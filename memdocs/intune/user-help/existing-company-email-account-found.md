@@ -1,0 +1,50 @@
+---
+title: Se ha encontrado una cuenta de correo de empresa existente | Microsoft Docs
+description: Describe cómo aplicar actualizaciones al dispositivo para que pueda tener acceso de nuevo al correo electrónico profesional o educativo.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
+manager: dougeby
+ms.date: 12/17/2018
+ms.topic: article
+ms.prod: ''
+ms.service: microsoft-intune
+ms.subservice: end-user
+ms.technology: ''
+ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
+searchScope:
+- User help
+ROBOTS: ''
+ms.reviewer: chrisgre
+ms.suite: ems
+ms.custom: intune-enduser
+ms.collection: ''
+ms.openlocfilehash: 5a96618d31dc2a6961882856d3404acb4a576939
+ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79336932"
+---
+# <a name="an-existing-company-email-account-was-found"></a>Se ha encontrado una cuenta de correo electrónico de empresa existente encontrado
+
+Podría haber tenido acceso con un dispositivo móvil a la cuenta de correo electrónico profesional o educativa *antes* de tener el dispositivo administrado. Si el dispositivo está ahora administrado, se recomienda que:
+
+* Desconecte la cuenta de correo electrónico profesional existente desde el dispositivo.
+* Vuelva a sincronizar la configuración del dispositivo desde la aplicación Portal de empresa.  
+
+Estos pasos garantizarán que el dispositivo cumple los requisitos de seguridad de la compañía, y que los correos electrónicos permanecen seguros.
+
+1. En el dispositivo, vaya a **Configuración** y encuentre las cuentas conectadas. En un dispositivo iOS 11 +, por ejemplo, seleccione **Cuentas y contraseñas**.
+ 
+2. Seleccione y quite la cuenta de correo electrónico profesional.
+
+3. Abra la aplicación Portal de empresa en el dispositivo.  
+
+4. En la lista de dispositivos, seleccione el dispositivo que desee actualizar.
+
+5. Seleccione **Comprobar configuración**. En unos instantes, el dispositivo se sincronizará con la nueva configuración de correo electrónico.
+
+6. Inicie sesión con su cuenta de correo electrónico profesional o educativa.
+
+¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para obtener información de contacto, consulte el [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
