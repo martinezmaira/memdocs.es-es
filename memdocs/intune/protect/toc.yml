@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: "Configuración de línea base de Microsoft\_Edge"
               href: security-baseline-settings-edge.md
+        - name: Configuración de directivas antivirus
+          items:
+            - name: Configuración de antivirus de Defender para macOS
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: "Configuración de antivirus de Microsoft\_Defender para Windows\_10"
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Configuración de Windows Update
           href: windows-update-settings.md
         - name: Configuración de directivas de cumplimiento (Android)
