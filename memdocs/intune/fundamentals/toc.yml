@@ -283,4 +283,4 @@
             - name: Errores comunes de Endpoint Protection
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
     - name: Documentación de usuario final de Intune
-      href: /user-help/use-managed-devices-to-get-work-done
+      href: ../user-help/use-managed-devices-to-get-work-done.md
