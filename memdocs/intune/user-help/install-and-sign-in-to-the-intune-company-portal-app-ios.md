@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 66dafbeea3d5fa540a4306c811f784a4c6088c2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad586baf79bb818ccdfc012c04a58e55d19d8cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347930"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084484"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalar e iniciar sesión en la aplicación de portal de empresa
 
@@ -38,6 +38,6 @@ Instale la aplicación Portal de empresa en el dispositivo iOS para acceder a la
 
 3. Abra la aplicación Portal de empresa, escriba la dirección y la contraseña del correo electrónico profesional o educativa y luego pulse **Iniciar sesión**.
 
-    Si va a iniciar sesión en la aplicación Portal de empresa por primera vez y su empresa o centro educativo usan Intune, se le solicitará que inscriba su dispositivo en Intune. Para inscribirlo, siga los pasos que aparecen en el artículo sobre la [inscripción del dispositivo iOS en Intune](enroll-your-device-in-intune-ios.md). También puede [iniciar sesión con otro dispositivo](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
+    Si va a iniciar sesión en la aplicación Portal de empresa por primera vez y su empresa o centro educativo usan Intune, se le solicitará que inscriba su dispositivo en Intune. Para inscribirlo, siga los pasos que aparecen en el artículo sobre la [inscripción del dispositivo iOS en Intune](enroll-your-device-in-intune-ios.md). También puede [iniciar sesión con otro dispositivo](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

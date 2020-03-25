@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359240"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086099"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Configuración de la Inscripción de usuario de iOS/iPadOS y iPadOS (versión preliminar)
 
@@ -59,7 +59,7 @@ Un perfil de inscripción define la configuración que se aplica a un grupo de d
 
     - **Inscripción de dispositivos**: todos los usuarios de este perfil usarán la Inscripción de dispositivos.
     - **Inscripción de usuarios**: todos los usuarios de este perfil usarán la Inscripción de usuarios.
-    - **Determinar según la opción del usuario**: todos los usuarios de este grupo tendrán la posibilidad de elegir qué tipo de inscripción usar. Cuando los usuarios inscriban sus dispositivos, verán una opción de elegir entre **Soy el propietario de este dispositivo** y **(Empresa) es el propietario de este dispositivo**. Si optan por la segunda, el dispositivo se inscribirá mediante la inscripción de dispositivos. Si el usuario elige **Soy el propietario de este dispositivo**, tendrá otra opción para proteger todo el dispositivo o solo las aplicaciones y los datos relacionados con el trabajo. La selección del usuario final de si es el propietario del dispositivo determina qué tipo de inscripción se implementa en su dispositivo. Esta opción de usuario también se refleja en el atributo Propiedad del dispositivo en Intune. Para obtener más información sobre la experiencia del usuario, vea [Configuración del acceso de dispositivos iOS/iPadOS a los recursos de la empresa](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+    - **Determinar según la opción del usuario**: todos los usuarios de este grupo tendrán la posibilidad de elegir qué tipo de inscripción usar. Cuando los usuarios inscriban sus dispositivos, verán una opción de elegir entre **Soy el propietario de este dispositivo** y **(Empresa) es el propietario de este dispositivo**. Si optan por la segunda, el dispositivo se inscribirá mediante la inscripción de dispositivos. Si el usuario elige **Soy el propietario de este dispositivo**, tendrá otra opción para proteger todo el dispositivo o solo las aplicaciones y los datos relacionados con el trabajo. La selección del usuario final de si es el propietario del dispositivo determina qué tipo de inscripción se implementa en su dispositivo. Esta opción de usuario también se refleja en el atributo Propiedad del dispositivo en Intune. Para obtener más información sobre la experiencia del usuario, vea [Configuración del acceso de dispositivos iOS/iPadOS a los recursos de la empresa](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
     
 5. Seleccione **Siguiente**.
 

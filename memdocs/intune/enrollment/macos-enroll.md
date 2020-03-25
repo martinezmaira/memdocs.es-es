@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1066e2d86a2c3be4ad4d55a0fd2bbbac03066cc6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363491"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086090"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configuración de la inscripción de dispositivos macOS en Intune
 
@@ -51,7 +51,7 @@ Puede permitir que los usuarios inscriban sus propios dispositivos personales en
 - visitando el [sitio web Portal de empresa](https://portal.manage.microsoft.com) o
 - descargando Portal de empresa de Mac en [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-También puede enviar a los usuarios un vínculo sobre los pasos de inscripción en línea: [Inscriba el dispositivo macOS en Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos).
+También puede enviar a los usuarios un vínculo sobre los pasos de inscripción en línea: [Inscriba el dispositivo macOS en Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
 
 Para más información acerca de otras tareas de usuario final, consulte estos artículos:
 

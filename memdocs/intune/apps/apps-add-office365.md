@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e72993141de963d78d6aeaf512af0165d747c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcd6a49c0960bc38215123536e520bc89bcaeca1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341222"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083467"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Adición de aplicaciones de Office 365 a dispositivos Windows 10 con Microsoft Intune
 
@@ -234,4 +234,4 @@ En la tabla siguiente se muestran los códigos de error comunes que podría enco
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Para asignar el conjunto de aplicaciones a grupos adicionales, consulte [Asignación de aplicaciones a grupos con Microsoft Intune](/intune-azure/manage-apps/deploy-apps).
+- Para asignar el conjunto de aplicaciones a grupos adicionales, consulte [Asignación de aplicaciones a grupos con Microsoft Intune](/mem/intune/apps/apps-deploy).

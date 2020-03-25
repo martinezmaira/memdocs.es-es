@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17fa979f9563eb0735a68d2cc0ed82d800f8816f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354742"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085829"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novedades de Microsoft Intune: meses anteriores
 
@@ -294,7 +294,7 @@ La aplicación de Microsoft Intune para Android se ha actualizado con las siguie
 - Se ha agregado la muestra de notificaciones push personalizadas, alineando la aplicación con la compatibilidad agregada recientemente en la aplicación Portal de empresa para iOS y Android. Para más información, consulte [Envío de notificaciones personalizadas en Intune](../remote-actions/custom-notifications.md).
 ""
 #### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal---4394993---"></a>Para dispositivos iOS, personalice la pantalla de privacidad del proceso de inscripción del Portal de empresa.<!-- 4394993 -->
-Con Markdown, puede personalizar la pantalla de privacidad del Portal de empresa que los usuarios finales ven durante la inscripción de iOS. En concreto, podrá personalizar la lista de elementos que la organización no puede ver o realizar en el dispositivo. Para más información, consulte [Configuración de la aplicación Portal de empresa de Intune](../apps/company-portal-app.md#privacy-statement-customization).
+Con Markdown, puede personalizar la pantalla de privacidad del Portal de empresa que los usuarios finales ven durante la inscripción de iOS. En concreto, podrá personalizar la lista de elementos que la organización no puede ver o realizar en el dispositivo. Para más información, consulte [Configuración de la aplicación Portal de empresa de Intune](../apps/company-portal-app.md#configuration).
 
 
 
@@ -819,7 +819,7 @@ La nueva página **Aplicaciones instaladas** del sitio web del Portal de empresa
 La aplicación Portal de empresa para Windows ahora muestra todas las aplicaciones administradas (tanto las requeridas como las disponibles) que están instaladas en el dispositivo de un usuario. Los usuarios también pueden ver las instalaciones de aplicaciones intentadas y pendientes, además de sus estados actuales. Si todavía no hay ninguna aplicación requerida o disponible para los usuarios, estos verán un mensaje en el que se explica que no hay ninguna aplicación de la empresa instalada. Para ver la vista nueva, vaya al panel de navegación del Portal de empresa y seleccione **Aplicaciones** > **Aplicaciones instaladas**.
 
 #### <a name="new-features-in-microsoft-intune-app"></a>Características nuevas de la aplicación Microsoft Intune
-Agregamos características nuevas a la aplicación Microsoft Intune (versión preliminar) para Android. Los usuarios de dispositivos Android totalmente administrados ahora pueden:  
+Hemos agregado características nuevas a la aplicación Microsoft Intune (versión preliminar) para Android. Los usuarios de dispositivos Android totalmente administrados ahora pueden:  
 
 * Ver y administrar los dispositivos inscritos mediante la aplicación Portal de empresa de Intune o Microsoft Intune.
 * Ponerse en contacto con su organización para obtener soporte técnico.
@@ -1094,7 +1094,7 @@ Se han actualizado los pasos y las pantallas de inscripción del Portal de empre
 * Abrir la aplicación Ajustes para instalar el perfil de administración en el dispositivo.
 * Volver a la aplicación Portal de empresa para completar la inscripción.  
 
-Para conocer los pasos y las pantallas de inscripción actualizados, vea [Enroll iOS device in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios) (Inscripción de dispositivos iOS en Intune).
+Para conocer los pasos y las pantallas de inscripción actualizados, vea [Enroll iOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios) (Inscripción de dispositivos iOS en Intune).
 
 #### <a name="openssl-encryption-for-android-app-protection-policies---3747362---"></a>Cifrado de OpenSSL para las directivas de protección de aplicaciones Android<!-- 3747362 -->
 Las directivas de protección de aplicaciones (APP) de Intune en dispositivos Android ahora usan una biblioteca de cifrado de OpenSSL que es compatible con FIPS 140-2. Para más información, vea la sección sobre [cifrado](../apps/app-protection-policy-settings-android.md#encryption) de [Configuración de directivas de protección de aplicaciones Android en Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -1390,7 +1390,7 @@ Hay nuevos mensajes de error de instalación de aplicaciones relacionados con lo
 En Intune, seleccione **Aplicaciones cliente** > **Aplicaciones** > "Nombre de la aplicación" > **Estado de instalación del dispositivo**. Los mensajes de error nuevos estarán disponibles en el estado **Detalles del estado**.
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Nuevas pantalla de categorías de aplicaciones en la aplicación Portal de empresa para Windows 10<!-- 3834780  -->
-Se ha agregado una nueva pantalla denominada **Categorías de aplicaciones** para mejorar la experiencia de exploración y selección en la aplicación Portal de empresa para Windows 10. Los usuarios ahora verán sus aplicaciones ordenadas en categorías como **Destacadas**, **Educación** y **Productividad**. Este cambio aparece en las versiones 10.3.3451.0 y posteriores de Portal de empresa. Para ver la nueva pantalla, vea [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](whats-new-app-ui.md). Para más información sobre las aplicaciones del Portal de empresa, vea [Instalar y compartir aplicaciones en el dispositivo](https://docs.microsoft.com/user-help/install-apps-cpapp-windows).  
+Se ha agregado una nueva pantalla denominada **Categorías de aplicaciones** para mejorar la experiencia de exploración y selección en la aplicación Portal de empresa para Windows 10. Los usuarios ahora verán sus aplicaciones ordenadas en categorías como **Destacadas**, **Educación** y **Productividad**. Este cambio aparece en las versiones 10.3.3451.0 y posteriores de Portal de empresa. Para ver la nueva pantalla, vea [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](whats-new-app-ui.md). Para más información sobre las aplicaciones del Portal de empresa, vea [Instalar y compartir aplicaciones en el dispositivo](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Aplicación de cumplimiento de Power BI<!-- 1455231 doc-work-item -->
 Acceda al almacenamiento de datos de Intune en Power BI Online mediante la aplicación [Cumplimiento de Intune (Almacenamiento de datos)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Con esta aplicación de Power BI, ahora puede acceder y compartir informes creados previamente sin necesidad de configuración y sin salir de su explorador web. Para más información, vea el [registro de cambios en la aplicación del cumplimiento de Power BI](../developer/reports-changelog.md#power-bi-compliance-app).
@@ -2274,7 +2274,7 @@ Si alguien intenta eliminar un certificado push MDM de Apple, en un cuadro de di
 Puede dejar que los usuarios controlen las instalaciones de aplicaciones. Si lo permite, las instalaciones que antes se detendrían debido a una infracción de seguridad podrán seguir funcionando. Puede indicar a Windows Installer que use permisos elevados cuando instale un programa en un sistema. Además, los elementos protegidos por WIP (Windows Information Protection) se pueden indexar y los metadatos relativos a estos elementos se pueden almacenar en una ubicación sin cifrar. Cuando la directiva está deshabilitada, los elementos protegidos por WIP no se indexan y no se muestran en los resultados de Cortana o del explorador de archivos. La funcionalidad de estas opciones está deshabilitada de forma predeterminada. 
 
 #### <a name="new-user-experience-update-for-the-company-portal-website--2000968---"></a>Nueva actualización de la experiencia de usuario para el sitio web del Portal de empresa<!--2000968 -->
-Tras escuchar los comentarios de los clientes, se han agregado características nuevas al sitio web de Portal de empresa. Experimentará una mejora considerable en las funciones y la facilidad de uso actual de los dispositivos. Se ha aplicado un nuevo diseño moderno y dinámico a las áreas del sitio, como los detalles del dispositivo, los comentarios, el soporte técnico y la descripción general del dispositivo. También verá:
+Tras escuchar los comentarios de los clientes, hemos agregado características nuevas al sitio web de Portal de empresa. Experimentará una mejora considerable en las funciones y la facilidad de uso actual de los dispositivos. Se ha aplicado un nuevo diseño moderno y dinámico a las áreas del sitio, como los detalles del dispositivo, los comentarios, el soporte técnico y la descripción general del dispositivo. También verá:
 
 - Flujos de trabajo optimizados en todas las plataformas de dispositivo
 - Flujos mejorados para la inscripción e identificación de dispositivos
@@ -2284,7 +2284,7 @@ Tras escuchar los comentarios de los clientes, se han agregado características 
 - Rendimiento mejorado de los catálogos de aplicaciones de gran tamaño
 - Aumento de accesibilidad para todos los usuarios  
 
-Se ha actualizado la [documentación del sitio web de Portal de empresa de Intune](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) para reflejar estos cambios. Para ver un ejemplo de las mejoras de la aplicación, vea [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](whats-new-app-ui.md).  
+Se ha actualizado la [documentación del sitio web de Portal de empresa de Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) para reflejar estos cambios. Para ver un ejemplo de las mejoras de la aplicación, vea [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](whats-new-app-ui.md).  
 
 ### <a name="monitor-and-troubleshoot"></a>Supervisión y solución de problemas
 

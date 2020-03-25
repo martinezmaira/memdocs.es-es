@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343497"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086991"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurar perfiles de telefonía móvil eSIM en Intune: versión preliminar pública
 
 eSIM es un chip SIM incrustado y permite conectarse a Internet a través de una conexión de datos móviles en un dispositivo compatible con eSIM, como [LTE Surface Pro](https://www.microsoft.com/surface/business/surface-pro). Con un eSIM, no es necesario obtener una tarjeta SIM del operador de telefonía móvil. Como viajero global, también puede cambiar entre los operadores de telefonía móviles y los planes de datos para estar siempre conectado.
 
 Por ejemplo, tiene un plan de datos móviles para el trabajo y otro con un operador de telefonía móvil distinto para uso personal. Cuando viaja, puede obtener acceso a Internet mediante la búsqueda de operadores de telefonía móvil con planes de datos en esa zona.
+
+Esta característica se aplica a:
+
+- Windows 10 y versiones posteriores
 
 En Intune, puede importar códigos de activación de un solo uso proporcionados por el operador de telefonía móvil. Para configurar los planes de datos móviles en el módulo eSIM, implemente esos códigos de activación en los dispositivos compatibles con eSIM. Cuando Intune instala el código de activación, el módulo de hardware de eSIM usa los datos del código de activación para ponerse en contacto con el operador de telefonía móvil. Al finalizar, el perfil de eSIM se descarga en el dispositivo y se configura para la activación de telefonía móvil.
 

@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c2a32561f66f3170b41209cb4d324e368768878
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344433"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220156"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configuración de la inscripción de dispositivos Windows
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Este artículo ayuda a los administradores de TI a simplificar la inscripción de Windows para sus usuarios. Una vez que haya [configurado Intune](../fundamentals/setup-steps.md), los usuarios inscriben los dispositivos Windows [iniciando sesión](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows) con su cuenta profesional o educativa.  
+Este artículo ayuda a los administradores de TI a simplificar la inscripción de Windows para sus usuarios. Una vez que haya [configurado Intune](../fundamentals/setup-steps.md), los usuarios inscriben los dispositivos Windows [iniciando sesión](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) con su cuenta profesional o educativa.  
 
 Como administrador de Intune, puede simplificar la inscripción de las siguientes maneras:
 
@@ -111,7 +111,7 @@ Indique a los usuarios cómo inscribir sus dispositivos Windows y qué esperar c
 > [!NOTE]
 > Los usuarios finales deben tener acceso al sitio web Portal de empresa a través de Microsoft Edge para ver las aplicaciones de Windows que haya asignado para versiones específicas de Windows. Otros exploradores (incluidos Google Chrome, Mozilla Firefox e Internet Explorer) no admiten este tipo de filtrado.
 
-Para instrucciones sobre inscripción del usuario final, consulte [Inscriba el dispositivo Windows en Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows). También puede indicar a los usuarios que revisen [¿Qué información puede ver mi administrador de TI cuando inscribo mi dispositivo en Intune?](https://docs.microsoft.com/user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+Para instrucciones sobre inscripción del usuario final, consulte [Inscriba el dispositivo Windows en Intune](../user-help/windows-enrollment-company-portal.md). También puede indicar a los usuarios que revisen [¿Qué información puede ver mi administrador de TI cuando inscribo mi dispositivo en Intune?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 >[!IMPORTANT]
 > Si no tiene habilitada la inscripción de MDM automática, pero tiene dispositivos Windows 10 unidos a Azure AD, verá dos registros en la consola de Intune tras la inscripción. Esto se puede evitar; para ello, asegúrese de que los usuarios con dispositivos unidos a Azure AD se dirigen a **Cuentas** > **Obtener acceso a trabajo o escuela** y usan **Conectar** para conectarse con la misma cuenta. 

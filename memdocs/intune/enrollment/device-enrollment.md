@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359409"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086168"
 ---
 # <a name="what-is-device-enrollment"></a>¿Qué es la inscripción de dispositivos?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ De manera predeterminada, los dispositivos de todas las plataformas pueden inscr
 |:---:|:---:|:---:|:---:|:---:|
 | | Durante la inscripción, los dispositivos se borran. | Se asocia cada dispositivo a un usuario.| En caso afirmativo, los usuarios no pueden anular la inscripción de los dispositivos. | |
 |**[BYOD](#bring-your-own-device)** | No| Sí | No | [Más información](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| No |No |No | [Más información](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| No |No |No | [Más información](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| Sí | Opcional | Opcional|[Más información](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Sí | Opcional | No| [Más información](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| No | No | No|[Más información](apple-configurator-enroll-ios.md)|
@@ -67,7 +67,7 @@ De manera predeterminada, los dispositivos de todas las plataformas pueden inscr
 
 | **Personal** | **Métodos de inscripción** | **Se requiere reinicio** | **Afinidad de usuario** | **Bloqueado** | **Detalles**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Administrador de dispositivos Android**|**Iniciado por el usuario a través del Portal de empresa** | No | Sí | No | [Más información](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Administrador de dispositivos Android**|**Iniciado por el usuario a través del Portal de empresa** | No | Sí | No | [Más información](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Perfil de trabajo de Android Enterprise**|**Iniciado por el usuario a través del Portal de empresa**| No | Sí | No | [Más información](android-work-profile-enroll.md)|
 
 

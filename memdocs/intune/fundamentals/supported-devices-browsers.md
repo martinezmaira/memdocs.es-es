@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f2fd16e0d4130fcc13b69a34d17777f1fd3d0f4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355912"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085748"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Exploradores y sistemas operativos compatibles en Intune
 
 Antes de configurar Microsoft Intune, consulte los sistemas operativos y exploradores compatibles.
 
-Para obtener ayuda para la instalación de Intune en su dispositivo, consulte el [uso de dispositivos administrados para realizar el trabajo](https://docs.microsoft.com/user-help/company-portal-frequently-asked-questions) y [Uso de ancho de banda de red de Intune](network-bandwidth-use.md).
+Para obtener ayuda para la instalación de Intune en su dispositivo, consulte el [uso de dispositivos administrados para realizar el trabajo](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) y [Uso de ancho de banda de red de Intune](network-bandwidth-use.md).
 
 Para más información sobre la compatibilidad con proveedores de servicios de configuración, consulte [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Referencia del proveedor de servicios de configuración).
 

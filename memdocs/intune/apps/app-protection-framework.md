@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342301"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083553"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Marco de protección de datos mediante directivas de protección de aplicaciones 
 
@@ -55,7 +55,7 @@ Como se indica en la tabla anterior, todos los cambios en las directivas de prot
 
 Al probar los cambios en APP, tenga en cuenta el [tiempo de entrega](app-protection-policy-delivery.md). El estado de entrega de APP para un usuario determinado puede supervisarse. Para más información, consulte [Supervisión de las directivas de protección de aplicaciones](app-protection-policies-monitor.md).
 
-La configuración de APP individual para cada aplicación se puede validar en dispositivos que usen Edge y la dirección URL *about:Intunehelp*. Para obtener más información, consulte [Revisión de los registros de protección de las aplicaciones cliente](app-protection-policy-settings-log.md) y [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+La configuración de APP individual para cada aplicación se puede validar en dispositivos que usen Edge y la dirección URL *about:Intunehelp*. Para obtener más información, consulte [Revisión de los registros de protección de las aplicaciones cliente](app-protection-policy-settings-log.md) y [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Configuración del marco de protección de datos mediante APP
 

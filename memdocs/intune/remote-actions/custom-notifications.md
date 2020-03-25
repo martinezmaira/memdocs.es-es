@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338245"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220258"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Envío de notificaciones personalizadas en Intune
 
@@ -73,7 +73,6 @@ Si tiene la aplicación Portal de empresa abierta en un dispositivo Android, la 
 - Para crear un mensaje, use una cuenta que tenga asignado un rol de Intune que incluya el permiso correcto, como se describe en la sección *Permisos* anterior. Para asignar permisos a un usuario, vea [Asignaciones de roles](../fundamentals/role-based-access-control.md#role-assignments).
 - Las notificaciones personalizadas se limitan a títulos de 50 caracteres y mensajes de 500.  
 - Intune no guarda texto de notificaciones personalizadas enviadas previamente. Para enviar de nuevo un mensaje, debe volver a crearlo.  
-- Solo puede enviar hasta 25 mensajes a grupos por hora. Esta restricción está en el nivel de inquilino. Esta limitación no se aplica cuando se envían notificaciones a dispositivos individuales.
 - Solo puede enviar hasta 25 mensajes a grupos por hora. Esta restricción está en el nivel de inquilino. Esta limitación no se aplica cuando se envían notificaciones a individuos.
 - Al enviar mensajes a dispositivos individuales, solo puede enviar hasta 10 mensajes por hora al mismo dispositivo.
 - Puede enviar notificaciones a usuarios de grupos. Al enviar notificaciones a grupos, cada notificación puede destinarse directamente a 25 grupos como máximo. Los grupos anidados no cuentan para este total. Cuando se envía una notificación a un grupo, los mensajes solo se dirigen a los usuarios del grupo y se envían a cada dispositivo iOS/iPadOS o Android que el usuario haya registrado. Al seleccionar el destino de la notificación, se omitirán los dispositivos del grupo.

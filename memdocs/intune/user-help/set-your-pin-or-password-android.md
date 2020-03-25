@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ec617d76ec2fe4d59de7715daec76351798bd460
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336178"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233430"
 ---
 # <a name="set-your-pin-or-password"></a>Establecimiento del PIN o la contraseña
 
@@ -36,6 +36,6 @@ Para establecer un PIN o una contraseña, use los siguientes pasos.
 
 2. Elija y confirme la nueva contraseña.
 
-En ciertos dispositivos, es posible que necesite establecer un PIN de inicio además de la contraseña de pantalla. Para intentar corregir este problema, encuentre una ubicación en la aplicación de configuración para habilitar esta opción. Por ejemplo, en el Samsung Galaxy S7, habilita el inicio seguro en **Configuración** > **Pantalla de bloqueo y seguridad** > **Inicio seguro**. Puede descubrir más [aquí](/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
+En ciertos dispositivos, es posible que necesite establecer un PIN de inicio además de la contraseña de pantalla. Para intentar corregir este problema, encuentre una ubicación en la aplicación de configuración para habilitar esta opción. Por ejemplo, en el Samsung Galaxy S7, habilita el inicio seguro en **Configuración** > **Pantalla de bloqueo y seguridad** > **Inicio seguro**. Puede descubrir más [aquí](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

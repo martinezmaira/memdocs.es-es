@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 828c033c5b8d7463244f356ebed9228838da74c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0e878294a9af6b80358aa495aa4d10ac6ed93404
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360384"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086343"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Incorporación de la configuración de Wi-Fi para dispositivos macOS en Microsoft Intune
 
@@ -33,7 +33,7 @@ Ambas se describen en este artículo.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-[Creación de un perfil de dispositivo en Microsoft Intune](device-profile-create.md).
+[Creación de un perfil de dispositivo en Microsoft Intune](wi-fi-settings-configure.md).
 
 > [!NOTE]
 > Estas configuraciones están disponibles para todos los tipos de inscripción. Para más información sobre los tipos de inscripción, consulte [Inscripción de macOS](../enrollment/macos-enroll.md).

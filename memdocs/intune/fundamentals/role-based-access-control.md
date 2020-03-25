@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b01f9444cf70c447c916d3d0a550a8cf46efc28a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79356432"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220173"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Control de acceso basado en rol (RBAC) con Microsoft Intune
 
@@ -72,10 +72,6 @@ Puede crear sus propios roles con permisos personalizados. Para obtener más inf
 
 > [!TIP]
 > Intune también muestra tres extensiones de Azure AD: **Usuarios**, **Grupos** y **Acceso condicional**, que se controlan mediante RBAC en Azure AD. Además, el **administrador de cuentas de usuario** solo realiza actividades de usuario o grupo de AAD y no tiene permisos completos para realizar todas las actividades en Intune. Para más información, vea [RBAC con Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
-### <a name="roles-created-in-the-intune-classic-portal"></a>Roles creados en el portal clásico de Intune
-Solo los usuarios con roles de **administradores del servicio** de Intune con permisos "completos" pueden migrarse desde el portal clásico de Intune a Intune en Azure Portal. Debe reasignar a los usuarios con roles de **administradores del servicio** de Intune y con los permisos "Solo lectura" o "Departamento de soporte técnico" a los roles de Intune en Azure Portal y eliminarlos del portal clásico.
-> [!IMPORTANT]
-> Es posible que necesite mantener el acceso del administrador del servicio de Intune en el portal clásico en caso de que los administradores todavía necesiten acceder para administrar equipos con Intune.
 
 ## <a name="role-assignments"></a>Asignaciones de roles
 Una asignación de roles define:

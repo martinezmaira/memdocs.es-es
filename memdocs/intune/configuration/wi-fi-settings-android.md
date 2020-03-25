@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46188be8ed347e488a89dc5f6f4e10390aa821bc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ca465bf8356a16f9716d45456f9675384ffb518
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363855"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086415"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Adición de la configuración de Wi-Fi en Microsoft Intune para dispositivos que ejecutan Android
 
@@ -34,7 +34,7 @@ Ambas se describen en este artículo.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-[Creación de un perfil de dispositivo en Microsoft Intune](device-profile-create.md).
+[Creación de un perfil de dispositivo en Microsoft Intune](wi-fi-settings-configure.md).
 
 ## <a name="basic"></a>Básico
 
