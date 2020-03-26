@@ -5,7 +5,7 @@
   items:
     - name: Introducción a la inscripción de dispositivos
       href: device-enrollment.md
-      displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+      displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
     - name: Capacidades de administración de dispositivos inscritos
       href: device-management-capabilities.md
     - name: Opciones de inscripción
@@ -20,7 +20,7 @@
   items:
     - name: Uso de Autopilot para la inscripción de dispositivos Windows
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: Uso de DEP para inscribir dispositivos iOS/iPadOS
+    - name: Uso de ADE para inscribir dispositivos iOS/iPadOS
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Conceptos
   items:
