@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219850"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Aplicación del cumplimiento en equipos Mac administrados con Jamf Pro
 
@@ -41,7 +41,10 @@ Los procedimientos descritos en este artículo requieren acceso tanto a las cons
 
 2. Seleccione **Dispositivos** > **Directivas de cumplimiento**. Si usa una directiva creada anteriormente, selecciónela en la consola y vaya luego al paso siguiente de este procedimiento. Para crear una nueva directiva, seleccione **Crear directiva** y, a continuación, especifique los detalles de una directiva con una *Plataforma* de **macOS**. Ajuste la *Configuración* y las *Acciones en caso de incumplimiento* para que coincidan con los requisitos de su organización y a continuación, seleccione **Crear** para guardar la directiva.
 
-3. En el panel *Información general* de las directivas, seleccione **Asignaciones**. Use las opciones disponibles para configurar los usuarios y los grupos de seguridad de Azure Active Directory (Azure AD) que reciben esta directiva. La integración de Jamf con Intune no es compatible con las directivas de cumplimiento que tienen como destino grupos de dispositivos.
+3. En el panel *Información general* de las directivas, seleccione **Asignaciones**. Use las opciones disponibles para configurar los usuarios y los grupos de seguridad de Azure Active Directory (Azure AD) que reciben esta directiva. **La integración de Jamf con Intune no es compatible con las directivas de cumplimiento que tienen como destino grupos de dispositivos.**
+
+> [!NOTE]
+> La integración de Jamf con Intune solo admite grupos de usuarios de AAD. No se aplicarán las directivas de cumplimiento de dispositivos que están destinadas a grupos de dispositivos.
 
 4. Al seleccionar **Guardar**, la directiva se implementa en los usuarios.  
 

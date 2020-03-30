@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361879"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087095"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicación de la configuración y características en dispositivos con perfiles de dispositivos Microsoft Intune
 
-Microsoft Intune incluye valores de configuración y características que puede habilitar o deshabilitar en distintos dispositivos dentro de su organización. Estas características y opciones de configuración se agregan a los "perfiles de configuración". Puede crear perfiles para diferentes dispositivos y plataformas, incluidas iOS/iPadOS, Android y Windows. Luego, use Intune para aplicar o "asignar" el perfil a los dispositivos.
+Microsoft Intune incluye valores de configuración y características que puede habilitar o deshabilitar en distintos dispositivos dentro de su organización. Estas características y opciones de configuración se agregan a los "perfiles de configuración". Puede crear perfiles para otros dispositivos y plataformas, como iOS/iPadOS, administrador de dispositivos Android, Android Enterprise y Windows. Luego, use Intune para aplicar o "asignar" el perfil a los dispositivos.
 
 Como parte de la solución de administración de dispositivos móviles (MDM), use estos perfiles de configuración para completar distintas tareas. Estos son algunos ejemplos de perfiles:
 
@@ -55,7 +55,7 @@ Los [certificados](../protect/certificates-configure.md) configuran certificados
 
 Esta característica es compatible con: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ La [configuración personalizada](custom-settings-configure.md) permite que los 
 
 Esta característica es compatible con:
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ Las [restricciones de dispositivos](device-restrictions-configure.md) controlan 
 
 Esta característica es compatible con:
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ La [configuración de correo electrónico](email-settings-configure.md) crea, as
 
 Esta característica es compatible con: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -241,7 +241,7 @@ Las redes privadas virtuales (VPN) ofrecen a los usuarios un acceso remoto segur
 
 Esta característica es compatible con: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ La [configuración de Wi-Fi](wi-fi-settings-configure.md) asigna valores de conf
 
 Esta característica es compatible con: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Esta característica es compatible con:
 
 Esta característica es compatible con:
 
-- Android (extensiones de movilidad)
+- Administradores de dispositivos Android (Mobility Extensions)
 
 ## <a name="manage-and-troubleshoot"></a>Supervisión y solución de problemas
 

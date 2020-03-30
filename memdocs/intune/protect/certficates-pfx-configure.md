@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caeeb332f4a7c8c124e40537041b8aef8d219240
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 94e170e01a1ede01a94b2ca3f09d8530f97335a3
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372626"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084998"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS con Intune
 
@@ -175,27 +175,42 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
-
-   ![Navegación a Intune y creación de un perfil para un certificado de confianza](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
 3. Escriba las propiedades siguientes:
+   - **Plataforma**: elija la plataforma de los dispositivos que recibirán este perfil.
+   - **Perfil**: seleccione **Certificado de confianza**.
+  
+4. Seleccione **Crear**.
 
-    - **Nombre** del perfil
-    - Si lo desea, establezca una descripción
-    - **Plataforma** en la cual implementar el perfil
-    - Establezca el **tipo del perfil** en **Certificado de confianza**
+5. En **Básico**, escriba las propiedades siguientes:
+   - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil es *Perfil de certificado de confianza en toda la empresa*.
+   - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
 
-4. Seleccione **Configuración** y especifique el certificado de entidad de certificación raíz del archivo .cer que ha exportado anteriormente.
+6. Seleccione **Siguiente**.
+
+7. En **Configuración**, especifique el certificado de entidad de certificación raíz del archivo .cer que ha exportado anteriormente.
 
    > [!NOTE]
-   > En función de la plataforma que haya elegido en el **paso 2**, es posible que tenga o no la opción de seleccionar el **Almacén de destino** del certificado.
+   > En función de la plataforma que ha elegido en el **paso 3**, es posible que tenga o no la opción de seleccionar el **Almacén de destino** del certificado.
 
    ![Crear un perfil y cargar un certificado de confianza](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-5. Seleccione **Aceptar** > **Crear** para guardar el perfil.
+8. Seleccione **Siguiente**.
 
-6. Para asignar el perfil nuevo a uno o varios dispositivos, consulte [Asignación de perfiles de dispositivo en Microsoft Intune](../configuration/device-profile-assign.md).
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+   Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. (*Se aplica solo a Windows 10*) En **Reglas de aplicación**, especifique las reglas de aplicación para restringir la asignación de este perfil. Puede elegir asignar o no asignar el perfil en función de la edición del sistema operativo o la versión de un dispositivo.
+
+  Para más información, consulte [Reglas de aplicabilidad](../configuration/device-profile-create.md#applicability-rules) en *Creación de un perfil de dispositivo en Microsoft Intune*.
+
+12. En **Revisar y crear**, revise la configuración. Si selecciona Crear, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Creación de un perfil de certificado PKCS
 
@@ -204,13 +219,25 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
 3. Escriba las propiedades siguientes:
+   - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:
+     - Administrador de dispositivos Android
+     - Android Enterprise > solo propietario del dispositivo
+     - Android Enterprise > solo perfil de trabajo
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 y versiones posteriores
+   - **Perfil**: seleccione **PKCS certificate** (Certificado PKCS).
 
-    - **Nombre** del perfil
-    - Si lo desea, establezca una descripción
-    - **Plataforma** en la cual implementar el perfil
-    - Establezca **Tipo del perfil** en **Certificado PKCS**
+   > [!NOTE]
+   > En los dispositivos con un perfil de Android Enterprise, los certificados que se instalan con un perfil de certificado PKCS no son visibles en el dispositivo. Para confirmar la correcta implementación de certificados, compruebe el estado del perfil en la consola de Intune.
+4. Seleccione **Crear**.
 
-4. Vaya a **Configuración** y configure las propiedades que se aplican a la plataforma seleccionada:
+5. En **Básico**, escriba las propiedades siguientes:
+   - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil sería *Perfil de PKCS de toda la empresa*.
+   - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
+
+6. Seleccione **Siguiente**.
+7. En **Opciones de configuración**, las opciones que puede configurar serán diferentes, según la plataforma que haya elegido. Seleccione la plataforma para obtener la configuración detallada: Administrador de dispositivos Android, Android Enterprise, iOS/iPadOS, Windows 10
    
    |Setting     | Plataforma     | Detalles   |
    |------------|------------|------------|
@@ -227,12 +254,18 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
    |**Permitir el acceso de todas las aplicaciones a la clave privada** |<ul><li>macOS  |Establezca esta opción en **Habilitar** para dar acceso a la clave privada de certificados PKCS a aquellas aplicaciones que estén configuradas para el dispositivo Mac asociado. <br><br> Para más información sobre esta configuración, vea *AllowAllAppsAccess* de la sección de carga de certificado de la [referencia de perfiles de configuración](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) en la documentación para desarrolladores de Apple. |
    |**Certificado raíz**             |<ul><li>Administrador de dispositivos Android </li><li>Android Enterprise (*Propietario del dispositivo*, *Perfil de trabajo*) |Seleccione un perfil de certificado de CA raíz asignado previamente. |
 
-5. Seleccione **Aceptar** > **Crear** para guardar el perfil.
+8. Seleccione **Siguiente**.
 
-6. Para asignar el perfil nuevo a uno o varios dispositivos, consulte [Asignación de perfiles de dispositivo en Microsoft Intune](../configuration/device-profile-assign.md).
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
 
-   > [!NOTE]
-   > En los dispositivos con un perfil de Android Enterprise, los certificados que se instalan con un perfil de certificado PKCS no son visibles en el dispositivo. Para confirmar la correcta implementación de certificados, compruebe el estado del perfil en la consola de Intune.
+   Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. En **Revisar y crear**, revise la configuración. Si selecciona Crear, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
+
 
 ### <a name="subject-name-format"></a>Formato de nombre del sujeto
 

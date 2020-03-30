@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98eba2cd2905a70157cfb50299bb9b11a6319fcc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342340"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083732"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>¿Qué es la administración de aplicaciones de Microsoft Intune?
 
@@ -118,7 +118,7 @@ Los siguientes elementos de la consola de proporcionan funcionalidad relacionada
 - **Claves de instalación de prueba de Windows**: agregue una clave de instalación de prueba de Windows que puede usarse para instalar una aplicación directamente en dispositivos en lugar de publicar y descargar la aplicación desde la tienda Windows. Para obtener más información, consulte [Carga de una aplicación de Windows](app-sideload-windows.md).
 - **Tokens de VPP de Apple**: aplique y vea sus licencias del Programa de Compras por Volumen (PCV) de iOS/iPadOS. Para obtener más información, consulte [Aplicaciones de iOS/iPadOS compradas a través de un programa de compras por volumen](vpp-apps-ios.md).
 - **Google Play administrado**: Google Play administrado es la tienda de aplicaciones empresariales de Google y el único origen de aplicaciones para Android Enterprise. Para obtener más información, consulte [Incorporación de aplicaciones de Google Play administrado a dispositivos Android Enterprise con Intune](apps-add-android-for-work.md).
-- **Marca y personalización**: personalice el Portal de empresa para adaptarlo a su empresa. Para obtener más información, consulte [Configuración de Portal de empresa](company-portal-app.md).
+- **Personalización**: personalice el Portal de empresa para adaptarlo a su empresa. Para obtener más información, consulte [Configuración de Portal de empresa](company-portal-app.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

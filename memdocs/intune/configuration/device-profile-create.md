@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339961"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084056"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Creación de un perfil de dispositivo en Microsoft Intune
 
@@ -52,7 +52,7 @@ En este artículo:
    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
    - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:  
 
-       - **Android**
+       - **Administrador de dispositivos Android**
        - **Android Enterprise**
        - **iOS/iPadOS**
        - **macOS**
@@ -68,12 +68,14 @@ En este artículo:
        - [Optimización de entrega](delivery-optimization-windows.md)
        - [Características del dispositivo](device-features-configure.md)
        - [Restricciones de dispositivos](device-restrictions-configure.md)
+       - [Unión a un dominio](domain-join-configure.md)
        - [Actualización de edición y conmutador de modo](edition-upgrade-configure-windows-10.md)
        - [Educación](education-settings-configure.md)
        - [Correo electrónico](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Protección de identidad](../protect/identity-protection-configure.md)  
        - [Quiosco](kiosk-settings.md)
+       - [ATP de Microsoft Defender](../protect/advanced-threat-protection.md)
        - [Certificado PKCS](../protect/certficates-pfx-configure.md)
        - [Certificado PKCS importado](../protect/certificates-imported-pfx-configure.md)
        - [Archivo de preferencia](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ En este artículo:
        - [Directivas de actualización](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [ATP de Microsoft Defender](../protect/advanced-threat-protection.md)
        - [Windows Information Protection](../protect/windows-information-protection-configure.md)
 
      Por ejemplo, si selecciona **iOS/iPadOS** como plataforma, las opciones de tipo de perfil serán similares al perfil siguiente:
 
-     ![Creación de perfil de iOS/iPadOS en Intune](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![Creación de un perfil de iOS o iPadOS en Intune](./media/device-profile-create/create-device-profile.png)
 
 4. Cuando termine, seleccione **Aceptar** > **Crear** para guardar los cambios. El perfil se crea y se muestra en la lista.
 
@@ -138,7 +140,8 @@ Al asignar el perfil a los grupos, las reglas de aplicabilidad actúan como un f
 
 1. Seleccione **Reglas de aplicabilidad**. Puede elegir los valores de **Regla**, **Propiedad** y **Edición del sistema operativo**:
 
-    ![Agregue una regla de aplicabilidad a un perfil de configuración de dispositivo en Microsoft Intune.](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![Adición de una regla de aplicabilidad a un perfil de configuración de dispositivo en Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
 2. En **Regla**, elija si desea incluir o excluir usuarios o grupos. Las opciones son:
 
@@ -184,7 +187,8 @@ Al crear perfiles, tenga en cuenta las siguientes recomendaciones:
 
   En la imagen siguiente se muestra un ejemplo de un valor de configuración que se puede aplicar a los usuarios o a los dispositivos:
 
-  ![Plantilla de administración de Intune que se aplica a usuarios y dispositivos](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![Plantilla de administración de Intune que se aplica a usuarios y dispositivos](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Cada vez que cree una directiva restrictiva, comunique este cambios a los usuarios. Por ejemplo, si va a cambiar el requisito de código de acceso de 4 a 6 caracteres, informe a los usuarios antes de asignar la directiva.
 

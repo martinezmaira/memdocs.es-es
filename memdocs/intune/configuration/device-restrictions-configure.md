@@ -1,11 +1,11 @@
 ---
 title: 'Restricción de las características de los dispositivos mediante directivas en Microsoft Intune: Azure | Microsoft Docs'
-description: Agregue un perfil de dispositivo para restringir características en dispositivos Android, macOS, iOS, iPadOS, Windows Phone y Windows 10 en Microsoft Intune
+description: Agregue un perfil de dispositivo para restringir características en el administrador de dispositivos Android, dispositivos Android, macOS, iOS, iPadOS, Windows Phone y Windows 10 en Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361827"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087081"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurar restricciones de dispositivos en Microsoft Intune
-
-
 
 Intune incluye directivas de restricción de dispositivos que ayudan a los administradores a controlar dispositivos Android, iOS/iPadOS, macOS y Windows. Estas restricciones permiten controlar una amplia variedad de configuraciones y características para proteger los recursos de la organización. Por ejemplo, los administradores pueden:
 
@@ -48,7 +46,7 @@ En este artículo se muestra cómo crear un perfil de restricciones de dispositi
     - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
     - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:  
 
-        - **Android**
+        - **Administrador de dispositivos Android**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -62,7 +60,7 @@ En este artículo se muestra cómo crear un perfil de restricciones de dispositi
 
 4. Dependiendo de la plataforma que haya elegido, las opciones que pueda configurar serán diferentes. Elija la plataforma para la configuración detallada:
 
-    - [Configuración de Android](device-restrictions-android.md)
+    - [Configuración del administrador de dispositivos Android](device-restrictions-android.md)
     - [Configuración de Android Enterprise](device-restrictions-android-for-work.md)
     - [Configuración de iOS/iPadOS](device-restrictions-ios.md)
     - [Configuración de macOS](device-restrictions-macos.md)

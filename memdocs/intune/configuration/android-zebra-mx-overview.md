@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaaa9095becbcac7840d5babc2a099e7ec84af03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362022"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084002"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Usar y administrar dispositivos Zebra con extensiones de movilidad de Zebra en Microsoft Intune
-
-
 
 Intune incluye un amplio conjunto de características, incluidas la administración de aplicaciones y la configuración de los ajustes del dispositivo. Estas características y ajustes integrados administran dispositivos Android fabricados por Zebra Technologies, también conocidos como "dispositivos Zebra".
 
@@ -36,7 +34,9 @@ Este artículo muestra cómo usar las extensiones de movilidad (MX) de Zebra en 
 
 Esta característica se aplica a:
 
-- Android
+- Administrador de dispositivos Android
+
+En el caso de dispositivos de Android Enterprise, use [OEMConfig](android-oem-configuration-overview.md).
 
 La empresa puede usar dispositivos Zebra para venta minorista, en la fábrica y mucho más. Por ejemplo, es un minorista y su entorno incluye miles de dispositivos móviles Zebra que usan los socios comerciales. Intune puede ayudarle a administrar estos dispositivos como parte de la solución de administración de dispositivos móviles (MDM).
 
@@ -139,7 +139,7 @@ En Intune, cree un perfil de configuración de dispositivo:
 
     - **Nombre**: escriba un nombre descriptivo para el nuevo perfil.
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-    - **Plataforma**: Seleccione **Android**.
+    - **Plataforma**: Seleccione **Administrador de dispositivos Android**.
     - **Tipo de perfil**: Seleccione **Perfil de MX (solo Zebra)** .
 
 4. En **Perfil de MX en formato .xml**, agregue el archivo de perfil XML que [exportó desde StageNow](#step-4-create-a-device-management-profile-in-stagenow) (en este artículo).

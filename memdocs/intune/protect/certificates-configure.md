@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353741"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085028"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Uso de certificados para la autenticación en Microsoft Intune
 
@@ -38,7 +38,7 @@ Use certificados con Intune para autenticar a los usuarios en las aplicaciones y
 
 Para implementar estos certificados, debe crear y asignar perfiles de certificado a los dispositivos.
 
-Cada perfil de certificado individual que cree es compatible con una sola plataforma. Por ejemplo, si usa certificados PKCS, creará un perfil de certificado PKCS para Android y otro independiente para iOS/iPadOS. Si también usa certificados SCEP para esas dos plataformas, tendrá que crear un perfil de certificado SCEP para Android y otro para iOS/iPadOS.
+Cada perfil de certificado individual que cree es compatible con una sola plataforma. Por ejemplo, si usa certificados PKCS, creará un perfil de certificado PKCS para Android y otro independiente para iOS o iPadOS. Si también usa certificados SCEP para esas dos plataformas, tendrá que crear un perfil de certificado SCEP para Android y otro para iOS o iPadOS.
 
 ### <a name="general-considerations-when-you-use-a-microsoft-certification-authority"></a>Consideraciones generales al usar una entidad de certificación de Microsoft
 
@@ -99,7 +99,7 @@ Usará este archivo .cer al [crear perfiles de certificado de confianza](#create
 
 ## <a name="create-trusted-certificate-profiles"></a>creación de perfiles de certificado de confianza
 
-Cree un perfil de certificado de confianza antes de poder crear un perfil de certificado SCEP, PKCS o PKCS importado. La implementación de un perfil de certificado de confianza garantiza que cada dispositivo reconozca la legitimidad de la entidad de certificación. Los perfiles de certificado SCEP hacen referencia directamente a un perfil de certificado de confianza. Los perfiles de certificado PKCS no hacen referencia directamente al perfil de certificado de confianza, pero sí al servidor en el que se hospeda la entidad de certificación. Los perfiles de certificado PKCS importados no hacen referencia directamente al perfil de certificado de confianza, pero pueden usarlo en el dispositivo. La implementación de un perfil de certificado de confianza en los dispositivos garantiza que se establece esta confianza. Cuando un dispositivo no confía en la entidad de certificación raíz, se producirá un error en la directiva de perfil de certificado SCEP o PKCS.
+Cree un perfil de certificado de confianza antes de poder crear un perfil de certificado SCEP, PKCS o PKCS importado. La implementación de un perfil de certificado de confianza garantiza que cada dispositivo reconozca la legitimidad de la entidad de certificación. Los perfiles de certificado SCEP hacen referencia directamente a un perfil de certificado de confianza. Los perfiles de certificado PKCS no hacen referencia directamente al perfil de certificado de confianza, pero sí al servidor que hospeda la entidad de certificación. Los perfiles de certificado PKCS importados no hacen referencia directamente al perfil de certificado de confianza, pero pueden usarlo en el dispositivo. La implementación de un perfil de certificado de confianza en los dispositivos garantiza que se establece esta confianza. Cuando un dispositivo no confía en la entidad de certificación raíz, se producirá un error en la directiva de perfil de certificado SCEP o PKCS.
 
 Cree un perfil de certificado de confianza independiente para cada plataforma de dispositivo que quiera admitir, como lo haría con los perfiles de certificado SCEP, PKCS y PKCS importados.
 
@@ -107,31 +107,47 @@ Cree un perfil de certificado de confianza independiente para cada plataforma de
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
+2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
-   ![Navegación a Intune y creación de un perfil para un certificado de confianza](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Navegación a Intune y creación de un perfil para un certificado de confianza](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. Escriba las propiedades siguientes:
+   - **Plataforma**: Elija la plataforma de los dispositivos que recibirán este perfil.
+   - **Perfil**: seleccione **Certificado de confianza**.
+  
+4. Seleccione **Crear**.
 
-   - **Nombre** del perfil
-   - Si lo desea, puede rellenar el campo **Descripción**.
-   - **Plataforma** en la cual implementar el perfil
-   - Establezca el **tipo del perfil** en **Certificado de confianza**
+5. En **Básico**, escriba las propiedades siguientes:
+   - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil es *Perfil de certificado de confianza en toda la empresa*.
+   - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
 
-4. Seleccione **Configuración** y busque el archivo .cer del certificado de entidad de certificación raíz de confianza que ha exportado para usar con este perfil de certificado y, después, seleccione **Aceptar**.
+6. Seleccione **Siguiente**.
 
-5. Solo para dispositivos Windows 8.1 y Windows 10, seleccione el **almacén de destino** del certificado de confianza. Las opciones son:
+7. En **Configuración**, especifique el archivo cer. del certificado de la entidad de certificación raíz de confianza que exportó anteriormente. 
+
+   Solo para dispositivos Windows 8.1 y Windows 10, seleccione el **almacén de destino** del certificado de confianza. Las opciones son:
 
    - **Almacén de certificados de equipo - Raíz**
    - **Almacén de certificados de equipo - Intermedio**
    - **Almacén de certificados de usuario - Intermedio**
 
-6. Cuando haya terminado, elija **Aceptar**, vuelva al panel **Crear perfil** y seleccione **Crear**.
+   ![Crear un perfil y cargar un certificado de confianza](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-El perfil aparece en la lista de perfiles de la ventana *Dispositivos - Perfiles de configuración*, con un tipo de perfil de **Certificado de confianza**. Asegúrese de asignar este perfil a los dispositivos que vayan a usar certificados SCEP o PKCS. Para asignar el perfil a grupos, vea [Asignación de perfiles de dispositivo](../configuration/device-profile-assign.md).
+8. Seleccione **Siguiente**.
 
-> [!NOTE]
-> Es posible que los dispositivos Android muestren un mensaje que indica que un tercero ha instalado un certificado de confianza.
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+   Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. (*Se aplica solo a Windows 10*) En **Reglas de aplicación**, especifique las reglas de aplicación para restringir la asignación de este perfil. Puede elegir asignar o no asignar el perfil en función de la edición del sistema operativo o la versión de un dispositivo.
+
+  Para más información, consulte [Reglas de aplicabilidad](../configuration/device-profile-create.md#applicability-rules) en *Creación de un perfil de dispositivo en Microsoft Intune*.
+
+12. En **Revisar y crear**, revise la configuración. Si selecciona Crear, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

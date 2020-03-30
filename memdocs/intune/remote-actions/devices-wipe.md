@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227d18a73ac33cfc277ec4c91935002e159da553
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348931"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084702"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo
 
@@ -188,7 +188,7 @@ Si quiere quitar completamente un dispositivo DEP de Apple de la administración
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Elija **Dispositivos** > **Todos los dispositivos** > elija el dispositivo > **Retirar**.
 ![Captura de pantalla de Retirar](./media/devices-wipe/retire.png)
-3. Visite [deploy.apple.com](http://deploy.apple.com) y busque el dispositivo por su número de serie.
+3. Visite [business.apple.com](http://business.apple.com) y busque el dispositivo por su número de serie.
 4. En el menú **Asignado a**, elija **Sin asignar**.
 
 5. Elija **Reasignar**.

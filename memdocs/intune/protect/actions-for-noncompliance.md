@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a3a3b38b28eda0e4bde9c353482d0234fa3329
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354326"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085224"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatización del correo electrónico y adición de acciones para dispositivos no compatibles en Intune
 
@@ -40,7 +40,16 @@ Hay varios tipos de acciones:
 
 - **Marcar dispositivo como no compatible**: cree una programación en la que se indique el número de días pasados los cuales el dispositivo se marcará como no compatible. Puede configurar la acción para que surta efecto de inmediato, o bien conceder al usuario un período de gracia para que el dispositivo sea conforme.
 
-En este artículo se muestra cómo:
+- **Retirar el dispositivo no compatible**: esta acción quita todos los datos de empresa del dispositivo y quita este de la administración de Intune. Para evitar el borrado accidental de un dispositivo, esta acción admite una programación mínima de 30 días. Las siguientes plataformas admiten esta acción:
+  - Android
+  - iOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 y versiones posteriores
+
+  Más información sobre la [retirada de los dispositivos](../remote-actions/devices-wipe.md#retire).
+  
+  En este artículo se muestra cómo:
 
 - Crear una plantilla de notificación de mensaje
 - Creación de una acción en caso de incumplimiento, como enviar un correo electrónico o bloquear de forma remota un dispositivo
@@ -76,7 +85,7 @@ Para enviar correo electrónico a los usuarios, cree una plantilla de mensaje de
    - **Pie de página de correo electrónico: incluir nombre de la empresa**
    - **Pie de página de correo electrónico: incluir información de contacto**
 
-   El logotipo que se carga como parte de la personalización de marca del Portal de empresa se usa para las plantillas de correo electrónico. Para más información sobre la personalización de marca del Portal de empresa, vea [Personalización de la marca de empresa](../apps/company-portal-app.md#company-identity-branding-customization).
+   El logotipo que se carga como parte de la personalización de marca del Portal de empresa se usa para las plantillas de correo electrónico. Para más información sobre la personalización de marca del Portal de empresa, vea [Personalización de la marca de empresa](../apps/company-portal-app.md#customizing-the-user-experience).
 
    ![Ejemplo de un mensaje de notificación compatible en Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -112,11 +121,13 @@ Además de la acción predeterminada para marcar dispositivos como no compatible
 
    - **Bloquear de forma remota el dispositivo no conforme**: cuando el dispositivo no sea compatible, bloquéelo. Esta acción obliga al usuario a escribir un PIN o una contraseña para desbloquear el dispositivo.
 
-5. Configurar una **programación**: escriba el número de días (de 0 a 365) después del incumplimiento para desencadenar la acción en los dispositivos de los usuarios. Después de este período de gracia, puede aplicar una directiva de [acceso condicional](conditional-access-intune-common-ways-use.md). Si escribe **0** (cero) para el número de días, el acceso condicional surte efecto **inmediatamente**. Por ejemplo, si un dispositivo no es compatible, use el acceso condicional para bloquear el acceso al correo electrónico, SharePoint y otros recursos de la organización inmediatamente.
+   - **Retirar el dispositivo no compatible**: cuando el dispositivo no es compatible, quite todos los datos de empresa del dispositivo y quítelo de la administración de Intune. Para evitar el borrado accidental de un dispositivo, esta acción admite una programación mínima de **30** días.
+
+5. Configurar una **programación**: escriba el número de días (de 0 a 365) después del incumplimiento para desencadenar la acción en los dispositivos de los usuarios. (*Retirar el dispositivo no compatible* admite como mínimo 30 días). Después de este período de gracia, puede aplicar una directiva de [acceso condicional](conditional-access-intune-common-ways-use.md). Si escribe **0** (cero) para el número de días, el acceso condicional surte efecto **inmediatamente**. Por ejemplo, si un dispositivo no es compatible, use el acceso condicional para bloquear el acceso al correo electrónico, SharePoint y otros recursos de la organización inmediatamente.
 
    Al crear una directiva de cumplimiento, se crea automáticamente la acción **Marcar el dispositivo como no conforme** y se establece también automáticamente en **0** días (inmediatamente). Con esta acción, cuando el dispositivo se registra, se evalúa como no conforme inmediatamente. Si también se usa el acceso condicional, este se inicia inmediatamente. Si desea permitir un período de gracia, cambie la **Programación** en la acción **Marcar el dispositivo como no conforme**.
 
-   En la directiva de cumplimiento, por ejemplo, también desea notificar al usuario. Puede agregar la acción **Enviar correo electrónico a usuario final**. En esta acción **Enviar correo electrónico**, debe establecer la **Programación** en 2 días. Si el dispositivo o usuario final sigue evaluándose como no conforme el día 2, su correo electrónico se enviará dicho día. Si desea volver a enviar un correo electrónico de incumplimiento el día 5, agregue otra acción y establezca la **Programación** en 5 días.
+  En la directiva de cumplimiento, por ejemplo, también desea notificar al usuario. Puede agregar la acción **Enviar correo electrónico a usuario final**. En la acción **Enviar correo electrónico**, debe establecer el valor de **Programación** en dos días. Si el dispositivo o el usuario final se siguen evaluando como no conformes el día 2, su correo electrónico se enviará dicho día. Si quiere volver a enviar al usuario un correo electrónico de incumplimiento el día 5, agregue otra acción y establezca **Programación** en cinco días.
 
    Para obtener más información sobre el cumplimiento y las acciones integradas, consulte la [información general de cumplimiento](device-compliance-get-started.md).
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350582"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526468"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Solución de problemas de comunicación entre un dispositivo y el servidor NDES para perfiles de certificado SCEP en Microsoft Intune
 
@@ -243,13 +243,26 @@ Si el grupo de aplicaciones de SCEP no se ha iniciado, compruebe el registro de 
 
   ![Permisos de IIS](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **Causa 4**: el certificado del módulo NDESPolicy ha expirado.
+
+  El registro CAPI2 (consulte la resolución de la causa 2) mostrará errores relacionados con el certificado al que se hace referencia en "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint" de que se encuentra fuera del período de validez del certificado.
+
+  **Solución**: actualice la referencia con la huella digital de un certificado válido.
+  1. Identifique un certificado de reemplazo:
+     - Renueve el certificado existente.
+     - Seleccione un certificado diferente con propiedades similares (asunto, EKU, tipo de clave y longitud, etc.).
+     - Inscriba un nuevo certificado.
+  2. Exporte la clave del Registro `NDESPolicy` para realizar una copia de seguridad de los valores actuales.
+  3. Reemplace los datos del valor del Registro `NDESCertThumbprint` por la huella digital del nuevo certificado, y quite todos los espacios en blanco y convierta el texto a minúsculas.
+  4. Reinicie los grupos de aplicaciones de IIS de NDES o ejecute `iisreset` desde un símbolo del sistema con privilegios elevados.
+
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
 Cuando vaya a la dirección URL del servidor SCEP, recibirá el siguiente error:
 
 ![Gatewaytimeout error](../protect/media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
 
-- **Causa**: No se ha iniciado el servicio del **conector del proxy de aplicación de Microsoft AAD**.
+- **Causa**: no se ha iniciado el servicio **Conector del proxy de aplicación AAD de Microsoft**.
 
   **Solución**:  Ejecute **services.msc** y, a continuación, asegúrese de que se está ejecutando el servicio del **conector del proxy de aplicación de AAD de Microsoft** y **Tipo de inicio** está establecido en **Automático**.
 
@@ -289,7 +302,7 @@ Tiene configurado Azure AD Application Proxy. Cuando vaya a la dirección URL d
 
   **Solución**: Use el dominio predeterminado de *yourtenant.msappproxy.net* para la dirección URL externa de SCEP en la configuración de Application Proxy.
 
-#### <a name="internal-server-error"></a>500 - Internal server error
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - Internal server error
 
 Cuando vaya a la dirección URL del servidor SCEP, recibirá el siguiente error:
 

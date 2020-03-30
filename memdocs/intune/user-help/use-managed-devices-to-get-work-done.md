@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 63090c61039c5029e6a8b80f53232191e1beb99a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347072"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233417"
 ---
 # <a name="what-is-device-enrollment"></a>¿Qué es la inscripción de dispositivos?
 Para obtener acceso a los recursos profesionales o educativos desde su dispositivo, debe inscribirlo con la aplicación Portal de empresa de Intune o con la aplicación Microsoft Intune. 
@@ -111,5 +111,3 @@ Si está listo para acceder a su cuenta profesional o educativa, siga las instru
 * [Inscripción de un dispositivo iOS proporcionado por la organización](enroll-your-device-dep-ios.md)
 * [Inscripción de dispositivos macOS](enroll-your-device-in-intune-macos-cp.md)
 * [Inscripción de un dispositivo macOS proporcionado por la organización](enroll-company-device-macos.md)
-
-

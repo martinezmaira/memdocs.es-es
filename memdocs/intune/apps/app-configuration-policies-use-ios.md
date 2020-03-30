@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342431"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233461"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Agregar directivas de configuración de aplicaciones para dispositivos iOS/iPadOS administrados
 
@@ -106,7 +106,7 @@ Los caracteres \{\{ y \}\} solo se usan para los tipos de token y no deben usars
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Permitir solo cuentas de organización configuradas en aplicaciones de varias identidades 
 
-Para dispositivos iOS/iPadOS, use los siguientes pares clave-valor:
+Como administrador de Microsoft Intune, puede controlar qué cuentas de usuario se agregan a las aplicaciones de Microsoft en dispositivos administrados. Puede limitar el acceso solo a las cuentas de usuario de la organización permitidas y bloquear las cuentas personales en los dispositivos inscritos. Para dispositivos iOS/iPadOS, use los siguientes pares clave-valor:
 
 | **Clave** | **Valores** |
 |----|----|
@@ -114,7 +114,10 @@ Para dispositivos iOS/iPadOS, use los siguientes pares clave-valor:
 | IntuneMAMUPN | <ul><li>UPN de la cuenta con permiso para iniciar sesión en la aplicación.</li><li> Para los dispositivos inscritos en Intune, el token <code>{{userprincipalname}}</code> se puede usar para representar la cuenta de usuario inscrito.</li></ul>  |
 
    > [!NOTE]
-   > Debe usar OneDrive para iOS 10.34 o posterior, Outlook para iOS 2.99.0 o posterior o Edge para iOS 44.8.7 o posterior y la aplicación debe ser objeto de [directivas de protección de aplicaciones de Intune](app-protection-policy.md) cuando se permitan solo cuentas de organización configuradas con varias identidades.
+   > Las siguientes aplicaciones procesan la configuración de aplicaciones anterior y solo permiten cuentas de organización:
+   > - Edge para iOS (44.8.7 y versiones posteriores)
+   > - OneDrive para iOS (10.34 y versiones posteriores)
+   > - Outlook para iOS (2.99.0 o versiones posteriores)
 
 ## <a name="enter-xml-data"></a>Especificar datos XML
 

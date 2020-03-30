@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338934"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084763"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Eliminación de certificados SCEP y PKCS en Microsoft Intune
 
@@ -91,7 +91,6 @@ Los certificados PKCS *permanecen* en el dispositivo (es decir, no se revocan ni
 - Un administrador elimina el usuario o el grupo de Azure AD.
 - Un administrador cambia o actualiza el perfil PKCS.
 - Un perfil de certificado se quita de la asignación de grupo.
-
 
 ## <a name="ios-devices"></a>Dispositivos iOS
 
@@ -190,8 +189,8 @@ Un certificado raíz se elimina cuando:
 - Un administrador ejecuta la acción de [retirar](../remote-actions/devices-wipe.md#retire).
 
 Los certificados PKCS *permanecen* en el dispositivo (es decir, no se revocan ni se quitan) cuando:
-- Un usuario pierde la licencia de Intune.
 
+- Un usuario pierde la licencia de Intune.
 - Un administrador retira la licencia de Intune.
 - Un administrador elimina el usuario o el grupo de Azure AD.
 - Un administrador cambia o actualiza el perfil PKCS.
@@ -228,7 +227,23 @@ Los certificados SCEP *permanecen* en el dispositivo (es decir, no se revocan ni
 
 ### <a name="pkcs-certificates"></a>Certificados PKCS
 
-No se admiten certificados PKCS en macOS.
+Un certificado PKCS se revoca *y* se elimina cuando:
+
+- Un usuario anula su inscripción.
+- Un administrador ejecuta la acción de [retirar](../remote-actions/devices-wipe.md#retire).
+
+Un certificado raíz se elimina cuando:
+
+- Un usuario anula su inscripción.
+- Un administrador ejecuta la acción de [retirar](../remote-actions/devices-wipe.md#retire).
+
+Los certificados PKCS permanecen en el dispositivo (es decir, no se revocan ni se quitan) cuando:
+
+- Un usuario pierde la licencia de Intune.
+- Un administrador retira la licencia de Intune.
+- Un perfil de certificado se quita de la asignación de grupo. (El perfil se elimina).
+- Un administrador elimina el usuario o el grupo de Azure AD.
+- Un administrador cambia o actualiza el perfil PKCS.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

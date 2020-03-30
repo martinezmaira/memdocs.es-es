@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7275963f521955c9e89c4b417c11f752e2f06ce1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f84df30204f866e5498e97b8d64ed3fc6fd4ba28
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352610"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084906"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creación de una directiva de cumplimiento en Microsoft Intune
 
@@ -63,80 +63,70 @@ Para usar las directivas de cumplimiento de dispositivos, asegúrese de lo sigui
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Crear directiva**.
+2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Directivas** > **Crear directiva**.
 
-3. Especifique las siguientes propiedades:
+3. Selecciona una **plataforma** para esta directiva de entre las siguientes opciones:
+   - *Administrador de dispositivos Android*
+   - *Android Enterprise*
+   - *iOS/iPadOS*
+   - *macOS*
+   - *Windows Phone 8.1*
+   - *Windows 8.1 y versiones posteriores*
+   - *Windows 10 y versiones posteriores*
 
-   - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un buen nombre de directiva es **Marcar los dispositivos iOS/iPadOS con jailbreak como no compatibles**.
+    Para *Android Enterprise*, también seleccionará un **tipo de directiva**:
+     - *Directiva de cumplimiento del propietario del dispositivo Android*
+     - *Directiva de cumplimiento del perfil de trabajo Android*
 
-   - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
+    Luego, seleccione **Crear** para abrir la ventana de configuración **Crear directiva**.
 
-   - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:
-     - **Administrador de dispositivos Android**
-     - **Android Enterprise**
-     - **iOS/iPadOS**
-     - **macOS**
-     - **Windows Phone 8.1**
-     - **Windows 8.1 y versiones posteriores**
-     - **Windows 10 y versiones posteriores**
+4. En la pestaña **Aspectos básicos**, rellene el campo **Nombre** para que le ayude a identificarla más tarde. Por ejemplo, un buen nombre de directiva es **Marcar los dispositivos iOS/iPadOS con jailbreak como no compatibles**.
 
-     En *Android Enterprise*, debe seleccionar un **Tipo de perfil**:
-     - **Propietario del dispositivo**
-     - **Perfil de trabajo**
+   También puede especificar una descripción en **Descripción**.
+  
+5. En la pestaña **Configuración de cumplimiento**, expanda las categorías disponibles y configure las opciones de la directiva.  En los siguientes artículos se describen los valores de configuración de cada plataforma:
+   - [Administrador de dispositivos Android](compliance-policy-create-android.md)
+   - [Android Enterprise](compliance-policy-create-android-for-work.md)
+   - [iOS/iPadOS](compliance-policy-create-ios.md)
+   - [macOS](compliance-policy-create-mac-os.md)
+   - [Windows Phone 8.1, Windows 8.1 y versiones posteriores](compliance-policy-create-windows-8-1.md)
+   - [Windows 10 y versiones posteriores](compliance-policy-create-windows.md)  
 
-   - **Configuración**: En los artículos siguientes se muestran y describen los valores de cada plataforma:
-     - [Administrador de dispositivos Android](compliance-policy-create-android.md)
-     - [Android Enterprise](compliance-policy-create-android-for-work.md)
-     - [iOS/iPadOS](compliance-policy-create-ios.md)
-     - [macOS](compliance-policy-create-mac-os.md)
-     - [Windows Phone 8.1, Windows 8.1 y versiones posteriores](compliance-policy-create-windows-8-1.md)
-     - [Windows 10 y versiones posteriores](compliance-policy-create-windows.md)  
+6. En la pestaña **Ubicaciones**, puede forzar el cumplimiento según la ubicación del dispositivo. Elija entre las ubicaciones existentes. Si aún no tiene una ubicación disponible, consulte [Usar ubicaciones (límite de red)](use-network-locations.md) para obtener instrucciones.
+   > [!TIP]
+   > Las **ubicaciones** solo están disponibles para la plataforma de *administrador de dispositivos Android*.
 
-   - **Ubicaciones** *(Administrador de dispositivos Android)* : En la directiva, puede forzar el cumplimiento según la ubicación del dispositivo. Elija entre las ubicaciones existentes. ¿Aún no tiene una ubicación? En [Usar ubicaciones (límite de red) en Intune](use-network-locations.md) se ofrecen algunas instrucciones.  
+7. En la pestaña **Acciones de no cumplimiento**, especifique una secuencia de acciones que se aplicarán automáticamente a los dispositivos que no satisfagan esta directiva de cumplimiento.
 
-   - **Acciones en caso de incumplimiento**: En el caso de los dispositivos que no cumplen con las directivas de cumplimiento, puede agregar una secuencia de acciones para aplicar de manera automática. Puede cambiar la programación cuando el dispositivo se marca como no conforme, por ejemplo, después de un día. También puede configurar una segunda acción que envía un correo electrónico al usuario cuando el dispositivo es no conforme.
+   Puede agregar varias acciones y configurar programaciones y detalles adicionales para algunas de ellas. Por ejemplo, puede cambiar la programación de la acción predeterminada *Marcar el dispositivo como no conforme* para que se produzca después de un día. Luego, puede agregar una acción para enviar un correo electrónico al usuario cuando el dispositivo no sea compatible para advertir de ese estado. También puede agregar acciones que bloqueen o retiren dispositivos que no sean compatibles.
 
-     En [Adición de acciones en caso de incumplimiento](actions-for-noncompliance.md) se proporciona más información, por ejemplo, cómo crear un correo electrónico para notificar a los usuarios.
+   Para información sobre las acciones que se pueden configurar, consulte [Adición de acciones para dispositivos no compatibles](actions-for-noncompliance.md), donde se habla también de cómo crear correos electrónicos de notificación para enviarlos a los usuarios.
 
-     Por ejemplo, se usa la característica Ubicaciones y se agrega una ubicación en una directiva de cumplimiento. La acción predeterminada en caso de incumplimiento se aplica cuando se selecciona al menos una ubicación. Si el dispositivo no está conectado a las ubicaciones seleccionadas, se considera de inmediato como no conforme. Puede dar a los usuarios un período de gracia, por ejemplo, un día.
+   Otro ejemplo incluye el uso de ubicaciones en las que se agrega al menos una ubicación a una directiva de cumplimiento. En este caso, la acción predeterminada en caso de no cumplimiento se aplica cuando se selecciona al menos una ubicación. Si el dispositivo no está conectado a ninguna de las ubicaciones seleccionadas, se considera no compatible. Puede configurar la programación para dar a los usuarios un período de gracia, por ejemplo, un día.
 
-   - **Ámbito (etiquetas)** : Las etiquetas de ámbito son una excelente manera de filtrar las directivas por grupos específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Una vez que agrega la configuración, también puede agregar una etiqueta de ámbito a las directivas de cumplimiento. [Uso de etiquetas de ámbito para filtrar directivas](../fundamentals/scope-tags.md) es un recurso útil.
+8. En la pestaña **Etiquetas de ámbito**, seleccione etiquetas para filtrar las directivas por grupos concretos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Una vez que agrega la configuración, también puede agregar una etiqueta de ámbito a las directivas de cumplimiento. 
 
-4. Cuando termine, seleccione **Aceptar** > **Crear** para guardar los cambios. La directiva se crea y se muestra en la lista. A continuación, asigne la directiva a los grupos.
+   Para información sobre el uso de etiquetas de ámbito, consulte [Uso de etiquetas de ámbito para filtrar directivas](../fundamentals/scope-tags.md).
 
-## <a name="assign-the-policy"></a>Asignación de la directiva
+9. En la pestaña **Asignaciones**, asigne la directiva a los grupos.  
 
-Una vez que se crea una directiva, el paso siguiente es asignar la directiva a los grupos:
+   Seleccione **+ Seleccionar grupos para incluir** y, luego, asigne la directiva a uno o varios grupos. La directiva se aplicará a estos grupos cuando la guarde después del siguiente paso. 
 
-1. Elija una directiva que haya creado. Las directivas existentes están en **Dispositivos** > **Directivas de cumplimiento** > **Directivas**.
+10. En la pestaña **Revisar + crear**, revise la configuración y seleccione **Crear** cuando esté listo para guardar la directiva de cumplimiento.  
 
-2. Seleccione la *directiva* > **Asignaciones**. Puede incluir o excluir grupos de seguridad de Azure Active Directory (AD).
+    Los usuarios o dispositivos de destino de la directiva se evalúan para comprobar su cumplimiento cuando se registran en Intune.
 
-3. Elija **Grupos seleccionados** para ver los grupos de seguridad de Azure AD. Seleccione los grupos a los que quiere aplicar esta directiva > Elija **Guardar** para implementar la directiva.
+<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
 
-Los usuarios o dispositivos de destino de la directiva se evalúan para comprobar su compatibilidad cuando se registran en Intune.
+### Evaluate how many users are targeted
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Evaluación de cuántos usuarios se rigen por una directiva
+When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
 
-Cuando asigna la directiva, también puede **evaluar** cuántos usuarios se verán afectados. Esta característica calcula los usuarios, no los dispositivos.
+1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
 
-1. En Intune, seleccione **Dispositivos** > **Directivas de cumplimiento** > **Directivas**.
+2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
 
-2. Seleccione una *directiva* > **Asignaciones** > **Evaluar**. Un mensaje muestra a cuántos usuarios se aplica esta directiva.
-
-Si el botón **Evaluar** está atenuado, asegúrese de que la directiva se asignó a uno o más grupos.
-
-<!-- ## Actions for noncompliance
-
-For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
-
-[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
-
-For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
-
-## Scope tags
-
-Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
 -->
 
 ## <a name="refresh-cycle-times"></a>Tiempos de ciclo de actualización

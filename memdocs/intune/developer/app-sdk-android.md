@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363777"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086329"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guía para desarrolladores de Android acerca del SDK para aplicaciones de Microsoft Intune
 
@@ -297,7 +297,7 @@ Además de las clases base, algunas clases que la aplicación podría usar sin t
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ Además de las clases base, algunas clases que la aplicación podría usar sin t
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -596,7 +596,7 @@ El parámetro `service` debe ser uno de los siguientes valores `SaveLocation`:
 
 `username` debe ser el UPN/nombre de usuario/correo electrónico asociado al servicio en la nube en donde se guarda (*no* necesariamente igual al usuario propietario del documento que se guarda). Use NULL si no existe una asignación entre el UPN de AAD y el nombre de usuario del servicio en la nube o si no se conoce el nombre de usuario. `SaveLocation.LOCAL` no es un servicio en la nube y, por tanto, siempre debe usarse con un parámetro de nombre de usuario `null`.
 
-El método anterior para determinar si la directiva de un usuario le permite guardar datos en diversas ubicaciones era `getIsSaveToPersonalAllowed()` dentro de la misma **AppPolicy**. Esta función está **en desuso** y no se debe usar; la invocación siguiente equivale a `getIsSaveToPersonalAllowed()`:
+El método anterior para determinar si la directiva de un usuario le permite guardar datos en diversas ubicaciones era `getIsSaveToPersonalAllowed()` dentro de la misma clase **AppPolicy**. Esta función está **en desuso** y no se debe usar; la invocación siguiente equivale a `getIsSaveToPersonalAllowed()`:
 
 ```java
 MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(SaveLocation.LOCAL, null);
@@ -970,7 +970,7 @@ La primera vez que se registra una cuenta, comienza con el estado `PENDING`, lo 
 | `NOT_LICENSED` | El usuario no cuenta con licencia para Intune, o bien se produjo un error al intentar ponerse en contacto con el servicio MAM de Intune.  La aplicación debe continuar con un estado no administrado (normal) y no se debe bloquear el usuario.  Las inscripciones se reintentarán periódicamente ante la eventualidad de que el usuario obtenga una licencia en el futuro. |
 | `ENROLLMENT_SUCCEEDED` | El intento de inscripción se completó con éxito, o bien el usuario ya está inscrito.  En caso de que se trate de una inscripción correcta, se enviará una notificación de actualización de política antes de esta notificación.  Se debe permitir el acceso a los datos corporativos. |
 | `ENROLLMENT_FAILED` | Error al intentar la inscripción.  Puede encontrar más detalles en los registros del dispositivo.  En este estado, la aplicación no debe permitir el acceso a los datos corporativos, ya que anteriormente se determinó que el usuario no tiene licencia para Intune.|
-| `WRONG_USER` | Solo un usuario por dispositivo puede inscribir una aplicación con el servicio MAM. Este resultado indica que el usuario para el que se ha entregado este resultado (el segundo usuario) es destinatario de la directiva de MAM, pero que ya hay otro usuario inscrito. Dado que no se puede aplicar la directiva de MAM para el segundo usuario, la aplicación no debe permitir el acceso a los datos de este (posiblemente mediante la eliminación del usuario de la aplicación) a menos o hasta que la inscripción de este usuario se realice correctamente en un momento posterior. A la vez que entrega este resultado `WRONG_USER`, MAM le pregunta si se debe quitar la cuenta existente. Si el usuario responde de forma afirmativa, es posible inscribir al segundo un poco más tarde. Siempre que el segundo usuario permanezca registrado, MAM vuelve a intentar la inscripción periódicamente. |
+| `WRONG_USER` | Solo un usuario por dispositivo puede inscribir una aplicación con el servicio MAM. Este resultado indica que el usuario para el que se ha entregado este resultado (el segundo usuario) es destinatario de la directiva de MAM, pero que ya hay otro usuario inscrito. Dado que no se puede aplicar la directiva de MAM al segundo usuario, la aplicación no debe permitir el acceso a los datos de este ( y posiblemente lo quitará de la aplicación) a menos o hasta que la inscripción de este usuario se realice correctamente en un momento posterior. A la vez que entrega este resultado `WRONG_USER`, MAM le pregunta si se debe quitar la cuenta existente. Si el usuario responde de forma afirmativa, es posible inscribir al segundo un poco más tarde. Siempre que el segundo usuario permanezca registrado, MAM vuelve a intentar la inscripción periódicamente. |
 | `UNENROLLMENT_SUCCEEDED` | La anulación de inscripción se realizó correctamente.|
 | `UNENROLLMENT_FAILED` | Error en la solicitud de anulación de inscripción.  Puede encontrar más detalles en los registros del dispositivo. En general, esto no ocurre si la aplicación pasa un UPN válido (es decir, ni nulo ni vacío). No hay ninguna corrección directa ni confiable que pueda llevar a cabo la aplicación. Si se recibe este valor al anular el registro de un UPN válido, notifíquelo como un error al equipo de MAM de Intune.|
 | `PENDING` | El intento de inscripción inicial para el usuario está en curso.  La aplicación puede bloquear el acceso a los datos corporativos hasta que se conozca el resultado de la inscripción, pero no es necesario que lo haga. |
@@ -1029,7 +1029,7 @@ public interface MAMComplianceManager {
 
 Se llama al método `remediateCompliance()` para intentar poner la aplicación en administración a fin de cumplir las condiciones para que AAD conceda el token solicitado.  Se pueden extraer los cuatro primeros parámetros de la excepción recibida por el método `AuthenticationCallback.onError()` de ADAL (vea el ejemplo de código siguiente).  El último parámetro es un valor booleano que controla si se muestra una experiencia de usuario durante el intento de cumplimiento.  Se trata de una sencilla interfaz de tipo de bloqueo de progreso que se ofrece de forma predeterminada para aplicaciones que no tienen que mostrar una experiencia de usuario personalizada durante esta operación.  Solo se bloqueará mientras se esté realizando la corrección de cumplimiento y no mostrará el resultado final.  La aplicación debe registrar un receptor de notificación para controlar el éxito o error del intento de corrección de cumplimiento (ver más adelante).
 
-El método `remediateCompliance()` puede realizar una inscripción de MAM como parte del establecimiento del cumplimiento.  La aplicación puede recibir una notificación de inscripción si ha registrado un receptor de notificación para las notificaciones de inscripción.  El `MAMServiceAuthenticationCallback` registrado de la aplicación hará que se llame a su método `acquireToken()` para obtener un token para la inscripción de MAM. Se llamará a `acquireToken()` antes de que la aplicación haya adquirido su propio token, por lo que es posible que las tareas de creación de cuentas o contabilidad que la aplicación realice después de una adquisición correcta de token no se hayan realizado todavía.  La devolución de llamada debe poder adquirir un token en este caso.  Si no se puede devolver un token de `acquireToken()`, se producirá un error en el intento de corrección de cumplimiento.  Si se llama a `updateToken()` más adelante con un token válido para el recurso solicitado, la corrección de cumplimiento se volverá a intentar inmediatamente con el token especificado.
+El método `remediateCompliance()` puede realizar una inscripción de MAM como parte del establecimiento del cumplimiento.  La aplicación puede recibir una notificación de inscripción si ha registrado un receptor de notificación para las notificaciones de inscripción.  El elemento `MAMServiceAuthenticationCallback` registrado de la aplicación hará que se llame a su método `acquireToken()` para obtener un token para la inscripción de MAM. Se llamará a `acquireToken()` antes de que la aplicación haya adquirido su propio token, por lo que es posible que las tareas de creación de cuentas o contabilidad que la aplicación realice después de una adquisición correcta de token no se hayan realizado todavía.  La devolución de llamada debe poder adquirir un token en este caso.  Si no se puede devolver un token de `acquireToken()`, se producirá un error en el intento de corrección de cumplimiento.  Si se llama a `updateToken()` más adelante con un token válido para el recurso solicitado, la corrección de cumplimiento se volverá a intentar inmediatamente con el token especificado.
 
 > [!NOTE]
 > La adquisición silenciosa del token todavía será posible en `acquireToken()` porque ya se habrá indicado al usuario que instale el agente y registre el dispositivo antes de que se reciba el error `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED`.  Esto hace que el agente tenga un token de actualización válido en su caché, lo que permite realizar correctamente la adquisición silenciosa del token solicitado.
@@ -1079,7 +1079,7 @@ El método `getComplianceStatus()` devuelve el resultado del intento de correcci
 | PENDING | El intento de corrección de cumplimiento no se ha realizado porque aún no se había recibido la respuesta de estado del servicio cuando se superó el límite de tiempo. La aplicación debería volver a intentar la adquisición de tokens más tarde. |
 | COMPANY_PORTAL_REQUIRED | El Portal de empresa debe estar instalado en el dispositivo para que la corrección de cumplimiento se realice correctamente.  Si el Portal de empresa ya está instalado en el dispositivo, debe reiniciarse la aplicación.  En este caso, se mostrará un cuadro de diálogo que pide al usuario que reinicie la aplicación. |
 
-Si el estado de cumplimiento es `MAMCAComplianceStatus.COMPLIANT`, la aplicación debe volver a iniciar la adquisición de tokens original (para su propio recurso). Si el intento de corrección de cumplimiento no se ha realizado, los métodos `getComplianceErrorTitle()` y `getComplianceErrorMessage()` devolverán las cadenas localizadas que la aplicación puede mostrar al usuario final, si así lo decide.  La mayoría de los casos de error no los puede solucionar la aplicación, por lo que en general puede ser mejor no crear la cuenta o no iniciar sesión y permitir que el usuario vuelva a intentarlo más tarde.  Si un error persiste, los registros MAM pueden ayudar a determinar la causa.  El usuario final puede enviar los registros mediante las instrucciones que se indican [aquí](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "Enviar registros al equipo de soporte técnico de su empresa por correo electrónico").
+Si el estado de cumplimiento es `MAMCAComplianceStatus.COMPLIANT`, la aplicación debe volver a iniciar la adquisición de tokens original (para su propio recurso). Si el intento de corrección de cumplimiento no se ha realizado, los métodos `getComplianceErrorTitle()` y `getComplianceErrorMessage()` devolverán las cadenas localizadas que la aplicación puede mostrar al usuario final, si así lo decide.  La mayoría de los casos de error no los puede solucionar la aplicación, por lo que en general puede ser mejor no crear la cuenta o no iniciar sesión y permitir que el usuario vuelva a intentarlo más tarde.  Si un error persiste, los registros MAM pueden ayudar a determinar la causa.  El usuario final puede enviar los registros mediante las instrucciones que se indican [aquí](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Enviar registros al equipo de soporte técnico de su empresa por correo electrónico").
 
 Como `MAMComplianceNotification` extiende `MAMUserNotification`, también está disponible la identidad del usuario para el que se ha intentado la inscripción.
 
@@ -1343,7 +1343,7 @@ Si no invalida `onSwitchMAMIdentityComplete` (o llama al método `super`), un c
 Además de la posibilidad de que la aplicación establezca la identidad, un subproceso o la identidad de un contexto pueden cambiar en función de la entrada de datos desde otra aplicación administrada por Intune que tenga la directiva de protección de la aplicación.
 
 #### <a name="examples"></a>Ejemplos
-1. Si una actividad se inicia desde un `Intent` enviado desde otra aplicación MAM, la identidad de la actividad se establecerá en función de la identidad efectiva de la otra aplicación en el punto en que se envió el `Intent`.
+1. Si una actividad se inicia desde un objeto `Intent` enviado desde otra aplicación MAM, la identidad de la actividad se establecerá en función de la identidad efectiva de la otra aplicación en el punto en que se envió el objeto `Intent`.
 
 2. En el caso de los servicios, la identidad del subproceso se establecerá de forma similar para la duración de una llamada `onStart` o `onBind`. Las llamadas a `Binder` devueltas por `onBind` también establecerán temporalmente la identidad del subproceso.
 
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ El SDK de Intune mantiene el contrato proporcionado por la API de Android, aunqu
 El SDK para aplicaciones de Intune para Android no controla la recopilación de datos de su aplicación. La aplicación Portal de empresa registra de forma predeterminada los datos generados por el sistema. Estos datos se envían a Microsoft Intune. Según la Directiva de Microsoft, no se recopilan datos personales.
 
 > [!NOTE]
-> Si los usuarios finales deciden no enviar estos datos, deberán desactivar la telemetría en la sección Configuración de la aplicación Portal de empresa. Para obtener más información, consulte [Desactivar la recopilación de datos de uso de Microsoft](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+> Si los usuarios finales deciden no enviar estos datos, deberán desactivar la telemetría en la sección Configuración de la aplicación Portal de empresa. Para obtener más información, consulte [Desactivar la recopilación de datos de uso de Microsoft](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="recommended-android-best-practices"></a>Procedimientos recomendados de Android
 

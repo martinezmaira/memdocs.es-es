@@ -1,11 +1,11 @@
 ---
 title: 'Configuración de características de dispositivos iOS/iPadOS en Microsoft Intune: Azure | Microsoft Docs'
-description: Consulte todas las opciones para configurar AirPrint, el diseño de la pantalla principal, las notificaciones de aplicaciones, el dispositivo compartido, el inicio de sesión único y la configuración de filtro de contenido web en Microsoft Intune en dispositivos iOS y iPadOS. Use estas opciones en un perfil de configuración de dispositivo para configurar en dispositivos iOS/iPadOS el uso de estas características de Apple en su organización.
+description: Consulte todas las opciones para configurar AirPrint, el diseño de la pantalla principal, las notificaciones de aplicaciones, los dispositivos compartidos, el inicio de sesión único y la configuración de filtro de contenido web en Microsoft Intune en dispositivos iOS y iPadOS. Use estas opciones en un perfil de configuración de dispositivo para configurar en dispositivos iOS/iPadOS el uso de estas características de Apple en su organización.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361086"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086957"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
-Intune incluye algunas configuraciones integradas para permitir que los usuarios de iOS/iPadOS usen diferentes características de Apple en sus dispositivos. Por ejemplo, los administradores pueden controlar cómo los usuarios de iOS/iPadOS usan impresoras AirPrint, agregan aplicaciones y carpetas a la base y páginas en la pantalla principal, muestran notificaciones de aplicación, muestran detalles de etiqueta de recursos en la pantalla de bloqueo, usan la autenticación de inicio de sesión único y autentican usuarios con certificados.
+Intune incluye algunas configuraciones integradas para permitir que los usuarios de iOS/iPadOS usen diferentes características de Apple en sus dispositivos. Por ejemplo, puede controlar las impresoras AirPrint, agregar aplicaciones y carpetas a la base y páginas de la pantalla principal, mostrar notificaciones de aplicación, mostrar detalles de etiqueta de recursos en la pantalla de bloqueo, usar la autenticación de inicio de sesión único y usar la autenticación de certificados.
 
 Use estas características para controlar los dispositivos iOS/iPadOS como parte de la solución de administración de dispositivos móviles (MDM).
 
@@ -48,7 +48,7 @@ En este artículo se enumeran estas opciones de configuración y se describe lo 
 - **Dirección IP**: escriba la dirección IPv4 o IPv6 de la impresora. Si usa nombres de host para identificar impresoras, puede obtener la dirección IP haciendo ping a la impresora en el terminal. En la sección Obtención de la dirección IP y la ruta de acceso (en este artículo) se proporcionan más detalles.
 - **Ruta de acceso**: La ruta de acceso suele ser `ipp/print` para las impresoras de la red. En la sección Obtención de la dirección IP y la ruta de acceso (en este artículo) se proporcionan más detalles.
 - **Puerto**: escriba el puerto de escucha del destino de AirPrint. Si se deja esta propiedad en blanco, AirPrint usa el puerto predeterminado. Disponible en iOS 11.0+ y iPadOS 13.0+.
-- **TLS**: elija **Habilitar** para proteger las conexiones AirPrint con Seguridad de la capa de transporte (TLS). Disponible en iOS 11.0+ y iPadOS 13.0+.
+- **TLS**: **Habilitar** protege las conexiones AirPrint con Seguridad de la capa de transporte (TLS). Disponible en iOS 11.0+ y iPadOS 13.0+.
 
 Para agregar servidores de AirPrint, puede:
 
@@ -81,7 +81,7 @@ Esta característica se aplica a:
 
 ### <a name="dock"></a>Acoplar
 
-Use la opción **Acoplar**, para agregar hasta seis elementos o carpetas a la base de la pantalla de iOS/iPadOS. Muchos dispositivos admiten menos elementos. Por ejemplo, los dispositivos iPhone admiten hasta cuatro elementos. En este caso, en el dispositivo solo se muestran los primeros cuatro elementos que agrega.
+Use la configuración **Acoplar**, para agregar hasta seis elementos o carpetas a la base de la pantalla. Muchos dispositivos admiten menos elementos. Por ejemplo, los dispositivos iPhone admiten hasta cuatro elementos. En este caso, en el dispositivo solo se muestran los primeros cuatro elementos que agrega.
 
 Puede agregar hasta **seis** elementos (aplicaciones y carpetas combinadas) para la base del dispositivo.
 
@@ -283,7 +283,31 @@ Esta característica se aplica a:
 - **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO. Las opciones son:
 
   - **No configurado**: no se usan las extensiones de la aplicación. Para deshabilitar una extensión de la aplicación, puede cambiar el tipo de extensión de la aplicación de SSO a **No configurado**.
-  - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación modernos. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
+  - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
+
+    En dispositivos iOS/iPad 13.0 +, puede configurar la **extensión de aplicación de inicio de sesión único de Microsoft Azure**  mediante este tipo de extensión de aplicación de SSO de redirección. La extensión de Microsoft Azure AD permite el inicio de sesión único entre las aplicaciones de Microsoft y las aplicaciones de la organización que usan Azure AD para la autenticación. La extensión de Azure AD actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario final. Todas las aplicaciones que anteriormente usaban autenticación asincrónica con la aplicación Microsoft Authenticator seguirán recibiendo SSO con la extensión de SSO. La extensión de SSO de Azure AD no es compatible todavía con el SSO del explorador. Para obtener más información sobre SSO y el agente de autenticación de iOS/iPadOS, consulte [Configuración del inicio de sesión único en macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    **Para configurar la extensión de Microsoft Azure AD en iOS:**
+
+    1. Establezca **Tipo de extensión de la aplicación de SSO** en **Redirigir**.
+    2. Establezca **Id. de extensión** en `com.microsoft.azureauthenticator.ssoextension`.
+    3. Establezca **Id. de equipo** en `SGGM6D27TK`.
+    4. En el parámetro **Direcciones URL**, escriba las siguientes direcciones URL:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > Para lograr el inicio de sesión único con la extensión de Microsoft Azure AD de iOS/iPadOS, instale primero la aplicación Microsoft Authenticator de iOS/iPad en el dispositivo. El autenticador entrega la extensión de Azure AD al dispositivo y la configuración de la extensión de la aplicación de SSO de MDM activa la extensión de Azure AD. Una vez que Authenticator y el perfil de extensión de aplicación de SSO están instalados en el dispositivo, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo.
+
   - **Credenciales**: use una extensión de la aplicación de credenciales genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación de desafío y respuesta. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
   - **Kerberos**: use la extensión integrada de Kerberos de Apple, que se incluye en iOS 13.0 y iPadOS 13.0, y versiones posteriores. Esta opción es una versión específica de Kerberos de la extensión de la aplicación de **Credenciales**.
 
@@ -303,7 +327,7 @@ Esta característica se aplica a:
   - Todos los dominios de los perfiles de Intune de la extensión de la aplicación de inicio de sesión único deben ser exclusivos. No se puede repetir un dominio en ningún perfil de extensión de la aplicación de inicio de sesión, aunque se usen distintos tipos de extensiones de la aplicación de SSO.
   - Estos dominios no distinguen mayúsculas de minúsculas.
 
-- **Direcciones URL** (solo redireccionamiento): escriba los prefijos de dirección URL de los proveedores de identidades en cuyo nombre la extensión de la aplicación de redireccionamiento realiza el inicio de sesión único. Cuando un usuario se redirige a estas direcciones URL, la extensión de la aplicación de SSO intervendrá y solicitará el inicio de sesión único.
+- **Direcciones URL** (solo redireccionamiento): escriba los prefijos de dirección URL de los proveedores de identidades en cuyo nombre la extensión de la aplicación de redireccionamiento usa el inicio de sesión único. Cuando los usuarios se redirige a estas direcciones URL, la extensión de la aplicación de inicio de sesión único interviene y solicita el inicio de sesión único.
 
   - Todas las direcciones URL de los perfiles de extensión de la aplicación de inicio de sesión único de Intune deben ser únicas. No se puede repetir un dominio en ningún perfil de extensión de la aplicación de SSO, aunque se usen distintos tipos de extensiones de la aplicación de SSO.
   - Las direcciones URL deben comenzar por http:// o https://.
@@ -320,7 +344,7 @@ Esta característica se aplica a:
 
   - **Agregar**: seleccione esta opción para agregar las claves de configuración.
 
-- **Uso de la cadena de claves** (solo Kerberos): elija **Bloquear** para impedir que las contraseñas se guarden y almacenen en la cadena de claves. Si está bloqueado, no se le pedirá al usuario que guarde la contraseña y tendrá que volver a escribirla cuando expire el vale de Kerberos. **No configurado** (valor predeterminado) permite guardar y almacenar las contraseñas en la cadena de claves. No se pedirá a los usuarios que vuelvan a escribir la contraseña cuando expire el vale.
+- **Uso de la cadena de claves** (solo Kerberos): elija **Bloquear** para impedir que las contraseñas se guarden y almacenen en la cadena de claves. Si está bloqueado, no se le pedirá a los usuarios que guarde la contraseña y tendrá que volver a escribirla cuando expire el vale de Kerberos. **No configurado** (valor predeterminado) permite guardar y almacenar las contraseñas en la cadena de claves. No se pedirá a los usuarios que vuelvan a escribir la contraseña cuando expire el vale.
 - **Face ID, Touch ID o código de acceso** (solo Kerberos): **Requerir** obliga a los usuarios a usar su Face ID, Touch ID o código de acceso del dispositivo cuando se necesitan las credenciales para actualizar el vale de Kerberos. **No configurado** (valor predeterminado) no exige que los usuarios utilicen información biométrica o el código de acceso del dispositivo para actualizar el vale de Kerberos. Si **Uso de la cadena de claves** está bloqueado, no se aplica esta configuración.
 - **Dominio predeterminado** (solo Kerberos): elija **Habilitar** para establecer el valor de **Dominio** que ha especificado como dominio predeterminado. **No configurado** (valor predeterminado) no establece un dominio predeterminado.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8cd8deb04dc939ed3dc742c9066c6dbfd4f51f3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ef2c4593ad9809614b7e0d497745065fef12df69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363816"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086384"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Importar la configuración de Wi-Fi para dispositivos Windows en Intune
 
@@ -31,6 +31,16 @@ Se aplica a:
 - Windows 10 y versiones posteriores
 - Windows 10 Desktop o Mobile
 - Windows Holographic for Business
+
+## <a name="before-you-begin"></a>Antes de comenzar
+
+[Creación de un perfil de dispositivo en Microsoft Intune](wi-fi-settings-configure.md). El nombre del perfil **debe** ser el mismo que el del atributo de nombre del archivo XML del perfil de Wi-Fi. De lo contrario, se producirá un error.
+
+## <a name="import-the-wi-fi-settings-into-intune"></a>Importación de la configuración de Wi-Fi en Intune
+
+- **Nombre de la conexión**: escriba un nombre para la conexión Wi-Fi. Este nombre se muestra a los usuarios cuando exploran las redes Wi-Fi disponibles.
+- **XML de perfil**: seleccione el botón Examinar y luego el archivo XML que contiene la configuración del perfil de Wi-Fi que quiere importar.
+- **Contenido del archivo**: muestra el código XML del perfil de configuración seleccionado.
 
 ## <a name="export-wi-fi-settings-from-a-windows-device"></a>Exportación de la configuración de Wi-Fi de un dispositivo Windows
 
@@ -43,30 +53,10 @@ En un equipo de Windows que ya tenga instalado el perfil de Wi-Fi necesario, lle
 3. Ejecute el comando `netsh wlan show profiles`. Anote el nombre del perfil que quiere exportar. En este ejemplo, el nombre de perfil es **WiFiName**.
 4. Ejecute el comando `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. Este comando crea un archivo de perfil de Wi-Fi denominado **Wi-Fi-WiFiName.xml** en la carpeta de destino.
 
-## <a name="import-the-wi-fi-settings-into-intune"></a>Importación de la configuración de Wi-Fi en Intune
-
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
-3. Escriba los valores siguientes:
-
-    - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. El nombre **debe** ser el mismo que el del atributo de nombre del archivo XML del perfil de Wi-Fi. De lo contrario, se producirá un error.
-    - **Descripción**: escriba una descripción con información general sobre la configuración y otros detalles importantes.
-    - **Plataforma**: seleccione **Windows 8.1 y versiones posteriores**.
-    - **Tipo de perfil**: seleccione **Importación de Wi-Fi**.
-
-    > [!IMPORTANT]
-    > - Si va a exportar un perfil de Wi-Fi que incluye una clave previamente compartida, **debe** agregar `key=clear` al comando. Por ejemplo, escriba `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
-    > - Si se usa una clave precompartida con Windows 10, se produce un error de corrección en Intune. Cuando esto sucede, el perfil de Wi-Fi se asigna correctamente al dispositivo y el perfil funciona según lo previsto.
-    > - Si exporta un perfil de Wi-Fi que incluye una clave previamente compartida, asegúrese de que el archivo esté protegido. La clave tiene texto sin formato, por lo que es su responsabilidad protegerla.
-
-4. Escriba los valores siguientes:
-
-    - **Nombre de la conexión**: escriba un nombre para la conexión Wi-Fi. Este nombre se muestra a los usuarios cuando exploran las redes Wi-Fi disponibles.
-    - **XML de perfil**: seleccione el botón Examinar y luego el archivo XML que contiene la configuración del perfil de Wi-Fi que quiere importar.
-    - **Contenido del archivo**: muestra el código XML del perfil de configuración seleccionado.
-
-5. Haga clic en **Aceptar** para guardar los cambios.
-6. Cuando termine, seleccione **Aceptar** > **Crear** para crear el perfil de Intune. Una vez hecho, el perfil aparece en la lista **Dispositivos - Perfiles de configuración**.
+> [!IMPORTANT]
+> - Si va a exportar un perfil de Wi-Fi que incluye una clave previamente compartida, **debe** agregar `key=clear` al comando. Por ejemplo, escriba `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+> - Si se usa una clave precompartida con Windows 10, se produce un error de corrección en Intune. Cuando esto sucede, el perfil de Wi-Fi se asigna correctamente al dispositivo y el perfil funciona según lo previsto.
+> - Si exporta un perfil de Wi-Fi que incluye una clave previamente compartida, asegúrese de que el archivo esté protegido. La clave tiene texto sin formato, por lo que es su responsabilidad protegerla.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

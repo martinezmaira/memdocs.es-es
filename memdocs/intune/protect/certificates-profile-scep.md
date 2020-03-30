@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353624"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084956"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creación y asignación de perfiles de certificado SCEP en Intune
 
@@ -35,28 +35,31 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Seleccione **Dispositivos** > **Perfil de configuración** > **Crear perfil**.
+2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
 3. Escriba las propiedades siguientes:
+   - **Plataforma**: seleccione la plataforma de los dispositivos.
+   - **Perfil**: Seleccione **SCEP certificate** (Certificado SCEP).
 
-4. Escriba un **Nombre** y una **Descripción** para el perfil de certificado SCEP.
+     Para la plataforma **Android Enterprise**, *Tipo de perfil* se divide en dos categorías: *Solo el propietario del dispositivo* y *Solo perfil de trabajo*. Asegúrese de seleccionar el perfil de certificado de SCEP correcto para los dispositivos que administra.  
 
-5. En la lista desplegable **Plataforma**, seleccione una [plataforma de dispositivo compatible](certificates-configure.md#supported-platforms-and-certificate-profiles) para este certificado SCEP.
+     Los perfiles de certificado de SCEP para *Solo el propietario del dispositivo* tienen las limitaciones siguientes:
 
-6. En la lista desplegable **Tipos de perfil**, seleccione **Certificado SCEP**.  
+      1. En Supervisión, la creación de informes de certificados no está disponible para los perfiles de certificado de SCEP de propietario del dispositivo.
 
-   Para la plataforma **Android Enterprise**, *Tipo de perfil* se divide en dos categorías: *Solo el propietario del dispositivo* y *Solo perfil de trabajo*. Asegúrese de seleccionar el perfil de certificado de SCEP correcto para los dispositivos que administra.  
+      2. Intune no se puede usar para revocar certificados aprovisionados por perfiles de certificado SCEP para los propietarios de dispositivos. La revocación se puede administrar a través de un proceso externo o directamente con la entidad de certificación.
 
-   Los perfiles de certificado de SCEP para *Solo el propietario del dispositivo* tienen las limitaciones siguientes:
+      3. En el caso de dispositivos Android Enterprise dedicado, los perfiles de certificado SCEP solo se admiten para la configuración de red Wi-Fi y la autenticación.  Los perfiles de certificado SCEP en dispositivos Android Enterprise dedicados no se admiten para la autenticación de VPN o de aplicación.
 
-   1. En Supervisión, la creación de informes de certificados no está disponible para los perfiles de certificado de SCEP de propietario del dispositivo.
+4. Seleccione **Crear**.
 
-   2. Intune no se puede usar para revocar certificados aprovisionados por perfiles de certificado SCEP para los propietarios de dispositivos. La revocación se puede administrar a través de un proceso externo o directamente con la entidad de certificación. 
+5. En **Básico**, escriba las propiedades siguientes:
+   - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil sería *Perfil de SCEP en toda la empresa*.
+   - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
 
-   4. En el caso de dispositivos Android Enterprise dedicado, los perfiles de certificado SCEP solo se admiten para la configuración de red Wi-Fi y la autenticación.  Los perfiles de certificado SCEP en dispositivos Android Enterprise dedicados no se admiten para la autenticación de VPN o de aplicación.   
+6. Seleccione **Siguiente**.
 
-   
-7. Seleccione **Configuración** y, después, complete las opciones de configuración siguientes:
+7. Seleccione **Configuración** y, después, realice las siguientes configuraciones:
 
    - **Tipo de certificado**:
 
@@ -209,7 +212,7 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
 
    - **Certificado raíz**:
 
-     Seleccione el *perfil de certificado de confianza* que ha configurado y asignado antes a los usuarios y dispositivos correspondientes para este perfil de certificado SCEP. El perfil de certificado de confianza se usa para aprovisionar usuarios y dispositivos con el certificado de entidad de certificación raíz de confianza. Para obtener información sobre el perfil de certificado de confianza, vea [Exportación del certificado de entidad de certificación raíz de confianza](certificates-configure.md#export-the-trusted-root-ca-certificate) y [Creación de perfiles de certificado de confianza](certificates-configure.md#create-trusted-certificate-profiles) en *Uso de certificados para la autenticación en Intune*. Si tiene una entidad de certificación raíz y una entidad de certificación emisora, seleccione el perfil de certificado raíz de confianza que está asociado a la entidad de certificación emisora.
+     Seleccione el *perfil de certificado de confianza* que ha configurado y asignado antes a los usuarios y dispositivos correspondientes para este perfil de certificado SCEP. El perfil de certificado de confianza se usa para aprovisionar usuarios y dispositivos con el certificado de entidad de certificación raíz de confianza. Para obtener información sobre el perfil de certificado de confianza, vea [Exportación del certificado de entidad de certificación raíz de confianza](certificates-configure.md#export-the-trusted-root-ca-certificate) y [Creación de perfiles de certificado de confianza](certificates-configure.md#create-trusted-certificate-profiles) en *Uso de certificados para la autenticación en Intune*. Si tiene una entidad de certificación raíz y una entidad de certificación emisora, seleccione el perfil de certificado raíz de confianza que valida la segunda.
 
    - **Uso mejorado de clave**:
 
@@ -223,7 +226,21 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
 
      especifique una o varias direcciones URL para los servidores SCEP que emiten certificados mediante SCEP. Por ejemplo, escriba algo como *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . Puede agregar direcciones URL de SCEP adicionales para el equilibrio de carga según sea necesario, ya que las direcciones URL se insertan de forma aleatoria en el dispositivo con el perfil. Si uno de los servidores SCEP no está disponible, se producirá un error en la solicitud de SCEP y es posible que, en las comprobaciones posteriores del dispositivo, la solicitud de certificado se realice en el mismo servidor inactivo.
 
-8. Seleccione **Aceptar** y, luego, **Crear**. El perfil se crea y aparece en la lista *Configuración del dispositivo - Perfiles*.
+8. Seleccione **Siguiente**.
+
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+   Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. (*Se aplica solo a Windows 10*) En **Reglas de aplicación**, especifique las reglas de aplicación para restringir la asignación de este perfil. Puede elegir asignar o no asignar el perfil en función de la edición del sistema operativo o la versión de un dispositivo.
+
+   Para más información, consulte [Reglas de aplicabilidad](../configuration/device-profile-create.md#applicability-rules) en *Creación de un perfil de dispositivo en Microsoft Intune*.
+
+12. En **Revisar y crear**, revise la configuración. Si selecciona Crear, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Evitar solicitudes de firma de certificado con caracteres de escape especiales
 

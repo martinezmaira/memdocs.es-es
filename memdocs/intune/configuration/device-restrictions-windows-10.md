@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8586e5c25ec3db4a736d84381e691ecebe6fae32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361684"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220105"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para permitir o restringir características mediante Intune
 
@@ -435,7 +435,7 @@ Estas opciones de configuración usan [DeviceLock policy CSP](https://docs.micro
   - **Longitud mínima de la contraseña**: escriba el número mínimo de caracteres o los caracteres requeridos, de 4 a 16. Por ejemplo, escriba `6` para exigir al menos seis caracteres de longitud de la contraseña.
   
     > [!IMPORTANT]
-    > Cuando el requisito de contraseña se cambia a un escritorio de Windows, los usuarios se ven afectados la próxima vez que inician sesión, porque es entonces cuando el dispositivo pasa de inactivo a activo. Los usuarios con contraseñas que cumplan el requisito de todos modos tendrán que cambiarlas.
+    > Cuando el requisito de contraseña se cambia en un escritorio de Windows, los usuarios se ven afectados la próxima vez que inician sesión, porque es entonces cuando el dispositivo pasa de inactivo a activo. Los usuarios con contraseñas que cumplan el requisito de todos modos tendrán que cambiarlas.
     
   - **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de errores de autenticación permitidos antes de que se pueda borrar el dispositivo, hasta 11. El número válido que escriba depende de la edición. [CSP de DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) enumera los valores admitidos. `0` (cero) puede deshabilitar la funcionalidad de borrado del dispositivo.
 
@@ -898,6 +898,11 @@ Estas opciones de configuración usan [defender policy CSP](https://docs.microso
   [CSP de Defender/ThreatSeverityDefaultAction](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Exclusiones del antivirus de Microsoft Defender
+
+Puede excluir determinados archivos de los exámenes de antivirus de Microsoft Defender mediante la modificación de las listas de exclusión. **Por lo general, no es necesario aplicar exclusiones**. El antivirus de Microsoft Defender incluye una serie de exclusiones automáticas basadas en comportamientos de sistema operativo conocidos y en archivos de administración típicos, como los que se usan en la administración empresarial, la administración de bases de datos y otros escenarios y situaciones empresariales.
+
+> [!WARNING]
+> **La definición de exclusiones reduce la protección que ofrece el antivirus de Microsoft Defender**. Evalúe siempre los riesgos asociados a la implementación de exclusiones. Excluya solo los archivos que sabe que no son malintencionados.
 
 - **Archivos y carpetas para excluir de exámenes y protección en tiempo real**: Agrega uno o varios archivos y carpetas como **C:\Path** o **%ProgramFiles%\Path\filename.exe** a la lista de exclusiones. Estos archivos y carpetas no se incluyen en ningún examen en tiempo real ni programado.
 - **Extensiones de archivo para excluir de exámenes y protección en tiempo real**: Agrega una o varias extensiones de archivo como **jpg** o **txt** a la lista de exclusiones. Los archivos con estas extensiones no se incluyen en los exámenes en tiempo real ni programados.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c30cc122931588149120efa10710627826c50e2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219833"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Búsqueda del usuario primario de un dispositivo de Intune
 
@@ -43,8 +43,11 @@ El usuario primario de un dispositivo se puede actualizar para dispositivos Wind
 3. Seleccione un nuevo usuario y elija **Seleccionar**.
 
 Una vez actualizado el usuario primario, también se actualizará las hojas de dispositivos de Intune y Azure AD.
-
-No se puede cambiar el usuario primario en dispositivos Windows 10 administrados conjuntamente.
+>[!NOTE]
+>1. Las actualizaciones del usuario principal en el Administrador de puntos de conexión y Azure AD pueden tardar hasta 10 minutos en reflejarse.
+>2. Actualmente, no se puede cambiar el usuario primario en dispositivos Windows 10 administrados conjuntamente. 
+>3. El cambio del usuario primario del dispositivo no implica ningún cambio en la pertenencia al grupo local, como agregar o quitar usuarios del grupo local "Administradores".
+>4. Al cambiar el usuario primario no se cambia el usuario "Inscrito por". 
 
 
 ## <a name="what-is-the-primary-user"></a>¿Qué es el usuario primario?
@@ -85,7 +88,7 @@ Intune agrega automáticamente el usuario primario a los dispositivos durante la
 | Android | Dispositivos Android dedicados de propiedad corporativa | Ninguno | No disponible |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Usuario primario y propietario del dispositivo de Azure AD
-En algunos casos, el usuario primario de Intune puede ser distinto de la propiedad **Owner** (Propietario) del dispositivo de Azure AD (que puede ver en **Dispositivos** > **Dispositivos de Azure AD**). El propietario del dispositivo de Azure AD se agrega durante el registro de un dispositivo en Azure Active Directory.
+En algunos casos, el usuario primario de Intune puede ser distinto de la propiedad **Owner** (Propietario) del dispositivo de Azure AD (que puede ver en **Dispositivos** > **Dispositivos de Azure AD**). El propietario del dispositivo de Azure AD se agrega durante el registro de un dispositivo en Azure Active Directory.
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Administre sus dispositivos de Intune.](device-management.md)

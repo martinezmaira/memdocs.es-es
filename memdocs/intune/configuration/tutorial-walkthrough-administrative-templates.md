@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/23/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936634a26dee315c7ad452ac408f9cc0eac00dfe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220239"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Uso de la nube para configurar directivas de grupo en dispositivos con Windows 10 con plantillas de ADMX y Microsoft Intune
 
@@ -101,7 +101,7 @@ Esta característica se aplica a:
 ## <a name="open-the-endpoint-manager-admin-center"></a>Apertura del Centro de administración de puntos de conexión
 
 1. Abra un explorador web Chromium, como Microsoft Edge, versión 77 y posteriores.
-2. Vaya al [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com). Inicie sesión con la cuenta siguiente:
+2. Vaya al [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). Inicie sesión con la cuenta siguiente:
 
     **Usuario**: escriba la cuenta de administrador de la suscripción de inquilino de Microsoft 365.  
     **Contraseña**: escriba su contraseña.
@@ -146,7 +146,7 @@ En los siguientes pasos se crean grupos de seguridad y se agregan usuarios a los
     - **Tipo de grupo**: seleccione **Seguridad**.
     - **Nombre de grupo**: escriba **Todos los dispositivos Windows**.
     - **Tipo de pertenencia**: Seleccione **Dispositivo dinámico**.
-    - **Miembros del dispositivo dinámico**: configure la consulta:
+    - **Miembros del dispositivo dinámico**: Seleccione **Agregar una consulta dinámica** y configure la consulta:
 
         - **Propiedad**: seleccione **deviceOSType**.
         - **Operador**: seleccione **Igual a**.
@@ -166,7 +166,7 @@ En los siguientes pasos se crean grupos de seguridad y se agregan usuarios a los
     - **Tipo de grupo**: seleccione **Seguridad**.
     - **Nombre de grupo**: escriba **Todos los profesores**.
     - **Tipo de pertenencia**: seleccione **Usuario dinámico**.
-    - **Usuarios miembros dinámicos**: configure la consulta:
+    - **Usuarios miembros dinámicos**: Seleccione **Agregar una consulta dinámica** y configure la consulta:
 
       - **Propiedad**: seleccione **departamento**.
       - **Operador**: seleccione **Igual a**.
@@ -225,12 +225,17 @@ En esta sección se crea una plantilla administrativa en Intune, se examinan alg
 1. En el Centro de administración de puntos de conexión, seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 2. Escriba las propiedades siguientes:
 
+    - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
+    - **Perfil**: seleccione **Plantillas administrativas**.
+
+3. Seleccione **Crear**.
+4. En **Básico**, escriba las propiedades siguientes:
+
     - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, escriba **Plantilla de administración: dispositivos de Windows 10 Student**.
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-    - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
-    - **Tipo de perfil**: seleccione **Plantillas administrativas**.
 
-3. Seleccione **Crear**. En la lista desplegable **Seleccionar una categoría**, seleccione **Todos los productos**. Se muestran todas las opciones. En estas opciones, observe las siguientes propiedades:
+5. Seleccione **Siguiente**.
+6. En la lista desplegable de **Opciones de configuración**, seleccione **Todos los productos**. Se muestran todas las opciones. En estas opciones, observe las siguientes propiedades:
 
     - La **Ruta de acceso** a la directiva es la misma que Administración de directivas de grupo o GPEdit.
     - El valor se aplica a usuarios o dispositivos.
@@ -263,7 +268,7 @@ En esta sección se muestra una directiva en Intune y su directiva correspondien
     > [!div class="mx-imgBorder"]
     > ![Vista de las opciones del valor Configuración del equipo en la directiva de grupo](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. En el centro de administración de dispositivos, vaya a la plantilla **Plantilla de administración: dispositivos de Windows 10 Student**.
+5. En el centro de administración del Administrador de puntos de conexión, vaya a la plantilla **Plantilla de administración: dispositivos de Windows 10 Student**.
 6. Seleccione **Todos los productos** en la lista desplegable y busque **personalización**:
 
     > [!div class="mx-imgBorder"]
@@ -290,7 +295,7 @@ En esta sección se muestra una directiva en Intune y su directiva correspondien
 
 #### <a name="compare-an-edge-policy"></a>Comparación de una directiva de Edge
 
-1. En el centro de administración de dispositivos, vaya a la plantilla **Plantilla de administración: dispositivos de Windows 10 Student**.
+1. En el centro de administración del Administrador de puntos de conexión, vaya a la plantilla **Plantilla de administración: dispositivos de Windows 10 Student**.
 2. Seleccione **Edge, versión 77 y posteriores** en la lista desplegable.
 3. Busque **inicio**. Observe las opciones disponibles.
 4. En el Editor de administración de directivas de grupo, busque estas opciones:
@@ -338,17 +343,16 @@ En esta plantilla se configuran algunos valores de Internet Explorer para bloque
 
 ### <a name="assign-your-template"></a>Asignación de la plantilla
 
-1. En la plantilla, seleccione **Asignaciones**. Es posible que tenga que cerrar la plantilla y, luego, seleccionarla en la lista **Dispositivos: Perfiles de configuración**:
+1. En la plantilla, seleccione **Asignaciones** > **Seleccionar grupos para incluir**:
 
     > [!div class="mx-imgBorder"]
     > ![Selección del perfil de plantilla administrativa en la lista Perfiles de configuración del dispositivo en Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. Seleccione **Seleccionar grupos para incluir**. Aparece una lista de usuarios y grupos existentes.
-3. Seleccione el grupo **Todos los dispositivos de Windows 10 Student** creado anteriormente y **Seleccionar**.
+2. Aparece una lista de usuarios y grupos existentes. Seleccione el grupo **Todos los dispositivos de Windows 10 Student** creado anteriormente y **Seleccionar**.
 
     Si usa este tutorial en un entorno de producción, plantéese agregar grupos que estén vacíos. El objetivo es practicar la asignación de la plantilla.
 
-4. Guarde los cambios mediante **Guardar**.
+3. Elija **Siguiente** para ir a la pestaña **Revisar y crear**. Seleccione **Crear** para guardar los cambios.
 
 Al guardar el perfil, este se aplica a los dispositivos en cuanto se registran en Intune. Si los dispositivos están conectados a Internet, puede suceder de inmediato. Vea [¿Cuánto tiempo tardan los dispositivos en obtener una directiva, un perfil o una aplicación después de que se hayan asignado?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) para obtener más información sobre los tiempos de actualización de directivas.
 
@@ -366,14 +370,17 @@ En esta sección se crea una plantilla de administración de OneDrive en Intune 
 
 2. Escriba las propiedades siguientes:
 
-    - **Nombre**: escriba **Plantilla de administración: directivas de OneDrive que se aplican a todos los usuarios de Windows 10**.
-    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
     - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
-    - **Tipo de perfil**: seleccione **Plantillas administrativas**.
+    - **Perfil**: seleccione **Plantillas administrativas**.
 
 3. Seleccione **Crear**.
-4. Seleccione **Office** en la lista desplegable.
-5. **Habilite** los siguientes valores. Asegúrese de seleccionar **Aceptar** para guardar los cambios.
+4. En **Básico**, escriba las propiedades siguientes:
+
+    - **Nombre**: escriba **Plantilla de administración: directivas de OneDrive que se aplican a todos los usuarios de Windows 10**.
+    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
+
+5. Seleccione **Siguiente**.
+6. En **Opciones de configuración**, seleccione **Office** en la lista desplegable. **Habilite** los siguientes valores. Asegúrese de seleccionar **Aceptar** para guardar los cambios.
 
     - **Registrar a usuarios silenciosamente en el cliente de sincronización de OneDrive con sus credenciales de Windows**
     - **Usar Archivos a petición de OneDrive**
@@ -388,13 +395,12 @@ Para obtener más información sobre la configuración de cliente de OneDrive, v
 
 ### <a name="assign-your-template"></a>Asignación de la plantilla
 
-1. En la plantilla, seleccione **Asignaciones**.
-2. Seleccione **Seleccionar grupos para incluir**. Aparece una lista de usuarios y grupos existentes.
-3. Seleccione el grupo **Todos los dispositivos Windows** creado anteriormente y **Seleccionar**.
+1. En la plantilla, seleccione **Asignaciones** > **Seleccionar grupos para incluir**.
+2. Aparece una lista de usuarios y grupos existentes. Seleccione el grupo **Todos los dispositivos Windows** creado anteriormente y **Seleccionar**.
 
     Si usa este tutorial en un entorno de producción, plantéese agregar grupos que estén vacíos. El objetivo es practicar la asignación de la plantilla.
 
-4. Guarde los cambios mediante **Guardar**.
+3. Seleccione **Siguiente** para ir a la pestaña **Revisar y crear**. Seleccione **Crear** para guardar los cambios.
 
 En este punto ha creado algunas plantillas administrativas y las ha asignado a los grupos que ha creado. El siguiente paso consiste en crear una plantilla administrativa con Windows PowerShell y Microsoft Graph API para Intune.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f475f6f204225e00424e08afb8c69e20e21e815
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342028"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233511"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Creación y asignación de directivas de protección de aplicaciones
 
@@ -58,7 +58,7 @@ Cuando se crea una directiva de protección de aplicaciones para aplicaciones de
 
     El valor de **Plataforma** se establece en función de la elección anterior.
 
-    ![Captura de pantalla de la pestaña Datos básicos del panel Crear directiva](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Captura de pantalla de la pestaña Datos básicos del panel Crear directiva](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Haga clic en **Siguiente** para abrir la página **Aplicaciones**.<br>
     La página **Aplicaciones** permite elegir cómo se quiere aplicar esta directiva a las aplicaciones en distintos dispositivos. Debe agregar al menos una aplicación.<p>
@@ -123,7 +123,7 @@ Para ver el efecto de los cambios inmediatamente, el usuario final debe cerrar s
     
     | Valor/opción | Descripción |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Destinar a todos los tipos de aplicaciones | Use esta opción para destinar la directiva a las aplicaciones en dispositivos que se encuentren en cualquier estado de administración. Elija **No** para destinar a aplicaciones en tipos de dispositivos específicos. Para más información, consulte [Destinar directivas de protección de aplicaciones en función del estado de administración del dispositivo](#target-app-protection-policies-based-on-device-management-state). |
+    | Destinar a todos los tipos de aplicaciones | Use esta opción para destinar la directiva a las aplicaciones en dispositivos que se encuentren en cualquier estado de administración. Elija **No** para destinar a aplicaciones en tipos de dispositivos específicos. Puede ser necesaria una configuración adicional de la aplicación para esta configuración. Para obtener más información, vea [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state) (Destinar directivas de protección de aplicaciones en función del estado de administración del dispositivo). |
     |     Tipos de dispositivo | Use esta opción para especificar si esta directiva se aplica a dispositivos administrados por MDM o a dispositivos no administrados. En el caso de las directivas de aplicaciones iOS/iPadOS, elija entre **Dispositivos no administrados** y **Dispositivos administrados**. En el caso de las directivas de aplicaciones de Android, elija entre **Dispositivos no administrados**, **Administrador de dispositivos Android** y **Android Enterprise**.  |
     | Aplicaciones públicas | Haga clic en **Seleccionar aplicaciones públicas** para elegir las aplicaciones de destino. |
     | Aplicaciones personalizadas | Haga clic en **Seleccionar aplicaciones personalizadas** para seleccionar aplicaciones personalizadas de destino en función de un identificador de paquete. |
@@ -178,10 +178,9 @@ Para crear estas directivas, vaya a **Aplicaciones cliente** > **Directivas de p
 - **Administrador de dispositivos Android**: Dispositivos administrados por Intune mediante la API de administración de dispositivos Android.
 - **Android Enterprise**: Dispositivos administrados por Intune mediante perfiles de trabajo de Android Enterprise o administración completa de dispositivos de Android Enterprise.
 
-> [!NOTE]
-> Los dispositivos Android le pedirán que instale la aplicación Portal de empresa de Intune independientemente del tipo de dispositivo que se elija. Por ejemplo, si selecciona "Android Enterprise", se le seguirá solicitando a los usuarios con dispositivos Android no administrados.
+En Android, los dispositivos Android le pedirán que instale la aplicación Portal de empresa de Intune independientemente del tipo de dispositivo que se elija. Por ejemplo, si selecciona "Android Enterprise", se le seguirá solicitando a los usuarios con dispositivos Android no administrados.
 
-Para iOS/iPadOS, se requieren ajustes adicionales en la configuración de la aplicación para dirigir la configuración de la directiva de protección de aplicaciones (APP) a las aplicaciones de dispositivos inscritos en Intune:
+En el caso de iOS/iPadOS, para que la selección de "Tipo de dispositivo" se aplique a dispositivos "no administrados", se necesitan opciones de configuración de aplicaciones adicionales. Estas configuraciones comunicarán al servicio de aplicaciones que una aplicación determinada está administrada y que la configuración de la aplicación no se aplicará:
 
 - **IntuneMAMUPN** debe configurarse para todas las aplicaciones administradas de MDM. Para más información, vea [Administración de transferencias de datos entre aplicaciones iOS/iPadOS en Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** debe configurarse para todas las aplicaciones administradas por MDM de línea de negocio y de terceros. **IntuneMAMDeviceID** debe configurarse en el token de identificador de dispositivo. Por ejemplo, `key=IntuneMAMDeviceID, value={{deviceID}}`. Para más información, vea [Agregar directivas de configuración de aplicaciones para dispositivos iOS/iPadOS administrados](app-configuration-policies-use-ios.md).

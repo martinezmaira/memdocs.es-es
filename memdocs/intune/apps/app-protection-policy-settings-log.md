@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe508dac691f922ec638709e04d6d4dd9f47f078
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341703"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083571"
 ---
 # <a name="review-client-app-protection-logs"></a>Revisión de los registros de protección de aplicaciones cliente
 
 Obtenga información sobre la configuración que puede revisar en los registros de protección de aplicaciones. Para acceder a los registros, habilite los diagnósticos de Intune en un cliente móvil. 
 
 El proceso para habilitar y recopilar registros varía según la plataforma:
-- **Dispositivos iOS/iPadOS**: use Microsoft Edge para iOS/iPadOS para recopilar registros. Para obtener detalles, vea [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs). 
+- **Dispositivos iOS/iPadOS**: use Microsoft Edge para iOS/iPadOS para recopilar registros. Para obtener detalles, vea [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Dispositivos Windows 10**: use *MDMDiag* y registros de eventos. Consulte [Diagnósticos de errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10), que encontrará en el contenido de administración del cliente de Windows, así como la entrada de blog [Solución de problemas de errores de directivas de Intune en Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
-- **Dispositivos Android**: no hay datos de diagnóstico para la directiva de protección de aplicaciones (APP) en dispositivos Android.
+- **Dispositivos Android**: use Microsoft Edge para Android para recopilar registros. Para obtener detalles, vea [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 
 En la tabla siguiente se muestra el nombre de la configuración de la directiva de protección de aplicaciones y los valores admitidos que se anotan en el registro. Además, cada valor identifica la configuración de directiva que se encuentra en el portal de Microsoft Endpoint Manager. Para más información sobre cada opción, consulte [Configuración de directivas de protección de aplicaciones de iOS/iPadOS](app-protection-policy-settings-ios.md).
 

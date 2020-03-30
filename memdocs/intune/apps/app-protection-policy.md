@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341664"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083804"
 ---
 # <a name="app-protection-policies-overview"></a>Introducción general a las directivas de protección de aplicaciones
 
@@ -205,6 +205,9 @@ Como ejemplo de contexto "personal", piense en un usuario que empieza un documen
 Como ejemplo de contexto de trabajo o "corporativo", piense en un usuario que inicia la aplicación OneDrive con su cuenta profesional. En el contexto de trabajo, no puede mover los archivos a una ubicación de almacenamiento personal. Más adelante, cuando usa OneDrive con su cuenta personal, puede copiar y mover los datos de su OneDrive personal sin restricciones.
 
 Outlook tiene una vista de correo electrónico combinada de correos electrónicos "personales" y "corporativos". En esta situación, la aplicación Outlook solicita el PIN de Intune al iniciarse.
+
+  >[!NOTE]
+  > Aunque Edge está en el contexto "corporativo", el usuario puede trasladar de forma deliberada los archivos de contexto "corporativos" de OneDrive a una ubicación de almacenamiento en la nube personal desconocida. Para evitar esto, consulte [Especificación de una lista de sitios permitidos o bloqueados para Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) y configure la lista de sitios permitidos o bloqueados para Edge.
 
 Para obtener más información sobre varias identidades en Intune, consulte [MAM y varias identidades](apps-supported-intune-apps.md).
 

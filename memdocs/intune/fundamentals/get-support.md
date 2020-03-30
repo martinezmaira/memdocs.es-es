@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362685"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086021"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Cómo obtener asistencia para Microsoft Intune
 
@@ -35,7 +35,6 @@ Como administrador de Intune, puede usar la opción **Ayuda y soporte técnico**
 > Para obtener soporte técnico para productos de terceros que funcionan con Intune (por ejemplo, Saaswedo, Cisco o Lookout), póngase en contacto con el proveedor de ese producto en primer lugar. Asegúrese de que ha configurado el otro producto correctamente antes de abrir una solicitud con el soporte técnico de Intune.
 >
 > Para obtener información sobre cómo solucionar problemas relacionados con Microsoft Intune, consulte la [sección de solución de problemas](help-desk-operators.md) de la documentación de Intune.
-
 
 ## <a name="help-and-support-experience"></a>Experiencia de ayuda y soporte técnico
 
@@ -52,10 +51,9 @@ Cuando se usa un inquilino recién creado con Intune, es posible que no pueda ab
 
 - *We encountered an unknown problem. Please refresh the page but if the problem persists, please create a case through [M365 Admin Center](https://admin.microsoft.com) and reference the session ID provided.* (Se encontró un problema desconocido. Actualice la página; si el problema persiste, cree un caso en el Centro de administración de M365 y haga referencia al identificador de sesión proporcionado).
 
-Los detalles del error incluyen un *identificador de sesión*, la *extensión*, etc. 
- 
-Este problema se produce cuando todavía no se ha autenticado la nueva cuenta del inquilino en el **Centro de administración de M365** en https://admin.microsoft.com o en el **portal de Office 365** en https://portal.office.com. Para resolver este problema, seleccione el vínculo del *Centro de administración de M365* en el mensaje, o bien, visite https://portal.office.com e inicie sesión. Tras la autenticación en uno de estos sitios, la experiencia *Ayuda y soporte técnico* para Intune se vuelve accesible.
+Los detalles del error incluyen un *identificador de sesión*, la *extensión*, etc.
 
+Este problema se produce cuando no ha autenticado la nueva cuenta del inquilino en el **Centro de administración de M365** en https://admin.microsoft.com o en el **portal de Office 365** en https://portal.office.com. Para resolver este problema, seleccione el vínculo del *Centro de administración de M365* en el mensaje, o bien, visite https://portal.office.com e inicie sesión. Tras la autenticación en uno de estos sitios, la experiencia *Ayuda y soporte técnico* para Intune se vuelve accesible.
 
 **Acceso a Ayuda y soporte técnico**:
 
@@ -67,18 +65,28 @@ Este problema se produce cuando todavía no se ha autenticado la nueva cuenta de
   > Si la instancia de Intune se hospeda en la nube privada de organismos públicos, también conocida como nube soberana de tipo Azure Government, consulte [Compatibilidad de Intune con la nube privada para organismos públicos](#intune-support-for-private-cloud-for-government), más adelante en este artículo. La experiencia de *Ayuda y soporte técnico* de Intune no estará disponible en la nube privada para organismos públicos hasta el próximo año.
 
 - **Desde el Centro de administración de Microsoft Endpoint Manager**
-  - Después de seleccionar un área de características para Intune, seleccione la opción de **Ayuda y soporte técnico**.
-  - Desde cualquier nodo del Centro de administración de Microsoft Endpoint Manager, seleccione el icono **?** en la esquina superior derecha del portal y, a continuación, use la lista desplegable para seleccionar el servicio con el que desea ayuda. El icono **?** del Centro de administración de Microsoft Endpoint Manager admite varios servicios, y debe seleccionar el servicio específico con el que necesita ayuda.  
 
-    ![Selección del servicio](./media/get-support/select-a-service.png)
+  - Desde cualquier nodo del Centro de administración de Microsoft Endpoint Manager, seleccione el icono **?** en la esquina superior derecha del portal y, luego, use la lista desplegable para seleccionar el tipo de administración con el que quiere ayuda. El centro de administración de Microsoft Endpoint Manager admite los siguientes tipos de administración, y debe seleccionar aquel para el que quiera ayuda, como Intune:
 
-    Después de seleccionar un servicio, verá su página de *Ayuda y soporte técnico*, donde puede especificar detalles para [encontrar soluciones](#find-solutions) sobre un problema específico.
+    - Configuration Manager (incluye Desktop Analytics)
+    - Intune
+    - Administración conjunta  
 
-    Si los resultados de la búsqueda no parecen coincidir con las expectativas del servicio, asegúrese de que se ha seleccionado el servicio correcto. La selección del servicio aparece justo después de *Ayuda y soporte técnico*.  En caso de que no se haya seleccionado el servicio adecuado, haga clic en *Seleccione un servicio* para volver al menú desplegable de selección de servicio.
+    > [!div class="mx-imgBorder"]
+    > ![Selección del tipo de administración](./media/get-support/select-management-type.png)
 
-    ![Confirmación del servicio](./media/get-support/confirm-your-service-selection.png)
+    Después de seleccionar un tipo de administración, se abre la página *Ayuda y soporte técnico*, donde puede especificar los detalles para [buscar soluciones](#find-solutions) para un problema concreto. Los detalles se filtran en función del tipo de administración que seleccione.
 
-###  <a name="the-support-experience"></a>Experiencia de soporte técnico
+     Si no se ha seleccionado el tipo de administración correcto **(1)** , haga clic en *Seleccionar un tipo de administración* **(2)** para volver a la lista desplegable de selección del tipo de administración:
+
+    > [!div class="mx-imgBorder"]
+    > ![Confirmación del tipo de administración](./media/get-support/confirm-management-selection.png)
+
+  - Si abre Ayuda y soporte técnico desde **Solución de problemas y soporte técnico** > **Ayuda y soporte técnico**, no verá el tipo de administración que seleccionó en *Ayuda y soporte técnico*.
+
+  - Si explora en profundidad cualquier otro nodo, como *Dispositivos*, *Aplicaciones*o *Usuarios* y, después, selecciona *Ayuda y soporte técnico*, no tendrá la oportunidad de seleccionar un tipo de administración ni se mostrará en *Ayuda y soporte*. En este caso, se da por hecho *Intune*. Si no quiere que el contexto sea Intune, use la opción **?** para que pueda seleccionar un tipo de administración diferente.
+
+### <a name="the-support-experience"></a>Experiencia de soporte técnico
 
   Al abrir Ayuda y soporte técnico, el portal muestra la ventana **¿Necesita ayuda?** :
 
@@ -124,7 +132,7 @@ El panel *Solicitudes de servicio* muestra el historial de casos. Los casos acti
 
 Si tiene un número de caso de soporte técnico activo, puede escribirlo aquí para ir a ese problema o puede seleccionar un incidente de la lista de incidentes activos y cerrados para ver más información sobre él.
 
-Cuando haya terminado de ver los detalles de un incidente, seleccione la flecha izquierda que aparece en la parte superior de la ventana de la solicitud de servicio, justo encima de los tres iconos del panel *¿Necesita ayuda?* . La flecha atrás vuelve a la lista de incidentes de soporte técnico que ha abierto.
+Cuando haya terminado de ver los detalles de un incidente, seleccione la flecha izquierda que aparece en la parte superior de la ventana de la solicitud de servicio, justo encima de los tres iconos del panel *¿Necesita ayuda?* La flecha atrás vuelve a la lista de incidentes de soporte técnico que ha abierto.
 
 #### <a name="premier-and-unified-support-customers"></a>Clientes de soporte técnico Premier y Unified
 
@@ -144,8 +152,7 @@ La selección de un problema con una gravedad **A** o **Crítica** le limita a u
 Ya no puede usar la experiencia de *Ayuda y soporte técnico* de Azure para obtener ayuda con Intune, a menos que la suscripción esté en una nube privada para organismos públicos.
 Si la instancia de Intune no se ejecuta en una nube privada para organismos públicos, al desplazarse a *Ayuda y soporte técnico* de Azure se le redirigirá a la experiencia de *Ayuda y soporte técnico* de Intune para crear y administrar incidentes de soporte técnico.
 
-Cuando usa el panel de navegación izquierdo **Ayuda y soporte técnico** o usa el icono **?** para abrir el panel *Ayuda* y, después, seleccione **Ayuda y soporte técnico**, abra la página *Ayuda y soporte técnico* de Azure. 
-
+Cuando usa el panel de navegación izquierdo **Ayuda y soporte técnico** o usa el icono **?** para abrir el panel *Ayuda* y, después, seleccione **Ayuda y soporte técnico**, abra la página *Ayuda y soporte técnico* de Azure.
 
 En esta página, seleccione **+ Nueva solicitud de soporte técnico** para abrir la pestaña *Datos básicos* de la página *Ayuda y soporte técnico + Nueva solicitud de soporte técnico*.
 
@@ -160,17 +167,16 @@ En esta página:
   
   ![Nueva solicitud de soporte técnico](./media/get-support/new-request.png)
 
-
 ## <a name="intune-support-for-private-cloud-for-government"></a>Compatibilidad de Intune con la nube privada para organismos públicos
 
-Con la suscripción de Intune hospedada en la nube privada para organismos públicos, que también se conoce como nube soberana de tipo Azure Government, todavía no tiene acceso a la nueva experiencia de ayuda y soporte técnico de Intune.  En su lugar, use la siguiente información para obtener soporte técnico de Intune.
+Cuando la suscripción de Intune hospedada en la nube privada para organismos públicos, que también se conoce como nube soberana de tipo Azure Government, todavía no tiene acceso a la nueva experiencia de Ayuda y soporte técnico de Intune.  En su lugar, use la siguiente información para obtener soporte técnico de Intune.
 
 ### <a name="create-an-online-support-ticket"></a>Creación de un vale de soporte en línea
 
 >[!IMPORTANT]
-> En la transición de *Ayuda y soporte técnico* a un nuevo sistema que todavía no está disponible para la nube privada para organismos públicos, cuando se crea un incidente de soporte técnico, el portal identifica un caso de soporte técnico en el que se usa un número de identificación de 15 dígitos. Cuando se crea el caso de 15 dígitos, se crea un reflejo de ese caso para que lo use el Soporte técnico de Microsoft. Este caso reflejado se crea en un nuevo sistema de soporte técnico, utiliza un identificador de caso de 8 dígitos y lo usan los servicios de soporte técnico para realizar el seguimiento de todos los trabajos y las comunicaciones de su incidente de soporte técnico. Poco después de crear el caso de 15 dígitos, recibirá un correo electrónico que identifica el número de 8 dígitos del caso de soporte reflejado que usan los servicios de soporte técnico.
+> En la transición de *Ayuda y soporte técnico* a un nuevo sistema que todavía no está disponible para la nube privada para organismos públicos, cuando se crea un incidente de soporte técnico, el portal identifica un caso de soporte técnico en el que se usa un número de identificación de 15 dígitos. Cuando se crea el caso de 15 dígitos, se crea un reflejo de ese caso para que lo use el Soporte técnico de Microsoft. Este caso reflejado se crea en un nuevo sistema de soporte técnico, utiliza un identificador de caso de 8 dígitos y lo usan los servicios de soporte técnico para realizar el seguimiento de todos los trabajos y las comunicaciones de su incidente de soporte técnico. Poco después de crear el caso de 15 dígitos, recibirá un correo electrónico que identifica el número de 8 dígitos del caso de soporte técnico reflejado que usan los servicios de soporte técnico.
 >
-> Apoye el trabajo personal y comuníquese con el caso de soporte técnico de 8 dígitos, y use solo el caso de soporte de 8 dígitos para registrar las comunicaciones y realizar un seguimiento del progreso de los incidentes. De este modo, recibirá actualizaciones por correo electrónico de ese caso de soporte técnico de 8 dígitos que sirven como registro de seguimiento del trabajo en el caso. No se registran detalles en el incidente de soporte técnico de 15 dígitos. Cuando concluye el soporte técnico y se cierra el caso de soporte de 8 dígitos, este estado se refleja en el caso de soporte técnico de 15 dígitos que puede ver desde Azure Portal.  No se deben esperar otras actualizaciones ni cambios de estado para el caso de soporte técnico de 15 dígitos.
+> Apoye el trabajo personal y comuníquese con el caso de soporte técnico de 8 dígitos, y use solo el caso de soporte de 8 dígitos para registrar las comunicaciones y realizar un seguimiento del progreso de los incidentes. Por tanto, recibirá actualizaciones por correo electrónico de ese caso de soporte técnico de 8 dígitos que sirven como registro de seguimiento del trabajo en el caso. No se registran detalles en el incidente de soporte técnico de 15 dígitos. Cuando concluye el soporte técnico y se cierra el caso de soporte de 8 dígitos, este estado se refleja en el caso de soporte técnico de 15 dígitos que puede ver desde Azure Portal.  No se deben esperar otras actualizaciones ni cambios de estado para el caso de soporte técnico de 15 dígitos.
 >
 > Cuando se completen las transiciones entre las herramientas de soporte técnico más adelante este año, la experiencia de soporte técnico de Intune hospedada en la nube de administración pública se asemejará a la experiencia predeterminada de *Ayuda y soporte técnico* que está disponible actualmente para las suscripciones de Intune hospedadas en la nube pública.
 

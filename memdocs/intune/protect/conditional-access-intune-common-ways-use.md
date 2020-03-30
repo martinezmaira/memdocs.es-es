@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352896"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084942"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>¿Cuáles son las formas habituales de usar el acceso condicional con Intune?
 
@@ -83,7 +83,7 @@ El acceso condicional para equipos proporciona funcionalidades similares a las d
 
 #### <a name="corporate-owned"></a>Propiedad corporativa
 
-- **Unidos a un dominio de AD local:** esta opción se usa habitualmente por las organizaciones que están razonablemente cómodas con la manera en que ya se están administrando sus equipos mediante directivas de grupo de AD o con Configuration Manager.
+- **Hybrid Azure AD joined** (Unido a Azure AD híbrido): esta opción se usa habitualmente por las organizaciones que están razonablemente cómodas con la manera en que ya se están administrando sus equipos mediante directivas de grupo de AD o con Configuration Manager.
 
 - **Unidos a un dominio de Azure AD y administración de Intune:** este escenario es para aquellas organizaciones que desean priorizar la nube (es decir, usar principalmente servicios en la nube, con el objetivo de reducir el uso de una infraestructura local) o darle exclusividad (sin infraestructura local). Unión a Azure AD funciona bien en un entorno híbrido, al permitir el acceso a aplicaciones y recursos en la nube y locales. El dispositivo se une a Azure AD y se inscribe en Intune, lo que puede usarse como criterios de acceso condicional al acceder a recursos corporativos.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354274"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085193"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Aplicación del cumplimiento de ATP de Microsoft Defender con acceso condicional en Intune
 
@@ -100,7 +100,7 @@ Solo tiene que habilitar ATP de Defender una vez por inquilino.
 > - Las usa Intune MTD para requerir que los dispositivos estén registrados en Azure AD, de modo que dispongan de un id. de dispositivo antes de comunicarse con los asociados de MTD. El id. es necesario para que los dispositivos puedan informar de su estado correctamente a Intune.
 > - No tiene ningún efecto en otros recursos o aplicaciones en la nube.
 > - Son diferentes a las directivas de acceso condicional que puede crear para ayudarle con la administración de MTD.
-> - De manera predeterminada, no interactúan con otras directivas de acceso condicional que usa para la evaluación.
+> - No interactúan de forma predeterminada con otras directivas de acceso condicional usadas para la evaluación.
 >
 > Para ver las directivas de acceso condicional clásicas, en [Azure](https://portal.azure.com/#home), vaya a **Azure Active Directory** > **Acceso condicional** > **Directivas clásicas**.
 
@@ -136,24 +136,26 @@ Cuando estableció la conexión a ATP de Microsoft Defender, Intune recibió un 
 
 La directiva de cumplimiento determina el nivel de riesgo que se considera aceptable para un dispositivo.
 
-### <a name="create-the-compliance-policy"></a>Creación de la directiva de cumplimiento
+Si no está familiarizado con la creación de una directiva de cumplimiento, consulte el procedimiento [Creación de una directiva](../protect/create-compliance-policy.md#create-the-policy) del artículo *Creación de una directiva de cumplimiento en Microsoft Intune*. La siguiente información es específica de la configuración de ATP de Defender como parte de una directiva de cumplimiento.
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Crear directiva**.
-3. Escriba la información que desee en **Nombre** y **Descripción**.
-4. En **Plataforma**, seleccione **Windows 10 y versiones posteriores**.
-5. En **Configuración**, seleccione **ATP de Microsoft Defender**.
-6. Establezca **Solicitar que el dispositivo tenga o esté por debajo de la puntuación de riesgo de la máquina** en el nivel que prefiera.
+
+2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Directivas** > **Crear directiva**.
+
+3. En **Plataforma**, seleccione *Windows 10 y versiones posteriores* y, luego, elija **Crear** para abrir la ventana de configuración **Crear directiva**.
+
+4. En la pestaña **Aspectos básicos**, rellene el campo **Nombre** para que le ayude a identificarla más tarde. También puede especificar una descripción en **Descripción**.
+  
+5. En la pestaña **Compliance settings** (Configuración de cumplimiento), expanda el grupo **Microsoft Defender ATP** (ATP de Microsoft Defender) y establezca **Require the device to be at or under the machine risk score** (Requerir que el dispositivo tenga la misma puntuación de riesgo de la máquina o inferior) en su nivel preferido.
 
    Las clasificaciones de nivel de amenaza vienen [determinadas por ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Borrar**: este nivel es el más seguro. El dispositivo no puede tener ninguna amenaza existente y aún puede acceder a los recursos de la empresa. Si se encuentra alguna amenaza, el dispositivo se clasificará como no conforme. ATP de Microsoft Defender usa el valor *Seguro*.
+   - **Borrar**: este nivel es el más seguro. El dispositivo no puede tener ninguna amenaza existente y aún puede acceder a los recursos de la empresa. Si se encuentra alguna amenaza, el dispositivo se clasificará como no conforme. (ATP de Microsoft Defender usa el valor *Seguro*).
    - **Bajo**: el dispositivo se evalúa como compatible si solo hay amenazas de nivel bajo. Los dispositivos con niveles de amenaza medio o alto no son compatibles.
    - **Media**: el dispositivo se evalúa como compatible si las amenazas que se encuentran en él son de nivel bajo o medio. Si se detectan amenazas de nivel alto, se determinará que el dispositivo no es compatible.
    - **Alta**: este nivel es el menos seguro, ya que permite todos los niveles de amenaza. Por tanto, los dispositivos con niveles de amenaza alto, medio o bajo se consideran compatibles.
 
-7. Seleccione **Aceptar** y **Crear** para guardar los cambios (y crear la directiva).
-8. [Asigne la directiva de cumplimiento de dispositivo](create-compliance-policy.md#assign-the-policy) a los grupos aplicables.
+6. Complete la configuración de la directiva, incluida la asignación de esta a los grupos correspondientes.
 
 ## <a name="create-a-conditional-access-policy"></a>Creación de una directiva de acceso condicional
 

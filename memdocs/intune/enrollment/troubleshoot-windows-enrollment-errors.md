@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344615"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526281"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos Windows en Microsoft Intune
 
@@ -321,6 +321,8 @@ Error 0x80070774: Se ha producido un problema. Confirme que está usando la info
 Este problema se produce normalmente antes de que el dispositivo se reinicie en un escenario de Azure AD híbrido en Autopilot, cuando el dispositivo agota el tiempo de espera durante la pantalla de inicio de sesión inicial. Significa que el controlador de dominio no se puede encontrar o no se puede acceder a él correctamente debido a problemas de conectividad. O bien, que el dispositivo ha entrado en un estado que no se puede unir al dominio.
 
 **Causa:** La causa más común es que se está usando Unión a Azure AD híbrido y que la característica de asignación de usuario está configurada en el perfil de Autopilot. El uso de la característica de asignación de usuarios realiza una unión a Azure AD en el dispositivo durante la pantalla de inicio de sesión inicial, que pone el dispositivo en un estado en el que no se puede unir al dominio local. Por lo tanto, la característica de asignación de usuarios solo se debe usar en escenarios de Unión a Azure AD estándar en Autopilot.  La característica no debe usarse en escenarios de Unión a Azure AD híbrido.
+
+Otra posible causa de este error es que se ha eliminado el dispositivo de AzureAD asociado del objeto de AutoPilot. Para solucionarlo, elimine el objeto de AutoPilot y vuelva a importar el hash para generar uno nuevo.
 
 #### <a name="resolution"></a>Solución
 

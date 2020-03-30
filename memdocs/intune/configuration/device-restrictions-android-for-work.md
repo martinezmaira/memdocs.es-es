@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0546b280f6a04b6bc396b39a9a04031ee9800172
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361892"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220122"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -316,7 +316,7 @@ Esta configuración se aplica a los tipos de inscripción Android Enterprise don
 - **Longitud mínima de la contraseña**: escriba el número mínimo de caracteres que debe tener la contraseña del usuario (**4**-**16**).
 - **Cantidad máxima de minutos de inactividad hasta que el perfil de trabajo se bloquea**: seleccione la cantidad de tiempo antes de que se bloquee el perfil de trabajo. El usuario deberá especificar sus credenciales para volver a obtener acceso.
 - **Número de errores de inicio de sesión antes de borrar el dispositivo**: especifique el número de veces que se puede escribir una contraseña incorrecta antes de que el perfil de trabajo se borre del dispositivo.
-- **Expiración de la contraseña (días)** : escriba el número de días hasta que se deba cambiar la contraseña de un usuario final (**1**-**255**).
+- **Expiración de la contraseña (días)** : escriba el número de días hasta que se deba cambiar la contraseña de un usuario final (**1**-**365**).
 - **Tipo de contraseña requerida**: seleccione el tipo de contraseña que se debe establecer en el dispositivo. Elija de entre las siguientes opciones:
   - **Valor predeterminado del dispositivo**
   - **Biométrico de seguridad baja**
@@ -337,7 +337,7 @@ Esta configuración de contraseña se aplica a los perfiles personales de los di
 - **Longitud mínima de la contraseña**: escriba el número mínimo de caracteres que debe tener la contraseña del usuario (**4**-**14**).
 - **Máximo de minutos de inactividad hasta que se bloquea la pantalla**: seleccione la cantidad de tiempo antes de que un dispositivo inactivo se bloquee automáticamente.
 - **Número de errores de inicio de sesión antes de borrar el dispositivo**: especifique el número de veces que se puede escribir una contraseña incorrecta antes de que el perfil de trabajo se borre del dispositivo.
-- **Expiración de la contraseña (días)** : escriba el número de días hasta que se deba cambiar la contraseña de un usuario final (**1**-**255**).
+- **Expiración de la contraseña (días)** : escriba el número de días hasta que se deba cambiar la contraseña de un usuario final (**1**-**365**).
 - **Tipo de contraseña requerida**: seleccione el tipo de contraseña que se debe establecer en el dispositivo. Elija de entre las siguientes opciones:
   - **Valor predeterminado del dispositivo**
   - **Biométrico de seguridad baja**

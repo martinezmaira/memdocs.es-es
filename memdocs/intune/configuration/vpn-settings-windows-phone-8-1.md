@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcaa3d4dc27f1791db77b70513968eeda51c668d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363907"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086480"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>Configuración de VPN para dispositivos Windows Phone 8.1 en Microsoft Intune
-
-
 
 En este artículo, se muestra la configuración de Intune que puede usar para configurar conexiones VPN en dispositivos que ejecutan Windows Phone 8.1. 
 
@@ -32,6 +30,10 @@ Según la configuración que elija, no todos los valores de la lista siguiente s
 
 >[!IMPORTANT]
 >Los perfiles de red privada virtual de Windows Phone 8.1 también se aplican a los dispositivos Windows 10.
+
+## <a name="before-you-begin"></a>Antes de comenzar
+
+[Cree un perfil de configuración de dispositivo VPN](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Configuración de VPN base
 
@@ -51,7 +53,7 @@ Según la configuración que elija, no todos los valores de la lista siguiente s
 - **Omitir VPN en red Wi-Fi de empresa**: habilite esta opción para especificar que las conexiones VPN no se usan cuando el dispositivo está conectado a la red Wi-Fi de la empresa.
 - **Omitir VPN en red Wi-Fi doméstica**: habilite esta opción para especificar que la conexión VPN no se usa cuando el dispositivo está conectado a una red Wi-Fi doméstica.
 
-- **Tipo de conexión**: Seleccione el tipo de conexión VPN de la siguiente lista de proveedores:
+- **Tipo de conexión**: seleccione el tipo de conexión VPN. Las opciones son:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -91,7 +93,7 @@ Según la configuración que elija, no todos los valores de la lista siguiente s
 
   Para obtener más información sobre la escritura de comandos XML personalizados, vea la documentación de la VPN del fabricante.
 
-- **Tunelización dividida**: **habilite** o **deshabilite** esta opción, que permite que los dispositivos decidan qué conexión usar en función del tráfico. Por ejemplo, un usuario en un hotel usará la conexión VPN para acceder a los archivos de trabajo, pero usará la red normal del hotel para la exploración web habitual.
+- **Tunelización dividida**: **Habilitar** permite que los dispositivos decidan qué conexión van a usar en función del tráfico. Por ejemplo, un usuario en un hotel usará la conexión VPN para acceder a los archivos de trabajo, pero usará la red normal del hotel para la exploración web habitual. Si quiere que todo el tráfico use el túnel de VPN cuando la conexión VPN está activa, establezca esta opción en **Deshabilitar**.
 
 ## <a name="proxy-settings"></a>Configuración del proxy
 

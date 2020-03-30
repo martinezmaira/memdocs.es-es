@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364089"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086500"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Configuración de dispositivos con Windows 10 y Windows Holographic para agregar conexiones VPN mediante Intune
-
-
 
 Puede agregar y configurar conexiones VPN para dispositivos con Microsoft Intune. En este artículo se enumeran y describen las características y los valores de configuración más usados al crear redes privadas virtuales (VPN). Estas características y valores de configuración de VPN se usan en los perfiles de configuración de dispositivo en Intune que se insertan o implementan en dispositivos.
 
@@ -68,10 +66,10 @@ Según la configuración que elija, es posible que no se puedan configurar todos
   - **PPTP**
 
   Al elegir un tipo de conexión de VPN; puede que también se le solicite la siguiente configuración:  
-  - **Siempre disponible**: elija **Habilitar** para conectarse automáticamente a la VPN cuando se produzcan estas situaciones: 
+  - **Siempre disponible**: elija **Habilitar** para conectarse automáticamente a la VPN cuando se produzcan estas situaciones:
     - Los usuarios inicien sesión en sus dispositivos
     - La red del dispositivo cambie
-    - La pantalla del dispositivo se vuelva a activar después de haberse desactivado 
+    - La pantalla del dispositivo se vuelva a activar después de haberse desactivado
 
   - **Método de autenticación**: seleccione cómo quiere que los usuarios se autentiquen en el servidor VPN. El uso de **certificados** ofrece características mejoradas, como experiencia sin interacción del usuario, VPN a petición y VPN por aplicación.
   - **Recordar credenciales en cada inicio de sesión**: copie en la caché las credenciales de autenticación.

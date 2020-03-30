@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359292"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086112"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscripción de dispositivos iOS/iPadOS en Intune
 
@@ -46,7 +46,7 @@ Puede permitir que los usuarios inscriban sus dispositivos personales para la ad
 - La inscripción de dispositivos es lo que se puede considerar una inscripción típica de BYOD. Proporciona a los administradores una amplia gama de opciones de administración.
 - La inscripción de usuarios es un proceso de inscripción más sencillo que proporciona a los administradores un subconjunto de opciones de administración de dispositivos. Esta característica actualmente está en versión preliminar. 
 
-Tras completar los requisitos previos y asignar licencias a los usuarios, estos podrán descargar la aplicación Portal de empresa de Intune del App Store y seguir las instrucciones de inscripción. Puede personalizar la declaración de privacidad del Portal de empresa en dispositivos iOS/iPadOS, tal como se explica en [Personalización de la declaración de privacidad](../apps/company-portal-app.md#privacy-statement-customization).
+Tras completar los requisitos previos y asignar licencias a los usuarios, estos podrán descargar la aplicación Portal de empresa de Intune del App Store y seguir las instrucciones de inscripción. Puede personalizar la declaración de privacidad del Portal de empresa en dispositivos iOS o iPadOS como se explica en [Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y las aplicaciones de Intune](../apps/company-portal-app.md#configuration).
 
 ## <a name="company-owned-iosipados-devices"></a>Dispositivos iOS/iPadOS propiedad de la empresa
 

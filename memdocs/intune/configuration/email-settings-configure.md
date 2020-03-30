@@ -1,12 +1,12 @@
 ---
 title: Configuración del correo electrónico en Microsoft Intune (Azure) | Microsoft Docs
 titleSuffix: ''
-description: Cree un perfil de correo electrónico en Microsoft Intune e impleméntelo en dispositivos Android Enterprise, iOS, iPadOS y Windows. Use un perfil de correo electrónico para configurar los valores de correo electrónico comunes, incluidos un servidor de correo electrónico y un método de autenticación para conectarse al correo electrónico corporativo en los dispositivos que administra.
+description: Cree un perfil de correo electrónico en Microsoft Intune, impleméntelo en el administrador de dispositivos Android y dispositivos Android Enterprise, iOS, iPadOS y Windows. Use perfiles de correo electrónico para configurar los valores de correo electrónico comunes, incluidos un servidor de correo electrónico y un método de autenticación para conectarse al correo electrónico corporativo en los dispositivos que administra.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364245"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086984"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Agregar la configuración de correo electrónico a dispositivos que usan Intune
 
@@ -29,7 +29,7 @@ Microsoft Intune incluye una configuración de correo electrónico diferente que
 
 Puede usar perfiles de correo electrónico para configurar las opciones de correo electrónico integradas en los siguientes dispositivos:
 
-- Android Samsung Knox Standard 4.0 y versiones posteriores
+- Administrador de dispositivos Android en Samsung Knox Standard 4.0 y versiones más recientes
 - Android Enterprise
 - iOS 8.0 y versiones posteriores
 - IPadOS 13.0 y versiones más recientes
@@ -38,35 +38,48 @@ Puede usar perfiles de correo electrónico para configurar las opciones de corre
 
 En este artículo se explica cómo crear un perfil de correo electrónico en Microsoft Intune. También incluye vínculos a las distintas plataformas para consultar configuraciones más específicas.
 
-## <a name="create-a-device-profile"></a>Creación del perfil de un dispositivo
+## <a name="create-the-profile"></a>Creación del perfil
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
-    - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un buen nombre de directiva es **Configuración de correo electrónico para todos los dispositivos Windows**.
-    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-    - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:
+    - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:  
 
-        - **Android** (solo Android Samsung Knox Standard)
+        - **Administrador de dispositivos Android** (solo en Samsung Android Knox Standard)
         - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 y versiones posteriores**
+        - **Windows Phone 8.1**
 
-    - **Tipo de perfil**: Seleccione **Correo electrónico**.
+    - **Perfil**: Seleccione **Correo electrónico**.
 
-4. Dependiendo de la plataforma que haya elegido, las opciones que pueda configurar serán diferentes. Elija la plataforma para la configuración detallada:
+4. Seleccione **Crear**.
+5. En **Básico**, escriba las propiedades siguientes:
 
-    - [Configuración de Android Samsung Knox Standard](email-settings-android.md)
-    - [Configuración de Android Enterprise](email-settings-android-enterprise.md)
-    - [Configuración de iOS/iPadOS](email-settings-ios.md)
-    - [Configuración de Windows Phone 8.1](email-settings-windows-phone-8-1.md)
-    - [Configuración de Windows 10](email-settings-windows-10.md)
+    - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva válido es **Windows 10: Configuración del correo electrónico para dispositivos Windows 10**.
+    - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
 
-5. Cuando haya terminado, seleccione **Aceptar** > **Crear** para guardar los cambios.
+6. Seleccione **Siguiente**.
 
-Después de escribir la configuración y crear el perfil, el perfil se muestra en la lista de perfiles. A continuación, [asigne este perfil a algunos grupos](device-profile-assign.md).
+7. En **Opciones de configuración**, las opciones que puede configurar serán diferentes, según la plataforma que haya elegido. Elija la plataforma para la configuración detallada:
+
+    - [Administrador de dispositivos Android (Samsung Knox Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. Seleccione **Siguiente**.
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+    Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
 ## <a name="remove-an-email-profile"></a>Eliminación de un perfil de correo electrónico
 
@@ -104,4 +117,4 @@ Si hace cambios en el perfil de correo electrónico que asignó anteriormente, p
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](device-profile-assign.md).
+Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).

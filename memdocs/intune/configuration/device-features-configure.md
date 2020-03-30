@@ -1,11 +1,11 @@
 ---
 title: 'Creación de perfiles de dispositivos iOS/iPadOS o macOS con Microsoft Intune: Azure | Microsoft Docs'
-description: Agregue o cree un perfil de dispositivo para iOS/iPadOS o macOS y, después, configure opciones para AirPrint, el diseño de la pantalla principal, las notificaciones de aplicaciones, dispositivo compartido, inicio de sesión único y configuración de filtro de contenido web en Microsoft Intune.
+description: Agregue o cree un perfil de dispositivo iOS, iPadOS o macOS y, después, configure opciones para AirPrint, el diseño de la pantalla principal, notificaciones de aplicaciones, dispositivo compartido, inicio de sesión único y configuración de filtros de contenido web en Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350140"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084091"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adición de la configuración de características de dispositivos iOS, iPadOS o macOS en Intune
 
@@ -149,16 +149,16 @@ Se aplica a:
 
 ## <a name="single-sign-on-app-extension"></a>Extensión de aplicación de inicio de sesión único
 
-Estas opciones configuran una extensión de aplicación que habilita el inicio de sesión único (SSO) para los dispositivos iOS, iPados y macOS. La mayoría de las aplicaciones de línea de negocio (LOB) y sitios web de la organización necesitan cierto nivel de autenticación de usuario segura. En muchos casos, la autenticación requiere que los usuarios escriban las mismas credenciales varias veces. El inicio de sesión único proporciona a los usuarios acceso a las aplicaciones y los sitios web después de escribir sus credenciales una vez. Después de iniciar sesión, los usuarios pueden acceder a aplicaciones y sitios web de forma automática, o bien usar Face ID, Touch ID o el código de acceso de Apple para obtener acceso.
+Estas opciones configuran una extensión de aplicación que habilita el inicio de sesión único (SSO) para los dispositivos iOS, iPados y macOS. La mayoría de las aplicaciones de línea de negocio (LOB) y sitios web de la organización necesitan cierto nivel de autenticación de usuario segura. En muchos casos, la autenticación requiere que los usuarios escriban las mismas credenciales varias veces. El inicio de sesión único proporciona a los usuarios acceso a las aplicaciones y los sitios web después de escribir sus credenciales una vez. El inicio de sesión único también proporciona una mejor experiencia de autenticación para los usuarios y reduce el número de avisos repetidos de credenciales.
 
-En Intune, use estas opciones para configurar una extensión de aplicación de inicio de sesión único creada por la organización, proveedor de identidades o Apple. La extensión de la aplicación de inicio de sesión único controla la autenticación de los usuarios. Estas opciones configuran las extensiones de aplicación de inicio de sesión único de tipo credencial y redirección.
+En Intune, use estas opciones para configurar una extensión de aplicación de inicio de sesión único creada por la organización, el proveedor de identidades, Microsoft o Apple. La extensión de la aplicación de inicio de sesión único controla la autenticación de los usuarios. Estas opciones configuran las extensiones de aplicación de inicio de sesión único de tipo credencial y redirección.
 
-- El tipo de redirección está diseñado para protocolos de autenticación modernos como OAuth y SAML2.
+- El tipo de redirección está diseñado para protocolos de autenticación modernos, como OAuth y SAML2. Microsoft cuenta con una extensión de aplicación de inicio de sesión único de tipo redirección de Azure AD para iOS o iPadOS que se puede habilitar con la configuración de la extensión de aplicación de inicio de sesión único.
 - El tipo de credencial está diseñado para flujos de autenticación de desafío y respuesta. Puede elegir entre una extensión de credenciales específicas de Kerberos proporcionada por Apple y una extensión de credenciales genérica.
 
 Para obtener una lista de las opciones que puede configurar en Intune, vea [Extensión de la aplicación de inicio de sesión único de iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) y [Extensión de la aplicación de inicio de sesión único de macOS](macos-device-features-settings.md#single-sign-on-app-extension).
 
-Para más información sobre cómo desarrollar una extensión de aplicación de inicio de sesión único, consulte [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) en el sitio web de Apple. Para leer la descripción de Apple de la característica, visite [Ajustes de carga "Exten. inicio sesión único"](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
+Para más información sobre cómo desarrollar una extensión de aplicación de inicio de sesión único, consulte [Enterprise SSO extensible](https://developer.apple.com/videos/play/tech-talks/301) en el sitio web de Apple. Para leer la descripción de Apple de la característica, visite [Ajustes de carga "Exten. inicio sesión único"](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > La característica de **extensión de la aplicación de inicio de sesión único** es diferente de la característica **Inicio de sesión único**:
@@ -194,7 +194,7 @@ Se aplica a:
 
 ## <a name="web-content-filter"></a>Filtro de contenido web
 
-Esta configuración puede usar el algoritmo de Autofiltro integrado de Apple para evaluar páginas web y bloquear el contenido para adultos y el idioma para adultos. También puede crear una lista de vínculos web permitidos y vínculos web restringidos. Por ejemplo, puede permitir que se abran solo los sitios web de `contoso`.
+Esta configuración puede usar el algoritmo de Autofiltro integrado de Apple para evaluar páginas web y bloquear contenido y lenguaje para adultos. También puede crear una lista de vínculos web permitidos y vínculos web restringidos. Por ejemplo, puede permitir que se abran solo los sitios web de `contoso`.
 
 Para obtener una lista de los valores que puede configurar en Intune, vea [Filtro de contenido web en iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 

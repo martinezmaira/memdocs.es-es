@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353676"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084983"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS importados con Intune
 
@@ -45,8 +45,8 @@ Intune admite la importación de certificados PFX para las plataformas siguiente
 - Android: Administrador de dispositivos
 - Android Enterprise: Totalmente administrado
 - Android Enterprise: Perfil de trabajo
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>Requisitos
@@ -213,28 +213,53 @@ Después de importar los certificados en Intune, cree un perfil de **certificado
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Seleccione **Dispositivos** > **Perfil de configuración** > **Crear perfil**.
+2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
 3. Escriba las propiedades siguientes:
+   - **Plataforma**: seleccione la plataforma de los dispositivos.
+   - **Perfil**: seleccione **PKCS imported certificate** (Certificado PKCS importado).
 
-   - **Nombre** del perfil
-   - Si lo desea, establezca una descripción
-   - **Plataforma** en la cual implementar el perfil
-   - Establezca **Tipo del perfil** en **Certificado PKCS importado**.
+4. Seleccione **Crear**.
 
-4. Seleccione **Configuración** y escriba las siguientes propiedades:
+5. En **Básico**, escriba las propiedades siguientes:
+   - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil es *Perfil de certificado PKCS importado en toda la empresa*.
+   - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
+
+6. Seleccione **Siguiente**.
+
+7. En **Opciones de configuración**, escriba las siguientes propiedades:
 
    - **Propósito planteado**: Especifique el propósito planteado de los certificados que se importan para este perfil. Los administradores pueden importar los certificados con otros propósitos planteados (como firma S/MIME o cifrado S/MIME). El propósito planteado seleccionado en el perfil de certificado coincide con el perfil de certificado con los certificados importados adecuados. El propósito planteado es una etiqueta para agrupar los certificados importados y no garantiza que los certificados importados con esa etiqueta cumplan dicho propósito.  
-   - **Período de validez del certificado**: A menos que se haya cambiado el período de validez en la plantilla de certificado, esta opción tiene como valor predeterminado un año.
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **Proveedor de almacenamiento de claves (KSP)** : en el caso de Windows, seleccione la ubicación del dispositivo en la que quiera almacenar las claves.
 
-5. Seleccione **Aceptar** > **Crear** para guardar el perfil.
+8. Seleccione **Siguiente**.
+
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+   Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. (*Se aplica solo a Windows 10*) En **Reglas de aplicación**, especifique las reglas de aplicación para restringir la asignación de este perfil. Puede elegir asignar o no asignar el perfil en función de la edición del sistema operativo o la versión de un dispositivo.
+
+    Para más información, consulte [Reglas de aplicabilidad](../configuration/device-profile-create.md#applicability-rules) en *Creación de un perfil de dispositivo en Microsoft Intune*.
+
+    Seleccione **Siguiente**.
+
+12. En **Revisar y crear**, revise la configuración. Si selecciona Crear, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
 ## <a name="support-for-third-party-partners"></a>Compatibilidad con asociados de terceros
 
 Los siguientes asociados proporcionan métodos o herramientas compatibles que puede usar para importar certificados PFX en Intune.
 
 ### <a name="digicert"></a>DigiCert
+
 Si usa el servicio de la plataforma PKI DigiCert, puede usar la **herramienta de importación de certificados S/MIME para Intune de DigiCert** con el fin de importar los certificados PFX en Intune. El uso de esta herramienta permite obviar las instrucciones de la sección [Importación de certificados PFX en Intune](#import-pfx-certificates-to-intune) que se detallaron anteriormente en este artículo.
 
 Para obtener más información sobre la herramienta de importación de DigiCert y cómo obtenerla, consulte https://knowledge.digicert.com/tutorials/microsoft-intune.html en la base de conocimiento de DigiCert.

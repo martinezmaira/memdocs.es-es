@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d31d83aff2bc2dc6c0c62c46220bf73b430a912c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360475"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086552"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Configuración de dispositivos Android para configurar VPN en Intune
 
@@ -32,7 +32,7 @@ Para más información sobre los perfiles de VPN en Intune, consulte [Perfiles d
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-[Cree un perfil de configuración de dispositivo](vpn-settings-configure.md#create-a-device-profile) y elija **Android**.
+[Cree un perfil de configuración de dispositivo](vpn-settings-configure.md) y elija **Administrador de dispositivos Android**.
 
 ## <a name="base-vpn"></a>VPN base
 
@@ -53,7 +53,7 @@ Para más información sobre los perfiles de VPN en Intune, consulte [Perfiles d
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **Huella digital** (solo Check Point Capsule VPN): escriba una cadena (por ejemplo **Código de huella digital de Contoso**) para comprobar que se puede confiar en el servidor VPN. Se envía una huella digital al cliente para que este sepa que se puede confiar en cualquier servidor que tenga la misma huella digital. Si el dispositivo no tiene la huella digital, le pide al usuario que confíe en el servidor VPN mientras muestra la huella digital. El usuario comprueba la huella digital manualmente y opta por confiar para conectarse.
+- **Huella digital** (solo Check Point Capsule VPN): escriba una cadena (por ejemplo **Código de huella digital de Contoso**) para comprobar que se puede confiar en el servidor VPN. Se envía una huella digital al cliente para que este sepa que se puede confiar en cualquier servidor que tenga la misma huella digital. Si el dispositivo no tiene la huella digital, le pide al usuario que confíe en el servidor VPN mientras la muestra. El usuario comprueba la huella digital manualmente y opta por confiar para conectarse.
 - **Especifique pares clave-valor para los atributos de VPN de Citrix** (solo Citrix): escriba los pares de clave y valor, proporcionados por Citrix. Estos valores configuran las propiedades de la conexión VPN. 
 
   También puede **importar** un archivo de valores separados por comas (.csv) con pares de clave y valor. Asegúrese de revisar las propiedades **Mis datos tienen encabezados** y **Clave** .

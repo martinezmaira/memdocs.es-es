@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352350"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084888"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Uso de credenciales derivadas en Microsoft Intune
 
@@ -33,7 +33,7 @@ Las credenciales derivadas son una implementación de las directrices del Nation
 
 **Con la implementación de Intune**:
 
-- El administrador de Intune configura su inquilino para que funcione con un emisor de credenciales derivadas compatible. No es necesario aplicar ninguna configuración específica de Intune en el sistema del emisor de las credenciales derivadas.
+- El administrador de Intune configura su inquilino para que funcione con un emisor de credenciales derivadas compatible. No es necesario aplicar ninguna configuración específica de Intune en el sistema del emisor de credenciales derivadas.
 
 - El administrador de Intune especifica la **credencial derivada** como *método de autenticación* de los siguientes objetos:
 
@@ -43,7 +43,7 @@ Las credenciales derivadas son una implementación de las directrices del Nation
 
   - Firma S/MIME y cifrado
 
-- Los usuarios obtienen una credencial derivada usando su tarjeta inteligente en un equipo para autenticarse en el emisor de las credenciales derivadas. Luego, el emisor emite en el dispositivo móvil un certificado que se deriva de su tarjeta inteligente.
+- Los usuarios obtienen una credencial derivada usando su tarjeta inteligente en un equipo para autenticarse en el emisor de las credenciales derivadas. Luego, el emisor emite al dispositivo móvil un certificado que se deriva de su tarjeta inteligente.
 
 - Una vez que el dispositivo ha recibido la credencial derivada, se usa para la autenticación, así como para la firma S/MIME y el cifrado, cuando las aplicaciones o los recursos obtienen acceso a perfiles que requieren la credencial derivada. 
 
@@ -90,7 +90,7 @@ En función del emisor que elija, puede que necesite personal que esté disponib
 
 Por ejemplo, puede usar el acceso condicional para bloquear el acceso al correo electrónico en los dispositivos no compatibles. Si confía en las notificaciones por correo electrónico para informar al usuario de que debe iniciar el proceso de inscripción de credenciales derivadas, es posible que los usuarios no reciban esas instrucciones hasta que cumplan la directiva.
 
-Del mismo modo, algunos flujos de trabajo de solicitud de credenciales derivadas requieren el uso de la cámara del dispositivo para escanear un código QR que aparece en pantalla. Este código vincula ese dispositivo a la solicitud de autenticación que se efectuó en el emisor de las credenciales derivadas con las credenciales de la tarjeta inteligente del usuario. Si las directivas de la configuración del dispositivo bloquean el uso de la cámara, el usuario no podrá llevar a cabo la solicitud de inscripción de credenciales derivadas.
+Del mismo modo, algunos flujos de trabajo de solicitud de credenciales derivadas requieren el uso de la cámara del dispositivo para escanear un código QR que aparece en pantalla. Este código vincula ese dispositivo a la solicitud de autenticación que se efectuó en el emisor de credenciales derivadas con las credenciales de la tarjeta inteligente del usuario. Si las directivas de configuración del dispositivo bloquean el uso de la cámara, el usuario no podrá llevar a cabo la solicitud de inscripción de credenciales derivadas.
 
 Información general:
 
@@ -106,13 +106,13 @@ A continuación se indican las consideraciones clave de cada asociado admitido. 
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Revise el [flujo de trabajo del usuario para DISA Purebred](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred). Los principales requisitos de este flujo de trabajo incluyen:
+Revise el [flujo de trabajo del usuario para DISA Purebred](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred). Los principales requisitos de este flujo de trabajo incluyen:
 
 - Los usuarios necesitan tener acceso a un equipo o a un quiosco en el que puedan usar su tarjeta inteligente para autenticarse en el emisor.
 
 - Los dispositivos que se inscriban en una credencial derivada deben instalar la aplicación Portal de empresa de Intune.
 
-- Use Intune para [implementar la aplicación DISA Purebred](#deploy-the-disa-purebred-app) en los dispositivos que se van a inscribir en una credencial derivada. Esta aplicación debe estar implementada a través de Intune para que se administre y pueda trabajar después con la aplicación Portal de empresa de Intune. Esta aplicación la usan los usuarios del dispositivo para llevar a cabo la solicitud de credenciales derivadas.
+- Use Intune para [implementar la aplicación DISA Purebred](#deploy-the-disa-purebred-app) en los dispositivos que se van a inscribir en una credencial derivada. Esta aplicación se debe implementar mediante Intune para que se administre y pueda funcionar después con la aplicación del Portal de empresa de Intune. Esta aplicación la usan los usuarios del dispositivo para llevar a cabo la solicitud de credenciales derivadas.
 
 - La aplicación DISA Purebred requiere una [VPN por aplicación](../configuration/vpn-settings-configure.md) para garantizar que la aplicación pueda acceder a DISA Purebred durante la inscripción de la credencial derivada.
 
@@ -122,7 +122,7 @@ Para obtener información sobre cómo obtener y configurar la aplicación DISA P
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-Revise el [flujo de trabajo del usuario para Entrust Datacard](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard). Los principales requisitos de este flujo de trabajo incluyen:
+Revise el [flujo de trabajo del usuario para Entrust Datacard](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard). Los principales requisitos de este flujo de trabajo incluyen:
 
 - Los usuarios necesitan tener acceso a un equipo o a un quiosco en el que puedan usar su tarjeta inteligente para autenticarse en el emisor.
 
@@ -132,7 +132,7 @@ Revise el [flujo de trabajo del usuario para Entrust Datacard](https://docs.micr
 
 #### <a name="intercede"></a>Intercede
 
-Revise el [flujo de trabajo del usuario para Intercede](https://docs.microsoft.com/user-help/enroll-ios-device-intercede). Los principales requisitos de este flujo de trabajo incluyen:
+Revise el [flujo de trabajo del usuario para Intercede](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede). Los principales requisitos de este flujo de trabajo incluyen:
 
 - Los usuarios necesitan tener acceso a un equipo o a un quiosco en el que puedan usar su tarjeta inteligente para autenticarse en el emisor.
 
@@ -154,7 +154,7 @@ Le recomendamos que proporcione una dirección URL que hospede su guía. Esta di
 
 Cree directivas o edite las directivas existentes para usar las credenciales derivadas. Las credenciales derivadas reemplazan otros métodos de autenticación para la autenticación de aplicaciones, Wi-Fi, VPN, correo electrónico, así como para la firma S/MIME y el cifrado.
 
-Evite requerir el uso de una credencial derivada para obtener acceso a un proceso que usará como parte del proceso para obtener la credencial derivada, ya que puede impedir que los usuarios lleven a cabo la solicitud.
+Evite exigir el uso de una credencial derivada para acceder a un proceso que se usará como parte del proceso para obtener la credencial derivada, ya que puede impedir que los usuarios lleven a cabo la solicitud.
 
 ## <a name="set-up-a-derived-credential-issuer"></a>Configurar un emisor de credenciales derivadas
 
@@ -175,7 +175,7 @@ Antes de crear directivas que requieran el uso de una credencial derivada, confi
 
 5. Especifique una **dirección URL de ayuda de credenciales derivadas** para proporcionar un vínculo a una ubicación que incluya instrucciones personalizadas para ayudar a los usuarios a obtener las credenciales derivadas para su organización. Las instrucciones deben ser específicas de su organización y del flujo de trabajo necesario para obtener una credencial del emisor elegido. El vínculo aparece en la aplicación Portal de empresa y debe ser accesible desde el dispositivo.
 
-   Si no especifica su propia dirección URL, Intune proporcionará un vínculo a los detalles genéricos que no pueden cubrir todos los escenarios. Puede que esta guía genérica no sea precisa para su entorno.
+   Si no especifica su propia dirección URL, Intune proporcionará un vínculo a detalles genéricos que no pueden abarcar todos los escenarios. Puede que esta guía genérica no sea precisa para su entorno.
 
 6. Seleccione una o más opciones para **Tipo de notificación**. Los tipos de notificación son los métodos que se usan para informar a los usuarios sobre los siguientes escenarios:
 
@@ -221,17 +221,34 @@ Puede especificar **credenciales derivadas** para los tipos de perfil y propósi
 Use credenciales derivadas para la autenticación basada en certificados en sitios web y aplicaciones. Para entregar una credencial derivada para la autenticación de aplicaciones:
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
-3. Escriba los valores siguientes:
 
-    - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil es **Perfil Credencial derivada para dispositivos iOS/iPadOS**.
-    - **Descripción**: escriba una descripción con información general sobre la configuración y otros detalles importantes.
-    - **Plataforma**: Seleccione **iOS/iPad**.
-    - **Tipo de perfil**: Seleccione **Credencial derivada**.
+3. Escriba las propiedades siguientes:
+   - **Plataforma**: seleccione la plataforma de los dispositivos que recibirán este perfil.
+   - **Perfil**: seleccione **Credencial derivada**.
 
-4. Haga clic en **Aceptar** para guardar los cambios.
-5. Cuando termine, seleccione **Aceptar** > **Crear** para crear el perfil de Intune. Una vez que se haya completado, el perfil se mostrará en la lista **Dispositivos - Perfiles de configuración**.
-6. Seleccione su perfil nuevo > **Asignaciones**. Seleccione los grupos que deben recibir la directiva.
+4. Seleccione **Crear**.
+
+5. En **Básico**, escriba las propiedades siguientes:
+
+   - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil es **Perfil Credencial derivada para dispositivos iOS/iPadOS**.
+   - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
+
+6. Seleccione **Siguiente**.
+
+7. En **Opciones de configuración**, establezca **Usar una credencial derivada para la autenticación de aplicaciones** en **Sí** y, luego, seleccione **Siguiente**.
+
+8. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+   Seleccione **Siguiente**.
+
+9. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+10. En **Revisar y crear**, revise la configuración. Si selecciona Crear, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
+
  
 Los usuarios reciben la notificación por correo electrónico o de la aplicación en función de la configuración que haya especificado al configurar el emisor de credenciales derivadas. La notificación informa al usuario de que debe iniciar el Portal de empresa para que se puedan procesar las directivas de credenciales derivadas.
 
