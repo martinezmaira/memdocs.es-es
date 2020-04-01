@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084091"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359473"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adición de la configuración de características de dispositivos iOS, iPadOS o macOS en Intune
 
@@ -203,30 +203,45 @@ Se aplica a:
 - iOS 7.0 y versiones más recientes
 - IPadOS 13.0 y versiones más recientes
 
-## <a name="create-a-device-profile"></a>Creación del perfil de un dispositivo
+## <a name="create-the-profile"></a>Creación del perfil
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
-    - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva válido es **macOS: Configura la pantalla de inicio de sesión**.
-    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
     - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:  
+
         - **iOS/iPadOS**
         - **macOS**
-    - **Tipo de perfil**: seleccione **Características del dispositivo**.
 
-4. Dependiendo de la plataforma que haya elegido, las opciones que pueda configurar serán diferentes. Elija la plataforma para la configuración detallada:
+    - **Perfil**: seleccione **Características del dispositivo**.
+
+4. Seleccione **Crear**.
+5. En **Básico**, escriba las propiedades siguientes:
+
+    - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva válido es **macOS: Configura la pantalla de inicio de sesión**.
+    - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
+
+6. Seleccione **Siguiente**.
+
+7. En **Opciones de configuración**, las opciones que puede configurar serán diferentes, según la plataforma que haya elegido. Elija la plataforma para la configuración detallada:
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-5. Cuando haya terminado, seleccione **Aceptar** > **Crear** para guardar los cambios.
+8. Seleccione **Siguiente**.
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
 
-El perfil se crea y se muestra en la lista de perfiles. Asegúrese de [asignar el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
+    Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Una vez creado el perfil, está listo para asignarlo. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+El perfil se crea, pero puede que todavía no haga nada. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
 Vea todas las configuraciones de características de dispositivo para dispositivos [iOS/iPadOS](ios-device-features-settings.md) y [macOS](macos-device-features-settings.md).

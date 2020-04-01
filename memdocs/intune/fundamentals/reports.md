@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63034080c883452edadb3ae7812d936b841910e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79356588"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326749"
 ---
 # <a name="intune-reports"></a>Informes de Intune
 Los informes de Microsoft Intune le permiten supervisar de forma más eficaz y proactiva el estado y la actividad de los puntos de conexión de toda la organización, además de proporcionar otros datos de informes en Intune. Por ejemplo, podrá ver informes sobre el cumplimiento, el estado y las tendencias de los dispositivos. Además, puede crear informes personalizados para obtener datos más específicos. 

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c52261051000e7af1580f8213e5d348857a128c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340234"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324367"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Habilitación de aplicaciones de Win32 en dispositivos en modo S
 
-[Modo Windows 10 S](https://docs.microsoft.com/windows/deployment/s-mode) es un sistema operativo bloqueado que solo ejecuta aplicaciones de la tienda. De forma predeterminada, los dispositivos de modo Windows S no permiten la instalación y ejecución de aplicaciones Win32. Estos dispositivos incluyen una única *directiva base de Win 10S*, que bloquea el dispositivo del modo S para que no ejecute ninguna aplicación Win32 en él. Sin embargo, al crear y usar una **directiva complementaria del modo S** en Intune, puede instalar y ejecutar aplicaciones Win32 en dispositivos administrados en modo Windows 10 S. Mediante las herramientas de PowerShell de [Control de aplicaciones de Microsoft Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control), puede crear una o varias directivas complementarias para el modo Windows S. Debe firmar las directivas complementarias con el [servicio de firma de Device Guard (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) o con [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool) y, después, cargue y distribuya las directivas mediante Intune. Como alternativa, puede firmar las directivas complementarias con un certificado de codiseño de la organización; sin embargo, el método preferido es usar DGSS. En la instancia que usa el certificado de codiseño de la organización, el certificado raíz al que se encadena el certificado de codiseño debe estar presente en el dispositivo.
+[Modo Windows 10 S](https://docs.microsoft.com/windows/deployment/s-mode) es un sistema operativo bloqueado que solo ejecuta aplicaciones de la tienda. De forma predeterminada, los dispositivos de modo Windows S no permiten la instalación y ejecución de aplicaciones Win32. Estos dispositivos incluyen una única *directiva base de Win 10S*, que bloquea el dispositivo del modo S para que no ejecute ninguna aplicación Win32 en él. Sin embargo, al crear y usar una **directiva complementaria del modo S** en Intune, puede instalar y ejecutar aplicaciones Win32 en dispositivos administrados en modo Windows 10 S. Mediante las herramientas de PowerShell de [Control de aplicaciones de Microsoft Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control), puede crear una o varias directivas complementarias para el modo Windows S. Debe firmar las directivas complementarias con el [servicio de firma de Device Guard (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) o con [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) y, después, cargue y distribuya las directivas mediante Intune. Como alternativa, puede firmar las directivas complementarias con un certificado de codiseño de la organización; sin embargo, el método preferido es usar DGSS. En la instancia que usa el certificado de codiseño de la organización, el certificado raíz al que se encadena el certificado de codiseño debe estar presente en el dispositivo.
 
 Al asignar la directiva complementaria del modo S en Intune, el dispositivo puede hacer una excepción a la directiva de modo S existente del dispositivo, que permite que el catálogo de aplicaciones firmado correspondiente esté cargado. La directiva establece una lista de permitidos de aplicaciones (el catálogo de aplicaciones) que se puede usar en el dispositivo de modo S.
 

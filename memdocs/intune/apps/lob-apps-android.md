@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cce00bd1a3d9883d5a7b3e759a9968aac9c032b2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0fb8f9e4f779acc9f77327d3fdeee20ae02c6924
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361294"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324119"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Incorporación de una aplicación de línea de negocio de Android a Microsoft Intune
 

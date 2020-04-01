@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a6833001b73678557d0c9a911005cf6c80faed5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349139"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322565"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Deshabilitación del Bloqueo de activación en dispositivos iOS/iPadOS supervisados con Intune
 

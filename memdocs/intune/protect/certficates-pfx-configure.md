@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94e170e01a1ede01a94b2ca3f09d8530f97335a3
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084998"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322781"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS con Intune
 
@@ -202,7 +202,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 
    Seleccione **Siguiente**.
 
-10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+10. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
 
     Seleccione **Siguiente**.
 
@@ -260,7 +260,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 
    Seleccione **Siguiente**.
 
-10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+10. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
 
     Seleccione **Siguiente**.
 

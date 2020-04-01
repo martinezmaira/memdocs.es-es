@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083732"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80358708"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>¿Qué es la administración de aplicaciones de Microsoft Intune?
 
@@ -71,7 +71,7 @@ Intune ofrece diversas funcionalidades para ayudarle a conseguir las aplicacione
 <sup>1</sup> Considere el uso de [Windows Information Protection](../protect/windows-information-protection-configure.md) para proteger aplicaciones en dispositivos que ejecutan Windows 10.<br>
 <sup>2</sup> Se aplica solo a dispositivos administrados por Intune.<br>
 <sup>3</sup> Intune admite aplicaciones disponibles del almacén de Google Play administrado en dispositivos empresariales Android.<br>
-<sup>4</sup> Intune no proporciona la instalación de un acceso directo a una aplicación como vínculo web en dispositivos empresariales estándar de Android. Sin embargo, se proporciona compatibilidad con vínculos web para [dispositivos empresariales de Android dedicados con varias aplicaciones](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
+<sup>4</sup> Intune no proporciona la instalación de un acceso directo a una aplicación como vínculo web en dispositivos empresariales estándar de Android. Sin embargo, se proporciona compatibilidad con vínculos web para [dispositivos empresariales de Android dedicados con varias aplicaciones](../configuration/device-restrictions-android-for-work.md#dedicated-devices). 
 
 
 ## <a name="get-started"></a>Introducción

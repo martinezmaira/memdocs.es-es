@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357121"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326719"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Uso de conjuntos de directivas para agrupar colecciones de objetos de administración
 
@@ -63,7 +63,7 @@ Cuando se crea un conjunto de directivas, se crea una única unidad de asignaci�
     - **Nombre del conjunto de directivas**: indique un nombre para este conjunto de directivas.
     - **Descripción**: opcionalmente, especifique una descripción del conjunto de directivas.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Haga clic en **Siguiente: Administración de aplicaciones**.<br>
    En la página **Administración de aplicaciones** puede decidir si quiere [agregar aplicaciones](../apps/apps-add.md), [directivas de configuración de aplicaciones](../apps/app-configuration-policies-overview.md) y [directivas de protección de aplicaciones](../apps/app-protection-policy.md) al conjunto de directivas. Para más información sobre cómo administrar aplicaciones, vea [¿Qué es la administración de aplicaciones de Microsoft Intune?](../apps/app-management.md)

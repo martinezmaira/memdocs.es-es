@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5011e24064c4c546107f950925d12489ed9113c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340611"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324595"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inclusión y exclusión de asignaciones de aplicaciones en Microsoft Intune
 
@@ -90,7 +90,7 @@ Cuando se realizan asignaciones de grupos, los grupos que se han asignado ya no 
 
 Para editar las asignaciones, en la lista de **asignaciones** de aplicaciones, seleccione la fila que contiene la asignación específica que quiere cambiar. Otra forma de quitar una asignación es seleccionar los puntos suspensivos ( **…** ) al final de una fila y, luego, seleccionar **Quitar**. Para cambiar la vista de la lista **Asignaciones**, agrupe por **Tipo de asignación** o por **Incluidos o excluidos**.
 
-![Asignaciones de aplicaciones de Intune: completar](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Asignaciones de aplicaciones de Intune: completar](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

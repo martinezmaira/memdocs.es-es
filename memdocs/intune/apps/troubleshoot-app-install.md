@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad7f3f2afca711750128b75b387ddffaeb6afe79
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343822"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325813"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Solucionar problemas de instalación de aplicaciones
 

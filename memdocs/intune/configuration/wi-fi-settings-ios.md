@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3765794048de337100be0384b325f5288063121
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 27a37642891693f59c8dc38aa9bb047b251084ca
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086364"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327367"
 ---
 # <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Adición de configuración de Wi-Fi para dispositivos iOS/iPadOS en Microsoft Intune
 
@@ -33,7 +33,7 @@ Ambas se describen en este artículo.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-[Creación de un perfil de dispositivo en Microsoft Intune](device-profile-create.md).
+[Creación de un perfil de dispositivo en Microsoft Intune](wi-fi-settings-configure.md).
 
 > [!NOTE]
 > Estas configuraciones están disponibles para todos los tipos de inscripción. Para más información sobre los tipos de inscripción, consulte [Inscripción en iOS/iPadOS ](../enrollment/ios-enroll.md).

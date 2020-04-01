@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b02e7fe5d2f2812f42a049b65d6162998e8af7c2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345837"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323565"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Administración de libros electrónicos de iOS/iPadOS comprados mediante un programa de compras por volumen con Microsoft Intune
 

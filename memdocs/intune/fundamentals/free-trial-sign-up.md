@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343991"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401484"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Inicio rápido: Prueba gratuita de Microsoft Intune
 
@@ -64,7 +64,7 @@ Probar Intune es gratis durante 30 días. Si ya dispone de una cuenta profesiona
 
 Si aún no ha iniciado sesión en el portal, complete los pasos siguientes:
 
-1. Abra una nueva ventana del explorador y escriba **https://devicemanagement.microsoft.com** en la barra de direcciones. 
+1. Abra una nueva ventana del explorador y escriba **https://endpoint.microsoft.com** en la barra de direcciones. 
 2. Use el id. de usuario que recibió en los pasos anteriores para iniciar sesión ( *yourID@yourdomain* .onmicrosoft.com).
 
     ![Imagen de la página de inicio de sesión del portal](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Tal como se mencionó anteriormente, si quiere usar el dominio personalizado de 
 ## <a name="admin-experiences"></a>Experiencias del administrador
 
 Hay dos portales que usará con mayor frecuencia:
-- El Centro de administración de Microsoft Endpoint Manager ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) es donde puede explorar las [funcionalidades de Intune](what-is-intune.md). Aquí es donde un administrador puede trabajar con Intune.
+- El Centro de administración de Microsoft Endpoint Manager ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) es donde puede explorar las [funcionalidades de Intune](what-is-intune.md). Aquí es donde un administrador puede trabajar con Intune.
 - El Centro de administración de Microsoft 365 ([https://admin.microsoft.com](https://admin.microsoft.com)) es donde puede agregar y administrar usuarios si no usa Azure Active Directory para esta tarea. También puede administrar otros aspectos de su cuenta, como la facturación y el soporte técnico.
 
 ## <a name="next-steps"></a>Pasos siguientes

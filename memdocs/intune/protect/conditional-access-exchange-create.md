@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4efae3dca2560c51cb818b6b81dae4a6f3f5188b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352987"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323125"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configuración del acceso a Exchange local para Intune
 

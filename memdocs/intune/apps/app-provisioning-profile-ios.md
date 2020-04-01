@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3cf008c708ce42611a842ff7f8720d48d57ac91
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341625"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323431"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Uso de perfiles de aprovisionamiento de aplicaciones para iOS para evitar que las aplicaciones expiren
 
@@ -53,7 +53,7 @@ Como administrador, puede incluir y excluir grupos de seguridad para asignar la 
 
    La **Fecha de expiración** se rellenará a partir de un valor en el archivo del perfil de configuración móvil de Apple que se agregó anteriormente.<br>
 
-   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="./media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Haga clic en **Siguiente: Etiquetas de ámbito**.<br>
    En la página **Etiquetas de ámbito** puede configurar opcionalmente etiquetas de ámbito para determinar quién puede ver el perfil de aprovisionamiento de aplicaciones iOS/iPadOS en Intune. Para obtener más información sobre las etiquetas de ámbito, consulte [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Uso del control de acceso basado en roles y de las etiquetas de ámbito para la TI distribuida).

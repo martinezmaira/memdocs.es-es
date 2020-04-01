@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e7bc7064fca5355f33aaa16306e452d8ecffb56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: adbc96dade5b6da134fa8a22f2cb613fc0baa923
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348905"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326320"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Reinicio remoto de los dispositivos con Intune
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50e0b724ae62a5400d6807525db157ad0fa19b8f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c64d6dab674b75fd4e62638ac6a221cd2aca4a85
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334293"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323980"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Incorporación de una aplicación de línea de negocio de Windows Phone a Microsoft Intune
 

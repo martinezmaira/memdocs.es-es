@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02e029755c40c0e54843d950e01b1ab9172c45a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345044"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327050"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Inicio rápido: Inscripción de dispositivos Windows 10
 

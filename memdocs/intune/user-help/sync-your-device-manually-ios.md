@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 67ea2757e066b70154baea9f87a95a12dd2fe632
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347202"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274955"
 ---
 # <a name="sync-your-ios-device-manually"></a>Sincronización manual del dispositivo iOS
 
@@ -34,13 +34,13 @@ A veces, una aplicación puede tardar más tiempo en descargarse desde el Portal
 
 2. Pulse en **Dispositivos**. Si tiene varios dispositivos, verá una lista de ellos. Elija el que está usando actualmente. Si solo tiene un dispositivo, irá directamente a la pantalla de detalles del dispositivo.
 
-    ![Captura de la pantalla Dispositivos, donde se muestran dos dispositivos. El dispositivo superior tiene el texto "Este es el iPhone 6 Plus que está usando actualmente".](/user-help/media/ios_sync_1_CP_after_1804.png)
+    ![Captura de la pantalla Dispositivos, donde se muestran dos dispositivos. El dispositivo superior tiene el texto "Este es el iPhone 6 Plus que está usando actualmente".](./media/ios_sync_1_CP_after_1804.png)
 
 3. Pulse **Comprobar configuración** para sincronizar el dispositivo. Mientras dure la sincronización, aparecerá una barra en la pantalla.
 
-    ![Captura de pantalla con los detalles del dispositivo, en los que se muestra la hora de la última comprobación del dispositivo y el vínculo Comprobar configuración.](/user-help/media/ios_sync_2_CP_after_1804.png)  
+    ![Captura de pantalla con los detalles del dispositivo, en los que se muestra la hora de la última comprobación del dispositivo y el vínculo Comprobar configuración.](./media/ios_sync_2_CP_after_1804.png)  
 
-   ![Captura de pantalla con los detalles del dispositivo y con la barra de carga después de que el usuario hace clic en Comprobar comprobación.](/user-help/media/ios_sync_3_CP-after_1804.png)
+   ![Captura de pantalla con los detalles del dispositivo y con la barra de carga después de que el usuario hace clic en Comprobar comprobación.](./media/ios_sync_3_CP-after_1804.png)
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
 

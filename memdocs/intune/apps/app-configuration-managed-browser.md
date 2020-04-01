@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083635"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323407"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Administración del acceso web con un explorador protegido por directiva de Microsoft Intune
 

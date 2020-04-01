@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7bcc99937cfdf0c286eeb4f7f3d11ff4bf5c0c4f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085028"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322810"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Uso de certificados para la autenticación en Microsoft Intune
 
@@ -112,7 +112,7 @@ Cree un perfil de certificado de confianza independiente para cada plataforma de
    ![Navegación a Intune y creación de un perfil para un certificado de confianza](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. Escriba las propiedades siguientes:
-   - **Plataforma**: Elija la plataforma de los dispositivos que recibirán este perfil.
+   - **Plataforma**: elija la plataforma de los dispositivos que recibirán este perfil.
    - **Perfil**: seleccione **Certificado de confianza**.
   
 4. Seleccione **Crear**.
@@ -139,7 +139,7 @@ Cree un perfil de certificado de confianza independiente para cada plataforma de
 
    Seleccione **Siguiente**.
 
-10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+10. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
 
     Seleccione **Siguiente**.
 

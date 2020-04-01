@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d817c7e8fc10fe95040fbf48f5d807504ca44a2
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372643"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407797"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune independiente: administración de aplicaciones Win32
 
@@ -57,7 +57,7 @@ Puede descargar la [Herramienta de preparación de contenido de Microsoft Win32]
 
 ### <a name="process-flow-to-create-intunewin-file"></a>Flujo del proceso para crear un archivo .intunewin
 
-   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.svg" width="700">
+   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.png" width="700">
 
 ### <a name="run-the-microsoft-win32-content-prep-tool"></a>Ejecución de la Herramienta de preparación de contenido de Microsoft Win32
 
