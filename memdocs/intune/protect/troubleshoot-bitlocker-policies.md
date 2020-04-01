@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e1e3db367d7e8e9044201c8f5e02a9225305495
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338609"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325620"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Solución de problemas de directivas de BitLocker en Microsoft Intune
 
