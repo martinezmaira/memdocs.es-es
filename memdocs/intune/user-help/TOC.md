@@ -12,6 +12,7 @@
 
 ## Uso del dispositivo Android
 ### [Por qué inscribir su dispositivo Android](why-enroll-android-device.md)
+### [Instalación de la aplicación Portal de empresa en China](install-company-portal-android-china.md)
 ### Inscribir el dispositivo
 #### [Inscripción de su dispositivo Android](enroll-device-android-company-portal.md)  
 #### [Inscripción con el perfil de trabajo Android](enroll-device-android-work-profile.md)
