@@ -5,27 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: ''
+ms.reviewer: kakyker; annovich
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526298"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359194"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Configuración de características de dispositivos macOS en Intune
 
-Intune incluye algunas opciones integradas para personalizar las características de los dispositivos macOS. Por ejemplo, los administradores pueden agregar impresoras AirPrint, elegir cómo los usuarios inician sesión, configurar los controles de energía, usar la autenticación de inicio de sesión único, etc.
+Intune incluye opciones integradas para personalizar las características de los dispositivos macOS. Por ejemplo, los administradores pueden agregar impresoras AirPrint, elegir cómo los usuarios inician sesión, configurar los controles de energía, usar la autenticación de inicio de sesión único, etc.
 
 Use estas características para controlar los dispositivos macOS como parte de la solución de administración de dispositivos móviles (MDM).
 
@@ -40,7 +40,7 @@ En este artículo se enumeran estas opciones de configuración y se describe lo 
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Las opciones se aplican a: Inscripción de dispositivos e inscripción de dispositivos automatizada 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Las opciones se aplican a: Inscripción de dispositivos e inscripción de dispositivos automatizada
 
 - **Dirección IP**: escriba la dirección IPv4 o IPv6 de la impresora. Si usa nombres de host para identificar las impresoras, puede obtener la dirección IP haciendo ping a la impresora en la aplicación Terminal. En la sección [Obtención de la dirección IP y la ruta de acceso](#get-the-ip-address-and-path) (en este artículo) se proporcionan más detalles.
 - **Ruta de acceso**: escriba la ruta de acceso de la impresora. La ruta de acceso suele ser `ipp/print` para las impresoras de la red. En la sección [Obtención de la dirección IP y la ruta de acceso](#get-the-ip-address-and-path) (en este artículo) se proporcionan más detalles.
@@ -70,7 +70,7 @@ Para agregar servidores AirPrinter, necesita la dirección IP de la impresora, l
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Las opciones se aplican a: Todos los tipos de inscripción
 
-- **Archivos, carpetas y aplicaciones personalizadas**: **agregue** la ruta de acceso de un archivo, una carpeta, una aplicación personalizada o una aplicación del sistema que quiera abrir cuando un usuario inicie sesión en el dispositivo. Las aplicaciones del sistema o las aplicaciones creadas o personalizadas para su organización suelen estar en la carpeta `Applications`, con una ruta de acceso similar a `/Applications/AppName.app`. 
+- **Archivos, carpetas y aplicaciones personalizadas**: **agregue** la ruta de acceso de un archivo, una carpeta, una aplicación personalizada o una aplicación del sistema que quiera abrir cuando los usuarios inicien sesión en los dispositivos. Las aplicaciones del sistema o las aplicaciones creadas o personalizadas para su organización suelen estar en la carpeta `Applications`, con una ruta de acceso similar a `/Applications/AppName.app`. 
 
   Puede agregar muchos archivos, carpetas y aplicaciones. Por ejemplo, escriba:  
   
@@ -81,43 +81,45 @@ Para agregar servidores AirPrinter, necesita la dirección IP de la impresora, l
   
   Al agregar una aplicación, una carpeta o un archivo, asegúrese de escribir la ruta de acceso correcta. No todos los elementos se encuentran en la carpeta `Applications`. Si un usuario mueve un elemento de una ubicación a otra, la ruta de acceso cambia. Este elemento movido no se abrirá cuando el usuario inicie sesión.
 
+- **Ocultar en la configuración del usuario**: **ocultar** no muestra la aplicación en la lista de elementos de inicio de sesión de usuarios y grupos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo muestra el elemento con el que se comienza al iniciar sesión en la lista de elementos de inicio de sesión de usuarios y grupos con la opción Ocultar desactivada.
+
 ## <a name="login-window"></a>Ventana de inicio de sesión
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Las opciones se aplican a: Inscripción de dispositivos e inscripción de dispositivos automatizada
 
 #### <a name="window-layout"></a>Diseño de ventana
 
-- **Mostrar información adicional en la barra de menús**: cuando se selecciona el área de tiempo en la barra de menús, **Permitir** muestra el nombre de host y la versión de macOS. **No configurado** (valor predeterminado) no muestra esta información en la barra de menús.
-- **Banner**: escriba un mensaje que se muestre en la pantalla de inicio de sesión del dispositivo. Por ejemplo, escriba la información de su organización, un mensaje de bienvenida, información de objetos perdidos, etc.
-- **Elegir el formato de inicio de sesión**: elija cómo inician sesión los usuarios en el dispositivo. Las opciones son:
+- **Mostrar información adicional en la barra de menús**: cuando se selecciona el área de tiempo en la barra de menús, **Permitir** muestra el nombre de host y la versión de macOS. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no mostrar esta información en la barra de menús.
+- **Banner**: escriba un mensaje que se muestre en la pantalla de inicio de sesión de los dispositivos. Por ejemplo, escriba la información de su organización, un mensaje de bienvenida, información de objetos perdidos, etc.
+- **Elegir el formato de inicio de sesión**: elija cómo inician sesión los usuarios en los dispositivos. Las opciones son:
   - **Solicitar nombre de usuario y contraseña** (valor predeterminado): exige que los usuarios escriban un nombre de usuario y una contraseña.
   - **Enumerar todos los usuarios, solicitar contraseña**: exige que los usuarios seleccionen su nombre de usuario en una lista de usuarios y luego escriban su contraseña. Configure también:
 
-    - **Usuarios locales**: **Ocultar** no muestra las cuentas de usuarios locales en la lista de usuarios, que puede incluir las cuentas de administrador y estándar. Se muestran únicamente las cuentas de usuario de red y del sistema. **No configurado** (valor predeterminado) muestra las cuentas de usuarios locales en la lista de usuarios.
-    - **Cuentas móviles**: **Ocultar** no muestra las cuentas móviles en la lista de usuarios. **No configurado** (valor predeterminado) muestra las cuentas móviles en la lista de usuarios. Algunas cuentas móviles pueden aparecer como usuarios de red.
-    - **Usuarios de la red**: seleccione **Mostrar** para enumerar los usuarios de la red en la lista de usuarios. **No configurado** (valor predeterminado) no muestra las cuentas de usuarios de red en la lista de usuarios.
-    - **Usuarios administradores**: **Ocultar** no muestra las cuentas de usuarios administradores en la lista de usuarios. **No configurado** (valor predeterminado) muestra las cuentas de usuarios administradores en la lista de usuarios.
-    - **Otros usuarios**: seleccione **Mostrar** para enumerar los usuarios de **Otros...** en la lista de usuarios. **No configurado** (valor predeterminado) no muestra las cuentas de otros usuarios en la lista de usuarios.
+    - **Usuarios locales**: **Ocultar** no muestra las cuentas de usuarios locales en la lista de usuarios, que puede incluir las cuentas de administrador y estándar. Se muestran únicamente las cuentas de usuario de red y del sistema. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar las cuentas de usuarios locales en la lista de usuarios.
+    - **Cuentas móviles**: **Ocultar** no muestra las cuentas móviles en la lista de usuarios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar las cuentas móviles en la lista de usuarios. Algunas cuentas móviles pueden aparecer como usuarios de red.
+    - **Usuarios de la red**: seleccione **Mostrar** para enumerar los usuarios de la red en la lista de usuarios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no mostrar las cuentas de usuarios de red en la lista de usuarios.
+    - **Usuarios administradores**: **Ocultar** no muestra las cuentas de usuarios administradores en la lista de usuarios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar las cuentas de usuarios administradores en la lista de usuarios.
+    - **Otros usuarios**: seleccione **Mostrar** para enumerar los usuarios de **Otros...** en la lista de usuarios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no mostrar otras cuentas de usuarios en la lista de usuarios.
 
 #### <a name="login-screen-power-settings"></a>Configuración de energía de la pantalla de inicio de sesión
 
-- **Botón Apagar**: **Ocultar** no muestra el botón de apagado en la pantalla de inicio de sesión. **No configurado** (valor predeterminado) muestra el botón de apagado.
-- **Botón Reiniciar**: **Ocultar** no muestra el botón de reinicio en la pantalla de inicio de sesión. **No configurado** (valor predeterminado) muestra el botón de reinicio.
-- **Botón de suspensión**: **Ocultar** no muestra el botón de suspensión en la pantalla de inicio de sesión. **No configurado** (valor predeterminado) muestra el botón de suspensión.
+- **Botón Apagar**: **Ocultar** no muestra el botón de apagado en la pantalla de inicio de sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar el botón de apagado.
+- **Botón Reiniciar**: **Ocultar** no muestra el botón de reinicio en la pantalla de inicio de sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar el botón de reinicio.
+- **Botón de suspensión**: **Ocultar** no muestra el botón de suspensión en la pantalla de inicio de sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar el botón de suspensión.
 
 #### <a name="other"></a>Otros
 
-- **Deshabilitar inicio de sesión del usuario desde la consola**: **Deshabilitar** oculta la línea de comandos de macOS usada para iniciar sesión. Para usuarios típicos, **deshabilite** esta configuración. **No configurado** (valor predeterminado) permite a los usuarios avanzados iniciar sesión con la línea de comandos de macOS. Para entrar en modo de consola, los usuarios escriben `>console` en el campo de nombre de usuario de campo y deben autenticarse en la ventana de la consola.
+- **Deshabilitar inicio de sesión del usuario desde la consola**: **Deshabilitar** oculta la línea de comandos de macOS usada para iniciar sesión. Para usuarios típicos, **deshabilite** esta configuración. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir a los usuarios avanzados iniciar sesión con la línea de comandos de macOS. Para entrar en modo de consola, los usuarios escriben `>console` en el campo de nombre de usuario de campo y deben autenticarse en la ventana de la consola.
 
 #### <a name="apple-menu"></a>Menú Apple
 
 Después de que los usuarios inicien sesión en los dispositivos, la siguiente configuración afecta a lo que puede hacer.
 
-- **Deshabilitar Apagar**: **Deshabilitar** evita que los usuarios seleccionen la opción **Apagado** después de que el usuario inicie sesión. **No configurado** (valor predeterminado) permite que los usuarios seleccionen el elemento de menú **Apagado** en el dispositivo.
-- **Deshabilitar Reiniciar**: **Deshabilitar** evita que los usuarios seleccionen la opción **Reiniciar** después de que el usuario inicie sesión. **No configurado** (valor predeterminado) permite que los usuarios seleccionen el elemento de menú **Reiniciar** en el dispositivo.
-- **Deshabilitar Desconectar**: **Deshabilitar** evita que los usuarios seleccionen la opción **Desconectar** después de que el usuario inicie sesión. **No configurado** (valor predeterminado) permite que los usuarios seleccionen el elemento de menú **Desconectar** en el dispositivo.
-- **Deshabilitar Cerrar sesión** (macOS 10.13 y versiones posteriores): **Deshabilitar** evita que los usuarios seleccionen la opción **Cerrar sesión** después de que el usuario inicie sesión. **No configurado** (valor predeterminado) permite que los usuarios seleccionen el elemento de menú **Cerrar sesión** en el dispositivo.
-- **Deshabilitar bloqueo de pantalla** (macOS 10.13 y versiones posteriores): **Deshabilitar** evita que los usuarios seleccionen la opción **Bloquear pantalla** después de que el usuario inicie sesión. **No configurado** (valor predeterminado) permite que los usuarios seleccionen el elemento de menú **Pantalla de bloqueo** en el dispositivo.
+- **Deshabilitar Apagar**: **Deshabilitar** evita que los usuarios seleccionen la opción **Apagado** después de que el usuario inicie sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios seleccionen el elemento de menú **Apagar** en los dispositivos.
+- **Deshabilitar Reiniciar**: **Deshabilitar** evita que los usuarios seleccionen la opción **Reiniciar** después de que el usuario inicie sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios seleccionen el elemento de menú **Reiniciar** en los dispositivos.
+- **Deshabilitar Desconectar**: **Deshabilitar** evita que los usuarios seleccionen la opción **Desconectar** después de que el usuario inicie sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios seleccionen el elemento de menú **Desconectar** en los dispositivos.
+- **Deshabilitar Cerrar sesión** (macOS 10.13 y versiones posteriores): **Deshabilitar** evita que los usuarios seleccionen la opción **Cerrar sesión** después de que el usuario inicie sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios seleccionen el elemento de menú **Cerrar sesión** en los dispositivos.
+- **Deshabilitar bloqueo de pantalla** (macOS 10.13 y versiones posteriores): **Deshabilitar** evita que los usuarios seleccionen la opción **Bloquear pantalla** después de que el usuario inicie sesión. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios seleccionen el elemento de menú **Bloquear pantalla** en los dispositivos.
 
 ## <a name="single-sign-on-app-extension"></a>Extensión de aplicación de inicio de sesión único
 
@@ -130,7 +132,7 @@ Esta característica se aplica a:
 - **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO de credenciales. Las opciones son:
 
   - **No configurado**: no se usan las extensiones de la aplicación. Para deshabilitar una extensión de aplicación, cambie el tipo de extensión de la aplicación de SSO a **Sin configurar**.
-  - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación modernos. Asegúrese de que conoce la extensión y el identificador del equipo correspondiente a la extensión de la aplicación de su organización.
+  - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce la extensión y el identificador del equipo correspondiente a la extensión de la aplicación de su organización.
   - **Credenciales**: use una extensión de la aplicación de credenciales genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación de desafío y respuesta. Asegúrese de que conoce el identificador de la extensión y del equipo correspondiente a la extensión de la aplicación de inicio de sesión único de su organización.  
   - **Kerberos**: use la extensión integrada de Kerberos de Apple, que se incluye en macOS Catalina 10.15 y versiones más recientes. Esta opción es una versión específica de Kerberos de la extensión de la aplicación de **Credenciales**.
 
@@ -149,7 +151,7 @@ Esta característica se aplica a:
   - Todos los dominios de los perfiles de Intune de la extensión de la aplicación de inicio de sesión único deben ser exclusivos. No se puede repetir un dominio en ningún perfil de extensión de la aplicación de inicio de sesión, aunque se usen distintos tipos de extensiones de la aplicación de SSO.
   - Estos dominios no distinguen mayúsculas de minúsculas.
 
-- **Direcciones URL** (solo redireccionamiento): escriba los prefijos de dirección URL de los proveedores de identidades en cuyo nombre la extensión de la aplicación de redireccionamiento realiza el inicio de sesión único. Cuando un usuario se redirige a estas direcciones URL, la extensión de la aplicación de SSO intervendrá y solicitará el inicio de sesión único.
+- **Direcciones URL** (solo redireccionamiento): escriba los prefijos de dirección URL de los proveedores de identidades en cuyo nombre la extensión de la aplicación de redireccionamiento usa el inicio de sesión único. Cuando se redirige a los usuarios a estas direcciones URL, la extensión de la aplicación de inicio de sesión único interviene y solicita el inicio de sesión único.
 
   - Todas las direcciones URL de los perfiles de extensión de la aplicación de inicio de sesión único de Intune deben ser únicas. No se puede repetir un dominio en ningún perfil de extensión de la aplicación de SSO, aunque se usen distintos tipos de extensiones de la aplicación de SSO.
   - Las direcciones URL deben comenzar por http:// o https://.
@@ -166,25 +168,25 @@ Esta característica se aplica a:
   
   - **Agregar**: seleccione esta opción para agregar las claves de configuración.
 
-- **Uso de la cadena de claves** (solo Kerberos): elija **Bloquear** para impedir que las contraseñas se guarden y almacenen en la cadena de claves. Si está bloqueado, no se le pedirá al usuario que guarde la contraseña y tendrá que volver a escribirla cuando expire el vale de Kerberos. **No configurado** (valor predeterminado) permite guardar y almacenar las contraseñas en la cadena de claves. No se pedirá a los usuarios que vuelvan a escribir la contraseña cuando expire el vale.
-- **Face ID, Touch ID o código de acceso** (solo Kerberos): **Requerir** obliga a los usuarios a usar su Face ID, Touch ID o código de acceso del dispositivo cuando se necesitan las credenciales para actualizar el vale de Kerberos. **No configurado** (valor predeterminado) no exige que los usuarios utilicen información biométrica o el código de acceso del dispositivo para actualizar el vale de Kerberos. Si **Uso de la cadena de claves** está bloqueado, no se aplica esta configuración.
-- **Dominio predeterminado** (solo Kerberos): elija **Habilitar** para establecer el valor de **Dominio** que ha especificado como dominio predeterminado. **No configurado** (valor predeterminado) no establece un dominio predeterminado.
+- **Uso de la cadena de claves** (solo Kerberos): elija **Bloquear** para impedir que las contraseñas se guarden y almacenen en la cadena de claves. Si está bloqueado, no se le pedirá a los usuarios que guarde la contraseña y tendrá que volver a escribirla cuando expire el vale de Kerberos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir guardar y almacenar las contraseñas en la cadena de claves. No se pedirá a los usuarios que vuelvan a escribir la contraseña cuando expire el vale.
+- **Face ID, Touch ID o código de acceso** (solo Kerberos): **Requerir** obliga a los usuarios a usar su Face ID, Touch ID o código de acceso del dispositivo cuando se necesitan las credenciales para actualizar el vale de Kerberos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir que los usuarios usen información biométrica o el código de acceso del dispositivo para actualizar el vale de Kerberos. Si **Uso de la cadena de claves** está bloqueado, no se aplica esta configuración.
+- **Dominio predeterminado** (solo Kerberos): elija **Habilitar** para establecer el valor de **Dominio** que ha especificado como dominio predeterminado. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no establecer un dominio Kerberos predeterminado.
 
   > [!TIP]
   > - **Habilite** esta opción si va a configurar varias extensiones de la aplicación de SSO de Kerberos en su organización.
   > - **Habilite** esta opción si usa varios dominios. Establece el valor de **Dominio** que escribió como dominio predeterminado.
   > - Si solo tiene un dominio, déjelo como **No configurado** (valor predeterminado).
 
-- **Detección automática** (solo Kerberos): cuando se establece en **Bloquear**, la extensión de Kerberos no usa automáticamente LDAP y DNS para determinar su nombre de sitio de Active Directory. **No configurado** (valor predeterminado) permite que la extensión busque automáticamente el nombre del sitio de Active Directory.
-- **Cambios de contraseña** (solo Kerberos): **Bloquear** impide que los usuarios cambien las contraseñas que usan para iniciar sesión en los dominios que ha escrito. **No configurado** (valor predeterminado) permite cambios de contraseña.  
-- **Sincronización de contraseñas** (solo Kerberos): elija **Habilitar** para sincronizar las contraseñas locales de los usuarios con Azure AD. **No configurado** (valor predeterminado) deshabilita la sincronización de contraseñas para Azure AD. Use esta opción como alternativa o copia de seguridad en SSO. Esta configuración no funciona si los usuarios han iniciado sesión con una cuenta móvil de Apple.
-- **Complejidad de contraseña de Windows Server Active Directory** (solo Kerberos): elija **Requerir** para exigir que las contraseñas de usuario cumplan los requisitos de complejidad de contraseñas de Active Directory. Para más información, consulte [Las contraseñas deben cumplir los requisitos de complejidad](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). **No configurado** (valor predeterminado) no requiere que los usuarios cumplan los requisitos de contraseña de Active Directory.
-- **Longitud mínima de contraseña** (solo Kerberos): escriba el número mínimo de caracteres que pueden formar la contraseña de un usuario. **No configurado** (valor predeterminado) no exige una longitud de contraseña mínima en los usuarios.
-- **Límite de reutilización de contraseñas** (solo Kerberos): escriba el número de contraseñas nuevas, de 1 a 24, que deben usarse hasta que se pueda reutilizar una contraseña anterior en el dominio. **No configurado** (valor predeterminado) no exige un límite de reutilización de contraseñas.
-- **Vigencia mínima de la contraseña** (solo Kerberos): escriba el número de días que se debe utilizar una contraseña en el dominio antes de que un usuario pueda cambiarla. **No configurado** (valor predeterminado) no exige una vigencia mínima para las contraseñas antes de que se puedan cambiar.
-- **Días hasta la notificación de expiración de la contraseña** (solo Kerberos): escriba el número de días antes de que una contraseña expire en que los usuarios recibirán una notificación en la que se les indicará que la contraseña va a expirar. **No configurado** (valor predeterminado) utiliza `15` días.
-- **Caducidad de la contraseña** (solo Kerberos): Especifique el número de días antes de que se deba cambiar la contraseña del dispositivo. **No configurado** (valor predeterminado) significa que las contraseñas de usuario nunca expiran.
-- **Dirección URL de cambio de contraseña** (solo Kerberos): escriba la dirección URL que se abre cuando el usuario inicia un cambio de contraseña de Kerberos.
+- **Detección automática** (solo Kerberos): cuando se establece en **Bloquear**, la extensión de Kerberos no usa automáticamente LDAP y DNS para determinar su nombre de sitio de Active Directory. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que la extensión busque automáticamente el nombre del sitio de Active Directory.
+- **Cambios de contraseña** (solo Kerberos): **Bloquear** impide que los usuarios cambien las contraseñas que usan para iniciar sesión en los dominios que ha escrito. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir cambiar las contraseñas.  
+- **Sincronización de contraseñas** (solo Kerberos): elija **Habilitar** para sincronizar las contraseñas locales de los usuarios con Azure AD. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría deshabilitar la sincronización de contraseñas en Azure AD. Use esta opción como alternativa o copia de seguridad en SSO. Esta configuración no funciona si los usuarios han iniciado sesión con una cuenta móvil de Apple.
+- **Complejidad de contraseña de Windows Server Active Directory** (solo Kerberos): elija **Requerir** para exigir que las contraseñas de usuario cumplan los requisitos de complejidad de contraseñas de Active Directory. Para obtener más información, consulte [Las contraseñas deben cumplir los requisitos de complejidad](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no requerir que los usuarios cumplan los requisitos de contraseña de Active Directory.
+- **Longitud mínima de contraseña** (solo Kerberos): escriba el número mínimo de caracteres que pueden formar las contraseñas de los usuarios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir una longitud de contraseña mínima en los usuarios.
+- **Límite de reutilización de contraseñas** (solo Kerberos): escriba el número de contraseñas nuevas, de 1 a 24, que deben usarse hasta que se pueda reutilizar una contraseña anterior en el dominio. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no aplicar un límite de reutilización de contraseñas.
+- **Vigencia mínima de la contraseña** (solo Kerberos): escriba el número de días que se debe usar una contraseña en el dominio antes de que los usuarios puedan cambiarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir una vigencia mínima para las contraseñas antes de que se puedan cambiar.
+- **Días hasta la notificación de expiración de la contraseña** (solo Kerberos): escriba el número de días antes de que una contraseña expire en que los usuarios recibirán una notificación en la que se les indicará que la contraseña va a expirar. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría usar `15` días.
+- **Caducidad de la contraseña** (solo Kerberos): Especifique el número de días antes de que se deba cambiar la contraseña del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría establecer que las contraseñas no expiren nunca.
+- **Dirección URL de cambio de contraseña** (solo Kerberos): escriba la dirección URL que se abre cuando los usuarios inician un cambio de contraseña de Kerberos.
 - **Nombre de la entidad de seguridad** (solo Kerberos): escriba el nombre de usuario de la entidad de seguridad de Kerberos. No es necesario incluir el nombre de dominio. Por ejemplo, en `user@contoso.com`, `user` es el nombre de la entidad de seguridad y `contoso.com` es el nombre de dominio.
 
   > [!TIP]
@@ -194,7 +196,7 @@ Esta característica se aplica a:
 - **Código de sitio de Active Directory** (solo Kerberos): escriba el nombre del sitio de Active Directory que la extensión de Kerberos debe usar. Es posible que no necesite cambiar este valor, ya que la extensión de Kerberos puede encontrar automáticamente el código del sitio de Active Directory.
 - **Nombre de la caché** (solo Kerberos): escriba el nombre de los servicios de seguridad genéricos (GSS) de la memoria caché de Kerberos. Lo más probable es que no tenga que establecer este valor.  
 - **Mensaje de requisitos de contraseñas** (solo Kerberos): escriba una versión de texto de los requisitos de contraseña de su organización que se muestra a los usuarios. El mensaje se muestra si no necesita los requisitos de complejidad de la contraseña de Active Directory o no escribe una longitud mínima de la contraseña.  
-- **Identificadores de lote de las aplicaciones** (solo Kerberos): **agregue** los identificadores de lote de aplicaciones que deben usar el inicio de sesión único en los dispositivos. A estas aplicaciones se les concede acceso al vale de concesión de vales de Kerberos y al vale de autenticación, así como acceso para autenticar a los usuarios en los servicios a los que tienen acceso autorizado.
+- **Identificadores de lote de las aplicaciones** (solo Kerberos): **agregue** los identificadores de lote de aplicaciones que deben usar el inicio de sesión único en los dispositivos. Estas aplicaciones obtienen acceso al vale de concesión de vales de Kerberos y al vale de autenticación. Las aplicaciones también autentican a los usuarios en los servicios a los que están autorizados a acceder.
 - **Asignación de dominio** (solo Kerberos): **agregue** los sufijos DNS de dominio que se deben asignar al dominio. Use esta opción cuando los nombres DNS de los hosts no coincidan con el nombre de dominio. Lo más probable es que no tenga que crear esta asignación personalizada de dominio a dominio.
 - **Certificado PKINIT** (solo Kerberos): **seleccione** el certificado de criptografía de clave pública de la autenticación inicial (PKINIT) que se puede usar en la autenticación Kerberos. Puede elegir entre los certificados [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) que ha agregado en Intune. Para más información sobre los certificados, consulte [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
 
@@ -219,7 +221,7 @@ Esta característica se aplica a:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Dominio**: escriba el dominio del sitio web que se va a asociar a una aplicación. El dominio incluye un tipo de servicio y un nombre de host completo, como `webcredentials: www.contoso.com`.
+- **Dominio**: escriba el dominio del sitio web que se va a asociar a una aplicación. El dominio incluye un tipo de servicio y un nombre de host completo, como `webcredentials:www.contoso.com`.
 
   Puede hacer coincidir todos los subdominios de un dominio asociado escribiendo `*.` (un carácter comodín de asterisco y un punto) antes del principio del dominio. El punto es obligatorio. Los dominios exactos tienen una prioridad más alta que los dominios con caracteres comodín. Por lo tanto, los patrones de los dominios primarios coinciden *si* no se encuentra ninguna coincidencia en el subdominio completo.
 
