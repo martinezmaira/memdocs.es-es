@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff94f0b628fb20c063ef77ccb061f33eb0199195
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363686"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327102"
 ---
 # <a name="categorize-devices-into-groups"></a>Clasificar dispositivos en grupos
 
@@ -71,7 +71,7 @@ Si no se muestra la columna **Categoría del dispositivo**, seleccione **Columna
 
 ### <a name="change-the-category-of-a-device"></a>Cambiar la categoría de un dispositivo
 
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Todos los dispositivos** &gt; seleccione el dispositivo que quiera &gt; **Propiedades**.
+1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Todos los dispositivos** > seleccione el dispositivo que quiera > **Propiedades**.
 2. En la siguiente hoja, puede cambiar la **categoría del dispositivo** seleccionado por cualquiera de los nombres de categoría que configuró anteriormente.
 
 ## <a name="after-you-configure-device-groups"></a>Después de configurar grupos de dispositivos

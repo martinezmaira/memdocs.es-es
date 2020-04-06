@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086021"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326957"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Cómo obtener asistencia para Microsoft Intune
 
@@ -38,7 +38,7 @@ Como administrador de Intune, puede usar la opción **Ayuda y soporte técnico**
 
 ## <a name="help-and-support-experience"></a>Experiencia de ayuda y soporte técnico
 
-La experiencia de ayuda y soporte técnico de Intune está disponible en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y en todas las hojas (o páginas) de Intune, en Azure Portal.
+La experiencia de Ayuda y soporte técnico de Intune está disponible en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y en todas las hojas (o páginas) de Intune, en Azure Portal.
 
 La experiencia de *Ayuda y soporte técnico* es similar a la observada en el [centro de administración de Microsoft 365](https://admin.microsoft.com/) y reemplaza a la experiencia anterior de *Ayuda y soporte técnico*, que permanece vigente para otros servicios en Azure.
 
@@ -66,7 +66,7 @@ Este problema se produce cuando no ha autenticado la nueva cuenta del inquilino 
 
 - **Desde el Centro de administración de Microsoft Endpoint Manager**
 
-  - Desde cualquier nodo del Centro de administración de Microsoft Endpoint Manager, seleccione el icono **?** en la esquina superior derecha del portal y, luego, use la lista desplegable para seleccionar el tipo de administración con el que quiere ayuda. El centro de administración de Microsoft Endpoint Manager admite los siguientes tipos de administración, y debe seleccionar aquel para el que quiera ayuda, como Intune:
+  - Seleccione el icono **?** Desde cualquier nodo del Centro de administración de Microsoft Endpoint Manager. en la esquina superior derecha del portal y, luego, use la lista desplegable para seleccionar el tipo de administración con el que quiere ayuda. El Centro de administración de Microsoft Endpoint Manager admite los tipos de administración siguientes; debe seleccionar aquel para el que quiera ayuda, como Intune:
 
     - Configuration Manager (incluye Desktop Analytics)
     - Intune

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4ea84b0b378030a02c73da20b4a59d0b65ca288
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363153"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326814"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Asignación de un rol a un usuario de Intune
 

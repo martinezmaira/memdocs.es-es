@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eefc9f07a6c0cf442468b14d6d74567b8c15861
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348827"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322333"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Solución de problemas de acciones de dispositivo en Intune
 
@@ -54,7 +54,7 @@ No. Además, no es necesario escribir los guiones.
 ## <a name="remove-devices-action"></a>Acción Quitar dispositivos
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>¿Cómo puedo saber quién ha iniciado Retirar/Eliminar datos?
-En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Administración de inquilinos** > **Registros de auditoría** &gt; compruebe la columna **Iniciado por**.
+En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Administración de inquilinos** > **Registros de auditoría** > compruebe la columna **Iniciado por**.
 Si no ve ninguna entrada, lo más probable es que la persona que ha iniciado la acción sea el usuario del dispositivo. Probablemente ha usado la aplicación Portal de empresa o portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>¿Por qué no se ha desinstalado la aplicación después de usar Retirar?

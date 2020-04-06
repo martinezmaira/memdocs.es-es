@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086900"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359157"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Configuración de dispositivos con Windows 10 y Windows Holographic for Business para ejecutarse como una pantalla completa dedicada con Intune
 
 En dispositivos con Windows 10, use Intune para ejecutar los dispositivos como una pantalla completa, lo que a veces se conoce como un dispositivo dedicado. Un dispositivo en pantalla completa puede ejecutar una aplicación o varias. Puede mostrar y personalizar un menú Inicio, agregar diferentes aplicaciones, incluidas las aplicaciones Win32, agregar una página principal específica a un explorador web y mucho más. 
 
-Esta característica se aplica a los dispositivos que ejecutan:
+Esta característica se aplica a:
 
 - Windows 10 y versiones posteriores
 - Windows Holographic for Business
+
+Para crear perfiles de quiosco para otras plataformas, consulte [Administrador de dispositivos Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) y [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune admite un perfil de quiosco por dispositivo. Si necesita varios perfiles de quiosco en un único dispositivo, puede usar un [OMA-URI personalizado](custom-settings-windows-10.md).
 
@@ -69,7 +71,8 @@ El perfil se crea y se muestra en la lista de perfiles. Después, [asigne](devic
 [Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
 Puede crear perfiles de pantalla completa para dispositivos que ejecutan las siguientes plataformas:
+
 - [Administrador de dispositivos Android](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 y versiones posteriores](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

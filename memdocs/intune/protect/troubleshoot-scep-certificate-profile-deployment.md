@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 216cf1a4d84adf717ebf914732eab3d6a169508f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350426"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326607"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Solución de problemas de implementación de un perfil de certificado SCEP en dispositivos en Microsoft Intune
 
@@ -36,7 +36,7 @@ Los perfiles de certificado SCEP para Android llegan al dispositivo como SyncML 
 
 ### <a name="validate-that-the-android-device-was-sent-the-policy"></a>Validación de que el dispositivo Android se envió a la directiva
 
-Para validar que se envió un perfil al dispositivo que espera, en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vaya al apartado de **solución de problemas y soporte técnico** > **Solucionar problemas**.  En la ventana *Solucionar problemas*, establezca **Asignaciones** en **Perfiles de configuración** y, a continuación, valide las siguientes configuraciones:
+Para validar que se envió un perfil al dispositivo que espera, en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vaya a **Solución de problemas y soporte técnico** > **Solucionar problemas**.  En la ventana *Solucionar problemas*, establezca **Asignaciones** en **Perfiles de configuración** y, a continuación, valide las siguientes configuraciones:
 
 1. Especifique un usuario que debe recibir el perfil de certificado SCEP.
 
@@ -63,7 +63,7 @@ Ejemplos de entradas clave:
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>Validación de que se ha enviado la directiva al dispositivo iOS/iPadOS
 
-Para validar que se envió un perfil al dispositivo que espera, en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vaya al apartado de **solución de problemas y soporte técnico** > **Solucionar problemas**.  En la ventana *Solucionar problemas*, establezca **Asignaciones** en **Perfiles de configuración** y, a continuación, valide las siguientes configuraciones:
+Para validar que se envió un perfil al dispositivo que espera, en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vaya a **Solución de problemas y soporte técnico** > **Solucionar problemas**.  En la ventana *Solucionar problemas*, establezca **Asignaciones** en **Perfiles de configuración** y, a continuación, valide las siguientes configuraciones:
 
 1. Especifique un usuario que debe recibir el perfil de certificado SCEP.
 
@@ -90,7 +90,7 @@ Ejemplos de entradas clave:
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>Validación de que el dispositivo Windows se envió a la directiva
 
-Para validar que se envió un perfil al dispositivo que espera, en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)[Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya al apartado de **solución de problemas y soporte técnico** > **Solucionar problemas**.  En la ventana *Solucionar problemas*, establezca **Asignaciones** en **Perfiles de configuración** y, a continuación, valide las siguientes configuraciones:
+Para validar que se envió un perfil al dispositivo que espera, en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)[Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Solución de problemas y soporte técnico** > **Solucionar problemas**.  En la ventana *Solucionar problemas*, establezca **Asignaciones** en **Perfiles de configuración** y, a continuación, valide las siguientes configuraciones:
 
 1. Especifique un usuario que debe recibir el perfil de certificado SCEP.
 

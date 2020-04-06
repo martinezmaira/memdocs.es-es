@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085193"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323304"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Aplicación del cumplimiento de ATP de Microsoft Defender con acceso condicional en Intune
 
@@ -162,7 +162,7 @@ Si no está familiarizado con la creación de una directiva de cumplimiento, con
 La directiva de acceso condicional bloquea el acceso a los recursos de los dispositivos que superan el nivel de amenaza establecido en la directiva de cumplimiento. Puede bloquear el acceso del dispositivo a los recursos corporativos, como SharePoint o Exchange Online.
 
 > [!TIP]
-> Acceso condicional es una tecnología de Azure Active Directory (Azure AD). El nodo de acceso condicional al que se accede desde el Centro de administración de Microsoft Endpoint Manager es el mismo nodo que al que se accede desde *Azure AD*.
+> Acceso condicional es una tecnología de Azure Active Directory (Azure AD). El nodo de acceso condicional al que se accede desde el Centro de administración de Microsoft Endpoint Manager es el mismo nodo que al que se accede desde *Azure AD*.
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086168"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256647"
 ---
 # <a name="what-is-device-enrollment"></a>¿Qué es la inscripción de dispositivos?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,7 +40,7 @@ De manera predeterminada, los dispositivos de todas las plataformas pueden inscr
 | | Durante la inscripción, los dispositivos se borran. | Se asocia cada dispositivo a un usuario.| En caso afirmativo, los usuarios no pueden anular la inscripción de los dispositivos. | |
 |**[BYOD](#bring-your-own-device)** | No| Sí | No | [Más información](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No | [Más información](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| Sí | Opcional | Opcional|[Más información](device-enrollment-program-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Sí | Opcional | Opcional|[Más información](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Sí | Opcional | No| [Más información](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| No | No | No|[Más información](apple-configurator-enroll-ios.md)|
 
@@ -49,7 +49,7 @@ De manera predeterminada, los dispositivos de todas las plataformas pueden inscr
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | No| Sí | No | [Más información](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No  | [Más información](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| Sí | Opcional | Opcional|[Más información](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Sí | Opcional | Opcional|[Más información](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Métodos de inscripción de Windows
 
@@ -84,15 +84,15 @@ De manera predeterminada, los dispositivos de todas las plataformas pueden inscr
 Entre los dispositivos Bring Your Own Device (BYOD) se incluyen teléfonos, tabletas y equipos personales. Los usuarios instalan y ejecutan la aplicación Portal de empresa para inscribir sus dispositivos BYOD. Este programa permite a los usuarios acceder a los recursos de la compañía, como el correo electrónico.
 
 ## <a name="corporate-owned-device"></a>Dispositivo de propiedad corporativa
-Entre los [dispositivos de propiedad corporativa (COD)](corporate-identifiers-add.md) se incluyen teléfonos, tabletas y equipos propiedad de la empresa facilitados a los recursos. La inscripción de COD permite escenarios como la inscripción automática, el uso compartido de dispositivos o los requisitos de inscripción autorizada previamente. Una forma habitual de inscribir dispositivos COD es utilizar el administrador de inscripción de dispositivos (DEM) por parte de un administrador. Los dispositivos iOS/iPadOS se pueden inscribir directamente mediante las herramientas del Programa de inscripción de dispositivos (DEP) proporcionadas por Apple. Los dispositivos con un número IMEI también se pueden identificar y etiquetar como de propiedad corporativa.
+Entre los [dispositivos de propiedad corporativa (COD)](corporate-identifiers-add.md) se incluyen teléfonos, tabletas y equipos propiedad de la empresa facilitados a los recursos. La inscripción de COD permite escenarios como la inscripción automática, el uso compartido de dispositivos o los requisitos de inscripción autorizada previamente. Una forma habitual de inscribir dispositivos COD es utilizar el administrador de inscripción de dispositivos (DEM) por parte de un administrador. Los dispositivos iOS/iPadOS se pueden inscribir directamente a través de las herramientas de ADE proporcionadas por Apple. Los dispositivos con un número IMEI también se pueden identificar y etiquetar como de propiedad corporativa.
 
 ### <a name="device-enrollment-manager"></a>Administrador de inscripción de dispositivos
 El administrador de inscripción de dispositivos (DEM) es una cuenta especial de usuario que se usa para inscribir y administrar varios dispositivos de la empresa. Los administradores pueden instalar el portal de empresa e inscribir muchos dispositivos sin usuario. Estos tipos de dispositivos son buenos para aplicaciones de punto de venta o de utilidad, por ejemplo, pero inadecuados para usuarios que necesitan acceso al correo electrónico o a los recursos de empresa. Obtenga más información sobre [DEM](device-enrollment-manager-enroll.md).
 
-### <a name="apple-device-enrollment-program"></a>Programa de inscripción de dispositivos de Apple
-La administración del Programa de inscripción de dispositivos (DEP) de Apple permite crear e implementar directivas "de forma inalámbrica" en dispositivos iOS/iPadOS y macOS que se han adquirido y administrado con DEP. El dispositivo se inscribe cuando los usuarios lo activan por primera vez y ejecutan el asistente de configuración. Este método admite el modo supervisado de iOS/iPadOS, que permite configurar un dispositivo con una funcionalidad específica.
+### <a name="apple-automated-device-enrollment"></a>Inscripción de dispositivo automatizada de Apple
+La administración de la Inscripción de dispositivo automatizada (ADE) de Apple permite crear e implementar directivas "de forma inalámbrica" en dispositivos iOS/iPadOS y macOS que se han adquirido y administrado con ADE. El dispositivo se inscribe cuando los usuarios lo activan por primera vez y ejecutan el asistente de configuración. Este método admite el modo supervisado de iOS/iPadOS, que permite configurar un dispositivo con una funcionalidad específica.
 
-Más información sobre la inscripción de DEP para iOS/iPadOS:
+Más información sobre la inscripción de ADE para iOS/iPadOS:
 
 - [Inscripción de dispositivos iOS/iPadOS en Intune](ios-enroll.md)
 - [Inscripción de dispositivos iOS/iPadOS con el Programa de inscripción de dispositivos](device-enrollment-program-enroll-ios.md)

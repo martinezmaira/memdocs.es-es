@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220105"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407840"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para permitir o restringir características mediante Intune
 
@@ -208,7 +208,9 @@ Estas opciones de configuración usan [experience policy CSP](https://docs.micro
   Esta configuración de directiva no se aplica si el equipo está unido a Azure AD y la inscripción automática está habilitada.
 
 - **Instalación manual del certificado raíz** (solo móviles): **Bloquear** evita que los usuarios finales instalen manualmente certificados raíz y certificados CAP intermedios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
-- **Cámara**: **Bloquear** evita que los usuarios finales usen la cámara en el dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
+- **Cámara**: **Bloquear** evita que los usuarios finales usen la cámara en el dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir el acceso a la cámara del dispositivo.
+
+  Intune solo administra el acceso a la cámara del dispositivo. No tiene acceso a imágenes o vídeos.
 
   [CSP de Cámara](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 

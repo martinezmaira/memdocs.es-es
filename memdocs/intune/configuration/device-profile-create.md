@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084056"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327450"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Creación de un perfil de dispositivo en Microsoft Intune
 
@@ -37,73 +37,64 @@ En este artículo:
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+Los perfiles se crean en el [Centro de administración de Microsoft Endpoint Manager Intune](https://go.microsoft.com/fwlink/?linkid=2109431). En este Centro de administración, seleccione **Dispositivos**. Dispone de las siguientes opciones:
 
-2. Seleccione **Dispositivos** > **Perfiles de configuración**. Dispone de las siguientes opciones:
+- **Información general**: muestra el estado de los perfiles y proporciona detalles adicionales sobre los perfiles que ha asignado a usuarios y dispositivos.
+- **Supervisión**: compruebe si el estado de un perfil es correcto o erróneo, y consulte registros sobre los perfiles.
+- **Por plataforma**: cree y vea directivas y perfiles en su plataforma. Esta vista también puede mostrar características específicas de la plataforma. Por ejemplo, seleccione **Windows**. Verá características específicas de Windows tales como **Anillos de actualización de Windows 10** y **Scripts de PowerShell**.
+- **Directiva**: cree perfiles de dispositivo, cargue [scripts de PowerShell](../apps/intune-management-extension.md) personalizados para ejecutarlos en los dispositivos y agregue planes de datos a los dispositivos con [eSIM](esim-device-configuration.md).
 
-    - **Información general**: muestra el estado de los perfiles y proporciona detalles adicionales sobre los perfiles que ha asignado a usuarios y dispositivos.
-    - **Administrar**: cree perfiles de dispositivo, cargue [scripts de PowerShell](../apps/intune-management-extension.md) personalizados para ejecutarlos en el perfil y agregue planes de datos a los dispositivos con [eSIM](esim-device-configuration.md).
-    - **Supervisión**: compruebe si el estado de un perfil es correcto o erróneo, y consulte registros sobre los perfiles.
-    - **Configuración**: agregue una entidad de certificación SCEP o PFX, o bien habilite la [Administración de gastos de telecomunicaciones](telecom-expenses-monitor.md) en el perfil.
+Cuando cree un perfil (**Perfiles de configuración** > **Crear perfil**), elija la plataforma:
 
-3. Seleccione **Crear perfil**. Escriba las propiedades siguientes:
+- **Administrador de dispositivos Android**
+- **Android Enterprise**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 y versiones posteriores**
+- **Windows 8.1 y versiones posteriores**
+- **Windows Phone 8.1**
 
-   - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil sería **Perfil de correo electrónico de WP para toda la empresa**.
-   - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-   - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:  
+A continuación, elija el tipo de perfil. En función de la plataforma que haya elegido, las opciones que pueda configurar serán diferentes. En los artículos siguientes se describen las opciones de los distintos tipos de perfil:
 
-       - **Administrador de dispositivos Android**
-       - **Android Enterprise**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 y versiones posteriores**
-       - **Windows 10 y versiones posteriores**
+- [Plantillas administrativas (Windows)](administrative-templates-windows.md)
+- [Personalizado](custom-settings-configure.md)
+- [Optimización de distribución (Windows)](delivery-optimization-windows.md)
+- [Credencial derivada (Android Enterprise, iOS y iPadOS)](../protect/derived-credentials.md)
+- [Características del dispositivo (macOS, iOS y iPadOS)](device-features-configure.md)
+- [Firmware del dispositivo (Windows)](device-firmware-configuration-interface-windows.md)
+- [Restricciones de dispositivos](device-restrictions-configure.md)
+- [Unión a un dominio (Windows)](domain-join-configure.md)
+- [Actualización de edición y conmutador de modo (Windows)](edition-upgrade-configure-windows-10.md)
+- [Educación (iOS y iPadOS)](../fundamentals/education-settings-configure-ios.md)
+- [Correo electrónico](email-settings-configure.md)
+- [Endpoint Protection (macOS y Windows)](../protect/endpoint-protection-configure.md)
+- [Extensiones (macOS)](kernel-extensions-overview-macos.md)
+- [Identity Protection (Windows)](../protect/identity-protection-configure.md)
+- [Quiosco](kiosk-settings.md)
+- [ATP de Microsoft Defender (Windows)](../protect/advanced-threat-protection.md)
+- [Perfil de Mobility Extensions (MX) (Administrador de dispositivos Android)](android-zebra-mx-overview.md)
+- [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
+- [Certificado PKCS](../protect/certficates-pfx-configure.md)
+- [Certificado PKCS importado](../protect/certificates-imported-pfx-configure.md)
+- [Archivo de preferencias (macOS)](preference-file-settings-macos.md)
+- [Certificado SCEP](../protect/certificates-scep-configure.md)
+- [Evaluación segura (Education) (Windows)](education-settings-configure.md)
+- [Dispositivo multiusuario compartido (Windows)](shared-user-device-settings.md)
+- [Gastos de telecomunicaciones (Administrador de dispositivos Android, iOS y iPadOS)](telecom-expenses-monitor.md)
+- [Certificado de confianza](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **Tipo de perfil**: seleccione el tipo de opciones de configuración que quiere crear. La lista dependerá de la **plataforma** que elija.
-   - **Configuración**: En los siguientes temas se describen los valores de cada tipo de perfil:
+Por ejemplo, si selecciona **iOS/iPadOS** como plataforma, las opciones de tipo de perfil serán similares al perfil siguiente:
 
-       - [Plantillas administrativas](administrative-templates-windows.md)
-       - [Personalizado](custom-settings-configure.md)
-       - [Optimización de entrega](delivery-optimization-windows.md)
-       - [Características del dispositivo](device-features-configure.md)
-       - [Restricciones de dispositivos](device-restrictions-configure.md)
-       - [Unión a un dominio](domain-join-configure.md)
-       - [Actualización de edición y conmutador de modo](edition-upgrade-configure-windows-10.md)
-       - [Educación](education-settings-configure.md)
-       - [Correo electrónico](email-settings-configure.md)
-       - [Endpoint Protection](../protect/endpoint-protection-configure.md)
-       - [Protección de identidad](../protect/identity-protection-configure.md)  
-       - [Quiosco](kiosk-settings.md)
-       - [ATP de Microsoft Defender](../protect/advanced-threat-protection.md)
-       - [Certificado PKCS](../protect/certficates-pfx-configure.md)
-       - [Certificado PKCS importado](../protect/certificates-imported-pfx-configure.md)
-       - [Archivo de preferencia](preference-file-settings-macos.md)
-       - [Certificado SCEP](../protect/certificates-scep-configure.md)
-       - [Certificado de confianza](../protect/certificates-configure.md)
-       - [Directivas de actualización](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Information Protection](../protect/windows-information-protection-configure.md)
-
-     Por ejemplo, si selecciona **iOS/iPadOS** como plataforma, las opciones de tipo de perfil serán similares al perfil siguiente:
-
-     > [!div class="mx-imgBorder"]
-     > ![Creación de un perfil de iOS o iPadOS en Intune](./media/device-profile-create/create-device-profile.png)
-
-4. Cuando termine, seleccione **Aceptar** > **Crear** para guardar los cambios. El perfil se crea y se muestra en la lista.
+> [!div class="mx-imgBorder"]
+> ![Creación de un perfil de iOS o iPadOS en Intune](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>Etiquetas de ámbito
 
-Una vez que agrega la configuración, también puede agregar una etiqueta de ámbito al perfil. Las etiquetas de ámbito filtran los perfiles a grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`.
+Una vez que agrega la configuración, también puede agregar una etiqueta de ámbito al perfil. Las etiquetas de ámbito filtran los perfiles a grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Además, se usan en TI distribuida.
 
 Para más información sobre las etiquetas de ámbito y lo que puede hacer el usuario, consulte el artículo sobre [el uso de RBAC y las etiquetas de ámbito para TI distribuida](../fundamentals/scope-tags.md).
-
-### <a name="add-a-scope-tag"></a>Incorporación de una etiqueta de ámbito
-
-1. Seleccione **Ámbito (etiquetas)** .
-2. Seleccione **Agregar** para crear una etiqueta de ámbito. O seleccione una etiqueta de ámbito existente en la lista.
-3. Haga clic en **Aceptar** para guardar los cambios.
 
 ## <a name="applicability-rules"></a>Reglas de aplicabilidad
 
@@ -183,7 +174,7 @@ Al crear perfiles, tenga en cuenta las siguientes recomendaciones:
 
 - Separe las directivas de usuario de las directivas de dispositivo.
 
-  Por ejemplo, las [plantillas administrativas en Intune](administrative-templates-windows.md) tienen cientos de valores de configuración de ADMX. Estas plantillas muestran si un valor de configuración se aplica a usuarios o dispositivos. Al crear plantillas de administración, asigne la configuración de usuario a un grupo de usuarios y la configuración de dispositivo a un grupo de dispositivos.
+  Por ejemplo, las [plantillas administrativas en Intune](administrative-templates-windows.md) tienen cientos de valores de configuración de ADMX. Estas plantillas muestran si se aplica una opción de configuración a usuarios o dispositivos. Al crear plantillas de administración, asigne la configuración de usuario a un grupo de usuarios y la configuración de dispositivo a un grupo de dispositivos.
 
   En la imagen siguiente se muestra un ejemplo de un valor de configuración que se puede aplicar a los usuarios o a los dispositivos:
 

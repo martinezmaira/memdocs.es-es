@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352077"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359458"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Configuración de Endpoint Protection de macOS en Intune  
 
 En este artículo se muestran las opciones de Endpoint Protection que se pueden configurar para los dispositivos con macOS. Estas opciones se configuran mediante un perfil de configuración de dispositivo macOS para [Endpoint Protection](endpoint-protection-configure.md) en Intune.  
+
+## <a name="before-you-begin"></a>Antes de comenzar
+
+[Cree un perfil de Endpoint Protection de macOS](endpoint-protection-configure.md).
 
 ## <a name="gatekeeper"></a>Equipo selector  
 
@@ -97,7 +101,7 @@ Para obtener más información sobre la configuración de FileVault de Apple, ve
     Las claves de recuperación de *Clave personal* se crean para los dispositivos. Configure las opciones siguientes para la clave personal.  
 
     - **Ubicación de la clave de recuperación personal**: especifique un mensaje breve para el usuario que explique cómo y dónde puede recuperar su clave de recuperación personal. Este texto se inserta en el mensaje que el usuario ve en la pantalla de inicio de sesión cuando se le pide que escriba su clave de recuperación personal en caso de que se haya olvidado una contraseña.  
-      
+
     - **Rotación de clave de recuperación personal**: especifique la frecuencia con la que se rotará la clave de recuperación personal para un dispositivo. Puede seleccionar el valor predeterminado, que es **No configurado**, o un valor de **1** a **12** meses.  
 
   - **Deshabilitar mensaje al cerrar sesión**  
@@ -118,3 +122,8 @@ Para obtener más información sobre la configuración de FileVault de Apple, ve
 
 Para obtener más información sobre FileVault con Intune, vea [Claves de recuperación de FileVault](encryption-monitor.md#filevault-recovery-keys).
 
+## <a name="next-steps"></a>Pasos siguientes
+
+[Asigne el perfil](../configuration/device-profile-assign.md) y [supervise el estado](../configuration/device-profile-monitor.md).
+
+También puede configurar Endpoint Protection en [dispositivos con Windows 10 y otros más recientes](endpoint-protection-windows-10.md).

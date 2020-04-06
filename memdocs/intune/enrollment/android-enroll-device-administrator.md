@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c22da8e3c4fdbcf40c3292476e734dd50f9543a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086215"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438789"
 ---
 # <a name="android-device-administrator-enrollment"></a>Inscripción del administrador de dispositivos Android
 
@@ -32,8 +32,6 @@ El administrador de dispositivos Android (que a veces se conoce como "administra
 Por lo tanto, para evitar esta funcionalidad reducida, se recomienda dejar de inscribir los nuevos dispositivos con el proceso del administrador de dispositivos que se describe a continuación.
 
 Por las mismas razones, también se recomienda migrar los dispositivos desde la administración del administrador de dispositivos si los dispositivos van a actualizarse a Android 10. 
-
-Para más información sobre la compatibilidad de Intune con el administrador de dispositivos, consulte la [sección de avisos](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
 
 Si, a pesar de todo, prefiere que los usuarios inscriban sus dispositivos Android con la administración del administrador de dispositivos, continúe con la siguiente sección.  
 

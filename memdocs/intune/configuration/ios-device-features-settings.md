@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086957"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359384"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
@@ -33,7 +33,7 @@ En este artículo se enumeran estas opciones de configuración y se describe lo 
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-[Cree un perfil de configuración de dispositivo iOS/iPadOS](device-features-configure.md).
+[Cree un perfil de características del dispositivo iOS/iPadOS](device-features-configure.md).
 
 > [!NOTE]
 > Esta configuración se aplica a diferentes tipos de inscripción, mientras que algunas opciones se aplican a todas las opciones de inscripción. Para más información sobre los diferentes tipos de inscripción, consulte [Inscripción en iOS/iPadOS](../enrollment/ios-enroll.md).
@@ -81,11 +81,11 @@ Esta característica se aplica a:
 
 ### <a name="dock"></a>Acoplar
 
-Use la configuración **Acoplar**, para agregar hasta seis elementos o carpetas a la base de la pantalla. Muchos dispositivos admiten menos elementos. Por ejemplo, los dispositivos iPhone admiten hasta cuatro elementos. En este caso, en el dispositivo solo se muestran los primeros cuatro elementos que agrega.
+Use la configuración **Acoplar**, para agregar hasta seis elementos o carpetas a la base de la pantalla. Muchos dispositivos admiten menos elementos. Por ejemplo, los dispositivos iPhone admiten hasta cuatro elementos. En este caso, en los dispositivos solo se muestran los primeros cuatro elementos que agrega.
 
 Puede agregar hasta **seis** elementos (aplicaciones y carpetas combinadas) para la base del dispositivo.
 
-- **Agregar**: agrega aplicaciones o carpetas a la base del dispositivo.
+- **Agregar**: agrega aplicaciones o carpetas a la base de los dispositivos.
 - **Tipo**: agregue una **Aplicación** o una **Carpeta**:
 
   - **Aplicación**: elija esta opción para agregar aplicaciones a la base en la pantalla. Especifique:
@@ -113,11 +113,13 @@ Puede agregar hasta **seis** elementos (aplicaciones y carpetas combinadas) para
 
 En el ejemplo siguiente, la pantalla de la base muestra solo las aplicaciones Safari, Correo y Bolsa. Se ha seleccionado la aplicación Correo para mostrar sus propiedades:
 
-![Configuración de ejemplo de la base de iOS/iPadOS](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![Configuración de ejemplo de la base de iOS/iPadOS](./media/ios-device-features-settings/FfFiUcP.png)
 
 Cuando asigna la directiva a un iPhone, la base tiene un aspecto similar al de la siguiente imagen:
 
-![Diseño de ejemplo de la base de iOS/iPadOS en iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![Diseño de ejemplo de la base de iOS/iPadOS en iPhone](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### <a name="pages"></a>Páginas
 
@@ -134,7 +136,7 @@ Puede agregar hasta **40** páginas en un dispositivo.
 
   Puede agregar hasta **60** elementos (aplicaciones y carpetas combinadas) en un dispositivo.
 
-  - **Agregar**: agrega aplicaciones o carpetas a una página del dispositivo.
+  - **Agregar**: agrega aplicaciones o carpetas a una página de los dispositivos.
 
     - **Tipo**: agregue una **Aplicación** o una **Carpeta**:
 
@@ -158,11 +160,13 @@ Puede agregar hasta **40** páginas en un dispositivo.
 
 En el ejemplo siguiente, se agrega una nueva página denominada **Contoso**. La página muestra las aplicaciones Buscar a mis amigos y Ajustes. Se ha seleccionado la aplicación Ajustes para mostrar sus propiedades:
 
-![ejemplo de configuración de pantalla principal de iOS/iPadOS en Intune.](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![Ejemplo de configuración de pantalla principal de iOS/iPadOS en Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 Cuando asigna la directiva a un iPhone, la página tiene un aspecto similar al de la siguiente imagen:
 
-![dispositivo iOS/iPadOS con la pantalla principal modificada en Intune.](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![Dispositivo iOS/iPadOS con la pantalla principal modificada en Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>Notificaciones de la aplicación
 
@@ -170,18 +174,19 @@ Cuando asigna la directiva a un iPhone, la página tiene un aspecto similar al d
 
 - **Agregar**: agregue notificaciones para las aplicaciones:
 
-    ![Adición de notificaciones de aplicación en el perfil de iOS/iPadOS en Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![Adición de notificaciones de aplicación en el perfil de iOS/iPadOS en Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **Identificador de lote de aplicaciones**: escriba un identificador en **Identificador del lote de aplicaciones** para la aplicación que desea agregar. Consulte [Identificadores de lote para aplicaciones iOS/iPadOS integradas](bundle-ids-built-in-ios-apps.md) para ver algunos ejemplos.
-  - **Nombre de la aplicación**: escriba el nombre de la aplicación que desea agregar. Este nombre se usa como referencia en el centro de administración de Microsoft Endpoint Manager. *No* se muestra en el dispositivo.
-  - **Publicador**: escriba el publicador de la aplicación que está agregando. Este nombre se usa como referencia en el centro de administración de Microsoft Endpoint Manager. *No* se muestra en el dispositivo.
-  - **Notificaciones**: puede seleccionar **Habilitar** o **Deshabilitar** para que la aplicación envíe o no, respectivamente, notificaciones al dispositivo.
+  - **Nombre de la aplicación**: escriba el nombre de la aplicación que desea agregar. Este nombre se usa como referencia en el centro de administración de Microsoft Endpoint Manager. *No* se muestra en los dispositivos.
+  - **Publicador**: escriba el publicador de la aplicación que está agregando. Este nombre se usa como referencia en el centro de administración de Microsoft Endpoint Manager. *No* se muestra en los dispositivos.
+  - **Notificaciones**: puede seleccionar **Habilitar** o **Deshabilitar** para que la aplicación envíe o no, respectivamente, notificaciones a los dispositivos.
     - **Mostrar en Centro de notificaciones**: **Habilitar** permite a la aplicación mostrar notificaciones en el centro de notificaciones del dispositivo. **Deshabilitar** impide a la aplicación mostrar notificaciones en el centro de notificaciones.
-    - **Mostrar en pantalla de bloqueo**: seleccione **Habilitar** para ver las notificaciones de la aplicación en la pantalla de bloqueo del dispositivo. **Deshabilitar** impide a la aplicación mostrar notificaciones en la pantalla de bloqueo.
-    - **Tipo de alerta**: cuando el dispositivo está desbloqueado, elija cómo se muestra la notificación. Las opciones son:
+    - **Mostrar en pantalla de bloqueo**: **Habilitar** muestra las notificaciones de la aplicación en la pantalla de bloqueo del dispositivo. **Deshabilitar** impide a la aplicación mostrar notificaciones en la pantalla de bloqueo.
+    - **Tipo de alerta**: cuando los dispositivos están desbloqueados, elija cómo se muestra la notificación. Las opciones son:
       - **Ninguna**: no se muestra ninguna notificación.
       - **Banner**: se muestra brevemente un banner con la notificación.
-      - **Modal**: se muestra la notificación y el usuario debe descartarla manualmente antes de continuar usando el dispositivo.
+      - **Modal**: se muestra la notificación y los usuarios deben descartarla manualmente para poder seguir usando el dispositivo.
     - **Distintivo en el icono de la aplicación**: seleccione **Habilitar** para agregar un distintivo en el icono de la aplicación. El distintivo significa que la aplicación envió una notificación.
     - **Sonidos**: seleccione **Habilitar** para reproducir un sonido cuando se entrega una notificación.
 
@@ -196,7 +201,7 @@ Esta característica se aplica a:
 
 - **Información de etiqueta de activo**: escriba información sobre la etiqueta de activo del dispositivo. Por ejemplo, escriba `Owned by Contoso Corp` o `Serial Number: {{serialnumber}}`.
 
-  El texto que escriba se mostrará en la ventana de inicio de sesión y en la pantalla de bloqueo del dispositivo.
+  El texto que escriba se mostrará en la ventana de inicio de sesión y en la pantalla de bloqueo de los dispositivos.
 
 - **Nota al pie de pantalla de bloqueo**: si pierde el dispositivo o se lo roban, escriba una nota que pueda ayudar a que se lo devuelvan. Puede escribir el texto que quiera. Por ejemplo, escriba algo parecido a `If found, call Contoso at ...`.
 
@@ -209,15 +214,16 @@ Esta característica se aplica a:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivos, también en el caso de la inscripción automatizada (con supervisión)
 
-- **Atributo de nombre de usuario de AAD**: Intune busca este atributo para cada usuario de Azure AD. Después, Intune rellena el campo correspondiente (como UPN) antes de generar el código XML que se instala en el dispositivo. Las opciones son:
+- **Atributo de nombre de usuario de AAD**: Intune busca este atributo para cada usuario de Azure AD. Después, Intune rellena el campo correspondiente (como UPN) antes de generar el código XML que se instala en los dispositivos. Las opciones son:
 
   - **Nombre principal de usuario**: se analiza el UPN de la manera siguiente:
 
-    ![Atributo SSO de nombre de usuario de iOS/iPadOS en Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![Atributo SSO de nombre de usuario de iOS/iPadOS en Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     También puede sobrescribir el dominio kerberos con el texto que escriba en el cuadro de texto **Dominio kerberos**.
 
-    Por ejemplo, Contoso tiene varias regiones, incluidas Europa, Asia y Norteamérica. Contoso desea que los usuarios de Asia usen el inicio de sesión único y la aplicación requiere UPN con el formato `username@asia.contoso.com`. Si selecciona **Nombre principal de usuario**, el dominio kerberos de cada usuario se toma de Azure AD, que es `contoso.com`. Por tato, para los usuarios de Asia, seleccione **Nombre principal de usuario** y escriba `asia.contoso.com`. El UPN del usuario final se convierte en `username@asia.contoso.com` y no en `username@contoso.com`.
+    Por ejemplo, Contoso tiene varias regiones, incluidas Europa, Asia y Norteamérica. Contoso desea que los usuarios de Asia usen el inicio de sesión único y la aplicación requiere UPN con el formato `username@asia.contoso.com`. Si selecciona **Nombre principal de usuario**, el dominio kerberos de cada usuario se toma de Azure AD, que es `contoso.com`. Por tato, para los usuarios de Asia, seleccione **Nombre principal de usuario** y escriba `asia.contoso.com`. El UPN del usuario se convierte en `username@asia.contoso.com`, en lugar de `username@contoso.com`.
 
   - **Identificador de dispositivo de Intune** : Intune selecciona automáticamente el identificador de dispositivo de Intune.
 
@@ -231,7 +237,7 @@ Esta característica se aplica a:
 - **Dominio kerberos**: escriba la parte del dominio de la dirección URL. Por ejemplo, escriba `contoso.com`.
 - **Prefijos de dirección URL que usarán el inicio de sesión único**: **Agregue** cualquier dirección URL de la organización que exija la autenticación de inicio de sesión único de usuario.
 
-  Por ejemplo, cuando un usuario se conecta a alguno de estos sitios, el dispositivo iOS/iPadOS usa las credenciales de inicio de sesión único. El usuario no tiene que escribir otras credenciales. Si la autenticación multifactor está habilitada, los usuarios tienen que escribir la segunda autenticación.
+  Por ejemplo, cuando un usuario se conecta a alguno de estos sitios, el dispositivo iOS/iPadOS usa las credenciales de inicio de sesión único. Los usuarios no tienen que escribir otras credenciales. Si la autenticación multifactor está habilitada, los usuarios tienen que escribir la segunda autenticación.
 
   > [!NOTE]
   > Estas direcciones URL deben tener el formato FQDN correcto. Apple exige que tengan el formato `http://<yourURL.domain>`.
@@ -240,13 +246,13 @@ Esta característica se aplica a:
 
   Los patrones `http://.com` y `https://.com` coinciden con todas las direcciones URL HTTP y HTTPS, respectivamente.
 
-- **Aplicaciones que usarán el inicio de sesión único:** **agregue** las aplicaciones de los dispositivos de los usuarios finales que pueden usar el inicio de sesión único.
+- **Aplicaciones que usarán el inicio de sesión único:** **agregue** las aplicaciones de los dispositivos de los usuarios que pueden usar el inicio de sesión único.
 
   La matriz `AppIdentifierMatches` debe incluir cadenas que coincidan con los identificadores del lote de aplicaciones. Estas cadenas pueden ser coincidencias exactas, como `com.contoso.myapp`, o pueden especificar una coincidencia de prefijo en el identificador de lote mediante el carácter comodín \*. El carácter comodín debe aparecer después de un carácter de punto (.) y solo puede hacerlo una vez, al final de la cadena, como `com.contoso.*`. Cuando se incluye un carácter comodín, se concede acceso a la cuenta a cualquier aplicación cuyo identificador de lote empiece por el prefijo.
 
   Use **Nombre de la aplicación** para especificar un nombre descriptivo que ayude a identificar el identificador de lote.
 
-- **Certificado de renovación de credenciales**: si usa certificados para la autenticación (no contraseñas), seleccione el certificado SCEP o PFX existente como certificado de autenticación. Normalmente, se trata del mismo certificado implementado para el usuario para otros perfiles como VPN, Wi-Fi o correo electrónico.
+- **Certificado de renovación de credenciales**: si usa certificados para la autenticación (no contraseñas), seleccione el certificado SCEP o PFX existente como certificado de autenticación. Normalmente, se trata del mismo certificado implementado en los usuarios para otros perfiles como VPN, Wi-Fi o correo electrónico.
 
 ## <a name="web-content-filter"></a>Filtro de contenido web
 
@@ -263,13 +269,13 @@ Esta característica se aplica a:
 
     - **URL bloqueadas**: **agregue** las direcciones URL que desea impedir que se abran, independientemente de la configuración de filtro web de Apple.
 
-  - **Solo sitios web específicos** (solo para el explorador web Safari): estas direcciones URL se agregan a los marcadores del explorador Safari. El usuario **solo** tiene permiso para visitar estos sitios; no pueden abrir otros sitios. Use esta opción solo si conoce la lista exacta de direcciones URL a las que pueden acceder los usuarios.
+  - **Solo sitios web específicos** (solo para el explorador web Safari): estas direcciones URL se agregan a los marcadores del explorador Safari. Los usuarios **solo** tienen permiso para visitar estos sitios; no se pueden abrir otros sitios. Use esta opción solo si conoce la lista exacta de direcciones URL a las que pueden acceder los usuarios.
 
     - **Dirección URL**: escriba la dirección URL del sitio web que quiere permitir. Por ejemplo, escriba `https://www.contoso.com`.
     - **Ruta de acceso de marcador**: Apple ha cambiado esta configuración. Todos los marcadores van a la carpeta **Sitios aprobados**. Los marcadores no entran en la ruta de acceso de marcador que especifique.
     - **Título**: escriba un título descriptivo para el marcador.
 
-    Si no especifica ninguna dirección URL, los usuarios finales no pueden acceder a ningún sitio web, excepto `microsoft.com`, `microsoft.net` y `apple.com`. Intune permite automáticamente estas direcciones URL.
+    Si no especifica ninguna dirección URL, los usuarios no pueden acceder a ningún sitio web, excepto `microsoft.com`, `microsoft.net` y `apple.com`. Intune permite automáticamente estas direcciones URL.
 
 ## <a name="single-sign-on-app-extension"></a>Extensión de aplicación de inicio de sesión único
 
@@ -282,10 +288,10 @@ Esta característica se aplica a:
 
 - **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO. Las opciones son:
 
-  - **No configurado**: no se usan las extensiones de la aplicación. Para deshabilitar una extensión de la aplicación, puede cambiar el tipo de extensión de la aplicación de SSO a **No configurado**.
+  - **No configurado**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no usar extensiones de la aplicación. Para deshabilitar una extensión de la aplicación, puede cambiar el tipo de extensión de la aplicación de SSO a **No configurado**.
   - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
 
-    En dispositivos iOS/iPad 13.0 +, puede configurar la **extensión de aplicación de inicio de sesión único de Microsoft Azure**  mediante este tipo de extensión de aplicación de SSO de redirección. La extensión de Microsoft Azure AD permite el inicio de sesión único entre las aplicaciones de Microsoft y las aplicaciones de la organización que usan Azure AD para la autenticación. La extensión de Azure AD actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario final. Todas las aplicaciones que anteriormente usaban autenticación asincrónica con la aplicación Microsoft Authenticator seguirán recibiendo SSO con la extensión de SSO. La extensión de SSO de Azure AD no es compatible todavía con el SSO del explorador. Para obtener más información sobre SSO y el agente de autenticación de iOS/iPadOS, consulte [Configuración del inicio de sesión único en macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+    En dispositivos iOS/iPad 13.0 +, puede configurar la **extensión de aplicación de inicio de sesión único de Microsoft Azure**  mediante este tipo de extensión de aplicación de SSO de redirección. La extensión de Microsoft Azure AD permite el inicio de sesión único entre las aplicaciones de Microsoft y las aplicaciones de la organización que usan Azure AD para la autenticación. La extensión de Azure AD actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario. Todas las aplicaciones que anteriormente usaban autenticación asincrónica con la aplicación Microsoft Authenticator seguirán recibiendo SSO con la extensión de SSO. La extensión de SSO de Azure AD no es compatible todavía con el SSO del explorador. Para obtener más información sobre SSO y el agente de autenticación de iOS/iPadOS, consulte [Configuración del inicio de sesión único en macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
 
     **Para configurar la extensión de Microsoft Azure AD en iOS:**
 
@@ -306,7 +312,7 @@ Esta característica se aplica a:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > Para lograr el inicio de sesión único con la extensión de Microsoft Azure AD de iOS/iPadOS, instale primero la aplicación Microsoft Authenticator de iOS/iPad en el dispositivo. El autenticador entrega la extensión de Azure AD al dispositivo y la configuración de la extensión de la aplicación de SSO de MDM activa la extensión de Azure AD. Una vez que Authenticator y el perfil de extensión de aplicación de SSO están instalados en el dispositivo, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo.
+    > Para lograr el inicio de sesión único con la extensión de Microsoft Azure AD de iOS/iPadOS, instale primero la aplicación Microsoft Authenticator de iOS/iPadOS en los dispositivos. El autenticador entrega la extensión de Azure AD a los dispositivos y la configuración de la extensión de la aplicación de SSO de MDM activa la extensión de Azure AD. Una vez que Authenticator y el perfil de extensión de la aplicación de SSO están instalados en los dispositivos, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo.
 
   - **Credenciales**: use una extensión de la aplicación de credenciales genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación de desafío y respuesta. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
   - **Kerberos**: use la extensión integrada de Kerberos de Apple, que se incluye en iOS 13.0 y iPadOS 13.0, y versiones posteriores. Esta opción es una versión específica de Kerberos de la extensión de la aplicación de **Credenciales**.
@@ -344,9 +350,9 @@ Esta característica se aplica a:
 
   - **Agregar**: seleccione esta opción para agregar las claves de configuración.
 
-- **Uso de la cadena de claves** (solo Kerberos): elija **Bloquear** para impedir que las contraseñas se guarden y almacenen en la cadena de claves. Si está bloqueado, no se le pedirá a los usuarios que guarde la contraseña y tendrá que volver a escribirla cuando expire el vale de Kerberos. **No configurado** (valor predeterminado) permite guardar y almacenar las contraseñas en la cadena de claves. No se pedirá a los usuarios que vuelvan a escribir la contraseña cuando expire el vale.
-- **Face ID, Touch ID o código de acceso** (solo Kerberos): **Requerir** obliga a los usuarios a usar su Face ID, Touch ID o código de acceso del dispositivo cuando se necesitan las credenciales para actualizar el vale de Kerberos. **No configurado** (valor predeterminado) no exige que los usuarios utilicen información biométrica o el código de acceso del dispositivo para actualizar el vale de Kerberos. Si **Uso de la cadena de claves** está bloqueado, no se aplica esta configuración.
-- **Dominio predeterminado** (solo Kerberos): elija **Habilitar** para establecer el valor de **Dominio** que ha especificado como dominio predeterminado. **No configurado** (valor predeterminado) no establece un dominio predeterminado.
+- **Uso de la cadena de claves** (solo Kerberos): **Bloquear** impide que las contraseñas se guarden y almacenen en la cadena de claves. Si está bloqueado, no se le pedirá a los usuarios que guarde la contraseña y tendrá que volver a escribirla cuando expire el vale de Kerberos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir guardar y almacenar las contraseñas en la cadena de claves. No se pedirá a los usuarios que vuelvan a escribir la contraseña cuando expire el vale.
+- **Face ID, Touch ID o código de acceso** (solo Kerberos): **Requerir** obliga a los usuarios a usar su Face ID, Touch ID o código de acceso del dispositivo cuando se necesitan las credenciales para actualizar el vale de Kerberos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir que los usuarios usen información biométrica o el código de acceso del dispositivo para actualizar el vale de Kerberos. Si **Uso de la cadena de claves** está bloqueado, no se aplica esta configuración.
+- **Dominio predeterminado** (solo Kerberos): **Habilitar** establece el valor de **Dominio** que escribió como dominio predeterminado. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no establecer un dominio Kerberos predeterminado.
 
   > [!TIP]
   > - **Habilite** esta opción si va a configurar varias extensiones de la aplicación de SSO de Kerberos en su organización.
@@ -371,8 +377,8 @@ Puede experimentar un comportamiento inesperado cuando un perfil sin imagen se a
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivo automatizada (supervisado)
 
-- **Ubicación de presentación del fondo de pantalla**: elija una ubicación en el dispositivo para mostrar la imagen. Las opciones son:
-  - **No configurado**: no se agrega una imagen personalizada al dispositivo. El dispositivo usa la configuración predeterminada del sistema operativo.
+- **Ubicación de presentación del fondo de pantalla**: elija una ubicación en los dispositivos para mostrar la imagen. Las opciones son:
+  - **No configurado**: Intune no cambia ni actualiza esta configuración. no se agrega una imagen personalizada a los dispositivos. De forma predeterminada, el sistema operativo podría establecer su propia imagen.
   - **Pantalla de bloqueo**: agrega la imagen a la pantalla de bloqueo.
   - **Pantalla de inicio**: agrega la imagen a la pantalla de inicio.
   - **Pantalla de bloqueo y pantalla de inicio**: usa la misma imagen en la pantalla de bloqueo y en la pantalla de inicio.

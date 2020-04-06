@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26c30c947c6db1d44d8438aa63972fd5a3f663cd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363439"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326986"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Términos y condiciones para el acceso de los usuarios
 
@@ -93,7 +93,7 @@ Puede editar los términos y condiciones y administrar sus versiones. Cada vez q
 
 Si va a corregir errores tipográficos o cambiar el formato, por ejemplo, mantenga el número de versión actual.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Términos y condiciones** &gt; elija los términos y condiciones que quiera modificar &gt; **Propiedades**.
+1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Términos y condiciones** > elija los términos y condiciones que quiera modificar > **Propiedades**.
 
 2. En el panel **Propiedades**, elija **Términos y condiciones** y, luego, modifique el **Título**, el **Resumen de los términos** y los **Términos y condiciones**, según corresponda. Si los cambios hacen que los usuarios tengan que volver a aceptar los términos nuevos, elija **Solicite a los usuarios que acepten de nuevo los términos e incremente el número de versión a**.
 

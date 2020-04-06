@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526281"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326867"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos Windows en Microsoft Intune
 
@@ -41,7 +41,7 @@ Recopile la siguiente información sobre el problema:
 - ¿Cuántos usuarios están afectados? ¿Todos los usuarios están afectados o solo algunos?
 - ¿Cuántos dispositivos se ven afectados? ¿Todos los dispositivos se ven afectados o solo algunos?
 - ¿Qué es la entidad de MDM?
-- ¿Cómo se realiza la inscripción? ¿Se trata de la opción "Bring Your Own Device" (BYOD) o del Programa de inscripción de dispositivos (DEP) de Apple con perfiles de inscripción?
+- ¿Cómo se realiza la inscripción? ¿Se trata de la opción "Bring Your Own Device" (BYOD) o de la Inscripción de dispositivos automatizada (ADE) de Apple con perfiles de inscripción?
 
 ## <a name="error-messages"></a>Mensajes de error
 
@@ -141,7 +141,7 @@ Asigne una licencia válida de Intune al usuario y, después, inscriba el dispos
 Para solucionar este problema, use alguno de los métodos siguientes: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Asignar una licencia válida al usuario
-Vaya al [Centro de administración de Microsoft 365](https://portal.office.com/adminportal/home) y, después, asigne una licencia de Intune u Office 365 al usuario.
+Vaya al [Centro de administración de Microsoft 365](https://admin.microsoft.com) y, después, asigne una licencia de Intune u Office 365 al usuario.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Corregir la dirección URL de las condiciones de uso de MDM
   1. Inicie sesión en [Azure Portal](https://portal.azure.com/) y seleccione **Azure Active Directory**.    
@@ -201,7 +201,7 @@ Error: "Hubo un problema. Su organización no es compatible con esta versión de
 #### <a name="resolution"></a>Solución
 Para corregir este problema en un entorno de Intune independiente, siga estos pasos: 
  
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Restricciones de inscripción** y seleccione una restricción de tipo de dispositivo.    
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Restricciones de inscripción** > elija una restricción de tipo de dispositivo.    
 2. Elija **Propiedades** > **Editar** (junto a **Configuración de plataforma**) > **Permitir** para **Windows (MDM)** .    
 3. Haga clic en **Revisar y guardar**.    
 

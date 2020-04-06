@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363270"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326931"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos iOS/iPadOS en Microsoft Intune
 
@@ -41,7 +41,7 @@ Recopile la siguiente información sobre el problema:
 - ¿Cuántos usuarios están afectados? ¿Todos los usuarios están afectados o solo algunos?
 - ¿Cuántos dispositivos se ven afectados? ¿Todos los dispositivos se ven afectados o solo algunos?
 - ¿Qué es la entidad de MDM?
-- ¿Cómo se realiza la inscripción? ¿Se trata de la opción "Bring Your Own Device" (BYOD) o del Programa de inscripción de dispositivos (DEP) de Apple con perfiles de inscripción?
+- ¿Cómo se realiza la inscripción? ¿Se trata de la opción "Bring Your Own Device" (BYOD) o de la Inscripción de dispositivos automatizada (ADE) de Apple con perfiles de inscripción?
 
 ## <a name="error-messages"></a>Mensajes de error
 
@@ -106,7 +106,7 @@ Si su organización usa varios dominios para las credenciales de usuario, cree r
 **Causa:** El usuario que está intentando inscribir el dispositivo no tiene una licencia de Microsoft Intune.
 
 #### <a name="resolution"></a>Solución
-1. Vaya al [Centro de administración de Office 365](https://portal.office.com/adminportal/home#/homepage)y, después, elija **Usuarios > Usuarios activos**.
+1. Vaya al [Centro de administración de Office 365](https://admin.microsoft.com)y, después, elija **Usuarios > Usuarios activos**.
 2. Seleccione la cuenta de usuario a la que quiere asignar una licencia de usuario de Intune y luego elija **Licencias de producto > Editar**.
 3. Cambie el botón de alternancia a la posición **activada** para la licencia que desea asignar a este usuario y, después, elija **Guardar**.
 4. Vuelva a inscribir el dispositivo.
@@ -139,7 +139,7 @@ Si su organización usa varios dominios para las credenciales de usuario, cree r
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Todos los dispositivos** y compruebe el número de dispositivos que el usuario ha inscrito.
     > [!NOTE]
     > También debe tener el inicio de sesión de usuario afectado en el [portal de usuarios de Intune](https://portal.manage.microsoft.com/) y comprobar los dispositivos que se han inscrito. Pueden aparecer dispositivos en el [portal de usuarios de Intune](https://portal.manage.microsoft.com/), pero no en el [portal de administración de Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview), aunque estos dispositivos también cuentan para el límite de inscripción de dispositivos.
-2. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Restricciones de inscripción** y compruebe el límite de inscripción de dispositivos. De forma predeterminada, el límite es 15. 
+2. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Restricciones de inscripción** > compruebe el límite de inscripción de dispositivos. De forma predeterminada, el límite es 15. 
 3. Si el número de dispositivos inscritos ha alcanzado el límite, quite los dispositivos innecesarios o aumente el límite de inscripción de dispositivos. Dado que todos los dispositivos inscritos utilizan una licencia de Intune, se recomienda quitar siempre los dispositivos innecesarios primero.
 4. Vuelva a inscribir el dispositivo.
 
@@ -157,7 +157,7 @@ Si su organización usa varios dominios para las credenciales de usuario, cree r
 **Causa:** El usuario que está intentando inscribir el dispositivo no tiene una licencia válida de Intune.
 
 #### <a name="resolution"></a>Solución
-1. Vaya al [Centro de administración de Microsoft 365](https://portal.office.com/adminportal/home#/homepage) y, después, elija **Usuarios** > **Usuarios activos**.
+1. Vaya al [Centro de administración de Microsoft 365](https://admin.microsoft.com) y, después, elija **Usuarios** > **Usuarios activos**.
 2. Seleccione la cuenta de usuario afectada > **Licencias de producto** > **Editar**.
 3. Compruebe que se ha asignado una licencia válida de Intune a este usuario.
 4. Vuelva a inscribir el dispositivo.
@@ -166,7 +166,7 @@ Si su organización usa varios dominios para las credenciales de usuario, cree r
 
 **Causa:** El usuario que está intentando inscribir el dispositivo no tiene una licencia válida de Intune.
 
-1. Vaya al [Centro de administración de Microsoft 365](https://portal.office.com/adminportal/home#/homepage) y, después, elija **Usuarios** > **Usuarios activos**.
+1. Vaya al [Centro de administración de Microsoft 365](https://admin.microsoft.com) y, después, elija **Usuarios** > **Usuarios activos**.
 2. Seleccione la cuenta de usuario afectada y, después, elija **Licencias de producto** > **Editar**.
 3. Compruebe que se ha asignado una licencia válida de Intune a este usuario.
 4. Vuelva a inscribir el dispositivo.
@@ -203,7 +203,7 @@ Renueve el certificado de APNs y, después, vuelva a inscribir el dispositivo.
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR Conexión no válida
 
-Al activar un dispositivo administrado por DEP que tiene asignado un perfil de inscripción, se produce un error en la inscripción y recibe el mensaje de error siguiente:
+Al activar un dispositivo administrado por ADE que tiene asignado un perfil de inscripción, se produce un error en la inscripción y recibe el mensaje de error siguiente:
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Causa:** Hay una incidencia de conexión entre el dispositivo y el servicio DEP de Apple.
+**Causa:** hay una incidencia de conexión entre el dispositivo y el servicio ADE de Apple.
 
 #### <a name="resolution"></a>Solución
 Corrija el problema de conexión o use una conexión de red diferente para inscribir el dispositivo. También puede que tenga que ponerse en contacto con Apple si el problema persiste.
@@ -221,20 +221,20 @@ Corrija el problema de conexión o use una conexión de red diferente para inscr
 
 ## <a name="other-issues"></a>Otros problemas
 
-### <a name="dep-enrollment-doesnt-start"></a>No se inicia la inscripción de DEP
-Al activar un dispositivo administrado por DEP que tiene asignado un perfil de inscripción, no se inicia el proceso de inscripción de Intune.
+### <a name="ade-enrollment-doesnt-start"></a>No se inicia la inscripción de ADE
+Al activar un dispositivo administrado por ADE que tiene asignado un perfil de inscripción, no se inicia el proceso de inscripción de Intune.
 
-**Causa:** El perfil de inscripción se ha creado antes de que se haya cargado el token de DEP en Intune.
+**Causa:** el perfil de inscripción se ha creado antes de que se haya cargado el token de ADE en Intune.
 
 #### <a name="resolution"></a>Solución
 
 1. Edite el perfil de inscripción. Puede hacer cualquier cambio en el perfil. El propósito es actualizar la hora de modificación del perfil.
-2. Sincronizar dispositivos administrados por DEP: En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** &gt; seleccione un token &gt; **Sincronizar ahora**. Se envía una solicitud de sincronización a Apple.
+2. Sincronice dispositivos administrados por ADE: En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** > seleccione un token > **Sincronizar ahora**. Se envía una solicitud de sincronización a Apple.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>Inscripción de DEP bloqueada en el inicio de sesión de usuario
-Al activar un dispositivo administrado por DEP que tiene asignado un perfil de inscripción, la instalación inicial se bloquea después de escribir las credenciales.
+### <a name="ade-enrollment-stuck-at-user-login"></a>Inscripción de ADE bloqueada en el inicio de sesión de usuario
+Al activar un dispositivo administrado por ADE que tiene asignado un perfil de inscripción, la instalación inicial se bloquea después de escribir las credenciales.
 
-**Causa:** La Autenticación multifactor (MFA) está habilitada. Actualmente, MFA no funciona durante la inscripción en dispositivos DEP.
+**Causa:** La Autenticación multifactor (MFA) está habilitada. Actualmente, MFA no funciona durante la inscripción en dispositivos ADE.
 
 #### <a name="resolution"></a>Solución
 Deshabilite MFA y, después, vuelva a inscribir el dispositivo.

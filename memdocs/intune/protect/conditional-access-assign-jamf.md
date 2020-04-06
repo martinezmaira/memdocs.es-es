@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219850"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323088"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Aplicación del cumplimiento en equipos Mac administrados con Jamf Pro
 
@@ -114,7 +114,7 @@ Si se produce un error en la prueba de conexión de la consola de Jamf Pro, revi
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Eliminación de un dispositivo administrado por Jamf de Intune
 
-Para quitar un dispositivo administrado por Jamf, abra el centro de administración de Microsoft Endpoint Manager y seleccione **Dispositivos** > **Todos los dispositivos**, seleccione el dispositivo y, a continuación, seleccione **Eliminar**.  La eliminación de dispositivos de forma masiva puede habilitarse si se seleccionan varios dispositivos y se hace clic en **Eliminar**.
+Para quitar un dispositivo administrado por Jamf, abra el Centro de administración de Microsoft Endpoint Manager y seleccione **Dispositivos** > **Todos los dispositivos**, seleccione el dispositivo y, luego, **Eliminar**.  La eliminación de dispositivos de forma masiva puede habilitarse si se seleccionan varios dispositivos y se hace clic en **Eliminar**.
 
 Obtenga información sobre cómo [quitar un dispositivo administrado por Jamf en los documentos de Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). También puede presentar una incidencia de soporte técnico al [soporte técnico de Jamf](https://www.jamf.com/support/) para obtener más ayuda. 
 

@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343432"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359285"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>Ajustes de dispositivos macOS para configurar y usar extensiones de kernel en Intune
-
-
 
 En este artículo se enumeran y describen los diferentes valores de configuración de la extensión kernel que se pueden controlar en los dispositivos macOS. Como parte de su solución de administración de dispositivos móviles (MDM), use esta configuración para agregar y administrar extensiones de kernel en sus dispositivos.
 
@@ -44,7 +43,7 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Las opciones se aplican a: Inscripción de dispositivo aprobada y automatizada por el usuario
 
-- **Permitir invalidaciones de usuario**: use la opción **Permitir** para que los usuarios puedan aprobar extensiones de kernel no incluidas en el perfil de configuración. La opción predeterminada, **No configurado**, impide que los usuarios puedan permitir extensiones no incluidas en el perfil de configuración; es decir, solo se permiten las extensiones incluidas en el perfil de configuración.
+- **Permitir invalidaciones de usuario**: use la opción **Permitir** para que los usuarios puedan aprobar extensiones de kernel no incluidas en el perfil de configuración. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir que los usuarios permitan extensiones no incluidas en el perfil de configuración. es decir, solo se permiten las extensiones incluidas en el perfil de configuración.
 
   Vea [Carga de extensiones de kernel aprobadas por el usuario](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (se abre el sitio web de Apple) para obtener más información sobre esta característica.
 

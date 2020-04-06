@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085855"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327005"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos en Microsoft Intune
 
@@ -65,7 +65,7 @@ Compruebe que el usuario no tiene asignados más del número máximo de disposit
 
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Restricciones de inscripción** > **Restricciones de límite de dispositivos**. Anote el valor de la columna **Límite de dispositivos**.
 
-2. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Usuarios** > **Todos los usuarios**, seleccione el usuario y haga clic en **Dispositivos**. Anote el número de dispositivos.
+2. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Usuarios** > **Todos los usuarios** > seleccione el usuario > **Dispositivos**. Anote el número de dispositivos.
 
 3. Si el número de dispositivos inscritos del usuario ya es igual a la restricción de límite de dispositivos, no se pueden inscribir más hasta que:
     - [Se quiten dispositivos existentes](../remote-actions/devices-wipe.md), o
@@ -286,9 +286,9 @@ Para corregir el problema, los usuarios deben seleccionar el botón **Configurar
 Una vez inscrito, los dispositivos vuelven a un estado correcto y recuperan el acceso a recursos de la empresa.
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>Comprobar que WS-Trust 1.3 está habilitado
-**Problema** Los dispositivos iOS/iPadOS del Programa de inscripción de dispositivos (DEP) no se pueden inscribir
+**Incidencia**: los dispositivos iOS/iPadOS de la Inscripción de dispositivos automatizada (ADE) no se pueden inscribir.
 
-La inscripción de dispositivos DEP con afinidad de usuario precisa que el extremo WS-Trust 1.3 Username/Mixed esté habilitado para solicitar el token de usuario. Active Directory permite este punto de conexión de forma predeterminada. Para obtener una lista de puntos de conexión habilitados, use el cmdlet Get-AdfsEndpoint PowerShell y busque el extremo trust/13/UsernameMixed. Por ejemplo:
+La inscripción de dispositivos ADE con afinidad de usuario requiere que el punto de conexión WS-Trust 1.3 Username/Mixed esté habilitado para solicitar los tokens de usuario. Active Directory permite este punto de conexión de forma predeterminada. Para obtener una lista de puntos de conexión habilitados, use el cmdlet Get-AdfsEndpoint PowerShell y busque el extremo trust/13/UsernameMixed. Por ejemplo:
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
@@ -339,7 +339,7 @@ Este problema puede ocurrir si:
 4. Indicar al usuario que debe reiniciar el proceso de inscripción.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Determinar si hay algún problema con el token de VPP
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** &gt; nombre del token &gt; **Perfiles** &gt; nombre del perfil &gt; **Administrar** > **Propiedades**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** > nombre del token > **Perfiles** > nombre del perfil > **Administrar** > **Propiedades**.
 2. Revise las propiedades para ver si aparecen errores similares al siguiente:
     - Este token expiró.
     - Este token está fuera de las licencias de Portal de empresa.
@@ -349,7 +349,7 @@ Este problema puede ocurrir si:
 3. Corrija los problemas para el token.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identificar qué dispositivos bloquea el token de VPP
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS**k &gt;**Inscripción de iOS** > **Tokens del programa de inscripción** &gt; nombre del token &gt; **Dispositivos**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** > nombre del token > **Dispositivos**.
 2. Filtre la columna **Estado del perfil** por **Bloqueado**.
 3. Tome nota de los números de serie para todos los dispositivos que están **bloqueados**.
 

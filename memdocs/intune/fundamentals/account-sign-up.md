@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad73f89ff4dccd3151bd3123cd4bb54483aaae30
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4bec3347ec45f020fd4c8e128278dc619335442
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363179"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401461"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Suscribirse o iniciar sesión en Microsoft Intune
 
@@ -62,7 +62,7 @@ Para conceder acceso para administrar el servicio para los usuarios con otros pe
 
 ### <a name="intune-admin-portal-url"></a>Dirección URL del portal de administración de Intune
 
-Centro de administración de Microsoft 365: https://devicemanagement.microsoft.com
+Centro de administración de Microsoft Endpoint Manager: https://endpoint.microsoft.com
 
 Azure Portal en Intune: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
@@ -74,7 +74,7 @@ Portal de Intune clásico: https://manage.microsoft.com El portal de Intune clá
 
 Microsoft 365 Empresa: https://portal.microsoft.com/adminportal
 
-Administración de dispositivos móviles de Office 365: https://portal.office.com/adminportal/home#/MifoDevices
+Administración de dispositivos móviles de Office 365: https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Vea también
 

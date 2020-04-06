@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d42e532f02d74ff776d392d634d60fd0b4d0ebba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338167"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326557"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Cierre de la sesión del usuario actual en dispositivos iOS/iPadOS administrados con Intune
 
@@ -41,7 +41,7 @@ La acción **Cerrar sesión del usuario actual** cierra la sesión del usuario a
 
 ## <a name="how-to-log-out-the-current-user"></a>Cómo cerrar la sesión del usuario actual
 
-1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Dispositivos** > **Todos los dispositivos**.
+1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Dispositivos** > **Todos los dispositivos**.
 2. Elija un dispositivo iOS/iPadOS > **...**  > **Cerrar sesión del usuario actual**.
 
 ## <a name="next-steps"></a>Pasos siguientes

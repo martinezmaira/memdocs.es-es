@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03f3e89b8fe1872b323459e3c0da34f3029a7e9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358798"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326788"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Asignar licencias a los usuarios para que puedan inscribir dispositivos en Intune
 
@@ -30,9 +30,9 @@ Tanto si quiere agregar usuarios manualmente como si quiere sincronizar desde Ac
 > [!NOTE]
 > Los usuarios que tienen asignada la directiva de protección de aplicaciones de Intune y no inscriben sus dispositivos en Microsoft Intune también necesitarán una licencia de Intune para recibir la directiva.
 
-## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Asignación de una licencia de Intune en el Centro de administración de Microsoft Endpoint Manager
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Asignación de una licencia de Intune en el Centro de administración de Microsoft Endpoint Manager
 
-Puede usar el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) para agregar manualmente usuarios basados en la nube y asignar licencias a las cuentas de usuario basadas en la nube y a las cuentas sincronizadas desde Active Directory local con Azure AD.
+Puede usar el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) para agregar manualmente usuarios basados en la nube y asignar licencias a las cuentas de usuario basadas en la nube y a las cuentas sincronizadas desde Active Directory local con Azure AD.
 
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Usuarios** > **Todos los usuarios** > elija un usuario > **Licencias** > **Asignaciones**.
 

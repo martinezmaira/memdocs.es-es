@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 03/25/2020
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,19 +18,29 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2806ca94b474ddea35d286fa9ee9a2ca626100a8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5078f41e08f78063fac3e355301d285d1bdf6ff2
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337855"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274972"
 ---
-# <a name="check-compliance-on-your-android-device"></a>Comprobar el cumplimiento normativo en el dispositivo Android
+# <a name="check-compliance-on-your-android-device"></a>Comprobar el cumplimiento normativo en el dispositivo Android  
+Inicie manualmente la sincronización de un dispositivo desde el Portal de empresa para lo siguiente:
 
-Si el dispositivo no se ha activado en Intune durante un tiempo, es posible que no pueda acceder a los recursos de la empresa o la institución educativa. Pruebe estos pasos para recuperar el acceso.  
+* Actualizar el estado del dispositivo 
+* Recuperar el acceso a los recursos profesionales o educativos 
+
+Durante una sincronización, el Portal de empresa confirmará que la configuración del dispositivo cumple los requisitos de la directiva de su organización.  La organización puede limitar o restringir el acceso a los recursos profesionales o educativos hasta que se sincronice.  
+
+Si se han realizado cambios recientemente en la configuración del dispositivo, es posible que tenga que sincronizar manualmente para registrar estos cambios con el Portal de empresa. 
 
 1. Abra la aplicación Portal de empresa para Android en el dispositivo.  
 
-2. Pulse **Comprobar configuración del dispositivo**.   
+2. Pulse **Dispositivos** y, después, seleccione su dispositivo.  
 
-Si no puede restablecer el dispositivo perdido o robado, pida al equipo de soporte técnico de su empresa que lo haga. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+3. En **Estado de configuración del dispositivo**, pulse **Comprobar la configuración del dispositivo**. El Portal de empresa comprobará el dispositivo para confirmar que cumple los requisitos de la directiva de su organización. 
+
+4. Después de la comprobación, el estado de la configuración del dispositivo podrá ser **Cumple las directivas** o **No cumple las directivas**. Si es necesario realizar algún cambio, aparecerá un mensaje en la parte superior de la pantalla. Púlselo para obtener más detalles. 
+
+Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

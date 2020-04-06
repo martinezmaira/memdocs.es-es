@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f68278e936a85ab21407e55c8d5c18529457938a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359305"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327082"
 ---
 # <a name="set-enrollment-restrictions"></a>Establecer restricciones de inscripción
 
@@ -126,7 +126,7 @@ Durante las inscripciones de BYOD, los usuarios recibirán una notificación en 
 
 Para cambiar la configuración de una restricción de inscripción, siga estos pasos. Estas restricciones no afectan a los dispositivos que ya se han inscrito. Los dispositivos inscritos con el [agente de PC de Intune](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) no se puede bloquear con esta característica.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **Restricciones de inscripción** &gt; elija la restricción que quiera cambiar &gt; **Propiedades**.
+1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **Restricciones de inscripción** > elija la restricción que quiera cambiar > **Propiedades**.
 2. Elija **Editar** junto a la configuración que quiere cambiar.
 3. En la página **Editar**, realice los cambios que quiera y siga en la página **Revisar y guardar**; luego, elija **Guardar**.
 

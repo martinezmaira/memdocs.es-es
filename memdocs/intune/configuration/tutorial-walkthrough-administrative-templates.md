@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220239"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488213"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Uso de la nube para configurar directivas de grupo en dispositivos con Windows 10 con plantillas de ADMX y Microsoft Intune
 
@@ -39,12 +39,12 @@ Las plantillas de ADMX están disponibles para los siguientes servicios:
 
 Para obtener más información sobre las directivas de ADMX, vea [Descripción de las directivas respaldadas por ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
 
-En Microsoft Intune, estas plantillas están integradas en el servicio Intune y están disponibles como perfiles de **plantillas administrativas**. En este perfil, configure los valores que quiere incluir y, luego, "asigne" este perfil a los dispositivos.
+Estas plantillas se integran en Microsoft Intune y están disponibles como perfiles de **Plantillas administrativas**. En este perfil, configure los valores que quiere incluir y, luego, "asigne" este perfil a los dispositivos.
 
 En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
-> * Conocer el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431).
+> * Conocer el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 > * Crear grupos de usuarios y de dispositivos.
 > * Comparar la configuración de Intune con la configuración de ADMX local.
 > * Crear distintas plantillas administrativas y configurar los valores para los distintos grupos.
@@ -68,7 +68,7 @@ Esta característica se aplica a:
 
 - En un controlador de dominio (DC) local de Active Directory:
 
-  1. Copie las siguientes plantillas de Office y Microsoft Edge en el [almacén central (carpeta SYSVOL)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
+  1. Copie las siguientes plantillas de Office y Microsoft Edge en el [almacén central (carpeta sysvol)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Plantillas administrativas de Office](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Plantillas administrativas de Microsoft Edge > Archivo de directiva](https://www.microsoftedgeinsider.com/en-us/enterprise)
@@ -78,7 +78,9 @@ Esta característica se aplica a:
       - La directiva de grupo creada con estas plantillas se denomina **OfficeandEdge**. Este nombre aparece en las imágenes.
       - El equipo de administrador de Windows 10 Enterprise usado se denomina **equipo de administración**.
 
-      En algunas organizaciones, un administrador de dominio tiene dos cuentas: una cuenta de trabajo de dominio típica y otra cuenta de administrador de dominio que solo se usa para tareas de administración de dominios, como la directiva de grupo.
+      En algunas organizaciones, un administrador de dominio tiene dos cuentas:  
+        - Una cuenta profesional de dominio típica
+        - Una cuenta de administrador de dominio diferente que se usa solo para tareas de administrador de dominio, como la directiva de grupo
 
       El propósito de este **equipo de administración** es que los administradores inicien sesión con su cuenta de administrador de dominio y accedan a herramientas diseñadas para administrar la directiva de grupo.
 
@@ -101,7 +103,7 @@ Esta característica se aplica a:
 ## <a name="open-the-endpoint-manager-admin-center"></a>Apertura del Centro de administración de puntos de conexión
 
 1. Abra un explorador web Chromium, como Microsoft Edge, versión 77 y posteriores.
-2. Vaya al [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). Inicie sesión con la cuenta siguiente:
+2. Vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Inicie sesión con la cuenta siguiente:
 
     **Usuario**: escriba la cuenta de administrador de la suscripción de inquilino de Microsoft 365.  
     **Contraseña**: escriba su contraseña.
@@ -201,7 +203,7 @@ En los siguientes pasos se crean grupos de seguridad y se agregan usuarios a los
   - Administradores de TI de la costa oeste
   - Administradores de TI de la costa este
 
-Los usuarios y los grupos creados también pueden verse en el [Centro de administración de Microsoft 365](https://admin.microsoft.com), Azure AD en Azure Portal y [Microsoft Intune en Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). Puede crear y administrar grupos en todas estas áreas de la suscripción de inquilino. **Si su objetivo es la administración de dispositivos, use el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431)** .
+Los usuarios y los grupos creados también pueden verse en el [Centro de administración de Microsoft 365](https://admin.microsoft.com), Azure AD en Azure Portal y [Microsoft Intune en Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). Puede crear y administrar grupos en todas estas áreas de la suscripción de inquilino. **Si su objetivo es la administración de dispositivos, use el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)** .
 
 ### <a name="review-group-membership"></a>Revisión de la pertenencia a grupos
 
@@ -235,10 +237,20 @@ En esta sección se crea una plantilla administrativa en Intune, se examinan alg
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
 
 5. Seleccione **Siguiente**.
-6. En la lista desplegable de **Opciones de configuración**, seleccione **Todos los productos**. Se muestran todas las opciones. En estas opciones, observe las siguientes propiedades:
+6. En **Opciones de configuración**, hay opciones que se aplican a los dispositivos (**Configuración del equipo**) y opciones que se aplican a los usuarios (**Configuración de usuario**):
 
-    - La **Ruta de acceso** a la directiva es la misma que Administración de directivas de grupo o GPEdit.
-    - El valor se aplica a usuarios o dispositivos.
+    > [!div class="mx-imgBorder"]
+    > ![Aplicación de la configuración de la plantilla de ADMX a usuarios y dispositivos en el Administrador de puntos de conexión de Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. Expanda **Configuración del equipo** > **Microsoft Edge** > seleccione **Configuración de SmartScreen**. Observe la ruta de acceso a la directiva y todas las opciones disponibles:
+
+    > [!div class="mx-imgBorder"]
+    > ![Consulte la configuración de directiva de SmartScreen de Microsoft Edge en plantillas ADMX de Microsoft Intune.](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. En el cuadro de búsqueda, escriba **descargar**. Observe que la configuración de directiva se ha filtrado:
+
+    > [!div class="mx-imgBorder"]
+    > ![Filtre la configuración de directiva de SmartScreen de Microsoft Edge en plantillas ADMX de Microsoft Intune.](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>Apertura de Administración de directivas de grupo
 
@@ -254,7 +266,7 @@ En esta sección se muestra una directiva en Intune y su directiva correspondien
 3. Haga clic con el botón derecho en la directiva **OfficeandEdge** > **Editar**. Se abre la aplicación Editor de administración de directivas de grupo.
 
     > [!div class="mx-imgBorder"]
-    > ![Clic con el botón derecho en la directiva de grupo de ADMX OfficeandEdge y selección de Editar](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![Haga clic con el botón derecho en la directiva de grupo de ADMX de Office y Microsoft Edge y seleccione Editar.](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     **OfficeandEdge** es una directiva de grupo que incluye las plantillas de ADMX de Office y Microsoft Edge. Esta directiva se describe en [Requisitos previos](#prerequisites) (en este artículo).
 
@@ -269,18 +281,18 @@ En esta sección se muestra una directiva en Intune y su directiva correspondien
     > ![Vista de las opciones del valor Configuración del equipo en la directiva de grupo](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. En el centro de administración del Administrador de puntos de conexión, vaya a la plantilla **Plantilla de administración: dispositivos de Windows 10 Student**.
-6. Seleccione **Todos los productos** en la lista desplegable y busque **personalización**:
+6. Seleccione **Configuración del equipo** > **Panel de control** > **Personalización**. Observe las opciones disponibles:
 
     > [!div class="mx-imgBorder"]
-    > ![Búsqueda de personalización en la plantilla administrativa en Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![Ruta de acceso de la configuración de directiva de personalización en Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    Observe las opciones disponibles.
-
-    El tipo de valor es **Dispositivo** y la ruta de acceso es **\Panel de control\Personalización**. Esta ruta de acceso es similar a la que acaba de observar en el Editor de administración de directivas de grupo. Si abre el valor, ve las mismas opciones **Sin configurar**, **Habilitado** y **Deshabilitado** que se ven en el Editor de administración de directivas de grupo.
+    El tipo de valor es **Dispositivo** y la ruta de acceso es **\Panel de control\Personalización**. Esta ruta de acceso es similar a la que acaba de observar en el Editor de administración de directivas de grupo. Si abre la opción **Evitar la activación de la cámara de la pantalla de bloqueo**, ve las mismas opciones **No configurado**, **Habilitado** y **Deshabilitado** que se ven en el Editor de administración de directivas de grupo.
 
 #### <a name="compare-a-user-policy"></a>Comparación de una directiva de usuario
 
-1. En la plantilla de administración, busque **exploración de InPrivate**. Tenga en cuenta la ruta de acceso y que la opción se aplica a usuarios y dispositivos.
+1. En la plantilla de administración, seleccione **Configuración del equipo** > **Toda la configuración** y busque **Exploración de InPrivate**. Observe la ruta de acceso.
+
+    Haga lo mismo para **Configuración de usuario**. Seleccione **Toda la configuración** y busque **Exploración de InPrivate**.
 
 2. En el **Editor de administración de directivas de grupo**, busque la opción de usuario y dispositivo coincidente:
 
@@ -296,9 +308,11 @@ En esta sección se muestra una directiva en Intune y su directiva correspondien
 #### <a name="compare-an-edge-policy"></a>Comparación de una directiva de Edge
 
 1. En el centro de administración del Administrador de puntos de conexión, vaya a la plantilla **Plantilla de administración: dispositivos de Windows 10 Student**.
-2. Seleccione **Edge, versión 77 y posteriores** en la lista desplegable.
-3. Busque **inicio**. Observe las opciones disponibles.
-4. En el Editor de administración de directivas de grupo, busque estas opciones:
+2. Expanda **Configuración del equipo** > **Microsoft Edge** > **Inicio, Página principal y Página Nueva pestaña**. Observe las opciones disponibles.
+
+    Haga lo mismo para **Configuración de usuario**.
+
+3. En el Editor de administración de directivas de grupo, busque estas opciones:
 
     - Dispositivo: expanda **Configuración del equipo** > **Directivas** > **Plantillas administrativas** > **Microsoft Edge** > **Inicio, página principal y nueva página de pestañas**.
     - Usuario: expanda **Configuración del usuario** > **Directivas** > **Plantillas administrativas** > **Microsoft Edge** > **Inicio, página principal y nueva página de pestañas**.
@@ -311,12 +325,12 @@ Ha creado una plantilla administrativa en Intune. En esta plantilla se han visto
 
 En esta plantilla se configuran algunos valores de Internet Explorer para bloquear dispositivos compartidos con varios alumnos.
 
-1. En la **Plantilla de administración: dispositivos de Windows 10 Student**, busque **Desactivar la exploración de InPrivate** y seleccione la directiva de dispositivo:
+1. En la **Plantilla de administración: dispositivos de Windows 10 Student**, expanda **Configuración del equipo**, seleccione **Toda la configuración** y busque **Desactivar la exploración de InPrivate**:
 
     > [!div class="mx-imgBorder"]
     > ![Desactivación de la directiva de dispositivo de exploración de InPrivate en la plantilla administrativa en Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. En esta ventana, observe la descripción y los valores que se pueden establecer. Estas opciones son similares a lo que se ve en la directiva de grupo.
+2. Seleccione la opción **Desactivar la exploración de InPrivate**. En esta ventana, observe la descripción y los valores que se pueden establecer. Estas opciones son similares a lo que se ve en la directiva de grupo.
 3. Seleccione **Habilitado** > **Aceptar** para guardar los cambios.
 4. Además, configure las siguientes opciones de Internet Explorer. Asegúrese de seleccionar **Aceptar** para guardar los cambios.
 
@@ -343,7 +357,7 @@ En esta plantilla se configuran algunos valores de Internet Explorer para bloque
 
 ### <a name="assign-your-template"></a>Asignación de la plantilla
 
-1. En la plantilla, seleccione **Asignaciones** > **Seleccionar grupos para incluir**:
+1. En la plantilla, seleccione **Siguiente** hasta que llegue a **Asignaciones**. Seleccione **Seleccionar grupos para incluir**:
 
     > [!div class="mx-imgBorder"]
     > ![Selección del perfil de plantilla administrativa en la lista Perfiles de configuración del dispositivo en Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
@@ -352,7 +366,7 @@ En esta plantilla se configuran algunos valores de Internet Explorer para bloque
 
     Si usa este tutorial en un entorno de producción, plantéese agregar grupos que estén vacíos. El objetivo es practicar la asignación de la plantilla.
 
-3. Elija **Siguiente** para ir a la pestaña **Revisar y crear**. Seleccione **Crear** para guardar los cambios.
+3. Seleccione **Siguiente**. En **Revisar y crear**, seleccione **Crear** para guardar los cambios.
 
 Al guardar el perfil, este se aplica a los dispositivos en cuanto se registran en Intune. Si los dispositivos están conectados a Internet, puede suceder de inmediato. Vea [¿Cuánto tiempo tardan los dispositivos en obtener una directiva, un perfil o una aplicación después de que se hayan asignado?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) para obtener más información sobre los tiempos de actualización de directivas.
 
@@ -380,11 +394,20 @@ En esta sección se crea una plantilla de administración de OneDrive en Intune 
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
 
 5. Seleccione **Siguiente**.
-6. En **Opciones de configuración**, seleccione **Office** en la lista desplegable. **Habilite** los siguientes valores. Asegúrese de seleccionar **Aceptar** para guardar los cambios.
+6. En **Opciones de configuración**, establezca los siguientes parámetros. No olvide seleccionar **Aceptar** para guardar los cambios.
 
-    - **Registrar a usuarios silenciosamente en el cliente de sincronización de OneDrive con sus credenciales de Windows**
-    - **Usar Archivos a petición de OneDrive**
-    - **Impedir que los usuarios sincronicen cuentas de OneDrive personales**
+    - **Configuración del equipo** > **Toda la configuración**:
+      - **Registrar a usuarios silenciosamente en el cliente de sincronización de OneDrive con sus credenciales de Windows**
+        - **Tipo**: Dispositivo
+        - **Valor**: Habilitado
+      - **Usar Archivos a petición de OneDrive**
+        - **Tipo**: Dispositivo
+        - **Valor**: Habilitado
+
+    - **Configuración de usuario** > **Toda la configuración**:
+      - **Impedir que los usuarios sincronicen cuentas de OneDrive personales**
+        - **Tipo**: Usuario
+        - **Valor**: Habilitado
 
 La configuración tiene un aspecto similar a la siguiente:
 
@@ -395,12 +418,12 @@ Para obtener más información sobre la configuración de cliente de OneDrive, v
 
 ### <a name="assign-your-template"></a>Asignación de la plantilla
 
-1. En la plantilla, seleccione **Asignaciones** > **Seleccionar grupos para incluir**.
+1. En la plantilla, seleccione **Siguiente** hasta que llegue a **Asignaciones**. Seleccione **Seleccionar grupos para incluir**:
 2. Aparece una lista de usuarios y grupos existentes. Seleccione el grupo **Todos los dispositivos Windows** creado anteriormente y **Seleccionar**.
 
     Si usa este tutorial en un entorno de producción, plantéese agregar grupos que estén vacíos. El objetivo es practicar la asignación de la plantilla.
 
-3. Seleccione **Siguiente** para ir a la pestaña **Revisar y crear**. Seleccione **Crear** para guardar los cambios.
+3. Seleccione **Siguiente**. En **Revisar y crear**, seleccione **Crear** para guardar los cambios.
 
 En este punto ha creado algunas plantillas administrativas y las ha asignado a los grupos que ha creado. El siguiente paso consiste en crear una plantilla administrativa con Windows PowerShell y Microsoft Graph API para Intune.
 
@@ -552,7 +575,7 @@ Cuando ya no sean necesarios, puede:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial se ha familiarizado con el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431), ha usado el generador de consultas para crear grupos dinámicos y ha creado plantillas administrativas en Intune para configurar [valores de ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). También ha comparado el uso de plantillas de ADMX en local y en la nube con Intune. Como bonus, ha usado cmdlets de PowerShell para crear una plantilla administrativa.
+En este tutorial se ha familiarizado con el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), ha usado el generador de consultas para crear grupos dinámicos y ha creado plantillas administrativas en Intune para configurar [valores de ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). También ha comparado el uso de plantillas de ADMX en local y en la nube con Intune. Como bonus, ha usado cmdlets de PowerShell para crear una plantilla administrativa.
 
 Para obtener más información sobre las plantillas administrativas en Intune, vea:
 

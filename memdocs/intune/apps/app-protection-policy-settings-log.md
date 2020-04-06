@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083571"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401366"
 ---
 # <a name="review-client-app-protection-logs"></a>Revisión de los registros de protección de aplicaciones cliente
 
@@ -33,6 +33,9 @@ El proceso para habilitar y recopilar registros varía según la plataforma:
 - **Dispositivos iOS/iPadOS**: use Microsoft Edge para iOS/iPadOS para recopilar registros. Para obtener detalles, vea [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Dispositivos Windows 10**: use *MDMDiag* y registros de eventos. Consulte [Diagnósticos de errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10), que encontrará en el contenido de administración del cliente de Windows, así como la entrada de blog [Solución de problemas de errores de directivas de Intune en Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
 - **Dispositivos Android**: use Microsoft Edge para Android para recopilar registros. Para obtener detalles, vea [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+
+  > [!Note]
+  > En los dispositivos Android totalmente administrados, en determinados casos, la aplicación Portal de empresa de Intune puede estar visible en todas las aplicaciones. Esto puede ocurrir si una aplicación asociada a una directiva de protección de aplicaciones no está instalada o no se ha iniciado. 
 
 En la tabla siguiente se muestra el nombre de la configuración de la directiva de protección de aplicaciones y los valores admitidos que se anotan en el registro. Además, cada valor identifica la configuración de directiva que se encuentra en el portal de Microsoft Endpoint Manager. Para más información sobre cada opción, consulte [Configuración de directivas de protección de aplicaciones de iOS/iPadOS](app-protection-policy-settings-ios.md).
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: ebeb2c31b72ec10f4ce95b09e32b3e3c9accccfa
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084888"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323026"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Uso de credenciales derivadas en Microsoft Intune
 
@@ -243,7 +243,7 @@ Use credenciales derivadas para la autenticación basada en certificados en siti
 
    Seleccione **Siguiente**.
 
-9. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+9. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
 
     Seleccione **Siguiente**.
 
@@ -287,4 +287,4 @@ Después de eliminar un emisor y de agregar uno nuevo, los usuarios del disposit
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Creación de perfiles de configuración de dispositivo](../configuration/device-profile-create.md).
+[Información general sobre el perfil de configuración de dispositivos](../configuration/device-profile-create.md)

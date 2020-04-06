@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086112"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256460"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscripción de dispositivos iOS/iPadOS en Intune
 
@@ -52,23 +52,23 @@ Tras completar los requisitos previos y asignar licencias a los usuarios, estos 
 
 En las organizaciones que adquieran dispositivos para sus usuarios, Intune admite los siguientes métodos de inscripción de dispositivos de empresa para iOS/iPadOS:
 
-- Programa de inscripción de dispositivos (DEP) de Apple
+- Inscripción de dispositivo automatizada (ADE) de Apple
 - Apple School Manager
 - Inscripción de Apple Configurator mediante el Asistente de configuración
 - Inscripción directa de Apple Configurator
 
 También puede inscribir dispositivos iOS/iPadOS de empresa con una cuenta de [administrador de inscripción de dispositivos](device-enrollment-manager-enroll.md).
 
-## <a name="device-enrollment-program"></a>Programa de inscripción de dispositivos
+## <a name="automated-device-enrollment"></a>Inscripción de dispositivo automatizada
 
-Las organizaciones pueden adquirir dispositivos iOS/iPadOS con el Programa de inscripción de dispositivos (DEP) de Apple. DEP permite implementar un perfil de inscripción "de forma inalámbrica" para incluir los dispositivos en la administración. Para más información, consulte la información sobre el [Programa de inscripción de dispositivos](device-enrollment-program-enroll-ios.md).
+Las organizaciones pueden adquirir dispositivos iOS/iPadOS con la Inscripción de dispositivo automatizada (ADE) de Apple. ADE permite implementar un perfil de inscripción "de forma inalámbrica" para incluir los dispositivos en la administración. Para más información, consulte la información sobre el [Programa de inscripción de dispositivos](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Inscripción de usuarios
 La inscripción de usuario proporciona a los administradores un subconjunto de opciones de administración en comparación con otros métodos de inscripción. Para más información, vea [Acciones admitidas en la inscripción de usuarios, contraseñas y otras opciones](ios-user-enrollment-supported-actions.md) y [Configuración de la inscripción de usuarios de iOS/iPadOS y iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager es un programa de compra e inscripción de dispositivos para centros escolares. Al igual que DEP, puede implementar un perfil para inscribir dispositivos en la administración. Más información sobre [Apple School Manager](apple-school-manager-set-up-ios.md).
+Apple School Manager es un programa de compra e inscripción de dispositivos para centros escolares. Al igual que ADE, puede implementar un perfil para inscribir dispositivos en la administración. Más información sobre [Apple School Manager](apple-school-manager-set-up-ios.md).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Puede inscribir dispositivos iOS/iPadOS con la ejecución de Apple Configurator 
 
 Más información sobre [Inscripción de Apple Configurator](apple-configurator-enroll-ios.md).
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Usar el portal de empresa en dispositivos inscritos mediante DEP o Apple Configurator
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>Uso del Portal de empresa en dispositivos inscritos mediante ADE o Apple Configurator
 
 Los dispositivos configurados con afinidad de usuario pueden instalar y ejecutar la aplicación del Portal de empresa para descargar aplicaciones y administrar dispositivos. Después de recibir sus dispositivos, los usuarios deben realizar una serie de pasos adicionales para completar el Asistente de configuración e instalar la aplicación del portal de empresa.
 

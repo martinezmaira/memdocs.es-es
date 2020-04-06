@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2883add5a3dbba274201bfeebb7960a312e33da
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354235"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323193"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configuración de directivas de acceso condicional basado en la aplicación con Intune
 
@@ -38,7 +38,7 @@ Antes de usar directivas de acceso condicional basadas en la aplicación, debe h
 
 Acceso condicional es una tecnología de Azure Active Directory (Azure AD). El nodo de acceso condicional al que se accede desde *Intune* es el mismo nodo al que se accede desde *Azure AD*. Por lo tanto, no es necesario cambiar entre Intune y Azure AD para configurar las directivas.
 
-Para poder crear directivas de acceso condicional desde el Centro de administración de Microsoft Endpoint Manager, debe tener una licencia de Azure AD Premium.
+Para poder crear directivas de acceso condicional desde el Centro de administración de Microsoft Endpoint Manager, debe tener una licencia de Azure AD Premium.
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>Para crear una directiva de acceso condicional basado en la aplicación
 

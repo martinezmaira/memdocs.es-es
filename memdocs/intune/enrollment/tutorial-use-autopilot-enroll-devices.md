@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c4c6660138df0c05975b1fc6b093c41600c0547
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344628"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326894"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutorial: Uso de Autopilot para inscribir dispositivos Windows en Intune
 
@@ -60,7 +60,7 @@ El primer paso para configurar Windows Autopilot es agregar los dispositivos Win
 
 2. Guarde el archivo CSV.
 
-3. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Windows** > **Dispositivos** (en **Windows Autopilot Deployment Program** > **Importar**.
+3. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Windows** > **Dispositivos** (en **Programa Windows Autopilot Deployment** > **Importar**.
 
     ![Captura de pantalla de dispositivos de Windows Autopilot](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -78,7 +78,7 @@ El primer paso para configurar Windows Autopilot es agregar los dispositivos Win
 
 Después, se creará un grupo de dispositivos e incluirá en él los dispositivos Autopilot que acaba de cargar.
 
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Grupos** > **Nuevo grupo**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Grupos** > **Nuevo grupo**.
 2. En la hoja **Grupo**:
     1. En **Tipo de grupo**, elija **Seguridad**.
     2. En **Nombre de grupo**, escriba *Grupo de Autopilot*. En **Descripción del grupo**, escriba *Probar grupo para dispositivos Autopilot*.
@@ -116,7 +116,7 @@ Si ya no quiere usar más los dispositivos Autopilot, puede eliminarlos.
 
 1. Si los dispositivos están inscritos en Intune, antes hay que [eliminarlos del portal de Azure Active Directory](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Windows** > **Inscripción de Windows** > **Dispositivos** (en **Windows Autopilot Deployment Program**).
+2. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Windows** > **Inscripción de Windows** > **Dispositivos** (en **Programa Windows Autopilot Deployment**).
 
 3. Elija los dispositivos que quiera eliminar y, después, seleccione **Eliminar**.
 

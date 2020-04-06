@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359552"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327234"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configuración de la inscripción de dispositivos iOS/iPadOS con Apple School Manager
 
@@ -31,7 +31,7 @@ ms.locfileid: "79359552"
 
 Puede configurar Intune para inscribir los dispositivos iOS/iPadOS adquiridos mediante el programa de [Apple School Manager](https://school.apple.com/). Al usar Intune con Apple School Manager, puede inscribir un gran número de dispositivos iOS/iPadOS sin tener que tocarlos. Cuando un estudiante o profesor activa el dispositivo, se ejecuta el Asistente para la configuración con valores preconfigurados y el dispositivo se inscribe en la administración.
 
-Para habilitar la inscripción de Apple School Manager, se usan los portales de Intune y de Apple School Manager. Se necesita una lista de números de serie o un número de pedido de compra, de manera que pueda asignar dispositivos a Intune para la administración. Puede crear perfiles de inscripción de DEP que contengan opciones que se apliquen a los dispositivos durante la inscripción.
+Para habilitar la inscripción de Apple School Manager, se usan los portales de Intune y de Apple School Manager. Se necesita una lista de números de serie o un número de pedido de compra, de manera que pueda asignar dispositivos a Intune para la administración. Puede crear perfiles de inscripción de Inscripción de dispositivo automatizada (ADE) que contengan opciones que se apliquen a los dispositivos durante la inscripción.
 
 La inscripción de Apple School Manager no se puede usar con el [Programa de inscripción de dispositivos de Apple](device-enrollment-program-enroll-ios.md) ni con el [Administrador de inscripciones de dispositivos](device-enrollment-manager-enroll.md).
 
@@ -106,7 +106,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
     > Estas operaciones no se admiten durante la autenticación con el asistente para configuración de Apple.
 
 6. Elija **Configuración de administración de dispositivos** y seleccione si quiere o no que se supervisen los dispositivos con este perfil.
-    Los dispositivos **supervisados** ofrecen más opciones de administración y, en este caso, el bloqueo de activación está deshabilitado de forma predeterminada. Microsoft recomienda usar el Programa de inscripción de dispositivos como mecanismo para habilitar el modo supervisado, sobre todo para las organizaciones que implementan un gran número de dispositivos iOS/iPadOS.
+    Los dispositivos **supervisados** ofrecen más opciones de administración y, en este caso, el bloqueo de activación está deshabilitado de forma predeterminada. Microsoft recomienda usar ADE como mecanismo para habilitar el modo supervisado, sobre todo para las organizaciones que implementan un gran número de dispositivos iOS/iPadOS.
 
     Los usuarios reciben notificaciones de que sus dispositivos están supervisados de dos maneras:
 
@@ -178,7 +178,7 @@ Para cumplir con los términos de Apple relativos a un tráfico del programa de 
 ## <a name="assign-a-profile-to-devices"></a>Asignar un perfil a los dispositivos
 Los dispositivos de Apple School Manager administrados por Intune deben tener un perfil de inscripción asignado antes de la inscripción.
 
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** y elija su token de la lista.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** y elija un token de la lista.
 2. Elija **Dispositivos** > Elija los dispositivos de la lista > **Asignar perfil**.
 3. En **Asignar perfil**, elija un perfil para los dispositivos y después seleccione **Asignar**.
 

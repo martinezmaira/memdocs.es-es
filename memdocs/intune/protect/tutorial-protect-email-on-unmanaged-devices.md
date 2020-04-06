@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1e6731e41ccc7c687cf6fa68dc06b8c6ee4e1e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349685"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326595"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutorial: Protección del correo electrónico de Exchange Online en dispositivos no administrados
 
@@ -42,7 +42,7 @@ Necesitará a un inquilino de prueba con las siguientes suscripciones para este 
 
 ## <a name="sign-in-to-intune"></a>Iniciar sesión en Intune
 
-En este tutorial, cuando inicia sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), lo hace como [administrador global](../fundamentals/users-add.md#types-of-administrators) o [administrador de servicio](../fundamentals/users-add.md#types-of-administrators) de Intune. Si ha creado una suscripción de prueba de Intune, la cuenta con la que la haya creado es el administrador global.
+En este tutorial, cuando inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), hágalo como [administrador global](../fundamentals/users-add.md#types-of-administrators) o [administrador del servicio](../fundamentals/users-add.md#types-of-administrators) de Intune. Si ha creado una suscripción de prueba de Intune, la cuenta con la que la haya creado es el administrador global.
 
 ## <a name="create-the-app-protection-policy"></a>Creación de la directiva de protección de la aplicación
 

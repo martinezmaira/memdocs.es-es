@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14bc0be97a2e74c4666603feb2a4832c6a1e2011
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339467"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327139"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscripción de dispositivos en Intune mediante una cuenta de administrador de inscripción de dispositivos
 
@@ -37,7 +37,7 @@ Los dispositivos y las cuentas de los usuarios de DEM inscritos con una cuenta d
 - No se puede realizar el borrado desde el Portal de empresa. Se puede borrar un dispositivo inscrito por una cuenta de usuario de DEM desde Intune en Azure Portal.
 - Solo el dispositivo local aparece en el sitio web o en la aplicación de Portal de empresa.
 - Las cuentas de usuario de DEM no pueden usar aplicaciones del Programa de Compras por Volumen de Apple (VPP) con licencias de usuario de Apple VPP debido a los requisitos de identificador de Apple por usuario para la administración de aplicaciones.
-- No se pueden usar cuentas de DEM al inscribir dispositivos mediante el Programa de inscripción de dispositivos de Apple (DEP).
+- No se pueden usar cuentas de DEM al inscribir dispositivos mediante la Inscripción de dispositivos automatizada (ADE) de Apple.
 - Los dispositivos pueden instalar aplicaciones de VPP si disponen de licencias de dispositivo de Apple VPP.
 - Los dispositivos están bloqueados para el acceso condicional con la excepción de Windows 10 1803+.
 - Todos los dispositivos inscritos con cuentas DEM deben tener la licencia correspondiente para que Intune los administre. La licencia puede ser una licencia de usuario de Intune o una licencia de dispositivo de Intune.
@@ -46,7 +46,7 @@ Los dispositivos y las cuentas de los usuarios de DEM inscritos con una cuenta d
 
 ## <a name="add-a-device-enrollment-manager"></a>Agregar un administrador de inscripción de dispositivos
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Inscribir dispositivos** > **Administradores de inscripción de dispositivos de Apple**.
+1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Inscribir dispositivos** > **Administradores de inscripciones de dispositivos**.
 
 2. Seleccione **Agregar**.
 
@@ -67,6 +67,6 @@ La eliminación de un administrador de inscripción de dispositivos no afecta a 
 
 **Eliminación de un administrador de inscripción de dispositivos**
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Inscribir dispositivos** > **Administradores de inscripción de dispositivos de Apple**.
+1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Inscribir dispositivos** > **Administradores de inscripciones de dispositivos**.
 2. En la hoja **Administradores de inscripción de dispositivos**, seleccione el usuario DEM y **Eliminar**.
 

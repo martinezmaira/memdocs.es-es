@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086090"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327035"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configuración de la inscripción de dispositivos macOS en Intune
 
@@ -60,7 +60,7 @@ Para más información acerca de otras tareas de usuario final, consulte estos a
 
 ## <a name="company-owned-macos-devices"></a>Dispositivos macOS propiedad de la empresa
 Para las organizaciones que adquieran dispositivos para sus usuarios, Intune admite los métodos de inscripción de dispositivos macOS propiedad de la empresa siguientes:
-- [Programa de inscripción de dispositivos (DEP) de Apple](device-enrollment-program-enroll-macos.md): Las organizaciones pueden adquirir dispositivos macOS a través del Programa de inscripción de dispositivos (DEP) de Apple. DEP permite implementar un perfil de inscripción "de forma inalámbrica" para incluir los dispositivos en la administración.
+- [Inscripción de dispositivo automatizada (ADE) de Apple](device-enrollment-program-enroll-macos.md): las organizaciones pueden adquirir dispositivos macOS a través de ADE. ADE permite implementar un perfil de inscripción "de forma inalámbrica" para incluir los dispositivos en la administración.
 - [Administrador de inscripción de dispositivos (DEM)](device-enrollment-manager-enroll.md): puede usar una cuenta de DEM para inscribir hasta 1000 dispositivos.
 
 ## <a name="block-macos-enrollment"></a>Bloqueo de la inscripción de macOS

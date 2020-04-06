@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cec45dae7e0596428b2d7ab5c925889c183d465
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364596"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359415"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Uso de una configuración personalizada para dispositivos iOS y iPadOS en Microsoft Intune
 
@@ -38,7 +38,7 @@ En este artículo se proporcionan instrucciones sobre el uso de Apple Configurat
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-[Cree el perfil](device-profile-create.md).
+[Cree el perfil](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Aspectos que debe saber
 
@@ -57,14 +57,12 @@ En este artículo se proporcionan instrucciones sobre el uso de Apple Configurat
 ## <a name="custom-configuration-profile-settings"></a>Ajustes de perfiles de configuración personalizados
 
 - **Nombre del perfil de configuración personalizado**: Especifique un nombre para la directiva. Este nombre se muestra en el dispositivo y en el estado de Intune.
-- **Archivo del perfil de configuración**: vaya al perfil de configuración que ha creado mediante Apple Configurator o Apple Profile Manager. El tamaño máximo de archivo es de 1 millón de bytes (justo por debajo de 1 MB). El archivo importado se muestra en el área **Contenido del archivo**.
+- **Archivo del perfil de configuración**: vaya al perfil de configuración que ha creado mediante Apple Configurator o Apple Profile Manager. El tamaño máximo de archivo es de `1000000` bytes (justo por debajo de 1 MB). El archivo importado se muestra en el área **Contenido del archivo**.
 
   También puede agregar tokens de dispositivo a los archivos de configuración personalizados. Los tokens de dispositivo se usan para agregar información específica del dispositivo. Por ejemplo, para que se muestre el número de serie, escriba `{{serialnumber}}`. En el dispositivo, el texto se muestra de forma similar `123456789ABC`, lo que es único para cada dispositivo. Al especificar variables, no olvide usar llaves: `{{ }}`. En los [tokens de configuración de aplicación](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) podrá ver una lista de las variables que puede usar. También puede usar `deviceid` o cualquier otro valor específico del dispositivo.
 
   > [!NOTE]
-  > Las variables no se validan en la interfaz de usuario y distinguen mayúsculas de minúsculas. Como resultado, es posible que vea perfiles guardados con entradas incorrectas. Por ejemplo, si escribe `{{DeviceID}}` en lugar de `{{deviceid}}`, se muestra la cadena literal en lugar del identificador del dispositivo. Asegúrese de especificar la información correcta.
-
-Seleccione **Aceptar** > **Crear** para guardar los cambios. El perfil se crea y se muestra en la lista de perfiles.
+  > Las variables no se validan en la interfaz de usuario y distinguen mayúsculas de minúsculas. Como resultado, es posible que vea perfiles guardados con entradas incorrectas. Por ejemplo, si escribe `{{DeviceID}}` en lugar de `{{deviceid}}`, se muestra la cadena literal en lugar del identificador único del dispositivo. Asegúrese de especificar la información correcta.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

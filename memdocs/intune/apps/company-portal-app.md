@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084202"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407753"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -45,7 +45,7 @@ En la tabla siguiente se proporcionan los detalles de personalización de marca 
 | **Mostrar en encabezado** | Seleccione si el encabezado de las experiencias del usuario final mostrará **Nombre y logotipo de empresa**, **Solo el logotipo de empresa** o **Solo el nombre de empresa**. En los cuadros de vista previa siguientes solo se muestran los logotipos, no el nombre.  |
 | **Upload logo for theme color background** (Cargar logotipo para fondo de color del tema) | Cargue el logotipo que quiera mostrar encima del color del tema seleccionado. Para conseguir la mejor apariencia, cargue un logotipo con un fondo transparente. Puede ver el aspecto que tendrá en el cuadro de vista previa que se encuentra debajo de la opción.<p>Tamaño máximo de imagen: 400 x 400 píxeles<br>Tamaño máximo de archivo:   750 KB<br>Tipo de archivo: PNG, JPG o JPEG |
 | **Upload logo for white or light background** (Cargar logotipo para fondo blanco o claro) | Cargue el logotipo que quiera mostrar encima de los fondos blancos o de color claro. Para conseguir la mejor apariencia, cargue un logotipo con un fondo transparente. Puede ver el aspecto que tendrá sobre un fondo blanco en el cuadro de vista previa que se encuentra debajo de la opción.<p>Tamaño máximo de imagen: 400 x 400 píxeles<br>Tamaño máximo de archivo: 750 KB<br>Tipo de archivo: PNG, JPG o JPEG |
-| **Upload brand image** (Cargar imagen de marca) | Cargue una imagen que refleje la marca de su organización.<p><ul><li>Ancho de imagen recomendado: mayor que 1125 píxeles (como mínimo 650 píxeles)</li><li>Tamaño máximo de imagen: 1,3 MB</li><li>Tipo de archivo: PNG, JPG o JPEG</li><li>Se muestra en estas ubicaciones:</li><ul><li>Portal de empresa de iOS o iPadOS: imagen de fondo en la página de perfil del usuario.</li><li>Sitio web del Portal de empresa:   imagen de fondo en la página de perfil del usuario.</li><li>Aplicación de Intune para Android: en el cajón y como imagen de fondo en la página de perfil del usuario.</li></ul></ul> |
+| **Upload brand image** (Cargar imagen de marca) | Cargue una imagen que refleje la marca de su organización.<p><ul><li>Ancho de imagen recomendado: mayor que 1125 píxeles (como mínimo 650 píxeles)</li><li>Tamaño máximo de imagen: 1,3 MB</li><li>Tipo de archivo: PNG, JPG o JPEG</li><li>Se muestra en estas ubicaciones:</li><ul><li>Portal de empresa de iOS o iPadOS: imagen de fondo en la página de perfil del usuario.</li><li>Sitio web del Portal de empresa:   imagen de fondo en la página de perfil del usuario.</li><li>Aplicación de Intune para Android: en el cajón, como imagen de fondo en la página de perfil del usuario.</li></ul></ul> |
 
 > [!NOTE]
 > Al instalar una aplicación iOS/iPadOS desde el Portal de empresa, el usuario recibirá un mensaje. Esto sucede cuando la aplicación iOS/iPadOS está vinculada a la tienda de aplicaciones, a un programa de compras por volumen (VPP) o a una aplicación de línea de negocio (LOB). El mensaje permite a los usuarios aceptar la acción o permitir la administración de la aplicación. El mensaje mostrará el nombre de la empresa o, cuando este no esté disponible, se mostrará **Portal de empresa**.
@@ -107,7 +107,7 @@ En la siguiente tabla se proporcionan detalles de configuración adicionales:
 |    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    No    |    No    |    Sí    |    Sí    |
 |    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    No    |    No    |    No<sup>(1)</sup>    |
 
-<sup>(1)</sup> **Problema conocido:** si establece las aplicaciones para que sea necesaria la inscripción para instalarse y también establece la inscripción de dispositivos en "No disponible", la aplicación del Portal de empresa en Android seguirá indicando a los usuarios que se inscriban. Esto se quitará en breve.
+<sup>(1)</sup> **Problema conocido:** si establece las aplicaciones para que sea necesaria la inscripción para instalarse y también establece la inscripción de dispositivos en "No disponible", la aplicación Portal de empresa en Android seguirá indicando a los usuarios que se inscriban. Esto se quitará en breve.
 
 > [!NOTE]
 > Si usa Azure Government, se ofrecen registros de aplicaciones para que el usuario final decida cómo compartirá cuando inicie el proceso para pedir ayuda para un problema. Sin embargo, si no usa Azure Government, el Portal de empresa enviará registros de aplicaciones directamente a Microsoft cuando el usuario inicie el proceso de pedir ayuda con un problema. Si se envían los registros de aplicaciones a Microsoft, será más fácil solucionar los problemas.
@@ -193,4 +193,4 @@ Algunas plataformas y configuraciones no realizar permiten acciones de autoservi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Adición manual de la aplicación Portal de empresa para Windows 10 con Microsoft Intune](company-portal-app.md)
+- [Agregar aplicaciones](apps-add.md)

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0ffd06d86106b07224edc40aefc7407673a0391
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526264"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326679"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito para TI distribuida
 
@@ -43,14 +43,14 @@ Esta característica es similar a la característica de ámbitos de seguridad de
 
 ## <a name="to-create-a-scope-tag"></a>Para crear una etiqueta de ámbito
 
-1. En el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Ámbito (etiquetas)**  > **Crear**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Ámbito (etiquetas)**  > **Crear**.
 2. En la página **Datos básicos**, proporcione un **Nombre** y una **Descripción** opcional. Elija **Siguiente**.
 3. En la página **Asignaciones**, elija los grupos que contengan los dispositivos que quiera asignar a esta etiqueta de ámbito. Elija **Siguiente**.
 4. En la página **Revisar y crear**, elija **Crear**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Para asignar una etiqueta de ámbito a un rol
 
-1. En el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Todos los roles** > seleccione un rol > **Asignaciones** > **Asignar**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Todos los roles** > seleccione un rol > **Asignaciones** > **Asignar**.
 2. En la página **Datos básicos**, proporcione un **Nombre de asignación** y una **Descripción**. Elija **Siguiente**.
 3. En la página **Grupos de administración**, elija **Seleccionar grupos para incluir** y seleccione los grupos que quiere que formen parte de esta asignación. Los usuarios de este grupo tendrán permisos para administrar los usuarios o dispositivos de Ámbito (grupos). Elija **Siguiente**.
 
@@ -70,7 +70,7 @@ Esta característica es similar a la característica de ámbitos de seguridad de
 
 En el caso de los objetos que admiten etiquetas de ámbito, estas suelen aparecer en **Propiedades**. Por ejemplo, para asignar una etiqueta de ámbito a un perfil de configuración, siga estos pasos:
 
-1. En el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Perfiles de configuración** > elija un perfil.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Perfiles de configuración** > elija un perfil.
 
 2. Seleccione **Propiedades** > **Ámbito (etiquetas)**  > **Editar** > **Seleccionar etiquetas de ámbito** > elija las etiquetas que quiera agregar al perfil. Puede asignar un máximo de 100 etiquetas de ámbito a un objeto.
 4. Elija **Seleccionar** > **Revisar + guardar**.

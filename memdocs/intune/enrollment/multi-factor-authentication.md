@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec03d186b0b5d64b5b867cf413f477d9ded79e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2b645b41a721063ddfea6019d726a3c232c8dd78
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345109"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327025"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Requerir la autenticación multifactor para las inscripciones de dispositivos de Intune
 
@@ -50,7 +50,7 @@ Para requerir MFA cuando se inscribe un dispositivo, siga estos pasos:
 >[!Important]
 >No configure **reglas de acceso basadas en dispositivos** para la inscripción a Microsoft Intune.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Acceso condicional**. El nodo de acceso condicional al que se accede desde *Intune* es el mismo nodo al que se accede desde *Azure AD*.
+1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Acceso condicional**. El nodo de acceso condicional al que se accede desde *Intune* es el mismo nodo al que se accede desde *Azure AD*.
 2. Pulse **Nueva directiva**.
 3. En **Directiva nueva**, escriba un nombre descriptivo para la directiva.
 4. En la sección **Asignaciones**, seleccione **Usuarios y grupos**. 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086733"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327271"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Traslado de dispositivos Android del administrador de dispositivos a la administración de perfil de trabajo
 
@@ -40,7 +40,7 @@ Cuando los usuarios ven que no cumplen los requisitos por este motivo, pueden pu
 - Configure la administración de perfiles de trabajo de Android [conectando su cuenta de inquilino de Intune a su cuenta de Android Enterprise](connect-intune-android-enterprise.md).
 - [Establezca la inscripción del perfil de trabajo de Android Enterprise](android-work-profile-enroll.md) para el grupo de usuarios que se está trasladando al perfil de trabajo de Android.
 - Considere la posibilidad de aumentar los límites de dispositivos de usuario. Al anular la inscripción de los dispositivos de la administración de los administradores de dispositivos, es posible que los registros de dispositivo no se quiten inmediatamente. Para proporcionar un margen durante este período, puede que necesite aumentar la capacidad del límite de dispositivos para que los usuarios puedan inscribirse en la administración de perfiles de trabajo.
-  - [Establezca la configuración del dispositivo Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) para el número máximo de dispositivos por usuario.
+  - [Establezca la configuración del dispositivo Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) para el número máximo de dispositivos por usuario.
   - Ajuste las [restricciones del límite de dispositivos de Intune](enrollment-restrictions-set.md#create-a-device-limit-restriction) estableciendo el límite de dispositivos. 
 
 ## <a name="create-device-compliance-policy"></a>Creación de una directiva de cumplimiento de dispositivos
@@ -71,6 +71,7 @@ Cuando los usuarios ven que no cumplen los requisitos por este motivo, pueden pu
     > [!NOTE]
     > - Por supuesto, puede usar hipertexto descriptivo para los vínculos de comunicación con los usuarios. Sin embargo, no use acortadores de URL porque es posible que los vínculos no funcionen si cambian de este modo.
     > - Si el Portal de empresa Android está abierto y en segundo plano, cuando un usuario pulsa el vínculo, es posible que vaya a la última página que tenía abierta.
+    > - Los usuarios deben pulsar el vínculo de un dispositivo Android. Si, por el contrario, lo pegan en un explorador, no iniciará el Portal de empresa de Android. 
 
     Elija **Siguiente**.
 
@@ -80,12 +81,12 @@ Cuando los usuarios ven que no cumplen los requisitos por este motivo, pueden pu
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-El [flujo de usuario final para pasar a la nueva configuración de administración de dispositivos](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) guía a los usuarios por la anulación de la inscripción de la administración de administradores de dispositivos y la configuración de la administración de perfiles de trabajo. Los usuarios deben tener [dispositivos inscritos por el administrador de dispositivos Android](android-enroll-device-administrator.md) con el Portal de empresa de Android, versión 5.0.4720.0 o posterior.
+El [flujo de usuario final para pasar a la nueva configuración de administración de dispositivos](../user-help/move-to-new-device-management-setup.md) guía a los usuarios por la anulación de la inscripción de la administración de administradores de dispositivos y la configuración de la administración de perfiles de trabajo. Los usuarios deben tener [dispositivos inscritos por el administrador de dispositivos Android](android-enroll-device-administrator.md) con el Portal de empresa de Android, versión 5.0.4720.0 o posterior.
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>El usuario ve un error después de pulsar Resolver.
 Si los usuarios ven un error después de pulsar el botón **Resolver**, es probable que se deba a uno de estos motivos:
 - La inscripción de perfiles de trabajo no está configurada correctamente (no hay ninguna cuenta de Android Enterprise conectada o las restricciones de inscripción están configuradas para bloquear la inscripción de perfiles de trabajo).
-- El dispositivo ejecuta Android 4.4 o anterior, que no admite la inscripción de perfiles de trabajo. 
+- El dispositivo ejecuta Android 4.4 o anterior, que no admite la inscripción de perfiles de trabajo. 
 - El fabricante del dispositivo no admite la inscripción de perfiles de trabajo en el modelo de dispositivo.
 
 ### <a name="resolve-button-doesnt-appear-on-the-users-device"></a>El botón Resolver no aparece en el dispositivo del usuario.
@@ -103,8 +104,5 @@ Los usuarios pueden ver una página de error en el explorador al pulsar la direc
 - El dispositivo Android usa Android 6 o una versión anterior. 
 
 ## <a name="next-steps"></a>Pasos siguientes
-[Vea el flujo del usuario final](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md).
-
+[Vea el flujo del usuario final](../user-help/move-to-new-device-management-setup.md)
 [Administrar dispositivos de perfil de trabajo Android con Intune](android-enterprise-overview.md)
-
-

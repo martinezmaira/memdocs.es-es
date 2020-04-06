@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354417"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326637"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Administre y use diferentes características de administración de dispositivos en los dispositivos Windows Holographic y HoloLens con Intune
 
@@ -58,7 +58,7 @@ En la aplicación Portal de empresa, también puede realizar las acciones siguie
 
 **[Crear una directiva de cumplimiento de dispositivos](../protect/compliance-policy-create-windows.md)**
 
-Las directivas de cumplimiento son las reglas y la configuración que deben cumplir los dispositivos para ser conformes. Use estas directivas con el acceso condicional para bloquear el acceso a los recursos de la empresa a los dispositivos no conformes. En Intune, se crean directivas de cumplimiento para permitir o bloquear el acceso a dispositivos que ejecutan Windows Holographic for Business. Por ejemplo, puede crear una directiva que exija la habilitación de Bitlocker.
+Las directivas de cumplimiento son las reglas y la configuración que deben cumplir los dispositivos para ser conformes. Use estas directivas con el acceso condicional para bloquear el acceso a los recursos de la empresa a los dispositivos no conformes. En Intune, se crean directivas de cumplimiento para permitir o bloquear el acceso a dispositivos que ejecutan Windows Holographic for Business. Por ejemplo, se puede crear una directiva que exija la habilitación de BitLocker.
 
 Vea también **[Introducción a las directivas de cumplimiento de dispositivos de Microsoft Intune](../protect/device-compliance-get-started.md)** .
 
@@ -107,7 +107,7 @@ Con Intune, puede crear categorías de dispositivos para agregar automáticament
 
 ## <a name="device-configuration-profiles"></a>Perfiles de configuración de dispositivos
 
-**[Introducción a los perfiles de configuración](../configuration/device-profiles.md) y [Crear un perfil propio](../configuration/device-profile-create.md)**
+**[Introducción a los perfiles de configuración](../configuration/device-profiles.md) e [Información general del perfil](../configuration/device-profile-create.md)**
 
 Intune incluye opciones y características que se pueden habilitar o deshabilitar en distintos dispositivos dentro de la organización. Estos valores de configuración y características se administran mediante perfiles. Por ejemplo, puede crear un perfil que habilite Cortana o que use Microsoft Defender Smart Screen en los dispositivos con Windows Holographic for Business.
 

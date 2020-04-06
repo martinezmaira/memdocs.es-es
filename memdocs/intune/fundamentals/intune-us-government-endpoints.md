@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 149a1dba78b32f2d59884fbb5b69ed58f4c0fccd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358772"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438768"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Puntos de conexión del Gobierno de EE. UU. de Microsoft Intune
 
@@ -51,6 +51,7 @@ En las siguientes tablas se enumeran los puertos y los servicios a los que acced
 - Azure Portal: https:\//portal.azure.us/ 
 - Office 365: https:\//portal.office365.us/ 
 - Portal de empresa de Intune: https:\//portal.manage.microsoft.us/ 
+- Centro de administración de Microsoft Endpoint Manager:\//endpoint.microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Puntos de conexión de servicio asociados de los que depende Intune:
 - Servicio sincronización de AAD: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc

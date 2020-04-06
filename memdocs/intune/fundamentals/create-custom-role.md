@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54cb4028001f2e6b64cba639cb27c58b31db172f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344160"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326795"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Creación de un rol personalizado en Intune
 
@@ -34,7 +34,7 @@ Para crear, editar o asignar roles, la cuenta debe tener uno de los siguientes p
 
 ## <a name="to-create-a-custom-role"></a>Para crear un rol personalizado
 
-1. En el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Todos los roles** > **Crear**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Todos los roles** > **Crear**.
 
 2. En la página **Datos básicos**, escriba un nombre y una descripción para el nuevo rol y, después, elija **Siguiente**.
 
@@ -48,7 +48,7 @@ Para crear, editar o asignar roles, la cuenta debe tener uno de los siguientes p
 
 También puede copiar un rol existente.
 
-1. En el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Todos los roles** > active la casilla de un rol de la lista > **Duplicar**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Administración de inquilinos** > **Roles** > **Todos los roles** > active la casilla de un rol de la lista > **Duplicar**.
 
 2. En la página **Datos básicos**, escriba un nombre. Asegúrese de usar un nombre único.
 

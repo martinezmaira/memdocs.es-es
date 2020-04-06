@@ -1,12 +1,12 @@
 ---
 title: Directiva de protección de aplicaciones de Windows Information Protection (WIP)
 titleSuffix: Microsoft Intune
-description: Creación e implementación de una directiva de protección de aplicaciones de Windows Information Protection (WIP) con Microsoft Intune
+description: Creación e implementación de una directiva de Windows Information Protection (WIP) con Microsoft Intune
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345694"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326102"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Creación e implementación de una directiva de protección de aplicaciones de Windows Information Protection (WIP) con Intune
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Creación e implementación de una directiva de Windows Information Protection (WIP) con Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Puede usar directivas de protección de aplicaciones con aplicaciones de Windows 10 para proteger las aplicaciones sin inscripción en dispositivos.
+Se pueden usar directivas de Windows Information Protection (WIP) con aplicaciones de Windows 10 para proteger las aplicaciones sin inscripción de dispositivos.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
@@ -49,10 +49,10 @@ Antes de agregar una directiva de trabajo en curso, debe tener claros algunos co
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debe configurar el proveedor de MAM para poder crear una directiva de protección de la aplicación de WIP. Obtenga más información sobre [cómo configurar el proveedor de MAM con Intune](app-protection-policies-configure-windows-10.md).  
+Se debe configurar el proveedor de MAM para poder crear una directiva de WIP. Obtenga más información sobre [cómo configurar el proveedor de MAM con Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP no admite varias identidades, solo puede existir una identidad administrada al mismo tiempo.
+> WIP no admite varias identidades, solo puede existir una identidad administrada al mismo tiempo. Para obtener información sobre las capacidades y limitaciones de WIP, vea [Protección de los datos de su empresa mediante Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Además, necesita la siguiente licencia y actualización:
 
@@ -63,7 +63,7 @@ Además, necesita la siguiente licencia y actualización:
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>Para agregar una directiva de protección de aplicaciones de WIP
+## <a name="to-add-a-wip-policy"></a>Para agregar una directiva de WIP
 
 Una vez configurado Intune en su organización, puede crear una directiva específica de WIP.
 
@@ -76,7 +76,7 @@ Una vez configurado Intune en su organización, puede crear una directiva espec�
 3. Agregue los siguientes valores:
     - **Nombre:** escriba un nombre (necesario) para la nueva directiva.
     - **Descripción:** (opcional) escriba una descripción.
-    - **Plataforma:** elija **Windows 10** como plataforma admitida para la directiva de protección de aplicaciones.
+    - **Plataforma:** Elija **Windows 10** como plataforma admitida para la directiva de WIP.
     - **Estado de inscripción:** elija **Sin inscripción** como estado de inscripción para la directiva.
 4. Elija **Crear**. La directiva se crea y aparece en la tabla del panel **Directivas de protección de aplicaciones**.
 

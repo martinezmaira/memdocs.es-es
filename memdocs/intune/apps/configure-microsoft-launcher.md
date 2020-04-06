@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6daf1b37517f33f004742d9550f04f79aa207b63
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334137"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407730"
 ---
 # <a name="configure-microsoft-launcher"></a>Configuración de Microsoft Launcher
 
@@ -33,7 +33,7 @@ En dispositivos Android Enterprise totalmente administrados, Launcher permite a 
 
 ## <a name="how-to-configure-the-microsoft-launcher-app"></a>Cómo configurar la aplicación Microsoft Launcher 
 
-Vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones** . Agregue una directiva de configuración para **Dispositivos administrados** que se ejecutan en **Android** y elija **Microsoft Launcher** como la aplicación asociada. Haga clic en **Opciones de configuración** para configurar las distintas opciones disponibles de Microsoft Launcher. 
+Una vez que la aplicación Microsoft Launcher se haya [agregado a Intune](../apps/apps-add.md), vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones**. Agregue una directiva de configuración para **Dispositivos administrados** que se ejecutan en **Android** y elija **Microsoft Launcher** como la aplicación asociada. Haga clic en **Opciones de configuración** para configurar las distintas opciones disponibles de Microsoft Launcher. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Selección de un formato de opciones de configuración 
 
@@ -46,6 +46,9 @@ Puede usar dos métodos para definir opciones de configuración para Microsoft L
 Si agrega propiedades con el **Diseñador de configuraciones**, las puede convertir de forma automática en JSON si selecciona **Especificar datos JSON** en la lista desplegable **Formato de opciones de configuración** como se muestra a continuación.
 
    ![Formato de opciones de configuración - Usar diseñador de configuraciones](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
+
+   > [!NOTE]
+   > Una vez que las propiedades se hayan configurado mediante el Diseñador de configuraciones, los datos JSON también se actualizarán para reflejar solo estas propiedades. Para agregar claves de configuración adicionales a los datos JSON, use el [ejemplo de script JSON](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) a fin de copiar las líneas necesarias para cada clave de configuración. 
 
 ## <a name="using-configuration-designer"></a>Uso del Diseñador de configuraciones
 
@@ -64,6 +67,10 @@ En la tabla siguiente se enumeran las claves de configuración disponibles de Mi
 |    Permiso para el usuario para cambiar establecer el fondo de pantalla    |    Bool    |    True    |    Le permite especificar si el usuario final puede cambiar el valor de la opción de establecer fondo de pantalla.<ul><li>Si se establece en **True**, el fondo de pantalla definido en la directiva solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, el fondo de pantalla se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Habilitación de fuente    |    Boolean    |    True    |    Permite habilitar la fuente de Launcher en el dispositivo cuando el usuario se desliza hacia la derecha en la pantalla principal.<ul><li>Si se establece en **True**, se habilitará la fuente.</li><li>Si se establece en **False**, se deshabilitará la fuente.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Permiso para el usuario para cambiar la habilitación de la fuente    |    Boolean    |    True    |     Le permite especificar si el usuario final puede cambiar el valor de la opción de **habilitar fuente**.<ul><li>Si se establece en **True**, la fuente solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, la fuente se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    Ubicación de la barra de búsqueda   |    String    |    Inferior    |  Permite especificar la **ubicación de la barra de búsqueda** en la pantalla principal. <ul><li>Si se establece en **Inferior**, la barra de búsqueda se encontrará en la parte inferior de la pantalla principal.</li><li>Si se establece en **Superior**, la barra de búsqueda se encontrará en la parte superior de la pantalla principal.</li><li>Si se establece en **Ocultar**, la barra de búsqueda se quitará de la pantalla principal.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Permiso para el usuario a fin de cambiar la ubicación de la barra de búsqueda   |    Bool    |    True    |  Permite especificar si el usuario final puede cambiar el valor de la opción **Ubicación de la barra de búsqueda**. <ul><li>Si se establece en **True**, la ubicación de la barra de búsqueda solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, la ubicación de la barra de búsqueda se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Modo de acoplamiento  |    String    |    Mostrar    | Permite habilitar el acoplamiento en el dispositivo cuando el usuario se desliza hacia la derecha en la pantalla principal.<ul><li>Si se establece en **Mostrar**, se habilitará el acoplamiento.</li><li>Si se establece en **Ocultar**, el acoplamiento se ocultará en la pantalla principal, pero el usuario podrá mostrarlo cuando sea necesario.</li><li>Si se establece en **Deshabilitado**, el acoplamiento se deshabilitará.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Dock.Mode`    |
+|   Permiso para el usuario a fin de cambiar el modo de acoplamiento   |    String    |    True    |  Permite especificar si el usuario final puede cambiar el valor de la opción Modo de acoplamiento.<ul><li>Si se establece en **True**, el modo de acoplamiento solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, el modo de acoplamiento se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>Especificar datos JSON
 
@@ -76,7 +83,9 @@ Además de la lista de opciones configurables enumeradas en la tabla del Diseña
 |    Configuration Key    |    Tipo de valor    |    Valor predeterminado    |    Descripción     |
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Establecer aplicaciones permitidas<br>Clave JSON:`com.microsoft.launcher.HomeScreen.Applications`    |    BundleArray    | Vea: [Establecer aplicaciones permitidas](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    Le permite definir el conjunto de aplicaciones visibles en la pantalla principal de entre las instaladas en el dispositivo. Para definir las aplicaciones, escriba el nombre del paquete de aplicación de las aplicaciones que le gustaría hacer visibles; por ejemplo, `com.android.settings` hará que se pueda acceder a la configuración desde la pantalla principal. Las aplicaciones que incluya en la lista de permitidas en esta sección ya deben estar instaladas en el dispositivo para que se vean en la pantalla principal.<p>Propiedades:<ul><li>**Paquete**: nombre del paquete de la aplicación.</li><li>**Clase**: actividad de la aplicación, que es específica de una página determinada de la aplicación. Usaría la página de aplicación predeterminada si este valor está vacío.</li></ul>      |
-|    Orden de las aplicaciones en la pantalla principal<br>Clave JSON: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Vea: [Orden de las aplicaciones en la pantalla principal](configure-microsoft-launcher.md#home-screen-app-order)      |    Permite especificar el orden de las aplicaciones en la pantalla principal.<p>Propiedades:<br><ul><li>**Tipo**: El único tipo admitido es `application`.</li><li>**Posición:** La ranura del icono de la aplicación en la pantalla principal. Comienza desde la posición 1 en la parte superior izquierda y va de izquierda a derecha, de arriba abajo.</li><li>**Paquete**: nombre del paquete de la aplicación.</li><li>**Clase**: actividad de la aplicación, que es específica de una página determinada de la aplicación. Se usará la página de aplicación predeterminada si este valor está vacío.</li></ul>    |
+|    Orden de las aplicaciones en la pantalla principal<br>Clave JSON: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Vea: [Orden de las aplicaciones en la pantalla principal](configure-microsoft-launcher.md#home-screen-app-order)      |    Permite especificar el orden de las aplicaciones en la pantalla principal.<p>Propiedades:<br><ul><li>**Tipo**: si se quieren especificar las posiciones de las aplicaciones, el único tipo admitido es `application`. Si se quieren especificar las posiciones de los vínculos web, el tipo es `weblink`.</li><li>**Posición:** esto especifica la ranura del icono de la aplicación en la pantalla principal. Comienza desde la posición 1 en la parte superior izquierda y va de izquierda a derecha, de arriba abajo.</li><li>**Paquete**: se trata de un nombre de paquete de aplicación que se usa para especificar el orden de la aplicación.</li><li>**Clase**: se trata de una actividad de la aplicación, que es específica de una página determinada de la aplicación. Se usará la página de aplicación predeterminada si este valor está vacío. Esta propiedad se utiliza para la aplicación.</li><li>**Etiqueta**: se trata de una actividad de la aplicación, que es específica de una página determinada de la aplicación. Se usará la página de aplicación predeterminada si este valor está vacío. Esta propiedad se utiliza para la aplicación.</li><li>**Vínculo**: dirección URL que se iniciará después de que el usuario final haga clic en el icono de vínculo web. Esta propiedad se usa para el vínculo web.</li></ul>    |
+|    Establecer vínculos web anclados<br>Clave JSON: `com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    Vea: [Establecer vínculos web anclados](configure-microsoft-launcher.md#set-pinned-web-link)      |    Esta clave permite anclar sitios web como iconos de inicio rápido en la pantalla principal. De este modo, puede asegurarse de que el usuario final puede tener acceso rápido y sencillo a sitios web fundamentales. Se puede modificar la ubicación de cada icono de vínculo web en la configuración "Orden de las aplicaciones en la pantalla principal".<p>Propiedades:<br><ul><li>**Etiqueta**: título del vínculo web mostrado en la pantalla principal de Microsoft Launcher.</li><li>**Vínculo**: dirección URL que se iniciará después de que el usuario final haga clic en el icono de vínculo web.</li></ul>    |
+
 
 ### <a name="set-allow-listed-applications"></a>Establecer aplicaciones permitidas
 
@@ -131,6 +140,57 @@ Además de la lista de opciones configurables enumeradas en la tabla del Diseña
     ]
 }
 ```
+
+### <a name="set-pinned-web-link"></a>Establecer vínculos web anclados
+
+```JSON
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "label",
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link", 
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+},
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.AppOrder",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "type",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "position",  
+                    "valueInteger": 
+                },  
+                { 
+                    "key": "label",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link",  
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+}
+```
+
+
+
+### <a name="microsoft-launcher-configuration-example"></a>Ejemplo de configuración de Microsoft Launcher
 
 Este es un ejemplo de script JSON con todas las claves de configuración disponibles incluidas:
 
@@ -204,6 +264,23 @@ Este es un ejemplo de script JSON con todas las claves de configuración disponi
                 }
             ]
         }, 
+        { 
+            "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+            "valueBundleArray": [ 
+                { 
+                    "managedProperty": [ 
+                        { 
+                            "key": "label",
+                            "valueString": "News" 
+                        },  
+                        { 
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com" 
+                        } 
+                    ] 
+                }
+            ] 
+        },
         {
             "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed", 
             "valueBool": false
@@ -270,11 +347,32 @@ Este es un ejemplo de script JSON con todas las claves de configuración disponi
                             "valueString": ""
                         }
                     ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type", 
+                            "valueString": "weblink"
+                        }, 
+                        {
+                            "key": "position", 
+                            "valueInteger": 20
+                        }, 
+                        {
+                            "key": "label", 
+                            "valueString": "News"
+                        }, 
+                        {
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com"
+                        }
+                    ]
                 }
             ]
         }
     ]
 }
+
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes

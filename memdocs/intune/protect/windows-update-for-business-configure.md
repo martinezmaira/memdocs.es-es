@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349217"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488042"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Administración de actualizaciones de software de Windows 10 en Intune
 
@@ -209,7 +209,7 @@ Cuando un dispositivo recibe una directiva de actualizaciones de característica
 
 Deben cumplirse los requisitos previos siguientes para usar las actualizaciones de características de Windows 10 en Intune.
 
-- Los dispositivos deben estar inscritos en Intune MDM y unidos a Azure AD o registrados en Azure AD.
+- Los dispositivos deben estar inscritos en MDM de Intune y estar unidos a AD híbrido, unidos a Azure AD o registrados en Azure AD.
 - Para usar la directiva de actualizaciones de características con Intune, los dispositivos deben tener la telemetría activada, con un valor mínimo de [*Básico*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). La telemetría se configura en *Informes y telemetría* como parte de la [directiva de restricción de dispositivos](../configuration/device-restrictions-configure.md).
   
   Los dispositivos que reciben la directiva de actualizaciones de características y que tienen la telemetría establecida en *No configurado* (lo que significa que está desactivada), pueden instalar una versión posterior de Windows que la definida en la directiva de actualización de características. El requisito previo de requerir telemetría está en revisión, ya que esta característica está en transición hacia la disponibilidad general.

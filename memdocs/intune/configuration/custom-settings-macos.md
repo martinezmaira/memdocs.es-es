@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6f57bd12713135244b2096f9eda4d8a802f32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361138"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359355"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Usar una configuración personalizada para dispositivos macOS en Microsoft Intune
 
@@ -38,7 +39,7 @@ En este artículo se proporcionan instrucciones sobre el uso de Apple Configurat
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-[Cree el perfil](device-profile-create.md).
+[Cree el perfil](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Aspectos que debe saber
 
@@ -64,10 +65,8 @@ En este artículo se proporcionan instrucciones sobre el uso de Apple Configurat
   > [!NOTE]
   > Las variables no se validan en la interfaz de usuario y distinguen mayúsculas de minúsculas. Como resultado, es posible que vea perfiles guardados con entradas incorrectas. Por ejemplo, si escribe `{{DeviceID}}` en lugar de `{{deviceid}}`, se muestra la cadena literal en lugar del identificador único del dispositivo. Asegúrese de especificar la información correcta.
 
-Seleccione **Aceptar** > **Crear** para guardar los cambios. El perfil se crea y se muestra en la lista de perfiles.
-
 ## <a name="next-steps"></a>Pasos siguientes
 
-Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](device-profile-assign.md).
+El perfil se crea, pero puede que todavía no haga nada. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
-Vea cómo [crear el perfil en dispositivos iOS/iPadOS](custom-settings-ios.md).
+Cree un [perfil personalizado en dispositivos iOS/iPadOS](custom-settings-ios.md).

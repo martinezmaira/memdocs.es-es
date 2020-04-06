@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087095"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359309"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicación de la configuración y características en dispositivos con perfiles de dispositivos Microsoft Intune
 
@@ -53,7 +53,7 @@ Esta característica es compatible con:
 
 Los [certificados](../protect/certificates-configure.md) configuran certificados PKCS, SCEP y de confianza que están asignados a los dispositivos. Estos certificados autentican perfiles de correo electrónico, VPN y Wi-Fi.
 
-Esta característica es compatible con: 
+Esta característica es compatible con:
 
 - Administrador de dispositivos Android
 - Android Enterprise
@@ -84,6 +84,15 @@ Use estas opciones para controlar cómo se descargan las actualizaciones de soft
 Esta característica es compatible con:
 
 - Windows 10 y versiones posteriores
+
+## <a name="derived-credential"></a>Credencial derivada
+
+Las [credenciales derivadas](../protect/derived-credentials.md) son certificados en tarjetas inteligentes que pueden autenticar, firmar y cifrar. En Intune, se pueden crear perfiles con estas credenciales para usarlas en aplicaciones, perfiles de correo electrónico y conexión a VPN, S/MIME y Wi-Fi.
+
+Esta característica es compatible con:
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## <a name="device-features"></a>Características del dispositivo
 
@@ -133,7 +142,7 @@ Esta característica es compatible con:
 
 ## <a name="education"></a>Education
 
-En [Configuración de los ajustes de educación de Windows 10 en Microsoft Intune](education-settings-configure.md) se configuran opciones para la [aplicación Take a Test de Windows](https://education.microsoft.com/gettrained/win10takeatest). Al configurar estas opciones, no puede ejecutar ninguna otra aplicación en el dispositivo hasta que se complete la prueba.
+En [Configuración de los ajustes de educación de Windows 10 en Microsoft Intune](education-settings-configure.md) se configuran opciones para la [aplicación Take a Test de Windows](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Al configurar estas opciones, no puede ejecutar ninguna otra aplicación en el dispositivo hasta que se complete la prueba.
 
 En [Configuración del entorno educativo: iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) se usa la aplicación Classroom de iOS/iPadOS para guiar el aprendizaje y controlar los dispositivos de los alumnos en el aula. Puede configurar dispositivos iPad para que muchos alumnos puedan compartir un solo dispositivo.
 
@@ -141,7 +150,7 @@ En [Configuración del entorno educativo: iOS/iPadOS](../fundamentals/education-
 
 La [configuración de correo electrónico](email-settings-configure.md) crea, asigna y supervisa la configuración de correo electrónico de Exchange ActiveSync en los dispositivos. Los perfiles de correo electrónico ayudan en la coherencia, reducen las llamadas al soporte técnico y permiten a los usuarios finales acceder al correo electrónico de la empresa en sus dispositivos personales sin necesidad de ninguna configuración por su parte. 
 
-Esta característica es compatible con: 
+Esta característica es compatible con:
 
 - Administrador de dispositivos Android
 - Android Enterprise
@@ -151,12 +160,13 @@ Esta característica es compatible con:
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-La [configuración de Endpoint Protection para Windows 10](../protect/endpoint-protection-windows-10.md) configura los valores de BitLocker y Microsoft Defender para dispositivos Windows 10.
+[Endpoint Protection](../protect/endpoint-protection-configure.md) configura los valores de BitLocker y Microsoft Defender para dispositivos Windows 10. Además, configura el firewall, la puerta de enlace y otros recursos en dispositivos macOS.
 
 Para incorporar Advanced Threat Protection de Microsoft Defender (WDATP) a Microsoft Intune, consulte [Configuración de los puntos de conexión mediante las herramientas de Administración de dispositivos móviles (MDM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 Esta característica es compatible con:
 
+- macOS
 - Windows 10 y versiones posteriores
 
 ## <a name="esim-cellular---public-preview"></a>Telefonía móvil eSIM: versión preliminar pública
@@ -192,7 +202,15 @@ Esta característica es compatible con:
 
 - Windows 10 y versiones posteriores
 
-La configuración de pantalla completa también está disponible como restricciones de dispositivos para [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) e [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+La configuración de pantalla completa también está disponible como restricciones de dispositivos para [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) e [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+
+## <a name="microsoft-defender-atp"></a>ATP de Microsoft Defender
+
+[Advanced Threat Protection (ATP) de Microsoft Defender](../protect/advanced-threat-protection.md) se integra con Intune para supervisar y ayudar a proteger los dispositivos. Establezca los niveles de riesgo y determine qué sucede si los dispositivos superan ese nivel. Cuando se combina con el acceso condicional, se puede ayudar a evitar actividades malintencionadas en la organización.
+
+Esta característica es compatible con:
+
+- Windows 10 y versiones posteriores
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -206,11 +224,18 @@ Esta característica es compatible con:
 
 Los [scripts de PowerShell en dispositivos Windows 10](../apps/intune-management-extension.md) usan la extensión de administración de Intune para cargar los scripts de PowerShell en Intune y, luego, ejecutan esos scripts en los dispositivos. Consulte también lo que se necesita para usar una extensión, cómo agregarla a Intune y otra información importante.
 
-
 Esta característica es compatible con:
 
 - Windows 10 y versiones posteriores
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>Archivo de preferencia
+
+Los [archivos de preferencia](preference-file-settings-macos.md) en dispositivos macOS incluyen información sobre las aplicaciones. Por ejemplo, se pueden usar los archivos de preferencia para controlar la configuración del explorador web, personalizar las aplicaciones y mucho más.
+
+Esta característica es compatible con:
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Dispositivos multiusuario compartidos
 
@@ -260,14 +285,6 @@ Esta característica es compatible con:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (solo importación)
-- Windows 10 y versiones posteriores
-
-## <a name="windows-information-protection-profile"></a>Perfil de Windows Information Protection
-
-[Windows Information Protection](../protect/windows-information-protection-configure.md) contribuye a la protección contra la pérdida de datos sin interferir en la experiencia del empleado. También ayuda a proteger los datos y las aplicaciones empresariales contra las pérdidas accidentales de datos en dispositivos propiedad de la empresa y dispositivos personales que los empleados usan en el trabajo. Para usar Windows Information Protection, no es necesario realizar cambios en el entorno ni en otras aplicaciones.
-
-Esta característica es compatible con:
-
 - Windows 10 y versiones posteriores
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)

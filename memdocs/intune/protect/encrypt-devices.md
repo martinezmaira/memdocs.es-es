@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084876"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322470"
 ---
 # <a name="use-device-encryption-with-intune"></a>Uso del cifrado de dispositivos con Intune
 
@@ -43,7 +43,7 @@ La inscripción de dispositivos aprobados por el usuario es necesaria para que F
 
 FileVault es un programa de cifrado de disco completo que se incluye con macOS. Puede usar Intune para configurar FileVault en dispositivos que ejecuten **macOS 10.13 o versiones posteriores**.
 
-Para configurar FileVault, cree un [perfil de configuración de dispositivo](../configuration/device-profile-create.md) para la protección de punto de conexión en la plataforma de macOS. La configuración de FileVault es una de las categorías de configuración disponibles para la protección de punto de conexión de macOS.
+Para configurar FileVault, cree un [perfil de configuración de dispositivo](endpoint-protection-configure.md) para la protección de punto de conexión en la plataforma de macOS. La configuración de FileVault es una de las categorías de configuración disponibles para la protección de punto de conexión de macOS.
 
 Después de crear una directiva para cifrar dispositivos con FileVault, la directiva se aplica a los dispositivos en dos fases. En primer lugar, el dispositivo se prepara para habilitar a Intune a recuperar y hacer una copia de seguridad de la clave de recuperación. Esta acción se denomina custodia. Una vez que se ha custodiado la clave, se puede iniciar el cifrado de disco.
 
@@ -105,7 +105,7 @@ Use Intune para configurar el Cifrado de unidad BitLocker en los dispositivos qu
 
 BitLocker está disponible en dispositivos que ejecutan **Windows 10 o versiones posteriores**.
 
-Configure BitLocker cuando cree un [perfil de configuración de dispositivo](../configuration/device-profile-create.md) para la protección de punto de conexión en la plataforma de Windows 10 o versiones posteriores. La configuración de BitLocker se encuentra en la categoría de configuración de cifrado de Windows para la protección de punto de conexión de Windows 10.
+Configure BitLocker cuando cree un [perfil de configuración de dispositivo](endpoint-protection-configure.md) para la protección de punto de conexión en la plataforma de Windows 10 o versiones posteriores. La configuración de BitLocker se encuentra en la categoría de configuración de cifrado de Windows para la protección de punto de conexión de Windows 10.
 
 ![Configuración de BitLocker](./media/encrypt-devices/bitlocker-settings.png)
 
@@ -128,7 +128,7 @@ Configure BitLocker cuando cree un [perfil de configuración de dispositivo](../
 
 ### <a name="silently-enable-bitlocker-on-devices"></a>Habilitación en modo silencioso de BitLocker en dispositivos
 
-Puede configurar una directiva de BitLocker que habilite de forma automática y silenciosa BitLocker en un dispositivo. Esto significa que BitLocker se habilita correctamente sin presentar ninguna interfaz de usuario al usuario final, incluso cuando ese usuario no es un administrador local en el dispositivo.
+Puede configurar una directiva de BitLocker que habilite de forma automática y silenciosa BitLocker en un dispositivo. Esto significa que BitLocker se habilita correctamente sin presentar ninguna interfaz de usuario al usuario final, aunque ese usuario no sea administrador local en el dispositivo.
 
 **Requisitos previos del dispositivo**:
 

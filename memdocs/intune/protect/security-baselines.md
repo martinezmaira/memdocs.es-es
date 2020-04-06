@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349997"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488065"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Uso de líneas de base de seguridad para configurar dispositivos Windows 10 en Intune
 
@@ -60,7 +60,7 @@ Para ver más información sobre las versiones de línea de base que usa, selecc
 
 Al crear un *perfil* de la línea de base de seguridad, este usará automáticamente la instancia de línea de base de seguridad publicada hace menos tiempo.  Puede seguir usando y editando perfiles creados anteriormente que usan una instancia de versión de la línea de base anterior, incluidas las líneas de base creadas mediante una versión preliminar.
 
-Puede optar por [cambiar la versión](#change-the-baseline-version-for-a-profile) de una línea de base que está en uso con un perfil determinado. Esto significa que, cuando sale una nueva versión, no es necesario crear un nuevo perfil de la línea de base para aprovecharla. En su lugar, cuando esté listo, puede seleccionar un perfil de la línea de base y luego usar la opción integrada para cambiar la versión de la instancia de ese perfil a una nueva.
+Puede optar por [cambiar la versión](#change-the-baseline-version-for-a-profile) de una línea de base que está en uso con un perfil determinado. Esto significa que, cuando sale una nueva versión, no es necesario crear un nuevo perfil de línea de base para aprovecharla. En su lugar, cuando esté listo, puede seleccionar un perfil de línea de base y luego usar la opción integrada para cambiar la versión de la instancia de ese perfil a una nueva.
 
 ## <a name="available-security-baselines"></a>Líneas de base de seguridad disponibles
 
@@ -76,7 +76,7 @@ Las instancias de línea de base de seguridad siguientes están disponibles para
 
 - **Línea de base de Microsoft Defender ATP**
    *(Para usar esta línea de base, su entorno debe cumplir con los requisitos previos para usar [Protección contra amenazas avanzada de Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
-  - [Línea de base de ATP de Microsoft Defender](security-baseline-settings-defender-atp.md)
+  - [Línea de base versión 3 de ATP de Microsoft Defender](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > La base de referencia de seguridad de ATP de Microsoft Defender se ha optimizado para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados.  Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
@@ -146,7 +146,7 @@ Las tareas comunes cuando se trabaja con líneas de base de seguridad incluyen:
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Cambio de la versión de línea de base de un perfil
 
-Puede cambiar la versión de la instancia de línea de base que se usa con un perfil.  Al cambiar la versión, se selecciona una instancia disponible de la misma línea de base. No puede cambiar entre dos tipos de línea de base distintos, como cambiar un perfil pasando de usar una línea de base para ATP de Defender a usar la línea de base de seguridad MDM.
+Puede cambiar la versión de la instancia de línea de base que se usa con un perfil.  Al cambiar la versión, se selecciona una instancia disponible de la misma línea de base. No puede cambiar entre dos tipos de línea de base distintos, como cambiar un perfil que usa una línea de base para ATP de Defender a usar la línea de base de seguridad MDM.
 
 Durante la configuración de un cambio de la versión de línea de base, puede descargar un archivo CSV que muestra los cambios entre las dos versiones de línea de base implicadas. También tiene la opción de conservar todas las personalizaciones de la versión de línea de base original, o bien implementar la nueva versión con todos sus valores predeterminados. No tiene la opción de realizar cambios en la configuración individual cuando se cambia la versión de una línea de base para un perfil.
 
@@ -158,7 +158,7 @@ Al guardar, después de completarse la conversión, la línea de base se volver�
 
 - La configuración que no esté en la nueva versión de línea de base seleccionada se quitará y este perfil de la línea de base de seguridad ya no la aplicará.
 
-  Si un perfil de la línea de base deja de administrar una configuración, dicha configuración no se restablecerá en el dispositivo. En su lugar, la configuración del dispositivo seguirá estando establecida en su última configuración hasta que otro proceso la administra para cambiarla. Entre los ejemplos de procesos que pueden cambiar una configuración una vez que deja de administrarla se incluyen un perfil de la línea de base diferente, una configuración de directiva de grupo o una configuración manual realizada en el dispositivo.
+  Si un perfil de línea de base deja de administrar una configuración, dicha configuración no se restablecerá en el dispositivo. En su lugar, la configuración del dispositivo seguirá estando establecida en su última configuración hasta que otro proceso la administra para cambiarla. Entre los ejemplos de procesos que pueden cambiar una configuración una vez que deja de administrarla se incluyen un perfil de línea de base diferente, una configuración de directiva de grupo o una configuración manual realizada en el dispositivo.
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Para cambiar la versión de línea de base de un perfil
 
@@ -186,7 +186,7 @@ Al guardar, después de completarse la conversión, la línea de base se volver�
 
 ### <a name="remove-a-security-baseline-assignment"></a>Quitar una asignación de la línea de base de seguridad
 
-Si una configuración de líneas de base de seguridad deja de aplicarse a un dispositivo o la configuración en una línea de base se establece en *No configurada*, esa configuración de un dispositivo no se revertirá a una configuración administrada previamente. En su lugar, la configuración administrada previamente del dispositivo conservará sus últimas configuraciones tal como se reciben de la línea de base hasta que otro proceso actualice esa configuración del dispositivo.
+Si una configuración de líneas de base de seguridad deja de aplicarse a un dispositivo o la configuración de una línea de base se establece en *No configurado*, esa configuración de un dispositivo no se revertirá a una configuración administrada previamente. En su lugar, la configuración administrada previamente del dispositivo conservará sus últimas configuraciones tal como se reciben de la línea de base hasta que otro proceso actualice esa configuración del dispositivo.
 
 Otros procesos que podrían cambiar la configuración del dispositivo posteriormente incluyen una línea de base de seguridad nueva o diferente, un perfil de configuración de dispositivo, configuraciones de directiva de grupo o una edición manual de la configuración del dispositivo.
 
@@ -208,13 +208,13 @@ El mismo equipo de seguridad de Microsoft eligió y organizó la configuración 
 
 ### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>¿Son compatibles las líneas de base de seguridad CIS o NSIT de Intune?
 
-Estrictamente hablando, no. El equipo de seguridad de Microsoft consulta a las organizaciones, como CIS, para recopilar sus recomendaciones. Sin embargo, no hay una asignación unívoca entre las líneas de base de Microsoft y “compatibles con CIS”.
+Estrictamente hablando, no. El equipo de seguridad de Microsoft consulta a las organizaciones, como CIS, para recopilar sus recomendaciones. Sin embargo, no hay una asignación unívoca entre las líneas de base de Microsoft y "compatibles con CIS".
 
 ### <a name="what-certifications-does-microsofts-security-baselines-have"></a>¿Qué certificaciones tienen las líneas de base de seguridad de Microsoft? 
 
 - Microsoft continúa publicando líneas de base de seguridad para directivas de grupo (GPO) y el [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), como ha hecho durante muchos años. Muchas organizaciones usan estas líneas de base. Las recomendaciones que figuran en estas líneas de base provienen del compromiso del equipo de seguridad de Microsoft con clientes empresariales y agencias externas, incluido el Departamento de Defensa (DoD), el Instituto Nacional de Estándares y Tecnología (NIST), etc. Compartimos nuestras recomendaciones y líneas de base con estas organizaciones. Estas organizaciones también tienen sus propias recomendaciones que reflejan fielmente las recomendaciones de Microsoft. Dado que la administración de dispositivos móviles (MDM) continúa creciendo en la nube, Microsoft ha creado recomendaciones de MDM equivalentes de estas líneas de base de directivas de grupo. Estas líneas de base adicionales están integradas en Microsoft Intune e incluyen informes de cumplimiento sobre usuarios, grupos y dispositivos que siguen (o no) la línea de base.
 
-- Muchos clientes utilizan las recomendaciones de línea de base de Intune como punto de partida y luego las personalizan para satisfacer sus demandas de TI y seguridad. La **línea de base de seguridad de MDM** de Windows 10 RS5 de Microsoft es la primera línea de base para lanzar. Esta línea de base se construye como una infraestructura genérica que permite a los clientes eventualmente importar otras líneas de base de seguridad basadas en CIS, NIST y otros estándares. En la actualidad, está disponible para Windows y eventualmente incluirá iOS/iPadOS y Android.
+- Muchos clientes utilizan las recomendaciones de línea de base de Intune como punto de partida y luego las personalizan para satisfacer sus demandas de TI y seguridad. La **línea de base de seguridad de MDM** de Windows 10 RS5 de Microsoft es la primera línea de base que se lanza. Esta línea de base se construye como una infraestructura genérica que permite a los clientes eventualmente importar otras líneas de base de seguridad basadas en CIS, NIST y otros estándares. En la actualidad, está disponible para Windows y eventualmente incluirá iOS/iPadOS y Android.
 
 - La migración de las directivas de grupo de Active Directory locales a una solución en la nube pura mediante Azure Active Directory (AD) con Microsoft Intune es una odisea. Para ayudar, se incluyen plantillas de directiva de grupo en el [kit de herramientas para el cumplimiento de la seguridad](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) que pueden ayudar a administrar dispositivos híbridos unidos a Azure AD. Estos dispositivos pueden obtener configuraciones de MDM desde la nube (Intune) y configuraciones de directiva de grupo desde los controladores de dominio locales según sea necesario.
 
