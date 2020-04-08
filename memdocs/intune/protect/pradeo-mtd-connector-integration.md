@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8a38ad4cf8aa9186bfbd061c5463d36e93c116c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
+ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351466"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80525204"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integración de Mobile Threat Defense de Pradeo con Intune
 
@@ -64,7 +64,7 @@ El proceso de autorización de la aplicación Pradeo es el siguiente:
 
 ## <a name="to-set-up-pradeo-integration"></a>Para configurar la integración de Pradeo
 
-1. Vaya a la [consola Pradeo Security](https://www.apps-security.com) e inicie sesión con sus credenciales.
+1. Vaya a la [consola Pradeo Security](https://www.pradeo-security.com) e inicie sesión con sus credenciales.
 
 2. En el menú, elija **Administración - Enterprise Mobility Management**.
 

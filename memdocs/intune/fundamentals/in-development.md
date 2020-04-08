@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a807a90cdca18d79e7b92b4efeb56d341da2596
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438729"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808161"
 ---
 # <a name="in-development-for-microsoft-intune---april-2020"></a>En desarrollo para Microsoft Intune: abril de 2020
 
@@ -87,16 +87,6 @@ Se va a publicar un nuevo perfil de configuración de dispositivo macOS que conf
 
 Se aplica a:
 - macOS
-
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984----"></a>Experiencia de interfaz de usuario mejorada al crear perfiles de configuración en dispositivos iOS/iPadOS y macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984  -->
-Cuando se crea un perfil para dispositivos iOS/iPadOS o macOS, se actualiza la experiencia en el Centro de administración de Endpoint Manager. Este cambio afecta a los siguientes perfiles de configuración de dispositivos (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **iOS** o **macOS** para plataforma):
-
-- Personalizado: iOS/iPadOS y macOS
-- Características del dispositivo: iOS/iPadOS y macOS
-- Restricciones de dispositivos: iOS/iPadOS y macOS
-- Endpoint Protection: macOS
-- Extensiones: macOS
-- Archivo de preferencias: macOS
 
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>Las opciones y valores de los perfiles de configuración de dispositivos se actualizarán para las plataformas Windows<!-- 4091122 -->
 Al crear perfiles de configuración de dispositivos para plataformas Windows (**Dispositivos** > **Perfiles de configuración** >  **Crear perfil** > cualquier opción **Windows** para la plataforma), algunas opciones y sus valores son diferentes del CSP y pueden ser confusos. Los nombres de las opciones y sus valores se actualizarán para que sean más claros.

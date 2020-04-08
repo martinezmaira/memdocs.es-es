@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407715"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696537"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Administración del acceso web mediante Microsoft Edge con Microsoft Intune
 
@@ -367,14 +367,14 @@ Si la organización funciona en un sector muy regulado o usa una VPN por aplicac
 
 |    Key    |    Valor    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** deshabilita la exploración InPrivate.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** deshabilita la exploración InPrivate.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Restricción del uso de Microsoft Edge a cuentas permitidas
 
 Además de bloquear la exploración InPrivate y de MSA, puede permitir el uso de Microsoft Edge solo cuando el usuario inicie sesión con su cuenta de AAD. Esta característica solo está disponible para los usuarios inscritos en MDM. Puede obtener más información sobre cómo configurar esta opción aquí:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` se puede usar para deshabilitar varias características a la vez. Por ejemplo, para deshabilitar tanto InPrivate como la contraseña, use `inprivate| password`.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` se puede usar para deshabilitar varias características a la vez. Por ejemplo, para deshabilitar tanto InPrivate como la contraseña, use `inprivate|password`.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Configuración de Microsoft Edge como una aplicación de pantalla completa en dispositivos Android
 
