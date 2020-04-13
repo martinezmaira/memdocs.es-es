@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359317"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551505"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Adición de un archivo de lista de propiedades a dispositivos macOS con Microsoft Intune
 
@@ -43,6 +43,9 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 - Si no tiene claro cómo especificar una clave de aplicación, cambie la configuración en la aplicación. Después, revise el archivo de preferencias de la aplicación mediante [Xcode](https://developer.apple.com/xcode/) para ver cómo se ha configurado. Apple recomienda quitar la configuración no administrable con Xcode antes de importar el archivo.
 - Solo algunas aplicaciones funcionan con preferencias administradas, y es posible que no le permitan administrar toda la configuración.
 - Asegúrese de cargar los archivos de lista de propiedades que tengan como destino la configuración del canal del dispositivo, no la configuración del canal del usuario. Los archivos de lista de propiedades tienen como destino todo el dispositivo.
+
+> [!NOTE]
+> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración que se describe en este artículo.
 
 ## <a name="create-the-profile"></a>Creación del perfil
 

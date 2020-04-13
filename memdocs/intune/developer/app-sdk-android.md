@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086329"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620564"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guía para desarrolladores de Android acerca del SDK para aplicaciones de Microsoft Intune
 
 > [!NOTE]
 > Es posible que quiera leer primero la [Información general del SDK para aplicaciones de Intune](app-sdk.md), que cubre las características actuales del SDK y describe cómo preparar la integración en cada plataforma compatible.
+>
+> Para descargar el SDK, consulte [Descargar los archivos del SDK](../developer/app-sdk-get-started.md#download-the-sdk-files).
 
 El SDK para aplicaciones de Microsoft Intune para Android permite incorporar directivas de aplicaciones de Intune (también conocidas como directivas MAM o **APP**) a la aplicación Android nativa. Una aplicación administrada por Intune es aquella que está integrada con el SDK para aplicaciones de Intune. Los administradores de Intune pueden implementar fácilmente directivas de protección de aplicaciones en la aplicación administrada por Intune cuando Intune la administra de manera activa.
 

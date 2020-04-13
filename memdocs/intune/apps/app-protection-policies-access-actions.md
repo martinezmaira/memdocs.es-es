@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323782"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551344"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Borrado de los datos mediante acciones de inicio condicional de la directiva de protección de aplicaciones en Intune
 
@@ -59,7 +59,7 @@ Para iOS/iPadOS, podrá configurar las acciones de las siguientes opciones desde
 - Modelos de dispositivos
 - Nivel máximo de amenazas de dispositivo permitido
 
-Para usar el valor de configuración **Modelos de dispositivo**, indique una lista de identificadores de modelos de iOS/iPadOS separados por punto y coma. Estos valores no distinguen mayúsculas de minúsculas. Además de los informes de Intune para la entrada de "modelos de dispositivo", puede encontrar un identificador de modelos de iOS/iPadOS en la columna de tipo de dispositivo de la [documentación de soporte técnico de HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) o en este [repositorio de GitHub de terceros](https://gist.github.com/adamawolf/3048717).<br>
+Para usar el valor de configuración **Modelos de dispositivo**, indique una lista de identificadores de modelos de iOS/iPadOS separados por punto y coma. Estos valores no distinguen mayúsculas de minúsculas. Además de los informes de Intune para la entrada de "modelos de dispositivo", puede encontrar un identificador de modelos de iOS/iPadOS en este [repositorio de GitHub de terceros](https://gist.github.com/adamawolf/3048717).<br>
 Entrada de ejemplo: *iPhone5,2;iPhone5,3*
 
 En los dispositivos del usuario final, el cliente de Intune tomaría medidas en función de una coincidencia simple de las cadenas de modelo de dispositivo que se especifican en Intune para las directivas de protección de aplicaciones. La coincidencia depende por completo de lo que informa el dispositivo. A usted (administrador de TI) se le anima a garantizar que se produzca el comportamiento deseado mediante la comprobación de esta configuración en función de una variedad de modelos y fabricantes de dispositivos, y destinado a un grupo de usuarios pequeño. El valor predeterminado es **Sin configurar**.<br>

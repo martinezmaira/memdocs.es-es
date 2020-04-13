@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322989"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551380"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creación de una directiva de cumplimiento en Microsoft Intune
 
@@ -58,6 +58,9 @@ Para usar las directivas de cumplimiento de dispositivos, asegúrese de lo sigui
 - Inscriba dispositivos en Intune (necesario para ver el estado de cumplimiento)
 
 - Inscriba dispositivos en un usuario o realice la inscripción sin un usuario primario. Los dispositivos inscritos en varios usuarios no se admiten.
+
+> [!NOTE]
+> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración que se describe en este artículo.
 
 ## <a name="create-the-policy"></a>Creación de la directiva
 

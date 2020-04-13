@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488065"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551686"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Uso de líneas de base de seguridad para configurar dispositivos Windows 10 en Intune
 
@@ -62,11 +62,20 @@ Al crear un *perfil* de la línea de base de seguridad, este usará automáticam
 
 Puede optar por [cambiar la versión](#change-the-baseline-version-for-a-profile) de una línea de base que está en uso con un perfil determinado. Esto significa que, cuando sale una nueva versión, no es necesario crear un nuevo perfil de línea de base para aprovecharla. En su lugar, cuando esté listo, puede seleccionar un perfil de línea de base y luego usar la opción integrada para cambiar la versión de la instancia de ese perfil a una nueva.
 
+## <a name="avoid-conflicts"></a>Evitación de conflictos
+
+Puede usar una o varias de las líneas de base disponibles en su entorno de Intune al mismo tiempo. También puede usar varias instancias de las mismas líneas de base de seguridad con diversas personalizaciones.
+
+Al usar varias líneas de base de seguridad, revise la configuración en cada una para identificar los casos en los que diferentes configuraciones de líneas de base presentan valores en conflicto del mismo ajuste. Dado que puede implementar líneas de base de seguridad diseñadas para diversas intenciones e implementar varias instancias de la misma línea de base que incluye la configuración personalizada, es posible que cree conflictos de configuración para dispositivos que deben investigarse y resolverse.
+
+Además, las líneas de base de seguridad suelen administrar la misma configuración que se puede establecer con [perfiles de configuración de dispositivos](../configuration/device-profiles.md) u otros tipos de directivas. Por lo tanto, tenga en cuenta las directivas y los perfiles adicionales de la configuración cuando trate de evitar o resolver conflictos.
+
+Utilice la información de los vínculos siguientes para ayudar a identificar y resolver conflictos:
+
+- [Solución de problemas de directivas y perfiles en Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Supervisión de las líneas de base de seguridad](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>Líneas de base de seguridad disponibles
-
- Puede usar una o varias de las líneas de base disponibles en su entorno de Intune al mismo tiempo. También puede usar varias instancias de las mismas líneas de base de seguridad con diversas personalizaciones.
-
-Al usar varias líneas de base de seguridad, revise la configuración en cada una para identificar los casos en los que diferentes líneas de base presentan valores en conflicto de la misma configuración. Dado que puede implementar líneas de base de seguridad diseñadas para diversas intenciones e implementar varias instancias de la misma línea de base que incluye la configuración personalizada, es posible que cree [conflictos de configuración para dispositivos que deben investigarse y resolverse](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Tenga también en cuenta sus [perfiles de configuración del dispositivo](../configuration/device-profiles.md), que pueden configurar muchas de las mismas opciones de configuración que las líneas de base de seguridad.
 
 Las instancias de línea de base de seguridad siguientes están disponibles para usarlas con Intune. Use los vínculos para ver la configuración de la instancia más reciente de cada línea de base.
 

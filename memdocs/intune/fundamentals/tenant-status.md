@@ -6,26 +6,27 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355899"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696434"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Uso de la página de estado del inquilino de Intune
 La página de estado del inquilino de Microsoft Intune es un centro donde puede ver detalles importantes y actuales sobre el inquilino. Entre estos detalles se incluyen la disponibilidad y el uso de la licencia, el estado del conector y comunicaciones importantes sobre el servicio Intune.  
 
-Para ver el panel, inicie sesión en [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) y, a continuación, seleccione **Estado de inquilino**.  *Estado de inquilino* aparece en **Ayuda y soporte técnico**.  
+Para ver el panel, inicie sesión en el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Administración de inquilinos** y, a continuación, seleccione **Estado del inquilino**.
 
 La página se divide en tres pestañas:
 

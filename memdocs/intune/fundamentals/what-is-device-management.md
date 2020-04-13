@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326642"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696462"
 ---
 # <a name="device-management-overview"></a>Información general sobre la administración de dispositivos
 
@@ -76,7 +76,7 @@ Una tarea esencial de cualquier solución de administración de dispositivos con
 
 Hay dos maneras de aproximarse a la administración de dispositivos. Primero, puede administrar diferentes aspectos de los dispositivos usando las características integradas en Intune. Este método se denomina **Administración de dispositivos móviles (MDM)** . Consiste en que los usuarios "inscriben" sus dispositivos y usan certificados para comunicarse con Intune. Como administrador de TI, puede insertar aplicaciones en dispositivos, restringir dispositivos a un sistema operativo específico, bloquear dispositivos personales y mucho más. Si alguna vez se pierde un dispositivo o lo roban, también puede quitar todos los datos del dispositivo.
 
-El otro enfoque consiste en administrar las aplicaciones en los dispositivos. Este método se denomina **Administración de aplicaciones móviles (MAM)** . Con este método, los usuarios pueden usar sus dispositivos personales para acceder a recursos de la organización. Al abrir una aplicación, como el correo electrónico o SharePoint, se pedirá a los usuarios una autenticación adicional. Si alguna vez se pierde un dispositivo o lo roban, puede quitar todos los datos de la organización del dispositivo.
+El otro enfoque consiste en administrar las aplicaciones en los dispositivos. Este método se denomina **Administración de aplicaciones móviles (MAM)** . Con este método, los usuarios pueden usar sus dispositivos personales para acceder a recursos de la organización. Al abrir una aplicación, como el correo electrónico o SharePoint, se pedirá a los usuarios una autenticación adicional. Si alguna vez se pierde un dispositivo o lo roban, puede quitar todos los datos de la organización desde las aplicaciones administradas de Intune.
 
 También puede usar una combinación de [MDM y MAM](byod-technology-decisions.md) juntos.
 

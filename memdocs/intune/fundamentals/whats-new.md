@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438808"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808215"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
@@ -55,14 +55,29 @@ Obtenga información sobre las novedades que se producen cada semana en Microsof
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>Semana del 6 de abril de 2020
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>Nueva configuración de script de shell para dispositivos macOS<!-- 6884363 -->
+Al configurar scripts de shell para dispositivos macOS, ahora puede configurar las siguientes opciones nuevas: 
+- Ocultar las notificaciones de scripts en los dispositivos
+- Frecuencia del script
+- Número máximo de reintentos en caso de error del script
+
+Para obtener más información, vea [Uso de scripts de shell para dispositivos macOS en Intune](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>Semana del 30 de marzo de 2020
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Dirección URL nueva para el Centro de administración de Microsoft Endpoint Manager<!-- 3704810 -->
 En consonancia con el anuncio del año pasado relativo a Microsoft Endpoint Manager en Ignite, hemos cambiado la dirección URL del Centro de administración de Microsoft Endpoint Manager (anteriormente Administración de dispositivos de Microsoft 365) a [https://endpoint.microsoft.com](https://endpoint.microsoft.com). La dirección URL del centro de administración anterior ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) continuará funcionando, pero se recomienda empezar a acceder al Centro de administración de Microsoft Endpoint Manager con la dirección URL nueva.
 
-Para obtener más información, vea [Simplificación de las tareas de TI mediante el Centro de administración de Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+Para obtener más información, vea [Simplificación de las tareas de TI mediante el Centro de administración de Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).  
 
-### <a name="app-management"></a>Administración de aplicaciones
+
+### <a name="app-management"></a>Administración de aplicaciones  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>Modo horizontal admitido en Portal de empresa para iOS<!--6048329 wnready -->   
+Los usuarios ahora pueden inscribir sus dispositivos, buscar aplicaciones y obtener soporte técnico de TI con la orientación de pantalla que prefieran. La aplicación detectará y ajustará automáticamente las pantallas para ajustarse al modo horizontal o vertical, a menos que los usuarios bloqueen la pantalla en modo vertical.  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Compatibilidad con scripts para dispositivos macOS (Versión preliminar pública)<!-- 4280361 wnready -->
 Se podrán agregar e implementar scripts en dispositivos macOS. Esta compatibilidad amplía la capacidad de configurar dispositivos macOS más allá de lo que es posible con las funcionalidades de MDM nativas en dispositivos macOS. Para obtener más información, vea [Uso de scripts de shell para dispositivos macOS en Intune](../apps/macos-shell-scripts.md).
@@ -71,6 +86,9 @@ Se podrán agregar e implementar scripts en dispositivos macOS. Esta compatibili
 ## <a name="week-of-march-24-2020"></a>Semana del 24 de marzo de 2020
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Experiencia de interfaz de usuario mejorada al crear perfiles de restricciones de dispositivo en dispositivos Android y Android Enterprise<!-- 5841361 -->
+
+> [!NOTE] 
+> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración.
 
 Al crear un perfil para dispositivos Android o Android Enterprise, se actualizará la experiencia en el Centro de administración de Microsoft Endpoint Manager. Este cambio afecta a los perfiles de configuración de dispositivo siguientes (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **Administrador de dispositivos Android** o **Android Enterprise** para la plataforma):
 
@@ -82,6 +100,9 @@ Para obtener más información sobre las restricciones de dispositivos que se pu
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Experiencia de interfaz de usuario mejorada al crear perfiles de configuración en dispositivos iOS/iPadOS y macOS<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración.
+
 Al crear un perfil para dispositivos iOS o macOS, se actualizará la experiencia en el Centro de administración de Microsoft Endpoint Manager. Este cambio afecta a los siguientes perfiles de configuración de dispositivos (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **iOS/iPadOS** o **macOS** para plataforma):
 
 - Personalizado: iOS/iPadOS y macOS
@@ -92,6 +113,9 @@ Al crear un perfil para dispositivos iOS o macOS, se actualizará la experiencia
 - Archivo de preferencias: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Opción Ocultar en la configuración del usuario en características del dispositivo en dispositivos macOS<!-- 6524869 -->
+
+> [!NOTE]
+> Este cambio se implementará en todos los clientes durante el siguiente par de semanas.
 
 Al crear un perfil de dispositivo de configuración de características en dispositivos macOS, hay una nueva opción **Ocultar en la configuración del usuario** (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **macOS** para plataforma > **Características del dispositivo** para perfil > **Elementos de inicio de sesión**).
 
@@ -129,7 +153,7 @@ Hemos actualizado el panel de Intune que se denominaba "Personalización de marc
 - Se va a mejorar la organización y el diseño de las opciones.
 - Se va a mejorar el texto y la información sobre herramientas de las opciones.
 
-Para encontrar estas opciones en Intune, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Administración de inquilinos** > **Personalización**. Para obtener información sobre la personalización existente, vea [Configuración de la aplicación Portal de empresa de Microsoft Intune](../apps/company-portal-app.md).
+Para encontrar estas opciones en Intune, vaya al [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Administración de inquilinos** > **Personalización**. Para obtener información sobre la personalización existente, vea [Configuración de la aplicación Portal de empresa de Microsoft Intune](../apps/company-portal-app.md).
 
 #### <a name="users-personal-encrypted-recovery-key---6273943----"></a>Clave de recuperación cifrada personal del usuario<!-- 6273943  -->
 Hay una nueva característica de Intune disponible que permitirá a los usuarios recuperar su clave de recuperación de **FileVault** cifrada personal para dispositivos Mac a través de la aplicación Portal de empresa de Android o la aplicación de Intune de Android. Hay un vínculo en la aplicación Portal de empresa y en la aplicación de Intune que abrirá un explorador Chrome en el Portal de empresa web, donde el usuario puede ver la clave de recuperación de **FileVault** necesaria para acceder a sus dispositivos Mac. Para obtener más información sobre el cifrado, vea [Uso del cifrado de dispositivos con Intune](../protect/encrypt-devices.md).
@@ -187,7 +211,11 @@ Para ver los valores que puede restringir, vaya a [Configuración de dispositivo
 El icono de notificación de una directiva de MAM pendiente en la hoja de solución de problemas se ha cambiado a un icono informativo.
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Actualización de la interfaz de usuario al configurar la directiva de cumplimiento<!-- 3961639    -->
-Hemos actualizado la interfaz de usuario para [crear directivas de cumplimiento](../protect/create-compliance-policy.md#create-the-policy) en el Centro de administración de Microsoft Endpoint Manager (**Dispositivos** > **Directivas de cumplimiento** > **Directivas** > **Crear directiva**). Tenemos una nueva experiencia de usuario que proporciona la misma configuración y los mismos detalles que ha usado anteriormente. La nueva experiencia sigue un proceso similar a un asistente para crear una directiva de cumplimiento e incluye una página en la que puede agregar *Asignaciones* a la directiva, y una página *Revisar y crear* en la que puede revisar la configuración antes de crear la directiva.
+
+> [!NOTE]
+> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración.
+
+Hemos actualizado la interfaz de usuario para [crear directivas de cumplimiento](../protect/create-compliance-policy.md#create-the-policy) en el Administrador de puntos de conexión de Microsoft (**Dispositivos** > **Directivas de cumplimiento** > **Directivas** > **Crear directiva**). Tenemos una nueva experiencia de usuario que proporciona la misma configuración y los mismos detalles que ha usado anteriormente. La nueva experiencia sigue un proceso similar a un asistente para crear una directiva de cumplimiento e incluye una página en la que puede agregar *Asignaciones* a la directiva, y una página *Revisar y crear* en la que puede revisar la configuración antes de crear la directiva.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Retirar dispositivos no compatibles<!-- 1827291       -->
 Hemos agregado una nueva acción para dispositivos no compatibles que puede agregar a cualquier directiva para [retirar el dispositivo no compatible](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance).  La nueva acción, **Retirar el dispositivo no compatible**, da como resultado la eliminación de todos los datos de la compañía del dispositivo, y también quita el dispositivo de la administración de Intune.  Esta acción se ejecuta cuando se alcanza el valor configurado en días y, en ese momento, el dispositivo se puede retirar. El valor mínimo es 30 días.  Se requerirá la aprobación explícita del administrador de TI para retirar los dispositivos mediante la sección *Retirada de los dispositivos no compatibles*, donde los administradores pueden retirar todos los dispositivos que cumplan los requisitos.
@@ -198,7 +226,7 @@ Hemos agregado una nueva acción para dispositivos no compatibles que puede agre
 Las nuevas opciones de empresa son similares a las que están disponibles para un perfil de Wi-Fi básico para iOS.
 
 #### <a name="new-user-experience-for-certificate-email-vpn-and-wi-fi-vpn-profiles---5615208-----"></a>Nueva experiencia de usuario para perfiles de certificado, correo electrónico, VPN y Wi-Fi<!-- 5615208   -->
-Se ha actualizado la [experiencia del usuario](../configuration/device-profile-create.md) en el Centro de administración de Microsoft Endpoint Manager (**Dispositivos** > **Perfiles de configuración** > **Crear perfil**) para crear y modificar los siguientes tipos de perfil. La nueva experiencia presenta las mismas opciones que antes, pero usa una experiencia similar a un asistente que no requiere tanto desplazamiento horizontal. Con la nueva experiencia no tendrá que modificar las configuraciones existentes.
+Se ha actualizado la [experiencia del usuario](../configuration/device-profile-create.md) en el Centro de administración del Administrador de puntos de conexión (**Dispositivos** > **Perfiles de configuración** > **Crear perfil**) para crear y modificar los siguientes tipos de perfil. La nueva experiencia presenta las mismas opciones que antes, pero usa una experiencia similar a un asistente que no requiere tanto desplazamiento horizontal. Con la nueva experiencia no tendrá que modificar las configuraciones existentes.
 
 - Credencial derivada
 - Correo electrónico
@@ -213,7 +241,7 @@ Se ha actualizado la [experiencia del usuario](../configuration/device-profile-c
 ### <a name="device-enrollment"></a>Inscripción de dispositivos
 
 #### <a name="configure-if-enrollment-is-available-in-company-portal-for-android-and-ios---4260128----"></a>Configuración de la disponibilidad de la inscripción en Portal de empresa para iOS y Android<!-- 4260128  -->
-Puede configurar si la inscripción de dispositivos en el Portal de empresa en dispositivos iOS y Android está disponible con mensajes o sin mensajes o no está disponible para los usuarios. Para encontrar estas opciones en Intune, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y, seleccione **Administración de inquilinos** > **Personalización** > **Editar** > **Inscripción de dispositivos**.  
+Puede configurar si la inscripción de dispositivos en el Portal de empresa en dispositivos iOS y Android está disponible con mensajes o sin mensajes o no está disponible para los usuarios. Para encontrar estas opciones en Intune, vaya al [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) y, seleccione **Administración de inquilinos** > **Personalización** > **Editar** > **Inscripción de dispositivos**.  
 
 La compatibilidad con la configuración de inscripción de dispositivos requiere que los usuarios finales tengan estas versiones del Portal de empresa:
 -    Portal de empresa en iOS: versión 4.4 o posterior
@@ -225,7 +253,7 @@ Para obtener más información sobre la personalización existente del Portal de
 ### <a name="device-management"></a>Administración de dispositivos
 
 #### <a name="new-android-report-on-android-devices-overview-page---5435435-----"></a>Nuevo informe de Android en la página de información general de dispositivos Android<!-- 5435435   -->
-Hemos agregado un informe a la consola de administración de Microsoft Endpoint Manager en la página de información general de dispositivos Android, en la que se muestra el número de dispositivos Android inscritos en cada solución de administración de dispositivos. En este gráfico (como en el de la consola de Azure) se muestra la cantidad de dispositivos inscritos de perfil de trabajo, totalmente administrados, dedicados y de administrador de dispositivos. Para ver el informe, elija **Dispositivos** > **Android** > **Información general**.
+Hemos agregado un informe a la consola de administración del Administrador de puntos de conexión de Microsoft en la página de información general de dispositivos Android, en la que se muestra el número de dispositivos Android inscritos en cada solución de administración de dispositivos. En este gráfico (como en el de la consola de Azure) se muestra la cantidad de dispositivos inscritos de perfil de trabajo, totalmente administrados, dedicados y de administrador de dispositivos. Para ver el informe, elija **Dispositivos** > **Android** > **Información general**.
 
 #### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-idready-wnready-wnstaged--"></a>Guía para usuarios desde la administración de administradores de dispositivos Android a la administración de perfiles de trabajo<!--5857738 idready wnready wnstaged-->
 Se va a publicar una nueva opción de cumplimiento para la plataforma de administrador de dispositivos Android. Esta opción permite hacer que un dispositivo no sea compatible si se administra con el administrador de dispositivos.
@@ -256,7 +284,7 @@ Las propiedades adicionales de inventario de dispositivos están disponibles med
 Para obtener más información, vea [API de Almacenamiento de datos de Intune](../developer/reports-nav-intune-data-warehouse.md) y la entidad de [dispositivos](../developer/intune-data-warehouse-collections.md#devices) de Almacenamiento de datos de Intune.
 
 #### <a name="help-and-support-workflow-update-to-support-additional-services---5654170-----"></a>Actualización del flujo de trabajo de ayuda y soporte técnico para admitir servicios adicionales<!-- 5654170   -->
-Hemos actualizado la página de ayuda y soporte técnico en el Centro de administración de Microsoft Endpoint Manager, donde ahora [elige el tipo de administración que usa](../fundamentals/get-support.md#options-to-access-help-and-support). Con este cambio podrá seleccionar de entre los tipos de administración siguientes:
+Hemos actualizado la página de ayuda y soporte técnico en el centro de administración del Administrador de puntos de conexión de Microsoft, donde ahora [elige el tipo de administración que usa](../fundamentals/get-support.md#options-to-access-help-and-support). Con este cambio podrá seleccionar de entre los tipos de administración siguientes:
 
 - Configuration Manager (incluye Análisis de escritorio)
 - Intune
@@ -320,7 +348,7 @@ Estos son los nuevos tipos de directivas que se encuentran en versión prelimina
 
 #### <a name="configure-delivery-optimization-agent-when-downloading-win32-app-content---5410945---"></a>Configuración del agente de optimización de entrega al descargar contenido de aplicaciones Win32<!-- 5410945 -->
 
-El agente de optimización de distribución se puede configurar para descargar contenido de aplicaciones Win32 en primer o segundo plano en función de la asignación. En el caso de las aplicaciones Win32 existentes, el contenido se seguirá descargando en el modo de segundo plano. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Aplicaciones** > **Todas las aplicaciones** > *seleccione la aplicación Win32* > **Propiedades**. Seleccione **Editar** junto a **Asignaciones**.  Edite la asignación seleccionando **Incluir** en **Modo**, en la sección **Requerido**.  Verá la nueva configuración en la sección **Configuración de la aplicación**. Para obtener más información sobre la Optimización de entrega, vea [Administración de aplicaciones Win32: Optimización de entrega](../apps/apps-win32-app-management.md#delivery-optimization).
+El agente de optimización de distribución se puede configurar para descargar contenido de aplicaciones Win32 en primer o segundo plano en función de la asignación. En el caso de las aplicaciones Win32 existentes, el contenido se seguirá descargando en el modo de segundo plano. En el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Aplicaciones** > **Todas las aplicaciones** > *seleccione la aplicación Win32* > **Propiedades**. Seleccione **Editar** junto a **Asignaciones**.  Edite la asignación seleccionando **Incluir** en **Modo**, en la sección **Requerido**.  Verá la nueva configuración en la sección **Configuración de la aplicación**. Para obtener más información sobre la Optimización de entrega, vea [Administración de aplicaciones Win32: Optimización de entrega](../apps/apps-win32-app-management.md#delivery-optimization).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Administración de dispositivos
@@ -345,7 +373,7 @@ Microsoft Endpoint Manager reúne Configuration Manager e Intune en una misma co
 Revise el [artículo de Technical Preview de Configuration Manager](https://docs.microsoft.com/configmgr/core/get-started/technical-preview) antes de instalar esta actualización. Ese artículo le ayuda a familiarizarse con los requisitos generales y las limitaciones para usar una versión Technical Preview, cómo actualizar entre versiones y cómo proporcionar comentarios.
 
 #### <a name="bulk-remote-actions--4576882--"></a>Acciones remotas en masa<!--4576882-->
-Ahora puede emitir comandos en masa para las siguientes acciones remotas: reiniciar, cambiar el nombre, restablecer Autopilot, borrar y eliminar. Para ver las nuevas acciones en masa, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **Todos los dispositivos** > **Acciones en masa**.
+Ahora puede emitir comandos en masa para las siguientes acciones remotas: reiniciar, cambiar el nombre, restablecer Autopilot, borrar y eliminar. Para ver las nuevas acciones en masa, vaya al [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **Todos los dispositivos** > **Acciones en masa**.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Lista de todos los dispositivos búsqueda, ordenación y filtro mejorados<!--6179023-->
 La lista Todos los dispositivos se ha mejorado para optimizar el rendimiento, la búsqueda, la ordenación y el filtrado. Para más información, vea [esta sugerencia de soporte técnico](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).  
@@ -441,7 +469,7 @@ Los nuevos tipos de informe se centran en la información siguiente:
 El primer conjunto de informes nuevos se centra en el cumplimiento de los dispositivos. Para obtener más información, vea [Blog:marco de creación de informes de Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) e [Informes de Intune](reports.md).
 
 #### <a name="consolidated-the-location-of-security-baselines-in-the-ui---6177074-----"></a>Consolidación de la ubicación de las líneas de base de seguridad en la interfaz de usuario<!-- 6177074   -->
-Se han consolidado las rutas de acceso para encontrar [líneas de base de seguridad](../protect/security-baselines.md) en el Centro de administración de Microsoft Endpoint Manager mediante la eliminación de *Líneas de base de seguridad* de varias ubicaciones de la interfaz de usuario. Para buscar líneas de base de seguridad, ahora se usa la ruta de acceso siguiente:  **Seguridad de los puntos de conexión** > **Líneas de base de seguridad**.
+Se han consolidado las rutas de acceso para encontrar [líneas de base de seguridad](../protect/security-baselines.md) en el Centro de administración del Administrador de puntos de conexión de Microsoft mediante la eliminación de *Líneas de base de seguridad* de varias ubicaciones de la interfaz de usuario. Para buscar líneas de base de seguridad, ahora se usa la ruta de acceso siguiente:  **Seguridad de los puntos de conexión** > **Líneas de base de seguridad**.
 
 #### <a name="expanded-support-for-imported-pkcs-certificates---6044197----"></a>Compatibilidad ampliada con certificados PKCS importados<!-- 6044197  -->
 Se ha ampliado la compatibilidad con el uso de [certificados PKCS importados](../protect/certificates-imported-pfx-configure.md#supported-platforms) para admitir *dispositivos Android Enterprise totalmente administrados*. Por lo general, la importación de certificados PFX se usa para escenarios de cifrado S/MIME, donde los certificados de cifrado de un usuario son necesarios en todos sus dispositivos para que se pueda realizar el descifrado del correo electrónico.
@@ -456,7 +484,7 @@ Las siguientes plataformas admiten la importación de certificados PFX:
 - Windows 10
 
 #### <a name="view-the-endpoint-security-configuration-for-devices---6206460----"></a>Visualización de la configuración de seguridad de los puntos de conexión para dispositivos<!-- 6206460  -->
-Se ha actualizado el nombre de la opción en el Centro de administración de Microsoft Endpoint Manager para ver las [configuraciones de seguridad de los puntos de conexión que se aplican a un dispositivo específico](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). Se ha cambiado el nombre de esta opción por **Configuración de seguridad de los puntos de conexión** porque muestra las líneas base de seguridad aplicables y las directivas adicionales creadas fuera de las líneas de base de seguridad. Esta opción antes se denominaba *Líneas de base de seguridad*.
+Se ha actualizado el nombre de la opción en el Centro de administración del Administrador de puntos de conexión de Microsoft para ver las [configuraciones de seguridad de los puntos de conexión que se aplican a un dispositivo específico](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). Se ha cambiado el nombre de esta opción por **Configuración de seguridad de los puntos de conexión** porque muestra las líneas base de seguridad aplicables y las directivas adicionales creadas fuera de las líneas de base de seguridad. Esta opción antes se denominaba *Líneas de base de seguridad*.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Control de acceso basado en roles.

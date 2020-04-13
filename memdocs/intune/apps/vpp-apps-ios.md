@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52d69b851b67d0a230e71d8aaa6b60b5cb7b2b8d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef23854fd3fee0883f6f91415a40ebbcc1b3c240
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325686"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620571"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Administración de aplicaciones de iOS y macOS compradas a través del Programa de Compras por Volumen de Apple con Microsoft Intune
 
@@ -46,15 +46,15 @@ Los tokens de ubicación también se conocen como tokens del Programa de Compras
 ## <a name="how-are-purchased-apps-licensed"></a>¿Cómo se concede la licencia a las aplicaciones adquiridas?
 Las aplicaciones compradas se pueden asignar a grupos con dos tipos de licencias que Apple ofrece para dispositivos iOS/iPadOS y macOS.
 
-|   | Licencias de dispositivo | Licencias de usuario |
-|-----|------------------|----------------|
-| **Inicio de sesión en App Store** | No es necesario. | Cada usuario final debe usar un identificador de Apple único cuando se le pida que inicie sesión en App Store. |
-| **Configuración del dispositivo que bloquea el acceso a App Store** | Las aplicaciones se pueden instalar y actualizar mediante el Portal de empresa. | La invitación para unirse al VPP de Apple requiere acceso a App Store. Si ha configurado una directiva para deshabilitar App Store, las licencias de aplicaciones de VPP basadas en usuario no funcionarán. |
-| **Actualización automática de la aplicación** | Tal como se configura por el administrador de Intune en la configuración del token de VPP de Apple, donde el **tipo de asignación** de la aplicación es **necesario**. <br> <br> Si el **tipo de asignación** está **disponible para los dispositivos inscritos**, las actualizaciones de aplicaciones disponibles se pueden instalar desde el Portal de empresa. | Tal y como lo configuró el usuario final en la configuración personal de App Store. El administrador de Intune no puede administrarlo. |
-| **Inscripción de usuarios** | No compatible. | Compatible con identificadores de Apple administrados. |
-| **Libros** | No compatible. | Compatible. |
-| **Licencias en uso** | 1 licencia por dispositivo. La licencia se asocia con el dispositivo. | 1 licencia para un máximo de 5 dispositivos con el mismo identificador de Apple personal. La licencia se asocia con el usuario. <br> <br> Un usuario final asociado a un identificador de Apple personal y un identificador de Apple administrado en Intune consume 2 licencias de aplicación.|
-| **Migración de licencias** | Las aplicaciones se pueden migrar silenciosamente desde una licencia de usuario a otra de dispositivo. | Las aplicaciones no se pueden migrar desde una licencia de dispositivo a otra de usuario. |
+|  | Licencias de dispositivo | Licencias de usuario |
+|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Inicio de sesión en App Store | No es necesario. | Cada usuario final debe usar un ID de Apple único cuando se le pida que inicie sesión en App Store. |
+| Configuración del dispositivo que bloquea el acceso a App Store | Las aplicaciones se pueden instalar y actualizar mediante el Portal de empresa. | La invitación para unirse al VPP de Apple requiere acceso a App Store. Si ha configurado una directiva para deshabilitar App Store, las licencias de aplicaciones de VPP basadas en usuario no funcionarán. |
+| Actualización automática de la aplicación | Tal como se configura por el administrador de Intune en la configuración del token del programa de Compras por Volumen (PCV) de Apple, donde el tipo de asignación de la aplicación es necesario.<p>Si el tipo de asignación está disponible para los dispositivos inscritos, las actualizaciones de aplicaciones disponibles se pueden instalar desde el Portal de empresa. | Tal y como lo configuró el usuario final en la configuración personal de App Store. El administrador de Intune no puede administrarlo. |
+| Inscripción de usuarios | No compatible. | Compatible con identificadores de Apple administrados. |
+| Libros | No compatible. | Compatible. |
+| Licencias en uso | 1 licencia por dispositivo. La licencia se asocia con el dispositivo. | 1 licencia para un máximo de 5 dispositivos con el mismo ID de Apple personal. La licencia se asocia con el usuario.<p>Un usuario final asociado a un ID de Apple personal y un ID de Apple administrado en Intune consume 2 licencias de aplicación. |
+| Migración de licencias | Las aplicaciones se pueden migrar silenciosamente desde una licencia de usuario a otra de dispositivo. | Las aplicaciones no se pueden migrar desde una licencia de dispositivo a otra de usuario. |
 
 > [!NOTE]  
 > El Portal de empresa no muestra las aplicaciones con licencia de dispositivo en los dispositivos de inscripción de usuarios, ya que solo se pueden instalar aplicaciones con licencia de usuario en dispositivos de inscripción de usuario.
@@ -158,10 +158,10 @@ El usuario final recibirá solicitudes para que instale la aplicación de VPP en
 
 Puede revocar todas las licencias de aplicación del Programa de Compras por Volumen de Apple (VPP) de iOS/iPadOS o macOS asociadas en función de un dispositivo, usuario o aplicación determinados.  Sin embargo, hay algunas diferencias entre las plataformas iOS/iPadOS y macOS. 
 
-|   | iOS/iPadOS | macOS |
-|-----|------------------|----------------|
-| **Eliminación de la asignación de aplicaciones** | Si quita una aplicación que estaba asignada a un usuario, Intune reclama la licencia de usuario o dispositivo y desinstala la aplicación del dispositivo. | Al quitar una aplicación que se asignó a un usuario, Intune reclama la licencia de usuario o dispositivo. La aplicación no se desinstala del dispositivo. |
-| **Revocación de la licencia de la aplicación** | La revocación de una licencia de aplicación recupera la licencia de aplicación del usuario o dispositivo. Debe cambiar la asignación a **Desinstalar** para quitar la aplicación del dispositivo. | La revocación de una licencia de aplicación recupera la licencia de aplicación del usuario o dispositivo. La aplicación macOS a la que se le revocó la licencia se puede seguir usando en el dispositivo, pero no se puede actualizar hasta que se vuelva a asignar una licencia al usuario o al dispositivo. Según Apple, estas aplicaciones se quitan después de un período de gracia de 30 días. Sin embargo, Apple no proporciona un medio para que Intune quite la aplicación mediante la acción de asignación Desinstalar.
+|  | iOS/iPadOS | macOS |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Eliminación de la asignación de aplicaciones | Si quita una aplicación que estaba asignada a un usuario, Intune reclama la licencia de usuario o dispositivo y desinstala la aplicación del dispositivo. | Al quitar una aplicación que se asignó a un usuario, Intune reclama la licencia de usuario o dispositivo. La aplicación no se desinstala del dispositivo. |
+| Revocación de la licencia de la aplicación | La revocación de una licencia de aplicación recupera la licencia de aplicación del usuario o dispositivo. Debe cambiar la asignación a **Desinstalar** para quitar la aplicación del dispositivo. | La revocación de una licencia de aplicación recupera la licencia de aplicación del usuario o dispositivo. La aplicación macOS a la que se le revocó la licencia se puede seguir usando en el dispositivo, pero no se puede actualizar hasta que se vuelva a asignar una licencia al usuario o al dispositivo. Según Apple, estas aplicaciones se quitan después de un período de gracia de 30 días. Sin embargo, Apple no proporciona un medio para que Intune quite la aplicación mediante la acción de asignación Desinstalar. |
 
 >[!NOTE]
 > - Cuando un empleado abandona la empresa y deja de formar parte de los grupos de AAD, Intune reclama las licencias de aplicaciones.

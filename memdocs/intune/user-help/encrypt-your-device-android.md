@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 03/31/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,63 +15,79 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d220e308b406251f049e1c17422f89ee36534
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348788"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696276"
 ---
 # <a name="encrypting-your-android-device"></a>Cifrado del dispositivo Android
 
-El cifrado de dispositivos protege los archivos y las carpetas de accesos no autorizado si el dispositivo se pierde o se sustrae. Después de activar el cifrado del dispositivo, solo los usuarios que tengan la contraseña o el PIN correctos podrán iniciar sesión en ese el dispositivo. 
+El cifrado de dispositivos protege los archivos y las carpetas de accesos no autorizado si el dispositivo se pierde o se sustrae. Impide que las personas que no tienen código de acceso puedan acceder a los datos del dispositivo o leerlos. 
 
-Para poder acceder a los recursos educativos o profesionales, es posible que su organización le obligue a cifrar el dispositivo Android. Algunos de los dispositivos Android más recientes se suministran ya cifrados de forma predeterminada.  
+Para poder acceder a los recursos educativos o profesionales, es posible que su organización le requiera lo siguiente:
 
-## <a name="turn-on-encryption"></a>Activación del cifrado
-
-Haga lo siguiente si el Portal de empresa o la aplicación Microsoft Intune le pide cifrar el dispositivo. 
+* [Cifrado del dispositivo](#encrypt-device)
+* [Habilitación del arranque seguro](#enable-secure-startup)
+* [Establecimiento de código de acceso de inicio, PIN u otro método de autenticación](#set-startup-passcode)  
 
 > [!Note]
-> Algunos dispositivos Android de Huawei, Vivo y OPPO no se pueden cifrar. Descubra más [aquí](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
+> Algunos dispositivos Android de Huawei, Vivo y OPPO no se pueden cifrar. Para obtener más información, consulte [Dispositivo cifrado, pero las aplicaciones dicen lo contrario](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-1. Establezca un bloqueo de pantalla del dispositivo.  
-    a. Vaya a **Configuración** > **Pantalla de bloqueo y seguridad** > **Tipo de bloqueo de pantalla**.  
-    b. Seleccione **PIN**, **Contraseña** o **Patrón**.  
-    c. Siga las instrucciones en pantalla para configurar el bloqueo de pantalla.  
+## <a name="encrypt-device"></a>Cifrado de dispositivos
 
-2. Vuelva a **Pantalla de bloqueo de seguridad** y seleccione **Inicio seguro**.
-3. Elija **Require PIN when device turns on** (Requerir PIN cuando el dispositivo se active) > **Aceptar**.
-4. Escriba el PIN para confirmar y cifrar el dispositivo.
-5. Abra la aplicación Portal de empresa o Microsoft Intune.
+Siga estos pasos para cifrar el dispositivo. El dispositivo puede reiniciarse varias veces. 
+
+El nombre y la ubicación de la opción de cifrado variarán en función del fabricante del dispositivo y de la versión de Android. 
+
+1. Abra la aplicación **Configuración**.
+2. Escriba **seguridad** o **cifrar** en la barra de búsqueda de la aplicación para buscar la configuración relacionada.
+3. Pulse la opción para cifrar el dispositivo. Siga las instrucciones en pantalla.  
+4. Cuando se le solicite, establezca la contraseña de la pantalla de bloqueo, el PIN u otro método de autenticación (si la organización lo permite). 
+5. Para comprobar de nuevo la configuración, abra la aplicación Portal de empresa o Microsoft Intune.
+    * Usuarios se Portal de empresa: seleccione el dispositivo y pulse en **Comprobar configuración del dispositivo**. 
+    * Usuarios de Microsoft Intune: tendrán que esperar hasta que se actualice la página, pero cuando lo haga, el estado de cifrado debe haber cambiado a compatible. 
+
+## <a name="enable-secure-startup"></a>Habilitación del inicio seguro
+
+Su organización puede requerir que habilite el inicio seguro como parte de su directiva de cifrado. Esta característica protege aún más el dispositivo al solicitar una contraseña o un PIN antes de que se inicie el teléfono. Es posible que tenga otras opciones de autenticación, pero variarán en función de lo que permita la organización. 
+
+El nombre y la ubicación de la opción de inicio seguro variarán en función del fabricante del dispositivo y de la versión de Android. En algunos dispositivos, este ajuste se puede denominar **Protección segura**. 
+
+1. Abra la aplicación **Configuración**.
+2. Escriba **inicio seguro** en la barra de búsqueda de la aplicación.
+3. Pulse **Inicio seguro** > **Require PIN when device turns on** (Requerir PIN cuando el dispositivo se active).
+4. Cuando se le solicite, escriba el PIN del dispositivo.   
+5. Para comprobar de nuevo la configuración, abra la aplicación Portal de empresa o Microsoft Intune.
     * Usuarios se Portal de empresa: seleccione el dispositivo y pulse en **Comprobar configuración del dispositivo**. 
     * Usuarios de Microsoft Intune: tendrán que esperar hasta que se actualice la página, pero cuando lo haga, el estado de cifrado debe haber cambiado a compatible.  
 
-Los dispositivos que ejecuten Android 4.4 y versiones anteriores pueden no tener la opción **Inicio seguro**. En ese caso, complete los pasos siguientes para cifrar el dispositivo.
 
-1. Vaya a **Configuración** > **Seguridad** > **Cifrar dispositivo**. Las etiquetas en pantalla varían de un dispositivo Android a otro. Si no ve la opción **Cifrar dispositivo**, pruebe con:
-    * **Almacenamiento** > **Cifrado del almacenamiento**
-    * **Almacenamiento** > **Pantalla de bloqueo de seguridad** > **Configuración adicional de seguridad** 
+## <a name="set-startup-passcode"></a>Establecimiento del código de acceso de inicio   
+Cuando [cifre el dispositivo](#encrypt-device) y [habilite el inicio seguro](#enable-secure-startup), se le pedirá que configure el PIN del dispositivo, la contraseña u otro método de autenticación (si lo permite la organización). No es necesario ningún paso más. 
 
-2. Siga las instrucciones en pantalla. Durante el cifrado, es posible que el dispositivo se reinicie varias veces.
-3. Abra la aplicación Portal de empresa o Microsoft Intune.
-    * Usuarios se Portal de empresa: seleccione el dispositivo y pulse en **Comprobar configuración del dispositivo**.  
-    * Usuarios de Microsoft Intune: tendrán que esperar hasta que se actualice la página, pero cuando lo haga, el estado de cifrado debe haber cambiado a compatible.
+Para elegir o cambiar el tipo de pantalla de bloqueo:
 
-## <a name="troubleshoot"></a>Solución de problemas  
-**Problema**: ya cifró el dispositivo y
+1. Abra la aplicación **Configuración**.
+2. Escriba **bloqueo de pantalla** en la barra de búsqueda de la aplicación.
+3. Pulse en la opción de **tipo de bloqueo de pantalla**.
+4. Pulse en el tipo de bloqueo de pantalla que desea usar y siga las instrucciones en pantalla para confirmarlo.  
 
-- El botón de cifrado está deshabilitado.
-- Ve un mensaje en el que se indica que aún es necesario realizar el cifrado.
-- Obtiene errores al intentar usar el Portal de empresa o la aplicación Microsoft Intune.
+## <a name="troubleshoot"></a>Solución de problemas    
+**Problema**: El botón de cifrado está deshabilitado.   
 
-**Opciones que puede probar**
+**Intente lo siguiente**: 
+* Asegúrese de que el dispositivo está totalmente cargado y conectado. El cifrado puede tardar un rato y requiere una batería completa.   
 
-- Asegúrese de que el dispositivo está cargado y conectado.  
-- Asegúrese de que ha establecido un PIN o una contraseña en el dispositivo.  
+**Problema**: Ve un mensaje en el que se indica que aún es necesario realizar el cifrado del dispositivo.  
+
+**Pruebe lo siguiente**:
+   *  [Establezca una pantalla de bloqueo](#set-startup-passcode) en el dispositivo. 
+   * [Habilite el inicio seguro](#enable-secure-startup).
 
 ¿Aún necesita ayuda? Póngase en contacto con el equipo de soporte técnico de su empresa (visite el [sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980) para obtener la información de contacto), o escriba al <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">equipo de Microsoft Android</a>.  

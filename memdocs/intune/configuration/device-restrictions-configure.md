@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 470ca47aa92b30acacc8a251c6d7d1741513bdf1
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359220"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551409"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurar restricciones de dispositivos en Microsoft Intune
 
@@ -35,6 +35,9 @@ Intune incluye directivas de restricción de dispositivos que ayudan a los admin
 Estas características están disponibles en Intune y el administrador puede configurarlas. Intune usa "perfiles de configuración" para crear y personalizar estas configuraciones para las necesidades de su organización. Después de agregar estas características en un perfil, puede insertar o implementar el perfil en los dispositivos de su organización.
 
 En este artículo se muestra cómo crear un perfil de restricciones de dispositivos. También puede ver todas las opciones de configuración disponibles para las distintas plataformas.
+
+> [!NOTE]
+> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración que se describe en este artículo.
 
 ## <a name="create-the-profile"></a>Creación del perfil
 

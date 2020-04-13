@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327271"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624910"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Traslado de dispositivos Android del administrador de dispositivos a la administración de perfil de trabajo
 
@@ -65,8 +65,8 @@ Cuando los usuarios ven que no cumplen los requisitos por este motivo, pueden pu
 
 
     En el correo electrónico, puede incluir la dirección URL siguiente en los mensajes a los usuarios. La dirección URL iniciará el Portal de empresa de Android en la página para **actualizar la configuración del dispositivo**. Esta página inicia su flujo para trasladar a la administración de perfiles de trabajo.
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
-    - En el Gobierno de EE. UU., puede usar este vínculo en su lugar: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+    - En el Gobierno de EE. UU., puede usar este vínculo en su lugar: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
     > [!NOTE]
     > - Por supuesto, puede usar hipertexto descriptivo para los vínculos de comunicación con los usuarios. Sin embargo, no use acortadores de URL porque es posible que los vínculos no funcionen si cambian de este modo.

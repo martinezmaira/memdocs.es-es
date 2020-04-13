@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322613"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551663"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Supervisión de la línea base de seguridad y los perfiles en Microsoft Intune
 
@@ -153,4 +153,8 @@ En [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/clie
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Supervisar perfiles de dispositivo](../configuration/device-profile-monitor.md) y [ver algunos problemas comunes y resoluciones](../configuration/device-profile-troubleshoot.md).
+- [Más información sobre las líneas de base de seguridad](security-baselines.md)
+- [Evitación de conflictos](security-baselines.md#avoid-conflicts)
+- [Supervisar perfiles de dispositivo](../configuration/device-profile-monitor.md) 
+- [Problemas comunes y sus soluciones](../configuration/device-profile-troubleshoot.md)
+- [Solución de problemas de directivas y perfiles en Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

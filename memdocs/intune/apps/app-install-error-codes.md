@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 04/02/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: bdf779e35125d8da7093e67702e064cff362d6ed
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407900"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620550"
 ---
 # <a name="intune-app-installation-error-reference"></a>Referencia de errores de instalación de aplicaciones de Intune
 
@@ -59,6 +59,7 @@ Los siguientes mensajes y descripciones de errores proporcionan detalles sobre l
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Error del agente MDM de Apple: error del comando de instalación de la aplicación sin ningún motivo de error especificado. Vuelva a intentar instalar la aplicación. | El agente MDM de Apple ha devuelto que no se puede ejecutar el comando de instalación. |
 | 0x87D1313C | -2016333508 | Se perdió o se interrumpió la conexión de red en el cliente. Los intentos posteriores no deberían tener problemas en un entorno de red mejor. | Se perdió la conexión de red mientras se enviaba la dirección URL del servicio de descarga actualizada al dispositivo. En concreto, no se encontró un servidor con el nombre de host especificado. |
+| 0x87D1313D | -2016333507 | No se pudo recuperar la licencia de la aplicación con el identificador de iTunes Store. | Sincronice el token del programa de Compras por Volumen (PCV) de Apple asociado y sincronice el dispositivo con Intune. Si el problema persiste, quite la asignación de grupo y vuelva a asignar la aplicación de PCV como licencia de dispositivo. Si el problema persiste, revoque la licencia de la aplicación del dispositivo; para ello, vaya a **Aplicaciones** > **iOS** > *Seleccione aplicación de PCV* > **Licencias de aplicación** > *Seleccione el dispositivo*. A continuación, anule la licencia e intente asignar de nuevo la aplicación al grupo de usuarios o al grupo de dispositivos. Si el problema persiste, revoque todas las licencias de PCV para el dispositivo; para ello, vaya a **Dispositivos** > **iOS** > *Seleccione el dispositivo* > **Información general** > **Revocar licencias** y, a continuación, retire el dispositivo y vuelva a inscribirlo en Intune.
 | 0x87D11388 | -2016341112 | El dispositivos iOS/iPadOS está ocupado actualmente.  | El dispositivo iOS/iPadOS estaba ocupado, lo que provocó un error. El dispositivo estaba bloqueado. El usuario debe desbloquear el dispositivo para instalar la aplicación. |
 | 0x87D13B64 | -2016330908 | Error al instalar la aplicación.  | Se ha producido un error de instalación de la aplicación. Para solucionar este error se necesitan los registros de la consola de iOS/iPadOS. |
 | 0x87D13B66 | -2016330906 | La aplicación está administrada, pero ha expirado o el usuario la ha quitado.  | El usuario desinstaló explícitamente la aplicación o la aplicación expiró pero no se pudo descargar, o la detección de la aplicación no coincide con la respuesta del dispositivo.   Además, este error se puede producir debido a un error en la plataforma iOS/iPadOS 9.2.2. |

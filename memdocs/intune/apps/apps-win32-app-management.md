@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407797"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620608"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune independiente: administración de aplicaciones Win32
 
@@ -33,7 +33,7 @@ ms.locfileid: "80407797"
 > Esta capacidad de administración de aplicaciones admite la arquitectura del sistema operativo de 32 bits y 64 bits para las aplicaciones Windows.
 
 > [!IMPORTANT]
-> Al implementar aplicaciones Win32, considere la posibilidad de usar la [extensión de administración de Intune](../apps/intune-management-extension.md) de forma exclusiva, especialmente cuando tenga un instalador de aplicaciones Win32 de varios archivos. Si mezcla la instalación de aplicaciones de Win32 y aplicaciones de línea de negocio durante la inscripción de AutoPilot, puede producirse un error en la instalación de la aplicación.  
+> Al implementar aplicaciones Win32, considere la posibilidad de usar el enfoque de la [extensión de administración de Intune](../apps/intune-management-extension.md) de forma exclusiva, especialmente cuando tenga un instalador de aplicaciones Win32 de varios archivos. Si mezcla la instalación de aplicaciones de Win32 y aplicaciones de línea de negocio durante la inscripción de AutoPilot, puede producirse un error en la instalación de la aplicación. Se instalará la extensión de administración de Intune automáticamente cuando se asigne un script de PowerShell o una aplicación Win32 al usuario o al dispositivo.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

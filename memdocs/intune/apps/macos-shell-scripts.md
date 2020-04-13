@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401789"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808055"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Uso de scripts de shell en dispositivos macOS en Microsoft Intune (versión preliminar pública)
 
@@ -55,6 +55,9 @@ Asegúrese de que se cumplen los siguientes requisitos previos al crear scripts 
 4. En **Configuración de script**, escriba las propiedades siguientes y seleccione **Siguiente**:
    - **Cargue el script**: Vaya al script de shell. El script debe tener un tamaño inferior a 200 KB.
    - **Ejecute el script como usuario que inició sesión**: Seleccione **Sí** para ejecutar el script con las credenciales del usuario en el dispositivo. Elija **No** (valor predeterminado) para ejecutar el script como usuario raíz. 
+   - **Ocultar las notificaciones de scripts en los dispositivos**: De forma predeterminada, se muestran las notificaciones de script para cada script que se ejecuta. Los usuarios finales ven la notificación de *se está configurando el equipo* desde Intune en dispositivos macOS.
+   - **Frecuencia del script:** seleccione la frecuencia con la que se va a ejecutar el script. Elija **No configurado** (valor predeterminado) para ejecutar un script una sola vez.
+   - **Número máximo de reintentos en caso de error del script:** seleccione el número de veces que se debe ejecutar el script si devuelve un código de salida distinto de cero (cero significa que es correcto). Elija **No configurado** (valor predeterminado) para no volver a intentarlo cuando se produce un error en un script.
 5. En **Etiquetas de ámbito**, agregue etiquetas de ámbito opcionalmente al script y seleccione **Siguiente**. Puede usar las etiquetas de ámbito para determinar quién puede ver scripts en Intune. Para obtener más información sobre las etiquetas de ámbito, consulte [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Uso del control de acceso basado en roles y de las etiquetas de ámbito para la TI distribuida).
 6. Seleccione **Asignaciones** > **Seleccionar grupos para incluir**. Se muestra una lista existente de grupos de Azure AD. Seleccione uno o varios grupos de dispositivos que incluyan los usuarios cuyos dispositivos macOS van a recibir el script. Elija **Seleccionar**. Los grupos que ha elegido se muestran en la lista y recibirán la directiva de script.
    > [!NOTE]
@@ -103,9 +106,17 @@ El rol asignado en Intune requiere permisos de **configuraciones de dispositivo*
  - El agente se autentica de forma silenciosa ante los servicios de Intune antes de la sincronización para recibir los scripts de shell asignados al dispositivo macOS.
  - El agente recibe los scripts de shell asignados y los ejecuta según la programación configurada, los intentos de reintento, la configuración de notificaciones y otras opciones establecidas por el administrador.
  - El agente normalmente comprueba cada ocho horas si hay scripts nuevos o actualizados en los servicios de Intune. Este proceso de sincronización es independiente de la sincronización de MDM. 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>¿Cómo puedo iniciar manualmente una sincronización del agente desde un equipo Mac?
+En un equipo Mac administrado que tenga instalado el agente, abra **Terminal** y ejecute el comando `sudo killall IntuneMdmAgent` para finalizar el proceso de `IntuneMdmAgent`. El proceso de `IntuneMdmAgent` se reiniciará inmediatamente, lo que iniciará una sincronización con Intune.
 
- >[!NOTE]
- > La acción **Comprobar configuración** del Portal de empresa solo fuerza una sincronización de MDM. No hay ninguna acción manual de sincronización del agente.
+De forma alternativa, puede realizar una de las acciones siguientes:
+1. Abra **Monitor de actividad** > **Ver** > *seleccione **Todos los procesos**.* 
+2. Busque procesos denominados `IntuneMdmAgent`. 
+3. Cierre el proceso que se ejecuta para el usuario **raíz**. 
+
+> [!NOTE]
+> La acción **Comprobar configuración** del Portal de empresa y la acción **Sincronizar** para dispositivos en la consola de administración de Microsoft Endpoint Manager inician una sincronización de MDM y no fuerzan una sincronización del agente.
 
  ### <a name="when-is-the-agent-removed"></a>¿Cuándo se quita el agente?
  Hay varias condiciones que pueden hacer que el agente se quite del dispositivo como, por ejemplo:

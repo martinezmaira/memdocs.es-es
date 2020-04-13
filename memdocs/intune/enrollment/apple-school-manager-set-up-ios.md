@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327234"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696552"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configuración de la inscripción de dispositivos iOS/iPadOS con Apple School Manager
 
@@ -38,7 +38,6 @@ La inscripción de Apple School Manager no se puede usar con el [Programa de ins
 **Requisitos previos**
 - [Certificado push de administración de dispositivos móviles (MDM) de Apple](apple-mdm-push-certificate-get.md)
 - [Entidad de MDM](../fundamentals/mdm-authority-set.md)
-- [Certificado push MDM de Apple](apple-mdm-push-certificate-get.md)
 - Si se usa ADFS, la afinidad de usuario debe ser [Punto de conexión mixto/nombre de usuario de WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Obtenga más información](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Los dispositivos tienen que haberse adquirido a través del programa de [Apple School Management](http://school.apple.com)
 
@@ -120,7 +119,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 
 8. Puede permitir que varios usuarios inicien sesión en dispositivos iPad inscritos mediante el uso de un identificador de Apple administrado. Para ello, elija **Sí** en **iPad compartido** (esta opción requiere **Inscribir sin afinidad de usuario** y que el modo **Supervisado** se establezca en **Sí**). Los identificadores de Apple administrados se crean en el portal de Apple School Manager. Obtenga más información sobre [Shared iPad](../fundamentals/education-settings-configure-ios-shared.md) y los [requisitos de Shared iPad de Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-9. Elija si desea que los dispositivos que usan este perfil se puedan **sincronizar con equipos**. Si elige **Permitir Apple Configurator mediante certificado**, debe seleccionar un certificado en **Certificado de Apple Configurator**.
+9. Elija si desea que los dispositivos que usan este perfil se puedan **sincronizar con equipos**. **Denegar todo** significa que ningún dispositivo que use este perfil podrá sincronizarse con los datos de ningún equipo. Si elige **Permitir Apple Configurator mediante certificado**, debe seleccionar un certificado en **Certificado de Apple Configurator**.
 
 10. Si selecciona **Permitir Apple Configurator mediante certificado** en el paso anterior, elija un certificado de Apple Configurator para importarlo.
 

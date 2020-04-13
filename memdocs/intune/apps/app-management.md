@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358708"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536847"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>¿Qué es la administración de aplicaciones de Microsoft Intune?
 
@@ -119,6 +119,8 @@ Los siguientes elementos de la consola de proporcionan funcionalidad relacionada
 - **Tokens de VPP de Apple**: aplique y vea sus licencias del Programa de Compras por Volumen (PCV) de iOS/iPadOS. Para obtener más información, consulte [Aplicaciones de iOS/iPadOS compradas a través de un programa de compras por volumen](vpp-apps-ios.md).
 - **Google Play administrado**: Google Play administrado es la tienda de aplicaciones empresariales de Google y el único origen de aplicaciones para Android Enterprise. Para obtener más información, consulte [Incorporación de aplicaciones de Google Play administrado a dispositivos Android Enterprise con Intune](apps-add-android-for-work.md).
 - **Personalización**: personalice el Portal de empresa para adaptarlo a su empresa. Para obtener más información, consulte [Configuración de Portal de empresa](company-portal-app.md).
+
+Para más información sobre las aplicaciones, consulte[Incorporación de aplicaciones a Microsoft Intune](../apps/apps-add.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

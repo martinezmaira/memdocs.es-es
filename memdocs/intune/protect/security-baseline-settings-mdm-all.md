@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 388630712b398ef82e78e55efa63418e95187681
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351193"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696489"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Configuración de líneas de base de seguridad de MDM para Windows para Intune
 
@@ -1583,6 +1583,9 @@ Para más información, vea [Policy CSP - Defender](https://docs.microsoft.com/w
 ::: zone pivot="mdm-may-2019"
 
 - **Inicio de Adobe Reader en un proceso secundario**:  
+Esta regla evita ataques al impedir que Adobe Reader cree procesos adicionales. A través de ingeniería social o vulnerabilidades de seguridad, el malware puede descargar y ejecutar cargas adicionales y salir de Adobe Reader. Al bloquear la generación de procesos secundarios por parte de Adobe Reader, se impide la propagación del malware que intenta usarlo como vector.
+[Más información](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction).
+
   **Valor predeterminado**: Habilitar
 
 ::: zone-end
@@ -2162,3 +2165,9 @@ La configuración es alguna de las siguientes:
 - **Requerir mayúsculas en el PIN**
 
 ::: zone-end
+
+## <a name="next-steps"></a>Pasos siguientes
+
+- [Más información sobre las líneas de base de seguridad](security-baselines.md)
+- [Evitación de conflictos](security-baselines.md#avoid-conflicts)
+- [Solución de problemas de directivas y perfiles en Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

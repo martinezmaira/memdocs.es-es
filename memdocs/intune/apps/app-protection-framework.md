@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083553"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696500"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Marco de protección de datos mediante directivas de protección de aplicaciones 
 
@@ -62,6 +62,9 @@ La configuración de APP individual para cada aplicación se puede validar en di
 La siguiente configuración de directiva de protección de aplicaciones debe estar habilitada para las aplicaciones correspondientes y asignada a todos los usuarios móviles. Para obtener más información sobre cada configuración de directiva, consulte [Configuración de directivas de protección de aplicaciones de iOS](app-protection-policy-settings-ios.md) y [Configuración de directivas de protección de aplicaciones de Android](app-protection-policy-settings-android.md).
 
 Microsoft recomienda revisar y clasificar los escenarios de uso y, después, configurar los usuarios mediante las instrucciones prescriptivas para ese nivel. Como con cualquier marco de trabajo, es posible que sea necesario ajustar la configuración dentro de un nivel correspondiente en función de las necesidades de la organización, ya que la protección de datos debe evaluar el entorno de amenazas, el apetito del riesgo y el impacto en la facilidad de uso.  
+
+### <a name="conditional-access-policies"></a>Directivas de acceso condicional
+Para asegurarse de que solo las aplicaciones que admiten las directivas de protección de aplicaciones tengan acceso a los datos de la cuenta profesional o educativa, se necesitan directivas de acceso condicional de Azure Active Directory. Vea **Escenario 1: Las aplicaciones de Office 365 requieren aplicaciones aprobadas con directivas de protección de aplicaciones** en [Uso obligatorio de directivas de protección de aplicaciones y una aplicación aprobada por el cliente para el acceso a aplicaciones en la nube con acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) para ver los pasos para implementar las directivas específicas.
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Aplicaciones que se van a incluir en las directivas de protección de aplicaciones  
 

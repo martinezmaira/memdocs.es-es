@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256460"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696521"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscripción de dispositivos iOS/iPadOS en Intune
 
