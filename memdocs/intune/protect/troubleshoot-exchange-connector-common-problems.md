@@ -71,7 +71,7 @@ Revise las siguientes secciones para solucionar problemas de notificación de co
    2. Escriba *Autodiscover.SMTPdomain.com*. La salida código debe ser similar a la imagen siguiente: ![Resultados de nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   También puede probar el servicio de detección automática desde Internet en https://testconnectivity.microsoft.com. O probarlo desde un dominio local mediante la herramienta Analizador de conectividad de Microsoft. Para más información, consulte [Herramienta Analizador de conectividad de Microsoft](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   También puede probar el servicio de detección automática desde Internet en https://testconnectivity.microsoft.com. O probarlo desde un dominio local mediante la herramienta Analizador de conectividad de Microsoft. Para más información, consulte [Herramienta Analizador de conectividad de Microsoft](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
 ### <a name="check-autodiscovery"></a>Comprobación de la detección automática
@@ -84,7 +84,7 @@ Si se produce un error en la detección automática, pruebe con los pasos siguie
 
    1. Determine la dirección URL de EWS. La dirección URL de EWS predeterminada para Exchange es `https://<mailServerFQDN>/ews/exchange.asmx`, pero su dirección URL puede ser diferente. Póngase en contacto con el Administrador del servicio Exchange para comprobar la dirección URL correcta para su entorno.
 
-   2. Edite el archivo *OnPremisesExchangeConnectorServiceConfiguration.xml*. De forma predeterminada, el archivo se encuentra en *%ProgramData%\Microsoft\Windows Intune Exchange Connector* en el equipo que ejecuta Exchange Connector. Abra el archivo en un editor de texto y cambie la siguiente línea para que refleje la dirección URL de EWS para su entorno: `<ExchangeWebServiceURL> https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. Edite el archivo *OnPremisesExchangeConnectorServiceConfiguration.xml*. De forma predeterminada, el archivo se encuentra en *%ProgramData%\Microsoft\Windows Intune Exchange Connector* en el equipo que ejecuta Exchange Connector. Abra el archivo en un editor de texto y cambie la siguiente línea para que refleje la dirección URL de EWS para su entorno: `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. Guarde el archivo y, después, reinicie el equipo o el servicio Microsoft Intune Exchange Connector.
 
