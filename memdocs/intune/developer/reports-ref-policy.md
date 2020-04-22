@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5a2f13bddb852b46459c9c79df39dda49ef9549d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339922"
 ---
 # <a name="reference-for-policy-entities"></a>Referencia de entidades de directivas
@@ -37,7 +37,7 @@ La categoría **Directivas** contiene entidades para dispositivos móviles que r
 
 La entidad **policy** muestra los perfiles de configuración de los dispositivos, los perfiles de configuración de las aplicaciones y las directivas de cumplimiento. Puede asignar las directivas con Administración de dispositivos móviles (MDM) a un grupo de la empresa.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | policyKey |Clave única para representar la directiva en el almacenamiento de datos. |123 |
 | policyId |Identificador único de la directiva en el almacenamiento de datos. |b66bc706-ffff-7437-0340-032819502773 |
@@ -52,7 +52,7 @@ La entidad **policy** muestra los perfiles de configuración de los dispositivos
 
 La entidad **policyType** muestra los tipos de perfiles de configuración de los dispositivos, los perfiles de configuración de las aplicaciones y las directivas de cumplimiento. Puede asignar las directivas con Administración de dispositivos móviles (MDM) a un grupo de la empresa.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | policyTypeId |Identificador único de la directiva en el sistema de origen. |123 |
 | policyTypeKey |Identificador único de la directiva en el almacenamiento de datos. |1 |
@@ -62,20 +62,20 @@ La entidad **policyType** muestra los tipos de perfiles de configuración de los
 
 La entidad **deviceConfigurationProfileDeviceActivity** muestra el número de **dispositivos** con estado correcto, pendiente, con errores o de error por día. El número refleja los perfiles de configuración de dispositivos asignados a la entidad. Por ejemplo, si un **dispositivo** muestra el estado correcto para todas las directivas que tiene asignadas, aumenta en uno el contador de éxitos de ese día. Si un dispositivo tiene dos perfiles asignados, uno con el estado correcto y otro con el estado de error, la entidad aumenta el contador de éxitos y coloca el dispositivo en el estado de error. La entidad indica qué número de dispositivos se encuentra en cada estado en un día determinado de los últimos 30 días.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | dateKey |Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro del perfil de configuración de dispositivos. |20160703 |
-| pending |Número de dispositivos únicos en estado pendiente. |123 |
+| pendiente |Número de dispositivos únicos en estado pendiente. |123 |
 | Correcto |Número de dispositivos únicos en estado correcto. |12 |
 | error |Número de dispositivos únicos en estado de error. |10 |
 | failed |Número de dispositivos únicos en estado con errores. |2 |
 
 La entidad **deviceConfigurationProfileUserActivity** muestra el número de **usuarios** con estado correcto, pendiente, con errores o de error al día. El número refleja los perfiles de configuración de dispositivos asignados a la entidad. Por ejemplo, si un **usuario** muestra el estado correcto para todas las directivas que tiene asignadas, aumenta en uno el contador de éxitos de ese día. Si un usuario tiene dos perfiles asignados, uno en estado correcto y otro en estado de error, se cuenta el usuario en el estado de error.  La entidad **deviceConfigurationProfileUserActivity** muestra cuántos usuarios hay en cada estado en un día determinado de los últimos 30 días.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | dateKey |Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro del perfil de configuración de dispositivos. |20160703 |
-| pending |Número de usuarios únicos en estado pendiente. |123 |
+| pendiente |Número de usuarios únicos en estado pendiente. |123 |
 | Correcto |Número de usuarios únicos en estado correcto. |12 |
 | error |Número de usuarios únicos en estado de error. |10 |
 | failed |Número de usuarios únicos en estado con errores. |2 |
@@ -84,12 +84,12 @@ La entidad **deviceConfigurationProfileUserActivity** muestra el número de **us
 
 La entidad **policyTypeActivity** muestra el número acumulado de dispositivos con estado correcto, estado pendiente, estado con errores o estado de error. Muestra estos estados con respecto a un perfil de configuración de dispositivos, un perfil de configuración de aplicaciones o una directiva de cumplimiento por día.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | dateKey |Valor dateKey que corresponde a la fecha de registro de la inserción en el repositorio del perfil de configuración de los dispositivos en el almacenamiento de datos. |20160703 |
 | policyKey |Valor policyKey, que puede combinarse con la directiva para obtener el nombre de la directiva. |Línea base de Windows 10 |
 | policyTypeKey |Clave del tipo de directiva, que puede combinarse con el tipo de directiva para obtener el nombre del tipo de directiva. |Directiva de cumplimiento de Windows 10 |
-| pending |Número de dispositivos únicos en estado pendiente. |123 |
+| pendiente |Número de dispositivos únicos en estado pendiente. |123 |
 | Correcto |Número de dispositivos únicos en estado correcto. |12 |
 | error |Número de dispositivos únicos en estado de error. |10 |
 | failed |Número de dispositivos únicos en estado con errores. |2 |
@@ -103,7 +103,7 @@ La referencia de API de directiva de cumplimiento contiene entidades que proporc
 En la tabla siguiente se resume el estado de asignación de directivas de cumplimiento a dispositivos. Muestra el número de dispositivos que hay en cada estado de cumplimiento.
 
 
-|Propiedad     |Descripción  |Ejemplo  |
+|Propiedad     |Description  |Ejemplo  |
 |---------|---------|---------|
 |dateKey  |Clave de fecha del momento en el que se creó el resumen de la directiva de cumplimiento.|20161204 |
 |unknown  |Número de dispositivos sin conexión o que no se pudieron comunicar con Intune o Azure AD por otros motivos. |5|
@@ -119,7 +119,7 @@ La siguiente tabla resume el estado de asignación de directivas de cumplimiento
 
 
 
-|Propiedad  |Descripción  |Ejemplo  |
+|Propiedad  |Description  |Ejemplo  |
 |---------|---------|---------|
 |dateKey  |Clave de fecha del momento en el que se creó el resumen de la directiva de cumplimiento.|20161219|
 |policyKey     |Clave de la directiva de cumplimiento para la que se ha creado el resumen. |10178 |
@@ -136,7 +136,7 @@ La siguiente tabla resume el estado de asignación de directivas de cumplimiento
 La tabla siguiente contiene los tipos de plataforma de todas las directivas asignadas. Los tipos de plataforma de directivas que nunca se han asignado a ningún dispositivo no están presentes en esta tabla.
 
 
-|Propiedad  |Descripción  |Ejemplo  |
+|Propiedad  |Description  |Ejemplo  |
 |---------|---------|---------|
 |policyPlatformTypeKey      |Clave única del tipo de plataforma de directivas. |20170519 |
 |policyPlatformTypeId      |Identificador único del tipo de plataforma de directivas.|1|
@@ -146,10 +146,10 @@ La tabla siguiente contiene los tipos de plataforma de todas las directivas asig
 
 La tabla siguiente muestra el número de dispositivos en estado correcto, pendiente, con errores o de error al día. El número refleja los datos por perfiles de tipo de directiva. Por ejemplo, si un dispositivo muestra el estado correcto para todas las directivas que tiene asignadas, aumenta en uno el contador de éxitos de ese día. Si un dispositivo tiene dos perfiles asignados, uno con el estado correcto y otro con el estado de error, la entidad aumenta el contador de éxitos y coloca el dispositivo en el estado de error. La entidad policyDeviceActivity muestra cuántos dispositivos hay en cada estado en un día determinado de los últimos 30 días.
 
-|Propiedad  |Descripción  |Ejemplo  |
+|Propiedad  |Description  |Ejemplo  |
 |---------|---------|---------|
 |dateKey|Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro del perfil de configuración de dispositivos.|20160703|
-|pending|Número de dispositivos únicos en estado pendiente.|123|
+|pendiente|Número de dispositivos únicos en estado pendiente.|123|
 |Correcto|Número de dispositivos únicos en estado correcto.|12|
 |policyKey|Valor policyKey, que puede combinarse con la directiva para obtener el nombre de la directiva.|Línea base de Windows 10|
 |error|Número de dispositivos únicos en estado de error.|10|
@@ -160,10 +160,10 @@ La tabla siguiente muestra el número de dispositivos en estado correcto, pendie
 La tabla siguiente muestra el número de usuarios en estado correcto, pendiente, con errores o de error al día. El número refleja los datos por perfiles de tipo de directiva. Por ejemplo, si un usuario muestra el estado correcto para todas las directivas que tiene asignadas, aumenta en uno el contador de éxitos de ese día. Si un usuario tiene dos perfiles asignados, uno en estado correcto y otro en estado de error, se cuenta el usuario en el estado de error. La entidad PolicyUserActivity muestra cuántos usuarios hay en cada estado en un día determinado de los últimos 30 días.
 
 
-| Propiedad  |                                         Descripción                                         |       Ejemplo       |
+| Propiedad  |                                         Description                                         |       Ejemplo       |
 |-----------|---------------------------------------------------------------------------------------------|---------------------|
 |  dateKey  | Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro del perfil de configuración de dispositivos. |      20160703       |
-|  pending  |                         Número de dispositivos únicos en estado pendiente.                          |         123         |
+|  pendiente  |                         Número de dispositivos únicos en estado pendiente.                          |         123         |
 | Correcto |                         Número de dispositivos únicos en estado correcto.                          |         12          |
 | policyKey |                 Valor policyKey, que puede combinarse con la directiva para obtener el nombre de la directiva.                 | Línea base de Windows 10 |
 |   error   |                          Número de dispositivos únicos en estado de error.                           |         10          |

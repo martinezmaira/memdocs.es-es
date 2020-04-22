@@ -12,12 +12,12 @@ metadata:
   author: brenduns
   ms.author: brenduns
   ms.date: 08/20/2019
-  ms.openlocfilehash: 9d5c1c95cd5247f32fd32a77c774ec787d052e16
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: be6460b9faa9dea44ea14c7198dbdfd8af539d46
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333709"
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81525686"
 landingContent:
 - title: Establecimiento de reglas en dispositivos para permitir el acceso a los recursos
   linkLists:
@@ -75,7 +75,7 @@ landingContent:
     links:
     - text: ATP de Microsoft Defender
       url: advanced-threat-protection.md
-    - text: Asociados de Mobile Threat Defense
+    - text: Socios de Mobile Threat Defense
       url: mtd-apps-ios-app-configuration-policy-add-assign.md
     - text: Líneas base de seguridad
       url: security-baselines.md
@@ -134,4 +134,4 @@ landingContent:
     - text: Formas comunes de usar el acceso condicional
       url: conditional-access-intune-common-ways-use.md
     - text: Jamf Pro para macOS
-      url: conditional-access-integrate-jamf.md
+      url: conditional-access-jamf-cloud-connector.md

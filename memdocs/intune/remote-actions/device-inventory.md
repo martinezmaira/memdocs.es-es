@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696287"
 ---
 # <a name="see-device-details-in-intune"></a>Ver detalles del dispositivo en Intune
@@ -38,10 +38,10 @@ En este artículo se explica cómo se pueden ver todos los dispositivos y sus pr
 
    - En **Información general** se indica el nombre del dispositivo y algunas de sus propiedades clave, como, por ejemplo, si se trata de un dispositivo personal o corporativo, el número de serie, el usuario principal, etc. Puede realizar lo siguiente en el dispositivo:
       - [Retirar](devices-wipe.md#retire)
-      - [Borrar](devices-wipe.md#wipe)
+      - [Eliminación de datos](devices-wipe.md#wipe)
       - [Eliminar](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Bloqueo remoto](device-remote-lock.md)
-      - [Sincronización](device-sync.md)
+      - [Sincronizar](device-sync.md)
       - [Restablecer el código de acceso](device-passcode-reset.md)
       - [Reiniciar](device-restart.md) (solo para Windows)
       - [Comienzo de cero](device-fresh-start.md) (solo para Windows)
@@ -54,7 +54,7 @@ En este artículo se explica cómo se pueden ver todos los dispositivos y sus pr
       - [Nueva sesión de Asistencia remota](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Use **Propiedades** para asignar una [categoría de dispositivo que cree](../enrollment/device-group-mapping.md) y cambie la propiedad del dispositivo a un dispositivo personal o a un dispositivo de empresa.
    - **Hardware** incluye muchos detalles sobre el dispositivo, como el identificador del dispositivo, el sistema operativo y la versión, el espacio de almacenamiento y más detalles.
-   - **Aplicaciones detectadas**: muestra todas las aplicaciones que Intune encuentra instaladas en el dispositivo, así como las versiones de las aplicaciones. Para más información, consulte [Aplicaciones descubiertas de Intune](../apps/app-discovered-apps.md).
+   - **Aplicaciones detectadas**: muestra todas las aplicaciones que Intune encuentra instaladas en el dispositivo, así como las versiones de las aplicaciones. Para más información, consulte [Aplicaciones detectadas de Intune](../apps/app-discovered-apps.md).
    - En **Conformidad de dispositivos** figuran todas las directivas de cumplimiento asignadas y se indica si el dispositivo es compatible o no.
    - En **Configuración del dispositivo** se muestran todas las directivas de configuración de dispositivos asignadas al dispositivo. También se indica si la directiva se ha aplicado correctamente o no.
    - **Configuración de aplicaciones** 
@@ -68,7 +68,7 @@ En función del operador que usen los dispositivos, puede que no se recopilen to
 > [!Note]  
 > El inventario de hardware y de software se actualiza cada 7 días en el servicio de Intune.
 
-|Detalle|Descripción|Plataforma| 
+|Detalle|Description|Plataforma| 
 |--------------|----------------------|----|  
 |Nombre|Nombre del dispositivo.|Windows, iOS|
 |Nombre de administración|Nombre de dispositivo usado solo en la consola. Si se cambia, el nombre del dispositivo permanece inalterado.|Windows, iOS|

@@ -5,7 +5,7 @@
   items:
     - name: Información general sobre la administración de dispositivos
       href: device-management.md
-- name: Guías de procedimientos
+- name: Guías paso a paso
   items:
     - name: Bloqueos y contraseñas
       items:
@@ -59,7 +59,7 @@
           href: device-inventory.md
     - name: Acciones masivas de dispositivo
       href: bulk-device-actions.md
-    - name: Solución de problemas
+    - name: Solucionar problemas
       items:
         - name: Solución de problemas de acciones de dispositivos
           href: troubleshoot-device-actions.md

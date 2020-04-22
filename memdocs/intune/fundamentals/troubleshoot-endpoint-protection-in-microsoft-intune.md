@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355704"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problemas de Endpoint Protection y posibles soluciones en Microsoft Intune
@@ -37,7 +37,7 @@ Revise los registros de eventos y los códigos de error para [solucionar problem
 
 ### <a name="endpoint-protection-engine-unavailable"></a>Motor de Endpoint Protection no disponible
 
-**Posible causa**: El motor de Intune Endpoint Protection se ha dañado o eliminado.
+**Causa posible**: el motor de Intune Endpoint Protection se dañó o eliminó.
 
 **Soluciones posibles**:
 
@@ -58,11 +58,11 @@ Puede que vea un mensaje que indique que algunas características están deshabi
 `Script scanning disabled`  
 `Network Inspection System disabled`  
 
-**Soluciones posibles**: Habilite estas características. Para obtener instrucciones, consulte:
+**Soluciones posibles**: habilite estas características. Para obtener instrucciones, consulte:
 
 - [Agregar la configuración de Endpoint Protection](../protect/endpoint-protection-configure.md)
 - [Antivirus de Microsoft Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
-- [Usuarios finales: Activar Windows Defender para tener acceso a los recursos de la empresa](../user-help/turn-on-defender-windows.md)
+- [End users: Turn on real-time protection to access company resources](../user-help/turn-on-defender-windows.md) (Usuarios finales: activación de la protección en tiempo real para acceder a los recursos de la empresa)
 
 ### <a name="malware-definitions-out-of-date"></a>Definiciones de malware desactualizadas
 
@@ -80,7 +80,7 @@ No se ha realizado un examen completo ni un examen rápido en los últimos 14 d�
 
 Se está ejecutando otra aplicación de Endpoint Protection y el dispositivo está en buenas condiciones.
 
-**Soluciones posibles**: Si se instala otra aplicación de Endpoint Protection y Intune detecta dicha aplicación, el dispositivo puede volverse inestable.
+**Soluciones posibles**: si se instala otra aplicación de Endpoint Protection e Intune detecta esa aplicación, es posible que el dispositivo se vuelva inestable.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

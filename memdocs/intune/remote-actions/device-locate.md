@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 433bea6442ef52cd970513213d1623faf8aae2ca
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327474"
 ---
 # <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Búsqueda de dispositivos iOS/iPadOS perdidos o robados con Intune
@@ -29,7 +29,7 @@ ms.locfileid: "80327474"
 
 Para descubrir la ubicación de un dispositivo iOS/iPadOS robado o perdido en un mapa, use la acción **Buscar dispositivo**. El dispositivo debe estar en modo supervisado. Antes de realizar esta acción, asegúrese de que el dispositivo esté en [modo perdido](device-lost-mode.md).
 
-## <a name="supported-platforms"></a>Plataformas compatibles
+## <a name="supported-platforms"></a>Plataformas admitidas
 
 - iOS/iPadOS 9.3 y versiones posteriores
 

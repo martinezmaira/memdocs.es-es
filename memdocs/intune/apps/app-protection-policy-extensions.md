@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7de306a7d4f632b3eedf321323e12c7ad95b713
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79341963"
 ---
 # <a name="protecting-application-extensions"></a>Protección de las extensiones de aplicación
@@ -64,7 +64,7 @@ Si la integración de LinkedIn está habilitada para el inquilino, cuando los us
 Si un usuario da su consentimiento para compartir datos entre las cuentas, como con complementos de Office, la integración de LinkedIn usa las API de Microsoft Graph existentes. La integración de LinkedIn usa únicamente un subconjunto de las API disponibles para los complementos de Office y admite diversas exclusiones.
 
 
-|Permisos de Microsoft Graph  |Descripción  |
+|Permisos de Microsoft Graph  |Description  |
 |---------|---------|
 |Permisos de lectura para [Contactos](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Permite que la aplicación lea una lista puntuada de personas relevantes para el usuario que inició sesión. La lista puede incluir contactos locales, contactos de redes sociales o el directorio de su organización, así como personas con las que se ha comunicado recientemente (por ejemplo, por correo electrónico y Skype).         |
 |Permisos de lectura para [Calendarios](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Permite que la aplicación lea eventos de los calendarios de los usuarios. Incluye las reuniones recogidas en los calendarios del usuario que ha iniciado sesión, las horas, las ubicaciones y los asistentes.         |

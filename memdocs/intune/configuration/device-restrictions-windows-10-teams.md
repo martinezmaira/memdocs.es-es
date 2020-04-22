@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361658"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Configuración de restricciones de dispositivos Windows 10 Team de Microsoft Intune
@@ -33,12 +33,12 @@ En este artículo, se muestran las opciones de configuración de restricciones d
 - **Información sobre la reunión en la pantalla de inicio de sesión**: habilite esta opción para elegir la información que se muestra en el icono de reuniones de la pantalla de bienvenida. Puede:
   - **Mostrar solo el organizador y la hora**
   - **Mostrar el organizador, la hora y el asunto (asunto oculto para reuniones privadas)**
-- **URL de imagen de fondo de pantalla de inicio de sesión**: habilite esta opción para mostrar un fondo personalizado en la pantalla de **bienvenida** de los dispositivos Windows 10 Team desde la dirección URL que especifique.<br>La imagen debe estar en formato PNG y la dirección URL debe comenzar con **https://** .
+- **URL de imagen de fondo de pantalla de inicio de sesión**: habilite esta opción para mostrar un fondo personalizado en la pantalla de **bienvenida** de los dispositivos Windows 10 Team desde la dirección URL que especifique.<br>La imagen debe tener el formato PNG y la dirección URL debe comenzar con **https://** .
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 
 - **Azure Operational Insights**: parte del conjunto de aplicaciones Microsoft Operations Manager, Azure Operational Insights recopila, almacena y analiza datos de archivos de registro de dispositivos con Windows 10 Team.
-Para conectarse a Visión operativa de Azure, se debe especificar un **Id. de área de trabajo** y una **Clave de área de trabajo**.
+Para conectarse a Azure Operational Insights, debe especificar un **identificador del área de trabajo** y una **clave del área de trabajo**.
 
 ## <a name="maintenance"></a>Mantenimiento
 

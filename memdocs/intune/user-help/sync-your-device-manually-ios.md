@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80274955"
 ---
 # <a name="sync-your-ios-device-manually"></a>Sincronización manual del dispositivo iOS

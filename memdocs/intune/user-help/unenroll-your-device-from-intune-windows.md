@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347124"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Quitar el dispositivo Windows de la administración
@@ -85,7 +85,7 @@ Complete estos pasos para quitar un equipo Windows 8.1 de Intune.
 ## <a name="remove-your-windows-81-phone"></a>Quitar un teléfono con Windows 8.1
 Siga estos pasos para quitar un teléfono con Windows 8.1 de Intune.
 
-1. Vaya a **Configuración** > **Área de trabajo**.
+1. Pulse en **Configuración** > **Área de trabajo**.
 2. Pulse la cuenta de trabajo cuya inscripción quiere anular.
 3. Pulse en **Eliminar** en la parte inferior de la pantalla.
 4. En el cuadro de diálogo **Eliminar cuenta**, pulse en **Eliminar**.  

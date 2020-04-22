@@ -4,7 +4,7 @@ La inscripción automática permite a los usuarios inscribir sus dispositivos Wi
 
 **Requisitos previos**
 
-- Suscripción a Azure Active Directory Premium ([suscripción de prueba](https://go.microsoft.com/fwlink/?LinkID=816845))
+- Suscripción Premium a Azure Active Directory ([suscripción de prueba](https://go.microsoft.com/fwlink/?LinkID=816845))
 - Suscripción a Microsoft Intune
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Configurar la inscripción de MDM automática

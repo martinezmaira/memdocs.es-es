@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325023"
 ---
 # <a name="rename-a-device-in-intune"></a>Cambio de nombre de un dispositivo en Intune
@@ -46,7 +46,7 @@ Esta característica no es compatible actualmente con el cambio de nombre de dis
 Al cambiar el nombre de un dispositivo Windows, el nuevo nombre debe seguir estas reglas:
 - 15 caracteres o menos (debe ser menor o igual que 63 bytes, sin incluir el valor NULL final).
 - No puede ser una cadena nula o vacía.
-- Caracteres ASCII permitidos: letras (a-z, A-Z), números (0-9) y guiones.
+- Caracteres ASCII permitidos: letras (a-z, A-Z), números (0-9) y guiones
 - Caracteres Unicode permitidos: caracteres >=0x80, debe tener un formato UTF8 válido, debe ser asignable mediante IDN (es decir, el proceso RtlIdnToNameprepUnicode debe finalizar correctamente. Consulte el documento RFC 3492).
 - El nombre no debe contener números exclusivamente.
 - El nombre no debe contener espacios.

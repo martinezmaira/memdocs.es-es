@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fb8b5eae3c88664caff76da597fc3ab9111f989c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343861"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Inicio rápido: Creación y asignación de una directiva de protección de aplicaciones
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Inicio rápido: Crear y asignar una directiva de protección de aplicaciones
 
 En este tutorial de inicio rápido usará Intune para crear y asignar una directiva de protección de aplicaciones a una aplicación cliente en el dispositivo de un usuario final. Intune usa directivas de protección de aplicaciones para confirmar que sus aplicaciones cumplen los requisitos de protección de datos de la organización.
 
@@ -46,7 +46,7 @@ Use los siguientes pasos para crear una directiva de protección de aplicaciones
 1. En [Intune](https://aka.ms/intuneportal), seleccione **Aplicaciones** > **Directivas de protección de aplicaciones** > **Crear directiva**. 
 2. Escriba la siguiente información:
 
-    - **Nombre**: *Protección de contenido de Windows 10*
+    - **Nombre**: *Protección de contenido de Windows 10*
     - **Descripción**: *Los usuarios asociados a esta directiva no podrán cortar, copiar ni pegar contenido entre la aplicación asignada y otras aplicaciones no administradas en el dispositivo.*
     - **Plataforma**: *Windows 10*
     - **Estado de inscripción**: *Con inscripción*

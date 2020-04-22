@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345551"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparar aplicaciones iOS para directivas de protección de aplicaciones con la herramienta de ajuste de aplicaciones de Intune
@@ -217,17 +217,17 @@ En la carpeta IntuneMAMPackager/Contents/MacOS, abra `Parameters.plist`, que es 
 
 | Clave de plist | Tipo |  Valor predeterminado | Notas |
 |------------------|-----|--------------|-----|
-| Ruta de acceso del paquete de aplicación de entrada |String|vacío| Igual que -i|
-| Ruta de acceso del paquete de aplicación de salida |String|vacío| Igual que -o|
-| Ruta de acceso del perfil de aprovisionamiento |String|vacío| Igual que -p|
-| Hash del certificado SHA-1 |String|vacío| Igual que -c|
-| Autoridad de ADAL |String|vacío| Igual que -aa|
-| Id. de cliente de ADAL |String|vacío| Igual que -ac|
-| URI de respuesta de ADAL |String|vacío| Igual que -ar|
+| Ruta de acceso del paquete de aplicación de entrada |Cadena|vacío| Igual que -i|
+| Ruta de acceso del paquete de aplicación de salida |Cadena|vacío| Igual que -o|
+| Ruta de acceso del perfil de aprovisionamiento |Cadena|vacío| Igual que -p|
+| Hash del certificado SHA-1 |Cadena|vacío| Igual que -c|
+| Autoridad de ADAL |Cadena|vacío| Igual que -aa|
+| Id. de cliente de ADAL |Cadena|vacío| Igual que -ac|
+| URI de respuesta de ADAL |Cadena|vacío| Igual que -ar|
 | Modo detallado habilitado |Boolean|false| Igual que -v|
 | Quitar los derechos que faltan |Boolean|false| Igual que -c|
 | Impedir la actualización de la compilación predeterminada |Boolean|false| Equivale a usar -b sin argumentos|
-| Invalidación de la cadena de compilación |String|vacío| Valor de CFBundleVersion personalizado de la aplicación de salida ajustada.|
+| Invalidación de la cadena de compilación |Cadena|vacío| Valor de CFBundleVersion personalizado de la aplicación de salida ajustada.|
 | Incluir el SDK de aplicaciones de Citrix XenMobile (variante solo de red)|Boolean|false| Igual que -citrix|
 | Rutas de acceso del perfil de aprovisionamiento de extensión |Matriz de cadenas|vacío| Matriz de perfiles de aprovisionamiento de extensión para la aplicación.
 
@@ -287,7 +287,7 @@ Si la herramienta de ajuste de aplicaciones no se completa correctamente, se mos
 |La aplicación de entrada especificada no está firmada. Especifique una aplicación firmada válida.|La herramienta de ajuste de aplicaciones requiere que las aplicaciones estén firmadas. Consulte la documentación para desarrolladores para aprender a firmar una aplicación ajustada.|
 |La aplicación de entrada especificada debe tener formato .ipa o .app.|La herramienta de ajuste de aplicaciones solo acepta aplicaciones con las extensiones .app e .ipa. Asegúrese de que el archivo de entrada tenga una extensión válida y se haya compilado como archivo .app o .ipa.|
 |La aplicación de entrada especificada ya se ajustó y se encuentra en la última versión de la plantilla de directiva.|La herramienta de ajuste de aplicaciones no ajustará una aplicación ajustada existente con la última versión de la plantilla de directiva.|
-|WARNING: No ha especificado un hash de certificado SHA1. Asegúrese de que la aplicación ajustada se firme antes de implementarla.|Asegúrese de especificar un valor de hash SHA1 válido después de la marca de línea de comandos –c. |
+|ADVERTENCIA: no ha especificado un hash de certificado SHA1. Asegúrese de que la aplicación ajustada se firme antes de implementarla.|Asegúrese de especificar un valor de hash SHA1 válido después de la marca de línea de comandos –c. |
 
 ### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Obtención de registros para las aplicaciones ajustadas desde el dispositivo
 Siga estos pasos para obtener registros para las aplicaciones ajustadas durante la solución de problemas.
@@ -327,7 +327,7 @@ Antes de ajustar la aplicación, puede concederle *derechos* para que tenga perm
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Capacidades admitidas por la herramienta de ajuste de aplicaciones para iOS
 
-|Capacidad|Descripción|Uso recomendado|
+|Capacidad|Description|Uso recomendado|
 |--------------|---------------|------------------------|
 |Grupos de aplicaciones|Use los grupos de aplicaciones para permitir que varias aplicaciones tengan acceso a contenedores compartidos y que la comunicación entre procesos adicionales entre las aplicaciones sea posible.<br /><br />Para habilitar grupos de aplicaciones, abra el panel **Funcionalidades** y haga clic en **ACTIVAR** en **Grupos de aplicaciones**. Puede agregar grupos de aplicaciones o seleccionar los ya existentes.|Al usar grupos de aplicaciones, use la notación DNS inversa:<br /><br />*group.com.companyName.AppGroup*|
 |Modos en segundo plano|Si habilita los modos en segundo plano, la aplicación de iOS podrá seguir ejecutándose en segundo plano.||

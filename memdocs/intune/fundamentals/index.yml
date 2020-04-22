@@ -14,10 +14,10 @@ metadata:
   ms.manager: dougeby
   ms.date: 12/05/2019
   ms.openlocfilehash: 3ee393f220673669e831a802d28d581eb4d0b42d
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/13/2020
+  ms.lasthandoff: 04/21/2020
   ms.locfileid: "79333845"
 landingContent:
 - title: Acerca de Microsoft Intune
@@ -42,7 +42,7 @@ landingContent:
       url: what-is-device-management.md
     - text: Arquitectura de alto nivel
       url: high-level-architecture.md
-    - text: Usos habituales de Intune
+    - text: Formas habituales de usar Intune
       url: common-scenarios.md
     - text: Decisiones de tecnología para BYOD con EMS
       url: byod-technology-decisions.md
@@ -72,7 +72,7 @@ landingContent:
       url: network-bandwidth-use.md
     - text: Puntos de conexión de red de Intune
       url: intune-endpoints.md
-    - text: Control de acceso basado en roles.
+    - text: Control de acceso basado en roles
       url: role-based-access-control.md
     - text: Licencias de Intune
       url: licenses.md

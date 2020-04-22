@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362516"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Escenario guiado: Aplicaciones móviles seguras de Microsoft Office
@@ -46,7 +46,7 @@ Las aplicaciones móviles de Office, así como Microsoft Edge para dispositivos
 
 Las [directivas de protección de aplicaciones de Intune](../apps/app-protection-policy.md) ayudan a proteger los archivos de trabajo almacenados en dispositivos inscritos en Intune. También puede usar directivas de protección de aplicaciones en dispositivos que poseen los empleados que no están inscritos para administración en Intune. En este caso, aunque la empresa no administre el dispositivo, deberá asegurarse de que los archivos de trabajo y los recursos de la empresa están protegidos.
 
-Puede usar directivas de protección de aplicaciones para impedir a los usuarios que guarden archivos de trabajo en ubicaciones desprotegidas. También puede restringir el movimiento de datos a otras aplicaciones que no estén protegidas por directivas de protección. La configuración de directivas de protección de aplicaciones incluyen:
+Puede usar directivas de protección de aplicaciones para impedir a los usuarios que guarden archivos de trabajo en ubicaciones desprotegidas. También puede restringir el movimiento de datos a otras aplicaciones que no estén protegidas por directivas de protección. La configuración de directivas de protección de aplicaciones incluye:
 
 - Las directivas de reubicación de datos como **Guardar copias de los datos de la organización** y **Restringir funciones Cortar, Copiar y Pegar**.
 - Opciones de directivas de acceso para requerir un PIN sencillo para el acceso o bloquear las aplicaciones administradas para que no se ejecuten en dispositivos con jailbreak o rooting
@@ -80,7 +80,7 @@ Le preguntaremos por las aplicaciones que los usuarios necesitan y lo que es nec
 - Lista de las aplicaciones de Office aprobadas para su uso corporativo
 - Cualquier requisito de PIN para iniciar aplicaciones aprobadas en dispositivos no administrados
 
-## <a name="step-2---basics"></a>Paso 2: aspectos básicos
+## <a name="step-2---basics"></a>Paso 2: aspectos básicos
 
 En este paso, debe especificar el **Prefijo** y una **Descripción** de la nueva directiva de protección de aplicaciones. Cuando agregue el **Prefijo**, se actualizarán los detalles relacionados con los recursos creados en el escenario guiado. Estos detalles permitirán encontrar más fácilmente las directivas más adelante por si necesita cambiar las asignaciones y la configuración.
 
@@ -109,7 +109,7 @@ Cuando termine de seleccionar las aplicaciones, haga clic en **Siguiente**.
 
 En este paso, debe configurar los requisitos de acceso y uso compartido de los archivos y correos electrónicos corporativos en estas aplicaciones. Los usuarios pueden guardar los datos de forma predeterminada en las cuentas de OneDrive y SharePoint de la organización.
 
-| Setting | Descripción | Valor predeterminado |
+| Opción | Description | Valor predeterminado |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Tipo de PIN | Los PIN numéricos se componen únicamente de números, mientras que los códigos de acceso pueden contener caracteres alfanuméricos y caracteres especiales.  Para configurar el tipo de código de acceso en iOS/iPadOS, es necesario que la aplicación tenga la versión 7.1.12 del SDK de Intune o una versión posterior. El tipo numérico no tiene ninguna restricción de versión para el SDK de Intune. | Numérico |
 | Seleccionar la longitud mínima del PIN | especifique el número mínimo de dígitos en una secuencia de PIN. | 6 |
@@ -129,7 +129,7 @@ Los usuarios que no tengan asignadas directivas de protección de aplicaciones n
 El último paso permite revisar un resumen de los valores que ha configurado. Una vez que haya revisado las opciones, haga clic en **Crear** para completar el escenario guiado. Tras completar el escenario guiado, se muestra una tabla de recursos. Puede editar estos recursos más adelante, pero una vez que salga de la vista de resumen, la tabla no se guardará.
 
 > [!IMPORTANT]
-> Cuando el escenario guiado se complete, se mostrará un resumen. Los recursos mencionados en este resumen se pueden modificar más adelante, pero la tabla en la que se muestran estos recursos no se guardará.
+> Cuando se haya completado el escenario guiado, se mostrará un resumen. Los recursos mencionados en este resumen se pueden modificar más adelante, pero la tabla en la que se muestran estos recursos no se guardará.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

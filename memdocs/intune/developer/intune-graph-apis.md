@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345161"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Cómo usar Azure AD para acceder a las API de Intune en Microsoft Graph
@@ -140,7 +140,7 @@ Para más información:
 - [Autenticación de Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Ámbitos de permiso de aplicaciones](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Al conceder permiso a Microsoft Graph, puede especificar los ámbitos siguientes para controlar el acceso a las características de Intune: En la tabla siguiente se resumen los ámbitos de permiso de la API de Intune.  En la primera columna se muestra el nombre de la característica, tal como aparece en Azure Portal y en la segunda columna se proporciona el nombre del ámbito de permiso.
+Al conceder permiso a Microsoft Graph, puede especificar los ámbitos siguientes para controlar el acceso a las características de Intune. En la tabla siguiente se resumen los ámbitos de permiso de la API de Intune.  En la primera columna se muestra el nombre de la característica, tal como aparece en Azure Portal y en la segunda columna se proporciona el nombre del ámbito de permiso.
 
 Configuración _Habilitar acceso_ | Nombre de ámbito
 :--|:--
@@ -160,9 +160,9 @@ En la tabla se muestra la configuración según aparece en Azure Portal. En las 
 
 En este momento, todos los ámbitos de permiso de Intune requieren acceso de administrador.  Esto significa que se necesitan las credenciales correspondientes al ejecutar aplicaciones o scripts que acceden a recursos de la API de Intune.
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- Valor **Habilitar acceso**: __Leer en aplicaciones de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer en aplicaciones de Microsoft Intune__
 
 - Permite el acceso de lectura a las siguientes propiedades de entidades y estado:
   - Aplicaciones de cliente
@@ -170,9 +170,9 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Directivas de protección de aplicaciones
   - Configuraciones de aplicaciones
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- Valor **Habilitar acceso**: __Leer y escribir en aplicaciones de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer y escribir en aplicaciones de Microsoft Intune__
 
 - Permite las mismas operaciones que __DeviceManagementApps.Read.All__.
 
@@ -183,18 +183,18 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Directivas de protección de aplicaciones
   - Configuraciones de aplicaciones
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- Valor **Habilitar acceso**: __Leer las directivas y la configuración de los dispositivos de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer en la configuración de dispositivos y directivas de Microsoft Intune__
 
 - Permite el acceso de lectura a las siguientes propiedades de entidades y estado:
   - Configuración de dispositivos
   - Directiva de cumplimiento de dispositivos
   - Mensajes de notificación
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- Valor **Habilitar acceso**: __Leer y escribir en las directivas y la configuración de dispositivos de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer y escribir en la configuración de dispositivos y directivas de Microsoft Intune__
 
 - Permite las mismas operaciones que __DeviceManagementConfiguration.Read.All__.
 
@@ -203,9 +203,9 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Directiva de cumplimiento de dispositivos
   - Mensajes de notificación
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- Valor **Habilitar acceso**: __Realizar acciones remotas que influyen en el usuario en dispositivos de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Realizar acciones remotas que influyen en el usuario en dispositivos de Microsoft Intune__
 
 - Permite las acciones remotas siguientes en un dispositivo administrado:
   - Retirar
@@ -217,9 +217,9 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Reiniciar
   - Eliminar usuario de dispositivo compartido
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- Valor **Habilitar acceso**: __Leer en dispositivos de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer en dispositivos de Microsoft Intune__
 
 - Permite el acceso de lectura a las siguientes propiedades de entidades y estado:
   - Dispositivo administrado
@@ -228,9 +228,9 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Acciones remotas
   - Información de malware
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- Valor **Habilitar acceso**: __Leer y escribir en dispositivos de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer y escribir en dispositivos de Microsoft Intune__
 
 - Permite las mismas operaciones que __DeviceManagementManagedDevices.Read.All__.
 
@@ -243,18 +243,18 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Deshabilitación del bloqueo de activación
   - Solicitar asistencia remota
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- Valor **Habilitar acceso**: __Leer en la configuración RBAC de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer en la configuración RBAC de Microsoft Intune__
 
 - Permite el acceso de lectura a las siguientes propiedades de entidades y estado:
   - Asignaciones de roles
   - Definiciones de roles
   - Operaciones de recursos
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- Valor **Habilitar acceso**: __Leer y escribir en la configuración RBAC de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer y escribir en la configuración RBAC de Microsoft Intune__
 
 - Permite las mismas operaciones que __DeviceManagementRBAC.Read.All__.
 
@@ -262,9 +262,9 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Asignaciones de roles
   - Definiciones de roles
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- Valor **Habilitar acceso**: __Leer en la configuración de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer en la configuración de Microsoft Intune__
 
 - Permite el acceso de lectura a las siguientes propiedades de entidades y estado:
   - Inscripción de dispositivos
@@ -278,9 +278,9 @@ En este momento, todos los ámbitos de permiso de Intune requieren acceso de adm
   - Personalización de marca
   - Mobile Threat Defense
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- Valor **Habilitar acceso**: __Leer y escribir en la configuración de Microsoft Intune__
+- Configuración **Habilitar acceso**: __Leer y escribir en la configuración de Microsoft Intune__
 
 - Permite las mismas operaciones que DeviceManagementServiceConfig.Read.All_
 

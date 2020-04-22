@@ -18,13 +18,13 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 46e717478078ab13cc2c8783cdacbde0911e83a5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358200"
 ---
-# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fase 1: preparación de Microsoft Intune para la administración de dispositivos móviles (MDM)
+# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fase 1: Preparar Microsoft Intune para la administración de dispositivos móviles (MDM)
 
 Antes de profundizar en los detalles de configuración de Intune, revisemos los requisitos de administración de dispositivos móviles de la organización. Puede resultar útil ejecutar informes de usuarios activos en su proveedor de MDM actual para identificar los grupos de usuarios críticos. Luego, puede empezar a abordar las cuestiones planteadas en la sección [Evaluar los requisitos de MDM](migration-guide-prepare.md#assess-mdm-requirements).
 

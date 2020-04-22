@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 428ee1ce93b4f6fe21c4b0180a9df222f3e23e09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359760"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referencia de entidades de administración de aplicaciones móviles (MAM)
 
 La categoría **Administración de aplicaciones móviles** contiene entidades para las aplicaciones móviles como las siguientes:
 
-- Aplicaciones
+- Apps
 - Instancias
 - Estado de registro
 - Estado de mantenimiento
@@ -41,7 +41,7 @@ La categoría **Administración de aplicaciones móviles** contiene entidades pa
 
 La entidad **mamApplication** muestra las aplicaciones de línea de negocio (LOB) que se administran mediante la administración de aplicaciones móviles (MAM) sin inscripción en la empresa.
 
-| Propiedad | Descripción | Ejemplo |
+| Propiedad | Description | Ejemplo |
 |---------|------------|--------|
 | mamApplicationKey |Identificador único de la aplicación MAM. | 432 |
 | mamApplicationName |Nombre de la aplicación MAM. |Nombre de ejemplo de la aplicación MAM |
@@ -57,7 +57,7 @@ La entidad **mamApplication** muestra las aplicaciones de línea de negocio (LOB
 La entidad **mamApplicationInstance** muestra las aplicaciones de administración de aplicaciones móviles (MAM) administradas como instancias singulares por usuario y dispositivo. Todos los usuarios y dispositivos enumerados en la entidad están protegidos, como si tuvieran al menos una directiva de MAM asignada.
 
 
-|          Propiedad          |                                                                                                  Descripción                                                                                                  |               Ejemplo                |
+|          Propiedad          |                                                                                                  Description                                                                                                  |               Ejemplo                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   applicationInstanceKey   |                                                               Identificador único de la instancia de la aplicación MAM en el almacenamiento de datos. Clave suplente.                                                                |                 123                  |
 |           userId           |                                                                              Identificador del usuario que tiene instalada esta aplicación MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
@@ -67,7 +67,7 @@ La entidad **mamApplicationInstance** muestra las aplicaciones de administració
 |        createdDate         |                                                                 Fecha en la que se ha creado este registro de la instancia de la aplicación MAM. El valor puede ser NULL.                                                                 |        23/11/2016 12:00:00 AM        |
 |          plataforma          |                                                                          Plataforma del dispositivo en el que está instalada esta aplicación MAM.                                                                           |                  2                   |
 |      platformVersion       |                                                                      Versión de la plataforma del dispositivo en el que está instalada esta aplicación MAM.                                                                       |                 2.2                  |
-|         sdkVersion         |                                                                            Versión de SDK de MAM con la que se ha encapsulado esta aplicación MAM.                                                                            |                 3.2                  |
+|         sdkVersion         |                                                                            Versión de SDK de MAM con la que se ha encapsulado esta aplicación MAM.                                                                            |                 3,2                  |
 | mamDeviceId | Identificador de dispositivo al que está asociada la instancia de la aplicación MAM.   | 23/11/2016 12:00:00 AM   |
 | mamDeviceType | Tipo de dispositivo al que está asociada la instancia de la aplicación MAM.   | 23/11/2016 12:00:00 AM   |
 | mamDeviceName | Nombre de dispositivo al que está asociada la instancia de la aplicación MAM.   | 23/11/2016 12:00:00 AM   |
@@ -84,7 +84,7 @@ La entidad **mamCheckin** representa los datos recopilados cuando una instancia 
 > [!Note]  
 > Cuando una instancia de la aplicación se registra varias veces al día, el almacenamiento de datos la almacena como un único registro.
 
-| Propiedad | Descripción | Ejemplo |
+| Propiedad | Description | Ejemplo |
 |---------|------------|--------|
 | dateKey |Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro de la aplicación MAM. | 20160703 |
 | applicationInstanceKey |Clave de la instancia de la aplicación asociada a este registro de la aplicación MAM. | 123 |
@@ -100,7 +100,7 @@ La entidad **mamCheckin** representa los datos recopilados cuando una instancia 
 
 La entidad **mamDeviceHealth** representa los dispositivos que tienen implementadas directivas de administración de aplicaciones móviles (MAM), incluso aunque estén liberados.
 
-| Propiedad | Descripción | Ejemplo |
+| Propiedad | Description | Ejemplo |
 |---------|------------|--------|
 | deviceHealthKey |Identificador único del dispositivo y su mantenimiento asociado en el almacenamiento de datos. Clave suplente. |123 |
 | deviceHealth |Identificador único del dispositivo y su mantenimiento asociado. Es parecido a DeviceHealthKey, pero el identificador es una clave natural. |b66bc706-ffff-7777-0340-032819502773 |
@@ -111,7 +111,7 @@ La entidad **mamDeviceHealth** representa los dispositivos que tienen implementa
 
 La entidad **mamEffectivePolicy** muestra todas las directivas efectivas de administración de aplicaciones móviles (MAM) aplicadas en la organización. Una directiva aplicada efectiva es el resultado de la combinación de todas las directivas pertinentes para una aplicación y un usuario determinados.
 
-| Propiedad | Descripción | Ejemplo |
+| Propiedad | Description | Ejemplo |
 |---------|------------|--------|
 | effectivePolicyKey |Identificador único de la directiva de MAM efectiva en el almacenamiento de datos. |2 |
 | realPolicyKey |Identificador único de la directiva de MAM creada por profesionales de TI. |1 |
@@ -122,10 +122,10 @@ La entidad **mamEffectivePolicy** muestra todas las directivas efectivas de admi
 La entidad **mamPlatform** muestra nombres y tipos de plataforma en los que se ha instalado una aplicación de administración de aplicaciones móviles (MAM).
 
 
-|          Propiedad          |                                    Descripción                                    |                         Ejemplo                         |
+|          Propiedad          |                                    Description                                    |                         Ejemplo                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        platformKey         |     Identificador único de la plataforma en el almacenamiento de datos. Clave suplente.      |                           123                           |
 |          plataforma          | Identificador único de la plataforma. Se parece a PlatformKey, pero es una clave natural. |                           123                           |
-|        platformName        |                                   Nombre de la plataforma.                                   | No disponible <br>Ninguno <br>Windows <br>IOS <br>Android. |
+|        platformName        |                                   Nombre de la plataforma.                                   | No disponible <br>Ninguno <br>Windows <br>iOS <br>Android. |
 | rowLastModifiedDateTimeUtc | Fecha y hora en formato UTC en que se ha modificado por última vez esta plataforma en el almacenamiento de datos.  |                 23/11/2016 12:00:00 AM                  |
 

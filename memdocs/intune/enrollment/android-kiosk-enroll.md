@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b8872efe661f01d2cc286282c38953739711982b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327287"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397703"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configuración de la inscripción en Intune de dispositivos dedicados de Android Enterprise
 
@@ -39,7 +39,7 @@ Los dispositivos que administre de esta forma se inscriben en Intune sin una cue
 
 Para poder administrarlos como dispositivos dedicados de Android Enterprise, los dispositivos deben cumplir estos requisitos:
 
-- Android OS versión 5.1 y versiones posteriores.
+- SO Android versión 6.0 y posteriores.
 - Los dispositivos deben ejecutar una versión de Android que tenga conectividad con Servicios de Google para móviles (GMS). Los dispositivos deben tener GMS disponible y deben ser capaces de conectarse a GMS.
 
 ## <a name="set-up-android-enterprise-dedicated-device-management"></a>Configuración de la administración de dispositivos dedicados de Android Enterprise
@@ -62,7 +62,7 @@ Debe crear un perfil de inscripción para poder inscribir los dispositivos dedic
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y elija **Dispositivos** > **Android** > **Inscripción de Android** > **Dispositivos dedicados de propiedad corporativa**.
 2. Elija **Crear** y rellene los campos obligatorios.
     - **Nombre**: escriba el nombre que va a usar al asignar el perfil al grupo de dispositivos dinámicos.
-    - **Fecha de expiración del token**: la fecha en que caduca el token. Google exige un máximo de 90 días.
+    - **Fecha de expiración del token**: la fecha en que expira el token. Google exige un máximo de 90 días.
 3. Elija **Crear** para guardar el perfil.
 
 ### <a name="create-a-device-group"></a>Creación de un grupo de dispositivos
@@ -71,8 +71,8 @@ Puede dirigir las aplicaciones y directivas a grupos de dispositivos dinámicos 
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y elija **Grupos** > **Todos los grupos** > **Nuevo grupo**.
 2. En la hoja **Grupo**, rellene los campos obligatorios, como se indica a continuación:
-    - **Tipo de grupo**: Seguridad
-    - **Nombre de grupo**: escriba un nombre intuitivo (como Dispositivos de fábrica 1)
+    - **Tipo de grupo**: seguridad
+    - **Nombre del grupo**: escriba un nombre intuitivo (como Dispositivos de fábrica 1)
     - **Tipo de pertenencia**: dispositivo dinámico
 3. Elija **Agregar una consulta dinámica**.
 4. En la hoja **Reglas de pertenencia dinámica**, rellene los campos del modo siguiente:

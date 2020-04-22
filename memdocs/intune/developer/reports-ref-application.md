@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359864"
 ---
 # <a name="reference-for-application-entities"></a>Referencia de entidades de aplicaciones
@@ -39,7 +39,7 @@ La categoría **Application** contiene entidades para dispositivos que realizan 
 
 La entidad **appRevision** muestra todas las versiones de las aplicaciones.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | appKey |Identificador único de la aplicación. |123 |
 | applicationId |Identificador único de la aplicación. Se parece a AppKey, pero es una clave natural. |b66bc706-ffff-7437-0340-032819502773 |
@@ -61,7 +61,7 @@ La entidad **appRevision** muestra todas las versiones de las aplicaciones.
 
 La entidad **appTypes** muestra el origen de instalación de una aplicación.
 
-| Propiedad  | Descripción |
+| Propiedad  | Description |
 |---------|------------|
 | appTypeID |Identificador del tipo. |
 | appTypeKey |Clave suplente de la clave. |
@@ -69,7 +69,7 @@ La entidad **appTypes** muestra el origen de instalación de una aplicación.
 
 ### <a name="example"></a>Ejemplo
 
-| AppTypeID  | Nombre | Descripción |
+| AppTypeID  | Nombre | Description |
 |---------|------------|--------|
 | 0 |Aplicación de la tienda Android | Una aplicación de la tienda Android. |
 | 1 |Aplicación de LOB de Android | Una aplicación de línea de negocio de Android. |
@@ -90,7 +90,7 @@ La entidad **appTypes** muestra el origen de instalación de una aplicación.
 
 La entidad **vppProgramTypes** muestra los posibles tipos de programa VPP para una aplicación.
 
-| Propiedad  | Descripción |
+| Propiedad  | Description |
 |---------|------------|
 | vppProgramTypeID | Identificador del tipo. |
 | vppProgramTypeKey | Clave suplente de la clave. |
@@ -98,7 +98,7 @@ La entidad **vppProgramTypes** muestra los posibles tipos de programa VPP para u
 
 ### <a name="example"></a>Ejemplo
 
-| VppProgramID  | Nombre | Descripción |
+| VppProgramID  | Nombre | Description |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Programa VPP de Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | No disponible aún | Valor predeterminado. Sin VPP. |
@@ -110,7 +110,7 @@ La entidad **vppProgramTypes** muestra los posibles tipos de programa VPP para u
 
 La entidad **applicationInventory** muestra las aplicaciones que se encuentran en el dispositivo en el momento de la recopilación del inventario.
 
-| Propiedad  | Descripción |
+| Propiedad  | Description |
 |---------|------------|
 | deviceKey | Se trata de una referencia a la tabla de dispositivos que contiene el identificador de dispositivo de Intune. |
 | dateKey | Referencia a la tabla de fechas que indica el día del inventario. |
@@ -122,7 +122,7 @@ La entidad **applicationInventory** muestra las aplicaciones que se encuentran e
 
 La entidad **mobileAppInstallState** representa el estado de la instalación de una aplicación móvil una vez asignada a un grupo que contiene dispositivos, usuarios o ambos.
 
-| Propiedad | Descripción |
+| Propiedad | Description |
 |---|---|
 | appInstallStateKey | El identificador único del estado de instalación de aplicación de su cuenta. |
 | appInstallState | Valor de enumeración del estado de instalación de aplicación. |

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80624910"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Traslado de dispositivos Android del administrador de dispositivos a la administración de perfil de trabajo
@@ -73,13 +73,13 @@ Cuando los usuarios ven que no cumplen los requisitos por este motivo, pueden pu
     > - Si el Portal de empresa Android está abierto y en segundo plano, cuando un usuario pulsa el vínculo, es posible que vaya a la última página que tenía abierta.
     > - Los usuarios deben pulsar el vínculo de un dispositivo Android. Si, por el contrario, lo pegan en un explorador, no iniciará el Portal de empresa de Android. 
 
-    Elija **Siguiente**.
+    Seleccione **Siguiente**.
 
 7. En la página **Etiquetas de ámbito**, seleccione las etiquetas de ámbito que desee incluir.
 8. En la página **Asignaciones**, asigne la directiva a un grupo que tenga dispositivos inscritos con la administración del administrador de dispositivos > **Siguiente**.
 9. En la página **Revisar y crear**, confirme toda la configuración y, a continuación, seleccione **Crear**.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 El [flujo de usuario final para pasar a la nueva configuración de administración de dispositivos](../user-help/move-to-new-device-management-setup.md) guía a los usuarios por la anulación de la inscripción de la administración de administradores de dispositivos y la configuración de la administración de perfiles de trabajo. Los usuarios deben tener [dispositivos inscritos por el administrador de dispositivos Android](android-enroll-device-administrator.md) con el Portal de empresa de Android, versión 5.0.4720.0 o posterior.
 

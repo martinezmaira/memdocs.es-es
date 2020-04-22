@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 84a7f679cc071a3e8d339fd29e278dfde6eef28c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79348203"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Inscribir el dispositivo Windows Phone 8.1 en Intune  
@@ -35,11 +35,11 @@ Para inscribir el dispositivo en Intune, siga el conjunto de instrucciones que c
 ## <a name="enroll-through-company-portal"></a>Inscribirse a través del Portal de empresa  
 Siga estos pasos si puede instalar la aplicación del Portal de empresa desde Microsoft Store. 
 
-1. Pulse **Inicio** > **Tienda**.  
+1. Pulse en **Inicio** > **Tienda**.  
 
-2. Pulse **Buscar** y escriba **portal de empresa** .  
+2. Pulse **Buscar** y escriba **portal de empresa**.  
 
-3. En la lista de resultados, pulse en **Portal de empresa** .  
+3. En la lista de resultados, pulse en **Portal de empresa**.  
 
 
     ![Resultados de búsqueda del portal de empresa](./media/WP81-1-CP-search-store-v2.png)  

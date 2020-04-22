@@ -16,10 +16,10 @@ ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a23155c31586992c82781998bb664bf2ce6a0889
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339181"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Conector Mobile Threat Defense de Pradeo con Intune
@@ -31,7 +31,7 @@ Se pueden configurar directivas de acceso condicional según la evaluación de r
 > [!NOTE]
 > Este proveedor de Mobile Threat Defense no es compatible con dispositivos no inscritos.
 
-## <a name="supported-platforms"></a>Plataformas compatibles
+## <a name="supported-platforms"></a>Plataformas admitidas
 
 - **Android 4.0.3 y versiones posteriores**
 
@@ -71,7 +71,7 @@ Cuando se detectan aplicaciones malintencionadas, como el malware, en los dispos
 
 ![Imagen conceptual de aplicaciones malintencionadas detectadas](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-blocked.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 ![Aplicaciones malintencionadas detectadas y acceso concedido](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-unblocked.png)
 
@@ -83,11 +83,11 @@ Detecte amenazas para la red, por ejemplo, ataques de tipo **Man in the middle**
 
 ![Bloquear el acceso de red a través de Wi-Fi](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 ![Imagen conceptual de acceso concedido tras la corrección](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Control del acceso a SharePoint Online basado en amenazas a la red
 
 Detecte amenazas para la red, por ejemplo, ataques de tipo **Man in the middle**, y evite la sincronización de archivos corporativos según el riesgo del dispositivo.
 
@@ -95,7 +95,7 @@ Detecte amenazas para la red, por ejemplo, ataques de tipo **Man in the middle**
 
 ![Bloqueo de SharePoint Online cuando se detectan amenazas a la red](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 ![Imagen conceptual de acceso concedido tras la corrección para el ejemplo de SharePoint](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-unblocked.png)
 

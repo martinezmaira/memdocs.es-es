@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085810"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Uso del portal de solución de problemas para ayudar a los usuarios de su empresa
@@ -61,12 +61,12 @@ Puede usar el panel **Solución de problemas** para consultar la información de
 
 ![Panel de solución de problemas, con áreas numeradas que se describen en la tabla siguiente](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Área | Nombre | Descripción |
+| Área | Nombre | Description |
 | ---  | ---  | ---         |
 | 1.   | Estado de la cuenta  | Muestra el estado del inquilino actual de Intune como **Activo** o **Inactivo**.       |
 | 2.   | Selección de usuarios  | El nombre del usuario seleccionado actualmente. Haga clic en **Cambiar usuario** para elegir un usuario nuevo.       |
 | 3.   | Estado del usuario  | Muestra el estado de la licencia de Intune del usuario, el número de dispositivos y el cumplimiento de cada uno.       |
-| 4.   | Información de usuario  | Use la lista para seleccionar los detalles que vaya a consultar en el panel. <br>Puede seleccionar: <ul><li>Aplicaciones cliente<li>Directivas de cumplimiento<li> Directivas de configuración<li>Directivas de protección de aplicaciones <li>Restricciones de inscripción</ul>      |
+| 4.   | Información de usuario  | Use la lista para seleccionar los detalles que vaya a consultar en el panel. <br>Puede seleccionar: <ul><li>Aplicaciones cliente<li>Compliance directivas<li> Directivas de configuración<li>Directivas de protección de aplicaciones <li>Restricciones de inscripción</ul>      |
 | 5.   | Pertenencia a grupos  | Muestra los grupos actuales de los que es miembro el usuario seleccionado.       |
 
 <!-- this section needs to be updated
@@ -248,18 +248,18 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 La tabla Errores de inscripción enumera los intentos de inscripción que no han tenido éxito. Los dispositivo enumerados en la tabla siguiente pueden haberse inscrito correctamente en un intento posterior. Puede que no se muestren todos los intentos con error. La información de mitigación no está disponible para todos los errores.
 
-| Columna de tabla | Descripción |
+| Columna de tabla | Description |
 |-------------|----------|
 | Inicio de inscripción | La hora en la que el usuario comenzó la inscripción. |
 | Sistema operativo | El sistema operativo del dispositivo. |
-| Versión del sistema operativo | Versión del sistema operativo del dispositivo. |
+| Versión de SO | Versión del sistema operativo del dispositivo. |
 | Error | El motivo del error. |
 
 ### <a name="failure-details"></a>Detalles del error
 
 Cuando se elige una fila de error, se proporcionan más detalles.
 
-| Sección | Descripción |
+| Sección | Description |
 |-------------|----------|
 | Detalles del error | Una explicación más detallada del error. |
 | Soluciones posibles | Pasos sugeridos para resolver el error. Puede que algunos errores no tengan solución. |
@@ -267,7 +267,7 @@ Cuando se elige una fila de error, se proporcionan más detalles.
 
 ### <a name="enrollment-errors"></a>Errores de inscripción
 
-| Error | Detalles |
+| Error de: | Detalles |
 |-------------|----------|
 | Tiempo de espera o error de iOS/iPadOS | Tiempo de espera agotado entre el dispositivo e Intune debido a que el usuario tarda demasiado en realizar la inscripción. |
 | Usuario no encontrado o sin licencia | El usuario no tiene una licencia o se ha quitado del servicio. |

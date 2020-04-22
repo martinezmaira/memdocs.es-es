@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cf5ab63f72484ddbbf311810e232404ab643d2d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359851"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Modelo de datos de Data Warehouse de Microsoft Intune
@@ -40,7 +40,7 @@ El almacenamiento expone los datos en las siguientes áreas de alto nivel:
 
 Estas áreas contienen las entidades que son significativas para el entorno de Intune. Encontrará más detalles sobre los conjuntos de entidades en los temas siguientes:
 
-- [Aplicación](reports-ref-application.md)
+- [Application](reports-ref-application.md)
 - [Fecha](reports-ref-date.md)
 - [Dispositivos](reports-ref-devices.md)
 - [Extensión de administración de Intune](reports-ref-intunemanagementextension.md)
@@ -57,7 +57,7 @@ Las entidades y las relaciones usan un modelo de esquema de estrella. Un esquema
 
 Los modelos de esquema de estrella están optimizados para la flexibilidad y el análisis de datos, de modo que pueda crear los informes necesarios para entender su entorno móvil en constante evolución.
 
-## <a name="time-daily-snapshots"></a>Hora: instantáneas diarias
+## <a name="time-daily-snapshots"></a>Tiempo: instantáneas diarias
 
 El almacén de datos es descendiente en relación con los datos de Intune. Todos los días a medianoche (UTC) Intune toma una instantánea y la guarda en el almacén. La duración de las instantáneas retenidas varía en función de cada tabla de hechos. En algunos casos puede ser de 7 días, en otros de 30, o incluso superiores.
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8612640ec71075194af680535a988f2228bb66fd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362893"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Configuración del entorno educativo de Intune para dispositivos iPad compartidos
@@ -99,7 +99,7 @@ En **Teacher root certificate** (Certificado raíz de profesor), elija el botón
 En **Teacher PKCS#12 certificate** (Certificado de profesor PKCS#12), configure los siguientes valores:
 
 - **Formato de nombre de sujeto**: Intune agrega automáticamente el prefijo **líder**, para el certificado del profesor, y **miembro**, para el certificado de los estudiantes, a los nombres comunes del certificado.
-- **Entidad de certificación**: entidad de certificación (CA) empresarial que se ejecuta en una edición Enterprise de Windows Server 2008 R2 o versión posterior. No se admiten CA independientes.
+- **Entidad de certificación**: entidad de certificación empresarial (CA) que se ejecuta en una edición Enterprise de Windows Server 2008 R2 o versión posterior. No se admiten CA independientes.
 - **Nombre de la entidad de certificación**: escriba el nombre de la entidad de certificación.
 - **Nombre de plantilla de certificado**: escriba el nombre de una plantilla de certificado que se haya agregado a una CA emisora.
 - **Umbral de renovación (%)** : especifique qué porcentaje de la duración del certificado tiene que quedar para que el dispositivo solicite la renovación del certificado.
@@ -121,7 +121,7 @@ En **Certificado raíz de dispositivo**, seleccione el botón Examinar para sele
 En **Student PKCS#12 certificate** (Certificado de estudiante PKCS#12), configure los siguientes valores:
 
 - **Formato de nombre de sujeto**: Intune agrega automáticamente el prefijo líder, para el certificado del profesor, y miembro, para el certificado de los dispositivos, a los nombres comunes del certificado.
-- **Entidad de certificación**: entidad de certificación (CA) empresarial que se ejecuta en una edición Enterprise de Windows Server 2008 R2 o versión posterior. No se admiten CA independientes.
+- **Entidad de certificación**: entidad de certificación empresarial (CA) que se ejecuta en una edición Enterprise de Windows Server 2008 R2 o versión posterior. No se admiten CA independientes.
 - **Nombre de la entidad de certificación**: escriba el nombre de la entidad de certificación.
 - **Nombre de plantilla de certificado**: escriba el nombre de una plantilla de certificado que se haya agregado a una CA emisora.
 - **Umbral de renovación (%)** : especifique qué porcentaje de la duración del certificado tiene que quedar para que el dispositivo solicite la renovación del certificado.

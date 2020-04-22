@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4e2c16a4002d807ba7665e53eea7347d498f8981
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347098"
 ---
 # <a name="you-need-to-update-your-ios-device-to-install-the-outlook-app"></a>Debe actualizar el dispositivo iOS para instalar la aplicación Outlook
@@ -32,7 +32,7 @@ ms.locfileid: "79347098"
 La aplicación Outlook ayuda a millones de usuarios a conectar todas sus cuentas de correo, todos sus calendarios y todos sus archivos en un lugar conveniente para los dispositivos [iOS](https://itunes.apple.com/app/microsoft-outlook-email-calendar/id951937596).
 
 >[!NOTE]
-> ¿Busca las instrucciones para dispositivos Android? [Obtenga más información](update-device-outlook-android.md).
+> ¿Busca las instrucciones para dispositivos Android? [Obtenga más información en](update-device-outlook-android.md).
 
 A veces, se puede producir un error durante la instalación de una aplicación, especialmente si el dispositivo no está actualizado. 
 

@@ -19,10 +19,10 @@ ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
 ms.openlocfilehash: ee7c1898315a01872bc47b9928116bc9a487b837
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334683"
 ---
 # <a name="you-need-to-turn-off-unknown-sources"></a>Tiene que desactivar Orígenes desconocidos

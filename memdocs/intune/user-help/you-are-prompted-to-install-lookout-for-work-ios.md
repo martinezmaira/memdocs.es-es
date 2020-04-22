@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 18bc732dfbceeb4b6c9ec27d8f6fa27a1b3f3575
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346682"
 ---
 # <a name="install-lookout-for-work-on-your-ios-device"></a>Instalación de Lookout for Work en su dispositivo iOS
@@ -50,9 +50,9 @@ Para poder obtener acceso a su trabajo, su empresa necesita que instale la aplic
 
    * Una vez que Lookout for Work finaliza la instalación, verá la siguiente pantalla si no se ha encontrado ninguna amenaza de seguridad en el dispositivo.
 
-     ![Lookout for Work no ha encontrado amenazas de seguridad](./media/ios-lfw-no-threats-found.png)
+     ![Lookout for Work no ha detectado ninguna amenaza de seguridad](./media/ios-lfw-no-threats-found.png)
 
-   * Si Lookout for Work encuentra una amenaza de seguridad en su dispositivo, verá instrucciones sobre cómo solucionar el problema.
+   * Si Lookout for Work detecta una amenaza de seguridad en el dispositivo, verá instrucciones sobre cómo solucionar el problema.
 
 ## <a name="if-the-installation-doesnt-work"></a>Si la instalación no funciona
 

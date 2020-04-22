@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4e809a888fc2696e54540ee6baa2271d7340579
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361060"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Actualización de dispositivos que ejecutan Windows Holographic a Windows Holographic for Business
@@ -37,8 +37,8 @@ Para más información sobre esta característica, consulte [Uso de un perfil de
 
 ## <a name="edition-upgrade"></a>Actualización de la edición
 
-- **Edición a la que actualizar**: seleccione **Windows 10 Holographic for Business**.
-- **Archivo de licencia**: busque y seleccione el archivo de licencia XML que se le proporcionó.
+- **Edición a la que actualizar**: seleccione **Windows 10 Holographic for Business**.
+- **Archivo de licencia**: busque y seleccione el archivo de licencia XML que se le ha proporcionado.
 
   ![Escriba el nombre de archivo XML que incluye Holographic para la información de licencia empresarial](./media/holographic-upgrade/Holographic-edition-upgrade.png)
  

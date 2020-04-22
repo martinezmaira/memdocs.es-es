@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6127b365a04ad48a9cbaa98bdef821c4d1334181
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339896"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Referencia de la entidad Asociación de dispositivos del usuario
@@ -32,7 +32,7 @@ La entidad **userDeviceAssociation** contiene las asociaciones de dispositivos d
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 
 
-|        Nombre        |                                           Descripción                                            |        Ejemplo         |
+|        Nombre        |                                           Description                                            |        Ejemplo         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
 |      userKey       |              Identificador único del usuario en el almacenamiento de datos. (Clave suplente).               |          123           |
 |     deviceKey      |                      Identificador único del dispositivo en el almacenamiento de datos.                      |          123           |

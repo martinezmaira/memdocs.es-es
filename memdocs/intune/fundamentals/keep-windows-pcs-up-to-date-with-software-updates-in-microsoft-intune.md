@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a1a5b291135f5c6d42a47377d14d6d3d4f13411
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362334"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Mantener los equipos Windows al día con las actualizaciones de software de Microsoft Intune
@@ -57,15 +57,15 @@ En la tabla siguiente se muestran los valores que puede configurar en la directi
 
   |Configuración de directiva|Detalles|
     |------------------|--------------------|
-    |**Frecuencia de detección de la aplicación y la actualización (horas)** |Especifica la frecuencia (de 8 a 22 horas) con que Intune comprueba si hay nuevas actualizaciones y aplicaciones.<br /><br />Valor recomendado: **8** horas.|
-    |**Instalación de actualizaciones y aplicaciones automatizada o con confirmación** |Especifica si las actualizaciones se instalan automáticamente o si se pregunta al usuario antes de la instalación. Además, esta configuración permite programar la instalación de actualizaciones y aplicaciones.<br /><br />La opción **Instalar actualizaciones y aplicaciones automáticamente según la programación** instala las actualizaciones y aplicaciones mediante la programación especificada.<br /><br />Como configuración de directiva dependiente, **Usar mantenimiento automático para equipos Windows**  especifica que se instalan las actualizaciones y aplicaciones con la ventana de mantenimiento automático de Windows.<br /><br />La opción **Solicitar al usuario la instalación** solicita al usuario que instale las actualizaciones cuando están listas.<br /><br />Valores recomendados:<br /><br />Seleccionar **Instalar actualizaciones y aplicaciones automáticamente según la programación**<br /><br />**Día programado: cada día**<br /><br />**Hora programada: 3:00 a.m.**<br /><br />Seleccionar **Usar mantenimiento automático para equipos Windows**|
+    |**Frecuencia de detección de la aplicación y la actualización (horas)** |Especifica la frecuencia (de 8 a 22 horas) con que Intune comprueba si hay nuevas actualizaciones y aplicaciones.<br /><br />Valor recomendado: **8** horas.|
+    |**Instalación de actualizaciones y aplicaciones automatizada o con confirmación** |Especifica si las actualizaciones se instalan automáticamente o si se pregunta al usuario antes de la instalación. Además, esta configuración permite programar la instalación de actualizaciones y aplicaciones.<br /><br />La opción **Instalar actualizaciones y aplicaciones automáticamente según la programación** instala las actualizaciones y aplicaciones mediante la programación especificada.<br /><br />Como configuración de directiva dependiente, **Usar mantenimiento automático para equipos Windows**  especifica que se instalan las actualizaciones y aplicaciones con la ventana de mantenimiento automático de Windows.<br /><br />La opción **Solicitar al usuario la instalación** solicita al usuario que instale las actualizaciones cuando están listas.<br /><br />Valores recomendados:<br /><br />Seleccionar **Instalar actualizaciones y aplicaciones automáticamente según la programación**<br /><br />**Día programado: todos los días**<br /><br />**Tiempo programado: 3:00**<br /><br />Seleccionar **Usar mantenimiento automático para equipos Windows**|
     |**Permitir la instalación inmediata de actualizaciones que no interrumpan Windows** |La opción **Permitir** instala inmediatamente las actualizaciones tras su descarga, excepto las actualizaciones que interrumpan o reinicien Windows. Esas actualizaciones se instalan según el valor configurado en **Instalación automática o solicitada de actualizaciones** .<br /><br />La opción **No permitir** instala las actualizaciones según el valor configurado en **Instalación automática o solicitada de actualizaciones**.<br /><br />Valor recomendado: **Permitir** |
-    |**Retraso de reinicio de Windows tras la instalación de aplicaciones y actualizaciones programadas (minutos)** |Especifica el tiempo de espera (de 1 a 30 minutos) para reiniciar Windows después de la instalación programada de actualizaciones y aplicaciones.<br /><br />Valor recomendado: **15 minutos** |
-    |**Retraso después del reinicio de Windows para iniciar la instalación de aplicaciones y actualizaciones programadas que faltan (minutos)** |Especifica el tiempo que se esperará (de 1 a 60 minutos) para iniciar la instalación de actualizaciones y aplicaciones tras el reinicio de Windows cuando no se realiza una actualización programada.<br /><br />Valor recomendado: **5 minutos**|
+    |**Retraso de reinicio de Windows tras la instalación de aplicaciones y actualizaciones programadas (minutos)** |Especifica el tiempo de espera (de 1 a 30 minutos) para reiniciar Windows después de la instalación programada de actualizaciones y aplicaciones.<br /><br />Valor recomendado: **15 minutos** |
+    |**Retraso después del reinicio de Windows para iniciar la instalación de aplicaciones y actualizaciones programadas que faltan (minutos)** |Especifica el tiempo que se esperará (de 1 a 60 minutos) para iniciar la instalación de actualizaciones y aplicaciones tras el reinicio de Windows cuando no se realiza una actualización programada.<br /><br />Valor recomendado: **5 minutos**|
     |**Permitir que el usuario que ha iniciado sesión controle el reinicio de Windows tras la instalación de aplicaciones y actualizaciones programadas** |Especifica si el usuario que ha iniciado sesión puede retrasar el reinicio de Windows (si está establecido en **Sí**) o solo recibir una notificación del reinicio automático de Windows (si está establecido en **No**). Si ningún usuario ha iniciado sesión cuando se completa la instalación de actualizaciones o aplicaciones programadas, Windows se reiniciará automáticamente cuando sea necesario. Si se establece en **No**, de manera predeterminada el tiempo que transcurre antes de que se reinicie Windows es 5 minutos.<br /><br />Valor recomendado: **Sí**|
     |**Solicitar al usuario que reinicie Windows durante las actualizaciones obligatorias del agente cliente de Microsoft Intune** |Especifica si se pide a los usuarios conectados que reinicien Windows cuando una actualización obligatoria del cliente de Intune requiere que se reinicie Windows.<br /><br />Valor recomendado: **Sí**|
     |**Programación de instalación de actualizaciones obligatorias del agente cliente de Microsoft Intune** |Programa cuándo se debe realizar la instalación de las actualizaciones del cliente.<br /><br />Valor recomendado: no configurado|
-    |**Retraso entre solicitudes para reiniciar Windows tras la instalación de actualizaciones y aplicaciones programadas (minutos)** |Especifica la frecuencia (entre 1 y 1440 minutos) con la que se solicita al usuario que reinicie Windows cuando se instala una actualización o aplicación que requiera el reinicio de Windows y el usuario retrase el reinicio.<br /><br />Valor recomendado: **30 minutos** |
+    |**Retraso entre solicitudes para reiniciar Windows tras la instalación de actualizaciones y aplicaciones programadas (minutos)** |Especifica la frecuencia (entre 1 y 1440 minutos) con la que se solicita al usuario que reinicie Windows cuando se instala una actualización o aplicación que requiera el reinicio de Windows y el usuario retrase el reinicio.<br /><br />Valor recomendado: **30 minutos** |
 
 ## <a name="update-software-made-by-microsoft"></a>Actualización de software de Microsoft
 La actualización del software de Microsoft no requiere mucho trabajo por parte del usuario. Sin embargo, antes de empezar hay dos cosas que debe configurar:
@@ -80,7 +80,7 @@ Utilice los dos procedimientos siguientes como ayuda para preparar el uso de las
 
 1. En la [consola de administración de Microsoft Intune](https://manage.microsoft.com/), elija **Administración** &gt; **Actualizaciones**.
 
-2. En la página **Configuración del servicio: actualizaciones**, en la lista **Categoría de productos**, seleccione las categorías de actualización que quiera que estén disponibles para los equipos. Tenga en cuenta que las actualizaciones más comunes están seleccionadas de forma predeterminada.
+2. En la página **Configuración del servicio: Actualizaciones** , en la lista **Categoría de productos** , seleccione las categorías de actualización que quiera que estén disponibles para los equipos. Tenga en cuenta que las actualizaciones más comunes están seleccionadas de forma predeterminada.
 
     > [!IMPORTANT]
     > Para asegurarse de que los equipos reciben las actualizaciones aprobadas por el administrador, la configuración de directiva de grupo de Windows Server Update Services (WSUS) **Especificar la ubicación del servicio Microsoft Update en la intranet** no se debe aplicar a los equipos inscritos con Intune.
@@ -93,7 +93,7 @@ Utilice los dos procedimientos siguientes como ayuda para preparar el uso de las
 
 1. En la [consola de administración de Microsoft Intune](https://manage.microsoft.com/), elija **Administración** &gt; **Actualizaciones**.
 
-2. En la sección **Reglas de aprobación automática** de la pagina **Configuración del servidor: actualizaciones**, elija **Nueva**.
+2. En la sección **Reglas de aprobación automática** de la página **Configuración del servidor: Actualizaciones**, seleccione **Nuevo**.
 
 3. En la página **General** del asistente para Crear regla de aprobación automática, escriba un nombre y, opcionalmente, una descripción para la regla.
 
@@ -114,7 +114,7 @@ Utilice los dos procedimientos siguientes como ayuda para preparar el uso de las
 
 7. En la página **Resumen**, revise los valores de configuración de la nueva regla y, después, seleccione **Finalizar**.
 
-La nueva regla se muestra en la sección **Reglas de aprobación automática** de la página **Configuración del servicio: actualizaciones**.
+La nueva regla se muestra en la sección **Reglas de aprobación automática** de la página **Configuración de servicio: Actualizaciones** .
 
 > [!NOTE]
 > Cuando se crea una regla de aprobación automática, la regla solo aprueba futuras actualizaciones, no las actualizaciones previas que ya existan en Intune. Para aprobar estas actualizaciones debe ejecutar la regla de aprobación automática.
@@ -136,7 +136,7 @@ La nueva regla se muestra en la sección **Reglas de aprobación automática** d
         > Eliminar una regla no afecta a las actualizaciones anteriores que se aprobaron mediante la regla eliminada.
 
 ## <a name="update-software-not-made-by-microsoft"></a>Actualizar software de otros fabricantes
-Puede implementar actualizaciones de software que no sea de Microsoft. Para ello debe usar el asistente para **Cargar actualización** , a fin de colocar la actualización en su espacio de almacenamiento en nube. Una vez hecho esto, se puede aprobar o rechazar la actualización, igual que en el caso del software de Microsoft.
+Puede implementar actualizaciones de software que no sea de Microsoft. Para ello debe usar el asistente para **Cargar actualización**, a fin de colocar la actualización en su espacio de almacenamiento en nube. Una vez hecho esto, se puede aprobar o rechazar la actualización, igual que en el caso del software de Microsoft.
 
 ### <a name="to-upload-and-configure-a-third-party-update"></a>Para cargar y configurar una actualización de otro fabricante
 
@@ -208,7 +208,7 @@ Al seleccionar una actualización de la lista estarán disponibles otros comando
 |Tarea|Detalles|
 |--------|--------------------|
 |**Ver propiedades**|Muestra información detallada de la actualización, como el número de equipos a los que se puede aplicar.|
-|**Editarar**|Sólo para actualizaciones de otros fabricantes. Permite editar las propiedades de la actualización.|
+|**Editar**|Sólo para actualizaciones de otros fabricantes. Permite editar las propiedades de la actualización.|
 |**Aprobar**|Aprueba la actualización seleccionada y permite configurar los grupos en los que se va a implementar. Para obtener más información, vea el procedimiento **Para aprobar actualizaciones** de este tema.|
 |**Rechazar**|Quita las aprobaciones anteriores de la actualización y oculta la actualización en las vistas predeterminadas. Además, se eliminarán los datos de informe de la actualización.<br /><br />Si posteriormente desea localizar una actualización rechazada, en la página **Todas las actualizaciones** establezca el filtro en **Rechazada**. Puede aprobar esta actualización si es necesario.<br /><br />Si una actualización ha sido rechazada porque la actualización había caducado en Microsoft Update, no se podrá aprobar esa actualización en la consola de administración de Intune.<br /><br />Si elimina una directiva de actualizaciones implementada en los equipos, los valores de esa configuración de directiva de actualizaciones se restablecen a los valores del estado predeterminado del sistema operativo instalado en los equipos.|
 |**Eliminar**|Sólo para actualizaciones de otros fabricantes. Elimina la actualización seleccionada.|

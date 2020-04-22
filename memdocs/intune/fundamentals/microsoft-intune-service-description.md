@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358642"
 ---
 # <a name="microsoft-intune-service-description"></a>Descripción del servicio Microsoft Intune
@@ -56,7 +56,7 @@ Dado que el ecosistema de administración de dispositivos móviles cambia con fr
 
 - [Novedades de Microsoft Intune](whats-new.md). Este tema se actualiza con la actualización mensual del servicio y semanalmente cuando, por ejemplo, se publican aplicaciones, como la aplicación del portal de empresa.
 
-- También se anunciarán actualizaciones importantes en el Centro de mensajes del [Centro de administración de Microsoft 365](https://admin.microsoft.com/). Si instala la [aplicación móvil complementaria de Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), podrá recibir notificaciones en su dispositivo móvil. Obtenga más información sobre cómo trabajar con el [Centro de mensajes de Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- También se anunciarán actualizaciones importantes en el Centro de mensajes del [Centro de administración de Microsoft 365](https://admin.microsoft.com/). Si instala la [aplicación móvil complementaria de administración de Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), podrá recibir notificaciones en su dispositivo móvil. Obtenga más información sobre cómo trabajar con el [Centro de mensajes de Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Algunas sugerencias útiles:
 
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>Compatibilidad con idiomas
-Intune se ejecuta en Azure Portal, que admite los siguientes idiomas: alemán, checo, chino (simplificado), chino (tradicional), coreano, español, francés, húngaro, inglés, italiano, japonés, neerlandés, polaco, portugués (Brasil), portugués (Portugal), ruso, sueco y turco.
+Intune se ejecuta en Azure Portal que admite los siguientes idiomas: chino (simplificado), chino (tradicional), checo, neerlandés, inglés, alemán, húngaro, italiano, japonés, portugués (Brasil), portugués (Portugal), ruso, español, inglés, francés, coreano, polaco, sueco y turco.
 
 La consola de administración de Intune y las experiencias móviles de usuario admiten danés, finés, griego, noruego y rumano, además de todos los idiomas admitidos en Azure Portal.
 

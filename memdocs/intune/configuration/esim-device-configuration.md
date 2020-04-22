@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086991"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurar perfiles de telefonía móvil eSIM en Intune: versión preliminar pública
@@ -37,7 +37,7 @@ En Intune, puede importar códigos de activación de un solo uso proporcionados 
 
 Para implementar eSIM en los dispositivos mediante Intune, se necesita lo siguiente:
 
-- **Dispositivos compatibles con eSIM**, como Surface LTE: vea si [el dispositivo admite eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). O bien, vea una lista de [algunos de los dispositivos compatibles con eSIM conocidos](#esim-capable-devices) (en este artículo).
+- **Dispositivos compatibles con eSIM**, como Surface LTE: vea [si el dispositivo admite eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). O bien, vea una lista de [algunos de los dispositivos compatibles con eSIM conocidos](#esim-capable-devices) (en este artículo).
 - **PC con Windows 10 Fall Creators Update** (1709 o posterior) inscrito y administrado mediante MDM por Intune.
 - **Códigos de activación** proporcionados por el operador de telefonía móvil. Estos códigos de activación de un solo uso se agregan a Intune y se implementan en los dispositivos compatibles con eSIM. Póngase en contacto con su operador de telefonía móvil para obtener los códigos de activación de eSIM.
 
@@ -77,7 +77,7 @@ El operador de telefonía móvil proporciona los códigos de activación de tele
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de telefonía móvil eSIM** > **Agregar**.
 3. Seleccione el archivo CSV que tenga los códigos de activación.
-4. Haga clic en **Aceptar** para guardar los cambios.
+4. Seleccione **Aceptar** para guardar los cambios.
 
 ### <a name="csv-file-requirements"></a>Requisitos del archivo CSV
 
@@ -148,7 +148,7 @@ Después de crear el perfil de dispositivo, Intune proporciona gráficos. Estos 
 
     Intune muestra el estado de entrega e instalación del código de activación destinado a los dispositivos.
 
-    - **Dispositivo no sincronizado:** el dispositivo de destino no ha contactado con Intune desde que se creó la directiva de implementación de eSIM.
+    - **Dispositivo no sincronizado**: el dispositivo de destino no ha contactado con Intune desde que se creó la directiva de implementación de eSIM.
     - **Activación pendiente**: un estado transitorio cuando Intune está instalando de forma activa el código de activación en el dispositivo.
     - **Activo**: instalación correcta del código de activación.
     - **Error de activación**: no se pudo instalar el código de activación: vea la guía de solución de problemas.
@@ -193,7 +193,7 @@ El perfil de eSIM también se quita cuando el usuario [retira](../remote-actions
 - Asegúrese de que el archivo .csv tiene el formato apropiado. Confirme que el archivo no incluye códigos duplicados, varios operadores de telefonía móvil ni otros planes de datos. Recuerde que cada archivo debe ser único para un operador de telefonía móvil y un plan de datos móviles.
 - Cree un grupo de dispositivos estáticos de Azure AD que solo incluya los dispositivos de eSIM de destino.
 - Si hay un problema con el estado de implementación, compruebe lo siguiente:
-  - **El archivo no tiene el formato adecuado**: Consulte **Paso 1: Agregar códigos de activación de telefonía móvil** (en este artículo) sobre cómo aplicar el formato correcto al archivo.
+  - **El archivo no tiene el formato adecuado**: vea **Paso 1: Agregar códigos de activación de telefonía móvil** (en este artículo) sobre cómo aplicar el formato correcto al archivo.
   - **Error de activación de telefonía móvil, póngase en contacto con el operador de telefonía móvil**: no se puede activar el código de activación dentro de su red. O bien, se ha producido un error en la descarga del perfil y la activación de telefonía móvil.
 
 ## <a name="next-steps"></a>Pasos siguientes

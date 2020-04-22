@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327102"
 ---
 # <a name="categorize-devices-into-groups"></a>Clasificar dispositivos en grupos
@@ -44,7 +44,7 @@ Puede crear todas las categorías de dispositivo que quiera. Por ejemplo:
 
 ## <a name="how-to-configure-device-categories"></a>Configuración de las categorías de dispositivos
 
-### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Paso 1: Creación de categorías de dispositivos en la hoja de Intune de Azure Portal
+### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Paso 1: Creación de categorías de dispositivos en la hoja de Intune del portal de Azure
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Categorías de dispositivos**.
 2. En la página **Categorías de dispositivos**, elija **Crear** para agregar una nueva categoría.
 3. En la hoja **Crear categoría de dispositivos**, escriba un **Nombre** para la nueva categoría y una **Descripción** opcional.
@@ -52,7 +52,7 @@ Puede crear todas las categorías de dispositivo que quiera. Por ejemplo:
 
 Usará el nombre de la categoría de dispositivo al crear grupos de seguridad de Azure Active Directory (Azure AD) en el paso 2.
 
-### <a name="step-2-create-azure-active-directory-security-groups"></a>Paso 2: Creación de grupos de seguridad de Azure Active Directory
+### <a name="step-2-create-azure-active-directory-security-groups"></a>Paso 2: Crear grupos de seguridad de Azure Active Directory
 En este paso creará grupos dinámicos en Azure Portal según la categoría del dispositivo y el nombre de la categoría del dispositivo.
 
 Para continuar, consulte [Uso de atributos para crear reglas avanzadas](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) en la documentación de Azure AD.

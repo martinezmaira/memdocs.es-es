@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 368972acc1b3380b1adf9b21939adbca0dc1434c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346864"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>¿Qué ocurre si anula la inscripción del dispositivo Android de Intune?
@@ -42,6 +42,6 @@ Cuando anula la inscripción del dispositivo Android de Intune:
 
 Si el dispositivo está configurado solo para recibir correo electrónico de empresa y anula la inscripción del dispositivo, el dispositivo ya no aparecerá en el Portal de empresa.
 
-Para obtener instrucciones sobre cómo anular la inscripción, vea [Anular la inscripción del dispositivo de Intune mediante la aplicación Portal de empresa](unenroll-your-device-from-intune-android.md).
+Para obtener instrucciones sobre cómo anular la inscripción, consulte [Anular la inscripción del dispositivo de Intune mediante la aplicación Portal de empresa](unenroll-your-device-from-intune-android.md).
 
 ¿Necesita ayuda? Póngase en contacto con el equipo de soporte técnico de su empresa (visite el [sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980) para obtener la información de contacto), o escriba al <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">equipo de Microsoft Android</a>.

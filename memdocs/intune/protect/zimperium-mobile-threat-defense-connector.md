@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed623abeb602e599866af7b7249756edd87d5a29
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349204"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Conector Mobile Threat Defense de Zimperium con Intune
@@ -31,7 +31,7 @@ Puede controlar el acceso desde dispositivos móviles a recursos corporativos me
 
 Se pueden configurar directivas de acceso condicional según la evaluación de riesgos de Zimperium habilitada mediante las directivas de cumplimiento de dispositivos de Intune para dispositivos inscritos, que se pueden usar para permitir o bloquear dispositivos que no cumplan los requisitos y, así, evitar que accedan a recursos corporativos en función de las amenazas detectadas. En el caso de los dispositivos no inscritos, puede usar directivas de protección de aplicaciones para aplicar un bloqueo o un borrado selectivo en función de las amenazas detectadas.
 
-## <a name="supported-platforms"></a>Plataformas compatibles
+## <a name="supported-platforms"></a>Plataformas admitidas
 
 - **Android 4.1 y versiones posteriores**
 
@@ -80,7 +80,7 @@ Cuando se detectan aplicaciones malintencionadas, como malware, en los dispositi
 > [!div class="mx-imgBorder"]
 > ![Imagen conceptual de aplicaciones malintencionadas detectadas](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 > [!div class="mx-imgBorder"]
 > ![Imagen conceptual del acceso concedido tras la corrección](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
@@ -94,12 +94,12 @@ Detecte amenazas para la red, como **ataques de tipo Man-in-the-middle**, y prot
 > [!div class="mx-imgBorder"]
 > ![Bloquear el acceso de red a través de Wi-Fi](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 > [!div class="mx-imgBorder"]
 > ![Acceso concedido tras la corrección](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Control del acceso a SharePoint Online basado en amenazas a la red
 
 Detecte amenazas para la red, como **ataques de tipo Man-in-the-middle**, y evite la sincronización de archivos corporativos según el riesgo del dispositivo.
 
@@ -108,7 +108,7 @@ Detecte amenazas para la red, como **ataques de tipo Man-in-the-middle**, y evit
 > [!div class="mx-imgBorder"]
 > ![Bloqueo de SharePoint Online cuando se detectan amenazas de red](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 > [!div class="mx-imgBorder"]
 > ![Acceso concedido tras la corrección para el ejemplo de SharePoint](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)

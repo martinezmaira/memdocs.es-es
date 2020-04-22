@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 93bacecf2829b1e7119f909c14ce9ab44a8f6d2f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349906"
 ---
 # <a name="troubleshoot-ndes-reporting-of-certificate-deployments-in-microsoft-intune"></a>Solución de problemas de notificación de NDES de implementaciones de certificado en Microsoft Intune

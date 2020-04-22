@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9bf88dd3a30caeb57b10e0c88c6954d1479d4f2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349412"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Conector Wandera Mobile Threat Defense con Intune  
@@ -43,7 +43,7 @@ La directiva de cumplimiento de Intune incluye una regla para MTD basada en la e
 
 Para los dispositivos que no son compatibles, puede bloquearse el acceso a recursos como Office 365. Los usuarios de dispositivos bloqueados reciben instrucciones de la aplicación de Wandera para resolver el problema y volver a obtener acceso.
 
-## <a name="supported-platforms"></a>Plataformas compatibles  
+## <a name="supported-platforms"></a>Plataformas admitidas  
 
 Las siguientes plataformas son compatibles con Wandera cuando se inscriben en Intune:
 
@@ -90,9 +90,9 @@ Detecte amenazas para la red como ataques de tipo "Man in the middle" y proteja 
 
 *Acceso concedido tras la corrección*:  
 
-![Acceso concedido tras la corrección](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+![Acceso concedido tras la solución](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
-## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red
+## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Control del acceso a SharePoint Online basado en amenazas a la red
 
 Detecte amenazas en la red como ataques de tipo "Man in the middle" e impida la sincronización de archivos corporativos en función del riesgo del dispositivo.
 

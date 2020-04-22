@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326925"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configuración de la inscripción de dispositivos Windows
@@ -67,10 +67,10 @@ Cuando los usuarios estándar inician sesión con sus credenciales de Azure AD, 
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Simplificación de la inscripción de Windows sin Azure AD Premium
 Para simplificar la inscripción, cree un alias de servidor de nombres de dominio (DNS, tipo de registro CNAME) que redirija las solicitudes de inscripción a los servidores de Intune. De lo contrario, los usuarios que intenten conectarse a Intune deberán escribir el nombre del servidor de Intune durante la inscripción.
 
-**Paso 1: Creación de CNAME** (opcional)<br>
+**Paso 1: Crear CNAME** (opcional)<br>
 Cree registros de recursos DNS CNAME para el dominio de su empresa. Por ejemplo, si el sitio web de la empresa es contoso.com, debe crear un registro CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.
 
-Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
+Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, los usuarios deberán escribir manualmente el nombre del servidor MDM, enrollment.manage.microsoft.com.
 
 |Tipo|Nombre de host|Apunta a|TTL|
 |----------|---------------|---------------|---|
@@ -101,7 +101,7 @@ EnterpriseEnrollment-s.manage.microsoft.com es el FQDN preferido para la inscrip
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>No se admiten métodos alternativos de redireccionamiento
 No se admite el uso de un método que no sea la configuración de CNAME. Por ejemplo, no se admite el uso de un servidor proxy para redirigir enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc a enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc o manage.microsoft.com/EnrollmentServer/Discovery.svc.
 
-**Paso 2: Comprobación de CNAME** (opcional)<br>
+**Paso 2: Comprobar CNAME** (opcional)<br>
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Windows** > **Inscripción de Windows** > **Validación de CNAME**.
 2. En el cuadro **Dominio**, escriba el sitio web de empresa y, a continuación, haga clic en **Probar**.
 
@@ -116,7 +116,7 @@ Para instrucciones sobre inscripción del usuario final, consulte [Inscriba el d
 >[!IMPORTANT]
 > Si no tiene habilitada la inscripción de MDM automática, pero tiene dispositivos Windows 10 unidos a Azure AD, verá dos registros en la consola de Intune tras la inscripción. Esto se puede evitar; para ello, asegúrese de que los usuarios con dispositivos unidos a Azure AD se dirigen a **Cuentas** > **Obtener acceso a trabajo o escuela** y usan **Conectar** para conectarse con la misma cuenta. 
 
-Para más información sobre las tareas del usuario final, consulte [Cómo presentar Microsoft Intune a los usuarios finales](../fundamentals/end-user-educate.md).
+Para más información sobre las tareas del usuario final, vea [Recursos sobre la experiencia del usuario final con Microsoft Intune](../fundamentals/end-user-educate.md).
 
 ## <a name="registration-and-enrollment-cnames"></a>CNAME de registro e inscripción
 Azure Active Directory tiene un CNAME diferente que usa para el registro de dispositivos iOS/iPadOS, Android y Windows. El acceso condicional de Intune requiere el registro de dispositivos, en una acción denominada también "unirse al área de trabajo". Si piensa usar el acceso condicional, también debe configurar el CNAME EnterpriseRegistration para cada nombre de empresa que tenga.

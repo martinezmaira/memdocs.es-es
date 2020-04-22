@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b751b3f52c1a0cd0f0a1f259e79e6917a0438d9b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347111"
 ---
 # <a name="you-need-to-update-your-android-device-to-install-the-outlook-app"></a>Debe actualizar el dispositivo Android para instalar la aplicación Outlook
@@ -32,7 +32,7 @@ ms.locfileid: "79347111"
 La aplicación Outlook ayuda a millones de usuarios a conectar todas sus cuentas de correo, todos sus calendarios y todos sus archivos en un lugar conveniente para los dispositivos [Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook).
 
 >[!NOTE]
-> ¿Busca las instrucciones para dispositivos iOS? [Obtenga más información](update-device-outlook-ios.md).
+> ¿Busca las instrucciones para dispositivos iOS? [Obtenga más información en](update-device-outlook-ios.md).
 
 A veces, se puede producir un error durante la instalación de una aplicación, especialmente si el dispositivo no está actualizado. Si ve un mensaje similar a este, debe actualizar el dispositivo Android antes de intentarlo de nuevo.
 

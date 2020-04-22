@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360020"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Creación de un informe de Intune desde la fuente de OData con Power BI
@@ -47,7 +47,7 @@ El uso de los términos *entidad* y *tabla* puede llevar a confusión. Se puede 
 
 ## <a name="install-power-bi-desktop"></a>Instalar Power BI Desktop
 
-Instale la versión más reciente de Power BI Desktop. Puede descargar Power BI Desktop desde: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Instale la versión más reciente de Power BI Desktop. Puede descargar Power BI Desktop desde [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Conectarse a la fuente OData para el Almacén de datos de Intune para su inquilino
 

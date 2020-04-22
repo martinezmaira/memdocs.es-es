@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335112"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Inscripción de dispositivos Windows en Portal de empresa de Intune  
@@ -62,8 +62,8 @@ Los pasos de inscripción varían para las distintas versiones de los dispositiv
 
 4. Si la versión es  
 
-    * __1607 o posterior__: inscriba el dispositivo mediante la ruta [**Configuración** > **Cuenta** > **Obtener acceso a trabajo o escuela**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 o anterior__: inscriba el dispositivo mediante la ruta [**Configuración** > **Cuenta** > **Sus cuentas**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 o posteriores__: inscriba el dispositivo mediante la ruta [**Configuración** > **Cuenta** > **Obtener acceso a trabajo o escuela**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 o anteriores__: inscriba el dispositivo mediante la ruta [**Configuración** > **Cuenta** > **Sus cuentas**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Dispositivos Windows 10 Mobile
 
@@ -72,8 +72,8 @@ Los pasos de inscripción varían para las distintas versiones de los dispositiv
 3. En __Información del dispositivo__, busque la __Versión__.  
 4. Si la versión es  
 
-    * __1607 o posterior__: inscriba el dispositivo mediante la ruta [**Configuración** > **Obtener acceso a trabajo o escuela**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 o anterior__: inscriba el dispositivo mediante la ruta [**Configuración** > **Cuentas**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 o posteriores__: inscriba el dispositivo mediante la ruta [**Configuración** > **Obtener acceso a trabajo o escuela**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 o anteriores__: inscriba el dispositivo mediante la ruta [**Configuración** > **Cuentas**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Inscribir dispositivos que no son Windows 10  
 Use los siguientes artículos para inscribir otros dispositivos compatibles con Windows a través del sitio web Portal de empresa:   

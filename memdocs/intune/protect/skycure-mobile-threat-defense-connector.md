@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275091"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Conector de Symantec Endpoint Protection Mobile
@@ -42,7 +42,7 @@ Puede habilitar la evaluación de riesgos de SEP Mobile mediante directivas de c
 > [!NOTE]
 > Este proveedor de Mobile Threat Defense no es compatible con dispositivos no inscritos.
 
-## <a name="supported-platforms"></a>Plataformas compatibles
+## <a name="supported-platforms"></a>Plataformas admitidas
 
 - **Android 4.1 y versiones posteriores**
 
@@ -90,7 +90,7 @@ Cuando se detectan aplicaciones malintencionadas, como malware, en los dispositi
 
 ![Imagen conceptual de aplicaciones malintencionadas detectadas](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 ![Imagen de Acceso concedido tras la corrección después de detectar aplicaciones malintencionadas](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
@@ -102,11 +102,11 @@ Detecte amenazas para la red, como **ataques de tipo Man-in-the-middle**, y prot
 
 ![Bloquear el acceso de red a través de Wi-Fi](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 ![Acceso concedido tras la solución](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Control del acceso a SharePoint Online basado en amenazas a la red
 
 Detecte amenazas para la red, como **ataques de tipo Man-in-the-middle**, y evite la sincronización de archivos corporativos según el riesgo del dispositivo.
 
@@ -114,7 +114,7 @@ Detecte amenazas para la red, como **ataques de tipo Man-in-the-middle**, y evit
 
 ![Bloqueo de SharePoint Online cuando se detectan amenazas a la red](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
-*Acceso concedido tras la corrección:*
+*Acceso concedido tras la solución:*
 
 ![Acceso concedido tras la solución](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 

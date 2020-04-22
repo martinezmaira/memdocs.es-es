@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233417"
 ---
 # <a name="what-is-device-enrollment"></a>¿Qué es la inscripción de dispositivos?
@@ -61,7 +61,7 @@ La aplicación Microsoft Intune está pensada para usarse en los dispositivos An
 Se pueden inscribir los siguientes dispositivos con Portal de empresa:  
 
 - Dispositivos Windows
-  - Windows 10 Mobile
+  - Windows 10 Móvil
   - Windows 10 Escritorio
   - Windows Phone 8.1
   - Windows 8.1

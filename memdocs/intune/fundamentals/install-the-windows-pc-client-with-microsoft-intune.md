@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358967"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalar el cliente de software de Intune en equipos con Windows
@@ -126,7 +126,7 @@ Si a los usuarios se les ha asignado una licencia de Intune y la entidad de MDM 
 
 - A los usuarios de equipos con Windows 10 o Windows 8.1 se les muestran dos opciones de inscripción:
 
-  - **Inscribir el equipo como un dispositivo móvil**: los usuarios eligen el botón **Vea cómo inscribir dispositivos** y se les dirige a las instrucciones sobre cómo inscribir sus equipos como un dispositivo móvil. Este botón se muestra claramente, ya que la inscripción de MDM se considera la opción de inscripción preferida y predeterminada. En cambio, la opción de MDM no se aplica a este tema, que trata solo la instalación del software cliente.
+  - **Inscribir el equipo como un dispositivo móvil**: los usuarios pulsan el botón **Cómo inscribirse** y se les dirige a las instrucciones sobre cómo inscribir sus equipos como un dispositivo móvil. Este botón se muestra claramente, ya que la inscripción de MDM se considera la opción de inscripción preferida y predeterminada. En cambio, la opción de MDM no se aplica a este tema, que trata solo la instalación del software cliente.
   - **Inscribir el equipo con el software cliente de Intune**: necesitará indicar a los usuarios que seleccionen el vínculo **Haga clic aquí para descargar**, que les guía a través de la instalación del software cliente.
 
 En la siguiente tabla se resumen las opciones.
@@ -252,7 +252,7 @@ Compruebe "%ProgramFiles%\Microsoft\OnlineManagement" y asegúrese de que solo s
 
 - AgentInstaller
 - Registros
-- Actualizaciones
+- Updates
 - Común
 
 ### <a name="remove-the-onlinemanagement-folder"></a>Quitar la carpeta OnlineManagement

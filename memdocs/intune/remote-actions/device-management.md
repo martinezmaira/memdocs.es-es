@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 98451e7ffd6aef9e5fb298af96b91074f39c383e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325264"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>¿Qué es la administración de dispositivos de Microsoft Intune?
@@ -66,7 +66,7 @@ Las acciones disponibles dependen de la plataforma y la configuración del dispo
   - [Buscar dispositivo](device-locate.md) (solo para iOS)
   - [Modo perdido](device-lost-mode.md) (solo para iOS)
   - [Examen rápido](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (solo Windows 10)
-  - [Control remoto en Android](teamviewer-support.md)
+  - [Control remoto para Android](teamviewer-support.md)
   - [Bloqueo remoto](device-remote-lock.md)
   - [Cambio de nombre de un dispositivo](device-rename.md)
   - [Restablecer el código de acceso](device-passcode-reset.md)
@@ -74,7 +74,7 @@ Las acciones disponibles dependen de la plataforma y la configuración del dispo
   - [Retirar](devices-wipe.md#retire)
   - [Actualizar la inteligencia de seguridad de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Restablecimiento del PIN de Windows 10](device-windows-pin-reset.md)
-  - [Borrar](devices-wipe.md#wipe)
+  - [Eliminación de datos](devices-wipe.md#wipe)
   - [Envío de notificaciones personalizadas](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android y iOS/iPadOS)
   - [Sincronización del dispositivo](device-sync.md)
 - [Acciones masivas de dispositivo](bulk-device-actions.md)

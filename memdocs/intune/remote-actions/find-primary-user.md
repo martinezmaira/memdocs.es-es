@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326194"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Búsqueda del usuario primario de un dispositivo de Intune
@@ -56,7 +56,7 @@ La propiedad del usuario primario se usa para asignar un usuario de Intune con l
 - El sitio web del usuario final.
 - Experiencias de los profesionales de TI, como las páginas de solución de problemas en Azure Portal. Estas páginas usan el usuario primario para asignar las cuentas de usuario a los dispositivos. 
 
-### <a name="company-portal-app"></a>Aplicación de portal de empresa
+### <a name="company-portal-app"></a>Aplicación Portal de empresa
 La aplicación Portal de empresa espera que la cuenta de usuario que inició sesión en Portal de empresa sea el usuario primario de dicho dispositivo. Si se asignó otro usuario como el usuario primario, la aplicación Portal de empresa muestra una advertencia:
 
 "Este dispositivo ya está asignado a un usuario de la organización. Póngase en contacto con el soporte técnico de la empresa para convertirse en el usuario primario del dispositivo. Puede seguir usando la aplicación Portal de empresa, pero con una funcionalidad limitada".

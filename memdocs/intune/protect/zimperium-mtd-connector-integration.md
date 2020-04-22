@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bb106e482beb7894c84f11d0994b43ba43eb302
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338388"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrar Zimperium con Intune
@@ -39,7 +39,7 @@ Antes de iniciar el proceso de integración de Zimperium con Intune, asegúrese 
 
 - Credenciales de administrador de Administrador global de Azure Active Directory para conceder los permisos siguientes:
 
-  - Iniciar sesión y leer el perfil de usuario
+  - Iniciar sesión y leer el perfil del usuario
 
   - Obtener acceso al directorio con el usuario que tiene la sesión iniciada
 
@@ -74,7 +74,7 @@ Para obtener más información sobre el consentimiento y las aplicaciones de Azu
 
 4. Seleccione **Add MDM** (Agregar MDM) y, luego, seleccione **Microsoft Intune** en la lista **MDM provider** (Proveedor MDM).
 
-5. Cuando haya establecido Microsoft Intune como servicio MDM, aparecerá la ventana **Configuración de Microsoft Intune**. A continuación, elija **Agregar Azure Active Directory** para cada opción: **zConsole de Zimperium** y **aplicaciones zIPS para iOS y Android** para autorizar a Zimperium para comunicarse con Intune y Azure AD a través del inicio de sesión único de Azure AD.
+5. Una vez que haya establecido Microsoft Intune como servicio MDM, aparecerá la ventana **Microsoft Intune Configuration** (Configuración de Microsoft Intune). Seleccione la opción **Add Azure Active Directory** (Agregar Azure Active Directory) para todas las opciones, **Zimperium zConsole** (consola zConsole de Zimperium) y **zIPS iOS and Android apps** (aplicaciones zIPS para iOS y Android), para autorizar a Zimperium para que se comunique con Intune y Azure AD mediante el inicio de sesión único de Azure AD.
 
     > [!IMPORTANT]  
     > Debe agregar la consola zConsole de Zimperium y las aplicaciones zIPS para iOS y Android para completar el proceso de integración con Intune.

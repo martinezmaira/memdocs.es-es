@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327206"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Obtener un certificado push MDM de Apple
@@ -51,7 +51,7 @@ Seleccione **Acepto** para conceder permiso a Microsoft para el envío de datos 
 ### <a name="step-2-download-the-intune-certificate-signing-request-required-to-create-an-apple-mdm-push-certificate"></a>Paso 2. Descargar la solicitud de firma de certificado de Intune necesaria para crear un certificado push MDM de Apple
 Seleccione **Descargue su CSR** para descargar y guardar localmente el archivo de solicitud. El archivo se usa para solicitar un certificado de relación de confianza desde el portal de certificados push de Apple.
 
-### <a name="step-3-create-an-apple-mdm-push-certificate"></a>Paso 3. Crear un certificado push MDM de Apple
+### <a name="step-3-create-an-apple-mdm-push-certificate"></a>Paso 3: Crear un certificado push MDM de Apple
 Seleccione **Crear el certificado push MDM** para ir al Portal de certificados push de Apple. Inicie sesión con el id. de Apple de su empresa y, después, haga clic en **Crear certificado**. Seleccione **Elegir archivo** y busque el archivo de solicitud de firma de certificado y, luego, elija **Cargar**. En la página de confirmación, elija **Descargar** para descargar el archivo de certificado (.pem) y guárdelo localmente.
 
 > [!NOTE]

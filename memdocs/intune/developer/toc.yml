@@ -1,6 +1,6 @@
 - name: Instrucciones para desarrolladores
   href: index.yml
-- name: Guías de procedimientos
+- name: Guías paso a paso
   expanded: true
   items:
     - name: Protección de aplicaciones con Intune App SDK

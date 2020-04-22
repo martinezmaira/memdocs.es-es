@@ -18,10 +18,10 @@ search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 227ed78b593ce10d47b9a1cdcc14dfbd58acdd93
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339519"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Trabajar con servidores proxy locales existentes

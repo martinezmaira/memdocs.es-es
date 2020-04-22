@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7b339941da247cf6bc5efd9f3fa9c598415ed0e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339909"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Representación de la duración del usuario en el Almacenamiento de datos de Microsoft Intune
@@ -39,14 +39,14 @@ Imaginemos que el 01/06/2017 se asigna una licencia al usuario **John Smith**. L
  
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| John Smith | FALSE | 01/06/2017 | 12/31/9999 | TRUE
+| John Smith | FALSE | 01/06/2017 | 31/12/9999 | TRUE
  
 John Smith deja la licencia el 25/07/2017. La tabla **Usuario** tiene las entradas siguientes. Los cambios en los registros existentes son `marked`. 
 
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 01/06/2017 | `07/26/2017` | `FALSE` 
-| John Smith | TRUE | 26/07/2017 | 12/31/9999 | TRUE 
+| John Smith | TRUE | 26/07/2017 | 31/12/9999 | TRUE 
 
 La primera fila indica que John Smith existió en Intune desde el 01/06/2017 al 25/07/2017. El segundo registro indica que el usuario se eliminó el 25/07/2017 y ya no existe en Intune.
 
@@ -56,7 +56,7 @@ Ahora imaginemos que se asigna una licencia nueva a John Smith el 31/08/2017. La
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 01/06/2017 | 26/07/2017 | FALSE 
 | John Smith | TRUE | 26/07/2017 | `08/31/2017` | `FALSE` 
-| John Smith | FALSE | 08/31/2017 | 12/31/9999 | TRUE 
+| John Smith | FALSE | 08/31/2017 | 31/12/9999 | TRUE 
  
 Una persona que desea ver el estado actual de todos los usuarios querría aplicar un filtro donde `IsCurrent = TRUE`. 
  

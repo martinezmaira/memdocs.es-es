@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 275939c4c97b25f7e9b2ab179a7491d47801e48e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355067"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Usar directivas para simplificar la administración de PC de Windows
@@ -38,7 +38,7 @@ Los usuarios ven el cliente de software de Intune como **Microsoft Intune Center
 
 - Obtener aplicaciones desde el portal de empresa.
 
-- Compruebe si hay actualizaciones.
+- Comprobar si hay actualizaciones.
 
 - Administrar Microsoft Intune Endpoint Protection.
 
@@ -48,12 +48,12 @@ Microsoft Intune Center se instala en todos los equipos administrados. En una di
 
 |Configuración de directiva|Detalles|
 |------------------|--------------------|
-|**Nombre**|El nombre del administrador del equipo.<br />Longitud máxima: 40 caracteres|
-|**Número de teléfono**|El número de teléfono del administrador del equipo.<br />Longitud máxima: 20 caracteres|
-|**Dirección de correo electrónico**|La dirección de correo electrónico del administrador del equipo.<br />Longitud máxima: 40 caracteres|
-|**Nombre del sitio web**|El nombre del sitio web de soporte para los usuarios.<br />>Longitud máxima: 40 caracteres|
-|**Dirección URL del sitio web**|La dirección URL del sitio web de soporte.<br />Longitud máxima: 150 caracteres|
-|**Notas**|Una nota que se muestra a los usuarios.<br />Longitud máxima: 120 caracteres|
+|**Nombre**|El nombre del administrador del equipo.<br />Longitud máxima: 40 caracteres|
+|**Número de teléfono**|El número de teléfono del administrador del equipo.<br />Longitud máxima: 20 caracteres|
+|**Dirección de correo electrónico**|La dirección de correo electrónico del administrador del equipo.<br />Longitud máxima: 40 caracteres|
+|**Nombre del sitio web**|El nombre del sitio web de soporte para los usuarios.<br />>Longitud máxima: 40 caracteres|
+|**Dirección URL del sitio web**|La dirección URL del sitio web de soporte.<br />Longitud máxima: 150 caracteres|
+|**Notas**|Una nota que se muestra a los usuarios.<br />Longitud máxima: 120 caracteres|
 
 Consulte los siguientes recursos para obtener información sobre las directivas y las opciones que puede configurar para equipos Windows:
 

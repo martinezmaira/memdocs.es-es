@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401484"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Inicio rápido: Prueba gratuita de Microsoft Intune
@@ -104,7 +104,7 @@ Para obtener más información sobre la entidad de MDM, vea [Establecer la entid
 Tal como se mencionó anteriormente, si quiere usar el dominio personalizado de su organización sin **.onmicrosoft.com**, puede cambiarlo en el Centro de administración de Microsoft 365. Puede agregar, comprobar y configurar un nombre de dominio personalizado siguiendo los pasos que se indican a continuación.  
 
 > [!IMPORTANT]
-> No es posible cambiar la parte del nombre de dominio **onmicrosoft.com** *inicial*, ni tampoco quitarla. Sin embargo, se puede agregar, comprobar o quitar los nombres de dominio *personalizado* usados en Intune para identificar claramente su negocio. Para obtener más información, vea [Configuración de un nombre de dominio personalizado](custom-domain-name-configure.md).
+> No es posible cambiar la parte del nombre de dominio *onmicrosoft.com* **inicial**, ni tampoco quitarla. Sin embargo, se puede agregar, comprobar o quitar los nombres de dominio *personalizado* usados en Intune para identificar claramente su negocio. Para obtener más información, vea [Configuración de un nombre de dominio personalizado](custom-domain-name-configure.md).
 
 1. Vaya al [Centro de administración de Microsoft 365](https://admin.microsoft.com) e inicie sesión con su cuenta de administrador.
 

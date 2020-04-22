@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334280"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Inicio rápido: Agregar y asignar una aplicación cliente
@@ -91,7 +91,7 @@ Debe instalar y usar la aplicación del Portal de empresa para instalar la aplic
 4. Haga clic en la aplicación que ha agregado mediante Intune. En este tutorial de inicio rápido ha agregado la aplicación **Conjunto de aplicaciones de Microsoft Office 365**.
 
     > [!NOTE]
-    > Si no ha logrado asignar ninguna aplicación al usuario de Intune, verá el siguiente mensaje: *El administrador de TI no puso a su disposición ninguna aplicación*.
+    > Si no ha logrado asignar ninguna aplicación al usuario de Intune, verá el siguiente mensaje: *Your IT administrator did not make any apps available to you.* (Su administrador de TI no ha puesto ninguna aplicación a su disposición.).
 
 5. Haga clic en **Instalar**.
 

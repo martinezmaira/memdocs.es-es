@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325300"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Usar ubicaciones (límite de red) en Intune
@@ -52,9 +52,9 @@ Para crear una directiva de cumplimiento basadas en ubicación:
 
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Directivas de cumplimiento** > **Ubicaciones** > **Crear**.
 
-2. Escriba las propiedades siguientes:  
+2. Complete las siguientes propiedades:  
 
-   - Necesario. Escriba un **Nombre** para la ubicación, como **Planta de fabricación** o **Nave 44-Protegida**.
+   - Obligatorio. Escriba un **Nombre** para la ubicación, como **Planta de fabricación** o **Nave 44-Protegida**.
    - Opcional. Escriba un **Rango IPv4** con notación CIDR (Enrutamiento entre dominios sin clase), como `aaa.bbb.ccc.ddd/n`.
    - Opcional. Escriba la dirección de **Puerta de enlace IPv4**, como `aaa.bbb.ccc.ddd`.
    - Opcional. Escriba la dirección de **Servidor DHCP IPv4**, como `aaa.bbb.ccc.ddd`.
@@ -77,7 +77,7 @@ Después de crear la directiva de cumplimiento, se aplica la acción predetermin
 
 En [Automatización del correo electrónico y adición de acciones para dispositivos no compatibles: Intune](actions-for-noncompliance.md) se proporcionan algunas indicaciones.
 
-## <a name="company-portal-app"></a>Aplicación de portal de empresa
+## <a name="company-portal-app"></a>Aplicación Portal de empresa
 
 Cuando el dispositivo está conectado a sus ubicaciones, el dispositivo se muestra como que es conforme en la aplicación Portal de empresa. Cuando el dispositivo no está conectado a una de las ubicaciones, el dispositivo se muestra como no conforme.
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084074"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Identificadores de lote para aplicaciones iOS y iPadOS integradas que se pueden usar en Intune
@@ -29,7 +29,7 @@ Al configurar características en dispositivos iOS/iPadOS, también puede agrega
 
 ## <a name="bundle-ids"></a>Identificador de lote
 
-| Identificador de lote                   | Nombre de la aplicación     | Publicador |
+| Identificador de lote                   | Nombre de la aplicación     | Publisher |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | Tienda de aplicaciones    | Apple     |
 | com.apple.store.Jolly       | Apple Store  | Apple     |
@@ -56,7 +56,7 @@ Al configurar características en dispositivos iOS/iPadOS, también puede agrega
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
 | com.apple.Maps              | Asignaciones         | Apple     |
-| com.apple.measure           | Medida      | Apple     |
+| com.apple.measure           | Measure      | Apple     |
 | com.apple.MobileSMS         | Mensajes     | Apple     |
 | com.apple.Music             | Música        | Apple     |
 | com.apple.news              | Noticias         | Apple     |

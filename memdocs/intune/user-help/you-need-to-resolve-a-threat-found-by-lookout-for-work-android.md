@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 535c9b6384c30473a0e4d6e849d41404acfea043
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346383"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Resolver una amenaza detectada por Lookout for Work  
@@ -52,7 +52,7 @@ Recupere el acceso a los recursos de la empresa cuando la aplicación Lookout fo
 
 Si instala una aplicación que Lookout for Work identifica como una amenaza, recibirá un mensaje similar al que se muestra en la captura de pantalla siguiente.  
 
-![Captura de pantalla de ejemplo en la que se muestra un mensaje de alerta de virus de Lookout sobre la interfaz de la aplicación Lookout for Work. Muestra tres botones: "Cerrar", "Más información" y "Desinstalar".](./media/lookout-virus-alert-android.png)  
+![Captura de pantalla de ejemplo en la que se muestra un mensaje de alerta de virus de Lookout sobre la interfaz de la aplicación Lookout for Work. Se muestran tres botones: "Cerrar", "Más información" y "Desinstalar".](./media/lookout-virus-alert-android.png)  
 
 Para recuperar el acceso que ha perdido al correo electrónico y los datos de la empresa, desinstale la aplicación cuestionable. Mientras la aplicación esté en el dispositivo, no podrá acceder a los recursos de la empresa.    
 

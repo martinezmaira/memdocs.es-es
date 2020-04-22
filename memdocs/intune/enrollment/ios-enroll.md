@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696521"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscripción de dispositivos iOS/iPadOS en Intune
@@ -81,13 +81,13 @@ Más información sobre [Inscripción de Apple Configurator](apple-configurator-
 
 ## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>Uso del Portal de empresa en dispositivos inscritos mediante ADE o Apple Configurator
 
-Los dispositivos configurados con afinidad de usuario pueden instalar y ejecutar la aplicación del Portal de empresa para descargar aplicaciones y administrar dispositivos. Después de recibir sus dispositivos, los usuarios deben realizar una serie de pasos adicionales para completar el Asistente de configuración e instalar la aplicación del portal de empresa.
+Los dispositivos configurados con afinidad de usuario pueden instalar y ejecutar la aplicación del Portal de empresa para descargar aplicaciones y administrar dispositivos. Una vez que los usuarios han recibido sus dispositivos, deben realizar una serie de pasos adicionales para completar el Asistente de configuración e instalar la aplicación del portal de empresa.
 
 La afinidad de usuario es necesaria para admitir lo siguiente:
 
 - Aplicaciones de administración de aplicaciones móviles (MAM)
 - Acceso condicional al correo electrónico y los datos de la empresa.
-- Aplicación de portal de empresa
+- Aplicación Portal de empresa
 
 ### <a name="how-users-enroll-corporate-owned-iosipados-devices-with-user-affinity"></a>Inscripción de dispositivos iOS/iPadOS de empresa con afinidad de usuario
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488016"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Validación de la configuración de la directiva de protección de aplicaciones en Microsoft Intune

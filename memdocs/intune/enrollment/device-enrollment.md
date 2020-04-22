@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80808192"
 ---
 # <a name="what-is-device-enrollment"></a>¿Qué es la inscripción de dispositivos?
@@ -65,13 +65,13 @@ De manera predeterminada, los dispositivos de todas las plataformas pueden inscr
 
 ## <a name="android-enrollment-methods"></a>Métodos de inscripción de Android
 
-| **Personal** | **Métodos de inscripción** | **Se requiere reinicio** | **Afinidad de usuario** | **Bloqueado** | **Detalles**|
+| **Personales** | **Métodos de inscripción** | **Se requiere reinicio** | **Afinidad de usuario** | **Bloqueado** | **Detalles**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Administrador de dispositivos Android**|**Iniciado por el usuario a través del Portal de empresa** | No | Sí | No | [Más información](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Perfil de trabajo de Android Enterprise**|**Iniciado por el usuario a través del Portal de empresa**| No | Sí | No | [Más información](android-work-profile-enroll.md)|
 
 
-| **Corporativo** | **Métodos de inscripción** | **Se requiere reinicio** | **Afinidad de usuario** | **Bloqueado** | **Detalles**|
+| **Corporativos** | **Métodos de inscripción** | **Se requiere reinicio** | **Afinidad de usuario** | **Bloqueado** | **Detalles**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Administrador de dispositivos Android**|**Iniciado por [usuarios degradados](#device-enrollment-manager) a través del Portal de empresa**| No | No | No |[Más información](device-enrollment-manager-enroll.md)|
 |**Administrador de dispositivos Android**|**(IMEI o SN declarado previamente) Iniciado por el usuario a través del Portal de empresa**| No | Sí | No | [Más información](corporate-identifiers-add.md)|

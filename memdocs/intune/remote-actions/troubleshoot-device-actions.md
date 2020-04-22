@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322333"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Solución de problemas de acciones de dispositivo en Intune
@@ -97,12 +97,12 @@ Porque una de las directivas de cumplimiento requiere un código de acceso.
 ## <a name="wipe-action"></a>Acción de borrado
 
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>No puedo reiniciar un dispositivo Windows 10 después de usar la acción de borrado
-Esto puede suceder si usa la opción **Borrar el dispositivo y sigue borrando incluso en caso de que este pierda energía. Si selecciona esta opción, tenga en cuenta que puede impedir que algunos dispositivos con Windows 10 vuelvan a iniciarse.** en un dispositivo Windows 10.
+Esto puede ocurrir si usa la opción **Borrar dispositivo y sigue borrando aunque los dispositivos pierdan potencia. Si selecciona esta opción, tenga en cuenta que esto puede impedir que algunos dispositivos Windows 10 vuelvan a iniciarse** en un dispositivo Windows 10.
 
 Esto puede deberse a que la instalación de Windows presenta daños importantes que impiden que el sistema operativo se vuelva a instalar. En tal caso, el proceso genera un error y deja el sistema en el [Entorno de recuperación de Windows]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>No puedo reiniciar un dispositivo cifrado con BitLocker después de usar la acción de borrado
-Esto puede suceder si usa la opción **Borrar el dispositivo y sigue borrando incluso en caso de que este pierda energía. Si selecciona esta opción, tenga en cuenta que puede impedir que algunos dispositivos con Windows 10 vuelvan a iniciarse.** en un dispositivo cifrado con BitLocker.
+Esto puede ocurrir si usa la opción **Borrar dispositivo y sigue borrando aunque los dispositivos pierdan potencia. Si selecciona esta opción, tenga en cuenta que esto puede impedir que algunos dispositivos Windows 10 vuelvan a iniciarse** en un dispositivo cifrado con BitLocker.
 
 Para resolver este problema, use medios de arranque para volver a instalar Windows 10 en el dispositivo.
 

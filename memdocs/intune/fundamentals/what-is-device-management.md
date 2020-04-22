@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696462"
 ---
 # <a name="device-management-overview"></a>Información general sobre la administración de dispositivos
@@ -41,7 +41,7 @@ La respuesta es [Microsoft Intune](what-is-intune.md). Intune ofrece administrac
 
 Intune se incluye con Microsoft Azure y Microsoft 365 y se integra con Azure Active Directory (Azure AD). Con Azure AD es más fácil controlar quién tiene acceso y a qué tiene acceso.
 
-## <a name="microsoft-intune"></a>Microsoft Intune
+## <a name="microsoft-intune"></a>Microsoft Intune
 
 Muchas organizaciones, como Microsoft, usan Intune para proteger datos de su propiedad a los que acceden los usuarios desde sus dispositivos móviles personales o de la empresa. Intune incluye directivas de configuración de dispositivos y aplicaciones, directivas de actualización de software y estados de instalación (gráficos, tablas e informes) con los que puede proteger y supervisar el acceso a los datos.
 
@@ -88,7 +88,7 @@ El [Centro de administración de Microsoft Endpoint Manager](https://go.microso
 
 En el centro de administración de dispositivos, puede:
 
-- [Inscripción de dispositivos](../enrollment/device-enrollment.md)
+- [Inscribir dispositivos](../enrollment/device-enrollment.md)
 - [Establecimiento del cumplimiento de los dispositivos](../protect/device-compliance-get-started.md)
 - [Administrar dispositivos](../remote-actions/device-management.md)
 - [Administración de aplicaciones](../apps/app-management.md)  

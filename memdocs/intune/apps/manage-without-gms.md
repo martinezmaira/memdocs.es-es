@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ce61f7af7c11fb579e34890700231ca2e59fb5cd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576859"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81267690"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Uso de Intune en entornos sin Google Mobile Services
 
@@ -33,7 +33,7 @@ Microsoft Intune usa Google Mobile Services (GMS) para comunicarse con el Porta
 
 ### <a name="for-users-outside-of-mainland-china"></a>Para usuarios fuera de la China continental 
 
-Si Google Play no está disponible, los dispositivos Android pueden descargar el  [Portal de empresa de Microsoft Intune para Android](../user-help/install-the-company-portal-app-android.md) y transferir localmente la aplicación. Cuando se instala este modo, la aplicación no recibe las actualizaciones o correcciones automáticamente. Debe asegurarse de actualizar y aplicar revisiones periódicamente a la aplicación de forma manual. 
+Si Google Play no está disponible, los dispositivos Android pueden descargar el  [Portal de empresa de Microsoft Intune para Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) y transferir localmente la aplicación. Cuando se instala este modo, la aplicación no recibe las actualizaciones o correcciones automáticamente. Debe asegurarse de actualizar y aplicar revisiones periódicamente a la aplicación de forma manual. 
 
 ### <a name="for-users-in-mainland-china"></a>Para usuarios de la China continental 
 
@@ -61,8 +61,8 @@ Los dispositivos Android inscritos emiten notificaciones a Intune cada 8 horas.
 Las siguientes tareas pueden tardar hasta 8 horas en completarse: 
 
 **Consola de Intune**:
-- Eliminación completa
-- Borrado selectivo
+- Borrar todos los datos
+- La eliminación de datos selectiva
 - Implementaciones de la aplicación nuevas o actualizadas
 - Bloqueo remoto
 - Restablecimiento de la contraseña

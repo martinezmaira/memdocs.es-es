@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526451"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Conector Sophos Mobile Threat Defense con Intune
@@ -29,7 +29,7 @@ Se pueden configurar directivas de acceso condicional según la evaluación de r
 > [!NOTE]
 > Este proveedor de Mobile Threat Defense no es compatible con dispositivos no inscritos.
 
-## <a name="supported-platforms"></a>Plataformas compatibles
+## <a name="supported-platforms"></a>Plataformas admitidas
 
 - Android 5.0 y versiones posteriores
 - iOS 11.0 y versiones posteriores
@@ -77,7 +77,7 @@ Detecte amenazas para la red, por ejemplo, ataques de tipo "Man in the middle", 
 *Acceso concedido tras la corrección*:   
 ![Acceso concedido tras la corrección](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Control del acceso a SharePoint Online basado en amenazas a la red
 
 Detecte amenazas para la red, por ejemplo, ataques de tipo "Man in the middle", y evite la sincronización de los archivos corporativos según el riesgo del dispositivo.  
 

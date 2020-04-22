@@ -17,17 +17,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7107669b3a87f0ca7488f2fdd5203c6052beffad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326274"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Restablecimiento del código de acceso en dispositivos Windows con Intune
 
 Puede restablecer el código de acceso para los dispositivos Windows. La característica de restablecimiento del código de acceso usa el Servicio de restablecimiento del PIN de Microsoft para generar un código de acceso nuevo para los dispositivos que ejecutan Windows 10 Mobile. 
 
-## <a name="supported-platforms"></a>Plataformas compatibles
+## <a name="supported-platforms"></a>Plataformas admitidas
 
 - Windows 10 Mobile que ejecuta Creators Update y versiones posteriores (unido a Azure AD).
 
@@ -42,9 +42,9 @@ Puede restablecer el código de acceso para los dispositivos Windows. La caracte
 Para restablecer el código de acceso en los dispositivos Windows, incorpore el servicio de restablecimiento del PIN al inquilino de Intune.
 
 1. Vaya a la [producción del Servicio de restablecimiento del PIN de Microsoft](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=b8456c59-1230-44c7-a4a2-99b085333e84&resource=https%3A%2F%2Fgraph.windows.net&redirect_uri=https%3A%2F%2Fcred.microsoft.com&state=e9191523-6c2f-4f1d-a4f9-c36f26f89df0&prompt=admin_consent) e inicie sesión con la cuenta de administrador de inquilinos.
-2. **Acepte** el consentimiento para que el servicio de restablecimiento del PIN tenga acceso a la cuenta: ![Aceptar la solicitud de permisos para el Servicio de restablecimiento del PIN](./media/device-windows-pin-reset/pin-reset-service-home-screen.png)
+2. **Acepte** el consentimiento para que el servicio de restablecimiento del PIN tenga acceso a la cuenta: ![Aceptar la solicitud de permisos del servidor de restablecimiento del PIN](./media/device-windows-pin-reset/pin-reset-service-home-screen.png).
 3. Vaya a la [producción del cliente del restablecimiento del PIN de Microsoft](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=9115dd05-fad5-4f9c-acc7-305d08b1b04e&resource=https%3A%2F%2Fcred.microsoft.com%2F&redirect_uri=ms-appx-web%3A%2F%2FMicrosoft.AAD.BrokerPlugin%2F9115dd05-fad5-4f9c-acc7-305d08b1b04e&state=6765f8c5-f4a7-4029-b667-46a6776ad611&prompt=admin_consent) e inicie sesión con la cuenta de administrador de inquilinos. **Acepte** el consentimiento para que el cliente de restablecimiento del PIN tenga acceso a la cuenta.
-4. En [Azure Portal](https://portal.azure.com), confirme que los servicios de restablecimiento del PIN aparecen en Aplicaciones empresariales (Todas las aplicaciones): ![Página de permisos del servicio de restablecimiento del PIN](./media/device-windows-pin-reset/pin-reset-service-application.png)
+4. En [Azure Portal](https://portal.azure.com), confirme que los servicios de restablecimiento del PIN aparecen en Aplicaciones empresariales (Todas las aplicaciones): ![Página de permisos de servicio de restablecimiento del PIN](./media/device-windows-pin-reset/pin-reset-service-application.png).
 
 > [!NOTE]
 > Después de aceptar las solicitudes de restablecimiento del PIN, es posible que obtenga un mensaje `Page not found`, o bien puede aparecer como si no ocurriera nada. Este comportamiento es normal. Asegúrese de confirmar que las dos aplicaciones de restablecimiento del PIN aparecen para el inquilino.

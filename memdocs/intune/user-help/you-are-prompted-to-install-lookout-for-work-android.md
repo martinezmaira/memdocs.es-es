@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 6d588955a625c6cf1e7771560f298bd612b10aff
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346669"
 ---
 # <a name="install-lookout-for-work"></a>Instalación de Lookout for Work
@@ -34,15 +34,15 @@ Si tiene problemas con la instalación, pruebe los pasos de solución de problem
 
 1. Arrastre hacia abajo en la parte superior de la pantalla para abrir la barra de Notificaciones y, a continuación, seleccione **Aplicación requerida: instale Lookout for Work desde la Play Store**.
 
-   ![necesita instalar Lookout for Work](./media/lookout-required-app-install-android.png)
+   ![se le solicita instalar Lookout for Work](./media/lookout-required-app-install-android.png)
 
-2. Se le dirigirá a la página de instalación de Lookout for Work en Play Store. Instale Lookout for Work y, después, pulse **Aceptar** para permitir que Lookout for Work tenga acceso a su dispositivo.
+2. Se le dirigirá a la página de instalación de Lookout for Work en la Play Store. Instale Lookout for Work y, después, pulse **Aceptar** para permitir que Lookout for Work tenga acceso a su dispositivo.
 
    ![seleccione Aceptar para permitir el acceso de Lookout for Work a su dispositivo](./media/lookout-accept-store-permissions-android.png)
 
 3. Abra Lookout for Work y, después, pulse **ACTIVAR**.
 
-   ![abra Lookout for Work y pulse Activar](./media/lookout-activate-button-android.png)
+   ![abra Lookout for Work y seleccione Activar](./media/lookout-activate-button-android.png)
 
 4. Pulse **Iniciar sesión en Azure Active Directory** y, después, escriba la cuenta que usa para tener acceso a los archivos y correos electrónicos profesionales o educativos.
 
@@ -52,11 +52,11 @@ Si tiene problemas con la instalación, pruebe los pasos de solución de problem
 
    ![seleccione la cuenta profesional o educativa y seleccione Agregar cuenta](./media/lookout-pick-account-android.png)
 
-6. Pulse **Aceptar** para concederle permiso a Lookout for Work para que inicie su sesión y lea su perfil. Una pantalla muestra que Lookout for Work se está conectando a Lookout Security Cloud.
+6. Seleccione **Aceptar** para conceder a Lookout for Work permiso para iniciar sesión y leer su perfil. Una pantalla muestra que Lookout for Work se está conectando a Lookout Security Cloud.
 
-   ![pulse Aceptar para concederle permiso a Lookout for Work para que lea su perfil](./media/lookout-needs-permission-to-view-profile-android.png)
+   ![seleccione Aceptar para conceder a Lookout for Work permiso para leer el perfil](./media/lookout-needs-permission-to-view-profile-android.png)
 
-7. Revise los artículos sobre cómo Lookout protege su dispositivo y, después, pulse **Aceptar**.
+7. Revise los elementos acerca de cómo Lookout protege su dispositivo y, a continuación, seleccione **Aceptar**.
 
    ![revise cómo Lookout for Work protege su dispositivo](./media/lookout-how-it-protects-your-device-android.png)
 
@@ -64,7 +64,7 @@ Si tiene problemas con la instalación, pruebe los pasos de solución de problem
 
    ![ahora está conectado a Lookout for Work](./media/lookout-you-are-now-connected-android.png)
 
-   Lookout for Work comienza a comprobar inmediatamente si existen amenazas de seguridad en su dispositivo. Si no se encuentran amenazas, verá la siguiente pantalla.
+   Lookout for Work comienza a comprobar inmediatamente si existen amenazas de seguridad en su dispositivo. Si no se encuentra ninguna amenaza, verá la siguiente pantalla.
 
    ![Lookout for Work no ha detectado ninguna amenaza de seguridad](./media/lookout-scan-no-threats-found-android.png)
 

@@ -15,10 +15,10 @@ ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c25a40d288b643c289c05322e3e2d4677afb0b60
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362243"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Administrar versiones de sistemas operativos con Intune
@@ -84,7 +84,7 @@ Puede usar las capacidades de Intune que se describen en este artículo para imp
   - En estas directivas se informará a los usuarios finales de que los dispositivos existentes deben actualizarse por correo electrónico, a través del Portal de empresa de Intune y, si la aplicación está abierta y tiene la función habilitada, con una directiva de protección de aplicaciones.
   - Puede ejecutar un informe de cumplimiento para identificar a los usuarios que no cumplan los requisitos. 
 - **Paso 3a**: use las directivas de protección de aplicaciones de Intune para bloquear a los usuarios que usen un dispositivo en el que no se esté ejecutando la versión 2 del sistema operativo cuando se abra o reanude una aplicación.
-- **Paso 3b**: use las directivas de cumplimiento de dispositivos para requerir la versión 2 del sistema operativo como versión mínima para que un dispositivo cumpla los requisitos.
+- **Paso 3b**: use las directivas de cumplimiento del dispositivo para requerir la versión 2 del sistema operativo como la versión mínima para que un dispositivo sea compatible.
   - Estas directivas requieren que los dispositivos estén actualizados para seguir teniendo acceso a datos de la organización. Los servicios protegidos se bloquean cuando se usan con acceso condicional al dispositivo. Las aplicaciones que disponen de una directiva de protección de aplicaciones se bloquean cuando se abren o cuando acceden a datos de la organización.
 
 ## <a name="next-steps"></a>Pasos siguientes

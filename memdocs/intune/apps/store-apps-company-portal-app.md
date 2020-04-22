@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c658176046fca5dfc8cda1a3c655e32150a7d9c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343848"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Adición de la aplicación Portal de empresa de Windows 10 con Microsoft Intune
@@ -95,7 +95,7 @@ Así es cómo se tiene que firmar y asignar la aplicación:
 3. Para firmar la aplicación Portal de empresa de Windows 10, ejecute el script con los parámetros de entrada detallados en el encabezado del script, como se muestra en la siguiente tabla.  
     Las dependencias no tienen que pasarse al script. Solo se necesitan cuando la aplicación va a cargarse en la consola de administración de Intune.
 
-| Parámetro |  Descripción  |
+| Parámetro |  Description  |
 |---|---|
 | InputWin10AppxBundle  |  Ruta de acceso al archivo de origen appxbundle. |
 | OutputWin10AppxBundle | La ruta de acceso de salida del archivo firmado appxbundle. 

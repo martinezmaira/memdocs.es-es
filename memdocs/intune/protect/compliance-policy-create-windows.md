@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084925"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Configuración de Windows 10 y versiones posteriores para marcar dispositivos como compatibles o no compatibles con Intune
@@ -39,7 +39,7 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
 
 [Crear una directiva de cumplimiento](create-compliance-policy.md#create-the-policy). En **Plataforma**, seleccione **Windows 10 y versiones posteriores**.
 
-## <a name="device-health"></a>Estado del dispositivo
+## <a name="device-health"></a>Estado de dispositivos
 
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Reglas de evaluación del servicio Atestación de estado de Windows
 
@@ -65,7 +65,7 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
 Más recursos:
 
 - Vea [CSP de atestación de mantenimiento](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) para obtener información sobre cómo funciona el servicio HAS.
-- [Sugerencia de soporte: Uso de la configuración de atestación de estado de dispositivo como parte de la directiva de cumplimiento de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- [Sugerencia de soporte técnico: Uso de la configuración de atestación de estado de dispositivo como parte de la directiva de cumplimiento de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Propiedades de dispositivos
 

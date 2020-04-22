@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b855628807861651cb641a976870c841089ff13b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357784"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Comparación de la administración de equipos con Windows como dispositivos móviles o equipos
@@ -35,19 +35,19 @@ Las organizaciones pueden usar Microsoft Intune para administrar equipos con Win
 |--------------|-------------------------------|-------------------------------|
 |**Sistemas operativos** |Windows 10, Windows 8+, Windows 7, Windows Vista | Windows 10+ |
 |**Compatibilidad con el portal de Intune** |[Consola de Silverlight](https://manage.microsoft.com)|[Portal de Azure](https://portal.azure.com) |
-|**Acceso condicional**|No disponible|Disponible <br>[¿Qué es el acceso condicional?](../protect/conditional-access.md)|
-|**Inscripción masiva**|No disponible|Disponible <br>[Inscripción masiva para dispositivos Windows](../enrollment/windows-bulk-enroll.md)|
-|**Perfiles de dispositivo**|No disponible|Disponible <br>[¿Qué son los perfiles de dispositivo de Microsoft Intune?](../configuration/device-profiles.md)|
-|**Inscripción sin agente**|No disponible |Disponible<br>[Inscribir dispositivos Windows](../enrollment/windows-enroll.md)|
+|**Acceso condicional**|No disponible|Available <br>[¿Qué es el acceso condicional?](../protect/conditional-access.md)|
+|**Inscripción masiva**|No disponible|Available <br>[Inscripción masiva para dispositivos Windows](../enrollment/windows-bulk-enroll.md)|
+|**Perfiles de dispositivo**|No disponible|Available <br>[¿Qué son los perfiles de dispositivo de Microsoft Intune?](../configuration/device-profiles.md)|
+|**Inscripción sin agente**|No disponible |Available<br>[Inscribir dispositivos Windows](../enrollment/windows-enroll.md)|
 |**Administración de actualizaciones de software**| Actualizaciones de Windows y actualizaciones de aplicaciones de Microsoft<br>[Mantener los equipos Windows al día con las actualizaciones de software](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)|Tienda Microsoft para Empresas para actualizaciones de aplicaciones de Windows 10 y Microsoft<br> [Configurar Windows Update para empresas](../protect/windows-update-for-business-configure.md) |
-|**Administración de licencias de software**|Disponible <br>[Administrar contratos de licencia de software de equipos Windows](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)|Tienda Microsoft para Empresas (solo aplicaciones .appx)<br>[Administración de aplicaciones adquiridas a través de la Tienda Microsoft para Empresas](../apps/windows-store-for-business.md)|
-|**Inventario**|Disponible <br>[Visualización del inventario de software y hardware para equipos Windows](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|Disponible <br>[Supervisión de la información de las aplicaciones](../apps/apps-monitor.md)<br>[What is device management](../remote-actions/device-management.md) (¿Qué es la administración de dispositivos?)|
-|**Directiva de Firewall de Windows**|Disponible <br>[Ayudar a proteger los equipos de Windows mediante directivas del Firewall de Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Disponible <br>[Firewall de Microsoft Defender](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
+|**Administración de licencias de software**|Available <br>[Administrar contratos de licencia de software de equipos Windows](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)|Tienda Microsoft para Empresas (solo aplicaciones .appx)<br>[Administración de aplicaciones adquiridas a través de la Tienda Microsoft para Empresas](../apps/windows-store-for-business.md)|
+|**Inventario**|Available <br>[Visualización del inventario de software y hardware para equipos Windows](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|Available <br>[Supervisión de la información de las aplicaciones](../apps/apps-monitor.md)<br>[What is device management](../remote-actions/device-management.md) (¿Qué es la administración de dispositivos?)|
+|**Directiva de Firewall de Windows**|Available <br>[Ayudar a proteger los equipos de Windows mediante directivas del Firewall de Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Available <br>[Firewall de Microsoft Defender](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
 |**Protección antimalware**|Endpoint Protection<br>[Ayudar a proteger los equipos de Windows con Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Microsoft Defender<br>[Habilitar Microsoft Defender](../protect/advanced-threat-protection.md)|
 |**Asistencia remota** |TeamViewer<br>[Solicitar y proporcionar asistencia remota para equipos con Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Uso de TeamViewer para administrar dispositivos de Intune de forma remota](../remote-actions/teamviewer-support.md) |
 |**Implementación de aplicaciones** | No está disponible para la Tienda Microsoft para Empresas. Solo para<br>.exe, .appx, y varios archivos .msi<br>[Agregar aplicaciones para PC Windows que ejecutan el software cliente de Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)|Disponible para aplicaciones de la Tienda Microsoft y de línea de negocio<br>[Adición de aplicaciones de la Tienda Windows](../apps/store-apps-windows.md)<br>[Adición de aplicaciones de línea de negocio (LOB) de Windows](../apps/lob-apps-windows.md)|
 |**Protección de aplicaciones**|No disponible|Available <br>[¿Qué son las directivas de protección de aplicaciones?](../apps/app-protection-policy.md)|
-|**Atestación de estado**|No disponible|Disponible|
+|**Atestación de estado**|No disponible|Available|
 
 ## <a name="advantages-of-mdm-windows-pc-management"></a>Ventajas de la administración de equipos con Windows de MDM
 La administración de equipos con Windows con la moderna administración de dispositivos móviles presenta las siguientes ventajas:

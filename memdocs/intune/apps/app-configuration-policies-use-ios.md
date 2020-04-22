@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233461"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Agregar directivas de configuración de aplicaciones para dispositivos iOS/iPadOS administrados
@@ -110,7 +110,7 @@ Como administrador de Microsoft Intune, puede controlar qué cuentas de usuario
 
 | **Clave** | **Valores** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**Habilitada**: la única cuenta permitida es la cuenta de usuario administrado definida por la clave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Deshabilitada** (o cualquier valor que no sea una coincidencia con **Habilitada**, sin distinguir mayúsculas de minúsculas): se permite cualquier cuenta.</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Habilitado**: la única cuenta permitida es la cuenta de usuario administrado definida por la clave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Deshabilitado** (o cualquier valor que no sea una coincidencia con **Habilitado**, sin distinguir mayúsculas de minúsculas): se permite cualquier cuenta.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN de la cuenta con permiso para iniciar sesión en la aplicación.</li><li> Para los dispositivos inscritos en Intune, el token <code>{{userprincipalname}}</code> se puede usar para representar la cuenta de usuario inscrito.</li></ul>  |
 
    > [!NOTE]

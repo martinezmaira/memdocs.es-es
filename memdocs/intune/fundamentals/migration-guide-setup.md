@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358161"
 ---
 # <a name="basic-setup"></a>Configuración básica
@@ -59,7 +59,7 @@ Si piensa usar autenticación basada en certificados para perfiles de VPN, Wi-Fi
 
 Para poder migrar a Intune, necesita primero una [suscripción a Intune](account-sign-up.md).
 
-### <a name="task-2-assign-intune-user-licenses"></a>Tarea 2: Asignación de licencias de usuario de Intune
+### <a name="task-2-assign-intune-user-licenses"></a>Tarea 2: asignar licencias de usuario de Intune
 
 - Aprenda a [asignar licencias de usuario de Intune](licenses-assign.md).
 

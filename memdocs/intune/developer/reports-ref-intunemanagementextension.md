@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8152eb12779376e1885d0a2b2898cd602aa825d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359773"
 ---
 # <a name="reference-for-intune-management-extensions"></a>Referencia de las extensiones de administración de Intune
@@ -36,7 +36,7 @@ La categoría **intuneManagementExtension** contiene entidades para dispositivos
 
 La entidad **intuneManagementExtensionVersion** muestra todas las versiones usadas por intuneManagementExtension.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | extensionVersionKey |Identificador único de la versión de intuneManagementExtension. | 1 |
 | extensionVersion |Número de versión de 4 dígitos. |1.0.2.0 |
@@ -45,7 +45,7 @@ La entidad **intuneManagementExtensionVersion** muestra todas las versiones usad
 
 El valor **intuneManagementExtensionHealthState** muestra todos los estados de mantenimiento posibles de intuneManagementExtension.
 
-| Propiedad  | Descripción | Ejemplo |
+| Propiedad  | Description | Ejemplo |
 |---------|------------|--------|
 | extensionStateKey |Identificador único del estado de mantenimiento. | 2 |
 | extensionState |Estado de mantenimiento de una entidad IntuneManagementExtension. | Correcto |
@@ -56,7 +56,7 @@ El valor **intuneManagementExtension** muestra el mantenimiento diario de intune
 Los datos se conservan durante 60 días. 
 
 
-|      Propiedad       |                         Descripción                         | Ejemplo |
+|      Propiedad       |                         Description                         | Ejemplo |
 |---------------------|-------------------------------------------------------------|---------|
 |       dateKey       |               Identificador único de la fecha.                |   123   |
 |      tenantKey      |              Identificador único del inquilino.               |   456   |

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360241"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Punto de conexión de la API de Almacenamiento de datos de Intune
@@ -49,7 +49,7 @@ La dirección URL de Intune usa el formato siguiente:
 
 La dirección URL contiene los elementos siguientes:
 
-| Elemento | Ejemplo | Descripción |
+| Elemento | Ejemplo | Description |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | ubicación | msua06 | Para localizar la URL base, vea la hoja de la API de Almacenamiento de datos en Azure Portal. |
 | entity-collection | devicePropertyHistories | Nombre de la colección de entidades OData. Para obtener más información sobre las colecciones y las entidades del modelo de datos, vea [Data Model](reports-ref-data-model.md) (Modelo de datos). |
@@ -78,7 +78,7 @@ Los filtros de intervalo de `DateKey` se pueden usar para limitar la cantidad de
 > [!NOTE]
 > En los ejemplos de filtro se supone que hoy es 21/2/2019.
 
-|                             Filtro                             |           Optimización del rendimiento           |                                          Descripción                                          |
+|                             Filtro                             |           Optimización del rendimiento           |                                          Description                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    Full                                      |    Devolver datos con `DateKey` entre 20180214 y 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Full                                      |    Devolver datos con `DateKey` igual a 20180214.                                                    |

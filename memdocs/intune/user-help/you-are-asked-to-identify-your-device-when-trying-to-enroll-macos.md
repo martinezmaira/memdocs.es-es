@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 320d4fcc4a7e13333832150125e3ddaa74fbaba4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335164"
 ---
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Necesita identificar el dispositivo cuando está intentando la inscripción
@@ -32,6 +32,6 @@ Si intenta inscribir el dispositivo macOS en Intune y ve una pantalla que le pid
 
 1. Si ve el dispositivo en la lista, haga clic en él. Si no lo ve, seleccione **nuevo dispositivo**.
 2. Haga clic en **Continuar**.
-3. Escriba los cuatro últimos caracteres del número de serie del dispositivo para ayudar a Intune a confirmar que el dispositivo está inscrito. Para encontrar el número de serie, vea [How do I find the serial number on my device?](how-do-i-find-the-serial-number-on-my-device-macos.md) (¿Cómo se puede encontrar el número de serie de un dispositivo?).
+3. Escriba los cuatro últimos caracteres del número de serie del dispositivo para ayudar a Intune a confirmar que el dispositivo está inscrito. Para buscar el número de serie, consulte [¿Cómo se puede encontrar el número de serie de un dispositivo?](how-do-i-find-the-serial-number-on-my-device-macos.md).
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

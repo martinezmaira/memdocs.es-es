@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357732"
 ---
 # <a name="create-a-design"></a>Creación de un diseño
@@ -209,7 +209,7 @@ Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.mic
 
 Intune admite dispositivos de propiedad corporativa y personal. Un dispositivo se considera de propiedad corporativa si está inscrito por un administrador de inscripción de dispositivos o por un programa de inscripción de dispositivos. Por ejemplo, un dispositivo se inscribe mediante el Programa de Inscripción de Dispositivos (DEP) de Apple, se marca como corporativo y se coloca en un grupo de dispositivos que recibe aplicaciones y directivas corporativas de destino.
 
-Consulte la [Sección 3: Determinación de los requisitos de los escenarios de casos de uso](planning-guide-requirements.md) para obtener más información sobre los casos de uso BYOD y de la empresa.
+Vea la [Sección 3: Determinación de los requisitos de los escenarios de casos de uso](planning-guide-requirements.md) para obtener más información sobre los casos de uso BYOD y de la empresa.
 
 ### <a name="bulk-enrollment"></a>Inscripción masiva
 
@@ -225,11 +225,11 @@ En estas secciones, revisaremos las siguientes funciones y características que 
 
 - Perfiles de recursos
 
-- Aplicaciones
+- Apps
 
 - Directiva de cumplimiento
 
-- Acceso condicional
+- Conditional Access
 
 Revisemos cada una de estas áreas con más detalle.
 
@@ -255,8 +255,8 @@ Debe crear al menos una directiva de configuración por plataforma. Puede crear 
 
 | **Nombre de la directiva** | **Plataforma de dispositivo** | **Configuración** | **Grupo de destino** |   
 |:---:|:---:|:---:|:---:|
-| Corporativo: iOS | iOS | Se necesita PIN, longitud: 6, Restringir la copia de seguridad en la nube | Dispositivos corporativos |                                                           
-| Corporativo: Android | Android | Se necesita PIN, longitud: 6, Restringir la copia de seguridad en la nube | Dispositivos corporativos |                                                           
+| Corporativo: iOS | iOS | Se necesita PIN, longitud: 6, restringir copia de seguridad en la nube | Dispositivos corporativos |                                                           
+| Corporativo: Android | Android | Se necesita PIN, longitud: 6, restringir copia de seguridad en la nube | Dispositivos corporativos |                                                           
 | BYOD: iOS  | iOS | Se necesita PIN, longitud: 4 | Dispositivos BYOD |
 | BYOD: Android  | Android | Se necesita PIN, longitud: 4 | Dispositivos BYOD |
 
@@ -340,7 +340,7 @@ A continuación se muestra un ejemplo de la documentación del diseño de perfil
 | Perfil de correo electrónico | Perfil de correo electrónico Android KNOX | Android KNOX | BYOD |
 
 Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar los requisitos de los perfiles de correo electrónico.
-### <a name="apps"></a>Aplicaciones
+### <a name="apps"></a>Apps
 
 Puede usar Intune para proporcionar las aplicaciones a los usuarios o a los dispositivos de varias maneras. El tipo de aplicación incluye aplicaciones de instalador de software, aplicaciones de una tienda de aplicaciones pública, vínculos externos o aplicaciones iOS administradas. Además de las implementaciones de aplicaciones individuales, puede administrar e implementar las aplicaciones adquiridas por volumen mediante los programas de compra por volumen para iOS y Windows. Más información acerca de:
 
@@ -371,14 +371,14 @@ Como las aplicaciones pueden implementarse en usuarios y dispositivos, se recomi
 
 Las directivas de protección de aplicaciones minimizan la pérdida de datos definiendo cómo administra la aplicación los datos corporativos. Intune admite las directivas de protección de aplicaciones para cualquier aplicación compilada para funcionar con la administración de aplicaciones móviles. Al diseñar la directiva de protección de aplicaciones, debe decidir qué restricciones colocará en los datos corporativos de una aplicación determinada. Se recomienda que revise cómo funcionan las [directivas de protección de aplicaciones](../apps/app-protection-policy.md). A continuación se muestra un ejemplo de cómo documentar las aplicaciones existentes y qué protección se necesita.
 
-| **Aplicación** | **Finalidad** | **Plataformas** | **Caso de uso** | **Directiva de protección de aplicaciones** |
+| **Application** | **Finalidad** | **Plataformas** | **Caso de uso** | **Directiva de protección de aplicaciones** |
 |:---:|:---:|:---:|:---:|:---:|
-| Outlook Mobile  | Disponible | iOS | Corporativo: ejecutivos | No puede descodificarse, archivos cifrados |                                                         
-| Word | Disponible | iOS/iPadOS, Android Samsung Knox y que no son Knox, Windows 10 Mobile | Corporativo, BYOD | No puede descodificarse, archivos cifrados |                                                         
+| Outlook Mobile  | Available | iOS | Corporativo: ejecutivos | No puede descodificarse, archivos cifrados |                                                         
+| Word | Available | iOS/iPadOS, Android Samsung Knox y que no son Knox, Windows 10 Mobile | Corporativo, BYOD | No puede descodificarse, archivos cifrados |                                                         
 
 
 Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar los requisitos de la directiva de protección de aplicaciones.
-#### <a name="compliance-policies"></a>Directivas de cumplimiento
+#### <a name="compliance-policies"></a>Compliance directivas
 
 Las directivas de cumplimiento determinan si un dispositivo se adapta a determinados requisitos. Intune usa directivas de cumplimiento para determinar si un dispositivo se considera compatible o no compatible. El estado de cumplimiento puede usarse para restringir o permitir el acceso a los recursos de la empresa. Si se requiere el acceso condicional, se recomienda diseñar una [directiva de cumplimiento de dispositivos](../protect/device-compliance-get-started.md).
 
