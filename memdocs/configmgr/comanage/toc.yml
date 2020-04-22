@@ -1,0 +1,54 @@
+- name: Documentación de administración conjunta
+  href: index.yml
+- name: Introducción
+  items:
+    - name: ¿Qué es administración conjunta?
+      href: overview.md
+- name: Guías de inicios rápidos
+  items:
+    - name: Información general de la guía de inicio rápido
+      href: quickstarts.md
+    - name: Valor inmediato
+      items:
+        - name: Acceso condicional
+          href: quickstart-conditional-access.md
+        - name: Acciones remotas de Intune
+          href: quickstart-remote-actions.md
+        - name: Estado de cliente
+          href: quickstart-client-health.md
+        - name: Azure AD híbrido
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: Introducción
+      items:
+        - name: Rutas hacia la administración conjunta
+          href: quickstart-paths.md
+        - name: Configuración de Azure AD híbrido
+          href: quickstart-setup-hybrid-aad.md
+        - name: Actualización a Windows 10
+          href: quickstart-upgrade-win10.md
+        - name: Ayuda de FastTrack
+          href: quickstart-fasttrack.md
+- name: Tutoriales
+  items:
+    - name: Habilitación de la administración conjunta para clientes de Configuration Manager
+      href: tutorial-co-manage-clients.md
+    - name: Habilitar la administración conjunta para dispositivos basados en Internet
+      href: tutorial-co-manage-new-devices.md
+- name: Conceptos
+  items:
+    - name: Cargas de trabajo
+      href: workloads.md
+    - name: Coexistencia de MDM de terceros
+      href: coexistence.md
+- name: Guías de procedimientos
+  items:
+    - name: Habilitación de la administración conjunta
+      href: how-to-enable.md
+    - name: Preparación de dispositivos basados en Internet
+      href: how-to-prepare-Win10.md
+    - name: Cambio de cargas de trabajo a Intune
+      href: how-to-switch-workloads.md
+    - name: Supervisión de la administración conjunta
+      href: how-to-monitor.md

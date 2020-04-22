@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Documentación de administración conjunta
+summary: La administración conjunta permite administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune.
+metadata:
+  title: Documentación de administración conjunta
+  titleSuffix: Configuration Manager
+  description: La administración conjunta permite administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune.
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741007"
+landingContent:
+- title: Acerca de la administración conjunta
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ¿Qué es administración conjunta?
+      url: overview.md
+    - text: Rutas hacia la administración conjunta
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: Acceso condicional con administración conjunta
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: Introducción
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Habilitación de la administración conjunta para clientes existentes de Configuration Manager
+      url: tutorial-co-manage-clients.md
+    - text: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: Actualización a Windows 10 para usar la administración conjunta
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: Principales tareas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Cambiar las cargas de trabajo de Configuration Manager a Intune
+      url: how-to-switch-workloads.md
+    - text: Supervisión de la administración conjunta en Configuration Manager
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Windows Autopilot con administración conjunta
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

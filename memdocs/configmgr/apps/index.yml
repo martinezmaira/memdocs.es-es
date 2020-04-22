@@ -1,0 +1,68 @@
+### YamlMime:Landing
+title: Documentación sobre la administración de aplicaciones
+summary: Use Configuration Manager para administrar e implementar aplicaciones, scripts y paquetes. Automatice las implementaciones o permita que los usuarios puedan instalar aplicaciones del Centro de software.
+metadata:
+  title: Documentación sobre la administración de aplicaciones
+  titleSuffix: Configuration Manager
+  description: Use Configuration Manager para administrar e implementar aplicaciones, scripts y paquetes. Automatice las implementaciones o permita que los usuarios puedan instalar aplicaciones del Centro de software.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-app
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7fccbe98c6199543554b48f28325b6531d0092c3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740905"
+landingContent:
+- title: Acerca de la administración de aplicaciones
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introducción a la administración de aplicaciones
+      url: understand/introduction-to-application-management.md
+    - text: Planeamiento de la administración de aplicaciones
+      url: plan-design/plan-for-and-configure-application-management.md
+    - text: Planeamiento del centro de software
+      url: plan-design/plan-for-software-center.md
+  - linkListType: tutorial
+    links:
+    - text: Creación e implementación de una aplicación
+      url: get-started/create-and-deploy-an-application.md
+- title: Introducción
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creación de aplicaciones
+      url: deploy-use/create-applications.md
+    - text: Crear y ejecutar scripts de PowerShell
+      url: deploy-use/create-deploy-scripts.md
+  - linkListType: deploy
+    links:
+    - text: Implementación de aplicaciones
+      url: deploy-use/deploy-applications.md
+    - text: Implementación y actualización de Microsoft Edge
+      url: deploy-use/deploy-edge.md
+- title: Principales tareas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creación de grupos de aplicaciones
+      url: deploy-use/create-app-groups.md
+    - text: Aprobación de aplicaciones
+      url: deploy-use/app-approval.md
+    - text: Instalación de aplicaciones para un dispositivo
+      url: deploy-use/install-app-for-device.md
+    - text: Afinidad de dispositivo de usuario
+      url: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - text: Supervisar el uso de aplicaciones a través de la medición de software
+      url: deploy-use/monitor-app-usage-with-software-metering.md
+  - linkListType: reference
+    links:
+    - text: Solución de problemas de implementación de aplicaciones
+      url: understand/app-deployment-technical-reference.md
+    - text: Paquetes y programas
+      url: deploy-use/packages-and-programs.md

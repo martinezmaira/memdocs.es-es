@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Documentación sobre el cumplimiento de dispositivos
+summary: Configuration Manager ofrece las herramientas y los recursos que necesita para administrar la configuración y el cumplimiento de los dispositivos de su organización.
+metadata:
+  title: Documentación sobre el cumplimiento de dispositivos
+  titleSuffix: Configuration Manager
+  description: Configuration Manager ofrece las herramientas y los recursos que necesita para administrar la configuración y el cumplimiento de los dispositivos de su organización.
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+  ms.openlocfilehash: 7b66409e8f4082927225246bb5144efb8b65d567
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741109"
+landingContent:
+- title: Acerca del cumplimiento de dispositivos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introducción al cumplimiento de dispositivos
+      url: understand/ensure-device-compliance.md
+    - text: Introducción a la configuración de cumplimiento
+      url: get-started/get-started-with-compliance-settings.md
+  - linkListType: architecture
+    links:
+    - text: Planear y configurar la configuración de cumplimiento
+      url: plan-design/plan-for-and-configure-compliance-settings.md
+- title: Introducción
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Tareas comunes para administrar el cumplimiento
+      url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - text: Creación de elementos de configuración para dispositivos con Windows 10
+      url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+    - text: Creación de líneas base de configuración
+      url: deploy-use/create-configuration-baselines.md
+  - linkListType: deploy
+    links:
+    - text: Implementación de líneas base de configuración
+      url: deploy-use/deploy-configuration-baselines.md
+  - linkListType: how-to-guide
+    links:
+    - text: Supervisión de la configuración de cumplimiento
+      url: deploy-use/monitor-compliance-settings.md
+- title: Principales tareas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creación de elementos de configuración personalizados
+      url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - text: Creación de perfiles de conexión remota
+      url: deploy-use/create-remote-connection-profiles.md
+    - text: Creación de elementos de configuración de perfiles y datos de usuario
+      url: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - linkListType: concept
+    links:
+    - text: Perfiles de OneDrive para la Empresa
+      url: deploy-use/onedrive-profile.md
+    - text: Administrar datos de configuración
+      url: deploy-use/management-tasks-for-configuration-data.md

@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Documentación sobre Análisis de escritorio
+summary: Análisis de escritorio es un servicio en la nube que se integra con Configuration Manager. Proporciona información para ayudarle a actualizar los clientes de Windows.
+metadata:
+  title: Documentación sobre Análisis de escritorio
+  titleSuffix: Configuration Manager
+  description: Análisis de escritorio es un servicio en la nube que se integra con Configuration Manager. Proporciona información para ayudarle a actualizar los clientes de Windows.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741415"
+landingContent:
+- title: Acerca de Análisis de escritorio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ¿Qué es Análisis de escritorio?
+      url: overview.md
+    - text: Novedades
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: Windows 10 piloto
+      url: tutorial-windows10.md
+- title: Introducción
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configuración del análisis de escritorio
+      url: set-up.md
+    - text: Conexión de Configuration Manager
+      url: connect-configmgr.md
+    - text: Inscribir dispositivos
+      url: enroll-devices.md
+- title: Recursos
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: P+F sobre Análisis de escritorio
+      url: faq.md
+    - text: Habilitación del uso compartido de datos
+      url: enable-data-sharing.md
+    - text: Supervisión del estado de conexión
+      url: monitor-connection-health.md
+    - text: Solución de problemas de Análisis de escritorio
+      url: troubleshooting.md

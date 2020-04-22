@@ -1,0 +1,8 @@
+- name: Documentación de la asociación de inquilinos
+  href: index.yml
+- name: Implementar y usar
+  items:
+    - name: Habilitación de la asociación de inquilinos
+      href: device-sync-actions.md
+    - name: Solución de problemas de acciones de dispositivos
+      href: technical-reference.md

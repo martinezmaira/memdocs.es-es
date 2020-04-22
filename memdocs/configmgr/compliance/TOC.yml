@@ -1,0 +1,62 @@
+- name: Documentación sobre el cumplimiento de dispositivos
+  href: index.yml
+- name: Conocer y explorar
+  items:
+    - name: Asegurar el cumplimiento de dispositivos
+      href: understand/ensure-device-compliance.md
+- name: Introducción
+  items:
+    - name: Introducción a la configuración de cumplimiento
+      href: get-started/get-started-with-compliance-settings.md
+- name: Planear y diseñar
+  items:
+    - name: Planear y configurar la configuración de cumplimiento
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: Tareas para administrar el cumplimiento
+      items:
+        - name: Tareas comunes para administrar el cumplimiento
+          href: plan-design/common-tasks-for-managing-compliance.md
+        - name: Dispositivos con el cliente de Configuration Manager
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: Crear e implementar líneas base de configuración
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: Seguridad y privacidad
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+- name: Implementar y usar
+  items:
+    - name: Crear elementos de configuración
+      items:
+        - name: Información general de crear elementos de configuración
+          href: deploy-use/create-configuration-items.md
+        - name: Dispositivos administrados con el cliente de Configuration Manager
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Escritorio y servidor de Windows (personalizado)
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: Creación de elementos de configuración secundarios
+      href: deploy-use/create-child-configuration-items.md
+    - name: Creación de líneas base de configuración
+      href: deploy-use/create-configuration-baselines.md
+    - name: Implementación de líneas base de configuración
+      href: deploy-use/deploy-configuration-baselines.md
+    - name: Administrar datos de configuración
+      items:
+        - name: Administrar datos de configuración
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: Importar datos de configuración
+          href: deploy-use/import-configuration-data.md
+    - name: Creación de elementos de configuración de perfiles y datos de usuario
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: Perfiles de OneDrive para la Empresa
+      href: deploy-use/onedrive-profile.md
+    - name: Creación de perfiles de conexión remota
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: Actualizar los dispositivos de Windows a una nueva edición
+      href: deploy-use/upgrade-windows-version.md
+    - name: Configuración de las opciones de Microsoft Edge
+      href: deploy-use/browser-profiles.md
+    - name: Supervisión de la configuración de cumplimiento
+      href: deploy-use/monitor-compliance-settings.md
