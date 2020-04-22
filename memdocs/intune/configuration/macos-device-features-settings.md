@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551524"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615714"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Configuración de características de dispositivos macOS en Intune
 
@@ -82,9 +82,6 @@ Para agregar servidores AirPrinter, necesita la dirección IP de la impresora, l
   Al agregar una aplicación, una carpeta o un archivo, asegúrese de escribir la ruta de acceso correcta. No todos los elementos se encuentran en la carpeta `Applications`. Si un usuario mueve un elemento de una ubicación a otra, la ruta de acceso cambia. Este elemento movido no se abrirá cuando el usuario inicie sesión.
 
 - **Ocultar en la configuración del usuario**: **ocultar** no muestra la aplicación en la lista de elementos de inicio de sesión de usuarios y grupos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo muestra el elemento con el que se comienza al iniciar sesión en la lista de elementos de inicio de sesión de usuarios y grupos con la opción Ocultar desactivada.
-
-  > [!NOTE]
-  > Este ajuste se implementará en todos los clientes durante el siguiente par de semanas.
 
 ## <a name="login-window"></a>Ventana de inicio de sesión
 

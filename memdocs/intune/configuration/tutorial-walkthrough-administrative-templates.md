@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488213"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Uso de la nube para configurar directivas de grupo en dispositivos con Windows 10 con plantillas de ADMX y Microsoft Intune
@@ -44,7 +44,7 @@ Estas plantillas se integran en Microsoft Intune y están disponibles como perf
 En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
-> * Conocer el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+> * Conocer el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431).
 > * Crear grupos de usuarios y de dispositivos.
 > * Comparar la configuración de Intune con la configuración de ADMX local.
 > * Crear distintas plantillas administrativas y configurar los valores para los distintos grupos.
@@ -103,7 +103,7 @@ Esta característica se aplica a:
 ## <a name="open-the-endpoint-manager-admin-center"></a>Apertura del Centro de administración de puntos de conexión
 
 1. Abra un explorador web Chromium, como Microsoft Edge, versión 77 y posteriores.
-2. Vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Inicie sesión con la cuenta siguiente:
+2. Vaya al [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). Inicie sesión con la cuenta siguiente:
 
     **Usuario**: escriba la cuenta de administrador de la suscripción de inquilino de Microsoft 365.  
     **Contraseña**: escriba su contraseña.
@@ -203,7 +203,7 @@ En los siguientes pasos se crean grupos de seguridad y se agregan usuarios a los
   - Administradores de TI de la costa oeste
   - Administradores de TI de la costa este
 
-Los usuarios y los grupos creados también pueden verse en el [Centro de administración de Microsoft 365](https://admin.microsoft.com), Azure AD en Azure Portal y [Microsoft Intune en Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). Puede crear y administrar grupos en todas estas áreas de la suscripción de inquilino. **Si su objetivo es la administración de dispositivos, use el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)** .
+Los usuarios y los grupos creados también pueden verse en el [Centro de administración de Microsoft 365](https://admin.microsoft.com), Azure AD en Azure Portal y [Microsoft Intune en Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). Puede crear y administrar grupos en todas estas áreas de la suscripción de inquilino. **Si su objetivo es la administración de dispositivos, use el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431)** .
 
 ### <a name="review-group-membership"></a>Revisión de la pertenencia a grupos
 
@@ -575,7 +575,7 @@ Cuando ya no sean necesarios, puede:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial se ha familiarizado con el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), ha usado el generador de consultas para crear grupos dinámicos y ha creado plantillas administrativas en Intune para configurar [valores de ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). También ha comparado el uso de plantillas de ADMX en local y en la nube con Intune. Como bonus, ha usado cmdlets de PowerShell para crear una plantilla administrativa.
+En este tutorial se ha familiarizado con el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431), ha usado el generador de consultas para crear grupos dinámicos y ha creado plantillas administrativas en Intune para configurar [valores de ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). También ha comparado el uso de plantillas de ADMX en local y en la nube con Intune. Como bonus, ha usado cmdlets de PowerShell para crear una plantilla administrativa.
 
 Para obtener más información sobre las plantillas administrativas en Intune, vea:
 

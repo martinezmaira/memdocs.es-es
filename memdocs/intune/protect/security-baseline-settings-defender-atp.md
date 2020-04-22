@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551746"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397516"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Configuración de la línea de base de Advanced Threat Protection de Microsoft Defender
 
@@ -133,7 +133,7 @@ Para más información, vea [Configuración de las directivas de grupo de BitLoc
     - **Sí**: Windows no permitirá que se escriban datos en unidades fijas que no estén protegidas con BitLocker. Si no se cifra una unidad fija, el usuario ha de completar el Asistente para la instalación de BitLocker para la unidad antes de que se conceda acceso de escritura.
 
   - **Cifrado para unidades de datos fijas**  
-    CSP: [EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     Esta opción está disponible cuando *Directiva de unidades fijas de BitLocker* se establece en *Configurar*.
 
     Configure el método de cifrado y la intensidad de cifrado para los discos de unidades de datos fijas. *XTS-AES de 128 bits* es el método de cifrado predeterminado de Windows y el valor recomendado.
@@ -215,7 +215,7 @@ Para más información, vea [Configuración de las directivas de grupo de BitLoc
 ## <a name="device-installation"></a>Instalación de dispositivos
 
 - **Hardware device installation by device identifiers** (Instalación de dispositivos de hardware mediante identificadores de dispositivo)  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   Esta configuración de directiva le permite especificar una lista de identificadores de hardware Plug and Play e identificadores compatibles para dispositivos que Windows no puede instalar. Esta configuración de directiva tiene prioridad sobre cualquier otra configuración de directiva que permita a Windows instalar dispositivos.  Si habilita esta configuración de directiva en un servidor de escritorio remoto, esta afectará a la redirección de los dispositivos especificados desde un cliente de escritorio remoto al servidor de escritorio remoto.
 

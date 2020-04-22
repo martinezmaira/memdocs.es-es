@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407866"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listas de configuraciones de restricciones de dispositivos Android y Samsung Knox en Intune
@@ -79,7 +79,7 @@ En este artículo, se muestran todas las opciones de configuración de restricci
     Cuando se establece en **Numérica compleja** y se asigna la configuración a los dispositivos que ejecutan una versión de Android anterior a la 5.0, se aplica el comportamiento siguiente:
 
     - Si la aplicación Portal de empresa ejecuta una versión anterior a 1704, no se aplica ninguna directiva de PIN a los dispositivos y se muestra un error en el Centro de administración de Microsoft Endpoint Manager.
-    - Si la aplicación del Portal de empresa ejecuta la versión 1704 o una versión posterior, solo se puede aplicar un PIN sencillo. Las versiones de Android anteriores a la 5.0 no admiten esta configuración. No se muestra ningún error en el Centro de administración de Microsoft Endpoint Manager.
+    - Si la aplicación del Portal de empresa ejecuta la versión 1704 o una versión posterior, solo se puede aplicar un PIN sencillo. Las versiones de Android anteriores a la 5.0 no admiten esta configuración. No se muestra ningún error en el Centro de administración del Administrador de puntos de conexión de Microsoft.
 
   - **Al menos alfabética**: incluye letras del alfabeto. No son necesarios números ni símbolos.
   - **Al menos alfanumérica**: incluye letras mayúsculas, minúsculas y caracteres numéricos.

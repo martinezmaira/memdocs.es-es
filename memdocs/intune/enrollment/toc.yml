@@ -89,7 +89,7 @@
     - name: Configuración de la inscripción de iOS/iPadOS
       href: ios-enroll.md
       items:
-        - name: Programa de inscripción de dispositivos
+        - name: Inscripción de dispositivo automatizada
           href: device-enrollment-program-enroll-ios.md
         - name: Configuración de la inscripción de usuarios de iOS/iPadOS y iPadOS
           href: ios-user-enrollment.md

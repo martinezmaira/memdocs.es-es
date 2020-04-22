@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327005"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397771"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos en Microsoft Intune
 
@@ -237,7 +237,7 @@ Para cerciorarse de que el certificado se ha instalado correctamente, puede usar
 
 Los pasos siguientes describen solo uno de los muchos métodos y herramientas que se pueden usar para validar que el certificado se instaló correctamente.
 
-1. Vaya a la [herramienta gratuita Digicert](ttps://www.digicert.com/help/).
+1. Vaya a la [herramienta gratuita Digicert](https://www.digicert.com/help/).
 2. Escriba el nombre de dominio completo del servidor AD FS (por ejemplo, sts.contoso.com) y seleccione **COMPROBAR SERVIDOR**.
 
 Si el certificado de servidor se instaló correctamente, verá marcas de verificación en los resultados. Si existe el problema anterior, verá una X roja en las secciones "Certificate Name Matches" ("El nombre de certificado coincide") y "SSL Certificate is correctly Installed" ("El certificado SSL se instaló correctamente") del informe.
