@@ -1,0 +1,48 @@
+- name: Documentación de MDM
+  href: index.yml
+- name: MDM local
+  items:
+    - name: Qué es MDM local
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: Planear la MDM local
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Setup
+      items:
+        - name: Instalación de roles locales
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: Configurar los certificados
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: Configurar para la inscripción
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: Inscribir dispositivos
+      items:
+        - name: Información general de inscripción
+          href: deploy-use/enroll-devices-on-premises-mdm.md
+        - name: Inscripción de usuarios
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: Inscripción masiva
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: Administración de dispositivos y protección de los datos
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: Administración de aplicaciones
+      href: deploy-use/management-tasks-applications.md
+    - name: Administración de las opciones de configuración
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Administrar el acceso a los recursos
+      items:
+        - name: Crear perfiles de certificado PFX
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: Importar perfiles de certificado PFX
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: Perfiles de Wi-Fi
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+        - name: Perfiles de VPN
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+- name: Conector de Exchange Server
+  items:
+    - name: Administración de dispositivos con Exchange
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: Instalar Exchange Connector
+      href: deploy-use/install-configure-exchange-connector.md
+- name: ¿Qué ha ocurrido con la MDM híbrida?
+  href: understand/what-happened-to-hybrid.md

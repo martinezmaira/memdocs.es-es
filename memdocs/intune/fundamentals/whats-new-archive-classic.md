@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085775"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81681982"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Novedades del portal clásico de Intune: meses anteriores
 
@@ -361,9 +361,9 @@ La nueva aplicación también permitirá a los usuarios aprovechar característi
 > [!IMPORTANT]
 > __Actualización de Intune y Android for Work__ Aunque se pueden implementar aplicaciones de Android for Work con una acción __Requerido__, solo puede implementar aplicaciones como __Disponible__ si los grupos de Intune se han migrado a la nueva experiencia de grupos de Azure AD.
 
-__El complemento Intune App SDK para Cordova ahora admite MAM sin inscripción__ Los desarrolladores de aplicaciones ahora pueden usar el complemento Intune App SDK para Cordova para habilitar la funcionalidad MAM sin inscribir el dispositivo en sus aplicaciones de Cordova para Android e iOS/iPadOS. El complemento Cordova del SDK para aplicaciones de Intune se puede encontrar [aquí](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
+__El complemento Intune App SDK para Cordova ahora admite MAM sin inscripción__ Los desarrolladores de aplicaciones ahora pueden usar el complemento Intune App SDK para Cordova para habilitar la funcionalidad MAM sin inscribir el dispositivo en sus aplicaciones de Cordova para Android e iOS/iPadOS.
 
-__El componente Xamarin de Intune App SDK ahora admite MAM sin suscripción__ Los desarrolladores de aplicaciones ahora pueden usar el componente Xamarin de Intune App SDK para habilitar la funcionalidad MAM sin inscribir el dispositivo en sus aplicaciones basadas en Xamarin para Android e iOS/iPadOS. El componente Xamarin del SDK para aplicaciones de Intune se puede encontrar [aquí](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
+__El componente Xamarin de Intune App SDK ahora admite MAM sin suscripción__ Los desarrolladores de aplicaciones ahora pueden usar el componente Xamarin de Intune App SDK para habilitar la funcionalidad MAM sin inscribir el dispositivo en sus aplicaciones basadas en Xamarin para Android e iOS/iPadOS. El componente Xamarin del SDK para aplicaciones de Intune se puede encontrar [aquí](https://www.npmjs.com/package/cordova-plugin-ms-intune-mam).
 
 ### <a name="notices"></a>Notificaciones
 

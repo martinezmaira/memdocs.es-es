@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Documentación sobre la implementación del SO
+summary: Use Configuration Manager para implementar Windows con la ayuda de diferentes métodos y automatice tareas.
+metadata:
+  title: Documentación sobre la implementación del SO
+  titleSuffix: Configuration Manager
+  description: Use Configuration Manager para implementar Windows con la ayuda de diferentes métodos y automatice tareas.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741959"
+landingContent:
+- title: Acerca de la implementación de SO
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introducción a la implementación del sistema operativo
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: Requisitos de la infraestructura
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: Preparar la implementación de sistema operativo
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: Escenarios de implementación del SO
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: Métodos de implementación del SO
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: Introducción
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Administrar secuencias de tareas
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: Creación de una secuencia de tareas de actualización de SO
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: Creación de una implementación por fases
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: Implementar una secuencia de tareas
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: Depurar una secuencia de tareas
+      url: deploy-use/debug-task-sequence.md
+- title: Referencia técnica
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Uso del editor de secuencias de tareas
+      url: understand/task-sequence-editor.md
+    - text: Acerca delos pasos de la secuencia de tareas
+      url: understand/task-sequence-steps.md
+    - text: Uso de variables en una secuencia de tareas
+      url: understand/using-task-sequence-variables.md
+    - text: Referencia de variables de secuencia de tareas
+      url: understand/task-sequence-variables.md

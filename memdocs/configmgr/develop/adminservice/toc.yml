@@ -1,0 +1,16 @@
+- name: Documentación del servicio de administración
+  href: index.yml
+- name: ¿Qué es el servicio de administración?
+  href: overview.md
+- name: Guías de procedimientos
+  items:
+    - name: Cómo se configura
+      href: set-up.md
+    - name: Cómo se usa
+      href: usage.md
+- name: Referencia
+  items:
+    - name: Preguntas más frecuentes
+      href: faq.md
+    - name: Notas de la versión
+      href: release-notes.md

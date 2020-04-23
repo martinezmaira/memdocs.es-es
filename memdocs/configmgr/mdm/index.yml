@@ -1,0 +1,58 @@
+### YamlMime:Landing
+title: Documentación de administración de dispositivos móviles (MDM)
+summary: Use Microsoft Endpoint Manager para administrar los dispositivos móviles en su organización, ya sea de forma local o en la nube.
+metadata:
+  title: Administración de dispositivos móviles
+  titleSuffix: Configuration Manager
+  description: Use Microsoft Endpoint Manager para administrar los dispositivos móviles en su organización, ya sea de forma local o en la nube.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdm
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 12/31/2019
+  ms.openlocfilehash: d9e3c95272c9e0d6596d214f73ea53f572b54c6b
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741806"
+landingContent:
+- title: Acerca de la MDM local
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ¿Qué es la MDM local?
+      url: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - text: Planear la MDM local
+      url: plan-design/plan-on-premises-mdm.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instalación de roles
+      url: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - text: Inscribir dispositivos
+      url: deploy-use/enroll-devices-on-premises-mdm.md
+    - text: Administrar los dispositivos
+      url: deploy-use/wipe-lock-reset-devices.md
+- title: Conexión de ConfigMgr y Exchange
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Administración de dispositivos con Exchange
+      url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instalar Exchange Connector
+      url: deploy-use/install-configure-exchange-connector.md
+- title: Uso de Intune basado en la nube
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ¿Qué es Intune?
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+    - text: Información general sobre la administración de dispositivos
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-device-management
+  - linkListType: tutorial
+    links:
+    - text: Tutorial de Intune en Microsoft Endpoint Manager
+      url: https://docs.microsoft.com/intune/fundamentals/tutorial-walkthrough-endpoint-manager

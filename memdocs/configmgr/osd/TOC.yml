@@ -1,0 +1,148 @@
+- name: Documentación sobre la implementación del SO
+  href: index.yml
+- name: Descripción
+  items:
+    - name: Introducción a la implementación del sistema operativo
+      href: understand/introduction-to-operating-system-deployment.md
+- name: Planear y diseñar
+  items:
+    - name: Requisitos de infraestructura para la implementación del sistema operativo
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: Planificación de consideraciones para la automatización de tareas
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: Escenarios para implementar sistemas operativos de empresa
+      items:
+        - name: Información general de los escenarios de implementación del SO
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: Actualizar Windows a la versión más reciente
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: Windows Autopilot para dispositivos existentes
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: Actualizar un equipo existente con una nueva versión de Windows
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: Reemplazar un equipo existente y transferir la configuración
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: Métodos para implementar sistemas operativos de empresa
+      items:
+        - name: Métodos de implementación del SO
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: Usar PXE para implementar Windows a través de la red
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Usar Centro de software para implementar Windows a través de la red
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Usar medios de arranque para implementar Windows a través de la red
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Usar medios independientes para implementar Windows sin usar la red
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Usar multidifusión para implementar Windows a través de la red
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Creación de una imagen para un OEM en fábrica o en un almacén local
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Seguridad y privacidad para la implementación de sistema operativo
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: Planear la interoperabilidad de la implementación del sistema operativo
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: Introducción
+  items:
+    - name: Preparar los roles de sistema de sitio para la implementación de sistema operativo
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: Preparación de la implementación del SO
+      items:
+        - name: Preparar la implementación de sistema operativo
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: Imágenes de arranque
+          items:
+            - name: Administrar imágenes de arranque
+              href: get-started/manage-boot-images.md
+            - name: Personalizar imágenes de arranque
+              href: get-started/customize-boot-images.md
+        - name: Imágenes de SO
+          items:
+            - name: Administrar imágenes del sistema operativo
+              href: get-started/manage-operating-system-images.md
+            - name: Personalizar imágenes del sistema operativo
+              href: get-started/customize-operating-system-images.md
+        - name: Administrar paquetes de actualización del sistema operativo
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: Administrar controladores
+          href: get-started/manage-drivers.md
+        - name: Administrar el estado de usuario
+          href: get-started/manage-user-state.md
+        - name: Preparación para implementaciones en equipos desconocidos
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: Asociar usuarios a un equipo de destino
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: Implementar y usar
+  items:
+    - name: Administrar y crear secuencias de tareas
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: Creación de secuencias de tareas para automatizar tareas
+      items:
+        - name: Crear una secuencia de tareas para instalar un sistema operativo
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: Crear una secuencia de tareas para actualizar un sistema operativo
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: Crear una secuencia de tareas para capturar un sistema operativo
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: Crear una secuencia de tareas para capturar y restaurar el estado del usuario
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: Crear una secuencia de tareas personalizada
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: Crear una secuencia de tareas para implementaciones que no son de sistema operativo
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Implementar una secuencia de tareas
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: Creación de una implementación por fases
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: Administración y supervisión de implementaciones por fases
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: Administración de Windows como servicio
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: Implementar Windows to Go
+      href: deploy-use/deploy-windows-to-go.md
+    - name: Supervisar implementaciones del sistema operativo
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: Depurar una secuencia de tareas
+      href: deploy-use/debug-task-sequence.md
+    - name: Configuración del contenido de la caché previa
+      href: deploy-use/configure-precache-content.md
+    - name: Crear medios de secuencia de tareas
+      items:
+        - name: Información general de medio de secuencia de tareas
+          href: deploy-use/create-task-sequence-media.md
+        - name: Crear medios independientes
+          href: deploy-use/create-stand-alone-media.md
+        - name: Crear medios preconfigurados
+          href: deploy-use/create-prestaged-media.md
+        - name: Crear medios de arranque
+          href: deploy-use/create-bootable-media.md
+        - name: Crear medios de captura
+          href: deploy-use/create-capture-media.md
+- name: Referencia técnica
+  items:
+    - name: Uso del editor de secuencias de tareas
+      href: understand/task-sequence-editor.md
+    - name: Experiencias de usuario para la implementación de sistemas operativos
+      href: understand/user-experience.md
+    - name: Pasos de la secuencia de tareas
+      items:
+        - name: Acerca delos pasos de la secuencia de tareas
+          href: understand/task-sequence-steps.md
+        - name: Instalar actualizaciones de software
+          href: understand/install-software-updates.md
+        - name: "Aprovisionamiento previo de BitLocker en Windows\_PE"
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: Uso de variables en una secuencia de tareas
+      href: understand/using-task-sequence-variables.md
+    - name: Variables de la secuencia de tareas
+      href: understand/task-sequence-variables.md
+    - name: Comandos de preinicio para medios de secuencia de tareas
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: Modo de aprovisionamiento
+      href: understand/provisioning-mode.md
