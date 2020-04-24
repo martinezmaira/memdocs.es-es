@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/13/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ccc5c93d72c026c38616c8fdcfea6f81f153aa0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fd126e59b8162a66815e89d0e80850fe2fe9c2d4
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352324"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771063"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Establecimiento de reglas en los dispositivos para permitir el acceso a recursos de su organización con Intune
 
@@ -82,7 +82,7 @@ También puede usar las directivas de cumplimiento de dispositivos sin ningún a
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Formas de implementar las directivas de cumplimiento de dispositivos
 
-Puede implementar directivas de cumplimiento en los usuarios de grupos de usuarios o en dispositivos de grupos de dispositivos. Cuando se implementa una directiva de cumplimiento en un usuario, se comprueba el cumplimiento de todos los dispositivos del usuario. En Windows 10 versión 1803 y dispositivos más recientes, se recomienda realizar la implementación en grupos de dispositivos *si* el usuario primario no ha inscrito el dispositivo. El uso de grupos de dispositivos en este escenario ayuda con los informes de cumplimiento.
+Puede implementar directivas de cumplimiento en los usuarios de grupos de usuarios o en dispositivos de grupos de dispositivos. Cuando se implementa una directiva de cumplimiento en un usuario, se comprueba el cumplimiento de todos los dispositivos del usuario. El uso de grupos de dispositivos en este escenario ayuda con los informes de cumplimiento.
 
 Intune también incluye un conjunto de configuraciones de directivas de cumplimiento integradas. Las directivas integradas siguientes se evalúan en todos los dispositivos inscritos en Intune:
 
