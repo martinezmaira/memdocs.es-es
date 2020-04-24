@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ec5bf332d951fc19cb4d6ef1dee242b87d02ee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325472"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079491"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Inicio rápido: Enviar notificaciones a dispositivos no conformes
 
@@ -33,7 +33,7 @@ De forma predeterminada, cuando Intune detecta un dispositivo que no es compatib
 
 Una acción que debe llevarse a cabo cuando un dispositivo no satisface los requisitos de cumplimiento es enviar un correo electrónico al usuario de los dispositivos. También puede personalizar una notificación por correo electrónico antes de enviarla. En concreto, puede personalizar los destinatarios, el asunto, el cuerpo del mensaje, incluido el logotipo de la empresa, y la información de contacto. Intune también incluye detalles sobre los dispositivos no conformes en la notificación por correo electrónico.
 
-Si no tiene una suscripción a Intune, [regístrese para obtener una cuenta de prueba gratuita](../fundamentals/free-trial-sign-up.md).
+Si no dispone de ninguna suscripción a Intune, [regístrese para obtener una cuenta de evaluación gratuita](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

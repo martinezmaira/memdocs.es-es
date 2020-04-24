@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 934e2283fec0cd68ea5b72f092fb6dcac6f3fe4c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81379630"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126095"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Solución de problemas de comunicación entre un dispositivo y el servidor NDES para perfiles de certificado SCEP en Microsoft Intune
 
@@ -161,7 +161,7 @@ Las conexiones que se parecen al ejemplo siguiente, con un código de estado 500
 
 Use los pasos siguientes para probar la dirección URL que se especifica en el perfil de certificado SCEP.
 
-1. En Intune, edite el perfil de certificado SCEP y copie la dirección URL del servidor. La dirección URL debe ser similar a *https://contoso.com/certsrv/mscep/msecp.dll* .
+1. En Intune, edite el perfil de certificado SCEP y copie la dirección URL del servidor. La dirección URL debe ser similar a *https://contoso.com/certsrv/mscep/mscep.dll* .
 
 2. Abra un explorador web y, a continuación, vaya a la dirección URL del servidor SCEP. El resultado debe ser: **HTTP Error 403.0 – Forbidden**. Este resultado indica que la dirección URL funciona correctamente.
 

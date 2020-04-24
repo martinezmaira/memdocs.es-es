@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1f0117f6dbf186b3a4bdddb393d053c33c914a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359799"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078063"
 ---
 # <a name="reference-for-devices-entities"></a>Referencia de las entidades Devices
 
@@ -42,7 +42,7 @@ La categoría **Dispositivos** contiene entidades para dispositivos móviles que
 
 La entidad **deviceType** representa el tipo de dispositivo al que hacen referencia otras entidades de almacenamiento de datos. Normalmente, el tipo de dispositivo describe el modelo del dispositivo, el fabricante o una combinación de ambos.
 
-| Propiedad  | Description |
+| Propiedad  | Descripción |
 |---------|------------|
 | deviceTypeID |Identificador único del tipo de dispositivo. |
 | deviceTypeKey |Identificador único del tipo de dispositivo en el almacenamiento de datos. Clave suplente. |
@@ -50,7 +50,7 @@ La entidad **deviceType** representa el tipo de dispositivo al que hacen referen
 
 ### <a name="example"></a>Ejemplo
 
-| deviceTypeID  | Nombre | Description |
+| deviceTypeID  | Nombre | Descripción |
 |---------|------------|--------|
 | 0 |Escritorio |Dispositivo de escritorio de Windows |
 | 1 |WindowsRT |Dispositivo WindowsRT |
@@ -76,7 +76,7 @@ La entidad **deviceType** representa el tipo de dispositivo al que hacen referen
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 La entidad **enrollmentActivity** indica la actividad de una inscripción de dispositivos.
 
-| Propiedad                      | Description                                                               |
+| Propiedad                      | Descripción                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | Clave de la fecha en la que se ha registrado esta actividad de inscripción.               |
 | deviceEnrollmentTypeKey       | Clave del tipo de inscripción.                                        |
@@ -90,30 +90,30 @@ La entidad **enrollmentActivity** indica la actividad de una inscripción de dis
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
 La entidad **enrollmentEventStatus** indica el resultado de una inscripción de dispositivos.
 
-| Propiedad                   | Description                                                                       |
+| Propiedad                   | Descripción                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | Identificador único del estado de la inscripción en el almacenamiento de datos (clave suplente).  |
 | enrollmentEventStatusName  | Nombre del estado de la inscripción. Vea los ejemplos siguientes.                            |
 
 ### <a name="example"></a>Ejemplo
 
-| enrollmentEventStatusName  | Description                            |
+| enrollmentEventStatusName  | Descripción                            |
 |----------------------------|----------------------------------------|
 | Correcto                    | Inscripción de dispositivo correcta.         |
-| Error                     | Inscripción de dispositivo errónea.             |
+| Failed                     | Inscripción de dispositivo errónea.             |
 | No disponible              | El estado de la inscripción no está disponible.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
 La entidad **EnrollmentFailureCategory** indica el motivo del error de una inscripción de dispositivos. 
 
-| Propiedad                       | Description                                                                                 |
+| Propiedad                       | Descripción                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | Identificador único de la categoría del error de la inscripción en el almacenamiento de datos (clave suplente).  |
 | enrollmentFailureCategoryName  | Nombre de la categoría del error de la inscripción. Vea los ejemplos siguientes.                            |
 
 ### <a name="example"></a>Ejemplo
 
-| enrollmentFailureCategoryName   | Description                                                                                                   |
+| enrollmentFailureCategoryName   | Descripción                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | No aplicable                  | La categoría del error de la inscripción no es aplicable.                                                            |
 | No disponible                   | La categoría del error de la inscripción no está disponible.                                                             |
@@ -133,14 +133,14 @@ La entidad **EnrollmentFailureCategory** indica el motivo del error de una inscr
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 La entidad **EnrollmentFailureReason** indica un motivo más detallado para el error de inscripción de un dispositivo dentro de una categoría de error determinada.  
 
-| Propiedad                     | Description                                                                               |
+| Propiedad                     | Descripción                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
 | enrollmentFailureReasonKey   | Identificador único del motivo del error de la inscripción en el almacenamiento de datos (clave suplente).  |
 | enrollmentFailureReasonName  | Nombre del motivo del error de la inscripción. Vea los ejemplos siguientes.                            |
 
 ### <a name="example"></a>Ejemplo
 
-| enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
+| enrollmentFailureReasonName      | Descripción                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | No aplicable                   | El motivo del error de la inscripción no es aplicable.                                                                                                                                                       |
 | No disponible                    | El motivo del error de la inscripción no está disponible.                                                                                                                                                        |
@@ -163,7 +163,7 @@ La entidad **EnrollmentFailureReason** indica un motivo más detallado para el e
 
 La entidad **enrollmentType** indica si el dispositivo es corporativo, personal o desconocido.
 
-| Propiedad  | Description | Ejemplo |
+| Propiedad  | Descripción | Ejemplo |
 |---------|------------|--------|
 | ownerTypeID |Identificador único del tipo de propietario. | |
 | ownerTypeKey |Identificador único del tipo de propietario en el almacenamiento de datos. Clave suplente. | |
@@ -176,7 +176,7 @@ La entidad **enrollmentType** indica si el dispositivo es corporativo, personal 
 
 La entidad **managementState** proporciona detalles sobre el estado del dispositivo. Los detalles pueden ser útiles en los casos en los que se aplican acciones remotas o el dispositivo se ha liberado o modificado.
 
-| Propiedad  | Description |
+| Propiedad  | Descripción |
 |---------|------------|
 | managementStateID | Identificador único del estado de administración. |
 | managementStateKey | Identificador único del estado de administración en el almacenamiento de datos. Clave suplente. |
@@ -184,7 +184,7 @@ La entidad **managementState** proporciona detalles sobre el estado del disposit
 
 ### <a name="example"></a>Ejemplo
 
-| managementStateID  | Nombre | Description |
+| managementStateID  | Nombre | Descripción |
 |---------|------------|--------|
 | 0 |Administrados | Administrado sin acciones remotas pendientes. |
 | 1 |RetirePending | Hay un comando de retirada pendiente para el dispositivo. |
@@ -203,7 +203,7 @@ La entidad **managementState** proporciona detalles sobre el estado del disposit
 
 La entidad **managementAgentType** representa los agentes usados para administrar un dispositivo.
 
-| Propiedad  | Description |
+| Propiedad  | Descripción |
 |---------|------------|
 | managementAgentTypeID | Identificador único del tipo de agente de administración. |
 | managementAgentTypeKey | Identificador único del tipo de agente de administración en el almacenamiento de datos. Clave suplente. |
@@ -211,7 +211,7 @@ La entidad **managementAgentType** representa los agentes usados para administra
 
 ### <a name="example"></a>Ejemplo
 
-| ManagementAgentTypeID  | Nombre | Description |
+| ManagementAgentTypeID  | Nombre | Descripción |
 |---------|------------|--------|
 | 1 |EAS | El dispositivo se administra a través de Exchange Active Sync. |
 | 2 |MDM | El dispositivo se administra mediante un agente MDM. |
@@ -225,7 +225,7 @@ La entidad **managementAgentType** representa los agentes usados para administra
 
 La entidad **devices** muestra todos los dispositivos inscritos en la administración y sus propiedades correspondientes.
 
-|          Propiedad          |                                                                                       Description                                                                                      |
+|          Propiedad          |                                                                                       Descripción                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | deviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente.                                                                                                               |
 | deviceId                   | Identificador único del dispositivo.                                                                                                                                                     |
@@ -268,7 +268,7 @@ La entidad **devices** muestra todos los dispositivos inscritos en la administra
 
 La entidad **devicePropertyHistory** tiene las mismas propiedades que las tablas de dispositivos y las instantáneas diarias de cada registro de dispositivo por día de los últimos 90 días. La columna DateKey indica el día de cada fila.
 
-|          Propiedad          |                                                                                      Description                                                                                     |
+|          Propiedad          |                                                                                      Descripción                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | dateKey                    | Referencia a la tabla de fechas que indica el día.                                                                                                                                          |
 | deviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente. Es una referencia a la tabla de dispositivos que contiene el identificador de dispositivo de Intune.                               |
