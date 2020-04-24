@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6b7ce4fd1ab09607f167696df35f3b5f19469b0d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688993"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075734"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Crear aplicaciones Windows en Configuration Manager
 
@@ -124,7 +124,7 @@ A partir de la versión 2002, puede instalar aplicaciones complejas mediante se
 
 - Definir metadatos adicionales para la secuencia de tareas de aplicación, incluida información localizada.
 
-Solo se puede agregar una secuencia de tareas de implementación que no sea del sistema operativo como tipo de implementación en una aplicación. No se admiten las secuencias de tareas de gran impacto, de implementación del sistema operativo ni de actualización del sistema operativo. Una implementación dirigida al usuario se sigue ejecutando en el contexto de usuario de la cuenta de sistema local.
+Solo se puede agregar una secuencia de tareas de implementación que no sea del sistema operativo como tipo de implementación en una aplicación. No se admiten las secuencias de tareas de gran impacto, de implementación del sistema operativo ni de actualización del sistema operativo. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 Al agregar este tipo de implementación a una aplicación, configure sus propiedades en la página **Secuencia de tareas**. Para obtener más información, vea las opciones [Tipo de implementación **Secuencia de tareas**](../deploy-use/create-applications.md#bkmk_dt-ts).
 

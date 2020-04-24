@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 93d37ae321ec35fe8de83626f1c5963cb663882d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696003"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078760"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funciones de Technical Preview 1806.2 de Configuration Manager
 
@@ -200,7 +200,7 @@ En esta versión se encuentra disponible información adicional sobre administra
 
 - **Grupos de límites sin sistemas de sitio asignados**: sin los sistemas de sitio asignados, los grupos de límites solo pueden usarse para la asignación de sitio.  
 
-- **Grupos de límites sin miembros**: los grupos de límites no son aplicables a la asignación de sitio o a la búsqueda de contenido si no tienen ningún miembro.  
+- **Grupos de límites sin miembros**: los grupos de límites no son aplicables a la asignación de sitio ni a la búsqueda de contenido si no tienen ningún miembro.  
 
 - **Puntos de distribución que no proporcionan contenido a los clientes**: puntos de distribución que no han proporcionado contenido a los clientes en los treinta últimos días. Estos datos se basan en los informes de los clientes de su historial de descargas.  
 
