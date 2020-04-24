@@ -10,12 +10,12 @@ ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2a3d810fa2a3b8630b50b702e03ab9666661560d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53a3aabfe65449723bdb6076486128b76a1a830c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700153"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078437"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Administrar reglas de aplicabilidad para Updates Publisher
 
@@ -32,7 +32,7 @@ Por ejemplo, el siguiente conjunto de reglas contiene tres reglas. La primera re
 
 ``` Example
 And  
-  File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
+  File '\[PROGRAM\_FILES\] \\Microsoft\\MyFile' exists  
   Or  
     Windows Language is English
     Windows Language is Japanese
