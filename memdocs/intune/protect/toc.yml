@@ -87,10 +87,14 @@
           href: app-based-conditional-access-intune-create.md
         - name: ADAL e Intune
           href: app-modern-authentication-block.md
-        - name: Integración de Jamf Pro con Intune para cumplimiento
-          href: conditional-access-integrate-jamf.md
-        - name: Aplicación del cumplimiento en equipos Mac administrados con Jamf Pro
-          href: conditional-access-assign-jamf.md
+        - name: Jamf Pro para macOS
+          items:
+            - name: Uso del conector en la nube de Jamf
+              href: conditional-access-jamf-cloud-connector.md
+            - name: Integración manual de Jamf con Intune
+              href: conditional-access-integrate-jamf.md
+            - name: Aplicación del cumplimiento en equipos Mac administrados con Jamf Pro
+              href: conditional-access-assign-jamf.md
     - name: Protección contra amenazas
       items:
         - name: Mobile Threat Defense
@@ -253,26 +257,15 @@
           href: troubleshoot-jamf.md
 - name: Referencia
   items:
+    - name: Configuración de directivas antivirus
+      items:
+        - name: Configuración de antivirus de Defender para macOS
+          href: antivirus-microsoft-defender-settings-macos.md
+        - name: "Configuración de antivirus de Microsoft\_Defender para Windows\_10"
+          href: antivirus-microsoft-defender-settings-windows.md
     - name: API para agregar la entidad de certificación de terceros
-      href: scep-libraries-apis.md
     - name: Configuración de directivas de cumplimiento
       items:
-        - name: Líneas base de seguridad
-          items:
-            - name: "Configuración de línea base de MDM de Windows\_10"
-              href: security-baseline-settings-mdm-all.md
-            - name: Configuración de línea base de ATP de Microsoft Defender
-              href: security-baseline-settings-defender-atp.md
-            - name: "Configuración de línea base de Microsoft\_Edge"
-              href: security-baseline-settings-edge.md
-        - name: Configuración de directivas antivirus
-          items:
-            - name: Configuración de antivirus de Defender para macOS
-              href: antivirus-microsoft-defender-settings-macos.md
-            - name: "Configuración de antivirus de Microsoft\_Defender para Windows\_10"
-              href: antivirus-microsoft-defender-settings-windows.md
-        - name: Configuración de Windows Update
-          href: windows-update-settings.md
         - name: Configuración de directivas de cumplimiento (Android)
           href: compliance-policy-create-android.md
         - name: Configuración de directivas de cumplimiento (Android Enterprise)
@@ -287,6 +280,17 @@
           href: compliance-policy-create-windows-8-1.md
         - name: "Configuración de directivas de cumplimiento (Windows\_Phone\_8.1)"
           href: compliance-policy-create-windows-8-1.md
+      href: scep-libraries-apis.md
+    - name: Configuración de líneas de base de seguridad
+      items:
+        - name: "Configuración de línea base de MDM de Windows\_10"
+          href: security-baseline-settings-mdm-all.md
+        - name: Configuración de línea base de ATP de Microsoft Defender
+          href: security-baseline-settings-defender-atp.md
+        - name: "Configuración de línea base de Microsoft\_Edge"
+          href: security-baseline-settings-edge.md
+    - name: Configuración de Windows Update
+      href: windows-update-settings.md
     - name: Códigos de error y descripciones
       items:
         - name: Errores de actualización de software
