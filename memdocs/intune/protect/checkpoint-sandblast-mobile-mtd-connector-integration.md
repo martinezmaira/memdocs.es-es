@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed468bfd9a16bb231d29f21c545cd27f121d22e7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 71dc3eed84f2f1a5a267740b5c1539b29f4c63bb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353377"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079865"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Integrar SandBlast Mobile de Check Point con Intune
 
@@ -58,7 +58,7 @@ El proceso de autorización de la aplicación SandBlast de Check Point consta de
 
 - Permitir que el servicio de SandBlast Mobile de Check Point comunique a Intune la información relacionada con el estado de mantenimiento del dispositivo.
 
-- SandBlast Mobile de Check Point se sincroniza con la pertenencia a grupos de inscripción de Azure AD para rellenar la base de datos de su dispositivo.
+- SandBlast Mobile de Check Point se sincroniza con la pertenencia a grupos de inscripción de Azure AD para rellenar la base de datos de su dispositivo.
 
 - Permitir que la consola de administración de SandBlast de Check Point use el inicio de sesión único (SSO) de Azure AD.
 

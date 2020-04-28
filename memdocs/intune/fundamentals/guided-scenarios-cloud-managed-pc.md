@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362594"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023204"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Escenario guiado: Escritorio moderno administrado en la nube
 
-Escritorio moderno es la plataforma de productividad de vanguardia para el trabajador de la información. Offic 365 ProPlus y Windows 10 son los componentes principales de Escritorio moderno junto con las líneas de base de seguridad más recientes para Windows 10 y Protección contra amenazas avanzada de Microsoft Defender.
+Escritorio moderno es la plataforma de productividad de vanguardia para el trabajador de la información. Aplicaciones de Microsoft 365 y Windows 10 son los componentes principales de Escritorio moderno junto con las líneas de base de seguridad más recientes para Windows 10 y Advanced Threat Protection de Microsoft Defender.
 
 La administración de Escritorio moderno desde la nube aporta la ventaja adicional de las acciones remotas en toda Internet. La administración en la nube emplea las directivas de Administración de dispositivos móviles integradas de Windows y quita las dependencias de la directiva de grupo de Active Directory local.
 
@@ -44,9 +44,9 @@ Si quiere evaluar un escritorio moderno administrado en la nube en su propia org
   - Líneas de base de seguridad, Leer, Crear, Eliminar, Asignar y Actualizar
   - Conjuntos de directivas Leer, Crear, Eliminar, Asignar y Actualizar
 
-## <a name="step-1---introduction"></a>Paso 1: Introducción
+## <a name="step-1---introduction"></a>Paso 1: introducción
 
-Con este escenario guiado, configurará un usuario de prueba, inscribirá un dispositivo en Intune y lo implementará con la configuración recomendada de Intune, así como con Windows 10 y Office ProPlus. El dispositivo también se configurará para Protección contra amenazas avanzada de Microsoft Defender, si elige [habilitar esta protección en Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). El usuario que configure y el dispositivo que inscriba se agregarán a un nuevo grupo de seguridad y se configurarán con la configuración recomendada para la seguridad y la productividad.
+Con este escenario guiado, configurará un usuario de prueba, inscribirá un dispositivo en Intune y lo implementará con la configuración recomendada de Intune, así como con Windows 10 y Aplicaciones de Microsoft 365. El dispositivo también se configurará para Protección contra amenazas avanzada de Microsoft Defender, si elige [habilitar esta protección en Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). El usuario que configure y el dispositivo que inscriba se agregarán a un nuevo grupo de seguridad y se configurarán con la configuración recomendada para la seguridad y la productividad.
 
 ### <a name="what-you-will-need-to-continue"></a>Qué se necesita para continuar
 
@@ -121,7 +121,7 @@ El escenario guiado también asignará el usuario al dispositivo Autopilot selec
 
 Una vez que el usuario une el dispositivo a Azure Active Directory, se aplicarán las configuraciones siguientes al dispositivo:
 
-1. Office 365 ProPlus se instalará de forma automática en el equipo administrado en la nube. Incluye las aplicaciones con las que está familiarizado, como Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype Empresarial y Word. Puede usar estas aplicaciones para conectarse a servicios de Office 365, como SharePoint Online, Exchange Online y Skype Empresarial Online. Office 365 ProPlus se actualiza periódicamente con nuevas características, a diferencia de las versiones de Office que no son de suscripción. Para obtener una lista de las características nuevas, vea Novedades de Office 365.
+1. Aplicaciones de Microsoft 365 se instalará de forma automática en el equipo administrado en la nube. Incluye las aplicaciones con las que está familiarizado, como Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype Empresarial y Word. Puede usar estas aplicaciones para conectarse a servicios de Office 365, como SharePoint Online, Exchange Online y Skype Empresarial Online. Aplicaciones de Microsoft 365 se actualiza periódicamente con nuevas características, a diferencia de las versiones de Office que no son de suscripción. Para obtener una lista de las características nuevas, vea Novedades de Office 365.
 2. Las líneas de base de seguridad de Windows se instalarán en el equipo administrado en la nube. Si ha configurado Protección contra amenazas avanzada de Microsoft Defender, el escenario guiado también configurará las opciones de línea de base de Defender. Protección contra amenazas avanzada de Microsoft Defender proporciona una nueva capa de protección posterior a la infracción en la pila de seguridad de Windows 10. Con una combinación de tecnología cliente integrada en Windows 10 y un sólido servicio en la nube, ayudará a detectar las amenazas que han superado otras medidas de defensa. 
 
 ## <a name="next-steps"></a>Pasos siguientes

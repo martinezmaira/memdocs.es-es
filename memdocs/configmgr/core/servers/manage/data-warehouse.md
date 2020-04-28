@@ -10,12 +10,12 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb2d1cc85488decf61bce7a3f18aa73bc17bce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: abe6b05d24955959e1d08defc2c5054c4499d756
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692673"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075598"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>El punto de servicio de almacenamiento de datos para Configuration Manager
 

@@ -10,12 +10,12 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0edf83c736c2737f4af2f040159a71bb0348aee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6b519d60be094bb7c39f738d04322009b36a409f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689313"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075870"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>Más información sobre la seguridad del script de PowerShell
 
@@ -62,7 +62,7 @@ Pasar parámetros es una manera de disponer de flexibilidad con los scripts y de
 - Aprovechar el módulo de PowerShell ["injection hunter"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) (cazador de inserciones) de la Galería de PowerShell.
     - Puede haber falsos positivos, por lo que cuando algo se marque como sospechoso, busque la intención para determinar si se trata de un problema real o no. 
 - Microsoft Visual Studio tiene un analizador de scripts, que puede ayudar con la comprobación de la sintaxis de PowerShell.
-- En este vídeo, titulado “DEF CON 25 - Lee Holmes - Get $pwned: Attacking Battle Hardened Windows Server” (atacar una instancia de Windows Server preparada para la batalla), se proporciona información general sobre los tipos de problemas para los que puede protegerse (especialmente, la sección de 12:20 a 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- En este vídeo, titulado "DEF CON 25 - Lee Holmes - Get $pwned: atacar una instancia de Windows Server preparada para la batalla", se proporciona información general sobre los tipos de problemas para los que puede protegerse (especialmente, la sección entre los minutos 12:20 y 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>Recomendaciones de entorno
 Recomendaciones generales para los administradores de PowerShell.

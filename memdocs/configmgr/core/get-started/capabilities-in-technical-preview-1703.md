@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cbdcc7a4774c9b57ab4a836719ebfc408a2d771d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705283"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076159"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funciones de Technical Preview 1703 de Configuration Manager
 

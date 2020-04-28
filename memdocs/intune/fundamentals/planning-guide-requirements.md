@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357654"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080137"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Determinación de los requisitos de los escenarios de casos de uso
 

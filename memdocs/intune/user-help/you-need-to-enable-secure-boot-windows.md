@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 3b466261aff8392f7c055e523e433246c47918b5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4d35ec1cc34b7bba7a27f67640d3adaf66510e02
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346422"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076822"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Necesita habilitar el arranque seguro
 

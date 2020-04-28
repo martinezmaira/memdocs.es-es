@@ -10,12 +10,12 @@ ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: aca0f3078c046bbc988a289f548ac11e26747088
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ba5479a4c75d3ab8f91a8439a6799589b93972d0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696593"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076703"
 ---
 # <a name="how-to-create-and-apply-power-plans-in-configuration-manager"></a>Cómo crear y aplicar planes de energía en Configuration Manager
 

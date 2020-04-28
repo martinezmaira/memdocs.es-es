@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 200bde56a4a1e77ce78678eddd35537c04dfa514
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325490"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079066"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutorial: Protección del correo electrónico de Exchange Online en dispositivos administrados
 
@@ -35,7 +35,7 @@ En este tutorial, aprenderá a:
 > * Crear una directiva de cumplimiento para dispositivos iOS para establecer las condiciones que debe cumplir un dispositivo para que se considere compatible.
 > * Crear una directiva de acceso condicional de Azure Active Directory (Azure AD) que exige que los dispositivos iOS se inscriban en Intune, cumplan las directivas de Intune y usen la aplicación móvil de Outlook aprobada para acceder al correo electrónico de Exchange Online.
 
-Si no tiene una suscripción a Intune, [regístrese para obtener una cuenta de prueba gratuita](../fundamentals/free-trial-sign-up.md).
+Si no dispone de ninguna suscripción a Intune, [regístrese para obtener una cuenta de evaluación gratuita](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -43,7 +43,7 @@ Necesitará a un inquilino de prueba con las siguientes suscripciones para este 
 
 - Azure Active Directory Premium ([evaluación gratuita](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 
-- Suscripción de Office 365 Empresa que incluya Exchange ([evaluación gratuita](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Suscripción de Aplicaciones de Microsoft 365 para empresas que incluya Exchange ([evaluación gratuita](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 Antes de comenzar, cree un perfil de dispositivo de prueba para dispositivos iOS siguiendo los pasos descritos en [Inicio rápido: Creación de un perfil de dispositivo de correo para iOS/iPadOS](../configuration/quickstart-email-profile.md).
 

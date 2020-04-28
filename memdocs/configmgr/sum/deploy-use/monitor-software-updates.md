@@ -5,17 +5,17 @@ description: La consola de Configuration Manager proporciona alertas y estados 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 278f859d58c4feda6fa13522b476ec2beb60f514
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa17e58f2687a48895502d1062a22d0c8630aea3
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709493"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110379"
 ---
 # <a name="monitor-software-updates-in-configuration-manager"></a>Supervisar actualizaciones de software en Configuration Manager
 
@@ -33,7 +33,7 @@ A partir de Configuration Manager versión 1610, puede usar el panel de actualiz
 <!--4224414-->
 *(Se introdujo en la versión 1906)*
 
-Se pueden obtener detalles de las estadísticas de compatibilidad para ver qué dispositivos requieren una actualización de software de Office 365 específica. Para ver la lista de dispositivos, necesita permiso para ver las actualizaciones y las colecciones a las que pertenecen los dispositivos. Para explorar en profundidad la lista de dispositivos:
+Se pueden obtener detalles de las estadísticas de compatibilidad para ver qué dispositivos requieren una actualización de software de Aplicaciones de Microsoft 365 específica. Para ver la lista de dispositivos, necesita permiso para ver las actualizaciones y las colecciones a las que pertenecen los dispositivos. Para explorar en profundidad la lista de dispositivos:
 
 1. Vaya a **Biblioteca de software** > **Actualizaciones de software** > **Todas las actualizaciones de software**.
 1. Seleccione las actualizaciones que requiera al menos un dispositivo.

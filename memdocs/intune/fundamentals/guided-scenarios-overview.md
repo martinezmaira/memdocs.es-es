@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aa70d5881a60d159ca668751ab2e1de9cf0cbd07
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80401437"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076108"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Introducción a los escenarios guiados de Intune 
 
@@ -64,7 +64,7 @@ Si se produce un error al implementar el escenario, se revertirán todos los cam
 
 Los escenarios guiados no se pueden usar para editar los recursos existentes. Una vez creados, todos los recursos, grupos y asignaciones se deben editar con las cargas de trabajo existentes.
 
-### <a name="monitoring"></a>Supervisión 
+### <a name="monitoring"></a>monitoring 
 
 Los escenarios guiados no se pueden usar para supervisar los recursos existentes aparte del proceso de creación inicial. Una vez creados, todos los recursos, grupos y asignaciones se deben supervisar con las cargas de trabajo existentes. 
 

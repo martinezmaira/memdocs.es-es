@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65533f3d93d226b91493c98fd029c6257e7e6409
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335242"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077264"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>¿Qué ocurre si instala la aplicación de Portal de empresa e inscribe el dispositivo Windows en Intune?
 
@@ -33,7 +33,7 @@ Al instalar la aplicación Portal de empresa y después usarla para inscribir un
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>¿Qué ocurre con todos los dispositivos Windows después de la inscripción?
 Cuando inscribe un dispositivo Windows o Windows Phone en Intune, puede:
 
-- Acceder a la red, el correo electrónico y los archivos de trabajo de la empresa.
+- Acceder a la red, al correo electrónico y a los archivos de trabajo de la empresa.
 
 - Obtener aplicaciones de empresa desde el sitio web del Portal de empresa. (__Nota__: Para Windows 7 y Windows Vista, solo puede obtener aplicaciones de empresa desde el sitio web del Portal de empresa).
 

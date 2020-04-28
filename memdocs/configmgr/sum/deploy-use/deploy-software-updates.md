@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 8104bbab04e2c8741bfbbc9c6fb61039033941c9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696143"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110430"
 ---
 # <a name="deploy-software-updates"></a>Implementar actualizaciones de software  
 
@@ -68,10 +68,9 @@ En la lista siguiente se indica el flujo de trabajo general de la implementació
 
 Para obtener más información y pasos detallados, vea [Implementar actualizaciones de software manualmente](manually-deploy-software-updates.md).
 
-> [!Tip]  
-> Cuando implemente manualmente las actualizaciones de cliente de Office 365, búsquelas en el nodo **Actualizaciones de Office 365** bajo **Administración de clientes de Office 365** del área de trabajo **Biblioteca de software**.  
-
-
+> [!Note]
+> - A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
+> - Cuando implemente manualmente las actualizaciones de cliente de Office 365, búsquelas en el nodo **Actualizaciones de Office 365** bajo **Administración de clientes de Office 365** del área de trabajo **Biblioteca de software**. 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Implementar actualizaciones de software automáticamente
 

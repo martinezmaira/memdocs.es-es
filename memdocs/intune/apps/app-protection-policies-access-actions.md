@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ba37abadc8571cee53b97877f4a8a6695f78acd2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551344"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079338"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Borrado de los datos mediante acciones de inicio condicional de la directiva de protección de aplicaciones en Intune
 
@@ -88,10 +88,10 @@ Para Android, podrá configurar las acciones de las siguientes opciones desde el
 Con la opción **Min Company Portal version** (Versión mínima del Portal de empresa), puede especificar una versión definida mínima específica del Portal de empresa que se aplique en un dispositivo de usuario final. Esta configuración de inicio condicional permite establecer valores para **bloquear el acceso**, **borrar datos** y **advertir** como posibles acciones cuando no se cumple cada uno de los valores. Los posibles formatos de este valor siguen el patrón *[Principal].[Secundaria]* , *[Principal].[Secundaria].[Compilación]* o *[Principal].[Secundaria].[Compilación].[Revisión]* . Dado que es posible que algunos usuarios finales no prefieran una actualización forzada de las aplicaciones en el momento, la opción "advertir" puede ser muy adecuada al configurar este valor. Lo bueno de Google Play Store es que solo envía la diferencia de bytes de las actualizaciones de aplicaciones, pero aún así puede seguir siendo una gran cantidad de datos que quizás el usuario no quiera utilizar si está trabajando con datos en el momento de la actualización. Forzar una actualización y, por tanto, descargar una aplicación actualizada podría dar lugar a cargos por datos inesperados en el momento de la actualización. La opción **Min Company Portal version** (Versión mínima del Portal de empresa), si está configurada, afectará a cualquier usuario final que obtenga la versión 5.0.4560.0 del Portal de empresa y todas sus versiones futuras. Esta configuración no afectará a los usuarios que usen una versión del Portal de empresa anterior a la versión con la que se publique esta característica. Los usuarios finales que usen actualizaciones automáticas de aplicaciones en su dispositivo probablemente no verán ningún cuadro de diálogo de esta característica, dado que es posible que estén en la versión más reciente del Portal de empresa. Esta opción es solo para Android con la protección de aplicaciones para dispositivos inscritos y no inscritos.
 
 Para usar el valor de configuración **Fabricantes de dispositivos**, indique una lista de fabricantes de Android separados por punto y coma. Estos valores no distinguen mayúsculas de minúsculas. Además de en los informes de Intune, puede encontrar el fabricante de Android de un dispositivo en la configuración del dispositivo. <br>
-Entrada de ejemplo: *Fabricante A;Fabricante B* 
+Entrada de ejemplo: *Fabricante A; Fabricante B* 
 
 >[!NOTE]
-> Estos son algunos fabricantes comunes notificados por dispositivos en los que se usa Intune, y que se pueden usar como entrada: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk.
+> Estos son algunos fabricantes habituales sobre los que se ha informado de dispositivos con Intune, y se pueden usar como entrada: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk.
 
 En los dispositivos del usuario final, el cliente de Intune tomaría medidas en función de una coincidencia simple de las cadenas de modelo de dispositivo que se especifican en Intune para las directivas de protección de aplicaciones. La coincidencia depende por completo de lo que informa el dispositivo. A usted (administrador de TI) se le anima a garantizar que se produzca el comportamiento deseado mediante la comprobación de esta configuración en función de una variedad de modelos y fabricantes de dispositivos, y destinado a un grupo de usuarios pequeño. El valor predeterminado es **Sin configurar**.<br>
 Establezca una de las acciones siguientes: 

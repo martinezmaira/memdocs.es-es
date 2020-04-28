@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: ab5ad2af9b1cad051346eca28c186e7223e8253a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fd668760a6b5d1a16cfbb8549063da4f7e8a8b7d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705503"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074187"
 ---
 # <a name="capabilities-in-technical-preview-1608-for-configuration-manager"></a>Funciones de Technical Preview 1608 de Configuration Manager
 
@@ -52,8 +52,8 @@ Después de haber definido las relaciones de elementos primarios y secundarios, 
 
 Ahora la vista solo muestra los elementos de software primarios o el software que no tiene ninguna relación definida. No se muestra el software que es solo un secundario de otro título.
 
-## <a name="remote-control-keyboard-translation"></a>Traducción de teclado de Control remoto
-Anteriormente, Configuration Manager transmitía la posición de la tecla desde la ubicación del lector a la del colaborador. Esto era problemático para las configuraciones de teclado que diferían entre lector y colaborador. Por ejemplo, un lector con un teclado inglés escribiría una “A”, pero el teclado francés del colaborador proporcionaría una “Q”. Se está modificando el comportamiento predeterminado para que sea el propio carácter el que se transmita desde el teclado del lector al del colaborador y para que sea lo que el lector intenta escribir lo que llegue al colaborador.
+## <a name="remote-control-keyboard-translation"></a>Traducción de teclado de control remoto
+Anteriormente, Configuration Manager transmitía la posición de la tecla desde la ubicación del lector a la del colaborador. Esto era problemático para las configuraciones de teclado que diferían entre lector y colaborador. Por ejemplo, un lector con un teclado inglés escribiría una "A", pero el teclado francés del colaborador proporcionaría una "Q". Se está modificando el comportamiento predeterminado para que sea el propio carácter el que se transmita desde el teclado del lector al del colaborador y para que sea lo que el lector intenta escribir lo que llegue al colaborador.
 
 El lector puede desactivar este comportamiento si prefiere escribir conforme a la disposición de teclado del colaborador. Para cambiar el comportamiento, en **Control remoto de Configuration Manager**, elija **Acción** y luego **Habilitar traducción del teclado** para transmitir la posición de las teclas.
 

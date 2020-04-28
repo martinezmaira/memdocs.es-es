@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8e3f375fb515808c1df39d1fdd786abb8f89a0a2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691373"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078692"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versiones de SO admitidas para clientes y dispositivos de Configuration Manager
 

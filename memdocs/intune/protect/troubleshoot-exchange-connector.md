@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af44b09f5e539306a24ae0e0294b3ad674f7cb74
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79338557"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079134"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Solución de problemas de Intune Exchange Connector
 

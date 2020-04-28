@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b75faa501fa91dc82bfec83b8c418e28b39fcec
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 592b42ca5f21cd68eaad01acf9895f7e5f4b5c73
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350686"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079168"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Eventos y códigos de diagnóstico de Intune Certificate Connector
 

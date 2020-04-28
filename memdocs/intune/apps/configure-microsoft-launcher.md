@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac4a9797df1ea64a5ffbceca3ea204bd9ed13a6f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407730"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075547"
 ---
 # <a name="configure-microsoft-launcher"></a>Configuración de Microsoft Launcher
 
@@ -49,6 +49,8 @@ Si agrega propiedades con el **Diseñador de configuraciones**, las puede conver
 
    > [!NOTE]
    > Una vez que las propiedades se hayan configurado mediante el Diseñador de configuraciones, los datos JSON también se actualizarán para reflejar solo estas propiedades. Para agregar claves de configuración adicionales a los datos JSON, use el [ejemplo de script JSON](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) a fin de copiar las líneas necesarias para cada clave de configuración. 
+
+Al editar las directivas de configuración de aplicaciones creadas anteriormente, si se han configurado propiedades complejas, el proceso de edición mostrará el editor de datos de JSON. Se conservarán todas las opciones configuradas previamente, y puede cambiar para usar el diseñador de configuración para modificar la configuración admitida.
 
 ## <a name="using-configuration-designer"></a>Uso del Diseñador de configuraciones
 

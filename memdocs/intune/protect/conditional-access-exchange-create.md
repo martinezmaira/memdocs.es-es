@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323125"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739906"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configuración del acceso a Exchange local para Intune
 
@@ -35,7 +35,7 @@ Si tiene un entorno de Exchange Online dedicado y necesita averiguar si es la co
 
 Antes de configurar el acceso condicional, compruebe que existen las siguientes configuraciones:
 
-- Su versión de Exchange es **Exchange 2010 SP1 o posterior**. Se admite la matriz del servidor de acceso de cliente (CAS) del servidor de Exchange.
+- Su versión de Exchange es **Exchange 2010 SP3 o posterior**. Se admite la matriz del servidor de acceso de cliente (CAS) del servidor de Exchange.
 
 - Ha instalado y usa la instancia de [On-Premises Exchange Connector de Exchange Active Sync](exchange-connector-install.md), que conecta Intune con Exchange local.
 

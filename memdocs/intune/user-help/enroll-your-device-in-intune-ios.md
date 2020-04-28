@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084697"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137973"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configuración del acceso de dispositivos iOS a los recursos de la empresa  
 
@@ -170,13 +170,13 @@ Si hace una pausa de más de unos minutos durante la inscripción, puede provoca
 
 8. En la pantalla **Iniciar sesión**, escriba la contraseña del identificador de Apple administrado. En la mayoría de los casos, estas credenciales serán las mismas que se usan para iniciar sesión en la cuenta profesional o educativa, a menos que la organización le haya proporcionado un conjunto de credenciales diferente. 
 9. Pulse **Iniciar sesión**.  
-10. Una vez que se haya instalado el perfil, aparecerá un mensaje de operación correcta en la pantalla. Para comprobar que el perfil se ha instalado, vaya a la configuración  **Administración de perfiles y dispositivos** . Debería ver el perfil en  **Administración de dispositivos móviles**.  
+10. Una vez que se haya instalado el perfil, aparecerá un mensaje de operación correcta en la pantalla. Para comprobar que el perfil se ha instalado, vaya a la configuración **Administración de perfiles y dispositivos**. Debería ver el perfil en **Administración de dispositivos móviles**.  
 
     ![Captura de pantalla de la configuración Administración de perfiles y dispositivos de la aplicación Ajustes, que muestra el perfil de administración.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Vuelva a la aplicación Portal de empresa. Portal de empresa comenzará a sincronizar y configurar el dispositivo. Portal de empresa podría pedirle que actualice alguna configuración adicional del dispositivo. Si lo hace, pulse **Continuar**.    
 
-12. Se sabe que la configuración se ha completado cuando todos los elementos de la lista muestran una marca de verificación verde. Pulse  **Listo**.  
+12. Se sabe que la configuración se ha completado cuando todos los elementos de la lista muestran una marca de verificación verde. Pulse **Listo**.  
 
 ## <a name="it-administrator-support"></a>Soporte técnico para administradores de TI  
 Si es administrador de TI y detecta problemas al inscribir dispositivos, vea [Troubleshooting iOS device enrollment problems in Microsoft Intune](https://support.microsoft.com/en-us/help/4039809) (Solucionar problemas de inscripción de dispositivos iOS en Microsoft Intune). En este artículo se enumeran errores habituales, sus causas y los pasos para resolverlos.  

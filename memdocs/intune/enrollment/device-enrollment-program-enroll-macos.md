@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1070c7b396ac3c19c340a69b6e2eb8db9d6707b6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e6a62767fdb3e80c7f7f517c06f1e44a6a7423d1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327198"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078012"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Inscripción automática de dispositivos macOS con Apple Business Manager o Apple School Manager
 
@@ -118,7 +118,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 5. En **Afinidad de usuario**, elija si los dispositivos con este perfil deben o no inscribirse con o sin un usuario asignado.
     - **Inscribir con afinidad de usuario**: seleccione esta opción para dispositivos que pertenezcan a usuarios y necesiten usar la aplicación Portal de empresa para hacer uso de servicios, como instalar aplicaciones. Si se usa ADFS, la afinidad de usuario debe ser [Punto de conexión mixto/nombre de usuario de WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Más información](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). La autenticación multifactor no es compatible con dispositivos ADE macOS con afinidad de usuario.
 
-    - **Inscribir sin afinidad de usuario**: seleccione esta opción para dispositivos no afiliados con un usuario único. Use esta opción para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones como la aplicación de portal de empresa no funcionan.
+    - **Inscribir sin afinidad de usuario**: seleccione esta opción para dispositivos no afiliados con un usuario único. Use esta opción para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones como Portal de empresa no funcionan.
 
 6. Elija **Configuración de administración de dispositivos** y elija si desea o no que la inscripción de dispositivos esté bloqueada con este perfil. **Inscripción bloqueada** deshabilita la configuración de macOS que permite que el perfil de administración se quite del menú **Preferencias del sistema** o a través del **Terminal**. Tras la inscripción del dispositivo, no se puede cambiar esta configuración sin borrar el dispositivo.
 

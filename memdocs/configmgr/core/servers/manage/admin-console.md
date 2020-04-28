@@ -2,7 +2,7 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6bcd0bc06721fbd6ea3ce1226867db522bb2560
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700343"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110039"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>Cómo usar la consola de Configuration Manager
 
@@ -428,6 +428,8 @@ Vaya al área de trabajo **Biblioteca de software**, expanda **Administración d
 1. Seleccione el hipervínculo **Vista necesaria** situado junto al gráfico circular para obtener los detalles de la lista de dispositivos.
 1. Esta acción le llevará a un nodo temporal en **Dispositivos** donde podrá ver los dispositivos que requieren la actualización. También puede realizar acciones para el nodo, como crear una colección a partir de la lista.
 
+> [!NOTE]
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
 
 #### <a name="maximize-the-browse-registry-window"></a>Maximizar la ventana Examinar registro
 

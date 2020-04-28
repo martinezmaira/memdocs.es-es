@@ -10,12 +10,12 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32944157759e537c5b01061ab8648f242cfdac57
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab2270435ac13585cb0b7d3271f1faa02cc728d3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693573"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075751"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-configuration-manager"></a>Cómo asignar clientes a un sitio en Configuration Manager
 

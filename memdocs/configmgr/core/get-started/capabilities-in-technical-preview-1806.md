@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 516d14e40edd582223bae1e3e1dd4bf8d3cf936d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695993"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074068"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funciones de Technical Preview 1806 de Configuration Manager
 
@@ -183,7 +183,7 @@ Ahora puede pasar la carga de trabajo de Office 365 de Configuration Manager a M
 También hay una nueva condición global, **Are Office 365 applications managed by Intune on the device** (¿Las aplicaciones de Office 365 están administradas por Intune en este dispositivo?). Esta condición se agrega de forma predeterminada como requisito a las nuevas aplicaciones de Office 365. Cuando se hace la transición de esta carga de trabajo, los clientes administrados conjuntamente no cumplen el requisito en la aplicación. Por lo tanto, no instale Office 365 implementado a través de Configuration Manager.
 
 ### <a name="known-issue"></a>Problema conocido
-- Esta transición de carga de trabajo actualmente solo se aplica a las implementaciones de Office 365. Configuration Manager continúa administrando las actualizaciones de Office 365.<!--510876--> Para obtener más información y una posible solución alternativa, consulte las notas de la versión 1802 de Configuration Manager [No se aplica la configuración cliente de cambios de Office 365](../servers/deploy/install/release-notes.md).
+- Esta transición de carga de trabajo actualmente solo se aplica a las implementaciones de Office 365. Configuration Manager continúa administrando las actualizaciones de Office 365.<!--510876--> Para obtener más información y una posible solución alternativa, consulte las notas de la versión 1802 de Configuration Manager [No se aplica la configuración cliente de cambios de Office 365](../servers/deploy/install/release-notes.md).
 
 
 

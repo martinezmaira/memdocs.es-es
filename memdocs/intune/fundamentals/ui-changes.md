@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355119"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077927"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>¿Dónde está mi característica de Intune en Azure?
 Hemos aprovechado la oportunidad para organizar algunas tareas de forma más lógica durante el traslado de Intune a Azure Portal. Pero, como ocurre con todas las mejoras, deberá aprender la nueva organización. Esta guía de referencia está dirigida a aquellos que están familiarizados con Intune en el portal clásico y se preguntan dónde se encuentra una determinada función en Intune en Azure Portal. Si en este artículo no se incluye una característica que intenta encontrar, deje un comentario al final para que podamos actualizarlo.
@@ -52,7 +52,7 @@ En el portal clásico, podía establecer reglas que controlaran la inscripción 
 
 ![Imagen de reglas de inscripción de dispositivos móviles clásicas](./media/ui-changes/01-classic-rules.png)
 
-Estas reglas se aplicaban a todos los usuarios de su cuenta de Intune sin excepciones. En Azure Portal estas reglas aparecen ahora en dos tipos de directivas distintas: Restricciones de tipo de dispositivo y Restricciones de límite de dispositivos.
+Estas reglas se aplicaban a todos los usuarios de su cuenta de Intune sin excepciones. En Azure Portal, ahora estas reglas aparecen en dos tipos de directiva distintos: Restricciones de tipo de dispositivo y Restricciones de límite de dispositivos.
 
 ![Imagen de restricciones de inscripción de dispositivos móviles de Azure](./media/ui-changes/02-azure-enroll-restrictions.png)
 

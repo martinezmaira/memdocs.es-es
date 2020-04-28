@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be5ecd02817d315da4a3bea1f21285eb5a77d77e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709363"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075020"
 ---
 # <a name="deploy-bitlocker-management"></a>Implementación de la administración de BitLocker
 
@@ -194,6 +194,19 @@ Configuration Manager no vuelve a cifrar las unidades que ya están protegidas c
 Por ejemplo, ha usado MBAM para cifrar la unidad sin protección por PIN, pero la directiva de Configuration Manager requiere un PIN. La unidad no es conforme con la directiva, aunque la unidad esté cifrada.
 
 Para evitar este comportamiento, deshabilite primero BitLocker en el dispositivo. A continuación, implemente una nueva directiva con la nueva configuración.
+
+## <a name="co-management-and-intune"></a>Administración conjunta e Intune
+
+<!-- SCCMDocs#2321 -->
+
+El controlador del cliente de Configuration Manager para BitLocker es compatible con la administración conjunta. Si el dispositivo está administrado conjuntamente y cambia la [carga de trabajo de Endpoint Protection](../../../comanage/workloads.md#endpoint-protection) a Intune, el cliente de Configuration Manager omite su directiva de BitLocker. El dispositivo obtiene la directiva de cifrado de Windows de Intune.
+
+Al cambiar las autoridades de administración de cifrado, planee un [nuevo cifrado](#re-encryption).
+
+Para obtener más información sobre la administración de BitLocker con Intune, consulte los siguientes artículos:
+
+- [Uso del cifrado de dispositivos con Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Solución de problemas de directivas de BitLocker en Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

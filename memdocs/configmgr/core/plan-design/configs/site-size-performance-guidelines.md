@@ -7,12 +7,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/23/2019
-ms.openlocfilehash: 7380621fdc7a7f4d26b4844df3ee9026f0997024
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9e5cc21e4fef60f64576a7b578b3616a7e37756d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688653"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073507"
 ---
 # <a name="configuration-manager-site-size-and-performance-guidelines"></a>Instrucciones sobre rendimiento y tamaño del sitio de Configuration Manager
 

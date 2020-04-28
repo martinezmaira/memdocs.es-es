@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cce452f5790091cbba351147b7c54da85a472f75
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 64a42bebdff76186d74854237e7985afa0ee2c89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347449"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079967"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-ios-devices"></a>Envío de registros a los desarrolladores del Portal de empresa para dispositivos iOS
 
@@ -33,7 +33,7 @@ A veces, la aplicación del Portal de empresa se puede cerrar inesperadamente. L
 Si esto le ocurre a usted, el equipo del Portal de empresa necesita cierta información para tratar de diagnosticar la causa raíz. Esto es lo que necesita hacer:
 
 1. Intentar reproducir el problema. No pasa si no puede, pero facilitaría el siguiente paso.
-2. Vaya a __Configuración__ > __Privacidad__ > __Análisis__ > __Analytics Data__ (Datos de análisis). Se trata de una lista de actividades de la aplicación que se han producido, desde bloqueos hasta patrones de uso normales, y no contiene ninguna información personal. Esta lista está organizada de la más reciente a la más antigua. Si fue capaz de reproducir el problema, debería ser el primer elemento que aparece en la lista de actividades de la aplicación de esta página. Si no pudo hacerlo, desplácese hacia abajo hasta encontrar el primer elemento que comienza con "Portal de empresa"; luego, tóquelo para abrirlo.
+2. Vaya a __Configuración__ > __Privacidad__ > __Análisis__ > __Analytics Data__ (Datos de análisis). Se trata de una lista de actividades de la aplicación que se han producido, desde bloqueos hasta patrones de uso normales, y no contiene ninguna información personal. Esta lista está organizada de la más reciente a la más antigua. Si fue capaz de reproducir el problema, debería ser el primer elemento que aparece en la lista de actividades de la aplicación de esta página. Si no pudo hacerlo, desplácese hacia abajo hasta encontrar el primer elemento que comienza con "Portal de empresa"; luego, púlselo para abrirlo.
 3. Pulsa y sostén los pequeños puntos azules y arrástrelos hacia arriba y abajo hasta que todo el texto del informe se haya seleccionado. Toque __Copiar__ en el menú emergente.
 4. Abra su aplicación de correo electrónico y pegue ese contenido en el cuerpo del mensaje. Envío el correo electrónico a <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>.
 

@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b196b7e29ee8423efebd458564d12be950c14102
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8ce6c44ed569498e7c168353b39876dbfe14f8a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347514"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079406"
 ---
 # <a name="resolve-access-point-restrictions"></a>Resolver restricciones de punto de acceso
 

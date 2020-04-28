@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638205"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077774"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Configuración de un dispositivo iOS o iPadOS con Portal de empresa de Intune y Intercede
 
@@ -58,7 +58,7 @@ Las credenciales derivadas son una implementación de las directrices del Nation
 
 * La tarjeta inteligente educativa o profesional que se le haya suministrado
 * Acceso a un equipo o quiosco de autoservicio donde pueda iniciar sesión con la tarjeta inteligente
-* El dispositivo móvil
+* Dispositivo móvil
 * La aplicación Portal de empresa de Intune para iOS y iPadOS instalada en el dispositivo
 
 

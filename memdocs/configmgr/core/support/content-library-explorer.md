@@ -10,12 +10,12 @@ ms.assetid: 691896d9-ec0f-461f-a3f2-40378ebd3121
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 92aa778dded970800a65cab9074a547e870bf88e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa92fb143815faf693f6c2629c3f6436546c5080
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707863"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078539"
 ---
 # <a name="content-library-explorer"></a>Content Library Explorer
 

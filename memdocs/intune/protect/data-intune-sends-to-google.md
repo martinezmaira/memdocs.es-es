@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa9b8bc49e9c5aaf6337988fd980115beea1200b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 56274fd614dfd521e59c604cf00f18df7c8b1bc3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352480"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079729"
 ---
 # <a name="data-intune-sends-to-google"></a>Datos que Intune manda a Google
 

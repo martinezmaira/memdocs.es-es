@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5871ac29f8b5d4adb9866e091042300df1d64832
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690533"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078488"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Administrar secuencias de tareas para automatizar tareas
 
@@ -299,7 +299,7 @@ Al ejecutar una secuencia de tareas y se produce un error, puede volver a la pá
 
 - Cuando un equipo se inicia en Windows PE, el cuadro de diálogo de arranque de la secuencia de tareas puede mostrarse antes de que la secuencia de tareas esté disponible. Cuando hace clic en Siguiente en este escenario, la página final de la secuencia de tareas se muestra con un mensaje de que no existe ninguna secuencia de tareas disponible. Ahora, puede seleccionar **Anterior** para buscar de nuevo secuencias de tareas disponibles. Puede repetir este proceso hasta que la secuencia de tareas esté disponible.  
 
-- Cuando ejecuta una secuencia de tareas, pero los paquetes de contenido dependientes todavía no están disponibles en los puntos de distribución, se produce un error en la secuencia de tareas. Si aún no se ha distribuido el contenido que faltan, distribúyalo ahora. También puede esperar a que el contenido esté disponible en los puntos de distribución. Después, seleccione **Anterior** para que la secuencia de tareas busque de nuevo el contenido.
+- Cuando ejecuta una secuencia de tareas, pero los paquetes de contenido dependientes todavía no están disponibles en los puntos de distribución, se produce un error en la secuencia de tareas. Si aún no se ha distribuido el contenido que falta, distribúyalo ahora. También puede esperar a que el contenido esté disponible en los puntos de distribución. Después, seleccione **Anterior** para que la secuencia de tareas busque de nuevo el contenido.
 
 ## <a name="collection-and-device-variables"></a><a name="BKMK_CreateTSVariables"></a> Variables de recopilación y dispositivo
 

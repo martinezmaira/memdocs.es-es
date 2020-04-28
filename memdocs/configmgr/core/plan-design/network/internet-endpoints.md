@@ -2,7 +2,7 @@
 title: Requisitos de acceso a Internet
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los puntos de conexión de Internet para permitir la funcionalidad completa de las características de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2edcff868a684d5e108626b7372241dd1ec47d1c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701533"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110141"
 ---
 # <a name="internet-access-requirements"></a>Requisitos de acceso a Internet
 
@@ -171,13 +171,16 @@ Es posible que tenga que agregar puntos de conexión a un firewall que se encuen
 
 ## <a name="manage-office-365"></a>Administrar Office 365
 
-Si usa Configuration Manager para implementar y actualizar Office 365, permita los siguientes puntos de conexión:
+> [!NOTE]
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
+
+Si usa Configuration Manager para implementar y actualizar Aplicaciones de Microsoft 365 para empresas, permita los siguientes puntos de conexión:
 
 <!-- SCCMDocs#929 -->
 
-- `officecdn.microsoft.com` para sincronizar el punto de actualización de software para las actualizaciones de cliente de Office 365
+- `officecdn.microsoft.com` para sincronizar el punto de actualización de software para actualizaciones de cliente de Aplicaciones de Microsoft 365 para empresas
 
-- `config.office.com` para crear configuraciones personalizadas para las implementaciones de Office 365
+- `config.office.com` para crear configuraciones personalizadas para implementaciones de Aplicaciones de Microsoft 365 para empresas
 
 ## <a name="configuration-manager-console"></a>Consola de Configuration Manager
 

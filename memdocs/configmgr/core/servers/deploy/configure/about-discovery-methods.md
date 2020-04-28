@@ -10,12 +10,12 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 68e622d45de6575ec0f652f33934654cd1481dc2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: af35d5a941d5fd9bde2f87c8fb700b9d85e10b00
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705003"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078658"
 ---
 # <a name="about-discovery-methods-for-configuration-manager"></a>Acerca de los métodos de detección en Configuration Manager
 

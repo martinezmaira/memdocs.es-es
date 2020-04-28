@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3cefbbb9824266fd5fa057a7625332e85ec0ab32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705123"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078777"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Funciones de Technical Preview 1709 de Configuration Manager
 
@@ -44,7 +44,7 @@ En este artículo se presentan las características disponibles en la versión 
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Experiencia mejorada del perfil VPN en la consola de Configuration Manager
 <!-- 1313282 -->
-Con esta versión hemos actualizado las páginas de propiedades y el asistente de perfiles VPN para mostrar una configuración más adecuada para la plataforma seleccionada. De manera específica:
+Con esta versión, hemos actualizado las páginas de propiedades y el Asistente para perfiles VPN con el fin de mostrar una configuración más adecuada para la plataforma seleccionada. De manera específica:
 
 - Cada plataforma tiene su propio flujo de trabajo, lo que significa que los nuevos perfiles VPN contienen únicamente la configuración compatible con la plataforma.
 - Las páginas **Plataformas admitidas** ahora aparecen después de la página **General**.  Ahora se elige primero la plataforma antes de establecer los valores de propiedad.
@@ -152,7 +152,7 @@ Puede habilitar la administración conjunta en los dispositivos de Windows 10 qu
 #### <a name="command-line-to-install-configuration-manager-client"></a>Línea de comandos para instalar el cliente de Configuration Manager
 Cree una aplicación en Intune para los dispositivos de Windows 10 que aún no son clientes de Configuration Manager. Al crear la aplicación en las secciones siguientes, use la siguiente línea de comandos:
 
-ccmsetup.msi CCMSETUPCMD="/mp:&#60;*Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway*&#62;/ CCMHOSTNAME=&#60;*Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway*&#62; SMSSiteCode=&#60;*CódigoSitio*&#62; SMSMP=https:&#47;/&#60;*FQDN del MP*&#62; AADTENANTID=&#60;*Id. de inquilino de AAD*&#62; AADTENANTNAME=&#60;*Nombre del inquilino*&#62; AADCLIENTAPPID=&#60;*Id. de aplicación del servidor de integración de AAD*&#62; AADRESOURCEURI=https:&#47;/&#60;*Id. de recurso*&#62;”
+ccmsetup.msi CCMSETUPCMD="/mp:&#60;*Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway*&#62;/ CCMHOSTNAME=&#60;*Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway*&#62; SMSSiteCode=&#60;*CódigoSitio*&#62; SMSMP=https:&#47;/&#60;*FQDN del MP*&#62; AADTENANTID=&#60;*Id. de inquilino de AAD*&#62; AADTENANTNAME=&#60;*Nombre del inquilino*&#62; AADCLIENTAPPID=&#60;*Id. de aplicación del servidor de integración de AAD*&#62; AADRESOURCEURI=https:&#47;/&#60;*Id. de recurso*&#62;"
 
 Por ejemplo, si tuviera los siguientes valores:
 

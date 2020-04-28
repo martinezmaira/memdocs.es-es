@@ -1,0 +1,33 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: security-baseline-settings-one
+  title: Líneas base de seguridad
+  prompt: Selección de la base de referencia de seguridad
+  pivots:
+  - id: windows-mdm
+    title: MDM de Windows
+  - id: microsoft-defender-atp
+    title: Protección contra amenazas avanzada de Microsoft Defender
+- id: windows-mdm-versions
+  title: Versiones de la base de referencia de MDM de Windows
+  prompt: Selección de una versión
+  pivots:
+  - id: mdm-may-2019
+    title: Mayo de 2019
+  - id: mdm-preview
+    title: Versión preliminar de octubre de 2018
+- id: edge-baseline-versions
+  title: Versiones de línea base de Edge
+  prompt: Selección de una versión
+  pivots:
+  - id: edge-october-2019
+    title: Octubre de 2019
+  - id: edge-april-2020
+    title: Abril de 2020
+metadata:
+  ms.openlocfilehash: 2071c0b05d2ec5f8b5fb20f25436e0ec297613e6
+  ms.sourcegitcommit: 1eebe9ad283a048f166c9654a548485cac6a1b9b
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/17/2020
+  ms.locfileid: "82136020"

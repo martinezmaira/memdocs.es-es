@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ea760ef125ce2d6d7d0446564be3b2b27a6038ce
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bee0f037e1695112739a898c75a67d232ea722d8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335138"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079950"
 ---
 # <a name="why-enroll-your-android-device"></a>Por qué inscribir su dispositivo Android  
 

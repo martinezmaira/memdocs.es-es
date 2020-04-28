@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7b2afaf1090b1e7c9c53d403f70c17d3e171cdbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705343"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076210"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Funciones de Technical Preview 1701 de Configuration Manager
 
@@ -109,7 +109,7 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
 
    **Ediciones:**
 
-   Cambie el valor del nombre de la configuración *FairFaxArmResourceID* de modo que sea igual a "<https://management.usgovcloudapi.net/”>
+   Cambie el valor del nombre de la configuración *FairFaxArmResourceID* de modo que sea igual a "<https://management.usgovcloudapi.net/">
 
    - **Original:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
      &lt;value>&lt;/value>   

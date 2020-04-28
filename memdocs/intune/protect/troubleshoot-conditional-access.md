@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350673"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079151"
 ---
 # <a name="troubleshoot-conditional-access"></a>Solucionar problemas de acceso condicional
 En este artículo se describe qué hacer cuando los usuarios no pueden obtener acceso a los recursos protegidos con el acceso condicional o cuando los usuarios pueden acceder a recursos protegidos, pero se debería bloquear el acceso.
@@ -80,7 +80,7 @@ Puede ver si estas condiciones se cumplen en los dispositivos en Azure Portal y 
   1. Abra la aplicación del portal de empresa.
   2. Vaya a la página Configuración desde los tres puntos (…) o desde el botón de menú de hardware.
   3. Seleccione el botón *Habilitar acceso al explorador*.
-  4. En el explorador Chrome, cierre la sesión de Office 365 y reinicie Chrome.  
+  4. En el Explorador de Chrome, cierre sesión en Office 365 y reinicie Chrome.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Los dispositivos están bloqueados y no se recibe ningún correo electrónico de cuarentena
@@ -110,7 +110,7 @@ Si un dispositivo no es compatible pero sigue teniendo acceso, realice las sigui
 - Asegúrese de que se detecte el dispositivo. ¿El conector de Exchange apunta a un CAS de Exchange 2010 mientras el usuario está en un servidor de Exchange 2013? En este caso, si la regla de Exchange predeterminada es Permitir, incluso si el usuario está en el grupo de destino, Intune no puede ser consciente de la conexión del dispositivo a Exchange.
 
 - Comprobar estado de la existencia y acceso del dispositivo en Exchange:
-  - Use este cmdlet de PowerShell para obtener una lista de todos los dispositivos móviles para un buzón de correo: "Get-ActiveSyncDeviceStatistics -mailbox mbx'. Si el dispositivo no aparece en la lista, no dispone de acceso a Exchange.
+  - Use este cmdlet de PowerShell para obtener una lista de todos los dispositivos móviles para un buzón de correo: "Get-ActiveSyncDeviceStatistics -mailbox mbx". Si el dispositivo no aparece en la lista, no dispone de acceso a Exchange.
   
   - Si aparece el dispositivo, use el cmdlet "Get-CASmailbox -identity: 'upn' | fl" para información detallada sobre su estado de acceso y proporcione esta información al Soporte técnico de Microsoft.
 

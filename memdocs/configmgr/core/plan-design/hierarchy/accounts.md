@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c0cfc9ee0fe80aa39ba49b25c392334a01169a8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703773"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073422"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
@@ -673,7 +673,7 @@ Compatibilidad de PFX con el Punto de registro de certificados. ConfigMgr conced
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-Punto de administración de dispositivos. ConfigMgr concede este permiso a la cuenta de equipo de un Punto de administración con la opción “Permitir que los dispositivos móviles y el equipo Mac usen este punto de administración”, la capacidad para proporcionar compatibilidad con dispositivos inscritos en MDM.
+Punto de administración de dispositivos. ConfigMgr concede este permiso a la cuenta de equipo de un Punto de administración con la opción "Permitir que los dispositivos móviles y el equipo Mac usen este punto de administración", la capacidad para proporcionar compatibilidad con dispositivos inscritos en MDM.
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 

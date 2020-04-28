@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7af5274065217331cf3c7fc2a493374f4c0e2227
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335658"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077723"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Solución de problemas con la inscripción de dispositivos de Windows 10
 Si ha inscrito el dispositivo pero todavía no puede acceder a sus archivos y dirección de correo electrónico profesional o educativa, pruebe estos pasos de solución de problemas.  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359864"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023323"
 ---
 # <a name="reference-for-application-entities"></a>Referencia de entidades de aplicaciones
 
@@ -39,7 +39,7 @@ La categoría **Application** contiene entidades para dispositivos que realizan 
 
 La entidad **appRevision** muestra todas las versiones de las aplicaciones.
 
-| Propiedad  | Description | Ejemplo |
+| Propiedad  | Descripción | Ejemplo |
 |---------|------------|--------|
 | appKey |Identificador único de la aplicación. |123 |
 | applicationId |Identificador único de la aplicación. Se parece a AppKey, pero es una clave natural. |b66bc706-ffff-7437-0340-032819502773 |
@@ -61,7 +61,7 @@ La entidad **appRevision** muestra todas las versiones de las aplicaciones.
 
 La entidad **appTypes** muestra el origen de instalación de una aplicación.
 
-| Propiedad  | Description |
+| Propiedad  | Descripción |
 |---------|------------|
 | appTypeID |Identificador del tipo. |
 | appTypeKey |Clave suplente de la clave. |
@@ -69,7 +69,7 @@ La entidad **appTypes** muestra el origen de instalación de una aplicación.
 
 ### <a name="example"></a>Ejemplo
 
-| AppTypeID  | Nombre | Description |
+| AppTypeID  | Nombre | Descripción |
 |---------|------------|--------|
 | 0 |Aplicación de la tienda Android | Una aplicación de la tienda Android. |
 | 1 |Aplicación de LOB de Android | Una aplicación de línea de negocio de Android. |
@@ -77,7 +77,7 @@ La entidad **appTypes** muestra el origen de instalación de una aplicación.
 | 3 |Aplicación de la tienda iOS | Una aplicación de la tienda iOS. |
 | 4 |Aplicación de LOB de iOS | Una aplicación de línea de negocio de iOS. |
 | 5 |Aplicación administrada de la tienda iOS (¿MAM?) | Una aplicación de la tienda iOS habilitada para la administración. |
-| 6 |Conjunto de aplicaciones de O365 ProPlus | El conjunto de aplicaciones de Office 365 ProPlus para Windows 10. |
+| 6 |Conjunto de aplicaciones de O365 ProPlus | Las Aplicaciones de Microsoft 365 para Windows 10. |
 | 7 |Aplicación web | Una aplicación web. |
 | 8 |Aplicación de la Tienda Windows Phone 8.1 | Una aplicación de la Tienda Windows Phone 8.1. |
 | 9 |Aplicación de la Tienda Windows | Una aplicación de la Tienda Windows. |
@@ -90,7 +90,7 @@ La entidad **appTypes** muestra el origen de instalación de una aplicación.
 
 La entidad **vppProgramTypes** muestra los posibles tipos de programa VPP para una aplicación.
 
-| Propiedad  | Description |
+| Propiedad  | Descripción |
 |---------|------------|
 | vppProgramTypeID | Identificador del tipo. |
 | vppProgramTypeKey | Clave suplente de la clave. |
@@ -98,7 +98,7 @@ La entidad **vppProgramTypes** muestra los posibles tipos de programa VPP para u
 
 ### <a name="example"></a>Ejemplo
 
-| VppProgramID  | Nombre | Description |
+| VppProgramID  | Nombre | Descripción |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Programa VPP de Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | No disponible aún | Valor predeterminado. Sin VPP. |
@@ -110,7 +110,7 @@ La entidad **vppProgramTypes** muestra los posibles tipos de programa VPP para u
 
 La entidad **applicationInventory** muestra las aplicaciones que se encuentran en el dispositivo en el momento de la recopilación del inventario.
 
-| Propiedad  | Description |
+| Propiedad  | Descripción |
 |---------|------------|
 | deviceKey | Se trata de una referencia a la tabla de dispositivos que contiene el identificador de dispositivo de Intune. |
 | dateKey | Referencia a la tabla de fechas que indica el día del inventario. |
@@ -122,7 +122,7 @@ La entidad **applicationInventory** muestra las aplicaciones que se encuentran e
 
 La entidad **mobileAppInstallState** representa el estado de la instalación de una aplicación móvil una vez asignada a un grupo que contiene dispositivos, usuarios o ambos.
 
-| Propiedad | Description |
+| Propiedad | Descripción |
 |---|---|
 | appInstallStateKey | El identificador único del estado de instalación de aplicación de su cuenta. |
 | appInstallState | Valor de enumeración del estado de instalación de aplicación. |

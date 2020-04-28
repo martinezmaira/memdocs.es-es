@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 953dbf7883377b95647a1cd1f253306cf41f0fd6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 275bb43552b0dda3409dcd11ef14311334f13fa9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351310"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079523"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Privacidad y datos personales en Intune
 

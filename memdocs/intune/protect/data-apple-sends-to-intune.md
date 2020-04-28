@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 643c5713bdedce84def842ae06c00fb0e8c6d069
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 106c08b6e988c104858a06ef9843ebcb2e3ae93a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352558"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079780"
 ---
 # <a name="data-apple-sends-to-intune"></a>Datos que Apple manda a Intune
 
@@ -43,7 +43,7 @@ Para que Microsoft Intune pueda establecer una conexión, debe crear una cuenta 
 
 En la tabla siguiente se muestran los datos que un dispositivo Apple envía a Intune. [Intune también envía datos a Apple](data-intune-sends-to-apple.md). 
 
-| Service | Mensaje | Datos que se envían a Intune | Usada para |
+| Servicio | Mensaje | Datos que se envían a Intune | Usada para |
 |:---:|:---:|:---:| ---|
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Autenticar | MessageType | El tipo de mensaje: autenticar. |
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Autenticar | Tema | El tema que el dispositivo escuchará. |
@@ -69,7 +69,7 @@ En la tabla siguiente se muestran los datos que un dispositivo Apple envía a In
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Protocolo MDM | ErrorChain | Matriz de diccionarios que representa la cadena de errores que se produjeron.  |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token del programa de inscripción | Número de serie | El número de serie del dispositivo. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token del programa de inscripción | modelo | El nombre de modelo del dispositivo. |
-| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token del programa de inscripción | Description | Una descripción del dispositivo. |
+| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token del programa de inscripción | Descripción | Una descripción del dispositivo. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token del programa de inscripción | Color | El color del dispositivo. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token del programa de inscripción | Etiqueta de recurso | La etiqueta de recurso del dispositivo. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token del programa de inscripción | Estado de perfil | El estado de instalación del perfil. |
@@ -88,7 +88,7 @@ En la tabla siguiente se muestran los datos que un dispositivo Apple envía a In
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | assignedCount | El número de licencias asignadas para una aplicación. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | availableCount | El número de licencias no asignadas para una aplicación. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | bundleId | BundleId de una aplicación. |
-| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | propiedad intelectual, | La información de derechos de autor de una aplicación. |
+| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | copyright | La información de derechos de autor de una aplicación. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | CountryCode | El código de país de un programa VPP. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | deviceAssignable | Apple devuelve true si el administrador puede asignar una licencia de dispositivo para una aplicación. De lo contrario, se devuelve false. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Token VPP de Apple | facilitatorMemberId | El identificador de miembro de un facilitador de cuenta VPP.  |

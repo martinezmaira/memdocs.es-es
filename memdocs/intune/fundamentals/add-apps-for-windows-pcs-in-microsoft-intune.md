@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2c5590acd870e2623491052ba43bf29e4676568
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9ad6414bd0565389b39cc97322341ada0b4b4c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344368"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079304"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Agregar aplicaciones para PC Windows en Microsoft Intune
 
@@ -53,7 +53,7 @@ En el siguiente procedimiento usará el editor de software de Intune para config
    - **Especificar la ubicación de los archivos de instalación del software**. Escriba la ubicación de los archivos de instalación o elija **Examinar** para seleccionar la ubicación en una lista.
    - **Incluir archivos y subcarpetas adicionales de la misma carpeta**. Algún software que usa Windows Installer requiere los archivos auxiliares. Estos deben estar ubicados en la misma carpeta que el archivo de instalación. Seleccione esta opción si también desea implementar estos archivos auxiliares.
 
-   Por ejemplo, si quiere publicar una aplicación llamada Application.msi en Intune, la página sería similar a la siguiente: ![Página de configuración del software del publicador](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
+   Por ejemplo, si quiere publicar una aplicación llamada Application.msi en Intune, la página sería similar a la siguiente: ![Página Instalación de software del publicador](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
 
    Este tipo de instalación usa parte del espacio de almacenamiento en la nube.
 
@@ -84,15 +84,15 @@ En el siguiente procedimiento usará el editor de software de Intune para config
 
    Si la aplicación cumple alguna de las reglas que configuró, no se instalará.
 
-6. Únicamente para el tipo de archivo **Windows Installer** (.msi y .exe): en la página **Argumentos de la línea de comandos** , elija si quiere proporcionar argumentos de línea de comandos opcionales para el instalador.
+6. Únicamente en el caso del tipo de archivo **Windows Installer** (.msi y .exe): en la página **Argumentos de la línea de comandos** , elija si quiere proporcionar argumentos de línea de comandos opcionales del instalador.
    Intune agrega automáticamente los parámetros siguientes:
    - Para los archivos .exe, se agrega **/install**.
    - Para los archivos .msi, se agrega **/quiet**.
    Tenga en cuenta que estas opciones solo funcionarán si el creador del paquete de aplicaciones ha habilitado la funcionalidad correspondiente.
 
-7. Únicamente para el tipo de archivo **Windows Installer** (solo .exe): en la página **Códigos de retorno** puede agregar nuevos códigos de error que Intune interpretará cuando la aplicación se instale en un equipo Windows administrado.
+7. Únicamente en el caso del tipo de archivo **Windows Installer** (solo .exe): en la página **Códigos de retorno** puede agregar nuevos códigos de error que Intune interpretará cuando la aplicación se instale en un equipo Windows administrado.
 
-   Intune usa códigos de retorno estándar de la industria de forma predeterminada para informar de una instalación correcta o incorrecta de un paquete de aplicación: **0:** (Correcto) o **3010:** (Correcto con reinicio). También puede agregar sus propios códigos de retorno a esta lista. Si especifica una lista de códigos de retorno y la instalación de la aplicación devuelve un código que no se encuentra en la lista, se interpreta como un error.
+   Intune usa códigos de retorno estándar de la industria de forma predeterminada para informar de una instalación correcta o incorrecta de un paquete de aplicación: **0** (Correcto) o **3010** (Correcto con reinicio). También puede agregar sus propios códigos de retorno a esta lista. Si especifica una lista de códigos de retorno y la instalación de la aplicación devuelve un código que no se encuentra en la lista, se interpreta como un error.
 
 8. En la página **Resumen**, revise la información que especificó. Cuando esté listo, elija **Cargar**.
 
@@ -104,4 +104,4 @@ La aplicación se muestra en el nodo **Aplicaciones** del área de trabajo **Apl
 
 Tras crear una aplicación, el siguiente paso es implementarla. Para obtener más información, consulte [Asignación de aplicaciones a grupos con Microsoft Intune](../apps/apps-deploy.md).
 
-Si quiere obtener más información sobre consejos y trucos para implementar software en equipos Windows, consulte la entrada de blog [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929) (Consejo de soporte: recomendaciones para la distribución de software de Intune en PC).
+Para más información sobre consejos y trucos para implementar software en equipos Windows, vea la entrada de blog [Consejo de soporte: recomendaciones para la distribución de software de Intune en PC](https://support.microsoft.com/en-US/help/2583929).

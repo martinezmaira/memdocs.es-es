@@ -10,12 +10,12 @@ ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c642e97589ff345e4eb3a17b63b3fdfbc2891f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1e14cf57e962d7bc90cc39db9ecfea68d9c5b00e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703593"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073354"
 ---
 # <a name="design-a-hierarchy-of-sites-for-configuration-manager"></a>Diseñar una jerarquía de sitios para Configuration Manager
 

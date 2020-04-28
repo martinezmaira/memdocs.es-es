@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2c05a5518ff180bcfd3f00f6f59097815e9eed9d
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696521"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126170"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscripción de dispositivos iOS/iPadOS en Intune
 
@@ -35,7 +35,7 @@ Como administrador de Intune, puede configurar la inscripción para dispositivos
 
 Antes de que pueda habilitar dispositivos iOS/iPadOS, complete estos pasos:
 
-- [Asegúrese de que el dispositivo es apto para la inscripción de dispositivos de Apple](https://support.apple.com/en-us/HT204142#eligibility).
+- [Asegúrese de que los dispositivos sean compatibles](../fundamentals/supported-devices-browsers.md).
 - [Configurar Intune](../fundamentals/setup-steps.md): estos pasos configurar la infraestructura de Intune. En concreto, la inscripción de dispositivos requiere que [establezca su autoridad de MDM](../fundamentals/mdm-authority-set.md).
 - [Obtención de un certificado push MDM de Apple](apple-mdm-push-certificate-get.md): Apple requiere un certificado para habilitar la administración de dispositivos iOS/iPadOS y macOS.
 
@@ -81,13 +81,13 @@ Más información sobre [Inscripción de Apple Configurator](apple-configurator-
 
 ## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>Uso del Portal de empresa en dispositivos inscritos mediante ADE o Apple Configurator
 
-Los dispositivos configurados con afinidad de usuario pueden instalar y ejecutar la aplicación del Portal de empresa para descargar aplicaciones y administrar dispositivos. Una vez que los usuarios han recibido sus dispositivos, deben realizar una serie de pasos adicionales para completar el Asistente de configuración e instalar la aplicación del portal de empresa.
+Los dispositivos configurados con afinidad de usuario pueden instalar y ejecutar la aplicación del Portal de empresa para descargar aplicaciones y administrar dispositivos. Después de recibir sus dispositivos, los usuarios deben realizar una serie de pasos adicionales para completar el Asistente de configuración e instalar la aplicación del portal de empresa.
 
 La afinidad de usuario es necesaria para admitir lo siguiente:
 
 - Aplicaciones de administración de aplicaciones móviles (MAM)
 - Acceso condicional al correo electrónico y los datos de la empresa.
-- Aplicación Portal de empresa
+- Aplicación de portal de empresa
 
 ### <a name="how-users-enroll-corporate-owned-iosipados-devices-with-user-affinity"></a>Inscripción de dispositivos iOS/iPadOS de empresa con afinidad de usuario
 

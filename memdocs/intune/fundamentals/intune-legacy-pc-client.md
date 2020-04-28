@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aebd63cc0d0b1664b406ce07bfe6624b9384071
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 41b5b4116359864c4d1251515d29005b9d9af425
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342938"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077944"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Consola de Intune en Azure y cliente de equipo de Intune heredado
 
@@ -42,7 +42,7 @@ Los flujos de trabajo de administración del cliente de equipo de Intune usan la
 - Para todas las tareas de administración que no están agrupadas con el cliente de equipo de Intune, debe usar la consola Silverlight.
 - Cuando administre los grupos, debe usar el [portal de Intune en Azure](https://portal.azure.com/). Este requisito existe porque ahora Intune usa grupos de Azure AD en lugar de los grupos de Intune heredados. 
 
-Debido al cambio a los grupos de Azure AD, el filtrado "basado en grupo" de las vistas del panel de la consola de Silverlight cambió levemente. Para filtrar en la interfaz de usuario actualizada de Silverlight, siga estos pasos:
+Debido al cambio a los grupos de Azure AD, el filtrado "basado en grupo" de las vistas del panel de la consola de Silverlight cambió levemente. Para filtrar en la interfaz de usuario actualizada de Silverlight, siga estos pasos:
 
 1. Seleccione una vista.
 2. En el cuadro **Filtros**, escriba el nombre del grupo por el que desea filtrar y presione Entrar. Con esto se filtrará la vista de lista de los dispositivos de ese grupo determinado.
@@ -52,7 +52,7 @@ Debido al cambio a los grupos de Azure AD, el filtrado "basado en grupo" de las 
 
 ## <a name="continue-to-manage-windows-7-by-using-intune-pc-client"></a>Continuación de la administración de Windows 7 mediante el cliente de equipo de Intune
 
-En el caso de Windows 7, que no se puede administrar mediante MDM, se seguirán admitiendo las funcionalidades existentes del cliente de equipo de Intune solo en la consola de Silverlight. Considere la posibilidad de migrar a la administración de MDM cuando actualice a Windows 10.
+En el caso de Windows 7, que no se puede administrar mediante MDM, se seguirán admitiendo las funcionalidades existentes del cliente de equipo de Intune solo en la consola de Silverlight. Considere la posibilidad de migrar a la administración de MDM cuando actualice a Windows 10.
 
 ## <a name="mdm-capabilities"></a>Funcionalidades de MDM
 

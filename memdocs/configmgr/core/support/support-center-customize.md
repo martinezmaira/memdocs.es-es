@@ -10,12 +10,12 @@ ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1436f40dc989202725d7b83d551d318b970f9b5d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fc17437e508ea69a19043c29bf9ad4501cbac3e4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707443"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078522"
 ---
 # <a name="customize-support-center"></a>Personalizar el Centro de soporte técnico
 

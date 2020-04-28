@@ -2,7 +2,7 @@
 title: Creación de implementaciones por fases
 titleSuffix: Configuration Manager
 description: Use las implementaciones por fases para automatizar la implementación de software a varias colecciones.
-ms.date: 04/16/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 75868250b1f35654e01065e7ff610beb293de727
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5af0b7c90225a1f42d55767a0296d7e2263f956f
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690733"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110464"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Crear implementaciones por fases con Configuration Manager
 
@@ -117,14 +117,12 @@ Include a timeline diagram
 
 4. En la página **Configuración**, elija una opción para cada una de las opciones de programación. Para obtener más información, vea [Configuración de fase](#bkmk_settings). Haga clic en **Siguiente** cuando haya terminado.  
 
-5. En la página **Fases**, vea las dos fases que crea el asistente para las colecciones especificadas. Seleccione **Siguiente**.   
-
-    > [!Note]  
-    > En esta sección se describe el procedimiento para crear automáticamente una implementación en dos fases predeterminada. El asistente le permite agregar, quitar, reordenar, editar o ver las fases de una implementación por fases. Para obtener más información sobre estas acciones adicionales, vea [Creación de implementaciones por fases para una secuencia de tareas](#bkmk_manual).  
+5. En la página **Fases**, vea las dos fases que crea el asistente para las colecciones especificadas. Seleccione **Siguiente**. En estas instrucciones se describe el procedimiento para crear automáticamente una implementación en dos fases predeterminada. El asistente le permite agregar, quitar, reordenar, editar o ver las fases de una implementación por fases. Para obtener más información sobre estas acciones adicionales, vea [Creación de implementaciones por fases para una secuencia de tareas](#bkmk_manual).  
 
 6. Confirme las selecciones en la pestaña **Resumen** y después haga clic en **Siguiente** para completar el asistente.  
 
-
+> [!NOTE]
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo el nombre anterior en el producto y la documentación de Configuration Manager mientras se está actualizando la consola.  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Creación de una implementación por fases con fases configuradas manualmente
 <!--1358148--> 

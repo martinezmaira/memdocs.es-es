@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: cb88ddf489fbcf588d3abbaffae545dc46d91b7d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e6537eec4e897afa183c51f67f32704c75985e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326575"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079032"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integración de Windows Hello para empresas con Microsoft Intune  
 
@@ -42,7 +42,7 @@ Use este artículo para crear una directiva de Windows Hello para empresas prede
 > [!IMPORTANT]
 > En las versiones de escritorio y móvil de Windows 10 anteriores a la Actualización de aniversario, era posible establecer dos PIN diferentes para autenticarse en los recursos:
 > - El **PIN de dispositivo** se usaba para desbloquear el dispositivo y conectarse a recursos de nube.
-> - El **PIN de trabajo** se usaba para acceder a recursos de Azure AD en los dispositivos personales del usuario (BYOD).
+> - El **PIN de trabajo** se usaba para acceder a recursos de Azure AD en los dispositivos personales del usuario (BYOD).
 > 
 > En la Actualización de aniversario, estos dos PIN se combinaron en un solo PIN de dispositivo.
 > Las directivas de configuración de Intune que establezca para controlar el PIN de dispositivo y las directivas de Windows Hello para empresas que configure serán las que establecerán ahora este nuevo valor de PIN.

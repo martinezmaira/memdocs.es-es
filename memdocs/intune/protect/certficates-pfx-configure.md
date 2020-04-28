@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322781"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771468"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS con Intune
 
@@ -151,7 +151,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 3. Haga clic en *Descargar el software de Certificate Connector* para el conector de PKCS #12 y guarde el archivo en una ubicación a la que pueda acceder desde el servidor en el que va a instalar el conector.
 
    ![Descarga de Microsoft Intune Certificate Connector](./media/certficates-pfx-configure/download-ndes-connector.png)
- 
+
 4. Una vez finalizada la descarga, inicie sesión en el servidor. Después:
 
     1. Asegúrese de que .NET Framework 4.5 o una versión posterior esté instalado, tal como requiere el conector de certificado NDES. .NET Framework 4.5 se incluye automáticamente con Windows Server 2012 R2 y las versiones más recientes.
@@ -202,7 +202,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 
    Seleccione **Siguiente**.
 
-10. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+10. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Planee la implementación de este perfil de certificado en los mismos grupos que reciben el perfil de certificado PKCS. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
 
     Seleccione **Siguiente**.
 
@@ -260,7 +260,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 
    Seleccione **Siguiente**.
 
-10. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+10. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Planee la implementación de este perfil de certificado en los mismos grupos que reciben el perfil de certificado de confianza. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
 
     Seleccione **Siguiente**.
 

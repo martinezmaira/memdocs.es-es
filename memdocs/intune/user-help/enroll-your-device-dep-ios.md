@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1f6af588b6350bb7a0d2058f8f623c51bbdaa4c4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4c31f8ee0389da35fe515928cbb286dd2632809f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79337517"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077740"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Inscripción de dispositivos iOS proporcionados por la organización en la administración
 

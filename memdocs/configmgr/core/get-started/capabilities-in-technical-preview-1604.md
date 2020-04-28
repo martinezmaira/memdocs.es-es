@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ef37b5f99cda8022166972cdc015a3c60d0458a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1785880af8c7d0d106abfe3eea8ecd390f6ce6b1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705633"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074459"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-configuration-manager"></a>Funciones de Technical Preview 1604 de Configuration Manager
 
@@ -39,7 +39,7 @@ En este artículo se presentan las características disponibles en la versión 
 
 ##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>Escenario 1: Configurar la sincronización de la Tienda Windows para empresas  
 
-1.  En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web y/o API web". De este modo, obtendrá un identificador de cliente que necesitará más adelante.  
+1.  En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web o API web". De este modo, obtendrá un identificador de cliente que necesitará más adelante.  
 
     1.  En el nodo **Active Directory** de [https://manage.windowsazure.com](https://manage.windowsazure.com), seleccione Azure Active Directory y luego haga clic en **Aplicaciones** > **Agregar**.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 03a6e7cd49bbb5a65a4364be398961c048d2a1b9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705683"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074510"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Funciones de Technical Preview 1512 de Configuration Manager
 
@@ -75,9 +75,9 @@ En 1512 Technical Preview, hemos agregado la siguiente nueva configuración de d
 
      El motor de antimalware puede solicitar ejemplos de archivo que se enviarán a Microsoft para un análisis más profundo. De forma predeterminada, siempre se le preguntará antes de enviar dichos ejemplos. Los administradores pueden administrar ahora las siguientes opciones para configurar este comportamiento:  
 
-    -   Avanzado: **Habilitar el envío automático de archivos de ejemplo para ayudar a Microsoft a averiguar si ciertos elementos encontrados son malintencionados**:  cambie esta opción a "Sí" para habilitar el envío automático de archivos de ejemplo. De forma predeterminada, esta configuración está establecida como "No", lo que significa que el envío automático de archivos de ejemplo está deshabilitado y se le preguntará a los usuarios antes de enviar ejemplos.   (Esta configuración se introdujo por primera vez en System Center 2012 R2 Configuration Manager SP1)  
+    -   Avanzado: **Habilitar el envío automático de archivos de ejemplo para ayudar a Microsoft a averiguar si ciertos elementos encontrados son malintencionados**:  cambie esta opción a "Sí" para habilitar el envío automático de archivos de ejemplo. De forma predeterminada, este valor está establecido como "No", lo que significa que el envío automático de archivos de muestra está deshabilitado y se le preguntará a los usuarios antes de enviar ejemplos.   (Esta configuración se introdujo por primera vez en System Center 2012 R2 Configuration Manager SP1)  
 
-    -   Avanzado: **Permitir a los usuarios modificar la configuración de envío automático de archivos de ejemplo**: Esta configuración determina si un usuario con derechos administrativos locales en un dispositivo puede cambiar la configuración de envío automático de archivos de ejemplo en la interfaz del cliente. De forma predeterminada, esta opción está establecida en "No", lo que significa que la configuración solo se puede cambiar en la consola de Configuration Manager y los administradores locales de un dispositivo no pueden cambiarla.  
+    -   Avanzado: **Permitir a los usuarios modificar la configuración de envío automático de archivos de ejemplo**: Esta configuración determina si un usuario con derechos administrativos locales en un dispositivo puede cambiar la configuración de envío automático de archivos de ejemplo en la interfaz del cliente. De forma predeterminada, esta opción está establecida en "No", lo que significa que la configuración solo se puede cambiar desde la consola de Configuration Manager y los administradores locales de un dispositivo no pueden cambiarla.  
 
          Por ejemplo, a continuación se muestra la configuración de Windows Defender en Windows 10 establecida por el administrador como habilitada, y el usuario no tiene permiso para modificarla:  
 

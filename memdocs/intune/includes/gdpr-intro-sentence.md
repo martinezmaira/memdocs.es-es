@@ -1,6 +1,6 @@
 ---
-title: archivo de inclusión
-description: archivo de inclusión
+title: archivo include
+description: Archivo de inclusión
 services: azure-policy
 author: eross-msft
 ms.service: azure-policy
@@ -9,12 +9,12 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5e550f18908ae34c7df7e8ba9f03ce6a1b7d0a5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 349ad64867426efda8bb33134edc09fcae7b16cf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339116"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82095963"
 ---
 >[!Note] 
-> En este artículo se indican los pasos para eliminar los datos personales del dispositivo o del servicio y puede utilizarse para cumplir con sus obligaciones según el Reglamento general de protección de datos (RGPD). Si quiere obtener información general sobre este reglamento, vea la [sección del RGPD del Portal de confianza de servicios](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> En este artículo se ofrecen pasos sobre las formas de eliminar datos personales del dispositivo o el servicio, y se puede utilizar para dar soporte a sus obligaciones exigidas por el RGPD. Si busca información general sobre RPGD, consulte la [sección del RGPD del Portal de confianza de servicios](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

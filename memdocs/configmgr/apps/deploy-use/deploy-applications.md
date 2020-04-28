@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec8292256a55b7fc7d99e07b27ee9dee366cb9a3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7bbf395a5de98459043609986e51647362e7a0b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689513"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075343"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Implementar aplicaciones con Configuration Manager
 

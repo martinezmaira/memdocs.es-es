@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eae55477ef62c408ff886499f4668c81c799fc8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e359b07669f45999ae3de4280d1eb65d5ca11064
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326285"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023340"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo
 
@@ -134,7 +134,7 @@ Solo se pueden borrar dispositivos de quiosco. Los dispositivos de quiosco de An
 
 |Tipo de datos|Windows 8.1 (MDM) y Windows RT 8.1|Windows RT|Windows Phone 8.1 y Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Aplicaciones de empresa y datos asociados instalados por Intune.|Se revocan las claves de los archivos protegidos con EFS. El usuario no puede abrir los archivos.|No se quitan las aplicaciones de empresa.|Se desinstalan las aplicaciones instaladas originalmente a través del Portal de empresa. Se quitarán los datos de la aplicación de empresa.|Las aplicaciones se desinstalarán. Se quitan las claves de instalación de prueba.<br>Para Windows 10 versión 1703 (Creator Update) y versiones posteriores, no se quitan las aplicaciones de Office 365 ProPlus. Las aplicaciones Win32 instaladas en la extensión de administración de Intune no serán dispositivos desinstalados o no inscritos. Los administradores pueden aprovechar la exclusión de asignación para no ofrecer las aplicaciones Win32 en los dispositivos BYOD.|
+|Aplicaciones de empresa y datos asociados instalados por Intune.|Se revocan las claves de los archivos protegidos con EFS. El usuario no puede abrir los archivos.|No se quitan las aplicaciones de empresa.|Se desinstalan las aplicaciones instaladas originalmente a través del Portal de empresa. Se quitarán los datos de la aplicación de empresa.|Las aplicaciones se desinstalarán. Se quitan las claves de instalación de prueba.<br>Para Windows 10 versión 1703 (Creator Update) y versiones posteriores, no se quitan las aplicaciones de Aplicaciones de Microsoft 365. Las aplicaciones Win32 instaladas en la extensión de administración de Intune no serán dispositivos desinstalados o no inscritos. Los administradores pueden aprovechar la exclusión de asignación para no ofrecer las aplicaciones Win32 en los dispositivos BYOD.|
 |Configuración|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|
 |Configuración de perfil de Wi-Fi y VPN|Quitado.|Quitado.|No compatible.|Quitado.|
 |Configuración de perfil de certificado|Certificados eliminados y revocados.|Certificados eliminados y revocados.|No compatible.|Certificados eliminados y revocados.|

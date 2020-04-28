@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe58f7baf20903ade462430f4944d0f4555223af
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 10cda4126f709ddd0cb5cda40b36067bd078a3f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725980"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079593"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integración de Mobile Threat Defense de Pradeo con Intune
 
@@ -56,7 +56,7 @@ El proceso de autorización de la aplicación Pradeo es el siguiente:
 
 - Permita que el servicio de Pradeo comunique a Intune la información relacionada con el estado de mantenimiento del dispositivo.
 
-- Pradeo se sincroniza con la pertenencia a grupos de inscripción de Azure AD para rellenar la base de datos de su dispositivo.
+- Pradeo se sincroniza con la pertenencia a grupos de inscripción de Azure AD para rellenar la base de datos de su dispositivo.
 
 - Permita que la consola de administración de Pradeo use el inicio de sesión único (SSO) de Azure AD.
 

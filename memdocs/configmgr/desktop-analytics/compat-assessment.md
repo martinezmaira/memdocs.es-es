@@ -2,7 +2,7 @@
 title: Evaluación de compatibilidad
 titleSuffix: Configuration Manager
 description: Aprenda sobre la evaluación de compatibilidad para aplicaciones y controladores de Windows en Análisis de escritorio.
-ms.date: 03/03/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0d5397dca3c8abff056b7944bde7d27794c45401
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707823"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110005"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Evaluación de compatibilidad en Análisis de escritorio
 
@@ -218,4 +218,4 @@ Puede encontrar la evaluación sobre el controlador en Análisis de escritorio. 
 
 ## <a name="see-also"></a>Vea también
 
-Ventajas del Centro de FastTrack para Windows 10 proporciona acceso a **Asesoría de aplicaciones de escritorio**. Esta ventaja es un nuevo servicio diseñado para solucionar problemas con la compatibilidad de aplicaciones de Windows 10 y Office 365 ProPlus. Para más información, consulte [Asesoría de aplicaciones de escritorio](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Ventajas del Centro de FastTrack para Windows 10 proporciona acceso a **Asesoría de aplicaciones de escritorio**. Esta ventaja es un nuevo servicio diseñado para solucionar problemas con la compatibilidad de Windows 10 y Aplicaciones de Microsoft 365 para empresas. Para más información, consulte [Asesoría de aplicaciones de escritorio](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7fd1a1567096f804b56c5f141fccfc825f4a02e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6c0dab3c84e3a87048a8071c591722c63d89ad69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360319"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078131"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparar aplicaciones Android para directivas de protección de aplicaciones con la herramienta de ajuste de aplicaciones de Intune
 
@@ -65,7 +65,7 @@ Antes de ejecutar la herramienta, lea [Consideraciones de seguridad para ejecuta
 
 2. Acepte el contrato de licencia y finalice la instalación.
 
-Tome nota de la carpeta donde instala la herramienta. La ubicación predeterminada es C:\Archivos de programa (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
+Tome nota de la carpeta donde instala la herramienta. La ubicación predeterminada es: C:\Archivos de programa (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
 ## <a name="run-the-app-wrapping-tool"></a>Ejecutar la herramienta de ajuste de aplicaciones
 
@@ -86,7 +86,7 @@ Tome nota de la carpeta donde instala la herramienta. La ubicación predetermina
 
    En la siguiente tabla se detallan las propiedades del comando **invoke-AppWrappingTool**:
 
-|Propiedad|Información|Ejemplo|
+|Propiedad|Información de|Ejemplo|
 |-------------|--------------------|---------|
 |**-InputPath**&lt;String&gt;|Ruta de acceso de la aplicación de Android (.apk) de origen.| |
  |**-OutputPath**&lt;String&gt;|Ruta de acceso a la aplicación de Android de salida. Si se trata de la misma ruta de acceso al directorio que InputPath, se producirá un error en el empaquetado.| |

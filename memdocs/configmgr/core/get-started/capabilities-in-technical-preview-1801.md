@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9b60c8f170b68e85474cf55515a5739d412ac868
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e1e83126748596d9d631caa85506f7b236bf4a76
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705043"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074221"
 ---
 # <a name="capabilities-in-technical-preview-1801-for-configuration-manager"></a>Funciones de Technical Preview 1801 de Configuration Manager
 

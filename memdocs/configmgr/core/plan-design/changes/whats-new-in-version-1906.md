@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 94ad19c2b405af75c7432bb4601098f980c1e821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702333"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078709"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novedades de la versión 1906 de la rama actual de Configuration Manager
 
@@ -371,6 +371,10 @@ Esta versión incluye las siguientes mejoras en las implementaciones del sistema
 - La secuencia de tareas establece una variable de solo lectura nueva **_SMSTSLastContentDownloadLocation**. Esta variable contiene la última ubicación donde la secuencia de tareas ha descargado o intentado descargar el contenido. Inspeccione esta variable en lugar de analizar los registros de cliente.<!-- 2840337 -->
 
 - Al crear medios de secuencia de tareas, Configuration Manager no agrega un archivo autorun.inf. Normalmente, los productos antimalware bloquean este archivo. Aun así, si es necesario para su escenario, puede incluir el archivo.<!-- 4090666 -->
+
+### <a name="improvements-to-pxe"></a>Mejoras en PXE
+
+La opción 82 durante el protocolo de enlace DHCP de PXE ahora es compatible con el respondedor PXE sin WDS. La opción 82 no es compatible con WDS.
 
 
 ## <a name="software-center"></a><a name="bkmk_userxp"></a> Centro de software

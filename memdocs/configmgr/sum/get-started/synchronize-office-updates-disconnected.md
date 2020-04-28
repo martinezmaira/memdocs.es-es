@@ -2,7 +2,7 @@
 title: Sincronización de actualizaciones de Office 365 sin conexión a Internet
 titleSuffix: Configuration Manager
 description: Sincronice actualizaciones de Office 365 en el punto de actualización de software de nivel superior que está desconectado de Internet.
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 78b97be755659fa06466dd1bb1f6920e2a7be330
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699473"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110362"
 ---
 # <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Sincronización de actualizaciones de Office 365 desde un punto de actualización de software desconectado
 
 *Se aplica a: Configuration Manager (rama actual)*
 <!--4065163-->
 A partir de la versión 2002 de Configuration Manager, puede usar una nueva herramienta para importar actualizaciones de Office 365 desde un servidor de WSUS conectado a Internet en un entorno de Configuration Manager desconectado. Anteriormente, cuando exportaba e importaba metadatos para software actualizado en entornos desconectados, no podía implementar las actualizaciones de Office 365. Las actualizaciones de Office 365 requieren metadatos adicionales descargados de una API de Office y la red CDN de Office, lo cual no es posible en entornos desconectados.
+
+> [!Note]
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

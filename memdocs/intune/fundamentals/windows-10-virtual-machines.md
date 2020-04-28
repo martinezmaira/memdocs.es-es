@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f09ffc2bc1d0c1850f20121c869186018cf9ae31
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 944b3d98dc59dcae69f72fef5dfdb1793701f67a
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79354430"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126158"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>Uso de máquinas virtuales Windows 10 con Intune
 
@@ -31,12 +31,15 @@ Intune admite la administración de máquinas virtuales que ejecutan Windows 10
 
 Al administrar máquinas virtuales Windows 10 con Intune, tenga en cuenta los puntos siguientes:
 
+- La sesión múltiple de Windows 10 Enterprise (Enterprise para dispositivos virtuales), tal y como se usa en Windows Virtual Desktop, no admite actualmente la administración de Intune.
+
 ## <a name="enrollment"></a>Inscripción
 - No se recomienda administrar máquinas virtuales de host de sesión a petición con Intune. Cada máquina virtual creada debe inscribirse. Además, la eliminación periódica de máquinas virtuales dejará registros de dispositivos huérfanos en Intune hasta que se [limpien](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
 - Los tipos de implementación automática de Windows AutoPilot y White Glove no se admiten porque requieren un Módulo de plataforma segura (TPM) físico. 
 - La inscripción en la experiencia rápida (OOBE) no se admite en máquinas virtuales a las que solo se pueda acceder mediante RDP (como es el caso de las máquinas virtuales hospedadas en Azure). Esta restricción significa lo siguiente:
     - Windows Autopilot y la OOBE comercial no se admiten.
     - No se admiten las opciones de página de estado de inscripción para las directivas de contexto de dispositivo.
+
 
 ## <a name="configuration"></a>Configuración
 Intune no admite ninguna configuración que use un Módulo de plataforma segura o administración de hardware, lo que incluye:

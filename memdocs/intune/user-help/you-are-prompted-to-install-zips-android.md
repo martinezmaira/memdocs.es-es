@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d862f29866ecaaa758983f847d0a1a598e2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346474"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079627"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Instalación de Zimperium zIPS en su dispositivo Android
 
@@ -40,7 +40,7 @@ Si tiene problemas con la instalación, pruebe los pasos de solución de problem
 
 4. Pulse **Iniciar sesión en Azure Active Directory** y, después, escriba la cuenta que usa para tener acceso a los archivos y correos electrónicos profesionales o educativos.
 
-5. Seleccione la cuenta que utilice para obtener acceso a los archivos y al correo electrónico escolar o del trabajo y, a continuación, seleccione **AGREGAR CUENTA**.
+5. Seleccione la cuenta que usa para tener acceso a los archivos y correos electrónicos profesionales o educativos y, después, pulse **AGREGAR CUENTA**.
 
 6. Pulse **Aceptar** para conceder permiso a Zimperium zIPS para que inicie su sesión y lea su perfil.
 
@@ -52,7 +52,7 @@ Si tiene problemas con la instalación, pruebe los pasos de solución de problem
 
    * Si no se detecta ninguna amenaza, los tres tipos de amenaza aparecerán en verde.
 
-11. La pantalla **Detalles del dispositivo** del Portal de empresa muestra que ahora cumple con los requisitos de seguridad de la empresa.
+11. La pantalla **Detalles del dispositivo** del Portal de empresa muestra que ahora cumple con los requisitos de seguridad de su empresa.
 
     ![El dispositivo cumple ahora con las directivas](./media/mtd-device-now-compliant-android.png)
 

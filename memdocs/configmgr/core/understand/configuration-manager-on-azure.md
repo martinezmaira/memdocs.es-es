@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ced7d5347e4b8b9fbf0a3006063f507578a7b887
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701233"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078505"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
 
@@ -88,7 +88,7 @@ El [tipo y tamaño de VM de Azure](https://azure.microsoft.com/documentation/art
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>Quiero saber más sobre las máquinas virtuales de Azure; ¿qué tamaño de máquina virtual debo usar?
 En general, la potencia informática (CPU y memoria) tiene que satisfacer el [hardware recomendado para Configuration Manager](../plan-design/configs/recommended-hardware.md). Pero hay algunas diferencias entre el hardware informático normal y las máquinas virtuales de Azure, especialmente cuando se trata de los discos que usan estas máquinas.  El tamaño de las máquinas virtuales que use dependerá del tamaño del entorno, pero aquí tiene algunas recomendaciones:
-- Para implementaciones de producción de un tamaño considerable se recomiendan máquinas virtuales de Azure de clase “**S**”. Esto es porque pueden aprovechar los discos Premium Storage.  Las máquinas virtuales que no son de clase “S” usan almacenamiento de blobs y en general no satisfarán los requisitos de rendimiento necesarios para una experiencia de producción aceptable.
+- Para implementaciones de producción de un tamaño considerable se recomiendan máquinas virtuales de Azure de clase "**S**". Esto es porque pueden aprovechar los discos Premium Storage.  Las máquinas virtuales que no son de clase "S" usan almacenamiento de blobs y en general no satisfarán los requisitos de rendimiento necesarios para una experiencia de producción aceptable.
 - Para una escala mayor se deben usar varios discos Premium Storage, que se distribuirán en la consola de Windows Disk Management para una E/S máxima por segundo.  
 - Durante la implementación del sitio inicial se recomienda usar mejores discos premium o varios de ellos (por ejemplo, P30 en lugar de P20 y 2 x P30 en un volumen seccionado en lugar de 1 x P30). Si más adelante el sitio necesita aumentar el tamaño de VM debido a la carga adicional, puede aprovechar la CPU y la memoria adicionales que proporciona un mayor tamaño de memoria virtual. También tendrá ya discos que pueden aprovechar el rendimiento adicional de E/S por segundo que ofrece el mayor tamaño de VM.
 

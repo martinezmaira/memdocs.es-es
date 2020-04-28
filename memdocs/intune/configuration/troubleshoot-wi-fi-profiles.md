@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ca59c9eea6ba7dd489f5c958ef6976095f27c9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360631"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078216"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Solución de problemas de perfiles de configuración de dispositivos de Wi-Fi en Microsoft Intune
 

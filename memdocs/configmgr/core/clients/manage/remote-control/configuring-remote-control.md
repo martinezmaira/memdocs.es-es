@@ -10,12 +10,12 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1362f44c510fd34aebc6af77efc63e881c27688c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78f74a9659a011defd50e6ab0e9e1cfe85eec16b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696473"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076737"
 ---
 # <a name="configuring-remote-control-in-configuration-manager"></a>Configuración del control remoto en Configuration Manager
 
@@ -41,7 +41,7 @@ Para usar Asistencia remota o Escritorio remoto, debe estar instalado y configur
 
 #### <a name="enable-keyboard-translation"></a>Habilitar traducción del teclado
 
-De manera predeterminada, Configuration Manager transmite la posición de la tecla desde la ubicación del lector a la ubicación del colaborador. Esto puede ser problemático para las configuraciones de teclado que difieren entre lector y colaborador. Por ejemplo, un lector con un teclado inglés escribiría una “A”, pero el teclado francés del colaborador proporcionaría una “Q”. Ahora tiene la opción de configurar el control remoto para que sea el propio carácter el que se transmita desde el teclado del lector al del colaborador y para que sea lo que el lector intenta escribir lo que llegue al colaborador.
+De manera predeterminada, Configuration Manager transmite la posición de la tecla desde la ubicación del lector a la ubicación del colaborador. Esto puede ser problemático para las configuraciones de teclado que difieren entre lector y colaborador. Por ejemplo, un lector con un teclado inglés escribiría una "A", pero el teclado francés del colaborador proporcionaría una "Q". Ahora tiene la opción de configurar el control remoto para que sea el propio carácter el que se transmita desde el teclado del lector al del colaborador y para que sea lo que el lector intenta escribir lo que llegue al colaborador.
 
 Para activar la traducción de teclado, en **Control remoto de Configuration Manager**, elija **Acción** y, luego, **Habilitar traducción del teclado** para transmitir la posición de las teclas.
 

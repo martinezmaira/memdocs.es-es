@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 70f6e3d3fcd0a5f65866e43198b499b321aab836
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326595"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079049"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutorial: Protección del correo electrónico de Exchange Online en dispositivos no administrados
 
@@ -38,7 +38,7 @@ Necesitará a un inquilino de prueba con las siguientes suscripciones para este 
 
 - Azure Active Directory Premium ([evaluación gratuita](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 - Suscripción a Intune ([evaluación gratuita](../fundamentals/free-trial-sign-up.md))
-- Suscripción de Office 365 Empresa que incluya Exchange ([evaluación gratuita](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Suscripción de Aplicaciones de Microsoft 365 para empresas que incluya Exchange ([evaluación gratuita](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## <a name="sign-in-to-intune"></a>Iniciar sesión en Intune
 
@@ -46,7 +46,7 @@ En este tutorial, cuando inicie sesión en el [Centro de administración de Micr
 
 ## <a name="create-the-app-protection-policy"></a>Creación de la directiva de protección de la aplicación
 
-En este tutorial, configurará una directiva de protección de aplicaciones para iOS para la aplicación Outlook a fin de colocar protecciones en el nivel de aplicación. Solicitaremos un PIN para abrir la aplicación en un contexto de trabajo. También limitaremos el uso compartido de los datos entre aplicaciones y evitaremos que los datos de la compañía se guarden en una ubicación personal.
+En este tutorial, configurará una directiva de protección de aplicaciones de Intune para iOS para la aplicación Outlook a fin de colocar protecciones en el nivel de aplicación. Solicitaremos un PIN para abrir la aplicación en un contexto de trabajo. También limitaremos el uso compartido de los datos entre aplicaciones y evitaremos que los datos de la compañía se guarden en una ubicación personal.
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -206,7 +206,7 @@ Las directivas de protección de aplicaciones y el acceso condicional están pre
 
 ## <a name="try-it-out"></a>Haga la prueba
 
-Con las directivas que se han creado, los dispositivos deberán inscribirse en Intune y usar la aplicación móvil de Outlook para acceder al correo electrónico de Office 365. Para probar este escenario en un dispositivo iOS, intente iniciar sesión en Exchange Online con las credenciales de un usuario en su inquilino de prueba.
+Con las directivas que se han creado, los dispositivos deberán inscribirse en Intune y usar la aplicación móvil de Outlook para acceder al correo electrónico de Office 365. Para probar este escenario en un dispositivo iOS, intente iniciar sesión en Exchange Online con las credenciales de un usuario en su inquilino de prueba.
 
 1. Para realizar pruebas en un iPhone, vaya a **Configuración** > **Contraseñas y cuentas** > **Agregar cuenta** > **Exchange** .
 

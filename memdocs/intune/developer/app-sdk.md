@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d47d91388fffd0e5716d20be640c4afbad2862e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4416e6bef4386358c964b0ed58aa568bb8c3a3a4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343042"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078165"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Introducción al SDK para aplicaciones de Microsoft Intune
 El SDK de aplicaciones de Intune, disponible para iOS y Android, permite que la aplicación admita [directivas de protección de aplicaciones](../apps/app-protection-policy.md) de Intune. Cuando la aplicación tiene aplicadas directivas de protección, puede administrarse mediante Intune y se reconoce mediante Intune como una aplicación administrada. El SDK intenta minimizar la cantidad de cambios de código que debe realizar el desarrollador de la aplicación. Verá que puede habilitar la mayoría de las características del SDK sin necesidad de cambiar el comportamiento de la aplicación. Para obtener una experiencia de administrador de TI y de usuario final mejorada, puede usar las API del SDK con el objetivo de personalizar el comportamiento de la aplicación para que admita las características que requieren la participación de esta.
 
 Una vez que haya habilitado la aplicación para que admita las directivas de protección de aplicaciones de Intune, los administradores de TI pueden implementarlas para proteger sus datos corporativos dentro de la aplicación.
 
-## <a name="app-protection-features"></a>Funciones de protección de aplicaciones
+## <a name="app-protection-features"></a>Características de protección de aplicaciones
 
 A continuación se muestran ejemplos de características de protección de aplicaciones de Intune que pueden habilitarse con el SDK.
 

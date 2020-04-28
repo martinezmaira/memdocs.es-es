@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 92fb7b2a14815c84d60ed81c33f3b2d8209d2ff6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 33a95ae78fdc80c6c08b59cfe5ec5b2e88485a8f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689753"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074663"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Crear aplicaciones en Configuration Manager
 

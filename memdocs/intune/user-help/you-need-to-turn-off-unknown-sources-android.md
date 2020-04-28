@@ -18,18 +18,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ee7c1898315a01872bc47b9928116bc9a487b837
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 449bbd14ae32ca5a8b0d02347b00a827fb714b40
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334683"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080171"
 ---
 # <a name="you-need-to-turn-off-unknown-sources"></a>Tiene que desactivar Orígenes desconocidos
 
 El dispositivo Android puede instalar aplicaciones desde varias ubicaciones. Para la mayoría de los usuarios, Google Play Store tiene muchas aplicaciones. Algunas aplicaciones, como las aplicaciones desarrolladas por su empresa para uso interno, pueden instalarse desde otros catálogos de soluciones. Instalar aplicaciones desde ubicaciones no comprobadas puede causar problemas con el dispositivo y puede provocar problemas de seguridad. El equipo de soporte técnico de su empresa ha decidido que, para asegurarse de que los datos corporativos están seguros, se desactive el acceso a "Orígenes desconocidos".
 
-Si ve el mensaje “Debe deshabilitarse la instalación desde orígenes desconocidos”, debe ir a **Configuración** > **Seguridad** (en algunos dispositivos, esto puede ser **Pantalla de bloqueo y seguridad**) y desactivar **Orígenes desconocidos**.
+Si ve el mensaje "Debe deshabilitarse la instalación desde orígenes desconocidos", debe ir a **Configuración** > **Seguridad** (en algunos dispositivos, esto puede ser **Pantalla de bloqueo y seguridad**) y desactivar **Orígenes desconocidos**.
 
 Después de que **Orígenes desconocidos** se desactiva, pueden pasar unos minutos antes de poder seguir usando el dispositivo Android para tener acceso a los datos de la empresa o la escuela.
 

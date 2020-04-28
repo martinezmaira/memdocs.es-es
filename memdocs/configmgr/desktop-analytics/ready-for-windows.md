@@ -2,7 +2,7 @@
 title: Ready for Windows
 titleSuffix: Configuration Manager
 description: Acerca de la retirada del sitio web Ready for Windows
-ms.date: 10/30/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: da56dbe1a363606e50569db8be10d65d10d1b422
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3f378ce519085eb1d2714a901e20b29b62b0cd4
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695573"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109988"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Preguntas frecuentes sobre la retirada de Ready for modern desktop
 
@@ -31,6 +31,9 @@ Muchos clientes tienen dificultades para estar siempre actualizados con Windows�
 En el directorio *Ready for modern desktop* se enumeraban las soluciones de software admitidas y en uso en dispositivos comerciales que ejecutaban Windows 10 y Office 365 ProPlus. El directorio ayuda a los administradores de TI que están pensado en implementar las versiones más recientes de Windows 10 y Office 365.
 
 Los administradores de TI expresan en sus comentarios que quieren que esta información se integre con las herramientas que ya usan para crear sus planes de implementación. Use [Análisis de escritorio](https://aka.ms/dadocs) y las [características de preparación para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) de Configuration Manager para planear y administrar los proyectos de actualización de Windows 10 y Office 365 ProPlus. 
+
+> [!Note]
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
 
 ### <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 

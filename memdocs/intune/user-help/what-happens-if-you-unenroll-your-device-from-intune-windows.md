@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346877"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076805"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>¿Qué ocurre si anula la inscripción del dispositivo Windows de Intune?
 
@@ -48,7 +48,7 @@ Use los vínculos de la derecha de esta página, debajo de **En este artículo**
 
 Además, para Windows 8.1:
 
-- No se podrán utilizar las aplicaciones y los datos de la empresa.
+- No se podrán usar las aplicaciones y los datos de la empresa.
 
 - Algunas aplicaciones de correo, como Correo de Windows, ya no pueden acceder al correo electrónico de la empresa almacenado en el dispositivo.
 
@@ -60,7 +60,7 @@ Además, para Windows 8.1:
 
 - Se desinstalará la aplicación Portal de empresa del dispositivo. Esto significa que el dispositivo ya no aparece en el Portal de empresa ni se pueden instalar aplicaciones desde la aplicación Portal de empresa ni desde el sitio web del Portal de empresa.
 
-- No se podrán utilizar las aplicaciones y los datos de la empresa.
+- No se podrán usar las aplicaciones y los datos de la empresa.
 
 - Dejará de aplicarse cualquier configuración que se modificara en el dispositivo al agregarlo, por ejemplo, deshabilitar la cámara o exigir una determinada longitud de la contraseña.
 
@@ -71,7 +71,7 @@ Además, para Windows 8.1:
 
 - Se desinstalará la aplicación Portal de empresa del dispositivo. Eso significa que el dispositivo ya no aparece en el Portal de empresa ni se pueden instalar aplicaciones desde este.
 
-- No se podrán utilizar las aplicaciones y los datos de la empresa.
+- No se podrán usar las aplicaciones y los datos de la empresa.
 
 - Dejará de aplicarse cualquier configuración que se modificara en el dispositivo al agregarlo, por ejemplo, deshabilitar la cámara o exigir una determinada longitud de la contraseña.
 
@@ -85,7 +85,7 @@ Si se quita un dispositivo Windows RT, ocurre lo siguiente:
 
 - Se desinstalará la aplicación Portal de empresa del dispositivo. Eso significa que el dispositivo ya no aparece en el Portal de empresa ni se pueden instalar aplicaciones desde este.
 
-- No se podrán utilizar las aplicaciones y los datos de la empresa.
+- No se podrán usar las aplicaciones y los datos de la empresa.
 
 - Dejará de aplicarse cualquier configuración que se modificara en el dispositivo al agregarlo, por ejemplo, deshabilitar la cámara o exigir una determinada longitud de la contraseña.
 

@@ -10,12 +10,12 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b5f5ee5f8348a3d0a2d059c18edaa964826228e1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692463"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075309"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>Creación de elementos de configuración de perfiles y datos de usuario en Configuration Manager
 

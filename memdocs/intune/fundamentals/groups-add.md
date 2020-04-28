@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 42e28238a1ffbad3faa162dd21d4639e742ec7e3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326831"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075411"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Agregar grupos para organizar usuarios y dispositivos
 

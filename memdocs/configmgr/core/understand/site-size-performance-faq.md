@@ -7,12 +7,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 5cd23667eadc7e1caae90a135bc96be89563f883
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3e7b9f6bc861ef5a60e4c0857dc253e3c806a851
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706803"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073269"
 ---
 # <a name="configuration-manager-site-sizing-and-performance-faq"></a>Preguntas más frecuentes sobre rendimiento y tamaño del sitio de Configuration Manager
 

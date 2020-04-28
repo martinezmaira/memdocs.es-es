@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325677"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074782"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Tutorial: Configuración de Slack para usar Intune para EMM y la configuración de aplicaciones
 
@@ -35,7 +35,7 @@ En este tutorial, aprenderá a:
 > - Crear directivas de configuración de aplicaciones para administrar la aplicación Slack para EMM en iOS/iPadOS y la aplicación Slack para dispositivos Android con perfiles de trabajo.
 > - Crear directivas de cumplimiento de dispositivos de Intune para establecer las condiciones que deben cumplir los dispositivos Android e iOS/iPadOS para que se los considere compatibles.
 
-Si no tiene una suscripción a Intune, [regístrese para obtener una cuenta de prueba gratuita](../fundamentals/free-trial-sign-up.md).
+Si no dispone de ninguna suscripción a Intune, [regístrese para obtener una cuenta de evaluación gratuita](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 Necesitará a un inquilino de prueba con las siguientes suscripciones para este tutorial:

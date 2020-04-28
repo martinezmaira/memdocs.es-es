@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06d2c0b659f3dacb68f5029c23fbd488c06c1fbe
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326607"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079100"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Solución de problemas de implementación de un perfil de certificado SCEP en dispositivos en Microsoft Intune
 
@@ -102,7 +102,7 @@ Para validar que se envió un perfil al dispositivo que espera, en el [Centro de
 
 ### <a name="validate-the-policy-reached-the-windows-device"></a>Validación de que la directiva llegó al dispositivo Windows
 
-La llegada de la directiva para el perfil se registra en un registro *DeviceManagement-Enterprise-Diagnostics-Provider* > **Administración** del dispositivo Windows, con un identificador de evento **306**. 
+La llegada de la directiva para el perfil se registra en un registro *DeviceManagement-Enterprise-Diagnostics-Provider* > **Administración** del dispositivo Windows, con un identificador de evento **306**. 
 
 Para abrir el registro:
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c541c257d885ee5cba9e174a86a6859b078c8594
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 15735b015796d2cccfa9b0a24afc8f6eb0573df1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702413"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073626"
 ---
 # <a name="what39s-new-in-version-1710-of-configuration-manager"></a>Novedades de la versión 1710 de Configuration Manager
 
@@ -150,7 +150,7 @@ Cuando los dispositivos ARM64 que ejecutan Windows 10 estén disponibles, admiti
 ### <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Experiencia mejorada del perfil VPN en la consola de Configuration Manager 
 <!-- 1318232 -->
 
-Con esta versión, hemos actualizado las páginas de propiedades y el Asistente para perfiles VPN con el fin de mostrar una configuración más adecuada para la plataforma seleccionada:
+Con esta versión, hemos actualizado las páginas de propiedades y el Asistente para perfiles de VPN con el fin de mostrar una configuración más adecuada para la plataforma seleccionada:
 
 
 - Cada plataforma tiene su propio flujo de trabajo, lo que significa que los nuevos perfiles VPN contienen únicamente la configuración compatible con la plataforma.

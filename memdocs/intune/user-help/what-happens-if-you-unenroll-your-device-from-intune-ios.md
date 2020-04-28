@@ -19,12 +19,12 @@ ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 92fcdda0e3b99e227fafb85a87a4f1eda27756e1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 91a69f413e4b24a5a9f5b5fb092270039d4e0668
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335190"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076890"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>¿Qué ocurre si anula la inscripción del dispositivo iOS o macOS de Intune?
 
@@ -38,7 +38,7 @@ Cuando se anula la inscripción del dispositivo iOS o macOS de Intune:
 
 - Es posible que ya no tenga acceso en el dispositivo a algunos recursos de la empresa, como recursos compartidos de archivos o sitios web internos.
 
-- No se podrán utilizar las aplicaciones y los datos de la empresa.
+- No se podrán usar las aplicaciones y los datos de la empresa.
 
 - Es posible que ya no se pueda conectar a la red de la empresa mediante Wi-Fi o una red privada virtual (VPN).
 

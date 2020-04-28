@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77c8a972020113b36b57c992b64a6965f733d119
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 66053bae197a74bf83a41b7ea400ffdc3d514b06
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335476"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077587"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Anular la inscripción del dispositivo Android de la administración  
 

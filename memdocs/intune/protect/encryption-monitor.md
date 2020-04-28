@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 55c98368619338bb7018be0651f6cde4054cf9cf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322454"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079712"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Supervisión del cifrado de dispositivos con Intune
 

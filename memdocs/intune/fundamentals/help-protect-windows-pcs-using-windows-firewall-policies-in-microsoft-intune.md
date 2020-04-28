@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57210928bf92c5300db69dc68d5d5dd4d37795e7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362425"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079440"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ayudar a proteger los equipos de Windows mediante directivas del Firewall de Windows en Microsoft Intune
 
@@ -101,7 +101,7 @@ El valor predeterminado para cada uno de estos valores es **Sí**.
 
 Puede configurar las excepciones que permiten determinados tipos de tráfico de red a través del firewall independientemente de los valores que haya configurado con anterioridad. De forma predeterminada, no se configura ninguna de estas opciones.
 
-|Nombre del valor|Detalles|
+|Nombre de la configuración|Detalles|
 |------------------|--------------------|
 |**BranchCache: recuperación de contenido**<br>(Windows 7 o posterior)|Permite a los clientes de BranchCache usar HTTP para recuperar contenido de otros clientes de BranchCache en el modo distribuido y desde la caché hospedada en el modo de caché hospedada. Esta configuración usa HTTP.|
 |**BranchCache: cliente de caché hospedada**<br>(Windows 7 o posterior)|Permite a los clientes de BranchCache usar una caché hospedada. Esta configuración usa HTTPS.|

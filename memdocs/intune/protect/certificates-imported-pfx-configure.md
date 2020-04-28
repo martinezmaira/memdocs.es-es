@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 098ccdef50c9f006884f9b6ae6acc635da100cb2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725672"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023187"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS importados con Intune
 
@@ -210,6 +210,9 @@ Para más información sobre otros comandos disponibles, consulte el archivo Lé
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>Creación de un perfil de certificado PKCS importado
 
 Después de importar los certificados en Intune, cree un perfil de **certificado PKCS importado** y asígnelo a los grupos de Azure Active Directory.
+
+> [!NOTE]
+> Después de crear un perfil de certificado PKCS importado, los valores **Propósito planteado** y **Proveedor de almacenamiento de claves** (KSP) del perfil son de solo lectura y no se pueden editar. Si necesita un valor diferente para cualquiera de estas opciones, cree e implemente un nuevo perfil. 
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 

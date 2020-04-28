@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 374b433ff6ee50f91343489ae36a1a190d87c7aa
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b2ed22f393ea58d50c10175ffbd647bc53f592e5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347865"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078828"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Administrar aplicaciones desde el sitio web del Portal de empresa 
 Visite el [sitio web Portal de empresa](https://portal.manage.microsoft.com) para ver y administrar aplicaciones de su organización. 

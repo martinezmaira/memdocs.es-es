@@ -19,18 +19,18 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 64a1a8484af537649fd618b5cfa718dc7dff5607
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: af748f91d47d6276b5590577079130e2be470e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335294"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077366"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-device-in-intune"></a>¿Qué ocurre si instala la aplicación Portal de empresa e inscribe su dispositivo iOS en Intune?
 
 Al instalar la aplicación Portal de empresa e inscribir su dispositivo iOS en Intune, puede usar la aplicación Portal de empresa para:
 
-- Acceder a la red, el correo electrónico y los archivos de trabajo de la empresa.
+- Acceder a la red, al correo electrónico y a los archivos de trabajo de la empresa.
 
 - Obtener aplicaciones de empresa desde el Portal de empresa.
 

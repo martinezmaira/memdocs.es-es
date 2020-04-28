@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 32405d7cc00d7ddbf528eb9ce736cf0faf702b42
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334280"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023034"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Inicio rápido: Agregar y asignar una aplicación cliente
 
@@ -46,7 +46,7 @@ Se puede incluir una aplicación para que Intune pueda administrar los distintos
 Siga estos pasos para agregar una aplicación a Intune:
 
 1. En [Intune](https://aka.ms/intuneportal), seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**. 
-2. Seleccione **Windows 10** en la sección **Conjunto de aplicaciones Office 365** del panel **Seleccionar tipo de aplicación**.
+2. Seleccione **Windows 10** en la sección **Aplicaciones de Microsoft 365** del panel **Seleccionar tipo de aplicación**.
 3. Haga clic en **Seleccionar**. Se muestran los pasos para **Agregar aplicación**.
 4. Confirme los detalles predeterminados en la página **Información del conjunto de aplicaciones**.
 5. Haga clic en **Siguiente** para mostrar la página **Configurar conjunto de aplicaciones**.
@@ -88,10 +88,10 @@ Debe instalar y usar la aplicación del Portal de empresa para instalar la aplic
 
 2. En el menú **Inicio**, abra **Microsoft Store**. Luego, busque la aplicación **Portal de empresa** e instálela.
 3. Inicie la aplicación **Portal de empresa**.
-4. Haga clic en la aplicación que ha agregado mediante Intune. En este tutorial de inicio rápido ha agregado la aplicación **Conjunto de aplicaciones de Microsoft Office 365**.
+4. Haga clic en la aplicación que ha agregado mediante Intune. En este inicio rápido ha agregado la aplicación **Aplicaciones de Microsoft 365**.
 
     > [!NOTE]
-    > Si no ha logrado asignar ninguna aplicación al usuario de Intune, verá el siguiente mensaje: *Your IT administrator did not make any apps available to you.* (Su administrador de TI no ha puesto ninguna aplicación a su disposición.).
+    > Si no ha logrado asignar ninguna aplicación al usuario de Intune, verá el siguiente mensaje: *El administrador de TI no puso a su disposición ninguna aplicación*.
 
 5. Haga clic en **Instalar**.
 

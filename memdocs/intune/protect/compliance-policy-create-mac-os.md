@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210ec5ea6acc2d0ce91a93c83991b630a6fdbb4d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d5ac87b7539888ddceb6095b8a8c37f194c5a97a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353247"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079831"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Configuración de macOS para marcar dispositivos como compatibles o no compatibles con Intune
 
@@ -37,7 +37,7 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
 
 [Crear una directiva de cumplimiento](create-compliance-policy.md#create-the-policy). Para **Plataforma**, seleccione **macOS**.
 
-## <a name="device-health"></a>Estado de dispositivos
+## <a name="device-health"></a>Estado del dispositivo
 
 - **Requerir una protección de integridad del sistema**:  
   - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.

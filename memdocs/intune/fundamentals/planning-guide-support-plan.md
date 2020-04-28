@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cb8107efa5961c74277afa84da861305d8b9484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2368e27cbd5f98683a0b00e6b23c070236c84491
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357290"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080120"
 ---
 # <a name="develop-a-support-plan"></a>Desarrollo de un plan de soporte técnico
 
@@ -43,7 +43,7 @@ Revisemos cada área con más detalle.
 
 Las organizaciones pueden tener diferentes niveles (1 a 3) de soporte técnico. Por ejemplo, el nivel 1 y 2 pueden formar parte del equipo de soporte técnico, y el nivel 3 incluir miembros del equipo de MDM responsable de la implementación de Intune.
 
-El nivel 1 normalmente es el primer nivel de soporte y, generalmente, el primer nivel con el que el usuario se pone en contacto para las solicitudes de asistencia. Si el nivel 1 no puede resolver el problema del usuario final, lo escalan al nivel 2. El nivel 2 lo escala al nivel 3 si es necesario. Además, el soporte técnico de Microsoft puede considerarse como el nivel 4.
+El nivel 1 normalmente es el primer nivel de soporte y, generalmente, el primer nivel con el que el usuario se pone en contacto para las solicitudes de asistencia. Si el nivel 1 no puede resolver el problema del usuario final, lo escalan al nivel 2. El nivel 2 lo escala al nivel 3 si es necesario. Además, el soporte técnico de Microsoft puede considerarse como el nivel 4.
 
 Más información sobre el [soporte técnico de Intune](get-support.md).
 

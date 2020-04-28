@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324336"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079321"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementación de aplicaciones Windows 10 con Microsoft Intune 
 
@@ -97,7 +97,7 @@ Las aplicaciones solo se pueden instalar en el contexto de dispositivo cuando la
 - Aplicaciones Win32
 - Aplicaciones de Microsoft Store para Empresas con licencias sin conexión
 - Aplicaciones LOB (MSI, appx y MSIX)
-- Office 365 ProPlus
+- Aplicaciones de Microsoft 365 para empresas
 
 Las aplicaciones de línea de negocio de Windows (en concreto, appx y MSIX) y de Microsoft Store para Empresas (aplicaciones sin conexión) que haya seleccionado para instalar en el contexto del dispositivo deben asignarse a un grupo de dispositivos. Se produce un error en la instalación si una de estas aplicaciones está implementada en el contexto del usuario. El siguiente estado y error aparecen en la consola de administración:
   - Estado: erróneo.

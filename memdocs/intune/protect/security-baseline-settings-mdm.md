@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b2f3952d0805237acf0fe71c4f0f1617618723
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f88c352206d087ca6e79f25ec078fabc000de66
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351154"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079185"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Configuración de líneas de base de seguridad de MDM para Intune  
 

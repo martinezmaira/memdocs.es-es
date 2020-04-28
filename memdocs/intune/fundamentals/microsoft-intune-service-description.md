@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358642"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078859"
 ---
 # <a name="microsoft-intune-service-description"></a>Descripción del servicio Microsoft Intune
 
@@ -56,7 +56,7 @@ Dado que el ecosistema de administración de dispositivos móviles cambia con fr
 
 - [Novedades de Microsoft Intune](whats-new.md). Este tema se actualiza con la actualización mensual del servicio y semanalmente cuando, por ejemplo, se publican aplicaciones, como la aplicación del portal de empresa.
 
-- También se anunciarán actualizaciones importantes en el Centro de mensajes del [Centro de administración de Microsoft 365](https://admin.microsoft.com/). Si instala la [aplicación móvil complementaria de administración de Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), podrá recibir notificaciones en su dispositivo móvil. Obtenga más información sobre cómo trabajar con el [Centro de mensajes de Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- También se anunciarán actualizaciones importantes en el Centro de mensajes del [Centro de administración de Microsoft 365](https://admin.microsoft.com/). Si instala la [aplicación móvil complementaria de Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), podrá recibir notificaciones en su dispositivo móvil. Obtenga más información sobre cómo trabajar con el [Centro de mensajes de Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Algunas sugerencias útiles:
 
@@ -81,18 +81,18 @@ Dado que el ecosistema de administración de dispositivos móviles cambia con fr
 
 Para ayudarle a planear los cambios de servicio, le notificamos con un plazo mínimo de entre 7 y 90 días antes del cambio del servicio, en función de las repercusiones de este. Estos cambios podrían incluir cualquiera de los siguientes tipos:
 
-- Cambios en la experiencia del usuario final que puede desear compartir con su personal de soporte técnico o sus usuarios finales. Solemos proporcionar un aviso de esos cambios con una antelación de entre 7 y 30 días, y los documentamos en la sección de [novedades de la interfaz de usuario de aplicación de Intune](whats-new-app-ui.md). Cosas como corregir un error de ortografía no se suelen señalar en la documentación. Sin embargo, un cambio en la experiencia de inscripción del usuario final es lo bastante importante en la interfaz de usuario como para publicar un mensaje para los clientes en el Centro de mensajes de Office 365 e incluir un vínculo a la página de novedades de la interfaz de usuario de aplicaciones de Intune. De esta forma, sabrán lo que ha cambiado y tendrán tiempo de evaluar y actualizar las instrucciones para el usuario final antes de que los cambios se implementen en producción.
+- Cambios en la experiencia del usuario final que puede desear compartir con su personal de soporte técnico o sus usuarios finales. Solemos proporcionar un aviso de esos cambios con una antelación de entre 7 y 30 días, y los documentamos en la sección de [novedades de la interfaz de usuario de aplicación de Intune](whats-new-app-ui.md). Cosas como corregir un error de ortografía no se suelen señalar en la documentación. Sin embargo, un cambio en la experiencia de inscripción del usuario final es lo bastante importante en la interfaz de usuario como para publicar un mensaje para los clientes en el Centro de mensajes de Office 365 e incluir un vínculo a la página de novedades de la interfaz de usuario de aplicaciones de Intune. De esta forma, sabrán lo que ha cambiado y tendrán tiempo de evaluar y actualizar las instrucciones para el usuario final antes de que los cambios se implementen en producción.
 
 - Aquellos cambios en los que es necesario que realice alguna acción se llaman **Plan for Change** (Plan de cambio) y se avisan con una antelación de unos 30 días. En el Centro de mensajes de Office 365, la categoría indica específicamente Plan for Change (Plan de cambio) y si existe una fecha exacta de cuándo el cambio pasará a producción, se incluirá también una fecha **Act by** (Acción por) que le proporciona una cola visual y un signo de exclamación.
 
-- En el caso de suspensiones, es preferible proporcionar un aviso con 90 días de antelación para la mayoría de ellas. Por ejemplo, si ya no se va a admitir una versión determinada de Internet Explorer, nuestro objetivo es proporcionar un aviso con 90 días de antelación. Sin embargo, las suspensiones se complican cuando es otra compañía la que anuncia la suspensión. Por ejemplo, la compañía de un explorador avisó de que en la última compilación dejaría de haber compatibilidad con Silverlight, así que se comunicó a los clientes que se abandonaba la compatibilidad con ese explorador, pero lo notificamos a los clientes en el periodo de 90 días.
+- En el caso de suspensiones, es preferible proporcionar un aviso con 90 días de antelación para la mayoría de ellas. Por ejemplo, si ya no se va a admitir una versión determinada de Internet Explorer, nuestro objetivo es proporcionar un aviso con 90 días de antelación. Sin embargo, las suspensiones se complican cuando es otra compañía la que anuncia la suspensión. Por ejemplo, la compañía de un explorador avisó de que en la última compilación dejaría de haber compatibilidad con Silverlight, así que se comunicó a los clientes que se abandonaba la compatibilidad con ese explorador, pero lo notificamos a los clientes en el periodo de 90 días.
 
 - En caso de retirada del servicio de Intune, sería notificado con 12 meses de antelación.
 
-Por último, en el excepcional caso de que fuera necesario realizar alguna acción con posterioridad al incidente con el fin devolver el servicio al estado normal, o un enorme cambio que consideramos potencialmente perjudicial como indican los comentarios de los clientes, se escribirá un correo electrónico a los administradores del servicio según [las preferencias de comunicación de Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) que se hayan definido y si se ha incluido una dirección de correo electrónico válida (y preferiblemente profesional).  
+Por último, en el excepcional caso de que fuera necesario realizar alguna acción con posterioridad al incidente con el fin devolver el servicio al estado normal, o un enorme cambio que consideramos potencialmente perjudicial como indican los comentarios de los clientes, se escribirá un correo electrónico a los administradores del servicio según [las preferencias de comunicación de Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) que se hayan definido y si se ha incluido una dirección de correo electrónico válida (y preferiblemente profesional).  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>Compatibilidad con idiomas
-Intune se ejecuta en Azure Portal que admite los siguientes idiomas: chino (simplificado), chino (tradicional), checo, neerlandés, inglés, alemán, húngaro, italiano, japonés, portugués (Brasil), portugués (Portugal), ruso, español, inglés, francés, coreano, polaco, sueco y turco.
+Intune se ejecuta en Azure Portal, que admite los siguientes idiomas: alemán, checo, chino (simplificado), chino (tradicional), coreano, español, francés, húngaro, inglés, italiano, japonés, neerlandés, polaco, portugués (Brasil), portugués (Portugal), ruso, sueco y turco.
 
 La consola de administración de Intune y las experiencias móviles de usuario admiten danés, finés, griego, noruego y rumano, además de todos los idiomas admitidos en Azure Portal.
 

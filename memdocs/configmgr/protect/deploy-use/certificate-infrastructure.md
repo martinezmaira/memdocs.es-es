@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fe34768de48f52dd4872a63ccf353fda1c691a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705803"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075003"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 

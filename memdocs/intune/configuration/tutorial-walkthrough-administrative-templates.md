@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488213"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022864"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Uso de la nube para configurar directivas de grupo en dispositivos con Windows 10 con plantillas de ADMX y Microsoft Intune
 
@@ -34,7 +34,7 @@ Las plantillas administrativas de directiva de grupo, también conocidas como pl
 Las plantillas de ADMX están disponibles para los siguientes servicios:
 
 - **Microsoft Edge**: descárguelas de [Archivo de directiva de Microsoft Edge](https://www.microsoftedgeinsider.com/en-us/enterprise).
-- **Office**: descárguelas de [Office 365 ProPlus, Office 2019 y Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+- **Office**: descárguelas de [Aplicaciones de Microsoft 365, Office 2019 y Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: integradas en el sistema operativo Windows 10.
 
 Para obtener más información sobre las directivas de ADMX, vea [Descripción de las directivas respaldadas por ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).

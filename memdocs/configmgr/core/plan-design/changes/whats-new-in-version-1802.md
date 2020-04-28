@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0165488946dda924484a53e0e6832ce1d60acded
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702303"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073609"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Novedades de la versión 1802 de Configuration Manager
 

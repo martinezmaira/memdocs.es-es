@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326764"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077910"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Establecer la entidad de administración de dispositivos móviles
 

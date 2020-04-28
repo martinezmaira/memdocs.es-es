@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04991b4856ee45618b15788cb832d915a174b47a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701943"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074034"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Novedades de la versión 1606 de Configuration Manager
 

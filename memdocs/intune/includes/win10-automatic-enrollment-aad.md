@@ -4,7 +4,7 @@ La inscripción automática permite a los usuarios inscribir sus dispositivos Wi
 
 **Requisitos previos**
 
-- Suscripción Premium a Azure Active Directory ([suscripción de prueba](https://go.microsoft.com/fwlink/?LinkID=816845))
+- Suscripción a Azure Active Directory Premium ([suscripción de prueba](https://go.microsoft.com/fwlink/?LinkID=816845))
 - Suscripción a Microsoft Intune
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Configurar la inscripción de MDM automática
@@ -21,7 +21,7 @@ La inscripción automática permite a los usuarios inscribir sus dispositivos Wi
 
    ![Captura de pantalla de Azure Portal](../enrollment/media/windows-enroll/auto-enroll-intune.png)
 
-4. Configure **Ámbito de usuario de MDM**. Especifique qué dispositivos de los usuarios deben administrarse mediante Microsoft Intune. Estos dispositivos Windows 10 pueden inscribirse automáticamente para la administración con Microsoft Intune.
+4. Configure **Ámbito de usuario de MDM**. Especifique qué dispositivos de los usuarios deben administrarse mediante Microsoft Intune. Estos dispositivos Windows 10 pueden inscribirse automáticamente para la administración con Microsoft Intune.
 
    - **Ninguno**: inscripción automática de MDM deshabilitada
    - **Algunos** : seleccione los **Grupos** que pueden inscribir automáticamente sus dispositivos Windows 10

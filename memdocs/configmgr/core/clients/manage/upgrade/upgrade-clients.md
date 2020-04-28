@@ -10,12 +10,12 @@ ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 40fc094d6c1a1acbd31f1d26e6fe6617972f8da5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 95e6ebf1544951b71ca2b60615e3e01b27cc0f3b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696243"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076686"
 ---
 # <a name="upgrade-clients-in-configuration-manager"></a>Actualización de clientes en Configuration Manager
 

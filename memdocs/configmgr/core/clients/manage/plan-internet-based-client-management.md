@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 485b27e9781d9c636b8dfe3691fa7f7068a6db92
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c6f5166a26db9da1026191f8b07aa88a6f0cfd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696683"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076754"
 ---
 # <a name="plan-for-internet-based-client-management-in-configuration-manager"></a>Planificación de la administración de cliente basada en Internet en Configuration Manager
 

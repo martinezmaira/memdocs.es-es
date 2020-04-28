@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1b9afc8c9cde94488908e4cd9737a58547326f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703673"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110192"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -41,7 +41,7 @@ Use la configuración de cliente para habilitar a los clientes para que sean or�
 
 Un origen de caché del mismo nivel debe ser miembro del grupo de límites actual del cliente de caché del mismo nivel. El punto de administración no incluye los orígenes de caché del mismo nivel de un grupo de límites vecino en la lista de orígenes de contenido que proporciona al cliente. Solo incluye los puntos de distribución de un grupo de límites vecino. Para más información acerca de los grupos de límites actuales y vecinos, vea [Grupos de límites](../../servers/deploy/configure/boundary-groups.md).<!--SCCMDocs issue 685-->  
 
-El cliente de Configuration Manager usa la caché del mismo nivel para proporcionar a otros clientes todos los tipos de contenido en la caché. Este contenido incluye archivos de Office 365 y de instalación rápida.<!--SMS.500850-->  
+El cliente de Configuration Manager usa la caché del mismo nivel para proporcionar a otros clientes todos los tipos de contenido en la caché. Este contenido incluye archivos de Aplicaciones de Microsoft 365 para empresas y archivos de instalación rápida.<!--SMS.500850-->  
 
 La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimización de distribución o Windows BranchCache. La caché del mismo nivel funciona junto con otras soluciones. Estas tecnologías le proporcionan más opciones para extender las soluciones tradicionales de implementación de contenido, como los puntos de distribución. La caché del mismo nivel es una solución personalizada que no depende de BranchCache. Si no habilita o usa BranchCache, la caché del mismo nivel sigue funcionando.  
 
