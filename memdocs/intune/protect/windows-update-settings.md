@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078964"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254714"
 ---
 # <a name="windows-update-settings-for-intune"></a>Configuración de actualizaciones de Windows para Intune  
 
@@ -85,8 +85,7 @@ La configuración de actualizaciones controla qué bits descargará un dispositi
   Período de aplazamiento admitido:  
 
   - *Windows versión 1709 y versiones posteriores*: de 0 a 365 días  
-  - *Versión 1703 de Windows*: de 0 a 180 días  
-
+  
   Las actualizaciones de características suelen ser características nuevas de Windows.  
 
 - **Establecer el período de desinstalación de la actualización de características (de 2 a 60 días)**  
@@ -164,8 +163,6 @@ La configuración de la experiencia de usuario controla la experiencia del usuar
   
   Este valor tiene resultados diferentes según la versión de Windows de los dispositivos:  
  
-  - *Windows, versión 1703 y anteriores*: al reiniciar un dispositivo se efectúan algunas comprobaciones, como la de los usuarios activos, los niveles de batería, los juegos en ejecución, etc.  
-  
   - *Windows, versión 1709 y posteriores*: durante las horas activas no se ejecutan los procesos siguientes para las actualizaciones: examen, descarga, instalación y reinicio. Después de las horas activas, se ejecutan los procesos de actualización y se puede reactivar el dispositivo tras la suspensión, y examinar, descargar, instalar y reiniciar el dispositivo, siempre y cuando se hayan pasado las comprobaciones de batería y energía. 
 
 - **Impedir que los usuarios pausen las actualizaciones de Windows**  
