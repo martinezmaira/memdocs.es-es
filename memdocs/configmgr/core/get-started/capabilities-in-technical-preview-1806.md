@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074068"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210084"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funciones de Technical Preview 1806 de Configuration Manager
 
@@ -163,10 +163,10 @@ Para más información sobre esta cuenta, consulte [Cuenta de conexión de punto
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Configurar SmartScreen de Windows Defender para Microsoft Edge
 <!--1353701-->
-Esta versión agrega tres configuraciones de [SmartScreen de Windows Defender](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) a la [directiva de configuración de cumplimiento del explorador Microsoft Edge](../../compliance/deploy-use/browser-profiles.md). La directiva ahora incluye los siguientes valores adicionales en la página **Configuración de SmartScreen**:
-- **Permitir SmartScreen**: especifica si se permite SmartScreen de Windows Defender. Para obtener más información, consulte la [directiva de explorador AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
-- **Los usuarios pueden invalidar los avisos de SmartScreen para los sitios**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre sitios web potencialmente malintencionados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
-- **Los usuarios pueden invalidar los avisos de SmartScreen para los archivos**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre la descarga de archivos no comprobados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+Esta versión agrega tres configuraciones de [SmartScreen de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) a la [directiva de configuración de cumplimiento del explorador Microsoft Edge](../../compliance/deploy-use/browser-profiles.md). La directiva ahora incluye los siguientes valores adicionales en la página **Configuración de SmartScreen**:
+- **Permitir SmartScreen**: especifica si se permite SmartScreen de Windows Defender. Para obtener más información, consulte la [directiva de explorador AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Los usuarios pueden invalidar los avisos de SmartScreen para los sitios**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre sitios web potencialmente malintencionados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Los usuarios pueden invalidar los avisos de SmartScreen para los archivos**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre la descarga de archivos no comprobados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 
 
