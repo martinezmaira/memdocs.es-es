@@ -264,6 +264,8 @@
       items:
         - name: Información general de Technical Preview
           href: get-started/technical-preview.md
+        - name: Características de 2004
+          href: get-started/2020/technical-preview-2004.md
         - name: Características de 2003
           href: get-started/2020/technical-preview-2003.md
         - name: Características de 2002.2
@@ -274,8 +276,6 @@
           href: get-started/2020/technical-preview-2001-2.md
         - name: Características de 2001
           href: get-started/2020/technical-preview-2001.md
-        - name: Características de 1912
-          href: get-started/2019/technical-preview-1912.md
     - name: Migrar datos entre jerarquías
       items:
         - name: Información general sobre la migración
