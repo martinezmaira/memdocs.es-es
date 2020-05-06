@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/02/2017
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,16 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e8b2fe2cfa080c5fffc1e66e66a397a036d794c6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65a7c561e8686a88367d70bf17d0f08eee80af02
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347189"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210339"
 ---
-# <a name="fix-common-issues-with-your-ios-device"></a>Solución de problemas comunes con el dispositivo iOS
+# <a name="fix-common-problems-with-your-ios-device"></a>Solución de problemas comunes con el dispositivo iOS
 
-A veces pueden producirse problemas con el dispositivo iOS que puede corregirse mediante la solución de problemas. A continuación se enumeran algunos problemas comunes que puede intentar resolver primero por su cuenta. En el caso de problemas más complejos, le recomendamos que se ponga en contacto con el equipo de soporte técnico de su empresa mediante sus datos de contacto en el [sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Use los vínculos de este artículo para encontrar respuestas a preguntas comunes sobre la inscripción de iOS o para solucionar problemas relacionados con iOS. Si tiene alguna pregunta o necesita ayuda con algo que no aparece aquí, póngase en contacto con el personal de soporte técnico de TI mediante la información de contacto en el sitio web de [Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 - [Tengo que volver a conectar un dispositivo iOS en riesgo](how-to-reconnect-a-compromised-ios-device.md)
 - [Tengo que enviar errores al equipo de soporte técnico de mi empresa](send-errors-to-your-it-admin-ios.md)
@@ -38,5 +38,5 @@ A veces pueden producirse problemas con el dispositivo iOS que puede corregirse 
 - [¿Cómo se puede encontrar el número de serie de un dispositivo?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Tengo que actualizar el dispositivo iOS](you-need-to-update-your-ios-device.md)
 - [La versión de iOS aún no es compatible](your-ios-version-isnt-yet-supported.md)
-- [Tengo que instalar una aplicación de Mobile Threat Defense en el dispositivo iOS](you-are-prompted-to-install-mtd-ios.md)
+- [Tengo que instalar una aplicación de Mobile Threat Defense en el dispositivo iOS](set-up-mobile-threat-defense.md)
 - [Tengo que solucionar una amenaza detectada por una aplicación de Mobile Threat Defense en el dispositivo iOS](you-need-to-resolve-a-threat-found-by-mtd-ios.md)

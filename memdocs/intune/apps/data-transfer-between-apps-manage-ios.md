@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3b794fdd180ad655b7cd11cc5c1f6d11bc874e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075462"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254986"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Administración de transferencias de datos entre aplicaciones iOS en Microsoft Intune
 
@@ -45,7 +45,7 @@ Use directivas de protección de aplicaciones con la característica de **admini
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Configurar el valor de UPN de usuario para Microsoft Intune o para una solución EMM de terceros
 La configuración del valor de UPN de usuario es **necesaria** para los dispositivos administrados por Intune o por una solución EMM de terceros para identificar la cuenta de usuario inscrita. La configuración de UPN funciona con las directivas de protección de aplicaciones que implementa desde Intune. El procedimiento siguiente es un flujo general para la configuración del valor de UPN y la experiencia del usuario resultante:
 
-1. En [Azure Portal](https://portal.azure.com), [cree y asigne una directiva de protección de aplicaciones](app-protection-policies.md) para iOS/iPadOS. Configure las directivas según los requisitos de su empresa y seleccione las aplicaciones iOS que debe tener esta directiva.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), [cree y asigne una directiva de protección de aplicaciones](app-protection-policies.md) para iOS/iPadOS. Configure las directivas según los requisitos de su empresa y seleccione las aplicaciones iOS que debe tener esta directiva.
 
 2. Implemente las aplicaciones y el perfil de correo electrónico que quiera administrar a través de Intune o de la solución MDM de terceros siguiendo los pasos generales siguientes. Esto también se aborda en el *Ejemplo 1*.
 

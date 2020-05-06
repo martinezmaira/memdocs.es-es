@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326788"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210356"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Asignar licencias a los usuarios para que puedan inscribir dispositivos en Intune
 
@@ -36,7 +36,7 @@ Puede usar el [Centro de administración de Microsoft Endpoint Manager](https:/
 
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Usuarios** > **Todos los usuarios** > elija un usuario > **Licencias** > **Asignaciones**.
 
-2. Elija el cuadro para **Intune** > **Guardar**.
+2. Elija el cuadro para **Intune** > **Guardar**. Si desea usar Enterprise Mobility + Security E5 u otra licencia, active ese cuadro en su lugar.
 
    ![Captura de pantalla de la sección de licencias de productos del Centro de administración de Microsoft 365.](./media/licenses-assign/mem-assign-license.png)
 
@@ -96,7 +96,7 @@ Cree un nuevo usuario en la línea de comandos y asigne una licencia de EMS sin 
     $CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
     Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
 
-Comprobar con:
+Realice la comprobación con lo siguiente:
 
     (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 
@@ -108,7 +108,7 @@ Deshabilite la parte de Intune de la licencia de EMS de un usuario que ya tenga 
     $CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
     Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -LicenseOptions $CustomEMS
 
-Comprobar con:
+Realice la comprobación con lo siguiente:
 
     (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 

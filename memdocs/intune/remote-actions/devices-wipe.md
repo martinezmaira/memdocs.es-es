@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e359b07669f45999ae3de4280d1eb65d5ca11064
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023340"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254697"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo
 
@@ -94,7 +94,7 @@ En las tablas siguientes se describen los datos que se eliminan y el efecto de l
 |Correo electrónico|Se borran los perfiles de correo electrónico que se aprovisionan mediante Intune. Se elimina el correo electrónico almacenado en caché en el dispositivo.|
 |Separación de Azure AD|Se quita el registro de Azure AD.|
 
-### <a name="android"></a>Android
+### <a name="android-device-administrator"></a>Administrador de dispositivos Android
 
 |Tipo de datos|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -110,11 +110,11 @@ En las tablas siguientes se describen los datos que se eliminan y el efecto de l
 |Correo electrónico|N/D (los dispositivos Android no admiten los perfiles de correo electrónico)|Se borran los perfiles de correo electrónico que se aprovisionan mediante Intune. Se elimina el correo electrónico almacenado en caché en el dispositivo.|
 |Separación de Azure AD|Se quita el registro de Azure AD.|Se quita el registro de Azure AD.|
 
-### <a name="android-work-profile"></a>Perfil de trabajo Android
+### <a name="android-enterprise-devices-with-a-work-profile"></a>Dispositivos Android Enterprise con un perfil de trabajo
 
 Al eliminar los datos de la compañía de un dispositivo de perfil de trabajo Android, se eliminan todos los datos, las aplicaciones y las configuraciones del perfil de trabajo en dicho dispositivo. El dispositivo se retira de la administración con Intune. No se admite el borrado en los perfiles de trabajo Android.
 
-### <a name="android-enterprise-kiosk-devices"></a>Dispositivos de quiosco de Android Enterprise
+### <a name="android-enterprise-dedicated-devices"></a>Dispositivos Android Enterprise dedicados
 
 Solo se pueden borrar dispositivos de quiosco. Los dispositivos de quiosco de Android no se pueden retirar.
 
@@ -134,7 +134,7 @@ Solo se pueden borrar dispositivos de quiosco. Los dispositivos de quiosco de An
 
 |Tipo de datos|Windows 8.1 (MDM) y Windows RT 8.1|Windows RT|Windows Phone 8.1 y Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Aplicaciones de empresa y datos asociados instalados por Intune.|Se revocan las claves de los archivos protegidos con EFS. El usuario no puede abrir los archivos.|No se quitan las aplicaciones de empresa.|Se desinstalan las aplicaciones instaladas originalmente a través del Portal de empresa. Se quitarán los datos de la aplicación de empresa.|Las aplicaciones se desinstalarán. Se quitan las claves de instalación de prueba.<br>Para Windows 10 versión 1703 (Creator Update) y versiones posteriores, no se quitan las aplicaciones de Aplicaciones de Microsoft 365. Las aplicaciones Win32 instaladas en la extensión de administración de Intune no serán dispositivos desinstalados o no inscritos. Los administradores pueden aprovechar la exclusión de asignación para no ofrecer las aplicaciones Win32 en los dispositivos BYOD.|
+|Aplicaciones de empresa y datos asociados instalados por Intune.|Se revocan las claves de los archivos protegidos con EFS. El usuario no puede abrir los archivos.|No se quitan las aplicaciones de empresa.|Se desinstalan las aplicaciones instaladas originalmente a través del Portal de empresa. Se quitarán los datos de la aplicación de empresa.|Las aplicaciones se desinstalarán. Se quitan las claves de instalación de prueba.<br>Para Windows 10 versión 1709 (Creator Update) y versiones posteriores, no se quitan las aplicaciones de Aplicaciones de Microsoft 365. Las aplicaciones Win32 instaladas en la extensión de administración de Intune no serán dispositivos desinstalados o no inscritos. Los administradores pueden aprovechar la exclusión de asignación para no ofrecer las aplicaciones Win32 en los dispositivos BYOD.|
 |Configuración|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|
 |Configuración de perfil de Wi-Fi y VPN|Quitado.|Quitado.|No compatible.|Quitado.|
 |Configuración de perfil de certificado|Certificados eliminados y revocados.|Certificados eliminados y revocados.|No compatible.|Certificados eliminados y revocados.|

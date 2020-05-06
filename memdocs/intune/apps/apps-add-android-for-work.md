@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80624907"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615523"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adición de aplicaciones de Google Play administrado a dispositivos Android Enterprise con Intune
 
@@ -141,8 +141,6 @@ Para más información sobre las aplicaciones privadas de Google Play administra
 2. En la consola, seleccione **Agregar nueva aplicación**.
 3. Puede cargar y proporcionar información sobre la aplicación de la misma manera que publica cualquier aplicación en Google Play Store. Sin embargo, debe seleccionar **Solo hacer que esta aplicación esté disponible para mi organización (<*nombre de la organización*>)** .
 
-    ![Hacer que la aplicación esté disponible solo para su organización](./media/apps-add-android-for-work/restrict.png)
-
     Con esta operación, la aplicación solo estará disponible para su organización, y no en Google Play Store público.
 
     Para más información sobre la carga y publicación de aplicaciones Android, consulte la [Ayuda de la consola para desarrolladores de Google](https://support.google.com/googleplay/android-developer/answer/113469).
@@ -218,6 +216,10 @@ Como alternativa, puede configurar Google Play para que vuelva a aprobar automá
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Otros informes de aplicaciones de Google Play administrado para dispositivos de perfil de trabajo de Android Enterprise
 
 En las aplicaciones de Google Play administrado implementadas en dispositivos de perfil de trabajo de Android Enterprise, puede usar Intune para ver el estado y el número de versión de la aplicación instalada en un dispositivo. 
+
+## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Uso de canales de pruebas cerradas de Google Play administrado
+
+Puede distribuir una versión que no sea de producción de una aplicación de Google Play administrado a los dispositivos inscritos en un escenario de Android Enterprise (**Perfil de trabajo de Android Enterprise**, **Totalmente administrado** y **Dedicado**) para realizar pruebas. En Intune, también puede ver si una aplicación tiene publicado un canal de compilación de pruebas de preproducción, así como asignar ese canal a grupos de dispositivos o de usuarios de AAD. El flujo de trabajo para asignar una versión de producción a un grupo que actualmente existe es igual que asignar un canal que no es de producción. Después de la implementación, el estado de instalación de cada canal se corresponderá con el número de versión del canal en Google Play administrado. Para obtener más información, vea el artículo sobre [canales de pruebas cerradas de Google Play para las pruebas de versión preliminar de la aplicación](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Eliminación de aplicaciones de Google Play administrado
 Cuando sea necesario, podrá eliminar aplicaciones de Google Play administrado desde Microsoft Intune. Para eliminar una aplicación de Google Play administrado, abra Microsoft Intune en Azure Portal y seleccione **Aplicaciones** > **Todas las aplicaciones**. En la lista de aplicaciones, seleccione los puntos suspensivos (...) a la derecha de la aplicación de Google Play administrado y luego seleccione **Eliminar** en la lista que aparece. Cuando se elimina una aplicación de Google Play administrada de la lista de aplicaciones, automáticamente se desactiva la aprobación de la aplicación administrada de Google Play.

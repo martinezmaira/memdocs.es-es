@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e05577967d874ea8e3cd5e4bdd5e20e204158921
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325433"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615682"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Creación de directiva de cumplimiento de dispositivos de Mobile Threat Defense (MTD) con Intune
 
@@ -59,6 +59,11 @@ Requisitos previos de la directiva de cumplimiento de dispositivos con MTD:
    - **Media**: el dispositivo se evalúa como compatible si las amenazas que se encuentran en él son de nivel bajo o medio. Si se detectan amenazas de nivel alto, se determinará que el dispositivo no es compatible.
 
    - **Alta**: este nivel es el menos seguro. Permite todos los niveles de amenaza y usa Mobile Threat Defense solo con fines informativos. Los dispositivos deben tener activada la aplicación MTD con esta configuración.
+
+   > [!IMPORTANT]
+   > Como propietario del dispositivo Android Enterprise, después de crear y guardar una directiva, no podrá editar después la directiva para modificar el nivel de amenaza. Las modificaciones para cambiar el nivel de amenaza del dispositivo para la opción Estado del dispositivo de **Requerir que el dispositivo tenga el nivel de amenaza del dispositivo** no surten efecto. Para cambiar el valor de nivel de amenaza, debe eliminar la directiva actual y crear otra directiva que establezca el nivel de amenaza deseado.
+   >
+   > Se trata de un problema conocido que se resolverá en una actualización futura de Intune.
 
 6. Seleccione **Aceptar** dos veces y, luego, seleccione **Crear** para crear la directiva.
 

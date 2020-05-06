@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 03df52662aaced80280192b9096c6d169020b55d
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327160"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615441"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar dispositivos como corporativos
 
@@ -128,3 +128,9 @@ Las propiedades del dispositivo muestran **Propiedad** en los registros de Intun
 3. Establezca **Propiedad del dispositivo** como **Personal** o **Corporativo**.
 
    ![Propiedades del dispositivo con las opciones Categoría de dispositivo y Propiedad del dispositivo](./media/corporate-identifiers-add/device-properties.png)
+
+Se puede configurar una notificación de inserción para enviársela a los usuarios del Portal de empresa de Android e iOS cuando el tipo de propiedad del dispositivo cambie de **Personal** a **Corporativo** como gesto de cortesía hacia su privacidad. 
+
+Cuando se cambia el tipo de propiedad de un dispositivo de Corporativa a Personal, Intune elimina toda la información de la aplicación previamente recopilada de ese dispositivo en un plazo de siete días. Si es necesario, Intune también eliminará el número de teléfono registrado. Intune seguirá recopilando un inventario de las aplicaciones que instale el administrador de TI en el dispositivo y un número de teléfono parcial para el dispositivo una vez que se haya marcado como personal.
+
+Para encontrar esta opción en Microsoft Endpoint Manager, seleccione **Administración de inquilinos** > **Personalización**. Para obtener más información, vea [Portal de empresa: configuración](../apps/company-portal-app.md#configuration).

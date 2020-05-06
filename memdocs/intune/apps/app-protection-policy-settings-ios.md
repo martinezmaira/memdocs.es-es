@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a09b103f87b99e5ce7df3ec68760f1b55a9033bd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eda210408adbb15d82d6bfc31bef2f225f53bc6f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341859"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863084"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Configuración de directivas de protección de aplicaciones de iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "79341859"
 En este artículo se describe la configuración de directivas de protección de aplicaciones para dispositivos iOS/iPadOS. La configuración de directivas que se describe puede [realizarse](app-protection-policies.md) para una directiva de protección de aplicaciones en el panel **Configuración** de Azure Portal al crear una directiva.
 
 Hay tres categorías de configuraciones de directiva: *Reubicación de datos*, *Requisitos de acceso* e *Inicio condicional*. En este artículo, el término ***aplicaciones administradas por directivas*** hace referencia a las aplicaciones que están configuradas con directivas de protección de aplicaciones.
+
+> [!IMPORTANT]
+> Intune Managed Browser se ha retirado. Use [Microsoft Edge](../apps/manage-microsoft-edge.md) para la experiencia de explorador de Intune protegida. 
 
 ## <a name="data-protection"></a>Protección de datos
 

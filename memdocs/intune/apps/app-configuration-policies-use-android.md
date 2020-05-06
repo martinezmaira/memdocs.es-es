@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: f61f0dd7f0f3b343b8f68de0b20b06d0f69212ac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808091"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397788"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados
 
@@ -47,7 +47,7 @@ Las directivas de configuración de aplicaciones en Microsoft Intune proporcion
 8. Haga clic en **Agregar** para mostrar el panel **Agregar permisos**.
 9. Haga clic en los permisos que quiere invalidar. Los permisos concedidos invalidan la directiva "Permisos de aplicación predeterminados" para las aplicaciones seleccionadas.
 10. Establezca el **Estado del permiso** de cada permiso. Puede elegir entre **Solicitud**, **Concesión automática** o **Denegación automática**. Para más información sobre los permisos, consulte [Configuración de Android Enterprise para marcar dispositivos como compatibles o no compatibles con Intune](../protect/compliance-policy-create-android-for-work.md).
-11. Si la aplicación administrada admite valores de configuración, en el cuadro desplegable, seleccione el **formato de opciones de configuración**. Seleccione uno de los métodos siguientes para agregar información de la configuración:
+11. Si la aplicación administrada admite valores de configuración, se hace visible el cuadro desplegable **Formato de opciones de configuración**. Seleccione uno de los métodos siguientes para agregar información de la configuración:
     - **Uso del Diseñador de configuración**
     - **Especificar datos JSON**<br><br>
     Para obtener más detalles sobre cómo usar el diseñador de configuraciones, vea [Uso del Diseñador de configuración](#use-the-configuration-designer). Para información sobre cómo escribir datos XML, consulte [Especificar datos JSON](#enter-json-data).

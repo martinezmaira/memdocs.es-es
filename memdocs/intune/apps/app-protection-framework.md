@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696500"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182300"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Marco de protección de datos mediante directivas de protección de aplicaciones 
 
@@ -37,7 +37,7 @@ El marco de configuración de protección de datos de APP se organiza en tres es
 
 - Protección de datos empresariales mejorada de nivel 2: Microsoft recomienda esta configuración para los dispositivos con los que los usuarios acceden a información confidencial. Esta configuración es aplicable a la mayoría de los usuarios móviles que acceden a datos profesionales o educativos. Algunos de los controles pueden afectar a la experiencia del usuario.
 
-- Protección de datos empresariales alta de nivel 3: Microsoft recomienda esta configuración para los dispositivos que ejecuta una organización con un equipo de seguridad más grande o más sofisticado, o para usuarios o grupos específicos que tienen un riesgo único (por ejemplo, una organización que haya identificado usuarios que controlan datos cuyo robo afectaría directa y gravemente al precio de sus acciones). Una organización que pueda ser el objetivo de adversarios sofisticados y con una gran financiación debería elegir esta configuración.
+- Protección de datos empresariales alta de nivel 3: Microsoft recomienda esta configuración para los dispositivos que ejecuta una organización con un equipo de seguridad más grande o más sofisticado, o para usuarios o grupos específicos que tienen un riesgo único (usuarios que controlan datos altamente confidenciales cuya divulgación no autorizada provoca una considerable pérdida material a la organización). Una organización que pueda ser el objetivo de adversarios sofisticados y con una gran financiación debería elegir esta configuración.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>Metodología de implementación del marco de protección de datos de APP
 
@@ -159,8 +159,8 @@ La configuración de directiva que se aplica en el nivel 2 incluye todas las co
 
 | Setting | Descripción del valor |          Valor/acción  |          Plataforma        | Notas |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Condiciones de dispositivo  |       Versión mínima del sistema operativo  |          *Formato: Major.Minor.Build <br>Ejemplo:   12.4.4* / Bloquear acceso |          iOS/iPadOS        | Microsoft recomienda configurar la versión principal mínima de iOS para que coincida con las versiones de iOS compatibles con las aplicaciones de Microsoft.   Las aplicaciones de Microsoft admiten un enfoque N-1 donde N es la versión principal actual de iOS. En el caso de los valores de versión secundaria y de compilación, Microsoft recomienda garantizar que los dispositivos estén actualizados con las actualizaciones de seguridad respectivas. Vea [Actualizaciones de seguridad de Apple](https://support.apple.com/en-us/HT201222) para obtener las recomendaciones más recientes de Apple |
-| Condiciones de dispositivo  |       Versión mínima del sistema operativo  |          *Formato: Major.Minor<br>   Ejemplo: 8.0* / Bloquear acceso   |          Android        | Microsoft recomienda configurar la versión principal mínima de Android para que coincida con las versiones de Android compatibles con las aplicaciones de Microsoft. Los OEM y los dispositivos que se adhieren a los requisitos recomendados de Android Enterprise deben ser compatibles con la versión de publicación actual y una actualización posterior.   Actualmente, Android recomienda Android 8.0 y versiones posteriores para los profesionales que trabajan con datos.   Vea [Requisitos recomendados de Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) para obtener las recomendaciones más recientes de Android |
+| Condiciones de dispositivo  |       Versión mínima del sistema operativo  |          *Formato: Major.Minor.Build <br>Ejemplo:   12.4.6* / Bloquear acceso |          iOS/iPadOS        | Microsoft recomienda configurar la versión principal mínima de iOS para que coincida con las versiones de iOS compatibles con las aplicaciones de Microsoft.   Las aplicaciones de Microsoft admiten un enfoque N-1 donde N es la versión principal actual de iOS. En el caso de los valores de versión secundaria y de compilación, Microsoft recomienda garantizar que los dispositivos estén actualizados con las actualizaciones de seguridad respectivas. Vea [Actualizaciones de seguridad de Apple](https://support.apple.com/en-us/HT201222) para obtener las recomendaciones más recientes de Apple |
+| Condiciones de dispositivo  |       Versión mínima del sistema operativo  |          *Formato: Major.Minor<br>   Ejemplo: 5.0* / Bloquear acceso   |          Android        | Microsoft recomienda configurar la versión principal mínima de Android para que coincida con las versiones de Android compatibles con las aplicaciones de Microsoft. Los OEM y los dispositivos que se adhieren a los requisitos recomendados de Android Enterprise deben ser compatibles con la versión de publicación actual y una actualización posterior.   Actualmente, Android recomienda Android 8.0 y versiones posteriores para los profesionales que trabajan con datos.   Vea [Requisitos recomendados de Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) para obtener las recomendaciones más recientes de Android |
 | Condiciones de dispositivo  |       Versión mínima de la revisión  |          *Formato:   AAAA-MM-DD <br> Ejemplo: 2020-01-01* / Bloquear acceso  |          Android        | Los dispositivos Android pueden recibir revisiones de seguridad mensuales, pero la versión depende del OEM o los operadores. Las organizaciones deben asegurarse de que los dispositivos Android implementados reciban actualizaciones de seguridad antes de implementar esta configuración. Vea [Android Security Bulletins](https://source.android.com/security/bulletin/) (Boletines de seguridad de Android) para obtener información sobre las versiones de revisión más recientes.  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Protección de datos empresariales alta de nivel 3 
@@ -192,6 +192,7 @@ La configuración de directiva que se aplica en el nivel 3 incluye todas las co
 
 | Setting | Descripción del valor |          Valor/acción  |          Plataforma        | Notas |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Condiciones de dispositivo  |       Versión mínima del sistema operativo  |          *Formato: Major.Minor<br>   Ejemplo: 8.0* / Bloquear acceso   |          Android        | Microsoft recomienda configurar la versión principal mínima de Android para que coincida con las versiones de Android compatibles con las aplicaciones de Microsoft. Los OEM y los dispositivos que se adhieren a los requisitos recomendados de Android Enterprise deben ser compatibles con la versión de publicación actual y una actualización posterior.   Actualmente, Android recomienda Android 8.0 y versiones posteriores para los profesionales que trabajan con datos.   Vea [Requisitos recomendados de Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) para obtener las recomendaciones más recientes de Android |
 |       Condiciones de dispositivo  |          Dispositivos con jailbreak o liberados  |        N/D / Borrar datos  |          iOS/iPadOS, Android        |  |
 |       Condiciones de dispositivo  |          Nivel de amenaza máximo permitido  |          Protegido / Bloquear acceso  |          iOS/iPadOS, Android        | <p>Los dispositivos no inscritos pueden inspeccionarse en busca de amenazas con Mobile Threat Defense. Para obtener más información, vea [Mobile Threat Defense para  dispositivos no inscritos](https://aka.ms/mtdmamdocs).      </p><p>     Si el dispositivo está inscrito, este valor puede omitirse en favor de la implementación de Mobile Threat Defense para dispositivos inscritos. Para obtener más información, vea [Mobile Threat Defense para  dispositivos no inscritos](../protect/mtd-device-compliance-policy-create.md).</p> |
 

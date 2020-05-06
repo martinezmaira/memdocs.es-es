@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 3/13/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,22 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323088"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525687"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Aplicación del cumplimiento en equipos Mac administrados con Jamf Pro
 
-Al [integrar Jamf Pro con Intune](conditional-access-integrate-jamf.md), puede usar las directivas de acceso condicional para forzar el cumplimiento en los dispositivos Mac de los requisitos de la organización.  Este artículo le ayudará en las siguientes tareas:  
+Al integrar Jamf Pro con Intune, puede usar las directivas de acceso condicional para exigir el cumplimiento en los dispositivos Mac de los requisitos de la organización. Este artículo le ayudará en las siguientes tareas:  
 
 - Creación de directivas de acceso condicional.
 - Configuración de Jamf Pro para implementar la aplicación Portal de empresa de Intune en los dispositivos que administra con Jamf.
 - Configuración de los dispositivos para que se registren en Azure AD cuando el usuario del dispositivo inicie sesión en la aplicación Portal de empresa que se inicia desde la aplicación Jamf Self Service. El registro de dispositivos establece una identidad en Azure AD que permite que las directivas de acceso condicional evalúen el dispositivo para el acceso a los recursos de la empresa.  
  
 Los procedimientos descritos en este artículo requieren acceso tanto a las consolas de Intune como a las de Jamf Pro.
+Intune admite dos métodos para integrar Jamf Pro, que se configuran independientemente de los procedimientos descritos en este artículo:
+
+- Recomendación: [Uso del conector de nube de Jamf para integrar Jamf Pro con Intune](conditional-access-jamf-cloud-connector.md)
+- [Configuración manual de la integración de Jamf Pro con Intune](conditional-access-integrate-jamf.md)
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Configuración de las directivas de cumplimiento de dispositivos en Intune
 

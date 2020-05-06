@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4c0c913d3bc1467096090ac4e80d1d9d5f578a1b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79372558"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182317"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Cómo obtienen sus aplicaciones los usuarios de Android  
 
@@ -33,12 +33,12 @@ Este artículo le ayuda a comprender cómo y dónde obtienen los usuarios finale
 | Tipo de aplicación | Aplicaciones de línea de negocio (LOB) | Aplicaciones de Play Store  |
 | ------------- |-------------| -----|
 | Aplicaciones disponibles      | Los usuarios tocan **instalar** en el Portal de empresa. Aparece una notificación que los usuarios tocan para iniciar la instalación. Una vez realizada la instalación correctamente, la notificación desaparece. | Los usuarios tocan la aplicación del Portal de empresa y se les dirige a una página de la aplicación en la Play Store. Aquí es donde inician la instalación.|
-| Required apps      | **En los dispositivos que ejecutan Android 9.0 y versiones anteriores**, se muestra una notificación a los usuarios (que no se puede descartar) en la que se indica que deben descargar una aplicación. Los usuarios pulsan la notificación para iniciar la descarga e instalación. Una vez realizada la instalación correctamente, la notificación desaparece. **En los dispositivos que ejecutan Android 10 y versiones posteriores**, se muestra una notificación a los usuarios (que no se puede descartar) en la que se indica que deben descargar una aplicación. Los usuarios pulsan la notificación para iniciar la descarga y, tras ello, reciben otra para iniciar la instalación de la aplicación. Una vez realizada la instalación correctamente, la notificación desaparece.| Los usuarios ven una notificación, que no se puede descartar y que indica que deben instalar una aplicación. Los usuarios tocan la notificación y se les dirige a una página de la aplicación en la Play Store. Aquí es donde inician la instalación. Una vez realizada la instalación correctamente, la notificación desaparece. |
+| Required apps      | Los usuarios ven una notificación, que no se puede descartar y que indica que deben instalar una aplicación. Los usuarios tocan la notificación para iniciar la instalación. Una vez realizada la instalación correctamente, la notificación desaparece.    | Los usuarios ven una notificación, que no se puede descartar y que indica que deben instalar una aplicación. Los usuarios tocan la notificación y se les dirige a una página de la aplicación en la Play Store. Aquí es donde inician la instalación. Una vez realizada la instalación correctamente, la notificación desaparece. |
 
-Los usuarios finales necesitan permitir la instalación desde orígenes desconocidos para poder instalar [aplicaciones de LOB](../apps/lob-apps-android.md). Normalmente, esta opción se encuentra en dos lugares diferentes:
+Los usuarios finales necesitan permitir la instalación desde orígenes desconocidos para poder instalar [aplicaciones de LOB](../apps/lob-apps-android.md). Esta configuración se encuentra normalmente en dos lugares diferentes, en función de la versión de Android:
 
-* **Android 7.1.2 y versiones anteriores**: **Configuración** > **Seguridad** > **Orígenes desconocidos**
-* **Android 8.0 y versiones posteriores**: **Configuración** > **Aplicaciones y notificaciones** > **Acceso especial a las aplicaciones** > **Instalar aplicaciones desconocidas** > **Portal de empresa** > **Permitir desde este origen**
+* Android 7.1.2 y versiones anteriores: **Configuración** > **Seguridad** > **Orígenes desconocidos**
+* Android 8.0 y versiones posteriores: **Configuración** > **Aplicaciones y notificaciones** > **Acceso especial a las aplicaciones** > **Instalar aplicaciones desconocidas** > **Portal de empresa** > **Permitir desde este origen**
 
 Si ocurre esto, la aplicación Portal de empresa informará y guiará directamente al usuario final hasta la configuración adecuada. 
 
@@ -47,13 +47,13 @@ Si ocurre esto, la aplicación Portal de empresa informará y guiará directamen
 | Tipo de aplicación | Aplicaciones de línea de negocio (LOB) | Aplicaciones de Play Store  |
 | ------------- |-------------| -----|
 | Aplicaciones disponibles      | Los usuarios tocan **instalar** en el Portal de empresa. La aplicación se instala sin la intervención del usuario. | Los usuarios tocan la aplicación del Portal de empresa y se les dirige a una página de la aplicación en la Play Store. Aquí es donde inician la instalación.|
-| Required apps      | **En los dispositivos que ejecutan Android 9.0 y versiones anteriores**, la aplicación se instala sin intervención del usuario. **En los dispositivos que ejecutan Android 10 y versiones posteriores**, se muestra una notificación a los usuarios (que no se puede descartar) en la que se indica que deben descargar una aplicación. Los usuarios tocan la notificación para iniciar la instalación. Una vez realizada la instalación correctamente, la notificación desaparece. | Los usuarios ven una notificación, que no se puede descartar y que indica que deben instalar una aplicación. Los usuarios tocan la notificación y se les dirige a una página de la aplicación en la Play Store. Aquí es donde inician la instalación. Una vez realizada la instalación correctamente, la notificación desaparece. |
+| Required apps      | La aplicación se instala sin la intervención del usuario.    | Los usuarios ven una notificación, que no se puede descartar y que indica que deben instalar una aplicación. Los usuarios tocan la notificación y se les dirige a una página de la aplicación en la Play Store. Aquí es donde inician la instalación. Una vez realizada la instalación correctamente, la notificación desaparece. |
 
 Las aplicaciones pueden ser administradas o no administradas, tal como se describe a continuación. El proceso de crear aplicaciones administradas es el mismo para todos los tipos de dispositivos Android.
 
-**Aplicaciones administradas**: estas aplicaciones se administran a través de directivas. Intune las ha "encapsulado" o compilado mediante el SDK para aplicaciones de Intune. Estas aplicaciones pueden administrarse mediante Intune y las directivas de aplicación pueden aplicarse a estas.
+* Aplicaciones administradas: estas aplicaciones se administran a través de directivas. Intune las ha "encapsulado" o compilado mediante el SDK para aplicaciones de Intune. Estas aplicaciones pueden administrarse mediante Intune y las directivas de aplicación pueden aplicarse a estas.
 
-**Aplicaciones no administradas**: estas aplicaciones no se administran a través de directivas. Intune no las ha encapsulado o no incorporan el SDK para aplicaciones de Intune. Las directivas de aplicación no pueden aplicarse a estas aplicaciones.
+* Aplicaciones no administradas: estas aplicaciones no se administran a través de directivas. Intune no las ha encapsulado o no incorporan el SDK para aplicaciones de Intune. Las directivas de aplicación no pueden aplicarse a estas aplicaciones.
 
 ## <a name="zebra-devices-with-zebra-mobility-extensions"></a>Dispositivos Zebra con Zebra Mobility Extensions
 

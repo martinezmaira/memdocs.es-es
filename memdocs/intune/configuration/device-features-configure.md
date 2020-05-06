@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551403"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149183"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adición de la configuración de características de dispositivos iOS, iPadOS o macOS en Intune
 
@@ -37,9 +37,6 @@ Intune incluye muchas características y configuraciones que ayudan a los admini
 Intune usa "perfiles de configuración" para crear y personalizar estas configuraciones para las necesidades de su organización. Después de agregar estas características en un perfil, puede insertarlo o implementarlo en los dispositivos iOS/iPadOS y macOS de la organización.
 
 En este artículo se describen las distintas características que se pueden configurar y se muestra cómo crear un perfil de configuración de dispositivo. También puede ver todas las configuraciones disponibles para los dispositivos [iOS/iPadOS](ios-device-features-settings.md) y [macOS](macos-device-features-settings.md).
-
-> [!NOTE]
-> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración que se describe en este artículo.
 
 ## <a name="airprint"></a>AirPrint
 
@@ -134,14 +131,14 @@ Se aplica a:
 
 ## <a name="single-sign-on"></a>Inicio de sesión único
 
-La mayoría de las aplicaciones de línea de negocio (LOB) necesita cierto nivel de autenticación de usuario para ofrecer seguridad. En muchos casos, esta autenticación exige que el usuario escriba las mismas credenciales repetidamente. Para mejorar la experiencia del usuario, los desarrolladores pueden crear aplicaciones que usen el inicio de sesión único (SSO). El uso del inicio de sesión único reduce el número de veces que un usuario debe escribir las credenciales.
+La mayoría de las aplicaciones de línea de negocio (LOB) necesita cierto nivel de autenticación de usuario para ofrecer seguridad. En muchos casos, la autenticación requiere que los usuarios escriban las mismas credenciales varias veces. Para mejorar la experiencia del usuario, los desarrolladores pueden crear aplicaciones que usen el inicio de sesión único (SSO). El uso del inicio de sesión único reduce el número de veces que un usuario debe escribir las credenciales.
+
+El perfil de inicio de sesión único se basa en Kerberos. Kerberos es un protocolo de autenticación de red que utiliza criptografía de clave secreta para autenticar aplicaciones cliente-servidor. La configuración de Intune define la información de la cuenta de Kerberos al acceder a los servidores o a las aplicaciones especificadas, y controla los desafíos de Kerberos relacionados con las páginas web y las aplicaciones nativas. Apple recomienda usar la [extensión de la aplicación de SSO de Kerberos](#single-sign-on-app-extension) (en este artículo) en lugar de la configuración de SSO.  
 
 Para usar el inicio de sesión único, asegúrese de que tiene:
 
 - Una aplicación programada para buscar el almacén de credenciales del usuario en el inicio de sesión único en el dispositivo.
 - Intune configurado para el inicio de sesión único para dispositivos iOS/iPadOS.
-
-![Panel Inicio de sesión único](./media/device-features-configure/sso-blade.png)
 
 Para obtener una lista de los valores que puede configurar en Intune, vea [Inicio de sesión único en iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
@@ -156,8 +153,8 @@ Estas opciones configuran una extensión de aplicación que habilita el inicio d
 
 En Intune, use estas opciones para configurar una extensión de aplicación de inicio de sesión único creada por la organización, el proveedor de identidades, Microsoft o Apple. La extensión de la aplicación de inicio de sesión único controla la autenticación de los usuarios. Estas opciones configuran las extensiones de aplicación de inicio de sesión único de tipo credencial y redirección.
 
-- El tipo de redirección está diseñado para protocolos de autenticación modernos, como OAuth y SAML2. Microsoft cuenta con una extensión de aplicación de inicio de sesión único de tipo redirección de Azure AD para iOS o iPadOS que se puede habilitar con la configuración de la extensión de aplicación de inicio de sesión único.
-- El tipo de credencial está diseñado para flujos de autenticación de desafío y respuesta. Puede elegir entre una extensión de credenciales específicas de Kerberos proporcionada por Apple y una extensión de credenciales genérica.
+- El tipo de redirección está diseñado para protocolos de autenticación modernos, como OAuth y SAML2. Puede usar una extensión de redireccionamiento genérica en dispositivos macOS. En el caso de dispositivos iOS/iPadOS, puede elegir entre la extensión de SSO de Microsoft Azure AD ([complemento de Microsoft Enterprise Single Sign-On](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) y una extensión de redireccionamiento genérica.
+- El tipo de credencial está diseñado para flujos de autenticación de desafío y respuesta. Puede elegir entre una extensión de credenciales específica de Kerberos proporcionada por Apple y una extensión de credenciales genérica.
 
 Para obtener una lista de las opciones que puede configurar en Intune, vea [Extensión de la aplicación de inicio de sesión único de iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) y [Extensión de la aplicación de inicio de sesión único de macOS](macos-device-features-settings.md#single-sign-on-app-extension).
 
@@ -208,7 +205,7 @@ Se aplica a:
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 

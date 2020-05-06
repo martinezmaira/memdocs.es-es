@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4965f29144131895660796bc3282ba46d6b8101
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b93e850e7a38feb7dd5347670279f6d85b92455b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353611"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725663"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Información general sobre S/MIME para firmar y cifrar el correo electrónico en Intune
 
@@ -46,7 +46,7 @@ Para usar certificados de firma, cree una plantilla centrada en la firma en la e
 
 Los certificados de firma en Intune usan certificados PKCS. En [Configuración y uso de certificados PKCS con Intune](certficates-pfx-configure.md) se describe cómo implementar y usar el certificado PKCS en el entorno de Intune. Estos pasos incluyen los siguientes:
 
-- Descargar e instalar Microsoft Intune Certificate Connector para admitir las solicitudes de certificado PKCS.
+- Descargar e instalar Microsoft Intune Certificate Connector para admitir las solicitudes de certificado PKCS. El conector tiene los mismos requisitos de red que los [dispositivos administrados](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 - Crear un perfil de certificado raíz de confianza para los dispositivos. Este paso incluye el uso de certificados raíz de confianza e intermedios para la entidad de certificación y, después, la implementación del perfil en los dispositivos.
 - Crear un perfil de certificado PKCS mediante la plantilla de certificado que se creó. Este perfil emite certificados de firma para los dispositivos e implementa el perfil de certificado PKCS en los dispositivos.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407881"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166577"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -85,7 +85,7 @@ Esta configuración se aplica a los tipos de inscripción Android Enterprise en 
 
 ### <a name="system-security"></a>Seguridad del sistema
 
-- **Examen de amenazas en las aplicaciones**: **Requerir** (valor predeterminado) permite a Google Play Protect examinar las aplicaciones antes y después de instalarlas. Si se detecta una amenaza, puede avisar a los usuarios para que quiten la aplicación del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no habilite ni ejecute Google Play Protect para examinar aplicaciones.
+- **Examen de amenazas en las aplicaciones**: **Requerir** (valor predeterminado) permite a Google Play Protect examinar las aplicaciones antes y después de instalarlas. Si se detecta una amenaza, puede avisar a los usuarios para que quiten la aplicación del dispositivo. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no habilite ni ejecute Google Play Protect para examinar aplicaciones.
 
 ### <a name="dedicated-devices"></a>Dispositivos dedicados
 
@@ -207,6 +207,9 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa de 
 - **Número de días hasta que expire la contraseña**: escriba el número de días, entre 1 y 365, hasta que se deba cambiar la contraseña del dispositivo. Por ejemplo, escriba `90` para que la contraseña caduque pasados 90 días. Cuando la contraseña expire, se le solicitará a los usuarios que creen una nueva contraseña. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 - **Número de contraseñas requeridas antes de que el usuario pueda reusar una**: utilice esta configuración para impedir que los usuarios creen contraseñas usadas anteriormente. escriba el número de contraseñas usadas previamente que no se pueden volver a usar, de 1 a 24. Por ejemplo, escriba `5` para que los usuarios no puedan establecer una nueva contraseña en su contraseña actual o en cualquiera de sus cuatro contraseñas anteriores. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 - **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
+
+  > [!NOTE]
+  > No se pedirá a los dispositivos del Propietario del dispositivo que establezcan una contraseña. La configuración se aplicará y tendrá que establecer la contraseña manualmente. La directiva que aplique esto se notificará como errónea hasta que se establezca la contraseña que cumpla sus requisitos.
 
 ### <a name="power-settings"></a>Configuración de energía
 

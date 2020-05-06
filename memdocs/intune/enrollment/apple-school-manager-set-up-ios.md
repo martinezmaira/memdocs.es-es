@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 63a465e39e8a041c47b6748d9dacdebf3c6ea8a5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696552"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078114"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configuración de la inscripción de dispositivos iOS/iPadOS con Apple School Manager
 
@@ -90,7 +90,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 4. En **Afinidad de usuario**, elija si los dispositivos con este perfil deben inscribirse con o sin un usuario asignado.
     - **Inscribir con afinidad de usuario**: seleccione esta opción para dispositivos que pertenezcan a usuarios y necesiten usar el portal de empresa para hacer uso de servicios, como instalar aplicaciones. Esta opción también permite a los usuarios autenticar sus dispositivos mediante el portal de empresa. Si se usa ADFS, la afinidad de usuario debe ser [Punto de conexión mixto/nombre de usuario de WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Obtenga más información](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   El modo iPad compartido de Apple School Manager requiere la inscripción del usuario sin afinidad de usuario.
 
-    - **Inscribir sin afinidad de usuario**: seleccione esta opción para dispositivos no afiliados con un usuario único, como un dispositivo compartido. Use esta opción para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones como la aplicación de portal de empresa no funcionan.
+    - **Inscribir sin afinidad de usuario**: seleccione esta opción para dispositivos no afiliados con un usuario único, como un dispositivo compartido. Use esta opción para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones como Portal de empresa no funcionan.
 
 5. Si elige **Inscribir con afinidad de usuario**, puede permitir que los usuarios se autentiquen en el Portal de empresa en lugar de con el Asistente de configuración de Apple.
 
@@ -105,7 +105,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
     > Estas operaciones no se admiten durante la autenticación con el asistente para configuración de Apple.
 
 6. Elija **Configuración de administración de dispositivos** y seleccione si quiere o no que se supervisen los dispositivos con este perfil.
-    Los dispositivos **supervisados** ofrecen más opciones de administración y, en este caso, el bloqueo de activación está deshabilitado de forma predeterminada. Microsoft recomienda usar ADE como mecanismo para habilitar el modo supervisado, sobre todo para las organizaciones que implementan un gran número de dispositivos iOS/iPadOS.
+    Los dispositivos **supervisados** ofrecen más opciones de administración y, en este caso, el bloqueo de activación está deshabilitado de forma predeterminada. Microsoft recomienda usar ADE como mecanismo para habilitar el modo supervisado de Intune, sobre todo para las organizaciones que implementan un gran número de dispositivos iOS/iPadOS.
 
     Los usuarios reciben notificaciones de que sus dispositivos están supervisados de dos maneras:
 

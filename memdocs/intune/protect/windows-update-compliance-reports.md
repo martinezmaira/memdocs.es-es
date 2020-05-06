@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326516"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725638"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Informes de cumplimiento de Intune para las actualizaciones
 
-Al usar Intune para implementar la actualización de Windows en dispositivos Windows 10, vea detalles sobre el cumplimiento de las actualizaciones mediante Intune o una solución gratuita llamada *Update Compliance*, que forma parte de Microsoft Operations Management Suite (OMS).
+Al usar Intune para implementar la actualización de Windows en dispositivos Windows 10, vea detalles sobre el cumplimiento de las actualizaciones mediante Intune o una solución gratuita llamada *Update Compliance*. Update Compliance forma parte de Microsoft Operations Management Suite (OMS).
 
 ## <a name="use-intune"></a>Uso de Intune
 
@@ -43,17 +43,17 @@ Para revisar un informe de directivas sobre el estado de implementación para lo
 
    - **Estado del usuario**: muestra el nombre del usuario, el estado y la fecha de último informe. Para más información, consulte [Enumerar deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
 
-   - **Estado de actualización del usuario final**: muestra el estado de actualización del dispositivo Windows. Para más información, consulte [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
+   - **Estado de actualización del usuario final**: muestra el estado de actualización del dispositivo Windows. Para más información, vea [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
 
 ## <a name="use-update-compliance"></a>Uso de Update Compliance
 
-Puede supervisar los lanzamientos de las actualizaciones de Windows 10 mediante [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor), una solución de Windows Analytics. Update Compliance se ofrece a través de Azure Portal y está disponible de forma gratuita para los dispositivos que cumplen los [requisitos previos](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+Puede supervisar las implementaciones de actualización de Windows 10 mediante [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Update Compliance se ofrece a través de Azure Portal y está disponible de forma gratuita para los dispositivos que cumplen los [requisitos previos](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 Cuando se utiliza esta solución, se implementa un identificador comercial en cualquiera de sus dispositivos Windows 10 administrados con Intune para el que quiera que se informe del cumplimiento de las actualizaciones.  
 
 En Intune, puede usar la configuración OMA-URI de una directiva personalizada para configurar el identificador comercial. Consulte [Usar una configuración personalizada para dispositivos Windows 10 en Intune](../configuration/custom-settings-windows-10.md).
 
-Ruta OMA-URI (distingue mayúsculas de minúsculas) para configurar el identificador comercial: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
+Ruta OMA-URI (distingue mayúsculas de minúsculas) para configurar el identificador comercial: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 
 Por ejemplo, puede usar los siguientes valores en **Agregar o editar configuración OMA-URI**:
 

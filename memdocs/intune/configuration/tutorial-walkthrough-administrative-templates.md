@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022864"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254867"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Uso de la nube para configurar directivas de grupo en dispositivos con Windows 10 con plantillas de ADMX y Microsoft Intune
 
@@ -53,7 +53,7 @@ Al final de este laboratorio dispondrá de los conocimientos necesarios para emp
 
 Esta característica se aplica a:
 
-- Windows 10, versión 1703, y más recientes
+- Windows 10, versión 1709, y más recientes
 
 ## <a name="prerequisites"></a>Requisitos previos
 

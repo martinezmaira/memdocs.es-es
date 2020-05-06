@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326795"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440584"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Creación de un rol personalizado en Intune
 
@@ -40,7 +40,7 @@ Para crear, editar o asignar roles, la cuenta debe tener uno de los siguientes p
 
 3. En la página **Permisos**, elija los permisos que quiera usar con este rol.
 
-4. En la página **Ámbito (etiquetas)** , seleccione las etiquetas para este rol. Este rol puede acceder a los recursos que también tengan estas etiquetas. Elija **Siguiente**.
+4. En la página **Ámbito (etiquetas)** , seleccione las etiquetas para este rol. Cuando este rol se asigna a un usuario, el usuario puede acceder a los recursos que también tienen estas etiquetas. Elija **Siguiente**.
 
 5. Cuando haya terminado, elija **Crear** en la página **Revisar y crear**. El nuevo rol se muestra en la lista de la hoja **Roles de Intune: Todos los roles**.
 

@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337595"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077808"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>Configuración de un dispositivo iOS o iPadOS con Portal de empresa de Intune y DISA Purebred  
 
@@ -39,7 +40,7 @@ Es probable que necesite configurar una credencial derivada si usa una tarjeta i
 En este artículo, aprenderá lo siguiente:  
 
    * Inscribir un dispositivo iOS o iPadOS con Portal de empresa de Intune  
-   * Obtener una credencial derivada del proveedor de credenciales derivadas de la organización, [DISA Purebred](https://cyber.mil/pki-pke/purebred/)  
+   * Obtener una credencial derivada del proveedor de credenciales derivadas de la organización, DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.  
 
 ## <a name="what-are-derived-credentials"></a>¿Qué son las credenciales derivadas?  
 Una credencial derivada es un certificado que se deriva de las credenciales de la tarjeta inteligente y que se instala en el dispositivo. Esta credencial concede acceso remoto a los recursos de trabajo, a la vez que evita que los usuarios no autorizados accedan a la información confidencial.  

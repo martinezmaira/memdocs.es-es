@@ -54,12 +54,11 @@
 #### [Revisión de seguridad no compatible](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Dispositivos con errores de cifrado](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobile Threat Defense
-#### [Instalación de aplicaciones de Mobile Threat Defense](you-are-prompted-to-install-mtd-android.md)
-##### [Instalación de Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
-##### [Instalación de Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
-##### [Instalación de SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
-##### [Instalación de zIPS de Zimperium](you-are-prompted-to-install-zips-android.md)
+### Aplicaciones Mobile Threat Defense 
+#### [Instalación de Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
+#### [Instalación de Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
+#### [Instalación de SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
+#### [Instalación de zIPS de Zimperium](you-are-prompted-to-install-zips-android.md)
 #### [Resolución de amenazas](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 ##### [Uso de Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 ##### [Uso de Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
@@ -99,12 +98,11 @@
 #### [Actualización del dispositivo para instalar Outlook](update-device-outlook-ios.md)
 #### [La versión de iOS aún no es compatible](your-ios-version-isnt-yet-supported.md)
 
-### Mobile Threat Defense
-#### [Instalación de aplicaciones de Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md)
-##### [Instalación de Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-##### [Instalación de Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
-##### [Instalación de SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
-##### [Instalación de zIPS de Zimperium](you-are-prompted-to-install-zips-ios.md)
+### Aplicaciones Mobile Threat Defense
+#### [Instalación de Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
+#### [Instalación de Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
+#### [Instalación de SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
+#### [Instalación de zIPS de Zimperium](you-are-prompted-to-install-zips-ios.md)
 #### [Resolución de amenazas](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 ##### [Uso de Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 ##### [Uso de Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)

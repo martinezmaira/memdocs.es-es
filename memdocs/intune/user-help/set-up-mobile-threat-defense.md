@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084396"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182283"
 ---
 # <a name="install-mobile-threat-defense"></a>Instalación de Mobile Threat Defense   
 
@@ -30,7 +30,7 @@ Como parte de los requisitos de seguridad de su organización, es posible que de
 
 Si no tiene la aplicación MTD necesaria, no podrá iniciar sesión en las aplicaciones protegidas con su cuenta profesional o educativa. En este artículo, aprenderá a [instalar una aplicación MTD](set-up-mobile-threat-defense.md#install-app) para desbloquear su acceso.  
 
-Hay una gran variedad de aplicaciones de proveedor de MTD disponibles para instalar; su organización le informará de cuál debe usar. 
+Hay una gran variedad de aplicaciones de proveedor de MTD disponibles para instalar, todas ellas con nombres diferentes. Su organización le informará de cuál debe usar. Si se le pide que instale la aplicación pero no se proporcionan instrucciones adicionales o un vínculo para obtener la aplicación, póngase en contacto con el personal de soporte técnico de TI. 
 
 
 ## <a name="information-your-organization-can-see"></a>Información que puede ver su organización   

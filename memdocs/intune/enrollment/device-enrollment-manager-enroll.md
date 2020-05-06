@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808144"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254646"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscripción de dispositivos en Intune mediante una cuenta de administrador de inscripción de dispositivos
 
@@ -43,6 +43,13 @@ Los dispositivos y las cuentas de los usuarios de DEM inscritos con una cuenta d
 - Todos los dispositivos inscritos con cuentas DEM deben tener la licencia correspondiente para que Intune los administre. La licencia puede ser una licencia de usuario de Intune o una licencia de dispositivo de Intune.
 - Si va a [inscribir dispositivos de perfil de trabajo Android Enterprise](android-work-profile-enroll.md) mediante una cuenta de administrador de inscripciones de dispositivos (DEM), existe un límite de 10 dispositivos que se pueden inscribir por cuenta.
 - No se admite la [inscripción de dispositivos Android Enterprise totalmente administrados](android-fully-managed-enroll.md) con cuentas DEM.
+- La aplicación de una restricción de dispositivos de Azure AD a una cuenta DEM le impedirá alcanzar el límite de 1000 dispositivos que la cuenta DEM puede inscribir.
+
+## <a name="enrollment-methods-supported-by-dem-accounts"></a>Métodos de inscripción admitidos por las cuentas DEM
+
+- [Windows Autopilot](enrollment-autopilot.md):
+- [Inscripción masiva de dispositivos Windows](windows-bulk-enroll.md)
+- DEM iniciado a través del Portal de empresa
 
 ## <a name="add-a-device-enrollment-manager"></a>Agregar un administrador de inscripción de dispositivos
 
@@ -52,14 +59,13 @@ Los dispositivos y las cuentas de los usuarios de DEM inscritos con una cuenta d
 
 3. En la hoja **Agregar usuario**, escriba un nombre principal de usuario para el usuario de DEM y seleccione **Agregar**. El usuario DEM se agrega a la lista de usuarios DEM.
 
-## <a name="permissions-for-dem"></a>Permisos para DEM
+## <a name="permissions-required-to-create-dem-accounts"></a>Permisos necesarios para crear cuentas de DEM
 
 Se requieren los roles de administrador global o administrador de servicios de Intune de Azure AD para:
 - Asignar permisos de DEM a una cuenta de usuario de Azure AD.
 - Ver todos los usuarios de DEM.
 
 Si un usuario no tiene asignado el rol de administrador global o de administrador de servicios de Intune, pero tiene habilitados permisos de lectura para el rol de administradores de inscripción de dispositivos que tiene asignado, solo podrá ver los usuarios de DEM que haya creado.
-
 
 ## <a name="remove-device-enrollment-manager-permissions"></a>Eliminación de los permisos de administrador de inscripción de dispositivos
 

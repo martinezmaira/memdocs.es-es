@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd99c334866714095a4d87e1e028731ce3ee7c7c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326885"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078913"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Tutorial: Uso de las características de inscripción de dispositivos corporativos de Apple en Apple Business Manager (ABM) para inscribir dispositivos iOS/iPadOS en Intune
 Las características de inscripción de dispositivos de Apple Business Manager simplifican la inscripción de dispositivos. Intune también admite el antiguo portal Programa de inscripción de dispositivos (DEP) de Apple, pero se recomienda empezar desde cero con Apple Business Manager. Con Microsoft Intune y la inscripción de dispositivos corporativos de Apple, los dispositivos se inscriben de forma automática y segura la primera vez que el usuario activa el dispositivo. Por tanto, puede proporcionar dispositivos a muchos usuarios sin tener que configurar cada uno de forma individual. 
@@ -32,7 +32,7 @@ En este tutorial, aprenderá a:
 > * Crear un perfil de inscripción
 > * Asignar el perfil de inscripción a los dispositivos
 
-Si no tiene una suscripción a Intune, [regístrese para obtener una cuenta de prueba gratuita](../fundamentals/free-trial-sign-up.md).
+Si no dispone de ninguna suscripción a Intune, [regístrese para obtener una cuenta de evaluación gratuita](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 - Dispositivos comprados en [Apple Business Manager](https://business.apple.com) o el [Programa de inscripción de dispositivos de Apple](http://deploy.apple.com)
@@ -82,37 +82,39 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para los 
 
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción**.
 
-2. Haga clic en el token que acaba de instalar y seleccione **Perfiles** > **Crear perfil**.
+2. Seleccione el token que acaba de instalar y elija **Perfiles** > **Crear perfil** > **iOS**.
 
-3. En **Crear perfil**, escriba *TestProfile* en **Nombre** y *Prueba de ADE para dispositivos iOS/iPadOS* en **Descripción** . Los usuarios no ven estos detalles.
+3. En la página **Datos básicos**, escriba *TestProfile* como **Nombre** y *Prueba de ADE para dispositivos iOS/iPadOS* como **Descripción**. Los usuarios no ven estos detalles.
 
-4. Elija **iOS** en **Plataforma**.
+4. Seleccione **Siguiente**.
 
-5. Determine si quiere inscribir los dispositivos con o sin **Afinidad de usuario**. Afinidad de usuario está diseñada para los dispositivos que utilizarán usuarios concretos. Si los usuarios van a usar el portal de empresa para servicios como la instalación de aplicaciones, seleccione **Inscribir con afinidad de usuario**. Si los usuarios no necesitan el portal de empresa o quiere aprovisionar el dispositivo para muchos usuarios, elija **Inscribir sin afinidad de usuario**.
+5. En la página**Configuración de administración**, decida si quiere que los dispositivos se inscriban con o sin **Afinidad de usuario**. Afinidad de usuario está diseñada para los dispositivos que utilizarán usuarios concretos. Si los usuarios van a usar el portal de empresa para servicios como la instalación de aplicaciones, seleccione **Inscribir con afinidad de usuario**. Si los usuarios no necesitan el portal de empresa o quiere aprovisionar el dispositivo para muchos usuarios, elija **Inscribir sin afinidad de usuario**.
 
-6. Si decide inscribir con afinidad de usuario, determine si quiere autenticar con el Portal de empresa o el Asistente para configuración de Apple. Si quiere usar la autenticación multifactor, permitir a los usuarios cambiar las contraseñas al iniciar sesión por primera vez, o bien pedir a los usuarios que restablezcan sus contraseñas expiradas durante la inscripción, elija **Sí** en **Autenticar con el Portal de empresa en lugar del Asistente para configuración de Apple**. Si se siente cómodo con la autenticación HTTP básica que proporciona Apple a través del Asistente de configuración de Apple, elija **No**. Si elige **Sí** y desea que la aplicación Portal de empresa se actualice automáticamente en los dispositivos de los usuarios finales, implemente de forma independiente el Portal de empresa como una aplicación requerida para estos usuarios a través del programa de compras por volumen (VPP) de Apple.
-
-7. Si decide inscribir con afinidad de usuario y autenticar con el Portal de empresa, determine si le gustaría instalar el Portal de empresa con el Programa de compras por volumen de Apple (PCV). Si instala el Portal de empresa con un token de VPP, el usuario no tendrá que escribir un identificador y una contraseña de Apple para descargar el Portal de empresa desde la tienda de aplicaciones durante la inscripción. Elija **Usar token:** en **Instalar Portal de empresa con VPP** para seleccionar un token de VPP con licencias gratuitas del Portal de empresa disponibles. Si no quiere usar VPP para implementar el Portal de empresa, elija **No usar VPP** en **Instalar Portal de empresa con VPP**. 
+6. Si opta por inscribir con afinidad de usuario, aparecerá la opción **Seleccionar dónde deben autenticarse los usuarios**. Decida si quiere Autenticar con el Portal de empresa o el Asistente de configuración de Apple.
+   - **Portal de empresa**: seleccione esta opción para usar Multi-Factor Authentication, permitir a los usuarios cambiar las contraseñas al iniciar sesión por primera vez o pedir a los usuarios que restablezcan sus contraseñas expiradas durante la inscripción. Si quiere que la aplicación Portal de empresa se actualice automáticamente en los dispositivos de los usuarios finales, implemente de forma independiente el Portal de empresa como aplicación requerida para estos usuarios a través del programa de compras por volumen (VPP) de Apple.
+   - **Asistente de configuración**: seleccione esta opción para usar la autenticación HTTP básica que proporciona Apple a través del Asistente de configuración de Apple.
+  
+7. Si decide inscribir con afinidad de usuario y autenticar con Portal de empresa, aparece la opción **Instalar Portal de empresa con VPP**. Si instala el Portal de empresa con un token de VPP, el usuario no tendrá que escribir un identificador y una contraseña de Apple para descargar el Portal de empresa desde la tienda de aplicaciones durante la inscripción. Elija **Usar token:** en **Instalar Portal de empresa con VPP** para seleccionar un token de VPP con licencias gratuitas del Portal de empresa disponibles. Si no quiere usar VPP para implementar el Portal de empresa, elija **No usar VPP**. 
 
 8. Si ha elegido Inscribir con afinidad de usuario, Autenticar con el Portal de empresa e Instalar Portal de empresa con VPP, decida si quiere ejecutar el Portal de empresa en el modo de aplicación única hasta la autenticación. Esta configuración le permite asegurarse de que el usuario no tendrá acceso a otras aplicaciones hasta que haya terminado la inscripción corporativa. Si quiere restringir al usuario a este flujo hasta que se haya completado la inscripción, elija **Sí** en **Ejecutar el Portal de empresa en el modo de aplicación única hasta la autenticación**. 
 
-9. Seleccione **Configuración de administración de dispositivos** y elija **Sí** en **Supervisado**. Los dispositivos supervisados proporcionan la mayoría de las opciones de administración para los dispositivos iOS/iPadOS corporativos.
+9. En **Configuración de administración de dispositivos**, elija **Sí** en **Supervisada** (si elige **Inscribir con afinidad de usuario**, se establece automáticamente en **Sí**). Los dispositivos supervisados proporcionan la mayoría de las opciones de administración para los dispositivos iOS/iPadOS corporativos.
 
 10. Elija **Sí** en **Inscripción bloqueada** para asegurarse de que los usuarios no pueden quitar la administración del dispositivo corporativo. 
 
 11. Elija una opción en **Sincronizar con equipos** para determinar si los dispositivos iOS/iPadOS se podrán sincronizar con los equipos.
 
-12. De forma predeterminada, Apple asigna el tipo de dispositivo (por ejemplo, iPad) como nombre del dispositivo. Si quiere proporcionar otra plantilla de nombre, elija **Sí** en **Aplicar plantilla de nombre de dispositivo**. Escriba el nombre que quiera aplicar a los dispositivos, donde las cadenas *{{SERIAL}}* y *{{DEVICETYPE}}* sustituirán el número de serie y el tipo de cada dispositivo. En caso contrario, elija **No** en **Aplicar plantilla de nombre de dispositivo**.
+12. De forma predeterminada, Apple asigna el tipo de dispositivo (por ejemplo, iPad) como nombre del dispositivo. Si quiere especificar otra plantilla de nombre, elija **Sí** en **Aplicar plantilla de nombre de dispositivo**. Escriba el nombre que quiera aplicar a los dispositivos, donde las cadenas *{{SERIAL}}* y *{{DEVICETYPE}}* sustituirán el número de serie y el tipo de cada dispositivo. En caso contrario, elija **No** en **Aplicar plantilla de nombre de dispositivo**.
 
-13. Elija **Aceptar**.
+13. Elija **Siguiente**.
 
-14. Haga clic en **Personalización del Asistente de configuración** y escriba *Departamento Tutorial* en **Nombre de departamento**. Esta cadena es lo que los usuarios verán cuando pulsen **Acerca de la configuración** durante la activación del dispositivo.
+14. En la página **Asistente de configuración**, escriba *Departamento de tutoriales* como **Nombre del departamento**. Esta cadena es lo que los usuarios verán cuando pulsen **Acerca de la configuración** durante la activación del dispositivo.
 
 15. En **Teléfono del departamento**, escriba un número de teléfono. Este número aparece cuando los usuarios pulsan el botón **Necesito ayuda** durante la activación.
 
 16. También puede **Mostrar** u **ocultar** diversas pantallas durante la activación del dispositivo. Para obtener la mejor experiencia de inscripción, establezca todas las pantallas en **Ocultar**.
 
-17. Elija **Aceptar** > **Crear**.
+17. Elija **Siguiente** para ir a la página **Revisar y crear**. Seleccione **Crear**.
 
 ## <a name="sync-managed-devices-to-intune"></a>Sincronizar dispositivos administrados en Intune
 

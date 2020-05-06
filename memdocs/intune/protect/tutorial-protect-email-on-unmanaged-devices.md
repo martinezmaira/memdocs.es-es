@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f6e3d3fcd0a5f65866e43198b499b321aab836
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079049"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605225"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutorial: Protección del correo electrónico de Exchange Online en dispositivos no administrados
 
@@ -48,7 +48,7 @@ En este tutorial, cuando inicie sesión en el [Centro de administración de Micr
 
 En este tutorial, configurará una directiva de protección de aplicaciones de Intune para iOS para la aplicación Outlook a fin de colocar protecciones en el nivel de aplicación. Solicitaremos un PIN para abrir la aplicación en un contexto de trabajo. También limitaremos el uso compartido de los datos entre aplicaciones y evitaremos que los datos de la compañía se guarden en una ubicación personal.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Aplicaciones** > **Directivas de protección de aplicaciones** > **Crear directiva** y seleccione **iOS/iPadOS** como plataforma.
 
@@ -95,7 +95,6 @@ En este tutorial, configurará una directiva de protección de aplicaciones de I
    Haga clic en **Siguiente** para continuar.
 
 8. La página **Asignaciones** permite asignar la directiva de protección de aplicaciones a grupos de usuarios. En este tutorial, no asignará esta directiva a un grupo.  
- No es necesario configurar estos valores.
 
    Haga clic en **Siguiente** para continuar.
 
@@ -113,7 +112,7 @@ Ahora vamos a crear dos directivas de acceso condicional para cubrir todas las p
 
 ### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>Creación de una directiva de MFA para los clientes de autenticación moderna  
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Endpoint security** (Seguridad del punto de conexión)  >  **Acceso condicional** > **Nueva directiva**.  
 
@@ -163,7 +162,7 @@ Se crea la directiva de acceso condicional para clientes de autenticación moder
 
 ### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Creación de una directiva para los clientes de Exchange Active Sync
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Endpoint security** (Seguridad del punto de conexión)  > **Acceso condicional** > **Nueva directiva**.
 
@@ -229,7 +228,7 @@ Con las directivas que se han creado, los dispositivos deberán inscribirse en I
 
 Cuando ya no se necesiten las directivas de prueba, puede quitarlas.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** **Directivas de cumplimiento**.
 

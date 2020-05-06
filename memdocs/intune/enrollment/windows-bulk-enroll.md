@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eabdae9fcc8bdc3b6c93d5b735a5b9fbf4dcf69a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 54b26c2b7599906df29e5130b99dc38124e0b411
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078930"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254799"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscripción masiva para dispositivos Windows
 
@@ -32,7 +32,7 @@ Los usuarios de Azure AD son usuarios estándar en estos dispositivos y reciben 
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Requisitos previos para la inscripción masiva de dispositivos Windows
 
-- Dispositivos que ejecuten Windows 10 Creators Update (compilación 1703) o posterior
+- Dispositivos que ejecuten Windows 10 Creators Update (compilación 1709) o posterior
 - [Inscripción automática de Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## <a name="create-a-provisioning-package"></a>Creación de un paquete de aprovisionamiento

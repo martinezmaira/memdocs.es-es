@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 55c98368619338bb7018be0651f6cde4054cf9cf
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079712"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255003"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Supervisión del cifrado de dispositivos con Intune
 
@@ -53,10 +53,10 @@ En el panel de informe de cifrado se muestra una lista de los dispositivos que s
   - **Listo**: el dispositivo se puede cifrar mediante el uso de la directiva MDM, que necesita que el dispositivo cumpla los requisitos siguientes:
 
     **Para dispositivos macOS**:
-    - macOS 10.13 o versiones posteriores.
+    - macOS 10.13 o versiones posteriores
 
     **Para dispositivos Windows 10**:
-    - Versión 1703 o posterior de *Business*, *Enterprise*, *Education*, o versión 1809 o posterior de *Pro*.
+    - versión 1709 o posterior de *Business*, *Enterprise*, *Education*, o versión 1809 o posterior de *Pro*.
     - El dispositivo debe tener un chip TPM.
 
     Para más información, vea el [proveedor de servicios de configuración (CSP) de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) en la documentación de Windows.
@@ -229,7 +229,7 @@ Intune proporciona acceso la hoja de Azure AD para BitLocker, para que pueda ve
 
    Cuando las claves no están en Azure AD, Intune mostrará *No se encontró ninguna clave de BitLocker para este dispositivo*.
 
-La información de BitLocker se obtiene mediante el [proveedor de servicios de configuración de BitLocker (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp). El CSP de BitLocker se admite en Windows 10 versión 1703 y posteriores y en Windows 10 Pro versión 1809 y posteriores.
+La información de BitLocker se obtiene mediante el [proveedor de servicios de configuración de BitLocker (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp). El CSP de BitLocker se admite en Windows 10 versión 1709 y posteriores y en Windows 10 Pro versión 1809 y posteriores.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

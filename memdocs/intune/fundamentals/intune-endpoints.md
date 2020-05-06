@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e1a7c9665f142bf7dd7832e6bac0e016539ddea
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 86c90d8313cd9eed853ad438a5ea9a31f0d834ce
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358733"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725537"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Puntos de conexión de red de Microsoft Intune  
 
@@ -34,6 +34,9 @@ Como un servicio solo en la nube, Intune no requiere una infraestructura local c
 
 Para administrar dispositivos que se encuentren detrás de firewalls y servidores proxy, debe habilitar la comunicación para Intune.
 
+> [!NOTE]
+> La información de la sección también se aplica a Microsoft Intune Certificate Connector. El conector tiene los mismos requisitos de red que los dispositivos administrados.
+
 - El servidor proxy debe ser compatible con **HTTP (80)** y **HTTPS (443)** , ya que los clientes de Intune usan ambos protocolos. Windows Information Protection utiliza el puerto 444.
 - Para algunas tareas (como descargar actualizaciones de software para el agente de PC clásico), Intune necesita acceso de un servidor proxy no autenticado a manage.microsoft.com.
 
@@ -44,6 +47,7 @@ Puede modificar la configuración del servidor proxy en equipos cliente individu
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Los dispositivos administrados requieren configuraciones que dejen acceder a **Todos los usuarios** a los servicios a través de firewalls.
+
 
 En las siguientes tablas se enumeran los puertos y los servicios a los que accede el cliente de Intune:
 

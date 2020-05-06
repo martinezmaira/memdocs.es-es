@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696537"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183082"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Administración del acceso web mediante Microsoft Edge con Microsoft Intune
 
@@ -39,8 +39,8 @@ Las directivas de protección de Microsoft Intune para Microsoft Edge ayudan a p
 ## <a name="getting-started"></a>Introducción
 
 Tanto usted como los usuarios finales pueden descargar Microsoft Edge desde tiendas de aplicaciones públicas para usarlo en sus organizaciones. Para cumplir con los requisitos de sistema operativo para las directivas de explorador, se ha de disponer de cualquiera de los siguientes:
-- Android 4 y versiones posteriores
-- iOS 8.0 y versiones posteriores
+- Android 5 y versiones posteriores
+- iOS 12.0 y versiones posteriores
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Directivas de protección de aplicaciones para Microsoft Edge
 
@@ -64,7 +64,7 @@ Puede usar el acceso condicional de Azure AD para redirigir a los usuarios para
 > Los nuevos clips web (aplicaciones web ancladas) de los dispositivos iOS se abrirán en Microsoft Edge en lugar de en Intune Managed Browser si tienen que abrirse en un explorador protegido. En el caso de los clips web de iOS más antiguos, debe cambiar el destino de estos clips web para asegurarse de que se abren en Microsoft Edge y no en Managed Browser.
 
 Para restringir el uso de Microsoft Edge en iOS y Android por parte de las aplicaciones web conectadas a Azure AD, realice lo siguiente:
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. En el nodo de Intune, seleccione **Acceso condicional** > **Nueva directiva**.
 3. Seleccione **Conceder** en la sección **Controles de acceso** del panel.
 4. Seleccione **Requerir aplicación cliente aprobada**.
@@ -103,7 +103,7 @@ Para el inicio de sesión único es necesario que el dispositivo esté registrad
 
 Para crear la configuración de la aplicación para Microsoft Edge:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar**.
 3. En el panel **Agregar directiva de configuración**, escriba un **nombre** y una **descripción** opcional para las opciones de configuración de aplicaciones.
 4. En **Tipo de inscripción del dispositivo**, elija **Aplicaciones administradas**.
@@ -129,7 +129,7 @@ Debe asignar la configuración a los grupos de usuarios en Azure AD. Si ese usu
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Dirección de los usuarios a Microsoft Edge en vez de a Intune Managed Browser 
 
-Ahora, tanto Intune Managed Browser como Microsoft Edge se pueden usar como exploradores administrados por directivas. Para asegurarse de que se está dirigiendo a los usuarios para que usen la aplicación de explorador correcta, dirija todas las aplicaciones administradas por Intune (por ejemplo, Outlook, OneDrive y SharePoint) con la opción de configuración siguiente:
+Microsoft Edge se puede usar como explorador protegido por directivas. Para asegurarse de que se está dirigiendo a los usuarios para que usen la aplicación de explorador correcta, dirija todas las aplicaciones administradas por Intune (por ejemplo, Outlook, OneDrive y SharePoint) con la opción de configuración siguiente:
 
 |    Key    |    Valor    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,7 +194,7 @@ De forma similar a la configuración de un acceso directo de la página principa
 
 |    Key    |    Valor    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Especifique el conjunto de direcciones URL de valor. Cada acceso directo de sitio principal consta de un título y una dirección URL. Separe el título y la dirección URL con el carácter `|`. Por ejemplo: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Especifique el conjunto de direcciones URL de valor. Cada acceso directo de sitio principal consta de un título y una dirección URL. Separe el título y la dirección URL con el carácter `|`. Por ejemplo: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Configuración del color de marca y del logotipo de la organización para nuevas páginas de pestañas en Microsoft Edge
 
@@ -415,7 +415,7 @@ Para ver cómo se pueden consultar los registros en dispositivos Android, vea [E
 
 Las siguientes son consideraciones de seguridad y privacidad adicionales para Microsoft Edge:
 
-- Microsoft Edge no utiliza la configuración establecida por los usuarios para el explorador nativo https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps en sus dispositivos, porque Microsoft Edge no puede acceder a esta configuración.
+- Microsoft Edge no utiliza la configuración establecida por los usuarios para el explorador nativo en sus dispositivos, porque Microsoft Edge no puede acceder a esta configuración.
 - Puede configurar la opción **Requerir PIN sencillo para el acceso** o **Requerir credenciales corporativas para el acceso** en una directiva de protección de aplicaciones asociada a Microsoft Edge. Si un usuario selecciona el vínculo de ayuda en la página de autenticación, podrá navegar a cualquier sitio de Internet, independientemente de si este se ha agregado o no a una lista de bloqueados en la directiva.
 - Microsoft Edge puede bloquear el acceso a sitios solo cuando se accede a estos directamente. No bloquea el acceso cuando los usuarios usan servicios intermedios (por ejemplo, un servicio de traducción) para acceder al sitio.
 - Para permitir la autenticación y acceder a la documentación de Intune, * **.microsoft.com** está exento de la configuración de permitidos o bloqueados. Se permite siempre.
