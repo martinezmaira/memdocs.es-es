@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75ef2a03c9f42f0bda78af009f0fb563fbcedb75
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220060"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254901"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Usar plantillas de Windows 10 para configurar opciones de directiva de grupo en Microsoft Intune
 
@@ -41,13 +41,13 @@ En este artículo se enumeran los pasos para crear una plantilla para dispositiv
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-- Algunos de estos ajustes están disponibles a partir de la versión 1703 (RS2/compilación 15063) de Windows 10. Algunas opciones de configuración no se incluyen en todas las ediciones de Windows. Para obtener la mejor experiencia, se recomienda usar Windows 10 Enterprise versión 1903 (19H1/compilación 18362) y posteriores.
+- Algunos de estos ajustes están disponibles a partir de la versión 1709 de Windows 10 (RS2/compilación 15063). Algunas opciones de configuración no se incluyen en todas las ediciones de Windows. Para obtener la mejor experiencia, se recomienda usar Windows 10 Enterprise versión 1903 (19H1/compilación 18362) y posteriores.
 
 - La configuración de Windows usa los [CSP de directivas de Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). El CSP funciona en diferentes ediciones de Windows, como por ejemplo, Home, Professional, Enterprise, etcétera. Para ver si un CSP funciona en una edición específica, vaya a [CSP de directivas de Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
 ## <a name="create-the-template"></a>Crear la plantilla
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
@@ -102,6 +102,10 @@ En este artículo se enumeran los pasos para crear una plantilla para dispositiv
     Seleccione **Siguiente**.
 
 14. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+
+    Si el perfil se asigna a grupos de usuarios, las opciones configuradas de ADMX se aplican a cualquier dispositivo al que el usuario se inscriba e inicie sesión. Si el perfil se asigna a grupos de dispositivos, las opciones configuradas de ADMX se aplican a cualquier usuario que inicie sesión en ese dispositivo. Esta asignación se produce si el valor de ADMX es una configuración de equipo (`HKEY_LOCAL_MACHINE`) o una configuración de usuario (`HKEY_CURRENT_USER`). Con algunas opciones, una configuración de equipo asignada a un usuario también puede afectar a la experiencia de otros usuarios en ese dispositivo.
+    
+    Para obtener más información, vea [Grupos de usuarios frente a grupos de dispositivos](device-profile-assign.md#user-groups-vs-device-groups).
 
     Seleccione **Siguiente**.
 

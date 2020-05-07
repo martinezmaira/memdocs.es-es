@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82b9dd1db3bd625f21dcdbf2df375f5b8612e74a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327220"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023357"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscripción automática de dispositivos iOS/iPadOS con la Inscripción de dispositivos automatizada de Apple
 
@@ -32,7 +32,7 @@ ms.locfileid: "80327220"
 
 Puede configurar Intune para inscribir dispositivos iOS/iPadOS adquiridos mediante la [Inscripción de dispositivos automatizada (ADE)](https://deploy.apple.com) (anteriormente Programa de inscripción de dispositivos) de Apple. La Inscripción de dispositivos automatizada permite inscribir una gran cantidad de dispositivos sin siquiera tocarlos. Los dispositivos como iPhone, iPad y MacBook se pueden enviar directamente a los usuarios. Cuando el usuario activa el dispositivo, se ejecuta el Asistente para la instalación, que incluye la típica experiencia predeterminada de los productos de Apple, con opciones preconfiguradas, y el dispositivo se inscribe en la administración.
 
-Para habilitar ADE, se pueden usar los portales de Intune, [Apple Business Manager (ABM)](https://business.apple.com/) o [Apple School Manager (ASM)](https://school.apple.com/). Se necesita una lista de números de serie o un número de pedido de compra, de manera que pueda asignar dispositivos a Intune para la administración en cualquiera de los portales de Apple. Puede crear perfiles de inscripción de ADE en Intune que contengan opciones que se apliquen a los dispositivos durante la inscripción. Tenga en cuenta que ADE no se puede usar con una cuenta de [administrador de inscripciones de dispositivos](device-enrollment-manager-enroll.md).
+Para habilitar ADE, se pueden usar los portales de Intune, [Apple Business Manager (ABM)](https://business.apple.com/) o [Apple School Manager (ASM)](https://school.apple.com/). Se necesita una lista de números de serie o un número de pedido de compra, de manera que pueda asignar dispositivos a Intune para la administración en cualquiera de los portales de Apple. Puede crear perfiles de inscripción de ADE en Intune que contengan opciones que se apliquen a los dispositivos durante la inscripción. ADE no se puede usar con una cuenta de [administrador de inscripciones de dispositivos](device-enrollment-manager-enroll.md).
 
 > [!NOTE]
 > ADE establece configuraciones de dispositivo que el usuario final no puede necesariamente quitar. Por lo tanto, antes de [migrar a ADE](../fundamentals/migration-guide-considerations.md), el dispositivo debe borrarse para devolverlo a su estado predeterminado (nuevo).
@@ -52,7 +52,7 @@ Para permitir que el Portal de empresa se actualice automáticamente y proporcio
 
 Apple introdujo el modo supervisado en iOS/iPadOS 5. Un dispositivo iOS/iPadOS en modo supervisado se puede administrar con más controles, como el de bloquear la captura de pantalla e impedir la instalación de aplicaciones de App Store. Por lo tanto, resulta especialmente útil para los dispositivos corporativos. Intune admite la configuración de dispositivos en el modo de supervisión como parte de ADE.
 
-La compatibilidad con dispositivos ADE no supervisados entró en desuso en iOS/iPadOS 11. En iOS/iPadOS 11 y versiones posteriores, siempre se deben supervisar los dispositivos configurados por ADE. La marca *is_supervised* de ADE se omitirá en una versión de iOS/iPadOS futura.
+La compatibilidad con dispositivos ADE no supervisados entró en desuso en iOS/iPadOS 11. En iOS/iPadOS 11 y versiones posteriores, siempre se deben supervisar los dispositivos configurados por ADE. La marca *is_supervised* de ADE se omitirá en iOS/iPadOS 13.0 y versiones posteriores. Todos los dispositivos iOS/iPadOS con la versión 13.0 y posteriores se supervisan de forma automática cuando se inscriben con la inscripción de dispositivos automatizada. 
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -67,9 +67,16 @@ La compatibilidad con dispositivos ADE no supervisados entró en desuso en iOS/i
 - [Autoridad de Administración de dispositivos móviles (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certificado push MDM de Apple](apple-mdm-push-certificate-get.md)
 
+## <a name="supported-volume"></a>Volumen admitido
+
+- Número máximo de perfiles de inscripción por token: 1.000  
+- Número máximo de dispositivos de inscripción de dispositivos automatizada por perfil: sin límite (dentro del número máximo de dispositivos por token)
+- Número máximo de tokens de inscripción de dispositivos automatizada por cuenta de Intune: 2,000
+- Número máximo de dispositivos de inscripción de dispositivos automatizada por token: 75 000
+
 ## <a name="get-an-apple-ade-token"></a>Obtención de un token de ADE de Apple
 
-Antes de poder inscribir dispositivos iOS/iPadOS con ADE, necesita un archivo de token de ADE (.p7m) de Apple. Este token permite a Intune sincronizar información sobre dispositivos corporativos de ADE. También permite a Intune cargar perfiles de inscripción en Apple y asignar dispositivos a esos perfiles.
+Para poder inscribir dispositivos iOS/iPadOS con ADE, necesita un archivo de token de ADE (.p7m) de Apple. Este token permite a Intune sincronizar información sobre dispositivos corporativos de ADE. También permite a Intune cargar perfiles de inscripción en Apple y asignar dispositivos a esos perfiles.
 
 Use el portal de [Apple Business Manager (ABM)](https://business.apple.com/) o [Apple School Manager (ASM)](https://school.apple.com/) para crear un token. También puede usar el portal de ABM/ASM para asignar dispositivos a Intune para su administración.
 
@@ -84,8 +91,8 @@ Use el portal de [Apple Business Manager (ABM)](https://business.apple.com/) o [
 
 2. Conceda a Microsoft permiso para enviar información de usuario y dispositivo a Apple al seleccionar **Acepto**.
 
-> [!NOTE]
-> Una vez que haya superado el paso 2 para descargar el certificado de clave pública de Intune, no cierre el asistente ni salga de esta página. Si lo hace, el certificado que ha descargado se invalidará y tendrá que repetir este proceso. Si se produce esta situación, normalmente observará que el botón **Crear** de la pestaña **Revisar y crear** está atenuado y no puede completar el proceso.
+   > [!NOTE]
+   > Una vez que haya superado el paso 2 para descargar el certificado de clave pública de Intune, no cierre el asistente ni salga de esta página. Si lo hace, el certificado que ha descargado se invalidará y tendrá que repetir este proceso. Si se produce esta situación, normalmente observará que el botón **Crear** de la pestaña **Revisar y crear** está atenuado y no se puede completar el proceso.
 
    ![Captura de pantalla del panel Token del Programa de inscripción en el área de trabajo de Certificados de Apple para descargar la clave pública.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
@@ -122,7 +129,7 @@ En el [Centro de administración de Microsoft Endpoint Manager](https://go.micr
 
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Paso 4. Cargue el token y elija etiquetas de ámbito.
 
-1. En el cuadro **Token de Apple**, vaya al archivo de certificado (.pem) y elija **Abrir**.
+1. En el cuadro **Token de Apple**, vaya al archivo de certificado (.p7m) y elija **Abrir**.
 2. Si quiere aplicar [etiquetas de ámbito](../fundamentals/scope-tags.md) en este token de DEP, elija **Ámbito (etiquetas)** y seleccione las etiquetas de ámbito que quiera. Los perfiles y dispositivos agregados a este token heredarán las etiquetas de ámbito aplicadas a un token.
 3. Elija **Crear**.
 
@@ -141,14 +148,15 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 
     ![Cree una captura de pantalla del perfil.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. En la página **Básico**, escriba la información pertinente en **Nombre** y **Descripción** para el perfil con fines administrativos. Los usuarios no ven estos detalles. Puede usar este campo de **nombre** para crear un grupo dinámico en Azure Active Directory. Use el nombre de perfil para definir el parámetro enrollmentProfileName para asignar dispositivos con este perfil de inscripción. Obtenga más información sobre los [grupos dinámicos de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. En la página **Básico**, escriba la información pertinente en **Nombre** y **Descripción** para el perfil con fines administrativos. Los usuarios no ven estos detalles. Puede usar este campo de **nombre** para crear un grupo dinámico en Azure Active Directory. Use el nombre de perfil para definir el parámetro enrollmentProfileName para asignar dispositivos con este perfil de inscripción. En el caso de los dispositivos inscritos mediante Inscripción de dispositivo automatizada con afinidad de usuario, al seleccionar como destino grupos de usuarios de AAD en los que el usuario que realiza la inscripción es miembro antes de la configuración del dispositivo, se garantizará la entrega de la directiva más rápida a los dispositivos. Destinar las aplicaciones y la directiva a grupos dinámicos en función de los perfiles de inscripción producirá un retraso en la aplicación en los dispositivos después de completar el flujo de inscripción.
+Obtenga más información sobre los [grupos dinámicos de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Nombre y descripción del perfil.](./media/device-enrollment-program-enroll-ios/image05.png)
 
 4. Seleccione **Siguiente: Configuración de administración de dispositivos**.
 
 5. En **Afinidad de usuario**, elija si los dispositivos con este perfil deben inscribirse con o sin un usuario asignado.
-    - **Inscribir con afinidad de usuario**: seleccione esta opción para dispositivos que pertenezcan a usuarios y necesiten usar el Portal de empresa para hacer uso de servicios, como instalar aplicaciones. Si se usa ADFS y el perfil de inscripción tiene **Autenticar con el Portal de empresa en lugar del Asistente de configuración** está establecido en **No**, se requiere [Punto de conexión mixto/nombre de usuario de WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints)[Más información](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Inscribir con afinidad de usuario**: seleccione esta opción para dispositivos que pertenezcan a usuarios y necesiten usar el Portal de empresa para hacer uso de servicios, como instalar aplicaciones. Si usa ADFS y el Asistente de configuración para realizar la autenticación, se requiere [Punto de conexión mixto/nombre de usuario de WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Más información](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Inscribir sin afinidad de usuario**: seleccione esta opción para dispositivos no afiliados con un usuario único. Use esta opción para los dispositivos que no tengan acceso a los datos de usuario local. Las aplicaciones como Portal de empresa no funcionan.
 
@@ -164,7 +172,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
     >
     > Estas operaciones no se admiten durante la autenticación con el asistente para configuración de Apple.
 
-6. Si elige **Portal de empresa** para **Seleccionar dónde deben autenticarse los usuarios**, puede usar un token de VPP para instalar automáticamente el Portal de empresa en el dispositivo. En este caso, el usuario no tiene que proporcionar un id. de Apple. Para instalar Portal de empresa con un token de VPP, elija un token en **Instalar Portal de empresa con VPP**. Requiere que el Portal de empresa ya se haya agregado al token de VPP. Para asegurarse de que la aplicación Portal de empresa se sigue actualizando después de la inscripción, asegúrese de que ha configurado una implementación de aplicaciones en Intune (Intune>Aplicaciones cliente). Para que no sea necesaria la interacción del usuario, lo más probable es que quiera tener el Portal de empresa como una aplicación de VPP de iOS/iPadOS, convertirlo en una aplicación requerida y usar la licencia de dispositivo para la asignación. Asegúrese de que el token no expire y de que disponga de suficientes licencias de dispositivos para la aplicación Portal de empresa. Si el token expira o se agotan las licencias, Intune instala Portal de empresa de App Store y solicita un id. de Apple. 
+6. Si elige **Portal de empresa** para **Seleccionar dónde deben autenticarse los usuarios**, puede usar un token de VPP para instalar automáticamente el Portal de empresa en el dispositivo. En este caso, el usuario no tiene que proporcionar un id. de Apple. Para instalar Portal de empresa con un token de VPP, elija un token en **Instalar Portal de empresa con VPP**. Requiere que el Portal de empresa ya se haya agregado al token de VPP. Para asegurarse de que la aplicación Portal de empresa se sigue actualizando después de la inscripción, asegúrese de que ha configurado una implementación de aplicaciones en Intune (Intune>Aplicaciones cliente). Para que no sea necesaria la interacción del usuario, lo más probable es que quiera tener el Portal de empresa como aplicación VPP para iOS/iPadOS, convertirla en una aplicación requerida y usar licencias de dispositivo para la asignación. Asegúrese de que el token no expire y de que disponga de suficientes licencias de dispositivos para la aplicación Portal de empresa. Si el token expira o se agotan las licencias, Intune instala Portal de empresa de App Store y solicita un id. de Apple. 
 
     > [!NOTE]
     > Cuando **Seleccionar dónde deben autenticarse los usuarios**  se establezca en **Portal de empresa**, asegúrese de que el proceso de inscripción de los dispositivos se realiza en las primeras 24 horas en las que el Portal de empresa se ha descargado en el dispositivo ADE. De lo contrario, podría producirse un error en la inscripción y se necesitará un restablecimiento de fábrica para inscribir el dispositivo.
@@ -197,10 +205,15 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 
 10. Elija si desea que la inscripción de dispositivos esté bloqueada con este perfil. **Inscripción bloqueada** deshabilita la configuración de iOS/iPadOS que permite que el perfil de administración se quite del menú **Configuración**. Tras la inscripción del dispositivo, no se puede cambiar esta configuración sin borrar dicho dispositivo. Estos dispositivos deben tener el modo de administración **supervisado** definido en *Sí*. 
 
+    > [!NOTE]
+    > Cuando el dispositivo se inscriba con **Inscripción bloqueada**, los usuarios no podrán usar **Quitar de dispositivo** o **Restablecimiento de fábrica** en la aplicación Portal de empresa. Las opciones no estarán disponibles para el usuario. El usuario tampoco podrá quitar el dispositivo del sitio web del Portal de empresa (https://portal.manage.microsoft.com).
+    > Además, si un dispositivo BYOD se convierte en un dispositivo de inscripción de dispositivos automatizada de Apple y se inscribe con un perfil habilitado para **Inscripción bloqueada**, el usuario podrá usar **Quitar dispositivo** y **Restablecimiento de fábrica** durante 30 días y, luego, las opciones se deshabilitarán o no estarán disponibles. Referencia: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
+
 11. Elija si desea que los dispositivos que usan este perfil se puedan **sincronizar con equipos**. Si elige **Permitir Apple Configurator mediante certificado**, debe seleccionar un certificado en **Certificado de Apple Configurator**.
 
      > [!NOTE]
-     > Si **Sincronizar con equipos** está establecido en **Denegar todo**, el puerto estará limitado en dispositivos iOS y iPadOS. El puerto solo se puede usar para la carga y nada más. No se permitirá que el puerto use iTunes o Apple Configurator.
+     > Si **Sincronizar con equipos** está establecido en **Denegar todo**, el puerto estará limitado en dispositivos iOS y iPadOS. El puerto solo se puede usar para la carga y nada más. No se permitirá que el puerto use iTunes o Apple Configurator 2.
+     Si **Sincronizar con equipos** se establece en **Permitir Apple Configurator mediante certificado**, asegúrese de guardar una copia local del certificado a la que pueda acceder más adelante. No podrá realizar cambios en la copia cargada. Es importante conservar este certificado para que sea accesible en el futuro. 
 
 12. Si selecciona **Permitir Apple Configurator mediante certificado** en el paso anterior, elija un certificado de Apple Configurator para importarlo.
 
@@ -287,7 +300,7 @@ Vea [Inscribir el dispositivo iOS/iPadOS en Intune con el Programa de inscripci�
 ## <a name="renew-an-ade-token"></a>Renovación de un token de ADE  
 
 > [!NOTE]
-> Además de renovar el token de ADE anualmente, deberá renovar el token del programa de inscripción en Intune y Apple Business Manager cuando cambie la contraseña del id. de Apple administrado para el usuario que ha configurado el token en Apple Business Manager o si el usuario abandona la organización de Apple Business Manager.
+> Además de renovar anualmente el token de ADE, deberá renovar el token del programa de inscripción en Intune y Apple Business Manager cuando cambien la contraseña y el identificador de Apple administrados para el usuario que ha configurado el token en Apple Business Manager o si el usuario abandona la organización de Apple Business Manager.
 
 1. Vaya a business.apple.com.  
 2. En **Administrar servidores**, elija el servidor MDM asociado con el archivo de token que desea renovar.
@@ -305,3 +318,15 @@ Vea [Inscribir el dispositivo iOS/iPadOS en Intune con el Programa de inscripci�
 8. Cargue el token recién descargado.  
 9. Elija **Renovar token**. Verá la confirmación de que el token se renovó.   
     ![Captura de pantalla de confirmación.](./media/device-enrollment-program-enroll-ios/confirmation.png)
+
+## <a name="delete-an-ade-token-from-intune"></a>Eliminación de un token ADE de Intune
+
+Puede eliminar tokens de perfil de inscripción de Intune siempre y cuando:
+- No haya dispositivos asignados al token
+- No haya dispositivos asignados al perfil predeterminado
+
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **iOS/macOS** > **Inscripción de iOS/macOS** > **Tokens del programa de inscripción** > elegir el token > **Dispositivos**.
+2. Elimine todos los dispositivos asignados al token.
+3. Vaya a **Dispositivos** > **iOS/macOS** > **Inscripción de iOS/macOS** > **Tokens del programa de inscripción** > elegir el token > **Perfiles**.
+4. Si hay un perfil predeterminado, elimínelo.
+5. Vaya a **Dispositivos** > **iOS/macOS** > **Inscripción de iOS/macOS** > **Tokens del programa de inscripción** > elegir el token > **Eliminar**.

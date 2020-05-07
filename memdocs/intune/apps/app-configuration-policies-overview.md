@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083666"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023017"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Directivas de configuración de aplicaciones para Microsoft Intune
 
@@ -72,6 +72,20 @@ La selección de **Aplicaciones administradas** como el **Tipo de inscripción d
 
 > [!NOTE]
 > En el caso de las aplicaciones de varias identidades, como Microsoft Outlook, se pueden tener en cuenta las preferencias del usuario. La Bandeja de entrada Prioritarios, por ejemplo, respetará la configuración del usuario y no la cambiará. Otros parámetros permiten controlar si un usuario puede o no cambiar la configuración. Para más información, vea [Implementación de las opciones de configuración de la aplicación de Outlook para iOS/iPadOS y Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+
+## <a name="android-app-configuration-policies"></a>Directivas de configuración de aplicaciones de Android
+
+Para las directivas de configuración de aplicaciones de Android, puede seleccionar el tipo de inscripción del dispositivo antes de crear un perfil de configuración de aplicación. Puede dar cuenta de los perfiles de certificado que se basan en el tipo de inscripción (perfil de trabajo o propietario del dispositivo). En esta actualización se ofrece lo siguiente:
+
+1. Si se crea un perfil y se han seleccionado los perfiles de trabajo y de propietario del dispositivo para el tipo de inscripción del dispositivo, no podrá asociar un perfil de certificado a la directiva de configuración de la aplicación.
+2. Si se crea un perfil y solo se selecciona el perfil de trabajo, se podrán usar las directivas de certificado del perfil de trabajo creadas en la configuración del dispositivo.
+3. Si se crea un perfil y solo se selecciona el perfil de propietario del dispositivo, se podrán usar las directivas de certificado del propietario del dispositivo creadas en la configuración del dispositivo. 
+4. Si implementa un perfil de configuración de Gmail o Nine en un dispositivo dedicado Android Enterprise que no implica a un usuario, se producirá un error porque Intune no puede resolver el usuario.
+
+> [!IMPORTANT]
+> Las directivas existentes creadas antes del lanzamiento de esta característica (versión de abril de 2020: 2004) que no tengan ningún perfil de certificado asociado usarán de forma predeterminada los perfiles de trabajo y de propietario del dispositivo para el tipo de inscripción del dispositivo. Además, las directivas existentes creadas antes del lanzamiento de esta característica que tengan perfiles de certificado asociados usarán de forma predeterminada únicamente el perfil de trabajo.
+> 
+> Las directivas existentes no corregirán ni emitirán nuevos certificados.
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Validación de la directiva de configuración de aplicaciones aplicada
 
@@ -149,7 +163,7 @@ Puede validar la configuración de iOS/iPadOS con el **registro de diagnóstico 
 
 ### <a name="android-configuration-on-managed-devices"></a>Configuración de Android en dispositivos administrados
 
-Puede validar la configuración de iOS/iPadOS con el **registro de diagnóstico de Intune** en dispositivos administrados para la configuración de aplicaciones administradas.
+Puede validar la configuración de Android con el **registro de diagnóstico de Intune** en dispositivos administrados para la configuración de aplicaciones administradas.
 
 Para recopilar registros de un dispositivo Android, usted o el usuario final deben descargar los registros del dispositivo a través de una conexión USB (o el equivalente al **Explorador de archivos** del dispositivo). Estos son los pasos:
 

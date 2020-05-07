@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358701"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693492"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configuración de la aplicación Managed Home Screen de Microsoft para Android Enterprise
 
@@ -66,7 +66,6 @@ En la tabla siguiente se enumeran las claves de configuración disponibles de Ma
 | Establecer el tamaño del icono de la aplicación | integer | 2 | Le permite establecer el tamaño de icono para las aplicaciones que se muestran en la pantalla principal. Puede elegir los valores siguientes en esta configuración para diferentes tamaños: 0 (el más pequeño), 1 (pequeño), 2 (estándar), 3 (grande) y 4 (el más grande). |
 | Establecer el icono de la carpeta de aplicación | integer | 0 | Le permite definir la apariencia de las carpetas de aplicación en la pantalla principal. Puede elegir la apariencia entre los valores siguientes: Dark Square(0); Dark Circle(1); Light Square(2); Light Circle(3). |
 | Establecer la orientación de la pantalla | integer | 1 | Le permite establecer la orientación de la pantalla principal en modo vertical, horizontal o permitir el giro automático. Puede establecer la orientación si escribe los valores 1 (para el modo vertical), 2 (para el modo horizontal), 3 (para Girar automáticamente). |
-| Habilitar la telemetría de dispositivo | bool | FALSE | Habilita toda la telemetría que se captura para la pantalla principal administrada. Si habilita esta opción, Microsoft podrá capturar la telemetría de uso del dispositivo, como el número de veces que se inicia una aplicación determinada en este dispositivo. |
 | Establecer aplicaciones permitidas | bundleArray | FALSE | Le permite definir el conjunto de aplicaciones visibles en la pantalla principal de entre las instaladas en el dispositivo. Para definir las aplicaciones, escriba el nombre del paquete de aplicación de las aplicaciones que le gustaría hacer visibles; por ejemplo, com.microsoft.emmx hará que se pueda acceder a la configuración desde la pantalla principal. Las aplicaciones que incluya en la lista de permitidas en esta sección ya deben estar instaladas en el dispositivo para que se vean en la pantalla principal. |
 | Establecer vínculos web anclados | bundleArray | FALSE | Le permite anclar sitios web como iconos de inicio rápido en la pantalla principal. Con esta configuración, puede definir la dirección URL y agregarla a la pantalla principal para que el usuario final inicie el explorador con un solo toque. |
 | Habilitar protector de pantalla | bool | FALSE | Para habilitar o no el modo de protector de pantalla. Si se establece en true, puede configurar **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver** y **media_detect_screen_saver**. |
@@ -78,10 +77,17 @@ En la tabla siguiente se enumeran las claves de configuración disponibles de Ma
 | Tipo de botón de inicio virtual | string | Swipe_up | Use **swipe_up** para acceder al botón de inicio con un gesto de deslizar rápidamente hacia arriba. Use **float** para acceder a un botón de inicio fijo y persistente que el usuario final pueda mover por la pantalla. |
 | Barra indicadora de la batería y la intensidad de la señal | bool | True  | Al establecer esta opción en `True` se muestra la barra indicadora de la batería y la intensidad de la señal. |
 | Contraseña para salir del modo de bloqueo de tareas | string |   | Escriba un código de 4-6 dígitos para salir temporalmente del modo de bloqueo de tareas para solucionar problemas. |
+| Mostrar configuración administrada | bool | TRUE | "Configuración administrada" es una aplicación Managed Home Screen que solo aparece si se ha configurado algún valor de acceso rápido, como **Mostrar configuración de Wi-Fi**, **Mostrar configuración de Bluetooth**, **Mostrar configuración de volumen** y **Mostrar configuración de linterna**. También se puede acceder a esta configuración deslizando el dedo hacia abajo en la pantalla. Establezca esta clave en `False` para ocultar la aplicación "Configuración administrada" y que los usuarios finales solo puedan acceder a la configuración si deslizan el dedo hacia abajo.    |
+| Habilitar el menú Depurar de acceso fácil | bool | FALSE | Establezca esta opción en `True` para acceder al menú Depurar desde la aplicación Configuración administrada o al deslizar el dedo hacia abajo en Managed Home Screen. El menú Depurar es actualmente donde reside la capacidad de salir del modo de quiosco y se tiene acceso a él haciendo clic en el botón Atrás aproximadamente 15 veces. Mantenga este valor en `False` para que el punto de entrada al menú Depurar solo sea accesible mediante el botón Atrás.   |
 | Mostrar configuración de Wi-Fi | bool | FALSE | Al establecer esta opción en `True` se permite al usuario final activar o desactivar la conexión Wi-Fi, o bien conectarse a otras redes Wi-Fi.  |
+| Habilitar la lista de permitidos de Wi-Fi | bool | FALSE | Establezca esta opción en `True` y rellene la clave **Lista de permitidos de Wi-Fi** para restringir las redes Wi-Fi que se muestran en Managed Home Screen. Defínala como `False` para mostrar todas las redes Wi-Fi disponibles que el dispositivo ha detectado. Tenga en cuenta que esta configuración solo es pertinente si **Mostrar configuración de Wi-Fi** se ha establecido en `True` y se ha rellenado la **Lista de permitidos de Wi-Fi**.   |
+| Lista de permitidos de Wi-Fi| bundleArray | FALSE | Permite mostrar una lista de todos los SSID de las redes Wi-Fi que quiere que el dispositivo muestre en Managed Home Screen. Esta lista solo es relevante si **Mostrar configuración de Wi-Fi** y **Habilitar la lista de permitidos de Wi-Fi** se han establecido en `True`. Si alguna de ellas se ha establecido en `False`, no es necesario modificar esta configuración.    |
 | Mostrar la configuración de Bluetooth | bool | FALSE | Al establecer esta opción en `True` se permite al usuario final activar o desactivar Bluetooth, o bien conectarse a otros dispositivos compatibles con Bluetooth.   |
+| Mostrar configuración de volumen | bool | FALSE | El establecimiento de esta opción en `True` permite al usuario final acceder a un control deslizante de volumen para ajustar el volumen del elemento multimedia.   |
+| Mostrar configuración de linterna | bool | FALSE | El establecimiento de esta opción en `True` permite al usuario final activar o desactivar la linterna del dispositivo. Si el dispositivo no admite una linterna, este valor no aparecerá aunque se configure como `True`.   |
+| Mostrar configuración de información del dispositivo | bool | FALSE | El establecimiento de esta opción en `True` permite al usuario final acceder a información rápida sobre el dispositivo desde la aplicación Configuración administrada o al deslizar el dedo hacia abajo. La información accesible incluye la marca, el modelo y el número de serie del dispositivo.   |
 | Las aplicaciones de la carpeta se ordenan por nombre. | bool | TRUE | Si selecciona `False`, los elementos de una carpeta aparecerán en el orden en que se hayan especificado. En caso contrario, aparecerán en la carpeta ordenados alfabéticamente.   |
-| Orden de la aplicación habilitada | bool | FALSE | Si selecciona `True`, podrá establecer el orden de las aplicaciones, los vínculos web y las carpetas en la aplicación Managed Home Screen. Una vez habilitada, establezca el orden con **app_order**. El usuario final activará o desactivará Bluetooth y se conectará a los distintos dispositivos compatibles con Bluetooth.   |
+| Orden de la aplicación habilitada | bool | FALSE | Si selecciona `True`, podrá establecer el orden de las aplicaciones, los vínculos web y las carpetas en la aplicación Managed Home Screen. Una vez habilitada, establezca el orden con **app_order**.   |
 | Orden de la aplicación | bundleArray | FALSE | Permite especificar el orden de las aplicaciones, los vínculos web y las carpetas en la aplicación Managed Home Screen. Para usar esta configuración, **Bloquear pantalla de inicio** debe estar habilitada, **Definir tamaño de la cuadrícula** deben estar definido y **Orden de la aplicación habilitada** debe establecerse en `True`.   |
 
 ## <a name="enter-json-data"></a>Especificar datos JSON
@@ -124,10 +130,6 @@ Este es un ejemplo de script JSON con todas las claves de configuración disponi
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -182,6 +184,51 @@ Este es un ejemplo de script JSON con todas las claves de configuración disponi
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        }
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        }
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -335,7 +382,7 @@ Este es un ejemplo de script JSON con todas las claves de configuración disponi
 La aplicación de Pantalla principal administrada ahora proporciona acceso a la aplicación de directiva de dispositivo Android de Google. La aplicación de Pantalla principal administrada es un iniciador personalizado que se usa para dispositivos inscritos en Intune, como dispositivos dedicados de Android Enterprise (AE) que usan el modo de pantalla completa de varias aplicaciones. Puede acceder a la aplicación de directiva de dispositivo Android o guiar a los usuarios a esta aplicación, con fines de soporte técnico y depuración. Esta capacidad de inicio está disponible en el momento en que el dispositivo se inscribe y se bloquea en la Pantalla principal administrada. No se necesitan instalaciones adicionales para usar esta funcionalidad.
 
 ## <a name="managed-home-screen-debug-screen"></a>Pantalla de depuración de Managed Home Screen
-Para acceder a la pantalla de depuración de Managed Home Screen, haga clic en el botón **atrás** hasta que se muestre la pantalla de depuración (haga clic en el botón **atrás** 15 veces o más). En esta pantalla de depuración, puede iniciar la aplicación de directivas de dispositivos Android, ver y cargar registros o pausar temporalmente la pantalla completa para actualizar el dispositivo. Para más información sobre cómo pausar el modo de pantalla completa, consulte el elemento **Salir del modo de pantalla completa,** en la [configuración de dispositivo dedicada](../configuration/device-restrictions-android-for-work.md#dedicated-devices) de Android Enterprise.
+Para acceder a la pantalla de depuración de Managed Home Screen, haga clic en el botón **atrás** hasta que se muestre la pantalla de depuración (haga clic en el botón **atrás** 15 veces o más). En esta pantalla de depuración, puede iniciar la aplicación de directivas de dispositivos Android, ver y cargar registros o pausar temporalmente la pantalla completa para actualizar el dispositivo. Para más información sobre cómo pausar el modo de pantalla completa, consulte el elemento **Salir del modo de pantalla completa,** en la [configuración de dispositivo dedicada](../configuration/device-restrictions-android-for-work.md#dedicated-devices) de Android Enterprise. Si quiere que resulte más fácil acceder al menú Depurar de Managed Home Screen, puede establecer **Habilitar el menú Depurar de acceso fácil** en `True` con directivas de configuración de aplicación. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 

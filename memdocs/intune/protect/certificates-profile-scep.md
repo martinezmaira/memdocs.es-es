@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,24 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323143"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126060"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creación y asignación de perfiles de certificado SCEP en Intune
 
 Después de [configurar la infraestructura](certificates-scep-configure.md) para admitir certificados de Protocolo de inscripción de certificados simple (SCEP), puede crear y luego asignar perfiles de certificado SCEP a usuarios y dispositivos en Intune.
 
-> [!IMPORTANT]  
-> Antes de crear perfiles de certificado SCEP, los dispositivos que vayan a usarlos deben confiar en la entidad de certificación (CA) raíz de confianza. Use un *perfil de certificado de confianza* en Intune para aprovisionar el certificado de entidad de certificación raíz de confianza para usuarios y dispositivos. Para obtener información sobre el perfil de certificado de confianza, vea [Exportación del certificado de entidad de certificación raíz de confianza](certificates-configure.md#export-the-trusted-root-ca-certificate) y [Creación de perfiles de certificado de confianza](certificates-configure.md#create-trusted-certificate-profiles) en *Uso de certificados para la autenticación en Intune*.
-
+> [!IMPORTANT]
+> Para que los dispositivos usen un perfil de certificado SCEP, deben confiar en la entidad de certificación (CA) raíz de confianza. La confianza de la entidad de certificación raíz se establece mejor si se implementa un [perfil de certificado de confianza](../protect/certificates-configure.md#create-trusted-certificate-profiles) en el mismo grupo que recibe el perfil de certificado SCEP. Los perfiles de certificado de confianza aprovisionan el certificado de entidad de certificación raíz de confianza.
 
 ## <a name="create-a-scep-certificate-profile"></a>Creación de un perfil de certificado SCEP
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
@@ -95,7 +94,8 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
        - **Número de serie**
        - **Personalizado**: cuando se selecciona esta opción, se muestra también un cuadro de texto **Personalizado**. Use este campo para escribir un formato de nombre del firmante personalizado, incluidas las variables. El formato personalizado admite dos variables: **Nombre común (CN)** y **dirección de correo electrónico (E)** . **Nombre común (CN)** se puede establecer en cualquiera de las siguientes variables:
 
-         - **CN={{UserName}}** : nombre principal de usuario, como janedoe@contoso.com.
+         - **CN={{UserName}}** : nombre de usuario del usuario, como janedoe.
+         - **CN={{UserPrincipalName}}** : nombre principal de usuario del usuario, como janedoe@contoso.com.\*
          - **CN={{AAD_Device_ID}}** : identificador asignado al registrar un dispositivo en Azure Active Directory (AD). Este identificador normalmente se usa para autenticarse en Azure AD.
          - **CN={{SERIALNUMBER}}** : número de serie (SN) único que normalmente usa el fabricante para identificar un dispositivo.
          - **CN={{IMEINumber}}** : número exclusivo de identidad de equipo móvil internacional (IMEI) usado para identificar un teléfono móvil.
@@ -111,6 +111,8 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          Ese ejemplo incluye un formato de nombre de firmante en el que se usan las variables CN y E, y cadenas para los valores Unidad organizativa, Organización, Ubicación, Estado y País. [CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describe esta función y sus cadenas admitidas.
+         
+         \* En los perfiles Solo el propietario del dispositivo de Android, el valor **CN={{UserPrincipalName}}** no funcionará. Los perfiles Solo el propietario del dispositivo de Android se pueden usar con dispositivos sin usuario, por lo que este perfil no podrá obtener el nombre principal de usuario del usuario. Si realmente necesita esta opción para dispositivos con usuarios, puede usar una solución alternativa como la siguiente: **CN={{NombreDeUsuario}}\@contoso.com**. Proporcionará el nombre de usuario y el dominio que haya agregado manualmente, como janedoe@contoso.com.
 
       - **Tipo de certificado de dispositivo**
 
@@ -224,7 +226,7 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
 
    - **Direcciones URL de servidor SCEP**:
 
-     especifique una o varias direcciones URL para los servidores SCEP que emiten certificados mediante SCEP. Por ejemplo, escriba algo como *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . Puede agregar direcciones URL de SCEP adicionales para el equilibrio de carga según sea necesario, ya que las direcciones URL se insertan de forma aleatoria en el dispositivo con el perfil. Si uno de los servidores SCEP no está disponible, se producirá un error en la solicitud de SCEP y es posible que, en las comprobaciones posteriores del dispositivo, la solicitud de certificado se realice en el mismo servidor inactivo.
+     especifique una o varias direcciones URL para los servidores SCEP que emiten certificados mediante SCEP. Por ejemplo, escriba algo parecido a `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. Puede agregar direcciones URL de SCEP adicionales para el equilibrio de carga según sea necesario, ya que las direcciones URL se insertan de forma aleatoria en el dispositivo con el perfil. Si uno de los servidores SCEP no está disponible, se producirá un error en la solicitud de SCEP y es posible que, en las comprobaciones posteriores del dispositivo, la solicitud de certificado se realice en el mismo servidor inactivo.
 
 8. Seleccione **Siguiente**.
 
@@ -259,7 +261,7 @@ Cuando el nombre del firmante incluya uno de los caracteres especiales, use una 
 
 **Por ejemplo**, tiene un nombre del firmante que aparece como *Test User (TestCompany, LLC*).  Un CSR que incluya un CN con la coma entre *TestCompany* y *LLC* presenta un problema.  Para evitar el problema se puede poner el CN entero ente comillas o se puede quitar la coma que hay entre *TestCompany* y *LLC*:
 
-- **Agregar comillas**: *CN=* "Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Agregar comillas**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Quitar la coma**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  Sin embargo, al intentar usar un carácter de barra diagonal inversa para escapar la coma, se producirá un error en los registros de CRP:
@@ -282,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>Asignar el perfil de certificado
 
-Los perfiles de certificado SCEP se asignan de la misma manera que [se implementan perfiles de dispositivo](../configuration/device-profile-assign.md) para otros fines. Pero, antes de continuar, tenga en cuenta lo siguiente:
+Los perfiles de certificado SCEP se asignan de la misma manera que [se implementan perfiles de dispositivo](../configuration/device-profile-assign.md) para otros fines.
+
+Para usar un perfil de certificado SCEP, un dispositivo debe haber recibido también el perfil de certificado de confianza que lo aprovisiona con el certificado de entidad de certificación raíz de confianza. Se recomienda implementar el perfil de certificado raíz de confianza y el perfil de certificado SCEP. en los mismos grupos.
+
+Antes de continuar, tenga en cuenta lo siguiente:
 
 - Cuando asigna perfiles de certificado SCEP a grupos, el archivo de certificado de la entidad de certificación raíz de confianza (según lo especificado en el *perfil de certificado de confianza*) se instala en el dispositivo. El dispositivo usa el perfil de certificado SCEP para crear una solicitud de certificado para ese certificado de entidad de certificación raíz de confianza.
 
@@ -293,8 +299,6 @@ Los perfiles de certificado SCEP se asignan de la misma manera que [se implement
 - Para publicar rápidamente un certificado en un dispositivo una vez inscrito el dispositivo, asigne el perfil de certificado en un grupo de usuarios (no en un grupo de dispositivos). Si lo asigna en un grupo de dispositivos, deberá efectuar un registro completo del dispositivo para que el dispositivo reciba directivas.
 
 - Si usa la administración conjunta para Intune y Configuration Manager, en Configuration Manager, [establezca el control deslizante de la carga de trabajo](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) de las directivas de acceso a los recursos en **Intune** o **Intune piloto**. Esta configuración permite que los clientes de Windows 10 inicien el proceso de solicitar el certificado.
-
-- Aunque cree y asigne el perfil de certificado de confianza y el perfil de certificado SCEP por separado, los dos se deben asignar. Si no están instalados en un dispositivo, se produce un error en la directiva de certificado SCEP. Asegúrese de que los perfiles de certificado raíz de confianza también se implementan en los mismos grupos que el perfil SCEP. Por ejemplo, si va a implementar un perfil de certificado SCEP en un grupo de usuarios, el perfil de certificado raíz de confianza (y el intermedio) también se debe implementar en el mismo grupo de usuarios.
 
 > [!NOTE]
 > En los dispositivos iOS/iPadOS, cuando hay un perfil de certificado SCEP o PKCS asociado con un perfil adicional, como uno de Wi-Fi o VPN, el dispositivo recibe un certificado para cada uno de esos perfiles adicionales. Esto hace que la solicitud de certificado SCEP o PKCS entregue varios certificados al dispositivo iOS/iPadOS. 

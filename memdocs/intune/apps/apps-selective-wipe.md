@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324498"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078352"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Borrado solo de datos corporativos de aplicaciones administradas por Intune
 
@@ -40,11 +40,11 @@ Para quitar de forma selectiva datos de la aplicación de empresa, siga los paso
 > Se quitan los contactos sincronizados directamente desde la aplicación en la libreta de direcciones nativa. No se pueden borrar los contactos sincronizados desde la libreta de direcciones nativa en otro origen externo. Actualmente, esto solo se aplica a la aplicación Microsoft Outlook.
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>Directivas de WIP implementadas sin la inscripción del usuario
-Las directivas de Windows Information Protection (WIP) se pueden implementar sin requerir que los usuarios de MDM inscriban sus dispositivos Windows 10. Esta configuración permite a las empresas proteger sus documentos corporativos en función de la configuración de WIP, mientras que permite a los usuarios mantener la administración de sus propios dispositivos Windows. Una vez que los documentos están protegidos con una directiva de WIP, un administrador de Intune puede borrar de forma selectiva los datos protegidos. Mediante la selección del usuario y dispositivo, y el envío de una solicitud de borrado, todos los datos protegidos mediante la directiva de WIP quedarán inservibles. En Intune en Azure Portal, seleccione **Aplicación cliente** > **Borrado selectivo de aplicaciones**. Para obtener más información, consulte [Creación e implementación de una directiva de protección de aplicaciones de Windows Information Protection (WIP) con Intune](windows-information-protection-policy-create.md).
+Las directivas de Windows Information Protection (WIP) se pueden implementar sin requerir que los usuarios de MDM inscriban sus dispositivos Windows 10. Esta configuración permite a las empresas proteger sus documentos corporativos en función de la configuración de WIP, mientras que permite a los usuarios mantener la administración de sus propios dispositivos Windows. Una vez que los documentos están protegidos con una directiva de WIP, un administrador de Intune ([administrador global o administrador del servicio Intune](../fundamentals/users-add.md#types-of-administrators)) puede borrar de forma selectiva los datos protegidos. Mediante la selección del usuario y dispositivo, y el envío de una solicitud de borrado, todos los datos protegidos mediante la directiva de WIP quedarán inservibles. En Intune en Azure Portal, seleccione **Aplicación cliente** > **Borrado selectivo de aplicaciones**. Para obtener más información, consulte [Creación e implementación de una directiva de protección de aplicaciones de Windows Information Protection (WIP) con Intune](windows-information-protection-policy-create.md).
 
-## <a name="create-a-wipe-request"></a>Crear una solicitud de borrado
+## <a name="create-a-device-based-wipe-request"></a>Creación de una solicitud de borrado basado en el dispositivo
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Borrado selectivo de aplicaciones** > **Crear solicitud de borrado**.<br>
    Se muestra el panel **Crear solicitud de borrado**.
 3. Haga clic en **Seleccionar usuario**, elija el usuario cuyos datos de aplicación quiere borrar y haga clic en **Seleccionar** en la parte inferior del panel **Seleccionar usuario**.
@@ -61,6 +61,16 @@ El servicio crea y realiza el seguimiento de una solicitud de borrado independie
 
    ![Captura de pantalla del panel "Aplicaciones cliente - Borrado selectivo de aplicaciones"](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>Creación de una solicitud de borrado basado en el usuario
+
+Al agregar un usuario al borrado de nivel de usuario, se emitirán automáticamente comandos de borrado para todas las aplicaciones en todos los dispositivos del usuario.  El usuario seguirá recibiendo comandos de borrado en cada sincronización de todos los dispositivos.  Para volver a habilitar un usuario, debe quitarlo de la lista.  
+
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Seleccione **Aplicaciones** > **Borrado selectivo de aplicaciones** > **Crear solicitud de borrado**.<br>
+   Seleccione **User-Level Wipe** (Borrado en el nivel de usuario).
+3. Haga clic en **Agregar** y se mostrará el panel **Seleccionar usuario**.
+4. Elija el usuario cuyos datos de aplicación quiere borrar y haga clic en **Seleccionar**.
+
 ## <a name="monitor-your-wipe-requests"></a>Supervisar las solicitudes de borrado de datos
 
 Puede tener un informe resumido que muestre el estado general de la solicitud de borrado y que incluya el número de solicitudes pendientes y errores. Para obtener más información, siga estos pasos:
@@ -74,7 +84,7 @@ Además, podrá ver el nombre del dispositivo y su tipo, lo que puede resultar �
 >[!IMPORTANT]
 > El usuario debe abrir la aplicación de la que se vaya a realizar el borrado, que puede tardar hasta 30 minutos después de efectuar la solicitud.
 
-## <a name="delete-a-wipe-request"></a>Eliminación de una solicitud de borrado
+## <a name="delete-a-device-wipe-request"></a>Eliminación de una solicitud de borrado de dispositivo
 
 Los borrados con estado pendiente se muestran hasta que se eliminen manualmente. Para eliminar manualmente una solicitud de borrado:
 
@@ -85,6 +95,14 @@ Los borrados con estado pendiente se muestran hasta que se eliminen manualmente.
     ![Captura de pantalla de la lista de solicitudes de borrado en el panel Borrado selectivo de aplicaciones](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. Se le pedirá que confirme la eliminación. Elija **Sí** o **No** y luego haga clic en **Aceptar**.
+
+## <a name="delete-a-user-wipe-request"></a>Eliminación de una solicitud de borrado de usuario
+
+Los borrados de usuario permanecerán en la lista hasta que los elimine un administrador. Para quitar un usuario de la lista:
+
+1. En el panel **Aplicaciones cliente - Borrado selectivo de aplicaciones**, seleccione **User-Level Wipe** (Borrado en el nivel de usuario).
+2. En la lista, haga clic con el botón derecho en el usuario que quiere eliminar y elija **Eliminar**. 
+
 
 ## <a name="see-also"></a>Vea también
 [What's app protection policy](app-protection-policy.md) (¿Qué es la directiva de protección de aplicaciones?)

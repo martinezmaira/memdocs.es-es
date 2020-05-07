@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322670"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079882"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Configuración de Intune Certificate Connector para la plataforma de PKI de DigiCert
 
@@ -45,6 +45,7 @@ Si va a usar el conector solo con la CA de DigiCert, puede utilizar las instrucc
 ## <a name="prerequisites"></a>Requisitos previos
 
 - **Una suscripción activa en la CA de DigiCert**: la suscripción es necesaria para obtener un certificado de entidad de registro (RA) desde el CA de DigiCert.
+- Microsoft Intune Certificate Connector tiene los mismos requisitos de red que los [dispositivos administrados](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 ## <a name="install-the-digicert-ra-certificate"></a>Instalación del certificado de RA de DigiCert
 
@@ -135,7 +136,7 @@ Si va a usar el conector solo con la CA de DigiCert, puede utilizar las instrucc
 
    g. Registre una copia de la huella digital del certificado de RA sin ningún espacio. Observe la huella digital de ejemplo:
 
-        RA Cert Thumbprint: “EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5”
+        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
 
     > [!NOTE]
     > Para recibir ayuda a la hora de obtener el certificado de RA de la CA de DigiCert, póngase en contacto con la [asistencia al cliente de DigiCert](mailto:enterprise-pkisupport@digicert.com).
@@ -168,7 +169,7 @@ Si va a usar el conector solo con la CA de DigiCert, puede utilizar las instrucc
 
 Descargue la versión más reciente de Intune Certificate Connector del portal de administración de Intune y siga estas instrucciones.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificados** >  **+ Agregar**.
 
@@ -225,7 +226,7 @@ De forma predeterminada, Intune Certificate Connector está instalado en **%Prog
 
 ## <a name="create-a-trusted-certificate-profile"></a>Creación de un perfil de certificado de confianza
 
-Los certificados PKCS que implementará para los dispositivos administrados por Intune deben estar encadenados con un certificado raíz de confianza. Para establecer esta cadena, cree un perfil de certificado de confianza de Intune con el certificado raíz de la CA de DigiCert.
+Los certificados PKCS que implementará para los dispositivos administrados por Intune deben estar encadenados con un certificado raíz de confianza. Para establecer esta cadena, cree un perfil de certificado de confianza de Intune con el certificado raíz de la entidad de certificación DigiCert e implemente el perfil de certificado de confianza y el de PKCS en los mismos grupos.
 
 1. Obtenga un certificado raíz de confianza de la CA de DigiCert:
 
@@ -239,7 +240,7 @@ Los certificados PKCS que implementará para los dispositivos administrados por 
 
 2. Cree un perfil de certificado de confianza en el portal de Intune:
 
-   a. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+   a. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
    b. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
@@ -278,7 +279,7 @@ El OID del perfil de certificado está asociado con una plantilla de perfil de c
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Creación de un perfil de certificado PKCS
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
@@ -321,15 +322,15 @@ Los registros del servicio Intune Certificate Connector están disponibles en **
 
 | Mensaje de emisión o error | Pasos de resolución |
 | --- | --- |
-| No se puede iniciar sesión con la cuenta de administración del inquilino de Intune en la interfaz de usuario del conector NDES. | Esto puede ocurrir cuando el conector de certificado local no está habilitado en el Centro de administración de Microsoft Endpoint Manager. Para solucionar este problema: <br><br> 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificados**. <br> 3. Busque el conector de certificado y asegúrese de que está habilitado. <br><br> Después de completar los pasos anteriores, intente iniciar sesión con la misma cuenta de administrador de inquilinos de Intune en la interfaz de usuario del conector de NDES. |
+| No se puede iniciar sesión con la cuenta de administración del inquilino de Intune en la interfaz de usuario del conector NDES. | Esto puede ocurrir cuando el conector de certificado local no está habilitado en el Centro de administración de Microsoft Endpoint Manager. Para solucionar este problema: <br><br> 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificados**. <br> 3. Busque el conector de certificado y asegúrese de que está habilitado. <br><br> Después de completar los pasos anteriores, intente iniciar sesión con la misma cuenta de administrador de inquilinos de Intune en la interfaz de usuario del conector de NDES. |
 | No se encontró el certificado del conector NDES. <br><br> System.ArgumentNullException: El valor no puede ser NULL. | Intune Certificate Connector muestra este error si la cuenta de administrador del inquilino de Intune nunca inició sesión en la interfaz de usuario del conector NDES. <br><br> Si este error persiste, reinicie Intune Service Connector. <br><br> 1. Abra **services.msc**. <br> 2. Seleccione **Intune Connector Service**. <br> 3. Haga clic con el botón derecho y seleccione **Reiniciar**.|
 | Conector NDES: IssuePfx - Excepción genérica: <br> System.NullReferenceException: Referencia de objeto no establecida en una instancia de un objeto. | Este error es transitorio. Reinicie Intune Service Connector. <br><br> 1. Abra **services.msc**. <br> 2. Seleccione **Intune Connector Service**. <br> 3. Haga clic con el botón derecho y seleccione **Reiniciar**. |
 | Proveedor de DigiCert: No se pudo obtener la directiva de DigiCert. <br><br>"La operación ha agotado el tiempo de espera". | Intune Certificate Connector recibió un error de tiempo de espera agotado de la operación al comunicarse con la CA de DigiCert. Si este error persiste, aumente el valor de tiempo de espera de la conexión y vuelva a intentarlo. <br><br> Para aumentar el tiempo de espera de la conexión: <br> 1. Vaya al equipo del conector NDES. <br>2. Abra el archivo **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** en el Bloc de notas. <br> 3. Aumente el valor de tiempo de espera para el parámetro siguiente: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Reinicie el servicio Intune Certificate Connector. <br><br> Si el problema persiste, póngase en contacto con la asistencia al cliente de DigiCert. |
 | Proveedor de DigiCert: No se pudo obtener el certificado de cliente. | Intune Certificate Connector no pudo recuperar el certificado de autorización de recursos desde el almacén de certificados personales de la máquina local. Para resolver este problema, instale el certificado de autorización de recursos en el almacén de certificados personales de la máquina local junto con su clave privada. <br><br> El certificado de autorización de recursos se debe obtener desde la CA de DigiCert. Para más detalles, póngase en contacto con la asistencia al cliente de DigiCert. | 
-| Proveedor de DigiCert: No se pudo obtener la directiva de DigiCert. <br><br>"Se anuló la solicitud: no se pudo crear el canal seguro SSL/TLS". | Este error se produce en los siguientes escenarios: <br><br> 1. El servicio Intune Certificate Connector no tiene permisos para leer el certificado de autorización de recursos junto con su clave privada desde el almacén de certificados personales de la máquina local. Para resolver este problema, revise la cuenta de contexto en ejecución del servicio Connector en services.msc. El servicio Connector debe ejecutarse en el contexto de NT AUTHORITY\SYSTEM. <br><br> 2. El perfil de certificado PKCS en el portal de administración de Intune puede estar configurado con un nombre de dominio completo del servicio de base de la CA de DigiCert no válido. El nombre de dominio completo es similar a **pki-ws.symauth.com**. Para resolver este problema, consulte con la atención al cliente de DigiCert si la dirección URL es correcta para la suscripción. <br><br> 3. Intune Certificate Connector no puede realizar la autenticación con la CA de DigiCert mediante el certificado de autorización de recursos porque no puede recuperar la clave privada. Para resolver este problema, instale el certificado de autorización de recursos junto con su clave privada en el almacén de certificados personales de la máquina local. <br><br> Si el problema persiste, póngase en contacto con la asistencia al cliente de DigiCert. |
+| Proveedor de DigiCert: No se pudo obtener la directiva de DigiCert. <br><br>"Se anuló la solicitud: no se pudo crear el canal seguro SSL/TLS". | Este error se produce en los siguientes escenarios: <br><br> 1. El servicio Intune Certificate Connector no tiene permisos para leer el certificado de autorización de recursos junto con su clave privada desde el almacén del certificado personal de la máquina local. Para resolver este problema, revise la cuenta de contexto en ejecución del servicio Connector en services.msc. El servicio Connector debe ejecutarse en el contexto de NT AUTHORITY\SYSTEM. <br><br> 2. El perfil de certificado PKCS en el portal de administración de Intune puede estar configurado con un nombre de dominio completo del servicio de base de la CA de DigiCert no válido. El nombre de dominio completo es similar a **pki-ws.symauth.com**. Para resolver este problema, consulte con la atención al cliente de DigiCert si la dirección URL es correcta para la suscripción. <br><br> 3. Intune Certificate Connector no puede realizar la autenticación con la CA de DigiCert mediante el certificado de autorización de recursos porque no puede recuperar la clave privada. Para resolver este problema, instale el certificado de autorización de recursos junto con su clave privada en el almacén de certificados personales de la máquina local. <br><br> Si el problema persiste, póngase en contacto con la asistencia al cliente de DigiCert. |
 | Proveedor de DigiCert: No se pudo obtener la directiva de DigiCert. <br><br>"No se comprende un elemento de la solicitud". | Intune Certificate Connector no pudo obtener la plantilla de perfil del certificado de DigiCert, porque el OID del perfil de cliente no coincide con el perfil del certificado de Intune. En otro caso, Intune Certificate Connector no puede encontrar la plantilla de perfil del certificado que está asociada con el OID del perfil de cliente en la CA de DigiCert. <br><br> Para resolver este problema, obtenga el OID de perfil de cliente correcto de la plantilla de certificado de DigiCert en la CA de DigiCert. Después, actualice el perfil de certificado PKCS en el portal de administración de Intune. <br><br> Obtenga el OID del perfil de cliente de la CA de DigiCert: <br> 1. Inicie sesión en el portal de administración de la CA de DigiCert. <br> 2. Seleccione **Administrar perfiles de certificado**. <br> 3. Seleccione el perfil de certificado que desea usar. <br> 4. Obtenga el OID del perfil de certificado. Es similar al ejemplo siguiente: <br> `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109` <br><br> Actualice el perfil del certificado PKCS con el OID del perfil de certificado correcto: <br>1. Inicie sesión en el portal de administración de Intune. <br> 2. Vaya al perfil de certificado PKCS y seleccione **Editar**. <br> 3. Actualice el OID del perfil de certificado en el campo de nombre de la plantilla de certificado. <br> 4. Guarde el perfil de certificado PKCS. |
 | Proveedor de DigiCert: Error de comprobación de directiva. <br><br> El atributo no pertenece a la lista de atributos de plantilla de certificados compatibles con DigiCert. | La CA de DigiCert muestra este mensaje cuando hay una discrepancia entre la plantilla del perfil de certificado de DigiCert y el perfil de certificado de Intune. Es probable que este problema se deba a un error de coincidencia de atributos en **SubjectName** o en **SubjectAltName**. <br><br> Para resolver este problema, seleccione los atributos compatibles con Intune para **SubjectName** y **SubjectAltName** en la plantilla del perfil de certificado de DigiCert. Para más información, consulte los atributos compatibles con Intune en la sección **Parámetros de certificado**. |
-| Algunos dispositivos de usuario no reciben los certificados PKCS desde la CA de DigiCert. | Este problema se produce cuando el UPN de usuario contiene caracteres especiales como guion bajo (ejemplo: `global_admin@intune.onmicrosoft.com`). <br><br> La CA de DigiCert no admite caracteres especiales en **mail_firstname** y **mail_lastname**. <br><br> Los pasos siguientes ayudan a resolver este problema: <br><br> 1. Inicie sesión en el portal de administración de la CA de DigiCert. <br> 2. Vaya a **Administrar perfiles de certificado**. <br> 3. Seleccione el perfil de certificado que se usa para Intune. <br> 4. Seleccione el vínculo para **personalizar opciones**. <br> 5. Seleccione el botón de las **opciones avanzadas**. <br> 6. En los **campos del certificado – Subject DN**, agregue un campo **Nombre común (CN)** y elimine el campo **Nombre común (CN)** existente. Las operaciones para agregar y eliminar se deben realizar en conjunto. <br> 7. Seleccione **Guardar**. <br><br> Con el campo anterior, el perfil de certificado de DigiCert solicita **“CN=<upn>”** en lugar de **mail_firstname** y **mail_lastname**. |
+| Algunos dispositivos de usuario no reciben los certificados PKCS desde la CA de DigiCert. | Este problema se produce cuando el UPN de usuario contiene caracteres especiales como guion bajo (ejemplo: `global_admin@intune.onmicrosoft.com`). <br><br> La entidad de certificación DigiCert no admite caracteres especiales en **mail_firstname** y **mail_lastname**. <br><br> Los pasos siguientes ayudan a resolver este problema: <br><br> 1. Inicie sesión en el portal de administración de la CA de DigiCert. <br> 2. Vaya a **Administrar perfiles de certificado**. <br> 3. Seleccione el perfil de certificado que se usa para Intune. <br> 4. Seleccione el vínculo para **personalizar opciones**. <br> 5. Seleccione el botón de las **opciones avanzadas**. <br> 6. En los **campos del certificado – Subject DN**, agregue un campo **Nombre común (CN)** y elimine el campo **Nombre común (CN)** existente. Las operaciones para agregar y eliminar se deben realizar en conjunto. <br> 7. Seleccione **Guardar**. <br><br> Con el campo anterior, el perfil de certificado de DigiCert solicita **"CN=<upn>"** en lugar de **mail_firstname** y **mail_lastname**. |
 | El usuario eliminó manualmente un certificado ya implementado desde el dispositivo. | Intune vuelve a implementar el mismo certificado durante la siguiente comprobación o aplicación de la directiva. En este caso, el conector NDES no recibe una solicitud de certificado PKCS. |
 
 ## <a name="next-steps"></a>Pasos siguientes

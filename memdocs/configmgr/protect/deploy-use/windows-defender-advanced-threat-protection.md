@@ -2,7 +2,7 @@
 title: Protección contra amenazas avanzada de Microsoft Defender
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo administrar y supervisar Protección contra amenazas avanzada de Microsoft Defender, un nuevo servicio que ayuda a las empresas a responder ante ataques sofisticados.
-ms.date: 04/01/2020
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 186751bb8b1768b34573e2b614ce992b58fa9232
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706243"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210152"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Microsoft Defender
 
@@ -29,7 +29,7 @@ ATP de Microsoft Defender es un servicio del [Centro de seguridad avanzada de W
 
 - Suscripción al servicio en línea Protección contra amenazas avanzada de Microsoft Defender  
 - Equipos Mac que ejecutan el cliente de Configuration Manager
-- Clientes que usan un sistema operativo que aparece en la sección [Sistemas operativos de cliente compatibles](#bkmk_os) siguiente. 
+- Clientes que usan un sistema operativo que aparece en la sección [Sistemas operativos de cliente compatibles](#bkmk_os) siguiente.
 
 ### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> Sistemas operativos de cliente compatibles
 Según la versión de Configuration Manager que se ejecute, pueden incorporarse los siguientes sistemas operativos de cliente:
@@ -62,7 +62,7 @@ Según la versión de Configuration Manager que se ejecute, pueden incorporarse 
       1. Copie los valores correspondientes a **Clave del área de trabajo** e **Id. del área de trabajo** de la sección **Configurar conexión** una vez que se complete el proceso.
 
 > [!IMPORTANT]
-> El archivo de configuración de ATP de Microsoft Defender contiene información confidencial que debe mantenerse segura.
+> - El archivo de configuración de ATP de Microsoft Defender contiene información confidencial que debe mantenerse segura.
 
 ## <a name="onboard-devices"></a>Incorporación de dispositivos
 
@@ -70,6 +70,7 @@ Según la versión de Configuration Manager que se ejecute, pueden incorporarse 
 1. Escriba el **nombre** y la **descripción** de la directiva de ATP de Microsoft Defender y seleccione **Incorporación**.
 1. **Vaya** al archivo de configuración proporcionado por el espacio empresarial del servicio ATP de Microsoft Defender en la nube de la organización.
    - Para **Windows 7 y 8.1** o **Windows Server 2008 R2 SP1, 2012 R2 y 2016**, indique la **clave del área de trabajo** y el **identificador del área de trabajo**.
+   - Para la versión 2002 de Configuration Manager, necesitará la **Clave del área de trabajo** y el **Id. del área de trabajo** incluso si solo va a incorporar dispositivos Windows Server 2019 y Windows Server 1803 o posteriores. Para obtener estos valores, seleccione **Configuración** > **Incorporación** > **Windows 7 y 8.1** en el [servicio en línea ATP de Microsoft Defender](https://securitycenter.windows.com/). <!--7054188-->
 1. Especifique los ejemplos de archivos de dispositivos administrados que se recopilan y se comparten para su análisis.  
 
    - **Ninguno**

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401473"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842298"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novedades de Microsoft Intune: meses anteriores
 
@@ -222,7 +222,7 @@ Las credenciales derivadas se usan como método de autenticación de los perfile
 
 Para más información sobre la norma, vea el documento sobre [credenciales PIV derivadas](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) en www.nccoe.nist.gov.
 
-#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Uso de Graph API para especificar un nombre principal de usuario local como una variable para certificados SCEP<!--  5437939        -->  
+#### <a name="use-graph-api-to-specify-an-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Uso de Graph API para especificar un nombre principal de usuario local como variable en certificados SCEP<!--  5437939        -->  
 Cuando use [Graph API de Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0), puede especificar onPremisesUserPrincipalName como variable del nombre alternativo del firmante (SAN) de los certificados SCEP.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->'
@@ -284,7 +284,7 @@ Actualmente, una vez descargada la aplicación de LOB, aparecerá una notificaci
 Las aplicaciones pueden llamar a Graph API de Intune con operaciones de lectura y escritura mediante la identidad de la aplicación y sin credenciales de usuario. Para obtener más información sobre cómo obtener acceso a Microsoft Graph API para Intune, consulte [Trabajar con Intune en Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0).
 
 #### <a name="protected-data-sharing-and-encryption-for-intune-app-sdk-for-ios---3586942----"></a>Cifrado y uso compartido de datos protegidos para el SDK de aplicaciones de Intune para iOS<!-- 3586942  -->
-El SDK de aplicaciones de Intune para iOS usará claves de cifrado de 256 bits cuando el cifrado esté habilitado mediante las directivas de protección de aplicaciones. Todas las aplicaciones deberán tener una versión de SDK 8.1.1 para permitir el uso compartido de datos.
+El SDK de aplicaciones de Intune para iOS usará claves de cifrado de 256 bits cuando el cifrado esté habilitado mediante las directivas de protección de aplicaciones. Todas las aplicaciones deberán tener una versión de SDK 8.1.1 para permitir el uso compartido de datos protegidos.
 
 #### <a name="updates-to-microsoft-intune-app---4997846---"></a>Actualizaciones a la aplicación de Microsoft Intune<!-- 4997846 -->
 La aplicación de Microsoft Intune para Android se ha actualizado con las siguientes mejoras:
@@ -2011,7 +2011,7 @@ Ahora se solicitará a los usuarios un PIN después de realizar cambios biométr
 Esta característica solo está disponible para iOS y requiere la participación de aplicaciones que integran Intune APP SDK para iOS, versión 9.0.1 o posterior. La integración del SDK es necesaria para poder aplicar el comportamiento en las aplicaciones de destino. Esta integración ocurre de manera gradual y depende de los equipos de la aplicación específica. Algunas aplicaciones participantes incluyen WXP, Outlook, Managed Browser y Yammer.
 
 #### <a name="network-access-control-support-on-ios-vpn-clients---1333693---"></a>Compatibilidad del control de acceso a la red en clientes VPN de iOS<!-- 1333693 -->
-Con esta actualización, hay una nueva configuración para habilitar el control de acceso de red (NAC) al crear un perfil de configuración de VPN de Cisco AnyConnect, F5 Access y Citrix SSO para iOS. Esta configuración permite que el identificador de NAC del dispositivo se incluya en el perfil de VPN. Actualmente, no existe ningún cliente de VPN ni solución de asociados de NAC que admita este nuevo identificador de NAC, pero le mantendremos informado en nuestra [entrada de blog de soporte técnico](ttps://aka.ms/iOS12_and_vpn) cuando estén disponibles.
+Con esta actualización, hay una nueva configuración para habilitar el control de acceso de red (NAC) al crear un perfil de configuración de VPN de Cisco AnyConnect, F5 Access y Citrix SSO para iOS. Esta configuración permite que el identificador de NAC del dispositivo se incluya en el perfil de VPN. Actualmente, no existe ningún cliente de VPN ni solución de asociados de NAC que admita este nuevo identificador de NAC, pero le mantendremos informado en nuestra [entrada de blog de soporte técnico](https://aka.ms/iOS12_and_vpn) cuando estén disponibles.
 
 Para usar NAC, deberá:
 1. Optar por permitir que Intune incluya los identificadores de dispositivo en perfiles de VPN
@@ -2200,7 +2200,7 @@ En [Presentamos Windows 10 en modo S](https://www.microsoft.com/windows/s-mode) 
 Se aplica a: la compilación más reciente de [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (todavía en versión preliminar).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Paquete de configuración de ATP de Windows Defender agregado automáticamente al perfil de configuración<!-- 2144658 -->
-Cuando se usa la [Protección contra amenazas avanzada y la incorporación](../protect/advanced-threat-protection.md#onboard-devices-by-using-a-configuration-profile) de dispositivos en Intune, antes era necesario descargar un paquete de configuración y agregarlo al perfil de configuración. Con esta actualización, Intune obtiene de forma automática el paquete del Centro de seguridad avanzada de Windows Defender y lo agrega al perfil.
+Cuando se usa la [Protección contra amenazas avanzada y la incorporación](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile) de dispositivos en Intune, antes era necesario descargar un paquete de configuración y agregarlo al perfil de configuración. Con esta actualización, Intune obtiene de forma automática el paquete del Centro de seguridad avanzada de Windows Defender y lo agrega al perfil.
 Se aplica a Windows 10 y versiones posteriores.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Requerir que los usuarios se conecten durante la instalación del dispositivo<!--2311457-->
@@ -2530,7 +2530,7 @@ Ya puede editar el campo de nombre de administración en la hoja **Propiedades**
 #### <a name="new-all-devices-filter-device-category---1878520---"></a>Nuevo filtro Todos los dispositivos: Categoría de dispositivo<!-- 1878520 -->
 Ya puede filtrar la lista **Todos los dispositivos** por categoría de dispositivo. Para ello, elija **Dispositivos** > **Todos los dispositivos** > **Filtro** > **Categoría de dispositivo**.
 
-#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>Uso de TeamViewer para compartir la pantalla de dispositivos iOS y MacOS<!-- 1985547 -->
+#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>Uso de TeamViewer para compartir la pantalla de dispositivos iOS y macOS<!-- 1985547 -->
 Los administradores podrán conectarse a [TeamViewer](../remote-actions/teamviewer-support.md) e iniciar una sesión de uso compartido de pantalla con dispositivos iOS y macOS. Los usuarios de iPhone, iPad y macOS pueden compartir sus pantallas en vivo con cualquier otro dispositivo móvil o de escritorio. 
 
 #### <a name="multiple-exchange-connector-support---2070451---"></a>Compatibilidad con múltiples instancias de Exchange Connector<!-- 2070451 -->
@@ -2935,7 +2935,7 @@ Con Azure Active Directory (Azure AD), ya puede restringir el acceso a sitios we
 Hemos actualizado la aplicación Portal de empresa para Android para seguir las directrices de [Material Design](https://material.io/) de Android. Puede ver las imágenes de los iconos nuevos en el artículo [Novedades de la interfaz de usuario de aplicaciones](whats-new-app-ui.md).
 
 #### <a name="company-portal-enrollment-improved---1874230-eeready--"></a>Mejora de la inscripción de Portal de empresa<!-- 1874230 eeready-->
-Los usuarios que inscriben un dispositivo mediante el Portal de empresa en Windows 10, compilación 1703 y versiones posteriores, ahora pueden realizar el primer paso de la inscripción sin salir de la aplicación.
+Los usuarios que inscriben un dispositivo mediante el Portal de empresa en Windows 10, compilación 1709 y versiones posteriores, ahora pueden realizar el primer paso de la inscripción sin salir de la aplicación.
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists--1725868---"></a>HoloLens y Surface Hub ahora aparecen en las listas de dispositivos<!--1725868 -->
 Se ha agregado compatibilidad para mostrar los dispositivos HoloLens y Surface Hub inscritos en Intune en la aplicación Portal de empresa para Android.
 
@@ -3574,7 +3574,7 @@ Cuando el perfil se haya insertado en el dispositivo, el siguiente paso depender
 ### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>Acceso a los registros de aplicación administrada de iOS<!-- 1469920 -->
 Ahora, los usuarios finales que tengan Managed Browser instalado pueden ver el estado de administración de todas las aplicaciones publicadas de Microsoft y enviar registros para solucionar problemas con sus aplicaciones iOS administradas.
 
-Para más información sobre cómo habilitar el modo de solución de problemas en Managed Browser en un dispositivo iOS, vea [Cómo tener acceso a los registros de aplicación administrada con Managed Browser en iOS](../apps/app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
+Para más información sobre cómo habilitar el modo de solución de problemas en Managed Browser en un dispositivo iOS, vea [Cómo tener acceso a los registros de aplicación administrada con Managed Browser en iOS](../apps/app-configuration-managed-browser.md).
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>Mejoras en el flujo de trabajo de configuración de dispositivos en la versión 2.9.0 de Portal de empresa para iOS<!-- 1417174 -->
 
@@ -4025,7 +4025,7 @@ Basándonos en los comentarios de los clientes, hemos modificado la aplicación 
 Según los comentarios de los usuarios, se agregó una nueva acción de menú en la aplicación Portal de empresa de Intune para Android con el fin de iniciar su eliminación del dispositivo. Con esta acción se quita el dispositivo de administración de Intune para que la aplicación se pueda quitar del dispositivo por parte del usuario. Puede ver estos cambios en la página de [novedades en la UI de la aplicación](whats-new-app-ui.md) y en la [documentación para el usuario final de Android](../user-help/unenroll-your-device-from-intune-android.md).
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update--676505--"></a>Mejoras en la sincronización de aplicaciones con Windows 10 Creators Update<!--676505-->
-La aplicación Portal de empresa de Intune para Windows 10 ahora iniciará automáticamente una sincronización de las solicitudes de instalación de aplicaciones para dispositivos con Windows 10 Creators Update (versión 1703). De esta forma, se reducirá el problema de estancamiento de las instalaciones de aplicaciones durante el estado "Pending Sync" (Sincronización pendiente). Además, los usuarios podrán iniciar manualmente la sincronización desde dentro de la aplicación. Puede ver estos cambios en la página [Novedades en la interfaz de usuario de la aplicación](whats-new-app-ui.md).
+La aplicación Portal de empresa de Intune para Windows 10 ahora iniciará automáticamente una sincronización de las solicitudes de instalación de aplicaciones para dispositivos con Windows 10 Creators Update (versión 1709). De esta forma, se reducirá el problema de estancamiento de las instalaciones de aplicaciones durante el estado "Pending Sync" (Sincronización pendiente). Además, los usuarios podrán iniciar manualmente la sincronización desde dentro de la aplicación. Puede ver estos cambios en la página [Novedades en la interfaz de usuario de la aplicación](whats-new-app-ui.md).
 
 ### <a name="new-guided-experience-for-windows-10-company-portal---1058938---"></a>Nueva experiencia guiada del Portal de empresa de Windows 10<!---1058938--->
 La aplicación del Portal de empresa para Windows 10 incluirá la experiencia de un tutorial de Intune guiado para dispositivos que no se han identificado ni inscrito. La nueva experiencia proporciona instrucciones paso a paso que llevan al usuario por el registro en Azure Active Directory (que es necesario para las características de acceso condicional) y la inscripción en MDM (que es necesaria para las características de administración de dispositivos). La experiencia guiada será accesible desde la página principal del Portal de empresa. Los usuarios pueden seguir utilizando la aplicación si no completan el registro y la inscripción, pero experimentarán una funcionalidad limitada.
@@ -4187,7 +4187,7 @@ En un perfil de restricción de dispositivos de Intune, ahora puede configurar l
 - Especificar si se permiten los sonidos de notificaciones.
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>Configuración de aplicaciones iOS para que se ejecuten en el modo de aplicación única de forma autónoma<!-- 737837 -->
-Puede usar un perfil de dispositivo de Intune para configurar dispositivos iOS de modo que ejecuten aplicaciones especificadas en [modo de aplicación única autónoma](../configuration/device-restrictions-ios.md#autonomous-single-app-mode). Cuando se configura este modo y se ejecuta la aplicación, el dispositivo se bloquea para que solo pueda ejecutar esa aplicación. Un ejemplo es cuando se configura una aplicación que permite a los usuarios hacer un examen en el dispositivo. Cuando se completan las acciones de la aplicación, o quita esta directiva, el dispositivo vuelve a su estado normal.
+Puede usar un perfil de dispositivo de Intune para configurar dispositivos iOS de modo que ejecuten aplicaciones especificadas en [modo de aplicación única autónoma](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam). Cuando se configura este modo y se ejecuta la aplicación, el dispositivo se bloquea para que solo pueda ejecutar esa aplicación. Un ejemplo es cuando se configura una aplicación que permite a los usuarios hacer un examen en el dispositivo. Cuando se completan las acciones de la aplicación, o quita esta directiva, el dispositivo vuelve a su estado normal.
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>Configuración de dominios de confianza para el correo electrónico y la exploración web en dispositivos iOS<!-- 723765 -->
 Desde un perfil de restricción de dispositivos iOS, ahora puede configurar los [valores de dominio](../configuration/device-restrictions-ios.md#domains) siguientes:

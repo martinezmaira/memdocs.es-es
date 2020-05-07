@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611722"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183023"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Preguntas más frecuentes sobre MAM y la protección de la aplicación
 
@@ -38,9 +38,9 @@ MAM protege los datos de la organización dentro de una aplicación. Con MAM sin
 
 **¿Qué configuraciones de dispositivo admite MAM?**<br></br>
 Intune MAM admite dos configuraciones:
-- **Intune MDM + MAM**: Los administradores de TI solo pueden administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en los dispositivos que están inscritos con la administración de dispositivos móviles (MDM) de Intune. Para administrar aplicaciones mediante MDM + MAM, los clientes deben usar la consola de Intune en Azure Portal (en https://portal.azure.com ).
+- **Intune MDM + MAM**: Los administradores de TI solo pueden administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en los dispositivos que están inscritos con la administración de dispositivos móviles (MDM) de Intune. Para administrar aplicaciones mediante MDM + MAM, los clientes deben usar el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-- **MAM sin inscripción de dispositivos**: MAM sin inscripción de dispositivos o MAM-WE permite a los administradores de TI administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en dispositivos no inscritos con Intune MDM. Esto significa que las aplicaciones pueden administrarse mediante Intune en dispositivos inscritos con proveedores de EMM de terceros. Para administrar aplicaciones mediante MAM-WE, los clientes deben usar la consola de Intune en Azure Portal (en [https://portal.azure.com](https://portal.azure.com)). Además, Intune puede administrar las aplicaciones en dispositivos inscritos con otros proveedores de Enterprise Mobility Management (EMM) o no inscritos con MDM.
+- **MAM sin inscripción de dispositivos**: MAM sin inscripción de dispositivos o MAM-WE permite a los administradores de TI administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en dispositivos no inscritos con Intune MDM. Esto significa que las aplicaciones pueden administrarse mediante Intune en dispositivos inscritos con proveedores de EMM de terceros. Para administrar aplicaciones mediante MAM-WE, los clientes deben usar el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Además, Intune puede administrar las aplicaciones en dispositivos inscritos con otros proveedores de Enterprise Mobility Management (EMM) o no inscritos con MDM.
 
 
 ## <a name="app-protection-policies"></a>Directivas de protección de aplicaciones
@@ -54,6 +54,7 @@ Vea la [configuración de directivas de protección de aplicaciones Android](app
 **¿Es posible aplicar tanto la directiva de MDM como la de MAM al mismo usuario al mismo tiempo para distintos dispositivos? Por ejemplo, si un usuario pudiera tener acceso a sus recursos de trabajo desde su propia máquina habilitada para MAM, pero también viniera a trabajar y usara un dispositivo administrado por MDM de Intune. ¿Hay alguna advertencia sobre esta idea?**<br></br>
 Si aplica una directiva de MAM al usuario sin establecer el estado del dispositivo, el usuario recibirá la directiva de MAM en el dispositivo BYOD y el dispositivo administrado por Intune. También puede aplicar una directiva de MAM según el estado administrado. Por lo tanto, cuando cree una directiva de protección de aplicaciones, debería seleccionar No junto a Destinar a todos los tipos de aplicaciones. Luego, realice cualquiera de las siguientes acciones:
 - Aplique una directiva de MAM menos estricta a los dispositivos administrados por Intune y aplique una más estricta a los dispositivos no inscritos en MDM.
+-   Aplique una directiva de MAM igualmente estricta a los dispositivos administrados por Intune que a los administrados por terceros.
 - Aplique una directiva de MAM solo a los dispositivos no inscritos.
 
 Para más información, consulte [Supervisión de las directivas de protección de aplicaciones](app-protection-policies-monitor.md).
@@ -69,7 +70,7 @@ Cualquier aplicación integrada con el [SDK para aplicaciones de Intune](../deve
 
 - El usuario final debe tener una licencia de Microsoft Intune asignada a su cuenta de Azure Active Directory. Vea [Administrar licencias de Intune](../fundamentals/licenses-assign.md) para obtener información sobre cómo asignar licencias de Intune a los usuarios finales.
 
-- El usuario final debe pertenecer a un grupo de seguridad de destino de una directiva de protección de la aplicación. La misma directiva de protección de aplicaciones debe tener como destino la aplicación específica que se va a utilizar. Las directivas de protección de aplicaciones pueden crearse e implementarse en la consola de Intune en el [portal de Azure](https://portal.azure.com). Actualmente se pueden crear grupos de seguridad en el [Centro de administración de Microsoft 365](https://admin.microsoft.com).
+- El usuario final debe pertenecer a un grupo de seguridad de destino de una directiva de protección de la aplicación. La misma directiva de protección de aplicaciones debe tener como destino la aplicación específica que se va a utilizar. Las directivas de protección de aplicaciones pueden crearse e implementarse en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Actualmente se pueden crear grupos de seguridad en el [Centro de administración de Microsoft 365](https://admin.microsoft.com).
 
 - El usuario final debe iniciar sesión en la aplicación con su cuenta de AAD.
 
@@ -78,7 +79,7 @@ Cualquier aplicación integrada con el [SDK para aplicaciones de Intune](../deve
 El equipo de desarrollo del SDK de Intune comprueba y mantiene de forma activa la compatibilidad con las aplicaciones creadas con las plataformas nativas de Android, iOS/iPadOS (Obj-C, Swift), Xamarin y Xamarin.Forms. Aunque algunos clientes han podido integrar con éxito el SDK de Intune con otras plataformas como React Native y NativeScript, no proporcionamos instrucciones explícitas o complementos para desarrolladores de aplicaciones que no utilicen nuestras plataformas compatibles.
 
 **¿Es compatible la biblioteca de autenticación de Microsoft (MSAL) o las cuentas de redes sociales con el SDK de aplicaciones de Intune?**<br></br>
-El SDK de aplicaciones de Intune usa algunas funcionalidades avanzadas de ADAL para las versiones de la primera y la tercera parte del SDK. Por lo tanto, la MSAL no funciona bien con muchos de nuestros escenarios básicos, como la autenticación en el servicio de Intune App Protection y el inicio condicional. Dado que el objetivo general del equipo de identidades de Microsoft es migrar a MSAL en todas las aplicaciones de Microsoft Office, el SDK de Intune tendrá que admitirlo en algún momento, pero actualmente no está previsto.
+Intune App SDK puede usar la Biblioteca de autenticación de Azure Active Directory o la Biblioteca de autenticación de Microsoft para los escenarios de inicio condicional y de autenticación. También se basa en ADAL/MSAL para registrar la identidad del usuario con el servicio de MAM para la administración sin escenarios de inscripción de dispositivos.
 
 **¿Cuáles son los requisitos adicionales para usar la [aplicación móvil de Outlook](https://products.office.com/outlook)?**
 
@@ -91,7 +92,7 @@ El SDK de aplicaciones de Intune usa algunas funcionalidades avanzadas de ADAL p
 
 **¿Cuáles son los requisitos adicionales para usar las aplicaciones [Word, Excel y PowerPoint](https://products.office.com/business/office)?**
 
-- El usuario final debe tener una licencia de [Office 365 Empresa o Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) asignada a su cuenta de Azure Active Directory. La suscripción debe incluir las aplicaciones de Office en dispositivos móviles y puede incluir una cuenta de almacenamiento en la nube con [OneDrive para la Empresa](https://onedrive.live.com/about/business/). Las licencias de Office 365 se pueden asignar en el [Centro de administración de Microsoft 365](https://admin.microsoft.com) siguiendo estas [instrucciones](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- El usuario final debe tener una licencia de [Aplicaciones de Microsoft 365 para negocios o empresas](https://products.office.com/business/compare-more-office-365-for-business-plans) asignada a su cuenta de Azure Active Directory. La suscripción debe incluir las aplicaciones de Office en dispositivos móviles y puede incluir una cuenta de almacenamiento en la nube con [OneDrive para la Empresa](https://onedrive.live.com/about/business/). Las licencias de Office 365 se pueden asignar en el [Centro de administración de Microsoft 365](https://admin.microsoft.com) siguiendo estas [instrucciones](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - El usuario final debe tener una ubicación administrada configurada con la funcionalidad pormenorizada Guardar como en la configuración de directiva de protección de aplicaciones "Guardar copias de los datos de la organización". Por ejemplo, si la ubicación administrada es OneDrive, la aplicación [OneDrive](https://onedrive.live.com/about/) debe estar configurada en la aplicación Word, Excel o PowerPoint del usuario final.
 
@@ -161,7 +162,7 @@ Intune puede borrar los datos de la aplicación de tres maneras diferentes: borr
 
 - **¿Qué es el borrado selectivo para MDM?**<br></br> Vea [Eliminación de dispositivos: retirar](../remote-actions/devices-wipe.md#retire) para obtener información sobre cómo eliminar datos de la empresa.
 
-- **¿Qué es el borrado selectivo para MAM?**<br></br> El borrado selectivo de MAM simplemente quita los datos de la aplicación de empresa de la aplicación. La solicitud se inicia mediante el Portal de Intune Azure. Para obtener información sobre cómo iniciar una solicitud de borrado, vea [Borrado solo de datos corporativos de aplicaciones](apps-selective-wipe.md).
+- **¿Qué es el borrado selectivo para MAM?**<br></br> El borrado selectivo de MAM simplemente quita los datos de la aplicación de empresa de la aplicación. La solicitud se inicia mediante el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Para obtener información sobre cómo iniciar una solicitud de borrado, vea [Borrado solo de datos corporativos de aplicaciones](apps-selective-wipe.md).
 
 - **¿Con qué rapidez se produce el borrado selectivo para MAM?**<br></br> Si el usuario está utilizando la aplicación cuando se inicia el borrado selectivo, Intune App SDK comprueba cada 30 minutos una solicitud de borrado selectivo desde el servicio Intune MAM. También comprueba el borrado selectivo cuando el usuario inicia la aplicación por primera vez e inicia sesión con su cuenta profesional o educativa.
 

@@ -2,7 +2,7 @@
 title: Seguridad y privacidad de la administración de sitios
 titleSuffix: Configuration Manager
 description: Optimización de la seguridad y privacidad para la administración de sitios en Configuration Manager
-ms.date: 07/26/2019
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35c2738b363895671528196e99b324fd2fe6f5a7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 923018e35fae1ec1f5e9c0869ef22d43b5de552b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704583"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182266"
 ---
 # <a name="security-and-privacy-for-site-administration-in-configuration-manager"></a>Seguridad y privacidad para la administración de sitios en Configuration Manager
 
@@ -169,7 +169,11 @@ Para obtener más información sobre las diferentes tecnologías de Wake on LAN,
 
 ### <a name="if-you-use-email-notification-configure-authenticated-access-to-the-smtp-mail-server"></a>Si utiliza la notificación por correo electrónico, configure el acceso autenticado al servidor SMTP de correo electrónico
 
-Siempre que sea posible, utilice un servidor de correo que admita el acceso autenticado. Use la cuenta del equipo del servidor del sitio para la autenticación. Si debe especificar una cuenta de usuario para la autenticación, utilice una cuenta que tenga los privilegios mínimos.  
+Siempre que sea posible, utilice un servidor de correo que admita el acceso autenticado. Use la cuenta del equipo del servidor del sitio para la autenticación. Si debe especificar una cuenta de usuario para la autenticación, utilice una cuenta que tenga los privilegios mínimos. 
+
+### <a name="enforce-ldap-channel-binding-and-ldap-signing"></a>Aplicación del enlace de canal y la firma LDAP
+
+La seguridad de los controladores de dominio de Active Directory se puede mejorar mediante la configuración del servidor para que rechace los enlaces LDAP de Nivel de seguridad y autenticación simples (SASL) que no soliciten firma, o bien los enlaces LDAP simples que se realizan en una conexión de texto sin cifrar. A partir de la versión 1910, Configuration Manager admite la aplicación del enlace de canal y la firma de LDAP. Para obtener más información, vea [Requisitos de enlace de canal y firma de LDAP para Windows 2020](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). <!--6244453-->
 
 
 ## <a name="security-guidance-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> Guía de seguridad del servidor del sitio

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551617"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023170"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Uso de conjuntos de directivas para agrupar colecciones de objetos de administración
 
@@ -57,7 +57,7 @@ Cuando se crea un conjunto de directivas, se crea una única unidad de asignaci�
 
 ## <a name="how-to-create-a-policy-set"></a>Cómo crear un conjunto de directivas
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Conjuntos de directivas** > **Conjuntos de directivas** > **Crear**.
 3. En la página **Datos básicos**, agregue los siguientes valores:
     - **Nombre del conjunto de directivas**: indique un nombre para este conjunto de directivas.
@@ -89,7 +89,7 @@ Los conjuntos de directivas, novedad en la versión 1910, presentan los siguien
   - Aplicación de la tienda Android
   - Aplicación de línea de negocio de Android
   - Aplicación de línea de negocio de Android administrada
-  - Office 365 ProPlus Suite (Windows 10)
+  - Aplicaciones de Microsoft 365 (Windows 10)
   - Vínculo web
   - Aplicación iOS/iPadOS integrada
   - Aplicación de Android integrada
@@ -121,6 +121,7 @@ Los conjuntos de directivas, novedad en la versión 1910, presentan los siguien
     Si se agrega una directiva a un conjunto de directivas que está implementado en un grupo, dicho grupo se mostraría como directamente asignado en la carga de trabajo, y no "asignado mediante el conjunto de directivas". En consecuencia, MAM no procesa las eliminaciones de asignaciones de grupos procedentes de conjuntos de directivas.
 
 - MAM no permite realizar implementaciones en grupos virtuales de tipo **Todos los usuarios** y **Todos los dispositivos** de ningún tipo de directiva.
+- El perfil de configuración de dispositivo de tipo "Plantillas administrativas" no se puede seleccionar como parte de un conjunto de directivas.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

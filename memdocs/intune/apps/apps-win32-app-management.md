@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620608"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254612"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune independiente: administración de aplicaciones Win32
 
@@ -99,7 +99,7 @@ De forma bastante similar a una aplicación de línea de negocio (LOB), puede ag
 
 En los pasos siguientes se proporcionan instrucciones para ayudarle a agregar una aplicación Windows a Intune.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En el panel **Seleccionar tipo de aplicación**, en los **Otros** tipos de aplicaciones, seleccione **Aplicación de Windows (Win32)** .
 
@@ -357,9 +357,14 @@ Además, en la aplicación Portal de empresa se muestran a los usuarios finales 
 ## <a name="set-win32-app-availability-and-notifications"></a>Establecimiento de la disponibilidad y las notificaciones de las aplicaciones Win32
 Puede configurar la hora de inicio y la hora de la fecha límite para una aplicación Win32. A la hora de inicio, la extensión de administración de Intune iniciará la descarga del contenido de la aplicación y la almacenará en caché para la intención necesaria. La aplicación se instalará a la hora de la fecha límite. Para las aplicaciones disponibles, la hora de inicio determinará cuando la aplicación esté visible en Portal de empresa y se descargará el contenido cuando el usuario final solicite la aplicación desde Portal de empresa. Además, puede habilitar un período de gracia de reinicio. 
 
+> [!IMPORTANT]
+> La opción **Período de gracia de reinicio** de la sección **Asignación** solo está disponible cuando **Comportamiento de reinicio de dispositivo** en la sección **Programa** se establece en una de las opciones siguientes:
+> - **Determinar comportamiento en función de códigos de retorno**
+> - **Intune forzará un reinicio obligatorio del dispositivo**
+
 Establezca la disponibilidad de la aplicación en función de la fecha y la hora de una aplicación necesaria mediante los pasos siguientes:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones**.
 3. Seleccione una **aplicación de Windows (Win32)** existente en la lista. 
 4. En el panel de la aplicación, seleccione **Propiedades** > **Editar** junto a la sección **Asignaciones** > **Agregar grupo** debajo del tipo de asignación **Requerido**. 
@@ -405,6 +410,8 @@ Normalmente los registros de agente en el equipo cliente se encuentran en `C:\Pr
 > **En máquinas cliente X86**:<br>
 > *C:\Archivos de programa\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> Para obtener más información, vea [Recomendaciones de detección de virus para equipos de Enterprise que ejecutan versiones de Windows admitidas actualmente](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
 ### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Detección de la versión del archivo de la aplicación Win32 mediante PowerShell
 

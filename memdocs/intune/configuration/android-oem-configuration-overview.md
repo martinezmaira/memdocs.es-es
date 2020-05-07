@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326050"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254850"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Uso y administración de dispositivos Android Enterprise con OEMConfig en Microsoft Intune
 
@@ -78,7 +78,7 @@ Asegúrese de que el dispositivo admite OEMConfig, de que se ha agregado la apli
 
 ## <a name="create-an-oemconfig-profile"></a>Creación de un perfil de OEMConfig
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
@@ -151,17 +151,21 @@ En comparación con las aplicaciones estándar, las aplicaciones OEMConfig expan
 
 | OEM | Identificador de lote | Documentación de OEM (si la hubiera) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Guía de administración de Knox Service Plugin](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zebra Technologies | com.zebra.oemconfig.common | [Información general sobre Zebra OEMConfig](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com.ascom.myco.oemconfig | |
+| Cipherlab | com.cipherlab.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
+| HMDGlobal: 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal: 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Samsung | com.samsung.android.knox.kpu | [Guía de administración de Knox Service Plugin](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com.seuic.seuicoemconfig | |
 | Spectralink: códigos de barras | com.spectralink.barcode.service |  |
 | Spectralink: botones | com.spectralink.buttons |  |
 | Spectralink: dispositivo | com.spectralink.slnkdevicesettings  |  |
 | Spectralink: registro | com.spectralink.slnklogger |  |
 | Spectralink: VQO | com.spectralink.slnkvqo |  |
-| Seuic | com.seuic.seuicoemconfig | |
 | Unitech Electronics | com.unitech.oemconfig | |
+| Zebra Technologies | com.zebra.oemconfig.common | [Información general sobre Zebra OEMConfig](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 

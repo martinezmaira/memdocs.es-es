@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407840"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209880"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para permitir o restringir características mediante Intune
 
@@ -81,11 +81,13 @@ Estas opciones de configuración usan [ApplicationManagement policy CSP](https:/
 
   [CSP de ApplicationManagement/AllowGameDVR](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Solo aplicaciones de la tienda**: esta opción determina la experiencia del usuario al instalar aplicaciones desde ubicaciones que no son Microsoft Store. Las opciones son:
+- **Solo aplicaciones de la tienda**: esta opción determina la experiencia del usuario al instalar aplicaciones desde ubicaciones que no son Microsoft Store. No impide la instalación de contenido desde dispositivos USB, recursos compartidos de red u otros orígenes que no sean de Internet. Use un explorador de confianza para asegurarse de que estas protecciones funcionan según lo previsto.
+
+  Las opciones son:
 
   - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede permitir a los usuarios finales instalar aplicaciones desde ubicaciones distintas de Microsoft Store, incluidas las aplicaciones definidas en otras configuraciones de directiva.  
   - **Cualquier sitio**: desactiva las recomendaciones de aplicaciones y permite a los usuarios instalar aplicaciones desde cualquier ubicación.  
-  - **Solo Store**: obliga a los usuarios finales a que solo instalen aplicaciones de Microsoft Store.
+  - **Solo Store**: la intención es evitar que el contenido malintencionado afecte a los dispositivos de usuario al descargar contenido ejecutable de Internet. Cuando los usuarios intentan instalar aplicaciones desde Internet, se bloquea la instalación. Los usuarios ven un mensaje que recomienda que descarguen aplicaciones de Microsoft Store.
   - **Recomendaciones**: al instalar una aplicación desde Internet que está disponible en Microsoft Store, los usuarios ven un mensaje que recomienda descargarla de la tienda.  
   - **Preferir Store**: advierte a los usuarios cuando instalan aplicaciones desde ubicaciones distintas a Microsoft Store.
 
@@ -140,10 +142,14 @@ Estas opciones de configuración usan [Bluetooth policy CSP](https://docs.micros
 
 Estas opciones de configuración usan [accounts policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts) (CSP de directiva de cuentas), que también indica las ediciones de Windows compatibles.
 
+> [!IMPORTANT]
+> Bloquear o deshabilitar estas opciones de cuenta de Microsoft puede afectar a los escenarios de inscripción que requieren que los usuarios inicien sesión en Azure AD. Por ejemplo, si usa [AutoPilot preferencial](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Normalmente, se muestra a los usuarios una ventana de inicio de sesión de Azure AD. Cuando esta configuración se establece en **Bloquear** o **Deshabilitar**, es posible que no se muestre la opción de inicio de sesión de Azure AD. En su lugar, se pide a los usuarios que acepten el CLUF y creen una cuenta local, que puede que no sea lo que se quiere.
+
 - **Cuenta Microsoft**: **Bloquear** evita que los usuarios finales asocien una cuenta Microsoft al dispositivo. **Sin configurar** (valor predeterminado) permite agregar y usar una cuenta Microsoft.
+
 - **Cuenta que no es Microsoft**: **Bloquear** evita que los usuarios finales agreguen cuentas que no son de Microsoft mediante la interfaz de usuario. **Sin configurar** (valor predeterminado) permite que los usuarios agreguen cuentas de correo electrónico que no están asociadas a una cuenta Microsoft.
 - **Sincronización de configuración de cuenta Microsoft**: **Sin configurar** (valor predeterminado), permite que la configuración de dispositivo y aplicación asociada a una cuenta Microsoft se sincronice entre dispositivos. **Bloquear** evita esta sincronización.
-- **Ayudante para el inicio de sesión de cuentas Microsoft**: si se establece en **Sin configurar** (valor predeterminado), los usuarios finales pueden iniciar y detener el servicio **Ayudante para el inicio de sesión de cuenta Microsoft** (wlidsvc). Este servicio del sistema operativo permite a los usuarios iniciar sesión en su cuenta Microsoft. **Deshabilitar** evita que los usuarios finales controlen el servicio Ayudante para el inicio de sesión de cuenta Microsoft (wlidsvc).
+- **Ayudante para el inicio de sesión de cuentas Microsoft**: si se establece en **Sin configurar** (valor predeterminado), los usuarios finales pueden iniciar y detener el servicio **Ayudante para el inicio de sesión de cuenta Microsoft** (wlidsvc). Este servicio del sistema operativo permite a los usuarios iniciar sesión en su cuenta Microsoft. **Deshabilitar** configura el servicio del asistente para el inicio de sesión de Microsoft (wlidsvc) en deshabilitado y evita que los usuarios finales lo inicien manualmente.
 
 ## <a name="cloud-printer"></a>Impresora en la nube
 
@@ -404,7 +410,7 @@ Si "Bloquear y habilitar el reemplazo de usuarios" está seleccionado, el usuari
 - **Permitir modo de pantalla completa**: **Sí** (valor predeterminado) permite que Microsoft Edge use el modo de pantalla completa, que muestra solo el contenido web y oculta la interfaz de usuario de Microsoft Edge. **No** evita el modo de pantalla completa en Microsoft Edge.
 - **Permitir la página about flags**: **Sí** (valor predeterminado) usa el valor predeterminado del sistema operativo, que puede permitir el acceso a la página `about:flags`. La página `about:flags` permite a los usuarios cambiar la configuración de desarrollador y habilitar características experimentales. **No** evita que los usuarios finales accedan a la página `about:flags` en Microsoft Edge.
 - **Permitir herramientas de desarrollo**: **Sí** (valor predeterminado) permite a los usuarios usar las herramientas de desarrollo F12 para compilar y depurar páginas web de forma predeterminada. **No** evita que los usuarios finales usen las herramientas de desarrollo F12.
-- **Permitir JavaScript**: **Sí** (valor predeterminado) permite la ejecución de scripts, como JavaScript, en el explorador Microsoft Edge. **No** evita la ejecución de scripts de Java en el explorador.
+- **Permitir JavaScript**: **Sí** (valor predeterminado) permite la ejecución de scripts, como JavaScript, en el explorador Microsoft Edge. **No** evita la ejecución de scripts de Java en el explorador.
 - **El usuario puede instalar extensiones**: **Sí** (valor predeterminado) permite que los usuarios finales instalen extensiones de Microsoft Edge en el dispositivo. **No** evita la instalación.
 - **Permitir la instalación de prueba de extensiones de desarrollador**: **Sí** (valor predeterminado) usa el valor predeterminado del sistema operativo, que puede permitir la instalación de prueba. La transferencia local instala y ejecuta extensiones sin comprobar. **No** evita que Microsoft Edge transfiera localmente mediante la característica **Cargar extensiones**. No evita la transferencia local de extensiones de otras maneras, como PowerShell.
 - **Required extensions** (Extensiones obligatorias): elija cuáles son las extensiones que los usuarios finales no pueden desactivar en Microsoft Edge. Escriba los nombres de familia de paquete y seleccione **Agregar**. [Buscar un nombre de familia de paquete (PFN) para VPN por aplicación](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) proporciona alguna orientación.
@@ -669,7 +675,7 @@ Estas opciones de configuración usan [start policy CSP](https://docs.microsoft.
 
 ## <a name="microsoft-defender-smart-screen"></a>Smart Screen de Microsoft Defender
 
-- **SmartScreen para Microsoft Edge**: **Requerir** desactiva SmartScreen de Microsoft Defender y evita que los usuarios lo activen. **Sin configurar** (valor predeterminado) activa SmartScreen. Ayuda a proteger a los usuarios frente a amenazas potenciales y evita que lo desactiven.
+- **SmartScreen para Microsoft Edge**: **Requerir** desactiva SmartScreen de Microsoft Defender y evita que los usuarios lo activen. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo active SmartScreen y permita que los usuarios lo activen y desactiven.
 
   Microsoft Edge usa SmartScreen de Microsoft Defender (activado) para proteger a los usuarios de software malintencionado y posibles estafas de suplantación de identidad.
 

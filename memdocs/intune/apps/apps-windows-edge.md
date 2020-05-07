@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 64cb05d6e031cfe08789d6b7c923d9e489d0e433
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401333"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254323"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Adición de Microsoft Edge para Windows 10 a Microsoft Intune
 
 Antes de poder implementar, configurar, supervisar, o proteger las aplicaciones, debe agregarlas a Intune. Uno de los [tipos de aplicaciones](apps-add.md#app-types-in-microsoft-intune) disponibles es Microsoft Edge *versión 77 y posteriores*. Al seleccionar este tipo de aplicación en Intune, puede asignar e instalar Microsoft Edge *versión 77 y posteriores* en los dispositivos que administra y que ejecutan Windows 10.
 
 > [!IMPORTANT]
-> Este tipo de aplicación está en **versión preliminar pública** y ofrece los canales de desarrollador, beta y estable para Windows 10. La implementación solo está en inglés (EN), pero los usuarios finales pueden cambiar el idioma para mostrar en el explorador desde **Configuración** > **Idiomas**. Microsoft Edge es una aplicación Win32 que se instala en el contexto del sistema y en arquitecturas similares (aplicación x86 en sistemas operativos x86 y aplicación x64 en sistemas operativos x64). Intune detectará todas las instalaciones existentes de Microsoft Edge. Si está instalado en el contexto del usuario, una instalación del sistema lo sobrescribirá. Si está instalado en el contexto del sistema, se notificará que la instalación se ha realizado correctamente. Además, las actualizaciones automáticas de Microsoft Edge están **activadas** de forma predeterminada.
+> Este tipo de aplicación ofrece los canales de desarrollador, beta y estable para Windows 10. La implementación solo está en inglés (EN), pero los usuarios finales pueden cambiar el idioma para mostrar en el explorador desde **Configuración** > **Idiomas**. Microsoft Edge es una aplicación Win32 que se instala en el contexto del sistema y en arquitecturas similares (aplicación x86 en sistemas operativos x86 y aplicación x64 en sistemas operativos x64). Intune detectará todas las instalaciones existentes de Microsoft Edge. Si está instalado en el contexto del usuario, una instalación del sistema lo sobrescribirá. Si está instalado en el contexto del sistema, se notificará que la instalación se ha realizado correctamente. Además, las actualizaciones automáticas de Microsoft Edge están **activadas** de forma predeterminada.
 
 > [!NOTE]
 > Microsoft Edge *versión 77 y posteriores* también está disponible para macOS.
@@ -38,14 +38,14 @@ Antes de poder implementar, configurar, supervisar, o proteger las aplicaciones,
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Windows 10, versión 1703 o posteriores.
+- Windows 10, versión 1709 o posteriores.
 - Todas las versiones preinstaladas de Microsoft Edge *versión 77 y posteriores* de todos los canales del contexto de usuario se sobrescribirán con la versión de Edge instalada en el contexto del sistema.
 
 ## <a name="configure-the-app-in-intune"></a>Configuración de la aplicación en Intune
 
 Puede agregar una instancia de Microsoft Edge versión 77 y posteriores a Intune mediante los pasos siguientes:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En la lista **Tipo de aplicación** en **Microsoft Edge, versión 77 y posteriores**, seleccione **Windows 10**.
 
@@ -100,7 +100,7 @@ La aplicación que ha creado aparece en la lista de aplicaciones, donde puede as
 
 Si necesita desinstalar Microsoft Edge de los dispositivos de los usuarios, siga estos pasos.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **todas las aplicaciones** > aplicación*Microsoft Edge* > **Asignaciones** > **Agregar grupo**.
 3. En el panel **Agregar grupo**, seleccione **Desinstalar**.
 

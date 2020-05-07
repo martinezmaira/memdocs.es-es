@@ -2,7 +2,7 @@
 title: Referencia del archivo de registro
 titleSuffix: Configuration Manager
 description: Una referencia de todos los archivos de registro del cliente, el servidor y los componentes dependientes de Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f203861e2f82aa7eb0942a22a7b16cf5dd49616c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706533"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166549"
 ---
 # <a name="log-file-reference"></a>Referencia del archivo de registro
 
@@ -29,86 +29,85 @@ En las secciones siguientes se proporcionan detalles sobre los diferentes archiv
 
 - [Archivos de registro de cliente](#BKMK_ClientLogs)  
 
-    - [Operaciones de cliente](#BKMK_ClientOpLogs)  
+  - [Operaciones de cliente](#BKMK_ClientOpLogs)  
 
-    - [Instalación de cliente](#BKMK_ClientInstallLog)  
+  - [Instalación de cliente](#BKMK_ClientInstallLog)  
 
-    - [Cliente para Linux y UNIX](#BKMK_LogFilesforLnU)  
+  - [Cliente para Linux y UNIX](#BKMK_LogFilesforLnU)  
 
-    - [Cliente para equipos Mac](#BKMK_LogfilesforMac)  
+  - [Cliente para equipos Mac](#BKMK_LogfilesforMac)  
 
 - [Archivos de registro del servidor](#BKMK_ServerLogs)  
 
-    - [Servidor de sitio y sistemas de sitio](#BKMK_SiteSiteServerLog)  
+  - [Servidor de sitio y sistemas de sitio](#BKMK_SiteSiteServerLog)  
 
-    - [Instalación del servidor del sitio](#BKMK_SiteInstallLog)
+  - [Instalación del servidor del sitio](#BKMK_SiteInstallLog)
 
-    - [Punto de servicio de almacenamiento de datos](#BKMK_DataWarehouse)
+  - [Punto de servicio de almacenamiento de datos](#BKMK_DataWarehouse)
 
-    - [Punto de estado de reserva](#BKMK_FSPLog)  
+  - [Punto de estado de reserva](#BKMK_FSPLog)  
 
-    - [Punto de administración](#BKMK_MPLog)  
+  - [Punto de administración](#BKMK_MPLog)  
 
-    - [Punto de conexión de servicio](#BKMK_WITLog)  
+  - [Punto de conexión de servicio](#BKMK_WITLog)  
 
-    - [Punto de actualización de software](#BKMK_SUPLog)  
+  - [Punto de actualización de software](#BKMK_SUPLog)  
 
 - [Archivos de registro por funcionalidad](#BKMK_FunctionLogs)  
 
-    - [Administración de aplicaciones](#BKMK_AppManageLog)  
+  - [Administración de aplicaciones](#BKMK_AppManageLog)  
 
-    - [Asset Intelligence](#BKMK_AILog)  
+  - [Asset Intelligence](#BKMK_AILog)  
 
-    - [Copia de seguridad y recuperación](#BKMK_BnRLog)  
+  - [Copia de seguridad y recuperación](#BKMK_BnRLog)  
 
-    - [Inscripción de certificado](#BKMK_CertificateEnrollment)
+  - [Inscripción de certificado](#BKMK_CertificateEnrollment)
 
-    - [Notificación de cliente](#BKMK_BGB)
+  - [Notificación de cliente](#BKMK_BGB)
 
-    - [Puerta de enlace de administración en la nube](#cloud-management-gateway)
+  - [Puerta de enlace de administración en la nube](#cloud-management-gateway)
 
-    - [Configuración de cumplimiento y acceso a los recursos de la compañía](#BKMK_CompSettingsLog)  
+  - [Configuración de cumplimiento y acceso a los recursos de la compañía](#BKMK_CompSettingsLog)  
 
-    - [Consola de Configuration Manager](#BKMK_ConsoleLog)  
+  - [Consola de Configuration Manager](#BKMK_ConsoleLog)  
 
-    - [Administración de contenido](#BKMK_ContentLog)  
+  - [Administración de contenido](#BKMK_ContentLog)  
 
-    - [Análisis de escritorio](#desktop-analytics)
+  - [Análisis de escritorio](#desktop-analytics)
 
-    - [Detección](#BKMK_DiscoveryLog)  
+  - [Detección](#BKMK_DiscoveryLog)  
 
-    - [Endpoint Protection](#BKMK_EPLog)  
+  - [Endpoint Protection](#BKMK_EPLog)  
 
-    - [Extensiones](#BKMK_Extensions)  
+  - [Extensiones](#BKMK_Extensions)  
 
-    - [Inventario](#BKMK_InventoryLog)  
+  - [Inventario](#BKMK_InventoryLog)  
 
-    - [Migración](#BKMK_MigrationLog)  
+  - [Migración](#BKMK_MigrationLog)  
 
-    - [Dispositivos móviles](#BKMK_MDMLog)  
+  - [Dispositivos móviles](#BKMK_MDMLog)  
 
-    - [Implementación del sistema operativo](#BKMK_OSDLog)  
+  - [Implementación del sistema operativo](#BKMK_OSDLog)  
 
-    - [Administración de energía](#BKMK_PowerMgmtLog)  
+  - [Administración de energía](#BKMK_PowerMgmtLog)  
 
-    - [Control remoto](#BKMK_RCLog)  
+  - [Control remoto](#BKMK_RCLog)  
 
-    - [Generación de informes](#BKMK_ReportLog)  
+  - [Generación de informes](#BKMK_ReportLog)  
 
-    - [Administración basada en roles](#BKMK_RBALog)  
+  - [Administración basada en roles](#BKMK_RBALog)  
 
-    - [Medición de software](#BKMK_MeteringLog)  
+  - [Medición de software](#BKMK_MeteringLog)  
 
-    - [Actualizaciones de software](#BKMK_SU_NAPLog)  
+  - [Actualizaciones de software](#BKMK_SU_NAPLog)  
 
-    - [Wake On LAN](#BKMK_WOLLog)  
+  - [Wake On LAN](#BKMK_WOLLog)  
 
-    - [Mantenimiento de Windows 10](#BKMK_WindowsServicingLog)
+  - [Mantenimiento de Windows 10](#BKMK_WindowsServicingLog)
 
-    - [Agente de Windows Update](#BKMK_WULog)  
+  - [Agente de Windows Update](#BKMK_WULog)  
 
-    - [Servidor WSUS](#BKMK_WSUSLog)  
-
+  - [Servidor WSUS](#BKMK_WSUSLog)  
 
 ## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> Archivos de registro de cliente
 
@@ -120,6 +119,7 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 
 |Nombre del registro|Descripción|  
 |--------------|-----------------|  
+|ADALOperationProvider.log|Información sobre las solicitudes de token de autenticación de cliente con la biblioteca de autenticación de Azure Active Directory (Azure AD) (ADAL).|
 |BitLockerManagementHandler.log|Registra información sobre las directivas de administración de BitLocker.|
 |CAS.log|Servicio de acceso a contenido. Mantiene la caché del paquete local en el cliente.|  
 |Ccm32BitLauncher.log|Registra las acciones para iniciar aplicaciones en el cliente marcadas como *Ejecutar en modo de 32 bits*.|  
@@ -131,11 +131,12 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 |Ccmperf.log|Registra actividades relacionadas con el mantenimiento y la captura de datos relacionados con los contadores de rendimiento de cliente.|  
 |CcmRestart.log|Registra la actividad de reinicio del servicio de cliente.|  
 |CCMSDKProvider.log|Registra actividades de las interfaces SDK de cliente.|  
+|ccmsqlce.log|Registra actividades para la edición de SQL Compact que usa el cliente. Normalmente, este registro solo se usa cuando se habilita el registro de depuración o hay un problema con el componente. La tarea de mantenimiento del cliente (ccmeval) suele corregir de forma automática los problemas con este componente.|
 |CertificateMaintenance.log|Mantiene los certificados para servicios de dominio de Active Directory y los puntos de administración.|  
 |CIDownloader.log|Registra detalles acerca de las descargas de definiciones de elementos de configuración.|  
-|CITaskMgr.log|Registra las tareas iniciadas para cada aplicación y tipo de implementación, como las acciones de descarga de contenido e instalación o desinstalación.|  
+|CITaskMgr.log|Registra las tareas para cada aplicación y tipo de implementación, como las acciones de descarga de contenido e instalación o desinstalación.|  
 |ClientAuth.log|Registra la actividad de autenticación y firma del cliente.|  
-|ClientIDManagerStartup.log|Crea y mantiene el GUID de cliente e identifica las tareas realizadas durante la asignación y el registro de clientes.|  
+|ClientIDManagerStartup.log|Crea y mantiene el GUID de cliente e identifica tareas durante la asignación y el registro de clientes.|  
 |ClientLocation.log|Registra tareas relacionadas con la asignación de sitios de cliente.|  
 |CMHttpsReadiness.log|Registra los resultados de ejecución de la herramienta de evaluación de preparación de HTTPS de Configuration Manager. Esta herramienta comprueba si los equipos tienen un certificado de autenticación de cliente de infraestructura de clave pública (PKI) que se pueda usar con Configuration Manager.|  
 |CmRcService.log|Registra información del servicio de control remoto.|  
@@ -208,28 +209,28 @@ El cliente de Configuration Manager para Linux y UNIX registra información en l
 
 |Nombre del registro|Detalles|
 |-------------------|-----------------------------------------------------------------|
-|Scxcm.log| Archivo de registro para el servicio central del cliente de Configuration Manager para Linux y UNIX (ccmexec.bin). Este archivo de registro contiene información acerca de la instalación y las operaciones en curso de ccmexec.bin.<br /><br /> De forma predeterminada, este archivo de registro se encuentra en **/var/opt/microsoft/scxcm.log**<br /><br /> Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/configmgr/etc/scxcm.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto.<br /><br /> Puede establecer el nivel de registro en una de cuatro opciones distintas. |
-| Scxcmprovider.log |Archivo de registro del servicio CIM del cliente de Configuration Manager para Linux y UNIX (omiserver.bin). Este archivo de registro contiene información acerca de las operaciones en curso de nwserver.bin.<br /><br /> Este registro se encuentra en <strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/omi/etc/scxcmprovider.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto.<br /><br /> Puede establecer el nivel de registro en una de tres opciones.|
+|Scxcm.log| Archivo de registro para el servicio central del cliente de Configuration Manager para Linux y UNIX (ccmexec.bin). Este archivo de registro contiene información acerca de la instalación y las operaciones en curso de ccmexec.bin. De forma predeterminada, este archivo de registro se encuentra en **/var/opt/microsoft/scxcm.log**. Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/configmgr/etc/scxcm.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto. Puede establecer el nivel de registro en una de cuatro opciones distintas. |
+| Scxcmprovider.log |Archivo de registro del servicio CIM del cliente de Configuration Manager para Linux y UNIX (omiserver.bin). Este archivo de registro contiene información acerca de las operaciones en curso de nwserver.bin. Este registro se encuentra en `/var/opt/microsoft/configmgr/scxcmprovider.log`. Para cambiar la ubicación del archivo de registro, edite **/opt/microsoft/omi/etc/scxcmprovider.conf** y cambie el campo **PATH**. No es necesario reiniciar el equipo cliente o el servicio para que el cambio surta efecto. Puede establecer el nivel de registro en una de tres opciones.|
 
 Ambos archivos de registro admiten varios niveles de registro:  
 
 - **scxcm.log**. Para cambiar el nivel de registro, edite **/opt/microsoft/configmgr/etc/scxcm.conf** y cambie cada instancia de la etiqueta **MODULE** por el nivel de registro que quiera:  
 
-    - ERROR: Indica problemas que requieren atención.  
+  - ERROR: Indica problemas que requieren atención.  
 
-    - WARNING: Indica posibles problemas en las operaciones de cliente.  
+  - WARNING: Indica posibles problemas en las operaciones de cliente.  
 
-    - INFO: Registro más detallado que indica el estado de varios eventos en el cliente.  
+  - INFO: Registro más detallado que indica el estado de varios eventos en el cliente.  
 
-    - TRACE: Registro detallado que normalmente se usa para diagnosticar problemas.  
+  - TRACE: Registro detallado que normalmente se usa para diagnosticar problemas.  
 
 - **scxcmprovider.log**. Para cambiar el nivel de registro, edite **/opt/microsoft/omi/etc/scxcmprovider.conf** y cambie cada instancia de la etiqueta **MODULE** por el nivel de registro que quiera:  
 
-    - ERROR: Indica problemas que requieren atención.  
+  - ERROR: Indica problemas que requieren atención.  
 
-    - WARNING: Indica posibles problemas en las operaciones de cliente.
+  - WARNING: Indica posibles problemas en las operaciones de cliente.
 
-    - INFO: Registro más detallado que indica el estado de varios eventos en el cliente.  
+  - INFO: Registro más detallado que indica el estado de varios eventos en el cliente.  
 
 En condiciones normales de funcionamiento, use el nivel de registro ERROR. Este nivel de registro crea el archivo de registro más pequeño. A medida que el nivel de registro aumenta de ERROR a WARNING, INFO y TRACE, se crea un archivo de registro mayor, ya que se escriben más datos en el archivo.  
 
@@ -243,17 +244,16 @@ Para obtener información acerca de **logrotate**, consulte la documentación de
 
 ### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Cliente para equipos Mac
 
-El cliente de Configuration Manager para equipos Mac registra la información en los archivos de registro siguientes:  
+El cliente de Configuration Manager para equipos Mac registra la información en los archivos de registro siguientes en el equipo Mac:  
 
-|Nombre del registro|Detalles|  
-|--------------|-------------|  
-|CCMClient-&lt;*fecha_hora*>.log|Registra actividades relacionadas con operaciones de cliente de Mac, como la administración de aplicaciones, el inventario y el registro de errores.<br /><br /> El archivo de registro se encuentra en la carpeta /Library/Application Support/Microsoft/CCM/Logs del equipo Mac.|  
-|CCMAgent-&lt;*fecha_hora*>.log|Registra información relacionada con las operaciones de cliente, como las operaciones de inicio y cierre de sesión de usuario, y la actividad del equipo Mac.<br /><br /> Este archivo de registro se encuentra en la carpeta ~/Library/Logs del equipo Mac.|  
-|CCMNotifications-&lt;*fecha_hora*>.log|Registra las actividades relacionadas con las notificaciones de Configuration Manager que se muestran en el equipo Mac.<br /><br /> Este archivo de registro se encuentra en la carpeta ~/Library/Logs del equipo Mac.|  
-|CCMPrefPane-&lt;*fecha_hora*>.log|Registra las actividades relacionadas con el cuadro de diálogo de preferencias de Configuration Manager en el equipo Mac, como el estado general y el registro de errores.<br /><br /> Este archivo de registro se encuentra en la carpeta ~/Library/Logs del equipo Mac.|  
+|Nombre del registro|Detalles|Ubicación|
+|--------------|-------------|-------------|
+|CCMClient-&lt;*fecha_hora*>.log|Registra actividades relacionadas con operaciones de cliente de Mac, como la administración de aplicaciones, el inventario y el registro de errores.| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent-&lt;*fecha_hora*>.log|Registra información relacionada con las operaciones de cliente, como las operaciones de inicio y cierre de sesión de usuario, y la actividad del equipo Mac.| `~/Library/Logs`|  
+|CCMNotifications-&lt;*fecha_hora*>.log|Registra las actividades relacionadas con las notificaciones de Configuration Manager que se muestran en el equipo Mac.| `~/Library/Logs`|  
+|CCMPrefPane-&lt;*fecha_hora*>.log|Registra las actividades relacionadas con el cuadro de diálogo de preferencias de Configuration Manager en el equipo Mac, como el estado general y el registro de errores.| `~/Library/Logs`|  
 
 El archivo de registro **SMS_DM.log** del servidor de sistema de sitio además registra la comunicación entre equipos Mac y el punto de administración que está configurado para dispositivos móviles y equipos Mac.  
-
 
 ## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> Archivos de registro del servidor
 
@@ -277,6 +277,7 @@ En la tabla siguiente se incluyen los archivos de registro que se encuentra en l
 |CertMgr.log|Registra actividades de certificado de comunicaciones dentro de sitios.|Servidor de sistema de sitio|  
 |chmgr.log|Registra las actividades del administrador de mantenimiento del cliente.|Servidor de sitio|  
 |Cidm.log|Registra los cambios realizados en la configuración de cliente por el administrador de datos de instalación de cliente (CIDM).|Servidor de sitio|  
+|CollectionAADGroupSyncWorker.log | A partir de la versión 2002, archivo de registro para la sincronización de los resultados de pertenencia a colecciones con Azure Active Directory. En la versión 1910 y anteriores, el registro de esta característica se combinaba en SMS_AZUREAD_DISCOVERY_AGENT.log. | Servidor de sitio|
 |colleval.log|Registra los detalles acerca de la creación, cambio y eliminación de recopilaciones por parte del Evaluador de recopilaciones.|Servidor de sitio|  
 |compmon.log|Registra el estado de los subprocesos de componente supervisados del servidor de sitio.|Servidor de sistema de sitio|  
 |compsumm.log|Registra tareas del generador de resumen de estado de componente.|Servidor de sitio|  
@@ -284,7 +285,7 @@ En la tabla siguiente se incluyen los archivos de registro que se encuentra en l
 |dataldr.log|Registra información sobre el procesamiento de archivos MIF y el inventario de hardware en la base de datos de Configuration Manager.|Servidor de sitio|  
 |ddm.log|Registra actividades del administrador de datos de detección.|Servidor de sitio|  
 |despool.log|Registra las transferencias de comunicaciones de sitio a sitio entrantes.|Servidor de sitio|  
-|distmgr.log|Registra detalles acerca de las actualizaciones de información, la creación, la compresión y la replicación de datos de paquetes.|Servidor de sitio|  
+|distmgr.log|Registra detalles acerca de las actualizaciones de información, la creación, la compresión y la replicación de datos de paquetes. También puede incluir otras actividades del componente del administrador de distribución. Por ejemplo, la instalación de un punto de distribución, los intentos de conexión y la instalación de componentes. Para obtener más información sobre otras funciones que usan este registro, vea [Punto de conexión de servicio](#BKMK_WITLog) e [Implementación de sistema operativo](#BKMK_OSDLog).|Servidor de sitio|  
 |EPCtrlMgr.log|Registra información sobre la sincronización de información de amenazas de malware desde el servidor de rol de sistema de sitio de Endpoint Protection en la base de datos de Configuration Manager.|Servidor de sitio|  
 |EPMgr.log|Registra el estado del rol de sistema de sitio de Endpoint Protection.|Servidor de sistema de sitio|  
 |EPSetup.log|Proporciona información sobre la instalación del rol de sistema de sitio de Endpoint Protection.|Servidor de sistema de sitio|  
@@ -296,7 +297,7 @@ En la tabla siguiente se incluyen los archivos de registro que se encuentra en l
 |inboxmgr.log|Registra actividades de transferencia de archivos entre las carpetas de bandeja de entrada.|Servidor de sitio|  
 |inboxmon.log|Registra el procesamiento de archivos de la bandeja de entrada y las actualizaciones de contador de rendimiento.|Servidor de sitio|  
 |invproc.log|Registra el reenvío de archivos MIF de un sitio secundario a su sitio primario.|Servidor de sitio|  
-|migmctrl.log|Registra información sobre las acciones de migración que implican trabajos de migración, puntos de distribución compartidos y actualizaciones de puntos de distribución.|Sitio de nivel superior de la jerarquía de Configuration Manager y cada sitio primario secundario.<br /><br /> En una jerarquía de varios sitios primarios, use el archivo de registro creado en el sitio de administración central.|  
+|migmctrl.log|Registra información sobre las acciones de migración que implican trabajos de migración, puntos de distribución compartidos y actualizaciones de puntos de distribución.|Sitio de nivel superior de la jerarquía de Configuration Manager y cada sitio primario secundario. En una jerarquía de varios sitios primarios, use el archivo de registro creado en el sitio de administración central.|  
 |mpcontrol.log|Registra el registro del punto de administración en el Servicio de nombres de Internet de Windows (WINS). Registra la disponibilidad del punto de administración cada 10 minutos.|Servidor de sistema de sitio|  
 |mpfdm.log|Registra las acciones del componente de punto de administración que mueve los archivos de cliente a la carpeta INBOXES correspondiente en el servidor de sitio.|Servidor de sistema de sitio|  
 |mpMSI.log|Registra los detalles sobre la instalación de un punto de administración.|Servidor de sitio|  
@@ -323,7 +324,7 @@ En la tabla siguiente se incluyen los archivos de registro que se encuentra en l
 |sitecomp.log|Registra detalles sobre el mantenimiento de los componentes de sitio instalados en todos los servidores de sistema de sitio en el sitio.|Servidor de sitio|  
 |sitectrl.log|Registra cambios de configuración de sitio realizados en objetos de control de sitio en la base de datos.|Servidor de sitio|  
 |sitestat.log|Registra el proceso de supervisión de disponibilidad y espacio en disco de todos los sistemas de sitio.|Servidor de sitio|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| Archivo de registro para la sincronización de los resultados de pertenencia a recopilaciones con Azure Active Directory. Primero se presentó como una característica en versión preliminar en la versión 1906 de Configuration Manager.| Servidor de sitio|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Archivo de registro para la detección de usuarios y grupos de usuarios de Azure Active Directory (Azure AD). En la versión 1910 y anteriores, también se incluía la sincronización de los resultados de la pertenencia a colecciones en Azure AD.| Servidor de sitio|
 |SMS_BUSINESS_APP_PROCESS_MANAGER. log|Archivo de registro del componente que sincroniza las aplicaciones de Microsoft Store para Empresas.|Servidor de sitio|
 |SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.|
 |SMS_OrchestrationGroup.log| Archivo de registro para grupos de orquestaciones|Servidor de sitio|
@@ -355,7 +356,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |ConfigMgrSetup.log|Registra resultados detallados del programa de instalación de servidor de sitio.|Servidor de sitio|  
 |ConfigMgrSetupWizard.log|Registra información relacionada con la actividad del Asistente para instalación.|Servidor de sitio|  
 |SMS_BOOTSTRAP.log|Registra información sobre el progreso del inicio del proceso de instalación de sitio secundario. Los detalles del proceso de instalación figuran en ConfigMgrSetup.log.|Servidor de sitio|  
-|smstsvc.log|Registra información sobre la instalación, el uso y la eliminación de un servicio de Windows que se usa para probar la conectividad de red y los permisos entre servidores, mediante la cuenta de equipo del servidor que inicia la conexión.|Registros de servidor de sistema de sitio y servidor de sitio|  
+|smstsvc.log|Registra información sobre la instalación, el uso y la eliminación de un servicio de Windows. Windows usa este servicio para probar la conectividad de red y los permisos entre servidores. Usa la cuenta de equipo del servidor que crea la conexión.|Registros de servidor de sistema de sitio y servidor de sitio|  
 
 ### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> Punto de servicio de Data Warehouse
 
@@ -426,7 +427,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |sitecomp.log|Registra los detalles de la instalación del de punto de conexión de servicio.|Servidor de sitio|  
 |SmsAdminUI.log|Registra la actividad de consola de Configuration Manager.|Equipo que ejecuta la consola de Configuration Manager|  
 |SMS_CLOUDCONNECTION.log|Registra información sobre los servicios en la nube.|Equipo con el punto de conexión de servicio|
-|SMSProv.log|Registra las actividades realizadas por el proveedor de SMS. Las actividades de la consola de Configuration Manager usan el proveedor de SMS.|Equipo con el proveedor de SMS|  
+|SMSProv.log|Registra las actividades del proveedor de SMS. Las actividades de la consola de Configuration Manager usan el proveedor de SMS.|Equipo con el proveedor de SMS|  
 |SrvBoot.log|Registra los detalles sobre el servicio de instalador de punto de conexión de servicio.|Equipo con el punto de conexión de servicio|  
 |Statesys.log|Registra el procesamiento de mensajes de administración de dispositivos móviles.|Sitio primario y sitio de administración central|  
 
@@ -527,7 +528,7 @@ En la tabla siguiente se incluyen los archivos de registro de Configuration Mana
 |Crpmsi.log|Registra detalles sobre la instalación y configuración del punto de registro de certificado.|Punto de registro de certificados|  
 |NDESPlugin.log|Registra actividades de inscripción de certificado y verificación de desafío.|Módulo de directivas de Configuration Manager y el servicio de inscripción de dispositivos de red|  
 
-Además de los archivos de registro de Configuration Manager, revise los registros de aplicaciones de Windows en el Visor de eventos del servidor que ejecuta el Servicio de inscripción de dispositivos de red y el servidor que hospeda el punto de registro de certificado. Por ejemplo, busque mensajes del origen **NetworkDeviceEnrollmentService**. 
+Junto con los archivos de registro de Configuration Manager, revise los registros de aplicaciones de Windows en el Visor de eventos del servidor que ejecuta el Servicio de inscripción de dispositivos de red y el servidor en el que se hospeda el punto de registro de certificado. Por ejemplo, busque mensajes del origen **NetworkDeviceEnrollmentService**.
 
 También puede utilizar los siguientes archivos de registro:  
 
@@ -559,12 +560,11 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|Registra detalles sobre la implementación del servicio de puerta de enlace de administración en la nube, el estado del servicio en curso y datos de uso asociados con el servicio.<br>Se puede configurar el nivel de registro si se modifica el valor **Nivel de registro** de la clave del Registro HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER.|La carpeta *installdir* en el servidor de sitio primario o CAS.|
-|CMGSetup.log<sup>[Nota 1](#bkmk_note1)</sup>|Registra detalles sobre la segunda fase de la implementación de Cloud Management Gateway (implementación local en Azure).<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
-|CMGHttpHandler.log<sup>[Nota 1](#bkmk_note1)</sup>|Registra detalles sobre el enlace el controlador http de Cloud Management Gateway con Internet Information Services en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.<br>A partir de la versión 1806, este registro no existe. Las funciones de los componentes se combina con el componente de servicio de CMG. Puede consultar el registro CMGService.log.<!--SCCMDocs-pr issue #2822-->|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
-|CMGService.log<sup>[Nota 1](#bkmk_note1)</sup>|Registra detalles sobre el componente principal del servicio Cloud Management Gateway en Azure.<br>Puede configurar el nivel de registro mediante la configuración de **Nivel de seguimiento** [**Información** (predeterminada), **Detallado**, **Error**] en la pestaña de **configuración de Azure Portal\Cloud Services**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
-|SMS_Cloud_<br>ProxyConnector.log|Registra detalles sobre la configuración de conexiones entre el servicio de puerta de enlace de administración en la nube y el punto de conexión de la puerta de enlace de administración en la nube.|Servidor de sistema de sitio|
-|CMGContentService.log<sup>[Nota 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->Al habilitar una instancia de CMG para que también sirva contenido del almacenamiento de Azure, este registro almacena los detalles de ese servicio.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
+|CloudMgr.log|Registra detalles sobre la implementación del servicio de puerta de enlace de administración en la nube, el estado del servicio en curso y datos de uso asociados con el servicio. Para configurar el nivel de registro, edite el valor de **Nivel de registro** en la siguiente clave del Registro: `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|La carpeta *installdir* en el servidor de sitio primario o CAS.|
+|CMGSetup.log <sup>[Nota 1](#bkmk_note1)</sup>|Registra detalles sobre la segunda fase de la implementación de Cloud Management Gateway (implementación local en Azure). Para configurar el nivel de registro, use la opción **Nivel de seguimiento** (**Información** (predeterminada), **Detallado**, **Error**) en la pestaña **Azure Portal\Configuración de servicios en la nube**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
+|CMGService.log <sup>[Nota 1](#bkmk_note1)</sup>|Registra detalles sobre el componente principal del servicio Cloud Management Gateway en Azure. Para configurar el nivel de registro, use la opción **Nivel de seguimiento** (**Información** (predeterminada), **Detallado**, **Error**) en la pestaña **Azure Portal\Configuración de servicios en la nube**.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
+|SMS_Cloud_ProxyConnector.log|Registra detalles sobre la configuración de conexiones entre el servicio de puerta de enlace de administración en la nube y el punto de conexión de la puerta de enlace de administración en la nube.|Servidor de sistema de sitio|
+|CMGContentService.log <sup>[Nota 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->Al habilitar una instancia de CMG para que también sirva contenido del almacenamiento de Azure, este registro almacena los detalles de ese servicio.|**%approot%\logs** en el servidor de Azure o la carpeta SMS/Registros en el servidor de sistema de sitio|
 
 - Para solucionar problemas con implementaciones, use **CloudMgr.log** y **CMGSetup.log**
 - Para solucionar problemas de estado del servicio, utilice **CMGService.log** y **SMS_Cloud_ProxyConnector.log**.
@@ -594,7 +594,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|Registra la instalación de la consola de Configuration Manager.|Equipo que ejecuta la consola de Configuration Manager|  
 |SmsAdminUI.log|Registra información acerca del funcionamiento de la consola de Configuration Manager.|Equipo que ejecuta la consola de Configuration Manager|  
-|SMSProv.log|Registra las actividades realizadas por el proveedor de SMS. Las actividades de la consola de Configuration Manager usan el proveedor de SMS.|Servidor de sitio o servidor de sistema de sitio|  
+|SMSProv.log|Registra las actividades del proveedor de SMS. Las actividades de la consola de Configuration Manager usan el proveedor de SMS.|Servidor de sitio o servidor de sistema de sitio|  
 
 ### <a name="content-management"></a><a name="BKMK_ContentLog"></a> Administración de contenido
 
@@ -687,7 +687,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
-|migmctrl.log|Registra información acerca de las acciones de migración que implican trabajos de migración, puntos de distribución compartidos y actualizaciones de puntos de distribución.|Sitio de nivel superior de la jerarquía de Configuration Manager y cada sitio primario secundario.<br /><br /> En una jerarquía de varios sitios primarios, utilice el archivo de registro creado en el sitio de administración central.|  
+|migmctrl.log|Registra información acerca de las acciones de migración que implican trabajos de migración, puntos de distribución compartidos y actualizaciones de puntos de distribución.|Sitio de nivel superior de la jerarquía de Configuration Manager y cada sitio primario secundario. En una jerarquía de varios sitios primarios, utilice el archivo de registro creado en el sitio de administración central.|  
 
 ### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a> Dispositivos móviles
 
@@ -772,7 +772,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |smpperf.log|Registra las actualizaciones de contador de rendimiento de punto de migración de estado.|Servidor de sistema de sitio|  
 |smspxe.log|Registra detalles sobre las respuestas a los clientes que usan arranque PXE y detalles sobre la expansión de archivos e imágenes de arranque.|Servidor de sistema de sitio|  
 |smssmpsetup.log|Registra los detalles de instalación y configuración acerca del punto de migración de estado.|Servidor de sistema de sitio|
-| SMS_PhasedDeployment.log| Archivo de registro de las implementaciones por fases|Sitio de nivel superior de la jerarquía de Configuration Manager| 
+| SMS_PhasedDeployment.log| Archivo de registro de las implementaciones por fases|Sitio de nivel superior de la jerarquía de Configuration Manager|
 |Smsts.log|Registra las actividades de secuencia de tareas.|Cliente|  
 |TSAgent.log|Registra el resultado de las dependencias de secuencia de tareas antes de iniciar una secuencia de tareas.|Cliente|  
 |TaskSequenceProvider.log|Registra los detalles sobre las secuencias de tareas cuando se importan, exportan o editan.|Servidor de sistema de sitio|  
@@ -828,17 +828,17 @@ En la tabla siguiente se indican los archivos de registro que contienen informac
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
-|AlternateHandler.log|Registra los detalles cuando el cliente llama a la interfaz COM de hacer clic y ejecutar de Office para descargar e instalar las actualizaciones de cliente de Office 365. Es similar al uso de WuaHandler cuando llama a la API del agente de Windows Update para descargar e instalar las actualizaciones de Windows.<!-- SCCMDocs#888 -->|Cliente|
+|AlternateHandler.log|Registra los detalles cuando el cliente llama a la interfaz COM de hacer clic y ejecutar de Office para descargar e instalar las actualizaciones de cliente de Aplicaciones de Microsoft 365 para empresas. Es similar al uso de WuaHandler cuando llama a la API del agente de Windows Update para descargar e instalar las actualizaciones de Windows.<!-- SCCMDocs#888 -->|Cliente|
 |Ccmperf.log|Registra actividades relacionadas con el mantenimiento y la captura de datos relacionados con los contadores de rendimiento de cliente.|Cliente|
 |DeltaDownload.log|Registra información sobre la descarga de actualizaciones rápidas y actualizaciones descargadas mediante Optimización de entrega.|Cliente|  
 |PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Cuando las actualizaciones se descargan de forma manual, este archivo de registro se encontrará en el directorio %temp% del usuario que ejecuta la consola en el equipo en el que se ejecute la consola. Para las reglas de implementación automática, este archivo de registro se encontrará en el servidor del sitio en %windir%\CCM\Logs si el cliente de Configuration Manager está instalado en el servidor del sitio.|  
 |PolicyEvaluator.log|Registra los detalles acerca de la evaluación de directivas en los equipos cliente, incluidas las directivas de las actualizaciones de software.|Cliente|  
 |RebootCoordinator.log|Registra los detalles acerca de la coordinación de reinicios del sistema en los equipos cliente después de que se instalan las actualizaciones de software.|Cliente|  
 |ScanAgent.log|Registra los detalles acerca de cómo examinar las solicitudes de actualización de software, la ubicación de WSUS y acciones relacionadas.|Cliente|  
-|SdmAgent.log|Registra detalles sobre cómo realizar un seguimiento de la corrección y la compatibilidad. Pero en el archivo de registro de actualizaciones de software, Updateshandler.log, se proporcionan detalles más informativos sobre cómo instalar las actualizaciones de software necesarias a efectos de compatibilidad.<br /><br /> Este archivo de registro se comparte con la configuración de compatibilidad.|Cliente|  
+|SdmAgent.log|Registra detalles sobre cómo realizar un seguimiento de la corrección y la compatibilidad. Pero en el archivo de registro de actualizaciones de software, Updateshandler.log, se proporcionan detalles más informativos sobre cómo instalar las actualizaciones de software necesarias a efectos de compatibilidad. Este archivo de registro se comparte con la configuración de compatibilidad.|Cliente|  
 |ServiceWindowManager.log|Registra los detalles acerca de la evaluación de las ventanas de mantenimiento.|Cliente|
-|SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.| 
-|SMS_OrchestrationGroup.log| Archivo de registro para grupos de orquestaciones|Servidor de sitio| 
+|SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.|
+|SMS_OrchestrationGroup.log| Archivo de registro para grupos de orquestaciones|Servidor de sitio|
 |SmsWusHandler.log|Registra los detalles sobre el proceso de análisis de la herramienta de inventario para Microsoft Update.|Cliente|  
 |StateMessage.log|Registra detalles sobre los mensajes de estado de actualizaciones de software que se crean y envían al punto de administración.|Cliente|  
 |SUPSetup.log|Registra detalles acerca de la instalación de un punto de actualización de software. Cuando se completa la instalación del punto de actualización de software, **Installation was successful** se escribe en este archivo de registro.|Servidor de sistema de sitio|  
@@ -895,7 +895,6 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |SoftwareDistribution.log|Registra detalles sobre las actualizaciones de software que se sincronizan del origen de actualizaciones configurado a la base de datos del servidor de WSUS.|Servidor WSUS|  
 
 Estos archivos de registro se encuentran en la carpeta `%ProgramFiles%\Update Services\LogFiles`.
-
 
 ## <a name="see-also"></a>Vea también
 

@@ -2,7 +2,7 @@
 title: Autenticación basada en tokens para CMG
 titleSuffix: Configuration Manager
 description: Registre un cliente de un solo token en la red interna o cree un token de registro masivo para dispositivos basados en Internet.
-ms.date: 04/01/2020
+ms.date: 04/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae92fa2f8e3ee3270de4777fd889bc5fc16a6de4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694143"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587273"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticación basada en tokens para Cloud Management Gateway
 
@@ -99,7 +99,7 @@ El token no se almacena en el cliente ni en el sitio. Asegúrese de copiar el to
 
 #### <a name="lifetime"></a>/lifetime
 
-Se usa con el parámetro `/new` para especificar el período de validez del token. Especifique un valor entero en minutos. El valor predeterminado es 4320 minutos (tres días).
+Se usa con el parámetro `/new` para especificar el período de validez del token. Especifique un valor entero en minutos. El valor predeterminado es 4320 minutos (tres días). El valor máximo es de 10 080 (7 días).
 
 Ejemplo: `BulkRegistrationTokenTool.exe /lifetime:4320`
 

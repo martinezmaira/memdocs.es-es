@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275074"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506597"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Configuración de Windows 10 (y versiones posteriores) para proteger dispositivos mediante Intune
 
@@ -154,7 +154,7 @@ Esta configuración se aplica a todos los tipos de redes.
    - **Códigos de tipo ICMP de IPv6 de descubrimiento de vecinos**  
    - **ICMP**  
    - **Códigos de tipo ICMP de IPv6 de descubrimiento de enrutadores**  
-   - **Tráfico de red DHCP de IPv4 e IPv6**  
+   - **Tráfico de red DHCP de IPv4 e IPv6**   
 
 - **Comprobación de la lista de revocación de certificados**  
   **Valor predeterminado**: No configurado  
@@ -748,17 +748,6 @@ Esta configuración se aplica de forma específica a las unidades de datos fijas
     - **Realizar copia de seguridad de contraseñas de recuperación y paquetes de claves**  
     - **Realizar copia de seguridad solo de contraseñas de recuperación**  
 
-  - **Rotación de contraseña de recuperación controlada por el cliente**  
-    **Valor predeterminado**: Rotación de claves habilitada para dispositivos unidos a Azure AD  
-    CSP de BitLocker: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    Esta configuración inicia una rotación de la contraseña de recuperación controlada por el cliente después de una recuperación de la unidad del sistema operativo (mediante bootmgr o WinRE).  
-
-    - No configurado  
-    - Rotación de claves deshabilitada  
-    - Rotación de claves habilitada para dispositivos unidos a Azure AD  
-    - Rotación de claves habilitada para Azure AD y dispositivos unidos a Azure AD híbrido  
-
   - **Almacenar la información de recuperación en Azure Active Directory antes de habilitar BitLocker**  
     **Valor predeterminado**: No configurado  
  
@@ -942,6 +931,9 @@ Bloquee los siguientes elementos para evitar las amenazas de correo electrónico
 > **En máquinas cliente X86**:  
 > *C:\Archivos de programa\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> Para obtener más información, vea [Recomendaciones de detección de virus para equipos de Enterprise que ejecutan versiones de Windows admitidas actualmente](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### <a name="controlled-folder-access"></a>Acceso controlado a carpetas  
 
@@ -1264,9 +1256,8 @@ Use estas opciones para configurar la seguridad local en dispositivos Windows 10
   **Valor predeterminado**: No configurado  
   CSP de LocalPoliciesSecurityOptions: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **Bloquear**: los usuarios pueden presionar el botón de expulsión física de un dispositivo portátil acoplado para desacoplar el dispositivo de forma segura.  
-  - **No configurado**: un usuario tiene que iniciar sesión en el dispositivo y recibir permiso para desacoplarlo.  
+  - **Bloquear**: un usuario tiene que iniciar sesión en el dispositivo y recibir permiso para desacoplarlo.
+  - **No configurado**: los usuarios pueden presionar el botón de expulsión física de un dispositivo portátil acoplado para desacoplarlo de forma segura.
 
 - **Instalar controladores de impresora para impresoras compartidas**  
   **Valor predeterminado**:  No configurado  
@@ -1309,8 +1300,8 @@ Use estas opciones para configurar la seguridad local en dispositivos Windows 10
   CSP de LocalPoliciesSecurityOptions: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **Habilitar**: no es necesario que los usuarios presionen CTRL + ALT + SUPR para iniciar la sesión.  
-  - **Sin configurar**: exija que los usuarios presionen CTRL + ALT + SUPR antes de iniciar sesión en Windows.  
+  - **Habilitar**: exija que los usuarios presionen CTRL+ALT+SUPR antes de iniciar sesión en Windows.
+  - **Sin configurar**: no es necesario que los usuarios presionen CTRL+ALT+SUPR para iniciar sesión.
 
 - **Comportamiento de extracción de tarjeta inteligente**  
   **Valor predeterminado**: Bloquear la estación de trabajo   

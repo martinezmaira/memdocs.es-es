@@ -10,12 +10,12 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a13a22cc7e9ced580229306ab3680fca61319992
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706393"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126014"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación de Windows 10 en el piloto
 
@@ -219,8 +219,7 @@ Configuration Manager crea una directiva de configuración para configurar los d
 
 Supervise la configuración de los dispositivos de Análisis de escritorio. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda el nodo **Servicio de Análisis de escritorio** y seleccione el panel **Mantenimiento de la conexión**.  
 
-Configuration Manager sincroniza las recopilaciones en los 60 minutos siguientes a la creación de la conexión. En el portal de Análisis de escritorio, vaya a **Piloto global** y vea las recopilaciones de dispositivos de Configuration Manager.
-
+Configuration Manager sincroniza las recopilaciones en los 60 minutos siguientes a la creación de la conexión. En el portal de Análisis de escritorio, vaya a **Piloto global** y vea las recopilaciones de dispositivos de Configuration Manager. El resto del portal puede tardar entre dos y tres días en mostrar datos completos. Para más información, consulte [Latencia de datos](troubleshooting.md#data-latency).
 
 ## <a name="create-a-desktop-analytics-deployment-plan"></a>Crear un plan de implementación de Análisis de escritorio
 

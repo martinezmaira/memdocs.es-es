@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407753"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771429"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -31,7 +31,7 @@ Las aplicaciones del Portal de empresa, el sitio web del Portal de empresa y la 
 
 ## <a name="customizing-the-user-experience"></a>Personalización de la experiencia del usuario
 
-Con la personalización de la experiencia del usuario final, podrá ofrecer una experiencia conocida y útil a los usuarios finales. Para ello, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Administración de inquilinos** > **Personalización** y, después, configure las opciones necesarias. Esta configuración se aplicará a las aplicaciones del Portal de empresa, el sitio web del Portal de empresa y la aplicación de Intune en Android.
+Con la personalización de la experiencia del usuario final, podrá ofrecer una experiencia conocida y útil a los usuarios finales. Para ello, vaya a [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Administración de inquilinos** > **Personalización**, donde puede editar la directiva predeterminada o crear hasta 10 directivas de destino de grupo. Esta configuración se aplicará a las aplicaciones del Portal de empresa, el sitio web del Portal de empresa y la aplicación de Intune en Android.
 
 ## <a name="branding"></a>Personalización de marca
 
@@ -93,6 +93,7 @@ En la siguiente tabla se proporcionan detalles de configuración adicionales:
 | URL de la declaración de privacidad | 79 | Configure la declaración de privacidad de su organización para que aparezca cuando los usuarios hacen clic en los vínculos de privacidad. Debe especificar una dirección URL válida en el formato `https://www.contoso.com`. |
 | Privacy message in the Company Portal for (Mensaje de privacidad en el Portal de empresa para iOS o iPadOS) | 520 | Mantenga el valor predeterminado o establezca un mensaje personalizado para mostrar los elementos que la organización puede o no puede ver en los dispositivos iOS o iPad administrados. Puede usar Markdown para agregar viñetas, negritas, cursivas y vínculos. |
 | Inscripción de dispositivos | No aplicable | Especifique si se debe solicitar a los usuarios que se inscriban en la administración de dispositivos móviles y cómo. Puede ver los detalles a continuación. |
+| Device ownership notification (Notificación de propiedad del dispositivo) | No aplicable | Envíe una notificación de inserción a los usuarios del Portal de empresa de Android y de iOS cuando el tipo de propiedad del dispositivo haya cambiado de personal a corporativo. Esta notificación de inserción se establece de forma predeterminada como desactivada. Cuando la propiedad del dispositivo se establece en propiedad corporativa, Intune tiene mayor acceso al dispositivo, que incluye el inventario completo de la aplicación, la rotación de claves de FileVault, la recuperación del número de teléfono y una selección de acciones remotas. Para obtener más información, vea [Cambiar la propiedad del dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="device-enrollment-setting-options"></a>Opciones de configuración de inscripción de dispositivos
 
@@ -188,7 +189,7 @@ Algunas plataformas y configuraciones no realizar permiten acciones de autoservi
 <sup>(4)</sup> **Cambiar nombre** solo cambia el nombre del dispositivo en la aplicación Portal de empresa o en el portal web, no en el dispositivo.<br>
 <sup>(5)</sup> **Borrar** no está disponible en los dispositivos iOS o iPadOS inscritos por el usuario.<br>
 <sup>(6)</sup> **Restablecer el código de acceso** no se admite en algunas configuraciones de Android y Android Enterprise. Para más información, consulte [Restablecimiento o eliminación del código de acceso de un dispositivo en Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> **Retirar** y **Borrar** no están disponibles en escenarios de propietario del dispositivo Android Enterprise (COPE, COBO, COSU).<br> 
+<sup>(7)</sup> **Retirar** y **Borrar** no están disponibles en escenarios de propietario del dispositivo Android Enterprise (COPE, COBO, COSU).<br>
 <sup>(8)</sup> **Restablecer el código de acceso** no se admite en los dispositivos iOS o iPadOS inscritos por el usuario.
 
 ## <a name="next-steps"></a>Pasos siguientes

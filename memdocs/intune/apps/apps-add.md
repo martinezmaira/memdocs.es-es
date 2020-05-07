@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324741"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023255"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Incorporación de aplicaciones a Microsoft Intune 
 
@@ -56,8 +56,8 @@ En la tabla siguiente se enumeran los tipos de aplicaciones específicas y cómo
 | Aplicaciones de la Tienda Windows Phone 8.1  | Aplicación de la tienda  | Seleccione **Windows Phone 8.1** como el **tipo de aplicación** y escriba la dirección URL de Microsoft Store de la aplicación. |
 | Aplicaciones de Microsoft Store  | Aplicación de la tienda  | Seleccione **Windows** como el **tipo de aplicación** y escriba la dirección URL de Microsoft Store de la aplicación. |
 | Aplicaciones administradas de Google Play | Aplicación de la tienda  | Seleccione **Google Play administrado** para **Tipo de aplicación**, busque la aplicación y selecciónela en Intune. |
-| Aplicaciones de Office 365 para Windows 10  | Aplicación de la tienda (Office 365) | Seleccione **Windows 10** en **Conjunto de aplicaciones Office 365**  como el **tipo de aplicación** y después seleccione la aplicación de Office 365 que quiera instalar.  |
-| Aplicaciones de Office 365 para macOS | Aplicación de la tienda (Office 365) | Seleccione **macOS** en **Conjunto de aplicaciones Office 365** como el **tipo de aplicación** y después seleccione el paquete de aplicación de Office 365. |
+| Aplicaciones de Office 365 para Windows 10  | Aplicación de la tienda (Office 365) | Seleccione **Windows 10** en **Aplicaciones de Microsoft 365**  como el **tipo de aplicación** y, después, seleccione la aplicación de Office 365 que quiera instalar.  |
+| Aplicaciones de Office 365 para macOS | Aplicación de la tienda (Office 365) | Seleccione **macOS** en **Aplicaciones de Microsoft 365** como el **tipo de aplicación** y, después, seleccione el conjunto de aplicaciones de Office 365. |
 | Microsoft Edge versión 77 y posteriores para Windows 10 | Aplicación de la tienda | Seleccione **Windows 10** en **Microsoft Edge, versión 77 y posteriores**, como el **tipo de aplicación**. |
 | Microsoft Edge versión 77 y posteriores para macOS | Aplicación de la tienda | Seleccione **macOS** en **Microsoft Edge, versión 77 y posteriores**, como el **tipo de aplicación**. |
 | Aplicaciones de línea de negocio (LOB) Android | Aplicación LOB | Seleccione la aplicación de **línea de negocio** como **tipo de aplicación**, seleccione el **archivo de paquete de aplicación** y después introduzca un archivo de instalación de Android con la extensión **.apk** .  |
@@ -121,7 +121,7 @@ Para más información sobre los tipos de aplicaciones que necesita la organizac
 Intune le permite modificar la funcionalidad de las aplicaciones que implementa para ayudarle a que se ajusten a los requisitos de cumplimiento y las directivas de seguridad de su empresa. Este control le permite determinar cómo se protegen los datos de su compañía. Las aplicaciones administradas de Intune están habilitadas con un amplio conjunto de directivas de protección de aplicaciones móviles, como por ejemplo:
 
 - Restricción de las funciones Copiar y pegar y Guardar como.
-- Configuración de vínculos web para que se abran dentro de la aplicación Intune Managed Browser.
+- Configuración de vínculos web para que se abran dentro de la aplicación Microsoft Edge
 - Habilitación del uso de varias identidades y el acceso condicional de nivel de aplicación.
 
 Las aplicaciones administradas de Intune también pueden habilitar la protección de aplicaciones sin necesidad de una inscripción, lo que le ofrece la posibilidad de aplicar directivas de prevención de pérdida de datos sin tener que administrar el dispositivo del usuario. Además, puede incorporar la administración de aplicaciones móviles en las aplicaciones de línea de negocio y móviles mediante Intune App SDK y la herramienta de ajuste de aplicaciones. Para obtener más información sobre estas herramientas, consulte [Información general del SDK para aplicaciones de Intune](../developer/app-sdk.md).
@@ -161,7 +161,7 @@ Se pueden usar categorías de aplicaciones para ordenar las aplicaciones de form
 
 Al agregar una aplicación a Intune, tiene la opción de seleccionar la categoría que quiera. Use los temas específicos de la plataforma para agregar una aplicación y asignar categorías. Para crear y editar sus propias categorías, use el procedimiento siguiente:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Seleccione **Aplicaciones** > **Categorías de aplicación**.  
     El panel **Categorías de aplicaciones** muestra una lista de las categorías actuales. 
 5. Realice cualquiera de las siguientes acciones:

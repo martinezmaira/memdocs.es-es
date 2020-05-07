@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo preparar los dispositivos Windows�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 32c148b695a47241c6646a2a7309f0a27f3b3070
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691053"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137922"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Preparación de dispositivos basados en Internet para la administración conjunta
 
@@ -65,7 +65,7 @@ Para los dispositivos basados en Internet en la segunda ruta, debe crear una apl
 
 3. En la pestaña **Habilitación**, copie la línea de comandos. Péguela en el Bloc de notas para guardarla para el proceso siguiente.  
 
-La línea de comandos siguiente es un ejemplo: `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
+La línea de comandos siguiente es un ejemplo: `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 Decida qué propiedades de línea de comandos necesita para su entorno:  
@@ -91,14 +91,14 @@ Decida qué propiedades de línea de comandos necesita para su entorno:
 
     Para obtener más información, consulte [Acerca de los parámetros y propiedades de instalación de cliente: PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
 
-El sitio publica información adicional de Azure AD para Cloud Management Gateway (CMG). Un cliente unido a Azure AD obtiene esta información de la instancia de CMG durante el proceso de ccmsetup, mediante el mismo inquilino al que está unido. Este comportamiento simplifica más la inscripción de dispositivos en la administración conjunta de un entorno con más de un inquilino de Azure AD. Las dos únicas propiedades de ccmsetup requeridas son **CCMHOSTNAME** y **SMSSiteCode**.<!--3607731-->
+El sitio publica información adicional de Azure AD para Cloud Management Gateway (CMG). Un cliente unido a Azure AD obtiene esta información de la instancia de CMG durante el proceso de ccmsetup, mediante el mismo inquilino al que está unido. Este comportamiento simplifica más la inscripción de dispositivos en la administración conjunta de un entorno con más de un inquilino de Azure AD. Las dos únicas propiedades de ccmsetup necesarias son **CCMHOSTNAME** y **SMSSITECODE**.<!--3607731-->
 
 > [!NOTE]
 > Si ya implementa el cliente de Configuration Manager desde Intune, actualice la aplicación de Intune con una línea de comandos nueva y un MSI nuevo. <!-- SCCMDocs-pr issue 3084 -->
 
 En el ejemplo siguiente se incluyen todas estas propiedades:
 
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001`
+`CCMSETUPCMD="CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001"`
 
 Para obtener más información, vea [Acerca de las propiedades de instalación de clientes](../core/clients/deploy/about-client-installation-properties.md).
 

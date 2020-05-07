@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359384"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210261"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
@@ -111,10 +111,10 @@ Puede agregar hasta **seis** elementos (aplicaciones y carpetas combinadas) para
 
 #### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, la pantalla de la base muestra solo las aplicaciones Safari, Correo y Bolsa. Se ha seleccionado la aplicación Correo para mostrar sus propiedades:
+En el ejemplo siguiente, en la pantalla del Dock se muestran las aplicaciones Safari, Correo y Bolsa. Se ha seleccionado la aplicación Correo para mostrar sus propiedades:
 
 > [!div class="mx-imgBorder"]
-> ![Configuración de ejemplo de la base de iOS/iPadOS](./media/ios-device-features-settings/FfFiUcP.png)
+> ![Ejemplo de configuración del Dock en el diseño de la pantalla principal de iOS/iPadOS en Intune](./media/ios-device-features-settings/dock-screen-mail-app.png)
 
 Cuando asigna la directiva a un iPhone, la base tiene un aspecto similar al de la siguiente imagen:
 
@@ -158,10 +158,15 @@ Puede agregar hasta **40** páginas en un dispositivo.
 
 #### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, se agrega una nueva página denominada **Contoso**. La página muestra las aplicaciones Buscar a mis amigos y Ajustes. Se ha seleccionado la aplicación Ajustes para mostrar sus propiedades:
+En el ejemplo siguiente, se agrega una nueva página denominada **Contoso**. En la página se muestran las aplicaciones Buscar a mis amigos y Ajustes:
 
 > [!div class="mx-imgBorder"]
-> ![Ejemplo de configuración de pantalla principal de iOS/iPadOS en Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> ![Diseño de la pantalla principal de iOS/iPadOS, nueva página Ajustes y ejemplo en Intune](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+
+Se ha seleccionado la aplicación Ajustes para mostrar sus propiedades:
+
+> [!div class="mx-imgBorder"]
+> ![Ejemplo de propiedades de la aplicación Ajustes en el diseño de la pantalla principal de iOS/iPadOS en Intune](./media/ios-device-features-settings/page-settings-app-properties.png)
 
 Cuando asigna la directiva a un iPhone, la página tiene un aspecto similar al de la siguiente imagen:
 
@@ -175,7 +180,7 @@ Cuando asigna la directiva a un iPhone, la página tiene un aspecto similar al d
 - **Agregar**: agregue notificaciones para las aplicaciones:
 
   > [!div class="mx-imgBorder"]
-  > ![Adición de notificaciones de aplicación en el perfil de iOS/iPadOS en Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > ![Adición de notificaciones de aplicación en el perfil de iOS/iPadOS en Intune](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
 
   - **Identificador de lote de aplicaciones**: escriba un identificador en **Identificador del lote de aplicaciones** para la aplicación que desea agregar. Consulte [Identificadores de lote para aplicaciones iOS/iPadOS integradas](bundle-ids-built-in-ios-apps.md) para ver algunos ejemplos.
   - **Nombre de la aplicación**: escriba el nombre de la aplicación que desea agregar. Este nombre se usa como referencia en el centro de administración de Microsoft Endpoint Manager. *No* se muestra en los dispositivos.
@@ -214,8 +219,10 @@ Esta característica se aplica a:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivos, también en el caso de la inscripción automatizada (con supervisión)
 
-- **Atributo de nombre de usuario de AAD**: Intune busca este atributo para cada usuario de Azure AD. Después, Intune rellena el campo correspondiente (como UPN) antes de generar el código XML que se instala en los dispositivos. Las opciones son:
+- **Dominio kerberos**: escriba la parte del dominio de la dirección URL. Por ejemplo, escriba `contoso.com`.
+- **Nombre principal de Kerberos**: Intune busca este atributo para cada usuario de Azure AD. Después, Intune rellena el campo correspondiente (como UPN) antes de generar el código XML que se instala en los dispositivos. Las opciones son:
 
+  - **No configurado**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo solicitará a los usuarios un nombre de entidad de seguridad de Kerberos cuando se implemente el perfil en los dispositivos. Se requiere un nombre de entidad de seguridad para que las MDM instalen perfiles de SSO.
   - **Nombre principal de usuario**: se analiza el UPN de la manera siguiente:
 
     > [!div class="mx-imgBorder"]
@@ -227,15 +234,22 @@ Esta característica se aplica a:
 
   - **Identificador de dispositivo de Intune** : Intune selecciona automáticamente el identificador de dispositivo de Intune.
 
-    De forma predeterminada, las aplicaciones solo tienen que usar el identificador de dispositivo. Pero si la aplicación usa el dominio kerberos y el identificador de dispositivo, puede escribir dicho dominio en el cuadro de texto Dominio kerberos.
+    De forma predeterminada, las aplicaciones solo tienen que usar el identificador de dispositivo. Pero si la aplicación usa el dominio kerberos y el identificador de dispositivo, puede escribir dicho dominio en el cuadro de texto **Dominio Kerberos**.
 
     > [!NOTE]
     > Si usa el identificador de dispositivo, mantenga vacío el dominio kerberos de forma predeterminada.
 
   - **Id. de dispositivo de Azure AD**
+  - **Nombre de cuenta SAM**: Intune rellena el nombre de la cuenta del Administrador de cuentas de seguridad (SAM) local.
 
-- **Dominio kerberos**: escriba la parte del dominio de la dirección URL. Por ejemplo, escriba `contoso.com`.
-- **Prefijos de dirección URL que usarán el inicio de sesión único**: **Agregue** cualquier dirección URL de la organización que exija la autenticación de inicio de sesión único de usuario.
+
+- **Aplicaciones**: **agregue** las aplicaciones de los dispositivos de los usuarios que pueden usar el inicio de sesión único.
+
+  La matriz `AppIdentifierMatches` debe incluir cadenas que coincidan con los identificadores del lote de aplicaciones. Estas cadenas pueden ser coincidencias exactas, como `com.contoso.myapp`, o pueden especificar una coincidencia de prefijo en el identificador de lote mediante el carácter comodín \*. El carácter comodín debe aparecer después de un carácter de punto (.) y solo puede hacerlo una vez, al final de la cadena, como `com.contoso.*`. Cuando se incluye un carácter comodín, se concede acceso a la cuenta a cualquier aplicación cuyo identificador de lote empiece por el prefijo.
+
+  Use **Nombre de la aplicación** para especificar un nombre descriptivo que ayude a identificar el identificador de lote.
+
+- **Prefijos de dirección URL**: **Agregue** cualquier dirección URL de la organización que exija la autenticación de inicio de sesión único de usuario.
 
   Por ejemplo, cuando un usuario se conecta a alguno de estos sitios, el dispositivo iOS/iPadOS usa las credenciales de inicio de sesión único. Los usuarios no tienen que escribir otras credenciales. Si la autenticación multifactor está habilitada, los usuarios tienen que escribir la segunda autenticación.
 
@@ -246,13 +260,7 @@ Esta característica se aplica a:
 
   Los patrones `http://.com` y `https://.com` coinciden con todas las direcciones URL HTTP y HTTPS, respectivamente.
 
-- **Aplicaciones que usarán el inicio de sesión único:** **agregue** las aplicaciones de los dispositivos de los usuarios que pueden usar el inicio de sesión único.
-
-  La matriz `AppIdentifierMatches` debe incluir cadenas que coincidan con los identificadores del lote de aplicaciones. Estas cadenas pueden ser coincidencias exactas, como `com.contoso.myapp`, o pueden especificar una coincidencia de prefijo en el identificador de lote mediante el carácter comodín \*. El carácter comodín debe aparecer después de un carácter de punto (.) y solo puede hacerlo una vez, al final de la cadena, como `com.contoso.*`. Cuando se incluye un carácter comodín, se concede acceso a la cuenta a cualquier aplicación cuyo identificador de lote empiece por el prefijo.
-
-  Use **Nombre de la aplicación** para especificar un nombre descriptivo que ayude a identificar el identificador de lote.
-
-- **Certificado de renovación de credenciales**: si usa certificados para la autenticación (no contraseñas), seleccione el certificado SCEP o PFX existente como certificado de autenticación. Normalmente, se trata del mismo certificado implementado en los usuarios para otros perfiles como VPN, Wi-Fi o correo electrónico.
+- **Certificado de renovación**: si usa certificados para la autenticación (no contraseñas), seleccione el certificado SCEP o PFX existente como certificado de autenticación. Normalmente, se trata del mismo certificado implementado en los usuarios para otros perfiles como VPN, Wi-Fi o correo electrónico.
 
 ## <a name="web-content-filter"></a>Filtro de contenido web
 
@@ -288,37 +296,24 @@ Esta característica se aplica a:
 
 - **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO. Las opciones son:
 
-  - **No configurado**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no usar extensiones de la aplicación. Para deshabilitar una extensión de la aplicación, puede cambiar el tipo de extensión de la aplicación de SSO a **No configurado**.
-  - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
+  - **No configurado**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo no usará extensiones de la aplicación. Para deshabilitar una extensión de la aplicación, puede cambiar el tipo de extensión de la aplicación de SSO a **No configurado**.
+  - **Microsoft Azure AD**: usa el complemento de Microsoft Enterprise Single Sign-On, que es una extensión de la aplicación de SSO de tipo redirección. Este complemento proporciona SSO para las cuentas de Active Directory en todas las aplicaciones compatibles con la característica [Enterprise Single Sign-On de Apple](https://developer.apple.com/documentation/authenticationservices). Use este tipo de extensión de la aplicación de SSO para habilitar el inicio de sesión único en las aplicaciones de Microsoft, las aplicaciones de la organización y los sitios web que se autentican mediante Azure AD.
 
-    En dispositivos iOS/iPad 13.0 +, puede configurar la **extensión de aplicación de inicio de sesión único de Microsoft Azure**  mediante este tipo de extensión de aplicación de SSO de redirección. La extensión de Microsoft Azure AD permite el inicio de sesión único entre las aplicaciones de Microsoft y las aplicaciones de la organización que usan Azure AD para la autenticación. La extensión de Azure AD actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario. Todas las aplicaciones que anteriormente usaban autenticación asincrónica con la aplicación Microsoft Authenticator seguirán recibiendo SSO con la extensión de SSO. La extensión de SSO de Azure AD no es compatible todavía con el SSO del explorador. Para obtener más información sobre SSO y el agente de autenticación de iOS/iPadOS, consulte [Configuración del inicio de sesión único en macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
-
-    **Para configurar la extensión de Microsoft Azure AD en iOS:**
-
-    1. Establezca **Tipo de extensión de la aplicación de SSO** en **Redirigir**.
-    2. Establezca **Id. de extensión** en `com.microsoft.azureauthenticator.ssoextension`.
-    3. Establezca **Id. de equipo** en `SGGM6D27TK`.
-    4. En el parámetro **Direcciones URL**, escriba las siguientes direcciones URL:
-
-        - `https://login.microsoftonline.com`
-        - `https://login.windows.net`
-        - `https://login.microsoft.com`
-        - `https://sts.windows.net`
-        - `https://login.partner.microsoftonline.cn`
-        - `https://login.chinacloudapi.cn`
-        - `https://login.microsoftonline.de`
-        - `https://login.microsoftonline.us`
-        - `https://login.usgovcloudapi.net`
-        - `https://login-us.microsoftonline.com`
+    El complemento de SSO actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario. Todas las aplicaciones que anteriormente usaban autenticación asincrónica con la aplicación Microsoft Authenticator seguirán recibiendo SSO con el [complemento de Microsoft Enterprise Single Sign-On para los dispositivos Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > Para lograr el inicio de sesión único con la extensión de Microsoft Azure AD de iOS/iPadOS, instale primero la aplicación Microsoft Authenticator de iOS/iPadOS en los dispositivos. El autenticador entrega la extensión de Azure AD a los dispositivos y la configuración de la extensión de la aplicación de SSO de MDM activa la extensión de Azure AD. Una vez que Authenticator y el perfil de extensión de la aplicación de SSO están instalados en los dispositivos, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo.
+    > Para lograr el inicio de sesión único con el tipo de extensión de la aplicación de SSO de Microsoft Azure AD, instale en primer lugar la aplicación Microsoft Authenticator de iOS/iPadOS en los dispositivos. La aplicación Authenticator entrega el complemento de Microsoft Enterprise Single Sign-On a los dispositivos y la configuración de la extensión de la aplicación de SSO de MDM activa el complemento. Una vez que Authenticator y el perfil de extensión de la aplicación de SSO están instalados en los dispositivos, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión en los dispositivos. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo. Para obtener más información sobre Authenticator, vea [Qué es la aplicación Microsoft Authenticator](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
 
+  - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
   - **Credenciales**: use una extensión de la aplicación de credenciales genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación de desafío y respuesta. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
   - **Kerberos**: use la extensión integrada de Kerberos de Apple, que se incluye en iOS 13.0 y iPadOS 13.0, y versiones posteriores. Esta opción es una versión específica de Kerberos de la extensión de la aplicación de **Credenciales**.
 
   > [!TIP]
   > Con los tipos **Redireccionamiento** y **Credenciales**, se agregan sus propios valores de configuración para pasar a través de la extensión. Si utiliza **Credenciales**, considere la posibilidad de usar las opciones de configuración integradas proporcionadas por Apple en el tipo **Kerberos**.
+
+- **Modo de dispositivo compartido** (solo Microsoft Azure AD): elija **Habilitar** si se va a implementar el complemento de Microsoft Enterprise Single Sign-On en dispositivos iOS/iPados configurados para la característica de modo de dispositivo compartido de Azure AD. Los dispositivos en modo compartido permiten a muchos usuarios iniciar sesión de forma global y fuera de las aplicaciones que admiten el modo de dispositivo compartido. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración. De forma predeterminada, los dispositivos iOS/iPad no están diseñados para compartirse entre varios usuarios.
+
+  Para obtener más información sobre el modo de dispositivo compartido y cómo habilitarlo, vea [Información general del modo de dispositivo compartido](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) y [Modo de dispositivo compartido para dispositivos iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
 
 - **Id. de extensión** (redireccionamiento y credenciales): escriba el identificador de lote que identifica la extensión de la aplicación de SSO, como `com.apple.extensiblesso`.
 
@@ -336,16 +331,16 @@ Esta característica se aplica a:
 - **Direcciones URL** (solo redireccionamiento): escriba los prefijos de dirección URL de los proveedores de identidades en cuyo nombre la extensión de la aplicación de redireccionamiento usa el inicio de sesión único. Cuando los usuarios se redirige a estas direcciones URL, la extensión de la aplicación de inicio de sesión único interviene y solicita el inicio de sesión único.
 
   - Todas las direcciones URL de los perfiles de extensión de la aplicación de inicio de sesión único de Intune deben ser únicas. No se puede repetir un dominio en ningún perfil de extensión de la aplicación de SSO, aunque se usen distintos tipos de extensiones de la aplicación de SSO.
-  - Las direcciones URL deben comenzar por http:// o https://.
+  - Las direcciones URL deben comenzar por `http://` or `https://`.
 
-- **Configuración adicional** (redireccionamiento y credenciales): escriba datos adicionales específicos de la extensión para pasarlos a la extensión de la aplicación de SSO:
+- **Configuración adicional** (Microsoft Azure AD, redireccionamiento y credenciales): escriba datos adicionales específicos de la extensión para pasarlos a la extensión de la aplicación de SSO:
   - **Clave**: escriba el nombre del elemento que quiere agregar, como `user name`.
   - **Tipo**: escriba el tipo de datos. Las opciones son:
 
     - String
     - Booleano: en **Valor de configuración**, escriba `True` o `False`.
     - Entero: en **Valor de configuración**, escriba un número.
-    
+
   - **Valor**: escriba los datos.
 
   - **Agregar**: seleccione esta opción para agregar las claves de configuración.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326452"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078981"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Restablecimiento o eliminación del código de acceso de un dispositivo en Intune
 
@@ -42,7 +42,7 @@ En este documento se describe el restablecimiento del código de acceso tanto en
 | macOS | No |
 | Windows | No |
 
-Para dispositivos Android, esto significa que el restablecimiento del código de acceso en el nivel de dispositivo solo se admite en dispositivos que ejecutan la versión 6.x o anterior, o en dispositivos Android Enterprise que se ejecutan en modo de pantalla completa. El motivo es que Google ha quitado la posibilidad de restablecer el código de acceso o la contraseña de un dispositivo Android 7 desde una aplicación otorgada por un administrador de dispositivos, y esto es aplicable a todos los proveedores MDM.
+Para dispositivos Android, esto significa que el restablecimiento del código de acceso en el nivel de dispositivo solo se admite en dispositivos que ejecutan la versión 6.x o anterior, o en dispositivos Android Enterprise que se ejecutan en modo de pantalla completa. El motivo es que Google ha quitado la posibilidad de restablecer el código de acceso o la contraseña de un dispositivo Android 7 desde una aplicación otorgada por un administrador de dispositivos, y esto es aplicable a todos los proveedores MDM.
 
 ## <a name="supported-platforms-for-android-enterprise-work-profile-passcode-reset"></a>Plataformas compatibles con el restablecimiento del código de acceso del perfil de trabajo en Android Enterprise
 
@@ -59,13 +59,15 @@ Para crear un nuevo código de acceso del perfil de trabajo, use la acción Rest
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) con uno de los siguientes roles: Administrador global de Azure Active Directory, administrador del servicio de Intune de Azure Active Directory, operador del departamento de soporte técnico o administrador de roles.
 2. Seleccione **Dispositivos** y, después, **Todos los dispositivos**.
-3. En la lista de dispositivos que administra, seleccione un dispositivo y después **Quitar código de acceso**.
+3. En la lista de dispositivos que administra, seleccione un dispositivo y después **Restablecer código acceso**.
 
-## <a name="reset-android-work-profile-passcodes"></a>Restablecer códigos de acceso de perfil de trabajo Android
+## <a name="reset-android-work-profile-and-device-owner-passcodes"></a>Restablecimiento de códigos de acceso de propietario del dispositivo y el perfil de trabajo de Android
 
 Los dispositivos compatibles Android Enterprise inscritos un con perfil de trabajo reciben una nueva contraseña de desbloqueo de perfil o un desafío de perfil administrado para el usuario final.
 
-En los dispositivos Android Enterprise versión 8.x o posterior que están inscritos con un perfil de trabajo, los usuarios finales reciben una notificación para activar el restablecimiento de código de acceso una vez completada la inscripción. La notificación se muestra si hay establecida y se requiere una contraseña de perfil de trabajo. Una vez introducido el código de acceso, la notificación desaparece.
+En los dispositivos de perfil de trabajo que se ejecutan en Android Enterprise versión 8.x o posterior, los usuarios finales reciben una notificación para activar el restablecimiento de código de acceso después de completar la inscripción. La notificación se muestra si hay establecida y se requiere una contraseña de perfil de trabajo. Una vez introducido el código de acceso, la notificación desaparece.
+
+En el caso de los dispositivos de usuario o de perfil de trabajo de Android Enterprise que se ejecutan en la versión 8. x o posterior, después de seleccionar el código de acceso restablecido en la consola, se presenta un código de acceso temporal al administrador de Intune de MEM. El código de acceso temporal debe especificarse en el dispositivo. El código de acceso temporal del dispositivo se mostrará en la consola durante siete días.
 
 
 ## <a name="remove-iosipados-passcodes"></a>Quitar códigos de acceso de iOS/iPadOS

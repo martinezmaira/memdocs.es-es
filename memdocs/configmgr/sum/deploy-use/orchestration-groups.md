@@ -2,7 +2,7 @@
 title: Grupos de orquestaciones
 titleSuffix: Configuration Manager
 description: Cree grupos de orquestaciones e implemente actualizaciones en ellos.
-ms.date: 04/01/2020
+ms.date: 04/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d9998f298cee24e9f10b3fd8c5e58d7b76200485
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702983"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254918"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Grupos de orquestaciones en Configuration Manager
 <!--3098816-->
@@ -138,7 +138,6 @@ Para eliminar un grupo de orquestación, selecciónelo y, después, haga clic en
    1. Determine por qué se produjo un error en la orquestación y resuelva los problemas.
    1. [Restablezca el estado de la orquestación para los miembros del grupo](#bkmk_reset).
    1. En el nodo **Grupo de orquestación**, haga clic en el botón **Iniciar orquestación** para reiniciarla.
-    Restablezca el estado mediante el botón **Iniciar orquestación**.  
    [![Iniciar orquestación](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
 
 

@@ -2,7 +2,7 @@
 title: Creación y ejecución de scripts
 titleSuffix: Configuration Manager
 description: Cree y ejecute scripts de PowerShell en dispositivos cliente.
-ms.date: 04/01/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1c15106eeecdac0377900d913160bc23614327db
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689663"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605191"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -98,7 +98,7 @@ Esta aprobación se utiliza principalmente para la fase de pruebas de desarrollo
 >Como práctica recomendada, no debe permitir que el autor de un script apruebe sus propios scripts. Solo se debe permitir en entornos de laboratorio. Piense en el impacto que puede implicar modificar esta configuración en un entorno de producción.
 
 ## <a name="security-scopes"></a>Ámbitos de seguridad
-*(Se introdujo con la versión 1710)*  
+  
 La funcionalidad de ejecución de scripts utiliza ámbitos de seguridad, una característica existente de Configuration Manager, para controlar la ejecución y creación de scripts mediante la asignación de etiquetas que representan grupos de usuarios. Para más información, consulte [Configuración de la administración basada en roles de Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a> Crear roles de seguridad para scripts
@@ -168,11 +168,11 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 5. Complete el asistente. El nuevo script se muestra en la lista **Script** con el estado **En espera de aprobación**. Para poder ejecutar este script en los dispositivos cliente, debe aprobarlo. 
 
 > [!IMPORTANT]
-> Evite la aplicación de scripts al reinicio de un dispositivo o de un agente de Configuration Manageral utilizar la característica Ejecutar scripts. Si lo hace, podría provocar un estado de reinicio continuo. Si es necesario, existen mejoras en la característica de notificación de clientes que permiten reiniciar dispositivos, a partir de la versión 1710 de Configuration Manager. La [columna Reinicio pendiente](../../core/clients/manage/manage-clients.md#restart-clients) puede ayudar a identificar los dispositivos que necesitan un reinicio. 
+> Evite la aplicación de scripts al reinicio de un dispositivo o de un agente de Configuration Manageral utilizar la característica Ejecutar scripts. Si lo hace, podría provocar un estado de reinicio continuo. Si es necesario, existen mejoras en la característica de notificación de clientes que permiten reiniciar dispositivos. La [columna Reinicio pendiente](../../core/clients/manage/manage-clients.md#restart-clients) puede ayudar a identificar los dispositivos que necesitan un reinicio. 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Parámetros de script
-*(Se introdujo con la versión 1710)*  
+
 Al agregar parámetros a un script, dotará de más flexibilidad a su trabajo. Puede incluir hasta 10 parámetros. A continuación, se describe la funcionalidad actual de la característica de ejecución de scripts con parámetros de script para los tipos de datos *Cadena* y *Entero*. También hay disponibles listas de valores preestablecidos. Si el script tiene tipos de datos no compatibles, recibirá una advertencia.
 
 En el cuadro de diálogo **Crear script**, haga clic en **Parámetros de script**, bajo **Script**.
@@ -180,9 +180,8 @@ En el cuadro de diálogo **Crear script**, haga clic en **Parámetros de script*
 Cada uno de los parámetros de script tiene su propio cuadro de diálogo para agregar más detalles y la validación. Si hay un parámetro predeterminado en el script, se enumerará en la interfaz de usuario del parámetro y podrá configurarlo. Configuration Manager no sobrescribirá el valor predeterminado, ya que nunca modificará el script directamente. Puede pensar que en la interfaz de usuario se proporcionan "valores sugeridos rellenados previamente", pero Configuration Manager no proporciona acceso a los valores "predeterminados" en tiempo de ejecución. Esto se puede solucionar mediante la edición del script para que tenga los valores predeterminados correctos. <!--17694323-->
 
 >[!IMPORTANT]
-> Los valores de parámetro no pueden contener un apóstrofo. </br></br>
-> Hay un problema conocido en Configuration Manager versión 1802 donde los parámetros con espacios no se pasan correctamente al script. Si se usa un espacio en el parámetro, solo se pasa al script el primer elemento del parámetro, pero no lo que sigue al espacio. Los administradores pueden crear scripts de solución alternativa sustituyendo los espacios por caracteres alternativos y convertirlos, o con otros métodos.
-
+> Los valores de parámetro no pueden contener una comilla simple. </br></br>
+> Hay un problema conocido por el que los valores de parámetro que incluyen o se escriben entre comillas simples no se pasan correctamente al script. Al especificar valores de parámetro predeterminados que contienen un espacio dentro de un script, use comillas dobles en su lugar. Al especificar valores de parámetro predeterminados durante la creación o la ejecución de un **Script**, no es necesario incluir el valor predeterminado entre comillas simples ni dobles, con independencia de que contenga o no un espacio.
 
 ### <a name="parameter-validation"></a>Validación de parámetros
 
@@ -282,22 +281,31 @@ El script se ejecuta como cuenta de *sistema* o de *equipo* en los clientes obje
 
 ## <a name="script-monitoring"></a>Supervisión de scripts
 
-Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. A partir de la versión 1710, puede supervisar un script en tiempo real en cuanto se ejecuta, así como volver a un informe de una ejecución determinada de la funcionalidad Ejecutar scripts. Los datos de estado del script se limpian como parte de la [tarea de mantenimiento Eliminar operaciones cliente antiguas](../../core/servers/manage/reference-for-maintenance-tasks.md) o eliminar el script.<br>
+Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. Puede supervisar un script en tiempo real mientras se ejecuta y volver después al estado y los resultados de una ejecución determinada de Ejecutar script. Los datos de estado del script se limpian como parte de la [tarea de mantenimiento Eliminar operaciones cliente antiguas](../../core/servers/manage/reference-for-maintenance-tasks.md) o eliminar el script.<br>
 
 ![Supervisión de scripts: estado de ejecución de scripts](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. En la consola de Configuration Manager, haga clic en **Supervisión**.
 2. En el área de trabajo **Supervisión**, haga clic en **Estado de script**.
 3. En la lista **Estado de script** aparecen los resultados de cada script ejecutado en los dispositivos cliente. Un código de salida de script de **0** suele indicar que el script se ejecutó correctamente.
-    - A partir de Configuration Manager 1802, la salida del script se trunca en 4 KB para permitir una mejor experiencia de visualización.  <!--510013-->
-   
+
+ 
    ![Monitor de script (script truncado)](./media/run-scripts/Script-monitoring-truncated.png)
 
-## <a name="script-output-in-1810"></a>Salida del script en 1810
+## <a name="script-output"></a>Salida del script
 
-Puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla. Si el script devuelve texto válido con formato JSON, podrá ver la salida detallada como **salida JSON** o **salida sin formato**. En caso contrario, la única opción es **Salida de script**.
+El cliente devuelve la salida del script con formato JSON mediante la canalización de los resultados del script al cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json). El formato JSON devuelve una salida de script legible de manera uniforme. Para los scripts que no devuelven objetos como salida, el cmdlet ConvertTo-Json convierte el resultado en una cadena simple que el cliente devuelve en lugar de JSON.  
 
-### <a name="example-script-output-is-valid-json"></a>Ejemplo: la salida de script es un archivo JSON válido
+- Los scripts que obtengan un resultado desconocido o en los que el cliente estaba sin conexión no se mostrarán en los gráficos ni en el conjunto de datos. <!--507179-->
+- Evite devolver una salida de script grande, ya que se trunca en 4 KB. <!--508488-->
+- Convierta un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. <!--508377-->
+
+   ![Conversión de un objeto de enumeración en un valor de cadena](./media/run-scripts/enum-tostring-JSON.png)
+
+Puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla. Si el script devuelve texto con formato JSON válido o la salida se puede convertir a JSON mediante el cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) de PowerShell, puede ver la salida detallada como **Salida JSON** o **Salida sin formato**. En caso contrario, la única opción es **Salida de script**.
+
+### <a name="example-script-output-is-convertible-to-valid-json"></a>Ejemplo: la salida del script se puede convertir a JSON válido
+
 Comando: `$PSVersionTable.PSVersion`  
 
 ``` Output
@@ -307,34 +315,14 @@ Major  Minor  Build  Revision
 ```
 
 ### <a name="example-script-output-isnt-valid-json"></a>Ejemplo: la salida de script no es un archivo JSON válido
+
 Comando: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
 ```
 
-- Los clientes de 1810 devuelven resultados inferiores a 80 KB al sitio a través de un canal de comunicación rápido. Este cambio aumenta el rendimiento de la visualización de resultados del script o la consulta.  
-
-  - Si el resultado del script o la consulta es mayor que 80 KB, el cliente envía los datos a través de un mensaje de estado.  
-  - Los clientes anteriores a 1802 siguen utilizando los mensajes de estado.
-
-## <a name="script-output-pre-1810"></a>Salida del script anterior a 1810
-
-- A partir de Configuration Manager versión 1802, la salida del script realiza la devolución con el formato JSON. Este formato devuelve de manera uniforme una salida de script legible. 
-- Los scripts que obtengan un resultado desconocido o en los que el cliente estaba sin conexión no se mostrarán en los gráficos ni en el conjunto de datos. <!--507179-->
-- Evite devolver una salida de script grande, ya que se trunca en 4 KB. <!--508488-->
-- Algunas funciones con el formato de salida de script no están disponibles cuando se ejecuta Configuration Manager versión 1802 o posterior con una versión de nivel inferior del cliente. <!--508487-->
-    - Si tiene un cliente de Configuration Manager anterior a la versión 1802, obtendrá una cadena de salida.
-    -  Para clientes de Configuration Manager con versión 1802 y versiones posteriores, se obtiene el formato JSON.
-        - Por ejemplo, podría obtener resultados que indican TEXTO en una versión de cliente y "TEXTO" (incluido entre comillas dobles) en otra versión, y se colocarán en el gráfico como dos categorías diferentes.
-        - Si tiene que solucionar este comportamiento, considere la posibilidad de ejecutar un script en dos colecciones diferentes; Uno con clientes anteriores a la versión 1802 y otro con clientes de la versión 1802 y posteriores. O, si lo prefiere, puede convertir un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. 
-- Convierta un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. <!--508377-->
-
-   ![Conversión de un objeto de enumeración en un valor de cadena](./media/run-scripts/enum-tostring-JSON.png)
-
 ## <a name="log-files"></a>Archivos de registro
-
-A partir de la versión 1810, se ha agregado un registro adicional para la resolución de problemas.
 
 - En el cliente, de forma predeterminada en C:\Windows\CCM\logs:  
   - **Scripts.log**  

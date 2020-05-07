@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326847"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022711"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configuración de una página de estado de inscripción
  
@@ -41,7 +41,7 @@ La página de estado de la inscripción ayuda a los usuarios a comprender el est
 También puede establecer el orden de prioridad de cada perfil para tener en cuenta las asignaciones de perfiles en conflicto al mismo usuario.
 
 > [!NOTE]
-> La página de estado de la inscripción solo se puede destinar a un usuario que pertenezca a un grupo asignado. La directiva se establece en el dispositivo durante la inscripción para todos los usuarios que lo usan.  
+> La página de estado de la inscripción solo se puede destinar a un usuario que pertenezca a un grupo asignado. La directiva se establece en el dispositivo durante la inscripción para todos los usuarios que lo usan.  En este momento no se admite el destino de dispositivos para los perfiles de página de estado de inscripción.
 
 ## <a name="available-settings"></a>Opciones de configuración disponibles
 
@@ -97,6 +97,10 @@ Puede especificar qué aplicaciones deben estar instaladas antes de que el usuar
 5. Elija **Seleccionado** en **Block device use until these required apps are installed if they are assigned to the user/device** (Bloquear dispositivo hasta que las aplicaciones necesarias estén instaladas si están asignadas al usuario o dispositivo).
 6. Elija **Seleccionar aplicaciones** > elija las aplicaciones > **Seleccionar** > **Guardar**.
 
+Intune usa las aplicaciones que se incluyen en esta lista para filtrar la lista cuyo bloqueo se debe considerar.  No especifica qué aplicaciones deben instalarse.  Por ejemplo, si configura esta lista para incluir "aplicación 1", "aplicación 2" y "aplicación 3", y "aplicación 3" y "aplicación 4" se destinan al dispositivo o usuario, la Página de estado de inscripción solo realizará el seguimiento de "aplicación 3".  "Aplicación 4" todavía se instalará, pero la Página de estado de inscripción no esperará a que se complete.
+
+Se puede especificar un máximo de 25 aplicaciones.
+
 ## <a name="enrollment-status-page-tracking-information"></a>Información de seguimiento de la página de estado de la inscripción
 
 Hay tres fases en las que la página de estado de la inscripción realiza un seguimiento de la información: durante la preparación del dispositivo, la instalación del dispositivo y la configuración de la cuenta.
@@ -145,10 +149,11 @@ Para la configuración de la cuenta, la página de estado de la inscripción rea
 ### <a name="troubleshooting"></a>Solución de problemas
 Principales preguntas de solución de problemas.
 
-- ¿Por qué mis aplicaciones no se instalaron durante la fase de instalación del dispositivo en el transcurso de la implementación de Autopilot mediante la página de estado de la inscripción?
-  - Para garantizar que las aplicaciones se instalen durante la fase de instalación de un dispositivo Autopilot, compruebe lo siguiente: 
-        1. La aplicación está seleccionada para bloquear el acceso en la lista de aplicaciones seleccionadas.
-        2. El destino de las aplicaciones es el mismo grupo de dispositivos de Azure AD al que está asignado el perfil de Autopilot. 
+- ¿Por qué las aplicaciones no se han instalado ni se les ha realizado el seguimiento mediante la página de estado de la inscripción?
+  - Para garantizar qué las aplicaciones se instalan y se les realiza el seguimiento mediante la página de estado de la inscripción, asegúrese de que:
+      - Las aplicaciones se asignan a un grupo de Azure AD que contiene el dispositivo (para aplicaciones destinadas a dispositivos) o el usuario (para las destinadas a usuarios), mediante una asignación "necesaria".  (Se realiza el seguimiento de las aplicaciones destinadas a dispositivos durante la fase de dispositivo de ESP, mientras que el de las aplicaciones dirigidas al usuario se realiza durante la fase de usuario de ESP).
+      - Puede especificar **Bloquear el uso del dispositivo hasta que todos los perfiles y aplicaciones estén instalados** o incluir la aplicación en la lista **Bloquear el uso del dispositivo hasta que las aplicaciones requeridas estén instaladas**.
+      - Las aplicaciones se instalan en el contexto de dispositivo y no tienen reglas de aplicabilidad de contexto de usuario.
 
 - ¿Por qué se muestra la página de estado de la inscripción en las implementaciones que no son de Autopilot, por ejemplo, cuando un usuario inicia sesión por primera vez en un dispositivo inscrito en la administración conjunta de Configuration Manager?  
   - En la página de estado de la inscripción se muestra el estado de instalación de todos los métodos de inscripción. Por ejemplo:
@@ -190,7 +195,6 @@ Principales preguntas de solución de problemas.
 ### <a name="known-issues"></a>Problemas conocidos
 A continuación se muestran los problemas conocidos. 
 - Al deshabilitar el perfil de ESP no se quita la directiva de ESP de los dispositivos, y los usuarios siguen viendo la ESP cuando inician sesión en el dispositivo por primera vez. La directiva no se quita cuando se deshabilita el perfil de ESP. Debe implementar OMA-URI para deshabilitar la ESP. Consulte anteriormente las instrucciones para deshabilitar ESP mediante OMA-URI. 
-- Un reinicio pendiente siempre producirá un tiempo de expiración. El tiempo de expiración se agota porque el dispositivo debe reiniciarse. El reinicio es necesario para dar tiempo a que finalice el elemento cuyo seguimiento se realiza en la página de estado de la inscripción. Un reinicio provocará que se cierre la página de estado de la inscripción y, tras el reinicio, el dispositivo no accederá a ella mientras se configura la cuenta.  Considere la posibilidad de no exigir un reinicio durante la instalación de la aplicación, 
 - ya que obligará al usuario a escribir sus credenciales antes de pasar a la fase de configuración de la cuenta. Las credenciales de usuario no se conservan durante el reinicio. Haga que el usuario escriba sus credenciales; de este modo, la página de estado de la inscripción puede continuar. 
 - La página de estado de la inscripción siempre agotará el tiempo de expiración durante una inscripción mediante la opción para agregar una cuenta profesional o educativa en versiones de Windows 10 inferiores a la 1903. La página de estado de la inscripción espera a que finalice el registro de Azure AD. El problema se corrigió en Windows 10 versión 1903 y posteriores.  
 - La implementación de Autopilot de Azure AD híbrido con ESP tarda más tiempo que la duración del tiempo de expiración definida en el perfil de ESP. En implementaciones de Autopilot de Azure AD híbrido, ESP tardará 40 minutos más que el valor establecido en el perfil de ESP. Este retraso proporciona tiempo para que el conector de AD local cree el registro del dispositivo en Azure AD. 

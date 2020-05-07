@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2163f420089dcd8936d6dc64b8ce02c5ff268b53
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325751"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079899"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configuración de la infraestructura para admitir SCEP con Intune
 
@@ -46,13 +46,14 @@ La siguiente infraestructura local se debe ejecutar en servidores unidos a domin
 
   - El servidor en el que se hospeda NDES debe estar unido al dominio y en el mismo bosque que la entidad de certificación (CA) empresarial.
   - No puede usar NDES instalado en el servidor en el que se hospeda la entidad de certificación empresarial.
-  - Microsoft Intune Certificate Connector se instalará en el mismo servidor en el que se hospeda NDES.
+  - Microsoft Intune Certificate Connector se instalará en el mismo servidor en el que se hospeda NDES.
 
   Para más información sobre NDES, vea [Orientación para el Servicio de inscripción de dispositivos de red](https://technet.microsoft.com/library/hh831498.aspx) y [Uso de un módulo de directivas con el Servicio de inscripción de dispositivos de red](https://technet.microsoft.com/library/dn473016.aspx).
 
 - **Microsoft Intune Certificate Connector**: se necesita Microsoft Intune Certificate Connector para usar perfiles de certificado SCEP con Intune. Este artículo le guiará a través de la [instalación de este conector](#install-the-intune-certificate-connector).
 
   El conector admite el modo Estándar federal de procesamiento de información (FIPS). FIPS no es obligatorio, pero cuando está habilitado, permite emitir y revocar certificados.
+  - El conector tiene los mismos requisitos de red que los [dispositivos administrados](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - El conector se debe ejecutar en el mismo servidor que el rol de servidor NDES, un servidor que ejecute Windows Server 2012 R2 o posterior.
   - El conector requiere .NET Framework 4.5 y se incluye automáticamente con Windows Server 2012 R2.
   - La configuración de seguridad mejorada de Internet Explorer [debe estar deshabilitada en el servidor en el que se hospeda NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) y Microsoft Intune Certificate Connector.
@@ -359,7 +360,7 @@ Microsoft Intune Certificate Connector se instala en el servidor en el que se ej
 
 ### <a name="to-install-the-certificate-connector"></a>Para instalar Certificate Connector:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificados** > **Agregar**.
 

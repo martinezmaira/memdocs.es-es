@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611736"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078369"
 ---
 # <a name="app-protection-policies-overview"></a>Introducción general a las directivas de protección de aplicaciones
 
@@ -36,7 +36,7 @@ Las directivas de protección de aplicaciones de Administración de aplicaciones
 ## <a name="how-you-can-protect-app-data"></a>Cómo puede proteger los datos de la aplicación
 Los empleados usan dispositivos móviles para tareas personales y de trabajo. Mientras se asegura de que los empleados pueden ser productivos, puede evitar la pérdida de datos, ya sea intencional o involuntaria. También conviene proteger los datos de empresa que son accesibles desde dispositivos que no están administrados por usted.
 
-Puede usar directivas de protección de aplicaciones de Intune **independientemente de cualquier otra solución de administración de dispositivos móviles (MDM)** . Esta independencia le ayuda a proteger los datos de su empresa con o sin inscripción de dispositivos en una solución de administración de dispositivos. Mediante la implementación de **directivas de nivel de aplicación**, puede restringir el acceso a los recursos de la empresa y mantener los datos dentro del ámbito del departamento de TI.
+Puede usar directivas de protección de aplicaciones de Intune **independientemente de cualquier otra solución de administración de dispositivos móviles (MDM)** . Esta independencia le ayuda a proteger los datos de la empresa con o sin inscripción de dispositivos en una solución de administración de dispositivos. Mediante la implementación de **directivas de nivel de aplicación**, puede restringir el acceso a los recursos de la empresa y mantener los datos dentro del ámbito del departamento de TI.
 
 ### <a name="app-protection-policies-on-devices"></a>Directivas de protección de aplicaciones en dispositivos
 
@@ -167,7 +167,7 @@ Entre los requisitos adicionales para usar la [aplicación móvil de Outlook](ht
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel y PowerPoint
 Entre los requisitos adicionales para usar las aplicaciones [Word, Excel y PowerPoint](https://products.office.com/business/office) se incluyen los siguientes:
 
-- El usuario final debe tener una licencia de [Office 365 Empresa o Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) asignada a su cuenta de Azure Active Directory. La suscripción debe incluir las aplicaciones de Office en dispositivos móviles y puede incluir una cuenta de almacenamiento en la nube con [OneDrive para la Empresa](https://onedrive.live.com/about/business/). Las licencias de Office 365 se pueden asignar en el [Centro de administración de Microsoft 365](https://admin.microsoft.com) siguiendo estas [instrucciones](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- El usuario final debe tener una licencia de [Aplicaciones de Microsoft 365 para negocios o empresas](https://products.office.com/business/compare-more-office-365-for-business-plans) asignada a su cuenta de Azure Active Directory. La suscripción debe incluir las aplicaciones de Office en dispositivos móviles y puede incluir una cuenta de almacenamiento en la nube con [OneDrive para la Empresa](https://onedrive.live.com/about/business/). Las licencias de Office 365 se pueden asignar en el [Centro de administración de Microsoft 365](https://admin.microsoft.com) siguiendo estas [instrucciones](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - El usuario final debe tener una ubicación administrada configurada con la funcionalidad pormenorizada Guardar como en la configuración de directiva de protección de aplicaciones "Guardar copias de los datos de la organización". Por ejemplo, si la ubicación administrada es OneDrive, la aplicación [OneDrive](https://onedrive.live.com/about/) debe estar configurada en la aplicación Word, Excel o PowerPoint del usuario final.
 
@@ -190,7 +190,7 @@ La configuración, disponible en la consola de administración de OneDrive, esta
 
 Una vez habilitada, las aplicaciones de OneDrive y SharePoint para iOS/iPadOS y Android se protegen con la configuración seleccionada de forma predeterminada. Un profesional de TI puede editar esta directiva en la consola de Intune y agregar más aplicaciones de destino y modificar cualquier configuración de directiva. 
 
-De forma predeterminada, solo puede haber una directiva **Global** por inquilino, aunque puede usar una [Graph API de Intune](../developer/intune-graph-apis.md) para crear otras directivas globales por inquilino, aunque no se recomienda, dado que puede ser complicado solucionar problemas en la implementación de esta directiva.
+De forma predeterminada, solo puede haber una directiva **Global** por inquilino, aunque puede usar una [Graph API de Intune](../developer/intune-graph-apis.md) para crear otras directivas globales por inquilino, aunque no se recomienda, ya que puede ser complicado solucionar problemas en la implementación de esta directiva.
 
 Si bien la directiva **Global** se aplica a todos los usuarios del inquilino, cualquier directiva estándar de protección de aplicaciones de Intune anulará esta configuración.
 
@@ -300,7 +300,7 @@ Si el usuario está utilizando la aplicación cuando se inicia el borrado select
 La protección de aplicaciones de Intune depende de la identidad del usuario para ser coherente entre la aplicación y el [SDK de Intune](../developer/app-sdk.md). La única manera de garantizar esto es a través de la autenticación moderna. Hay escenarios en los que las aplicaciones pueden funcionar con una configuración local, pero no son coherentes ni ofrecen garantías.
 
 **Forma segura de abrir vínculos web desde aplicaciones administradas**<br>
-El administrador de TI puede implementar y establecer una directiva de protección de aplicaciones para la [aplicación Intune Managed Browser](app-configuration-managed-browser.md), un explorador web desarrollado por Microsoft Intune que puede administrarse fácilmente con Intune. El administrador de TI puede requerir que todos los vínculos web en aplicaciones administradas de Intune se abran con la aplicación Managed Browser.
+El administrador de TI puede implementar y establecer una directiva de protección de aplicaciones para [Microsoft Edge](app-configuration-managed-browser.md), un explorador web que puede administrarse fácilmente con Intune. El administrador de TI puede requerir que todos los vínculos web en aplicaciones administradas de Intune se abran con la aplicación Managed Browser.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Experiencia de protección de aplicaciones para dispositivos iOS
 
