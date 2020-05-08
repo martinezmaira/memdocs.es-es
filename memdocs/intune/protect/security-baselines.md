@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551686"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693418"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Uso de líneas de base de seguridad para configurar dispositivos Windows 10 en Intune
 
@@ -46,21 +46,49 @@ Las líneas de base de seguridad es poder ayudarlo a tener un flujo de trabajo s
 
 Las [líneas de base de seguridad de Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) son un excelente recurso para obtener más información sobre esta característica. La [administración de dispositivos móviles](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) es un magnífico recurso sobre MDM y lo que puede hacer en los dispositivos Windows.
 
+## <a name="available-security-baselines"></a>Líneas de base de seguridad disponibles
+
+Las instancias de línea de base de seguridad siguientes están disponibles para usarlas con Intune. Use los vínculos para ver la configuración de la instancia más reciente de cada línea de base.
+
+- **Línea de base de seguridad MDM**
+  - [Línea de base de seguridad de MDM para mayo de 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [Versión preliminar: línea de base de seguridad de MDM para octubre de 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Línea de base de Microsoft Defender ATP**
+   *(Para usar esta línea de base, su entorno debe cumplir con los requisitos previos para usar [Protección contra amenazas avanzada de Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
+  - [Línea de base de ATP de Microsoft Defender para abril de 2020: versión 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Línea de base de ATP de Microsoft Defender para marzo de 2020: versión 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
+
+  > [!NOTE]
+  > La base de referencia de seguridad de ATP de Microsoft Defender se ha optimizado para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados.  Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
+
+- **Línea de base de Microsoft Edge**
+  - [Línea de base de Microsoft Edge para abril de 2020 (Edge versión 80 y posteriores)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Versión preliminar: Línea de base de Microsoft Edge de octubre de 2019 (Edge versión 77 y posteriores)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+Puede continuar usando y editando los perfiles que creó anteriormente en función de una plantilla en versión preliminar, incluso si dicha plantilla deja de estar disponible para la creación de nuevos perfiles.
+
+Cuando esté listo para pasar a una versión más reciente de la línea base que use, vea [Cambio de la versión de línea de base de un perfil](#change-the-baseline-version-for-a-profile) en este artículo. 
+
 ## <a name="about-baseline-versions-and-instances"></a>A cerca de las instancias y versiones de línea de base
 
 Cada nueva instancia de versión de una línea de base puede agregar o quitar la configuración, o aplicar otros cambios. Por ejemplo, a medida que la nueva configuración de Windows 10 está disponible con nuevas versiones de Windows 10, la línea de base de seguridad MDM podría recibir una nueva instancia de versión con la configuración más reciente.
 
-En la consola de Intune, el icono de cada línea de base muestra el nombre de la plantilla de línea de base y la información básica sobre dicha línea de base. La información incluye cuántos perfiles de los que tiene usan ese tipo de línea de base, cuántas instancias (versiones) independientes del tipo de línea de base están disponibles y una fecha *Última publicación* que identifica cuándo se agregó esa línea de base a su inquilino. En el siguiente ejemplo se muestra el icono de una línea de base de seguridad MDM bien usada:
+En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), en **Seguridad de los puntos de conexión** > **Líneas de base de seguridad** verá una lista de las líneas de base disponibles. En la lista se incluye el nombre de la plantilla de línea de base, cuántos perfiles de los que tiene usan ese tipo de línea de base, cuántas instancias (versiones) independientes del tipo de línea de base están disponibles y una fecha *Última publicación* que identifica cuándo ha pasado a estar disponible la versión más reciente de la plantilla de línea de base.
 
-![Icono de la línea de base](./media/security-baselines/baseline-tile.png)
-
-Para ver más información sobre las versiones de línea de base que usa, seleccione un icono de línea de base para abrir su panel **Información general** y luego seleccione *Versiones*. Intune muestra detalles sobre las versiones de esa línea de base que se encuentran en uso por parte de sus perfiles. En el panel Versiones, puede seleccionar una sola versión para ver detalles más profundos sobre los perfiles que usan esa versión. También puede seleccionar dos versiones distintas y, a continuación, elegir **Comparar líneas de base** para descargar un archivo CSV que detalle esas diferencias.
-
-![Comparar líneas de base](./media/security-baselines/compare-baselines.png)
-
-Al crear un *perfil* de la línea de base de seguridad, este usará automáticamente la instancia de línea de base de seguridad publicada hace menos tiempo.  Puede seguir usando y editando perfiles creados anteriormente que usan una instancia de versión de la línea de base anterior, incluidas las líneas de base creadas mediante una versión preliminar.
+Para ver más información sobre las versiones de línea de base que usa, seleccione un icono de línea de base para abrir su panel **Información general** y luego seleccione *Versiones*. Intune muestra detalles sobre las versiones de esa línea de base que se usan en los perfiles, incluida la versión más reciente y la actual.  Puede seleccionar una sola versión para ver más detalles sobre los perfiles en los que se usa.
 
 Puede optar por [cambiar la versión](#change-the-baseline-version-for-a-profile) de una línea de base que está en uso con un perfil determinado. Esto significa que, cuando sale una nueva versión, no es necesario crear un nuevo perfil de línea de base para aprovecharla. En su lugar, cuando esté listo, puede seleccionar un perfil de línea de base y luego usar la opción integrada para cambiar la versión de la instancia de ese perfil a una nueva.
+
+### <a name="compare-baseline-versions"></a>Comparación de versiones de línea de base
+
+En el panel **Versiones** de una línea de base de seguridad se muestra una lista de todas las versiones de esta línea de base que ha implementado. En la lista también se incluye la versión más reciente y activa de la línea de base. Cuando se crea un *perfil* de línea de base de seguridad, el perfil usa la versión más reciente de esta.  Puede seguir usando y editando perfiles creados anteriormente en los que se usa una versión de la línea de base anterior, incluidas las líneas de base creadas mediante una versión preliminar.
+
+Para comprender lo que ha cambiado entre las versiones, active las casillas de dos versiones diferentes y, después, seleccione **Comparar líneas de base** para descargar un archivo CSV en el que se detallan esas diferencias. 
+
+La descarga identifica cada configuración de las dos versiones de línea de base e indica si esta configuración ha cambiado (*notEqual*) o no (*equal*). Los detalles también incluyen el valor predeterminado de la configuración por versión y si la configuración se *ha agregado* a la versión más reciente o se *ha quitado* de esta.
+
+![Comparar líneas de base](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>Evitación de conflictos
 
@@ -74,26 +102,6 @@ Utilice la información de los vínculos siguientes para ayudar a identificar y 
 
 - [Solución de problemas de directivas y perfiles en Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Supervisión de las líneas de base de seguridad](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-## <a name="available-security-baselines"></a>Líneas de base de seguridad disponibles
-
-Las instancias de línea de base de seguridad siguientes están disponibles para usarlas con Intune. Use los vínculos para ver la configuración de la instancia más reciente de cada línea de base.
-
-- **Línea de base de seguridad MDM**
-  - [Línea de base de seguridad de MDM para mayo de 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [Versión preliminar: línea de base de seguridad de MDM para octubre de 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Línea de base de Microsoft Defender ATP**
-   *(Para usar esta línea de base, su entorno debe cumplir con los requisitos previos para usar [Protección contra amenazas avanzada de Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
-  - [Línea de base versión 3 de ATP de Microsoft Defender](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > La base de referencia de seguridad de ATP de Microsoft Defender se ha optimizado para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados.  Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
-
-- **Línea de base de Microsoft Edge**
-  - [Versión preliminar: Línea de base de Microsoft Edge](security-baseline-settings-edge.md)
-
-Puede continuar usando y editando los perfiles que creó anteriormente en función de una plantilla en versión preliminar, incluso si dicha plantilla deja de estar disponible para la creación de nuevos perfiles.
 
 ## <a name="manage-baselines"></a>Administración de las líneas de base
 
@@ -112,7 +120,7 @@ Las tareas comunes cuando se trabaja con líneas de base de seguridad incluyen:
 
 ### <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Seguridad de los puntos de conexión** > **Líneas base de seguridad** para ver la lista de líneas base disponibles.
 
@@ -171,7 +179,7 @@ Al guardar, después de completarse la conversión, la línea de base se volver�
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Para cambiar la versión de línea de base de un perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
 2. Seleccione **Seguridad de los puntos de conexión** > **Líneas base de seguridad** y, luego, seleccione el icono del tipo de línea base que tenga el perfil que quiere cambiar.
 
@@ -198,6 +206,14 @@ Al guardar, después de completarse la conversión, la línea de base se volver�
 Si una configuración de líneas de base de seguridad deja de aplicarse a un dispositivo o la configuración de una línea de base se establece en *No configurado*, esa configuración de un dispositivo no se revertirá a una configuración administrada previamente. En su lugar, la configuración administrada previamente del dispositivo conservará sus últimas configuraciones tal como se reciben de la línea de base hasta que otro proceso actualice esa configuración del dispositivo.
 
 Otros procesos que podrían cambiar la configuración del dispositivo posteriormente incluyen una línea de base de seguridad nueva o diferente, un perfil de configuración de dispositivo, configuraciones de directiva de grupo o una edición manual de la configuración del dispositivo.
+
+### <a name="older-baseline-versions"></a>Versiones de línea de base anteriores
+
+Microsoft Endpoint Manager actualiza las versiones de las líneas de base de seguridad integradas en función de las necesidades cambiantes de una organización habitual. En cada versión nueva se genera una actualización de la versión de una línea de base determinada. Se espera que los clientes usen la versión de línea de base más reciente como punto de partida para sus perfiles de configuración de dispositivos.
+
+Cuando ya no haya ningún perfil que use una línea de base anterior enumerada en el inquilino, Microsoft Endpoint Manager solo mostrará la versión de línea de base más reciente disponible.
+
+Si tiene un perfil asociado a una línea de base anterior, seguirá apareciendo.
 
 ## <a name="co-managed-devices"></a>Dispositivos administrados conjuntamente
 

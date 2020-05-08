@@ -5,34 +5,58 @@ description: Configuración de la línea de base de seguridad compatible con Int
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397516"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693393"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Configuración de la línea de base de Advanced Threat Protection de Microsoft Defender
 
 Vea la configuración de línea de base de Advanced Threat Protection de Microsoft Defender compatible con Microsoft Intune. Los valores predeterminados de línea de base de Advanced Threat Protection (ATP) representan la configuración recomendada para ATP y podrían no coincidir con los valores predeterminados para otras líneas de base de seguridad.
 
-Los detalles de este artículo se aplican a la versión 3 de la línea de base de ATP de Microsoft Defender, publicada el 1 de marzo de 2020.
+::: zone pivot="atp-april-2020"
+
+Los detalles de este artículo se aplican a la versión 4 de la línea de base de ATP de Microsoft Defender, publicada el 21 de abril de 2020. Para comprender lo que ha cambiado en esta versión de línea de base con respecto a las versiones anteriores, use la acción [Comparar líneas de base](../protect/security-baselines.md#compare-baseline-versions) que está disponible al ver el panel *Versiones* para esta línea de base.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+Los detalles de este artículo se aplican a la versión 3 de la línea de base de ATP de Microsoft Defender, publicada el 1 de marzo de 2020. Para comprender lo que ha cambiado en esta versión de línea de base con respecto a las versiones anteriores, use la acción [Comparar líneas de base](../protect/security-baselines.md#compare-baseline-versions) que está disponible al ver el panel *Versiones* para esta línea de base.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 La línea base de [Advanced Threat Protection de Microsoft Defender](advanced-threat-protection.md#prerequisites) está disponible si el entorno cumple con los requisitos previos para su uso.
 
 La línea de base se optimiza para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados. Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
+
 
 ## <a name="application-guard"></a>Protección de aplicaciones
 
@@ -630,11 +654,26 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Sí** (*valor predeterminado*): se examinan todos los archivos y datos adjuntos descargados. La opción vuelve al valor predeterminado del cliente, que es activado, pero el usuario puede cambiarlo. Para deshabilitar esta opción, use un URI personalizado.
   - **No configurado**: la opción vuelve al valor predeterminado del cliente, que es activado, pero el usuario puede cambiarlo. Para deshabilitar esta opción, use un URI personalizado.
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **Bloquear la protección de acceso**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Sí**
+  - **Sin configurar** (*valor predeterminado*).
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **Bloquear la protección de acceso**  
   CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **Sí** (*valor predeterminado*)
   - **No configurado**.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Examinar los scripts del explorador**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -863,6 +902,8 @@ Para más información, vea [PassportForWork CSP](https://docs.microsoft.com/win
     - **No permitido**
     - **Requerido**
     - **Permitido** (*valor predeterminado*)
+
+::: zone-end
 
 ## <a name="next-steps"></a>Pasos siguientes
 

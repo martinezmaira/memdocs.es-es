@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536847"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538137"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>¿Qué es la administración de aplicaciones de Microsoft Intune?
 
@@ -78,7 +78,7 @@ Intune ofrece diversas funcionalidades para ayudarle a conseguir las aplicacione
 
 Puede encontrar la mayoría de la información relacionada con las aplicaciones en la carga de trabajo **Aplicaciones**, a la que puede acceder haciendo lo siguiente:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Seleccione **Aplicaciones**.
 
     ![Panel de carga de trabajo Aplicaciones](./media/app-management/apps-workload.png)
@@ -109,6 +109,11 @@ La parte superior del menú de navegación de la carga de trabajo de la aplicaci
     - **Categorías de aplicaciones**: agregue, ancle y elimine los nombres de categoría de las aplicaciones.
     - **Libros electrónicos**: Algunas tiendas de aplicaciones permiten comprar varias licencias para una aplicación o libros que desea usar en la empresa. Para obtener más información, vea [Administración de aplicaciones y libros comprados por volumen con Microsoft Intune](vpp-apps.md).
 - **Ayuda y soporte técnico**: solucione problemas, solicite soporte técnico o vea el estado de Intune. Para obtener más información, consulte [Solución de problemas](../fundamentals/help-desk-operators.md).
+
+### <a name="try-the-interactive-guide"></a>Pruebe la guía interactiva
+La guía interactiva [Administración y protección de aplicaciones para dispositivos móviles y de escritorio con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) le guía a través del Centro de administración de Microsoft Endpoint Manager para mostrarle cómo administrar dispositivos inscritos en Intune, aplicar el cumplimiento mediante directivas y proteger los datos de la organización.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>Información adicional
 Los siguientes elementos de la consola de proporcionan funcionalidad relacionada con las aplicaciones:

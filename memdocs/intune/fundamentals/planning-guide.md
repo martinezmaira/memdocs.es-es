@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080103"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802045"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Guía de implementación, diseño y planeación de Intune
 
@@ -53,7 +53,10 @@ En esta guía se incluyen las secciones que le guiarán a través del proceso co
 
 En esta guía también se proporciona información técnica adicional y plantillas de tabla que pueden usarse para facilitar el proceso de implementación, diseño y planeación de Intune.
 
-- [Recursos adicionales: vínculos y plantillas de tabla](planning-guide-resources.md)
+### <a name="additional-resources"></a>Recursos adicionales
+
+- [Guía de prueba de concepto (PoC) de Microsoft Endpoint Manager:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) se ha diseñado para proporcionar un marco de trabajo e instrucciones técnicas sobre cómo ejecutar una prueba de concepto correcta dentro de la organización.
+- [Vínculos y plantillas de tabla](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Suposiciones
 

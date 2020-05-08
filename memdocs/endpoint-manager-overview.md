@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/04/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939224776199407abb6a508f25bf5dadbacb882f
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "82135994"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782263"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Información general sobre Microsoft Endpoint Manager
 
@@ -102,11 +102,11 @@ También puede pensar en Endpoint Manager en tres partes: nube, local y nube+loc
 
 ## <a name="what-you-need-to-get-started"></a>Qué necesita para empezar
 
+Microsoft Endpoint Manager es una plataforma de soluciones que unifica varias tecnologías. No se trata de una nueva licencia. Los servicios se conceden según sus términos de licencias individuales. Para obtener más información, vea [Términos de licencia del producto](https://www.microsoft.com/licensing/product-licensing/products).
+
 Si actualmente usa Configuration Manager, también puede obtener Microsoft Intune para la administración conjunta de sus dispositivos Windows. Para otras plataformas, como iOS/iPadOS y Android, necesitará una licencia de Intune independiente.
 
-En la mayoría de los escenarios, Microsoft 365 puede ser la mejor opción, ya que proporciona Endpoint Manager y Office 365.
-
-Para obtener más información, vea [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+En la mayoría de los escenarios, Microsoft 365 puede ser la mejor opción, ya que proporciona Endpoint Manager y Office 365. Para obtener más información, vea [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

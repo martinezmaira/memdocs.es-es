@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 151b258826dcb65b3311b81e3c47bc5c089cb017
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771212"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587311"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Uso de certificados para la autenticación en Microsoft Intune
 
@@ -99,13 +99,15 @@ Usará este archivo .cer al [crear perfiles de certificado de confianza](#create
 
 ## <a name="create-trusted-certificate-profiles"></a>creación de perfiles de certificado de confianza
 
-Cree e implemente un perfil de certificado de confianza antes de crear un perfil de certificado SCEP, PKCS o PKCS importado. La implementación de un perfil de certificado de confianza en los mismos grupos que reciben los otros tipos de perfiles de certificado garantiza que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación. Los perfiles de certificado SCEP hacen referencia directamente a un perfil de certificado de confianza. Los perfiles de certificado PKCS no hacen referencia directamente al perfil de certificado de confianza, pero sí al servidor que hospeda la entidad de certificación. Los perfiles de certificado PKCS importados no hacen referencia directamente al perfil de certificado de confianza, pero pueden usarlo en el dispositivo. La implementación de un perfil de certificado de confianza en los dispositivos garantiza que se establece esta confianza. Cuando un dispositivo no confía en la entidad de certificación raíz, se producirá un error en la directiva de perfil de certificado SCEP o PKCS.
+Cree e implemente un perfil de certificado de confianza antes de crear un perfil de certificado SCEP, PKCS o PKCS importado. La implementación de un perfil de certificado de confianza en los mismos grupos que reciben los otros tipos de perfiles de certificado garantiza que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación. Esto incluye perfiles como los de VPN, Wi-Fi y correo electrónico.
+
+Los perfiles de certificado SCEP hacen referencia directamente a un perfil de certificado de confianza. Los perfiles de certificado PKCS no hacen referencia directamente al perfil de certificado de confianza, pero sí al servidor que hospeda la entidad de certificación. Los perfiles de certificado PKCS importados no hacen referencia directamente al perfil de certificado de confianza, pero pueden usarlo en el dispositivo. La implementación de un perfil de certificado de confianza en los dispositivos garantiza que se establece esta confianza. Cuando un dispositivo no confía en la entidad de certificación raíz, se producirá un error en la directiva de perfil de certificado SCEP o PKCS.
 
 Cree un perfil de certificado de confianza independiente para cada plataforma de dispositivo que quiera admitir, como lo haría con los perfiles de certificado SCEP, PKCS y PKCS importados.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Para crear un perfil de certificado de confianza
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
