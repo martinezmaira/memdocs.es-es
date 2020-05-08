@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd126e59b8162a66815e89d0e80850fe2fe9c2d4
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771063"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538158"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Establecimiento de reglas en los dispositivos para permitir el acceso a recursos de su organización con Intune
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345681"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506546"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Configuración de la opción Optimización de distribución en Microsoft Intune
 
@@ -34,27 +34,33 @@ Para obtener más información sobre la opción Optimización de distribución e
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
 3. Escriba las propiedades siguientes:
+   - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
+   - **Tipo de perfil**: seleccione **Optimización de distribución**.
 
-    - **Nombre**: escriba un nombre descriptivo para el nuevo perfil.
-    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-    - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
-    - **Tipo de perfil**: seleccione **Optimización de distribución**.
+4. Seleccione **Crear**.
 
-4. Elija **Configuración** > **Configurar** y defina cómo quiere que se descarguen las actualizaciones y las aplicaciones. Para obtener más información sobre las opciones de configuración disponibles, consulte [Delivery optimization settings for Intune](delivery-optimization-settings.md) (Configuración de la opción Optimización de distribución de Intune).
+5. En la página **Datos básicos**, escriba un nombre y una descripción para el perfil y, después, elija **Siguiente**.
 
-5. Cuando termine, seleccione **Aceptar** > **Crear** para guardar los cambios.
+6. En la página **Opciones de configuración**, defina cómo quiere que se descarguen las actualizaciones y aplicaciones. Para obtener más información sobre las opciones de configuración disponibles, consulte [Delivery optimization settings for Intune](delivery-optimization-settings.md) (Configuración de la opción Optimización de distribución de Intune).
 
-El perfil se crea y se muestra en la lista. Después, [asigne el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
+   Cuando haya finalizado la configuración, seleccione **Siguiente**.
 
-<!-- ## Move existing update rings to delivery optimization
+7. En la página **Ámbito (etiquetas)** , elija **Seleccionar etiquetas de ámbito** para abrir el panel *Seleccionar etiquetas* y asignar etiquetas de ámbito al perfil.
+  
+   Seleccione **Siguiente** para continuar.
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. En la página **Asignaciones**, seleccione los grupos que recibirán este perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](../configuration/device-profile-assign.md).
+
+   Seleccione **Siguiente**.
+
+9. En la página **Reglas de aplicabilidad**, use las opciones **Regla**, **Propiedad** y **Valor** para definir cómo se aplica este perfil dentro de los grupos asignados.
+
+10. Cuando haya terminado, elija **Crear** en la página **Revisar y crear**. El perfil se crea y se muestra en la lista. Después, [asigne el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Eliminación de la optimización de entrega de los anillos de actualización de Windows 10
 
@@ -72,7 +78,7 @@ Anteriormente, la optimización de entrega se configuraba como parte de los anil
         - **Configuración**: para **Modo de descarga de Optimización de entrega**, elija el mismo modo que usa el anillo de actualización de software existente, a menos que quiera cambiar la configuración que se aplica a los dispositivos. Las opciones son:
             - **No configurado**.
             - **HTTP solo, sin emparejamiento**
-            - **HTTP combinado con el emparejamiento que se encuentra en la misma NAT**
+            - **HTTP combinado con el emparejamiento que se encuentra en la misma NAT** 
             - **HTTP combinado con el emparejamiento de un grupo privado**
             - **HTTP combinado con emparejamiento de Internet**
             - **Modo de descarga sencillo sin emparejamiento**

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359458"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587248"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Configuración de Endpoint Protection de macOS en Intune  
 
@@ -113,6 +113,18 @@ Para obtener más información sobre la configuración de FileVault de Apple, ve
 
   - **Número de veces que se permite omitir**  
   Establece el número de veces que un usuario puede pasar por alto los mensajes para habilitar FileVault antes de que sea necesario para iniciar sesión. 
+
+    > [!IMPORTANT]
+    >
+    > Hay un problema conocido con el valor **No hay límite, avisar siempre**. En lugar de permitir que un usuario omita el cifrado al iniciar sesión, esta configuración requiere el cifrado del dispositivo en el siguiente inicio de sesión. Se espera que esta incidencia se solucione a finales de junio y se notifique en MC210922.
+    >
+    > Cuando se haya corregido, este valor tendrá una nueva opción de cero (**0**), que requerirá que los dispositivos se cifren la próxima vez que un usuario inicie sesión en el dispositivo. Además, cuando las actualizaciones de Intune incluyan esta corrección, cualquier directiva que esté establecida en **No hay límite, avisar siempre** se actualizará para usar el nuevo valor de **0**, que mantiene el comportamiento actual de requerir el cifrado.
+    >
+    > Una vez que se haya corregido este problema, podrá usar la capacidad de omitir el cifrado si vuelve a configurar esta opción para establecer **No hay límite, avisar siempre**, ya que el valor funcionará como se esperaba originalmente y permitirá a los usuarios omitir el cifrado del dispositivo.
+    >
+    > Si tiene dispositivos macOS inscritos y quiere obtener más información, inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Administración de inquilinos** > **Estado de inquilino**, seleccione **Estado del servicio y centro de mensajes**, y busque el id. de mensaje **MC210922**.
+
+    <br> 
 
     - **No configurado**: se requiere cifrado en el dispositivo antes de que se permita el siguiente inicio de sesión.  
     - De **1** a **10**: permite al usuario omitir el mensaje de 1 a 10 veces antes de requerir el cifrado en el dispositivo.  

@@ -16,10 +16,26 @@ groups:
     title: Mayo de 2019
   - id: mdm-preview
     title: Versión preliminar de octubre de 2018
+- id: edge-baseline-versions
+  title: Versiones de línea base de Edge
+  prompt: Selección de una versión
+  pivots:
+  - id: edge-october-2019
+    title: Octubre de 2019
+  - id: edge-april-2020
+    title: Abril de 2020
+- id: atp-baseline-versions
+  title: Versiones de línea de base de ATP
+  prompt: Selección de una versión
+  pivots:
+  - id: atp-april-2020
+    title: Abril de 2020
+  - id: atp-march-2020
+    title: Marzo de 2020
 metadata:
-  ms.openlocfilehash: 1b1f0e7b28dfda7ba9b4867c9641154147aa4c1f
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 304a1087e156f7c491afd83b9981cdba996dc9fc
+  ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79345941"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82693282"

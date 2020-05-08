@@ -28,9 +28,11 @@ La inscripción automática permite a los usuarios inscribir sus dispositivos Wi
    - **Todos**: todos los usuarios pueden inscribir automáticamente sus dispositivos Windows 10
 
       > [!IMPORTANT]
-      > En el caso de los dispositivos BYOD, el ámbito de usuario MAM tiene prioridad si el ámbito de usuario MAM y el ámbito de usuario MDM (inscripción automática de MDM) están habilitados para todos los usuarios (o los mismos grupos de usuarios). El dispositivo usará las directivas de Windows Information Protection (WIP) (si las ha configurado) en lugar de inscribirse en MDM.
+      > En el caso de los dispositivos Windows BYOD, el ámbito de usuario de MAM tiene prioridad si los ámbitos de usuario de MAM y MDM (inscripción automática de MDM) están habilitados para todos los usuarios (o los mismos grupos de usuarios). El dispositivo no se inscribirá en MDM y se aplicarán las directivas de Windows Information Protection (WIP), en el caso de que las haya configurado.
       >
-      > En el caso de los dispositivos corporativos, el ámbito de usuario MDM tiene prioridad si ambos ámbitos están habilitados. Los dispositivos se inscriben en MDM.
+      > Si la intención es habilitar la inscripción automática de dispositivos Windows BYOD en una MDM, establezca el ámbito de usuario de MDM en **Todos** (o bien en **Algunos** y especifique un grupo) y el ámbito de usuario de MAM en **Ninguno** (o bien en **Algunos** y especifique un grupo; asegúrese también de que los usuarios no sean miembros de un grupo de destino para los ámbitos de usuario de MDM y MAM).
+      >
+      >En el caso de los [dispositivos corporativos](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices), el ámbito de usuario de MDM tiene prioridad si los ámbitos de usuario de MDM y MAM están habilitados. El dispositivo se inscribirá de forma automática en la MDM configurada.
 
    > [!NOTE]
    > El ámbito de usuario de MDM debe establecerse en un grupo de Azure AD que contenga objetos de usuario.

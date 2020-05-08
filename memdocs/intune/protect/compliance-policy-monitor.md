@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745203"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Supervisión de las directivas de cumplimiento de dispositivos Intune
 
@@ -36,7 +36,7 @@ Los informes de cumplimiento ayudan a revisar el cumplimiento de los dispositivo
 
 Abra el **panel de Cumplimiento de dispositivos de Intune**:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione la pestaña **Dispositivos** > **Información general** > **Estado de cumplimiento**.
 
@@ -103,6 +103,11 @@ Esta acción abre la ventana **Conformidad de dispositivos**, que muestra los di
 
 Si quiere ver todos los dispositivos de un usuario específico, también puede filtrar el informe de gráfico escribiendo el correo electrónico del usuario.
 
+> [!TIP]
+> Si ningún usuario ha iniciado sesión en el dispositivo, el dispositivo con la directiva de cumplimiento de dispositivos de destino devolverá un informe de cumplimiento a Intune en el que se muestra **Cuenta del sistema** como nombre principal de usuario. Esto sucede porque una directiva de cumplimiento de dispositivos estaba destinada a un grupo de usuarios o dispositivos, y ningún usuario ha iniciado sesión en el dispositivo en el momento de evaluar la directiva de cumplimiento.
+>
+> Además, si varios usuarios han iniciado sesión en el mismo dispositivo y, por casualidad, se destina al dispositivo una directiva de cumplimiento que abarca todos los usuarios que actualmente han iniciado sesión en él, es posible que en el informe de cumplimiento se muestre varias veces el mismo dispositivo, ya que todos los usuarios que han iniciado sesión tienen que evaluar la directiva de cumplimiento de este y notificarlo a Intune.
+
 #### <a name="filter-and-columns"></a>Filtrar y columnas
 
 ![Haga clic en Filtrar y Columnas para cambiar los resultados en el gráfico](./media/compliance-policy-monitor/filter-columns.png)
@@ -153,7 +158,7 @@ En el gráfico **Configurando cumplimiento** se muestra la configuración de tod
 
 Además de usar los gráficos en *Estado de cumplimiento*, puede ir a **Informes** > **Cumplimiento de dispositivos**.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Monitor** y, luego, en **Cumplimiento**, seleccione el informe que quiere ver. Algunos de los informes de cumplimiento disponibles son:
 

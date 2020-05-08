@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086406"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587291"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Adición y uso de la configuración de Wi-Fi en los dispositivos en Microsoft Intune
 
@@ -51,7 +51,7 @@ Los perfiles de Wi-Fi admiten las siguientes plataformas de dispositivo:
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
@@ -97,6 +97,10 @@ Los perfiles de Wi-Fi admiten las siguientes plataformas de dispositivo:
     Seleccione **Siguiente**.
 
 11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
+
+> [!TIP]
+> Si usa la autenticación basada en certificados para el perfil de Wi-Fi, implemente el perfil de Wi-Fi, el de certificado y el perfil raíz de confianza en los mismos grupos para asegurarse de que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación.  Para obtener más información, vea [Procedimiento para configurar certificados con Microsoft Intune](../protect/certificates-configure.md).
+
 
 ## <a name="next-steps"></a>Pasos siguientes
 

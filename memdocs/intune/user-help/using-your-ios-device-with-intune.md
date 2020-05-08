@@ -19,19 +19,19 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 07d0d807a9d675d7eef0a3910a50d547dc6be872
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 764c04e130f206e77a99e557d0397a329865c2ab
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335333"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605089"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Use su dispositivo iOS con Portal de empresa de Intune
 En este artículo se enumeran tareas e información específica para el Portal de empresa para iOS. Le puede ser útil para solucionar problemas y administrar un dispositivo iOS. Haga clic en cualquier vínculo para ver más detalles, pasos y capturas de pantalla.
 
-## <a name="supported-versions"></a>Versiones compatibles
+## <a name="supported-versions"></a>Versiones admitidas
 
-Actualmente, el Portal de empresa para iOS es compatible con iOS 10.0 y versiones posteriores.  
+Actualmente, el Portal de empresa para iOS es compatible con iOS 11.0 y versiones posteriores.  
 
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inscripción en Intune e instalación del Portal de empresa
