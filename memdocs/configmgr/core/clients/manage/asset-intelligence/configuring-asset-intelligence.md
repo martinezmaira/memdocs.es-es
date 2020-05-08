@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694763"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906607"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>Configuración de Asset Intelligence en Configuration Manager
 
@@ -139,7 +139,7 @@ Además de descargar la nueva información del catálogo Asset Intelligence, el 
 4.  En la página **Importar** , especifique si está importando un archivo de licencias por volumen de Microsoft (MVLS) (.xml o .csv) o un archivo de declaración de licencia general (.csv). Para más información sobre cómo crear un archivo de declaración de licencia general, vea [Crear un archivo de información de declaración de licencia general para importación](#BKMK_CreateGeneralLicenseStatement) más adelante en este tema.  
 
     > [!WARNING]  
-    >  Para descargar un archivo MVLS en formato .csv que pueda importar en el catálogo Asset Intelligence, consulte [Centro de servicios de licencias por volumen de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=226547). Para acceder a esta información, debe tener una cuenta registrada en el sitio web. Debe ponerse en contacto con su representante de cuenta de Microsoft para recibir información sobre cómo obtener el archivo MVLS en formato .xml.  
+    >  Para descargar un archivo MVLS en formato .csv que pueda importar en el catálogo Asset Intelligence, consulte [Centro de servicios de licencias por volumen de Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Para acceder a esta información, debe tener una cuenta registrada en el sitio web. Debe ponerse en contacto con su representante de cuenta de Microsoft para recibir información sobre cómo obtener el archivo MVLS en formato .xml.  
 
 5.  Escriba la ruta de acceso UNC al archivo de declaración de licencia o pulse **Examinar** para seleccionar un archivo y una carpeta compartidos en la red.  
 

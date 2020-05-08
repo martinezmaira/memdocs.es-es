@@ -10,12 +10,12 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701263"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906110"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Características de accesibilidad de Configuration Manager
 
@@ -89,5 +89,5 @@ Para más información sobre los fundamentos de navegar por las interfaces de us
 - [Manual del usuario del Centro de software](software-center.md)
 
 > [!NOTE]  
-> Es posible que la información de este artículo solo sea válida para los usuarios con licencia de productos de Microsoft en Estados Unidos. Si ha obtenido este producto fuera de los Estados Unidos, puede usar la tarjeta de información de filiales incluida en el paquete de software o visitar el [sitio web de accesibilidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=8431) para obtener la información de contacto de los servicios de soporte técnico de Microsoft. Puede ponerse en contacto con su distribuidor para conocer si el tipo de productos y servicios que se describen en esta sección están disponibles en su área. La información acerca de la accesibilidad está disponible en otros idiomas, incluido el japonés y el francés.  
+> Es posible que la información de este artículo solo sea válida para los usuarios con licencia de productos de Microsoft en Estados Unidos. Si ha obtenido este producto fuera de los Estados Unidos, puede usar la tarjeta de información de filiales incluida en el paquete de software o visitar el [sitio web de accesibilidad de Microsoft](https://www.microsoft.com/accessibility/) para obtener la información de contacto de los servicios de soporte técnico de Microsoft. Puede ponerse en contacto con su distribuidor para conocer si el tipo de productos y servicios que se describen en esta sección están disponibles en su área. La información acerca de la accesibilidad está disponible en otros idiomas, incluido el japonés y el francés.  
 

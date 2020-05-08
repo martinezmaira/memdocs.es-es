@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705113"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905325"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Funciones de Technical Preview 1710 de Configuration Manager
 
@@ -125,7 +125,7 @@ Después de crear directivas de Protección contra vulnerabilidades de seguridad
 
 ## <a name="limited-support-for-cng-certificates"></a>Compatibilidad limitada con certificados CNG
 <!-- 1356191 -->
-A partir de esta versión, ahora se pueden usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) en los escenarios siguientes:
+A partir de esta versión, ahora se pueden usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) en los escenarios siguientes:
 
 - Registro de cliente y comunicación con un punto de administración de HTTPS.   
 - Distribución de software e implementación de aplicaciones con un punto de distribución de HTTPS.   

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076312"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905823"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funciones de Technical Preview 1601 de Configuration Manager
 
@@ -164,7 +164,6 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 
  Configuration Manager ahora ayuda a administrar las aplicaciones adquiridas a través de este tipo de programa al importar la información de licencia desde la tienda de aplicaciones y realizar el seguimiento de la cantidad de licencias que se han usado.  
 
- Para obtener detalles, vea [Manage apps you purchased through a volume-purchase program with Configuration Manager (Administrar aplicaciones compradas a través de un programa de compras por volumen con Configuration Manager)](https://technet.microsoft.com/library/mt627954.aspx).  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS: configuración de aplicaciones para aplicaciones<br />Híbrida  
  Algunas aplicaciones de iOS admiten la configuración previa de, por ejemplo, un servidor o una base de datos a los que debe conectarse la aplicación. Configuration Manager ahora admite la implementación de directivas de configuración de aplicación en el dispositivo, lo que permite que el usuario use la aplicación de inmediato sin necesidad de conocer esta información. Los desarrolladores deben habilitar esta característica en sus aplicaciones.  

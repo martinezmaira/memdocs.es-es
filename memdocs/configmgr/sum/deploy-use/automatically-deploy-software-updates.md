@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: fc2f2644ff042598d3df0ddfc1fd9d4d1adcc34a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110447"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906788"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -85,7 +85,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
      - El límite para las actualizaciones de software en la regla de implementación automática es de 1000 actualizaciones de software.  
 
-     - Si es necesario, filtre por el tamaño del contenido de las actualizaciones de software en las reglas de implementación automática. Para más información, vea [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+     - Si es necesario, filtre por el tamaño del contenido de las actualizaciones de software en las reglas de implementación automática. Para más información, vea [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
      - A partir de la versión 1910, puede usar **Implementado** como un filtro de actualización en las reglas de implementación automática (ADR). Este filtro ayuda a identificar las actualizaciones nuevas que se deben implementar en las colecciones de prueba o piloto. El filtro de actualización de software también puede ayudar a evitar volver a implementar actualizaciones anteriores. 
          - Cuando se usa **Implementado** como filtro, tenga en cuenta que es posible que ya haya implementado la actualización en otra colección, como una colección de prueba o piloto. <!--4852033-->

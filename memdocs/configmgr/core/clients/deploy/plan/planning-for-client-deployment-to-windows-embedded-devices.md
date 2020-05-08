@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623125ad64c7ed421ea209137eb68f17891d7a81
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694853"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906637"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Planeación de la implementación de clientes en dispositivos de Windows Embedded en Configuration Manager
 
@@ -46,11 +46,11 @@ ms.locfileid: "81694853"
 
  Configuration Manager admite la administración de los siguientes tipos de filtros de escritura:  
 
-- Filtro de escritura basado en archivo (FBWF): para obtener más información, vea [File-Based Write Filter (Filtro de escritura basado en archivo)](https://go.microsoft.com/fwlink/?LinkID=204717) en MSDN.  
+- Filtro de escritura basado en archivo (FBWF): para obtener más información, vea [File-Based Write Filter (Filtro de escritura basado en archivo)](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5)) en MSDN.  
 
-- RAM del filtro de escritura mejorado (EWF): para obtener más información, vea [Enhanced Write Filter (Filtro de escritura mejorado)](https://go.microsoft.com/fwlink/?LinkId=204718).  
+- RAM del filtro de escritura mejorado (EWF): para obtener más información, vea [Enhanced Write Filter (Filtro de escritura mejorado)](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5)).  
 
-- Filtro de escritura unificado (UWF): para obtener más información, vea [Unified Write Filter (Filtro de escritura unificado)](https://go.microsoft.com/fwlink/?LinkId=309236).  
+- Filtro de escritura unificado (UWF): para obtener más información, vea [Unified Write Filter (Filtro de escritura unificado)](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter).  
 
   Configuration Manager no admite las operaciones de filtro de escritura cuando el dispositivo de Windows Embedded está en modo EWF RAM Reg.  
 

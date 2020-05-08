@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9183efd622cb425027500d3fe51ed7b86d3a94e4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b9bd8f8102cbf6c814956127fc95a5f3961779c0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079372"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906946"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
 Windows 10 proporciona muchas características de seguridad nuevas que requieren dispositivos compatibles con UEFI. Es posible que tenga equipos modernos de Windows que admiten UEFI, pero que usan un BIOS heredado. Para convertir un dispositivo a UEFI es necesario que vuelva a particionar el disco duro y vuelva a configurar el firmware de cada equipo. Mediante el uso de secuencias de tareas en Configuration Manager, puede preparar un disco duro para la conversión de BIOS en UEFI, convertir de BIOS a UEFI como parte del proceso de actualización local y recopilar información de UEFI como parte del inventario de hardware.
@@ -57,7 +57,7 @@ Windows 10 Creators Update presenta una herramienta de conversión sencilla que 
 ### <a name="to-convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Para convertir de BIOS a UEFI durante una actualización local
 1. Cree una secuencia de tareas de actualización del sistema operativo que realiza una actualización local a Windows 10 Creators Update.
 2. Edite la secuencia de tareas. En el **grupo Posprocesamiento**, agregue los siguientes pasos a la secuencia de tareas:
-   1. En General, agregue un paso **Ejecutar línea de comandos**. Va a agregar la línea de comandos para la herramienta MBR2GPT que convierte un disco de MBR a GPT sin modificar o eliminar datos del disco. En la línea de comandos, escriba lo siguiente:  **MBR2GPT /convert /disk:0 /AllowFullOS**. También puede ejecutar la herramienta MBR2GPT.EXE en Windows PE en lugar de en el sistema operativo completo. Para ello, agregue un paso para reiniciar el equipo a WinPE antes del paso de ejecutar la herramienta MBR2GPT.EXE y eliminar la opción /AllowFullOS de la línea de comandos. Para obtener información detallada sobre la herramienta y las opciones disponibles, vea [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt).
+   1. En General, agregue un paso **Ejecutar línea de comandos**. Va a agregar la línea de comandos para la herramienta MBR2GPT que convierte un disco de MBR a GPT sin modificar o eliminar datos del disco. En la línea de comandos, escriba lo siguiente:  **MBR2GPT /convert /disk:0 /AllowFullOS**. También puede ejecutar la herramienta MBR2GPT.EXE en Windows PE en lugar de en el sistema operativo completo. Para ello, agregue un paso para reiniciar el equipo a WinPE antes del paso de ejecutar la herramienta MBR2GPT.EXE y eliminar la opción /AllowFullOS de la línea de comandos. Para obtener información detallada sobre la herramienta y las opciones disponibles, vea [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
    2. Agregue un paso para iniciar la herramienta de OEM que va a convertir el firmware de BIOS a UEFI. Normalmente será un paso de secuencia de tareas Ejecutar línea de comandos con una línea de comandos para iniciar la herramienta de OEM.
    3. En General, agregue el paso **Reiniciar equipo**. Para especificar lo que se debe ejecutar después del reinicio, seleccione **El sistema operativo predeterminado instalado actualmente**.
 3. Implemente la secuencia de tareas.

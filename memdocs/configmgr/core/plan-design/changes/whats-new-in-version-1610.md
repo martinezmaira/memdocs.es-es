@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073966"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904814"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Novedades de la versión 1610 de Configuration Manager
 
@@ -29,8 +29,8 @@ La actualización 1610 de la rama actual de Configuration Manager está disponi
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
 >
 > Más información acerca de:    
-> - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalación de nuevos sitios](../../servers/deploy/install/installing-sites.md)  
+> - [Instalación de actualizaciones en los sitios](../../servers/manage/updates.md)  
 > - [Versiones de línea de base y versiones de actualización](../../servers/manage/updates.md#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1610 de Configuration Manager.  
@@ -168,7 +168,7 @@ Esta acción no provoca que la aplicación se desinstale de ningún dispositivo.
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrar por tamaño del contenido en las reglas de implementación automática
 Ahora se puede filtrar por el tamaño del contenido de las actualizaciones de software en las reglas de implementación automática. Por ejemplo, para descargar solo las actualizaciones de software de menos de 2 MB, puede establecer el filtro **Tamaño del contenido (KB)** en **< 2048**. Con este filtro se evita que las actualizaciones de software de gran tamaño se descarguen automáticamente, lo que ofrece un mantenimiento simplificado de nivel inferior de Windows cuando el ancho de banda de la red es limitado. Si desea obtener información detallada, consulte:
-- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)
+- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056) (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)
 - [Implementar actualizaciones de software automáticamente](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 Para configurar el campo **Tamaño del contenido (KB)** , realice una de las siguientes acciones:

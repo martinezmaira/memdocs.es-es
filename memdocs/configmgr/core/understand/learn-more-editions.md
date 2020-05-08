@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706883"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906049"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Licencias y ramas de Configuration Manager
 
@@ -32,7 +32,7 @@ Use este artículo para obtener información sobre los requisitos de licencia de
 
 Los clientes con Software Assurance (SA) activo en licencias de Configuration Manager o con derechos de suscripción equivalentes el 1 de octubre de 2016 tienen derecho a usar la versión 1606 de octubre de 2016 de Configuration Manager. Los clientes con derechos para Configuration Manager el 1 de octubre de 2016 o después de esta fecha encontrarán dos opciones de licencia tras la instalación: la rama actual y la rama de mantenimiento a largo plazo (LTSB).
 
-Para conocer los términos y condiciones completos de los productos que compra mediante los programas de licencias por volumen de Microsoft, consulte [Licencias y ramas](https://go.microsoft.com/fwlink/?LinkId=800052).
+Para conocer los términos y condiciones completos de los productos que compra mediante los programas de licencias por volumen de Microsoft, consulte [Licencias y ramas](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 
 ## <a name="licensed-branches"></a>Ramas con licencia
@@ -117,7 +117,7 @@ Utilice los siguientes recursos para obtener más información acerca de los det
 
 - [Información general de VLSC](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Términos del programa Licencias por Volumen de Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Términos del programa Licencias por Volumen de Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - Los clientes de licencias por volumen pueden obtener un resumen de sus licencias en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Vaya al menú **Licencias** y haga clic en **Licenses Summary** (Resumen de licencias).
 

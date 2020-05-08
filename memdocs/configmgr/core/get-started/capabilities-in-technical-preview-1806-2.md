@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078760"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905216"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funciones de Technical Preview 1806.2 de Configuration Manager
 
@@ -147,7 +147,7 @@ Al crear una implementación por fases y configurar una fase manualmente, en la 
 <!--1357427-->
 Configuration Manager admite ahora la implementación de nuevos formatos del paquete de la aplicación (.msix) y del lote de aplicaciones (.msixbundle) de Windows 10. La compatibilidad con estos formatos está disponible en la [versión preliminar de Windows Insider](https://insider.windows.com/).
 
-Para obtener información general de MSIX, consulte [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/) (Análisis exhaustivo de MSIX).
+Para obtener información general de MSIX, consulte [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix) (Análisis exhaustivo de MSIX).
 
 Para crear una aplicación MSIX, vea [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376) (Compatibilidad de MSIX introducida en la compilación 17682 de Insider).
 

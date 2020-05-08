@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688523"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904576"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Configuraciones admitidas para Configuration Manager
 
@@ -27,12 +27,12 @@ La información de este tema y de los siguientes es esencial para ayudarle a ide
 
 Cuando una característica o capacidad de Configuration Manager requiere configuraciones más específicas, esa información se incluye en la documentación específica de la característica y complementa los detalles de configuración más generales.  
 
- Los productos y tecnologías que se describen en los temas siguientes son compatibles con Configuration Manager. En cambio, su inclusión en este contenido no implica una extensión de la compatibilidad con cualquier producto más allá del ciclo de vida de soporte individual de los productos. Los productos que superan su ciclo de vida de soporte técnico no se pueden usar con Configuration Manager, incluidos los productos del programa de [actualizaciones de seguridad extendida (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates). Para obtener más información sobre los ciclos de vida de soporte de Microsoft, visite el sitio web [Ciclo de vida de soporte de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270). Para más información acerca de las actualizaciones de seguridad extendida en Configuration Manager, consulte [Versiones de sistema operativo admitidas para clientes y dispositivos de Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
+ Los productos y tecnologías que se describen en los temas siguientes son compatibles con Configuration Manager. En cambio, su inclusión en este contenido no implica una extensión de la compatibilidad con cualquier producto más allá del ciclo de vida de soporte individual de los productos. Los productos que superan su ciclo de vida de soporte técnico no se pueden usar con Configuration Manager, incluidos los productos del programa de [actualizaciones de seguridad extendida (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates). Para obtener más información sobre los ciclos de vida de soporte de Microsoft, visite el sitio web [Ciclo de vida de soporte de Microsoft](https://support.microsoft.com/lifecycle). Para más información acerca de las actualizaciones de seguridad extendida en Configuration Manager, consulte [Versiones de sistema operativo admitidas para clientes y dispositivos de Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 > [!NOTE]  
->  Para obtener información sobre la directiva de ciclo de vida de soporte de Microsoft, visite el sitio web de preguntas más frecuentes sobre la directiva de ciclo de vida de soporte de Microsoft en [Directiva de ciclo de vida de soporte técnico: preguntas más frecuentes](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  Para obtener información sobre la directiva de ciclo de vida de soporte de Microsoft, visite el sitio web de preguntas más frecuentes sobre la directiva de ciclo de vida de soporte de Microsoft en [Directiva de ciclo de vida de soporte técnico: preguntas más frecuentes](https://support.microsoft.com/lifecycle).  
 
- Además, los productos y las versiones de los productos que no aparecen en los temas siguientes no son compatibles con Configuration Manager a menos que se hayan anunciado en el [Blog de Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/).  En ocasiones, el contenido de este blog precede una actualización de este conjunto de documentación.
+ Además, los productos y las versiones de los productos que no aparecen en los temas siguientes no son compatibles con Configuration Manager a menos que se hayan anunciado en el [Blog de Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).  En ocasiones, el contenido de este blog precede una actualización de este conjunto de documentación.
 
 
 -  [Números de tamaño y escala](../../../core/plan-design/configs/size-and-scale-numbers.md)  

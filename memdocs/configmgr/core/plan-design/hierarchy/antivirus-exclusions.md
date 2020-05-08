@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703743"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906199"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Exclusiones del antivirus recomendadas para Configuration Manager
 
@@ -114,10 +114,10 @@ Las exclusiones de procesos solo son necesarias si los programas antivirus agres
 
 Para más información sobre las exclusiones del antivirus, consulte los artículos siguientes:
 
-[Exclusiones del antivirus de la rama actual de Configuration Manager: blog de ingenieros de campo de System Center Premier](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
+[Exclusiones del antivirus de la rama actual de Configuration Manager: blog de ingenieros de campo de System Center Premier](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831)
 
-[Actualización de exclusiones del antivirus de System Center 2012 Configuration Manager con más información sobre las imágenes OSD y de arranque](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[Actualización de exclusiones del antivirus de System Center 2012 Configuration Manager con más información sobre las imágenes OSD y de arranque](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371)
 
-[Cómo elegir el software antivirus que se ejecutará en los equipos con SQL Server](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[Cómo elegir el software antivirus que se ejecutará en los equipos con SQL Server](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[Recomendaciones de detección de virus para equipos empresariales que ejecutan versiones de Windows admitidas actualmente](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[Recomendaciones de detección de virus para equipos empresariales que ejecutan versiones de Windows admitidas actualmente](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

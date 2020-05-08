@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df289c284774a4e0bb3a379853f31f8d6f5bd44d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704173"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906561"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
@@ -260,5 +260,5 @@ Para mejorar la seguridad de los clientes y servidores de Configuration Manager,
 - Deshabilitar SSL 3.0, TLS 1.0 y TLS 1.1 
 - Volver a ordenar los conjuntos de cifrado relacionados con TLS 
 
-Para más información, vea [Cómo restringir el uso de ciertos algoritmos criptográficos y protocolos en Schannel.dll](https://support.microsoft.com/en-us/kb/245030/) y [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx) (Prioridad de los conjuntos de cifrado de SChannel). Estos procedimientos no afectan a la funcionalidad de Configuration Manager.
+Para más información, vea [Cómo restringir el uso de ciertos algoritmos criptográficos y protocolos en Schannel.dll](https://support.microsoft.com/help/245030/) y [Prioritizing Schannel Cipher Suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites) (Prioridad de los conjuntos de cifrado de SChannel). Estos procedimientos no afectan a la funcionalidad de Configuration Manager.
 

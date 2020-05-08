@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703043"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906798"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
@@ -40,7 +40,7 @@ Hay configuraciones de directiva de grupo específicas empleadas por el Agente d
 Cuando se crea el punto de actualización de software para un sitio, los clientes reciben una directiva de equipo que proporciona el nombre de servidor del punto de actualización de software y configura la directiva local **Especificar ubicación del servicio de Windows Update en la intranet** en el equipo. El WUA recupera el nombre de servidor especificado en la configuración **Establecer el servicio de actualización de la intranet para detectar actualizaciones** y, a continuación, se conecta a este servidor al analizar la compatibilidad de las actualizaciones de software. Cuando se crea una directiva de dominio para la opción **Especificar la ubicación del servicio Microsoft Update en la intranet** , dicha directiva reemplaza la directiva local y, además, el WUA podría conectarse a un servidor que no sea el punto de actualización de software. Si esto ocurre, el cliente podría analizar la compatibilidad de la actualización de software según diferentes productos, clasificaciones e idiomas. Por lo tanto, no se debe configurar la directiva de Active Directory para equipos cliente.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Directiva local que permite el contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet  
-Debe habilitar la configuración de la directiva de grupo **Permitir el contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet** antes de que el WUA de los equipos analice si hay actualizaciones de software creadas y publicadas mediante el editor de actualizaciones de System Center. Si la configuración de directiva está habilitada, el WUA aceptará actualizaciones de software recibidas a través de una ubicación en intranet si las actualizaciones de software están firmadas en el almacén de certificados de **Editores de confianza** en el equipo local. Para obtener más información acerca de la configuración de directiva de grupo requerida para el editor de actualizaciones, consulte [Updates Publisher 2011 Documentation Library (Biblioteca de documentación del editor de actualizaciones 2011)](https://go.microsoft.com/fwlink/p/?LinkId=232476).  
+Debe habilitar la configuración de la directiva de grupo **Permitir el contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet** antes de que el WUA de los equipos analice si hay actualizaciones de software creadas y publicadas mediante el editor de actualizaciones de System Center. Si la configuración de directiva está habilitada, el WUA aceptará actualizaciones de software recibidas a través de una ubicación en intranet si las actualizaciones de software están firmadas en el almacén de certificados de **Editores de confianza** en el equipo local. Para obtener más información acerca de la configuración de directiva de grupo requerida para el editor de actualizaciones, consulte [Updates Publisher 2011 Documentation Library (Biblioteca de documentación del editor de actualizaciones 2011)](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Configuración de actualizaciones automáticas  
 Las actualizaciones automáticas permiten que los equipos cliente reciban actualizaciones de seguridad y otras descargas importantes. Las actualizaciones automáticas se especifican mediante la configuración de la directiva de grupo **Configurar actualizaciones automáticas** o mediante el Panel de control en el equipo local. Cuando las actualizaciones automáticas están habilitadas, los equipos cliente recibirán notificaciones de actualización y según las opciones configuradas, los equipos cliente descargarán e instalarán las actualizaciones necesarias. Cuando las actualizaciones automáticas coexisten con las actualizaciones de software, cada equipo cliente podría mostrar iconos y elementos emergentes de notificaciones en pantalla para la misma actualización. Además, cuando se requiere un reinicio, cada equipo cliente podría mostrar un cuadro de diálogo de reinicio para la misma actualización.  

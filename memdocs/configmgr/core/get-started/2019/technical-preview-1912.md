@@ -10,12 +10,13 @@ ms.assetid: ef972b5f-61f6-49a9-91a9-f70bf5c325b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 914f1bae0dc108500c0966a5f7e73f769f1625d7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ROBOTS: NOINDEX
+ms.openlocfilehash: 75b2ea9522ee41ad3ca0d227df2747f97b09d7fb
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697413"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729316"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-1912"></a>Características de la versión 1912 de Technical Preview de Configuration Manager
 

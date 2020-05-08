@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690513"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906926"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Implementación de Windows to Go con Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81690513"
 
 En este tema se proporcionan los pasos para aprovisionar Windows To Go en Configuration Manager. Windows To Go es una función empresarial de Windows 8 que habilita la creación de un área de trabajo Windows To Go que se puede arrancar desde una unidad externa conectada mediante USB en equipos que cumplan los requisitos de certificados de Windows 7 o Windows 8, sin tener en cuenta el sistema operativo que se ejecute en el equipo. Las áreas de trabajo de Windows To Go pueden utilizar la misma imagen que usan las empresas en los equipos de escritorio y portátiles, y se puede administrar de la misma manera.  
 
- Para obtener más información sobre Windows To Go, consulte [Windows To Go: Introducción a las características](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ Para obtener más información sobre Windows To Go, consulte [Windows To Go: Introducción a las características](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Aprovisionar Windows To Go  
  Windows To Go es un sistema operativo almacenado en una unidad externa conectada mediante USB. Puede aprovisionar la unidad de Windows To Go del mismo modo que aprovisiona otras implementaciones de sistema operativo. Sin embargo, como Windows To Go está diseñado para ser una solución de gran movilidad y centrada en el usuario, debe adoptar un enfoque ligeramente diferente para aprovisionar estas unidades.  

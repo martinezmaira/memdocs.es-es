@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707743"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906463"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1702 de Configuration Manager
 
@@ -89,7 +89,7 @@ Para obtener más información, consulte [Site and site system prerequisites](..
 
 **Revisar la versión de Windows Assessment and Deployment Kit (ADK) para Windows 10**: Windows 10 ADK debe tener la versión 1607 o posterior. Si es necesario actualizar el ADK, hágalo antes de comenzar la actualización de Configuration Manager. Esto garantiza que las imágenes de arranque predeterminadas se actualicen automáticamente a la última versión de Windows PE. (Las imágenes de arranque personalizadas deben actualizarse manualmente).
 
-Si actualiza el sitio antes de actualizar el ADK, vea el blog [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) (Configuration Manager y Windows ADK para Windows 10, versión 1607) para obtener un script que se pueda usar para regenerar las imágenes de arranque.
+Si actualiza el sitio antes de actualizar el ADK, vea el blog [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) (Configuration Manager y Windows ADK para Windows 10, versión 1607) para obtener un script que se pueda usar para regenerar las imágenes de arranque.
 
 **Revise el estado del sitio y de la jerarquía y compruebe que no hay problemas sin resolver:** Antes de actualizar un sitio, resuelva todos los problemas de funcionamiento para el servidor del sitio, el servidor de base de datos del sitio y los roles del sistema de sitio instalados en los equipos remotos. Una actualización del sitio puede generar errores debido a problemas de funcionamiento existentes.
 

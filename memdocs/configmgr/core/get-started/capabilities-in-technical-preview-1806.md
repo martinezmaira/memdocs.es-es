@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210084"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905187"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funciones de Technical Preview 1806 de Configuration Manager
 
@@ -81,10 +81,10 @@ SCUP continúa siendo compatible con otros catálogos y escenarios. La lista de 
 
     > [!Tip]  
     > El punto de actualización de software requiere HTTPS porque es un requisito para las API de WSUS que se usan para administrar certificados de firma. No es necesario que los clientes también estén habilitados para HTTPS. Para obtener más información sobre cómo habilitar HTTPS en WSUS, vea los artículos siguientes para obtener ayuda:  
-    > - [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (Protección de WSUS con el protocolo Capa de sockets seguros) 
-    > - [Entrada del blog de soporte técnico de WSUS](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [Secure WSUS with the Secure Sockets Layer Protocol](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (Protección de WSUS con el protocolo Capa de sockets seguros) 
+    > - [Entrada del blog de soporte técnico de WSUS](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Espacio en disco suficiente en el punto de actualización de software (la carpeta WSUSContent) para almacenar el contenido binario de origen de las actualizaciones de software de terceros. La cantidad de almacenamiento necesaria varía según el proveedor, los tipos de actualizaciones y las actualizaciones específicas que se publican para la implementación. Si necesita mover la carpeta WSUSContent a otra unidad con más espacio disponible, consulte el artículo del blog del equipo de soporte técnico de WSUS sobre [cómo cambiar la ubicación donde WSUS almacena las actualizaciones localmente](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
+- Espacio en disco suficiente en el punto de actualización de software (la carpeta WSUSContent) para almacenar el contenido binario de origen de las actualizaciones de software de terceros. La cantidad de almacenamiento necesaria varía según el proveedor, los tipos de actualizaciones y las actualizaciones específicas que se publican para la implementación. Si necesita mover la carpeta WSUSContent a otra unidad con más espacio disponible, consulte el artículo del blog del equipo de soporte técnico de WSUS sobre [cómo cambiar la ubicación donde WSUS almacena las actualizaciones localmente](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Habilite e implemente la configuración de cliente [Habilitar actualizaciones de software de terceros](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) en el grupo **Actualizaciones de software**.  
 
@@ -191,9 +191,6 @@ También hay una nueva condición global, **Are Office 365 applications managed 
 <!--1357861-->
 Package Conversion Manager es ahora una herramienta integrada que permite convertir paquetes de Configuration Manager 2007 heredados en aplicaciones de la rama actual Configuration Manager. Luego, pueden usarse las características de aplicaciones como dependencias, reglas de requisitos y afinidad entre usuario y dispositivo.
 
-> [!Tip]  
-> En [TechNet](https://technet.microsoft.com/library/hh531519.aspx) puede encontrar documentación heredada sobre la funcionalidad existente en Package Conversion Manager. Hay información importante en proceso para migrar a la biblioteca de docs.microsoft.com.
-
 ### <a name="try-it-out"></a>Haga la prueba
  Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities-in-technical-preview-1804.md#bkmk_feedback) para que sepamos cómo le ha ido.
 
@@ -206,7 +203,6 @@ Package Conversion Manager es ahora una herramienta integrada que permite conver
      - **Convert Package** (Convertir paquete): con esta acción, algunos paquetes se pueden convertir fácilmente en aplicaciones.
      - **Fix and Convert** (Corregir y convertir): algunos paquetes requieren que se corrijan los problemas antes de su conversión en aplicaciones.  
 
-   Para obtener más información sobre estas acciones, consulte [Cómo analizar y convertir paquetes](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29).  
 
 3. Vaya al área de trabajo **Monitoring** (Supervisión) y seleccione **Package Conversion Status** (Estado de conversión de paquete). Este nuevo panel muestra el análisis general y el estado de conversión de los paquetes del sitio. Los datos de análisis se resumen automáticamente mediante una nueva tarea en segundo plano.  
 

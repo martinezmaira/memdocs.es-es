@@ -10,12 +10,12 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f8dd7c4c561ca22c679ee8ae03764ebb20b87664
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708203"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906082"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitación del uso compartido de datos en Análisis de escritorio
 
@@ -74,6 +74,9 @@ Para habilitar el uso compartido de datos, configure el servidor proxy para perm
 > De cara a la privacidad y la integridad de los datos, Windows comprueba si hay un certificado SSL de Microsoft (asignación de certificados) al comunicarse con los puntos de conexión de datos de diagnóstico. No es posible la interceptación y la inspección de SSL. Para usar Análisis de escritorio, excluya estos puntos de conexión de la inspección de SSL.<!-- BUG 4647542 -->
 
 A partir de la versión 2002, si el sitio de Configuration Manager no se puede conectar a los puntos de conexión necesarios para un servicio en la nube, genera un mensaje de estado crítico con el identificador 11488. Si no se puede conectar al servicio, el estado del componente SMS_SERVICE_CONNECTOR cambia a crítico. Consulte el estado detallado en el nodo [Estado del componente](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) de la consola de Configuration Manager.<!-- 5566763 -->
+
+> [!NOTE]
+> Para más información sobre los intervalos de direcciones IP de Microsoft, consulte [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602) (Espacio de direcciones IP públicas de Microsoft). Estas direcciones se actualizan periódicamente. No hay granularidad por servicio, por lo que se podría usar cualquier dirección IP dentro de estos intervalos.
 
 ### <a name="server-connectivity-endpoints"></a>Puntos de conexión de conectividad del servidor
 

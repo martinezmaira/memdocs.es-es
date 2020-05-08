@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4574b7ae97e8200da248a0b798677eacadb6229f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: deb3108d492a955eb0ec6b1635e306dcb85e0062
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703083"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904209"
 ---
 # <a name="cng-certificates-overview"></a>Introducción a los certificados CNG
 <!-- 1356191 --> 
@@ -23,7 +23,7 @@ ms.locfileid: "81703083"
 Configuration Manager tiene compatibilidad limitada con certificados Cryptography: Next Generation (CNG). Los clientes de Configuration Manager pueden usar un certificado de autenticación del cliente PKI con clave privada en el proveedor de almacenamiento de claves (KSP) de CNG. Gracias a la compatibilidad con KSP, los clientes de Configuration Manager admiten una clave privada basada en hardware, como el KSP de TPM para los certificados de autenticación de cliente PKI.
 
 ## <a name="supported-scenarios"></a>Escenarios admitidos
-Puede usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) en los siguientes escenarios:
+Puede usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) en los siguientes escenarios:
 
 - Registro de cliente y comunicación con un punto de administración de HTTPS.   
 - Distribución de software e implementación de aplicaciones con un punto de distribución de HTTPS.   

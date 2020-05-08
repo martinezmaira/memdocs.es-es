@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9917ec8a1ed2072903276de438f49d3f783a1284
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692613"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904015"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Atestación de estado para Configuration Manager
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-Los administradores pueden ver el estado de la [atestación de estado de los dispositivos de Windows 10](https://technet.microsoft.com/library/mt592023.aspx) en la consola de Configuration Manager.  La atestación de estado del dispositivo permite al administrador garantizar que los equipos cliente tienen habilitadas las siguientes configuraciones BIOS, TPM y de software de arranque de confianza:  
+Los administradores pueden ver el estado de la [atestación de estado de los dispositivos de Windows 10](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) en la consola de Configuration Manager.  La atestación de estado del dispositivo permite al administrador garantizar que los equipos cliente tienen habilitadas las siguientes configuraciones BIOS, TPM y de software de arranque de confianza:  
 
 -   Antimalware de inicio temprano: el antimalware de inicio temprano (ELAM) protege su equipo cuando se inicia y antes de inicializar controladores de terceros. [Cómo activar ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker: el Cifrado de unidad BitLocker de Windows es un software que permite cifrar todos los datos almacenados en el volumen del sistema operativo Windows.  [Activación de Bitlocker](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Arranque seguro: el arranque seguro es un estándar de seguridad desarrollado por miembros de la industria de PC para ayudar a garantizar que el equipo arranca solo con el software que el fabricante indica como confiable. [Más información sobre el arranque seguro](https://technet.microsoft.com/library/hh824987.aspx)  
--   Integridad de código: la integridad de código es una característica que mejora la seguridad del sistema operativo al validar la integridad de un controlador o un archivo del sistema cada vez que se carga en memoria. [Más información sobre la integridad de código](https://technet.microsoft.com/library/dd348642.aspx)  
+-   Arranque seguro: el arranque seguro es un estándar de seguridad desarrollado por miembros de la industria de PC para ayudar a garantizar que el equipo arranca solo con el software que el fabricante indica como confiable. [Más información sobre el arranque seguro](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Integridad de código: la integridad de código es una característica que mejora la seguridad del sistema operativo al validar la integridad de un controlador o un archivo del sistema cada vez que se carga en memoria. [Más información sobre la integridad de código](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Esta funcionalidad está disponible para equipos y recursos locales administrados por Configuration Manager y dispositivos móviles administrados con Microsoft Intune. Los administradores pueden especificar si la notificación se realiza a través de la nube o de la insfraestructura local. La supervisión de la atestación de estado de dispositivo local permite al administrador supervisar los equipos cliente sin acceso a Internet.
 
@@ -34,7 +34,7 @@ Esta funcionalidad está disponible para equipos y recursos locales administrado
 
  **Requisitos:**  
 
--   Dispositivos cliente que ejecutan la versión 1607 de Windows 10 o la versión 1607 de Windows Server 2016 con la [Atestación de estado de dispositivo habilitada](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation).
+-   Dispositivos cliente que ejecutan la versión 1607 de Windows 10 o la versión 1607 de Windows Server 2016 con la [Atestación de estado de dispositivo habilitada](https://docs.microsoft.com/windows-server/security/device-health-attestation).
 -   Dispositivos habilitados para TPM 1.2 o TPM 2.
 -   Si se usa la administración en la nube, comunicación entre el agente cliente de Configuration Manager y el punto de administración con el servicio Atestación de estado (administración en la nube) de *has.spserv.microsoft.com* (puerto 443). Si es local, el cliente debe poder comunicarse con el punto de administración habilitado para la Atestación de estado de dispositivo.
 

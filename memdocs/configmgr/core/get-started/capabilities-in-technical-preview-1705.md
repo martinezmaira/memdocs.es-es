@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078811"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905478"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funciones de Technical Preview 1705 de Configuration Manager
 
@@ -121,12 +121,12 @@ Con esta versión, ahora puede usar réplicas de confirmación asincrónica en l
 
 - Esta versión no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
   > [!CAUTION]  
-  > Dado que Configuration Manager no valida el estado de la réplica de confirmación asincrónica para confirmar que está actualizada, y que [por cuestiones de diseño una réplica de este tipo puede no estar sincronizada](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), el uso de una réplica de confirmación asincrónica como la base de datos de sitio puede poner en peligro la integridad de los datos y del sitio.  
+  > Dado que Configuration Manager no valida el estado de la réplica de confirmación asincrónica para confirmar que está actualizada, y que [por cuestiones de diseño una réplica de este tipo puede no estar sincronizada](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), el uso de una réplica de confirmación asincrónica como la base de datos de sitio puede poner en peligro la integridad de los datos y del sitio.  
 
 - Puede usar el mismo número y tipo de réplicas en un grupo de disponibilidad en la medida en que lo admita la versión de SQL Server que utilice.   (La compatibilidad anterior se limitaba a dos réplicas de confirmación sincrónica).
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configuración de una réplica de confirmación asincrónica
-Para agregar una réplica asincrónica a un [grupo de disponibilidad que utilice con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), no es necesario ejecutar los scripts de configuración necesarios para configurar una réplica sincrónica. (El motivo es que no se admite el uso de esa réplica asincrónica como la base de datos de sitio). Vea [la documentación de SQL Server](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) para obtener información sobre cómo agregar réplicas secundarias a grupos de disponibilidad.
+Para agregar una réplica asincrónica a un [grupo de disponibilidad que utilice con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), no es necesario ejecutar los scripts de configuración necesarios para configurar una réplica sincrónica. (El motivo es que no se admite el uso de esa réplica asincrónica como la base de datos de sitio). Para más información, vea [Adición de una réplica secundaria a un grupo de disponibilidad Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Uso de la réplica asincrónica para la recuperación del sitio
 Antes de usar una réplica asincrónica para recuperar la base de datos de sitio, debe detener el sitio primario activo para evitar escrituras adicionales en la base de datos de sitio. Una vez detenido el sitio, puede utilizar una réplica asincrónica en lugar de una [base de datos recuperada manualmente](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -154,8 +154,8 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender
 
-[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante los parámetros de conformidad de Configuration Manager que establezca para a continuación implementarla en una recopilación.
-Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Creators Update. Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
+[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante las opciones de conformidad de Configuration Manager que establezca para, posteriormente, implementarla en una recopilación.
+Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Creators Update. Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
 
 
 ### <a name="before-you-start"></a>Antes de empezar
