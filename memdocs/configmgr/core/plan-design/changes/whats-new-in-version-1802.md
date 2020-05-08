@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073609"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904656"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Novedades de la versión 1802 de Configuration Manager
 
@@ -169,7 +169,7 @@ A partir de esta versión, puede ver un panel con información sobre la administ
 
 ### <a name="microsoft-edge-browser-policies"></a>Directivas del explorador Microsoft Edge
 <!-- 1357310 -->
-Para los clientes que usan el explorador web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento de Configuration Manager para configurar varias opciones de Microsoft Edge. Para obtener más información, vea [Create Microsoft Edge browser profile](../../../compliance/deploy-use/browser-profiles.md) (Crear el perfil del explorador Microsoft Edge). 
+Para los clientes que usan el explorador web [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento de Configuration Manager para configurar varias opciones de Microsoft Edge. Para obtener más información, vea [Create Microsoft Edge browser profile](../../../compliance/deploy-use/browser-profiles.md) (Crear el perfil del explorador Microsoft Edge). 
 
 
 

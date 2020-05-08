@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073558"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906246"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novedades de la versión 1810 de la rama actual de Configuration Manager
 
@@ -43,7 +43,7 @@ Obtenga información sobre los cambios de compatibilidad antes de implementarlos
 
 A partir del 14 de agosto de 2018, la característica de administración híbrida de dispositivos móviles está en desuso. Para obtener más información, vea [¿Qué ha ocurrido con la MDM híbrida?](../../../mdm/understand/what-happened-to-hybrid.md)<!--Intune feature 2683117-->  
 
-El soporte técnico para System Center Endpoint Protection (SCEP) para Mac y Linux (todas las versiones) terminará el 31 de diciembre de 2018. La disponibilidad de nuevas definiciones de virus para SCEP para Mac y SCEP para Linux puede interrumpirse tras el fin del soporte técnico. Para obtener más información, vea la [entrada del blog de fin del soporte técnico](https://go.microsoft.com/fwlink/?linkid=870182).
+El soporte técnico para System Center Endpoint Protection (SCEP) para Mac y Linux (todas las versiones) terminará el 31 de diciembre de 2018. La disponibilidad de nuevas definiciones de virus para SCEP para Mac y SCEP para Linux puede interrumpirse tras el fin del soporte técnico. Para obtener más información, vea la [entrada del blog de fin del soporte técnico](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).
 
 Las implementaciones de servicio clásico de Azure ya están en desuso en Configuration Manager. Empiece a usar implementaciones de Azure Resource Manager para Cloud Management Gateway y el punto de distribución de nube. Para obtener más información, vea [Planear para Cloud Management Gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 

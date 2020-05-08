@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702353"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904671"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Novedades de la versión 1910 de la rama actual de Configuration Manager
 
@@ -46,7 +46,7 @@ Las siguientes soluciones de administración de Microsoft ahora forman parte de 
 - [Intune](https://docs.microsoft.com/intune)
 - [Análisis de escritorio](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Otras características de la [consola de administración de dispositivos](https://go.microsoft.com/fwlink/?linkid=2109094).
+- Otras características de la [consola de administración de dispositivos](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760).
 
 Para más información, consulte las siguientes entradas de Brad Anderson, vicepresidente corporativo de Microsoft para Microsoft 365:
 

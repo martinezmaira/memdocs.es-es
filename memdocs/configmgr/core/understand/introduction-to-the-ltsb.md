@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706923"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906099"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Obtenga información sobre la rama de mantenimiento a largo plazo de Configuration Manager.
 
@@ -53,7 +53,7 @@ Las integraciones en la nube, así como las características incluidas con la ve
 
 ## <a name="find-ltsb-documentation"></a>Búsqueda de documentación de LTSB
 
-La LTSB se basa en la versión 1606 de la rama actual. Use la [documentación de la rama actual](https://docs.microsoft.com/sccm/), con advertencias y limitaciones que son específicas de la LTSB. Estas advertencias y limitaciones se identifican en los artículos siguientes:
+La LTSB se basa en la versión 1606 de la rama actual. Use la [documentación de la rama actual](https://docs.microsoft.com/mem/configmgr/), con advertencias y limitaciones que son específicas de la LTSB. Estas advertencias y limitaciones se identifican en los artículos siguientes:
 
 - [Instalar la rama de mantenimiento a largo plazo](install-the-ltsb.md)
 - [Actualizar la rama de mantenimiento a largo plazo a la rama actual](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ Los clientes con Software Assurance (SA) activo en licencias de Configuration Ma
 
 Los clientes que tengan derechos perpetuos en System Center Configuration Manager, o que admitan que SA o la suscripción expiren después del 1 de octubre, pueden instalar la versión de LTSB de System Center Configuration Manager actual en el momento de caducidad.
 
-Para obtener más información sobre estas licencias, vea los [términos y condiciones completos de los productos que compra mediante los programas de licencias por volumen de Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052).
+Para obtener más información sobre estas licencias, vea los [términos y condiciones completos de los productos que compra mediante los programas de licencias por volumen de Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 Para obtener más información sobre licencias para ramas de Configuration Manager, vea [Licencias y ramas para Configuration Manager](learn-more-editions.md).
 

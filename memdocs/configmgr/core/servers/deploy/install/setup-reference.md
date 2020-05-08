@@ -10,12 +10,12 @@ ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d948452da54a41e35095b01cb0e942e02a7a597f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff2d5c6df0da6b25395858a55ef1ee8a3c0da00b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700563"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906524"
 ---
 # <a name="reference-for-configuration-manager-setup"></a>Referencia de la instalación de Configuration Manager
 
@@ -73,4 +73,4 @@ En la recopilación de datos se incluyen estos tres niveles:
 
 Para más información, incluida la divulgación de los detalles recopilados por cada nivel, vea [Diagnósticos y datos de uso para Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-Para ver la declaración de privacidad en línea de Configuration Manager, vaya a [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527).
+Para más información, vea la [Declaración de privacidad de Microsoft](https://privacy.microsoft.com/privacystatement).

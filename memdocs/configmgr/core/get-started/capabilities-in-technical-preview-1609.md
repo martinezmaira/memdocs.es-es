@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705453"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905703"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funciones de Technical Preview 1609 de Configuration Manager
 
@@ -51,7 +51,6 @@ Si está habilitado, el Asistente para la instalación de Apple solicita este se
 
 Upgrade Analytics permite evaluar y analizar la preparación del dispositivo y la compatibilidad con Windows 10 para permitir unas actualizaciones más sencillas y con menos problemas. Con la integración de Upgrade Analytics y Configuration Manager, puede acceder a los datos de compatibilidad de actualización en la consola de administración de Configuration Manager y luego, en la lista de dispositivos, elegir dispositivos para actualización o corrección.
 
-Puede leer más sobre Upgrade Analytics en [Get started with Upgrade Analytics (Introducción a Upgrade Analytics)](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Tipos de conexión nativos para perfiles híbridos de VPN de Windows 10
 
@@ -348,7 +347,7 @@ El panel muestra gráficos para lo siguiente:
 - Versiones de cliente de Office 365
 - Idiomas de cliente de Office 365
 - Canales de cliente de Office 365     
-Para más información, vea [Información general de los canales de actualización para Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+Para más información, vea [Información general de los canales de actualización para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Reglas de implementación automática que tienen seleccionado el cliente de Office 365 en el conjunto de productos disponibles
 
 En el panel se pueden realizar las siguientes acciones:

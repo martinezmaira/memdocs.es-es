@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c6ff51edbd04a6d68f2770af123b1ac431542d2
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073949"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904700"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novedades de la versión 1702 de Configuration Manager
 
@@ -28,8 +28,8 @@ La actualización 1702 de la rama actual de Configuration Manager está disponi
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
 >
 > Más información acerca de:    
-> - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalación de nuevos sitios](../../servers/deploy/install/installing-sites.md)  
+> - [Instalación de actualizaciones en los sitios](../../servers/manage/updates.md)  
 > - [Versiones de línea de base y versiones de actualización](../../servers/manage/updates.md#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1702 de Configuration Manager.  
@@ -71,7 +71,7 @@ Puede encontrar la opción **Comentarios**:
 - Al hacer clic con el botón derecho en cualquier objeto de la consola.   
    ![Opción de hacer clic con el botón derecho](./media/feedback-option.png)   
 
-  Al hacer clic en **Comentarios** se abre el explorador en el [sitio web de comentarios de UserVoice de Configuration Manager](https://go.microsoft.com/fwlink/?linkid=617029).
+  Al hacer clic en **Comentarios** se abre el explorador en el [sitio web de comentarios de UserVoice de Configuration Manager](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Cambios para actualizaciones y mantenimiento

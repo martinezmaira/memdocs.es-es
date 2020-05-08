@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 91c11e133c74cd3b55db09e8bf80fd6c4df7774d
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210101"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906356"
 ---
 # <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>Configuración de opciones de Microsoft Edge en Configuration Manager
 
 *Se aplica a: Configuration Manager (rama actual)*
 
 <!-- 1357310 -->
-A partir de la versión 1802, para los clientes que usan el explorador web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento de Configuration Manager para configurar varias opciones de Microsoft Edge. 
+A partir de la versión 1802, para los clientes que usan el explorador web [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) en los clientes de Windows 10, cree una directiva de configuración de cumplimiento de Configuration Manager para configurar varias opciones de Microsoft Edge. 
 
 Esta directiva solo se aplica a clientes de Windows 10, versión 1703 o una versión posterior. <!--511552-->
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078743"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905245"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Funciones de Technical Preview 1804 de Configuration Manager
 
@@ -134,8 +134,6 @@ Si intenta enviar comentarios desde un dispositivo que no puede tener acceso a I
 
 Use Support Center para solucionar los problemas de los clientes, visualizar los registros en tiempo real o capturar el estado de un equipo cliente de Configuration Manager para su posterior análisis. Support Center es una única herramienta para consolidar muchas herramientas de solución de problemas del administrador. Puede encontrar una versión preliminar de la versión más reciente de Support Center y una versión preliminar de nuestro nuevo visor de registros en la versión preliminar técnica. Puede encontrar el programa de instalación de Support Center en el servidor de sitio en la carpeta **cd.latest\SMSSETUP\Tools\SupportCenter**.
 
- > [!Tip]  
- > Puede encontrar documentación heredada sobre la funcionalidad existente en Support Center en [TechNet](https://technet.microsoft.com/library/dn688621.aspx). Hay información importante en proceso para migrar a la biblioteca de docs.microsoft.com.  
 
 ### <a name="new-support-center-features"></a>Nuevas características de Support Center  
 

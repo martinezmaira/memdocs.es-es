@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705563"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905689"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Funciones de Technical Preview 1607 de Configuration Manager
 
@@ -62,7 +62,7 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Usar el mismo adaptador de red para varias implementaciones iniciadas por PXE
 En Technical Preview versión 1607, cuando se usa un adaptador Ethernet para crear una imagen de varios dispositivos (como un adaptador Ethernet USB que use en varios dispositivos), puede habilitar una nueva opción que permita especificar los identificadores de hardware para los adaptadores Ethernet. Configuration Manager omite los identificadores de hardware de la lista al realizar una instalación PXE y para el registro de cliente.
 
-Para más información sobre este problema, vea el [Blog del equipo de soporte técnico de Configuration Manager OSD](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
+Para más información sobre este problema, vea el [Blog del equipo de soporte técnico de Configuration Manager OSD](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>Habilitar la característica para administrar identificadores de hardware duplicados  
 1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios de nube** > **Actualizaciones y mantenimiento** > **Características**.
