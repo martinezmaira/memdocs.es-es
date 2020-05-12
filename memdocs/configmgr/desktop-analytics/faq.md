@@ -10,12 +10,12 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c6b8df10a9a20c96cd2f8c1a0b6583c9c5f6e4f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708163"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693302"
 ---
 # <a name="desktop-analytics-faq"></a>P+F sobre Análisis de escritorio
 
@@ -35,6 +35,9 @@ La primera vez que se configura Análisis de escritorio, puede que los informes 
 - Asegúrese de que los dispositivos envían datos de diagnóstico al servicio Análisis de escritorio. Para más información, consulte [Habilitación del uso compartido de datos](enable-data-sharing.md).
 - Aprovisione [aplicaciones de Azure AD](troubleshooting.md#bkmk_AzureADApps) en su instancia de Azure AD.
 - Compruebe los dispositivos que ha asociado a su organización en los últimos siete días. En el [portal de Análisis de escritorio](https://aka.ms/desktopanalytics), vaya al panel **Servicios conectados**. Seleccione **Inscribir dispositivos** y **Ver datos recientes**.
+
+  > [!IMPORTANT]
+  > La opción de Análisis de escritorio para **Ver datos recientes** está en desuso. Esta acción se quitará en una versión futura del servicio de Análisis de escritorio. Para más información, vea [Deprecated Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md) (Características en desuso).<!--7080949-->  
 
 Si los dispositivos están configurados correctamente y aún no ve los datos en el área de trabajo, [póngase en contacto con el servicio de soporte técnico de Microsoft](https://support.microsoft.com/hub/4343728/support-for-business).
 

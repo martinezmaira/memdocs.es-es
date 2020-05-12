@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842230"
 ---
 # <a name="co-management-workloads"></a>Administración conjunta de cargas de trabajo
 
@@ -75,14 +75,13 @@ La carga de trabajo de Endpoint Protection incluye el conjunto de característic
 - Control de aplicaciones de Windows Defender  
 - Centro de seguridad avanzada de Windows Defender  
 - Protección contra amenazas avanzada de Windows Defender (conocido ahora como Protección contra amenazas de Microsoft Defender)
-- Windows Information Protection  
 
 Para más información sobre la característica de Intune, consulte [Endpoint Protection para Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Al cambiar esta carga de trabajo, las directivas de Configuration Manager permanecen en el dispositivo hasta que las directivas de Intune las sobrescribe. Este comportamiento garantiza que el dispositivo todavía tiene directivas de protección durante la transición.
 >
-> La carga de trabajo de Endpoint Protection también forma parte de la configuración del dispositivo. El mismo comportamientos e aplica cuando cambia la carga de trabajo [Configuración del dispositivo](#device-configuration).<!-- SCCMDocs.nl-nl issue #4 -->
+> La carga de trabajo de Endpoint Protection también forma parte de la configuración del dispositivo. El mismo comportamientos e aplica cuando cambia la carga de trabajo [Configuración del dispositivo](#device-configuration).<!-- SCCMDocs.nl-nl issue #4 --> Al cambiar la carga de trabajo de configuración del dispositivo, también incluye directivas para la característica Information Protection de Windows, que no se incluye en la carga de trabajo de Endpoint Protection.<!-- 4184095 -->
 >
 > La configuración del antivirus de Microsoft Defender que forma parte del tipo de perfil Restricciones de dispositivos para la configuración de dispositivos de Intune no se incluye en el ámbito del control deslizante de Endpoint Protection. Para administrar el antivirus de Microsoft defender para dispositivos administrados conjuntamente con el control deslizante de Endpoint Protection habilitado, use las nuevas directivas de antivirus en **Centro de administración de Microsoft Endpoint Manager** > **Seguridad de los puntos de conexión** > **Antivirus**. El nuevo tipo de directiva tiene opciones nuevas y mejoradas disponibles, y admite todas las opciones de configuración disponibles en el perfil de restricciones de dispositivos. <!--6609171-->
 >
@@ -97,6 +96,9 @@ La carga de trabajo de configuración de dispositivos incluye la configuración 
 Todavía puede implementar la configuración de Configuration Manager en los dispositivos administrados conjuntamente, aunque Intune sea la autoridad de configuración de dispositivos. Esta excepción se podría usar para definir la configuración que necesita la organización, pero que todavía no está disponible en Intune. Especifique esta excepción en una [línea de base de configuración de Configuration Manager](../compliance/deploy-use/create-configuration-baselines.md). Habilite la opción **Aplicar siempre esta línea de base, incluso para clientes administrados conjuntamente** al crear la línea de base. Puede cambiarla más adelante en la pestaña **General** de las propiedades de una línea de base existente.  
 
 Para más información sobre la característica de Intune, consulte [Creación de un perfil de dispositivo en Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+
+> [!NOTE]
+> Al cambiar la carga de trabajo de configuración del dispositivo, también incluye directivas para la característica Information Protection de Windows, que no se incluye en la carga de trabajo de Endpoint Protection.<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Aplicaciones hacer clic y ejecutar de Office
 

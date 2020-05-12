@@ -2,7 +2,7 @@
 title: Supervisar implementaciones del sistema operativo
 titleSuffix: Configuration Manager
 description: Para ayudarle a supervisar los objetos de implementación de sistema operativo, la consola de Configuration Manager proporciona varios indicadores de estado, informes y alertas.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708483"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802173"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Supervisión de implementaciones de sistemas operativos en Configuration Manager
 
@@ -45,6 +45,9 @@ Para ayudarle a supervisar los objetos de implementación de sistema operativo, 
 3.  Haga clic en la secuencia de tareas cuyo estado de implementación quiere supervisar.  
 
 4.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Ver estado**.  
+
+> [!NOTE]  
+> Cuando se inicia una actualización, se genera el mensaje de estado 52200. Contiene el usuario que ha realizado la actualización.  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> Informes de implementación de sistema operativo  
  Hay muchos informes de implementación de sistema operativo predefinidos disponibles. Se organizan en diferentes categorías y se pueden usar para proporcionar información específica sobre migración de estado e implementaciones de secuencias de tareas. Además de utilizar los informes preconfigurados, también puede crear informes de actualizaciones de software personalizados según las necesidades de la empresa. Para obtener más información, vea [Operaciones y mantenimiento de informes](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

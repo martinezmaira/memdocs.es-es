@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705753"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923426"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creación e implementación de directivas de Protección de aplicaciones de Windows Defender
 
@@ -25,7 +25,7 @@ Puede crear e implementar directivas de [Protección de aplicaciones de Windows 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para crear e implementar una directiva de Protección de aplicaciones de Windows Defender, debe usar la actualización de Windows 10 Fall Creators (1709). Los dispositivos Windows 10 en los que implementa la directiva deben configurarse con una directiva de aislamiento de red. Para obtener más información, consulte [Información general de la Protección de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+Para crear e implementar una directiva de Protección de aplicaciones de Windows Defender, debe usar la actualización de Windows 10 Fall Creators (1709). Los dispositivos Windows 10 en los que implementa la directiva deben configurarse con una [directiva de aislamiento de red](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). Para obtener más información, consulte [Información general de la Protección de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Cree una directiva y examine la configuración disponible
 

@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8d413221f7dc4ea905844ad3b2dbe08826314a54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eef959182b2bada4b4e0c0395cf0e17ac255ba0d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704673"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906538"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de Configuration Manager
 
@@ -57,7 +57,7 @@ Los sitios primarios de Configuration Manager pueden usar una réplica de base d
 
     -   La base de datos del sitio debe **publicar** la réplica de base de datos y cada uno de los servidores remotos de réplica de la base de datos deben **suscribirse** a los datos publicados.  
 
-    -   Tanto el servidor de SQL Server que hospeda la base de datos del sitio como el que hospeda una réplica de la base de datos deben configurarse para admitir un **Tamaño de replicación de texto máximo** de 2 GB. Para obtener un ejemplo acerca de cómo configurarlo para SQL Server 2012, consulte [Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo](https://go.microsoft.com/fwlink/p/?LinkId=273960).  
+    -   Tanto el servidor de SQL Server que hospeda la base de datos del sitio como el que hospeda una réplica de la base de datos deben configurarse para admitir un **Tamaño de replicación de texto máximo** de 2 GB. Para obtener un ejemplo acerca de cómo configurarlo para SQL Server 2012, consulte [Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
 
 -   **Certificado autofirmado**: para configurar una réplica de base de datos, debe crear un certificado autofirmado en el servidor de réplica de base de datos y hacer que este certificado esté disponible para todos los puntos de administración que van a usar ese servidor de réplica de base de datos.  
 
@@ -172,7 +172,7 @@ Utilice el procedimiento siguiente como ejemplo de cómo configurar un servidor 
         -   Si el Agente SQL Server se ejecuta mediante una cuenta diferente, seleccione **Ejecutar en la siguiente cuenta de Windows**y después configure dicha cuenta. Puede especificar una cuenta de Windows o una cuenta de SQL Server.  
 
         > [!IMPORTANT]  
-        >  Debe conceder permiso a la cuenta que ejecuta el Agente de distribución en el publicador como suscripción de extracción. Para obtener información acerca de la configuración de estos permisos, consulte [Seguridad del Agente de distribución](https://go.microsoft.com/fwlink/p/?LinkId=238463) en la biblioteca TechNet de SQL Server.  
+        >  Debe conceder permiso a la cuenta que ejecuta el Agente de distribución en el publicador como suscripción de extracción. Para obtener información acerca de la configuración de estos permisos, consulte [Seguridad del Agente de distribución](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
 
       - Para **Conectarse al distribuidor**, seleccione **Mediante la suplantación de la cuenta de proceso**.  
 
@@ -457,7 +457,7 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
 -   En cada réplica de base de datos posterior, use este script para configurar y actualizar el nombre descriptivo del certificado.  Para ello, modifique la línea **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** y sustituya **ConfigMgr SQL Server Identification Certificate** por un nuevo nombre, como por ejemplo,  **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Administrar configuraciones de réplica de base de datos  
- Al utilizar una réplica de base de datos en un sitio, use la información de las siguientes secciones para complementar el proceso para desinstalar una réplica de base de datos, desinstalar un sitio que utiliza una réplica de base de datos o mover la base de datos de sitio a una instalación nueva de SQL Server. Si utiliza la información de las siguientes secciones para eliminar publicaciones, utilice la guía para eliminar la replicación transaccional de la versión SQL Server utilizada para la réplica de base de datos. Por ejemplo, si usa SQL Server 2008 R2, vea [Cómo: eliminar una publicación (programación de la replicación con Transact-SQL)](https://go.microsoft.com/fwlink/p/?LinkId=273934).  
+ Al utilizar una réplica de base de datos en un sitio, use la información de las siguientes secciones para complementar el proceso para desinstalar una réplica de base de datos, desinstalar un sitio que utiliza una réplica de base de datos o mover la base de datos de sitio a una instalación nueva de SQL Server. Si utiliza la información de las siguientes secciones para eliminar publicaciones, utilice la guía para eliminar la replicación transaccional de la versión SQL Server utilizada para la réplica de base de datos. Para obtener más información, vea [Eliminar una publicación](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
 
 > [!NOTE]  
 >  Después de restaurar una base de datos de sitio configurada para réplicas de base de datos, para poder utilizar las réplicas de base de datos debe volver a configurar cada réplica de base de datos y volver a crear tanto las publicaciones como las suscripciones.  

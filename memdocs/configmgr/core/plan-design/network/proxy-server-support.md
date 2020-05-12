@@ -2,7 +2,7 @@
 title: Compatibilidad de servidor proxy
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo los servidores de sistema de sitio de Configuration Manager usan los servidores proxy.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701483"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802096"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Compatibilidad con servidores proxy en Configuration Manager
 
@@ -50,6 +50,10 @@ Para esta configuración, el servidor de sitio primario:
 - De forma predeterminada, usa la cuenta de **sistema** del equipo para realizar la conexión. También puede usar la cuenta de servidor proxy de sistema de sitio, si es necesario.  
 
 - Usa las API de explorador web de Windows.  
+
+### <a name="cloud-management-gateway-connection-point"></a>Punto de conexión de Cloud Management Gateway
+
+El punto de conexión de Cloud Management Gateway (CMG) es un rol local que se comunica con el servicio de CMG en Azure. Para obtener más información, vea [Planificación de Cloud Management Gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### <a name="distribution-point"></a>Punto de distribución
 
@@ -111,3 +115,7 @@ A partir de Configuration Manager versión 2002, las siguientes característica
     - **Usar credenciales para conectarse al servidor proxy**: muchos servidores proxy necesitan que un usuario se autentique. De forma predeterminada, el servidor de sistema de sitio usa su cuenta de equipo para conectarse al servidor proxy. Si es necesario, habilite esta opción, haga clic en **Establecer** y, después, elija una **Cuenta existente** o especifique una **Nueva cuenta**. Estas credenciales son la **cuenta del servidor proxy de sistema de sitio**.  Para obtener más información, vea [Cuentas que se usan en Configuration Manager](../hierarchy/accounts.md).  
 
 4. Seleccione **Aceptar** para guardar la nueva configuración del servidor proxy.  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Si la organización restringe la comunicación de red con Internet a través de un dispositivo proxy o firewall, debe permitir el acceso a puntos de conexión de Internet. Para más información, consulte los [requisitos de acceso a Internet](internet-endpoints.md).

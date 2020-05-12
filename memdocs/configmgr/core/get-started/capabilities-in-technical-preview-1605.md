@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705603"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905749"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Funciones de Technical Preview 1605 de Configuration Manager
 
@@ -95,7 +95,7 @@ Acciones comunes como **Retirar/borrar**, **Restablecer contraseña**, **Bloqueo
 
 ### <a name="set-up-windows-store-for-business-synchronization"></a>Configurar la sincronización de la Tienda Windows para empresas  
 
-1.  En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web y/o API web". De este modo, obtendrá un identificador de cliente que necesitará más adelante.  
+1.  En Azure Active Directory, registre Configuration Manager como una herramienta de administración "Aplicación web o API web". De este modo, obtendrá un identificador de cliente que necesitará más adelante.  
 
     1.  En el nodo de Active Directory de [https://manage.windowsazure.com](https://manage.windowsazure.com), seleccione Azure Active Directory y, luego, haga clic en **Aplicaciones** > **Agregar**.  
 
@@ -192,7 +192,7 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 #### <a name="general-prerequisites"></a>Requisitos previos generales  
 
--   Asegúrese de haber finalizado los pasos de [Pasos de preparación para la administración local de dispositivos móviles en System Center Configuration Manager](https://technet.microsoft.com/library/mt613153.aspx) y de haber [inscrito los dispositivos](https://technet.microsoft.com/library/mt627870.aspx).  
+-   Asegúrese de haber finalizado los [pasos de preparación para la administración local de dispositivos móviles](../../mdm/plan-design/plan-on-premises-mdm.md) y de haber [inscrito los dispositivos](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md).  
 
 -   Para la mejor experiencia de instalación de la aplicación al usar el Portal de empresa, asegúrese de que Configuration Manager tenga una conexión activa a Microsoft Intune.  
 
@@ -284,7 +284,7 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Para crear una colección para un grupo de servidores  
 
-1.  [Cree una colección de dispositivos](https://technet.microsoft.com/library/gg712295.aspx) que contenga los equipos del grupo de servidores.  
+1.  [Cree una colección de dispositivos](../clients/manage/collections/create-collections.md) que contenga los equipos del grupo de servidores.  
 
 2.  En el área de trabajo **Activos y compatibilidad**, haga clic en **Recopilaciones de dispositivos**, haga clic con el botón derecho en la recopilación que contiene los equipos del grupo de servidores y luego haga clic en **Propiedades**.  
 
@@ -325,9 +325,9 @@ En esta Technical Preview, si el Portal de empresa está abierto durante más de
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>Para implementar actualizaciones de software en el grupo de servidores y supervisar el estado  
 
-1.  [Implemente las actualizaciones de software](https://technet.microsoft.com/library/gg712304.aspx) en la colección del grupo de servidores.  
+1.  [Implemente las actualizaciones de software](../../sum/deploy-use/deploy-software-updates.md) en la colección del grupo de servidores.  
 
-2.  [Supervise la implementación de las actualizaciones de software](https://technet.microsoft.com/library/gg712304.aspx). Además de las vistas de supervisión estándar para la implementación de actualizaciones de software, se muestra una nueva descripción de estado cuando un cliente está esperando su turno para instalar las actualizaciones de software. Aparece **En espera de bloqueo** para este nuevo estado.  
+2.  [Supervise la implementación de las actualizaciones de software](../../sum/deploy-use/monitor-software-updates.md). Además de las vistas de supervisión estándar para la implementación de actualizaciones de software, se muestra una nueva descripción de estado cuando un cliente está esperando su turno para instalar las actualizaciones de software. Aparece **En espera de bloqueo** para este nuevo estado.  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>Para borrar los bloqueos de implementación de los equipos de un grupo de servidores  
 

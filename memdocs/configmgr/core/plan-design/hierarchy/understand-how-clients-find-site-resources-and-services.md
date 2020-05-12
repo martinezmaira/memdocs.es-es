@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b91cf018d77d2c23f12a7023b95585ed849a3f7d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075666"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904225"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Información sobre cómo los clientes buscan servicios y recursos de sitio para Configuration Manager
 
@@ -62,7 +62,7 @@ Un cliente selecciona un punto de administración con el cual comunicarse en fun
 
 Puede usar puntos de administración preferidos. Los puntos de administración preferidos son los puntos de administración de un sitio asignado del cliente que se asocian a un grupo de límites que el cliente usa para buscar servidores de sistema de sitio. La asociación de un punto de administración preferido a un grupo de límites como servidor de sistema de sitio es similar a la forma en que los puntos de distribución o puntos de migración de estado se asocian a un grupo de límites. Si habilita puntos de administración preferidos para la jerarquía, cuando un cliente usa un punto de administración desde su sitio asignado intentará usar un punto de administración preferido antes de usar otros puntos de administración desde su sitio asignado.  
 
-También puede usar la información del blog sobre [afinidad de puntos de administración](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) de TechNet.com para configurar la afinidad del punto de administración. La afinidad de puntos de administración invalida el comportamiento predeterminado de los puntos de administración asignados y permite al cliente usar uno o varios puntos de administración específicos.  
+También puede usar la información del blog sobre [afinidad de puntos de administración](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) para configurar la afinidad del punto de administración. La afinidad de puntos de administración invalida el comportamiento predeterminado de los puntos de administración asignados y permite al cliente usar uno o varios puntos de administración específicos.  
 
 Cada vez que un cliente necesita contactar con un punto de administración, consulta la lista de puntos de administración que almacena localmente en Instrumental de administración de Windows (WMI). El cliente crea una lista de puntos de administración inicial cuando se instala. Luego, actualiza periódicamente la lista con detalles sobre cada punto de administración de la jerarquía.  
 
@@ -131,12 +131,12 @@ Después de establecer la comunicación con un punto de administración, el clie
 Luego, el cliente selecciona aleatoriamente un nuevo punto de administración que usar.  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
-Los clientes que están unidos a un dominio pueden usar AD DS para la ubicación del servicio. Para ello, es necesario que los sitios [publiquen datos en Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
+Los clientes que están unidos a un dominio pueden usar AD DS para la ubicación del servicio. Para ello, es necesario que los sitios [publiquen datos en Active Directory](/../../servers/deploy/configure/publish-site-data.md).  
 
 Un cliente puede utilizar AD DS para la ubicación del servicio cuando se cumpla alguna de las siguientes condiciones:  
 
-- El [esquema de Active Directory se ha extendido](https://technet.microsoft.com/library/mt345589.aspx) para System Center 2012 Configuration Manager.  
-- El [bosque de Active Directory está configurado para publicación](https://technet.microsoft.com/library/hh696542.aspx)y los sitios de Configuration Manager están configurados para publicar.  
+- El [esquema de Active Directory se ha extendido](../network/extend-the-active-directory-schema.md) para System Center 2012 Configuration Manager.  
+- El [bosque de Active Directory está configurado para publicación](/../../servers/deploy/configure/publish-site-data.md)y los sitios de Configuration Manager están configurados para publicar.  
 - El equipo cliente forma parte de un dominio de Active Directory y puede tener acceso a un servidor de catálogo global.  
 
 Si un cliente no encuentra un punto de administración para la ubicación del servicio en AD DS, intenta usar DNS.  
@@ -148,7 +148,7 @@ Considere la posibilidad de usar DNS para la ubicación del servicio cuando se c
 - El esquema de AD DS no se ha extendido para admitir Configuration Manager.
 - Los clientes de la intranet se encuentran en un bosque que no está habilitado para la publicación de Configuration Manager.  
 - Hay clientes en equipos de grupo de trabajo que no están configurados para la administración de clientes de solo Internet. (Un cliente de grupo de trabajo configurado para Internet se comunicará únicamente con puntos de administración con conexión a Internet y no usará DNS para la ubicación del servicio).  
-- Puede [configurar clientes para que busquen puntos de administración desde DNS](https://technet.microsoft.com/library/gg682055).  
+- Puede [configurar clientes para que busquen puntos de administración desde DNS](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 Cuando un sitio publica registros de ubicación del servicio de los puntos de administración en DNS:  
 

@@ -10,12 +10,12 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96e9f7523ae8946b7756a8a39d1757e652eb3c8c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46a320f4c6e32b57dc11beb325c34c300536381f
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696903"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693331"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de Análisis de escritorio
 
@@ -217,3 +217,6 @@ A continuación, seleccione **Aplicar cambios**:
 Este proceso suele tardar entre 15 y 60 minutos. El tiempo depende del tamaño del área de trabajo y del ámbito de los cambios que necesitan procesamiento. Cuando solicita una actualización de datos a petición, no se producen cambios en los datos de diagnóstico.  Para más información, consulte [Preguntas frecuentes sobre Análisis de escritorio](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 Si no ve los cambios actualizados dentro de los intervalos de tiempo indicados anteriormente, espere a que transcurran otras 24 horas para la siguiente actualización diaria. Si ve retrasos más largos, consulte el panel de estado del servicio. Si el servicio informa de un estado correcto, póngase en contacto con el soporte técnico de Microsoft.<!-- 3896921 -->
+
+> [!IMPORTANT]
+> La opción de Análisis de escritorio para **Ver datos recientes** está en desuso. Esta acción se quitará en una versión futura del servicio de Análisis de escritorio. Para más información, vea [Deprecated Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md) (Características en desuso).<!--7080949-->  

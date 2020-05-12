@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78fad6f17681fa9822a378844ea4838c50383c82
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704823"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643260"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuración de grupos de límites para Configuration Manager
 
@@ -211,6 +211,13 @@ Los grupos de límites incluyen los siguientes valores de configuración adicion
 
 Para obtener más información sobre cómo configurar estas opciones, vea [Configure a boundary group](boundary-group-procedures.md#bkmk_config) (Configuración de un grupo de límites).
 
+Si un dispositivo está en más de un grupo de límites, se aplican los comportamientos siguientes para esta configuración:
+
+- **Permitir descargas del mismo nivel en este grupo de límites**: si está deshabilitado en un grupo de límites, el cliente no usará la optimización de entrega.
+- **Durante las descargas del mismo nivel, use solo elementos del mismo nivel dentro de la misma subred**: si está habilitado en un grupo de límites, este valor surte efecto.
+- **Preferir puntos de distribución sobre elementos del mismo nivel dentro de la misma subred**: si está habilitado en un grupo de límites, este valor surte efecto.
+- **Preferir los orígenes basados en la nube frente a los orígenes locales**: si está habilitado en un grupo de límites, este valor surte efecto.
+
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a> Permitir descargas del mismo nivel en este grupo de límites
 
 Esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel. Este valor afecta también a la aplicación de los identificadores de grupo para la [optimización de entrega](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).  
@@ -220,6 +227,9 @@ Hay dos escenarios comunes en que debe considerar la deshabilitación de esta op
 - Si tiene un grupo de límites que incluye límites de ubicaciones dispersas geográficamente, como una VPN. Dos clientes pueden estar en el mismo grupo de límites porque se conectan a través de la VPN, pero en ubicaciones muy diferentes que resultan inapropiadas para el uso compartido de contenido del mismo nivel.  
 
 - Si utiliza un único grupo de límites grande para la asignación de sitio, no hace referencia a ningún punto de distribución.  
+
+> [!IMPORTANT]
+> Si un dispositivo está en más de un grupo de límites, asegúrese de habilitar esta configuración en todos los grupos de límites para el dispositivo. De lo contrario, el cliente no usará la optimización de entrega. Por ejemplo, no establece la clave del Registro DOGroupID.
 
 #### <a name="during-peer-downloads-only-use-peers-within-the-same-subnet"></a><a name="bkmk_bgoptions2"></a> Durante las descargas del mismo nivel, use solo elementos del mismo nivel dentro de la misma subred
 

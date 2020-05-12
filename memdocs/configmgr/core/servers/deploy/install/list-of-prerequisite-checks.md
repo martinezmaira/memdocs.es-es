@@ -2,7 +2,7 @@
 title: Comprobaciones de requisitos previos
 titleSuffix: Configuration Manager
 description: Referencia de las comprobaciones de requisitos previos específicos para las actualizaciones de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700743"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943797"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
@@ -605,7 +605,7 @@ Si pasa por alto esta advertencia sobre los requisitos previos, el programa de i
 
 ### <a name="cloud-management-gateway-requires-either-token-based-authentication-or-an-https-management-point"></a>Cloud Management Gateway requiere autenticación basada en tokens o un punto de administración HTTPS
 
-*Se aplica a: Cloud Management Gateway*
+*Se aplica a: Cloud Management Gateway* 
 
 Con algunas versiones de Configuration Manager, no puede usar un punto de administración de HTTP con Cloud Management Gateway (CMG). Configure la instancia de CMG para HTTPS, o configure el sitio para HTTP mejorado. Para obtener más información, consulte [Plan for cloud management gateway (Plan para la puerta de enlace de administración en la nube)](../../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 Cuando se instala un sitio nuevo, Configuration Manager instala de forma automática SQL Server Native Client como un componente redistribuible. Después de instalar el sitio, Configuration Manager no actualiza SQL Server Native Client. La actualización de SQL Server Native Client podría requerir un reinicio, lo que puede afectar al proceso de instalación de sitio.
 
-Esta comprobación garantiza que el sitio tiene una versión compatible de SQL Native Client. A partir de la versión 1810, la versión mínima es SQL 2012 SP4 (`11.*.7001.0`).
+Esta comprobación garantiza que el servidor de sitio tiene una versión compatible de SQL Native Client. La comprobación de requisitos previos no comprueba la versión de SQL Native Client en los sistemas de sitio remotos.
 
-Esta versión de SQL Native Client es compatible con TLS 1.2. Vea los siguientes artículos para más información:
+La versión mínima es SQL 2012 SP4 (`11.*.7001.0`). Esta versión de SQL Native Client es compatible con TLS 1.2. Vea los siguientes artículos para más información:
 
 - [Compatibilidad con TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

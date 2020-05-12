@@ -2,7 +2,7 @@
 title: Actualizaciones de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Aprenda sobre las actualizaciones de características y seguridad de Análisis de escritorio.
-ms.date: 08/21/2019
+ms.date: 04/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec510414f11aa312e6c1a7d1d5bfa8126f473fe3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c09212577cd61e7ddd6c293e2d1dc47dabe036f0
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706583"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693348"
 ---
 # <a name="updates-in-desktop-analytics"></a>Actualizaciones de Análisis de escritorio
 
@@ -46,8 +46,20 @@ Los dispositivos ejecutan una actualización de seguridad anterior a Más recien
 
 Análisis de escritorio no ha evaluado el dispositivo. Este estado incluye los dispositivos que ejecutan Windows 7 y Windows 8.1 o los dispositivos Windows 10 registrados para el programa Windows Insider.  
 
-Si un dispositivo Windows 10 *no está autenticado* con un cuenta Microsoft, Windows no informa de estos datos. Esta autenticación se realiza normalmente como parte de la configuración rápida de Windows (OOBE).<!-- 5148153 -->
+Para ver las tendencias de adopción de las actualizaciones de seguridad, seleccione **Ver más** para una versión específica de Windows. El gráfico de áreas apiladas clasifica los dispositivos por la actualización de seguridad que han instalado en el tiempo.
 
+Para revisar el estado de implementación de las actualizaciones de seguridad, seleccione **Ver todas**. En esta vista se enumeran los dispositivos de las categorías siguientes:
+
+- No iniciado
+- En curso
+- Completed
+- Necesita atención: dispositivos (ordenados por nombre de dispositivo)
+- Necesita atención: problemas (ordenados por tipo de problema)
+
+Para mostrar los dispositivos con información nueva que el servicio sigue procesando, seleccione **Ver datos recientes**. Análisis de escritorio mostrará esta información después de la siguiente actualización de datos completa.
+
+  > [!IMPORTANT]
+  > La opción de Análisis de escritorio para **Ver datos recientes** está en desuso. Esta acción se quitará en una versión futura del servicio de Análisis de escritorio. Para más información, vea [Deprecated Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md) (Características en desuso).<!--7080949-->  
 
 ## <a name="feature-updates"></a>Actualizaciones de características
 
@@ -77,8 +89,7 @@ Los dispositivos ejecutan una actualización de características que ha pasado l
 
 Análisis de escritorio no ha evaluado el dispositivo. Este estado incluye los dispositivos que ejecutan Windows 7 y Windows 8.1 o los dispositivos Windows 10 registrados para el programa Windows Insider.
 
-Si un dispositivo Windows 10 *no está autenticado* con un cuenta Microsoft, Windows no informa de estos datos. Esta autenticación se realiza normalmente como parte de la configuración rápida de Windows (OOBE).<!-- 5148153 -->
-
+Seleccione el icono para ver las tendencias de adopción de las actualizaciones de características. El gráfico de áreas apiladas clasifica los dispositivos por la actualización de características que han instalado en el tiempo.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

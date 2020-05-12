@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706673"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906020"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -47,7 +47,7 @@ Microsoft tiene previsto publicar actualizaciones de la rama actual de Configura
 
 Para instalar la rama actual como un nuevo sitio, use [medios de línea base](../servers/manage/updates.md#bkmk_Baselines). Además use medios de línea base para actualizar desde System Center 2012 Configuration Manager con Service Pack 2 o System Center 2012 R2 Configuration Manager con Service Pack 1. El acceso a este medio depende del tipo de licencia que tenga la organización para Configuration Manager.
 
-También se pueden usar los medios de línea base para instalar un nuevo sitio que sea una edición de evaluación de la rama actual. La edición de evaluación no requiere una licencia. Puede usar la edición de evaluación de 180 días. Admite la actualización a una edición con licencia de la rama actual. Para instalar únicamente una versión de evaluación, obténgala desde [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
+También se pueden usar los medios de línea base para instalar un nuevo sitio que sea una edición de evaluación de la rama actual. La edición de evaluación no requiere una licencia. Puede usar la edición de evaluación de 180 días. Admite la actualización a una edición con licencia de la rama actual. Para instalar únicamente una versión de evaluación, obténgala desde el [Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
 > [!NOTE]
 > Use los medios de línea base para instalar sitios para una nueva jerarquía de Configuration Manager. Si ha instalado previamente una versión de línea base, use las actualizaciones en consola para actualizar los sitios a una nueva versión.  
@@ -89,7 +89,7 @@ Para instalar LTSB como un sitio nuevo o una actualización de un sitio compatib
 >  
 > Para encontrar la versión 1606 de Configuration Manager en el Centro de servicios de licencias por volumen (VLSC), vaya a la pestaña **Downloads and Keys** (Descargas y claves) de [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), busque `System Center 2016` y luego seleccione **System Center 2016 Datacenter** o **System Center 2016 Standard**.  
 >  
-> También puede obtener una versión de evaluación de System Center 2016 en el sitio de [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
+> También puede obtener una versión de evaluación de System Center 2016 en el [Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
 
 ### <a name="features-of-the-ltsb"></a>Características de la LTSB
 

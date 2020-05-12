@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 991b3e2ab654aff56d982c587ccc4bda53694294
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703263"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782132"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -177,7 +177,7 @@ Especifica la marca del equipo.
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
-Especifica la ruta de acceso definida por la variable [SMSTSLocalDataDrive](#SMSTSLocalDataDrive). Si SMSTSLocalDataDrive se define antes de iniciar la secuencia de tareas (por ejemplo, al establecer una variable de la recopilación), Configuration Manager define la variable _SMSTSMDataPath después de que se inicie la secuencia de tareas.
+Especifica la ruta de acceso definida por la variable [SMSTSLocalDataDrive](#SMSTSLocalDataDrive). Esta ruta de acceso especifica la ubicación en la que la secuencia de tareas almacena los archivos en caché temporales en el equipo de destino mientras se ejecuta. Si SMSTSLocalDataDrive se define antes de iniciar la secuencia de tareas (por ejemplo, al establecer una variable de la recopilación), Configuration Manager define la variable _SMSTSMDataPath después de que se inicie la secuencia de tareas.
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
@@ -1592,9 +1592,9 @@ Utilice esta variable para cambiar el idioma de visualización de una imagen de 
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
-Especifica la ubicación en la que la secuencia de tareas almacena los archivos temporales en el equipo de destino mientras se ejecuta.
+Especifica la ubicación en la que la secuencia de tareas almacena los archivos en caché temporales en el equipo de destino mientras se ejecuta.
 
-Establezca esta variable antes de iniciar la secuencia de tareas (por ejemplo, estableciendo una variable de la recopilación). Una vez que se inicia la secuencia de tareas, Configuration Manager define la variable [_SMSTSMDataPath](#SMSTSMDataPath).
+Establezca esta variable antes de iniciar la secuencia de tareas (por ejemplo, estableciendo una variable de la recopilación). Una vez que se inicia la secuencia de tareas, Configuration Manager define la variable [_SMSTSMDataPath](#SMSTSMDataPath) en función de la definición de la variable SMSTSLocalDataDrive.
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
@@ -1638,7 +1638,7 @@ Utilice esta variable para conservar temporalmente contenido en la memoria cach�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Especifica un comando que se ejecuta una vez completada la secuencia de tareas. Por ejemplo, especifique un script que permite escribir filtros en los dispositivos incrustados después de la secuencia de tareas implemente un sistema operativo en el dispositivo.
+Especifica un comando que se ejecuta una vez completada la secuencia de tareas. Por ejemplo, especifique `shutdown.exe /r /t 30 /f` para reiniciar el equipo 30 segundos después de que se complete la secuencia de tareas.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

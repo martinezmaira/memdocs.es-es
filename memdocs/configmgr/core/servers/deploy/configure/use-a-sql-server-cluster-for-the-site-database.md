@@ -2,7 +2,7 @@
 title: Clúster de SQL Server
 titleSuffix: Configuration Manager
 description: Use un clúster de SQL Server para hospedar la base de datos de sitio de Configuration Manager.
-ms.date: 03/06/2019
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e731ef2d133c2187eb9eaa98c07afeed37645fa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700853"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643242"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Uso de un clúster de SQL Server para la base de datos del sitio
 
@@ -62,9 +62,12 @@ Tenga en cuenta los siguientes requisitos previos:
 
 - Para admitir la autenticación Kerberos, habilite el protocolo de comunicación de red **TCP/IP** para la conexión de red de cada nodo del clúster de SQL Server. No hace falta el protocolo de **canalizaciones con nombre**, pero puede usarse para solucionar problemas de autenticación Kerberos. Las opciones de protocolo de red se configuran en **Administrador de configuración de SQL Server**, en **Configuración de red de SQL Server**.  
 
-- Si usa una infraestructura de clave pública (PKI), consulte [Requisitos de certificados PKI](../../../plan-design/network/pki-certificate-requirements.md). Hay requisitos de certificado específicos cuando se usa el clúster de SQL Server para la base de datos del sitio.  
+- Hay requisitos de certificado específicos cuando se usa el clúster de SQL Server para la base de datos del sitio. Vea los siguientes artículos para más información:
+  - [Instalación de un certificado en una configuración de clúster de conmutación por error de SQL](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Requisitos de certificados PKI para Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
-
+  > [!NOTE]
+  > Si no aprovisiona previamente un certificado en SQL, Configuration Manager crea y aprovisiona un certificado autofirmado para SQL.<!-- 7099499 -->
 
 ## <a name="limitations"></a>Limitaciones
 

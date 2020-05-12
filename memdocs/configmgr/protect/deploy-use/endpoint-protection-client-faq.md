@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709253"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906831"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
@@ -145,7 +145,7 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
 -   Asegúrese de que el software antivirus y antispyware, Windows Defender, usa las actualizaciones más recientes contra amenazas potenciales (consulte ¿Cómo mantengo las definiciones de virus y spyware actualizadas?). Además, asegúrese de usar siempre la versión más reciente de Windows Defender.  
 
--   Descargue solo actualizaciones de orígenes de confianza. Si tiene un sistema operativo Windows, vaya siempre a [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) ) y, para el resto de software, use siempre sitios web legítimos de la empresa o la persona que los desarrolla.  
+-   Descargue solo actualizaciones de orígenes de confianza. En el caso de los sistemas operativos Windows, vaya siempre al [catálogo de Microsoft Update](https://catalog.update.microsoft.com).  Para otro software, utilice siempre los sitios web legítimos de la empresa o la persona que lo produce.
 
 -   Si recibe un correo electrónico con archivos adjuntos y no está seguro del origen, elimínelo inmediatamente. No descargue aplicaciones ni archivos de orígenes desconocidos y tenga cuidado al intercambiar archivos con otros usuarios.  
 

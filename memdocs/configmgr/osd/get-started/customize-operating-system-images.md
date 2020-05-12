@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708963"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906916"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Personalizar imágenes de sistema operativo con Configuration Manager
 
@@ -95,7 +95,7 @@ Las imágenes de sistema operativo de Configuration Manager son archivos WIM y 
     > [!IMPORTANT]  
     >  En el paso de la secuencia de tareas [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) (Preparar Windows para la captura) se intenta restablecer la contraseña del administrador local del equipo de referencia en un valor en blanco antes de que se ejecute Sysprep. Si la directiva de seguridad local **La contraseña debe cumplir los requisitos de complejidad** está habilitada, este paso de la secuencia de tareas no restablece la contraseña del administrador. En este escenario, deshabilite esta directiva antes de ejecutar la secuencia de tareas.  
 
-     Para más información acerca de Sysprep, consulte [Introducción a Sysprep (preparación del sistema)](https://go.microsoft.com/fwlink/?LinkId=280286).  
+     Para más información acerca de Sysprep, consulte [Información general sobre Sysprep (preparación del sistema)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Herramientas y scripts adecuados necesarios para minimizar escenarios de instalación**  
 

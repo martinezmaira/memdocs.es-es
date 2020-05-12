@@ -10,24 +10,24 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706753"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906436"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (rama de mantenimiento a largo plazo)*
+*Se aplica a: System Center Configuration Manager (Rama de mantenimiento a largo plazo)*
 
 Use la información de este tema para comprender qué sistemas operativos y dependencias de productos son compatibles con la rama de mantenimiento a largo plazo (LTSB) de Configuration Manager.
 Si no se indica lo contrario en este tema o en los temas específicos de la LTSB, se aplican a la LTSB las mismas configuraciones y limitaciones que se aplican a la versión 1606 de la rama actual.  Cuando se produzcan conflictos, use la información que se aplica a la edición que use. Normalmente, la LTSB es más limitada que la rama actual.
 
 ## <a name="general-statement-of-support"></a>Estado general de compatibilidad
-Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no expresa una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información, visite el sitio web [Ciclo de vida de soporte de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270) y lea la [Directiva de ciclo de vida de soporte técnico: preguntas más frecuentes](https://go.microsoft.com/fwlink/p/?LinkId=31976).
+Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no expresa una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información, visite el sitio web [Ciclo de vida de soporte de Microsoft](https://support.microsoft.com/lifecycle) y lea las preguntas más frecuentes de la directiva de ciclo de vida de soporte técnico.
 
-Además, los productos y las versiones de los productos que no aparecen en los temas siguientes no se admiten a menos que se hayan anunciado en el [Blog de Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/).
+Además, los productos y las versiones de los productos que no aparecen en los temas siguientes no se admiten a menos que se hayan anunciado en el [Blog de Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).
 
 **Limitaciones de compatibilidad futura:** la LTSB tiene compatibilidad limitada con futuros sistemas operativos cliente y del servidor, y dependencias del producto. La lista de plataformas de la LTSB se fija para la vida de la versión:
 
@@ -49,7 +49,7 @@ La LTSB admite el uso de los siguientes sistemas operativos de equipo Windows co
 - Windows Server 2012 (x64): Standard, Datacenter
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
-- Windows 8.1 (x86, x64): Professional, Enterprise
+- Windows 8.1 (x86, x64): Professional y Enterprise
 - La instalación Server Core de Windows Server 2012
 - La instalación Server Core de Windows Server 2012 R2
 
@@ -61,18 +61,18 @@ Puede usar la LTSB para administrar los siguientes sistemas operativos de equipo
 
 **Sistemas operativos compatibles:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64): Standard, Datacenter (Nota 1)
-- Windows Server 2012 (x64): Standard, Datacenter (Nota 1)
+- Windows Server 2012 R2 (x64): Standard, Datacenter (nota 1)
+- Windows Server 2012 (x64): Standard, Datacenter (nota 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
-- Windows 8.1 (x86, x64): Professional, Enterprise
+- Windows 8.1 (x86, x64): Professional y Enterprise
 - La instalación Server Core de Windows Server 2012 R2 (x64) (Nota 2)
 - La instalación Server Core de Windows Server 2012 (x64) (Nota 2)
 
 **(Nota 1)** Las versiones de Datacenter son compatibles pero no están certificadas para Configuration Manager.  
-**(Nota 2)** Para admitir la instalación de inserción de cliente, el equipo que ejecuta esta versión del sistema operativo debe ejecutar el servicio de rol Servidor de archivos para el rol de servidor Servicios de archivos y almacenamiento. Para obtener más información sobre cómo instalar características de Windows en un equipo Server Core, consulte [Instalar roles de servidor y características en un servidor Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) en la biblioteca de TechNet de Windows Server 2012.
+**(Nota 2)** Para admitir la instalación de inserción de cliente, el equipo que ejecuta esta versión del sistema operativo debe ejecutar el servicio de rol Servidor de archivos para el rol de servidor Servicios de archivos y almacenamiento. Para obtener más información sobre cómo instalar características de Windows en un equipo Server Core, consulte [Instalar roles de servidor y características en un servidor Server Core](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 Puede usar la LTSB para administrar los siguientes dispositivos de Windows Embedded mediante la instalación del software cliente en el dispositivo.  Para obtener más información, vea [Planeación de la implementación del cliente en dispositivos Windows Embedded](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -131,7 +131,7 @@ Puede usar la LTSB para administrar los siguientes dispositivos de Windows Embed
 ### <a name="mac-computers"></a>Equipos Mac  
  Puede usar la LTSB para administrar equipos con Mac OS X con el cliente de Configuration Manager para Mac.
 
-El paquete de instalación del cliente Mac no se suministra con los medios de Configuration Manager. Puede descargarlo como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184).  
+El paquete de instalación del cliente Mac no se suministra con los medios de Configuration Manager. Puede descargarlo como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 La compatibilidad con sistemas operativos Mac se limita a los que aparecen en esta sección. La compatibilidad no incluye otros sistemas operativos que pudieran ser compatibles mediante una futura actualización para paquetes de instalación de cliente Mac para la rama actual.
 
@@ -145,7 +145,7 @@ Para obtener más información, consulte [How to deploy clients to Macs](../clie
 ## <a name="linux-and-unix-servers"></a>Servidores Linux y UNIX
 Puede usar la LTSB para administrar servidores Linux y UNIX con el cliente de Configuration Manager para Linux y UNIX.
 
-Los paquetes de instalación del cliente Linux y UNIX no se suministran con los medios de Configuration Manager. Puede descargarlos como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de instalación que administra la instalación del cliente en cada equipo.
+Los paquetes de instalación del cliente Linux y UNIX no se suministran con los medios de Configuration Manager. Puede descargarlos como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=47719). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de instalación que administra la instalación del cliente en cada equipo.
 
 La compatibilidad con sistemas operativos Linux y UNIX se limita a los que aparecen en esta sección. La compatibilidad no incluye otros sistemas operativos que pudieran ser compatibles mediante una futura actualización para paquetes de cliente Linux y UNIX para la rama actual.
 
@@ -161,7 +161,7 @@ La compatibilidad con sistemas operativos Linux y UNIX se limita a los que apare
 Las siguientes versiones se admiten mediante el archivo .tar indicado.  
 ### <a name="aix"></a>AIX  
 
-|Versión|Archivo|  
+|Version|Archivo|  
 |-|-|  
 |Versión 5.3 (Power)|ccm-Aix53ppc.&lt;compilación\>.tar|  
 |Versión 6.1 (Power)|ccm-Aix61ppc.&lt;compilación\>.tar|  
@@ -169,7 +169,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="centos"></a>CentOS  
 
-|Versión|Archivo|  
+|Version|Archivo|  
 |-|-|  
 |Versión 5 x86|ccm-Universalx86.&lt;compilación\>.tar|  
 |Versión 5 x64|ccm-Universalx64.&lt;compilación\>.tar|  
@@ -179,7 +179,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="debian"></a>Debian  
 
-|Versión|Archivo|    
+|Version|Archivo|    
 |-|-|  
 |Versión 5 x86|ccm-Universalx86.&lt;compilación\>.tar|  
 |Versión 5 x64|ccm-Universalx64.&lt;compilación\>.tar|  
@@ -192,7 +192,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="hp-ux"></a>HP-UX  
 
-|Versión|Archivo|  
+|Version|Archivo|  
 |-|-|  
 |Versión 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;compilación\>.tar|  
 |Versión 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;compilación\>.tar|  
@@ -201,7 +201,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
-|Versión|Archivo|    
+|Version|Archivo|    
 |-|-|  
 |Versión 5 x86|ccm-Universalx86.&lt;compilación\>.tar|  
 |Versión 5 x64|ccm-Universalx64.&lt;compilación\>.tar|  
@@ -211,7 +211,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
-|Versión|Archivo|  
+|Version|Archivo|  
 |-|-|  
 |Versión 4 x86|ccm-RHEL4x86.&lt;compilación\>.tar|  
 |Versión 4 x64|ccm-RHEL4x64.&lt;compilación\>.tar|  
@@ -223,7 +223,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="solaris"></a>Solaris  
 
-|Versión|Archivo|   
+|Version|Archivo|   
 |-|-|  
 |Versión 9 SPARC|ccm-Sol9sparc.&lt;compilación\>.tar|  
 |Versión 10 x86|ccm-Sol10x86.&lt;compilación\>.tar|  
@@ -233,7 +233,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
-|Versión|Archivo|  
+|Version|Archivo|  
 |-|-|  
 |Versión 9 x86|ccm-SLES9x86.&lt;compilación\>.tar|  
 |Versión 10 SP1 x86|ccm-Universalx86.&lt;compilación\>.tar|  
@@ -244,7 +244,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 
 ### <a name="ubuntu"></a>Ubuntu  
 
-|Versión|Archivo|    
+|Version|Archivo|    
 |-|-|  
 |Versión 10.04 LTS x86|ccm-Universalx86.&lt;compilación\>.tar|  
 |Versión 10.04 LTS x64|ccm-Universalx64.&lt;compilación\>.tar|  
@@ -280,7 +280,7 @@ La LTSB es compatible con los siguientes sistemas operativos para ejecutar la co
 - Windows Server 2012 (x64): Standard, Datacenter
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
-- Windows 8.1 (x86, x64): Professional, Enterprise
+- Windows 8.1 (x86, x64): Professional y Enterprise
 
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>Versiones de SQL Server compatibles con la base de datos del sitio y el punto de notificación
@@ -303,9 +303,9 @@ Todos los sistemas de sitio de la LTSB deben ser miembros de un dominio de Windo
 
 **Niveles admitidos:**
 - Windows Server 2008
-- Windows Server 2008 R2
+- Windows Server 2008 R2
 - Windows Server 2012
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 
 ## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>Temas de compatibilidad adicionales que se aplican a la rama de mantenimiento a largo plazo
 La información de los siguientes temas de la rama actual se aplican a la LTSB:

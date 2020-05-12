@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a44123bc074c671f9b3d73af66b8d79c3ff433
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707263"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906497"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Implementar y administrar contenido en Configuration Manager
 
@@ -409,7 +409,7 @@ Puede usar el método de clase **RetryContentReplication** de Instrumental de ad
 
 Use este método únicamente para forzar la replicación cuando tenga que redistribuir contenido después de que se hayan producido problemas con la replicación normal de contenido (lo que suele confirmarse mediante el uso del nodo Supervisión de la consola).   
 
-Para obtener más información sobre esta opción del SDK, consulte [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) (Método RetryContentReplication de la clase SMS_CM_UpdatePackages) en MSDN.Microsoft.com.
+Para obtener más información sobre esta opción del SDK, consulte [Método RetryContentReplication de la clase SMS_CM_UpdatePackages](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md).
 
 ### <a name="remove-content"></a>Quitar contenido
 Cuando ya no necesite el contenido en los puntos de distribución, puede quitar los archivos de contenido del punto de distribución.  

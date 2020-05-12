@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693293"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906663"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Creación de líneas base de configuración en Configuration Manager
 
@@ -23,6 +23,9 @@ ms.locfileid: "81693293"
 
 
 Las líneas base de configuración de Configuration Manager contienen elementos de configuración predefinidos y, de manera opcional, otras líneas base de configuración. Después de crear una línea base de configuración, puede implementarla en una recopilación para que los dispositivos de esa recopilación descarguen la línea base de configuración y evalúen su cumplimiento con ella.  
+
+> [!TIP]
+> No hay ninguna manera de especificar el orden en el que el cliente de Configuration Manager evalúa los elementos de configuración en una línea de base. No es determinista.<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>Líneas de base de configuración
 

@@ -10,19 +10,19 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be314aee43e93b5e3d264c70626e2f0b85e8e7f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706383"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693157"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novedades de Análisis de escritorio
 
 Conozca las novedades mensuales de Análisis de escritorio.
 
 > [!TIP]
-> El lanzamiento de cada actualización mensual puede tardar hasta tres días. Algunas características pueden lanzarse a lo largo de varias semanas y pueden no estar disponibles para todos los clientes durante la primera semana.
+> El lanzamiento de cada actualización mensual puede tardar hasta tres días. Es posible que algunas características se implementen durante varias semanas y que no estén disponibles para todos los clientes la primera semana.
 
 Para obtener una notificación cuando se actualice esta página, copie y pegue la siguiente dirección URL en su lector de fuentes RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
@@ -121,3 +121,7 @@ Los documentos de Análisis de escritorio siempre hacen referencia a la funciona
 <!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
 
 - [Novedades de la versión 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+
+## <a name="deprecated-features"></a>Características en desuso
+
+Cuando Microsoft planea quitar una característica importante del servicio Análisis de escritorio, ese cambio se anunciará con antelación como una característica en desuso de Configuration Manager. Para más información, vea [Deprecated Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features) (Características en desuso).

@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 03/31/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec49f9931240e17218c125f1fa514088c83c55fd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701843"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905154"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -69,17 +69,12 @@ Para la mayoría de requisitos previos de producto, use la información que se e
 
 La rama de Technical Preview de Configuration Manager admite los productos y las tecnologías siguientes:
 
-- Solo es compatible con las versiones siguientes de **SQL Server**:
-
-  - SQL Server 2017 (con la actualización acumulativa 2 o posterior)
-  - SQL Server 2016 (sin ningún Service Pack)
-  - SQL Server 2014 (con Service Pack 1, o versiones posteriores)
-  - SQL Server 2012 (con Service Pack 3, o versiones posteriores)
+- A menos que se indique lo contrario, la rama de Technical Preview admite las mismas versiones de SQL Server que la rama actual. Para obtener más información, vea [Versiones de SQL Server compatibles](../plan-design/configs/support-for-sql-server-versions.md).
 
 - El sitio admite hasta 10 clientes que pueden ejecutar cualquier [versión de SO de cliente compatible](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> La inclusión de estos productos en este contenido no implica una extensión de la compatibilidad con una versión que están fuera de su ciclo de vida de soporte. Configuration Manager no es compatible con los productos que están fuera de su ciclo de vida de soporte. Para más información, consulte [Directiva de ciclo de vida de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270).
+> La inclusión de estos productos en este contenido no implica una extensión de la compatibilidad con una versión que están fuera de su ciclo de vida de soporte. Configuration Manager no es compatible con los productos que están fuera de su ciclo de vida de soporte. Para más información, consulte [Directiva de ciclo de vida de Microsoft](https://support.microsoft.com/lifecycle).
 
 ## <a name="install-and-update"></a><a name="bkmk_install"></a> Instalación y actualización
 
@@ -100,7 +95,7 @@ Instale una versión de base de referencia hasta un año después de su lanzamie
 
 - **Versión 2002 de Technical Preview**: la versión 2002 de la rama Technical Preview de Configuration Manager está disponible como actualización en la consola y como nueva versión de línea de base.
 
-Descargue las versiones de línea de base del [Centro de evaluación de TechNet](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+Descargue las versiones de línea de base del [Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 ## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a> Proporcionar comentarios
 
@@ -121,9 +116,36 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md#bkmk_anchor) <!--ID-->
+<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
 
 Las características siguientes están disponibles con la versión de Technical Preview de Configuration Manager más reciente:
+
+### <a name="technical-preview-version-2004"></a>Versión 2004 de Technical Preview
+
+- [Asociación de inquilinos de Microsoft Endpoint Manager: detalles de cliente de ConfigMgr](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Notificaciones de Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [Copia de datos de detección desde la consola](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [Mejoras en CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [Compatibilidad con PowerShell, versión 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [Mejora en el paso de secuencia de tareas Formatear y crear particiones en el disco](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [Reglas de información de administración para la implementación de SO](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [Cmdlets de PowerShell para tipos de implementación de secuencia de tareas](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+
+> [!NOTE]
+> Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.
+
+## <a name="features-in-recent-technical-previews"></a>Características en versiones recientes de Technical Preview
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+Las características siguientes se publicaron con versiones anteriores de la rama Technical Preview de Configuration Manager desde la versión 2002 de la rama actual:
+
+> [!TIP]
+> Cuando esté disponible una nueva versión de la rama actual, se mostrarán las características que disponibles en esa versión en el último artículo sobre las *novedades*. Para obtener más información, vea [Novedades en las versiones incrementales](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### <a name="technical-preview-version-2003"></a>Versión 2003 de Technical Preview
 
@@ -136,24 +158,6 @@ Las características siguientes están disponibles con la versión de Technical 
 - [Consulta de comentarios enviados a Microsoft](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
 - [Nuevo método de SDK para el progreso de la secuencia de tareas](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
 - [Mejoras de la implementación del sistema operativo](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
-
-> [!NOTE]
-> Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.
-
-<!-- temp remove for 2002 CB ## Features in recent technical previews -->
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-<!--temp remove for 2002 CB  The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910: -->
-
-> [!TIP]
-> Cuando esté disponible una nueva versión de la rama actual, se mostrarán las características que disponibles en esa versión en el último artículo sobre las *novedades*. Para obtener más información, vea [Novedades en las versiones incrementales](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
-
-<!-- ### Technical preview version 2003 -->
 
 ## <a name="features-in-previous-technical-previews"></a>Características de las versiones de Technical Preview anteriores
 

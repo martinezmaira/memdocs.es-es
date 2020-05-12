@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3729bdc28cce961bd081ddb461d3d1da45d6c017
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 909f9fa603f6b979b283593da79730a97fcb9fc9
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701493"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904169"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Requisitos de certificados PKI para Configuration Manager
 
@@ -23,11 +23,7 @@ ms.locfileid: "81701493"
 
 En las tablas siguientes se enumeran los certificados de infraestructura de clave pública (PKI) que pueda necesitar para Configuration Manager. Esta información supone un conocimiento básico de los certificados PKI. Para obtener más información, consulte [Ejemplo paso a paso de implementación de los certificados PKI para System Center Configuration Manager: entidad de certificación de Windows Server 2008](example-deployment-of-pki-certificates.md).
 
-Para obtener más información acerca de los servicios de certificados de Active Directory, consulte la siguiente documentación:  
-
-- Para Windows Server 2012: [Información general de Active Directory Domain Services](https://go.microsoft.com/fwlink/p/?LinkId=286744)  
-
-- Para Windows Server 2008: [Active Directory Certificate Services en Windows Server 2008](https://go.microsoft.com/fwlink/p/?LinkId=115018)
+Para obtener más información sobre los servicios de servidor de certificados de Active Directory, vea [Información general sobre los servicios de servidor de certificados de Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
 Para obtener información sobre el uso de certificados Cryptography API: Next Generation (CNG) con Configuration Manager, vea [Introducción a los certificados CNG](cng-certificates-overview.md).
 

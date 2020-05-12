@@ -2,7 +2,7 @@
 title: Caché conectada de Microsoft
 titleSuffix: Configuration Manager
 description: Uso del punto de distribución de Configuration Manager como servidor de caché local para la Optimización de distribución
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842213"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Caché de conexión de Microsoft en Configuration Manager
 
@@ -108,6 +108,20 @@ Para cambiar la unidad después de instalar la caché de conexión:
 - Configure manualmente las propiedades del punto de distribución para usar una letra de unidad específica.
 
 - Si se establece en Automático, cree primero el archivo **no_sms_on_drive.sms**. Después, realice algún cambio en las propiedades del punto de distribución para desencadenar un cambio de configuración.
+
+### <a name="automation"></a>Automation
+
+<!-- SCCMDocs#1911 -->
+
+Puede usar el SDK de Configuration Manager para automatizar la configuración de la configuración de la caché conectada de Microsoft en un punto de distribución. Como sucede en todos los roles de sitio, use la [clase de WMI SMS_SCI_SysResUse](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md). Para obtener más información, vea [Programación de los roles de sitio](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles).
+
+Cuando actualice la instancia de **SMS_SCI_SysResUse** para el punto de distribución, establezca las siguientes propiedades:
+
+- **AgreeDOINCLicense**: configúrelo en `1` para aceptar los términos de licencia.
+- **Flags**: habilite `|= 4`, deshabilite `&= ~4`.
+- **DiskSpaceDOINC**: configúrelo en `Percentage` o `GB`.
+- **RetainDOINCCache**: configúrelo en `0` o `1`.
+- **LocalDriveDOINC**: configúrelo en `Automatic`, o una letra de unidad específica, como `C:` o `D:`.
 
 ## <a name="verify"></a>Comprobar
 

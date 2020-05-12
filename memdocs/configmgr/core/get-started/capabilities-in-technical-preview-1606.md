@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705573"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905670"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funciones de Technical Preview 1606 de Configuration Manager
 
@@ -80,9 +80,9 @@ Se han agregado opciones similares al asistente para la implementación de actua
 
 Device Guard es una característica de Windows 10 que emplea características de hardware y software para controlar de forma estricta lo que se puede ejecutar en el dispositivo.
 
-Puede leer información general detallada de lo que hace Device Guard y de cómo funciona en [este artículo de Technet](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview).
+Para obtener más información, consulte [Introducción a Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-En esta versión, Configuration Manager puede interoperar con Device Guard y [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) para que los archivos ejecutables y DLL implementados con Configuration Manager se consideren de confianza automáticamente por proceder de un instalador administrado, lo que significa que se podrán ejecutar en el dispositivo de destino y no se permitirá ejecutar otro software a menos que se permita explícitamente mediante otras reglas de AppLocker.  
+En esta versión, Configuration Manager puede interoperar con Device Guard y [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) para que los archivos ejecutables y DLL implementados con Configuration Manager se consideren de confianza automáticamente por proceder de un instalador administrado, lo que significa que se podrán ejecutar en el dispositivo de destino y no se permitirá ejecutar otro software a menos que se permita explícitamente mediante otras reglas de AppLocker.  
 
 De momento, esta capacidad no se puede configurar desde la consola de Configuration Manager. La configuración de la directiva exige configurar una clave del Registro en cada cliente y configurar servicios de Windows en el cliente.
 Una vez hecho esto, configure el archivo de directiva de AppLocker. Después de configurar el archivo de directiva, puede implementarlo en cualquier dispositivo de cliente compatible.
@@ -93,13 +93,11 @@ Como todas las directivas de AppLocker, las directivas con reglas de instalador 
 - Modo auditoría: no se evita que las aplicaciones se ejecuten, pero todas aquellas que se hubieran bloqueado se notifican en un archivo de registro (esto se admitirá en una versión posterior de Configuration Manager).
 - Cumplimiento habilitado: se evita que las aplicaciones se ejecuten.
 
-Encontrará más información sobre cómo usar Device Guard con Configuration Manager en el [blog de Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10).
+Vea los siguientes artículos para más información:
 
-Lectura adicional:
+- [Introducción a Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Introducción a Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Device Guard certification and compliance (Certificación y cumplimiento de Device Guard)](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Guía de implementación de Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Planificación e introducción al proceso de implementación de controles de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Varios puntos de administración de dispositivos para la administración local de dispositivos móviles  
   Con Technical Preview 1606, la administración local de dispositivos móviles (MDM) admite una nueva capacidad de Windows 10 Anniversary Update que automáticamente configura un dispositivo inscrito para que tenga más de un punto de administración de dispositivos disponible. Esta capacidad permite al dispositivo retroceder a otro punto de administración de dispositivos cuando el que usa normalmente no está disponible. Esta capacidad solo funciona con equipos que tienen instalado Windows 10 Anniversary Update.  
@@ -221,7 +219,7 @@ Una vez que los clientes tengan la nueva información de ubicación del servicio
 
 A partir de Technical Preview 1606, puede usar una configuración del agente cliente de Configuration Manager, en lugar de la directiva de grupo, para permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager. Después de configurar esta opción e implementar las actualizaciones de Office 365, el agente cliente de Configuration Manager se comunica con el de Office 365 para descargar las actualizaciones de Office 365 desde un punto de distribución e instalarlas. Configuration Manager también realiza un inventario de la configuración del agente cliente.
 
-Para más información, vea [Manage Office 365 ProPlus updates (Administrar las actualizaciones de Office 365 ProPlus)](https://technet.microsoft.com/library/mt741983.aspx).
+Para más información, vea [Manage Office 365 ProPlus updates (Administrar las actualizaciones de Office 365 ProPlus)](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Establecer la configuración del cliente de Configuration Manager para administrar el agente cliente de Office 365
 1.  En la consola de Configuration Manager, haga clic en **Administración** > **Información general** > **Configuración de cliente**.

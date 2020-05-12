@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 253de522937e48fa1f3939c7303faf7e43e4e047
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 567c03d231c145718f4f960bda7073ba4b904de2
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704543"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82880999"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>La biblioteca de contenido en Configuration Manager
 
@@ -196,3 +196,5 @@ Las sugerencias siguientes pueden ayudar a solucionar problemas relacionados con
 - Para ver si hay diferencias en el código hash, valide el paquete desde la consola de Configuration Manager.  
 
 - Como última opción, redistribuya el contenido. Con esta acción se debería resolver la mayoría de los problemas.  
+
+Para obtener información más detallada, consulte [Descripción y solución de problemas de distribución de contenido en Configuration Manager](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).

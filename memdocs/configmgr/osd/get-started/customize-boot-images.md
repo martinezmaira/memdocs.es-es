@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e486ddd8652529000c6ec02266f677e45669111
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709003"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906877"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Personalización de imágenes de arranque con Configuration Manager
 
@@ -49,11 +49,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
 
 - **WinPE-WDS-Tools**: instala las herramientas de Servicios de implementación de Windows.  
 
-  Hay otros paquetes de Windows PE que puede agregar. Los siguientes recursos proporcionan más información sobre los componentes opcionales que puede agregar a la imagen de arranque.  
-
-- Para Windows PE 5, vea [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx)  
-
-- Para Windows PE 3.1, consulte el tema [Agregar un paquete a una imagen de Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) en la biblioteca de documentación de Technet de Windows 7.  
+  Hay otros paquetes de Windows PE que puede agregar. Para obtener más información sobre los componentes opcionales que puede agregar a la imagen de arranque, consulte [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Al arrancar en WinPE desde una imagen de arranque personalizada que incluye herramientas que se han agregado, puede abrir un símbolo del sistema desde WinPE y escribir el nombre de archivo de la herramienta para ejecutarla. La ubicación de estas herramientas se agrega automáticamente a la variable de ruta de acceso. Solo se puede agregar el símbolo del sistema si está seleccionada la opción **Habilitar compatibilidad de comando (solo prueba)** en la pestaña **Personalización** de las propiedades de la imagen de arranque.
@@ -76,7 +72,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     En la que C:\WinPEWAIK es la carpeta que contiene la imagen de arranque y C:\WinPEMount es la carpeta montada.  
 
    > [!NOTE]
-   >  Para obtener más información sobre DISM, consulte el tema [DISM - Deployment Image Servicing and Management Technical Reference (Referencia técnica de Administración y mantenimiento de imágenes de implementación - DISM)](https://technet.microsoft.com/library/hh824821.aspx) en la biblioteca de documentación de TechNet de Windows 8.1 y Windows 8.
+   >  Para obtener más información, consulte la referencia de [DISM (administración y mantenimiento de imágenes de implementación)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 5, los componentes opcionales de 64 bits se encuentran en <*ruta de instalación*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -112,7 +108,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Archivos de programa (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Para obtener más información sobre los componentes opcionales que puede agregar a la imagen de arranque, consulte el tema [Referencia de los componentes opcionales de Windows PE](https://technet.microsoft.com/library/hh824926.aspx) en la biblioteca de documentación de TechNet de Windows 8 y Windows 8.1.  
+   >  Para obtener más información sobre los componentes opcionales que puede agregar a la imagen de arranque, consulte el tema [Referencia de los componentes opcionales de Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Use DISM para agregar controladores a la imagen de arranque cuando sea necesario. Escriba lo siguiente para agregar controladores a la imagen de arranque:  
 
@@ -198,7 +194,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     En la que C:\WinPEWAIK es la carpeta que contiene la imagen de arranque y C:\WinPEMount es la carpeta montada.  
 
    > [!NOTE]
-   >  Para más información sobre DISM, consulte el tema [Deployment Image Servicing and Management Technical Reference](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) (Referencia técnica de Administración y mantenimiento de imágenes de implementación - DISM) en la biblioteca de documentación de TechNet de Windows 7.  
+   > Para obtener más información, consulte la referencia de [DISM (administración y mantenimiento de imágenes de implementación)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 3.1, por ejemplo, los componentes opcionales se encuentran en <*rutaDeInstalación*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
@@ -228,7 +224,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Archivos de programa\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Para más información sobre los diferentes paquetes que puede agregar a la imagen de arranque, consulte el tema [Agregar un paquete a una imagen de Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) en la biblioteca de documentación de TechNet de Windows 7.  
+   >  Para más información sobre los diferentes paquetes que puede agregar a la imagen de arranque, consulte el tema [Agregar un paquete a una imagen de Windows PE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Use DISM para agregar controladores a la imagen de arranque cuando sea necesario. Escriba lo siguiente para agregar controladores a la imagen de arranque:  
 

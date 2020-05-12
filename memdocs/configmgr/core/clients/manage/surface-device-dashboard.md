@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696353"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906291"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Panel de dispositivos Surface en Configuration Manager
 
@@ -57,11 +57,9 @@ En el panel de dispositivos Surface se muestran tres gráficos para el entorno.
 
 ## <a name="more-information"></a>Más información
 
-Para obtener más información sobre los dispositivos Surface, vea:
-- El sitio web de [Surface]( https://go.microsoft.com/fwlink/?linkid=861998).
+Para obtener más información acerca de los dispositivos Surface, consulte el sitio web de [Surface](https://www.microsoft.com/surface).
 
-Para más información sobre cómo implementar actualizaciones de firmware de Surface en Configuration Manager, vea:
-- [Cómo administrar actualizaciones de controladores de Surface en Configuration Manager]( https://support.microsoft.com/help/4098906).
+Para obtener más información sobre cómo implementar actualizaciones de firmware de Surface en Configuration Manager, vea [Administración de actualizaciones de controlador de Surface](https://support.microsoft.com/help/4098906).
 
 
 

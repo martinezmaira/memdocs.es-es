@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704323"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903935"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Actualizaciones y servicio para Configuration Manager
 
@@ -60,11 +60,13 @@ Las siguientes versiones admitidas de Configuration Manager están actualmente d
 
 | Version | Fecha de disponibilidad | [Fecha de finalización del soporte técnico](current-branch-versions-supported.md) | Línea de base | Actualización en la consola |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | Mayo de 2020 | 1 de octubre de 2021 | Sí<sup>[Nota 1](#bkmk_note1)</sup> | Sí |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 de abril de 2020 | 1 de octubre de 2021 | Sí<sup>[Nota 1](#bkmk_note1)</sup> | Sí |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 de noviembre de 2019 | 29 de mayo de 2021 | No | Sí |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 de julio de 2019 | 26 de enero de 2021 | No | Sí |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 de marzo de 2019 | 27 de septiembre de 2020 | Sí<sup>[Nota 1](#bkmk_note1)</sup> | Sí |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 de noviembre de 2018 | 1 de diciembre de 2020 | No | Sí |
+
+La **fecha de disponibilidad** es cuando se publica el [anillo de actualización inicial](checklist-for-installing-update-2002.md#early-update-ring). Los medios de línea base estarán disponibles en el Centro de servicios de licencias por volumen después de que la actualización esté disponible globalmente.
 
 <a name="bkmk_note1"></a>
 

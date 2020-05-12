@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706703"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906422"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Usar servicios en la nube con Configuration Manager
 
@@ -36,7 +36,7 @@ Aunque el aprovisionamiento de recursos en la nube no es algo que deba hacer ant
 
 -   Para obtener información sobre los puntos de distribución basados en la nube, consulte [Install cloud-based distribution points](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md) (Instalar puntos de distribución basados en la nube).
 
--   Para obtener más información sobre Azure, consulte [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) en la biblioteca de MSDN.  
+-   Para obtener más información sobre Azure, consulte [¿Qué es Azure?](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Máquinas virtuales de Azure (para infraestructuras basadas en la nube)  
  Configuration Manager admite el uso de equipos que se ejecutan en máquinas virtuales de Azure, igual que cuando se ejecuta localmente dentro de la red corporativa física. Puede usar máquinas virtuales de Azure en los siguientes escenarios:  
@@ -78,12 +78,4 @@ Para usar estas capacidades adicionales no es necesario tener una suscripción a
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> Seguridad de los servicios en la nube  
  Configuration Manager usa certificados para aprovisionar y acceder a su contenido en Azure y para administrar los servicios que use. Configuration Manager cifra los datos que se almacenan en Azure, pero no incluye controles adicionales de seguridad o de datos más allá de los que proporciona Azure.  
 
- Para obtener más información, consulte los detalles de los distintos escenarios de recursos basados en la nube. También puede ver los siguientes temas sobre seguridad de Azure:  
-
--   [Azure: Understanding Security Account Management in Azure (Azure: información sobre la administración de cuentas de seguridad en Windows Azure)](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Windows Azure Security Overview](https://go.microsoft.com/fwlink/p/?LinkId=262970) (Introducción a la seguridad de Windows Azure)  
-
--   [Get Past the Security Crossroads in Your Cloud Migration](https://go.microsoft.com/fwlink/p/?LinkId=262971) (Seguridad en la migración de nube)  
-
--   [Seguridad de los datos en Azure, parte 1 de 2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ Para obtener más información, consulte los detalles de los distintos escenarios de recursos basados en la nube. Consulte también [Introducción a la seguridad de Azure](https://docs.microsoft.com/azure/security/fundamentals/overview).
