@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360215"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881050"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Registro de cambios en la API Almacenamiento de datos de Intune
 
@@ -265,4 +265,4 @@ Ahora puede generar informes y visualizaciones de datos con la información de a
 
 ## <a name="next-steps"></a>Pasos siguientes
 - Conozca las [novedades semanales de Intune](../fundamentals/whats-new.md). También podrá obtener información sobre los próximos cambios, notificaciones importantes sobre el servicio e información sobre las versiones anteriores.
-- Lea el [Blog de Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Lea el [Blog de Microsoft Intune](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/).

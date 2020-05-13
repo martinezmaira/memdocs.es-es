@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183082"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943865"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Administración del acceso web mediante Microsoft Edge con Microsoft Intune
 
@@ -351,7 +351,7 @@ De forma predeterminada, Microsoft Edge en iOS ofrece la opción de guardar las
 
 |    Key    |    Valor    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **password** deshabilitará los mensajes que ofrecen la posibilidad de guardar contraseñas para el usuario final.    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **password** deshabilitará los mensajes que ofrecen la posibilidad de guardar contraseñas para el usuario final.    |
 
 ### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Impedir que los usuarios agreguen extensiones a Microsoft Edge 
 
