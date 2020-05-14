@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407818"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269021"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos iOS e iPadOS para permitir o restringir características mediante Intune
 
@@ -95,6 +95,10 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
 - **Bloqueo de activación**: **Permitir** habilita el Bloqueo de activación en dispositivos iOS/iPadOS supervisados. Bloqueo de activación dificulta que un dispositivo robado o perdido pueda reactivarse. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 - **Bloquear la eliminación de aplicaciones**: **Bloquear** impide la eliminación de aplicaciones. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios quiten aplicaciones de los dispositivos.
 - **Permitir accesorios USB con el dispositivo bloqueado**: **Permitir** habilita a los accesorios USB para intercambiar datos con dispositivos que han estado bloqueados durante más de una hora. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no actualice el modo restringido de USB en los dispositivos y los accesorios USB no puedan transferir datos de los dispositivos si están bloqueados durante más de una hora.
+
+  Esta característica se aplica a:  
+  - iOS/iPadOS 11.4.1 y versiones más recientes
+
 - **Forzar fecha y hora automáticas**: **Requerir** obliga a los dispositivos supervisados a establecer la fecha y la hora automáticamente. La zona horaria del dispositivo se actualiza cuando el dispositivo tiene conexiones móviles o tiene Wi-Fi con servicios de ubicación habilitados. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 - **Requerir que los estudiantes soliciten permiso para dejar el curso de Classroom**: **Requerir** obliga a los alumnos inscritos en un curso no administrado con la aplicación Aula a pedir permiso al profesor para dejar el curso. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no obligar al alumno a pedir permiso.
 
@@ -292,7 +296,7 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
   A partir de iOS/iPadOS 13.0, esta configuración requiere dispositivos supervisados.
 
   - **Instalación de aplicaciones de App Store**: **Bloquear** no muestra App Store en la pantalla principal del dispositivo. Los usuarios pueden seguir usando iTunes o Apple Configurator para instalar aplicaciones. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir la tienda de aplicaciones en la pantalla principal.
-  - **Descargas de aplicaciones automáticas**: **Bloquear** impide la descarga automática de las aplicaciones compradas en otros dispositivos. No afecta las actualizaciones de las aplicaciones existentes. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir la descarga en el dispositivo de las aplicaciones compradas en otros dispositivos iOS/iPadOS.
+  - **Descargas de aplicaciones automáticas**: **Bloquear** impide la descarga automática de las aplicaciones compradas en otros dispositivos y actualizaciones automáticas a nuevas aplicaciones. No afecta las actualizaciones de las aplicaciones existentes. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir la descarga y actualización en el dispositivo de las aplicaciones compradas en otros dispositivos iOS/iPadOS.
 
 - **Música, podcasts o contenido de noticias explícitos de iTunes**: **Bloquear** impide música, podcasts o contenido de noticias explícitos de iTunes. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que el dispositivo acceda a contenido clasificado para adultos en la tienda.
 
@@ -324,7 +328,10 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivos, también en el caso de la inscripción automatizada (con supervisión)
 
+
 - **Búsqueda de Spotlight para devolver resultados de Internet**: **Bloquear** evita que Spotlight devuelva resultados de una búsqueda en Internet. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que la búsqueda de Spotlight se conecte a Internet para proporcionar resultados de la búsqueda.
+
+  Esta configuración está duplicada en la interfaz de usuario y se corregirá en una próxima versión. Actualmente, esta configuración se aplica a los dispositivos supervisados. En una versión futura, esta configuración se aplicará a los dispositivos inscritos de dispositivo y a los dispositivos inscritos de dispositivo automatizado, y no requerirá supervisión.
 
 - **Cookies de Safari**: seleccione cómo se controlan las cookies en los dispositivos. Las opciones son:
   - Allow
@@ -334,7 +341,7 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
 
 - **JavaScript de Safari**: **Bloquear** impide que los scripts de Java del explorador se ejecuten en los dispositivos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir los scripts de Java.
 
-- **Ventanas emergentes de Safari**: **Bloquear** deshabilita el bloqueador de elementos emergentes del explorador web. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir el bloqueador de elementos emergentes.
+- **Ventanas emergentes de Safari**: **Bloquear** bloquea todos los elementos emergentes en el explorador web Safari. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir el bloqueador de elementos emergentes.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivo automatizada (supervisado)
 
@@ -386,6 +393,8 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
 - **Cambios en la configuración de la aplicación Buscar a mis amigos**: **Bloquear** evita los cambios en la configuración de la aplicación Buscar a mis amigos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que el usuario cambie la configuración de la aplicación Buscar a mis amigos.
 
 - **Búsqueda de Spotlight para devolver resultados de Internet**: **Bloquear** evita que Spotlight devuelva resultados de una búsqueda en Internet. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que la búsqueda de Spotlight se conecte a Internet para proporcionar resultados de la búsqueda.
+
+  Esta configuración está duplicada en la interfaz de usuario y se corregirá en una próxima versión. Actualmente, esta configuración se aplica a los dispositivos supervisados. En una versión futura, esta configuración se aplicará a los dispositivos inscritos de dispositivo y a los dispositivos inscritos de dispositivo automatizado, y no requerirá supervisión.
 
 - **Bloquear la eliminación de aplicaciones del sistema del dispositivo**: **Bloquear** deshabilita la capacidad de quitar aplicaciones del sistema de los dispositivos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios quiten aplicaciones del sistema.
 
@@ -586,11 +595,16 @@ Para agregar aplicaciones, puede:
 
   A partir de iOS/iPadOS 13.0, esta configuración requiere dispositivos supervisados.
 
-## <a name="autonomous-single-app-mode"></a>Modo de aplicación única autónoma
+## <a name="autonomous-single-app-mode-asam"></a>Modo de aplicación única autónoma (ASAM)
 
-Use estos valores para configurar los dispositivos iOS/iPadOS de modo que ejecuten aplicaciones específicas en modo de aplicación única autónoma. Si se configura este modo y los usuarios inician una de las aplicaciones configuradas, el dispositivo se bloqueará para esa aplicación. La conmutación de tareas y aplicaciones se deshabilitará hasta que los usuarios salgan de la aplicación permitida.
+Use estos valores para configurar los dispositivos iOS/iPadOS de modo que ejecuten aplicaciones específicas en modo de aplicación única autónoma (ASAM). Si se configura este modo y los usuarios inician una de las aplicaciones configuradas, el dispositivo se bloqueará para esa aplicación. La conmutación de tareas y aplicaciones se deshabilitará hasta que los usuarios salgan de la aplicación permitida.
 
 Por ejemplo, en un entorno educativo o universitario, agregue una aplicación que permita que los usuarios realicen una prueba en el dispositivo. Otra opción es bloquear el dispositivo en la aplicación Portal de empresa hasta que el usuario se autentique. Cuando los usuarios completen las acciones de la aplicación o quite esta directiva, el dispositivo volverá a su estado normal.
+
+> [!NOTE]
+> No todas las aplicaciones admiten el modo de aplicación única autónoma. Para activar el modo de aplicación única autónoma, normalmente se requiere un identificador de lote de aplicaciones o un par clave-valor entregado por una directiva de configuración de aplicaciones. Para obtener más información, consulte el artículo sobre la [restricción `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) en la documentación MDM de Apple. Para obtener más información sobre la configuración específica necesaria para la aplicación que vaya a configurar, consulte la documentación del proveedor.
+
+Por ejemplo, para configurar las salas de Zoom en el modo de aplicación única autónoma, Zoom indica que es necesario usar el id. de lote de aplicaciones `us.zoom.zpcontroller`. En esta instancia, también se realiza un cambio en el portal web de Zoom. Para obtener más información, consulte el [centro de ayuda de Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivo automatizada (supervisado)
 
@@ -601,6 +615,8 @@ Por ejemplo, en un entorno educativo o universitario, agregue una aplicación qu
 También puede **importar** un archivo .csv con la lista de nombres de aplicaciones y sus identificadores de lote. O bien puede **Exportar** una lista existente que incluya las aplicaciones.
 
 ## <a name="kiosk"></a>Pantalla completa
+
+El [modo de aplicación única](https://support.apple.com/guide/mdm/mdm80a981/web) se denomina Pantalla completa en Intune.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivo automatizada (supervisado)
 
@@ -666,8 +682,7 @@ También puede **importar** un archivo .csv con la lista de nombres de aplicacio
 
 El modo supervisado de iOS/iPadOS solo se puede habilitar durante la configuración inicial del dispositivo a través del Programa de inscripción de dispositivos de Apple o con Apple Configurator. Una vez activado el modo supervisado, Intune puede configurar un dispositivo con la funcionalidad siguiente:
 
-- Bloqueo de aplicaciones (modo de aplicación única) 
-- Proxy HTTP global 
+- Modo de pantalla completa (modo de aplicación única): Se conoce como "bloqueo de aplicación" en la [documentación para desarrolladores de Apple](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
 - Deshabilitación del bloqueo de activación 
 - Modo de aplicación única autónoma 
 - Filtro de contenido web 

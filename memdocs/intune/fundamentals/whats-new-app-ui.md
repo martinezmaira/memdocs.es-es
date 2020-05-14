@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255037"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991772"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune
 
@@ -36,6 +36,26 @@ Si es un empleado o un alumno, asegúrese de consultar las capturas de pantalla 
 
 
 
+## <a name="week-of-may-4-2020"></a>Semana del 4 de mayo de 2020  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Portal de empresa para Android guía a los usuarios para obtener aplicaciones después de la inscripción del perfil de trabajo <!-- 6103999 -->
+Hemos mejorado las instrucciones en la aplicación del Portal de empresa para facilitar a los usuarios la búsqueda e instalación de aplicaciones. Después de la inscripción en la administración del perfil de trabajo, los usuarios recibirán un mensaje que explica cómo encontrar aplicaciones sugeridas en la versión con distintivo de Google Play. El último paso de [Inscribir dispositivos con perfil Android](../user-help/enroll-device-android-work-profile.md) se ha actualizado para mostrar el mensaje nuevo. 
+
+![Imagen de ejemplo del mensaje de la pestaña Dispositivos del Portal de empresa para abrir la versión con distintivo de Google Play.](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+Los usuarios también verán un nuevo vínculo **Obtener aplicaciones** en el cajón de Portal de empresa de la izquierda. 
+
+![Cajón izquierdo de Portal de empresa de la imagen de ejemplo, resaltando el elemento de menú Obtener aplicaciones.](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+Para dejar espacio a estas experiencias nuevas y mejoradas, se ha quitado la pestaña **APLICACIONES** que se muestra en la siguiente imagen.  
+
+![Imagen de ejemplo de la pestaña Aplicaciones del Portal de empresa que se ha quitado ahora.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>Semana del 2 de marzo de 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Experiencia de inicio de sesión mejorada en la aplicación Portal de empresa para Android   
 Hemos actualizado el diseño de varias pantallas de inicio de sesión en la aplicación Portal de empresa para Android a fin de que la experiencia sea más moderna, sencilla y limpia para los usuarios. Para ver todas las instrucciones de inscripción del Portal de empresa para Android, vaya a [Inscripción de su dispositivo Android](../user-help/enroll-device-android-company-portal.md) o [Inscribir dispositivos con perfil profesional Android](../user-help/enroll-device-android-work-profile.md).   
@@ -44,7 +64,7 @@ Hemos actualizado el diseño de varias pantallas de inicio de sesión en la apli
 |Actualizado|Anterior|   
 |---|---|   
 |![Imagen de ejemplo de la pantalla de inicio de sesión de Portal de empresa, con el botón "Iniciar sesión".](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Imagen de ejemplo de la página anterior de inicio de sesión de Portal de empresa, que muestra un diseño con más elementos.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![Imagen de ejemplo de la nueva pantalla de progreso de inicio de sesión, que muestra una barra de progreso.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Imagen de ejemplo de la anterior pantalla de progreso de inicio de sesión, que muestra un diseño con más elementos.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![Imagen de ejemplo de la nueva pantalla de progreso de inicio de sesión, que muestra una barra de progreso.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Imagen de ejemplo de la anterior pantalla de progreso de inicio de sesión, que muestra un diseño con más elementos.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>Semana del 3 de febrero de 2020
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Pantalla quitada del Portal de empresa, inscripción del perfil de trabajo de Android <!--6103987 -->
@@ -615,6 +635,6 @@ Estos son los planes para mejorar la experiencia del usuario mediante la actuali
 
 
 ## <a name="see-also"></a>Vea también
-* [Blog de Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Blog de Microsoft Intune](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Guía básica de la plataforma en la nube](https://www.microsoft.com/cloud-platform/roadmap)
 * [Novedades de Intune](whats-new.md)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084925"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906897"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Configuración de Windows 10 y versiones posteriores para marcar dispositivos como compatibles o no compatibles con Intune
 
@@ -39,7 +39,7 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
 
 [Crear una directiva de cumplimiento](create-compliance-policy.md#create-the-policy). En **Plataforma**, seleccione **Windows 10 y versiones posteriores**.
 
-## <a name="device-health"></a>Estado de dispositivos
+## <a name="device-health"></a>Estado del dispositivo
 
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Reglas de evaluación del servicio Atestación de estado de Windows
 
@@ -65,7 +65,7 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
 Más recursos:
 
 - Vea [CSP de atestación de mantenimiento](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) para obtener información sobre cómo funciona el servicio HAS.
-- [Sugerencia de soporte técnico: Uso de la configuración de atestación de estado de dispositivo como parte de la directiva de cumplimiento de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- [Sugerencia de soporte: Uso de la configuración de atestación de estado de dispositivo como parte de la directiva de cumplimiento de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Propiedades de dispositivos
 
@@ -188,10 +188,20 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
 - **Antivirus**:  
   - **Sin configurar** (*valor predeterminado*): Intune no busca soluciones antivirus instaladas en el dispositivo. 
   - **Requerir**: comprobar el cumplimiento mediante soluciones antivirus registradas con el [Centro de seguridad de Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), como Symantec y Microsoft Defender.
+  
+  [CSP de DeviceStatus: DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > El CSP de DeviceStatus para Antivirus no es compatible con *Windows 10 Home* y notifica un estado *No aplicable*. El equipo de Intune trabaja en una corrección. Para solucionar esta limitación, considere la posibilidad de usar la configuración de [Windows Defender](#defender) en la directiva de cumplimiento de dispositivos. La configuración de Windows Defender es compatible con Windows 10 Home.  
 
 - **Antiespía**:  
   - **Sin configurar** (*valor predeterminado*): Intune no busca soluciones antiespía instaladas en el dispositivo.
   - **Requerir**: comprobar el cumplimiento mediante soluciones antiespía registradas con el [Centro de seguridad de Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), como Symantec y Microsoft Defender.  
+  
+  [CSP de DeviceStatus: DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > El CSP de DeviceStatus para Antispyware no es compatible con *Windows 10 Home* y notifica un estado *No aplicable*. El equipo de Intune trabaja en una corrección. Para solucionar esta limitación, considere la posibilidad de usar la configuración de [Windows Defender](#defender) en la directiva de cumplimiento de dispositivos. La configuración de Windows Defender es compatible con Windows 10 Home. 
 
 ### <a name="defender"></a>Defender
 

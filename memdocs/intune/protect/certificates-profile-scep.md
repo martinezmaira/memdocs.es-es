@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126060"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862384"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creación y asignación de perfiles de certificado SCEP en Intune
 
@@ -301,7 +301,8 @@ Antes de continuar, tenga en cuenta lo siguiente:
 - Si usa la administración conjunta para Intune y Configuration Manager, en Configuration Manager, [establezca el control deslizante de la carga de trabajo](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) de las directivas de acceso a los recursos en **Intune** o **Intune piloto**. Esta configuración permite que los clientes de Windows 10 inicien el proceso de solicitar el certificado.
 
 > [!NOTE]
-> En los dispositivos iOS/iPadOS, cuando hay un perfil de certificado SCEP o PKCS asociado con un perfil adicional, como uno de Wi-Fi o VPN, el dispositivo recibe un certificado para cada uno de esos perfiles adicionales. Esto hace que la solicitud de certificado SCEP o PKCS entregue varios certificados al dispositivo iOS/iPadOS. 
+> - En los dispositivos iOS/iPadOS, cuando hay un perfil de certificado SCEP o PKCS asociado con un perfil adicional, como uno de Wi-Fi o VPN, el dispositivo recibe un certificado para cada uno de esos perfiles adicionales. Esto hace que la solicitud de certificado SCEP o PKCS entregue varios certificados al dispositivo iOS/iPadOS. 
+> - En iOS 13 y macOS 10.15, hay algunos [requisitos de seguridad adicionales documentados por Apple](https://support.apple.com/HT210176) que se deben tener en cuenta.  
 
 
 ## <a name="next-steps"></a>Pasos siguientes

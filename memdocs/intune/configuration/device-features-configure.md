@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
-ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
+ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82149183"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943814"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adición de la configuración de características de dispositivos iOS, iPadOS o macOS en Intune
 
@@ -153,7 +153,7 @@ Estas opciones configuran una extensión de aplicación que habilita el inicio d
 
 En Intune, use estas opciones para configurar una extensión de aplicación de inicio de sesión único creada por la organización, el proveedor de identidades, Microsoft o Apple. La extensión de la aplicación de inicio de sesión único controla la autenticación de los usuarios. Estas opciones configuran las extensiones de aplicación de inicio de sesión único de tipo credencial y redirección.
 
-- El tipo de redirección está diseñado para protocolos de autenticación modernos, como OAuth y SAML2. Puede usar una extensión de redireccionamiento genérica en dispositivos macOS. En el caso de dispositivos iOS/iPadOS, puede elegir entre la extensión de SSO de Microsoft Azure AD ([complemento de Microsoft Enterprise Single Sign-On](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) y una extensión de redireccionamiento genérica.
+- El tipo de redirección está diseñado para protocolos de autenticación modernos, como OpenID Connect, OAuth y SAML2. Puede usar una extensión de redireccionamiento genérica en dispositivos macOS. En el caso de dispositivos iOS/iPadOS, puede elegir entre la extensión de SSO de Microsoft Azure AD ([complemento de Microsoft Enterprise Single Sign-On](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) y una extensión de redireccionamiento genérica.
 - El tipo de credencial está diseñado para flujos de autenticación de desafío y respuesta. Puede elegir entre una extensión de credenciales específica de Kerberos proporcionada por Apple y una extensión de credenciales genérica.
 
 Para obtener una lista de las opciones que puede configurar en Intune, vea [Extensión de la aplicación de inicio de sesión único de iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) y [Extensión de la aplicación de inicio de sesión único de macOS](macos-device-features-settings.md#single-sign-on-app-extension).

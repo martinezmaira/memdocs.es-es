@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210261"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943882"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
@@ -107,7 +107,7 @@ Puede agregar hasta **seis** elementos (aplicaciones y carpetas combinadas) para
       Puede agregar hasta **20** páginas para base del dispositivo.
 
 > [!NOTE]
-> Cuando se agregan iconos mediante la configuración del Dock, se bloquean los iconos de la pantalla principal y de las páginas, y no se pueden mover. Este problema puede deberse al diseño con iOS/iPadOS y las directivas MDM de Apple.
+> Al usar la configuración de diseño de pantalla principal para agregar las páginas, o bien agregar las páginas y aplicaciones a la base, se bloquean los iconos de la pantalla principal y las páginas. No se pueden mover ni eliminar. Este comportamiento puede deberse al diseño con iOS/iPadOS y las directivas MDM de Apple.
 
 #### <a name="example"></a>Ejemplo
 

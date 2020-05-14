@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023357"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269072"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscripción automática de dispositivos iOS/iPadOS con la Inscripción de dispositivos automatizada de Apple
 
@@ -148,8 +148,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 
     ![Cree una captura de pantalla del perfil.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. En la página **Básico**, escriba la información pertinente en **Nombre** y **Descripción** para el perfil con fines administrativos. Los usuarios no ven estos detalles. Puede usar este campo de **nombre** para crear un grupo dinámico en Azure Active Directory. Use el nombre de perfil para definir el parámetro enrollmentProfileName para asignar dispositivos con este perfil de inscripción. En el caso de los dispositivos inscritos mediante Inscripción de dispositivo automatizada con afinidad de usuario, al seleccionar como destino grupos de usuarios de AAD en los que el usuario que realiza la inscripción es miembro antes de la configuración del dispositivo, se garantizará la entrega de la directiva más rápida a los dispositivos. Destinar las aplicaciones y la directiva a grupos dinámicos en función de los perfiles de inscripción producirá un retraso en la aplicación en los dispositivos después de completar el flujo de inscripción.
-Obtenga más información sobre los [grupos dinámicos de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. En la página **Básico**, escriba la información pertinente en **Nombre** y **Descripción** para el perfil con fines administrativos. Los usuarios no ven estos detalles. 
 
     ![Nombre y descripción del perfil.](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Obtenga más información sobre los [grupos dinámicos de Azure Active Directory
 16. Elija **Siguiente** para ir a la página **Revisar y crear**.
 
 17. Para guardar el perfil, elija **Crear**.
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Grupos dinámicos en Azure Active Directory
+
+Puede usar el campo de **nombre** de la inscripción para crear un grupo dinámico en Azure Active Directory. Para obtener más información, consulte [Grupos dinámicos de Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+
+Puede usar el nombre de perfil para definir el [parámetro enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) para asignar dispositivos con este perfil de inscripción.
+
+Para obtener la entrega de directivas más rápida en dispositivos ADE con afinidad de usuario, asegúrese de que el usuario de la inscripción es miembro, antes de la configuración del dispositivo, de un grupo de usuarios de AAD. 
+
+La asignación de grupos dinámicos a perfiles de inscripción puede provocar un retraso en la entrega de aplicaciones y directivas a los dispositivos después de la inscripción.
+
 
 ## <a name="sync-managed-devices"></a>Sincronizar dispositivos administrados
 Ahora que Intune tiene permiso para administrar los dispositivos, puede sincronizar Intune con Apple para ver los dispositivos administrados en Intune en Azure Portal.

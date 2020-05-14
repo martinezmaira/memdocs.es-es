@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086576"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943831"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Creación de perfiles de VPN para conectarse a servidores VPN en Intune
 
@@ -131,7 +131,7 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
@@ -182,7 +182,13 @@ Los perfiles de VPN pueden utilizar diferentes tipos de conexiones y protocolos 
 
 Al crear el perfil de VPN, elija un perfil de certificado SCEP o PKCS que haya creado previamente en Intune. Este perfil se conoce como “certificado de identidad”. Se usa para autenticar con un perfil de certificado de confianza (o un *certificado raíz*) que se crea para que el dispositivo del usuario pueda conectarse. El certificado de confianza se asigna al equipo que autentica la conexión VPN, por lo general, el servidor de VPN.
 
+Si usa la autenticación basada en certificados para el perfil de VPN, implemente el perfil de VPN, el de certificado y el perfil raíz de confianza en los mismos grupos para asegurarse de que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación.
+
 Para más información sobre cómo crear y usar perfiles de certificado en Intune, consulte [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md) (Configuración de certificados con Microsoft Intune).
+
+> [!NOTE]
+> No se admiten los certificados agregados con el tipo de perfil del **certificado PKCS importado** para la autenticación de VPN. Se admiten los certificados agregados mediante el tipo de perfil de los **certificados PKCS** para la autenticación de VPN.
+
 
 ### <a name="user-name-and-password"></a>Nombre de usuario y contraseña
 

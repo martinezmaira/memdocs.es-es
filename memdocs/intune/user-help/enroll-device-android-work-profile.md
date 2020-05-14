@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348593"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991575"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Inscribir dispositivos con perfil profesional Android
 
@@ -74,6 +74,15 @@ Puede encontrar más información sobre [¿Qué ocurre cuando se crea un perfil 
 9. Una vez finalizada la instalación, pulse **LISTO**.  
 
     ![Imagen de ejemplo de Portal de empresa, pantalla Configuración de acceso a la empresa, en la que se muestra la configuración completa y el botón Listo resaltado.](./media/work-profile-done-1911.png)  
+
+10. Cuando se le pida ver las aplicaciones sugeridas de la organización en Google Play, seleccione **ABRIR**. 
+
+    ![Imagen de ejemplo del mensaje del Portal de empresa para abrir la versión con distintivo de Google Play.](./media/get-apps-banner-android-2005.png) 
+
+    Si no está listo para instalar las aplicaciones, siempre puede acceder a ellas más adelante yendo directamente a la versión con distintivo de la aplicación de Google Play. También puede seleccionar **Obtener aplicaciones** en el menú Portal de empresa.  
+
+    ![Imagen de ejemplo del menú Portal de empresa, resaltando el vínculo Obtener aplicaciones.](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>Pasos siguientes  

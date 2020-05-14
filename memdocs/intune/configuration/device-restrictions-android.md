@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407866"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862367"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listas de configuraciones de restricciones de dispositivos Android y Samsung Knox en Intune
 
@@ -114,7 +114,7 @@ Use esta configuración para permitir o impedir aplicaciones específicas en los
 - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración.
 - **Aplicaciones prohibidas**: enumere las aplicaciones (que no se administran mediante Intune) que los usuarios no pueden instalar ni ejecutar. Si un usuario instala una aplicación de esta lista, recibirá una notificación a través de Intune.
 - **Aplicaciones aprobadas**: Enumerar las aplicaciones que los usuarios pueden instalar. Para mantener el cumplimiento, los usuarios no deben instalar otras aplicaciones.  Las aplicaciones que se administran mediante Intune están permitidas automáticamente, incluido el Portal de empresa.
-- **Lista de aplicaciones**: **agregue** la aplicación:
+- **Lista de aplicaciones**: **Agregue** la aplicación:
   - **Identificador de lote de aplicaciones**: escriba el id. del conjunto de la aplicación.
   - **URL de App Store**: escriba la dirección URL de Google Play Store de la aplicación que quiere. Por ejemplo, para agregar la aplicación Escritorio remoto de Microsoft para Android, escriba `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 

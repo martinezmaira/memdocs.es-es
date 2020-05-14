@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 80e15e78e270ae72bdf584e9db967cae81d3ac2b
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254646"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343004"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscripción de dispositivos en Intune mediante una cuenta de administrador de inscripción de dispositivos
 
@@ -46,6 +46,8 @@ Los dispositivos y las cuentas de los usuarios de DEM inscritos con una cuenta d
 - La aplicación de una restricción de dispositivos de Azure AD a una cuenta DEM le impedirá alcanzar el límite de 1000 dispositivos que la cuenta DEM puede inscribir.
 
 ## <a name="enrollment-methods-supported-by-dem-accounts"></a>Métodos de inscripción admitidos por las cuentas DEM
+
+Puede usar los siguientes métodos para inscribir dispositivos mediante cuentas de DEM:
 
 - [Windows Autopilot](enrollment-autopilot.md):
 - [Inscripción masiva de dispositivos Windows](windows-bulk-enroll.md)

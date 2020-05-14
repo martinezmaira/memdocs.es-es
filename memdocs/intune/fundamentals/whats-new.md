@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619583"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991738"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
@@ -51,6 +51,14 @@ Obtenga información sobre las novedades que se producen cada semana en Microsof
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>Semana del 4 de mayo de 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Portal de empresa para Android guía a los usuarios para obtener aplicaciones después de la inscripción del perfil de trabajo <!-- 6103999 -->
+Hemos mejorado las instrucciones en la aplicación del Portal de empresa para facilitar a los usuarios la búsqueda e instalación de aplicaciones. Después de la inscripción en la administración del perfil de trabajo, los usuarios recibirán un mensaje que explica cómo encontrar aplicaciones sugeridas en la versión con distintivo de Google Play. El último paso de [Inscribir dispositivos con perfil Android](../user-help/enroll-device-android-work-profile.md) se ha actualizado para mostrar el mensaje nuevo. Los usuarios también verán un nuevo vínculo **Obtener aplicaciones** en el cajón de Portal de empresa de la izquierda. Para dejar espacio a estas experiencias nuevas y mejoradas, se quitó la pestaña **APLICACIONES**. Para ver las pantallas actualizadas, vaya a [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](./whats-new-app-ui.md). 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>Semana del 20 de abril de 2020
