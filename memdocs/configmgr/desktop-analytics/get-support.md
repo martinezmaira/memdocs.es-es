@@ -10,16 +10,17 @@ ms.assetid: d56742bc-a060-4714-a359-48f594c3eaff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 271a37c80db3a37b721918f3ee739b010c043c70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708143"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268528"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Obtención de soporte técnico para Análisis de escritorio
 
-Microsoft proporciona servicios globales de soporte técnico, preventa, facturación y suscripción para Análisis de escritorio. El soporte técnico está disponible tanto en línea como por teléfono para las suscripciones de pago y de prueba. El soporte técnico en línea está disponible en inglés y japonés. El soporte técnico telefónico y para facturación en línea está disponible en otros idiomas.
+Microsoft proporciona servicios globales de soporte técnico, preventa, facturación y suscripción para Análisis de escritorio. El soporte técnico está disponible tanto en línea como por teléfono para las suscripciones de prueba y de pago. El soporte técnico en línea está disponible en inglés y japonés. El soporte técnico telefónico y para facturación en línea está disponible en otros idiomas.
 
 > [!TIP]
 > Antes de ponerse en contacto con el servicio de soporte técnico de Microsoft, revise los siguientes artículos:

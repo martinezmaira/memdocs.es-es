@@ -10,12 +10,13 @@ ms.assetid: 004ca404-e6fa-47f0-ae77-e44e18a08b33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0224d9faecb9ff17afc2af3a57ba222023b5a3d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701743"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268681"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Configuración de la directiva de grupo para Análisis de escritorio
 

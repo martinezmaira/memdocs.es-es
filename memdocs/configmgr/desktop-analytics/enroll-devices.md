@@ -10,12 +10,13 @@ ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e9cca066d389ea8d3847737651f4994977a5e2f5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: acb8900a57408152133637ead3b8a0cf4732b4a7
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708173"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268732"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Inscripción de dispositivos en Análisis de escritorio
 

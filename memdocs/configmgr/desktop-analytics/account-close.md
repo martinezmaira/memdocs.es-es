@@ -10,12 +10,13 @@ ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e1d031588100f3930bf5bf25970f544b91017d77
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706613"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268477"
 ---
 # <a name="how-to-close-your-account"></a>Cierre de la cuenta
 

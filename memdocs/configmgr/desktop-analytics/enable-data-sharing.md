@@ -10,12 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f8dd7c4c561ca22c679ee8ae03764ebb20b87664
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.reviewer: acabello
+ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906082"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268749"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitación del uso compartido de datos en Análisis de escritorio
 

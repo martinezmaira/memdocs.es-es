@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0e939b51c464215ac1d4feea539ceb5677a01a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: ac4eed771e9e5d5a98ac0d3fb5c5f7ecceb5798a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708273"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268851"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Implementación en un grupo piloto con Análisis de escritorio
 
