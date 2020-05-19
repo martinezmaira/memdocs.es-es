@@ -2,7 +2,7 @@
 title: Supervisión de la administración conjunta
 titleSuffix: Configuration Manager
 description: Utilice el panel de administración conjunta para revisar información sobre los dispositivos administrados conjuntamente.
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688703"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268069"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Supervisión de la administración conjunta en Configuration Manager
 
@@ -173,7 +173,7 @@ La directiva de producción (CoMgmtSettingsProd) está destinada a la colección
 
 ## <a name="wmi-device-data"></a>Datos del dispositivo de WMI
 
-Consulte la clase WMI **SMS_Client_ComanagementState**. Puede crear recopilaciones personalizadas en Configuration Manager, lo que ayudará a determinar el estado de la implementación de administración conjunta. Para más información sobre cómo crear recopilaciones personalizadas, consulte [Cómo crear recopilaciones](../core/clients/manage/collections/create-collections.md).
+Consulte la clase WMI **SMS_Client_ComanagementState** en el espacio de nombres **ROOT\SMS\site_&lt;CÓDIGO DE SITIO>** en el servidor de sitio. Puede crear recopilaciones personalizadas en Configuration Manager, lo que ayudará a determinar el estado de la implementación de administración conjunta. Para más información sobre cómo crear recopilaciones personalizadas, consulte [Cómo crear recopilaciones](../core/clients/manage/collections/create-collections.md).
 
 Los campos siguientes están disponibles en la clase WMI:  
 

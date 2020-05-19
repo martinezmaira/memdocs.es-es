@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587273"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383739"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticación basada en tokens para Cloud Management Gateway
 
@@ -102,6 +102,28 @@ El token no se almacena en el cliente ni en el sitio. Asegúrese de copiar el to
 Se usa con el parámetro `/new` para especificar el período de validez del token. Especifique un valor entero en minutos. El valor predeterminado es 4320 minutos (tres días). El valor máximo es de 10 080 (7 días).
 
 Ejemplo: `BulkRegistrationTokenTool.exe /lifetime:4320`
+
+## <a name="bulk-registration-token-management"></a>Administración de tokens de registro masivo
+
+Puede ver los tokens de registro masivo creados anteriormente con su duración en la consola de Configuration Manager y bloquear su uso si es necesario. Aunque la base de datos del sitio no almacena tokens de registro masivo.
+
+#### <a name="to-review-a-bulk-registration-token"></a>Creación de un token de registro masivo
+
+1. En la consola de Configuration Manager, haga clic en **Administración**.
+
+2. En el área de trabajo Administración, expanda **Seguridad** y haga clic en **Certificados**. La consola muestra todos los certificados relacionados con el sitio y los tokens de registro masivo en el panel de detalles.
+
+3. Seleccione el token de registro masivo que se quiere a revisar.
+
+Puede identificar tokens de registro masivo específicos en función de su GUID. Los GUID para los tokens de registro masivo se muestran en el momento de la creación del token. También puede filtrar u ordenar por **Tipo** de columna si es necesario.
+
+#### <a name="to-block-a-bulk-registration-token"></a>Para bloquear un token de registro masivo
+
+1. En la consola de Configuration Manager, haga clic en **Administración**.
+
+2. En el área de trabajo Administración, expanda **Seguridad**, haga clic en **Certificados** y seleccione el token de registro masivo que quiere bloquear.
+
+3. En la pestaña **Inicio** de la barra de cinta o en el menú contextual, seleccione **Bloquear**. Por el contrario, puede desbloquear los tokens de registro masivo bloqueados previamente seleccionando **Desbloquear** en la pestaña **Inicio** de la barra de cinta o en el menú contextual.
 
 ## <a name="see-also"></a>Vea también
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076771"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383740"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
@@ -199,6 +199,43 @@ Este comando muestra los puntos de administración basados en Internet que el cl
 > [!Note]  
 > Para solucionar problemas de tráfico de cliente de CMG, use **CMGHttpHandler.log**, **CMGService.log** y **SMS_Cloud_ProxyConnector.log**. Para obtener más información, vea [Archivos de registro](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>Instalación de clientes no locales con una instancia de CMG
+
+Para instalar el agente cliente en sistemas que no están conectados actualmente a la intranet, debe cumplirse una de las siguientes condiciones. En todos los casos, se requiere una cuenta de administrador local en los sistemas de destino.
+
+1. El sitio de Configuration Manager está configurado correctamente para usar certificados PKI para la autenticación de cliente. Además, cada uno de los sistemas cliente tiene un certificado de autenticación de cliente válido, único y de confianza previamente emitido para ellos.
+
+2. Los sistemas están unidos a dominio de Azure AD o a dominio de Azure AD híbrido.
+
+3. El sitio ejecuta Configuration Manager, versión 2002 o posterior.
+
+Para las opciones 1 y 2, use el parámetro **/mp** para especificar la dirección URL de CMG al llamar a **ccmsetup.exe**. Para obtener más información, vea [Acerca de los parámetros y propiedades de instalación de cliente](../../deploy/about-client-installation-properties.md#mp).
+
+Para la opción 3, a partir de la versión 2002 de Configuration Manager, puede instalar el agente cliente en sistemas que no estén conectados a la intranet con un token de registro masivo. Para más información sobre este método, vea [Creación de un token de registro masivo](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+
+### <a name="configure-off-premises-clients-for-cmg"></a>Configuración de clientes no locales para CMG
+
+Puede conectar sistemas a una instancia de CMG recién configurada en donde se cumplan las condiciones siguientes:  
+
+- Los sistemas ya tienen instalado el agente cliente de Configuration Manager.
+
+- Los sistemas no están conectados ni se pueden conectar a la intranet.
+
+- Los sistemas cumplen alguna de las siguientes condiciones:
+
+ - Cada uno tiene un certificado de autenticación de cliente válido, único y de confianza previamente emitido para él.
+ 
+ - Unido a dominio de Azure AD
+ 
+ - Unido a dominio de Azure AD híbrido.
+
+- No quiere o no puede reinstalar completamente el agente cliente existente.
+
+- Tiene un método para cambiar el valor del registro de una máquina y reiniciar el servicio **Host de agente de SMS** con una cuenta de administrador local.
+
+Para forzar la conexión en estos sistemas, cree el valor del registro **CMGFQDNs** (de tipo REG_SZ) en **HKLM\Software\Microsoft\CCM**. Establezca este valor en la dirección URL de CMG (por ejemplo, `https://contoso-cmg.contoso.com`). Reinicie manualmente el servicio **Host de agente de SMS** en el sistema cliente.
+
+Si el cliente de Configuration Manager no tiene un punto de administración actual de CMG o con conexión a Internet establecido en el registro, comprueba automáticamente el valor del registro **CMGFQDNs**. Esta comprobación se produce cada 25 horas, cuando se inicia el servicio **Host de agente de SMS** o cuando se detecta un cambio de red. Cuando el cliente se conecta al sitio y detecta una instancia de CMG, actualiza automáticamente este valor.
 
 ## <a name="modify-a-cmg"></a>Modificar una instancia de CMG
 

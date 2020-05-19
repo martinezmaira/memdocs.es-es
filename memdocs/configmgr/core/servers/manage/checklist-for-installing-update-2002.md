@@ -2,7 +2,7 @@
 title: Lista de comprobación de 2002
 titleSuffix: Configuration Manager
 description: Sepa lo que debe hacer antes de actualizar a la versión 2002 de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708063"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268953"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 2002 de Configuration Manager
 
@@ -68,33 +68,35 @@ La primera vez que use una consola de Configuration Manager una vez que la actua
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+A partir del 11 de mayo de 2020, la versión 2002 está disponible globalmente para que todos los clientes puedan instalarla. Si anteriormente optó por el anillo de actualización temprana, espere a una actualización de esta versión de la rama actual.
 
-En este momento, la versión 2002 se ha lanzado para el anillo de actualización inicial. Para instalar esta actualización, debe indicar su consentimiento para participar. El siguiente script de PowerShell agrega la jerarquía o sitio primario independiente al anillo de actualización inicial de la versión 2002:
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[Script de participación en la versión 2002](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft firma el script digitalmente y lo agrupa dentro de un archivo ejecutable autoextraíble.
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> La actualización de la versión 2002 solo es válida en sitios que ejecutan la versión 1810 u otra posterior.
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-Para participar en el anillo de actualización inicial:
+To opt-in to the early update ring:
 
-1. Abra Windows PowerShell y **Ejecutar como administrador**.
-1. Ejecute el script **EnableEarlyUpdateRing2002.ps1** con la siguiente sintaxis:
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Donde `SiteServer` hace referencia al sitio de administración central o al servidor de sitio primario independiente. Por ejemplo, `EnableEarlyUpdateRing2002.ps1 cmprimary01`.
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. Compruebe si hay actualizaciones. Para obtener más información, consulte [Obtención de actualizaciones disponibles](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-Ahora, la actualización de la versión 2002 debería estar disponible en la consola.
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> Este script solo agrega el sitio al anillo de actualización inicial de la versión 2002. No se trata de un cambio permanente.
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>Lista de comprobación
 

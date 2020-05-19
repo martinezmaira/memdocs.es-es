@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: fb217a1e1ddf114155e43e8edef0c1b34842db64
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693302"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381526"
 ---
 # <a name="desktop-analytics-faq"></a>P+F sobre Análisis de escritorio
 
@@ -50,6 +51,10 @@ Sí, use el procedimiento siguiente:
 - En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y haga clic en el nodo **Servicios de Azure**. Abra las propiedades de la entrada asociada a su servicio Análisis de escritorio.
 
 - En la pestaña **Conexión con Análisis de escritorio**, cambie el valor **Recopilación de destino** o administre recopilaciones adicionales.
+
+<!-- 7130169 -->
+> [!Note]
+> No incluya más de 20 recopilaciones en la lista de recopilaciones adicionales. Tenga cuidado con el número total de dispositivos de cada recopilación. Incluya siempre las [recopilaciones de inclusión y exclusión del piloto global](deploy-pilot.md#bkmk_GlobalPilot).  
 
 > [!IMPORTANT]  
 > Configuration Manager usa una directiva de configuración para configurar los dispositivos de la recopilación de destino. Esta directiva incluye la configuración de datos de diagnóstico para permitir que los dispositivos envíen datos a Microsoft. El cambio de la recopilación de destino no deshace la directiva de configuración en los dispositivos que ya no están en dicha recopilación. Si no quiere que los dispositivos sigan enviando datos de diagnóstico, [reconfigure los dispositivos](account-close.md#reconfigure-clients).

@@ -5,17 +5,17 @@ description: Implementación automática de actualizaciones de software usando r
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: fc2f2644ff042598d3df0ddfc1fd9d4d1adcc34a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d1b4329def3aee97e1684935c0c8f889c3e4e513
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906788"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269038"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -211,7 +211,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
     -   **Descargar actualizaciones de software de Internet**: seleccione esta opción para descargar las actualizaciones de software desde una ubicación especificada de Internet. Esta opción está habilitada de forma predeterminada.  
 
-    -   **Descargar actualizaciones de software de una ubicación en mi red**: seleccione esta opción para descargar las actualizaciones de software desde un directorio local o una carpeta compartida. Esta opción es útil si el equipo que ejecuta el asistente no tiene acceso a Internet. Cualquier equipo con acceso a Internet puede descargar de forma preliminar las actualizaciones de software. Después, almacénelas en una ubicación en la red local que sea accesible desde el equipo que ejecuta al asistente.  
+    -   **Descargar actualizaciones de software de una ubicación en mi red**: seleccione esta opción para descargar las actualizaciones de software desde un directorio local o una carpeta compartida. Esta opción es útil si el equipo que ejecuta el asistente no tiene acceso a Internet. Cualquier equipo con acceso a Internet puede descargar de forma preliminar las actualizaciones de software. Después, almacénelas en una ubicación en la red local que sea accesible desde el equipo que ejecuta al asistente. Otro escenario podría ser cuando se descarga contenido publicado a través de System Center Updates Publisher o una solución de revisión de terceros. El recurso compartido de contenido de WSUS en el punto de actualización de software de nivel superior se puede especificar como la ubicación de red desde la que se va a descargar, como, por ejemplo, `\\server\WsusContent`. <!--memdocs-issue-211-->
 
 14. En la página **Selección del idioma**, seleccione los idiomas para los que el sitio descarga las actualizaciones de software seleccionadas. El sitio solo descarga estas actualizaciones si están disponibles en los idiomas seleccionados. Las actualizaciones de software que no son específicas de un idioma se descargan siempre. De forma predeterminada, el asistente selecciona los idiomas que se han configurado en las propiedades del punto de actualización de software. Debe seleccionar, como mínimo, un idioma para poder pasar a la página siguiente. Si solo se seleccionan idiomas que una actualización de software no admite, la descarga no se completa para esa actualización.  
 

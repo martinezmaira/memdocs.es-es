@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700673"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268987"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Requisitos previos para instalar sitios de Configuration Manager
 
@@ -49,6 +49,9 @@ Si va a instalar un sitio de administración central como parte de una expansió
 
         > [!IMPORTANT]  
         > Una vez finalizada la instalación de Configuration Manager, la cuenta de equipo del servidor de sitio deben conservar los derechos de administrador del sistema de SQL Server. No quite de esta cuenta los derechos de administrador del sistema de SQL.  
+
+    > [!NOTE]
+    > Para más información sobre la necesidad de estos permisos una vez completada la instalación, vea [Permisos elevados](../../../plan-design/hierarchy/accounts.md#elevated-permissions).
 
 - Si va a instalar un sitio primario, necesita los siguientes derechos adicionales:  
 
@@ -134,7 +137,7 @@ Después de expandir el sitio, debe volver a configurar estos servicios de Azure
 - [Microsoft Store para Empresas](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Puerta de enlace de administración en la nube](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-En la versión 1806 y versiones posteriores, renueve la clave secreta del inquilino de Azure Active Directory. Para más información, consulte [Renovar clave secreta](../configure/azure-services-wizard.md#bkmk_renew).
+El método más simple consiste en renovar la clave secreta del inquilino de Azure Active Directory. Para más información, vea [Renovar clave secreta](../configure/azure-services-wizard.md#bkmk_renew).
 
 También puede quitar y volver a crear la conexión a ese servicio:
 

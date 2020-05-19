@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 3374a912b8235f546ec551bd1a964f9fc957b96d
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771355"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991684"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -325,9 +325,9 @@ Si los clientes tienen que instalar las actualizaciones de software en la fecha 
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Período de gracia para el cumplimiento tras la fecha límite de la implementación (horas)
 
-Si quiere proporcionar a los usuarios más tiempo para instalar las implementaciones de actualizaciones de software o aplicaciones necesarias después de la fecha límite, establezca esta opción en **Sí**. Este período de gracia es para un equipo desactivado durante un período prolongado y el usuario tiene que instalar muchas implementaciones de aplicación o actualización. Por ejemplo, este ajuste es útil si un usuario vuelve de vacaciones y tiene que esperar mucho tiempo mientras el cliente instala las implementaciones de aplicación atrasadas.
+Si quiere proporcionar a los usuarios más tiempo para instalar las implementaciones de actualizaciones de software o aplicaciones necesarias después de la fecha límite, establezca un valor para esta opción. Este período de gracia es para un equipo desactivado durante un período prolongado y el usuario tiene que instalar muchas implementaciones de aplicación o actualización. Por ejemplo, este ajuste es útil si un usuario vuelve de vacaciones y tiene que esperar mucho tiempo mientras el cliente instala las implementaciones de aplicación atrasadas.
 
-Establezca un período de gracia de entre una y 120 horas. Use esta configuración junto con la propiedad de implementación **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario**. Para obtener más información, consulte [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period) (Implementar aplicaciones).
+Establezca un período de gracia de entre 0 y 120 horas. Use esta configuración junto con la propiedad de implementación **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario**. Para obtener más información, consulte [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period) (Implementar aplicaciones).
 
 
 ## <a name="computer-restart"></a>Reinicio de equipo

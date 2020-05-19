@@ -2,7 +2,7 @@
 title: Documentación en consola
 titleSuffix: Configuration Manager
 description: Este artículo solo se muestra en la consola de Configuration Manager.
-ms.date: 04/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126044"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268188"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "82126044"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Documentación de Microsoft Endpoint Configuration Manager
 
-*Última actualización: 23 de abril de 2020*
+*Última actualización: 11 de mayo de 2020*
 
 Este contenido puede ayudarle a aprender a usar Configuration Manager.
 
@@ -55,22 +55,22 @@ Lista recopilada manualmente de artículos importantes.
 
 ## <a name="trending"></a>Tendencias
 
-Los artículos más populares entre el 1 y el 30 de marzo de 2020.
+Los artículos más populares entre el 1 y el 30 de abril de 2020.
 
 | Vistas de página | Título |
 |------------|-------|
-| 22659 | [Planear puerta de enlace de administración en la nube](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 16797 | [Referencia del archivo de registro](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16142 | [Puertos usados para las conexiones](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 15907 | [Manual del usuario del Centro de software](https://docs.microsoft.com/configmgr/core/understand/software-center) |
-| 14667 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 14455 | [Habilitación de TLS 1.2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 12292 | [Análisis de escritorio](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 12062 | [Administración conjunta para dispositivos Windows 10](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 11741 | [¿Qué es Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 11282 | [Novedades de la versión 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 37071 | [Planear puerta de enlace de administración en la nube](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19105 | [Referencia del archivo de registro](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 17942 | [Puertos usados para las conexiones](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15564 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 15389 | [Habilitación de TLS 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15316 | [Administración conjunta para dispositivos Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 15229 | [Manual del usuario del Centro de software](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 14978 | [Procedimientos para habilitar TLS 1.2 en clientes](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 13522 | [Análisis de escritorio](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13017 | [Configuración de cliente](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
 
-En la [página central de Configuration Manager](https://docs.microsoft.com/mem/configmgr/) se han recibido 36 258 vistas en este período de tiempo.
+En la [página central de Configuration Manager](https://docs.microsoft.com/mem/configmgr/) se han recibido 41 479 vistas en este período de tiempo.
 
 ## <a name="recently-updated"></a>Actualizado recientemente
 
@@ -78,15 +78,16 @@ Artículos con una actualización reciente y significativa.
 
 | Últimas revisiones | Título |
 |---------------|-------|
-| 30/3/2020 | [Referencia de las tareas de mantenimiento](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
-| 30/3/2020 | [Administrar la configuración de las actualizaciones de software](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
-| 25/3/2020 | [Directivas antimalware de Endpoint Protection](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
-| 23/3/2020 | [Windows Autopilot para dispositivos existentes](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
-| 12/3/2020 | [Creación de planes de implementación](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
-| 12/3/2020 | [Implementación en un grupo piloto](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
-| 12/3/2020 | [Novedades de Análisis de escritorio](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 3/3/2020 | [Evaluación de compatibilidad](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
-| 3/3/2020 | [Análisis de escritorio](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 30/4/2020 | [Technical Preview 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
+| 29/4/2020 | [Autenticación basada en tokens para CMG](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
+| 28/4/2020 | [Grupos de orquestaciones](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
+| 15/4/2020 | [Proceso de aprobación de aplicación](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
+| 15/4/2020 | [Inscripción de dispositivos en Análisis de escritorio](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
+| 10/4/2020 | [Asociación de inquilinos de Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
+| 8/4/2020 | [Integración con Power BI Report Server](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
+| 8/4/2020 | [Notas de la versión](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 1/4/2020 | [¿Qué es el servicio de administración?](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
+| 1/4/2020 | [Novedades de la versión 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
 
 ## <a name="troubleshooting-articles"></a>Artículos de solución de problemas
 

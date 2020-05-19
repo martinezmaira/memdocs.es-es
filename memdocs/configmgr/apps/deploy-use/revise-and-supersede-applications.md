@@ -2,7 +2,7 @@
 title: Revisión y sustitución de aplicaciones
 titleSuffix: Configuration Manager
 description: Aprenda a trabajar con las versiones de aplicaciones de Configuration Manager y sustituya las aplicaciones.
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689233"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343140"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Revisar y sustituir aplicaciones en Configuration Manager
 
@@ -59,8 +59,8 @@ En este tema aprenderá a trabajar con versiones de aplicaciones de Configuratio
 >  Solo se puede eliminar la revisión de aplicación actual si se retiró la aplicación y no contiene referencias.  
 
 ##  <a name="application-supersedence"></a>Sustitución de la aplicación  
- La administración de aplicaciones de Configuration Manager le permite actualizar o sustituir aplicaciones existentes mediante una relación de sustitución. Al sustituir una aplicación, puede especificar un nuevo tipo de implementación para reemplazar el tipo de implementación de la aplicación sustituida y también decidir si se debe actualizar o desinstalar la aplicación sustituida antes de instalar la aplicación de sustitución.  
-
+ La administración de aplicaciones de Configuration Manager le permite actualizar o sustituir aplicaciones existentes mediante una relación de sustitución. Al sustituir una aplicación, puede especificar un nuevo tipo de implementación para reemplazar el tipo de implementación de la aplicación sustituida y también decidir si se debe actualizar o desinstalar la aplicación sustituida antes de instalar la aplicación de sustitución. Por lo general, se recomienda limitar las cadenas de sustitución a cinco niveles de profundidad como máximo.
+ 
 > [!IMPORTANT]  
 >  Cuando se selecciona la opción de desinstalar el tipo de implementación sustituida, no puede sustituirse un tipo de implementación por un tipo de implementación que se haya implementado en un tipo de recopilación diferente.  Por ejemplo, un tipo de implementación que se implementó en una recopilación de dispositivos no puede sustituirse por un tipo de implementación que se implementó en una recopilación de usuarios si se selecciona la opción de desinstalar el tipo de implementación sustituido.  
 

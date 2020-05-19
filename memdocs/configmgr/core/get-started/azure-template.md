@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691403"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406682"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Creación de un laboratorio de Configuration Manager en Azure
 
-*Se aplica a: Configuration Manager (rama Technical Preview)*
+*Se aplica a: Configuration Manager (rama actual, rama de Technical Preview)*
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ Para más información, consulte [Configuration Manager en Azure](../understand/
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para este proceso se necesita una suscripción de Azure en la que poder crear estos objetos: 
-- Dos máquinas virtuales Standard_B2s para el controlador de dominio y los roles MP y DP.
-- Una máquina virtual Standard_B2ms para el servidor de sitio principal y el servidor de SQL Database.
+- Dos máquinas virtuales Standard_B2s para el controlador de dominio, en el punto de administración y el punto de distribución.
+- Una máquina virtual Standard_B2ms para el servidor de sitio primario y el servidor de SQL Database.
 - Cuenta de almacenamiento Standard_LRS
 
 > [!Tip]  
-> Vea la [Calculadora de precios de Azure](https://azure.microsoft.com/pricing/calculator/) para determinar los costos potenciales.  
+> Para poder determinar los costos potenciales, vea la [Calculadora de precios de Azure](https://azure.microsoft.com/pricing/calculator/).  
 
 
 
@@ -102,7 +102,7 @@ El prefijo que especificó en la plantilla de implementación es el prefijo de n
 ### `<prefix>DC01`
 
 - Controlador de dominio de Active Directory
-- Standard_B2s, con dos CPU y 4 GB de memoria
+- Standard_B2s, con dos procesadores y 4 GB de memoria
 - Windows Server 2019, Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Roles y características de Windows
@@ -113,7 +113,7 @@ El prefijo que especificó en la plantilla de implementación es el prefijo de n
 
 ### `<prefix>PS01`
 
-- Standard_B2ms, con dos CPU y 8 GB de memoria
+- Standard_B2ms, con dos procesadores y 8 GB de memoria
 - Windows Server 2016, Datacenter Edition
 - SQL Server
 - Windows 10 ADK con Windows PE 
@@ -127,7 +127,7 @@ El prefijo que especificó en la plantilla de implementación es el prefijo de n
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s, con dos CPU y 4 GB de memoria
+- Standard_B2s, con dos procesadores y 4 GB de memoria
 - Windows Server 2019, Datacenter Edition
 - Punto de distribución
 - Punto de administración

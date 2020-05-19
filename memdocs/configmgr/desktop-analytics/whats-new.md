@@ -2,7 +2,7 @@
 title: Novedades de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Resumen de las nuevas características de la última versión mensual del servicio en la nube Análisis de escritorio.
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693157"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268171"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novedades de Análisis de escritorio
 
@@ -26,6 +27,16 @@ Conozca las novedades mensuales de Análisis de escritorio.
 
 Para obtener una notificación cuando se actualice esta página, copie y pegue la siguiente dirección URL en su lector de fuentes RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>Mayo de 2020
+
+### <a name="reduce-the-number-of-apps-for-review"></a>Reducir el número de aplicaciones para revisar
+
+<!-- 5542186 -->
+
+Para ayudar a consolidar y reducir el número de aplicaciones que se muestran en la página Activos del portal, ahora se combinan todas las versiones de las aplicaciones con el mismo nombre y el mismo editor. El recuento de aplicaciones en el icono **Aplicaciones de interés** refleja este valor. Por ejemplo, en lugar de mostrar cientos de instancias de Microsoft Edge, hay una sola instancia para todas las versiones. Puede tomar decisiones una vez para todas las versiones. Si necesita tomar decisiones sobre versiones específicas de una aplicación, este comportamiento es configurable.
+
+Para más información, vea [Acerca de los recursos: aplicaciones](about-assets.md#apps).
 
 ## <a name="march-2020"></a>Marzo de 2020
 

@@ -2,7 +2,7 @@
 title: Optimización de la distribución de actualizaciones de Windows 10
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar Configuration Manager para administrar el contenido de actualización para estar al día con Windows 10.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771367"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267797"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimización de la distribución de actualizaciones de Windows 10 con Configuration Manager
 
@@ -131,7 +131,7 @@ El agente de Windows Update (WUA) primero solicita el contenido rápido. Si no p
 
 3. CBS pide entonces a WUA que descargue los rangos necesarios de uno o varios archivos .psf rápidos.  
 
-4. La Optimización de distribución se coordina con Configuration Manager y descarga los rangos de un punto de distribución local o de elementos del mismo nivel, en caso de que estén disponibles. Si la Optimización de distribución está deshabilitada, se usa el Servicio de transferencia inteligente en segundo plano (BITS) de la misma forma con Configuration Manager en la coordinación de los orígenes de caché del mismo nivel. La Optimización de distribución o BITS pasan los rangos a WUA, que los pone a disposición de CBS para su aplicación e instalación.  
+4. Si Optimización de entrega está habilitada y se detecta que los pares tienen los intervalos necesarios, el cliente se descargará de los equipos del mismo nivel independientemente del cliente de Configuration Manager. Si Optimización de entrega está deshabilitada o ningún par tiene los intervalos necesarios, el cliente de Configuration Manager descargará estos intervalos desde un punto de distribución local (o un equipo del mismo nivel o Microsoft Update). Los intervalos se pasan al agente de Windows Update, que los pone a disposición del CBS para que aplique los intervalos.
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>¿Por qué los archivos rápidos (.psf) son tan grandes cuando se almacenan en los orígenes del mismo nivel de Configuration Manager en la carpeta ccmcache?

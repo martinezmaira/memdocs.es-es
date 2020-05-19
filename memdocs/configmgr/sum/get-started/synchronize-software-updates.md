@@ -2,7 +2,7 @@
 title: Administración de la sincronización de actualizaciones de software
 titleSuffix: Configuration Manager
 description: Siga estos pasos para programar la sincronización de actualizaciones de software, iniciar la sincronización de actualizaciones de software de forma manual y supervisar la sincronización de actualizaciones de software.
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1b47965fa5cc36b0c0eb6d47c2214d1dceb8ee8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d36c6a02868b8ccde9538a286135b2ad1ce08f43
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692943"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269055"
 ---
 #  <a name="synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> Sincronizar actualizaciones de software
 
@@ -56,7 +56,7 @@ Use los procedimientos siguientes en el sitio de nivel superior para iniciar de 
 
 2. En el área de trabajo Biblioteca de software, expanda **Actualizaciones de software** y haga clic en **Todas las actualizaciones de software** o en **Grupos de actualizaciones de software**.  
 
-3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Sincronizar actualizaciones de software**. Haga clic en **Sí** en el cuadro de diálogo para confirmar que desea iniciar el proceso de sincronización.  
+3. En la pestaña **Inicio**, en el grupo **Todas las actualizaciones de software**, haga clic en **Sincronizar actualizaciones de software**. Haga clic en **Sí** en el cuadro de diálogo para confirmar que desea iniciar el proceso de sincronización.  
 
    Después de iniciar el proceso de sincronización en el punto de actualización de software, puede supervisar el proceso de sincronización desde la consola de Configuration Manager para todos los puntos de actualización de software de la jerarquía. Utilice el siguiente procedimiento para supervisar el proceso de sincronización de las actualizaciones de software.  
 

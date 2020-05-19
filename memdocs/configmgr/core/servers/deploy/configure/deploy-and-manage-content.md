@@ -2,7 +2,7 @@
 title: Implementación de contenido
 titleSuffix: Configuration Manager
 description: Después de instalar puntos de distribución para Configuration Manager, siga los pasos que se indican a continuación para empezar a implementar contenido en ellos.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a44123bc074c671f9b3d73af66b8d79c3ff433
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906497"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343157"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Implementar y administrar contenido en Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "82906497"
 Después de instalar puntos de distribución para Configuration Manager, puede empezar a implementar contenido en ellos. Normalmente, el contenido se transfiere a los puntos de distribución a través de la red, pero existen otras opciones para llevar el contenido a los puntos de distribución. Después de que se haya transferido el contenido a un punto de distribución, puede actualizar, redistribuir, quitar y validar ese contenido en los puntos de distribución.  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a> Distribuir contenido  
-Normalmente, se distribuye contenido en puntos de distribución para que esté disponible en los equipos cliente. (La excepción es el uso de la distribución de contenido a petición para una implementación específica).  Al distribuir contenido, Configuration Manager almacena archivos de contenido en un paquete y, después, distribuye el paquete al punto de distribución. Entre los diversos tipos de contenido que se pueden distribuir se incluyen los siguientes:  
+Normalmente, se distribuye contenido en puntos de distribución para que esté disponible en los equipos cliente. (La excepción es el uso de la distribución de contenido a petición para una implementación específica). Al distribuir contenido, Configuration Manager almacena archivos de contenido en un paquete y, después, distribuye el paquete al punto de distribución. El contenido del paquete se extrae de la biblioteca de contenido del servidor de sitio. Entre los diversos tipos de contenido que se pueden distribuir se incluyen los siguientes:  
 
 - Tipos de implementación de aplicaciones  
 
@@ -311,7 +311,7 @@ Dispone de las opciones siguientes para administrar el contenido:
 
 ### <a name="update-content"></a>Actualizar contenido
 Cuando la ubicación del archivo de origen de una implementación se actualiza agregando archivos nuevos o reemplaza archivos existentes con una versión nueva, puede actualizar los archivos de contenido en los puntos de distribución mediante la acción **Actualizar puntos de distribución** o **Actualizar contenido**:  
-- Los archivos de contenido se copian de la ruta de acceso del archivo de origen a la biblioteca de contenido en el sitio al que pertenece el origen de contenido del paquete.  
+- Los archivos de contenido se copian de la ubicación de origen del paquete original a la biblioteca de contenido en el sitio al que pertenece el origen de contenido del paquete.
 - La versión del paquete se incrementa.  
 - Cada instancia de la biblioteca de contenido en los servidores de sitio y en los puntos de distribución se actualiza únicamente con los archivos que se cambiaron.  
 

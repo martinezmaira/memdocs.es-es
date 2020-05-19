@@ -2,7 +2,7 @@
 title: Novedades de la versión 2002
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 2002 de la rama actual de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702313"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381560"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novedades de la versión 2002 de la rama actual de Configuration Manager
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-La actualización 2002 de la rama actual de Configuration Manager está disponible como una actualización en consola. Aplique esta actualización en los sitios que ejecuten la versión 1806 o versiones posteriores. <!-- baseline only statement:-->Al instalar un nuevo sitio, también está disponible como una versión de línea de base. En este artículo se resumen los cambios y las nuevas características de la versión 2002 de Configuration Manager.
+La actualización 2002 de la rama actual de Configuration Manager está disponible como una actualización en consola. Aplique esta actualización en los sitios que ejecuten la versión 1810 o versiones posteriores. <!-- baseline only statement:-->Al instalar un nuevo sitio, también está disponible como una versión de línea de base. En este artículo se resumen los cambios y las nuevas características de la versión 2002 de Configuration Manager.
 
 Revise siempre la lista de comprobación más reciente para instalar esta actualización. Para obtener más información, vea la [lista de comprobación para la instalación de la actualización 2002](../../servers/manage/checklist-for-installing-update-2002.md). Después de actualizar un sitio, revise también la [lista de comprobación posterior a la actualización](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
@@ -411,9 +411,9 @@ Para obtener más información sobre los cambios en los cmdlets de Windows Powe
 
 Para obtener más información sobre los cambios en la API REST del servicio de administración, consulte las [notas de la versión del servicio de administración](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para más información, vea [Resumen de cambios en la rama actual de Configuration Manager, versión 2002](https://support.microsoft.com/help/4556203).
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -433,8 +433,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este momento, la versión 2002 se ha lanzado para el anillo de actualización inicial. Para instalar esta actualización, debe indicar su consentimiento para participar. Para más información, consulte [Círculo de actualizaciones inicial](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring).
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+A partir del 11 de mayo de 2020, la versión 2002 está disponible globalmente para que todos los clientes puedan instalarla.
 
 Cuando esté listo para instalar esta versión, vea cómo [instalar actualizaciones para Configuration Manager](../../servers/manage/updates.md) y la [lista de comprobación para la instalación de la actualización 2002](../../servers/manage/checklist-for-installing-update-2002.md).
 

@@ -2,7 +2,7 @@
 title: Réplicas de bases de datos de punto de administración
 titleSuffix: Configuration Manager
 description: Use una réplica de base de datos para reducir la carga de CPU que los puntos de administración colocan en el servidor de base de datos del sitio.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eef959182b2bada4b4e0c0395cf0e17ac255ba0d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906538"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343123"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de Configuration Manager
 
@@ -82,6 +82,8 @@ Los sitios primarios de Configuration Manager pueden usar una réplica de base d
 -   **Actualización a la rama actual de Configuration Manager**: antes de actualizar un sitio de System Center 2012 Configuration Manager a la rama actual de Configuration Manager o de actualizar la rama actual de Configuration Manager a la última versión, debe deshabilitar las réplicas de bases de datos para los puntos de administración.  Después de actualizar los sitios, puede volver a configurar las réplicas de bases de datos de los puntos de administración.  
 
 -   **Varias réplicas en un único servidor de SQL Server:**  si configura un servidor de réplica de bases de datos para hospedar varias réplicas de bases de datos para puntos de administración (cada réplica debe estar en una instancia independiente), debe usar un script de configuración modificado (del paso 4 de la sección siguiente) para impedir que se sobrescriba el certificado autofirmado que usaban las réplicas de bases de datos previamente configuradas en ese servidor.  
+
+- Las implementaciones de usuario en el Centro de software no funcionarán en un punto de administración con una réplica de SQL. <!--sccmdocs-1011-->
 
 ##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Configurar réplicas de bases de datos  
 Para configurar una réplica de base de datos, debe seguir los siguientes pasos:  

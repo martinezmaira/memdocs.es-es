@@ -2,7 +2,7 @@
 title: Información de administración
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la funcionalidad Información de administración disponible en la consola de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694453"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268970"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Información de administración en Configuration Manager
 
@@ -146,13 +146,13 @@ A partir de la versión 1902, hay nuevas reglas con recomendaciones sobre la adm
 
 - **Colecciones con la misma hora de inicio de reevaluación**: estas colecciones tienen la misma hora de reevaluación que otras colecciones. Modifique la hora de reevaluación para que no entren en conflicto.  
 
-- **Colecciones con tiempo de consulta superior a dos segundos**: revise las reglas de consulta de esta colección. Considere la posibilidad de modificar o eliminar la colección.
+- **Recopilaciones con un tiempo de consulta superior a cinco minutos**: revise las reglas de consulta de esta colección. Considere la posibilidad de modificar o eliminar la colección.
 
 - Estas reglas incluyen configuraciones que podrían ocasionar una carga innecesaria en el sitio. Revise estas colecciones y elimínelas o deshabilite la evaluación de regla:  
 
   - **Colecciones sin reglas de consulta y actualizaciones incrementales habilitadas**  
 
-  - **Colecciones sin reglas de consulta y habilitadas para la evaluación incremental o programada**  
+  - **Recopilaciones sin reglas de consulta y habilitadas para cualquier programación**  
 
   - **Colecciones sin reglas de consulta y con una evaluación completa programada seleccionada**  
 

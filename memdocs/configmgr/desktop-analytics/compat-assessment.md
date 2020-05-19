@@ -2,7 +2,7 @@
 title: Evaluación de compatibilidad
 titleSuffix: Configuration Manager
 description: Aprenda sobre la evaluación de compatibilidad para aplicaciones y controladores de Windows en Análisis de escritorio.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110005"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268902"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Evaluación de compatibilidad en Análisis de escritorio
 
@@ -29,7 +30,7 @@ Análisis de escritorio usa las siguientes categorías de evaluación de compati
 
 - **Alta**: es casi seguro que la aplicación va a generar un error durante o después de la actualización. Es posible que necesite una corrección.
 
-- **Desconocido**: no se evaluó la aplicación. No hay ninguna otra información, como *Problemas conocidos de MS*.
+- **Desconocido**: no se evaluó la aplicación. No hay ninguna otra información, como *Problemas conocidos de MS* o *Ready for Windows*.
 
 En la lista de recursos de aplicación o controlador de un plan de implementación, verá este valor para cada recurso en la columna **Riesgo de compatibilidad**.
 
@@ -40,9 +41,13 @@ En la lista de recursos de aplicación o controlador de un plan de implementaci�
 Son varios los orígenes que usa Análisis de escritorio para generar la clasificación de evaluación de las aplicaciones:
 
 - [Problemas conocidos de Microsoft](#microsoft-known-issues)
+- [Ready for Windows](#ready-for-windows)
 - [Información avanzada](#advanced-insights)
 
 Puede encontrar la evaluación de cada origen de la aplicación en Análisis de escritorio. En la lista de recursos de aplicación de un plan de implementación, seleccione una aplicación individual para abrir su panel de control flotante de propiedades. Verá una recomendación general y un nivel de evaluación. En la sección **Factores de riesgo de compatibilidad** se muestran los detalles de estas evaluaciones.
+
+> [!TIP]
+> Si en el panel de detalles de la aplicación no se muestra la evaluación de compatibilidad, puede deberse a que la opción **App Versions Details** (Detalles de versiones de la aplicación) está desactivada. Está desactivada de forma predeterminada y combina todas las versiones de las aplicaciones con el mismo nombre y el mismo editor. El servicio sigue realizando evaluaciones de riesgos de compatibilidad para cada versión. Active **App Versions Details** (Detalles de versiones de la aplicación) para ver la evaluación de riesgos de compatibilidad para una versión específica de la aplicación. Para más información, consulte [Planeamiento de recursos](about-deployment-plans.md#plan-assets).
 
 ## <a name="microsoft-known-issues"></a>Problemas conocidos de Microsoft
 
@@ -130,6 +135,28 @@ Los datos de compatibilidad de Windows clasifican algunas aplicaciones y control
 1. Compare la lista publicada actual con la lista de recursos de su entorno. Corrija cualquier aplicación o controlador potencialmente problemático mediante una actualización a una versión compatible.
 
 [![Captura de pantalla de la aplicación de medidas de seguridad en Análisis de escritorio](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Ready for Windows
+
+El estado de adopción se basa en la información de los dispositivos comerciales que comparten datos con Microsoft. El estado se integra con las instrucciones de soporte técnico de los proveedores de software.
+
+Análisis de escritorio proporciona el estado de adopción para cada versión de un recurso que se encuentra en dispositivos comerciales. Este estado no incluye datos de los dispositivos de consumidor ni de aquellos que no comparten datos. El estado puede no ser representativo de la tasa de adopción en todos los dispositivos Windows 10.
+
+Las categorías posibles son:
+
+- **Adopción alta**: al menos 100 000 dispositivos comerciales de Windows 10 tienen instalada esta aplicación.
+
+- **Adoptada**: al menos 10 000 dispositivos comerciales de Windows 10 tienen instalada esta aplicación.
+
+- **Datos insuficientes**: son muy pocos los dispositivos comerciales de Windows 10 que están compartiendo información de esta aplicación como para que Microsoft clasifique su adopción.
+
+- **Ponerse en contacto con el desarrollador**: puede que haya problemas de compatibilidad con esta versión de la aplicación. Microsoft recomienda ponerse en contacto con el proveedor de software para obtener más información.
+
+- **Desconocido**: no hay información disponible para esta versión de esta aplicación. Puede que haya información disponible para otras versiones de la aplicación.
+
+### <a name="support-statement"></a>Declaración de compatibilidad
+
+Si el proveedor de software admite una o varias versiones de esta aplicación en Windows 10, verá esta declaración en el panel de propiedades de la aplicación. En la sección de factores de riesgo de compatibilidad, vea lo que pone en **Declaración de compatibilidad**.
 
 ## <a name="advanced-insights"></a>Información avanzada
 

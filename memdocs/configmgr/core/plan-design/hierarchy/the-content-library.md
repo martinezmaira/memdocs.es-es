@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 567c03d231c145718f4f960bda7073ba4b904de2
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d7432b3522d5292e2c2afc1dac6b8db3382cca12
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82880999"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343174"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>La biblioteca de contenido en Configuration Manager
 
@@ -90,6 +90,8 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 - La cuenta de equipo del servidor de sitio necesita permisos de **control total** para la ruta de acceso de red a la que se va a mover la biblioteca de contenido. Este permiso se aplica al recurso compartido y al sistema de archivos. No se instala ningún componente en el sistema remoto.
 
 - El servidor de sitio no puede tener el rol de punto de distribución. El punto de distribución también usa la biblioteca de contenido, y este rol no admite una biblioteca de contenido remota. Después de mover la biblioteca de contenido, no se puede agregar el rol de punto de distribución al servidor de sitio.  
+
+- El sistema remoto de la biblioteca de contenido ha de estar en un dominio de confianza.
 
 > [!Important]  
 > No reutilice una ubicación de red compartida entre varios sitios. Por ejemplo, no use la misma ruta de acceso para un sitio de administración central y un sitio primario secundario. Esta configuración tiene el potencial de dañar la biblioteca de contenido y tendrá que volver a generarla.<!--SCCMDocs-pr issue 2764-->  

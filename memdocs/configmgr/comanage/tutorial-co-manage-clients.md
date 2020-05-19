@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 918df2cded3fad48352fff6a2617b1133540c0eb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692583"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268086"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager
 
@@ -64,9 +64,10 @@ Si no está ya presente en su entorno, durante este tutorial, necesitará:
 
 A lo largo de este tutorial, use los siguientes permisos para completar las tareas:
 
-- Una cuenta de *administrador global* en Azure Active Directory (Azure AD) 
 - Una cuenta que sea un *administrador de dominio* en su infraestructura local  
 - Una cuenta que sea un *administrador total* para *todos* los ámbitos en Configuration Manager
+- Una cuenta de *administrador global* en Azure Active Directory (Azure AD)
+   - Asegúrese de que ha asignado una licencia de Intune a la cuenta que usa para iniciar sesión en el inquilino. De lo contrario, no se podrá iniciar sesión y aparecerá el mensaje de error "Usuario no reconocido". <!--mem issue 169-->
 
 ## <a name="set-up-hybrid-azure-ad"></a>Configuración de Azure AD híbrido
 

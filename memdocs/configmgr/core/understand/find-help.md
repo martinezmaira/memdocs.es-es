@@ -2,7 +2,7 @@
 title: Búsqueda de ayuda
 titleSuffix: Configuration Manager
 description: Busque recursos para obtener más información sobre Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707163"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343191"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Buscar ayuda para usar Configuration Manager
 
@@ -127,6 +127,13 @@ Cuando **envíe una sonrisa** o **envíe un ceño fruncido**, se incluirá la in
         - `-s --silent` Ningún registro en la consola (no se puede combinar con --verbose)
         - `-v, --verbose` Registro detallado de salida en la consola (no se puede combinar con --silent)
         - `--help` Muestra la pantalla de ayuda
+    
+    - A partir de la versión 1910, la utilidad UploadOfflineFeedback admite el uso de un servidor proxy. Puede especificar los parámetros siguientes:
+        - `-x, --proxy` especifica el servidor proxy que se va a conectar a Internet.
+        - `-o, --port` especifica el puerto del servidor proxy que se va a conectar a Internet.
+        - `-u, --user` especifica el nombre de usuario del servidor proxy que se va a conectar a Internet.
+        - `-w, --password` especifica la contraseña del servidor proxy que se va a conectar a Internet. Escriba un asterisco (*) para generar una solicitud de contraseña. La contraseña no se muestra cuando se escribe en la solicitud de contraseña. Se recomienda especialmente usar un asterisco (*) para generar una solicitud de entrada de contraseña, ya que el texto sin formato en la línea de comandos es menos seguro.
+        - `-i` para omitir la comprobación de conexión: Omite la comprobación de conexión de red, solo carga los comentarios con la configuración especificada.
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> Confirmación de comentarios de la consola
 
