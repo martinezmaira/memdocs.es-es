@@ -100,7 +100,7 @@ Para obtener instrucciones sobre cómo registrar una aplicación y obtener los i
 
 ### <a name="java-library-api"></a>API de bibliotecas de Java
 
-La biblioteca de Java se implementa como un proyecto de Maven que extrae sus dependencias cuando se compila. La API se implementa por la clase `com.microsoft.intune.scepvalidation` en el espacio de nombres `IntuneScepServiceClient`.
+La biblioteca de Java se implementa como un proyecto de Maven que extrae sus dependencias cuando se compila. La API se implementa por la clase `IntuneScepServiceClient` en el espacio de nombres `com.microsoft.intune.scepvalidation`.
 
 #### <a name="intunescepserviceclient-class"></a>Clase IntuneScepServiceClient
 
