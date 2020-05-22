@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076159"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428408"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funciones de Technical Preview 1703 de Configuration Manager
 
@@ -130,7 +130,7 @@ Puede ver y editar las propiedades de un servicio en la nube para modificar la c
 En la consola, vaya a **Administración** > **Introducción** > **Administración de servicios en la nube** > **Azure** > **Servicios de Azure** y, después, elija **Configurar servicios de Azure**, seleccione un servicio en la nube y luego elija **Propiedades**.
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Conversión de BIOS a UEFI durante una actualización local
-Windows 10 Creators Update presenta una herramienta de conversión sencilla que automatiza el proceso para volver a particionar el disco duro de hardware compatible con UEFI e integra la herramienta de conversión en el proceso de actualización local de Windows 7 a Windows 10. Cuando esta herramienta se combina con la secuencia de tareas de actualización del sistema operativo y la herramienta de OEM que convierte el firmware de BIOS a UEFI, puede convertir los equipos de BIOS a UEFI durante una actualización local a Windows 10 Creators Update. Para obtener más información, consulte [Task sequence steps to manage BIOS to UEFI conversion (Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI)](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update presenta una herramienta de conversión sencilla que automatiza el proceso para volver a particionar el disco duro de hardware compatible con UEFI e integra la herramienta de conversión en el proceso de actualización local de Windows 7 a Windows 10. Cuando esta herramienta se combina con la secuencia de tareas de actualización del sistema operativo y la herramienta de OEM que convierte el firmware de BIOS a UEFI, puede convertir los equipos de BIOS a UEFI durante una actualización local a Windows 10 Creators Update. Para obtener más información, consulte [Task sequence steps to manage BIOS to UEFI conversion (Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI)](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ## <a name="collapsible-task-sequence-groups"></a>Grupos de secuencias de tareas contraíbles
 Esta versión introduce la capacidad de expandir y contraer los grupos de la secuencia de tareas. Puede expandir o contraer grupos individuales o expandir o contraer todos los grupos a la vez.

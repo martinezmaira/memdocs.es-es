@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905260"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428187"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Funciones de Technical Preview 1802 de Configuration Manager
 
@@ -112,7 +112,7 @@ La plantilla de secuencia de tareas predeterminada para la actualización en con
    - Agregue un segundo paso para **actualizar el sistema operativo** al principio del grupo **Preparar para la actualización**. Póngale el nombre *Evaluación de actualización*. Especifique el mismo paquete de actualización y, a continuación, habilite la opción **Realizar examen de compatibilidad del programa de instalación de Windows sin iniciar la actualización**. Habilite **Continuar después de un error** en la pestaña Opciones. 
    - Inmediatamente después de este paso de *Evaluación de actualización*, agregue otro paso **Ejecutar línea de comandos**. Especifique la siguiente línea de comandos:</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>En la pestaña **Opciones** , agregue la siguiente condición: </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>Este código de retorno es el equivalente decimal de MOSETUP_E_COMPAT_SCANONLY (0xC1900210), que es un examen de compatibilidad en el que no se detecta ningún problema. Si el paso *Evaluación de actualización* se realiza correctamente y devuelve este código, este paso se omitirá. En caso contrario, si el paso de la evaluación devuelve cualquier otro código de retorno, este paso produce un error en la secuencia de tareas con el código de retorno del examen de compatibilidad del programa de instalación de Windows.
    - Para obtener más información, consulte [Actualizar el sistema operativo](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).
-- Si desea cambiar el dispositivo de BIOS a UEFI durante esta secuencia de tareas, consulte [Conversión de BIOS a UEFI durante una actualización local](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+- Si desea cambiar el dispositivo de BIOS a UEFI durante esta secuencia de tareas, consulte [Conversión de BIOS a UEFI durante una actualización local](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 Envíe **comentarios** desde la pestaña **Inicio** de la cinta si tiene más recomendaciones o sugerencias.
 
