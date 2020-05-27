@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 27891b11e66e93d319f8c0de6e15a105b678a87a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079117"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991050"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>Solución de problemas del módulo de directivas de NDES en Microsoft Intune
 
