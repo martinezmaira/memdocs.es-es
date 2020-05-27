@@ -5,18 +5,18 @@ description: Aprenda a buscar en documentos de Intune, proporcionar comentarios 
 ms.date: 03/03/2020
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81726042"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988171"
 ---
 # <a name="using-the-intune-docs"></a>Uso de los documentos de Intune
 
