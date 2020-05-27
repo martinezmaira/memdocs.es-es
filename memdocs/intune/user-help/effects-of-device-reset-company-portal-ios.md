@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 87b51d2df20f13ad29bca0b5961d59a41cbedf49
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080069"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878083"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Efectos del restablecimiento de dispositivos iOS en Portal de empresa 
 

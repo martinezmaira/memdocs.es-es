@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 84fe8a6d5a21b643fcf8bd51161f7b03211ad6ac
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3b980e00d6132acf4e70e612c4826609036933d5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348606"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880523"
 ---
 # <a name="performing-actions-on-a-macos-device-managed-by-jamf"></a>Realizar acciones en un dispositivo macOS administrado por Jamf
 
