@@ -6,8 +6,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06e975e386b0d754b03e75ffeda456a432a6dc4b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615682"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984987"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Creación de directiva de cumplimiento de dispositivos de Mobile Threat Defense (MTD) con Intune
 
@@ -42,7 +42,7 @@ Requisitos previos de la directiva de cumplimiento de dispositivos con MTD:
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>Creación de una directiva de cumplimiento de dispositivos de MTD
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Crear directiva**.
 
@@ -60,11 +60,6 @@ Requisitos previos de la directiva de cumplimiento de dispositivos con MTD:
 
    - **Alta**: este nivel es el menos seguro. Permite todos los niveles de amenaza y usa Mobile Threat Defense solo con fines informativos. Los dispositivos deben tener activada la aplicación MTD con esta configuración.
 
-   > [!IMPORTANT]
-   > Como propietario del dispositivo Android Enterprise, después de crear y guardar una directiva, no podrá editar después la directiva para modificar el nivel de amenaza. Las modificaciones para cambiar el nivel de amenaza del dispositivo para la opción Estado del dispositivo de **Requerir que el dispositivo tenga el nivel de amenaza del dispositivo** no surten efecto. Para cambiar el valor de nivel de amenaza, debe eliminar la directiva actual y crear otra directiva que establezca el nivel de amenaza deseado.
-   >
-   > Se trata de un problema conocido que se resolverá en una actualización futura de Intune.
-
 6. Seleccione **Aceptar** dos veces y, luego, seleccione **Crear** para crear la directiva.
 
 > [!IMPORTANT]
@@ -74,7 +69,7 @@ Requisitos previos de la directiva de cumplimiento de dispositivos con MTD:
 
 Para asignar una directiva de cumplimiento de dispositivos a los usuarios:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivo** > **Directivas de cumplimiento**.
 

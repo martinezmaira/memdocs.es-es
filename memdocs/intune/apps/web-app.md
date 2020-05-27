@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6d4fd6022e7d772c70a2147e0e25bd7dad0775c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6dde51e28872585f251b72320c17b89bf0edece9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407705"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988505"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Agregar aplicaciones web a Microsoft Intune
 
@@ -47,7 +47,7 @@ Intune crea un acceso directo a la aplicación web en el dispositivo del usuario
 ## <a name="add-a-web-app-to-intune"></a>Agregar una aplicación web a Intune
 Para agregar una aplicación a Intune como acceso directo a una aplicación de Internet, haga lo siguiente:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En el panel **Seleccionar el tipo de aplicación**, en los **Otros** disponibles, seleccione **Enlace web**.
 4. Haga clic en **Seleccionar**. Se muestran los pasos para **Agregar aplicación**.

@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536858"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991216"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Configuración de la red privada virtual (VPN) por aplicación para dispositivos iOS/iPadOS en Intune
 
@@ -70,12 +70,12 @@ Cree o elija un grupo existente en Azure Active Directory (Azure AD) para los us
 
 Importe el certificado raíz del servidor VPN emitido por la entidad de certificación en un perfil creado en Intune. El perfil de certificado de confianza indicará al dispositivo iOS/iPadOS que puede confiar automáticamente en la entidad de certificación del servidor VPN.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
     - **Plataforma**: Seleccione **iOS/iPad**.
-    - **Tipo de perfil**: seleccione **Certificado de confianza**.
+    - **Perfil**: seleccione **Certificado de confianza**.
 
 4. Seleccione **Crear**.
 5. En **Básico**, escriba las propiedades siguientes:
@@ -113,7 +113,7 @@ El perfil de VPN incluye el certificado SCEP o PKCS que tiene las credenciales d
 3. Escriba las propiedades siguientes:
 
     - **Plataforma**: Seleccione **iOS/iPad**.
-    - **Tipo de perfil**: seleccione **VPN**.
+    - **Perfil**: seleccione **VPN**.
 
 4. Seleccione **Crear**.
 5. En **Básico**, escriba las propiedades siguientes:

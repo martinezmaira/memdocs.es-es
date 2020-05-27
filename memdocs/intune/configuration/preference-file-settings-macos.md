@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551505"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988675"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Adición de un archivo de lista de propiedades a dispositivos macOS con Microsoft Intune
 
@@ -44,12 +45,9 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 - Solo algunas aplicaciones funcionan con preferencias administradas, y es posible que no le permitan administrar toda la configuración.
 - Asegúrese de cargar los archivos de lista de propiedades que tengan como destino la configuración del canal del dispositivo, no la configuración del canal del usuario. Los archivos de lista de propiedades tienen como destino todo el dispositivo.
 
-> [!NOTE]
-> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración que se describe en este artículo.
-
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
@@ -66,9 +64,13 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 
 7. En **Opciones de configuración**, establezca los parámetros:
 
-    - **Nombre de dominio de preferencia**: los archivos de lista de propiedades se suelen usar en exploradores web (Microsoft Edge), [Advanced Threat Protection de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) y aplicaciones personalizadas. Al crear un dominio de preferencia, también se crea un identificador de agrupación. Escriba el identificador de agrupación, como `com.company.application`. Por ejemplo, escriba `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
+    - **Nombre de dominio de preferencia**: Escriba el identificador de agrupación, como `com.company.application`. Por ejemplo, escriba `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
+
+      los archivos de lista de propiedades se suelen usar en exploradores web (Microsoft Edge), [Advanced Threat Protection de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) y aplicaciones personalizadas. Al crear un dominio de preferencia, también se crea un identificador de agrupación.
+
     - **Archivo de la lista de propiedades**: seleccione el archivo de lista de propiedades asociado a la aplicación. Asegúrese de que es un archivo `.plist` o `.xml`. Por ejemplo, cargue un archivo `YourApp-Manifest.plist` o `YourApp-Manifest.xml`.
-    - **Contenido del archivo**: La información clave se muestra en el archivo de lista de propiedades. Si necesita cambiar la información clave, abra el archivo de lista en otro editor y, después, vuelva a cargar el archivo en Intune.
+
+      La información clave se muestra en el archivo de lista de propiedades. Si necesita cambiar la información clave, abra el archivo de lista en otro editor y, después, vuelva a cargar el archivo en Intune.
 
     Asegúrese de que el archivo tiene el formato correcto. El archivo solo debe tener pares clave-valor, y no debe incluirse entre etiquetas `<dict>`, `<plist>` ni `<xml>`. Por ejemplo, su archivo de lista de propiedades debe ser similar al siguiente:
 
@@ -93,6 +95,6 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+[Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
 Para obtener más información sobre los archivos de preferencia de Microsoft Edge, consulte [Configurar las opciones de directiva de Microsoft Edge en macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

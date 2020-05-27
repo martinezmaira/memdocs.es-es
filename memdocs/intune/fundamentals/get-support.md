@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326957"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989501"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Cómo obtener asistencia para Microsoft Intune
 
@@ -68,7 +68,7 @@ Este problema se produce cuando no ha autenticado la nueva cuenta del inquilino 
 
   - Seleccione el icono **?** Desde cualquier nodo del Centro de administración de Microsoft Endpoint Manager. en la esquina superior derecha del portal y, luego, use la lista desplegable para seleccionar el tipo de administración con el que quiere ayuda. El Centro de administración de Microsoft Endpoint Manager admite los tipos de administración siguientes; debe seleccionar aquel para el que quiera ayuda, como Intune:
 
-    - Configuration Manager (incluye Desktop Analytics)
+    - Configuration Manager (incluye Análisis de escritorio)
     - Intune
     - Administración conjunta  
 

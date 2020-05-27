@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023204"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764142"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Escenario guiado: Escritorio moderno administrado en la nube
 
@@ -80,7 +80,7 @@ Los usuarios instalarán e inscribirán de forma manual los dispositivos nuevos 
 El último paso permite revisar un resumen de los valores que ha configurado. Una vez que haya revisado las opciones, haga clic en **Implementar** para completar el escenario guiado. Una vez completado el escenario guiado, se mostrará una tabla de recursos. Puede editar estos recursos más adelante, pero una vez que salga de la vista de resumen, la tabla no se guardará.
 
 > [!IMPORTANT]
-> Cuando el escenario guiado se complete, se mostrará un resumen. Puede modificar los recursos enumerados en el resumen más adelante, pero la tabla en la que se muestran estos recursos no se guardará.
+> Cuando el escenario guiado se complete, se mostrará un resumen. Los recursos mencionados en este resumen se pueden modificar más adelante, pero la tabla en la que se muestran estos recursos no se guardará.
 
 ### <a name="verification"></a>Comprobación
 

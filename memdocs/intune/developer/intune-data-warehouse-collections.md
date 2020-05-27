@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022744"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709458"
 ---
 # <a name="intune-data-warehouse-collections"></a>Colecciones de almacenamiento de datos de Intune
 
@@ -193,6 +193,8 @@ La entidad **DeviceConfigurationProfileUserActivity** muestra el número de usua
 | OSVersion                  | Versión del SO.                                                                                                                                                                          |
 | JailBroken                 | Si el dispositivo está liberado.                                                                                                                                         |
 | DeviceCategoryKey          | Clave del atributo de categoría de dispositivo para este dispositivo.                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 La entidad **DeviceRegistrationState** representa el tipo de registro al que hacen referencia otras colecciones de almacenamiento de datos. 
 
@@ -222,7 +224,6 @@ La entidad **device** muestra todos los dispositivos inscritos en administració
 | DeviceRegistrationState    | Clave del atributo de estado de registro de cliente de este dispositivo.                                                                                                                      |
 | OwnerTypeKey               | Clave del atributo de tipo de propietario de este dispositivo: corporativo, personal o desconocido.                                                                                                    |
 | EnrolledDateTime           | Fecha y hora en que se inscribió este dispositivo.                                                                                                                                         |
-| EthernetMacAddress           | Identificador de red único de este dispositivo.                                                                                                                                        |
 | LastSyncDateTime           | Última inserción conocida del dispositivo en el repositorio con Intune.                                                                                                                                              |
 | ManagementAgentKey         | Clave del agente de administración asociada a este dispositivo.                                                                                                                             |
 | ManagementStateKey         | Clave del estado de administración asociada a este dispositivo, que indica el estado más reciente de una acción remota o si estaba liberado o modificado.                                                |
@@ -244,16 +245,12 @@ La entidad **device** muestra todos los dispositivos inscritos en administració
 | MEID                       | MEID                                                                                                                                                                                   |
 | IsSupervised               | Estado del dispositivo supervisado                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Almacenamiento libre en bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Capacidad de almacenamiento total en bytes.                                                                                                                                                                |
 | EncryptionState            | Estado de cifrado en el dispositivo                                                                                                                                                      |
 | SubscriberCarrier          | Operador del suscriptor del dispositivo                                                                                                                                                       |
 | PhoneNumber                | Número de teléfono del dispositivo                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Tecnología de datos móviles del dispositivo                                                                                                                                                    |
 | WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
-| Modelo                      | El modelo del dispositivo.                                                                                                                                                                      |
-| Office365Version           | La versión de Office 365 instalada en el dispositivo.                                                                                                                             |
-| PhysicalMemoryInBytes      | La memoria física en bytes.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>DeviceTypes
