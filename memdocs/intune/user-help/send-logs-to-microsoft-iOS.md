@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 64a42bebdff76186d74854237e7985afa0ee2c89
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 19bd14c3fad76930f76b393597dcad2394eb59d8
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079967"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881020"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-ios-devices"></a>Envío de registros a los desarrolladores del Portal de empresa para dispositivos iOS
 

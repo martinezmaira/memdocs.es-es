@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/21/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080086"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881497"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Inscribir dispositivos Windows 10 en Portal de empresa de Intune
 

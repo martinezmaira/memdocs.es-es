@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/29/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,12 +20,12 @@ ms.reviewer: vadona
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b751b3f52c1a0cd0f0a1f259e79e6917a0438d9b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ca194c61bb820992da7610e51c6379bf7c50a85e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347111"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881005"
 ---
 # <a name="you-need-to-update-your-android-device-to-install-the-outlook-app"></a>Debe actualizar el dispositivo Android para instalar la aplicación Outlook
 

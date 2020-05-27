@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1fcf4d98504f23f5fa19a099d61e7534e4df4571
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c1d89d6635928ced8190f819c0be7f9314894d4a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336750"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881247"
 ---
 # <a name="get-help-and-support-in-company-portal-for-windows-10"></a>Obtención de ayuda y soporte técnico en el Portal de empresa para Windows 10
 
