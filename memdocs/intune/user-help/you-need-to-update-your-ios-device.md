@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,12 +20,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 7ccc310d69ef604ad0050d0acc5e225645123648
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 557894e9e4b915dd3b84b09abe6977b5ec063fa4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346123"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877196"
 ---
 # <a name="your-ios-device-doesnt-have-the-required-minimum-operating-system-version"></a>El dispositivo iOS no tiene la versión necesaria mínima del sistema operativo
 
