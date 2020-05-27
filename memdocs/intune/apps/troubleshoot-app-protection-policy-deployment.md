@@ -9,17 +9,17 @@ search.appverid:
 audience: ITPro
 ms.date: 4/17/2020
 ms.service: microsoft-intune
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 3b4c02e366f4778e65b4fe4c853ed147fcdb1df3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8443ca01a0ca1647e8069fdccf1d71aef74c23d8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072759"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989470"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Solución de problemas de la implementación de directivas de protección de aplicaciones en Intune
 
