@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e151110a39e28d00a2a98cd6ea3c3fc9214ef4a0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326557"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983480"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Cierre de la sesión del usuario actual en dispositivos iOS/iPadOS administrados con Intune
 
