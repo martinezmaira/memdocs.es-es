@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3966560e48d0a409b592e33b22cf5e79b223e30a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7ce384a835bbc4b8d990bbd3ebf93b812647aa1d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346396"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882229"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Resolver una amenaza detectada por SandBlast Mobile Protect
 

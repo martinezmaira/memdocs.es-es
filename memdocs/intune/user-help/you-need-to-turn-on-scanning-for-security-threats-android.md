@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 664384a03839b85be3ff01731a988315b61342c3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6825a6b6dbab206d528d6063afb818510c75971d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334670"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882487"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Habilite los exámenes de amenazas de seguridad en el dispositivo 
 Si instala una aplicación no segura sin saberlo, los datos del dispositivo podrían estar en riesgo. Para proteger los datos del dispositivo, se recomienda que: 

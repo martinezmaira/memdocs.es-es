@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 449bbd14ae32ca5a8b0d02347b00a827fb714b40
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7fa3d1113ed24dae4ce7a3c315620cd54ff35ea3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080171"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882503"
 ---
 # <a name="you-need-to-turn-off-unknown-sources"></a>Tiene que desactivar Orígenes desconocidos
 

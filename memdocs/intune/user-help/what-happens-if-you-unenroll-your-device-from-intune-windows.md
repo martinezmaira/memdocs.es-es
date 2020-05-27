@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a742b5176d5b8dbc7e857e5c5e61c2fc80675166
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076805"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882335"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>¿Qué ocurre si anula la inscripción del dispositivo Windows de Intune?
 

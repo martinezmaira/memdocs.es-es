@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b6ef9fbb3db775dd6e0a29ac33e82dce4efd5dce
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 41c80ee092e61f016c02e66690cf7f3601f89618
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346175"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882540"
 ---
 # <a name="resolve-a-threat-found-by-zimperium-zips"></a>Resolución de una amenaza detectada por Zimperium zIPS
 
