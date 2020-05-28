@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268188"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551611"
 ---
 <!-- 
 - Feature 1357546
@@ -107,11 +107,12 @@ Tutoriales guiados que le ayudarán a solucionar problemas de características y
 
 ## <a name="new-and-updated-support-articles"></a>Artículos de soporte técnico nuevos y actualizados
 
-Artículos de soporte técnico que son nuevos o se han actualizado entre el 21 de febrero y el 19 de marzo de 2020.
+Artículos de soporte técnico que son nuevos o se han actualizado entre el 20 de marzo y el 15 de mayo de 2020.
 
-- [KB 4552430 La sincronización de categorías de actualización de terceros se ha restablecido a los valores predeterminados en Configuration Manager](https://support.microsoft.com/help/4552430)
-- [KB 4551013 Las actualizaciones de terceros revisadas no se pueden descargar en Configuration Manager](https://support.microsoft.com/help/4551013)
-- [KB 4552181 La distribución de contenido se detiene en la rama actual de Configuration Manager, versión 1910](https://support.microsoft.com/help/4552181)
-- [KB 4550023 Una secuencia de tareas de actualización local de Configuration Manager no continúa después de una reversión de la actualización local de Windows 10](https://support.microsoft.com/help/4550023)
+- [KB 4561494 Error en la creación de la aplicación Microsoft Edge en Configuration Manager](https://support.microsoft.com/help/4561494)
+- [KB 4551059 La consola remota de Configuration Manager se bloquea durante 20 segundos cada 10 minutos](https://support.microsoft.com/help/4551059)
+- [KB 4556203 Resumen de los cambios en la rama actual de Microsoft Endpoint Configuration Manager, versión 2002](https://support.microsoft.com/help/4556203)
+- [KB 4553501 Actualización para Microsoft Endpoint Configuration Manager versión 2002, anillo de actualización temprana](https://support.microsoft.com/help/4553501)
+- [KB 4561945 Error "Se cerró la conexión subyacente" cuando la herramienta de conexión de servicio descarga el archivo ConfigMgr.AdminUIContent.cab](https://support.microsoft.com/help/4561945)
 
 Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Actualizaciones de contenido de soporte técnico](https://support.microsoft.com/help/4089498/) y seleccione **Microsoft Endpoint Configuration Manager**.  

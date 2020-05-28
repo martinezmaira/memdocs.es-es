@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 23af311a78058240e6ebf8a2ca3c9e0fcdaf711f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: e9031b09fa6749d619c8048e70331a6f7c67d472
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268562"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633338"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -94,7 +94,7 @@ Para usar Análisis de escritorio, asegúrese de que el entorno cumple los requi
     > Análisis de escritorio admite varias jerarquías de Configuration Manager que informan a un único inquilino de Azure AD.<!-- 4814075 --> Si tiene varias jerarquías en su entorno, tiene las siguientes opciones:
     >
     > - Use diferentes identificadores comerciales e inquilinos de Azure AD.
-    > - Configure ambas jerarquías para que usen el mismo identificador comercial para compartir el inquilino de Azure AD y la instancia de Análisis de escritorio.
+    > - Configure ambas jerarquías para que usen el mismo identificador comercial para compartir el inquilino de Azure AD y la instancia de Análisis de escritorio. Use [diferentes aplicaciones](connect-configmgr.md#bkmk_connect) para conectar cada jerarquía. Puede tardar hasta 30 minutos después de desconectar una jerarquía para que el portal refleje los cambios. 
 
 - Dispositivos que ejecutan Windows 7, Windows 8.1 o Windows 10  
 

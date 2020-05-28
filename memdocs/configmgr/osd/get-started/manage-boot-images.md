@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075071"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732880"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Administración de imágenes de arranque con Configuration Manager
 
@@ -201,13 +201,8 @@ En la pestaña **Personalización** , seleccione cualquiera de las siguientes op
 
 - **Establecer la distribución del teclado predeterminada en WinPE**: <!--4910348-->A partir de la versión 1910, configure la distribución del teclado predeterminada para una imagen de arranque. Si selecciona un idioma distinto de es-es, Configuration Manager sigue incluyéndolo en las configuraciones regionales disponibles. En el dispositivo, el diseño de teclado inicial es la configuración regional seleccionada, pero el usuario puede cambiar el dispositivo a es-es si es necesario.
 
-    > [!Tip]
-    > El cmdlet [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) de PowerShell ahora incluye un parámetro nuevo, `-InputLocale`. Por ejemplo:
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> Use el cmdlet [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) de PowerShell para configurar estas opciones desde un script.
 
 #### <a name="optional-components"></a>Componentes opcionales
 

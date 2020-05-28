@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6f481fa54a8018137a4b45bc62f6fde9c1f1165b
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381592"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764244"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Análisis de puntos de conexión (versión preliminar)
 
@@ -102,6 +102,8 @@ Un usuario de solo lectura solo necesitará el permiso **Leer** en las categorí
 
 En el caso de las correcciones proactivas, el usuario necesita permisos adecuados para su rol en la categoría **Configuraciones de dispositivo**.  Los permisos de la categoría **Análisis de puntos de conexión** no son necesarios si el usuario solo usa correcciones proactivas.
 
+Se requiere un [Administrador del servicio Intune](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) para confirmar los requisitos de licencia antes de usar las correcciones proactivas por primera vez.
+
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a> Inicio de la recopilación de datos
 - Si solo va a inscribir dispositivos administrados por Intune, vaya la sección [Incorporación al portal Análisis de puntos de conexión](#bkmk_uea_onboard).
 
@@ -112,7 +114,7 @@ En el caso de las correcciones proactivas, el usuario necesita permisos adecuado
 
 ### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a> Inscripción de dispositivos administrados por Configuration Manager
 <!--6051638, 5924760-->
-Antes de inscribir dispositivos de Configuration Manager, compruebe los [requisitos previos](#bkmk_uea_prereq), incluida la habilitación de [Asociación de inquilinos de Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). Si solo va a inscribir dispositivos administrados por Intune, vaya la sección [Incorporación al portal Análisis de puntos de conexión](#bkmk_uea_onboard).
+Antes de inscribir dispositivos de Configuration Manager, compruebe los [requisitos previos](#bkmk_uea_prereq), incluida la habilitación de [Asociación de inquilinos de Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). 
 
 #### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a> Habilitación de la recopilación de datos de Análisis de puntos de conexión en Configuration Manager
 
@@ -238,7 +240,7 @@ Si hace clic en un dispositivo determinado, puede ver su historial de arranque e
 La página **Rendimiento de inicio** tiene pestañas de informes que brindan información, como las siguientes:
 1. **Rendimiento del modelo**. Esta pestaña permite ver el rendimiento de arranque e inicio de sesión por modelo de dispositivo, lo que puede ayudarle a identificar si los problemas de rendimiento son exclusivos de determinados modelos.
 1. **Rendimiento del dispositivo**. Esta pestaña proporciona métricas de arranque e inicio de sesión para todos los dispositivos. Puede ordenar por una métrica concreta (por ejemplo, la hora de inicio de sesión de la directiva de grupo) para ver los dispositivos que tienen las peores puntuaciones de esa métrica para ayudarle en la solución de problemas. También puede buscar un dispositivo por su nombre. Si hace clic en un dispositivo, puede ver su historial de inicio e inicio de sesión, lo que puede ayudarle a identificar si se ha producido una regresión reciente.
-1. **Procesos de inicio**. Esta pestaña (si está visible; solo la hemos puesto a disposición de algunos usuarios porque nos encontramos aún en el proceso de desarrollo de esta característica) le mostrará qué procesos están afectando a la fase del "tiempo hasta que el escritorio responde" en el inicio de sesión; esto es, mantener la CPU por encima del 50 % una vez representado el escritorio.
+1. **Procesos de inicio**. Los procesos de inicio pueden afectar negativamente a la experiencia del usuario al aumentar el período de tiempo que los usuarios deben esperar a que el escritorio responda. Esta pestaña (si está visible; solo la hemos puesto a disposición de algunos usuarios porque nos encontramos aún en el proceso de desarrollo de esta característica) le mostrará qué procesos están afectando a la fase del "tiempo hasta que el escritorio responde" en el inicio de sesión; esto es, mantener la CPU por encima del 50 % una vez representado el escritorio. En la tabla solo se muestran los procesos que afectan a un mínimo de 10 dispositivos del inquilino.  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a> Correcciones proactivas
 

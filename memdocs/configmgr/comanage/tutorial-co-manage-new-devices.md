@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo configurar la administración conj
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692993"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428618"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
 
@@ -237,11 +237,11 @@ Ejecute el siguiente procedimiento desde el servidor de sitio primario.
 
    1. Seleccione la aplicación web que creó.
 
-   2. Seleccione **Configuración > Permisos necesarios**, luego **Conceder permisos** y, a continuación **Sí**.  
+   2. Vaya a **Permisos de API** > seleccione **Conceder consentimiento de administrador para** <your tenant> y elija **Sí**.  
 
    3. Seleccione la aplicación cliente nativa que creó.
 
-   4. Seleccione **Configuración > Permisos necesarios**, luego **Conceder permisos** y, a continuación **Sí**.  
+   4. Vaya a **Permisos de API** > seleccione **Conceder consentimiento de administrador para** <your tenant> y elija **Sí**.
 
 9. En la consola de Configuration Manager, vaya a **Administración > Información general > Cloud Services > Servicios de Azure** y seleccione su servicio de Azure. A continuación, haga doble clic en **Detección de usuarios de Azure Active Directory** y seleccione **Ejecutar detección completa ahora**. Seleccione **Sí** para confirmar la acción.  
 
@@ -383,11 +383,11 @@ A continuación, cuando inscriba un dispositivo Windows 10 anteriormente no admi
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Creación de una aplicación de Intune para instalar el cliente de Configuration Manager
 
-1. Desde el servidor de sitio primario, inicie sesión en [Azure Portal](https://portal.azure.com/) y vaya a **Intune > Aplicaciones cliente > Aplicaciones > Agregar**.
+1. En el servidor de sitio principal, inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://endpoint.microsoft.com) y vaya a **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 
-2. Para **Tipo de aplicación**: Seleccione **Aplicación de línea de negocio**.
+2. Como tipo de aplicación, seleccione **Aplicación de línea de negocio** en **Otros**.
 
-3. Seleccione **Archivo del paquete de aplicaciones** y, a continuación, vaya a la ubicación del archivo de Configuration Manager **ccmsetup.msi**. Luego, seleccione **Abrir > Aceptar**.
+3. En **Archivo del paquete de aplicaciones**, vaya a la ubicación del archivo de Configuration Manager **ccmsetup.msi** y seleccione **Abrir > Aceptar**.
 Por ejemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*.
 
 4. Seleccione **Información de la aplicación** y, a continuación, especifique los detalles siguientes:
@@ -412,11 +412,11 @@ Por ejemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 
 El procedimiento siguiente implementa la aplicación para instalar el cliente de Configuration Manager que creó en el procedimiento anterior.
 
-1. Inicie sesión en [Azure Portal](https://portal.azure.com/).  Seleccione **Todos los servicios > Intune > Aplicaciones cliente > Aplicaciones** y, a continuación, seleccione **ConfigMgr Client Setup Bootstrap**, la aplicación que ha creado para implementar el cliente de Configuration Manager.  
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://endpoint.microsoft.com). Seleccione **Aplicaciones** > **Todas las aplicaciones** y elija **ConfigMgr Client Setup Bootstrap**, la aplicación que creó para implementar el cliente de Configuration Manager.  
 
-2. Seleccione **Asignaciones > Agregar grupo**.  Establezca el **Tipo de asignación** como **Requerido** y, a continuación, use los **Grupos incluidos** y los **Grupos excluidos** para configurar los grupos de Azure Active Directory (AD) que tienen los usuarios y los dispositivos que desea que participen en la administración conjunta.  
+2. Haga clic en **Propiedades** y luego en **Editar** para **Asignaciones**. Seleccione **Agregar grupo** en **Requerido** (asignaciones) para establecer los grupos de Azure Active Directory (AD) que tienen los usuarios y los dispositivos que quiere que participen en la administración conjunta.  
 
-3. Seleccione **Aceptar** y luego **Guardar** la configuración.
+3. Seleccione **Revisar + guardar** y luego **Guardar** para guardar la configuración.
 Ahora la aplicación es obligatoria para los usuarios y dispositivos que le asigne. Después de que la aplicación instale el cliente de Configuration Manager en un dispositivo, se administra mediante la administración conjunta.
 
 ## <a name="summary"></a>Resumen

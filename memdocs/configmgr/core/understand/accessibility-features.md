@@ -2,7 +2,7 @@
 title: Accesibilidad
 titleSuffix: Configuration Manager
 description: Conozca las características que permiten que Configuration Manager sea accesible para todo el mundo.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906110"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556037"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Características de accesibilidad de Configuration Manager
 
@@ -45,7 +46,7 @@ Para tener acceso a un área de trabajo, utilice los siguientes métodos abrevia
 |Ctrl+4|  Administración|
 
 
-### <a name="other-keyboard-shortcuts"></a>Otros métodos abreviados de teclado
+### <a name="other-console-shortcuts"></a>Otros accesos directos de la consola
 
 |Método abreviado de teclado|  Finalidad|
 |--------|--------|  
@@ -56,6 +57,14 @@ Para tener acceso a un área de trabajo, utilice los siguientes métodos abrevia
 |Ctrl+D|Establece el foco en el panel Detalles, si está disponible.|
 |Alt     |Cambia el foco dentro y fuera de la cinta de opciones.|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> Accesos directos de CMPivot
+
+La mayoría de los [métodos abreviados de teclado del explorador web](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) funcionarán en CMPivot.
+
+|Método abreviado de teclado|Finalidad|
+|--------|--------|  
+|Ctrl + 1|Establecer el foco en la primera pestaña.|
+|Alt + &lt;|Para volver a la dirección|
 
 
 ## <a name="other-accessibility-features"></a>Otras características de accesibilidad
@@ -85,7 +94,7 @@ Para tener acceso a un área de trabajo, utilice los siguientes métodos abrevia
 ## <a name="see-also"></a>Vea también
 
 Para más información sobre los fundamentos de navegar por las interfaces de usuario de Configuration Manager, consulte los artículos siguientes:
-- [Uso de la consola de Configuration Manager](../servers/manage/admin-console.md)  
+- [Uso de la consola de Configuration Manager](../servers/manage/admin-console.md)
 - [Manual del usuario del Centro de software](software-center.md)
 
 > [!NOTE]  

@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 460c9dd503861ba9f45e85f471bb1cb1274754a0
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782131"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764125"
 ---
 # <a name="plan-for-bitlocker-management"></a>Planeamiento de la administración de BitLocker
 
@@ -74,7 +74,7 @@ Permita que los usuarios se ayuden con una clave de un solo uso para desbloquear
 
 - Para crear una directiva de administración de BitLocker, necesita el rol de **Administrador total** en Configuration Manager.
 
-- El servicio de recuperación de BitLocker requiere HTTPS para cifrar las claves de recuperación a través de la red desde el cliente de Configuration Manager al punto de administración. Hay dos opciones:
+- El servicio de recuperación de BitLocker requiere HTTPS para cifrar las claves de recuperación en toda la red desde el cliente de Configuration Manager al punto de administración. Hay dos opciones:
 
   - HTTPS: habilite el sitio web de IIS en el punto de administración que hospeda el servicio de recuperación. Esta opción solo se aplica a Configuration Manager, versión 2002.<!-- 5925660 -->
 

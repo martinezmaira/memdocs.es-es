@@ -5,17 +5,17 @@ description: Implementación automática de actualizaciones de software usando r
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: d1b4329def3aee97e1684935c0c8f889c3e4e513
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269038"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709441"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -49,7 +49,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
          - La plantilla **Actualizaciones de cliente de Office 365** proporciona opciones de configuración comunes que se usarán al implementar las actualizaciones para los clientes de Office 365 Pro Plus.
              > [!Note]
-             > A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Si las ADR se basan en la propiedad "Title", deberá editarlo a partir del 9 de junio de 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` es un ejemplo del nuevo título. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Si las ADR se basan en la propiedad "Title", deberá editarlo a partir del 9 de junio de 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` es un ejemplo del nuevo título. Para más información sobre cómo modificar las reglas de implementación automática (ADR) para el cambio de título, consulte el artículo sobre [canales de actualización para aplicaciones de Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Para más información sobre el cambio de nombre, consulte [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - La plantilla **Actualizaciones de SCEP y Antivirus de Windows Defender** proporciona opciones de configuración comunes que se usarán cuando implemente actualizaciones de definiciones de Endpoint Protection.  
 

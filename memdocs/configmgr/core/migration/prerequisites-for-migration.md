@@ -10,12 +10,12 @@ ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 229a8c7980933480a243278b2679d55f012490ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 36e62ea5198824a6b3466853cdbcfc3057d1829e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693423"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428742"
 ---
 # <a name="prerequisites-for-migration-in-configuration-manager"></a>Requisitos previos para la migración en Configuration Manager
 
@@ -93,11 +93,13 @@ A continuación, se enumeran las configuraciones necesarias para el uso de la mi
 
   Al recopilar datos, se utilizan los puertos y protocolos de red siguientes:  
 
-  -   NetBIOS/SMB - 445 (TCP)  
+  - NetBIOS/SMB - 445 (TCP)  
 
-  -   RPC (WMI) - 135 (TCP)  
+  - RPC (WMI) - 135 (TCP y UDP)  
 
-  -   SQL Server - los puertos TCP que utilizan bases de datos de sitios de origen y de destino.  
+  - RPC dinámico. Los puertos dinámicos usan una serie de números de puerto que define la versión del sistema operativo. Estos puertos también se conocen como puertos efímeros. Para obtener más información acerca de los intervalos de puertos predeterminados, consulte [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).<!-- SCCMDocs#1053 -->
+
+  - SQL Server - los puertos TCP que utilizan bases de datos de sitios de origen y de destino.  
 
 - **Migrar actualizaciones de software:**  
 

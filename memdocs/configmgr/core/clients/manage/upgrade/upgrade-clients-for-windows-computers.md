@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696293"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427760"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Actualización de clientes de equipos Windows con System Center Configuration Manager
 
@@ -97,7 +97,7 @@ Utilice el siguiente procedimiento para configurar la actualización de cliente 
 Los clientes reciben esta configuración la próxima vez que descarguen la directiva.
 
 > [!NOTE]
-> Las actualizaciones de cliente cumplen las ventanas de mantenimiento de Configuration Manager que ha configurado.
+> Las actualizaciones de cliente cumplen las ventanas de mantenimiento de Configuration Manager que ha configurado. El subproceso execmgr solo ejecuta el programa de arranque del programa de instalación del cliente (ccmsetup.exe) durante una ventana de mantenimiento. Si el dispositivo ejecuta una edición de Windows con un filtro de escritura, ccmsetup intenta descargar e instalar al mismo tiempo. De lo contrario, ccmsetup aleatoriza una hora para descargar el contenido. Después de descargar el contenido y de compilar la directiva local, execmgr programa la actualización del cliente durante la siguiente ventana de mantenimiento.<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>Pasos siguientes
 

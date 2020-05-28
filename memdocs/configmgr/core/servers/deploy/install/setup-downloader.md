@@ -1,8 +1,8 @@
 ---
-title: Descargador del programa de instalación
+title: Herramienta Descargador del programa de instalación
 titleSuffix: Configuration Manager
-description: Lea sobre esta aplicación independiente diseñada para asegurar que la instalación del sitio usa las versiones actuales de los archivos de instalación principales.
-ms.date: 01/22/2020
+description: Use la herramienta independiente para descargar las versiones actuales de los principales archivos de instalación para el programa de instalación.
+ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,102 +10,113 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2fa1899f8e7dc14812f9f9ecf889350a153b2d25
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2da8aed5cfe4a478010165445094f1fce4627d9a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700573"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428830"
 ---
 # <a name="setup-downloader-for-configuration-manager"></a>Descargador del programa de instalación de Configuration Manager
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-Antes de ejecutar el programa de instalación para instalar o actualizar un sitio de Configuration Manager, puede usar la aplicación independiente del descargador del programa de instalación de la versión de Configuration Manager que quiera instalar para descargar los archivos actualizados del programa de instalación.  
+Antes de ejecutar el programa de instalación de Configuration Manager para instalar o actualizar un sitio, puede usar la herramienta independiente Descargador del programa de instalación para descargar los archivos de instalación actualizados. Ejecute la herramienta desde la versión de Configuration Manager que quiere instalar. Use archivos de instalación actualizados para asegurarse de que la instalación del sitio usa las versiones actuales de los principales archivos de instalación.
 
-Si usa los archivos actualizados del programa de instalación, la instalación del sitio usará las versiones actuales de los archivos de instalación principales. En resumen:   
--   Al usar el descargador del programa de instalación para descargar los archivos antes de iniciar la instalación, especifique la carpeta que contendrá los archivos.  
--   La cuenta que use para ejecutar el descargador del programa de instalación debe tener permisos de **Control total** de la carpeta de descarga.  
--   Al ejecutar el programa de instalación para instalar o actualizar un sitio, puede dirigirlo para que use esta copia local de los archivos descargados anteriormente. Esto evita que el programa de instalación tenga que conectarse a Microsoft cuando se inicia la instalación o la actualización del sitio.  
--   Puede usar la misma copia local de los archivos de instalación para instalaciones o actualizaciones posteriores del sitio.  
+Cuando se usa el descargador del programa de instalación, se especifica una carpeta para que contenga los archivos. La cuenta que use para ejecutar la herramienta debe tener permisos de **Control total** de la carpeta de descarga. Al ejecutar el programa de instalación para instalar o actualizar un sitio, puede especificar esta copia local de los archivos descargados anteriormente. Este comportamiento evita que el programa de instalación tenga que conectarse a Microsoft cuando se inicia la instalación o la actualización del sitio. Puede usar la misma copia local de los archivos de instalación para otras instalaciones o actualizaciones del sitio de la misma versión.
 
-El descargador del programa de instalación descarga los siguientes tipos de archivos:  
--   Archivos redistribuibles como requisitos previos  
--   Paquetes de idioma  
--   Las últimas actualizaciones del producto para el programa de instalación  
+La herramienta Descargador del programa de instalación descarga los siguientes tipos de archivos:
+
+- Archivos redistribuibles como requisitos previos
+- Paquetes de idioma
+- Las últimas actualizaciones del producto para el programa de instalación
 
 Tiene dos opciones para ejecutar el descargador del programa de instalación:
+
 - Ejecutar la aplicación con la interfaz de usuario.
-- Para las opciones de línea de comandos, ejecutar la aplicación en un símbolo del sistema.
+- Ejecutar la aplicación en un símbolo del sistema para tener opciones adicionales de la línea de comandos
 
+Si la organización restringe la comunicación de red con Internet mediante un dispositivo proxy o firewall, tiene que permitir que la herramienta acceda a puntos de conexión de Internet. El dispositivo en el que se ejecutará la herramienta requiere acceso a Internet, al igual que el punto de conexión del servicio. Para más información, consulte los [requisitos de acceso a Internet](../../../plan-design/network/internet-endpoints.md#bkmk_scp).<!-- SCCMDocs#677 -->
 
-## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a> Ejecutar el descargador del programa de instalación con la interfaz de usuario  
+## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a> Ejecutar el descargador del programa de instalación con la interfaz de usuario
 
-1.  En un equipo que tiene acceso a Internet, abra el Explorador de Windows y vaya a **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
+1. En un equipo que tenga acceso a Internet, busque los medios de instalación de la versión de Configuration Manager que quiere instalar.
 
-2.  Haga doble clic en **Setupdl.exe** para abrir el descargador del programa de instalación.   
+1. En la subcarpeta **SMSSETUP\BIN\X64**, ejecute **Setupdl.exe**.
 
-3. Especifique la ruta de acceso de la carpeta en la que se hospedarán los archivos de instalación actualizados y después haga clic en **Descargar**. El descargador del programa de instalación comprueba los archivos que se encuentran en la carpeta de descarga. Solo descarga los archivos que faltan o que son más recientes que los archivos existentes. El descargador del programa de instalación crea subcarpetas para los idiomas descargados y otras subcarpetas necesarias.  
+1. Especifique la ruta de acceso de la carpeta en la que se almacenan los archivos de instalación actualizados y después seleccione **Descargar**. El descargador del programa de instalación comprueba los archivos que se encuentran en la carpeta de descarga. Solo descarga los archivos que faltan o que son más recientes que los archivos existentes. Crea subcarpetas para los idiomas descargados y otros componentes necesarios.
 
-4.  Para revisar los resultados de la descarga, abra el archivo **ConfigMgrSetup.log** en el directorio raíz de la unidad C.  
+1. Para revisar los resultados de la descarga, vea **C:\ConfigMgrSetup.log**.
 
-## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a> Ejecutar el descargador del programa de instalación desde el símbolo del sistema  
+## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a> Ejecutar el descargador del programa de instalación desde el símbolo del sistema
 
-1.  En una ventana del símbolo del sistema, vaya a **&lt;*medio de instalación de Configuration Manager*\>\SMSSETUP\BIN\X64**.   
+1. Abra un símbolo del sistema y cambie el directorio para los medios de instalación de la versión de Configuration Manager que quiere instalar.
 
-2.  Ejecute **Setupdl.exe** para abrir el descargador del programa de instalación.
+1. Cambie el directorio a la subcarpeta **SMSSETUP\BIN\X64** y ejecute **Setupdl.exe** con las opciones necesarias.
 
-    Puede usar las siguientes opciones de línea de comandos con **Setupdl.exe**:   
+1. Para revisar los resultados de la descarga, vea **C:\ConfigMgrSetup.log**.
 
-    -   **/VERIFY**: utilice esta opción para comprobar los archivos en la carpeta de descarga, que incluyen los archivos de idioma. Consulte el archivo ConfigMgrSetup.log en el directorio raíz de la unidad C para obtener una lista de archivos que no están actualizados. No se descarga ningún archivo al utilizar esta opción.  
+### <a name="command-line-options"></a>Opciones de línea de comandos
 
-    -   **/VERIFYLANG**: utilice esta opción para comprobar los archivos de idioma en la carpeta de descarga. Consulte el archivo ConfigMgrSetup.log en el directorio raíz de la unidad C para obtener una lista de archivos de idioma que no están actualizados.
+Puede usar las siguientes opciones de línea de comandos con **Setupdl.exe**:
 
-    -   **/LANG**: utilice esta opción para descargar solo los archivos de idioma en la carpeta de descarga.  
+- **/VERIFY**: para comprobar los archivos en la carpeta de descarga, que incluyen los archivos de idioma. Para ver la lista de archivos obsoletos, revise **C:\ConfigMgrSetup.log**. Cuando se usa esta opción, no descarga ningún archivo.
 
-    -   **/NOUI**: utilice esta opción para iniciar el descargador del programa de instalación sin mostrar la interfaz de usuario. Al usar esta opción, debe especificar la **ruta de acceso de la descarga** como parte del comando en el símbolo del sistema.  
+- **/VERIFYLANG**: para comprobar solo los archivos de idioma en la carpeta de descarga. Para ver la lista de archivos de idioma obsoletos, revise **C:\ConfigMgrSetup.log**.
 
-    -   **&lt;DownloadPath\>** : puede especificar la ruta de acceso a la carpeta de descarga para iniciar automáticamente el proceso de comprobación o descarga. Debe especificar la ruta de acceso de descarga al usar la opción **/NOUI**. Si no se especifica ninguna ruta de acceso de descarga, debe especificarla cuando se abra el descargador del programa de instalación. El descargador del programa de instalación crea la carpeta en caso de que no exista.  
+- **/LANG**: para descargar solo los archivos de idioma en la carpeta de descarga.
 
-    Comandos de ejemplo:
+- **/NOUI**: Inicie el descargador del programa de instalación sin la interfaz de usuario. Cuando se usa esta opción, se requiere la **ruta de acceso de descarga**.
 
-    -   **setupdl &lt;DownloadPath\>**  
+- **Ruta de acceso de descarga**: para iniciar automáticamente el proceso de comprobación o descarga, especifique la ruta de acceso a la carpeta de descarga. Cuando use la opción **/NOUI**, se requiere la ruta de acceso de descarga. Si no especifica una ruta de acceso de descarga, el descargador del programa de instalación le pedirá que especifique la ruta de acceso. Si la carpeta no existe, el descargador del programa de instalación la crea.
 
-        -   El descargador del programa de instalación se inicia, comprueba los archivos de la carpeta de descarga especificada y luego descarga solo los archivos que faltan o que tienen versiones más recientes que los archivos existentes.     
+### <a name="example-commands"></a>Comandos de ejemplo
 
-    -   **setupdl /VERIFY &lt;DownloadPath\>**  
+#### <a name="example-1"></a>Ejemplo 1
 
-        -   El descargador del programa de instalación se inicia y comprueba los archivos de la carpeta de descarga especificada.  
+El descargador del programa de instalación comprueba los archivos de la carpeta de descarga especificada.
 
-    -   **setupdl /NOUI &lt;DownloadPath\>**  
+`setupdl.exe C:\Download`
 
-        -   El descargador del programa de instalación se inicia, comprueba los archivos de la carpeta de descarga especificada y luego descarga solo los archivos que faltan o que son más recientes que los archivos existentes.  
+#### <a name="example-2"></a>Ejemplo 2
 
-    -   **setupdl /LANG  &lt;DownloadPath\>**  
+El descargador del programa de instalación solo comprueba los archivos de la carpeta de descarga especificada.
 
-        -   El descargador del programa de instalación se inicia, comprueba los archivos de idioma de la carpeta de descarga especificada y luego descarga solo los archivos que faltan o que son más recientes que los archivos existentes.  
+`setupdl.exe /VERIFY C:\Download`
 
-    -   **setupdl /VERIFY**  
+#### <a name="example-3"></a>Ejemplo 3
 
-        -   El descargador del programa de instalación se inicia y, a continuación, debe especificar la ruta a la carpeta de descarga. Después de hacer clic en **Comprobar**, el descargador del programa de instalación comprueba los archivos en la carpeta de descarga.  
+El descargador del programa de instalación comprueba los archivos de la carpeta de descarga especificada. La herramienta no muestra ninguna interfaz de usuario.
 
-3.  Para revisar los resultados de la descarga, abra el archivo **ConfigMgrSetup.log** en el directorio raíz de la unidad C.
+`setupdl.exe /NOUI C:\Download`
+
+#### <a name="example-4"></a>Ejemplo 4
+
+El descargador del programa de instalación comprueba los archivos de idioma de la carpeta de descarga especificada y luego descarga solo los archivos de idioma.
+
+`setupdl.exe /LANG C:\Download`
 
 ## <a name="copy-setup-downloader-files-to-another-computer"></a><a name="bkmk_cp-files"></a> Copiar a otro equipo los archivos del descargador del programa de instalación
 
 1. En el Explorador de Windows, vaya a una de las siguientes ubicaciones:
 
     - **&lt;Medios de instalación de Configuration Manager>\SMSSETUP\BIN\X64**
+
     - **&lt;Ruta de instalación de Configuration Manager>\BIN\X64**
-    
+
 1. Copie los archivos siguientes en la misma carpeta de destino del otro equipo:
-    
+
     - **setupdl.exe**
+
     - **.\\&lt;idioma>\\setupdlres.dll**
-      - Este archivo se encuentra en la subcarpeta del idioma de instalación. Por ejemplo, el idioma inglés se encuentra en la subcarpeta `00000409`.
 
-    Por ejemplo, estas serían las carpetas de destino de su dispositivo:
-    - C:\ConfigManInstall\setupdl.exe
-    - C:\ConfigManInstall\00000409\setupdlres.dll
+        > [!NOTE]
+        > Este archivo se encuentra en la subcarpeta del idioma de instalación. Por ejemplo, el idioma inglés se encuentra en la subcarpeta `00000409`.
 
-1. Inicie el descargador del programa de instalación desde el equipo mediante la [interfaz de usuario](#bkmk_ui) o el [símbolo del sistema](#bkmk_cmd) tal como se describe en las secciones de más arriba.
+    Las carpetas de destino del dispositivo deben ser similares al ejemplo siguientes:
+
+    - `C:\ConfigManInstall\setupdl.exe`
+
+    - `C:\ConfigManInstall\00000409\setupdlres.dll`
+
+1. Ejecute el descargador del programa de instalación desde el equipo de destino. Use la [interfaz de usuario](#bkmk_ui) o el [símbolo del sistema](#bkmk_cmd).

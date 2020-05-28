@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acb8900a57408152133637ead3b8a0cf4732b4a7
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268732"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633319"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Inscripción de dispositivos en Análisis de escritorio
 
@@ -126,7 +126,7 @@ Hay una opción en la configuración de Configuration Manager para Análisis de 
 
 En general, use recopilaciones de Configuration Manager como destino para la configuración y la inscripción de Análisis de escritorio. Use la pertenencia directa o las consultas para incluir o excluir dispositivos de la recopilación. Para obtener más información, vea [Creación de recopilaciones](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager solo configura las opciones de Windows si aún no existe un valor. Si necesita configurar diferentes valores para un grupo de dispositivos único, puede usar [directiva de grupo](group-policy-settings.md). La configuración de destino de directiva de grupo tiene prioridad sobre la configuración de Configuration Manager.
+Configuration Manager solo configura las opciones de Windows si aún no existe un valor. Si necesita configurar diferentes valores para un grupo de dispositivos único, puede usar [directiva de grupo](group-policy-settings.md). La configuración de destino de directiva de grupo tiene prioridad sobre la configuración de Configuration Manager. Es posible que los dispositivos de destino de la directiva de grupo no reflejen con precisión el estado en el panel [Estado de conexión](monitor-connection-health.md).
 
 Al configurar el nivel de datos de diagnóstico, se establece el límite superior para el dispositivo. De forma predeterminada, en la versión 1803 y posterior de Windows 10, los usuarios pueden elegir establecer un nivel inferior. Para controlar este comportamiento, use la configuración de directiva de grupo **Configure telemetry opt-in setting user interface** (Configurar la interfaz de usuario de establecimiento de participación en la telemetría). Para obtener más información, consulte [Configuración de directiva de grupo para Análisis de escritorio](group-policy-settings.md).
 

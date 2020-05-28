@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383739"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709406"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticación basada en tokens para Cloud Management Gateway
 
@@ -25,7 +25,7 @@ ms.locfileid: "83383739"
 
 Las puertas de enlace de administración en la nube (CMG) admiten muchos tipos de clientes, pero, incluso con un protocolo [HTTP mejorado](../../plan-design/hierarchy/enhanced-http.md), estos clientes requieren un [certificado de autenticación de cliente](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). Este requisito de certificado puede ser difícil de aprovisionar en clientes basados en Internet que no se suelen conectar a la red interna, no consiguen conectar con Azure Active Directory (Azure AD) y no disponen de ningún método para instalar un certificado emitido con PKI.
 
-A partir de la versión 2002, Configuration Manager amplía la compatibilidad de su dispositivo con los métodos siguientes:
+Para superar estos desafíos, a partir de la versión 2002, Configuration Manager amplía su compatibilidad de dispositivos con los métodos siguientes:
 
 - Registro de un solo token en la red interna
 
@@ -101,7 +101,7 @@ El token no se almacena en el cliente ni en el sitio. Asegúrese de copiar el to
 
 Se usa con el parámetro `/new` para especificar el período de validez del token. Especifique un valor entero en minutos. El valor predeterminado es 4320 minutos (tres días). El valor máximo es de 10 080 (7 días).
 
-Ejemplo: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Ejemplo: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 ## <a name="bulk-registration-token-management"></a>Administración de tokens de registro masivo
 

@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo preparar los dispositivos Windows�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137922"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427778"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Preparación de dispositivos basados en Internet para la administración conjunta
 
@@ -104,9 +104,9 @@ Para obtener más información, vea [Acerca de las propiedades de instalación d
 
 ### <a name="create-the-app-in-intune"></a>Creación de la aplicación en Intune
 
-1. Vaya a [Azure Portal](https://portal.azure.com) y abra la página de Intune.  
+1. Vaya al [Centro de administración de Microsoft Endpoint Manager](https://endpoint.microsoft.com) y expanda el panel de navegación izquierdo.  
 
-2. Seleccione **Aplicaciones cliente** > **Aplicaciones** > **Agregar**.  
+2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.  
 
 3. En **Otros**, seleccione **Aplicación de línea de negocio**.  
 

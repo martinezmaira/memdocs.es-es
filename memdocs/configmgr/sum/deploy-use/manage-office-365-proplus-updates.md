@@ -5,17 +5,17 @@ description: Configuration Manager sincroniza las actualizaciones de cliente de 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4967b8b289d54a6355cb0a1e6454d5fac469a733
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 09d8f0a37e9ed4308c5c8ffcf005c788612be235
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110413"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709509"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -224,7 +224,33 @@ Para asegurarse de que el canal de actualización está establecido para que las
     Ejemplo: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Haga clic en **Aceptar**. 
 
-## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a><a name="bkmk_channel"></a> Cambiar el canal de actualización después de permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a> Canales de actualización para aplicaciones de Microsoft 365
+<!--6298093-->
+Cuando el nombre de Office 365 ProPlus se cambió a **Microsoft 365 Apps for enterprise**, también se cambió el nombre de los canales de actualización. Si usa una regla de implementación automática (ADR) para implementar las actualizaciones, tendrá que realizar cambios en las ADR si se basan en la propiedad **Title**. Esto se debe a que el nombre de los paquetes de actualización en el catálogo de Microsoft Update está cambiando.
+
+Actualmente, el título de un paquete de actualización para Office 365 ProPlus comienza con "Actualización de cliente de Office 365", como se aprecia en el ejemplo siguiente:
+
+&nbsp; &nbsp; Actualización de cliente de Office 365: canal semestral versión 1908 para la edición basada en x64 (compilación 11929.20648)
+
+En el caso de los paquetes de actualización publicados a partir del 9 de junio, el título comenzará con "Actualización de aplicaciones de Microsoft 365", tal como se presenta en el ejemplo siguiente:
+
+&nbsp; &nbsp; Actualización de Aplicaciones de Microsoft 365: canal semestral versión 1908 para la edición basada en x64 (compilación 11929.50000)
+</br>
+</br>
+
+|Nuevo nombre del canal|Nombre anterior del canal|
+|--|--|
+|Canal semestral para empresas|Canal semianual|
+|Canal semestral para empresas (versión preliminar)|Canal semianual (dirigido)|
+|Canal mensual para empresas|N/D|
+|Canal actual|Canal mensual|
+|Canal actual (versión preliminar)|Canal mensual (dirigido)|
+|Canal beta|Insider|
+
+Para más información sobre cómo modificar las ADR, consulte [Implementar actualizaciones de software automáticamente](automatically-deploy-software-updates.md). Para más información sobre el cambio de nombre, consulte [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+
+
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Cambiar el canal de actualización después de permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager
 
 Después de implementar Office 365 ProPlus, puede cambiar el canal de actualización con directiva de grupo o la Herramienta de implementación de Office (ODT). Por ejemplo, puede trasladar un dispositivo del Canal semianual al Canal semianual (dirigido). Al cambiar de canal, Office se actualiza automáticamente sin tener que volver a instalar ni descargar la versión completa. Para obtener más información, consulte el artículo sobre cómo [cambiar el canal de actualización de Office 365 ProPlus para dispositivos de su organización](https://docs.microsoft.com//deployoffice/change-update-channels).
 

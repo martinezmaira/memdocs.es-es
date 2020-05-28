@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701673"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427734"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instalación de un punto de distribución de nube para Configuration Manager
 
@@ -215,6 +215,8 @@ La configuración predeterminada del cliente habilita automáticamente a los cli
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> Administración y supervisión  
 
 La supervisión del contenido que se distribuye a un punto de distribución de nube es igual que la de cualquier otro punto de distribución local. Para obtener más información, vea [Supervisión del contenido](monitor-content-you-have-distributed.md).
+
+Al ver la lista de puntos de distribución de nube en la consola, puede agregar otras columnas a la lista. Por ejemplo, la columna **Salida de datos** muestra la cantidad de clientes de datos descargados del servicio en los últimos 30 días.<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a> Alertas  
 

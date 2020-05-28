@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694963"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427821"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notificación de cliente de Configuration Manager
 
@@ -153,6 +153,9 @@ A partir de la versión 1910, hay nuevas acciones de dispositivo de **Diagnóst
 Para obtener más información sobre esta configuración, consulte [Acerca de los archivos de registro](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
 
 Realice un seguimiento del estado de la tarea en el elemento **diagnostics.log** del cliente. Al recopilar registros de cliente, se registra información adicional en **MP_SinvCollFile. log**, en el punto de administración, y **sinvproc.log**, en el servidor de sitio.
+
+> [!Tip]
+> Los registros de cliente recopilados se almacenan según la configuración de la recopilación de archivos de inventario de software. Los archivos se almacenan en el servidor de sitio en el directorio **Inboxes\sinv.box\FileCol**. No hay ningún límite definido para el número de versiones. La tarea de mantenimiento del sitio [Eliminar archivos recopilados antiguos](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) elimina los archivos según una programación, que de forma predeterminada es cada 90 días.
 
 ### <a name="prerequisites---client-diagnostics"></a>Requisitos previos: diagnósticos del cliente
 
