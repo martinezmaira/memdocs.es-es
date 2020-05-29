@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428603"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153445"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Acerca de los parámetros y propiedades de instalación de cliente en Configuration Manager
 
@@ -80,6 +80,8 @@ Ejemplo: `ccmsetup.exe /?`
 
 Especifica la ubicación de descarga de archivos. Use una ruta de acceso local o UNC. El dispositivo descarga los archivos mediante el protocolo de bloque de mensajes del servidor (SMB). Para usar **/source**, la cuenta de usuario de Windows para la instalación de cliente debe tener permisos de **lectura** para la ubicación.
 
+Para obtener más información sobre cómo ccmsetup descarga el contenido, consulte [Grupos de límites: instalación de cliente](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). En ese artículo también se incluyen detalles del comportamiento de ccmsetup si usa los parámetros **/mp** y **/source**.
+
 > [!TIP]  
 > Puede usar el parámetro **/source** más de una vez en una línea de comandos para especificar ubicaciones de descarga alternativas.  
 
@@ -88,6 +90,8 @@ Ejemplo: `ccmsetup.exe /source:"\\server\share"`
 ### <a name="mp"></a>/mp
 
 Especifica un punto de administración de origen al que se van a conectar los equipos. Los equipos usan dicho punto de administración para encontrar el punto de distribución más cercano para los archivos de instalación. Si no hay ningún punto de distribución o los equipos no pueden descargar los archivos desde los puntos de distribución después de cuatro horas, descargan los archivos desde el punto de administración especificado.  
+
+Para obtener más información sobre cómo ccmsetup descarga el contenido, consulte [Grupos de límites: instalación de cliente](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). En ese artículo también se incluyen detalles del comportamiento de ccmsetup si usa los parámetros **/mp** y **/source**.
 
 > [!IMPORTANT]  
 > Este parámetro especifica un punto de administración inicial para que los equipos busquen un origen de descarga. Puede ser cualquier punto de administración en cualquier sitio. No *asigna* el cliente al punto de administración especificado.
