@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694413"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879811"
 ---
 # <a name="monitor-database-replication"></a>Supervisión de la replicación de base de datos
 
@@ -122,7 +122,10 @@ Ejecute RLA en la consola de Configuration Manager o en un símbolo del sistema:
 
 - Para ejecutar en la consola de Configuration Manager: Vaya al área de trabajo **Supervisión** y seleccione el nodo **Replicación de base de datos**. Seleccione el vínculo de replicación que desea analizar y luego, en la cinta de opciones, seleccione **Replication Link Analyzer**.  
 
-- Para la ejecución en un símbolo del sistema, escriba el siguiente comando: `%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- Para la ejecución en un símbolo del sistema, escriba el siguiente comando: `%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > A partir de la versión 1910, esta ruta de acceso cambió para usar la carpeta `Microsoft Endpoint Manager`. Asegúrese de que no usa una versión anterior del archivo que pudiera existir en otra carpeta.
 
 Cuando ejecuta RLA, este detecta los problemas con una serie de comprobaciones y reglas de diagnóstico. Puede ver los problemas que identifica la herramienta. Cuando tiene instrucciones para resolver un problema, los muestra. Si RLA puede corregir automáticamente un problema, le presenta esa opción.
 

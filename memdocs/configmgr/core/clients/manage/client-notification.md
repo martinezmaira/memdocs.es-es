@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427821"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153420"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notificación de cliente de Configuration Manager
 
@@ -140,7 +140,7 @@ A partir de la versión 1910, hay nuevas acciones de dispositivo de **Diagnóst
 
 - **Habilitación del registro detallado**: cambie el nivel de registro global del componente CCM a detallado y habilite el registro de depuración.
 - **Deshabilitación del registro detallado**: cambie el nivel de registro global a predeterminado y deshabilite el registro de depuración.
-- **Recopilar registros de cliente** (a partir de la versión 2002): Se envía un mensaje de notificación a los clientes seleccionados para recopilar los registros de CCM. Los registros se devuelven mediante la recopilación de archivos de inventario de software. <!--4226618-->
+- **Recopilar registros de cliente** (a partir de la versión 2002): El sitio envía un mensaje de notificación a los clientes seleccionados para recopilar los registros de CCM. El cliente envía los registros al punto de administración mediante el mismo canal que la recopilación de archivos de inventario de software. <!--4226618--> No es necesario habilitar el inventario de software en la configuración de cliente.<!-- MEMDocs#305 -->
    - El límite de tamaño de los registros de cliente comprimidos es de 100 MB. <!--6366098-->
    - Use el [Explorador de recursos](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) para administrar y ver estos archivos.
 

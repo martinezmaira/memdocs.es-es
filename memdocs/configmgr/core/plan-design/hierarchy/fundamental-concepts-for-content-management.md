@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1355b6d670e94d985717dfb32386f579cba42a0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078675"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878952"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -156,7 +156,7 @@ La Optimización de distribución es la tecnología recomendada para optimizar l
 A partir de la versión 1906, puede instalar un servidor de caché con conexión de Microsoft en los puntos de distribución. Al almacenar en caché este contenido de forma local, los clientes pueden beneficiarse de la característica de Optimización de entrega y, además, puede ayudar a proteger los vínculos WAN.
 
 > [!NOTE]
-> A partir de la versión 1910, esta característica se llama **caché con conexión de Microsoft**. Antes se conocía como “caché en la red de Optimización de distribución (DOINC)”.
+> A partir de la versión 1910, esta característica se llama **caché con conexión de Microsoft**. Antes se conocía como “caché en la red de Optimización de distribución”.
 
 Este servidor de caché actúa como una caché transparente a petición para el contenido descargado mediante la Optimización de entrega. Use la configuración de cliente para asegurarse de que este servidor se ofrezca únicamente a los miembros del grupo de límites de Configuration Manager local.
 

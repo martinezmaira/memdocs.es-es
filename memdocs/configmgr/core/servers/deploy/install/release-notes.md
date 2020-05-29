@@ -2,7 +2,7 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700653"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823969"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -33,6 +33,8 @@ Para obtener información sobre las características que presentan las distintas
 - [Novedades de la versión 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Novedades de la versión 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [Novedades de la versión 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+Para obtener información sobre las nuevas características de Análisis de escritorio, consulte [Novedades de Análisis de escritorio](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
 > Para obtener una notificación cuando se actualice esta página, copie y pegue la siguiente dirección URL en su lector de fuentes RSS: `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -165,6 +167,15 @@ Para solucionar esta incidencia, cree un rol de seguridad personalizado. Copie u
 Para obtener más información, vea [Crear roles de seguridad personalizados](../configure/configure-role-based-administration.md#BKMK_CreateSecRole).
 
 ## <a name="desktop-analytics"></a>Análisis de escritorio
+
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Una actualización de seguridad extendida para Windows 7 hace que aparezca como **No se puede inscribir**
+
+<!-- 7283186 -->
+_Se aplica a: Configuration Manager, versiones 1902, 1906, 1910 y 2002_
+
+La actualización de seguridad extendida (ESU) de abril de 2020 para Windows 7 cambió la versión mínima requerida de diagtrack.dll de 10586 a 10240. Este cambio hace que los dispositivos de Windows 7 se muestren como **No se pueden inscribir** en el panel **Estado de conexión** de Análisis de escritorio. Al explorar en profundidad la vista de dispositivos para este estado, la propiedad **Configuración del servicio DiagTrack** muestra el estado siguiente: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+No se requiere ninguna solución alternativa para este problema. No desinstale la ESU de abril. Si, por lo contrario, está configurada correctamente, los dispositivos de Windows 7 siguen notificando los datos de diagnóstico al servicio Análisis de escritorio y dichos dispositivos se siguen mostrando en el portal.
 
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>Si usa el inventario de hardware para las vistas distribuidas, no puede realizar incorporaciones al Análisis de escritorio
 

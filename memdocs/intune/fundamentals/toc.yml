@@ -157,6 +157,10 @@
               href: intune-endpoints.md
             - name: "Puntos de conexión de Intune para el Gobierno de EE.\_UU."
               href: intune-us-government-endpoints.md
+            - name: Puntos de conexión de China
+              href: china-endpoints.md
+            - name: Intune ofrecido por 21Vianet en China
+              href: china.md
         - name: Iniciar sesión en Intune
           href: account-sign-up.md
         - name: Configuración de dominios

@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 590f3adec168fe6d7f4718505bd6f7d6b9f7c25f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fe570eeedc2c050bdaf27903d30ddffff63109d9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692733"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879163"
 ---
 # <a name="creating-custom-report-models-for-configuration-manager-in-sql-server-reporting-services"></a>Creación de modelos de informes personalizados de Configuration Manager en SQL Server Reporting Services
 
@@ -413,7 +413,7 @@ Configuration Manager incluye modelos de informe de ejemplo, pero también se pu
 
 9. Guarde y cierre el archivo _&lt;Nombre del modelo\>_ **.smdl**.  
 
-10. Copie el archivo _&lt;Nombre del modelo\>_ **.smdl** en la carpeta *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
+10. Copie el archivo _&lt;Nombre del modelo\>_ **.smdl** en la carpeta *%programfiles%* \Microsoft Endpoint Manager\AdminConsole\XmlStorage\Other en el servidor de sitio de Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Después de copiar el archivo de modelo de informe en el servidor de sitio de Configuration Manager, debe salir y reiniciar la consola de Configuration Manager para poder usar el modelo de informe en el **Asistente para crear informes**.  

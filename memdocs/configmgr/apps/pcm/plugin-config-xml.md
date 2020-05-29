@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689083"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877744"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Referencia técnica del XML de configuración del complemento del Administrador de conversión de paquetes
 
@@ -44,7 +44,10 @@ En la tabla siguiente se describen los elementos XML del archivo de configuraci�
 ## <a name="sample-configuration-xml"></a>XML de configuración de ejemplo
 
 En esta sección se proporciona un ejemplo de los elementos XML de configuración del Administrador de conversión de paquetes, en el archivo de configuración de Configuration Manager, **Microsoft.ConfigurationManagement.exe.config**. De forma predeterminada, este archivo está en la ruta de acceso siguiente:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> A partir de la versión 1910, esta ruta de acceso cambió para usar la carpeta `Microsoft Endpoint Manager`. Asegúrese de que no usa una versión anterior del archivo que pudiera existir en otra carpeta. 
 
 En el ejemplo, los elementos relacionados con el Administrador de conversión de paquetes están dentro del siguiente elemento: `Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

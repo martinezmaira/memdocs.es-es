@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3374a912b8235f546ec551bd1a964f9fc957b96d
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991684"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877524"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -363,7 +363,7 @@ Los grupos de límites de Configuration Manager se usan para definir y regular l
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Uso de grupos de límites de Configuration Manager para el identificador del grupo de optimización de distribución
 
-Seleccione **Sí** para aplicar el identificador del grupo de límites como identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado.
+Seleccione **Sí** para aplicar el identificador del grupo de límites como identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado. Al habilitar esta configuración, también se establece el modo de descarga Optimización de distribución en la opción Grupo (2) en los clientes de destino.
 
 > [!Note]
 > Microsoft recomienda permitir que el cliente configure esta opción a través de la directiva local, en lugar de la directiva de grupo. De esta manera, el identificador del grupo de límites puede establecerse como identificador del grupo de optimización de entrega en el cliente. Para obtener más información, consulte [Optimización de entrega](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -509,13 +509,12 @@ Elija una de las opciones siguientes para esta configuración:
 
     - Implementaciones requeridas (una vez alcanzada la fecha límite de instalación)  
 
-    > [!IMPORTANT]  
-    > El cliente siempre permite las instalaciones de software desde el Centro de software, independientemente de la configuración de la conexión de Internet de uso medido.  
-
     Si se alcanza el límite de transferencia de datos para la conexión a Internet de uso medido, el cliente ya no intentará comunicarse con los sitios de Configuration Manager.  
 
 - **Bloquear**: el cliente de Configuration Manager no intenta comunicarse con los sitios de Configuration Manager si se encuentra en una conexión a Internet de uso medido. Esta opción es el valor predeterminado.  
 
+> [!IMPORTANT]  
+> El cliente siempre permite las instalaciones de software desde el Centro de software, independientemente de la configuración de la conexión de Internet de uso medido. Si el usuario solicita una instalación de software mientras el dispositivo está en una red medida, el Centro de software respeta la intención del usuario.<!-- MEMDocs#285 -->
 
 
 ## <a name="power-management"></a>Administración de energía  

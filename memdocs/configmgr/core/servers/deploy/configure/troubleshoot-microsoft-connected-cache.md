@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700873"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878098"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Solución de problemas de la caché de conexión de Microsoft en Configuration Manager
 
 En este artículo encontrará detalles técnicos sobre la caché de conexión de Microsoft en Configuration Manager. Úselo como ayuda para solucionar problemas que pueda tener en el entorno. Para más información sobre cómo funciona esta caché y cómo usarla, vea [Caché de conexión de Microsoft en Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
-> A partir de la versión 1910, esta característica se llama **caché con conexión de Microsoft**. Antes se conocía como “caché en la red de Optimización de distribución (DOINC)”.
+> A partir de la versión 1910, esta característica se llama **caché con conexión de Microsoft**. Antes se conocía como “caché en la red de Optimización de distribución”.
 
 ## <a name="verify"></a>Comprobar
 

@@ -2,7 +2,7 @@
 title: Compatibilidad con Windows 10
 titleSuffix: Configuration Manager
 description: Obtención de información sobre las versiones de Windows 10 que se admiten como clientes o para OSD con Configuration Manager
-ms.date: 04/01/2020
+ms.date: 05/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7241db0220bf4adf9b55341514afb03de33c2589
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688603"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879073"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Compatibilidad con Windows 10 en Configuration Manager  
 
@@ -53,11 +53,12 @@ En la tabla siguiente se enumeran las versiones de Windows 10 que puede usar com
 | **Enterprise 2015 LTSB** <!--10/14/2025-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | **Enterprise 2016 LTSB** <!--10/13/2026-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | **Enterprise LTSC 2019** <!--01/09/2029-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--04/14/2020-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/11/2021-->   | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -112,6 +113,7 @@ En la tabla siguiente se enumeran las versiones de Windows 10 ADK que puede usar
 | **1803**<br>(10.1.17134) | ![Compatible con versiones anteriores](media/blue_compat.png) | ![Compatible con versiones anteriores](media/blue_compat.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) |
 | **1809**<br>(10.1.17763) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible con versiones anteriores](media/blue_compat.png) | ![Compatible con versiones anteriores](media/blue_compat.png) | ![No compatible](media/Red_X.png) |
 | **1903**<br>(10.1.18362) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| **2004**<br>(10.1.19041) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) |
 
 |Key|
 |--|

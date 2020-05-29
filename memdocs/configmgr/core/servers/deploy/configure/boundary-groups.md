@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643260"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153416"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuración de grupos de límites para Configuration Manager
 
@@ -154,8 +154,16 @@ Si configura el contenido para distribuir a petición y no está disponible cuan
 
 ### <a name="client-installation"></a><a name="bkmk_ccmsetup"></a> Instalación de cliente
 
+El instalador del cliente de Configuration Manager, ccmsetup, puede obtener el contenido de instalación desde un origen local o a través de un punto de administración. Su comportamiento inicial depende de los parámetros de la línea de comandos que use para instalar el cliente:<!-- MEMDocs#286 -->
+
+- Si no usa los parámetros **/mp** o **/source**, ccmsetup intenta obtener una lista de puntos de administración de Active Directory o DNS.
+- Si solo especifica **/source**, se exige la instalación desde la ruta de acceso especificada. No detecta puntos de administración. Si no puede encontrar ccmsetup.cab en la ruta de acceso especificada, se produce un error en ccmsetup.
+- Si especifica tanto **/mp** como **/source**, comprobará los puntos de administración especificados y los detectará. Si no puede encontrar un punto de administración válido, recurre a la ruta de acceso de origen especificada.
+
+Para obtener más información sobre estos parámetros de ccmsetup, vea [Acerca de los parámetros y propiedades de instalación de cliente](../../../clients/deploy/about-client-installation-properties.md).
+
 <!--1358840-->
-Al instalar el cliente de Configuration Manager, el proceso ccmsetup contacta con el punto de administración para localizar el contenido necesario. El punto de administración devuelve puntos de distribución basados en la configuración del grupo de límites. Si define las relaciones que se establecen en el grupo de límites, el punto de administración devuelve los puntos de distribución en el orden siguiente:
+Cuando ccmsetup entra en contacto con el punto de administración para buscar el contenido necesario, el punto de administración devuelve los puntos de distribución en función de la configuración del grupo de límites. Si define las relaciones que se establecen en el grupo de límites, el punto de administración devuelve los puntos de distribución en el orden siguiente:
 
 1. Grupo de límites actual  
 2. Grupos de límites vecinos  

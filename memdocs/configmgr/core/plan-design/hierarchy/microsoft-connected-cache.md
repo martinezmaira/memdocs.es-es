@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842213"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878488"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Caché de conexión de Microsoft en Configuration Manager
 
@@ -26,7 +26,7 @@ ms.locfileid: "82842213"
 a partir de la versión 1906, puede instalar un servidor de caché con conexión de Microsoft en los puntos de distribución. Al almacenar en caché este contenido de forma local, los clientes pueden beneficiarse de la característica de Optimización de entrega y, además, puede ayudar a proteger los vínculos WAN.
 
 > [!NOTE]
-> A partir de la versión 1910, esta característica se llama **caché con conexión de Microsoft**. Antes se conocía como “caché en la red de Optimización de distribución (DOINC)”.
+> A partir de la versión 1910, esta característica se llama **caché con conexión de Microsoft**. Antes se conocía como “caché en la red de Optimización de distribución”.
 
 Este servidor de caché actúa como una caché transparente a petición para el contenido descargado mediante la Optimización de entrega. Use la configuración de cliente para asegurarse de que este servidor se ofrezca únicamente a los miembros del grupo de límites de Configuration Manager local.
 

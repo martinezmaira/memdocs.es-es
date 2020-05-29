@@ -10,12 +10,12 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688983"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877619"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Solución de problemas del Administrador de conversión de paquetes
 
@@ -58,10 +58,13 @@ En el panel de detalles del nodo **Paquetes** de la consola de Configuration Man
 
 ### <a name="enable-logging"></a>Habilitar registro
 
-Al habilitar el registro para el Administrador de conversión de paquetes, se registran todas sus acciones, excepciones y errores. 
+Al habilitar el registro para el Administrador de conversión de paquetes, se registran todas sus acciones, excepciones y errores.
 
 Para habilitar el registro para este componente en Configuration Manager, modifique **Microsoft.ConfigurationManagement.exe.Config**. De forma predeterminada, este archivo de configuración se encuentra en la ruta de acceso siguiente:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> A partir de la versión 1910, esta ruta de acceso cambió para usar la carpeta `Microsoft Endpoint Manager`. Asegúrese de que no usa una versión anterior del archivo que pudiera existir en otra carpeta.
 
 Inserte los siguientes elementos XML **switches** y **trace** en el elemento **system.diagnostics** después del último elemento **sources**:
 

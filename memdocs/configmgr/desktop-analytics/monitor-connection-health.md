@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 6eb0a99043eefcdb54c27a183fbc1e1eec8899bf
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268647"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864878"
 ---
 # <a name="monitor-connection-health"></a>Supervisión del estado de conexión
 
@@ -104,6 +104,9 @@ El dispositivo tiene los siguientes atributos:
 Configuration Manager detecta uno o más problemas de bloqueo que impiden la inscripción del dispositivo. Para más información, consulte la lista de [propiedades del dispositivo de Análisis de escritorio en Configuration Manager](#bkmk_config-issues).  
 
 Por ejemplo, el cliente de Configuration Manager no tiene al menos la versión 1902 (5.0.8790). Actualice el cliente a la versión más reciente. Considere la posibilidad de habilitar la actualización automática del cliente en el sitio Configuration Manager. Para obtener más información, vea [Actualizar clientes](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
+
+> [!TIP]
+> Hay un problema conocido con la actualización de seguridad extendida (ESU) de abril de 2020 para Windows 7 que hace que los dispositivos informen equivocadamente de este error. Para obtener más información, consulte [Notas de la versión](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 A partir de la versión 2002, puede identificar más fácilmente los problemas de configuración del proxy de clientes en dos áreas:
 
@@ -410,6 +413,9 @@ Si esta comprobación se realiza correctamente, el componente DiagTrack está co
 De lo contrario, podría mostrarse uno de los siguientes errores:
 
 - El componente Experiencia del usuario y telemetría asociadas (diagtrack.dll) está obsoleto. Compruebe los requisitos.  
+
+    > [!TIP]
+    > Hay un problema conocido con la actualización de seguridad extendida (ESU) de abril de 2020 para Windows 7 que hace que los dispositivos informen equivocadamente de este error. Para obtener más información, consulte [Notas de la versión](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - No se encuentra el componente de Experiencia del usuario y telemetría asociadas (diagtrack.dll). Compruebe los requisitos.  
 

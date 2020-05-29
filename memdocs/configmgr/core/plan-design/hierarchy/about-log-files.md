@@ -10,12 +10,12 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703753"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879024"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>Acerca de los archivos de registro en Configuration Manager
 
@@ -211,7 +211,10 @@ Por ejemplo, para el rol de punto de distribución:
 
 Para cambiar el nivel detallado del AdminUI.log para la consola de Configuration Manager, use el siguiente procedimiento:
 
-1. Abra el archivo de configuración de la consola, **Microsoft.ConfigurationManagement.exe.config**, en un editor XML como el Bloc de notas. El archivo de configuración predeterminado está en la siguiente ubicación: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. Abra el archivo de configuración de la consola, **Microsoft.ConfigurationManagement.exe.config**, en un editor XML como el Bloc de notas. El archivo de configuración predeterminado está en la siguiente ubicación: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+    > [!IMPORTANT]
+    > A partir de la versión 1910, esta ruta de acceso cambió para usar la carpeta `Microsoft Endpoint Manager`. Asegúrese de que no usa una versión anterior del archivo que pudiera existir en otra carpeta.
 
 1. En el elemento **system.diagnostics** > **orígenes** > **origen**, cambie el atributo **switchValue** de `Error` a `Verbose`. Por ejemplo:
 
@@ -240,7 +243,7 @@ Las siguientes ubicaciones son los valores predeterminados. Si ha personalizado 
 - Cliente: `C:\Windows\CCM\logs`
 - Servidor: `C:\Program Files\Microsoft Configuration Manager\Logs`
 - Punto de administración: `C:\SMS_CCM\Logs`
-- Consola de Configuration Manager: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Consola de Configuration Manager: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS: `C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>Ubicaciones de registro de secuencia de tareas

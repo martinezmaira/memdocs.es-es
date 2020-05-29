@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708383"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823986"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configuración de la generación de informes en Configuration Manager
 
@@ -130,7 +130,7 @@ Para obtener más información sobre cómo configurar sistemas de sitio, consult
 
     - **Cuenta de punto de Reporting Services**: Seleccione **Establecer** y, a continuación, seleccione la cuenta que se va a usar. SQL Server Reporting Services en el punto de servicios de informes usa esta cuenta para conectarse a la base de datos de sitio de Configuration Manager. Esta conexión sirve para recuperar los datos de un informe. Seleccione **Cuenta existente** para especificar una cuenta de usuario de Windows configurada previamente como cuenta de Configuration Manager. Seleccione **Nueva cuenta** para especificar una cuenta de usuario de Windows que no está configurada actualmente para su uso. Configuration Manager concede automáticamente acceso al usuario especificado a la base de datos del sitio.  
 
-        La cuenta que ejecuta Reporting Services debe pertenecer al grupo de seguridad local de dominio **Grupo de acceso de autorización de Windows**. También necesita el permiso **Lectura tokenGroupsGlobalAndUniversal** configurado como **Permitir**. Los usuarios de un dominio distinto al de la cuenta de punto de servicios de informes necesita una relación de confianza bidireccional entre los dominios para la correcta ejecución de los informes.
+        La cuenta que ejecuta Reporting Services debe pertenecer al grupo de seguridad local de dominio **Grupo de acceso de autorización de Windows**. Esto concede a la cuenta los permisos **Permitir lectura** en el atributo **tokenGroupsGlobalAndUniversal** para todos los objetos de usuario dentro del dominio. Los usuarios de un dominio distinto al de la cuenta de punto de servicios de informes necesita una relación de confianza bidireccional entre los dominios para la correcta ejecución de los informes.
 
         La cuenta de usuario de Windows especificada y la contraseña se cifran, y se almacenan en la base de datos de Reporting Services. Reporting Services recupera los datos de los informes de la base de datos del sitio mediante el uso de esta cuenta y contraseña.  
 

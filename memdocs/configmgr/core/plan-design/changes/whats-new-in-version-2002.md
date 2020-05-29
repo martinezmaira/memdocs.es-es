@@ -2,7 +2,7 @@
 title: Novedades de la versión 2002
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 2002 de la rama actual de Configuration Manager.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381560"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126488"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novedades de la versión 2002 de la rama actual de Configuration Manager
 
@@ -328,6 +328,15 @@ Para obtener más información, consulte [Sincronización de actualizaciones de 
 
 <!-- 5229962 -->
 Configuration Manager ha ampliado su compatibilidad con la incorporación de dispositivos a ATP de Microsoft Defender. Para obtener más información, consulte [Protección contra amenazas avanzada de Microsoft Defender (ATP)](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Incorporación de clientes Configuration Manager a ATP de Microsoft Defender a través del Centro de administración de Microsoft Endpoint Manager
+<!--5691658-->
+Ahora puede implementar directivas de incorporación de respuesta y detección de puntos de conexión de ATP de Microsoft Defender (EDR) en clientes administrados de Configuration Manager. Estos clientes no requieren inscripción en Azure AD o MDM y la directiva está destinada a colecciones de Configuration Manager en lugar de a grupos de Azure AD.
+
+Esta funcionalidad permite a los clientes administrar la incorporación de Intune MDM y del cliente de EDR/ATP de Configuration Manager desde una sola experiencia de administración: el Centro de administración de Microsoft Endpoint Manager. Para obtener más información, consulte [Directiva de detección y respuesta de puntos de conexión para la seguridad de puntos de conexión en Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> Necesitará el paquete acumulativo de revisiones, [KB4563473](https://support.microsoft.com/help/4563473), instalado en el entorno para esta característica.
 
 ### <a name="improvements-to-bitlocker-management"></a>Mejoras en la administración de BitLocker
 

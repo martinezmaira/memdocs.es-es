@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633319"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864915"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Inscripción de dispositivos en Análisis de escritorio
 
@@ -37,10 +37,10 @@ En la tabla siguiente se enumeran las actualizaciones de cada componente en las 
 | Versión del sistema operativo | Evaluador | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | Incluido<sup>[Nota 1](#bkmk_note1)</sup> | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Incluido | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | Incluido | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | Incluido | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Incluido | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | Incluido<sup>[Nota 1](#bkmk_note1)</sup> | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | Incluido<sup>[Nota 1](#bkmk_note1)</sup> | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | Incluido<sup>[Nota 1](#bkmk_note1)</sup> | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | Incluido<sup>[Nota 1](#bkmk_note1)</sup> | [Actualización acumulativa más reciente](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[Nota 2](#bkmk_note2)</sup> | [Paquete acumulativo mensual más reciente](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[Nota 3](#bkmk_note3)</sup> | [Paquete acumulativo mensual más reciente](https://support.microsoft.com/help/4009469) |
 
@@ -51,7 +51,7 @@ En la tabla siguiente se enumeran las actualizaciones de cada componente en las 
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a> Nota 1: Windows 10
 
-Aunque Windows 10 incluye estos componentes de forma predeterminada, los dispositivos Windows 10 requieren la actualización acumulativa más reciente para obtener todas las funcionalidades de Análisis de escritorio. Por ejemplo, para evaluar la compatibilidad del dispositivo con la versión más reciente del sistema operativo y obtener información casi en tiempo real de las implementaciones y el estado de inscripción.
+Aunque Windows 10 incluye estos componentes de forma predeterminada, los dispositivos Windows 10 requieren la actualización acumulativa más reciente para obtener todas las funcionalidades de Análisis de escritorio, como la evaluación de la compatibilidad del dispositivo con la versión más reciente del sistema operativo.
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a> Nota 2: Windows 8.1
 
