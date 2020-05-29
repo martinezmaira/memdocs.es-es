@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771168"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987718"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Usar un punto de distribución de nube en Configuration Manager
 
@@ -174,7 +174,9 @@ Al usar un punto de distribución de nube en su jerarquía, use esta informació
 
 ### <a name="deployment-settings"></a>Configuración de implementación
 
-- Al implementar una secuencia de tareas con la opción **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**, en el punto de administración no se incluye un punto de distribución de nube como una ubicación de contenido. Implemente la secuencia de tareas con la opción **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas** para que los clientes usen un punto de distribución de nube.  
+- **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**. A partir de la versión 1910, el motor de secuencia de tareas puede descargar paquetes a petición desde una instancia de CMG habilitada para contenido o un punto de distribución de nube. Este cambio proporciona una flexibilidad adicional con las implementaciones de actualización en contexto de Windows 10 en dispositivos basados en Internet.
+
+- **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**. En la versión 1906 de Configuration Manager y en versiones anteriores, otras opciones como **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas** no funcionan en este escenario. El motor de secuencia de tareas no puede descargar contenido desde un origen en la nube. El cliente de Configuration Manager debe descargar el contenido desde el origen de nube antes de iniciar la secuencia de tareas. Puede seguir usando esta opción en la versión 1910 si es necesario para satisfacer sus necesidades.
 
 - Un punto de distribución de nube no admite implementaciones de paquetes con la opción **Ejecutar programa desde el punto de distribución.** Use la opción de implementación **Descargar contenido desde el punto de distribución y ejecutar localmente**.  
 

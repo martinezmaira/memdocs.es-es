@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904671"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879046"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Novedades de la versión 1910 de la rama actual de Configuration Manager
 
@@ -123,7 +123,7 @@ Cuando se habilita la caché conectada de Microsoft en los puntos de distribuci�
 Para más información, vea [Caché con conexión de Microsoft en Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
 
 > [!NOTE]
-> La versión 1906 de la rama actual de Configuration Manager incluía la [caché en la red de Optimización de distribución](../hierarchy/microsoft-connected-cache.md) (DOINC), una aplicación instalada en Windows Server que todavía está en desarrollo. A partir de la versión 1910 de la rama actual, esta característica se llama caché conectada de Microsoft.
+> La versión 1906 de la rama actual de Configuration Manager incluía la [caché en la red de Optimización de distribución](../hierarchy/microsoft-connected-cache.md), una aplicación instalada en Windows Server que todavía está en desarrollo. A partir de la versión 1910 de la rama actual, esta característica se llama caché conectada de Microsoft.
 >
 > Cuando se instala la caché conectada en un punto de distribución de Configuration Manager, se descarga el tráfico del servicio de optimización de entrega en los orígenes locales. Para lograr este comportamiento, la caché conectada almacena en caché de eficazmente el contenido en el nivel de intervalo de bytes.
 

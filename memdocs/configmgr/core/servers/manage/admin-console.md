@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110039"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878371"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>Cómo usar la consola de Configuration Manager
 
@@ -228,7 +228,7 @@ Las siguientes notificaciones son más aplicables a la rama de Technical Preview
 - Discrepancia de versiones de consola (crítico): la versión de la consola no coincide con la versión del sitio  
 - Actualización de sitio disponible (advertencia): hay un nuevo paquete de actualización disponible  
 
-Para obtener más información y ayuda para la solución de problemas, vea el archivo **SmsAdminUI.log** en el equipo de la consola. De forma predeterminada, este archivo de registro está en la ruta de acceso siguiente: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
+Para obtener más información y ayuda para la solución de problemas, vea el archivo **SmsAdminUI.log** en el equipo de la consola. De forma predeterminada, este archivo de registro está en la ruta de acceso siguiente: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a> Panel de documentación en consola

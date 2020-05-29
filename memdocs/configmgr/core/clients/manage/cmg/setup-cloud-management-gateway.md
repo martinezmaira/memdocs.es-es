@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383740"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877429"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
@@ -223,11 +223,11 @@ Puede conectar sistemas a una instancia de CMG recién configurada en donde se c
 
 - Los sistemas cumplen alguna de las siguientes condiciones:
 
- - Cada uno tiene un certificado de autenticación de cliente válido, único y de confianza previamente emitido para él.
- 
- - Unido a dominio de Azure AD
- 
- - Unido a dominio de Azure AD híbrido.
+  - Cada uno tiene un certificado de autenticación de cliente válido, único y de confianza previamente emitido para él.
+
+  - Unido a dominio de Azure AD
+
+  - Unido a dominio de Azure AD híbrido.
 
 - No quiere o no puede reinstalar completamente el agente cliente existente.
 

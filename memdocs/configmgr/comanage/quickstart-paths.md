@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691243"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983825"
 ---
 # <a name="paths-to-co-management"></a>Rutas hacia la administración conjunta
 
@@ -45,7 +45,6 @@ Tendrá que configurar lo siguiente:
         - Para dominios federados
 - Configuración del agente cliente para la unión a Azure AD híbrido
 - Configuración de la inscripción automática de dispositivos en Intune
-- Asignación de licencias de usuario de Intune
 - Habilitación de la administración conjunta en Configuration Manager
 
 Para ver un tutorial sobre esta ruta, consulte [Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager](tutorial-co-manage-clients.md).
