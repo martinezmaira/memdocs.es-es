@@ -6,3 +6,9 @@
       href: device-sync-actions.md
     - name: Solución de problemas de acciones de dispositivos
       href: technical-reference.md
+- name: CMPivot para dispositivos conectados al inquilino (versión preliminar)
+  items:
+    - name: Información general de CMPivot
+      href: cmpivot-overview-attached.md
+    - name: Scripts de ejemplo de CMPivot
+      href: cmpivot-samples-attached.md
