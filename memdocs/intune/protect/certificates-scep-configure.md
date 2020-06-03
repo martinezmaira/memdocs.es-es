@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f649a99f6b3d632fea9e46dfdaee89450ebd23
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989276"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166134"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configuración de la infraestructura para admitir SCEP con Intune
 
@@ -224,9 +224,9 @@ Intune usa de forma predeterminada el valor configurado en la plantilla. Pero pu
 
 1. En la entidad de certificación, ejecute los comandos siguientes:
 
-   -**certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   -**net stop certsvc**
-   -**net start certsvc**
+   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
+   **net stop certsvc**  
+   **net start certsvc**    
 
 2. En la CA emisora, use el complemento Entidad de certificación para publicar la plantilla de certificado. Seleccione el nodo **Plantillas de certificado**, seleccione **Acción** > **Nueva** > **Plantilla de certificado que se va a emitir** y después la plantilla que ha creado en la sección anterior.
 
