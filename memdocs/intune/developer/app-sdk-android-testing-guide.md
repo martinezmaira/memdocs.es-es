@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6875dc873d44b77a24fe68f637d9329c9f5e1d9c
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343081"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165607"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Guía de pruebas del SDK de aplicaciones de Microsoft Intune para Android
 

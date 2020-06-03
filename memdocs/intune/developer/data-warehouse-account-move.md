@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 88b79cc3f149af025b4cb2c757017355bc9b4786
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881084"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166015"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Mover los datos de la cuenta de almacenamiento de datos de Intune 
 
