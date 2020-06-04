@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4f85c30c9472849d26802c8cdccd7a95006a3e4a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364167"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984016"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Control del acceso, las cuentas y las características de energía en dispositivos con varios usuarios o equipos compartidos mediante Intune
 
@@ -42,22 +42,43 @@ Al crear el perfil en Intune, se implementa o asigna el perfil a grupos de dispo
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
+   - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
+   - **Perfil**: seleccione **Dispositivo multiusuario compartido**.
+
+4. Seleccione **Crear**.
+5. En **Básico**, escriba las propiedades siguientes:
+
    - **Nombre**: escriba un nombre descriptivo para el nuevo perfil.
    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-   - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
-   - **Tipo de perfil**: seleccione **Dispositivo multiusuario compartido**.
 
-4. Configure las opciones para [Windows 10](shared-user-device-settings-windows.md) y versiones posteriores o [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+6. Seleccione **Siguiente**.
+7. En **Opciones de configuración**, las opciones que puede configurar serán diferentes, según la plataforma que haya elegido. Elija la plataforma para la configuración detallada:
 
-5. Seleccione **Aceptar** > **Crear** para guardar los cambios.
+    - [Windows 10 y versiones posteriores](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-Su perfil se crea y se muestra en la lista, pero aún no se realiza ninguna acción. Asegúrese de [asignar el perfil](device-profile-assign.md) a grupos de dispositivos en la organización.
+8. Seleccione **Siguiente**.
+
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+    Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los grupos de dispositivos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+    > [!NOTE]
+    > Asegúrese de asignar el perfil a grupos de dispositivos de la organización.
+
+11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
+
+La próxima vez que cada dispositivo se registre, se aplicará la directiva.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 - Vea todas las opciones de configuración para [Windows 10 y versiones posteriores](shared-user-device-settings-windows.md) y [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
-- [Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+- Una vez [asignado el perfil](device-profile-assign.md), [supervise su estado](device-profile-monitor.md).

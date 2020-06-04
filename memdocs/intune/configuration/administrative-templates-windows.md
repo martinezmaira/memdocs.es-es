@@ -1,12 +1,12 @@
 ---
 title: Usar plantillas para dispositivos Windows 10 en Microsoft Intune - Azure | Microsoft Docs
-description: Use plantillas administrativas de Microsoft Intune y el Administrador de puntos de conexión para crear grupos de valores de configuración para dispositivos Windows 10. Use estos valores en un perfil de configuración de dispositivo para controlar programas de Office, Microsoft Edge, proteger características de Internet Explorer, controlar el acceso a OneDrive, usar características de escritorio remoto, habilitar la reproducción automática, establecer la configuración de administración de energía, usar la impresión a través de HTTP, usar otras opciones de inicio de sesión de usuario y controlar el tamaño del registro de eventos.
+description: Use plantillas administrativas de Microsoft Intune y el Administrador de puntos de conexión para crear grupos de valores de configuración para dispositivos Windows 10. Use estas opciones en un perfil de configuración de dispositivo para controlar programas de Office, Microsoft Edge, proteger Internet Explorer, acceder a OneDrive, usar el escritorio remoto, habilitar la reproducción automática, establecer la configuración de administración de energía, usar la impresión a través de HTTP, controlar el inicio de sesión de los usuarios y cambiar el tamaño del registro de eventos.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254901"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990196"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Usar plantillas de Windows 10 para configurar opciones de directiva de grupo en Microsoft Intune
 
 Al administrar dispositivos en una organización, el objetivo es crear grupos de valores de configuración que se apliquen a otros grupos de dispositivos. Por ejemplo, hay varios grupos de dispositivos. Para el grupo A, se quiere asignar un conjunto concreto de valores configuración. Para el grupo B, se quiere asignar otro conjunto de valores configuración. También se quiere obtener una vista sencilla de los valores que se pueden configurar.
 
-Esta tarea se puede realizar con **Plantillas administrativas** de Microsoft Intune. Las plantillas administrativas incluyen cientos de valores que controlan características de la versión 77 Microsoft Edge y posteriores, Internet Explorer, programas de Microsoft Office, el escritorio remoto, OneDrive, contraseñas y PIN, y mucho más. Esta configuración permite a los administradores de grupo administrar las directivas de grupo mediante la nube.
+Esta tarea se puede realizar con **Plantillas administrativas** de Microsoft Intune. Las plantillas administrativas incluyen miles de opciones que controlan características de la versión 77 de Microsoft Edge y posteriores, Internet Explorer, programas de Microsoft Office, escritorio remoto, OneDrive, contraseñas, PIN y mucho más. Esta configuración permite a los administradores de grupo administrar las directivas de grupo mediante la nube.
 
 Esta característica se aplica a:
 
@@ -62,27 +62,27 @@ En este artículo se enumeran los pasos para crear una plantilla para dispositiv
 
 6. Seleccione **Siguiente**.
 
-7. En **Opciones de configuración**, configure las opciones que se aplican al dispositivo (**Configuración del equipo**) y la configuración que se aplica a los usuarios (**Configuración del usuario**):
+7. En **Opciones de configuración**, seleccione **Todas las configuraciones** para ver una lista alfabética de todas las opciones. También puede configurar opciones que sean aplicables a dispositivos (**Configuración del equipo**) y opciones que sean aplicables a usuarios (**Configuración de usuario**):
 
     > [!div class="mx-imgBorder"]
     > ![Aplicación de la configuración de la plantilla de ADMX a usuarios y dispositivos en el Administrador de puntos de conexión de Microsoft Intune](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. Al seleccionar **Configuración del equipo**, se muestran las categorías de configuración. Puede seleccionar cualquier categoría para ver la configuración disponible.
+8. Al seleccionar **Todas las configuraciones**, se muestra cada opción de configuración. Desplácese hacia abajo para usar las flechas anterior y siguiente para ver más opciones de configuración:
+
+    > [!div class="mx-imgBorder"]
+    > ![Lista de ejemplo de valores y uso de los botones Anterior y Siguiente](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+9. Seleccione cualquier valor. Por ejemplo, filtre por **Office** y seleccione **Activar exploración restringida**. Se muestra una descripción detallada del valor. Elija **Habilitado**, **Deshabilitado** o bien deje el valor como **Sin configurar** (valor predeterminado). La descripción detallada también explica lo que sucede cuando se elige **Habilitado**, **Deshabilitado** o **Sin configurar**.
+
+    > [!TIP]
+    > La configuración de Windows en Intune se correlaciona con la ruta de acceso de la directiva de grupo local que ve en el Editor de directivas de grupo local (`gpedit`).
+
+10. Al seleccionar **Configuración del equipo** o **Configuración del usuario**, se muestran las categorías de configuración. Puede seleccionar cualquier categoría para ver la configuración disponible.
 
     Por ejemplo, seleccione **Configuración del equipo** > **Componentes de Windows** > **Internet Explorer** para ver la configuración del dispositivo que se aplica a Internet Explorer:
 
     > [!div class="mx-imgBorder"]
     > ![Vea toda configuración de dispositivos que se aplica a Internet Explorer en el Administrador de puntos de conexión de Microsoft Intune](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png).
-
-9. También puede seleccionar **Todos los valores** para ver todas las opciones de configuración del dispositivo. Desplácese hacia abajo para usar las flechas anterior y siguiente para ver más opciones de configuración:
-
-    > [!div class="mx-imgBorder"]
-    > ![Lista de ejemplo de valores y uso de los botones Anterior y Siguiente](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-10. Seleccione cualquier valor. Por ejemplo, filtre por **Office** y seleccione **Activar exploración restringida**. Se muestra una descripción detallada del valor. Elija **Habilitado**, **Deshabilitado** o bien deje el valor como **Sin configurar** (valor predeterminado). La descripción detallada también explica lo que sucede cuando se elige **Habilitado**, **Deshabilitado** o **Sin configurar**.
-
-    > [!TIP]
-    > La configuración de Windows en Intune se correlaciona con la ruta de acceso de la directiva de grupo local que ve en el Editor de directivas de grupo local (`gpedit`).
 
 11. Haga clic en **Aceptar** para guardar los cambios.
 
@@ -104,7 +104,7 @@ En este artículo se enumeran los pasos para crear una plantilla para dispositiv
 14. En **Asignaciones**, seleccione el usuario o los grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
 
     Si el perfil se asigna a grupos de usuarios, las opciones configuradas de ADMX se aplican a cualquier dispositivo al que el usuario se inscriba e inicie sesión. Si el perfil se asigna a grupos de dispositivos, las opciones configuradas de ADMX se aplican a cualquier usuario que inicie sesión en ese dispositivo. Esta asignación se produce si el valor de ADMX es una configuración de equipo (`HKEY_LOCAL_MACHINE`) o una configuración de usuario (`HKEY_CURRENT_USER`). Con algunas opciones, una configuración de equipo asignada a un usuario también puede afectar a la experiencia de otros usuarios en ese dispositivo.
-    
+
     Para obtener más información, vea [Grupos de usuarios frente a grupos de dispositivos](device-profile-assign.md#user-groups-vs-device-groups).
 
     Seleccione **Siguiente**.
@@ -115,16 +115,22 @@ La siguiente vez que el dispositivo busca actualizaciones de configuración, se 
 
 ## <a name="find-some-settings"></a>Buscar algunos valores
 
-Hay cientos de valores disponibles en estas plantillas. Para que sea más fácil encontrar un valor concreto, use las características integradas:
+Hay miles de opciones disponibles en estas plantillas. Para que sea más fácil encontrar un valor concreto, use las características integradas:
 
-- En la plantilla, seleccione las columnas **Configuración**, **Estado**, **Tipo de configuración** o **Ruta** para ordenar la lista. Por ejemplo, seleccione la columna **Ruta de acceso** y use la flecha siguiente para ver la configuración en la ruta de acceso `Microsoft Excel`:
+- En la plantilla, seleccione las columnas **Configuración**, **Estado**, **Tipo de configuración** o **Ruta** para ordenar la lista. Por ejemplo, seleccione la columna **Ruta de acceso** y use la flecha siguiente para ver la configuración en la ruta de acceso `Microsoft Excel`.
 
-- En la plantilla, use el cuadro **Buscar** para buscar valores específicos. Puede buscar por configuración o por la ruta de acceso. Por ejemplo, busque `copy`. Aparecen todos los valores con `copy`:
+- En la plantilla, use el cuadro **Buscar** para buscar valores específicos. Puede buscar por configuración o por la ruta de acceso. Por ejemplo, seleccione **Todas las configuraciones** y busque `copy`. Aparecen todos los valores con `copy`:
 
   > [!div class="mx-imgBorder"]
   > ![Búsqueda de copia para mostrar las configuraciones del dispositivo en las plantillas administrativas de Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   En otro ejemplo, busque `microsoft word`. Aparecen los valores que puede establecer para el programa Microsoft Word. Busque `explorer` para ver los valores de Internet Explorer que puede agregar a la plantilla.
+
+- También puede restringir la búsqueda si solo selecciona **Configuración del equipo** o **Configuración del usuario**.
+
+  Por ejemplo, para ver todas las opciones de usuario de Internet Explorer disponibles, seleccione **Configuración del usuario** y busque `Internet Explorer`. Solo se mostrarán las opciones de Internet Explorer que se aplica a los usuarios:
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="En la plantilla ADMX, seleccione Configuración del usuario y busque o filtre por Internet Explorer en Microsoft Intune.":::
 
 ## <a name="next-steps"></a>Pasos siguientes
 

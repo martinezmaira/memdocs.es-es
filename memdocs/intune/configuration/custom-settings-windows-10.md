@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 05/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,67 +15,55 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b6646c67f9425d395bbec1e33c03f6f29b6af7e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361931"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428986"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Usar una configuración personalizada para dispositivos Windows 10 en Intune
 
-Con Microsoft Intune, puede agregar o crear una configuración personalizada para los dispositivos Windows 10 mediante "perfiles personalizados". Los perfiles personalizados son una característica de Intune diseñada para agregar una configuración de dispositivo y características que no están integradas Intune.
+En este artículo se enumeran y describen todas las diferentes opciones personalizadas que se pueden controlar en los dispositivos con Windows 10 y versiones posteriores. Como parte de su solución de administración de dispositivos móviles (MDM), use estas opciones para definir configuraciones que no estén integradas en Intune.
 
-Los perfiles personalizados de Windows 10 usan la configuración OMA-URI (identificador uniforme de recursos de Open Mobile Alliance) para configurar diferentes características. Esta configuración la suelen usar los fabricantes de dispositivos móviles para controlar las características en el dispositivo. 
+Para obtener más información sobre los perfiles personalizados, vea [Crear un perfil con una configuración personalizada en Intune](custom-settings-configure.md).
+
+Estos valores se agregan a un perfil de configuración de dispositivo en Intune y luego se asignan o implementan en los dispositivos con Windows 10.
+
+Esta característica se aplica a:
+
+- Windows 10 y versiones posteriores
+
+Los perfiles personalizados de Windows 10 usan la configuración OMA-URI (identificador uniforme de recursos de Open Mobile Alliance) para configurar diferentes características. Esta configuración la suelen usar los fabricantes de dispositivos móviles para controlar las características en el dispositivo.
 
 Windows 10 tiene disponibles muchos valores de proveedores de servicios de configuración (CSP), como el [proveedor de servicios de configuración de directivas (CSP de directivas)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 
 Si busca una configuración determinada, recuerde que el [perfil de restricción de dispositivos de Windows 10](device-restrictions-windows-10.md) incluye muchas configuraciones integradas. Por lo tanto, es posible que no necesite especificar valores personalizados.
 
-En este artículo:
+## <a name="before-you-begin"></a>Antes de comenzar
 
-- Se explica cómo crear un perfil personalizado para dispositivos Windows 10
-- Se incluye una lista de las configuraciones OMA-URI recomendadas
-- Se proporciona un ejemplo de un perfil personalizado que abre una conexión VPN
+[Cree un perfil personalizado de Windows 10](custom-settings-configure.md#create-the-profile).
 
-## <a name="create-the-profile"></a>Creación del perfil
+## <a name="oma-uri-settings"></a>Configuración de OMA-URI
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
-3. Escriba los valores siguientes:
+**Agregar**: Escriba los valores siguientes:
 
-    - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Asígnele un nombre a los perfiles para que pueda identificarlos de manera sencilla más adelante. Por ejemplo, un buen nombre de perfil es **Perfil personalizado de Windows 10**.
-    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-    - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
-    - **Tipo de perfil**: seleccione **Personalizado**.
+- **Nombre**: Escriba un nombre único para el valor OMA-URI que le ayude a identificarlo en la lista de valores de configuración.
+- **Descripción**: escriba una descripción con información general sobre la configuración y otros detalles importantes.
+- **OMA-URI** (distingue mayúsculas de minúsculas): escriba la configuración OMA-URI que quiere usar.
+- **Tipo de datos**: seleccione el tipo de datos que se va a usar para esta configuración OMA-URI. Las opciones son:
 
-4. En **Configuración OMA-URI personalizada**, seleccione **Agregar**. Escriba los valores siguientes:
+  - Base64 (archivo)
+  - Boolean
+  - Cadena (archivo XML)
+  - Fecha y hora
+  - String
+  - Punto flotante
+  - Integer
 
-    - **Nombre**: Escriba un nombre único para el valor OMA-URI que le ayude a identificarlo en la lista de valores de configuración.
-    - **Descripción**: escriba una descripción con información general sobre la configuración y otros detalles importantes.
-    - **OMA-URI** (distingue mayúsculas de minúsculas): escriba la configuración OMA-URI que quiere usar.
-    - **Tipo de datos**: seleccione el tipo de datos que se va a usar para esta configuración OMA-URI. Las opciones son:
+- **Valor**: escriba el valor de datos que quiere asociar con la configuración OMA-URI especificada. El valor depende del tipo de datos que ha seleccionado. Por ejemplo, si selecciona **Fecha y hora**, seleccione el valor en un selector de fecha.
 
-        - String
-        - Cadena (archivo XML)
-        - Fecha y hora
-        - Integer
-        - Punto flotante
-        - Boolean
-        - Base64 (archivo)
-
-    - **Valor**: escriba el valor de datos que quiere asociar con la configuración OMA-URI especificada. El valor depende del tipo de datos que ha seleccionado. Por ejemplo, si selecciona **Fecha y hora**, seleccione el valor en un selector de fecha.
-
-    Después de agregar algunos valores de configuración, puede seleccionar **Exportar**. Haga clic en **Exportar** para crear una lista de todos los valores agregados en un archivo de valores separados por comas (.csv).
-
-5. Haga clic en **Aceptar** para guardar los cambios. Continúe agregando más valores según sea necesario.
-6. Cuando termine, seleccione **Aceptar** > **Crear** para crear el perfil de Intune. Una vez hecho, el perfil aparece en la lista **Dispositivos - Perfiles de configuración**.
-
-## <a name="example"></a>Ejemplo
-
-En el ejemplo siguiente, la configuración **Connectivity/AllowVPNOverCellular** está habilitada. Este valor permite que un dispositivo Windows 10 abra una conexión VPN cuando se encuentre en una red de telefonía móvil.
-
-![Ejemplo de una directiva personalizada que contiene opciones de VPN](./media/custom-settings-windows-10/custom-policy-example.png)
+Después de agregar algunos valores de configuración, puede seleccionar **Exportar**. Haga clic en **Exportar** para crear una lista de todos los valores agregados en un archivo de valores separados por comas (.csv).
 
 ## <a name="find-the-policies-you-can-configure"></a>Buscar las directivas que se pueden configurar
 
@@ -87,4 +75,6 @@ Además, Intune no es compatible con todas las configuraciones que aparecen en l
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+[Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+
+[Más información sobre los perfiles personalizados de Intune](custom-settings-configure.md).

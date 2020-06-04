@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615062"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989314"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configuración de acciones para dispositivos no compatibles en Intune
 
@@ -55,11 +55,25 @@ Cuando se envía el correo electrónico, Intune incluye información sobre los d
 
 - **Bloquear de forma remota el dispositivo no conforme**: use esta acción para emitir un bloqueo remoto de un dispositivo. Después se pide al usuario un PIN o una contraseña para desbloquear el dispositivo. Más información sobre la característica [Bloqueo remoto](../remote-actions/device-remote-lock.md).
 
+  Las siguientes plataformas admiten esta acción:
+  - Android:
+    - Administrador de dispositivos Android
+    - Propietario del dispositivo Android Enterprise
+    - Perfil de trabajo de Android Enterprise
+    - Dispositivos de quiosco de Android Enterprise
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 y versiones posteriores
+
 - **Retirar el dispositivo no compatible**: esta acción quita todos los datos de empresa del dispositivo y quita este de la administración de Intune. Para evitar el borrado accidental de un dispositivo, esta acción admite una programación mínima de **30** días.
 
   Las siguientes plataformas admiten esta acción:
-  - Android
-  - iOS
+  - Android:
+    - Administrador de dispositivos Android
+    - Propietario del dispositivo Android Enterprise
+    - Perfil de trabajo de Android Enterprise
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 y versiones posteriores
@@ -111,7 +125,7 @@ A fin de crear una directiva de cumplimiento de dispositivos, vea la guía sigui
 
 Para enviar correo electrónico a los usuarios, cree una plantilla de mensaje de notificación. Cuando un dispositivo no es compatible, los detalles que especifica en la plantilla se muestran en el correo electrónico enviado a los usuarios.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Notificaciones** > **Crear notificación**.
 3. En *Aspectos básicos*, especifique la información siguiente:
 
@@ -142,7 +156,7 @@ Cuando se crea una directiva de cumplimiento de dispositivos, Intune crea autom�
 
 Puede agregar acciones opcionales al crear una directiva de cumplimiento o bien actualizar una directiva existente.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Directivas**, seleccione una de las directivas y, luego, **Propiedades**.
 
@@ -161,7 +175,7 @@ Puede agregar acciones opcionales al crear una directiva de cumplimiento o bien 
 
    - **Bloquear de forma remota el dispositivo no conforme**: cuando el dispositivo no sea compatible, bloquéelo. Esta acción obliga al usuario a escribir un PIN o una contraseña para desbloquear el dispositivo.
 
-   - **Retirar el dispositivo no compatible**: cuando el dispositivo no es compatible, quite todos los datos de empresa del dispositivo y quítelo de la administración de Intune. Para evitar el borrado accidental de un dispositivo, esta acción admite una programación mínima de **30** días.
+   - **Retirar el dispositivo no compatible**: cuando el dispositivo no es compatible, quite todos los datos de empresa del dispositivo y quítelo de la administración de Intune.
 
    - **Enviar notificación de inserción al usuario final**: configure esta acción para enviar una notificación de inserción acerca del no cumplimiento de un dispositivo a través de la aplicación Portal de empresa o de la aplicación de Intune en el dispositivo.
 

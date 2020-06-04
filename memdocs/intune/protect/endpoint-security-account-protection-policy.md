@@ -50,4 +50,4 @@ Consulte [Configuración del perfil de protección de cuentas](../protect/endpoi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configuración de directivas de seguridad de los puntos de conexión](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configuración de directivas de seguridad de puntos de conexión](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

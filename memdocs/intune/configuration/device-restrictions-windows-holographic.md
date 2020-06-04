@@ -70,7 +70,7 @@ Al crear un perfil de configuración de restricciones de dispositivos de Windows
 
 ## <a name="cloud-and-storage"></a>Nube y almacenamiento
 
-- **Cuenta Microsoft**: **Bloquear** impide que los usuarios asocien una cuenta Microsoft al dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir agregar y usar una cuenta de Microsoft.
+- **Cuenta Microsoft**: **Bloquear** impide que los usuarios asocien una cuenta Microsoft al dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir agregar y usar una cuenta Microsoft.
 
   [CSP de Accounts/AllowMicrosoftAccountConnection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)
 
@@ -140,8 +140,8 @@ Al crear un perfil de configuración de restricciones de dispositivos de Windows
 - **Compartir los datos de uso**: elija el nivel de datos de diagnóstico que se envía. Las opciones son:
 
   - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. no se fuerza ninguna opción. Los usuarios eligen el nivel que se envía. De forma predeterminada, el sistema operativo podría no compartir ningún dato.
-  - **Seguridad**: información necesaria para ayudar a proteger Windows, lo que incluye datos sobre la configuración del componente Experiencia del usuario y telemetría asociadas, la Herramienta de eliminación de software malintencionado y Microsoft Defender.
-  - **Básica**: información básica del dispositivo que incluye datos relacionados con la calidad, compatibilidad de aplicaciones, datos de uso de aplicaciones y datos del nivel de seguridad.
+  - **Seguridad**: información necesaria para ayudar a proteger Windows, incluidos datos sobre la configuración del componente Experiencia del usuario y telemetría asociadas, la Herramienta de eliminación de software malintencionado y Microsoft Defender.
+  - **Básica**: información básica del dispositivo que incluye datos relacionados con la calidad, la compatibilidad de aplicaciones, datos de uso de aplicaciones y datos del nivel de seguridad.
   - **Mejorada**: información adicional que incluye: cómo se usan Windows, Windows Server, System Center y las aplicaciones, cómo funcionan, datos avanzados de confiabilidad y datos de los niveles Seguridad y Básica.
   - **Completa**: todos los datos necesarios para identificar y ayudar a solucionar problemas, además de datos de los niveles Seguridad, Básica y Mejorada.
 

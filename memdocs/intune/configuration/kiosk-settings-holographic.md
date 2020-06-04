@@ -53,7 +53,7 @@ Solo se ejecuta una aplicación en el dispositivo. Cuando el usuario inicia sesi
 - **Tipo de inicio de sesión de usuario**: Seleccione el tipo de cuenta que ejecuta la aplicación. Las opciones son:
 
   - **Inicio de sesión automático (Windows 10, versión 1803 y versiones posteriores)** : no se admite en Windows Holographic for Business.
-  - **Cuenta de usuario local**: escriba la cuenta de usuario local (en el dispositivo). O bien, escriba una cuenta de Microsoft (MSA) asociada a la aplicación de pantalla completa. La cuenta que especifique inicia sesión en la pantalla completa.
+  - **Cuenta de usuario local**: escriba la cuenta de usuario local (en el dispositivo). O bien, escriba una cuenta Microsoft (MSA) asociada a la aplicación de pantalla completa. La cuenta que especifique inicia sesión en la pantalla completa.
 
     En el caso de quioscos en entornos de acceso público, se debe usar un tipo de usuario con privilegios mínimos.
 
@@ -79,7 +79,7 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
 - **Exploradores y aplicaciones**: agregue las aplicaciones que se van a ejecutar en el dispositivo de pantalla completa. Recuerde que puede agregar varias aplicaciones.
 
   - **Exploradores**
-    - **Agregar Microsoft Edge**: se agrega Microsoft Edge a la cuadrícula de aplicaciones y todas las aplicaciones se pueden ejecutar en esta pantalla completa. Elija el Tipo de modo de quiosco de Microsoft Edge:
+    - **Agregar Microsoft Edge**: se agrega Microsoft Edge a la cuadrícula de aplicaciones y todas las aplicaciones se pueden ejecutar en esta pantalla completa. Seleccione el Tipo de modo de quiosco de Microsoft Edge:
 
       - **Modo normal (versión completa de Microsoft Edge)** : Se ejecuta una versión completa de Microsoft Edge con todas las características de exploración. Los datos de usuario y el estado se guardan entre sesiones.
       - **Exploración pública (InPrivate)** : se ejecuta una versión de varias pestañas de InPrivate de Microsoft Edge con una experiencia adaptada a los quioscos que se ejecutan en modo de pantalla completa.

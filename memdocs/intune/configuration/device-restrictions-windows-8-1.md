@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59af48b36cb9c76ce7587457d4921356f542493f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 36a74e503f15fe982eeaf1addfed40d0c599cb2c
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407664"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556241"
 ---
 # <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Configuración de restricciones de dispositivos Windows 8.1 de Microsoft Intune
 
 En este artículo se muestra la configuración de restricciones de dispositivos de Microsoft Intune que se puede aplicar a los dispositivos con Windows 8.1.
+
+## <a name="before-you-begin"></a>Antes de comenzar
+
+[Creación de un perfil de configuración de restricciones de dispositivos de Windows 8.1](device-restrictions-configure.md#create-the-profile)
 
 ## <a name="general"></a>General
 
@@ -46,15 +50,19 @@ En este artículo se muestra la configuración de restricciones de dispositivos 
   - **Numérica**: la contraseña solo debe contener números.
 - **Longitud mínima de la contraseña**: escriba el número mínimo de caracteres requeridos, de 6 a 16. Por ejemplo, escriba `6` para exigir al menos seis números o caracteres de longitud de la contraseña.
 - **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el dispositivo, entre 1 y 14.
-- **Máximo de minutos de inactividad hasta que se bloquea la pantalla (en minutos)** : escriba el tiempo durante el que un dispositivo debe estar inactivo antes de que se bloquee automáticamente la pantalla, de 1 a 60 minutos. Por ejemplo, escriba `5` para bloquear el dispositivo tras estar 5 minutos inactivo. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+- **Máximo de minutos de inactividad hasta que se bloquea la pantalla (en minutos)** : escriba el tiempo durante el que un dispositivo debe estar inactivo antes de que se bloquee automáticamente la pantalla, de 1 a 60 minutos. Por ejemplo, escriba `5 Minutes` para bloquear el dispositivo tras estar 5 minutos inactivo. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
 - **Expiración de la contraseña (días)** : especifique el periodo de tiempo en días tras el cual debe cambiarse la contraseña del dispositivo, de 1 a 255. Por ejemplo, escriba `90` para que la contraseña caduque pasados 90 días. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 - **Impedir la reutilización de contraseñas anteriores**: escriba el número de contraseñas usadas previamente que no se pueden volver a usar, de 1 a 24. Por ejemplo, escriba `5` para que los usuarios no puedan establecer una nueva contraseña en su contraseña actual o en cualquiera de sus cuatro contraseñas anteriores. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
-- **PIN y contraseña de imagen**: **Bloquear** impide el uso de una imagen o un PIN como contraseña. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. Una contraseña de imagen permite que el usuario inicie sesión mediante gestos en una imagen. Un PIN permite que los usuarios inicien sesión rápidamente con un código de cuatro dígitos.
+- **PIN y contraseña de imagen**: Una contraseña de imagen permite que el usuario inicie sesión mediante gestos en una imagen. Un PIN permite que los usuarios inicien sesión rápidamente con un código de cuatro dígitos.
+
+  **Bloquear** impide el uso de una imagen o un PIN como contraseña. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
+
 - **Cifrado**: **requiera** el cifrado en los dispositivos, incluido en los archivos. No todos los dispositivos admiten el cifrado. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
 
   Para configurar esta opción y notificar correctamente el cumplimiento, configure también lo siguiente:
+
   - **Tipo de contraseña requerida**: establézcala en al menos **Numérica**.
-  - **Longitud mínima de la contraseña**: establézcala en al menos `4`.
+  - **Longitud mínima de la contraseña**: establézcala en al menos `6`.
 
   Para forzar el cifrado en los dispositivos que ejecutan Windows 8.1, debe instalar la [Actualización de cliente de diciembre de 2014 MDM en Windows](https://support.microsoft.com/kb/3013816) en cada dispositivo.
 
@@ -69,7 +77,7 @@ En este artículo se muestra la configuración de restricciones de dispositivos 
 - **Autorrelleno**: **Bloquear** impide que los usuarios cambien la configuración de Autocompletar en el explorador y que los campos de formulario se rellenen automáticamente. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir la característica Autorrellenar.
 - **Advertencias de fraude**: **Requerir** muestra advertencias de fraude en el explorador en el caso de posibles sitios web fraudulentos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 - **SmartScreen para Microsoft Edge**: **Bloquear** desactiva SmartScreen de Microsoft Defender. SmartScreen busca posibles correos de suplantación de identidad (phishing) y software malintencionado cuando se accede a sitios y descargas de archivos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría activar SmartScreen.
-- **JavaScript**: **Bloquear** impide que se ejecuten scripts en el explorador, como JavaScript. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
+- **Permitir JavaScript**: **Bloquear** impide que se ejecuten scripts en el explorador, como JavaScript. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir el uso de JavaScript.
 - **Elementos emergentes**: **Bloquear** activa el bloqueador de elementos emergentes para impedir que estos aparezcan en el explorador web. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 - **Encabezados de no seguimiento**: **Bloquear** impide que el dispositivo envíe encabezados de no seguimiento a los sitios web que soliciten información de seguimiento. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 - **Complementos**: **Bloquear** impide que los usuarios agreguen complementos en Internet Explorer. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
@@ -77,9 +85,9 @@ En este artículo se muestra la configuración de restricciones de dispositivos 
 - **Detección automática del sitio de intranet**: **Bloquear** impide que el explorador detecte automáticamente los sitios de intranet. Las reglas de asignación de intranet están bloqueadas. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 - **Nivel de seguridad de Internet**: establece el nivel de seguridad para sitios de Internet. Las opciones son:
   - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración.
-  - **Media**
-  - **Medio-alto**
   - **Alta**
+  - **Medio-alto**
+  - **Media**
 - **Nivel de seguridad de la intranet**: establece el nivel de seguridad para sitios de intranet. Las opciones son:
   - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración.
   - **Baja**
@@ -95,8 +103,12 @@ En este artículo se muestra la configuración de restricciones de dispositivos 
   - **Medio-alto**
   - **Alta**
 - **Nivel de seguridad alto para sitios restringidos**: Configura el nivel de seguridad para la zona de sitios restringidos. **Configurado** exige un nivel de seguridad alto para los sitios restringidos. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
-- **Acceso al menú Modo de empresa**: **Bloquear** impide que los usuarios accedan a las opciones del menú Modo de empresa en Internet Explorer. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. Si se establece en **Bloquear**, especifique también lo siguiente:
+- **Acceso al menú Modo de empresa**: **Bloquear** impide que los usuarios accedan a las opciones del menú Modo de empresa en Internet Explorer. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
+
+  Si se establece en **No configurado**, especifique también:
+
   - **URL de ubicación del informe de registro**: escriba una ubicación de URL donde obtener informes que muestren los sitios web con el acceso en modo de empresa activado.
+
 - **Ubicación de la lista de sitios del modo de empresa (solo escritorio)** : especifique la ubicación de la lista de sitios web que se pueden abrir en modo de empresa.
 
 ## <a name="cellular"></a>Móvil

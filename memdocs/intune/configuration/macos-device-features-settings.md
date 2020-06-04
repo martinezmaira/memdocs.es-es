@@ -47,7 +47,7 @@ En este artículo se enumeran estas opciones de configuración y se describe lo 
 
 - **Destinos de AirPrint**: **Agregue** una o varias impresoras AirPrint en las que los usuarios puedan imprimir desde sus dispositivos. Indique también:
   - **Puerto** (iOS 11.0+, iPadOS 13.0+): escriba el puerto de escucha del destino de AirPrint. Si se deja esta propiedad en blanco, AirPrint usa el puerto predeterminado.
-  - **Dirección IP**: escriba la dirección IPv4 o IPv6 de la impresora. Por ejemplo, escriba `10.0.0.1`. Si usa nombres de host para identificar las impresoras, puede obtener la dirección IP haciendo ping a la impresora en la aplicación Terminal. En la sección [Obtención de la dirección IP y la ruta de acceso](#get-the-ip-address-and-path) (en este artículo) se incluyen más detalles.
+  - **Dirección IP**: escriba la dirección IPv4 o IPv6 de la impresora. Por ejemplo, escriba `10.0.0.1`. Si usa nombres de host para identificar las impresoras, puede obtener la dirección IP haciendo ping a la impresora en la aplicación Terminal. En la sección [Obtención de la dirección IP y la ruta de acceso](#get-the-ip-address-and-path) (en este artículo) se incluyen más detalles.
   - **Ruta de acceso**: escriba la ruta de acceso al recurso de la impresora. La ruta de acceso suele ser `ipp/print` para las impresoras de la red. En la sección [Obtención de la dirección IP y la ruta de acceso](#get-the-ip-address-and-path) (en este artículo) se incluyen más detalles.
   - **TLS** (iOS 11.0+, iPadOS 13.0+): Las opciones son:
     - **No** (valor predeterminado): No se aplica Seguridad de la capa de transporte (TLS) al conectarse a impresoras AirPrint.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802028"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430094"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Configuración de la directiva antivirus de Microsoft Defender para Windows 10 en Microsoft Intune
 
-Vea la configuración de la directiva antivirus que puede configurar para el perfil antivirus de Microsoft Defender para Windows 10 en Microsoft Intune.
+Vea las opciones de directiva de antivirus de seguridad de puntos de conexión que se pueden configurar para el perfil de antivirus de Microsoft Defender para Windows 10 en Microsoft Intune como parte de una [directiva de seguridad de puntos de conexión](../protect/endpoint-security-policy.md).
 
 ## <a name="cloud-protection"></a>Protección de la nube
 

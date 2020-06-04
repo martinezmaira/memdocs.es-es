@@ -46,7 +46,7 @@ Para más información sobre esta característica, consulte [Uso de un perfil de
 
 - **Desactivación del modo S**: desactiva el modo S en el dispositivo. Las opciones son:
 
-  - **Sin configuración**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el dispositivo en modo S debería permanecer en modo S. Un usuario final puede desactivar el modo S en el dispositivo.
+  - **Sin configuración**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el dispositivo en modo S podría permanecer en modo S. Un usuario final puede desactivar el modo S en el dispositivo.
   - **Mantener en modo S**: Impide que el usuario final pueda desactivar el modo S en el dispositivo.
   - **Cambiar**: Permite a los usuarios desactivar el modo S en el dispositivo.
 

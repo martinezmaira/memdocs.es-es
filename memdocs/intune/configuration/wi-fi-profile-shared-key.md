@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28dfeecf841eb1b9c69f46b2002b350c83514e1d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086444"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990576"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Uso de un perfil de dispositivo personalizado para crear un perfil Wi-Fi con una clave precompartida en Intune
 
@@ -48,16 +48,21 @@ Esta característica es compatible con:
 
 ## <a name="create-a-custom-profile"></a>Creación de un perfil personalizado
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
+    - **Plataforma**: elija la plataforma.
+    - **Perfil**: seleccione **Personalizado**.
+
+4. Seleccione **Crear**.
+5. En **Básico**, escriba las propiedades siguientes:
+
     - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva válido es **Configuración del perfil Wi-Fi de OMA-URI personalizado para dispositivos del administrador de dispositivos Android**.
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-    - **Plataforma**: elija la plataforma.
-    - **Tipo de perfil**: seleccione **Personalizado**.
 
-4. En **Configuración**, seleccione **Agregar**. Escriba una nueva configuración de OMA-URI con las siguientes propiedades:
+6. Seleccione **Siguiente**.
+7. En **Opciones de configuración**, seleccione **Agregar**. Escriba una nueva configuración de OMA-URI con las siguientes propiedades:
 
     1. **Nombre**: escriba un nombre para la configuración de OMA-URI.
     2. **Descripción**: especifique una descripción para la configuración de OMA-URI. Esta configuración es opcional pero recomendada.
@@ -74,10 +79,22 @@ Esta característica es compatible con:
     4. **Tipo de datos**: Seleccione **Cadena**.
 
     5. **Valor**: pegue el código XML. Vea los [ejemplos](#android-or-windows-wi-fi-profile-example) de este artículo. Actualice cada valor para que coincida con la configuración de red. En la sección de comentarios del código se incluye información útil.
+    6. Haga clic en **Agregar** para guardar los cambios.
 
-5. Cuando haya terminado, seleccione **Aceptar** > **Crear** para guardar los cambios.
+8. Seleccione **Siguiente**.
 
-El perfil se muestra en la lista de perfiles. A continuación, [asigne este perfil](device-profile-assign.md) a los grupos de usuarios. Esta directiva solo se puede asignar a grupos de usuarios.
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+    Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o el grupo de usuarios que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+
+    > [!NOTE]
+    > Esta directiva solo se puede asignar a grupos de usuarios.
+
+    Seleccione **Siguiente**.
+
+11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
 La siguiente vez que se registre cada dispositivo, se aplicará la directiva y se creará un perfil de Wi-Fi en el dispositivo. A partir de entonces el dispositivo podrá conectarse automáticamente a la red.
 

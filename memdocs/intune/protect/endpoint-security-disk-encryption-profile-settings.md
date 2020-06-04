@@ -76,7 +76,7 @@ Perfiles y plataformas compatibles:
 
   Si la unidad se cifró antes de aplicar esta directiva, no se realiza ninguna acción adicional. Si el método y las opciones de cifrado coinciden con los de esta directiva, la configuración debe devolver un valor correcto. Si una opción de configuración de BitLocker en contexto no coincide con esta directiva, es probable que la configuración devuelva un error.
   
-  Para aplicar esta directiva a un disco ya cifrado, descifre la unidad y vuelva a aplicar la directiva MDM. El valor predeterminado de Windows es no requerir cifrado de unidad BitLocker. Aunque es posible que el cifrado automático de registro/inicio de sesión en Unión a Azure AD y la cuenta de Microsoft (MSA) apliquen la habilitación de BitLocker en el cifrado XTS-AES de 128 bits.
+  Para aplicar esta directiva a un disco ya cifrado, descifre la unidad y vuelva a aplicar la directiva MDM. El valor predeterminado de Windows es no requerir cifrado de unidad BitLocker. Aunque es posible que el cifrado automático de registro/inicio de sesión en Unión a Azure AD y la cuenta Microsoft (MSA) apliquen la habilitación de BitLocker en el cifrado XTS-AES de 128 bits.
 
   - **No configurado** (*valor predeterminado*): no se produce la aplicación de BitLocker.
   - **Sí**: se aplica el uso de BitLocker.
