@@ -10,12 +10,12 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 693f661f2a2db59335ec8e463842a0ad03c977f3
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: f9fafcc4b5462afb1b8e528837ea6ba61203e73d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724789"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347156"
 ---
 # <a name="manage-apps-for-on-premises-mdm-in-configuration-manager"></a>Administrar aplicaciones para MDM local en Configuration Manager
 
@@ -41,14 +41,14 @@ Configuration Manager admite los siguientes tipos de archivo de aplicación para
 |Tipo de dispositivo|Tipos de archivo admitidos|
 |-----------------|---------------------|
 |Windows Phone 8|xap|
-|Windows Phone 8,1|xap, appx, appxbundle|
+|Windows Phone 8.1|xap, appx, appxbundle|
 |Windows 10 Mobile|xap, appx, appxbundle|
 
 Implemente las aplicaciones de Windows Phone como **Disponible** o **Requerida**. También puede usar las implementaciones para desinstalar las aplicaciones.
 
 ## <a name="deploy-and-monitor-apps"></a>Implementación y supervisión de aplicaciones
 
-Implementar y supervisar aplicaciones para dispositivos móviles en Configuration Manager igual que en otros dispositivos, como equipos de escritorio y servidores. Para más información, consulte los siguientes artículos.
+Implementar y supervisar aplicaciones para dispositivos móviles en Configuration Manager igual que en otros dispositivos, como equipos de escritorio y servidores. Vea los siguientes artículos para más información:
 
 - [Implementar aplicaciones](../../apps/deploy-use/deploy-applications.md)
 - [Supervisar aplicaciones](../../apps/deploy-use/monitor-applications-from-the-console.md)
@@ -61,4 +61,4 @@ Revise las siguientes limitaciones específicas de los dispositivos móviles:
 
 ## <a name="next-step"></a>Paso siguiente
 
-Para realizar cambios, desinstalar o reemplazar una aplicación implementada por una nueva aplicación, debe administrarla igual que cualquier aplicación en Configuration Manager. Para obtener más información, vea [Actualizar y retirar aplicaciones](../../apps/deploy-use/update-and-retire-applications.md).
+Para realizar cambios, desinstalar o reemplazar una aplicación implementada por una nueva aplicación, debe administrarla igual que cualquier aplicación en Configuration Manager. Para obtener más información, vea [Revisar y sustituir aplicaciones](../../apps/deploy-use/revise-and-supersede-applications.md).
