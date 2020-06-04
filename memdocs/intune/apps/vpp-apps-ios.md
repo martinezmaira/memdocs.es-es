@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef23854fd3fee0883f6f91415a40ebbcc1b3c240
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80620571"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988513"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Administración de aplicaciones de iOS y macOS compradas a través del Programa de Compras por Volumen de Apple con Microsoft Intune
 
@@ -50,7 +50,7 @@ Las aplicaciones compradas se pueden asignar a grupos con dos tipos de licencias
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Inicio de sesión en App Store | No es necesario. | Cada usuario final debe usar un ID de Apple único cuando se le pida que inicie sesión en App Store. |
 | Configuración del dispositivo que bloquea el acceso a App Store | Las aplicaciones se pueden instalar y actualizar mediante el Portal de empresa. | La invitación para unirse al VPP de Apple requiere acceso a App Store. Si ha configurado una directiva para deshabilitar App Store, las licencias de aplicaciones de VPP basadas en usuario no funcionarán. |
-| Actualización automática de la aplicación | Tal como se configura por el administrador de Intune en la configuración del token del programa de Compras por Volumen (PCV) de Apple, donde el tipo de asignación de la aplicación es necesario.<p>Si el tipo de asignación está disponible para los dispositivos inscritos, las actualizaciones de aplicaciones disponibles se pueden instalar desde el Portal de empresa. | Tal y como lo configuró el usuario final en la configuración personal de App Store. El administrador de Intune no puede administrarlo. |
+| Actualización automática de la aplicación | Tal y como lo configuró el administrador de Intune en la configuración del token de VPP de Apple.<p>Si el tipo de asignación está disponible para los dispositivos inscritos, las actualizaciones de aplicaciones disponibles también se pueden instalar desde el Portal de empresa seleccionando la acción **Actualizar** en la página de detalles de la aplicación. | Tal y como lo configuró el usuario final en la configuración personal de App Store. El administrador de Intune no puede administrarlo. |
 | Inscripción de usuarios | No compatible. | Compatible con identificadores de Apple administrados. |
 | Libros | No compatible. | Compatible. |
 | Licencias en uso | 1 licencia por dispositivo. La licencia se asocia con el dispositivo. | 1 licencia para un máximo de 5 dispositivos con el mismo ID de Apple personal. La licencia se asocia con el usuario.<p>Un usuario final asociado a un ID de Apple personal y un ID de Apple administrado en Intune consume 2 licencias de aplicación. |
@@ -88,11 +88,11 @@ Migre el contenido y los tokens de VPP adquiridos existentes a Apps y libros en 
 2. Asegúrese de que todos los compradores de PCV de su organización hayan completado el paso 1 antes de continuar.
 3. Compruebe que todas las licencias y aplicaciones adquiridas se han migrado a Apps y libros en Apple Business Manager o Apple School Manager.
 4. Descargue el nuevo token de ubicación; para ello, vaya a **Apple Business (o School) Manager** > **Ajustes** > **Apps y libros** > **My Server Tokens** (Mis tokens de servidor).
-5. Actualice el token de ubicación en el Centro de administración de Microsoft Endpoint Manager. Para ello, vaya a **Administración de inquilinos** > **Conectores y tokens** > **Tokens de VPP de Apple** y sincronice el token.
+5. Actualice el token de ubicación en el Centro de administración de Microsoft Endpoint Manager. Para ello, vaya a **Administración de inquilinos** > **Conectores y tokens** > **Tokens de VPP de Apple** y cargue manualmente el token.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Carga de un token de VPP o de ubicación de Apple
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Tokens de VPP de Apple**.
 3. En la lista del panel de tokens del VPP, seleccione **Crear**.
 4. En el panel **Crear token de VPP**, especifique la información siguiente:
@@ -108,7 +108,7 @@ Migre el contenido y los tokens de VPP adquiridos existentes a Apps y libros en 
     - **Actualizaciones automáticas de la aplicación**: elija entre **activar** o **desactivar** las actualizaciones automáticas. Cuando se habilite, Intune detectará las actualizaciones de la aplicación de VPP dentro de la App Store y las insertará automáticamente en el dispositivo cuando este se registre.
 
         > [!NOTE]
-        > Las actualizaciones automáticas de la aplicación para aplicaciones del PCV de Apple actualizarán automáticamente solo las aplicaciones implementadas con la intención de instalación **Obligatorio**. En el caso de aplicaciones implementadas con la intención de instalación **Disponible**, la actualización automática genera un mensaje de estado dirigido al administrador en el que le informa de que hay disponible una versión nueva de la aplicación. Para ver este mensaje de estado, hay que seleccionar la aplicación, seleccionar la opción Estado de instalación del dispositivo y, finalmente, consultar Detalles del estado.  
+        > Las actualizaciones automáticas de la aplicación para aplicaciones de VPP de Apple se actualizarán automáticamente para las aplicaciones implementadas con las intenciones de instalación **Obligatorio** y **Disponible**. En el caso de aplicaciones implementadas con la intención de instalación **Disponible**, la actualización automática genera un mensaje de estado dirigido al administrador en el que le informa de que hay disponible una versión nueva de la aplicación. Para ver este mensaje de estado, hay que seleccionar la aplicación, seleccionar la opción Estado de instalación del dispositivo y, finalmente, consultar Detalles del estado.  
 
     - **Concedo permiso a Microsoft para enviar información del usuario y del dispositivo a Apple.** -Debe seleccionar **Acepto** para continuar. Para revisar qué datos envía Microsoft a Apple, consulte [Datos que Intune envía a Apple](../protect/data-intune-sends-to-apple.md).
 5. Cuando haya terminado, seleccione **Crear**. El token se muestra en el panel de la lista de tokens.

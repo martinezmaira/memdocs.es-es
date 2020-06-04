@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364128"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401788"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Solución de problemas de directivas y perfiles en Intune
 
@@ -39,12 +39,12 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 
 1. En el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Solución de problemas y soporte técnico**:
 
-    ![En Intune, vaya a Ayuda y soporte técnico, y haga clic en Solucionar problemas](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="En el Centro de administración de Endpoint Manager e Intune, vaya a Solución de problemas y soporte técnico.":::
 
 2. Haga clic en **Seleccionar el usuario** > seleccione el usuario que tenga un problema > **Seleccionar**.
 3. Confirme que se muestran marcas de verificación de color verde para **Licencia de Intune** y **Estado de la cuenta**:
 
-    ![En Intune, haga clic en el usuario y confirme que se muestran marcas de verificación de color verde para el estado en Licencia de Intune y Estado de la cuenta](./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="En Intune, seleccione el usuario y confirme que Licencia de Intune y Estado de la cuenta tienen marcas de verificación verdes en el estado.":::
 
     **Vínculos de ayuda**:
 
@@ -63,11 +63,11 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
  
         - Si el valor de esta columna es **No registrado**, es posible que haya un problema con la inscripción. Normalmente, anular la inscripción y volver a inscribir el dispositivo resuelve este estado.
 
-    - **Conforme con Intune**: debe ser **Sí**. Si se muestra **No**, es posible que haya un problema con las directivas de cumplimiento, o bien que el dispositivo no se conecte al servicio de Intune. Por ejemplo, es posible que el dispositivo esté apagado o que no tenga una conexión de red. Finalmente, el dispositivo pasa a ser no compatible, posiblemente después de 30 días.
+    - **Conforme con Intune**: el valor debe ser **Sí**. Si se muestra **No**, es posible que haya un problema con las directivas de cumplimiento, o bien que el dispositivo no se conecte al servicio de Intune. Por ejemplo, es posible que el dispositivo esté apagado o que no tenga una conexión de red. Finalmente, el dispositivo pasa a ser no compatible, posiblemente después de 30 días.
 
         Para más información, vea [Introducción a las directivas de cumplimiento de dispositivos](../protect/device-compliance-get-started.md).
 
-    - **Conforme con Azure AD**: debe ser **Sí**. Si se muestra **No**, es posible que haya un problema con las directivas de cumplimiento, o bien que el dispositivo no se conecte al servicio de Intune. Por ejemplo, es posible que el dispositivo esté apagado o que no tenga una conexión de red. Finalmente, el dispositivo pasa a ser no compatible, posiblemente después de 30 días.
+    - **Conforme con Azure AD**: el valor debe ser **Sí**. Si se muestra **No**, es posible que haya un problema con las directivas de cumplimiento, o bien que el dispositivo no se conecte al servicio de Intune. Por ejemplo, es posible que el dispositivo esté apagado o que no tenga una conexión de red. Finalmente, el dispositivo pasa a ser no compatible, posiblemente después de 30 días.
 
         Para más información, vea [Introducción a las directivas de cumplimiento de dispositivos](../protect/device-compliance-get-started.md).
 
@@ -93,7 +93,7 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 
         - **No aplicable**: esta directiva no se admite en esta plataforma. Por ejemplo, las directivas de iOS/iPadOS no funcionan en Android. Las directivas de Samsung KNOX no funcionan en dispositivos Windows.
         - **Conflicto**: hay una configuración existente en el dispositivo que Intune no puede invalidar. O bien, ha implementado dos directivas con la misma configuración mediante valores diferentes.
-        - **Pendiente**: el dispositivo no se ha registrado con Intune para recibir la directiva. O bien, el dispositivo ha recibido la directiva, pero no ha informado del estado a Intune.
+        - **Pendiente**: el dispositivo no se ha conectado a Intune para obtener la directiva. O bien, el dispositivo ha recibido la directiva, pero no ha informado del estado a Intune.
         - **Errores**: busque los errores y las posibles resoluciones en [Solucionar problemas de acceso a los recursos de la empresa](../fundamentals/troubleshoot-company-resource-access-problems.md).
 
         **Vínculos de ayuda**: 
@@ -103,7 +103,7 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>No está seguro de si se ha aplicado correctamente un perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Todos los dispositivos** > seleccione el dispositivo > **Configuración del dispositivo**. 
 
     Todos los dispositivos enumeran sus perfiles. Cada perfil tiene un **estado**. El estado se aplica cuando todos los perfiles asignados, incluidos los requisitos y las restricciones de hardware y del sistema operativo, se consideran de forma conjunta. Entre los estados posibles se incluyen los siguientes:
@@ -114,7 +114,7 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 
     - **Pendiente**: el perfil ha enviado al dispositivo, pero no ha informado del estado a Intune. Por ejemplo, el cifrado en Android requiere que el usuario final lo habilite y, por tanto, la directiva podría mostrarse como pendiente.
 
-**Vínculo de utilidad**: [Supervisar perfiles de dispositivo](../configuration/device-profile-monitor.md)
+**Vínculo de ayuda**: [Supervisar perfiles de dispositivo](../configuration/device-profile-monitor.md)
 
 > [!NOTE]
 > Cuando dos directivas con distintos niveles de restricción se aplican al mismo dispositivo o usuario, la directiva más restrictiva es la que se aplica.
@@ -126,9 +126,9 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 - [Solución de problemas de configuración personalizada de CSP para Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (abre otro sitio de Microsoft)
 - [Directiva de grupo de Windows 10 frente a directiva de MDM de Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (abre otro sitio de Microsoft)
 
-## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerta: error al guardar las reglas de acceso en Exchange
+## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerta: Error al guardar las reglas de acceso en Exchange
 
-**Problema**: recibe la alerta **Error al guardar las reglas de acceso en Exchange**  en la consola de administración.
+**Problema**: recibe la alerta **Error al guardar las reglas de acceso en Exchange** en la consola de administración.
 
 Si crea directivas en el área de trabajo Directiva de Exchange local (consola de administración) pero usa Office 365, Intune no aplica las opciones configuradas de la directiva. En la alerta, tenga en cuenta el origen de la directiva. En el área de trabajo Directiva de Exchange local, elimine las reglas heredadas. Las reglas heredadas son reglas de Exchange globales en Intune para Exchange local y no son pertinentes para Office 365. Después, cree una directiva para Office 365.
 

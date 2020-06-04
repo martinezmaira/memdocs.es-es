@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 5/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d1b13d29f42778d73d4df4a86127b070db5dc601
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881033"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989806"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Uso de credenciales derivadas en Microsoft Intune
 
@@ -63,7 +63,7 @@ Intune admite credenciales derivadas en las siguientes plataformas:
 
 Intune admite un solo emisor de credenciales derivadas por inquilino. Puede configurar Intune para que funcione con los siguientes emisores:
 
-- **DISA Purebred** (solo iOS): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (solo iOS): https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
@@ -112,6 +112,7 @@ A continuación se indican las consideraciones clave de cada asociado admitido. 
 Revise el flujo de trabajo del usuario específico de la plataforma para los dispositivos que se van a usar con las credenciales derivadas.
 
 - [iOS e iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Dispositivos Android Enterprise totalmente administrados](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **Los requisitos clave incluyen lo siguiente**:
 
@@ -187,7 +188,7 @@ Evite exigir el uso de una credencial derivada para acceder a un proceso que se 
 
 Antes de crear directivas que requieran el uso de una credencial derivada, configure un emisor de credenciales en la consola de Intune. Un emisor de credenciales derivadas es una configuración aplicada a todo el inquilino. Los inquilinos solo admiten un emisor a la vez.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Credenciales derivadas**.
 
     > [!div class="mx-imgBorder"]
@@ -226,7 +227,10 @@ Además de implementar la aplicación con Intune, configure una VPN por aplicaci
   
 1. Descargue la aplicación DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.
 
-2. Implemente la aplicación DISA Purebred en Intune. Vea [Incorporación de una aplicación de línea de negocio de iOS a Microsoft Intune](../apps/lob-apps-ios.md).
+2. Implemente la aplicación DISA Purebred en Intune. 
+
+   - Vea [Incorporación de una aplicación de línea de negocio de iOS a Microsoft Intune](../apps/lob-apps-ios.md).
+   - Consulte [Incorporación de una aplicación de línea de negocio de Android a Microsoft Intune](../apps/lob-apps-android.md)
 
 3. [Cree una VPN por aplicación](../configuration/vpn-settings-configure.md) para la aplicación DISA Purebred.
 
@@ -255,7 +259,7 @@ Puede especificar **credenciales derivadas** para los tipos de perfil y propósi
 
 Use credenciales derivadas para la autenticación basada en certificados en sitios web y aplicaciones. Para entregar una credencial derivada para la autenticación de aplicaciones:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba los valores siguientes:
 
@@ -296,7 +300,7 @@ Después de cambiar el emisor, se solicitará a los usuarios que obtengan una nu
 > [!IMPORTANT]
 > Si elimina un emisor y acto seguido vuelve a configurar ese mismo emisor, deberá actualizar los perfiles y dispositivos para usar las credenciales derivadas de ese emisor. Las credenciales derivadas obtenidas antes de eliminar el emisor ya no son válidas.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Credenciales derivadas**.
 3. Seleccione **Eliminar** para quitar el emisor de credenciales derivadas actual.
 4. Configure un nuevo emisor.

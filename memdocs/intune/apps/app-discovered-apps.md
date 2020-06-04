@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078403"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988722"
 ---
 # <a name="intune-discovered-apps"></a>Aplicaciones descubiertas de Intune
 
@@ -33,7 +33,7 @@ Las **aplicaciones descubiertas** de Intune es una lista de aplicaciones detecta
 
 Intune proporciona una lista agregada de aplicaciones detectadas en los dispositivos inscritos en Intune del inquilino.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Supervisar** > **Aplicaciones detectadas**.
 
 >[!NOTE]
@@ -43,7 +43,7 @@ Intune proporciona una lista agregada de aplicaciones detectadas en los disposit
 
 Intune también proporciona la lista de aplicaciones detectadas de cada dispositivo del inquilino.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Todos los dispositivos**.
 3. Seleccione un dispositivo.
 4. Para ver las aplicaciones detectadas de este dispositivo , seleccione **Aplicaciones detectadas** en la sección **Supervisión**.
@@ -54,7 +54,7 @@ En la lista siguiente se proporciona el tipo de plataforma de aplicaciones, las 
 
 | Plataforma | Para dispositivos personales | Para dispositivos propiedad de la empresa | Ciclo de actualización |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Nota de Windows 10 (aplicaciones Win32): [Requiere la Extensión de administración de Intune](intune-management-extension.md) en el dispositivo | No aplicable | Todas las aplicaciones instaladas en el dispositivo | Cada 24 horas a partir de la inscripción del dispositivo |
+| Nota de Windows 10 (aplicaciones Win32): [Requiere la Extensión de administración de Intune](intune-management-extension.md) en el dispositivo | No aplicable | Aplicaciones MSI instaladas en el dispositivo | Cada 24 horas a partir de la inscripción del dispositivo |
 | Windows 10 (aplicaciones modernas) | Solo aplicaciones modernas administradas | Todas las aplicaciones modernas instaladas en el dispositivo | Cada 7 días a partir de la inscripción de dispositivos |
 | Windows 8.1 | Solo aplicaciones administradas | Solo aplicaciones administradas | Cada 7 días a partir de la inscripción de dispositivos |
 | Windows Phone 8 | Solo aplicaciones administradas | Solo aplicaciones administradas | Cada 7 días a partir de la inscripción de dispositivos |

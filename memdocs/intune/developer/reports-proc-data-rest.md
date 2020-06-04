@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e036e139e97ce033b3269ba0b8d5cf202fad773
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360033"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864963"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obtener datos de la API de almacenamiento de datos de Intune con un cliente de REST
 
@@ -66,7 +66,7 @@ Ahora tiene una aplicación definida en Azure. Conceda acceso a la API de Micros
 7. Elija **Seleccionar**.
 8. Marque la casilla **Permisos delegados** para agregar la opción **Obtener información del almacén de datos de Microsoft Intune**.
 
-    ![Autorización del acceso: API de Microsoft Intune](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
+    ![Habilitación de acceso: API de Microsoft Intune](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
 
 9. Elija **Seleccionar**.
 10. Seleccione **Listo**.
@@ -81,7 +81,7 @@ Puede trabajar con la API de almacenamiento de datos de Intune mediante un clien
 
 Necesita la información siguiente para realizar una llamada REST mediante Postman:
 
-| Atributo        | Description                                                                                                                                                                          | Ejemplo                                                                                       |
+| Atributo        | Descripción                                                                                                                                                                          | Ejemplo                                                                                       |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Dirección URL de devolución de llamada     | Use este parámetro como la dirección URL de devolución de llamada en la página de configuración de la aplicación.                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
 | Nombre del token       | Una cadena que se usa para pasar las credenciales a la aplicación de Azure. El proceso genera el token para que pueda realizar una llamada a la API de almacenamiento de datos.                          | Portador                                                                                        |
@@ -216,6 +216,7 @@ El ejemplo siguiente contiene un cliente REST simple. El código usa la clase **
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
+   }
    }
    }
    ```

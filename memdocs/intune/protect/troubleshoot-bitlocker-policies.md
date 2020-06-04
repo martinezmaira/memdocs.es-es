@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079202"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428970"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Solución de problemas de directivas de BitLocker en Microsoft Intune
 
@@ -66,7 +66,7 @@ Como primer paso, determine si la directiva de Intune se ha implementado correct
 
 Al usar la directiva de configuración de dispositivos para configurar BitLocker, puede comprobar el estado de la directiva en el portal de Intune.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Perfiles de configuración** y, luego, el perfil que contiene la configuración de BitLocker.
 
@@ -169,11 +169,11 @@ Ahora debería tener una buena idea de cómo confirmar que Intune ha implementad
      
 El **cifrado de BitLocker no se realiza de forma silenciosa**: ha configurado una directiva de Endpoint Protection con la opción "Advertencia para otro cifrado de disco" establecida en bloquear, y el asistente para cifrado sigue apareciendo:
 
-- **Confirmar que la versión de Windows admite el cifrado silencioso**: esto requiere la versión mínima 1803. Si el usuario no es un administrador del dispositivo, se requiere la versión mínima 1809. Además, la versión 1809 agrega compatibilidad con dispositivos que no admiten el modo de espera moderno.
+- **Confirmar que la versión de Windows admite el cifrado silencioso**: esto requiere la versión mínima 1803. Si el usuario no es administrador en el dispositivo, se requiere una versión mínima de 1809. Además, la versión 1809 agrega compatibilidad con dispositivos que no admiten el modo de espera moderno.
 
 El **dispositivo cifrado con BitLocker se muestra como no compatible con las directivas de cumplimiento de Intune**: el problema se produce cuando el cifrado de BitLocker no finaliza. En función de factores como el tamaño del disco, el número de archivos y la configuración de BitLocker, el cifrado de BitLocker puede tardar mucho tiempo. Una vez completado el cifrado, el dispositivo se mostrará como compatible. Los dispositivos también pueden dejar de ser compatibles temporalmente justo después de una instalación reciente de actualizaciones de Windows.
 
-**Los dispositivos se cifran con un algoritmo de 128 bits cuando la directiva especifica 256 bits**: de forma predeterminada, Windows 10 cifrará una unidad con el cifrado XTS-AES de 128 bits. Vea esta guía para [establecer el cifrado de 256 bits para BitLocker durante Autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+**Los dispositivos se cifran con un algoritmo de 128 bits cuando la directiva especifica 256 bits**: de forma predeterminada, Windows 10 cifra una unidad con cifrado XTS-AES de 128 bits. Vea esta guía para [establecer el cifrado de 256 bits para BitLocker durante Autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
 
 
 **Ejemplo de investigación**

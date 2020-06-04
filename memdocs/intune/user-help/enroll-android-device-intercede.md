@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/17/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8afc499f85e91658b411a25988ac858ca59030cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e82d8f27b7ffbce663ee64030a6d933bf1684dc1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81616052"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880600"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>Configuración de un dispositivo Android con Portal de empresa e Intercede
 
@@ -135,7 +135,7 @@ En esta sección se digitaliza el código QR proporcionado por la empresa.  Cuan
 ### <a name="token-enrollment"></a>Inscripción de token  
 En esta sección se especifica el token proporcionado por la empresa. Cuando termina, se le vuelve a redirigir a los pasos de inscripción del dispositivo.  
 
-1. En la pantalla de inicio de sesión de Google, en el cuadro **Correo electrónico o teléfono**, escriba **afw#setup**. Pulse **Siguiente**. 
+1. En la pantalla de inicio de sesión de Google, en el cuadro **Correo electrónico o teléfono**, escriba **afw#setup**. Luego, pulse **Siguiente**. 
 
    ![Imagen de ejemplo de la pantalla de inicio de sesión de Google con "afw#setup" escrito en el campo.](./media/token-intune-app-01.png)   
 
@@ -162,7 +162,7 @@ En esta sección se especifica el token proporcionado por la empresa. Cuando ter
 
    1. Pulse el vínculo que lleva a las instrucciones de configuración de la organización. Si la organización no proporciona instrucciones adicionales, se le enviará a este artículo.
 
-   2. Pulse **Comenzar**.  
+   2. Pulse **COMENZAR**.  
 
    > [!div class="mx-imgBorder"]
    > ![Captura de pantalla de ejemplo de la pantalla "Configurar el acceso a la tarjeta inteligente móvil" de Portal de empresa.](./media/smart-card-open-entrust-android.png)
@@ -173,7 +173,7 @@ En esta sección se especifica el token proporcionado por la empresa. Cuando ter
 
 5. Cuando se le pregunte qué perfil quiere usar, seleccione la opción para activar con una credencial móvil. Aparece un código QR.  
 
-6. Vuelva a su dispositivo Android. En la pantalla **Obtener un código QR** de Portal de empresa, pulse **Siguiente**.
+6. Vuelva a su dispositivo Android. En la pantalla Portal de empresa > **Obtener un código QR** y pulse **SIGUIENTE**.
 
     > [!div class="mx-imgBorder"]
     > ![Captura de pantalla de ejemplo de la pantalla "Obtener un código QR" de Portal de empresa.](./media/get-qr-code-entrust-android.png)

@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a9be644a47a361cf29e7b7132b2c87a4921553ea
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359157"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989438"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Configuración de dispositivos con Windows 10 y Windows Holographic for Business para ejecutarse como una pantalla completa dedicada con Intune
 
@@ -41,34 +41,50 @@ En este artículo se muestra cómo crear un perfil de configuración de disposit
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
+   - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
+   - **Perfil**: seleccione **Pantalla completa**.
+
+4. Seleccione **Crear**.
+5. En **Básico**, escriba las propiedades siguientes:
+
    - **Nombre**: escriba un nombre descriptivo para el nuevo perfil.
    - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-   - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
-   - **Tipo de perfil**: seleccione **Pantalla completa**.
 
-4. En **Configuración**, seleccione una **pantalla completa**. **Modo de quiosco**: identifica el tipo de modo de quiosco admitido por la directiva. Las opciones son:
+6. Seleccione **Siguiente**.
+7. En **Opciones de configuración** > **Seleccionar un modo de pantalla completa**, elija el tipo de pantalla completa compatible con la directiva. Las opciones son:
 
-    - **Sin configurar** (valor predeterminado): la directiva no habilita la pantalla completa.
+    - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. la directiva no habilita la pantalla completa.
     - **Pantalla completa con aplicación única**: el dispositivo se ejecuta como una cuenta de usuario único y la bloquea para una única aplicación de la Tienda. Así que cuando el usuario inicia sesión, se inicia una aplicación concreta. Este modo también evita que el usuario abra nuevas aplicaciones o modifique la aplicación en ejecución.
     - **Pantalla completa con varias aplicaciones**: el dispositivo ejecuta varias aplicaciones de la Tienda, aplicaciones Win32 o aplicaciones de Windows de bandeja de entrada mediante el identificador de modelo del usuario de la aplicación (AUMID). En el dispositivo solo están disponibles las aplicaciones agregadas.
 
         La ventaja de un quiosco con varias aplicaciones, o un dispositivo para un propósito fijo, es que proporciona una experiencia fácil de entender para los usuarios, ya que solo acceden a las aplicaciones que necesitan. Además, se quitan de la vista las aplicaciones que no necesitan.
 
     Para una lista de todas las configuraciones, y lo que hacen, consulte:
+
       - [Configuración de pantalla completa en Windows 10](kiosk-settings-windows.md)
       - [Configuración de pantalla completa en Windows Holographic for Business](kiosk-settings-holographic.md)
 
-5. Cuando haya terminado, seleccione **Aceptar** > **Crear** para guardar los cambios.
+8. Seleccione **Siguiente**.
 
-El perfil se crea y se muestra en la lista de perfiles. Después, [asigne](device-profile-assign.md) el perfil.
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+    Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o el grupo de usuarios que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
+
+La próxima vez que se registre cada dispositivo, se aplicará la directiva.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+Después de [asignar el perfil](device-profile-assign.md), [supervise su estado](device-profile-monitor.md).
 
 Puede crear perfiles de pantalla completa para dispositivos que ejecutan las siguientes plataformas:
 

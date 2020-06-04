@@ -5,20 +5,20 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350725"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988287"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Adición de directivas de actualización de software de iOS/iPadOS en Intune
 
@@ -34,9 +34,13 @@ Esta característica se aplica a:
 
 De forma predeterminada, los dispositivos se registran con Intune aproximadamente cada ocho horas. Si hay una actualización disponible a través de una directiva de actualización, el dispositivo descarga la actualización. Después, el dispositivo instala la actualización la próxima vez que se registre dentro de la configuración de programación. Aunque el proceso de actualización normalmente no implica ninguna interacción del usuario, si el dispositivo tiene un código de acceso, el usuario tendrá que escribirlo para iniciar una actualización de software. Los perfiles no impiden que los usuarios actualicen el sistema operativo de forma manual. Se puede impedir que los usuarios actualicen el sistema operativo de forma manual con una directiva de configuración de dispositivos para restringir la visibilidad de las actualizaciones de software.
 
+> [!NOTE]
+> Si usa el [Modo de aplicación única autónoma (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), se debe considerar el impacto de las actualizaciones del sistema operativo, ya que el comportamiento resultante podría no ser el buscado.
+Considere la posibilidad de realizar pruebas para evaluar el impacto de las actualizaciones del sistema operativo en la aplicación que se ejecuta en ASAM.
+
 ## <a name="configure-the-policy"></a>Configuración de la directiva
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Directivas de actualización para iOS/iPadOS** > **Crear perfil**.
 3. En la pestaña **Datos básicos**, indique un nombre para la directiva y una descripción (opcional) y, después, seleccione **Siguiente**.
 
@@ -70,7 +74,9 @@ De forma predeterminada, los dispositivos se registran con Intune aproximadament
        Si no configura horas de inicio o finalización, la configuración no tendrá ninguna restricción y las actualizaciones se podrán instalar en cualquier momento.  
 
        > [!NOTE]
-       > Para retrasar la visibilidad de las actualizaciones de software durante un período de tiempo específico en los dispositivos iOS/iPadOS supervisados, establezca esta configuración en [Restricciones de dispositivos](../configuration/device-restrictions-ios.md#general). Las directivas de actualización de software invalidan cualquier restricción de dispositivo. Cuando se establece una restricción y una directiva de actualización de software para retrasar la visibilidad de las actualizaciones de software, el dispositivo fuerza una actualización de software de acuerdo con la directiva. La restricción se aplica para que los usuarios no vean la opción de actualizar ellos mismos el dispositivo, y la actualización se inserta en función de lo definido por la directiva de actualización de iOS.
+       > Puede configurar las opciones de [Restricciones de dispositivos](../configuration/device-restrictions-ios.md#general) para ocultar una actualización a los usuarios del dispositivo durante un período de tiempo en sus dispositivos iOS/iPadOS supervisados. Un período de restricción puede proporcionar tiempo para probar una actualización antes de que sea visible para que los usuarios la instalen. Una vez que expire el período de restricción del dispositivo, la actualización se hace visible para los usuarios. Los usuarios pueden optar por instalarla, o bien las directivas de actualización de software podrían instalarla de forma automática poco después.
+       >
+       > Cuando use una restricción de dispositivo para ocultar una actualización, revise las directivas de actualización de software para asegurarse de que no programen la instalación de la actualización antes de que finalice el período de restricción. Las directivas de actualización de software instalan actualizaciones según su propia programación, independientemente de que la actualización esté oculta o visible para el usuario del dispositivo.
 
    Después de configurar *Actualizar configuración de directiva*, seleccione **Siguiente**.
 

@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 35871aba60d45719b9a6da50184a6113f72e6044
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166625"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989302"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Aplicación del cumplimiento de ATP de Microsoft Defender con acceso condicional en Intune
 
@@ -204,7 +204,7 @@ Para más información sobre los informes, consulte [Informes de Intune](../fund
 
 ## <a name="view-onboarding-status"></a>Ver estado de incorporación
 
-Para ver el estado de incorporación de todos los dispositivos Windows 10 administrados por Intune, se puede ir a **Administración del inquilino** > **ATP de Microsoft Defender**. En esta página, también puede iniciar la creación de un perfil de configuración de dispositivo para incorporar más dispositivos a ATP de Microsoft Defender.
+Para ver el estado de incorporación de todos los dispositivos Windows 10 administrados por Intune, puede ir a **Seguridad de punto de conexión** > **ATP de Microsoft Defender**. En esta página, también puede iniciar la creación de un perfil de configuración de dispositivo para incorporar más dispositivos a ATP de Microsoft Defender.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

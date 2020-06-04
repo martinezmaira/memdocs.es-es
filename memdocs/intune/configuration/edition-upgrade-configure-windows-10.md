@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364388"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988420"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Actualización de las ediciones de Windows 10 o desactivación del modo S en dispositivos con Microsoft Intune
-
-
 
 Como parte de su solución de administración de dispositivos móviles (MDM), puede que le interese actualizar sus dispositivos Windows 10. Por ejemplo, puede actualizar los dispositivos Windows 10 Professional a Windows 10 Enterprise. O bien, quiere que el dispositivo desactive el modo S.
 
@@ -96,25 +94,41 @@ En la siguiente tabla, se muestran las rutas de actualización admitidas para el
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba las propiedades siguientes:
 
+    - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
+    - **Perfil**: seleccione **Actualización de edición**.
+
+4. Seleccione **Crear**.
+5. En **Básico**, escriba las propiedades siguientes:
+
     - **Nombre**: escriba un nombre descriptivo para el nuevo perfil. Por ejemplo, escriba algo parecido a `Windows 10 edition upgrade profile` o `Windows 10 switch off S mode`.
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
-    - **Plataforma**: seleccione **Windows 10 y versiones posteriores**.
-    - **Tipo de perfil**: seleccione **Actualización de edición**.
-    - **Configuración**: especifique la configuración que desee definir. Para una lista de todas las configuraciones, y lo que hacen, consulte:
 
-        - [Actualización de Windows 10 y el modo S](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. Seleccione **Siguiente**.
+7. En **Opciones de configuración**, especifique la configuración que quiere definir. Para una lista de todas las configuraciones, y lo que hacen, consulte:
 
-4. Seleccione **Aceptar** > **Crear** para guardar los cambios.
+    - [Actualización de Windows 10 y el modo S](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-El perfil se crea y se muestra en la lista. Asegúrese de [asignar el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
+8. Seleccione **Siguiente**.
+
+9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).
+
+    Seleccione **Siguiente**.
+
+10. En **Asignaciones**, seleccione los usuarios o el grupo de usuarios que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+
+    Seleccione **Siguiente**.
+
+11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
+
+La próxima vez que se sincronice cada dispositivo, se aplica la directiva.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Una vez creado el perfil, está listo para asignarlo. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+Una vez [asignado el perfil](device-profile-assign.md), [supervise su estado](device-profile-monitor.md).
 
 Vea la configuración de la actualización y del modo S para dispositivos [Windows 10](edition-upgrade-windows-settings.md) y [Windows Holographic for Business](holographic-upgrade.md).

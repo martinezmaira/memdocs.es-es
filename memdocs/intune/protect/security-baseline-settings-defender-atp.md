@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693393"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429352"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"

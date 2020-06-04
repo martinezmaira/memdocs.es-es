@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24938f85cf85e9c5934a0e26029ec2ccfc5c33a7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324650"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989444"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Adición de ATP de Microsoft Defender a dispositivos macOS con Microsoft Intune
 
@@ -39,7 +39,7 @@ Para poder implementar, configurar, supervisar o proteger aplicaciones, antes de
 ## <a name="add-microsoft-defender-atp-to-intune"></a>Adición de ATP de Microsoft Defender a Intune
 Puede agregar ATP de Microsoft Defender a Intune si sigue estos pasos:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En la lista **Tipo de aplicación** en **ATP de Microsoft Defender**, seleccione **macOS**.
 
@@ -76,7 +76,7 @@ La aplicación que ha creado aparece en la lista de aplicaciones, donde puede as
 > Actualmente, Apple no proporciona ningún método para que Intune desinstale ATP de Microsoft Defender en dispositivos macOS.
 
 ## <a name="next-steps"></a>Pasos siguientes
-- Para más información sobre cómo configurar ATP de Microsoft Defender en dispositivos macOS, vea [Configuración de ATP de Microsoft Defender en dispositivos macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-preferences).
+- Para más información sobre cómo aplicar una directiva de antivirus para la seguridad de los puntos de conexión en Intune, consulte [Directiva de antivirus para la seguridad de puntos de conexión en Intune](../protect/endpoint-security-antivirus-policy.md) 
 - Para información sobre cómo incluir y excluir las asignaciones de aplicaciones para grupos de usuarios, consulte [Inclusión y exclusión de asignaciones de aplicaciones](apps-inc-exl-assignments.md).
-- [Asignar aplicaciones a grupos](apps-deploy.md)
+- Para obtener más información sobre cómo asignar aplicaciones a grupos en Intune, consulte [Asignación de aplicaciones a grupos](apps-deploy.md).
 

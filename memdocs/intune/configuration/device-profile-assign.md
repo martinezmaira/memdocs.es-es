@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078284"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989026"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Asignación de perfiles de dispositivo en Microsoft Intune
 
@@ -43,12 +43,12 @@ Asegúrese de que tiene el rol adecuado para asignar perfiles. Para más informa
 
 ## <a name="assign-a-device-profile"></a>Asignar un perfil de dispositivo
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración**. Se muestran todos los perfiles.
 3. Seleccione el perfil que quiere asignar > **Asignaciones**.
 4. Elija **Incluir** grupos o **Excluir** grupos y, luego, seleccione los grupos. Al seleccionar los grupos, se elige un grupo de Azure AD. Para seleccionar varios grupos, mantenga presionada la tecla **Ctrl** y seleccione los grupos.
 
-    ![Captura de pantalla de las opciones para incluir o excluir grupos de una asignación de perfil](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Captura de pantalla de las opciones para incluir o excluir grupos de una asignación de perfil en Microsoft Intune":::
 
 5. Guarde los cambios mediante **Guardar**.
 
@@ -109,7 +109,7 @@ Como procedimiento recomendado, cree y asigne perfiles específicamente para sus
 
 Cuando asigne los perfiles, use la tabla siguiente al incluir y excluir grupos. Una marca de verificación significa que se admite la asignación:
 
-![Las opciones admitidas incluyen o excluyen grupos de una asignación de perfil](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="Las opciones admitidas incluyen o excluyen grupos de una asignación de perfil":::
 
 ### <a name="what-you-should-know"></a>Qué debe saber
 

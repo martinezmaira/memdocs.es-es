@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538158"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989725"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Establecimiento de reglas en los dispositivos para permitir el acceso a recursos de su organización con Intune
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>Funcionamiento de las directivas de cumplimiento de dispositivos con Azure AD
 
-Intune usa el [acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) de Azure Active Directory (AD) (abre otro sitio web de documentación) para ayudar a aplicar el cumplimiento. Cuando un dispositivo se inscribe en Intune, se inicia el proceso de registro de Azure AD y la información del dispositivo se actualiza en Azure AD. Una parte clave de la información es el estado de cumplimiento del dispositivo. Este estado de cumplimiento lo usan las directivas de acceso condicional para bloquear o permitir el acceso al correo electrónico y otros recursos de la organización.
+Intune usa [acceso condicional](../protect/conditional-access.md) para ayudar a aplicar el cumplimiento. Acceso condicional es una tecnología de Azure Active Directory (Azure AD).
 
-- [¿Qué es la administración de dispositivos en Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/device-management-introduction) es un recurso excelente que explica por qué y cómo se registran los dispositivos en Azure AD.
+Cuando un dispositivo se inscribe en Intune, se inicia el proceso de registro de Azure AD y la información del dispositivo se actualiza en Azure AD. Una parte clave de la información es el estado de cumplimiento del dispositivo. Este estado de cumplimiento lo usan las directivas de acceso condicional para bloquear o permitir el acceso al correo electrónico y otros recursos de la organización.
 
-- En [Acceso condicional](conditional-access.md) y [Formas comunes de usar el acceso condicional](conditional-access-intune-common-ways-use.md) se describe esta característica en relación con Intune.
+Más información sobre el acceso condicional e Intune:
+
+- [Formas habituales de usar el acceso condicional con Intune](conditional-access-intune-common-ways-use.md)
+
+Más información sobre el acceso condicional en la documentación de Azure AD:
+  - [¿Qué es el acceso condicional?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [¿Qué es una identidad de dispositivo?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>Formas de usar las directivas de cumplimiento de dispositivos
 
@@ -86,22 +92,22 @@ Puede implementar directivas de cumplimiento en los usuarios de grupos de usuari
 
 Intune también incluye un conjunto de configuraciones de directivas de cumplimiento integradas. Las directivas integradas siguientes se evalúan en todos los dispositivos inscritos en Intune:
 
-- **Marcar los dispositivos que no tienen asignada una directiva de cumplimiento como**: esta propiedad tiene dos valores:
+- **Marcar los dispositivos que no tienen asignada una directiva de cumplimiento como**: Se trata de una acción predeterminada para el no cumplimiento. esta propiedad tiene dos valores:
 
   - **Compatible** (*valor predeterminado*): característica de seguridad desactivada
   - **No compatible**: característica de seguridad activada
 
   Si un dispositivo no tiene asignada una directiva de cumplimiento, se considerará compatible de forma predeterminada. Si se usa el acceso condicional con directivas de cumplimiento, se recomienda cambiar la configuración predeterminada a **No compatible**. Si un usuario final no es compatible porque no se asignó ninguna directiva, en la [aplicación Portal de empresa de Intune](../apps/company-portal-app.md) se muestra `No compliance policies have been assigned`.
 
-- **Detección de jailbreak mejorada**: cuando se habilita, esta configuración hace que el estado del dispositivo con Jailbreak se realice con más frecuencia en dispositivos iOS/iPadOS. Esta configuración solo afecta a los dispositivos a los que se destina una directiva de cumplimiento que bloquea los dispositivos con Jailbreak. Para habilitar esta propiedad se usan los servicios de ubicación del dispositivo y puede afectar al uso de la batería. Intune no almacena los datos de ubicación del usuario y solo los usa para desencadenar la detección de jailbreak con mayor frecuencia en segundo plano. 
+- **Detección de jailbreak mejorada** (*se aplica a iOS/iPadOS*): cuando se habilita, esta configuración hace que el estado del dispositivo con Jailbreak se realice con más frecuencia en dispositivos iOS/iPadOS. Esta configuración solo afecta a los dispositivos a los que se destina una directiva de cumplimiento que bloquea los dispositivos con Jailbreak. Para habilitar esta propiedad se usan los servicios de ubicación del dispositivo y puede afectar al uso de la batería. Intune no almacena los datos de ubicación del usuario y solo los usa para desencadenar la detección de jailbreak con mayor frecuencia en segundo plano. 
 
   Para habilitar esta configuración, los dispositivos deben:
   - Habilitar los servicios de ubicación en el nivel de sistema operativo.
   - Permitir siempre que el Portal de empresa use los servicios de ubicación.
 
-  La evaluación se desencadena al abrir la aplicación Portal de empresa o al mover físicamente el dispositivo a una distancia significativa de 500 metros o más. En iOS 13 y versiones posteriores, esta característica requerirá que los usuarios seleccionen Permitir siempre cada vez que el dispositivo les pida que sigan permitiendo a Portal de empresa usar su ubicación en segundo plano. Si los usuarios no permiten siempre el acceso a la ubicación y tienen configurada una directiva con esta opción, el dispositivo se marcará como no conforme. Tenga en cuenta que Intune no puede garantizar que cada cambio de ubicación significativo garantice una comprobación de detección de jailbreak, ya que esto depende de la conexión de red de un dispositivo en ese momento.
+  La detección mejorada funciona a través de los servicios de ubicación. La evaluación se desencadena al abrir la aplicación Portal de empresa o al mover físicamente el dispositivo a una distancia de unos 500 metros o más. En iOS 13 y versiones posteriores, esta característica requiere que los usuarios seleccionen Permitir siempre cada vez que el dispositivo les pida que sigan permitiendo al Portal de empresa usar su ubicación en segundo plano. Si los usuarios no permiten siempre el acceso a la ubicación y tienen configurada una directiva con esta opción, el dispositivo se marcará como no conforme. Tenga en cuenta que Intune no puede garantizar que cada cambio de ubicación significativo garantice una comprobación de detección de jailbreak, ya que esto depende de la conexión de red de un dispositivo en ese momento.
 
-- **Período de validez del estado de cumplimiento (días)** : especifique el período en que los dispositivos informan del estado de todas las directivas de cumplimiento recibidas. Los dispositivos que no proporcionen el estado dentro de este período se tratarán como no conformes. El valor predeterminado es 30 días. El valor mínimo es 1 día.
+- **Período de validez del estado de cumplimiento (días)** : especifique el período en que los dispositivos informan del estado de todas las directivas de cumplimiento recibidas. Los dispositivos que no proporcionen el estado dentro de este período se tratarán como no conformes. El valor predeterminado es 30 días. El valor máximo es de 120 días. El valor mínimo es 1 día.
 
   Esta configuración se muestra como la directiva de cumplimiento predeterminada **Activa** (**Dispositivos** > **Monitor** > **Configuración de cumplimiento**). La tarea en segundo plano para esta directiva se ejecuta una vez al día.
 

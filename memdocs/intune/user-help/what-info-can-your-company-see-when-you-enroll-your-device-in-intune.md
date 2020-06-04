@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210322"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882075"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>¿Qué información puede ver mi organización cuando inscribo mi dispositivo?
 
@@ -51,7 +51,14 @@ Su organización no puede ver su información personal cuando inscribe un dispos
 - IMEI
 
  > [!NOTE]
- > En el caso de los dispositivos de Android Enterprise totalmente administrados y dedicados, no podrá ver todo el inventario de aplicaciones.    
+ > En el caso de los dispositivos de Android Enterprise totalmente administrados y dedicados, no podrá ver todo el inventario de aplicaciones.
+ 
+ > [!NOTE]
+ > Una aplicación se considera como **aplicación administrada** cuando se instala de una de las siguientes maneras:
+ > 1. Un usuario la instala desde la aplicación Portal de empresa después de que un administrador de Intune la publique como **disponible**.
+ > 2. Un administrador de Intune publica la aplicación como **requerida** y se instala en el dispositivo. 
+ >
+ > Si es administrador de TI o empleado de soporte técnico de su organización y quiere obtener más información sobre la administración de aplicaciones en Intune, consulte el artículo sobre la [descripción de las funcionalidades de las aplicaciones no administradas, las aplicaciones administradas y las aplicaciones MAM](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
     
 **Contenido que su organización podría ver:**
 

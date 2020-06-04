@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ab94c3cc8bb9009d49a6b301d9a67fa6ffc5f1a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364310"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429656"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Configuración de dispositivos Windows 10 (y versiones posteriores) para actualizar ediciones o habilitar el modo S en Intune
 
@@ -44,12 +44,14 @@ Para más información sobre esta característica, consulte [Uso de un perfil de
 
 ## <a name="mode-switch"></a>Modificador de modo
 
-- **Sin configuración**: el dispositivo en modo S permanece en ese modo. Un usuario final puede desactivar el modo S en el dispositivo.
-- **Keep in S mode** (Mantener en modo S): impide que el usuario final pueda desactivar el modo S en el dispositivo.
-- **Switch** (Cambiar): el modo S se desactiva en el dispositivo.
+- **Desactivación del modo S**: desactiva el modo S en el dispositivo. Las opciones son:
+
+  - **Sin configuración**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el dispositivo en modo S debería permanecer en modo S. Un usuario final puede desactivar el modo S en el dispositivo.
+  - **Mantener en modo S**: Impide que el usuario final pueda desactivar el modo S en el dispositivo.
+  - **Cambiar**: Permite a los usuarios desactivar el modo S en el dispositivo.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-El perfil se crea, pero puede que todavía no haga nada. Asegúrese de [asignar el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
+[Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
 También puede crear perfiles de actualización de edición para dispositivos [Windows Holographic for Business](holographic-upgrade.md).

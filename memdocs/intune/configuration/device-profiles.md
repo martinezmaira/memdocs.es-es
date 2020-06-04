@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/07/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359309"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983805"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicación de la configuración y características en dispositivos con perfiles de dispositivos Microsoft Intune
 
@@ -179,7 +179,7 @@ Esta característica es compatible con:
 
 ## <a name="extensions"></a>Extensiones
 
-Las [extensiones de kernel](kernel-extensions-overview-macos.md) permiten que los administradores agreguen características o programas en el nivel de kernel en los dispositivos macOS. Configure estas opciones para confiar en todas las extensiones de un desarrollador o asociado específico o para permitir extensiones de kernel específicas.
+[las extensiones del sistema macOS y las extensiones de kernel](kernel-extensions-overview-macos.md) permiten a los administradores agregar características o programas que amplían las funciones nativas del sistema operativo. Configure estas opciones para confiar en todas las extensiones de un desarrollador o partner específico o para permitir extensiones específicas.
 
 Esta característica es compatible con:
 

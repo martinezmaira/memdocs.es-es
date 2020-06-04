@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254714"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551917"
 ---
 # <a name="windows-update-settings-for-intune"></a>Configuración de actualizaciones de Windows para Intune  
 
@@ -250,6 +250,6 @@ La configuración de la experiencia de usuario controla la experiencia del usuar
 
 ### <a name="delivery-optimization-download-mode"></a>Modo de descarga de optimización de entrega  
 
-la optimización de entrega ya no se configura como parte del Círculo de actualizaciones de Windows 10 en Actualizaciones de software. Ahora, la optimización de entrega se establece mediante la configuración del dispositivo. Sin embargo, las opciones de configuración anteriores seguirán estando disponibles en la consola. Puede quitar estas configuraciones previas si las edita para que se muestren como *Sin configurar*, pero no se pueden modificar de otra forma. 
+La optimización de entrega ya no se configura como parte del Anillo de actualización de Windows 10 en Actualizaciones de software. Ahora, la optimización de entrega se establece mediante la configuración del dispositivo. Sin embargo, las opciones de configuración anteriores seguirán estando disponibles en la consola. Puede quitar estas configuraciones previas si las edita para que se muestren como *Sin configurar*, pero no se pueden modificar de otra forma. 
 
-Para evitar conflictos entre la directiva nueva y la anterior, consulte [Eliminación de la optimización de entrega de los anillos de actualización de Windows 10](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) y migre luego su configuración a un perfil de optimización de entrega.
+Para evitar conflictos entre la directiva nueva y la anterior, vea [Eliminación de la optimización de entrega de los Anillos de actualización de Windows 10](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) y, luego, migre su configuración a un perfil de optimización de entrega.

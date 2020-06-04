@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343354"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556292"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Opciones de configuración de Windows Holographic for Business para administrar dispositivos compartidos con Intune
 
@@ -36,24 +36,33 @@ Para obtener más información sobre esta característica de Intune, vea [Contro
 
 ## <a name="before-your-begin"></a>Antes de empezar
 
-[Cree el perfil](shared-user-device-settings.md).
+[Cree un perfil de configuración de dispositivo multiusuario compartido de Windows 10](shared-user-device-settings.md).
+
+Al crear un perfil de configuración de dispositivo de usuario compartido de Windows 10, hay más opciones de configuración de las que se enumeran en este artículo. La configuración de este artículo es compatible con dispositivos Windows Holographic for Business.
 
 ## <a name="shared-multi-user-device-settings"></a>Configuración de dispositivos compartidos con varios usuarios
 
 > [!NOTE]
 > Los dispositivos que ejecutan Windows Holographic for Business, incluido Microsoft HoloLens, solo admiten las opciones de configuración de **Administración de cuentas**. El hecho de configurar cualquier otra de las opciones de Intune, incluida **Modo de PC compartido**, no tendrá ningún efecto sobre estos dispositivos.
 
-- **Administración de cuentas**: establezca esta opción en **Habilitar** para eliminar automáticamente las cuentas locales creadas por invitados y las cuentas en AD y Azure AD. Cuando un usuario cierre sesión en el dispositivo, o cuando se ejecute el mantenimiento del sistema, estas cuentas se eliminarán. Al habilitar esta opción, también deberá establecer lo siguiente:
-  - **Eliminación de cuenta**: elija cuándo se eliminarán las cuentas: **Umbral de espacio de almacenamiento**, **Umbral de espacio de almacenamiento y umbral de inactividad** o **Inmediatamente después de cerrar sesión**. Indique también:
+- **Administración de cuentas**: elija si las cuentas se eliminan automáticamente. Las opciones son:
+  - **Sin configurar** (valor predeterminado): elimina automáticamente las cuentas locales que crean los invitados, así como las de AD y Azure AD. Cuando un usuario cierre sesión en el dispositivo, o cuando se ejecute el mantenimiento del sistema, estas cuentas se eliminarán.
+
+    Indique también:
+
+    - **Eliminación de cuenta**: elija cuándo se eliminarán las cuentas:
+      - **Umbral de espacio de almacenamiento**
+      - **Umbral de espacio de almacenamiento y umbral de inactividad**
+      - **Inmediatamente después de cerrar sesión**
+
+    Indique también:
+
     - **Iniciar umbral de eliminación (%)** : indique un porcentaje (de 0 a 100) de espacio en disco. Cuando el espacio de almacenamiento o en disco sea inferior al valor indicado, las cuentas en caché se eliminarán. Se eliminan las cuentas continuamente para recuperar espacio en disco. Las cuentas que lleven más tiempo inactivas serán las primeras en eliminarse.
     - **Detener umbral de eliminación (%)** : indique un porcentaje (de 0 a 100) de espacio en disco. Cuando el espacio de almacenamiento o en disco alcance el valor indicado, la eliminación se detendrá.
 
-  Establezca esta opción en **Deshabilitar** para mantener las cuentas locales, de AD y de Azure AD creadas por invitados.
-
-  > [!NOTE]
-  > Solo los dispositivos Microsoft HoloLens admiten las opciones de configuración de **Administración de cuentas**.
+  - **Deshabilitar**: las cuentas locales, de AD y de Azure AD que crean los invitados permanecen en el dispositivo y no se eliminan.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
-- Consulte la configuración para [Windows 10 y versiones más recientes](shared-user-device-settings-windows.md).
+- Vea la configuración del dispositivo de usuario compartido para [Windows 10 y versiones más recientes](shared-user-device-settings-windows.md).

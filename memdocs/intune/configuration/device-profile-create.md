@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327450"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988470"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Creación de un perfil de dispositivo en Microsoft Intune
 
@@ -85,10 +85,9 @@ A continuación, elija el tipo de perfil. En función de la plataforma que haya 
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-Por ejemplo, si selecciona **iOS/iPadOS** como plataforma, las opciones de tipo de perfil serán similares al perfil siguiente:
+Por ejemplo, si selecciona **iOS/iPadOS** como plataforma, las opciones de perfil serán similares al perfil siguiente:
 
-> [!div class="mx-imgBorder"]
-> ![Creación de un perfil de iOS o iPadOS en Intune](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Cree un perfil de iOS/iPadOS en Microsoft Intune.":::
 
 ## <a name="scope-tags"></a>Etiquetas de ámbito
 
@@ -129,10 +128,9 @@ Al asignar el perfil a los grupos, las reglas de aplicabilidad actúan como un f
 
 ### <a name="add-a-rule"></a>Agregar una regla
 
-1. Seleccione **Reglas de aplicabilidad**. Puede elegir los valores de **Regla**, **Propiedad** y **Edición del sistema operativo**:
+1. Seleccione **Reglas de aplicabilidad**. Puede elegir la**Regla** y la **Propiedad**:
 
-    > [!div class="mx-imgBorder"]
-    > ![Adición de una regla de aplicabilidad a un perfil de configuración de dispositivo en Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Adición de una regla de aplicabilidad a un perfil de configuración de dispositivo Windows 10 en Microsoft Intune.":::
 
 2. En **Regla**, elija si desea incluir o excluir usuarios o grupos. Las opciones son:
 
@@ -174,12 +172,11 @@ Al crear perfiles, tenga en cuenta las siguientes recomendaciones:
 
 - Separe las directivas de usuario de las directivas de dispositivo.
 
-  Por ejemplo, las [plantillas administrativas en Intune](administrative-templates-windows.md) tienen cientos de valores de configuración de ADMX. Estas plantillas muestran si se aplica una opción de configuración a usuarios o dispositivos. Al crear plantillas de administración, asigne la configuración de usuario a un grupo de usuarios y la configuración de dispositivo a un grupo de dispositivos.
+  Por ejemplo, las [plantillas administrativas en Intune](administrative-templates-windows.md) tienen miles de valores de configuración de ADMX. Estas plantillas muestran si se aplica una opción de configuración a usuarios o dispositivos. Al crear plantillas de administración, asigne la configuración de usuario a un grupo de usuarios y la configuración de dispositivo a un grupo de dispositivos.
 
   En la imagen siguiente se muestra un ejemplo de un valor de configuración que se puede aplicar a los usuarios o a los dispositivos:
 
-  > [!div class="mx-imgBorder"]
-  > ![Plantilla de administración de Intune que se aplica a usuarios y dispositivos](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Plantilla de administración de Intune que se aplica a usuarios y dispositivos.":::
 
 - Cada vez que cree una directiva restrictiva, comunique este cambios a los usuarios. Por ejemplo, si va a cambiar el requisito de código de acceso de 4 a 6 caracteres, informe a los usuarios antes de asignar la directiva.
 

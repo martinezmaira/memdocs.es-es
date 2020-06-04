@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 551f0a442f81712cff29a9ff6f55c62aeaba547a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078199"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429619"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Configuración de la aplicación Hacer un examen en dispositivos Windows 10 con Microsoft Intune
 
@@ -37,14 +37,12 @@ Una vez configurado el perfil, asígnelo a los alumnos e impleméntelo.
 [Cree un perfil de configuración de dispositivo](education-settings-configure.md#create-a-device-profile).
 
 ## <a name="take-a-test-settings"></a>Configuración de Hacer un examen
-Después de crear un perfil de configuración de dispositivo, vaya a **Tipo de perfil** y seleccione **Evaluación segura (Educación)** . Encontrará la configuración de aplicación Hacer un examen siguiente. 
-
 
 - **Tipo de cuenta**: elija cómo los usuarios inician sesión en el examen. Las opciones son:
   - Cuenta de Azure AD
   - Cuenta de dominio
   - Cuenta local
-  - Cuenta de invitado local: solo disponible en dispositivos que ejecuten Windows 10, versión 1903 y posteriores.    
+  - Cuenta de invitado local: solo disponible en dispositivos que ejecuten Windows 10, versión 1903 y posteriores.
 - **Nombre de usuario de la cuenta**: especifique el nombre del usuario de la cuenta que utiliza con Hacer un examen. Puede especificar cuentas en el siguiente formato:
   - `user@contoso.com`
   - `domain\username`
@@ -52,10 +50,12 @@ Después de crear un perfil de configuración de dispositivo, vaya a **Tipo de p
   - `computerName\username`
 - **Nombre de la cuenta**: para configurar un tipo de cuenta de invitado local, escriba el nombre de la cuenta que se usa con la aplicación Hacer un examen. El nombre de la cuenta aparecerá como un icono en la pantalla de inicio de sesión. Los alumnos deben hacer clic en el icono para iniciar el examen.  
 - **Dirección URL de evaluación**: especifique la dirección URL del examen que desea que los usuarios realicen. Para más información sobre cómo obtener la dirección URL, vea la [documentación de Hacer un examen](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
-- **Conexión de impresora**: elija **Requerir** para permitir solo el acceso a la aplicación Hacer un examen desde dispositivos que estén conectados a una impresora. Esta opción también hace que el botón Imprimir de la aplicación esté disponible para los alumnos que van a realizar el examen. **No configurado** permite a los alumnos tener acceso a la aplicación desde dispositivos que no están conectados a una impresora.  
-- **Supervisión de pantalla**: elija **Permitir** para supervisar la actividad de la pantalla mientras los usuarios realizan una prueba. **No configurada** impide la supervisión de la pantalla durante el examen.
-- **Sugerencias de texto**: elija **Permitir** para que los que hacen el examen puedan ver sugerencias de texto. **No configurada** bloquea las sugerencias de texto mientras los usuarios realizan un examen.
+- **Conexión de impresora**: **Requerir** solo permite el acceso a la aplicación Hacer un examen desde dispositivos conectados a una impresora. Esta opción también hace que el botón Imprimir de la aplicación esté disponible para los alumnos que van a realizar el examen. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede permitir a los alumnos acceder a la aplicación desde dispositivos que no están conectados a una impresora.  
+- **Supervisión de pantalla**: **Permitir** supervisa la actividad de la pantalla mientras los usuarios hacen un examen. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede evitar la supervisión de la pantalla durante el examen.
+- **Sugerencias de texto**: elija **Permitir** para que los que hacen el examen puedan ver sugerencias de texto. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede bloquear las sugerencias de texto mientras los usuarios hacen un examen.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Asegúrese de [asignar el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
+[Asigne el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
+
+Obtenga más información sobre la [aplicación Hacer un examen](education-settings-configure.md).

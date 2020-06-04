@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587291"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985505"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Adición y uso de la configuración de Wi-Fi en los dispositivos en Microsoft Intune
 
@@ -39,11 +39,11 @@ En este artículo se enumeran los pasos para crear un perfil Wi-Fi. También inc
 
 Los perfiles de Wi-Fi admiten las siguientes plataformas de dispositivo:
 
-- Android 4 y versiones posteriores
+- Android 5 y versiones posteriores
 - Quiosco de Android y Android Enterprise
-- iOS 8.0 y versiones posteriores
+- iOS 11.0 y versiones más recientes
 - IPadOS 13.0 y versiones más recientes
-- macOS X 10.11 y versiones más recientes
+- macOS X 10.12 y versiones posteriores
 - Windows 10 y versiones posteriores, Windows 10 Mobile y Windows Holographic for Business
 
 > [!NOTE]
@@ -69,7 +69,7 @@ Los perfiles de Wi-Fi admiten las siguientes plataformas de dispositivo:
       > [!TIP]
       >
       > - Para dispositivos **Android Enterprise** que se ejecutan como un dispositivo dedicado (quiosco), elija **Solo el propietario del dispositivo** > **Wi-Fi**.
-      > - Para **Windows 8.1 y versiones posteriores**, puede elegir **Importación de Wi-Fi**. Esta opción le permite importar la configuración de Wi-Fi como archivo XML exportado previamente de otro dispositivo.
+      > - En **Windows 8.1 y versiones posteriores**, puede seleccionar **Importación de Wi-Fi**. Esta opción le permite importar la configuración de Wi-Fi como archivo XML exportado previamente de otro dispositivo.
 
 4. Seleccione **Crear**.
 5. En **Básico**, escriba las propiedades siguientes:
@@ -84,7 +84,7 @@ Los perfiles de Wi-Fi admiten las siguientes plataformas de dispositivo:
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), incluidos los dispositivos dedicados
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
-    - [Windows 10 y versiones posteriores](wi-fi-settings-windows.md)
+    - [Windows 10 y versiones posteriores](wi-fi-settings-windows.md)
     - [Windows 8.1 y versiones posteriores](wi-fi-settings-import-windows-8-1.md), incluido Windows Holographic for Business
 
 8. Seleccione **Siguiente**.

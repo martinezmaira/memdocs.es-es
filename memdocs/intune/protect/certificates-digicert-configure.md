@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079882"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990353"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Configuración de Intune Certificate Connector para la plataforma de PKI de DigiCert
 
@@ -32,7 +32,7 @@ Use Intune Certificate Connector para emitir certificados PKCS desde la platafor
 > [!TIP]
 > DigiCert adquirió Website Security de Symantec y la empresa PKI Solutions relacionada. Para obtener más información sobre este cambio, consulte el [artículo de soporte técnico de Symantec](https://support.symantec.com/en_US/article.INFO4722.html).
 
-Si ya usa Intune Certificate Connector para emitir certificados desde una CA de Microsoft mediante PKCS o System Center Endpoint Protection, puede utilizar ese mismo conector para configurar y emitir certificados PKCS desde una CA de DigiCert. Una vez que complete la configuración para admitir la CA de DigiCert, Intune Certificate Connector puede emitir los siguientes certificados:
+Si ya usa Intune Certificate Connector para emitir certificados desde una CA de Microsoft mediante PKCS o el Protocolo de inscripción de certificados simple (SCEP), puede usar ese mismo conector para configurar y emitir certificados PKCS desde una CA de DigiCert. Una vez que complete la configuración para admitir la CA de DigiCert, Intune Certificate Connector puede emitir los siguientes certificados:
 
 * Certificados PKCS desde una CA de Microsoft
 * Certificados PKCS desde una CA de DigiCert

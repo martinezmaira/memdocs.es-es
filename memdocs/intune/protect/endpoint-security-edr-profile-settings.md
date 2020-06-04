@@ -1,0 +1,90 @@
+---
+title: Configuración de detección de puntos de conexión y respuesta para la seguridad de puntos de conexión de Intune | Microsoft Docs
+description: Configuración de la directiva de detección de puntos de conexión y respuesta para la seguridad de puntos de conexión en Microsoft Intune
+keywords: ''
+author: brenduns
+ms.author: brenduns
+manager: dougeby
+ms.date: 05/22/2020
+ms.topic: reference
+ms.service: microsoft-intune
+ms.subservice: protect
+ms.localizationpriority: medium
+ms.technology: ''
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune-azure
+ms.collection: M365-identity-device-management
+ms.reviewer: mattsha
+ms.openlocfilehash: dd53ec47435ba9dc416d2b152719b393d1647f90
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824003"
+---
+# <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de detección de puntos de conexión y respuesta para la seguridad de puntos de conexión en Intune
+
+Vea los parámetros que se pueden configurar en los perfiles de la [directiva de detección de puntos de conexión y respuesta](../protect/endpoint-security-edr-policy.md) en el nodo de seguridad de los puntos de conexión de Intune.
+
+Plataformas y perfiles compatibles:
+
+- **Windows 10 y versiones posteriores**: use esta plataforma para la directiva que implemente en dispositivos administrados con Intune.
+  - Perfil: **Detección de puntos de conexión y respuesta (MDM)**
+
+- **Windows 10 y Windows Server**: use esta plataforma para la directiva que implemente en dispositivos administrados mediante Configuration Manager.
+  - Perfil: **Detección de puntos de conexión y respuesta (ConfigMgr) (versión preliminar)**
+  
+  *Esta plataforma y perfil están en versión preliminar pública*.
+
+## <a name="endpoint-detection-and-response-mdm"></a>Detección de puntos de conexión y respuesta (MDM)
+
+**Detección de puntos de conexión y respuesta**:
+
+- **Tipo de paquete de configuración de cliente de ATP de Microsoft Defender**
+
+  Cargue un paquete de configuración firmado que se usará para incorporar el cliente de ATP de Microsoft Defender.
+
+  - **Sin configurar** (*valor predeterminado*).
+  - **Blob de incorporación**  
+  - **Blob de retirada**  
+
+  Si se establece en *Blob de incorporación*, se pueden configurar las siguientes opciones:
+
+  - **Blob de incorporación de Advanced Threat Protection**  
+    Haga clic en **Select onboarding file** (Seleccionar archivo de incorporación) para abrir el panel *Select onboarding File* (Seleccionar archivo de incorporación), donde se especifica un archivo `.onboarding`.
+
+  Si se establece en *Blob de retirada*, se pueden configurar las siguientes opciones:
+  
+  - **Blob de retirada de Advanced Threat Protection**  
+     Haga clic en **Select offboarding file** (Seleccionar archivo de retirada) para abrir el panel *Select offboarding File* (Seleccionar archivo de retirada), donde se especifica un archivo `.offboarding`.
+
+- **Uso compartido de muestras para todos los archivos**  
+
+  Devuelve o establece el parámetro de configuración de uso compartido de muestras de Advanced Threat Protection de Microsoft Defender.  
+  - **No configurado** (*valor predeterminado*)
+  - **Sí**
+
+- **Frecuencia de informes de telemetría urgentes**
+
+  - **No configurado** (*valor predeterminado*)
+  - **Sí**: aumente la frecuencia de informes de telemetría de Advanced Threat Protection de Microsoft Defender.
+
+## <a name="endpoint-detection-and-response-configmgr-preview"></a>Detección de puntos de conexión y respuesta (ConfigMgr) (versión preliminar)
+
+**Detección de puntos de conexión y respuesta**:
+
+- **Uso compartido de muestras para todos los archivos**  
+
+  Devuelve o establece el parámetro de configuración de uso compartido de muestras de Advanced Threat Protection de Microsoft Defender.  
+  - **No configurado** (*valor predeterminado*)
+  - **Sí**
+
+- **Frecuencia de informes de telemetría urgentes**
+
+  - **No configurado** (*valor predeterminado*)
+  - **Sí**: aumente la frecuencia de informes de telemetría de Advanced Threat Protection de Microsoft Defender.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Directiva de seguridad de puntos de conexión para EDR](../protect/endpoint-security-edr-policy.md)

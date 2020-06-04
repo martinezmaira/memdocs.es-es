@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,15 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696434"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690676"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Uso de la página de estado del inquilino de Intune
-La página de estado del inquilino de Microsoft Intune es un centro donde puede ver detalles importantes y actuales sobre el inquilino. Entre estos detalles se incluyen la disponibilidad y el uso de la licencia, el estado del conector y comunicaciones importantes sobre el servicio Intune.  
+
+La página de estado del inquilino de Microsoft Intune es un centro donde puede ver detalles importantes y actuales sobre el inquilino. Entre estos detalles se incluyen la disponibilidad y el uso de la licencia, el estado del conector y comunicaciones importantes sobre el servicio Intune.
+
+> [!TIP]
+> Un inquilino es una instancia de Azure Active Directory (Azure AD). La suscripción a Intune está hospedada en un inquilino de Azure AD. Para obtener más información, vea [Configuración de un inquilino](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) en la documentación de Azure AD.
 
 Para ver el panel, inicie sesión en el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Administración de inquilinos** y, a continuación, seleccione **Estado del inquilino**.
 
@@ -64,20 +68,20 @@ Por ejemplo, si selecciona el conector **Fecha de caducidad de VPP**, se abre la
 ## <a name="service-health-dashboard"></a>Panel de Service Health  
 En el panel de Service Health puede ver detalles de los *incidentes en el servicio* que afectan a su inquilino y *noticias de Intune* que proporcionan información sobre actualizaciones y cambios planeados.
 
-### <a name="intune-service-health"></a>Estado del servicio Intune
+### <a name="intune-service-health-and-message-center"></a>Service Health y centro de mensajes de Intune
 Vea detalles de incidentes activos y avisos sin tener que ir al panel de Estado del servicio Microsoft 365 ni al Centro de mensajes, que se encuentran en el [Centro de administración de Microsoft 365](https://admin.microsoft.com). Solo se muestran los incidentes que afectan a su inquilino.  
 
 Al seleccionar un incidente, los detalles de este se presentan directamente en la página Estado del inquilino. Para ver avisos e incidentes pasados, seleccione **See past Incidents/Advisories** (Ver incidentes y avisos pasados). Se abre el centro de administración de Microsoft 365, donde puede ver los avisos e incidentes del inquilino de los últimos 30 días.  
 
-Para ver información del *Estado del servicio Intune*, la cuenta debe tener el rol **Administrador global** o **Administrador de servicios** en Azure Active Directory o el Centro de administración de Microsoft 365. Para asignar estos permisos, inicie sesión en el [centro de administración de Microsoft 365](https://admin.microsoft.com) con permisos de Administrador global. Seleccione **Usuarios > Usuarios activos** y luego seleccione la cuenta que requiere acceso. Seleccione **Editar** en los roles, seleccione *Administrador de servicios* o *Administrador global* y luego seleccione **Guardar** para asignar los permisos.  
+Para ver información de *Service Health para Intune*, la cuenta debe tener el rol **Administrador global** o **Administrador de soporte técnico del servicio** en Azure Active Directory o el Centro de administración de Microsoft 365. Para asignar estos permisos, inicie sesión en el [centro de administración de Microsoft 365](https://admin.microsoft.com) con permisos de Administrador global. Seleccione **Usuarios > Usuarios activos** y luego seleccione la cuenta que requiere acceso. Seleccione **Editar** en los roles, *Administrador de soporte técnico del servicio* o *Administrador global* y **Guardar** para asignar los permisos.  
 
 Las preferencias de comunicación de Estado del servicio Intune solo se pueden establecer a través del centro de administración de Microsoft 365.
 
-### <a name="intune-news"></a>Noticias de Intune  
+### <a name="intune-message-center"></a>Centro de mensajes de Intune  
 Vea comunicaciones informativas del equipo del servicio Intune sin tener que ir al centro de mensajes de Office. Las comunicaciones incluyen mensajes sobre los cambios que se han producido recientemente en el servicio Intune o que están en camino para el inquilino.  
 
 De forma predeterminada, se muestran los 10 mensajes más recientes y activos. Para ver mensajes más antiguos, seleccione **Ver mensajes anteriores** para abrir el *Centro de mensajes* en el Centro de administración de Microsoft 365.  
 
-Para ver información de Noticias de Intune, la cuenta debe tener el rol **Administrador global** o **Administrador de servicios** en Azure Active Directory, o bien el rol **Lector del Centro de mensajes**  en el Centro de administración de Microsoft 365.  Para asignar este permiso, inicie sesión en el [centro de administración de Microsoft 365](https://admin.microsoft.com) con permisos de administrador. Seleccione **Usuarios > Usuarios activos** y luego seleccione la cuenta que requiere acceso. Seleccione **Editar** en *Roles*, seleccione *Administrador de comunicaciones de Teams*  y luego seleccione **Guardar** para asignar los permisos.  
+Para ver información de Noticias de Intune, la cuenta debe tener el rol **Administrador global** o **Administrador de soporte técnico del servicio** en Azure Active Directory, o bien el rol **Lector del Centro de mensajes**  en el Centro de administración de Microsoft 365.  Para asignar este permiso, inicie sesión en el [centro de administración de Microsoft 365](https://admin.microsoft.com) con permisos de administrador. Seleccione **Usuarios > Usuarios activos** y luego seleccione la cuenta que requiere acceso. Seleccione **Editar** en *Roles*, seleccione *Administrador de comunicaciones de Teams*  y luego seleccione **Guardar** para asignar los permisos.  
 
-Las preferencias de comunicación de Noticias de Intune solo se pueden establecer a través del centro de administración de Microsoft 365.
+Las preferencias de comunicación del centro de mensajes de Intune solo se pueden establecer a través del centro de administración de Microsoft 365.

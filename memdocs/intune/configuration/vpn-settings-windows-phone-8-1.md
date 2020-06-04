@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9cf69afb3db3e7250f8bf491efbfb3ff64dc32ec
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086480"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556309"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>Configuración de VPN para dispositivos Windows Phone 8.1 en Microsoft Intune
 
@@ -106,6 +106,6 @@ Según la configuración que elija, no todos los valores de la lista siguiente s
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
+[Asigne el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
 
 Configure las opciones de VPN en dispositivos [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md) y [Windows 10](vpn-settings-windows-10.md).

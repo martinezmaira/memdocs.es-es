@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086500"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429490"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Configuración de dispositivos con Windows 10 y Windows Holographic para agregar conexiones VPN mediante Intune
 
@@ -66,7 +66,7 @@ Según la configuración que elija, es posible que no se puedan configurar todos
   - **PPTP**
 
   Al elegir un tipo de conexión de VPN; puede que también se le solicite la siguiente configuración:  
-  - **Siempre disponible**: elija **Habilitar** para conectarse automáticamente a la VPN cuando se produzcan estas situaciones:
+  - **Siempre disponible**: **Habilitar** permite conectarse automáticamente a la VPN cuando se producen estas situaciones:
     - Los usuarios inicien sesión en sus dispositivos
     - La red del dispositivo cambie
     - La pantalla del dispositivo se vuelva a activar después de haberse desactivado
@@ -114,10 +114,11 @@ Para obtener más información sobre la creación de XML de EAP personalizado, c
 
   - **Asociar un trabajo en curso a esta conexión**: escriba un **dominio WIP para esta conexión**.
   - **Asociar aplicaciones a esta conexión**: puede seleccionar **Restringir conexión VPN a estas aplicaciones** y, luego, agregar **Aplicaciones asociadas**. Las aplicaciones que escriba automáticamente usan la conexión VPN. El tipo de aplicación determina el identificador de la aplicación. Para una aplicación universal, escriba el nombre de familia de paquete. Para una aplicación de escritorio, escriba la ruta de acceso al archivo de la aplicación.
-  >[!IMPORTANT]
-  >Le recomendamos que proteja todas las listas de aplicaciones creadas para VPN por aplicación. Si un usuario no autorizado cambia esta lista y, luego, esta se importa a la lista de aplicaciones de VPN por aplicación, se estará corriendo el riesgo de autorizar el acceso a la VPN a aplicaciones que no deberían tenerlo. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).
 
-- **Reglas de tráfico de red para esta conexión VPN**: seleccione qué protocolos, puertos locales y remotos, e intervalos de direcciones se habilitarán para la conexión VPN. Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usa los protocolos, puertos e intervalos de direcciones que escriba en esa regla.
+  > [!IMPORTANT]
+  > Le recomendamos que proteja todas las listas de aplicaciones creadas para VPN por aplicación. Si un usuario no autorizado cambia esta lista y, luego, esta se importa a la lista de aplicaciones de VPN por aplicación, se estará corriendo el riesgo de autorizar el acceso a la VPN a aplicaciones que no deberían tenerlo. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).
+
+- **Reglas de tráfico de red para esta conexión VPN**: seleccione los protocolos, puertos locales y remotos, así como los intervalos de direcciones que se habilitarán para la conexión VPN. Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usa los protocolos, puertos e intervalos de direcciones que escriba en esa regla.
 
 ## <a name="conditional-access"></a>Acceso condicional
 

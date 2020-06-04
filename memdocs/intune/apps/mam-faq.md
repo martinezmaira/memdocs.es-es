@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183023"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989983"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Preguntas más frecuentes sobre MAM y la protección de la aplicación
 
@@ -78,7 +78,7 @@ Cualquier aplicación integrada con el [SDK para aplicaciones de Intune](../deve
 
 El equipo de desarrollo del SDK de Intune comprueba y mantiene de forma activa la compatibilidad con las aplicaciones creadas con las plataformas nativas de Android, iOS/iPadOS (Obj-C, Swift), Xamarin y Xamarin.Forms. Aunque algunos clientes han podido integrar con éxito el SDK de Intune con otras plataformas como React Native y NativeScript, no proporcionamos instrucciones explícitas o complementos para desarrolladores de aplicaciones que no utilicen nuestras plataformas compatibles.
 
-**¿Es compatible la biblioteca de autenticación de Microsoft (MSAL) o las cuentas de redes sociales con el SDK de aplicaciones de Intune?**<br></br>
+**¿Es compatible la Biblioteca de autenticación de Microsoft (MSAL) con Intune App SDK?**<br></br>
 Intune App SDK puede usar la Biblioteca de autenticación de Azure Active Directory o la Biblioteca de autenticación de Microsoft para los escenarios de inicio condicional y de autenticación. También se basa en ADAL/MSAL para registrar la identidad del usuario con el servicio de MAM para la administración sin escenarios de inscripción de dispositivos.
 
 **¿Cuáles son los requisitos adicionales para usar la [aplicación móvil de Outlook](https://products.office.com/outlook)?**
@@ -170,7 +170,7 @@ Intune puede borrar los datos de la aplicación de tres maneras diferentes: borr
 La protección de aplicaciones de Intune depende de la identidad del usuario para ser coherente entre la aplicación e Intune App SDK. La única manera de garantizar esto es a través de la autenticación moderna. Hay escenarios en los que las aplicaciones pueden funcionar con una configuración local, pero no son coherentes ni ofrecen garantías.
 
 **¿Hay una forma segura de abrir vínculos web desde aplicaciones administradas?**<br></br>
-Sí. El administrador de TI puede implementar y establecer una directiva de protección de aplicaciones para la [aplicación Intune Managed Browser](../apps/app-configuration-managed-browser.md), un explorador web desarrollado por Microsoft Intune que puede administrarse fácilmente con Intune. El administrador de TI puede requerir que todos los vínculos web en aplicaciones administradas de Intune se abran con la aplicación Managed Browser.
+Sí. El administrador de TI puede implementar y establecer una directiva de protección de aplicaciones para la aplicación Microsoft Edge. El administrador de TI puede requerir que todos los vínculos web de aplicaciones administradas de Intune se abran con la aplicación Microsoft Edge.
 
 ## <a name="app-experience-on-android"></a>Experiencia de la aplicación en Android
 
@@ -211,7 +211,7 @@ Las directivas de protección de aplicaciones de Intune permiten limitar el acce
 La finalidad de esto es seguir manteniendo los datos de la organización dentro de la aplicación seguros y protegidos en el nivel de aplicación. Esta característica solo está disponible para iOS/iPadOS y requiere la participación de las aplicaciones que integran Intune App SDK para iOS/iPadOS, versión 9.0.1 o posterior. La integración del SDK es necesaria para poder aplicar el comportamiento en las aplicaciones de destino. Esta integración ocurre de manera gradual y depende de los equipos de la aplicación específica. Algunas aplicaciones participantes incluyen WXP, Outlook, Managed Browser y Yammer.
   
 **Puedo usar la extensión de recursos compartidos de iOS para abrir los datos profesionales o educativos en aplicaciones no administradas, incluso con la directiva de transferencia de datos establecida en "Solo aplicaciones administradas" o "Ninguna aplicación". ¿No es esto una pérdida de datos?**<br></br>
-La directiva de protección de aplicaciones de Intune no puede controlar la extensión de recursos compartidos de iOS sin administrar el dispositivo. Por lo tanto, Intune _**cifra los datos "corporativos" antes de compartirlos fuera de la aplicación**_ . Puede validar esto intentando abrir el archivo "corporativo" fuera de la aplicación administrada. El archivo debe estar cifrado y no debe poder abrirse fuera de la aplicación administrada.
+La directiva de protección de aplicaciones de Intune no puede controlar la extensión de recursos compartidos de iOS sin administrar el dispositivo. Por lo tanto, Intune _**cifra los datos "corporativos" antes de compartirlos fuera de la aplicación**_. Puede validar esto intentando abrir el archivo "corporativo" fuera de la aplicación administrada. El archivo debe estar cifrado y no debe poder abrirse fuera de la aplicación administrada.
 
 **¿Cómo funcionan en iOS las opciones de protección de acceso de aplicaciones de Intune configuradas para el mismo conjunto de aplicaciones y usuarios?**<br></br>
 Las directivas de protección de aplicaciones de Intune para el acceso se aplicarán en un orden específico en los dispositivos de usuario final cuando intenten obtener acceso a una aplicación de destino desde su cuenta corporativa. En general, tendría prioridad un borrado, seguido de un bloqueo y, después, una advertencia descartable. Por ejemplo, si es aplicable a la aplicación o usuario específico, una configuración de sistema operativo mínima de iOS/iPadOS que advierte al usuario que actualice la versión de iOS/iPadOS se aplicará después de la configuración de sistema operativo mínima de iOS/iPadOS que bloquea el acceso del usuario. Por tanto, en el caso en que el administrador de TI configure el sistema operativo mínimo de iOS/iPadOS en 11.0.0.0 y el sistema operativo mínimo de iOS/iPadOS (solo advertencia) en 11.1.0.0, mientras el dispositivo que intenta acceder a la aplicación esté en iOS/iPadOS 10, se bloquearía al usuario final en función del valor más restrictivo para la versión de sistema operativo de iOS/iPadOS mínima que provoque el bloqueo del acceso.

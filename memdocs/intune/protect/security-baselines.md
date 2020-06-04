@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693418"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988327"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Uso de líneas de base de seguridad para configurar dispositivos Windows 10 en Intune
 
@@ -68,23 +68,27 @@ Las instancias de línea de base de seguridad siguientes están disponibles para
 
 Puede continuar usando y editando los perfiles que creó anteriormente en función de una plantilla en versión preliminar, incluso si dicha plantilla deja de estar disponible para la creación de nuevos perfiles.
 
-Cuando esté listo para pasar a una versión más reciente de la línea base que use, vea [Cambio de la versión de línea de base de un perfil](#change-the-baseline-version-for-a-profile) en este artículo. 
+Cuando esté listo para pasar a una versión más reciente de una línea base que use, vea [Cambio de la versión de línea de base de un perfil](#change-the-baseline-version-for-a-profile) en este artículo. 
 
 ## <a name="about-baseline-versions-and-instances"></a>A cerca de las instancias y versiones de línea de base
 
 Cada nueva instancia de versión de una línea de base puede agregar o quitar la configuración, o aplicar otros cambios. Por ejemplo, a medida que la nueva configuración de Windows 10 está disponible con nuevas versiones de Windows 10, la línea de base de seguridad MDM podría recibir una nueva instancia de versión con la configuración más reciente.
 
-En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), en **Seguridad de los puntos de conexión** > **Líneas de base de seguridad** verá una lista de las líneas de base disponibles. En la lista se incluye el nombre de la plantilla de línea de base, cuántos perfiles de los que tiene usan ese tipo de línea de base, cuántas instancias (versiones) independientes del tipo de línea de base están disponibles y una fecha *Última publicación* que identifica cuándo ha pasado a estar disponible la versión más reciente de la plantilla de línea de base.
+En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), en **Seguridad de los puntos de conexión** > **Líneas de base de seguridad** verá una lista de las líneas de base disponibles. La lista incluye lo siguiente:
+- el nombre de la plantilla de línea base
+- cuántos perfiles tiene que usen ese tipo de línea base
+- cuántas instancias independientes (versiones) del tipo base hay disponibles
+- una fecha de *Última publicación* que identifica cuándo estuvo disponible la versión más reciente de la plantilla de línea base
 
-Para ver más información sobre las versiones de línea de base que usa, seleccione un icono de línea de base para abrir su panel **Información general** y luego seleccione *Versiones*. Intune muestra detalles sobre las versiones de esa línea de base que se usan en los perfiles, incluida la versión más reciente y la actual.  Puede seleccionar una sola versión para ver más detalles sobre los perfiles en los que se usa.
+Para ver más información sobre las versiones de línea base que usa, seleccione una línea base para abrir su panel *Información general* y luego seleccione **Versiones**. Intune muestra detalles sobre las versiones de esa línea de base que se encuentran en uso por parte de sus perfiles. Los detalles incluyen la versión de línea base más reciente y actual. Puede seleccionar una sola versión para ver más detalles sobre los perfiles en los que se usa.
 
-Puede optar por [cambiar la versión](#change-the-baseline-version-for-a-profile) de una línea de base que está en uso con un perfil determinado. Esto significa que, cuando sale una nueva versión, no es necesario crear un nuevo perfil de línea de base para aprovecharla. En su lugar, cuando esté listo, puede seleccionar un perfil de línea de base y luego usar la opción integrada para cambiar la versión de la instancia de ese perfil a una nueva.
+Puede optar por [cambiar la versión](#change-the-baseline-version-for-a-profile) de una línea de base que está en uso con un perfil determinado. Al cambiar de versión, no es necesario crear un nuevo perfil de línea base para aprovechar las versiones actualizadas, sino que se puede seleccionar un perfil de línea base y usar la opción integrada para cambiar la versión de la instancia de ese perfil por una nueva.
 
 ### <a name="compare-baseline-versions"></a>Comparación de versiones de línea de base
 
 En el panel **Versiones** de una línea de base de seguridad se muestra una lista de todas las versiones de esta línea de base que ha implementado. En la lista también se incluye la versión más reciente y activa de la línea de base. Cuando se crea un *perfil* de línea de base de seguridad, el perfil usa la versión más reciente de esta.  Puede seguir usando y editando perfiles creados anteriormente en los que se usa una versión de la línea de base anterior, incluidas las líneas de base creadas mediante una versión preliminar.
 
-Para comprender lo que ha cambiado entre las versiones, active las casillas de dos versiones diferentes y, después, seleccione **Comparar líneas de base** para descargar un archivo CSV en el que se detallan esas diferencias. 
+Para entender lo que ha cambiado entre versiones, active las casillas de dos versiones diferentes y seleccione **Comparar líneas base**. Luego se le pide que descargue un archivo CSV que detalla esas diferencias.
 
 La descarga identifica cada configuración de las dos versiones de línea de base e indica si esta configuración ha cambiado (*notEqual*) o no (*equal*). Los detalles también incluyen el valor predeterminado de la configuración por versión y si la configuración se *ha agregado* a la versión más reciente o se *ha quitado* de esta.
 
@@ -207,11 +211,41 @@ Si una configuración de líneas de base de seguridad deja de aplicarse a un dis
 
 Otros procesos que podrían cambiar la configuración del dispositivo posteriormente incluyen una línea de base de seguridad nueva o diferente, un perfil de configuración de dispositivo, configuraciones de directiva de grupo o una edición manual de la configuración del dispositivo.
 
+### <a name="duplicate-a-security-baseline"></a>Duplicado de una línea base de seguridad
+
+Puede crear duplicados de las líneas base de seguridad. Un escenario en el que el duplicado de una línea base resulta útil es cuando se quiere asignar una línea base similar pero distinta a un subconjunto de dispositivos. Al crear un duplicado, no es necesario volver a crear manualmente toda la línea base, sino que se puede duplicar cualquiera de las líneas base actuales y luego incorporar solo los cambios que necesita la nueva instancia. Solo se puede cambiar un valor específico y el grupo al que está asignada la línea base.
+
+Al crear un duplicado, se le asigna un nuevo nombre a la copia. La copia se realiza con las mismas opciones de configuración y etiquetas de ámbito que la original, pero no tiene ninguna asignación. Debe modificar la nueva línea base para agregar asignaciones.
+
+Todas las líneas base de seguridad admiten la creación de un duplicado.
+
+Después de duplicar una línea base, revise y edite la nueva instancia para realizar cambios en su configuración.
+
+#### <a name="to-duplicate-a-baseline"></a>Para duplicar una línea base
+
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vaya a **Seguridad de los puntos de conexión** > **Líneas base de seguridad**, seleccione el tipo de línea base que quiere duplicar y luego **Perfiles**.
+3. Haga clic con el botón derecho en el perfil que quiere duplicar y seleccione **Duplicar**, o bien seleccione los puntos suspensivos ( **...** ) situados a la derecha de la línea base y luego **Duplicar**.
+4. Proporcione un **Nuevo nombre** a la línea base y seleccione **Guardar**.
+
+Después de *Actualizar*, el nuevo perfil de línea base aparece en el centro de administración.
+
+#### <a name="to-edit-a-baseline"></a>Para editar una línea base
+
+1. Seleccione la línea base y luego **Propiedades**.
+2. Seleccione **Configuración** para expandir la lista de categorías de opciones de la línea base. No se pueden modificar las opciones desde esta vista, pero se puede revisar cómo están configuradas.
+3. Para modificar la configuración, seleccione **Editar** en cada categoría en la que quiera hacer un cambio:
+   - Aspectos básicos
+   - Assignments
+   - Etiquetas de ámbito
+   - Opciones de configuración
+4. Una vez realizados los cambios, seleccione **Guardar** para guardar las modificaciones.  Debe guardar las modificaciones realizadas en una categoría para poder especificar modificaciones en categorías adicionales.
+
 ### <a name="older-baseline-versions"></a>Versiones de línea de base anteriores
 
 Microsoft Endpoint Manager actualiza las versiones de las líneas de base de seguridad integradas en función de las necesidades cambiantes de una organización habitual. En cada versión nueva se genera una actualización de la versión de una línea de base determinada. Se espera que los clientes usen la versión de línea de base más reciente como punto de partida para sus perfiles de configuración de dispositivos.
 
-Cuando ya no haya ningún perfil que use una línea de base anterior enumerada en el inquilino, Microsoft Endpoint Manager solo mostrará la versión de línea de base más reciente disponible.
+Cuando ya no hay ningún perfil que use una línea base anterior enumerada en el inquilino, Microsoft Endpoint Manager solo muestra la versión de línea base más reciente disponible.
 
 Si tiene un perfil asociado a una línea de base anterior, seguirá apareciendo.
 

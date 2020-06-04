@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007630"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853594"
 ---
 # <a name="review-client-app-protection-logs"></a>Revisión de los registros de protección de aplicaciones cliente
 
 Obtenga información sobre la configuración que puede revisar en los registros de protección de aplicaciones. Para acceder a los registros, habilite los diagnósticos de Intune en un cliente móvil. 
 
 El proceso para habilitar y recopilar registros varía según la plataforma:
-- **Dispositivos iOS/iPadOS**: use Microsoft Edge para iOS/iPadOS para recopilar registros. Para obtener detalles, vea [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **Dispositivos iOS/iPadOS**: use Microsoft Edge para iOS/iPadOS para recopilar registros. Para obtener información detallada, vea [Uso de Edge para iOS y Android a fin de acceder a registros de aplicaciones administradas](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 - **Dispositivos Windows 10**: use *MDMDiag* y registros de eventos. Consulte [Diagnósticos de errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10), que encontrará en el contenido de administración del cliente de Windows, así como la entrada de blog [Solución de problemas de errores de directivas de Intune en Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
-- **Dispositivos Android**: use Microsoft Edge para Android para recopilar registros. Para obtener detalles, vea [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **Dispositivos Android**: use Microsoft Edge para Android para recopilar registros. Para obtener información detallada, vea [Uso de Edge para iOS y Android a fin de acceder a registros de aplicaciones administradas](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!Note]
   > En los dispositivos Android totalmente administrados, en determinados casos, la aplicación Portal de empresa de Intune puede estar visible en todas las aplicaciones. Esto puede ocurrir si una aplicación asociada a una directiva de protección de aplicaciones no está instalada o no se ha iniciado. 

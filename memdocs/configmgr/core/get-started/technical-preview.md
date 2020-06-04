@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
+ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905154"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84226250"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -116,20 +116,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 Las características siguientes están disponibles con la versión de Technical Preview de Configuration Manager más reciente:
 
-### <a name="technical-preview-version-2004"></a>Versión 2004 de Technical Preview
+### <a name="technical-preview-version-2005"></a>Versión 2005 Technical Preview
 
-- [Asociación de inquilinos de Microsoft Endpoint Manager: detalles de cliente de ConfigMgr](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Notificaciones de Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Copia de datos de detección desde la consola](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [Mejoras en CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [Compatibilidad con PowerShell, versión 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Mejora en el paso de secuencia de tareas Formatear y crear particiones en el disco](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [Reglas de información de administración para la implementación de SO](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [Cmdlets de PowerShell para tipos de implementación de secuencia de tareas](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [Asociación de inquilinos: escala de tiempo del dispositivo en el centro de administración](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Asociación de inquilinos: instalación de una aplicación desde el centro de administración](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [Asociación de inquilinos: CMPivot desde el centro de administración](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [Asociación de inquilinos: Ejecutar scripts desde el centro de administración](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [Tipo de límite de VPN](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [Autenticación de Azure AD en el Centro de software](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [Instalación y actualización del cliente en una conexión de uso medido](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [Compatibilidad de medios de secuencia de tareas para contenido basado en la nube](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [Mejoras en los cmdlets de Cloud Management Gateway](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [GitHub y Centro de comunidad](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Aplicaciones de Microsoft 365 para empresas](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [Notificación de errores de instalación y actualización a Microsoft](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Notificación de expiración de clave secreta de aplicación de Azure AD](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [Mejoras en los pasos de secuencia de tareas de BitLocker](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [Mejoras en la herramienta de limpieza de la biblioteca de contenido](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Eliminación del símbolo del sistema durante la actualización local de Windows 10](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.
@@ -146,6 +154,17 @@ Las características siguientes se publicaron con versiones anteriores de la ram
 
 > [!TIP]
 > Cuando esté disponible una nueva versión de la rama actual, se mostrarán las características que disponibles en esa versión en el último artículo sobre las *novedades*. Para obtener más información, vea [Novedades en las versiones incrementales](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2004"></a>Versión 2004 de Technical Preview
+
+- [Asociación de inquilinos de Microsoft Endpoint Manager: detalles de cliente de ConfigMgr](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Notificaciones de Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [Copia de datos de detección desde la consola](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [Mejoras en CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [Compatibilidad con PowerShell, versión 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [Mejora en el paso de secuencia de tareas Formatear y crear particiones en el disco](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [Reglas de información de administración para la implementación de SO](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [Cmdlets de PowerShell para tipos de implementación de secuencia de tareas](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### <a name="technical-preview-version-2003"></a>Versión 2003 de Technical Preview
 

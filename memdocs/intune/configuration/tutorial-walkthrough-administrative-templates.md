@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254867"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406554"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Uso de la nube para configurar directivas de grupo en dispositivos con Windows 10 con plantillas de ADMX y Microsoft Intune
 
@@ -114,7 +114,7 @@ También puede abrir el Centro de administración de puntos de conexión desde e
 
 1. Vaya a [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Inicie sesión con la cuenta de administrador de la suscripción de inquilino de Microsoft 365.
-3. En **Centros de administración**, seleccione **Todos los centros de administración** > **Administración de puntos de conexión**. Se abre el Centro de administración de puntos de conexión.
+3. Seleccione **Mostrar todos** > **Todos los centros de administración** > **Administración de puntos de conexión**. Se abre el Centro de administración de puntos de conexión.
 
     > [!div class="mx-imgBorder"]
     > ![Vista de todos los centros de administración en el Centro de administración de Microsoft 365](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
@@ -123,7 +123,13 @@ También puede abrir el Centro de administración de puntos de conexión desde e
 
 Las directivas locales se aplican en el orden: local, sitio, dominio y unidad organizativa (UO). En esta jerarquía, las directivas de UO sobrescriben a las directivas locales, las directivas de dominio sobrescriben a las directivas de sitio, y así sucesivamente.
 
-En Intune, las directivas se aplican a los usuarios y a los grupos que se crean. No existe ninguna jerarquía. Si dos directivas actualizan el mismo valor, este se muestra como un conflicto. Si hay dos directivas de cumplimiento en conflicto, se aplica la más restrictiva. Si hay dos perfiles de configuración en conflicto, no se aplica el valor. Para obtener más información, vea [Preguntas comunes, problemas y su solución con perfiles y directivas de dispositivos](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+En Intune, las directivas se aplican a los usuarios y a los grupos que se crean. No existe ninguna jerarquía. Por ejemplo:
+
+- Si dos directivas actualizan el mismo valor, este se muestra como un conflicto.
+- Si hay dos directivas de cumplimiento en conflicto, se aplica la más restrictiva.
+- Si hay dos perfiles de configuración en conflicto, no se aplica el valor.
+
+Para obtener más información, vea [Preguntas comunes, problemas y su solución con perfiles y directivas de dispositivos](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
 
 En los siguientes pasos se crean grupos de seguridad y se agregan usuarios a los grupos. Es posible agregar un usuario a varios grupos. Por ejemplo, es normal que un usuario tenga varios dispositivos, como un Surface Pro para el trabajo y un dispositivo móvil Android para uso personal. Además, es normal que una persona acceda a los recursos de la organización desde estos distintos dispositivos.
 
@@ -237,7 +243,7 @@ En esta sección se crea una plantilla administrativa en Intune, se examinan alg
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
 
 5. Seleccione **Siguiente**.
-6. En **Opciones de configuración**, hay opciones que se aplican a los dispositivos (**Configuración del equipo**) y opciones que se aplican a los usuarios (**Configuración de usuario**):
+6. En **Opciones de configuración**, seleccione **Todas las configuraciones** para ver una lista alfabética de todas las opciones. También puede configurar opciones que sean aplicables a dispositivos (**Configuración del equipo**) y opciones que sean aplicables a usuarios (**Configuración de usuario**):
 
     > [!div class="mx-imgBorder"]
     > ![Aplicación de la configuración de la plantilla de ADMX a usuarios y dispositivos en el Administrador de puntos de conexión de Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
@@ -305,7 +311,7 @@ En esta sección se muestra una directiva en Intune y su directiva correspondien
 > [!TIP]
 > Para ver las directivas integradas de Windows, también puede usar GPEdit (aplicación **Editar directiva de grupo**).
 
-#### <a name="compare-an-edge-policy"></a>Comparación de una directiva de Edge
+#### <a name="compare-a-microsoft-edge-policy"></a>Comparación de una directiva de Microsoft Edge
 
 1. En el centro de administración del Administrador de puntos de conexión, vaya a la plantilla **Plantilla de administración: dispositivos de Windows 10 Student**.
 2. Expanda **Configuración del equipo** > **Microsoft Edge** > **Inicio, Página principal y Página Nueva pestaña**. Observe las opciones disponibles.
@@ -368,7 +374,7 @@ En esta plantilla se configuran algunos valores de Internet Explorer para bloque
 
 3. Seleccione **Siguiente**. En **Revisar y crear**, seleccione **Crear** para guardar los cambios.
 
-Al guardar el perfil, este se aplica a los dispositivos en cuanto se registran en Intune. Si los dispositivos están conectados a Internet, puede suceder de inmediato. Vea [¿Cuánto tiempo tardan los dispositivos en obtener una directiva, un perfil o una aplicación después de que se hayan asignado?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) para obtener más información sobre los tiempos de actualización de directivas.
+Al guardar el perfil, este se aplica a los dispositivos en cuanto se registran en Intune. Si los dispositivos están conectados a Internet, puede suceder de inmediato. Consulte [¿Cuánto tiempo tardan los dispositivos en obtener una directiva, un perfil o una aplicación?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) para obtener más información sobre los tiempos de actualización de directivas.
 
 Al asignar directivas y perfiles estrictos o restrictivos, no se bloquee. Plantéese la posibilidad de crear un grupo que esté excluido de las directivas y los perfiles. La idea es tener acceso para solucionar problemas. Supervise este grupo para confirmar que se está usando según lo previsto.
 
@@ -394,9 +400,9 @@ En esta sección se crea una plantilla de administración de OneDrive en Intune 
     - **Descripción**: escriba una descripción para el perfil. Esta configuración es opcional pero recomendada.
 
 5. Seleccione **Siguiente**.
-6. En **Opciones de configuración**, establezca los siguientes parámetros. No olvide seleccionar **Aceptar** para guardar los cambios.
+6. En **Opciones de configuración**, establezca los siguientes parámetros. No olvide seleccionar **Aceptar** para guardar los cambios:
 
-    - **Configuración del equipo** > **Toda la configuración**:
+    - **Configuración del equipo**:
       - **Registrar a usuarios silenciosamente en el cliente de sincronización de OneDrive con sus credenciales de Windows**
         - **Tipo**: Dispositivo
         - **Valor**: Habilitado
@@ -404,7 +410,7 @@ En esta sección se crea una plantilla de administración de OneDrive en Intune 
         - **Tipo**: Dispositivo
         - **Valor**: Habilitado
 
-    - **Configuración de usuario** > **Toda la configuración**:
+    - **Configuración de usuario**:
       - **Impedir que los usuarios sincronicen cuentas de OneDrive personales**
         - **Tipo**: Usuario
         - **Valor**: Habilitado
@@ -545,7 +551,7 @@ En esta sección se usan los recursos siguientes. Estos recursos se instalan en 
 2. Seleccione el perfil de la **configuración de prueba** > **Configuración**.
 3. En la lista desplegable, seleccione **Todos los productos**.
 
-Ve que el valor **Registra a usuarios silenciosamente en el Cliente de sincronización de OneDrive con sus credenciales de Windows** está configurado.
+Verá que la opción **Registra a usuarios silenciosamente en el Cliente de sincronización de OneDrive con sus credenciales de Windows** está configurado.
 
 ## <a name="policy-best-practices"></a>Procedimientos recomendados de la directiva
 

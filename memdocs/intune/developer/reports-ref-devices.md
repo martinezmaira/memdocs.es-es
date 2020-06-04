@@ -6,7 +6,7 @@ keywords: Almacenamiento de datos de Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078063"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165437"
 ---
 # <a name="reference-for-devices-entities"></a>Referencia de las entidades Devices
 
@@ -226,7 +226,7 @@ La entidad **managementAgentType** representa los agentes usados para administra
 La entidad **devices** muestra todos los dispositivos inscritos en la administración y sus propiedades correspondientes.
 
 |          Propiedad          |                                                                                       Descripción                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente.                                                                                                               |
 | deviceId                   | Identificador único del dispositivo.                                                                                                                                                     |
 | deviceName                 | Nombre del dispositivo en plataformas que permiten asignar nombres a dispositivos. En otras plataformas, Intune crea un nombre a partir de otras propiedades. Este atributo no puede estar disponible para todos los dispositivos. |
@@ -263,13 +263,18 @@ La entidad **devices** muestra todos los dispositivos inscritos en la administra
 | cellularTechnology         | Tecnología de datos móviles del dispositivo                                                                                                                                                    |
 | WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
 | ICCD                       | Identificador de tarjeta de circuitos integrados                                                                                                                                                     |
+| windowsOsEdition           | Edición de sistema operativo Windows.                                                                                                                             |
+| ethernetMacAddress           | Identificador de red único de este dispositivo.                                                                                                                                        |
+| modelo                      | El modelo del dispositivo.                                                                                                                                                                      |
+| office365Version           | La versión de Office 365 instalada en el dispositivo.                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 La entidad **devicePropertyHistory** tiene las mismas propiedades que las tablas de dispositivos y las instantáneas diarias de cada registro de dispositivo por día de los últimos 90 días. La columna DateKey indica el día de cada fila.
 
 |          Propiedad          |                                                                                      Descripción                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Referencia a la tabla de fechas que indica el día.                                                                                                                                          |
 | deviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente. Es una referencia a la tabla de dispositivos que contiene el identificador de dispositivo de Intune.                               |
 | deviceName                 | Nombre del dispositivo en plataformas que permiten asignar nombres a dispositivos. En otras plataformas, Intune crea un nombre a partir de otras propiedades. Este atributo no puede estar disponible para todos los dispositivos. |
@@ -281,4 +286,6 @@ La entidad **devicePropertyHistory** tiene las mismas propiedades que las tablas
 | OSVersion                  | Versión del SO.                                                                                                                                                                          |
 | jailBroken                 | Si el dispositivo está liberado.                                                                                                                                         |
 | deviceCategoryKey          | Clave del atributo de categoría de dispositivo para este dispositivo. 
+| physicalMemoryInBytes      | La memoria física en bytes.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Capacidad de almacenamiento total en bytes.                                                                                                                                                                |
 

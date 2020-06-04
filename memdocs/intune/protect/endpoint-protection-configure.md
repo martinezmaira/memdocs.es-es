@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cb51d5f73edbc28572ee01d49ba4bd5a62cf6393
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551589"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989639"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Agregar la configuración de Endpoint Protection en Intune
 
@@ -39,12 +39,9 @@ Antes de crear un perfil, revise estos artículos que detallan la configuración
 - [Configuración de macOS](endpoint-protection-macos.md)
 - [Configuración de Windows 10](endpoint-protection-windows-10.md)
 
-> [!NOTE]
-> La interfaz de usuario de Intune se está actualizando a una experiencia de pantalla completa y puede tardar varias semanas. Hasta que el inquilino reciba esta actualización, tendrá un flujo de trabajo ligeramente diferente cuando cree o edite la configuración que se describe en este artículo.
-
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Crear un perfil de dispositivo que contenga la configuración de Endpoint Protection
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
@@ -60,8 +57,9 @@ Antes de crear un perfil, revise estos artículos que detallan la configuración
 4. Seleccione **Crear**.
 5. En **Básico**, escriba las propiedades siguientes:
 
-    - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva válido es **macOS: perfil de Endpoint Protection que configura el firewall para todos los dispositivos macOS**.
-    - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
+   - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva adecuado podría incluir el tipo de perfil y la plataforma.
+
+   - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
 
 6. Seleccione **Siguiente**.
 
@@ -97,7 +95,7 @@ Las reglas de firewall que Intune puede administrar se detallan en el [proveedor
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Adición de reglas de firewall personalizadas a un perfil de protección de punto de conexión
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 

@@ -1,12 +1,12 @@
 ---
 title: 'Incorporación de una configuración de VPN a dispositivos iOS en Microsoft Intune: Azure | Microsoft Docs'
-description: En el caso del administrador de dispositivos Android, Android Enterprise, iOS, iPadOS, macOS y Windows, use la configuración integrada para crear conexiones de red privada virtual (VPN) en Microsoft Intune.
+description: En el administrador de dispositivos Android, Android Enterprise, iOS, iPadOS, macOS y Windows, use la configuración integrada para crear conexiones de red privada virtual (VPN) en Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943831"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990262"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Creación de perfiles de VPN para conectarse a servidores VPN en Intune
 
-Las redes privadas virtuales (VPN) ofrecen a los usuarios acceso remoto seguro a la red de la empresa. Los dispositivos usan un perfil de conexión VPN para iniciar una conexión con el servidor VPN. Los **perfiles de VPN** de Microsoft Intune asignan la configuración de VPN a los usuarios y dispositivos de la organización, para que puedan conectarse de forma fácil y segura a la red de la empresa.
+Las redes privadas virtuales (VPN) ofrecen a los usuarios acceso remoto seguro a la red de la empresa. Los dispositivos usan un perfil de conexión VPN para iniciar una conexión con el servidor VPN. Los **perfiles de VPN** en Microsoft Intune asignan la configuración de VPN en los usuarios y los dispositivos de la organización. Use esta configuración para que los usuarios puedan conectarse de forma fácil y segura a la red de la organización.
 
 Por ejemplo, quiere configurar todos los dispositivos iOS/iPadOS con las opciones de configuración necesarias para conectarse a un recurso compartido de archivos de la red de la empresa. Cree un perfil de VPN que incluya estas opciones de configuración. Después, asigne este perfil a todos los usuarios que tengan dispositivos iOS/iPadOS. Los usuarios verán la conexión VPN en la lista de redes disponibles y podrán conectarse con un esfuerzo mínimo.
 
@@ -108,7 +108,6 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
   - Perfiles de trabajo de Android Enterprise
   - Propietario del dispositivo Android Enterprise (totalmente administrado)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -182,7 +181,7 @@ Los perfiles de VPN pueden utilizar diferentes tipos de conexiones y protocolos 
 
 Al crear el perfil de VPN, elija un perfil de certificado SCEP o PKCS que haya creado previamente en Intune. Este perfil se conoce como “certificado de identidad”. Se usa para autenticar con un perfil de certificado de confianza (o un *certificado raíz*) que se crea para que el dispositivo del usuario pueda conectarse. El certificado de confianza se asigna al equipo que autentica la conexión VPN, por lo general, el servidor de VPN.
 
-Si usa la autenticación basada en certificados para el perfil de VPN, implemente el perfil de VPN, el de certificado y el perfil raíz de confianza en los mismos grupos para asegurarse de que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación.
+Si usa la autenticación basada en certificados para el perfil de VPN, implemente el perfil de VPN, el de certificado y el perfil raíz de confianza en los mismos grupos. Esta asignación garantiza que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación.
 
 Para más información sobre cómo crear y usar perfiles de certificado en Intune, consulte [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md) (Configuración de certificados con Microsoft Intune).
 

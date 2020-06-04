@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023187"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990336"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS importados con Intune
 
@@ -87,7 +87,7 @@ Al utilizar Intune para implementar un **certificado PFX importado** para un usu
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>Descarga, instalación y configuración del conector de certificado PFX para Microsoft Intune
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificados** > **Agregar**.
 
@@ -126,7 +126,7 @@ Para usar los cmdlets de PowerShell, puede compilar el proyecto con Visual Stud
 
 3. En la parte superior, cambie de **Depurar** a **Liberar**.
 
-4. Vaya a **Compilar** y seleccione **Build PFXImportPS**. Transcurridos unos instantes, verá que aparece un mensaje de confirmación de **compilación correcta** en la parte inferior izquierda de Visual Studio.
+4. Vaya a **Compilar** y seleccione **Build PFXImportPS**. En unos instantes, verá que aparece un mensaje de confirmación de **Compilación correcta** en la parte inferior izquierda de Visual Studio.
 
    ![Opción de compilación de Visual Studio](./media/certificates-imported-pfx-configure/vs-build-release.png)
 
@@ -148,7 +148,7 @@ El módulo de PowerShell proporciona métodos para crear una clave mediante la c
 
 3. Para importar el módulo, ejecute `Import-Module .\IntunePfxImport.psd1`.
 
-4. A continuación, ejecute `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`.
+4. A continuación, ejecute `Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"`.
 
    > [!TIP]
    > El proveedor que usa debe volver a seleccionarse al importar los certificados PFX. Puede utilizar el **proveedor de almacenamiento de claves de software de Microsoft**, aunque también puede usar otro proveedor. Como ejemplo, también se proporciona el nombre de clave y puede usar el nombre de clave diferente de su elección.
@@ -187,7 +187,7 @@ Seleccione el proveedor de almacenamiento de claves que coincida con el proveedo
 
 3. Para importar el módulo, ejecute `Import-Module .\IntunePfxImport.psd1`.
 
-4. Para autenticarse en Graph de Intune, ejecute `$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"`.
+4. Para autenticarse en Graph de Intune, ejecute `Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"`.
 
    > [!NOTE]
    > Como la autenticación se ejecuta en Graph, debe proporcionar permisos a AppID. Si es la primera vez que usa esta utilidad, se requiere un *administrador global*. Los cmdlets de PowerShell usan el mismo AppID que el que se usa con los [ejemplos de Intune de PowerShell](https://github.com/microsoftgraph/powershell-intune-samples).
@@ -200,10 +200,15 @@ Seleccione el proveedor de almacenamiento de claves que coincida con el proveedo
 
    > [!NOTE]
    > Cuando importe el certificado desde un sistema que no sea el servidor en el que está instalado el conector, tiene que usar el comando siguiente, que incluye la ruta de acceso del archivo de claves `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`.
+   >
+   > El valor *VPN* no se admite como IntendedPurpose. 
 
-7. Importe el objeto **UserPFXCertificate** a Intune mediante la ejecución de `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`.
 
-8. Para validar que el certificado se ha importado, ejecute `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`.
+7. Importe el objeto **UserPFXCertificate** a Intune mediante la ejecución de `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject`.
+
+8. Para validar que el certificado se ha importado, ejecute `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`.
+
+9.  Ejecute `Remove-IntuneAuthenticationToken` para llevar a cabo el procedimiento recomendado a fin de limpiar la memoria caché de tokens de AAD sin esperar a que expire.
 
 Para más información sobre otros comandos disponibles, consulte el archivo Léame en [PFXImport PowerShell Project en GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
@@ -214,7 +219,7 @@ Después de importar los certificados en Intune, cree un perfil de **certificado
 > [!NOTE]
 > Después de crear un perfil de certificado PKCS importado, los valores **Propósito planteado** y **Proveedor de almacenamiento de claves** (KSP) del perfil son de solo lectura y no se pueden editar. Si necesita un valor diferente para cualquiera de estas opciones, cree e implemente un nuevo perfil. 
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24fd2085839df35a486fcfa4cf817944b0d19944
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407657"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556258"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Configuración de restricciones de dispositivos Windows Phone 8.1 de Microsoft Intune
 
 En este artículo, se muestran las opciones de configuración de restricciones de dispositivos de Microsoft Intune que puede configurar para los dispositivos que ejecutan Windows Phone 8.1.
+
+## <a name="before-you-begin"></a>Antes de comenzar
+
+[Cree un perfil de restricciones de dispositivos de Windows Phone 8.1](device-restrictions-configure.md).
 
 ## <a name="general"></a>General
 

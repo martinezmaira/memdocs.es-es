@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182300"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853577"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Marco de protección de datos mediante directivas de protección de aplicaciones 
 
@@ -55,7 +55,7 @@ Como se indica en la tabla anterior, todos los cambios en las directivas de prot
 
 Al probar los cambios en APP, tenga en cuenta el [tiempo de entrega](app-protection-policy-delivery.md). El estado de entrega de APP para un usuario determinado puede supervisarse. Para más información, consulte [Supervisión de las directivas de protección de aplicaciones](app-protection-policies-monitor.md).
 
-La configuración de APP individual para cada aplicación se puede validar en dispositivos que usen Edge y la dirección URL *about:Intunehelp*. Para obtener más información, consulte [Revisión de los registros de protección de las aplicaciones cliente](app-protection-policy-settings-log.md) y [Administración del acceso web mediante Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+La configuración de APP individual para cada aplicación se puede validar en dispositivos que usen Edge y la dirección URL *about:Intunehelp*. Para obtener más información, vea [Revisión de los registros de protección de aplicaciones cliente](app-protection-policy-settings-log.md) y [Uso de Edge para iOS y Android para acceder a registros de aplicaciones administradas](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Configuración del marco de protección de datos mediante APP
 
@@ -140,7 +140,7 @@ Las directivas de nivel 1 exigen un nivel de acceso a datos razonable a la vez 
 
 El nivel 2 es la configuración de protección de datos recomendada como estándar para los dispositivos en los que los usuarios acceden a información más confidencial. Estos dispositivos son un objetivo natural en las empresas de hoy en día. Estas recomendaciones no suponen una gran cantidad de personal de profesionales de seguridad muy experimentados y, por tanto, deben ser accesibles para la mayoría de las organizaciones empresariales. Esta configuración amplía la de nivel 1 mediante la restricción de los escenarios de transferencia de datos y la exigencia de una versión mínima del sistema operativo.
 
-La configuración de directiva que se aplica en el nivel 2 incluye todas las configuraciones de directiva recomendadas para el nivel 1 y solo actualiza o suma a la siguiente configuración de directiva para implementar más controles y una configuración más sofisticada que el nivel 1. Aunque esta configuración puede tener un impacto ligeramente mayor para los usuarios o las aplicaciones, aplica un nivel de protección de datos más acorde con los riesgos a los que se enfrentan los usuarios con acceso a información confidencial en dispositivos móviles.
+La configuración de directiva que se aplica en el nivel 2 incluye todas las configuraciones de directiva recomendadas para el nivel 1, pero solo enumera las configuraciones siguientes que se han agregado o cambiado para implementar más controles y una configuración más sofisticada que el nivel 1. Aunque esta configuración puede tener un impacto ligeramente mayor para los usuarios o las aplicaciones, aplica un nivel de protección de datos más acorde con los riesgos a los que se enfrentan los usuarios con acceso a información confidencial en dispositivos móviles.
 
 #### <a name="data-protection"></a>Protección de datos
 
@@ -167,7 +167,7 @@ La configuración de directiva que se aplica en el nivel 2 incluye todas las co
 
 El nivel 3 es la configuración de protección de datos recomendada como estándar para las organizaciones con organizaciones de seguridad grandes y sofisticadas, o para usuarios y grupos que serán objetivos específicos de sus adversarios. Por lo general, estas organizaciones son el objetivo de adversarios sofisticados y con buena financiación, por lo que necesitan las restricciones y los controles adicionales descritos. Esta configuración amplías las opciones de nivel 2 mediante la restricción de escenarios de transferencia de datos adicionales, el aumento de la complejidad de la configuración del PIN y la adición de detección de amenazas móviles.  
 
-La configuración de directiva que se aplica en el nivel 3 incluye todas las configuraciones de directiva recomendadas para los niveles 2 y 1 y solo actualiza o suma a la siguiente configuración de directiva para implementar configuración de protección de datos y controles estrictos. Esta configuración de directiva puede tener un impacto potencialmente significativo en los usuarios o en las aplicaciones, con lo que se impone un nivel de seguridad acorde con los riesgos a los que se enfrentan las organizaciones de destino.  
+La configuración de directiva que se aplica en el nivel 3 incluye todas las configuraciones de directiva recomendadas para el nivel 2, pero solo enumera las configuraciones siguientes que se han agregado o cambiado para implementar más controles y una configuración más sofisticada que el nivel 2. Esta configuración de directiva puede tener un impacto potencialmente significativo en los usuarios o en las aplicaciones, con lo que se impone un nivel de seguridad acorde con los riesgos a los que se enfrentan las organizaciones de destino.  
 
 #### <a name="data-protection"></a>Protección de datos
 

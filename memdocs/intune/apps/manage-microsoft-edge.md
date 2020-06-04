@@ -1,13 +1,13 @@
 ---
-title: Administración de Microsoft Edge para iOS y Android con Intune
+title: Administración de Edge para iOS y Android con Intune
 titleSuffix: ''
-description: Use las directivas de protección de aplicaciones de Intune con Microsoft Edge para garantizar que siempre se apliquen medidas de seguridad al acceder a los sitios web corporativos.
+description: Use las directivas de protección de aplicaciones de Intune con Edge para iOS y Android a fin de garantizar que siempre se apliquen medidas de seguridad al acceder a los sitios web corporativos.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/27/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,251 +18,282 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943865"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988382"
 ---
-# <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Administración del acceso web mediante Microsoft Edge con Microsoft Intune
+# <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Administración del acceso web mediante Edge para iOS y Android con Microsoft Intune
 
-Usar las directivas de protección de aplicaciones de Intune con Microsoft Edge puede garantizar que siempre se apliquen medidas de seguridad al acceder a los sitios web corporativos. Están disponibles las características empresariales de Microsoft Edge siguientes habilitadas por directivas de Intune:
+Edge para iOS y Android está diseñado para permitir a los usuarios explorar la web y es compatible con varias identidades. Los usuarios pueden agregar una cuenta profesional, así como una cuenta personal, para realizar la exploración. Existe una separación completa entre las dos identidades, igual que en otras aplicaciones móviles de Microsoft.
 
-- **Identidad dual.** Los usuarios pueden agregar una cuenta profesional, así como una cuenta personal, para realizar la exploración. Hay una separación total entre ambas identidades, que es similar a la arquitectura y experiencia existente en Office 365 y Outlook. Los administradores de Intune pueden establecer las directivas deseadas para lograr una experiencia de exploración protegida en de la cuenta profesional.
-- **Integración de la directiva de protección de aplicaciones de Intune.** Como Microsoft Edge está integrado con el SDK de Intune, puede aplicar directivas de protección de aplicaciones para evitar la pérdida de datos. Estas características incluyen el control de las funciones de cortar, copiar y pegar, impedir la obtención de capturas de pantalla y garantizar que los vínculos seleccionados por los usuarios se abran solo en otras aplicaciones administradas.
-- **Integración de Azure Application Proxy.** Puede controlar el acceso a las aplicaciones de software como servicio (SaaS) y las aplicaciones web. Esto ayuda a garantizar que las aplicaciones basadas en el explorador solo se ejecuten en el explorador seguro de Microsoft Edge, tanto si los usuarios finales se conectan desde la red corporativa como si lo hacen desde Internet.
-- **Configuración de la aplicación.** Puede usar los valores de configuración de la aplicación para reforzar el posicionamiento de seguridad de su organización y configurar características fáciles de usar para los usuarios finales. Por ejemplo, puede definir marcadores, accesos directos en la página principal, sitios web permitidos y bloqueados, así como Azure Active Directory (Azure AD) Application Proxy.
-
-Las directivas de protección de Microsoft Intune para Microsoft Edge ayudan a proteger los datos y los recursos de la organización. Usar estas directivas con Microsoft Edge garantiza la protección de los recursos de la empresa no solo dentro de las aplicaciones instaladas de manera nativa, sino también cuando se accede a ellas desde el explorador web.
-
-## <a name="getting-started"></a>Introducción
-
-Tanto usted como los usuarios finales pueden descargar Microsoft Edge desde tiendas de aplicaciones públicas para usarlo en sus organizaciones. Para cumplir con los requisitos de sistema operativo para las directivas de explorador, se ha de disponer de cualquiera de los siguientes:
-- Android 5 y versiones posteriores
-- iOS 12.0 y versiones posteriores
-
-## <a name="application-protection-policies-for-microsoft-edge"></a>Directivas de protección de aplicaciones para Microsoft Edge
-
-Como Microsoft Edge está integrado con el SDK de Intune, puede aplicarles directivas de protección de aplicaciones.
-
-Puede aplicar esta configuración a:
-- Dispositivos móviles inscritos con Intune.
-- Dispositivos inscritos con otro producto de administración de dispositivos móviles.
-- Dispositivos no administrados.
-
-Si la directiva de Intune no se dirige a Microsoft Edge, los usuarios no podrán usarlo para acceder a datos de otras aplicaciones administradas por Intune, como aplicaciones de Office. 
-
-   >[!NOTE]
-   > Las pulsaciones largas se deshabilitan para Microsoft Edge cuando se aplica una directiva de tipo "guardar como" que impide la descarga de imágenes.
-
-## <a name="conditional-access-for-microsoft-edge"></a>Acceso condicional para Microsoft Edge
-
-Puede usar el acceso condicional de Azure AD para redirigir a los usuarios para que accedan a contenido corporativo solo a través de Microsoft Edge. Esto restringe el acceso de explorador móvil de las aplicaciones web conectadas a Azure AD a Microsoft Edge protegido por directivas. Esto bloquea el acceso desde cualquier otro explorador no protegido, como Safari o Chrome. Puede aplicar el acceso condicional a recursos de Azure como Exchange Online y SharePoint Online, el Centro de administración de Microsoft 365 e, incluso, a sitios locales que estén expuestos a usuarios externos a través de [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
+Edge para iOS es compatible con iOS 12.0 y versiones posteriores. Edge para Android es compatible con Android 5 y versiones posteriores.
 
 > [!NOTE]
-> Los nuevos clips web (aplicaciones web ancladas) de los dispositivos iOS se abrirán en Microsoft Edge en lugar de en Intune Managed Browser si tienen que abrirse en un explorador protegido. En el caso de los clips web de iOS más antiguos, debe cambiar el destino de estos clips web para asegurarse de que se abren en Microsoft Edge y no en Managed Browser.
+> Edge para iOS y Android no usa la configuración establecida por los usuarios para el explorador nativo en sus dispositivos, porque Edge para iOS y Android no puede acceder a esta configuración.
 
-Para restringir el uso de Microsoft Edge en iOS y Android por parte de las aplicaciones web conectadas a Azure AD, realice lo siguiente:
-1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. En el nodo de Intune, seleccione **Acceso condicional** > **Nueva directiva**.
-3. Seleccione **Conceder** en la sección **Controles de acceso** del panel.
-4. Seleccione **Requerir aplicación cliente aprobada**.
-5. Elija **Seleccionar** en el panel **Conceder**. Esta directiva se debe asignar a las aplicaciones en la nube que quiera que estén accesibles a únicamente la aplicación Intune Managed Browser.
+Tendrá a su disposición las capacidades de protección más enriquecidas y más amplias para los datos de Office 365 cuando se suscriba al conjunto de aplicaciones de Enterprise Mobility + Security, que incluye características de Microsoft Intune y Azure Active Directory Premium, como el acceso condicional. Como mínimo, le interesará implementar una directiva de acceso condicional que solo permita la conectividad a Edge para iOS y Android desde dispositivos móviles y una directiva de protección de aplicaciones de Intune que garantice que la experiencia de exploración esté protegida.
 
-    ![Captura de pantalla de la directiva de acceso condicional: concesión](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
+> [!NOTE]
+> Los nuevos clips web (aplicaciones web ancladas) de los dispositivos iOS se abrirán en Edge para iOS y Android, en lugar de en Intune Managed Browser, si tienen que abrirse en un explorador protegido. En el caso de los clips web de iOS más antiguos, debe cambiar el destino de estos clips web para asegurarse de que se abren en Edge para iOS y Android, y no en Managed Browser.
 
-6. En la sección Asignaciones, seleccione **Condiciones** > **Aplicaciones**. Aparece el panel **Aplicaciones**.
-7. En **Configurar**, seleccione **Sí** para aplicar la directiva a aplicaciones cliente específicas.
-8. Compruebe que **Explorador** está seleccionado como aplicación cliente.
+## <a name="apply-conditional-access"></a>Aplicación del acceso condicional
+Las organizaciones pueden usar directivas de acceso condicional de Azure AD para asegurarse de que los usuarios solo puedan acceder al contenido profesional o educativo mediante Edge para iOS y Android. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de directivas de protección de aplicaciones para el acceso a aplicaciones en la nube con acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-    ![Captura de pantalla de la directiva de acceso condicional: selección de las aplicaciones cliente](./media/manage-microsoft-edge/manage-microsoft-edge-02.png)
+1. Siga el [Escenario 2: Las aplicaciones de explorador requieren aplicaciones aprobadas con directivas de protección de aplicaciones](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), lo que permite Edge para iOS y Android, pero impide que otros exploradores web de dispositivos móviles se conecten a los puntos de conexión de Office 365.
 
-    > [!NOTE]
-    > Si quiere restringir qué aplicaciones nativas (aplicaciones que no son de explorador) pueden tener acceso a estas aplicaciones en la nube, también puede seleccionar **Aplicaciones móviles y aplicaciones de escritorio**.
+   >[!NOTE]
+   > Esta directiva garantiza que los usuarios móviles puedan acceder a todos los puntos de conexión de Office 365 desde Edge para iOS y Android. Esta Directiva también impide que los usuarios empleen InPrivate para acceder a los puntos de conexión de Office 365.
 
-9. En la sección **Asignaciones**, seleccione **Usuarios y grupos** y, después, elija los usuarios o grupos a los que quiera asignar esta directiva.
+Con el acceso condicional, también puede establecer como destino sitios locales que haya expuesto a usuarios externos a través del [proxy de aplicación de Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
-10. En la sección **Asignaciones**, seleccione **Aplicaciones en la nube** para elegir las aplicaciones que se van a proteger con esta directiva.
+## <a name="create-intune-app-protection-policies"></a>Creación de directivas de protección de aplicaciones de Intune
 
-Una vez configurada la directiva, los usuarios deben usar obligatoriamente Microsoft Edge para acceder a las aplicaciones web conectadas a Azure AD que estén protegidas con dicha directiva. Si los usuarios intentan usar un explorador no administrado en este escenario, recibirán un mensaje en el que se les indicará que deben usar Microsoft Edge.
+Las directivas de protección de aplicaciones (APP) definen qué aplicaciones están permitidas y qué acciones pueden llevar a cabo con los datos de la organización. Las opciones disponibles en APP permiten a las organizaciones adaptar la protección a sus necesidades específicas. Para algunas de ellas, puede que no sea obvio qué configuración de directivas es necesaria para implementar un escenario completo. Para ayudar a las organizaciones a priorizar la protección del punto de conexión del cliente móvil, Microsoft ha introducido la taxonomía para su marco de protección de datos de APP para la administración de aplicaciones móviles de iOS y Android.
 
-> [!TIP]
-> Acceso condicional es una tecnología de Azure AD. El nodo de acceso condicional al que se accede desde Intune es el mismo nodo al que se accede desde Azure AD.
+El marco de protección de datos de APP se organiza en tres niveles de configuración distintos, cada uno de ellos basado en el nivel anterior:
+
+- La **protección de datos empresariales básica** (nivel 1) garantiza que las aplicaciones estén protegidas con un PIN y cifradas y realiza operaciones de borrado selectivo. En el caso de los dispositivos Android, este nivel valida la certificación de dispositivos Android. Se trata de una configuración de nivel de entrada que proporciona un control de protección de datos similar en las directivas de buzón de Exchange Online y que introduce tecnologías informáticas y la población de usuarios en APP.
+- La **protección de datos empresariales mejorada** (nivel 2) incorpora mecanismos para la prevención de la pérdida de datos de APP y requisitos mínimos para el sistema operativo. Esta es la configuración aplicable a la mayoría de los usuarios móviles que acceden a datos profesionales o educativos.
+- La **protección de datos empresariales alta** (nivel 3) incorpora mecanismos avanzados para la protección de datos, configuración de PIN mejorada y defensa contra amenazas móviles de APP. Esta configuración es conveniente para los usuarios que acceden a datos de alto riesgo.
+
+Para ver las recomendaciones específicas para cada nivel de configuración y las aplicaciones mínimas que se deben proteger, revise el [Marco de protección de datos mediante directivas de protección de aplicaciones](app-protection-framework.md).
+
+Independientemente de si el dispositivo está inscrito en una solución de administración de puntos de conexión unificada (UEM), es necesario crear una directiva de protección de aplicaciones de Intune para las aplicaciones iOS y Android con los pasos descritos en [Creación y asignación de directivas de protección de aplicaciones](app-protection-policies.md). Estas directivas deben cumplir como mínimo las siguientes condiciones:
+
+1. Deben incluir todas las aplicaciones móviles de Microsoft, como Outlook, OneDrive, Office o Teams, ya que esto garantizará que los usuarios puedan acceder a los datos profesionales o educativos y manipularlos desde cualquier aplicación de Microsoft de forma segura.
+
+2. Deben asignarse a todos los usuarios. Esto garantiza que todos los usuarios estén protegidos, independientemente de si usan Edge para iOS o Android.
+
+3. Deben determinar qué nivel de marco cumple los requisitos. La mayoría de las organizaciones deben implementar la configuración definida en la **protección de datos empresariales mejorada** (nivel 2), ya que habilita los controles de protección de datos y de requisitos de acceso.
+
+Para obtener más información sobre las configuraciones disponibles, vea [Configuración de directivas de protección de aplicaciones Android](app-protection-policy-settings-android.md) y [Configuración de directivas de protección de aplicaciones iOS](app-protection-policy-settings-ios.md).
+
+> [!IMPORTANT]
+> Para aplicar directivas de protección de aplicaciones de Intune a aplicaciones en dispositivos Android que no están inscritos en Intune, el usuario también debe instalar el Portal de empresa de Intune. Para obtener más información, vea [Qué esperar cuando la aplicación Android está administrada por directivas de protección de aplicaciones](../fundamentals/end-user-mam-apps-android.md).
 
 ## <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Inicio de sesión único en aplicaciones web conectadas a Azure AD en exploradores protegidos por directivas
 
-Microsoft Edge en iOS y Android puede aprovechar el inicio de sesión único (SSO) en todas las aplicaciones web (SaaS y locales) que estén conectadas a Azure AD. Con el inicio de sesión único, los usuarios pueden acceder a aplicaciones web conectadas a Azure AD a través de Microsoft Edge sin tener que volver a introducir sus credenciales.
+Edge para iOS y Android puede aprovechar el inicio de sesión único (SSO) en todas las aplicaciones web (SaaS y locales) que estén conectadas a Azure AD. Con el inicio de sesión único, los usuarios pueden acceder a aplicaciones web conectadas a Azure AD a través de Edge para iOS y Android sin tener que volver a introducir sus credenciales.
 
-Para el inicio de sesión único es necesario que el dispositivo esté registrado con la aplicación Microsoft Authenticator para dispositivos iOS o con el Portal de empresa de Intune en Android. Cuando los usuarios hayan realizado una de estas dos acciones, se les pedirá que registren su dispositivo cuando vayan a una aplicación web conectada a Azure AD en un explorador protegido por directivas. Esto solo ocurrirá si su dispositivo no se ha registrado ya. Una vez que el dispositivo esté registrado con la cuenta del usuario administrada por Intune, esa cuenta tendrá el inicio de sesión único habilitado en las aplicaciones web conectadas a Azure AD.
+Para el inicio de sesión único es necesario que el dispositivo esté registrado con la aplicación Microsoft Authenticator para dispositivos iOS o con el Portal de empresa de Intune en Android. Cuando los usuarios hayan realizado una de estas dos acciones, se les pedirá que registren su dispositivo cuando vayan a una aplicación web conectada a Azure AD en un explorador protegido por directivas (esto solo ocurrirá si su dispositivo no se ha registrado ya). Una vez que el dispositivo esté registrado con la cuenta del usuario administrada por Intune, esa cuenta tendrá el inicio de sesión único habilitado en las aplicaciones web conectadas a Azure AD.
 
 > [!NOTE]
 > El registro de dispositivos consiste en un sencillo registro en el servicio de Azure AD. No se requiere una inscripción de dispositivo completa ni se otorga a TI ningún tipo de privilegio extra en el dispositivo.
 
-## <a name="create-a-protected-browser-app-configuration"></a>Establecimiento de una configuración de aplicaciones de explorador protegido
+## <a name="utilize-app-configuration-to-manage-the-browsing-experience"></a>Uso de la configuración de la aplicación para administrar la experiencia de exploración
 
-Para crear la configuración de la aplicación para Microsoft Edge:
+Edge para iOS y Android admite la configuración de aplicaciones que permiten a los administradores de puntos de conexión unificada, como Microsoft Endpoint Manager, personalizar el comportamiento de la aplicación.
 
-1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar**.
-3. En el panel **Agregar directiva de configuración**, escriba un **nombre** y una **descripción** opcional para las opciones de configuración de aplicaciones.
-4. En **Tipo de inscripción del dispositivo**, elija **Aplicaciones administradas**.
-5. Elija **Seleccionar la aplicación requerida**. Después, en el panel **Aplicaciones de destino**, elija **Managed Browser** o **Edge** para iOS/iPadOS, para Android o para ambos.
-6. Seleccione **Aceptar** para volver al panel **Agregar directiva de configuración**.
-7. Seleccione **Opciones de configuración**. En el panel **Configuración**, defina los pares clave-valor para proporcionar configuraciones para Microsoft Edge. Use las secciones posteriores de este artículo para obtener información sobre los diferentes pares de clave y valor que puede definir.
+La configuración de aplicaciones se puede entregar a través del canal del sistema operativo de administración de dispositivos móviles (MDM) en los dispositivos inscritos (canal [Configuración de aplicaciones administradas](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) para iOS o canal [Android empresarial](https://developer.android.com/work/managed-configurations) para Android) o a través del canal Directiva de protección de aplicaciones (APP) de Intune. Edge para iOS y Android admite los siguientes escenarios de configuración:
 
-    > [!NOTE]
-    > Microsoft Edge usa los mismos pares de clave y valor que Managed Browser. En Android, Microsoft Edge debe ser el destino de las directivas de protección de aplicaciones para que las directivas de configuración de aplicaciones surtan efecto.
+- Permitir solo cuentas profesionales o educativas
+- Opciones generales de configuración de aplicaciones
+- Configuración de la protección de datos
 
-8. Cuando haya terminado, seleccione **Aceptar**.
-9. En el panel **Agregar directiva de configuración**, elija **Agregar**.<br>
-    Se crea la configuración y se muestra en el panel **Configuración de aplicaciones**.
+> [!IMPORTANT]
+> En el caso de escenarios de configuración que obligan a la inscripción de dispositivos en Android, los dispositivos deben inscribirse en Android Enterprise y Edge para Android debe implementarse a través del almacén de Google Play administrado. Para obtener más información, vea [Configuración de la inscripción de dispositivos del perfil de trabajo de Android Enterprise](../enrollment/android-work-profile-enroll.md) y [Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados](app-configuration-policies-use-android.md).
 
-## <a name="assign-the-configuration-settings-you-created"></a>Asignación de las opciones de configuración creadas 
-
-Debe asignar la configuración a los grupos de usuarios en Azure AD. Si ese usuario tiene instalada la aplicación de explorador protegido, esta se administra mediante la configuración especificada.
-
-1. En el panel **Aplicaciones** del panel de administración de aplicaciones móviles de Intune, seleccione **Directivas de configuración de aplicaciones**.
-2. En la lista de configuraciones de aplicación, seleccione la que desea asignar.
-3. En el siguiente panel, seleccione **Asignaciones**.
-4. En el panel **Asignaciones**, seleccione el grupo de Azure AD al que quiere asignar la configuración de aplicación y, después, seleccione **Aceptar**.
-
-## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Dirección de los usuarios a Microsoft Edge en vez de a Intune Managed Browser 
-
-Microsoft Edge se puede usar como explorador protegido por directivas. Para asegurarse de que se está dirigiendo a los usuarios para que usen la aplicación de explorador correcta, dirija todas las aplicaciones administradas por Intune (por ejemplo, Outlook, OneDrive y SharePoint) con la opción de configuración siguiente:
-
-|    Key    |    Valor    |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    El valor `true` dirigirá a los usuarios a descargar y usar Microsoft Edge.<br>El valor `false` permitirá que los usuarios usen Intune Managed Browser.    |
-
-Si **no** se establece este valor de configuración de la aplicación, la lógica siguiente definirá qué explorador se usará para abrir vínculos corporativos.
-
-En Android:
-- Intune Managed Browser se inicia si un usuario tiene Intune Managed Browser y Microsoft Edge descargados en el dispositivo. 
-- Microsoft Edge se inicia solo si Intune Microsoft Edge se descarga en el dispositivo y es el objetivo de la directiva.
-- Managed Browser se inicia solo si se encuentra en el dispositivo y es el objetivo de la directiva de Intune.
-
-En iOS/iPadOS, para las aplicaciones que tienen integrado el SDK de Intune para iOS, v. 9.0.9+:
-- Intune Managed Browser se inicia si Intune Managed Browser y Microsoft Edge se encuentran en el dispositivo.  
-- Microsoft Edge se inicia solo si Microsoft Edge se encuentra en el dispositivo y es el objetivo de la directiva de Intune.
-- Managed Browser se inicia solo si se encuentra en el dispositivo y es el objetivo de la directiva de Intune.
-
-## <a name="configure-application-proxy-settings-for-microsoft-edge"></a>Configuración de los valores del proxy de aplicación para Microsoft Edge
-
-Puede usar Microsoft Edge y [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) conjuntamente para proporcionar a los usuarios acceso a sitios de la intranet desde sus dispositivos móviles. 
-
-Estos son algunos ejemplos de los escenarios que Azure AD Application Proxy permite: 
-
-- Un usuario está utilizando la aplicación móvil de Outlook, que está protegida por Intune. El usuario hace clic en un vínculo de un correo electrónico que dirige a un sitio de la intranet y Microsoft Edge reconoce que dicho sitio se ha expuesto al usuario a través del proxy de aplicación. El usuario se enruta automáticamente a través del proxy de aplicación para que se autentique con una autenticación multifactor y un acceso condicional antes de llegar al sitio de la intranet. Ahora el usuario puede acceder a sitios internos incluso desde sus dispositivos móviles y el vínculo de Outlook funciona según lo previsto.
-- Un usuario abre Microsoft Edge en su dispositivo iOS o Android. Si Microsoft Edge está protegido con Intune y el proxy de aplicación está habilitado, el usuario puede ir a un sitio de la intranet mediante la URL interna como de costumbre. Microsoft Edge reconoce que este sitio de intranet se ha expuesto al usuario a través del proxy de aplicación. El usuario se enruta automáticamente a través del proxy de aplicación para autenticarse antes de llegar al sitio de la intranet. 
-
-### <a name="before-you-start"></a>Antes de empezar
-
-- Configure las aplicaciones internas a través de Azure AD Application Proxy.
-  - Para configurar el proxy de aplicación y publicar aplicaciones, vea la [documentación de configuración](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
-- La aplicación de Microsoft Edge debe tener asignada la [directiva de protección de aplicaciones de Intune](app-protection-policy.md).
+En cada escenario de configuración se indican sus requisitos específicos. Por ejemplo, se especifica si el escenario de configuración necesita la inscripción del dispositivo y, por tanto, funciona con cualquier proveedor de UEM, o bien si necesita directivas de protección de aplicaciones de Intune.
 
 > [!NOTE]
-> Los datos de redireccionamiento actualizados del proxy de la aplicación pueden tardar hasta 24 horas en aplicarse a Managed Browser y a Microsoft Edge.
+> Con Microsoft Endpoint Manager, la configuración de aplicaciones que se entrega a través del canal del sistema operativo de MDM se conoce como Directiva de configuración de aplicaciones (ACP) de **Dispositivos administrados**, mientras que la configuración de aplicaciones que se entrega a través del canal Directiva de protección de aplicaciones se denomina Directiva de configuración de aplicaciones de **Aplicaciones administradas**.
 
-#### <a name="step-1-enable-automatic-redirection-to-microsoft-edge-from-outlook"></a>Paso 1: Habilitación del redireccionamiento automático a Microsoft Edge desde Outlook.
-Configure Outlook con una directiva de protección de aplicaciones que permita el valor **Compartir contenido web con exploradores administrados por directivas**.
+## <a name="only-allow-work-or-school-accounts"></a>Permitir solo cuentas profesionales o educativas
 
-![Captura de pantalla de la directiva de protección de aplicaciones: compartir contenido web con exploradores administrados por directivas](./media/manage-microsoft-edge/manage-microsoft-edge-03.png)
+Respetar las directivas de seguridad y cumplimiento de datos de nuestros clientes más grandes y regulados es un pilar clave del valor de Microsoft 365. Algunas empresas tienen el requisito de capturar toda la información de comunicaciones dentro de su entorno corporativo, así como de asegurarse de que los dispositivos solo se usen para las comunicaciones corporativas. Para admitir estos requisitos, se puede configurar Edge para iOS y Android en dispositivos inscritos para permitir que solo se pueda aprovisionar ahí una cuenta corporativa.
 
-#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>Paso 2: Establecer la opción de configuración de la aplicación para habilitar el proxy de la aplicación
-Dirige Microsoft Edge con el siguiente par clave-valor para habilitar el proxy de aplicación para Microsoft Edge:
+Puede obtener más información sobre la configuración del modo de cuentas permitido por la organización aquí:
 
-|    Key    |    Valor    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
+- [Configuración de Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Configuración de iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
-Para más información sobre cómo usar Microsoft Edge y Azure AD Application Proxy conjuntamente para acceder sin problemas (y de forma segura) a las aplicaciones web locales, vea [Better together: Intune and Azure Active Directory team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254) (Juntos mejor: Intune y Azure Active Directory unen fuerzas para mejorar el acceso de usuario). En esta entrada de blog se hace referencia a Intune Managed Browser, pero el contenido también se aplica a Microsoft Edge.
+Este escenario de configuración solo funciona con dispositivos inscritos. Aun así, se admite cualquier proveedor de UEM. Si no usa Microsoft Endpoint Manager, debe consultar la documentación de UEM para obtener información sobre cómo implementar estas claves de configuración.
 
-## <a name="configure-a-homepage-shortcut-for-microsoft-edge"></a>Configuración de un acceso directo a Microsoft  Edge en la página principal
+## <a name="general-app-configuration-scenarios"></a>Escenarios generales de configuración de aplicaciones
 
-Esta opción de configuración permite configurar un acceso directo a Microsoft  Edge en la página principal. El acceso directo que configure en la página principal aparecerá como el primer icono debajo de la barra de búsqueda cuando el usuario abra una nueva pestaña en Microsoft Edge. El usuario no puede editar ni eliminar este acceso directo en su contexto administrado. El acceso directo a la página principal muestra el nombre de la organización para distinguirla. 
+Edge para iOS y Android ofrece a los administradores la posibilidad de personalizar la configuración predeterminada para varias configuraciones de aplicación. Esta función solo se ofrece actualmente cuando Edge para iOS y Android tiene una directiva de protección de aplicaciones de Intune establecida en la cuenta profesional o educativa en la que se ha iniciado sesión en la aplicación.
 
-Use el siguiente par clave-valor para configurar un acceso directo en la página principal:
+> [!IMPORTANT]
+> Edge para Android no es compatible con la configuración de Chromium disponible en Google Play administrado.
 
-|    Key    |    Valor    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.homepage   |    Especifique una dirección URL válida. Las direcciones URL incorrectas se bloquean como medida de seguridad.<br>**Ejemplo:**  <`https://www.bing.com`>     |
+Edge admite los siguientes valores de configuración:
 
-## <a name="configure-multiple-top-site-shortcuts-for-new-tab-pages-in-microsoft-edge"></a>Configuración de varios accesos directos de sitios principales para nuevas páginas de pestañas en Microsoft Edge 
-De forma similar a la configuración de un acceso directo de la página principal, puede configurar varios accesos directos de sitios principales en nuevas páginas de pestañas en Microsoft Edge. El usuario no puede editar ni eliminar estos accesos directos en un contexto administrado. Nota: Puede configurar un total de ocho accesos directos, incluido un acceso directo a la página principal. Si ha configurado un acceso directo a la página principal, se invalidará el primer sitio principal configurado. 
+- Experiencias de página Nueva pestaña
+- Experiencias de marcador
+- Experiencias de comportamiento de la aplicación
+- Experiencias de pantalla completa
 
-|    Key    |    Valor    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Especifique el conjunto de direcciones URL de valor. Cada acceso directo de sitio principal consta de un título y una dirección URL. Separe el título y la dirección URL con el carácter `|`. Por ejemplo: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+Estos valores se pueden implementar en la aplicación independientemente del estado de inscripción del dispositivo.
 
-## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Configuración del color de marca y del logotipo de la organización para nuevas páginas de pestañas en Microsoft Edge
+### <a name="new-tab-page-experiences"></a>Experiencias de página Nueva pestaña
 
-Esta configuración permite personalizar la Página Nueva pestaña para Microsoft Edge para mostrar el logotipo de la organización y el color de la marca como fondo de la página.
+Edge para iOS y Android ofrece a las organizaciones varias opciones para ajustar la experiencia de página Nueva pestaña.
+
+#### <a name="organization-logo-and-brand-color"></a>Logotipo y color de marca de la organización
+
+Esta configuración permite personalizar la página Nueva pestaña para Edge para iOS y Android, a fin de que muestre el logotipo y el color de marca de la organización como fondo de la página.
 
 Para cargar el logotipo y el color de la organización, complete primero los siguientes pasos:
-- En Azure Portal, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Administración de inquilinos** -> **Personalización** -> **Company Identity Branding** (Personalización de marca de identidad de empresa).
-- Para establecer el logotipo de la marca, en "Mostrar", elija solo "Logotipo de la empresa". Se recomienda usar logotipos con un fondo transparente. 
-- Para establecer el color de fondo de la marca, en "Mostrar" elija "Color de tema". Microsoft Edge aplica una sombra más clara del color en Página Nueva pestaña, lo que garantiza que la página tenga una gran legibilidad. 
+1. En [Microsoft Endpoint Manager](https://endpoint.microsoft.com), vaya a **Administración de inquilinos** -> **Personalización** -> **Personalización de marca de identidad de empresa**.
+2. Para establecer el logotipo de la marca, junto a **Mostrar en encabezado**, elija "Solo el logotipo de la organización". Se recomienda usar logotipos con un fondo transparente.
+3. Para establecer el color de fondo de la marca, seleccione un **Color de tema**. Edge para iOS y Android aplica una sombra más clara del color en la página Nueva pestaña, lo que garantiza que la página tenga una gran legibilidad.
 
-A continuación, use los siguientes pares clave/valor para extraer la marca de la organización en Microsoft Edge:
+Después, use los siguientes pares clave-valor para extraer la marca de la organización en Edge para iOS y Android:
 
 |    Key    |    Valor    |
 |--------------------------------------------------------------------|------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    True    |
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    True    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    **true** muestra el logotipo de marca de la organización.<br>**false** (valor predeterminado) no expone ningún logotipo.    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    **true** muestra el color de marca de la organización.<br>**false** (valor predeterminado) no expondrá ningún color.    |
 
-## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Visualización de noticias importantes del sector en las páginas Nueva pestaña
+#### <a name="homepage-shortcut"></a>Acceso directo a la página principal
 
-Puede configurar la experiencia de las páginas Nueva pestaña en Microsoft Edge para dispositivos móviles para mostrar noticias del sector importantes para su organización. Cuando se habilita esta característica, Microsoft Edge para dispositivos móviles usa el nombre de dominio de la organización para agregar noticias de la web sobre la organización, el sector de la organización y la competencia, para que los usuarios puedan encontrar noticias externas importantes desde las nuevas páginas de pestaña centralizadas de Microsoft Edge. Las noticias del sector están desactivadas de forma predeterminada y puede activarlas para su organización. 
+Esta opción de configuración permite configurar un acceso directo a Edge para iOS y Android en la página principal. El acceso directo que configure en la página principal aparecerá como el primer icono debajo de la barra de búsqueda cuando el usuario abra una nueva pestaña en Edge para iOS y Android. El usuario no puede editar ni eliminar este acceso directo en su contexto administrado. El acceso directo a la página principal muestra el nombre de la organización para distinguirla. 
+
+|    Key    |    Valor    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Especifique una dirección URL válida. Las direcciones URL incorrectas se bloquean como medida de seguridad.<br>Por ejemplo: `https://www.bing.com`     |
+
+#### <a name="multiple-top-site-shortcuts"></a>Varios accesos directos a sitios principales
+
+De forma similar a la configuración de un acceso directo a la página principal, puede configurar varios accesos directos a sitios principales en páginas Nueva pestaña en Edge para iOS y Android. El usuario no puede editar ni eliminar estos accesos directos en un contexto administrado. Nota: Puede configurar un total de ocho accesos directos, incluido un acceso directo a la página principal. Si ha configurado un acceso directo a la página principal, se invalidará el primer sitio principal configurado. 
+
+|    Key    |    Valor    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Especifique el conjunto de direcciones URL de valor. Cada acceso directo de sitio principal consta de un título y una dirección URL. Separe el título y la dirección URL con el carácter `|`.<br>Por ejemplo: `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+
+#### <a name="industry-news"></a>Noticias del sector
+
+Puede configurar la experiencia de página Nueva pestaña en Edge para iOS y Android de modo que muestre noticias del sector importantes para su organización. Cuando se habilita esta característica, Edge para iOS y Android usa el nombre de dominio de la organización para agregar noticias de la web sobre la organización, el sector de la organización y la competencia, de modo que los usuarios puedan encontrar noticias externas importantes desde las páginas Nueva pestaña centralizadas de Edge para iOS y Android. Las noticias del sector están desactivadas de forma predeterminada. 
 
 |    Key    |    Valor    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **True** mostrará las noticias del sector en la página Nueva pestaña de Microsoft Edge para dispositivos móviles.<p>**False** (valor predeterminado) ocultará las noticias del sector en la página Nueva pestaña.    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **true** muestra noticias del sector en la página Nueva pestaña.<br>**false** (valor predeterminado) oculta las noticias del sector en la página Nueva pestaña.    |
 
-## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Configuración de marcadores administrados para Microsoft Edge
+### <a name="bookmark-experiences"></a>Experiencias de marcador
 
-Para facilitar el acceso, puede configurar los marcadores que quiera que los usuarios tengan disponibles cuando usen Microsoft Edge. 
+Edge para iOS y Android ofrece a las organizaciones varias opciones para administrar marcadores.
 
-Estos son algunos detalles:
+#### <a name="managed-bookmarks"></a>Marcadores administrados
 
-- Los usuarios solo verán estos marcadores cuando usen el [modo de empresa](https://docs.microsoft.com/intune/apps/app-configuration-managed-browser#how-to-configure-bookmarks-for-a-protected-browser) de Microsoft Edge. 
-- Los usuarios no pueden eliminar ni modificar estos marcadores.
-- Aparecen en la parte superior de la lista. Los marcadores creados por los usuarios aparecen debajo de estos marcadores.
+Para facilitar el acceso, puede configurar los marcadores que quiera que los usuarios tengan disponibles cuando usen Edge para iOS y Android.
+
+- Los marcadores solo aparecen en la cuenta profesional o educativa y no se exponen a las cuentas personales.
+- Los usuarios no pueden eliminar ni modificar los marcadores.
+- Los marcadores aparecen en la parte superior de la lista. Los marcadores creados por los usuarios aparecen debajo de estos marcadores.
 - Si ha habilitado el redireccionamiento del proxy de aplicación, puede agregar aplicaciones web de proxy de aplicación mediante su dirección URL interna o externa.
 - Asegúrese de anteponer **http://** o **https://** a todas las direcciones URL al introducirlas en la lista.
-
-Use el siguiente par clave-valor para configurar marcadores administrados:
-
-|    Key    |    Valor    |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    El valor de esta configuración es una lista de marcadores. Cada marcador consta del título y de la URL del marcador. Separe el título y la dirección URL con el carácter `|`.      Ejemplo:<br>`Microsoft Bing|https://www.bing.com`<br>Para configurar varios marcadores, separe cada par con el carácter doble `||`.<p>Ejemplo:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
-
-## <a name="display-myapps-within-microsoft-edge-bookmarks"></a>Visualización de MyApps en los marcadores de Microsoft Edge
-
-De forma predeterminada, los usuarios verán los sitios de MyApps que tengan configurados en una carpeta situada dentro de los marcadores de Microsoft Edge. La carpeta está etiquetada con el nombre de su organización.
+- Los marcadores se crean en una carpeta con el nombre de la organización, que se define en Azure Active Directory.
 
 |    Key    |    Valor    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** muestra MyApps en los marcadores de Microsoft Edge.<p>**False** oculta MyApps en Microsoft Edge.    |
-    
-## <a name="use-https-protocol-as-default"></a>Uso del protocolo HTTPS como valor predeterminado
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    El valor de esta configuración es una lista de marcadores. Cada marcador consta del título y de la URL del marcador. Separe el título y la dirección URL con el carácter `|`.<br> Por ejemplo: `Microsoft Bing|https://www.bing.com`<p>Para configurar varios marcadores, separe cada par con el carácter doble `||`.<br>Por ejemplo:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
-Puede configurar Microsoft Edge para dispositivos móviles para usar el protocolo HTTPS de forma predeterminada cuando el usuario no especifique uno. Por lo general, esto se considera un procedimiento recomendado. Use el siguiente par clave-valor para habilitar HTTPS como protocolo predeterminado:
+#### <a name="my-apps-bookmark"></a>Marcador Mis aplicaciones
+
+De forma predeterminada, los usuarios tienen el marcador Mis aplicaciones configurado dentro de la carpeta de la organización en Edge para iOS y Android.
 
 |    Key    |    Valor    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **true** establece el protocolo predeterminado para usar HTTPS     |
+|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** (valor predeterminado) muestra Mis aplicaciones en los marcadores de Edge para iOS y Android.<br>**false** oculta Mis aplicaciones en Edge para iOS y Android.    |
 
+### <a name="app-behavior-experiences"></a>Experiencias de comportamiento de la aplicación
 
-## <a name="specify-allowed-or-blocked-sites-list-for-microsoft-edge"></a>Especificación de una lista de sitios permitidos o bloqueados para Microsoft Edge
-Puede usar la configuración de la aplicación para definir a qué sitios pueden acceder los usuarios al usar su perfil de trabajo. Si usa una lista de permitidos, los usuarios solo podrán acceder a los sitios que indique explícitamente. Si usa una lista de bloqueados, los usuarios podrán acceder a todos los sitios excepto los que haya bloqueado explícitamente. Solo puede imponer una lista de permitidos o bien una de bloqueados, pero no ambas a la vez. Si se imponen ambas, se priorizará la lista de permitidos.  
+Edge para iOS y Android ofrece a las organizaciones varias opciones para administrar el comportamiento de la aplicación.
 
-Use los siguientes pares clave-valor para configurar una lista de sitios permitidos o bloqueados para Microsoft Edge. 
+#### <a name="default-protocol-handler"></a>Controlador del protocolo predeterminado
+
+De forma predeterminada, Edge para iOS y Android usa el controlador de protocolo HTTPS cuando el usuario no especifica el protocolo en la dirección URL. Por lo general, esto se considera un procedimiento recomendado. pero puede deshabilitarse.
 
 |    Key    |    Valor    |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Elija de entre las siguientes opciones:<p>1. Especifique direcciones URL permitidas (solo se permiten estas direcciones URL; no se puede acceder a ningún otro sitio):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Especifique direcciones URL bloqueadas (se puede acceder a todos los demás sitios):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    El valor correspondiente de la clave es una lista de direcciones URL. Escriba todas las direcciones URL que quiera permitir o bloquear como un valor único, separadas por un carácter de barra vertical `|`.<br>**Ejemplos:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    com.microsoft.intune.mam.managedbrowser.defaultHTTPS     |     **true** (valor predeterminado) indica que el controlador de protocolo predeterminado es HTTPS.<br>**false** indica que el controlador de protocolo predeterminado es HTTP.     |
+
+#### <a name="disable-data-sharing-for-personalization"></a>Deshabilitación del uso compartido de datos para la personalización
+
+De forma predeterminada, Edge para iOS y Android solicita a los usuarios la recopilación de datos de uso y el uso compartido del historial de exploración para personalizar la experiencia de exploración. Las organizaciones pueden deshabilitar el uso compartido de estos datos si impiden que se muestre este aviso a los usuarios finales.
+
+|    Key    |    Valor    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     **true** deshabilita que se muestre esta solicitud a los usuarios finales.<br>**false** (valor predeterminado) indica que se pide a los usuarios que compartan los datos de uso.    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     **true** deshabilita que se muestre esta solicitud a los usuarios finales.<br>**false** (valor predeterminado) indica que se pide a los usuarios que compartan el historial de exploración.     |
+
+#### <a name="disable-specific-features"></a>Deshabilitación de características específicas
+
+Edge para iOS y Android permite a las organizaciones deshabilitar determinadas características que están habilitadas de forma predeterminada. Para deshabilitar dichas características, establezca la siguiente configuración:
+
+|    Key    |    Valor    |
+|-----------------------|-----------------------|
+|    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** deshabilita los mensajes que ofrecen la posibilidad de guardar contraseñas para el usuario final.<br>**inprivate** deshabilita la exploración InPrivate.<p>Para deshabilitar varias características, separe los valores con `|`. Por ejemplo, `inprivate|password` deshabilita tanto InPrivate como el almacenamiento de contraseñas.     |
+
+> [!NOTE]
+> Edge para Android no permite deshabilitar el administrador de contraseñas.
+
+#### <a name="disable-extensions"></a>Deshabilitación de extensiones
+
+Puede deshabilitar el marco de extensiones en Edge para Android con el fin de impedir que los usuarios instalen extensiones de aplicaciones. Para ello, establezca la siguiente configuración:
+
+|    Key    |    Valor    |
+|-----------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.disableExtensionFramework    |    **true** deshabilita el marco de extensiones.<br>**false** (valor predeterminado) habilita el marco de extensiones.    |
+
+### <a name="kiosk-mode-experiences-on-android-devices"></a>Experiencias de pantalla completa en dispositivos Android
+
+Edge para Android se puede habilitar como aplicación de pantalla completa con la siguiente configuración:
+
+|    Key    |    Valor    |
+|-----------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** habilita la pantalla completa en Edge para Android.<br>**false** (valor predeterminado) deshabilita la pantalla completa.    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** muestra la barra de direcciones en pantalla completa.<br> **false** (valor predeterminado) oculta la barra de direcciones en pantalla completa.    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** muestra la barra de acciones inferior en pantalla completa.<br> **false** (valor predeterminado) oculta la barra inferior en pantalla completa.    |
+
+## <a name="data-protection-app-configuration-scenarios"></a>Escenarios de configuración de aplicaciones de protección de datos
+
+Edge para iOS y Android admite directivas de configuración de aplicaciones para la siguiente configuración de protección de datos cuando la aplicación se administra mediante Microsoft Endpoint Manager con una directiva de protección de aplicaciones de Intune aplicada a la cuenta profesional o educativa en la que se ha iniciado sesión en la aplicación:
+
+- Administración de la sincronización de cuentas
+- Administración de sitios web restringidos
+- Administración de la configuración del proxy
+- Administración de sitios de inicio de sesión único NTLM
+
+Estos valores se pueden implementar en la aplicación independientemente del estado de inscripción del dispositivo.
+
+### <a name="manage-account-synchronization"></a>Administración de la sincronización de cuentas
+
+De forma predeterminada, la sincronización de Microsoft Edge permite a los usuarios acceder a los datos de exploración en todos sus dispositivos con sesión iniciada. Los datos que admite la sincronización incluyen los siguientes:
+
+- Favoritos
+- Contraseñas
+- Direcciones y más (entrada de formulario de autorrelleno)
+
+La función de sincronización se habilita mediante el consentimiento del usuario y los usuarios pueden activar o desactivar la sincronización para cada uno de los tipos de datos enumerados anteriormente. Para obtener más información, vea [Sincronización de Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
+
+Las organizaciones tienen la capacidad de deshabilitar la sincronización de Edge en iOS y Android. 
+
+|Key  |Valor  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (valor predeterminado) permite la sincronización de Edge.<br>**false** deshabilita la sincronización de Edge.          |
+
+### <a name="manage-restricted-web-sites"></a>Administración de sitios web restringidos
+
+Las organizaciones pueden definir a qué sitios pueden acceder los usuarios dentro del contexto de la cuenta profesional o educativa en Edge para iOS y Android. Si usa una lista de permitidos, los usuarios solo podrán acceder a los sitios que se hayan indicado explícitamente. Si usa una lista de bloqueados, los usuarios podrán acceder a todos los sitios excepto los que haya bloqueado explícitamente. Solo puede imponer una lista de permitidos o bien una de bloqueados, pero no ambas a la vez. Si se imponen ambas, solo se admitirá la lista de permitidos.
+
+La organización también define lo que ocurre cuando un usuario intenta navegar a un sitio web restringido. De forma predeterminada, se permiten las transiciones. Si la organización lo permite, los sitios web restringidos pueden abrirse en el contexto de la cuenta personal, en el contexto de InPrivate de la cuenta de Azure AD o si el sitio está completamente bloqueado. Para obtener más información sobre los distintos escenarios que se admiten, vea [Transiciones de sitios web restringidos en Microsoft Edge para dispositivos móviles](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). Al permitir las experiencias de transición, los usuarios de la organización permanecen protegidos y, al mismo tiempo, los recursos corporativos se mantienen seguros.
+
+> [!NOTE]
+> Edge para iOS y Android puede bloquear el acceso a sitios solo cuando se accede a estos directamente. No bloquea el acceso cuando los usuarios usan servicios intermedios (por ejemplo, un servicio de traducción) para acceder al sitio.
+
+Use los siguientes pares clave-valor para configurar una lista de sitios permitidos o bloqueados para Edge para iOS y Android. 
+
+|Key  |Valor  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |El valor correspondiente de la clave es una lista de direcciones URL. Escriba todas las direcciones URL que quiera permitir como un valor único, separadas por un carácter de barra vertical `|`.<p>**Ejemplos:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |El valor correspondiente de la clave es una lista de direcciones URL. Escriba todas las direcciones URL que quiera bloquear como un valor único, separadas por un carácter de barra vertical `|`.<br>**Ejemplos:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**true** (valor predeterminado) permite que Edge para iOS y Android realice la transición a sitios restringidos. Cuando no se deshabilitan las cuentas personales, se pide a los usuarios que cambien al contexto personal para abrir el sitio restringido o bien que agreguen una cuenta personal. Si com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked se establece en true, los usuarios pueden abrir el sitio restringido en el contexto de InPrivate.<p>**false** impide que Edge para iOS y Android realice la transición de los usuarios. A los usuarios simplemente se les muestra un mensaje en el que se indica que el sitio al que intentan acceder está bloqueado.         |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**true** permite abrir sitios restringidos en el contexto de InPrivate de la cuenta de Azure AD. Si la cuenta de Azure AD es la única configurada en Edge para iOS y Android, el sitio restringido se abre automáticamente en el contexto de InPrivate. Si el usuario tiene configurada una cuenta personal, se le pedirá que elija entre abrir InPrivate o cambiar a la cuenta personal.<p> **false** (valor predeterminado) requiere que el sitio restringido se abra en la cuenta personal del usuario. Si las cuentas personales están deshabilitadas, el sitio se bloquea.<p>Para que esta configuración surta efecto, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock debe establecerse en true.          |
+|com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Escriba el número de segundos que los usuarios verán la notificación de la barra emergente "Vínculo abierto con el modo InPrivate. La organización requiere el uso del modo InPrivate para este contenido". De forma predeterminada, la notificación de la barra emergente se muestra durante siete segundos.
 
 Siempre se permiten los siguientes sitios con independencia de la configuración definida para la lista de permitidos o la lista de bloqueados:
 - `https://*.microsoft.com/*`
@@ -273,8 +304,10 @@ Siempre se permiten los siguientes sitios con independencia de la configuración
 - `https://*.microsoftonline.com/*`
 - `https://*.microsoftonline-p.com/*`
 
-### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formatos de URL para la lista de sitios permitidos y bloqueados 
-Puede usar diferentes formatos de URL para crear listas de sitios permitidos o bloqueados. Estos patrones permitidos se detallan en la tabla siguiente. Algunas notas antes de empezar: 
+#### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formatos de URL para la lista de sitios permitidos y bloqueados 
+
+Puede usar diferentes formatos de URL para crear listas de sitios permitidos o bloqueados. Estos patrones permitidos se detallan en la tabla siguiente.
+
 - Asegúrese de anteponer **http://** o **https://** a todas las direcciones URL al introducirlas en la lista.
 - Puede usar el carácter comodín (\*) según las reglas de la siguiente lista de patrones permitidos.
 - Un carácter comodín solo puede coincidir con un componente entero del nombre de host (separado por puntos) o partes completas de la ruta de acceso (separadas por barras diagonales). Por ejemplo, `http://*contoso.com`**no** es compatible.
@@ -308,127 +341,104 @@ Puede usar diferentes formatos de URL para crear listas de sitios permitidos o b
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-## <a name="transition-users-to-their-personal-context-when-trying-to-access-a-blocked-site"></a>Transición de usuarios a su contexto personal al intentar tener acceso a un sitio bloqueado
+### <a name="manage-proxy-configuration"></a>Administración de la configuración del proxy
 
-Con el modelo de identidad dual integrado en Microsoft Edge, puede habilitar una experiencia más flexible para los usuarios finales, algo que no se podía hacer con Intune Managed Browser. Cuando los usuarios visitan un sitio bloqueado en Microsoft Edge, puede pedirles que abran el vínculo en su contexto personal en lugar de su contexto laboral. Esto les permitirá estar protegidos y, a la vez, proteger los recursos de la empresa. Por ejemplo, si un usuario recibe un vínculo a un artículo de noticias a través de Outlook, puede abrir el vínculo en su contexto personal o en una pestaña InPrivate. Su contexto laboral no permite sitios web de noticias. Estas transiciones están permitidas de forma predeterminada.
+Puede usar Edge para iOS y Android junto con [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) para proporcionar a los usuarios acceso a sitios de la intranet desde sus dispositivos móviles. Por ejemplo: 
 
-Use el siguiente par clave-valor para configurar si se permiten estas transiciones suaves:
+- Un usuario está utilizando la aplicación móvil de Outlook, que está protegida por Intune. El usuario hace clic en un vínculo de un correo electrónico que dirige a un sitio de la intranet y Edge para iOS y Android reconoce que dicho sitio se ha expuesto al usuario a través del proxy de aplicación. El usuario se enruta automáticamente a través del proxy de aplicación para que se autentique con una autenticación multifactor y un acceso condicional antes de llegar al sitio de la intranet. Ahora el usuario puede acceder a sitios internos incluso desde sus dispositivos móviles y el vínculo de Outlook funciona según lo previsto.
+- Un usuario abre Edge para iOS y Android en su dispositivo iOS o Android. Si Edge para iOS y Android está protegido con Intune y el proxy de aplicación está habilitado, el usuario puede ir a un sitio de la intranet mediante la URL interna como de costumbre. Edge para iOS y Android reconoce que este sitio de intranet se ha expuesto al usuario a través del proxy de aplicación. El usuario se enruta automáticamente a través del proxy de aplicación para autenticarse antes de llegar al sitio de la intranet. 
 
-|    Key    |    Valor    |
-|-------------------------------------------------------------------|-------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **true** (valor predeterminado) permite a Microsoft Edge realizar la transición de los usuarios a su contexto personal para que puedan abrir sitios bloqueados.<p>**False** impide que Microsoft Edge realice la transición de los usuarios. A los usuarios simplemente se les muestra un mensaje en el que se indica que el sitio al que intentan acceder está bloqueado.    |
+Antes de empezar:
 
-## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Apertura de vínculos restringidos directamente en páginas de pestañas de InPrivate
+- Configure las aplicaciones internas a través de Azure AD Application Proxy.
+  - Para configurar el proxy de aplicación y publicar aplicaciones, vea la [documentación de configuración](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- La aplicación de Edge para iOS y Android debe tener una [directiva de protección de aplicaciones de Intune](app-protection-policy.md) asignada.
+- Las aplicaciones de Microsoft deben contar con una directiva de protección de aplicaciones que tenga el valor de configuración de transferencia de datos **Restringir la transferencia de contenido web con otras aplicaciones** establecido en **Microsoft Edge**.
 
-Puede configurar si los vínculos restringidos deben abrirse directamente en la exploración de InPrivate, lo que proporciona a los usuarios una experiencia de exploración más fluida. Esto ahorraría a los usuarios el tener que realizar una transición a su contexto personal para ver un sitio. La exploración de InPrivate se considera no administrada, por lo que los usuarios no podrán obtener acceso al usar el modo de exploración de InPrivate.  Nota: Para que esta configuración surta efecto, debe haber configurado también el anterior valor `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` como **true**.
+> [!NOTE]
+> Los datos de redireccionamiento actualizados del proxy de aplicación pueden tardar hasta 24 horas en aplicarse en Edge para iOS y Android.
 
-|    Key    |    Valor    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **true** abrirá de forma automática los sitios directamente en una pestaña InPrivate, sin pedir al usuario que realice el cambio a su cuenta personal. <p> **False** (valor predeterminado) bloqueará el sitio en Microsoft Edge y se le pedirá al usuario que cambie a su cuenta personal para verlo.    |
-
-
-## <a name="disable-microsoft-edge-features-to-customize-the-end-user-experience-for-your-organizations-needs"></a>Deshabilitación de características de Microsoft Edge para personalizar la experiencia del usuario final para las necesidades de la organización
-
-### <a name="disable-prompts-to-share-usage-data-for-personalization"></a>Deshabilitación de solicitudes para compartir datos de uso para la personalización 
-
-De forma predeterminada, Microsoft Edge solicita a los usuarios la recopilación de datos de uso para personalizar su experiencia de exploración. Puede deshabilitar el uso compartido de estos datos si evita que se muestre este aviso a los usuarios finales. 
+Establezca como destino Edge para iOS con el siguiente par clave-valor a fin de habilitar el proxy de aplicación:
 
 |    Key    |    Valor    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableShareUsageData`    |     **true** deshabilitará que se muestre esta solicitud a los usuarios finales.    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    **true** habilita escenarios de redirección del proxy de aplicación de Azure AD.<br>**false** (valor predeterminado) impide los escenarios del proxy de aplicación de Azure AD.    |
 
-### <a name="disable-prompts-to-share-browsing-history"></a>Deshabilitación de mensajes para compartir el historial de exploración 
+> [!NOTE]
+> Edge para Android no usa esta clave. En su lugar, Edge para Android consume automáticamente la configuración del proxy de aplicación de Azure AD, siempre y cuando la cuenta de Azure AD en la que se ha iniciado sesión tenga aplicada una directiva de protección de aplicaciones.
 
-De forma predeterminada, Microsoft Edge solicita a los usuarios la recopilación de datos del historial de exploración para personalizar su experiencia de exploración. Puede deshabilitar el uso compartido de estos datos si evita que se muestre este aviso a los usuarios finales.
+Para obtener más información sobre cómo usar Edge para iOS y Android y Azure AD Application Proxy conjuntamente para acceder sin problemas (y de forma segura) a las aplicaciones web locales, vea [Better together: Intune and Azure Active Directory team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254) (Juntos mejor: Intune y Azure Active Directory unen fuerzas para mejorar el acceso de usuario). En esta entrada de blog se hace referencia a Intune Managed Browser, pero el contenido también se aplica a Edge para iOS y Android.
 
-|    Key    |    Valor    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     **true** deshabilitará que se muestre esta solicitud a los usuarios finales.     |
+### <a name="manage-ntlm-single-sign-on-sites"></a>Administración de sitios de inicio de sesión único NTLM
 
-### <a name="disable-prompts-that-offer-to-save-passwords"></a>Deshabilitación de mensajes que ofrecen guardar contraseñas
+Las organizaciones pueden obligar a los usuarios a autenticarse con NTLM para acceder a sitios web de la intranet. De forma predeterminada, se pide a los usuarios que escriban las credenciales cada vez que acceden a un sitio web que requiere la autenticación NTLM, ya que el almacenamiento en caché de credenciales NTLM está deshabilitado. 
 
-De forma predeterminada, Microsoft Edge en iOS ofrece la opción de guardar las contraseñas de los usuarios en la cadena de claves. Si desea deshabilitar este aviso para su organización, configure los siguientes valores:
-
-|    Key    |    Valor    |
-|-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **password** deshabilitará los mensajes que ofrecen la posibilidad de guardar contraseñas para el usuario final.    |
-
-### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Impedir que los usuarios agreguen extensiones a Microsoft Edge 
-
-Puede deshabilitar el marco de extensiones en Microsoft Edge para impedir que los usuarios instalen extensiones de aplicaciones. Para ello, establezca la siguiente configuración:
-
-|    Key    |    Valor    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableExtensionFramework`    |    **true** deshabilitará el marco de extensiones.    |
-
-### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>Deshabilitación de la exploración de InPrivate y las cuentas de Microsoft para restringir la exploración a contextos exclusivos de trabajo
-
-Si la organización funciona en un sector muy regulado o usa una VPN por aplicación para permitir que los usuarios accedan a los recursos de trabajo con Microsoft Edge, puede elegir deshabilitar la exploración InPrivate en Microsoft Edge, que se considera un contexto que no es de trabajo. 
-
-|    Key    |    Valor    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** deshabilita la exploración InPrivate.   |
-
-### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Restricción del uso de Microsoft Edge a cuentas permitidas
-
-Además de bloquear la exploración InPrivate y de MSA, puede permitir el uso de Microsoft Edge solo cuando el usuario inicie sesión con su cuenta de AAD. Esta característica solo está disponible para los usuarios inscritos en MDM. Puede obtener más información sobre cómo configurar esta opción aquí:
-
->[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` se puede usar para deshabilitar varias características a la vez. Por ejemplo, para deshabilitar tanto InPrivate como la contraseña, use `inprivate|password`.
-
-## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Configuración de Microsoft Edge como una aplicación de pantalla completa en dispositivos Android
-
-### <a name="enable-microsoft-edge-as-a-kiosk-app"></a>Habilitación de Microsoft Edge como aplicación de pantalla completa
-Para habilitar Microsoft Edge como aplicación de pantalla completa, realice primero esta configuración primaria:
-
-|    Key    |    Valor    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.enableKioskMode`    |    **true** permite la configuración de pantalla completa para Microsoft Edge.    |
-
-### <a name="show-address-bar-in-kiosk-mode"></a>Presentación de la barra de direcciones en el modo de pantalla completa
-Para mostrar la barra de direcciones en Microsoft Edge cuando está en pantalla completa, realice la siguiente configuración:
-
-|    Key    |    Valor    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode`    |    **true** muestra la barra de direcciones. <br> **false** (valor predeterminado) ocultará la barra de direcciones.    |
-
-### <a name="show-bottom-action-bar-in-kiosk-mode"></a>Presentación de la barra de acciones inferior en el modo de pantalla completa
-|    Key    |    Valor    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode`    |    **true** muestra la barra de acciones inferior en Microsoft Edge. <br> **false** (valor predeterminado) oculta la barra inferior.    |
+Las organizaciones pueden habilitar el almacenamiento en caché de credenciales NTLM para sitios web concretos. Para estos sitios, después de que el usuario escriba las credenciales y se autentique correctamente, las credenciales se almacenan en caché de forma predeterminada durante 30 días.
 
 
-## <a name="use-microsoft-edge-to-access-managed-app-logs"></a>Uso de Microsoft Edge para acceder a los registros de aplicaciones administradas
+|Key  |Valor  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |El valor correspondiente de la clave es una lista de direcciones URL. Escriba todas las direcciones URL que quiera permitir como un valor único, separadas por un carácter de barra vertical `|`.<p>**Ejemplos:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>Para obtener más información sobre los tipos de formato de dirección URL que se admiten, vea [Formatos de URL para la lista de sitios permitidos y bloqueados](#url-formats-for-allowed-and-blocked-site-list).         |
+|com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Número de horas para almacenar en caché las credenciales. El valor predeterminado es de 720 horas.         |
 
+## <a name="deploy-app-configuration-scenarios-with-microsoft-endpoint-manager"></a>Implementación de escenarios de configuración de aplicaciones con Microsoft Endpoint Manager
 
-Los usuarios que tengan instalado Microsoft Edge en el dispositivo iOS o Android pueden ver el estado de administración de todas las aplicaciones publicadas de Microsoft. Pueden enviar registros para solucionar problemas de sus aplicaciones iOS o Android administradas mediante los pasos siguientes:
+Si usa Microsoft Endpoint Manager como proveedor de administración de aplicaciones móviles, los siguientes pasos le permiten crear una directiva de configuración de aplicaciones administradas. Una vez creada la configuración, puede asignar sus valores a grupos de usuarios.
 
-1. Abra Microsoft Edge en el dispositivo.
+1. Inicie sesión en [Microsoft Endpoint Manager](https://endpoint.microsoft.com).
+
+2. Seleccione **Aplicaciones** y **Directivas de configuración de aplicaciones**.
+
+3. En la hoja **Directivas de configuración de aplicaciones**, elija **Agregar** y **Aplicaciones administradas**.
+
+4. En la sección **Conceptos básicos**, escriba un **nombre** y una **descripción** opcional para las opciones de configuración de aplicaciones.
+
+5. En **Aplicaciones públicas**, elija **Seleccionar aplicaciones públicas**. En la hoja **Aplicaciones de destino**, seleccione las aplicaciones de la plataforma iOS y Android para elegir **Edge para iOS y Android**. Haga clic en **Seleccionar** para guardar las aplicaciones públicas seleccionadas.
+
+6. Haga clic en **Siguiente** para completar la configuración básica de la directiva de configuración de aplicaciones.
+
+7. En la sección **Configuración**, expanda los **Valores de configuración de Edge**.
+
+8. Si quiere administrar la configuración de protección de datos, establezca las opciones deseadas según corresponda:
+
+    - Para **Redirección de proxy de aplicación**, elija entre las opciones disponibles: **Habilitar** o **Deshabilitar** (valor predeterminado).
+
+    - Para **Dirección URL de acceso directo a la página principal**, especifique una dirección URL válida que incluya el prefijo *http://* o *https://* . Las direcciones URL incorrectas se bloquean como medida de seguridad.
+
+    - Para **Marcadores administrados**, especifique una dirección URL válida que incluya el prefijo *http://* o *https://* .
+
+    - Para **Direcciones URL permitidas**, especifique una dirección URL válida (solo se permiten estas direcciones URL; no se puede acceder a ningún otro sitio). Para obtener más información sobre los tipos de formato de dirección URL que se admiten, vea [Formatos de URL para la lista de sitios permitidos y bloqueados](#url-formats-for-allowed-and-blocked-site-list).
+
+    - Para **Direcciones URL bloqueadas**, especifique una dirección URL válida (solo se bloquean estas direcciones URL). Para obtener más información sobre los tipos de formato de dirección URL que se admiten, vea [Formatos de URL para la lista de sitios permitidos y bloqueados](#url-formats-for-allowed-and-blocked-site-list).
+
+    - En **Redirigir los sitios restringidos a un contexto personal**, elija entre las opciones disponibles: **Habilitar** (valor predeterminado) o **Deshabilitar**.
+
+    > [!NOTE]
+    > Cuando se definen las direcciones URL permitidas y las direcciones URL bloqueadas en la directiva, solo se admite la lista de permitidos.
+
+9. Si quiere que las opciones de configuración adicionales de la aplicación no se expongan en la directiva anterior, expanda el nodo **Opciones de configuración generales** y especifique como corresponda los pares clave-valor.
+
+10. Cuando haya terminado de configurar la programación, seleccione **Siguiente**.
+
+11. En la sección **Asignaciones**, elija **Seleccionar grupos para incluir**. Seleccione el grupo de Azure AD al que quiere asignar la directiva de configuración de aplicación y elija **Seleccionar**.
+
+12. Cuando haya terminado con las asignaciones, elija **Siguiente**.
+
+13. En la hoja **Crear una directiva de configuración de aplicaciones**, revise la configuración establecida y elija **Crear**.
+
+La directiva de configuración recién creada se muestra en la hoja **Configuración de la aplicación**.
+
+## <a name="use-edge-for-ios-and-android-to-access-managed-app-logs"></a>Uso de Edge para iOS y Android para acceder a registros de aplicaciones administradas
+
+Los usuarios que tengan instalado Edge para iOS y Android en el dispositivo iOS o Android pueden ver el estado de administración de todas las aplicaciones publicadas de Microsoft. Pueden enviar registros para solucionar problemas de sus aplicaciones iOS o Android administradas mediante los pasos siguientes:
+
+1. Abra Edge para iOS y Android en el dispositivo.
 2. Escriba `about:intunehelp` en el cuadro de dirección.
-3. Microsoft Edge se abre en modo de solución de problemas.
+3. Edge para iOS y Android inicia el modo de solución de problemas.
 
 Para obtener una lista de las opciones de configuración almacenadas en los registros de la aplicación, consulte [Revisión de los registros de protección de aplicaciones en Managed Browser](app-protection-policy-settings-log.md).
 
 Para ver cómo se pueden consultar los registros en dispositivos Android, vea [Enviar registros al administrador de TI por correo electrónico](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
-
-## <a name="security-and-privacy-for-microsoft-edge"></a>Seguridad y privacidad para Microsoft Edge
-
-Las siguientes son consideraciones de seguridad y privacidad adicionales para Microsoft Edge:
-
-- Microsoft Edge no utiliza la configuración establecida por los usuarios para el explorador nativo en sus dispositivos, porque Microsoft Edge no puede acceder a esta configuración.
-- Puede configurar la opción **Requerir PIN sencillo para el acceso** o **Requerir credenciales corporativas para el acceso** en una directiva de protección de aplicaciones asociada a Microsoft Edge. Si un usuario selecciona el vínculo de ayuda en la página de autenticación, podrá navegar a cualquier sitio de Internet, independientemente de si este se ha agregado o no a una lista de bloqueados en la directiva.
-- Microsoft Edge puede bloquear el acceso a sitios solo cuando se accede a estos directamente. No bloquea el acceso cuando los usuarios usan servicios intermedios (por ejemplo, un servicio de traducción) para acceder al sitio.
-- Para permitir la autenticación y acceder a la documentación de Intune, * **.microsoft.com** está exento de la configuración de permitidos o bloqueados. Se permite siempre.
-- Los usuarios pueden desactivar la recopilación de datos. Microsoft recopila automáticamente datos anónimos sobre el rendimiento y el uso de Managed Browser para mejorar sus productos y servicios. Los usuarios pueden usar en sus dispositivos la configuración de **Datos de uso** para desactivar la recopilación de datos. No tiene ningún control sobre la recopilación de estos datos. En dispositivos iOS, no se pueden abrir los sitios web que visitan los usuarios y que tienen un certificado expirado o que no es de confianza.
-
-## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Restricción del uso de Microsoft Edge a cuentas de trabajo o educativas
-
-Respetar las directivas de seguridad y cumplimiento de datos de nuestros clientes más grandes y regulados es un pilar clave del valor de Microsoft 365. Algunas empresas tienen el requisito de capturar toda la información de comunicaciones dentro de su entorno corporativo, así como de asegurarse de que los dispositivos solo se usen para las comunicaciones corporativas. Para admitir estos requisitos, se puede configurar Edge para iOS y Android en dispositivos inscritos para que permitir que solo se pueda aprovisionar ahí una cuenta corporativa.
-
-Puede aprender más sobre la configuración del modo de cuentas permitido por la organización aquí:
-
-- [Configuración de Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [Configuración de iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023017"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988783"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Directivas de configuración de aplicaciones para Microsoft Intune
 
@@ -107,7 +107,7 @@ Puede validar la directiva de configuración de aplicaciones mediante los tres m
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>Configuración de iOS/iPadOS en dispositivos no administrados
 
-Puede validar la configuración de iOS/iPadOS con el **registro de diagnóstico de Intune** en dispositivos no administrados para la configuración de aplicaciones administradas. Además de los pasos siguientes, puede acceder a los registros de aplicaciones administradas con Microsoft Edge. Para más información, vea [Uso de Microsoft Edge en iOS/iPadOS para acceder a los registros de aplicaciones administradas](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Puede validar la configuración de iOS/iPadOS con el **registro de diagnóstico de Intune** en dispositivos no administrados para la configuración de aplicaciones administradas. Además de los pasos siguientes, puede acceder a los registros de aplicaciones administradas con Microsoft Edge. Para obtener más información, vea [Uso de Edge para iOS y Android para acceder a registros de aplicaciones administradas](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 1. Si aún no está instalado en el dispositivo, descargue e instale **Microsoft Edge** desde la App Store. Para obtener más información, consulte [Aplicaciones protegidas de Microsoft Intune](apps-supported-intune-apps.md).
 2. Inicie **Microsoft Edge** y seleccione **about** > **intunehelp** en la barra de navegación.

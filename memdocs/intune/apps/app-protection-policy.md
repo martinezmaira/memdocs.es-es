@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078369"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989613"
 ---
 # <a name="app-protection-policies-overview"></a>Introducción general a las directivas de protección de aplicaciones
 
@@ -84,6 +84,18 @@ La compatibilidad de plataformas de directivas de aplicaciones de Intune está a
 > [!IMPORTANT]
 > Es necesario que el Portal de empresa de Intune se encuentre en el dispositivo para recibir las directivas de protección de aplicación en Android. Para más información, consulte los [requisitos de las aplicaciones de acceso al Portal de empresa de Intune](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
+## <a name="app-protection-policy-data-protection-framework"></a>Marco de protección de datos de la directiva de protección de aplicaciones
+
+Las opciones disponibles en las directivas de protección de aplicaciones (APP) permiten a las organizaciones adaptar la protección a sus necesidades concretas. Para algunas de ellas, puede que no sea obvio qué configuración de directivas es necesaria para implementar un escenario completo. Para ayudar a las organizaciones a priorizar la protección del punto de conexión del cliente móvil, Microsoft ha introducido la taxonomía para su marco de protección de datos de APP para la administración de aplicaciones móviles de iOS y Android.
+
+El marco de protección de datos de APP se organiza en tres niveles de configuración distintos, cada uno de ellos basado en el nivel anterior:
+
+- La **protección de datos empresariales básica** (nivel 1) garantiza que las aplicaciones estén protegidas con un PIN y cifradas, y realiza operaciones de borrado selectivo. En el caso de los dispositivos Android, este nivel valida la certificación de dispositivos Android. Se trata de una configuración de nivel de entrada que proporciona un control de protección de datos similar en las directivas de buzón de Exchange Online y que introduce tecnologías informáticas y el rellenado de usuarios en APP.
+- La **protección de datos empresariales mejorada** (nivel 2) incorpora mecanismos para la prevención de la pérdida de datos de APP y requisitos mínimos para el sistema operativo. Esta es la configuración aplicable a la mayoría de los usuarios móviles que acceden a datos profesionales o educativos.
+- La **protección de datos empresariales alta** (nivel 3) incorpora mecanismos avanzados para la protección de datos, configuración de PIN mejorada y defensa contra amenazas móviles de APP. Esta configuración es conveniente para los usuarios que acceden a datos de alto riesgo.
+
+A fin de ver las recomendaciones específicas para cada nivel de configuración y las aplicaciones mínimas que se deben proteger, revise [Marco de protección de datos mediante directivas de protección de aplicaciones](app-protection-framework.md).
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>Protección de datos de una aplicación con directivas de protección de aplicaciones
 
 ### <a name="apps-without-app-protection-policies"></a>Aplicaciones sin directivas de protección de aplicaciones
@@ -143,13 +155,13 @@ El [SDK de Intune](../developer/app-sdk.md) usa algunas funcionalidades de auten
 
 En la siguiente lista se proporcionan los requisitos del usuario final para utilizar directivas de protección de aplicaciones en una aplicación administrada de Intune:
 
-- El usuario final debe tener una cuenta de Azure Active Directory (AAD). Consulte [Agregar usuarios y conceder permiso administrativo a Intune](../fundamentals/users-add.md) para aprender a crear usuarios de Intune en Azure Active Directory.
+- El usuario final debe tener una cuenta de Azure Active Directory (Azure AD). Consulte [Agregar usuarios y conceder permiso administrativo a Intune](../fundamentals/users-add.md) para aprender a crear usuarios de Intune en Azure Active Directory.
 
 - El usuario final debe tener una licencia de Microsoft Intune asignada a su cuenta de Azure Active Directory. Vea [Administrar licencias de Intune](../fundamentals/licenses-assign.md) para obtener información sobre cómo asignar licencias de Intune a los usuarios finales.
 
 - El usuario final debe pertenecer a un grupo de seguridad de destino de una directiva de protección de la aplicación. La misma directiva de protección de aplicaciones debe tener como destino la aplicación específica que se va a utilizar. Las directivas de protección de aplicaciones pueden crearse e implementarse en la consola de Intune en el [portal de Azure](https://portal.azure.com). Actualmente se pueden crear grupos de seguridad en el [Centro de administración de Microsoft 365](https://admin.microsoft.com).
 
-- El usuario final debe iniciar sesión en la aplicación con su cuenta de AAD.
+- El usuario final debe iniciar sesión en la aplicación con su cuenta de Azure AD.
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>Directivas de protección de aplicaciones para aplicaciones de Microsoft Office
 
@@ -207,7 +219,7 @@ Como ejemplo de contexto de trabajo o "corporativo", piense en un usuario que in
 Outlook tiene una vista de correo electrónico combinada de correos electrónicos "personales" y "corporativos". En esta situación, la aplicación Outlook solicita el PIN de Intune al iniciarse.
 
   >[!NOTE]
-  > Aunque Edge está en el contexto "corporativo", el usuario puede trasladar de forma deliberada los archivos de contexto "corporativos" de OneDrive a una ubicación de almacenamiento en la nube personal desconocida. Para evitar esto, consulte [Especificación de una lista de sitios permitidos o bloqueados para Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) y configure la lista de sitios permitidos o bloqueados para Edge.
+  > Aunque Edge está en el contexto "corporativo", el usuario puede trasladar de forma deliberada los archivos de contexto "corporativos" de OneDrive a una ubicación de almacenamiento en la nube personal desconocida. Para evitarlo, vea [Administración de sitios web restringidos](manage-microsoft-edge.md#manage-restricted-web-sites) y configure la lista de sitios permitidos o bloqueados para Edge.
 
 Para obtener más información sobre varias identidades en Intune, consulte [MAM y varias identidades](apps-supported-intune-apps.md).
 
@@ -310,7 +322,7 @@ Las directivas de protección de aplicaciones de Intune permiten limitar el acce
 La finalidad de este proceso es seguir manteniendo los datos de la organización dentro de la aplicación seguros y protegidos en el nivel de aplicación. Esta característica solo está disponible para iOS/iPadOS y requiere la participación de las aplicaciones que integran el SDK de Intune para iOS/iPadOS, versión 9.0.1 o posterior. La integración del SDK es necesaria para poder aplicar el comportamiento en las aplicaciones de destino. Esta integración ocurre de manera gradual y depende de los equipos de la aplicación específica. Algunas aplicaciones participantes incluyen WXP, Outlook, Managed Browser y Yammer.
   
 ### <a name="ios-share-extension"></a>Extensión de recursos compartidos de iOS
-Puede usar la extensión de recursos compartidos de iOS/iPadOS para abrir los datos profesionales o educativos en aplicaciones no administradas, incluso con la directiva de transferencia de datos establecida en **solo aplicaciones administradas** o **ninguna aplicación**. La directiva de protección de aplicaciones de Intune no puede controlar la extensión de recursos compartidos de iOS/iPadOS sin administrar el dispositivo. Por lo tanto, Intune _**cifra los datos "corporativos" antes de compartirlos fuera de la aplicación**_ . Puede validar este comportamiento de cifrado intentando abrir un archivo "corporativo" fuera de la aplicación administrada. El archivo debe estar cifrado y no debe poder abrirse fuera de la aplicación administrada.
+Puede usar la extensión de recursos compartidos de iOS/iPadOS para abrir los datos profesionales o educativos en aplicaciones no administradas, incluso con la directiva de transferencia de datos establecida en **solo aplicaciones administradas** o **ninguna aplicación**. La directiva de protección de aplicaciones de Intune no puede controlar la extensión de recursos compartidos de iOS/iPadOS sin administrar el dispositivo. Por lo tanto, Intune _**cifra los datos "corporativos" antes de compartirlos fuera de la aplicación**_. Puede validar este comportamiento de cifrado intentando abrir un archivo "corporativo" fuera de la aplicación administrada. El archivo debe estar cifrado y no debe poder abrirse fuera de la aplicación administrada.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Varias configuraciones de acceso de protección de aplicaciones de Intune para el mismo conjunto de aplicaciones y usuarios
 Las directivas de protección de aplicaciones de Intune para el acceso se aplicarán en un orden específico en los dispositivos de usuario final cuando intenten obtener acceso a una aplicación de destino desde su cuenta corporativa. En general, tendría prioridad un borrado, seguido de un bloqueo y, después, una advertencia descartable. Por ejemplo, si es aplicable a la aplicación o usuario específico, una configuración de sistema operativo mínima de iOS/iPadOS que advierte al usuario que actualice la versión de iOS/iPadOS se aplicará después de la configuración de sistema operativo mínima de iOS/iPadOS que bloquea el acceso del usuario. Por tanto, en el caso en que el administrador de TI configure el sistema operativo mínimo de iOS en 11.0.0.0 y el sistema operativo mínimo de iOS (solo advertencia) en 11.1.0.0, mientras el dispositivo que intenta obtener acceso a la aplicación esté en iOS 10, se bloquearía al usuario final en función del valor más restrictivo para la versión de sistema operativo de iOS mínima que provoque el bloqueo del acceso.

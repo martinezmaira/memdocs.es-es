@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268426"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223648"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Privacidad de datos de Análisis de escritorio
 
@@ -55,7 +55,7 @@ En la ilustración siguiente se muestra cómo fluyen los datos de diagnóstico d
 
     4. Las actualizaciones de compatibilidad se implementan en todos los dispositivos de destino.  
 
-3. Los dispositivos envían datos de diagnóstico al servicio de administración de datos de diagnóstico de Microsoft para Windows. Este servicio OMS está hospedado en Estados Unidos.  
+3. Los dispositivos envían datos de diagnóstico al servicio de administración de datos de diagnóstico de Microsoft para Windows. Todos los datos de diagnóstico se cifran a través de HTTPS y usan el anclaje de certificados durante la transferencia desde el dispositivo a este servicio. El servicio Administración de datos de Microsoft se hospeda en Estados Unidos.
 
 4. Cada día, Microsoft genera una instantánea de la información centrada en TI. Esta instantánea combina los datos de diagnóstico de Windows con la entrada de dispositivos inscritos. Este proceso se produce en el almacenamiento transitorio, que solo se usa en Análisis de escritorio. El almacenamiento transitorio se hospeda en centros de datos de Microsoft en Estados Unidos. Todos los datos se envían a través de un canal cifrado SSL (HTTPS). Las instantáneas se segregan por identificador comercial.  
 

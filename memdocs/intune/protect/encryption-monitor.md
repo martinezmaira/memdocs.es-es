@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255003"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989654"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Supervisión del cifrado de dispositivos con Intune
 
@@ -169,68 +169,20 @@ Mientras ve el panel de informe de cifrado, puede seleccionar **Exportar** para 
 
 Este informe se puede usar para identificar problemas en grupos de dispositivos. Por ejemplo, podría usar el informe para identificar una lista de todos los dispositivos macOS que informen *El usuario ya ha habilitado FileVault*, lo que indica qué dispositivos deben descifrarse de forma manual antes de que Intune pueda empezar a administrar su configuración de FileVault.
 
-## <a name="filevault-recovery-keys"></a>Claves de recuperación de FileVault
+## <a name="manage-recovery-keys"></a>Administración de claves de recuperación
 
-Cuando Intune cifra por primera vez un dispositivo macOS con FileVault, se crea una clave de recuperación personal. Tras el cifrado, el dispositivo muestra la clave personal una sola vez al usuario final.
+Para obtener detalles sobre la administración de claves de recuperación, vea lo siguiente en la documentación de Intune:
 
-En el caso de los dispositivos administrados, Intune puede custodiar una copia de la clave de recuperación personal. La custodia de las claves habilita a los administradores de Intune para girar claves con el fin de ayudar a proteger los dispositivos y a los usuarios para recuperar una clave de recuperación personal perdida o girada.
+FileVault de macOS:
+- [Recuperación de clave de recuperación personal](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Giro de claves de recuperación](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Recuperación de claves de recuperación](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune admite varias opciones para girar y recuperar claves de recuperación personales. Un motivo para girar una clave es si la clave personal actual se pierde o se considera que está en riesgo.
-
-> [!IMPORTANT]
-> Intune no puede administrar los dispositivos que, en vez de cifrar Intune, son los usuarios quienes los cifran. Esto significa que Intune no puede custodiar la recuperación personal de estos dispositivos ni administrar el giro de la clave de recuperación. Antes de que Intune pueda administrar FileVault y las claves de recuperación para el dispositivo, el usuario debe descifrar el dispositivo y, después, dejar que Intune cifre el dispositivo.
-
-### <a name="rotate-recovery-keys"></a>Giro de claves de recuperación
-
-- **Rotación automática**: como administrador, puede configurar el valor de la opción Giro de clave de recuperación personal de FileVault para que genere de forma automática nuevas claves de recuperación periódicamente. Cuando se genera una nueva clave para un dispositivo, esta clave no se muestra al usuario. En lugar de eso, el usuario debe obtener la clave desde un administrador o mediante la aplicación de Portal de empresa.
-
-- **Rotación manual**: como administrador, puede ver la información de un dispositivo que administra con Intune y que está cifrado con FileVault. Luego, puede optar por girar manualmente la clave de recuperación de los dispositivos corporativos. No es posible girar las claves de recuperación de dispositivos personales.
-
-  Para girar una clave de recuperación, realice lo siguiente:
-
-  1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-  
-  2. Seleccione **Dispositivos** > **Todos los dispositivos**.
-  
-  3. En la lista de dispositivos, seleccione el dispositivo que está cifrado y para el que quiere girar la clave. Luego, en Supervisar, seleccione  **Claves de recuperación**.
-  
-  4. En el panel Claves de recuperación, seleccione **Girar clave de recuperación de FileVault**.
-
-     La próxima vez que el dispositivo se registre con Intune, se girará la clave personal. Cuando sea necesario, el usuario final puede obtener la nueva clave a través del Portal de empresa.
-
-### <a name="recover-recovery-keys"></a>Recuperación de claves de recuperación
-
-- **Administrador**: los administradores no pueden ver las claves de recuperación personales de los dispositivos cifrados con FileVault.
-
-- **Usuario final**: los usuarios finales usan el sitio web de Portal de empresa desde cualquier dispositivo para ver la clave de recuperación personal actual de cualquiera de sus dispositivos administrados. No puede ver las claves de recuperación en la aplicación Portal de empresa.
-
-  Para ver una clave de recuperación, realice lo siguiente:
-  
-  1. Inicie sesión en el sitio web *Portal de empresa de Intune* desde cualquier dispositivo.
-
-  2. En el portal, vaya a **Dispositivos** y seleccione el dispositivo macOS cifrado con FileVault.
-
-  3. Seleccione **Obtener clave de recuperación**. Se muestra la clave de recuperación actual.
-
-## <a name="bitlocker-recovery-keys"></a>Claves de recuperación de BitLocker
-
-Intune proporciona acceso la hoja de Azure AD para BitLocker, para que pueda ver los identificadores de clave de BitLocker y las claves de recuperación para los dispositivos Windows 10, desde el portal de Intune. Para que sea accesible, el dispositivo debe tener sus claves custodiadas en Azure AD.
-
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Seleccione **Dispositivos** > **Todos los dispositivos**.
-
-3. Seleccione un dispositivo de la lista y, en *Supervisión*, seleccione **Claves de recuperación**.
-  
-   Cuando las claves están disponibles en Azure AD, está disponible la siguiente información:
-   - Identificador de clave de BitLocker
-   - Clave de recuperación de BitLocker
-   - Tipo de unidad
-
-   Cuando las claves no están en Azure AD, Intune mostrará *No se encontró ninguna clave de BitLocker para este dispositivo*.
-
-La información de BitLocker se obtiene mediante el [proveedor de servicios de configuración de BitLocker (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp). El CSP de BitLocker se admite en Windows 10 versión 1709 y posteriores y en Windows 10 Pro versión 1809 y posteriores.
+BitLocker de Windows 10:
+- [Giro de claves de recuperación de BitLocker](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Crear una directiva de [cumplimiento de dispositivos](compliance-policy-create-windows.md).
+[Administración de directiva de BitLocker](../protect/encrypt-devices.md)
+
+[Administración de directiva de FileVault](encrypt-devices-filevault.md)

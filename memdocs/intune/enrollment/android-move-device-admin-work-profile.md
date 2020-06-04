@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624910"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126522"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Traslado de dispositivos Android del administrador de dispositivos a la administración de perfil de trabajo
 
@@ -59,27 +59,31 @@ Cuando los usuarios ven que no cumplen los requisitos por este motivo, pueden pu
     ![Bloqueo de dispositivos](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. En la página **Ubicaciones** , puede agregar ubicaciones si lo desea > **Siguiente**.
-6. En **Acciones en caso de incumplimiento**, puede establecer la acción **Enviar correo electrónico al usuario final**.
 
-    ![Envío de correo electrónico](./media/android-move-device-admin-work-profile/send-email.png)
+6. En la pestaña **Acciones en caso de incumplimiento**, puede configurar las [acciones disponibles en caso de incumplimiento](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) para personalizar la experiencia del usuario final de este flujo.
 
+    ![Acciones de no cumplimiento](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    En el correo electrónico, puede incluir la dirección URL siguiente en los mensajes a los usuarios. La dirección URL iniciará el Portal de empresa de Android en la página para **actualizar la configuración del dispositivo**. Esta página inicia su flujo para trasladar a la administración de perfiles de trabajo.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - En el Gobierno de EE. UU., puede usar este vínculo en su lugar: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
+    Estas son algunas acciones que se deben tener en cuenta:
+
+    - **Marcar el dispositivo como no conforme**: de forma predeterminada, esta acción se establece en cero (0) días, con lo que los dispositivos se marcan como no conformes de inmediato. Si se cambia a un número mayor de días, se proporciona a los usuarios un período de gracia en el que pueden ver el flujo para pasar a la administración de perfiles de trabajo sin marcarse como no conforme. Por ejemplo, si se establece en 14 días, los usuarios tendrían dos semanas para pasar de administradores de dispositivos a la administración de perfiles de trabajo sin el riesgo de perder el acceso a los recursos.
+    - **Enviar notificación de inserción al usuario final**: configure esta opción para enviar notificaciones de inserción a los dispositivos del administrador de dispositivos. Cuando un usuario selecciona la notificación, se inicia el Portal de empresa de Android en la página **Actualizar configuración del dispositivo**, donde puede iniciar el flujo para pasar a la administración de perfiles de trabajo.
+    - **Enviar correo electrónico a usuario final**: configure esta opción para enviar correos electrónicos a los usuarios sobre el paso de administrador de dispositivos a la administración de perfiles de trabajo. En el correo electrónico, puede incluir la dirección URL siguiente, que al seleccionarse, inicia el Portal de empresa de Android en la página Actualizar configuración del dispositivo, donde puede iniciar el flujo para pasar a la administración de perfiles de trabajo.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - En el Gobierno de EE. UU., puede usar este vínculo en su lugar: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
-    > [!NOTE]
-    > - Por supuesto, puede usar hipertexto descriptivo para los vínculos de comunicación con los usuarios. Sin embargo, no use acortadores de URL porque es posible que los vínculos no funcionen si cambian de este modo.
-    > - Si el Portal de empresa Android está abierto y en segundo plano, cuando un usuario pulsa el vínculo, es posible que vaya a la última página que tenía abierta.
-    > - Los usuarios deben pulsar el vínculo de un dispositivo Android. Si, por el contrario, lo pegan en un explorador, no iniciará el Portal de empresa de Android. 
+      > [!NOTE]
+      > - Por supuesto, puede usar hipertexto descriptivo para los vínculos de comunicación con los usuarios. Sin embargo, no use acortadores de URL porque es posible que los vínculos no funcionen si cambian de este modo.
+      > - Si el Portal de empresa Android está abierto y en segundo plano, cuando un usuario pulsa el vínculo, es posible que vaya a la última página que tenía abierta.
+      > - Los usuarios deben pulsar el vínculo de un dispositivo Android. Si, por el contrario, lo pegan en un explorador, no iniciará el Portal de empresa de Android. 
 
-    Seleccione **Siguiente**.
+    Elija **Siguiente**.
 
 7. En la página **Etiquetas de ámbito**, seleccione las etiquetas de ámbito que desee incluir.
 8. En la página **Asignaciones**, asigne la directiva a un grupo que tenga dispositivos inscritos con la administración del administrador de dispositivos > **Siguiente**.
 9. En la página **Revisar y crear**, confirme toda la configuración y, a continuación, seleccione **Crear**.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 El [flujo de usuario final para pasar a la nueva configuración de administración de dispositivos](../user-help/move-to-new-device-management-setup.md) guía a los usuarios por la anulación de la inscripción de la administración de administradores de dispositivos y la configuración de la administración de perfiles de trabajo. Los usuarios deben tener [dispositivos inscritos por el administrador de dispositivos Android](android-enroll-device-administrator.md) con el Portal de empresa de Android, versión 5.0.4720.0 o posterior.
 
