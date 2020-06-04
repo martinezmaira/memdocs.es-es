@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
-ms.openlocfilehash: 9a0687b9e3938c93cfaebe0e064fd994077a92af
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 325460e4d487ade7337fc99b8a77fd3182d6cc17
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086694"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430108"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Configuración de ATP de Microsoft defender para Mac en Microsoft Intune
 
 Vea la configuración del perfil *antivirus* que puede configurar para ATP de Microsoft Defender para Mac en Microsoft Intune. Para obtener más información acerca de esta configuración, consulte [Advanced Threat Protection de Microsoft Defender para Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) en la documentación de Windows.
+
+Obtenga información sobre cómo usar [directivas de seguridad de punto de conexión](../protect/endpoint-security-policy.md) en Intune.
 
 **ATP de Microsoft Defender**
 
@@ -55,7 +57,7 @@ Vea la configuración del perfil *antivirus* que puede configurar para ATP de Mi
   Configure cómo se comparten los datos de uso y diagnóstico con Microsoft.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **Obligatorio**
+  - **Requerido**
   - **Opcional**
 
 - **Carpetas excluidas del examen**  

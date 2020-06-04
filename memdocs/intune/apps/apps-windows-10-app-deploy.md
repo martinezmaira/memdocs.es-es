@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079321"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985930"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementación de aplicaciones Windows 10 con Microsoft Intune 
 
@@ -74,7 +74,7 @@ Las aplicaciones de Microsoft Store para Empresas son aplicaciones modernas que 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Categorización de aplicaciones de Microsoft Store para Empresas 
 Para categorizar aplicaciones de Microsoft Store para Empresas: 
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones**. 
 3. Seleccione una aplicación de Microsoft Store para Empresas. A continuación, seleccione **Propiedades** > **Información de la aplicación** > **Categoría**. 
 4. Seleccione una categoría.
@@ -92,7 +92,9 @@ Según el tipo de aplicación, puede instalar la aplicación en un dispositivo W
 > [!NOTE]
 > En las aplicaciones Win32 compiladas en modo dual, el administrador debe seleccionar si la aplicación funcionará en modo de usuario o modo máquina en todas las asignaciones asociadas con esa instancia. No se puede cambiar el contexto de implementación por asignación.  
 
-Las aplicaciones solo se pueden instalar en el contexto de dispositivo cuando las admite el dispositivo y el tipo de aplicación de Intune. Puede instalar los siguientes tipos de aplicaciones en el contexto de dispositivo y asignar estas aplicaciones a un grupo de dispositivos:
+Las aplicaciones solo se pueden instalar en el contexto de dispositivo cuando las admite el dispositivo y el tipo de aplicación de Intune. Las instalaciones de contexto de dispositivo se admiten en equipos de escritorio y equipos con Windows 10, como Surface Hub. No se admiten en dispositivos que ejecutan Windows Holographic for Business, como Microsoft HoloLens.
+
+Puede instalar los siguientes tipos de aplicaciones en el contexto de dispositivo y asignar estas aplicaciones a un grupo de dispositivos:
 
 - Aplicaciones Win32
 - Aplicaciones de Microsoft Store para Empresas con licencias sin conexión

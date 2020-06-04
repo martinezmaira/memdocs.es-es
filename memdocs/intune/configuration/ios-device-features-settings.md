@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943882"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551934"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
@@ -213,7 +213,7 @@ Esta característica se aplica a:
   Los tokens de dispositivo también se pueden usar para agregar información específica sobre el dispositivo a estos campos. Por ejemplo, para que se muestre el número de serie, escriba `Serial Number: {{serialnumber}}`. En la pantalla de bloqueo, el texto tendrá un aspecto similar a este: `Serial Number 123456789ABC`. Al especificar variables, no olvide usar llaves: `{{ }}`. En los [tokens de configuración de aplicación](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) podrá ver una lista de las variables que puede usar. También puede usar `deviceName` o cualquier otro valor específico del dispositivo.
 
   > [!NOTE]
-  > Las variables no se validan en la interfaz de usuario y distinguen mayúsculas de minúsculas. Como resultado, es posible que vea perfiles guardados con entradas incorrectas. Por ejemplo, si escribe `{{DeviceID}}` en lugar de `{{deviceid}}`, se muestra la cadena literal en lugar del identificador único del dispositivo. Asegúrese de especificar la información correcta.
+  > Las variables no se validan en la interfaz de usuario y distinguen mayúsculas de minúsculas. Como resultado, es posible que vea perfiles guardados con entradas incorrectas. Por ejemplo, si escribe `{{DeviceID}}` en lugar de `{{deviceid}}` o "{{DEVICEID}}", se muestra la cadena literal en lugar del identificador único del dispositivo. Asegúrese de especificar la información correcta. Se admiten todas las variables en minúsculas o mayúsculas, pero no una mezcla de ambas. 
 
 ## <a name="single-sign-on"></a>Inicio de sesión único
 

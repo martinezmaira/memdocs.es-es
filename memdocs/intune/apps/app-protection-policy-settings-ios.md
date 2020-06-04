@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eda210408adbb15d82d6bfc31bef2f225f53bc6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65ba8319668baed6605bb8d0f409a4ea19a5140f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80863084"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990115"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Configuración de directivas de protección de aplicaciones de iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Hay tres categorías de configuraciones de directiva: *Reubicación de datos*, *
 | <ul><ui>**Permitir al usuario guardar copias en los servicios seleccionados** | Los usuarios pueden guardar en los servicios seleccionados (OneDrive para la Empresa, SharePoint y el almacenamiento local). El resto de servicios se bloquean.| **0 seleccionados**  |
 | **Restringir cortar, copiar y pegar entre otras aplicaciones** | Especifique cuándo pueden usarse las acciones de cortar, copiar y pegar con esta aplicación. Seleccione: <ul><li>**Bloqueado**:  no permite las acciones de cortar, copiar y pegar entre esta aplicación y cualquier otra.</li><li>**Aplicaciones administradas por directivas**: permite las acciones de cortar, copiar y pegar entre esta aplicación y otras aplicaciones administradas por directivas.</li><li>**Aplicaciones administradas por directivas con pegar**: permite cortar o copiar entre esta aplicación y otras aplicaciones administradas por directivas. Permite que los datos de cualquier aplicación se peguen en esta aplicación.</li><li>**Cualquier aplicación**: no se aplican restricciones a las acciones de cortar, copiar y pegar en esta aplicación y desde ella.</ul> | **Cualquier aplicación**   |
 | <ul><ui>**Límite de caracteres para cortar y copiar en cualquier aplicación** | Especifique el número de caracteres que se pueden cortar o copiar de las cuentas y los datos de la organización.  Esto permitirá compartir el número especificado de caracteres en cualquier aplicación, independientemente de la opción **Restringir cortar, copiar y pegar con otras aplicaciones**.<p>Valor predeterminado = 0<p>**Nota**: *Exige que la aplicación tenga la versión 9.0.14 del SDK de Intune o una versión posterior.*  | **0**   |
-| **Notificaciones de datos de la organización** | Especifica cómo se comparten los datos de la organización a través de las notificaciones del sistema operativo de las cuentas de organización. Esta configuración de directiva afectará al dispositivo local y a todos los dispositivos conectados, como ponibles y altavoces inteligentes. Las aplicaciones pueden proporcionar controles adicionales para personalizar el comportamiento de las notificaciones o pueden optar por no respetar todos los valores. Seleccione: <ul><li>**Bloqueado**: no se comparten las notificaciones.</li><ul><li>Si la aplicación no lo admite, se permiten las notificaciones.</li></ul><li>**Bloquear datos de la organización**: no se comparten datos de la organización en las notificaciones, por ejemplo:</li><UL><li>"Tiene correo nuevo"; "Tiene una reunión".</li><li>Si la aplicación no admite esta opción, se bloquearán las notificaciones.</li></ul><li>**Permitir**: se comparten los datos de la organización en las notificaciones.</li></ul> <p>**Nota**: *Esta configuración requiere que la aplicación sea compatible. En este momento, Outlook para iOS versión 4.15.0 o posterior será compatible con esta configuración.* | **Permitir**   |
+| **Notificaciones de datos de la organización** | Especifica cómo se comparten los datos de la organización a través de las notificaciones del sistema operativo de las cuentas de organización. Esta configuración de directiva afectará al dispositivo local y a todos los dispositivos conectados, como ponibles y altavoces inteligentes. Las aplicaciones pueden proporcionar controles adicionales para personalizar el comportamiento de las notificaciones o pueden optar por no respetar todos los valores. Seleccione: <ul><li>**Bloqueado**: no se comparten las notificaciones.</li><ul><li>Si la aplicación no lo admite, se permiten las notificaciones.</li></ul><li>**Bloquear datos de la organización**: no se comparten datos de la organización en las notificaciones, por ejemplo:</li><UL><li>"Tiene correo nuevo"; "Tiene una reunión".</li><li>Si la aplicación no admite esta opción, se bloquearán las notificaciones.</li></ul><li>**Permitir**: se comparten los datos de la organización en las notificaciones.</li></ul> <p>**Nota**: *Esta configuración requiere que la aplicación sea compatible. En este momento, Outlook para iOS versión 4.34.0 o posterior admite esta opción.* | **Permitir**   |
 | **Teclados de terceros** | Elija **Bloquear** para impedir el uso de teclados de terceros en las aplicaciones administradas.<p>Cuando esta opción está habilitada, el usuario recibe un mensaje de un solo uso en el que se indica que se bloquea el uso de teclados de terceros. Este mensaje aparece la primera vez que un usuario interactúa con datos de la organización que requieren el uso de un teclado. Cuando se usan aplicaciones administradas, solo está disponible el teclado estándar de iOS/iPadOS, y se deshabilitan todas las demás opciones de teclado. Esta configuración afectará a las cuentas personales y de la organización de las aplicaciones de varias identidades. Esta opción no afecta al uso de teclados de terceros en las aplicaciones no administradas.<p>**Nota:** Esta característica requiere que la aplicación use la versión 12.0.16 o posterior del SDK de Intune. Las aplicaciones con versiones del SDK de la 8.0.14 a la 12.0.15 (inclusive), no tendrán esta característica aplicada correctamente en aplicaciones de varias identidades. Para más información, consulte [Problema conocido: Los teclados de terceros no se bloquean en iOS/iPadOS para cuentas personales](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Permitir**  |
 
 ### <a name="encryption"></a>Cifrado

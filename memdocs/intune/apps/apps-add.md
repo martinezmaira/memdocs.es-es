@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/11/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023255"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989488"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Incorporación de aplicaciones a Microsoft Intune 
 
@@ -43,6 +43,7 @@ Intune admite una gran variedad de tipos de aplicaciones. Las opciones disponibl
 | Aplicaciones escritas internamente (línea de negocio) | Intune instala la aplicación en el dispositivo (el usuario proporciona el archivo de instalación). | Debe actualizar la aplicación. |
 | Aplicaciones integradas (aplicaciones integradas) | Intune instala la aplicación en el dispositivo.  | Las actualizaciones de aplicaciones son automáticas. |
 | Aplicaciones en la web (vínculo web) | Intune crea un acceso directo a la aplicación web en la pantalla principal del dispositivo. | Las actualizaciones de aplicaciones son automáticas. |
+| Aplicaciones de otros servicios de Microsoft  | Intune crea un acceso directo a la aplicación en el Portal de empresa. Para obtener más información, vea [Opciones de configuración de origen de aplicación](../apps/company-portal-app.md#app-source-setting-options). | Las actualizaciones de aplicaciones son automáticas. |
 
 ### <a name="specific-app-type-details"></a>Detalles del tipo de aplicación específico
  
@@ -70,7 +71,6 @@ En la tabla siguiente se enumeran los tipos de aplicaciones específicas y cómo
 | Aplicaciones del sistema de Android Enterprise  | Aplicación de la tienda  | Seleccione **Aplicación del sistema Android Enterprise** como **tipo de aplicación** y escriba el nombre de la aplicación, el publicador y el archivo de paquete.  |
 | Aplicación Windows (Win32)  | Aplicación LOB  | Seleccione **Aplicación Windows (Win32)** como el **tipo de aplicación**, elija **Archivo de paquete de aplicación** y seleccione un archivo de instalación con la extensión **.intunewin**.  |
 | Aplicaciones de LOB para macOS | Aplicación LOB  | Seleccione **Línea de negocio** como **tipo de aplicación**, elija **Archivo de paquete de aplicación** y seleccione un archivo de instalación con la extensión **.intunemac**.  |
-
 
 <sup>1</sup> Para obtener más información sobre los perfiles de trabajo de Android Enterprise y Android, consulte [Información sobre el uso de aplicaciones con licencia](apps-add.md#understanding-licensed-apps) a continuación.
 
@@ -112,6 +112,7 @@ Puede elegir entre los siguientes tipos de aplicaciones:
 - **Aplicaciones de la tienda**: aplicaciones que se han cargado en Microsoft Store, la tienda iOS/iPadOS o la tienda de Android son aplicaciones de la tienda. El proveedor de una aplicación de la tienda mantiene y proporciona las actualizaciones de la aplicación. Seleccione la aplicación en la lista de la tienda y agréguela mediante Intune como una aplicación disponible para los usuarios.
 - **Aplicaciones escritas internamente (línea de negocio)** : las aplicaciones que se crean internamente son aplicaciones de línea de negocio (LOB). La funcionalidad de este tipo de aplicación se ha creado para una de las plataformas compatibles con Intune, por ejemplo, Windows, iOS/iPadOS, macOS o Android. Su organización crea y le proporciona actualizaciones como un archivo independiente. Puede proporcionar actualizaciones de la aplicación a los usuarios agregando e implementando las actualizaciones mediante Intune.
 - **Aplicaciones en la Web**: las aplicaciones web son aplicaciones cliente-servidor. El servidor proporciona la aplicación web, que incluye la interfaz de usuario, el contenido y la funcionalidad. Además, las plataformas de hospedaje web modernas normalmente ofrecen seguridad, equilibrio de carga y otras ventajas. Este tipo de aplicación se mantiene por separado en la Web. Intune se usa para que apunte a este tipo de aplicación. También puede asignar qué grupos de usuarios pueden tener acceso a la aplicación. Tenga en cuenta que Android no es compatible con las aplicaciones web.
+- **Aplicaciones de otros servicios de Microsoft**: las que se han obtenido desde Azure AD u Office Online. Las **aplicaciones empresariales de Azure AD** se registran y asignan a través de [Azure Portal](https://portal.azure.com). Las **aplicaciones de Office Online** se asignan mediante los controles de licencia disponibles en el [Centro de administración de M365](https://admin.microsoft.com). Puede ocultar o mostrar las aplicaciones empresariales de Azure AD y las de Office Online para los usuarios finales en el Portal de empresa. Desde el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Administración de inquilinos** > **Personalización** para encontrar esta opción de configuración. Puede **Ocultar** o **Mostrar** **Aplicaciones empresariales de Azure AD** o **Aplicaciones de Office Online** en el Portal de empresa para cada usuario final. Cada usuario final verá todo el catálogo de aplicaciones desde el servicio de Microsoft elegido. De forma predeterminada, cada origen de aplicación adicional se establecerá en **Ocultar**. Para obtener más información, vea [Opciones de configuración de origen de aplicación](../apps/company-portal-app.md#app-source-setting-options). 
 
 A medida que determina qué aplicaciones necesita su organización, tenga en cuenta cómo se integran las aplicaciones con los servicios en la nube, a qué datos pueden acceder las aplicaciones, si las aplicaciones están disponibles para los usuarios BYOD y si las aplicaciones requieren acceso a internet.
 

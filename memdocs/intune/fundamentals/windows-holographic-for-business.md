@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326637"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791740"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Administre y use diferentes características de administración de dispositivos en los dispositivos Windows Holographic y HoloLens con Intune
 
@@ -116,6 +116,8 @@ En los perfiles, puede usar OMA-URI para personalizar algunas opciones, crear re
 ### <a name="custom-device-settings"></a>[Configuración de dispositivo personalizada](../configuration/custom-settings-windows-holographic.md)
 
 Para configurar las opciones de OMA-URI (Open Mobile Alliance Uniform Resource Identifier), puede crear un perfil personalizado en Intune. Use las opciones de OMA-URI para controlar diversas características de los dispositivos de Windows Holographic for Business, como habilitar una VPN o comprobar si hay actualizaciones en Microsoft Update.
+
+Vea un [ejemplo](../configuration/custom-profile-hololens.md) en el que se usa el [CSP Control de aplicaciones de Windows Defender(WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) para permitir o impedir que las aplicaciones se abran en dispositivos HoloLens 2.
 
 ### <a name="configure-kiosk-mode"></a>[Configuración del modo de pantalla completa](../configuration/kiosk-settings-holographic.md)
 

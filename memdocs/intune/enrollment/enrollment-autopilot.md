@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327125"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990597"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscripción de dispositivos Windows en Intune con Windows Autopilot  
 Windows Autopilot simplifica el proceso de inscripción de dispositivos en Intune. Crear y mantener imágenes personalizadas de sistemas operativos es un proceso que conlleva mucho tiempo. También se requiere tiempo para aplicar estas imágenes en dispositivos nuevos a la hora de prepararlos para que los puedan usar los usuarios finales. Con Microsoft Intune y Autopilot, puede proporcionar nuevos dispositivos a los usuarios finales sin necesidad de crear, mantener y aplicar imágenes personalizadas del sistema operativo a los dispositivos. Al usar Intune para administrar dispositivos Autopilot, puede administrar directivas, perfiles y aplicaciones (entre otros) después de inscribirlos. Para obtener información general sobre las ventajas, los escenarios y los requisitos previos, vea [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) (Introducción a Windows Autopilot).
@@ -34,6 +34,8 @@ Hay cuatro tipos de implementación de Autopilot:
 - [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) permite a los asociados o al personal de TI aprovisionar previamente un equipo con Windows 10 para que esté completamente configurado y listo para la empresa
 - [Autopilot para dispositivos existentes](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) permite implementar fácilmente la versión más reciente de Windows 10 en los dispositivos existentes
 - [Modo controlado por el usuario](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) para usuarios tradicionales.
+
+En este artículo se explica cómo configurar Autopilot para equipos Windows. Para obtener más información sobre Autopilot y Hololens, vea [Windows Autopilot para HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -90,7 +92,7 @@ Para agregar dispositivos de Windows Autopilot, puede importar un archivo CSV co
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Crear un perfil de implementación de Autopilot
 Los perfiles de implementación de Autopilot sirven para configurar los dispositivos Autopilot. Puede crear hasta 350 perfiles por inquilino.
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Windows** > **Inscripción de Windows** > **Perfiles de implementación** > **Crear perfil**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Windows** > **Inscripción de Windows** > **Perfiles de implementación** > **Crear perfil** > **PC Windows** u **HoloLens**. En este artículo se explica cómo configurar Autopilot para equipos Windows. Para obtener más información sobre Autopilot y Hololens, vea [Windows Autopilot para HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 2. En la página de los **datos básicos**, escriba un **nombre** y, opcionalmente, una **descripción**.
 
     ![Captura de pantalla de la página de los datos básicos](./media/enrollment-autopilot/create-profile-basics.png)
