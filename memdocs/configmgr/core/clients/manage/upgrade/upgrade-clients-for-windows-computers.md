@@ -2,7 +2,7 @@
 title: Actualización de clientes en Windows
 titleSuffix: Configuration Manager
 description: Actualice clientes en equipos Windows en Configuration Manager.
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427760"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347155"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Actualización de clientes de equipos Windows con System Center Configuration Manager
 
@@ -59,9 +59,6 @@ Un cliente puede actualizarse automáticamente en los siguientes escenarios:
 > Para identificar las diferentes versiones del cliente de Configuration Manager de su jerarquía, use el informe **Recuento de clientes de Configuration Manager por versiones de cliente** de la carpeta de informes **Sitio - Información del cliente**.  
 
 Configuration Manager crea un paquete de actualización de forma predeterminada. Envía automáticamente el paquete a todos los puntos de distribución de la jerarquía. Si realiza cambios en el paquete de cliente en el sitio de administración central, Configuration Manager actualiza automáticamente el paquete y lo redistribuye. Un cambio de ejemplo es cuando se agrega un paquete de idioma de cliente. Si habilita la actualización automática de cliente, todos los clientes instalan automáticamente el nuevo paquete de idioma del cliente.
-
-> [!NOTE]  
-> Configuration Manager no envía de forma automática el paquete de actualización de cliente a los puntos de distribución basados en la nube de Configuration Manager.  
 
 Habilite las actualizaciones de cliente automáticas en la jerarquía. Esta configuración mantiene los clientes actualizados con menos esfuerzo.  
 

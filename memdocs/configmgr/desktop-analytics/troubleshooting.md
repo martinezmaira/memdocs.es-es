@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268256"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428572"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de Análisis de escritorio
 
@@ -68,7 +68,7 @@ Análisis de escritorio agrega las siguientes aplicaciones a su instancia de Azu
 
 - **MALogAnalyticsReader**: Supervisa el área de trabajo de Log Analytics de Azure para asegurarse de que la instantánea diaria se haya copiado correctamente. Para obtener más información, consulte [Rol de aplicación MALogAnalyticsReader](#bkmk_MALogAnalyticsReader).  
 
-- **Administración del cliente de Office 365**: Permite que Configuration Manager recupere la información sobre el plan de implementación y el estado de preparación de los dispositivos de Análisis de escritorio.
+- **Análisis de escritorio**: Permite que Configuration Manager recupere la información sobre el plan de implementación y el estado de preparación de los dispositivos de Análisis de escritorio.
 
 Si tiene que aprovisionar estas aplicaciones después de completar la instalación, vaya al panel de **Servicios conectados**. Seleccione **Configurar el acceso de los usuarios y las aplicaciones** y aprovisione las aplicaciones.  
 
