@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 089303b76f674d47767afdff72341d09f7f227d4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 78cc6182cf8682935ecaa6c319e30ee8261fc2fb
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431740"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455266"
 ---
 # <a name="settings-for-the-windows-security-experience-profile-in-microsoft-intune"></a>Configuración del perfil de la experiencia de Seguridad de Windows en Microsoft Intune
 
@@ -43,7 +43,7 @@ Vea la configuración de la directiva antivirus que puede establecer para el per
   - **Sí**: se oculta a los usuarios finales el área de protección contra virus y amenazas en la aplicación Seguridad de Windows. Se suprimen las notificaciones relacionadas con la protección contra virus y amenazas.
 
   - **Ocultar la opción de recuperación de datos por ataque de ransomware en la aplicación Seguridad de Windows**  
-    CSP: [](https://go.microsoft.com/fwlink/?linkid=873664)
+    CSP: [HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)
 
   - **Sin configurar** (*valor predeterminado*): la opción devuelve al valor predeterminado del cliente, que es permitir el acceso de usuario y las notificaciones.
   - **Sí**: se oculta a los usuarios finales el área de recuperación de datos por ataque de ransonware en la aplicación Seguridad de Windows. Se suprimen las notificaciones relacionadas con el ransomware.
@@ -85,7 +85,7 @@ Vea la configuración de la directiva antivirus que puede establecer para el per
   - **Sí**: se oculta a los usuarios finales el área de opciones de familia en la aplicación Seguridad de Windows. Además, se suprimen las notificaciones relacionadas con las opciones de familia.
 
 - **Notificaciones de la aplicación Seguridad de Windows**  
-  CSP: [](https://go.microsoft.com/fwlink/?linkid=873675)
+  CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)
 
   Use esta opción para bloquear las notificaciones de Seguridad de Windows para los usuarios relacionadas con todos los valores de características anteriores. Como alternativa, puede administrar las notificaciones de la aplicación Seguridad de Windows por característica mediante los valores siguientes.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 739ebebe18628279e5242ab227cf0f43993eff08
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166032"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330872"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Preparar aplicaciones de línea de negocio para las directivas de protección de aplicaciones
 
@@ -121,7 +121,6 @@ En esta tabla se indican los valores que se habilitan si una aplicación usa App
 |Configuración del contenido de las notificaciones de una aplicación para las cuentas de organización|X|X|
 |Requerir uso de teclados aprobados (solo Android)|X|X|
 |Requerir directiva de protección de aplicaciones (acceso condicional)|X||
-|Requerir aplicación cliente aprobada (acceso condicional)|X||
 
 ## <a name="next-steps"></a>Pasos siguientes
 
