@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724839"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506264"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Crear elementos de configuración para dispositivos Windows con MDM local en Configuration Manager
 
@@ -89,7 +89,7 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
 - **Número de contraseñas recordadas**: evita la reutilización de contraseñas usadas anteriormente.
 - **Número de intentos de inicio de sesión incorrectos antes de que se borre el dispositivo**: si se produce un error en este número de intentos de inicio de sesión, MDM borra el dispositivo
 - **Tiempo de inactividad antes de que se bloquee el dispositivo**: especifique la cantidad de tiempo que un dispositivo puede estar inactivo antes de que se bloquee. El dispositivo está inactivo cuando no hay datos proporcionados por el usuario.
-- **Complejidad de la contraseña**: elija si puede especificar un PIN `1234`numérico como o si debe proporcionar una contraseña segura.
+- **Complejidad de la contraseña**: elija si puede especificar un PIN numérico como `1234` o si debe proporcionar una contraseña segura.
   - **Número de conjuntos de caracteres complejos necesarios en la contraseña**: Si la complejidad de la contraseña es **fuerte**, seleccione el número de tipos de caracteres que requiere la contraseña: letras mayúsculas, letras minúsculas, números o símbolos. De manera predeterminada, este valor es `2`.
 - **Enviar NIP de recuperación de contraseña a Exchange Server**
 
@@ -136,12 +136,12 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
 - **Compras desde la aplicación**: permite o prohíbe a los usuarios realizar compras desde la aplicación.
 - **Inicio**de la aplicación de la tienda: deshabilite todas las aplicaciones que se instalaron previamente en el dispositivo o que se instalaron desde el Microsoft Store.
 - **Actualización automática de aplicaciones desde la tienda**: permite o prohíbe que las aplicaciones instaladas desde el Microsoft Store se actualicen automáticamente.
-- **Instalar aplicaciones en la unidad del sistema**: permitir o prohibir el dispositivo para instalar aplicaciones en la unidad del sistema, `C:` que suele ser la unidad.
+- **Instalar aplicaciones en la unidad del sistema**: permitir o prohibir el dispositivo para instalar aplicaciones en la unidad del sistema, que suele ser la `C:` unidad.
 - **Instalar datos de la aplicación en el volumen del sistema**: habilite esta opción para permitir que las aplicaciones almacenen datos en la unidad del sistema.
 - **Usar solo el almacén privado**: requerir a los usuarios que descarguen aplicaciones de la tienda privada.
 - **Game DVR**: deshabilitar la transmisión y la grabación de juegos de Windows
 
-### <a name="browser"></a>Browser
+### <a name="browser"></a>Explorador
 
 Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.
 
@@ -164,7 +164,7 @@ Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.
 - **Nivel de seguridad para la zona de sitios de confianza**: establezca el nivel de seguridad para la zona de sitios de confianza: alto, medio-alto, medio, medio-bajo o bajo.
 - **Nivel de seguridad para zona de sitios restringidos**: establezca el nivel de seguridad para la zona de sitios restringidos: alto.
 - **Espacios de nombres para la zona de intranet**: configurar sitios web para agregar o quitar de la zona de intranet.
-- **Ir a sitio de intranet para la entrada de una sola palabra**: permitir o prohibir que Internet Explorer vaya automáticamente a un sitio de intranet si el usuario escribe un nombre de sitio válido `https://`sin un protocolo anterior, por ejemplo.
+- **Ir a sitio de intranet para la entrada de una sola palabra**: permitir o prohibir que Internet Explorer vaya automáticamente a un sitio de intranet si el usuario escribe un nombre de sitio válido sin un protocolo anterior, por ejemplo `https://` .
 - **Opción de menú modo de empresa**: permite a los usuarios activar y desactivar el modo de empresa desde el menú **herramientas** de Internet Explorer.
   - **Ubicación del informe de registro (URL)**: cuando el modo de empresa está activo, especifique una dirección URL para registrar sitios web visitados.
 - **Ubicación de la lista de sitios de modo de empresa (URL)**: cuando el modo de empresa está activo, especifique la lista de sitios web que lo usan.
@@ -242,7 +242,7 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
         - **WPA2**
         - **WPA2-PSK**
     - **Cifrado de datos**: elija el método de cifrado que usa esta conexión. Los valores disponibles cambian en función del método de **autenticación** que seleccione:
-        - **Deshabilitada**
+        - **Deshabilitado**
         - **WEP**
         - **TKIP**
         - **AES**
@@ -271,7 +271,7 @@ Seleccione **importar**y, a continuación, especifique los valores siguientes:
   - **Peer**
 - **Rol**: Si elige el almacén de certificados **SPC** (certificado de editor de software), elija el rol que se va a asociar al certificado:
   - **Operador móvil**
-  - **Manager**
+  - **Administrador**
   - **Usuario autenticado**
   - **Administrador de ti**
   - **Usuario sin autenticar**
@@ -321,13 +321,13 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 Team.
 - **Información de la reunión mostrada en la pantalla de bienvenida**: elija el tipo de información que el dispositivo muestra en el icono **reuniones** de la pantalla de **Inicio** de sesión:
   - **Mostrar solo el organizador y la hora**
   - **Mostrar el organizador, la hora y el asunto (asunto oculto para las reuniones privadas)**
-- **URL de imagen de fondo de pantalla de bloqueo**: especifique una dirección URL para mostrar un fondo personalizado en la pantalla de **Inicio** de sesión de un dispositivo de Windows 10 Team. Inicie la dirección URL `https://` con y use el formato PNG.
+- **URL de imagen de fondo de pantalla de bloqueo**: especifique una dirección URL para mostrar un fondo personalizado en la pantalla de **Inicio** de sesión de un dispositivo de Windows 10 Team. Inicie la dirección URL con `https://` y use el formato PNG.
 
 ### <a name="windows-information-protection"></a>Windows Information Protection  
 
 Para obtener más información sobre cómo configurar la protección de datos de empresa con Configuration Manager, consulte [protección de los datos de la empresa mediante Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Heredado de Microsoft Edge
 
 Esta configuración es solo para dispositivos que ejecutan Windows 10 y versiones posteriores.  
 
@@ -342,7 +342,7 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
 - **Extensiones**: permite o prohíbe extensiones perimetrales.
 - **Exploración de InPrivate**: permite o prohíbe la exploración de InPrivate, que no almacena el historial ni las cookies.
 - **Dirección IP de localhost de WebRTC**: permite o prohíbe que la dirección IP de localhost del dispositivo se muestre cuando el usuario realiza llamadas telefónicas mediante el protocolo RTC Web.
-- **Bloquear el acceso a about: flags**: permitir o prohibir que el `about:flags` usuario tenga acceso a la página, que contiene la configuración experimental y de desarrollador.
+- **Bloquear el acceso a about: flags**: permitir o prohibir que el usuario tenga acceso a la `about:flags` página, que contiene la configuración experimental y de desarrollador.
 - **Invalidación de avisos de SmartScreen para archivos**: permite o prohíbe al usuario omitir las advertencias del Filtro SmartScreen sobre la descarga de archivos potencialmente malintencionados.
 - **Invalidación de avisos de SmartScreen**: permite o prohíbe al usuario omitir las advertencias del Filtro SmartScreen sobre sitios Web potencialmente malintencionados.
 - **Dirección URL de primera ejecución**: especifique un sitio web para que se muestre cuando un usuario abra Edge por primera vez.
@@ -376,7 +376,7 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
 - **Detección de aplicaciones potencialmente no deseadas**: protege el dispositivo contra la ejecución de software clasificado por defender como potencialmente no deseado. Puede protegerse de estas aplicaciones en ejecución o usar el modo auditoría para informar cuando un usuario instala una aplicación potencialmente no deseada.
 - **Exclusiones de archivos y carpetas**: agregue uno o varios archivos y carpetas a la lista de exclusiones. Por ejemplo, `C:\Path` o `%ProgramFiles%\Path\filename.exe`. Defender no incluye estos archivos y carpetas en ningún examen en tiempo real ni programado.
 - **Exclusiones de extensiones de archivo**: agregue una o más extensiones de archivo a la lista de exclusiones. Por ejemplo, `java` o `exe`. Defender no incluye ningún archivo con estas extensiones en ningún examen en tiempo real ni programado.
-- **Exclusiones de procesos**: agregue procesos específicos a la lista de exclusiones. Por ejemplo: `C:\path\myproc.exe`. Este tipo de exclusión solo admite las siguientes extensiones `exe`: `com`, o `scr`. Defender no incluye estos procesos en ningún examen en tiempo real ni programado.
+- **Exclusiones de procesos**: agregue procesos específicos a la lista de exclusiones. Por ejemplo: `C:\path\myproc.exe`. Este tipo de exclusión solo admite las siguientes extensiones: `exe` , `com` o `scr` . Defender no incluye estos procesos en ningún examen en tiempo real ni programado.
 
 ### <a name="additional-settings"></a>Configuración adicional
 
