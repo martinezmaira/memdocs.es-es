@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878488"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455283"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Caché de conexión de Microsoft en Configuration Manager
 
@@ -63,7 +63,7 @@ Cuando se configuran los clientes para que usen el servidor de caché de conexi�
 
   - No preinstale la característica [Enrutamiento de solicitud de aplicaciones](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR). La caché de conexión instala ARR y configura sus valores. Microsoft no puede garantizar que la configuración de ARR de la caché de conexión no entre en conflicto con otras aplicaciones del servidor que también usan esta característica.
 
-  - El punto de distribución requiere acceso a la nube de Microsoft a través de Internet. Las direcciones URL concretas pueden variar según el contenido específico habilitado para la nube. Para más información, consulte los [requisitos de acceso a Internet](../network/internet-endpoints.md).
+  - El punto de distribución requiere acceso a la nube de Microsoft a través de Internet. Las direcciones URL concretas pueden variar según el contenido específico habilitado para la nube. Asegúrese de permitir también los puntos de conexión para la optimización de la distribución. Para más información, consulte los [requisitos de acceso a Internet](../network/internet-endpoints.md).
 
   - A partir de la versión 2002, la aplicación Caché conectada puede usar un servidor proxy no autenticado para acceder a Internet. Para más información, consulte [Configuración del proxy para un servidor de sistema de sitio](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 

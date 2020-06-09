@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988112"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455079"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Supervisión de las directivas de protección de aplicaciones
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Puede supervisar el estado de las directivas de protección de aplicaciones que haya aplicado a los usuarios en el panel de protección de aplicaciones de Intune en [Azure Portal](https://portal.azure.com). Además, podrá encontrar información sobre los usuarios afectados por las directivas de protección de aplicaciones, el estado de cumplimiento de las directivas y cualquier problema que puedan estar experimentando los usuarios finales.
+Puede supervisar el estado de las directivas de protección de aplicaciones que haya aplicado a los usuarios en Intune, en el panel de protección de aplicaciones de Intune. Además, podrá encontrar información sobre los usuarios afectados por las directivas de protección de aplicaciones, el estado de cumplimiento de las directivas y cualquier problema que puedan estar experimentando los usuarios finales.
 
 Hay tres lugares diferentes desde donde se pueden supervisar las directivas de protección de aplicaciones:
 - Vista Resumen
@@ -42,11 +42,10 @@ El período de retención de los datos de protección de la aplicación es de 90
 
 ## <a name="summary-view"></a>Vista Resumen
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Seleccione **Aplicaciones** > **Supervisar** > **Estado de protección de la aplicación**.
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Seleccione **Aplicaciones** > **Supervisar** > **Estado de protección de la aplicación**.
 
-   ![Captura de pantalla del icono Resumen en el panel de administración de aplicaciones móviles de Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+En la lista siguiente se proporcionan detalles sobre el estado de protección de la aplicación: 
 - **Usuarios asignados**: número total de usuarios asignados en la empresa que usan una aplicación que está asociada a una directiva en un contexto profesional, que está protegida y que tiene una licencia, así como los usuarios asignados que están desprotegidos y que non tienen ninguna licencia.
 - **Usuarios marcados**: número de usuarios que experimentan problemas con los dispositivos. Los dispositivos con jailbreak (iOS/iPadOS) y con rooting (Android) se notifican en **Usuarios marcados**. Además, aquí se notifican los usuarios con dispositivos marcados por la comprobación de atestación de dispositivo Google SafetyNet (si el administrador de TI la activó). 
 - **Usuarios con aplicaciones potencialmente perjudiciales**: el número de usuarios que pueden tener una aplicación perjudicial en su dispositivo Android detectado por Google Play Protect. 

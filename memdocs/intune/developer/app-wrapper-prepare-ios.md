@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424778a86ebf3bac750e17359204ef6be3aaa71c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166049"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436812"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparar aplicaciones iOS para directivas de protección de aplicaciones con la herramienta de ajuste de aplicaciones de Intune
 
@@ -323,7 +323,7 @@ La herramienta de ajuste de aplicaciones para iOS tiene algunos requisitos que s
 
 ## <a name="setting-app-entitlements"></a>Configurar los derechos de la aplicación
 
-Antes de ajustar la aplicación, puede concederle *derechos* para que tenga permisos y funcionalidades adicionales que normalmente no podría usar. Un *archivo de derechos* se usa durante la firma de código para especificar permisos especiales dentro de la aplicación (por ejemplo, acceso a una cadena de claves compartida). Los servicios de aplicaciones específicos, denominados *funcionalidades*, se habilitan en Xcode durante el desarrollo de las aplicaciones. Una vez habilitadas, las capacidades se reflejan en el archivo de derechos. Para obtener más información sobre los derechos y las funcionalidades, consulte [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) (Agregar funcionalidades) en la biblioteca para desarrolladores de iOS. Para obtener una lista completa de las capacidades admitidas, consulte [Capacidades admitidas](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Antes de ajustar la aplicación, puede concederle *[derechos](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* para que tenga permisos y funcionalidades adicionales para ampliar sus capacidades. Un *archivo de derechos* se usa durante la firma de código para especificar permisos especiales dentro de la aplicación (por ejemplo, acceso a una cadena de claves compartida). Los servicios de aplicaciones específicos, denominados *funcionalidades*, se habilitan en Xcode durante el desarrollo de las aplicaciones. Una vez habilitadas, las capacidades se reflejan en el archivo de derechos. Para obtener más información sobre los derechos y las funcionalidades, consulte [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) (Agregar funcionalidades) en la biblioteca para desarrolladores de iOS. Para obtener una lista completa de las capacidades admitidas, consulte [Capacidades admitidas](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Capacidades admitidas por la herramienta de ajuste de aplicaciones para iOS
 

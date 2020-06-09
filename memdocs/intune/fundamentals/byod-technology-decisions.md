@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079287"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455249"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Decisiones de tecnología para habilitar BYOD con Microsoft Enterprise Mobility + Security (EMS)
 
@@ -72,14 +72,14 @@ Aun así, suele haber riesgos concretos que preocupan a muchas organizaciones.  
 |Cuenta de usuario en peligro | Bloquear usuarios de alto riesgo | Bloquear usuarios de alto riesgo |
 |Cuenta de usuario en peligro | PIN de dispositivo | PIN de aplicación |
 | | | |
-| Dispositivo o aplicación en peligro | Exigir un dispositivo conforme | Comprobación de jailbreak al iniciar la aplicación |
+| Dispositivo o aplicación en peligro | Exigir un dispositivo conforme | Comprobación de jailbreak/root al iniciar la aplicación |
 | Dispositivo o aplicación en peligro | Cifrar datos de dispositivo | Cifrar datos de aplicación |
 | | | |
 |Dispositivo extraviado o robado | Borrar todos los datos del dispositivo | Borrar todos los datos de la aplicación|
 | | | |
-| Uso compartido de datos accidental o guardado en ubicaciones inseguras | Restringir copias de seguridad de datos del dispositivo | Restringir el corte, la copia o el pegado|
+| Uso compartido de datos accidental o guardado en ubicaciones inseguras | Restricción de copias de seguridad de datos del dispositivo | Restricción de copias de seguridad de los datos de la organización |
 | Uso compartido de datos accidental o guardado en ubicaciones inseguras | Restringir el guardado como | Restringir el guardado como |
-|Uso compartido de datos accidental o guardado en ubicaciones inseguras | Deshabilitar la impresión | n/a|
+|Uso compartido de datos accidental o guardado en ubicaciones inseguras | Deshabilitación de la impresión | Deshabilitación de la impresión de datos de la organización |
 
 ## <a name="next-steps"></a>Pasos siguientes
 Es hora de decidir si va a habilitar BYOD en la organización al centrarse en la administración del dispositivo, de la aplicación o en una combinación de ambas. Usted elige la forma de implementación, aquella que le asegure que las características de identidad y seguridad disponibles en Azure AD siempre van a estar disponibles.  

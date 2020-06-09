@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342366"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428618"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Información general sobre el ciclo de vida de la aplicación en Microsoft Intune
 
@@ -45,7 +45,7 @@ Como parte del ciclo de vida de la aplicación, periódicamente se publican nuev
 - Las [directivas de configuración de aplicaciones iOS/iPadOS](app-configuration-policies-use-ios.md) proporcionan valores para aplicaciones iOS/iPadOS compatibles que se usan cuando se ejecuta la aplicación. Por ejemplo, es posible que una aplicación necesite una configuración de marca concreta o el nombre de un servidor al que se debe conectar.
 - Las [directivas de explorador administrado](app-configuration-managed-browser.md) ayudan a configurar los valores de [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), lo que reemplaza al explorador de dispositivos predeterminado y que permite restringir los sitios web que pueden visitar los usuarios.
 
-## <a name="protect"></a>Proteger
+## <a name="protect"></a>Protección
 
 Intune ofrece muchas maneras de ayudar a proteger los datos de las aplicaciones. Los métodos principales son:
 
@@ -54,7 +54,7 @@ Intune ofrece muchas maneras de ayudar a proteger los datos de las aplicaciones.
 
 ## <a name="retire"></a>Retirar
 
-Por último, es probable que las aplicaciones que haya implementado queden obsoletas y tengan que quitarse. Intune facilita la [retirada de aplicaciones del servicio](../remote-actions/device-management.md).
+Por último, es probable que las aplicaciones que haya implementado queden obsoletas y tengan que quitarse. Intune permite desinstalar aplicaciones fácilmente. Para obtener más información, consulte [Desinstalación de una aplicación](../apps/apps-add.md#uninstall-an-app).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

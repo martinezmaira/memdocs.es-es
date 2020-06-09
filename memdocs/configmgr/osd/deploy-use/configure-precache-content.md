@@ -10,12 +10,12 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 184bdc58ac6dc0e311875cc1ddab8c605d8eec32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704213"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455232"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Configuración del contenido de la caché previa para secuencias de tareas
 
@@ -101,7 +101,6 @@ Por ejemplo, en el siguiente paso de **actualización del sistema operativo** se
 >
 > Primero agregue el idioma al seleccionar la condición **Idioma del sistema operativo**. Luego edite la consulta de WMI para incluir la cláusula de arquitectura.
 
-
 ### <a name="3-deploy-the-task-sequence"></a><a name="bkmk_deploy"></a> 3. Implementar la secuencia de tareas
 
 [Implemente la secuencia de tareas](deploy-a-task-sequence.md). Para la característica de caché previa, configure las opciones siguientes:  
@@ -115,8 +114,7 @@ Por ejemplo, en el siguiente paso de **actualización del sistema operativo** se
 - En la pestaña **Puntos de distribución**, configure los valores **Opciones de implementación**. Si el contenido no se ha almacenado previamente en la caché antes de que un usuario inicie la instalación, el cliente usa esta configuración.  
 
     > [!Important]  
-    > En una secuencia de tareas que instala una imagen de sistema operativo, no use la opción de implementación **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**. Cuando la secuencia de tareas borra el disco antes de aplicar la imagen del sistema operativo, quita la caché cliente. Puesto que el contenido ya no está, se produce un error en la secuencia de tareas.<!-- SCCMDocs-PR #1338 -->
-
+    > En una secuencia de tareas que instala una imagen de sistema operativo, no use la opción de implementación **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**. Cuando la secuencia de tareas borra el disco antes de aplicar la imagen del sistema operativo, quita la caché cliente. Puesto que el contenido ya no está, se produce un error en la secuencia de tareas.<!-- SCCMDocs-PR #1338 --> Estas opciones de implementación son dinámicas, en función de otras opciones que seleccione para la implementación. Para obtener más información, vea [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## <a name="user-experience"></a>Experiencia del usuario
 
@@ -125,7 +123,6 @@ Por ejemplo, en el siguiente paso de **actualización del sistema operativo** se
 - Cuando el cliente pone la implementación a disposición de los usuarios, se muestra una notificación para informarles sobre la nueva implementación. Ahora la secuencia de tareas es visible en el Centro de software. El usuario puede ir al Centro de software y hacer clic en **Instalar** para iniciar la instalación.  
 
 - Si el cliente no ha almacenado previamente en la caché el contenido cuando el usuario instala la secuencia de tareas, el cliente usa la configuración que se especifique en la pestaña **Opción de implementación** de la implementación.  
-
 
 ## <a name="see-also"></a>Vea también
 

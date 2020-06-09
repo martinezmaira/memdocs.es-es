@@ -10,12 +10,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c2347275ffdc194e73cf792d6f83ffa75732f8c4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691133"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455204"
 ---
 # <a name="deploy-a-task-sequence"></a>Implementar una secuencia de tareas
 
@@ -146,7 +146,7 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
 
     - **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: esta opción controla el comportamiento de instalación en los dispositivos Windows Embedded habilitados con un filtro de escritura. Elija esta opción para que los cambios se confirmen en la fecha límite de instalación o durante una ventana de mantenimiento. Al seleccionar esta opción, se necesita un reinicio y los cambios persisten en el dispositivo. De lo contrario, la aplicación se instala en la superposición temporal y se confirma más tarde. Cuando implemente una secuencia de tareas en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
 
-    - **Permitir que la secuencia de tareas se ejecute para el cliente en Internet**: especifique si la secuencia de tareas se puede ejecutar en un cliente basado en Internet. Las operaciones que requieren un medio de arranque, como la instalación de un sistema operativo, no se admiten con esta configuración. Use esta opción solo para instalaciones de software genéricas o secuencias de tareas basadas en scripts que realizan operaciones en el sistema operativo estándar.  
+    - **Permitir que la secuencia de tareas se ejecute para el cliente en Internet**: especifique si la secuencia de tareas se puede ejecutar en un cliente basado en Internet. Las operaciones que requieren un medio de arranque, como la instalación de un sistema operativo, no se admiten con esta configuración. Use esta opción solo para instalaciones de software genéricas o secuencias de tareas basadas en scripts que lleven a cabo acciones en el sistema operativo estándar.  
 
         - Esta opción se admite para implementaciones de una secuencia de tareas de actualización local de Windows 10 en clientes basados en Internet a través de Cloud Management Gateway. Para obtener más información, vea [Implementar una actualización local de Windows 10 a través de CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
 
@@ -154,19 +154,7 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
 
 9. En la página **Puntos de distribución** , especifique la siguiente información:  
 
-    - **Opciones de implementación**: Especifique una de las siguientes opciones:  
-
-        > [!NOTE]  
-        > Si usa multidifusión para implementar un sistema operativo, descargue el contenido cuando se necesite o antes de que se ejecute la secuencia de tareas.  
-
-        - **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**: especifique que los clientes descarguen el contenido desde el punto de distribución como necesite la secuencia de tareas. El cliente inicia la secuencia de tareas. Cuando un paso de una secuencia de tareas requiera contenido, este se descarga antes de que se ejecute el paso.  
-
-        - **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**: especifique que los clientes descarguen todo el contenido desde el punto de distribución antes de que se ejecute la secuencia de tareas. Si ha hecho que la secuencia de tareas esté disponible para implementaciones del medio de arranque y PXE en la página **Configuración de implementación**, esta opción no se muestra.  
-
-        - **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**: Especificar que los clientes ejecuten el contenido desde el punto de distribución. Esta opción está disponible solo cuando todos los paquetes asociados con la secuencia de tareas están habilitados para utilizar un recurso compartido de paquete en el punto de distribución. Para habilitar el contenido de tal modo que utilice un recurso compartido de paquete, consulte la pestaña **Acceso a datos** en las **Propiedades** de cada paquete.  
-
-            > [!IMPORTANT]  
-            > Para mayor seguridad, seleccione las opciones **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas** o **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**. Cuando se selecciona cualquiera de estas opciones, Configuration Manager aplica un algoritmo hash al paquete, por lo que se puede garantizar la integridad del paquete. Cuando se selecciona la opción **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**, Configuration Manager no comprueba el hash del paquete antes de ejecutar el programa especificado. Dado que el sitio no puede garantizar la integridad del paquete, es posible que los usuarios con derechos administrativos alteren o manipulen el contenido del paquete.  
+    - **Opciones de implementación**: para obtener más información, consulte [Opciones de implementación](#bkmk_deploy-options).
 
     - **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: especifique si los clientes pueden usar puntos de distribución de un grupo de límites vecino para descargar el contenido necesario para la secuencia de tareas.  
 
@@ -178,6 +166,63 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
 10. Para guardar esta configuración para usarla de nuevo, en la pestaña **Resumen**, seleccione **Guardar como plantilla**. Asigne un nombre a la plantilla y seleccione la configuración que quiere guardar.  
 
 11. Complete el asistente.  
+
+### <a name="deployment-options"></a><a name="bkmk_deploy-options"></a> Opciones de implementación
+
+<!-- MEMDocs#328, SCCMDocs#2114 -->
+
+Estas opciones se encuentran en la pestaña **Puntos de distribución** de la implementación de la secuencia de tareas. Con base en otras selecciones relativas a la implementación y los atributos de la secuencia de tareas, tienen un carácter dinámico. Es posible que no siempre vea todas las opciones.
+
+> [!NOTE]  
+> Si usa multidifusión para implementar un sistema operativo, descargue el contenido cuando se necesite o antes de que se ejecute la secuencia de tareas.  
+
+- **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**: especifique que los clientes descarguen el contenido desde el punto de distribución como necesite la secuencia de tareas. El cliente inicia la secuencia de tareas. Cuando un paso de una secuencia de tareas requiera contenido, este se descarga antes de que se ejecute el paso.  
+
+- **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**: especifique que los clientes descarguen todo el contenido desde el punto de distribución antes de que se ejecute la secuencia de tareas. Si ha hecho que la secuencia de tareas esté disponible para implementaciones del medio de arranque y PXE en la página **Configuración de implementación**, esta opción no se muestra.  
+
+- **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**: Especificar que los clientes ejecuten el contenido desde el punto de distribución. Esta opción está disponible solo cuando todos los paquetes asociados con la secuencia de tareas están habilitados para utilizar un recurso compartido de paquete en el punto de distribución. Para habilitar el contenido de tal modo que utilice un recurso compartido de paquete, consulte la pestaña **Acceso a datos** en las **Propiedades** de cada paquete.  
+
+> [!IMPORTANT]  
+> Para mayor seguridad, seleccione las opciones **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas** o **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**. Cuando se selecciona cualquiera de estas opciones, Configuration Manager aplica un algoritmo hash al paquete, por lo que se puede garantizar la integridad del paquete. Cuando se selecciona la opción **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**, Configuration Manager no comprueba el hash del paquete antes de ejecutar el programa especificado. Dado que el sitio no puede garantizar la integridad del paquete, es posible que los usuarios con derechos administrativos alteren o manipulen el contenido del paquete.  
+
+#### <a name="example-1-one-deployment-option"></a>Ejemplo 1: una opción de implementación
+
+Implementa una secuencia de tareas de implementación del sistema operativo que borra el disco y aplica una imagen. En la página **Configuración de la implementación**, hace que esté disponible para una opción que incluye los medios y el entorno PXE:
+
+:::image type="content" source="media/deploy-setting-make-available.png" alt-text="Implementación de una secuencia de tareas con disponibilidad para lo siguiente":::
+
+En la página **Puntos de distribución**, solo hay una opción de implementación:
+
+- **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**
+
+:::image type="content" source="media/deploy-option-1.png" alt-text="Implementación de una secuencia de tareas con una opción de implementación":::
+
+La opción **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas** no está disponible porque la implementación se pone a disposición de los medios y el entorno PXE.
+
+La opción **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas** no está disponible. No todo el contenido al que se hace referencia usa un recurso compartido de paquete.
+
+#### <a name="example-2-two-deployment-options"></a>Ejemplo 2: dos opciones de implementación
+
+Implementa una secuencia de tareas de implementación del sistema operativo que borra el disco y aplica una imagen. En la página **Configuración de la implementación**, hace que esté disponible para **Sólo clientes de Configuration Manager**. En la página **Puntos de distribución**, hay dos opciones de implementación disponibles:
+
+- **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**
+- **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**
+
+:::image type="content" source="media/deploy-option-2.png" alt-text="Implementación de una secuencia de tareas con dos opciones de implementación":::
+
+La opción **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas** no está disponible. No todo el contenido al que se hace referencia usa un recurso compartido de paquete.
+
+#### <a name="example-3-three-deployment-options"></a>Ejemplo 3: tres opciones de implementación
+
+Tiene varios paquetes con scripts de administración y contenido asociado. En la pestaña **Acceso a datos** de las propiedades de los paquetes, las configura todas con la opción **Copiar el contenido de este paquete en un recurso compartido de paquete en los puntos de distribución**.
+
+Crea una secuencia de tareas que solo tiene varios pasos **Instalar paquete** para dichos paquetes de scripts y la implementa. En la página **Configuración de la implementación**, la única opción es hacer que esté disponible para **Sólo clientes de Configuration Manager**. Esta es la única opción disponible. La secuencia de tareas no es para la implementación del sistema operativo, ya que no tiene una imagen de arranque asociada. En la página **Puntos de distribución**, hay tres opciones de implementación disponibles:
+
+- **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**
+- **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**
+- **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**
+
+:::image type="content" source="media/deploy-option-3.png" alt-text="Implementación de una secuencia de tareas con tres opciones de implementación":::
 
 ## <a name="deploy-windows-10-in-place-upgrade-via-cmg"></a>Implementar una actualización local de Windows 10 a través de CMG
 

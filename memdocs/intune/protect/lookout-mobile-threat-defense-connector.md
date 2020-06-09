@@ -1,5 +1,5 @@
 ---
-title: Conector de Lookout MTD con Microsoft Intune
+title: Integración de Lookout Mobile Endpoint con Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Obtenga información sobre cómo integrar Intune con Lookout Mobile Threat Defense (MTD) para controlar el acceso de los dispositivos móviles a los recursos corporativos.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c3ca25ce4bf4f6520e7ef5f7e3aaaff958060a2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1083e195cee20c3df9572db94395d462f9531a39
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990806"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330957"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Conector de Lookout Mobile Endpoint Security con Intune
 
@@ -48,7 +48,7 @@ La aplicación móvil Lookout, **Lookout for Work**, está instalada y se ejecut
   - [Cree una directiva de protección de aplicaciones de Mobile Threat Defense](../protect/mtd-app-protection-policy.md).
   - [Habilite el conector de MTD en Intune para dispositivos no inscritos](../protect/mtd-enable-unenrolled-devices.md).
 
-## <a name="supported-platforms"></a>Plataformas admitidas
+## <a name="supported-platforms"></a>Plataformas compatibles
 
 Las siguientes plataformas son compatibles con Lookout cuando se inscriben en Intune:
 
@@ -83,7 +83,7 @@ Cuando las aplicaciones malintencionadas como malware se detectan en dispositivo
 > [!div class="mx-imgBorder"]
 > ![Imagen conceptual de directiva que bloquea el acceso por contener aplicaciones malintencionadas](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
 
-*Acceso concedido tras la solución:*
+*Acceso concedido tras la corrección:*
 
 > [!div class="mx-imgBorder"]
 > ![Imagen conceptual que muestra el acceso que se concede a los dispositivos después de la corrección](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
@@ -97,12 +97,12 @@ Detecte amenazas para la red como ataques de tipo "Man in the middle" y proteja 
 > [!div class="mx-imgBorder"]
 > ![Imagen que muestra el bloqueo de acceso de Wi-Fi basándose en amenazas de red](./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png)
 
-*Acceso concedido tras la solución:*
+*Acceso concedido tras la corrección:*
 
 > [!div class="mx-imgBorder"]
 > ![Imagen conceptual del acceso condicional que permite el acceso después de la corrección](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Control del acceso a SharePoint Online basado en amenazas a la red
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar el acceso a SharePoint Online basándose en amenazas en la red
 
 Detecte amenazas en la red como ataques de tipo "Man in the middle" e impida la sincronización de archivos corporativos en función del riesgo del dispositivo.
 
@@ -111,7 +111,7 @@ Detecte amenazas en la red como ataques de tipo "Man in the middle" e impida la 
 > [!div class="mx-imgBorder"]
 > ![Imagen conceptual de bloqueo del acceso a SharePoint Online](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
 
-*Acceso concedido tras la solución:*
+*Acceso concedido tras la corrección:*
 
 > [!div class="mx-imgBorder"]
 > ![Imagen conceptual que muestra cómo se permite el acceso tras la corrección de la amenaza de red](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)

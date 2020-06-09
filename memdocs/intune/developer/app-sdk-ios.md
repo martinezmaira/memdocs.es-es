@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0d3b1fc1917e7567301a2d2c8a3a3b06d4892a6b
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989891"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436795"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guía para desarrolladores acerca del SDK de aplicaciones de Microsoft Intune para iOS
 
@@ -35,13 +35,13 @@ El SDK de aplicaciones de Microsoft Intune para iOS permite incorporar directiva
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Necesitará un equipo Mac OS con OS X 10.8.5 o posterior y que tenga instalado Xcode 9 o posterior.
+- Necesitará un equipo Mac OS con OS X 10.12.6 o posterior y que tenga instalado Xcode 9 o posterior.
 
-* La aplicación debe estar destinada para iOS 11 o posterior.
+- La aplicación debe estar destinada para iOS 11 o posterior.
 
-* Revise los [términos de licencia del SDK de aplicaciones de Intune para iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Imprima y conserve una copia de los términos de licencia para sus registros. Al descargar y usar el SDK de aplicaciones de Intune para iOS, acepta dichos términos.  Si no los acepta, no use el software.
+- Revise los [términos de licencia del SDK de aplicaciones de Intune para iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Imprima y conserve una copia de los términos de licencia para sus registros. Al descargar y usar el SDK de aplicaciones de Intune para iOS, acepta dichos términos.  Si no los acepta, no use el software.
 
-* Descargue los archivos del SDK de aplicaciones de Intune para iOS en [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
+- Descargue los archivos del SDK de aplicaciones de Intune para iOS en [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
 ## <a name="whats-in-the-sdk-repository"></a>Contenido del repositorio del SDK
 
@@ -750,7 +750,7 @@ Si la aplicación se integra con las intenciones de Siri, asegúrese de leer los
 ## <a name="notifications"></a>Notificaciones
 Si la aplicación recibe notificaciones, asegúrese de leer los comentarios de `notificationPolicy` en `IntuneMAMPolicy.h` para obtener instrucciones sobre cómo admitir este escenario.  Se recomienda que las aplicaciones se registren para `IntuneMAMPolicyDidChangeNotification` como se describe en `IntuneMAMPolicyManager.h` y que comuniquen este valor a su instancia de `UNNotificationServiceExtension` a través de la cadena de claves.
 ## <a name="displaying-web-content-within-application"></a>Representación de contenido web dentro de la aplicación
-Si la aplicación tiene la capacidad de mostrar sitios web en una vista web y las páginas web que se muestran tienen la capacidad de navegar a sitios arbitrarios, la aplicación es responsable de establecer la identidad actual para que los datos administrados no se puedan filtrar a través de la vista web. Ejemplos de esto son las páginas web "Sugerir una característica" o "Comentarios" que tienen vínculos directos o indirectos a un motor de búsqueda.
+Si la aplicación tiene la capacidad de mostrar sitios web en una vista web, y las páginas web que se muestran tienen la capacidad de navegar a sitios arbitrarios, la aplicación será responsable de establecer la identidad actual para que los datos administrados no se puedan filtrar a través de la vista web. Ejemplos de esto son las páginas web "Sugerir una característica" o "Comentarios" que tienen vínculos directos o indirectos a un motor de búsqueda.
 Las aplicaciones de varias identidades deben llamar a setUIPolicyIdentity de IntuneMAMPolicyManager y pasar la cadena vacía antes de mostrar la vista web. Una vez que se cierra la vista web, la aplicación debe llamar a setUIPolicyIdentity y pasar la identidad actual.
 Las aplicaciones de una sola identidad deben llamar a setCurrentThreadIdentity de IntuneMAMPolicyManager y pasar la cadena vacía antes de mostrar la vista web. Una vez que se cierra la vista web, la aplicación debe llamar a setCurrentThreadIdentity y no pasar nada.
 

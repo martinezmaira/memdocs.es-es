@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989488"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428628"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Incorporación de aplicaciones a Microsoft Intune 
 
@@ -187,6 +187,25 @@ Intune reinstala, actualiza o quita automáticamente una aplicación necesaria e
 - Si se produce un error de instalación de una aplicación necesaria o de algún modo la aplicación no está presente en el dispositivo, Intune evalúa el cumplimiento y reinstala la aplicación cuando transcurre este periodo.  
 - Un administrador destina una aplicación como disponible para un grupo de usuarios y un usuario final instala la aplicación desde el Portal de empresa en el dispositivo. Más adelante, el administrador actualiza la aplicación de v1 a v2. Intune actualiza la aplicación cuando transcurre este periodo, siempre que haya cualquier versión anterior de la aplicación en el dispositivo.
 - Si el administrador realiza un intento de desinstalación y la aplicación está presente en el dispositivo y no se desinstala, Intune evalúa el cumplimiento y desinstala la aplicación cuando transcurre este periodo.   
+
+## <a name="uninstall-an-app"></a>Desinstalación de una aplicación
+
+Si necesita desinstalar una aplicación de los dispositivos de los usuarios, siga estos pasos.
+
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > *Aplicación en cuestión* > **Asignaciones** > **Agregar grupo**.
+3. En el panel **Agregar grupo**, seleccione **Desinstalar**.
+4. Para seleccionar los grupos de usuarios que resultan afectados por esta asignación de aplicaciones, seleccione **Grupos incluidos**.
+5. Seleccione los grupos a los que quiere aplicar la asignación de desinstalación.
+6. Haga clic en **Seleccionar** en el panel **Seleccionar grupos**.
+7. Haga clic en **Aceptar** en el panel **Asignar** para establecer la asignación.
+8. Si quiere excluir algún grupo de usuarios para que no se vea afectado por esta asignación de aplicaciones, seleccione **Excluir grupos**.
+9. Si ha elegido excluir algún grupo, en **Seleccionar grupos**, seleccione **Seleccionar**.
+10. Seleccione **Aceptar** en el panel **Agregar grupo**.
+11. Seleccione **Guardar** en el panel **Asignaciones** de la aplicación.
+
+> [!IMPORTANT]
+> Para desinstalar la aplicación correctamente, asegúrese de quitar los miembros o la asignación de grupo para instalarlos antes de asignarlos para su desinstalación. Si se asigna un grupo para instalar y desinstalar una aplicación, la aplicación permanecerá y no se quitará.
 
 ## <a name="app-installation-errors"></a>Errores de instalación de la aplicación
 
