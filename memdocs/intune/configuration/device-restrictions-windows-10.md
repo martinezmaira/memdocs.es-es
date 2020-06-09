@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864908"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311193"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para permitir o restringir características mediante Intune
 
@@ -464,7 +464,7 @@ Estas opciones de configuración usan [NetworkProxy policy CSP](https://docs.mic
 
 Estas opciones de configuración usan [DeviceLock policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) (CSP de directiva de DeviceLock), que también indica las ediciones de Windows compatibles.
 
-- **Contraseña**: **Requerir** obliga a los usuarios a escribir una contraseña para acceder al dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede permitir el acceso a dispositivos sin una contraseña. Solo se aplica a cuentas locales. Las contraseñas de las cuentas de dominio siguen siendo configuradas por Active Directory (AD) y Azure AD.
+- **Contraseña**: **Requerir** obliga a los usuarios a escribir una contraseña para acceder al dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir el acceso a dispositivos sin una contraseña. Solo se aplica a cuentas locales. Las contraseñas de las cuentas de dominio siguen siendo configuradas por Active Directory (AD) y Azure AD.
 
   [CSP de DeviceLock/DevicePasswordEnabled](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 
@@ -498,7 +498,7 @@ Estas opciones de configuración usan [DeviceLock policy CSP](https://docs.micro
 
     [CSP de DeviceLock/DevicePasswordHistory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordhistory)
 
-  - **Requerir contraseña cuando el dispositivo vuelve de un estado de inactividad** (Mobile y Holographic): **Requerir** obliga a los usuarios a escribir una contraseña para desbloquear el dispositivo después de que este haya estado inactivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede no requerir un PIN o una contraseña después de que el dispositivo haya estado inactivo.
+  - **Requerir contraseña cuando el dispositivo vuelve de un estado de inactividad** (Mobile y Holographic): **Requerir** obliga a los usuarios a escribir una contraseña para desbloquear el dispositivo después de que este haya estado inactivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no requerir un PIN o una contraseña después de que el dispositivo haya estado inactivo.
 
     [CSP de DeviceLock/AllowIdleReturnWithoutPassword](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
 
@@ -638,7 +638,7 @@ Estas opciones de configuración usan [WirelessDisplay policy CSP](https://docs.
 ## <a name="reporting-and-telemetry"></a>Informes y telemetría
 
 - **Compartir los datos de uso**: elija el nivel de datos de diagnóstico que se envía. Las opciones son:
-  - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. no se fuerza ninguna opción. Los usuarios eligen el nivel que se envía. De forma predeterminada, el sistema operativo puede no compartir ningún dato.
+  - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. no se fuerza ninguna opción. Los usuarios eligen el nivel que se envía. De forma predeterminada, el sistema operativo podría no compartir ningún dato.
   - **Seguridad**: información necesaria para ayudar a proteger Windows, incluidos datos sobre la configuración del componente Experiencia del usuario y telemetría asociadas, la Herramienta de eliminación de software malintencionado y Microsoft Defender.
   - **Básica**: información básica del dispositivo que incluye datos relacionados con la calidad, la compatibilidad de aplicaciones, datos de uso de aplicaciones y datos del nivel de seguridad.
   - **Mejorada**: información adicional que incluye: cómo se usan Windows, Windows Server, System Center y las aplicaciones, cómo funcionan, datos avanzados de confiabilidad y datos de los niveles Seguridad y Básica.
@@ -1095,7 +1095,8 @@ Estas opciones de configuración usan [defender policy CSP](https://docs.microso
 - **Detectar aplicaciones potencialmente no deseadas**: Esta característica identifica las aplicaciones potencialmente no deseadas e impide que se puedan descargar e instalar en la red. Estas aplicaciones no se consideran virus, malware ni ningún otro tipo de amenaza, pero pueden realizar acciones en los puntos de conexión que pueden afectar a su uso o rendimiento. Elija el nivel de protección cuando Windows detecte aplicaciones potencialmente no deseadas. Las opciones son:
 
   - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. De forma predeterminada, Microsoft Defender puede deshabilitar esta característica.
-  - **Bloquear**: Microsoft Defender detecta las aplicaciones potencialmente no deseadas, y los elementos detectados se bloquean. Estos elementos se muestran en el historial junto con otras amenazas.
+  - **Desactivada**: protección de PUA desactivada.
+  - **Habilitar**: Microsoft Defender detecta las aplicaciones potencialmente no deseadas, y los elementos detectados se bloquean. Estos elementos se muestran en el historial junto con otras amenazas.
   - **Auditar**: Microsoft Defender detecta las aplicaciones potencialmente no deseadas, pero no realiza ninguna acción. Puede revisar la información sobre las aplicaciones contra las que Microsoft Defender tomaría medidas. Por ejemplo, busque eventos creados por Microsoft Defender en el Visor de eventos.
 
   Para obtener más información sobre aplicaciones potencialmente no deseadas, vea [Detectar y bloquear aplicaciones potencialmente no deseadas](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).

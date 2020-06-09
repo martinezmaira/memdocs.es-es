@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990717"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270946"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Uso de scripts de PowerShell para dispositivos Windows 10 en Intune
 
@@ -68,7 +68,7 @@ La extensión de administración de Intune tiene los siguientes requisitos previ
     
     - El usuario inicia sesión en el dispositivo con su cuenta de Azure AD y, posteriormente, se inscribe en Intune.
 
-  - Dispositivos administrados conjuntamente que usan Configuration Manager e Intune. Asegúrese de que la carga de trabajo **Aplicaciones** esté establecida en **Piloto de Intune** o **Intune**. Consulte los artículos siguientes para obtener instrucciones: 
+  - Dispositivos administrados conjuntamente que usan Configuration Manager e Intune. Al instalar las aplicaciones Win32, asegúrese de que la carga de trabajo **Aplicaciones** esté establecida en **Intune piloto** o **Intune**. Los scripts de PowerShell se ejecutarán incluso si la carga de trabajo de **Aplicaciones** está establecida en **Configuration Manager**. La extensión de administración de Intune se implementará en un dispositivo cuando el destino sea un script de PowerShell en el dispositivo. Sin embargo, como se indicó anteriormente, el dispositivo debe ser un dispositivo Azure AD o un dispositivo unido a Azure AD híbrido y debe ejecutar Windows 10 versión 1607 o posterior. Consulte los artículos siguientes para obtener instrucciones: 
   
     - [¿Qué es la administración conjunta?](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [Carga de trabajo de aplicaciones cliente](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)

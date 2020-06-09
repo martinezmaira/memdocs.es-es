@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023374"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270898"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Solucionar problemas de instalación de aplicaciones
 
@@ -35,7 +35,7 @@ En algunas ocasiones, las instalaciones de aplicaciones en los dispositivos admi
 
 Intune proporciona los detalles de solución de problemas de la aplicación en función de las aplicaciones instaladas en el dispositivo de un usuario específico.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Solución de problemas y soporte técnico**.
 3. Haga clic en **Seleccionar usuario** para seleccionar un usuario para solucionar problemas. Se mostrará el panel **Seleccionar usuarios**.
 4. Seleccione un usuario escribiendo su nombre o dirección de correo electrónico. Haga clic en **Seleccionar** en la parte inferior del panel. La información de solución de problemas del usuario se muestra en el panel de **solución de problemas**. 
@@ -107,6 +107,18 @@ Para recopilar archivos de registro, es necesario seguir unos requisitos especí
 - La recopilación de registros de instalación de la aplicación Win32 está habilitada para las aplicaciones que cumplen la intención de asignación de aplicación necesaria, disponible y de instalación.
 - Los registros almacenados se cifran para proteger cualquier información de identificación personal incluida en los registros.
 - Si se produce un error al abrir incidencias de soporte técnico para aplicaciones Win32, adjunte los registros de error relacionados siguiendo los pasos arriba indicados.
+
+## <a name="app-types-supported-on-arm64-devices"></a>Tipos de aplicación admitidos en dispositivos ARM64
+
+Entre los tipos de aplicaciones que se admiten en dispositivos ARM64 se incluyen los siguientes:
+- Aplicaciones web que no requieren un explorador administrado para abrirse. 
+- Aplicaciones de la Tienda Microsoft para Empresas o aplicaciones LOB universales de Windows (`.appx`) con cualquiera de las siguientes combinaciones de elementos `TargetDeviceFamily` y `ProcessorArchitectures`:
+  - `TargetDeviceFamily` incluye aplicaciones de escritorio, aplicaciones universales y aplicaciones Windows8x. Las aplicaciones de Windows8x se aplican únicamente como Aplicaciones de la Tienda Microsoft para Empresas en líena.
+  - `ProcessorArchitecture` incluye aplicaciones x86, aplicaciones ARM, aplicaciones ARM64 y aplicaciones neutras.
+- Aplicaciones de la Tienda Windows
+- Aplicaciones LOB de MSI para móviles
+- Aplicaciones Win32 con la regla de requisitos de 32 bits.
+- Aplicaciones de hacer clic y ejecutar de Windows Office si está seleccionada la arquitectura de 32 bits o x86.
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Solucionar problemas de aplicaciones de la Microsoft Store
 

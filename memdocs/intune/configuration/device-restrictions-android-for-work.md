@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 06/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
+ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166577"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257042"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -231,8 +231,16 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa de 
 
 ### <a name="applications"></a>Aplicaciones
 
-- **Permitir la instalación desde orígenes desconocidos**: **Permitir** habilita a los usuarios para activar los **orígenes desconocidos**. Esta configuración permite que se instalen aplicaciones desde orígenes desconocidos, incluidos los orígenes que no sean Google Play Store. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir que los usuarios activen los **orígenes desconocidos**.
-- **Permitir el acceso a todas las aplicaciones en Google Play Store**: si se establece en **Permitir**, los usuarios obtienen acceso a todas las aplicaciones de Google Play Store. No obtienen acceso a las aplicaciones que el administrador bloquee en [las aplicaciones cliente](../apps/apps-add-android-for-work.md). Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría obligar a los usuarios a acceder solo a las aplicaciones que el administrador ponga disponibles en Google Play Store o las aplicaciones necesarias en las [Aplicaciones cliente](../apps/apps-add-android-for-work.md).
+- **Permitir la instalación desde orígenes desconocidos**: **Permitir** habilita a los usuarios para activar los **orígenes desconocidos**. Esta configuración permite que se instalen aplicaciones desde orígenes desconocidos, incluidos los orígenes que no sean Google Play Store. Permite a los usuarios cargar aplicaciones en el dispositivo mediante medios distintos de Google Play Store. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir que los usuarios activen los **orígenes desconocidos**.
+- **Permitir el acceso a todas las aplicaciones en Google Play Store**: si se establece en **Permitir**, los usuarios obtienen acceso a todas las aplicaciones de Google Play Store. No obtienen acceso a las aplicaciones que el administrador bloquee en [las aplicaciones cliente](../apps/apps-add-android-for-work.md).
+
+  Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría:
+  
+  - Obligar a los usuarios a acceder solo a las aplicaciones que el administrador ponga disponibles en Google Play Store o las aplicaciones necesarias en las [Aplicaciones cliente](../apps/apps-add-android-for-work.md). 
+  - Desinstalar automáticamente las aplicaciones detectadas como instaladas por los usuarios fuera de la tienda de Google Play.
+
+  Si desea habilitar la instalación de prueba, establezca la configuración de **Permitir la instalación desde orígenes desconocidos** y **Permitir el acceso a todas las aplicaciones en Google Play Store** en **Permitir**.
+
 - **App auto-updates** (Actualizaciones automáticas de las aplicaciones): los dispositivos comprueban las actualizaciones de las aplicaciones diariamente. elija el momento de instalar las actualizaciones automáticas. Las opciones son:
   - **No configurado**: Intune no cambia ni actualiza esta configuración.
   - **Elección del usuario**: el sistema operativo podría tener como valor predeterminado esta opción. Los usuarios pueden establecer sus preferencias en la aplicación de Google Play administrado.

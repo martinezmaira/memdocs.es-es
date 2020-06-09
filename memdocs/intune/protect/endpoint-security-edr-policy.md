@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990879"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206339"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Directiva de detección y respuesta de puntos de conexión para la seguridad de puntos de conexión en Intune
 
@@ -38,13 +38,13 @@ Las directivas de EDR se implementan en grupos de dispositivos en Azure Active D
 
 Busque las directivas de seguridad de puntos de conexión para EDR en *Administrar*, en el nodo **Seguridad de los puntos de conexión** del [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Vea [Configuración del perfil de respuesta y detección de puntos de conexión](../protect/endpoint-security-edr-profile-settings.md).
+Vea [Configuración del perfil de respuesta y detección de puntos de conexión](endpoint-security-edr-profile-settings.md).
 
 ## <a name="prerequisites-for-edr-policies"></a>Requisitos previos para las directivas de EDR
 
 **General**:
 
-- **Inquilino de Advanced Threat Protection de Microsoft Defender**: el inquilino de ATP de Defender se debe integrar con el de Microsoft Endpoint Manager (suscripción de Intune) para poder crear directivas de EDR. Vea [Uso de ATP de Microsoft Defender](../protect/advanced-threat-protection.md) en la documentación de Intune.
+- **Inquilino de Advanced Threat Protection de Microsoft Defender**: el inquilino de ATP de Defender se debe integrar con el de Microsoft Endpoint Manager (suscripción de Intune) para poder crear directivas de EDR. Vea [Uso de ATP de Microsoft Defender](advanced-threat-protection.md) en la documentación de Intune.
 
 **Para admitir dispositivos desde Configuration Manager**:
 
@@ -67,7 +67,7 @@ para admitir el uso de directivas de EDR con dispositivos de Configuration Manag
 
 ## <a name="edr-profiles"></a>Perfiles de EDR
 
-[Vea las opciones](../protect/endpoint-security-edr-profile-settings.md) que puede configurar para las siguientes plataformas y perfiles.
+[Vea las opciones](endpoint-security-edr-profile-settings.md) que puede configurar para las siguientes plataformas y perfiles.
 
 **Intune**: los dispositivos que administra con Intune admiten lo siguiente:
 
@@ -138,7 +138,7 @@ Si tiene previsto habilitar la administración conjunta, antes de continuar debe
 
       Cuando está activada, el asistente presenta páginas adicionales para completar la configuración de la administración conjunta. Para obtener más información, vea [Habilitación de la administración conjunta](../../configmgr/comanage/how-to-enable.md) en el contenido de Configuration Manager.
 
-     ![Configuración de la asociación de inquilinos](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![Configuración de la asociación de inquilinos](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. Haga clic en **Siguiente** y luego en **Sí** para aceptar la notificación **Crear aplicación de AAD**. Esta acción aprovisiona una entidad de servicio y crea un registro de aplicación de Azure AD para facilitar la sincronización de las colecciones con el centro de administración de Microsoft Endpoint Manager.
 
@@ -159,7 +159,7 @@ Si tiene previsto habilitar la administración conjunta, antes de continuar debe
 3. En la pestaña **Configure upload** (Configurar carga), seleccione **Upload to Microsoft Endpoint Manager admin center** (Cargar en el centro de administración de Microsoft Endpoint Manager). Haga clic en **Aplicar**.
    - El valor predeterminado para la carga de dispositivos es **All my devices managed by Microsoft Endpoint Configuration Manager** (Todos los dispositivos administrados por Microsoft Endpoint Configuration Manager). También puede optar por limitar la configuración a una o varias colecciones de dispositivos.
 
-     ![Visualización de la pestaña Propiedades de administración conjunta](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![Visualización de la pestaña Propiedades de administración conjunta](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. Inicie sesión con la cuenta de *administrador global* cuando se le pida.
 
@@ -195,7 +195,7 @@ Después de configurar las colecciones para sincronizar con el centro de adminis
 
    - No se puede seleccionar esta opción si la jerarquía de Configuration Manager no está asociada al inquilino.
   
-   ![Configuración de la sincronización en la nube](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![Configuración de la sincronización en la nube](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. Seleccione **Aceptar** para guardar la configuración.
 
@@ -258,11 +258,17 @@ Puede ver los detalles de las directivas de EDR que implemente en el centro de a
 
 - En el caso de las directivas que tienen como destino la plataforma **Windows 10 y versiones posteriores** (Intune), verá información general del cumplimiento de la directiva. También puede seleccionar el gráfico para ver una lista de los dispositivos que han recibido la directiva y profundizar en dispositivos individuales para obtener más detalles.
 
+  En el gráfico **Dispositivos con sensor ATP** solo se muestran los dispositivos que se incorporan correctamente a ATP de Defender mediante el uso del perfil **Windows 10 y versiones posteriores**. Para asegurarse de que tiene una representación completa de los dispositivos en este gráfico, implemente el perfil de incorporación en todos los dispositivos. Los dispositivos que se incorporan a ATP de Defender por medios externos, como la directiva de grupo o PowerShell, se cuentan como **Dispositivos sin el sensor ATP**.
+
 - En el caso de las directivas que tienen como destino la plataforma **Windows 10 y Windows Server** (Configuration Manager), verá información general sobre el cumplimiento de la directiva, pero no puede profundizar para ver detalles adicionales. La vista está limitada porque el centro de administración recibe detalles de estado limitados de Configuration Manager, que administra la implementación de la directiva en los dispositivos de Configuration Manager.
 
-[Vea las opciones](../protect/endpoint-security-edr-profile-settings.md) que puede configurar para plataformas y perfiles.
+
+
+
+
+[Vea las opciones](endpoint-security-edr-profile-settings.md) que puede configurar para plataformas y perfiles.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Configuración de directivas de seguridad de puntos de conexión](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [Configuración de directivas de seguridad de puntos de conexión](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Obtenga más información sobre [detección de puntos de conexión y respuesta](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) en la documentación de ATP de Microsoft Defender.

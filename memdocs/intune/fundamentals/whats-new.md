@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824173"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223666"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
@@ -54,7 +54,22 @@ Obtenga información sobre las novedades que se producen cada semana en Microsof
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>Semana del 25 de mayo de 2020
+
+### <a name="app-management"></a>Administración de aplicaciones
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>Aplicaciones Windows de 32 bits (x86) en dispositivos ARM64<!-- 5477661 -->
+Las aplicaciones Windows de 32 bits (x86) implementadas como disponibles en dispositivos ARM64 ahora se mostrarán en el Portal de empresa. Para más información sobre las aplicaciones Windows de 32 bits, consulte [Administración de aplicaciones Win32](../apps/apps-win32-app-management.md).
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Icono de la aplicación Portal de empresa de Windows<!-- 7114635 -->
+Se actualizó el icono de la aplicación Portal de empresa de Windows. Para más información sobre el Portal de empresa de Intune, consulte [Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune](../apps/company-portal-app.md).
+
 ## <a name="week-of-may-18-2020"></a>Semana del 18 de mayo de 2020
+
+### <a name="app-management"></a>Administración de aplicaciones  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Actualización de iconos de la aplicación Portal de empresa para iOS/iPados y macOS<!--6057697 -->
+Actualizamos los iconos en Portal de empresa para crear una apariencia más moderna que sea compatible en dispositivos de pantalla doble y se alinee con Microsoft Fluent Design System. Para ver los iconos actualizados, vaya a [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](./whats-new-app-ui.md). 
 
 ### <a name="device-security"></a>Seguridad de dispositivos
 

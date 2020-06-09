@@ -6,7 +6,7 @@ keywords: Almacenamiento de datos de Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359890"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270997"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Conectarse al Almacenamiento de datos con Power BI
 
@@ -47,7 +47,7 @@ En los pasos siguientes se muestra cómo descargar el archivo de Power BI y cóm
 
 ## <a name="install-power-bi"></a>Instalar Power BI
 
-Instale la versión más reciente de [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). Para más información, vea [Power BI Desktop](https://powerbi.microsoft.com/desktop).
+Instale la versión más reciente de [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). Para más información, consulte [Power BI Desktop](https://powerbi.microsoft.com/desktop).
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Cargar los datos e informes con la aplicación de almacenamiento de datos de cumplimiento de Power BI Intune
 
@@ -64,10 +64,10 @@ La aplicación [Cumplimiento de Intune (almacenamiento de datos)](https://aka.ms
 9. Para ver todos los informes disponibles, haga clic en la pestaña **Informes** y luego en el informe **Cumplimiento V1.0**. Navegue por las páginas del informe haciendo clic en las pestañas de la parte inferior.
 10. Para que sea fácil navegar a estos informes más adelante, haga clic en la estrella junto al informe **Cumplimiento V1.0** y así el informe se agregará a los favoritos de Power BI.
 
-Si lo prefiere, puede instalar la aplicación desde el portal de Intune:
+Como alternativa, puede instalar la aplicación desde el Centro de administración de Microsoft Endpoint Manager:
 
-1. Inicie sesión en Azure Portal y seleccione **Supervisión y administración** > **Intune**. También puede buscar recursos para Intune.
-2. Abra la hoja **Configurar el almacenamiento de datos de Intune**.
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Seleccione **Informes** > **Almacenamiento de datos de Intune** > **Almacenamiento de datos**.
 3. Seleccione **Obtener aplicación de Power BI** para acceder a informes de Power BI creados previamente para el inquilino en el explorador y poder compartirlos.
 4. Siga los pasos anteriores del 2 al 10.
 
@@ -75,10 +75,10 @@ Si lo prefiere, puede instalar la aplicación desde el portal de Intune:
 
 Con un cliente autenticado en Azure AD, la dirección URL de OData se conecta al punto de conexión de RESTful en la API de Almacenamiento de datos que expone el modelo de datos al cliente de informes. Siga estas instrucciones para usar Power BI Desktop para conectarse y crear sus propios informes. No hace falta que se limite a Power BI Desktop, ya que puede usar la herramienta de análisis que prefiera con la dirección URL de OData, siempre y cuando el cliente admita la autenticación de OAUTH2.0 y el estándar de OData v4.0.
 
-1. Inicie sesión en [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Haga clic en **Set up Intune Data Warehouse** (Configurar Data Warehouse de Intune) en la sección **Otras tareas** a la derecha de la hoja de información general. Abra la hoja **Intune Data Warehouse** (Data Warehouse de Intune).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Seleccione **Informes** > **Almacenamiento de datos de Intune** > **Almacenamiento de datos**.
 3. Recupere la dirección URL de fuente personalizada desde la hoja de informes; por ejemplo:<br>
-    `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
+    `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Abra **Power BI Desktop**.
 5. Elija **Archivo** > **Obtener datos**. Seleccione **Fuente OData**.
 6. Elija **Básica**.
@@ -93,7 +93,7 @@ Con un cliente autenticado en Azure AD, la dirección URL de OData se conecta al
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Puede encontrar respuestas a preguntas sobre su entorno, como el número de dispositivos inscritos por día durante la última semana. Puede obtener una visión general de los inquilinos y los clientes de Intune mediante los informes de Power BI de almacenamiento de datos de Intune, que se obtienen en la hoja de Azure. Además, Intune proporciona diversas formas adicionales de ampliar o reutilizar los datos. Power BI y la API de almacenamiento de datos de Intune proporcionan también otras funciones, como por ejemplo:
+Puede encontrar respuestas a preguntas sobre su entorno, como el número de dispositivos inscritos por día durante la última semana. Puede obtener una visión general de los inquilinos y los clientes de Intune mediante los informes de Power BI de Data Warehouse de Intune, que se obtienen en la hoja del Centro de administración de Microsoft Endpoint Management. Además, Intune proporciona diversas formas adicionales de ampliar o reutilizar los datos. Power BI y la API de almacenamiento de datos de Intune proporcionan también otras funciones, como por ejemplo:
 
 <!-- - You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
 - Los datos de inquilino están organizados de una manera que le ayuda a obtener información a partir de los datos. Para obtener más información sobre cómo se organizan los datos, vea [Data Warehouse Data Model](reports-ref-data-model.md) (Modelo de datos de Almacenamiento de datos).

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f86b418df46069b2a33dd56d06e0e82dbbbf8090
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 734a1361d8889ca1463e8d8986239e088b90cd09
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81538454"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206373"
 ---
 # <a name="use-the-jamf-cloud-connector-with-microsoft-intune"></a>Uso del conector de nube de Jamf con Microsoft Intune
 
@@ -157,13 +157,15 @@ Si actualmente tiene una integración configurada manualmente entre Intune y Jam
 
    ![Selección de "Cloud Connector" en la consola de Jamf Pro](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
 
-6. En el menú emergente **Sovereign Cloud** (Nube soberana), seleccione la ubicación de la nube soberana de Microsoft.
+6. En el menú emergente **Sovereign Cloud** (Nube soberana), seleccione la ubicación de la nube soberana de Microsoft. Si va a reemplazar la integración anterior con el conector de nube de Jamf, puede omitir este paso si se ha especificado la ubicación.
 
 7. Seleccione una de las siguientes opciones de página de destino para los equipos que no reconoce Microsoft Azure:
    - **La página de registro de dispositivos predeterminada de Jamf Pro**: en función del estado del dispositivo macOS, esta opción redirige a los usuarios al portal de inscripción de dispositivos de Jamf Pro (para inscribirse con Jamf Pro) o a la aplicación Portal de empresa de Intune (para registrarse con Azure AD).
    - **La página de acceso denegado**
    - **Una URL personalizada**
-
+  
+   Si va a reemplazar la integración anterior con el conector de nube de Jamf, puede omitir este paso si se ha especificado la página de aterrizaje.
+  
 8. Seleccione **Conectar**. Se le redirigirá para registrar las aplicaciones de Jamf Pro en Azure.
 
    Cuando se le solicite, especifique sus credenciales de Microsoft Azure y siga las instrucciones en pantalla para conceder los permisos solicitados. Deberá conceder permisos para el **conector de nube** y, después, para la **aplicación de registro de usuarios del conector de nube**. Ambas aplicaciones se registran en Azure como aplicaciones empresariales.
@@ -208,7 +210,7 @@ Si necesita quitar la integración de Jamf Pro con Intune, siga los siguientes 
 
 3. Seleccione **Guardar**. Jamf Pro enviará la configuración a Intune y se terminará la integración.
 
-4. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+4. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 5. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Administración de dispositivos de socio** para comprobar que el estado es ahora **Finalizado**.
 
@@ -283,6 +285,10 @@ Sí. Puede volver a cambiar el tipo de conexión a manual y seguir los pasos par
 ### <a name="permissions-were-modified-on-one-or-both-required-apps-cloud-connector-and-cloud-connector-user-registration-app-and-registration-is-not-working-is-this-supported"></a>Los permisos se han modificado en una o en las dos aplicaciones requeridas (la *aplicación del conector de nube* y la *aplicación de registro de usuarios del conector de nube*) y el registro no funciona, ¿se admite esto?
 
 No se admite la modificación de los permisos en las aplicaciones.
+
+### <a name="is-there-a-log-file-in-jamf-pro-that-shows-if-the-connection-type-has-been-changed"></a>¿Hay un archivo de registro en Jamf Pro que muestra si se ha cambiado el tipo de conexión?
+
+Sí, los cambios se registran en el archivo JAMFChangeManagement.log. Para ver los registros de administración de cambios, inicie sesión en Jamf Pro, vaya a **Settings** > **System Settings** > **Change Management** > **Logs** (Configuración > Configuración del sistema > Administración de cambios > Registros), busque **Object type** (Tipo de objeto) para **Conditional Access** (Acceso condicional) y, después, haga clic en **Details** (Detalles) para ver los cambios.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

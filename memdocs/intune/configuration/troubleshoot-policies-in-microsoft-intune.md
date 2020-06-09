@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401788"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301391"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Solución de problemas de directivas y perfiles en Intune
 
@@ -37,7 +37,7 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 
 ## <a name="use-built-in-troubleshooting"></a>Uso de la solución de problemas integrada
 
-1. En el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Solución de problemas y soporte técnico**:
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Solución de problemas y soporte técnico** > **Solución de problemas**:
 
     :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="En el Centro de administración de Endpoint Manager e Intune, vaya a Solución de problemas y soporte técnico.":::
 
@@ -98,7 +98,7 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 
         **Vínculos de ayuda**: 
 
-        - [Formas de implementar las directivas de cumplimiento de dispositivos](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Formas de implementar las directivas de cumplimiento de dispositivos](../protect/device-compliance-get-started.md)
         - [Supervisión de las directivas de cumplimiento de dispositivos de Intune](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>No está seguro de si se ha aplicado correctamente un perfil
@@ -123,7 +123,7 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 
 - [Solución de problemas de directivas de iOS/iPadOS o Android que no se aplican a los dispositivos](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (se abre otro sitio de Microsoft)
 - [Solución de problemas de errores de directivas de Intune en Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (abre un blog)
-- [Solución de problemas de configuración personalizada de CSP para Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (abre otro sitio de Microsoft)
+- [Solución de problemas de configuración personalizada de CSP para Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (abre otro sitio de Microsoft)
 - [Directiva de grupo de Windows 10 frente a directiva de MDM de Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (abre otro sitio de Microsoft)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerta: Error al guardar las reglas de acceso en Exchange

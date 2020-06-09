@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525716"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270929"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Solución de problemas de integración de Jamf Pro con Microsoft Intune
 
@@ -205,14 +205,13 @@ Si se anula la inscripción de un dispositivo de Jamf pero no se quita correctam
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
    - /Library/Application Support/com.microsoft.CompanyPortal
    - /Library/Application Support/com.jamfsoftware.selfservice.mac
-   - /Library/Saved Application
-   - State/com.jamfsoftware.selfservice.mac.savedState
+   - /Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState
    - /Library/Saved Application State/com.microsoft.CompanyPortal.savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration.windows.net
@@ -295,7 +294,7 @@ El origen de este error puede ser una de las causas siguientes:
 Al registrar la aplicación Jamf Pro en Azure, se produjo una de las siguientes condiciones:
 
 - La aplicación recibió más de un permiso.
-- No se seleccionó la opción **Conceder consentimiento de administrador para *\<la compañía>*** .  
+- No se seleccionó la opción **Conceder consentimiento de administrador para *\<your company>***.  
 
 **Solución**  
 Consulte la solución de la causa 1 para [Los dispositivos no se pueden registrar](#devices-fail-to-register), anteriormente en este artículo.

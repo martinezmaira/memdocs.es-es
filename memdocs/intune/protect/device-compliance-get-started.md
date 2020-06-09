@@ -1,11 +1,11 @@
 ---
 title: Directivas de cumplimiento de dispositivos en Microsoft Intune - Azure | Microsoft Docs
-description: Introducción al uso de directivas de cumplimiento de dispositivos, información general de los estados y los niveles de gravedad, uso del estado InGracePeriod, trabajo con el acceso condicional y control de los dispositivos sin una directiva asignada.
+description: Introducción al uso de directivas de cumplimiento, incluyendo la configuración de directivas de cumplimiento y las directivas de cumplimiento de dispositivos para Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/28/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,108 +16,146 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989725"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206322"
 ---
-# <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Establecimiento de reglas en los dispositivos para permitir el acceso a recursos de su organización con Intune
+# <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Uso de directivas de cumplimiento para establecer reglas para los dispositivos que administra con Intune
 
-Muchas soluciones de administración de dispositivos móviles (MDM) ayudan a proteger los datos de la organización exigiendo a los usuarios y dispositivos que cumplan algunos requisitos. En Intune, esta característica se denomina "directivas de cumplimiento". Las directivas de cumplimiento definen las reglas y la configuración que los usuarios y los dispositivos deben cumplir para ser conformes. Cuando se combinan con el acceso condicional, los administradores pueden bloquear a los usuarios y dispositivos que no cumplan las reglas.
+Las soluciones de administración de dispositivos móviles (MDM) como Intune pueden ayudar a proteger los datos de la organización exigiendo a los usuarios y dispositivos que cumplan algunos requisitos. En Intune, esta característica se denomina *directivas de cumplimiento*.
 
-Por ejemplo, un administrador de Intune puede exigir:
+Las directivas de cumplimiento en Intune:
 
-- Que los usuarios finales usen una contraseña para acceder a los datos de la organización en dispositivos móviles
-- Que el dispositivo no esté descodificado o descifrado
-- Una versión máxima o mínima del sistema operativo en el dispositivo
-- Que el dispositivo esté en un nivel de amenaza o bajo el mismo
+- Definen las reglas y la configuración que los usuarios y los dispositivos deben cumplir para ser compatibles.
+- Incluyen las acciones que se aplican a los dispositivos que no son compatibles. Las acciones en caso de no cumplimiento pueden alertar a los usuarios de las condiciones de no cumplimiento y proteger los datos en dispositivos no compatibles.
+- Se pueden [combinar con el acceso condicional](#integrate-with-conditional-access), que luego puede bloquear a los usuarios y dispositivos que no cumplen las reglas.
 
-También puede usar esta característica para supervisar el estado del cumplimiento de los dispositivos de su organización.
+Las directivas de cumplimiento de Intune tienen dos partes:
 
-> [!IMPORTANT]
-> Intune sigue el programa de inserción en el repositorio del dispositivo para todas las evaluaciones de cumplimiento del dispositivo. En el artículo sobre [ciclos de actualización de directivas y perfiles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) se indican los tiempos de actualización estimados.
+- **Configuración de directivas de cumplimiento**: la configuración para todo el inquilino que es similar a una directiva de cumplimiento integrada que cada dispositivo recibe. La configuración de directivas de cumplimiento establece una línea de base para el funcionamiento de la directiva de cumplimiento en el entorno de Intune, lo que incluye si los dispositivos que no han recibido directivas de cumplimiento de dispositivos son compatibles o no.
 
-<!---### Actions for noncompliance
+- **Directiva de cumplimiento de dispositivos**: reglas específicas de la plataforma que se configuran e implementan en grupos de usuarios o dispositivos.  Estas reglas definen los requisitos de los dispositivos, como los sistemas operativos mínimos o el uso del cifrado de discos. Los dispositivos deben cumplir estas reglas para que se consideren compatibles.
 
-You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
-When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
-actions for a device that continues to be in the noncompliant status for
-a week:
+Al igual que otras directivas de Intune, las evaluaciones de las directivas de cumplimiento de un dispositivo dependen del momento en el que el dispositivo se sincroniza con Intune y los [ciclos de actualización de directivas y perfiles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-- When the device is first determined to be noncompliant, an email with noncompliant notification is sent to the user.
+## <a name="compliance-policy-settings"></a>Configuración de directivas de cumplimiento
 
-- 3 days after initial noncompliance state, a follow up reminder is sent to the user.
+La *configuración de directivas de cumplimiento* es una configuración para todo el inquilino que determina cómo el servicio de cumplimiento de Intune interactúa con los dispositivos. Esta configuración es distinta de la que se configura en una directiva de cumplimiento de dispositivos.
 
-- 5 days after initial noncompliance state, a final reminder with a notification that access to company resources will be blocked on the device in 2 days if the compliance issues are not remediated is sent to the user.
+Para administrar la configuración de directivas de cumplimiento, inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y vaya a **Seguridad de los puntos de conexión** > **Cumplimiento de dispositivos** > **Configuración de directivas de cumplimiento**.
 
-- 7 days after initial noncompliance state, access to company resources is blocked. This requires that you have Conditional Access policy that specifies that access from noncompliant devices should    be blocked for services such as Exchange and SharePoint.
+La configuración de directivas de cumplimiento incluye las configuraciones siguientes:
 
-### Grace Period
+- **Marcar los dispositivos que no tienen asignada una directiva de cumplimiento como**
 
-This is the time between when a device is first determined as
-noncompliant to when access to company resources on that device is blocked. This time allows for time that the user has to resolve
-compliance issues on the device. You can also use this time to create your action sequences to send notifications to the user before their access is blocked.
+  Esta configuración determina cómo Intune trata los dispositivos a los que no se ha asignado una directiva de cumplimiento de dispositivos. Esta configuración tiene dos valores:
+  - **Compatible** (*valor predeterminado*): esta característica de seguridad está desactivada. Los dispositivos a los que no se les envía una directiva de cumplimiento de dispositivos se consideran *compatibles*.
+  - **No compatible**: esta característica de seguridad está activada. Los dispositivos que no han recibido una directiva de cumplimiento de dispositivos se consideran no compatibles.
 
-Remember that you need to implement Conditional Access policies in addition to compliance policies in order for access to company resources to be blocked.--->
+  Si usa el acceso condicional con las directivas de cumplimiento de dispositivos, se recomienda cambiar esta configuración a **No compatible** para asegurarse de que solo los dispositivos que se confirman como compatibles puedan tener acceso a los recursos.
 
-## <a name="device-compliance-policies-work-with-azure-ad"></a>Funcionamiento de las directivas de cumplimiento de dispositivos con Azure AD
+  Si un usuario final no es compatible porque no se le ha asignado ninguna directiva, la [aplicación Portal de empresa](../apps/company-portal-app.md) muestra que no se han asignado directivas de cumplimiento.
 
-Intune usa [acceso condicional](../protect/conditional-access.md) para ayudar a aplicar el cumplimiento. Acceso condicional es una tecnología de Azure Active Directory (Azure AD).
+- **Detección de jailbreak mejorada** (*se aplica solo a iOS/iPadOS*)
 
-Cuando un dispositivo se inscribe en Intune, se inicia el proceso de registro de Azure AD y la información del dispositivo se actualiza en Azure AD. Una parte clave de la información es el estado de cumplimiento del dispositivo. Este estado de cumplimiento lo usan las directivas de acceso condicional para bloquear o permitir el acceso al correo electrónico y otros recursos de la organización.
+  Esta configuración solo funciona con dispositivos a los que se dirige una directiva de cumplimiento de dispositivos que bloquea los dispositivos con jailbreak.  (Consulte la configuración [Estado del dispositivo](compliance-policy-create-ios.md#device-health) para iOS/iPadOS).
 
-Más información sobre el acceso condicional e Intune:
+  Esta configuración tiene dos valores:
 
-- [Formas habituales de usar el acceso condicional con Intune](conditional-access-intune-common-ways-use.md)
+  - **Deshabilitada** (*valor predeterminado*): esta característica de seguridad está desactivada. Esta configuración no tiene ningún efecto en los dispositivos que reciben la directiva de cumplimiento de dispositivos que bloquea los dispositivos con jailbreak.
+  - **Habilitada**: esta característica de seguridad está activada. Los dispositivos que reciben la directiva de cumplimiento de dispositivos para bloquear los dispositivos con jailbreak usan la detección de jailbreak mejorada.
 
-Más información sobre el acceso condicional en la documentación de Azure AD:
-  - [¿Qué es el acceso condicional?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-  - [¿Qué es una identidad de dispositivo?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+  Cuando se habilita en un dispositivo iOS/iPadOS aplicable, el dispositivo:
 
-## <a name="ways-to-use-device-compliance-policies"></a>Formas de usar las directivas de cumplimiento de dispositivos
+  - Habilita los servicios de ubicación en el nivel de sistema operativo.
+  - Siempre permite que el Portal de empresa use los servicios de ubicación.
+  - Utiliza sus servicios de ubicación para desencadenar la detección de jailbreak con mayor frecuencia en segundo plano. Intune no almacena los datos de ubicación del usuario.
 
-### <a name="with-conditional-access"></a>Con acceso condicional
+  La detección de jailbreak mejorada ejecuta una evaluación cuando:
 
-Para los dispositivos que cumplan las reglas de directiva, puede concederles acceso al correo electrónico y a otros recursos de la organización. Si los dispositivos no cumplen las reglas de directiva, no obtendrán acceso a los recursos de la organización. Se trata del acceso condicional.
+  - Se abre la aplicación Portal de empresa
+  - El dispositivo se mueve físicamente una distancia significativa, que es aproximadamente 500 metros o más. Intune no puede garantizar que cada cambio de ubicación significativo genere una comprobación de detección de jailbreak, ya que esta comprobación depende de la conexión de red de un dispositivo en ese momento.
 
-### <a name="without-conditional-access"></a>Sin acceso condicional
+  En iOS 13 y versiones posteriores, esta característica requiere que los usuarios seleccionen *Permitir siempre* cada vez que el dispositivo les pida que sigan permitiendo al Portal de empresa usar su ubicación en segundo plano. Si los usuarios no permiten siempre el acceso a la ubicación y tienen configurada una directiva con esta opción, el dispositivo se marcará como no compatible.
 
-También puede usar las directivas de cumplimiento de dispositivos sin ningún acceso condicional. Cuando se usan directivas de cumplimiento de forma independiente, los dispositivos de destino se evalúan y su estado se cumplimiento se notifica. Por ejemplo, puede obtener un informe sobre cuántos dispositivos no están cifrados o qué dispositivos están descodificados o descifrados. Cuando se usan directivas de cumplimiento sin acceso condicional, no hay ninguna restricción de acceso a los recursos de la organización.
+- **Período de validez del estado de cumplimiento (días)**
 
-## <a name="ways-to-deploy-device-compliance-policies"></a>Formas de implementar las directivas de cumplimiento de dispositivos
+  Especifique un período en el que los dispositivos deben notificar correctamente todas las directivas de cumplimiento recibidas. Si un dispositivo no puede informar su estado de cumplimiento con respecto a una directiva antes de que expire el período de validez, el dispositivo se considerará como no compatible.
 
-Puede implementar directivas de cumplimiento en los usuarios de grupos de usuarios o en dispositivos de grupos de dispositivos. Cuando se implementa una directiva de cumplimiento en un usuario, se comprueba el cumplimiento de todos los dispositivos del usuario. El uso de grupos de dispositivos en este escenario ayuda con los informes de cumplimiento.
+  De manera predeterminada, el período se establece en 30 días. Puede configurar un período de entre 1 y 120 días.
 
-Intune también incluye un conjunto de configuraciones de directivas de cumplimiento integradas. Las directivas integradas siguientes se evalúan en todos los dispositivos inscritos en Intune:
+  Puede ver los detalles sobre el cumplimiento del dispositivo con respecto a la configuración del período de validez. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y vaya a **Dispositivos** > **Supervisión** > **Configuración de cumplimiento**. Esta configuración tiene el nombre **Is active** (Activo) en la columna *Configuración*.  Para más información sobre esta vista de estado de cumplimiento y vistas de estados de cumplimiento relacionadas, consulte [Supervisión del cumplimiento de dispositivos](compliance-policy-monitor.md).
 
-- **Marcar los dispositivos que no tienen asignada una directiva de cumplimiento como**: Se trata de una acción predeterminada para el no cumplimiento. esta propiedad tiene dos valores:
+## <a name="device-compliance-policies"></a>Directivas de cumplimiento de dispositivos
 
-  - **Compatible** (*valor predeterminado*): característica de seguridad desactivada
-  - **No compatible**: característica de seguridad activada
+Directivas de cumplimiento de dispositivos de Intune:
 
-  Si un dispositivo no tiene asignada una directiva de cumplimiento, se considerará compatible de forma predeterminada. Si se usa el acceso condicional con directivas de cumplimiento, se recomienda cambiar la configuración predeterminada a **No compatible**. Si un usuario final no es compatible porque no se asignó ninguna directiva, en la [aplicación Portal de empresa de Intune](../apps/company-portal-app.md) se muestra `No compliance policies have been assigned`.
+- Definen las reglas y la configuración que los usuarios y los dispositivos administrados deben cumplir para ser compatibles. Algunos ejemplos de reglas incluyen requerir que los dispositivos ejecuten una versión mínima del sistema operativo, que no tengan jailbreak ni acceso "root" y que tengan un *nivel de amenaza* según lo especificado en el software de administración de amenazas que ha integrado con Intune.
+- Admiten acciones que se aplican a los dispositivos que no cumplen con las reglas de cumplimiento. Entre los ejemplos de acciones se incluyen el bloqueo remoto o el envío de un correo electrónico del usuario del dispositivo sobre el estado del dispositivo para poder corregirlo.
+- Se implementan en los usuarios de grupos de usuarios o dispositivos de grupos de dispositivos. Cuando se implementa una directiva de cumplimiento en un usuario, se comprueba el cumplimiento de todos los dispositivos del usuario. El uso de grupos de dispositivos en este escenario ayuda con los informes de cumplimiento.
 
-- **Detección de jailbreak mejorada** (*se aplica a iOS/iPadOS*): cuando se habilita, esta configuración hace que el estado del dispositivo con Jailbreak se realice con más frecuencia en dispositivos iOS/iPadOS. Esta configuración solo afecta a los dispositivos a los que se destina una directiva de cumplimiento que bloquea los dispositivos con Jailbreak. Para habilitar esta propiedad se usan los servicios de ubicación del dispositivo y puede afectar al uso de la batería. Intune no almacena los datos de ubicación del usuario y solo los usa para desencadenar la detección de jailbreak con mayor frecuencia en segundo plano. 
+Si usa el acceso condicional, las directivas de acceso condicional pueden usar los resultados de cumplimiento de dispositivos para bloquear el acceso a los recursos desde dispositivos no compatibles.
 
-  Para habilitar esta configuración, los dispositivos deben:
-  - Habilitar los servicios de ubicación en el nivel de sistema operativo.
-  - Permitir siempre que el Portal de empresa use los servicios de ubicación.
+La configuración disponible que puede especificar en una directiva de cumplimiento de dispositivos depende del tipo de plataforma que selecciona cuando crea una directiva. Las distintas plataformas de dispositivos admiten diferentes configuraciones y cada tipo de plataforma requiere una directiva independiente.  
 
-  La detección mejorada funciona a través de los servicios de ubicación. La evaluación se desencadena al abrir la aplicación Portal de empresa o al mover físicamente el dispositivo a una distancia de unos 500 metros o más. En iOS 13 y versiones posteriores, esta característica requiere que los usuarios seleccionen Permitir siempre cada vez que el dispositivo les pida que sigan permitiendo al Portal de empresa usar su ubicación en segundo plano. Si los usuarios no permiten siempre el acceso a la ubicación y tienen configurada una directiva con esta opción, el dispositivo se marcará como no conforme. Tenga en cuenta que Intune no puede garantizar que cada cambio de ubicación significativo garantice una comprobación de detección de jailbreak, ya que esto depende de la conexión de red de un dispositivo en ese momento.
+Los temas siguientes se vinculan a artículos dedicados para distintos aspectos de la directiva de configuración de dispositivos.
 
-- **Período de validez del estado de cumplimiento (días)** : especifique el período en que los dispositivos informan del estado de todas las directivas de cumplimiento recibidas. Los dispositivos que no proporcionen el estado dentro de este período se tratarán como no conformes. El valor predeterminado es 30 días. El valor máximo es de 120 días. El valor mínimo es 1 día.
+- [**Acciones en caso de no cumplimiento**](actions-for-noncompliance.md): cada directiva de cumplimiento de dispositivos incluye una o varias acciones en caso de no cumplimiento. Estas acciones son reglas que se aplican a los dispositivos que no cumplen con las condiciones establecidas en la directiva.
 
-  Esta configuración se muestra como la directiva de cumplimiento predeterminada **Activa** (**Dispositivos** > **Monitor** > **Configuración de cumplimiento**). La tarea en segundo plano para esta directiva se ejecuta una vez al día.
+  De manera predeterminada, cada directiva de cumplimiento de dispositivos incluye la acción para marcar un dispositivo como no compatible si no cumple con una regla de directiva. Después, la directiva aplica al dispositivo cualquier acción adicional en caso de no cumplimiento que se haya configurado, en función de las programaciones que establece para esas acciones.
 
-Puede usar estas directivas integradas para supervisar estas configuraciones. Intune también [se actualiza o comprueba si hay actualizaciones](create-compliance-policy.md#refresh-cycle-times) en distintos intervalos, dependiendo de la plataforma del dispositivo. [Preguntas comunes, problemas y su solución con perfiles y directivas de dispositivos en Microsoft Intune](../configuration/device-profile-troubleshoot.md) es un recurso útil.
+  Las acciones en caso de no cumplimiento pueden ayudar a alertar a los usuarios cuando su dispositivo no es compatible o a proteger los datos que pueda haber en un dispositivo. Algunos ejemplos de acciones son:
 
-Los informes de cumplimiento son una excelente manera de comprobar el estado de los dispositivos. [Supervisión de las directivas de cumplimiento](compliance-policy-monitor.md) incluye algunas instrucciones.
+  - El **envío de alertas por correo electrónico** a usuarios y grupos con detalles sobre el dispositivo no compatible. Puede configurar la directiva para enviar un correo electrónico inmediatamente después de que el dispositivo se marca como no conforme y, de nuevo, de manera periódica, hasta que el dispositivo sea compatible.
+  - El **bloqueo remoto de dispositivos** que no son compatibles durante algún tiempo.
+  - La **retirada de dispositivos**  si han sido no compatibles durante un tiempo. Esta acción quita el dispositivo de la administración de Intune y quita todos los datos de la empresa del dispositivo.
 
-## <a name="non-compliance-and-conditional-access-on-the-different-platforms"></a>Incumplimiento y acceso condicional en las distintas plataformas
+- [**Configuración de ubicaciones de red**](use-network-locations.md): compatibles con los dispositivos Android, puede configurar *ubicaciones de red* para luego usarlas como una regla de cumplimiento de dispositivos. Este tipo de regla puede marcar un dispositivo como no compatible cuando está fuera de una red especificada o cuando sale de una. Para poder especificar una regla de ubicación, debe configurar las ubicaciones de red.
+
+- [**Creación de una directiva**](create-compliance-policy.md): con la información que aparece en este artículo, puede revisar los requisitos previos, examinar las opciones para configurar reglas, especificar acciones en caso de no cumplimiento y asignar la directiva a los grupos. En este artículo también se incluye información sobre los tiempos de actualización de directivas.
+
+  Consulte la configuración de cumplimiento de dispositivos para las distintas plataformas de dispositivos:
+
+  - [Android](compliance-policy-create-android.md)
+  - [Android Enterprise](compliance-policy-create-android-for-work.md)
+  - [iOS](compliance-policy-create-ios.md)
+  - [macOS](compliance-policy-create-mac-os.md)
+  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 y versiones posteriores](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 y versiones posteriores](compliance-policy-create-windows.md)
+
+## <a name="monitor-compliance-status"></a>Supervisión del estado de cumplimiento
+
+Intune incluye un panel de cumplimiento de dispositivos que se usa para supervisar el estado de cumplimiento de los dispositivos y para profundizar en las directivas y los dispositivos para saber más. Para más información sobre este panel, consulte [Supervisión del cumplimiento de dispositivos](compliance-policy-monitor.md).
+
+## <a name="integrate-with-conditional-access"></a>Integración con el acceso condicional
+
+Cuando usa el acceso condicional, puede configurar las directivas de acceso condicional para usar los resultados de las directivas de cumplimiento de dispositivos con el fin de determinar qué dispositivos pueden acceder a los recursos de la organización. Este control de acceso es aparte de las acciones en caso de no cumplimiento que se incluyen en las directivas de cumplimiento de dispositivos.
+
+Cuando un dispositivo se inscribe en Intune, se registra en Azure AD. El estado de cumplimiento de los dispositivos se informa a Azure AD. Si las directivas de acceso condicional tienen controles de acceso establecidos en *Requerir que el dispositivo esté marcado como compatible*, el acceso condicional usa ese estado de cumplimiento para determinar si se debe conceder o bloquear el acceso al correo electrónico y a otros recursos de la organización.
+
+Si va a utilizar el estado de cumplimiento de dispositivos con directivas de acceso condicional, revise cómo el inquilino ha configurado la opción *Marcar los dispositivos que no tienen asignada una directiva de cumplimiento como*, que se administra en [Configuración de directivas de cumplimiento](#compliance-policy-settings).
+
+Para más información sobre cómo usar el acceso condicional con las directivas de cumplimiento de dispositivos, consulte [Acceso condicional basado en dispositivos](conditional-access-intune-common-ways-use.md#device-based-conditional-access).
+
+Más información sobre el acceso condicional en la documentación de Azure AD:
+
+- [¿Qué es el acceso condicional?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [¿Qué es una identidad de dispositivo?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+
+### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>Referencia para el no cumplimiento y acceso condicional en las distintas plataformas
 
 En la tabla siguiente se describe cómo administrar la configuración de no conformidad cuando se usa una directiva de cumplimiento con una directiva de acceso condicional.
+
+- **Corregido**: el sistema operativo del dispositivo exige compatibilidad. Por ejemplo, se obliga al usuario a establecer un PIN.
+
+- **En cuarentena**: el sistema operativo del dispositivo no exige cumplimiento. Por ejemplo, los dispositivos Android y Android Enterprise no obligan al usuario a cifrar el dispositivo. Si el dispositivo no es conforme, se emprenden las acciones siguientes:
+  - El dispositivo se bloquea si se aplica una directiva de acceso condicional al usuario.
+  - La aplicación Portal de empresa de Intune notifica al usuario sobre cualquier problema de cumplimiento.
 
 ---------------------------
 
@@ -133,25 +171,10 @@ En la tabla siguiente se describe cómo administrar la configuración de no conf
 
 ---------------------------
 
-**Corregido**: el sistema operativo del dispositivo exige compatibilidad. Por ejemplo, se obliga al usuario a establecer un PIN.
-
-**En cuarentena**: el sistema operativo del dispositivo no exige cumplimiento. Por ejemplo, los dispositivos Android y Android Enterprise no obligan al usuario a cifrar el dispositivo. Si el dispositivo no es conforme, se emprenden las acciones siguientes:
-
-- El dispositivo se bloquea si se aplica una directiva de acceso condicional al usuario.
-- La aplicación Portal de empresa de Intune notifica al usuario sobre cualquier problema de cumplimiento.
-
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Cree una directiva](create-compliance-policy.md) y vea los requisitos previos.
-- Consulte la configuración de cumplimiento para las distintas plataformas de dispositivos:
-
-  - [Android](compliance-policy-create-android.md)
-  - [Android Enterprise](compliance-policy-create-android-for-work.md)
-  - [iOS](compliance-policy-create-ios.md)
-  - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
-  - [Windows 8.1 y versiones posteriores](compliance-policy-create-windows-8-1.md)
-  - [Windows 10 y versiones posteriores](compliance-policy-create-windows.md)
-
-- En [Referencia de entidades de directivas](../developer/reports-ref-policy.md) se brinda información sobre las entidades de directivas de almacenamiento de datos de Intune.
+- [Configurar ubicaciones](../protect/use-network-locations.md) para su uso con dispositivos Android
+- [Crear e implementar directivas](../protect/create-compliance-policy.md) y revisar los requisitos previos
+- [Supervisar el cumplimiento del dispositivo](../protect/compliance-policy-monitor.md)
+- [Preguntas comunes, problemas y su solución con perfiles y directivas de dispositivos en Microsoft Intune](../configuration/device-profile-troubleshoot.md)
+- En [Referencia de entidades de directivas](../developer/reports-ref-policy.md) se brinda información sobre las entidades de directivas de almacenamiento de datos de Intune

@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise incluye Microsoft Intune. Vea cómo Intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988135"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223639"
 ---
 # <a name="device-management-overview"></a>Información general sobre la administración de dispositivos
 
@@ -41,7 +41,7 @@ La respuesta es [Microsoft Intune](what-is-intune.md). Intune ofrece administrac
 
 Intune se incluye con Microsoft Azure y Microsoft 365 y se integra con Azure Active Directory (Azure AD). Con Azure AD es más fácil controlar quién tiene acceso y a qué tiene acceso.
 
-## <a name="microsoft-intune"></a>Microsoft Intune
+## <a name="microsoft-intune"></a>Microsoft Intune
 
 Muchas organizaciones, como Microsoft, usan Intune para proteger datos de su propiedad a los que acceden los usuarios desde sus dispositivos móviles personales o de la empresa. Intune incluye directivas de configuración de dispositivos y aplicaciones, directivas de actualización de software y estados de instalación (gráficos, tablas e informes) con los que puede proteger y supervisar el acceso a los datos.
 
@@ -56,6 +56,16 @@ Con Intune, es posible administrar varios dispositivos por persona y las distint
 - Uso de dispositivos personales para acceder a recursos de la organización
 
 Para más información sobre Intune, consulte [¿Qué es Intune?](what-is-intune.md)
+
+## <a name="co-management"></a>Administración conjunta
+
+Muchas organizaciones usan Configuration Manager en el entorno local para administrar dispositivos, como equipos de escritorio y servidores. Puede asociar su instancia local de Configuration Manager a Microsoft Intune. Cuando se conecta en la nube, se obtienen las ventajas de Intune y la nube, incluidos el [acceso condicional](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), la [ejecución de acciones remotas](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), el [uso de Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), etc.
+
+[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) es una plataforma de soluciones que unifica varios servicios. Incluye [Microsoft Intune](what-is-intune.md) para la administración de dispositivos basada en la nube y [Configuration Manager e Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) para la administración de dispositivos que se conectan a la nube.
+
+Si usa Configuration Manager y está listo para trasladar algunas tareas a la nube, la administración conjunta es la respuesta.
+
+Para obtener más información sobre cómo asociar la nube a Configuration Manager, consulte [¿Qué es administración conjunta?](https://docs.microsoft.com/mem/configmgr/comanage/overview).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integración con servicios de protección
 
@@ -88,7 +98,7 @@ El [Centro de administración de Microsoft Endpoint Manager](https://go.microso
 
 En el centro de administración de dispositivos, puede:
 
-- [Inscribir dispositivos](../enrollment/device-enrollment.md)
+- [Inscripción de dispositivos](../enrollment/device-enrollment.md)
 - [Establecimiento del cumplimiento de los dispositivos](../protect/device-compliance-get-started.md)
 - [Administrar dispositivos](../remote-actions/device-management.md)
 - [Administración de aplicaciones](../apps/app-management.md)  
