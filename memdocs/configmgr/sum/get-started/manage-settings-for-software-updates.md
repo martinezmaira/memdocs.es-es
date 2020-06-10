@@ -2,7 +2,7 @@
 title: Administración de la configuración de actualizaciones de software
 titleSuffix: Configuration Manager
 description: Obtenga información acerca de la configuración de cliente adecuada para las actualizaciones de software en su sitio después de instalar el punto de actualización de software.
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906798"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436676"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
@@ -113,13 +113,13 @@ En la pestaña **Información de sustitución** , puede ver la siguiente informa
 En las propiedades, se pueden configurar las opciones de actualización de software de una o varias actualizaciones de software. La mayoría de las opciones de actualización de software sólo se pueden configurar en el sitio de administración central o en el sitio primario independiente. La información de las siguientes secciones le permitirá configurar las opciones de las actualizaciones de software.  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Establecer el tiempo máximo de ejecución  
-En la pestaña **Duración máxima de la ejecución** , establezca el período de tiempo máximo que se asigna a una actualización de software para completarse en equipos cliente. Si la actualización supera el valor de este período máximo, Configuration Manager crea un mensaje de estado y detiene la supervisión de la implementación para la instalación de actualizaciones de software. Esta opción sólo se puede configurar en un sitio primario independiente o en el sitio de administración central.  
+En la pestaña **Duración máxima de la ejecución** , establezca el período de tiempo máximo que se asigna a una actualización de software para completarse en equipos cliente. Si la actualización supera el valor de este período máximo, Configuration Manager crea un mensaje de estado y detiene la instalación de actualizaciones de software. Esta opción sólo se puede configurar en un sitio primario independiente o en el sitio de administración central.  
 
 Configuration Manager también utiliza esta opción para determinar si la instalación de las actualizaciones de software se van a iniciar dentro de una ventana de mantenimiento configurada. Si este período máximo de tiempo es mayor que el tiempo restante disponible en la ventana de mantenimiento, la instalación de actualizaciones de software se pospone hasta el inicio de la siguiente ventana de mantenimiento. Si se van a instalar varias actualizaciones de software en un equipo cliente con una ventana de mantenimiento configurada (período de tiempo), las actualizaciones de software irán instalando desde la que tiene la duración de ejecución más baja hasta la más alta. Antes de instalar cada actualización de software, el cliente comprueba que la ventana de mantenimiento disponible proporcionará tiempo suficiente para instalar la actualización de software. Una vez iniciada la instalación de una actualización de software, su proceso de instalación continuará aunque su duración sea más prolongada que la ventana de mantenimiento. Para más información sobre las ventanas de mantenimiento, consulte [Cómo usar ventanas de mantenimiento en System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 En la pestaña **Duración máxima de la ejecución** , puede ver y configurar las siguientes opciones:  
 
-- **Duración máxima de la ejecución**: especifica el número máximo de minutos que se asigna a una instalación de actualización de software para que se complete antes de que Configuration Manager deje de supervisarla. Esta configuración también se utiliza para determinar si resta tiempo suficiente para instalar la actualización antes del final de la ventana de mantenimiento. El valor predeterminado es 60 minutos para los Service Pack. Para otros tipos de actualización de software, el valor predeterminado es 10 minutos si realizó una instalación nueva de la versión 1511 de Configuration Manager o posterior y 5 minutos al actualizar desde una versión anterior. El valor puede ir de 5 a 9999 minutos.  
+- **Duración máxima de la ejecución**: especifica el número máximo de minutos que se asigna a una instalación de actualización de software para que se complete antes de que Configuration Manager la detenga. Esta configuración también se utiliza para determinar si resta tiempo suficiente para instalar la actualización antes del final de la ventana de mantenimiento. El valor predeterminado es 60 minutos para los Service Pack. Para otros tipos de actualización de software, el valor predeterminado es 10 minutos si realizó una instalación nueva de la versión 1511 de Configuration Manager o posterior y 5 minutos al actualizar desde una versión anterior. El valor puede ir de 5 a 9999 minutos.  
 
 > [!IMPORTANT]  
 >  Asegúrese de configurar el valor de tiempo de ejecución máximo menor que el tiempo de ventana de mantenimiento configurado o aumente el tiempo de ventana de mantenimiento a un valor mayor que el tiempo de ejecución máximo. De lo contrario, la instalación de la actualización de software no se iniciará.  

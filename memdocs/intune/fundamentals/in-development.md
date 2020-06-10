@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562ef1eaa1cc98e3f5a654e90e4779e228768b6
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311210"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436761"
 ---
 # <a name="in-development-for-microsoft-intune"></a>En desarrollo para Microsoft Intune
 
@@ -161,7 +161,7 @@ Se notificarán nuevos errores para iOS/iPadOS y para dispositivos macOS, inclui
 - Se agregará un recuento de los dispositivos de Apple Business Manager eliminados a la página de información general en la que verá el estado de los dispositivos.
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Los dispositivos de tipo Bring Your Own Device pueden usar la VPN para la implementación<!--5015344 -->
-Es posible que esta característica se retrase.
+El nuevo botón de alternancia **Omitir comprobación de conectividad del dominio** del perfil de Autopilot le permite implementar dispositivos de Unión a Azure AD híbrido sin acceso a la red corporativa mediante su propio cliente VPN Win32 de terceros. Para ver el nuevo botón de alternancia, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos**  > **Windows** > **Inscripción de Windows** > **Perfiles de implementación** > **Crear perfil** > **Configuración rápida (OOBE)** .
 
 ### <a name="shared-ipads-for-business--6367326---"></a>iPad compartidos para la empresa<!--6367326 -->
 Podrá usar Intune y Apple Business Manager para configurar de forma fácil y segura un iPad compartido para que varios empleados puedan compartir dispositivos. [iPad compartido](https://developer.apple.com/education/shared-ipad/) de Apple proporciona una experiencia personalizada para varios usuarios a la vez que conserva los datos de usuario. Con un identificador de Apple administrado, los usuarios pueden acceder a sus aplicaciones, datos y configuraciones después de iniciar sesión en cualquier iPad compartido de su organización. iPad compartido funciona con identidades federadas.

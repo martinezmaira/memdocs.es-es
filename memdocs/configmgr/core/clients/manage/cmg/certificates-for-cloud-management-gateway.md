@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694943"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347209"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -238,15 +238,16 @@ Configure un punto de administración local con el modo de conexión de cliente 
 
 #### <a name="legend-of-terms"></a>Leyenda de términos
 
-- *Grupo de trabajo*: el dispositivo no está unido a un dominio ni a Azure AD, pero tiene un [certificado de autenticación del cliente](#bkmk_clientauth).  
-- *Unido a dominio de AD*: el dispositivo se une un dominio de Active Directory local.  
-- *Unido a Azure AD*: también conocido como "unido a un dominio en la nube", el dispositivo se une a un inquilino de Azure Active Directory.  
-- *Unido a híbrido*: el dispositivo se une a un dominio de Active Directory y un inquilino de Azure AD.  
-- *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**.  
-- *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**.  
-- *E-HTTP*: en las propiedades del sitio, en la pestaña **Comunicación de equipo cliente**, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).  
+- *Grupo de trabajo*: el dispositivo no está unido a un dominio ni a Azure AD, pero tiene un [certificado de autenticación del cliente](#bkmk_clientauth).
+- *Unido a dominio de AD*: el dispositivo se une un dominio de Active Directory local.
+- *Unido a Azure AD*: también conocido como "unido a un dominio en la nube", el dispositivo se une a un inquilino de Azure Active Directory. Para más información, consulte [Dispositivos unidos a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Unido a híbrido*: puede unir el dispositivo a la instancia local de Active Directory y registrarlo con Azure Active Directory. Para más información, consulte [Dispositivos híbridos unidos a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**.
+- *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**.
+- *E-HTTP*: en las propiedades del sitio, en la pestaña **Comunicación de equipo cliente**, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).
+
     > [!Note]
-    > A partir de la versión 1906, esta pestaña se denomina **Communication Security** (Seguridad de la comunicación).<!-- SCCMDocs#1645 -->  
+    > A partir de la versión 1906, esta pestaña se denomina **Communication Security** (Seguridad de la comunicación).<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Certificado de administración de Azure
 

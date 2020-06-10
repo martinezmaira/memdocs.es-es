@@ -2,7 +2,7 @@
 title: Recuperación del sitio
 titleSuffix: Configuration Manager
 description: Obtenga información para recuperar los sitios en Configuration Manager.
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903956"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301442"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Recuperar un sitio de Configuration Manager
 
@@ -347,6 +347,10 @@ Repita este proceso para cualquier otro punto de distribución local habilitado 
     - **Ejecutar script de PowerShell**: Si usa la opción para **ejecutar esta etapa como la cuenta siguiente**, seleccione **Establecer**. Escriba y confirme la contraseña y, a continuación, seleccione **Comprobar**.
 
 Repita este proceso para todas las secuencias de tareas.
+
+### <a name="recreate-bootable-media-and-prestaged-media-in-non-pki-environments"></a>Nueva creación de medios de arranque y medios preconfigurados en entornos que no son de PKI
+
+En entornos que no son de PKI, los certificados autofirmados en medios de arranque y medios configurados se basan en las claves de máquina del servidor en el que se crearon los medios. Por esta razón, si el hardware cambia o el sistema operativo se vuelve a instalar como parte de una recuperación, es necesario volver a crear los medios de arranque y los medios preconfigurados que se crearon en ese servidor. Para más información sobre cómo crear medios de arranque y medios preconfigurados, consulte [Crear medios de arranque](../../../osd/deploy-use/create-bootable-media.md) y [Crear medios preconfigurados](../../../osd/deploy-use/create-prestaged-media.md).
 
 ### <a name="reenter-sideloading-keys"></a>Volver a especificar las claves de instalación de prueba
 

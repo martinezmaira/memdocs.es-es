@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906383"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270861"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Crear aplicaciones Windows en Configuration Manager
 
@@ -39,7 +39,7 @@ Aprovisione una aplicación con un paquete de la aplicación de Windows para tod
 > [!Important]  
 > Tenga cuidado con la instalación, el aprovisionamiento y la actualización de versiones diferentes del mismo paquete de aplicación de Windows en un dispositivo, ya que puede producir resultados inesperados. Este comportamiento puede producirse si se usa Configuration Manager para aprovisionar la aplicación y, después, se permite a los usuarios actualizar la aplicación desde Microsoft Store. Para obtener más información, consulte las instrucciones del paso siguiente si [administra aplicaciones de Microsoft Store para Empresas](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
-Al aprovisionar una aplicación con licencia sin conexión, Configuration Manager no permite que Windows la actualice automáticamente desde Microsoft Store.  
+Al implementar aplicaciones sin conexión en dispositivos Windows 10 con el cliente de Configuration Manager, no permita a los usuarios actualizar aplicaciones externas en implementaciones de Configuration Manager. El control de las actualizaciones de las aplicaciones sin conexión es especialmente importante en entornos de varios usuarios como clases. Para más información, consulte [Administración de aplicaciones desde Microsoft Store para Empresas y Educación con Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
 
 Configuration Manager admite el aprovisionamiento de aplicaciones en las versiones siguientes de Windows 10 admitidas.<!--SCCMDocs-pr issue 2762-->
 

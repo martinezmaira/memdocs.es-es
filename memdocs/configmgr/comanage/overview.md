@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691003"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347192"
 ---
 # <a name="what-is-co-management"></a>¿Qué es administración conjunta?
 
@@ -26,7 +26,7 @@ La administración conjunta permite administrar simultáneamente dispositivos Wi
 
 Cuando un dispositivo Windows 10 tiene el cliente de Configuration Manager y está inscrito en Intune, el usuario recibe las ventajas de ambos servicios. El usuario controla para qué cargas de trabajo, si corresponde, cambia la entidad desde Configuration Manager a Intune. Configuration Manager sigue administrando todas las demás cargas de trabajo, incluidas las que no cambia a Intune, y todas las demás características de Configuration Manager que no admite la administración conjunta.
 
-También podemos realizar un piloto en una carga de trabajo con una red de dispositivos independiente. El piloto permite probar la funcionalidad de Intune con un subconjunto de dispositivos antes de cambiar a un grupo más grande.
+También podemos realizar un piloto en una carga de trabajo con una req de dispositivos independiente. El piloto permite probar la funcionalidad de Intune con un subconjunto de dispositivos antes de cambiar a un grupo más grande.
 
 ![Diagrama de información general de administración conjunta](media/co-management-overview.svg)
 
@@ -100,9 +100,9 @@ Habilitar la administración conjunta no requiere que incorpore su sitio con Azu
 
 ### <a name="azure-ad"></a>Azure AD
 
-- Los dispositivos Windows 10 deben estar unidos a Azure AD. Pueden ser cualquiera de los siguientes tipos:  
+- Los dispositivos Windows 10 se deben conectar a Azure AD. Pueden ser cualquiera de los siguientes tipos:  
 
-  - [Unido a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), donde el dispositivo está unido a la instancia local de Active Directory y a Azure Active Directory.  
+  - [Unido a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), en el que el dispositivo está unido a Active Directory local y registrado con Azure Active Directory.
 
   - Solo [Unido a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan). (Este tipo se conoce a veces como "unido al dominio en la nube")<!--SCCMDocs issue 605-->  
 

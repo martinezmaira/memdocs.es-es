@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696083"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270827"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Procedimientos para administrar clientes en Configuration Manager
 
@@ -103,7 +103,7 @@ Para obtener más información, vea [Cómo configurar el cliente](../deploy/conf
 
 ### <a name="approve"></a>Aprobar
 
-Cuando el cliente se comunica con los sistemas de sitio mediante HTTP y un certificado autofirmado, debe aprobar estos clientes para identificarlos como equipos de confianza. De forma predeterminada, la configuración del sitio aprueba automáticamente los clientes del mismo bosque de Active Directory y los bosques de confianza. Este comportamiento predeterminado significa que no es necesario aprobar cada cliente de forma manual. Apruebe manualmente los equipos del grupo de trabajo de confianza y cualquier otro equipo de confianza que no esté aprobado.
+Cuando el cliente se comunica con los sistemas de sitio mediante HTTP y un certificado autofirmado, debe aprobar estos clientes para identificarlos como equipos de confianza. De forma predeterminada, la configuración del sitio aprueba automáticamente los clientes del mismo bosque de Active Directory, bosques de confianza e inquilinos conectados de Azure Active Directory (Azure AD).<!-- MEMDocs#318 -->. Este comportamiento predeterminado significa que no es necesario aprobar cada cliente de forma manual. Apruebe manualmente los equipos del grupo de trabajo de confianza y cualquier otro equipo de confianza que no esté aprobado.
 
 > [!IMPORTANT]  
 > Aunque algunas funciones de administración puedan funcionar para los clientes no aprobados, este es un escenario no compatible para Configuration Manager.  

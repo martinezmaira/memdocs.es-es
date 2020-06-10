@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824025"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311227"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Implementación en un grupo piloto con Análisis de escritorio
 
@@ -104,7 +104,7 @@ Antes de implementar Windows, cree primero los objetos de software en Configurat
 Configuration Manager usa los datos de Análisis de escritorio para crear recopilaciones para las implementaciones piloto y de producción. Estas recopilaciones se encuentran en área de trabajo **Activos y compatibilidad** del nodo **Recopilaciones de dispositivos** de la carpeta **Planes de implementación**.
 
 > [!IMPORTANT]
-> Configuration Manager administra estas recopilaciones para los planes de implementación de Análisis de escritorio. No se admiten cambios manuales.
+> Configuration Manager administra estas recopilaciones para los planes de implementación de Análisis de escritorio. No se admiten cambios manuales. Si elimina una de estas colecciones, el Análisis de escritorio no funcionará y tendrá que [conectarse con Configuration Manager](connect-configmgr.md) de nuevo.<!--7208090-->
 
 Para asegurarse de que los dispositivos están en buen estado después de cada fase de implementación, use el procedimiento siguiente para crear una implementación por fases integrada en Análisis de escritorio:
 

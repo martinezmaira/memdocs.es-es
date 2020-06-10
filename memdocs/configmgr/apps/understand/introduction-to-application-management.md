@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d3cd21fe4b1d53ecbb0bc60818405cb795a4f289
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b2fc0dfe37ad51ce1a549545c3eaa716395438d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690223"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347119"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Introducción a la administración de aplicaciones en Configuration Manager
 
@@ -95,7 +95,7 @@ Si se hacen *revisiones* en una aplicación o un tipo de implementación, Config
 - Restaurar una versión anterior de una aplicación
 - Eliminar una versión anterior
 
-Para obtener más información, vea [Actualizar y retirar aplicaciones](../deploy-use/update-and-retire-applications.md).  
+Para más información, consulte [Revisar aplicaciones](../deploy-use/revise-and-supersede-applications.md#application-revisions).  
 
 ### <a name="detection-method"></a>Método de detección
 

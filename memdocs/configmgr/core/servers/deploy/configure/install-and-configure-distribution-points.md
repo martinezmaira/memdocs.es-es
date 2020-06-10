@@ -2,7 +2,7 @@
 title: Administración de puntos de distribución
 titleSuffix: Configuration Manager
 description: Use puntos de distribución para hospedar el contenido que implemente en dispositivos y usuarios.
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1cc931bd0e02be66f608db11e0052fde571a427
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d1d93dd446a65fda0b259bb10e0c944780d41059
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701683"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347098"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Instalar y configurar puntos de distribución en Configuration Manager
 
@@ -307,12 +307,16 @@ Las opciones siguientes se encuentran en la página **Punto de distribución** d
     - Configuration Manager, versión 1806 con el paquete acumulativo de actualizaciones (4462978), o posterior  
 
         - Windows Server, versión 1709 o posterior
-        - Windows Server 2016 con las actualizaciones KB4132216 y KB4284833
+        - Windows Server 2016 con las actualizaciones siguientes:
+           - Actualización acumulativa KB4132216, publicada el 21 de junio de 2018, o una actualización acumulativa posterior.
+           - Actualización de la pila de servicio KB4284833, publicada el 18 de mayo de 2018, o una actualización de la pila de servicio posterior.
 
     - Configuration Manager, versión 1810 o posterior:
 
         - Windows Server, versión 1709 o posterior
-        - Windows Server 2016 con las actualizaciones KB4132216 y KB4284833
+        - Windows Server 2016 con las actualizaciones siguientes:
+           - Actualización acumulativa KB4132216, publicada el 21 de junio de 2018, o una actualización acumulativa posterior.
+           - Actualización de la pila de servicio KB4284833, publicada el 18 de mayo de 2018, o una actualización de la pila de servicio posterior.
         - Windows Server 2019  
 
 - **Habilitar este punto de distribución para contenido preconfigurado**: esta opción permite agregar contenido al servidor antes de distribuir software. Como los archivos de contenido ya se encuentran en la biblioteca de contenido, no se transfieren a través de la red al distribuir el software. Para obtener más información, vea [Contenido preconfigurado](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent).  

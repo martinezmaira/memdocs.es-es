@@ -2,7 +2,7 @@
 title: Configurar la detección
 titleSuffix: Configuration Manager
 description: Configure métodos de detección para buscar recursos para administrar desde la red, Active Directory y Azure Active Directory.
-ms.date: 04/01/2020
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3bd03cb15ae1633d8ddfc8c2f26a741d2679b083
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cfda27df7df537ededb1f103afdd6107354af786
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704753"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347294"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configurar métodos de detección para Configuration Manager
 
@@ -265,7 +265,7 @@ Puede descubrir grupos de usuarios y miembros de esos grupos desde Azure AD. Cua
 
 ### <a name="limitations"></a>Limitaciones
 
-La detección delta de grupos de usuarios de Azure AD está deshabilitada actualmente.
+La detección delta de grupos de usuarios de Azure AD está deshabilitada en la versión 1906. Puede habilitarla a partir de la versión 1910 de Configuration Manager.
 
 ### <a name="log-files"></a>Archivos de registro
 

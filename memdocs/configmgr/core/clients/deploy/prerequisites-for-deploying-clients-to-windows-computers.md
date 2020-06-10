@@ -2,7 +2,7 @@
 title: Requisitos previos de la implementación de clientes de Windows
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los requisitos previos para la implementación del cliente de Configuration Manager en equipos Windows.
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694793"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428561"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Requisitos previos para la implementación de clientes en equipos Windows con Configuration Manager
 
@@ -28,18 +28,20 @@ Para obtener más información sobre los requisitos mínimos de hardware y siste
 > [!NOTE]  
 > Los números de versión de software que se muestran en este artículo solo indican los números de versión mínimos necesarios.  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a> Requisitos previos para los clientes de Windows  
 
 Use la información siguiente para determinar los requisitos previos para la instalación del cliente de Configuration Manager en dispositivos Windows.  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Dependencias externas a Configuration Manager  
+### <a name="dependencies-external-to-configuration-manager"></a>Dependencias externas a Configuration Manager
 
-|Componente|Descripción|  
-|---|---|  
-|Windows Installer versión 3.1.4000.2435|Necesario para admitir el uso de los archivos de actualización (.msp) de Windows Installer para paquetes y actualizaciones de software.|  
-|Microsoft Background Intelligent Transfer Service (BITS) versión 2.5|Se requiere para permitir transferencias de datos limitadas entre el equipo cliente y los sistemas de sitio de Configuration Manager. BITS no se descarga automáticamente durante la instalación del cliente. Cuando se instala BITS en los equipos, normalmente es necesario reiniciarlo para completar la instalación.<br /><br /> La mayoría de los sistemas operativos incluyen BITS. En caso contrario, instale BITS antes de instalar el cliente de Configuration Manager.|  
-|Programador de tareas de Microsoft|Habilite este servicio en el cliente para completar la instalación del cliente.|  
+Muchos de estos componentes son servicios o características que Windows habilita de manera predeterminada. No deshabilite estos componentes en los clientes de Configuration Manager.
+
+|Componente|Descripción|
+|---|---|
+|Windows Installer|Necesario para admitir el uso de los archivos de Windows Installer para aplicaciones y actualizaciones de software.|
+|Servicio de transferencia inteligente en segundo plano (BITS) de Microsoft|Se requiere para permitir transferencias de datos limitadas entre el equipo cliente y los sistemas de sitio de Configuration Manager.|
+|Programador de tareas de Microsoft|Necesario para las operaciones de cliente, como evaluar de manera periódica el estado del cliente de Configuration Manager.|
+|Compresión diferencial remota de Microsoft (RDC)|Necesario para optimizar la transmisión de datos a través de la red.|
 |Compatibilidad con la firma de código SHA-2|A partir de la versión 1906, los clientes requieren compatibilidad con el algoritmo de firma de código SHA-2. Para más información, consulte [Compatibilidad con la firma de código SHA-2](#bkmk_sha2).|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a> Compatibilidad con la firma de código SHA-2
@@ -64,18 +66,15 @@ Si tiene que administrar un cliente en una versión de Windows que no está actu
 
 El cliente de Configuration Manager tiene dependencias externas. Estas dependencias dependen de la versión del sistema operativo y del software instalado en el equipo cliente.  
 
-Si el cliente requiere estas dependencias para completar la instalación, las instala de forma automática.  
+Si el cliente requiere estas dependencias para completar la instalación, las instala de forma automática.
 
-|Componente|Descripción|  
-|---|---|  
-|Windows Update Agent versión 7.0.6000.363|Necesario para que Windows admita la detección e implementación de actualizaciones.|  
-|Microsoft Core XML Services (MSXML) versión 6.20.5002 o posterior|Necesario para admitir el procesamiento de documentos XML en Windows.|  
-|Compresión diferencial remota de Microsoft (RDC)|Necesario para optimizar la transmisión de datos a través de la red.|  
-|Microsoft Visual C++ 2013 Redistributable versión 12.0.21005.1|Necesario para admitir las operaciones de cliente. Cuando se instala esta actualización en los equipos cliente, es posible que sea necesario reiniciar para completar la instalación.|  
-|Microsoft Visual C++ 2005 Redistributable versión 8.0.50727.42|Para la versión 1606 y anteriores, es necesario admitir las operaciones de Microsoft SQL Server Compact.|  
-|API de creación de imágenes de Windows 6.0.6001.18000|Necesarias para permitir que Configuration Manager administre archivos de imagen de Windows (.wim).|  
-|Microsoft Policy Platform 1.2.3514.0|Necesaria para permitir a los clientes evaluar la configuración de la conformidad.|  
-|Microsoft .NET Framework versión 4.5.2.|Necesario para admitir las operaciones de cliente. Se instala automáticamente en el equipo cliente si este no tiene instalado Microsoft .NET Framework versión 4.5 o posterior. Para más información, consulte [Detalles adicionales sobre la versión 4.5.2 de Microsoft .NET Framework](#dotNet).|  
+|Componente|Descripción|
+|---|---|
+|Microsoft Core XML Services (MSXML) versión 6.20.5002 o posterior (`msxml6.msi`)|Necesario para admitir el procesamiento de documentos XML en Windows.|
+|Microsoft Visual C++ 2013 Redistributable versión 12.0.40660.0 (`vcredist_x*.exe`)|Necesario para admitir las operaciones de cliente. Cuando se instala esta actualización en los equipos cliente, es posible que sea necesario reiniciar para completar la instalación.|<!-- SCCMDocs#1526 -->
+|API de creación de imágenes de Windows 6.0.6001.18000 o posterior (`wimgapi.msi`)|Necesarias para permitir que Configuration Manager administre archivos de imagen de Windows (.wim).|
+|Microsoft Policy Platform 1.2.3514.0 o posterior (`MicrosoftPolicyPlatformSetup.msi`)|Necesaria para permitir a los clientes evaluar la configuración de la conformidad.|  
+|Microsoft .NET Framework versión 4.5.2 o posterior (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|Necesario para admitir las operaciones de cliente. Se instala automáticamente en el equipo cliente si este no tiene instalado Microsoft .NET Framework versión 4.5 o posterior. Para más información, consulte [Detalles adicionales sobre la versión 4.5.2 de Microsoft .NET Framework](#dotNet).|  
 |Componentes de Microsoft SQL Server Compact 4.0 SP1|Necesarios para almacenar información relacionada con las operaciones de cliente.|  
 
 > [!Important]

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764244"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428682"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Análisis de puntos de conexión (versión preliminar)
 
@@ -347,8 +347,11 @@ En segundo lugar, a continuación se muestra una lista de comprobación rápida 
 1. Los dispositivos que se hayan configurado correctamente para la recopilación de datos deben reiniciarse después de que se haya habilitado la recopilación de datos. Después, deberá esperar hasta 24 horas para que el dispositivo aparezca en la pestaña Rendimiento del dispositivo.
 1. Si el dispositivo se ha configurado correctamente para la recopilación de datos, se ha reiniciado posteriormente y, una vez transcurridas 24 horas, sigue sin verlo, es posible que el dispositivo no pueda acceder a nuestros puntos de conexión de la colección. Este problema puede producirse si su empresa usa un servidor proxy y los puntos de conexión no se han habilitado en el proxy. Para obtener más información, consulte [Solución de problemas de puntos de conexión](#bkmk_uea_endpoints).
 
+### <a name="data-collection-for-intune-managed-devices"></a>Colección de datos para dispositivos administrados por Intune
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> Puntos de conexión
+El análisis de puntos de conexión aprovecha el componente Experiencias del usuario y telemetría conectadas de Windows 10 y Windows Server (DiagTrack) para recopilar los datos de los dispositivos administrados por Intune. Asegúrese de que el servicio **Experiencia del usuario y telemetría asociadas** se ejecuta en el dispositivo.
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> Puntos de conexión
 
 Para inscribir dispositivos en Análisis de puntos de conexión, se deben enviar los datos funcionales necesarios a Microsoft. Si su entorno usa un servidor proxy, utilice esta información para configurar el proxy.
 
@@ -364,15 +367,15 @@ Para habilitar el uso compartido de datos funcionales, configure el servidor pro
 | `https://*.manage.microsoft.com` | Se usa para sincronizar la recopilación de dispositivos y los dispositivos con Análisis de puntos de conexión (solo en el rol del servidor de Configuration Manager). Para más información, consulte [Configuración del proxy para un servidor de sistema de sitio](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 
-### <a name="proxy-server-authentication"></a>Autenticación del servidor proxy
+#### <a name="proxy-server-authentication"></a>Autenticación del servidor proxy
 
 Si en la organización se usa la autenticación de servidor proxy para el acceso a Internet, asegúrese de que no bloquee los datos debido a la autenticación. Si el proxy no permite que los dispositivos envíen estos datos, no se mostrarán en Análisis de escritorio.
 
-#### <a name="bypass-recommended"></a>Desviar (recomendado)
+##### <a name="bypass-recommended"></a>Desviar (recomendado)
 
 Configure los servidores proxy para que no exijan la autenticación proxy del tráfico que entra en los puntos de conexión de uso compartido de datos. Esta opción es la solución más completa. Funciona en todas las versiones de Windows 10.  
 
-#### <a name="user-proxy-authentication"></a>Autenticación proxy del usuario
+##### <a name="user-proxy-authentication"></a>Autenticación proxy del usuario
 
 Configure los dispositivos para que usen el contexto del usuario con sesión iniciada para la autenticación proxy. Este método requiere las siguientes configuraciones:
 
@@ -385,7 +388,7 @@ Configure los dispositivos para que usen el contexto del usuario con sesión ini
 > [!IMPORTANT]
 > El enfoque de autenticación proxy del usuario no es compatible con el uso de Azure Advanced Threat Protection de Microsoft Defender. Este comportamiento se debe a que esta autenticación se basa en la clave del Registro **DisableEnterpriseAuthProxy** establecida en `0`, mientras que ATP de Microsoft Defender requiere que se establezca en `1`. Para obtener más información, consulte [Configurar el proxy del equipo y la configuración de conectividad de Internet en ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-#### <a name="device-proxy-authentication"></a>Autenticación proxy del dispositivo
+##### <a name="device-proxy-authentication"></a>Autenticación proxy del dispositivo
 
 Este enfoque admite los escenarios siguientes:
 

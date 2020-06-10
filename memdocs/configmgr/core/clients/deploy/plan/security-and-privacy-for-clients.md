@@ -10,12 +10,12 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694843"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270844"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Seguridad y privacidad para los clientes de Configuration Manager
 
@@ -48,7 +48,7 @@ Si no puede usar la autenticación de PKI, la aprobación identifica un equipo e
 - Automático para equipos en dominios de confianza
 - Automático para todos los equipos  
 
-El método de aprobación más seguro es aprobar automáticamente los clientes que pertenezcan a dominios de confianza. Después, compruebe y apruebe de forma manual el resto de los equipos. No le recomendamos que apruebe automáticamente todos los clientes, excepto si tiene otros controles de acceso para impedir que los equipos que no sean de confianza puedan acceder a la red.  
+El método de aprobación más seguro es aprobar automáticamente los clientes que pertenezcan a dominios de confianza. Esta opción incluye clientes unidos a un dominio en la nube de inquilinos conectados de Azure Active Directory (Azure AD).<!-- MEMDocs#318 --> Después, compruebe y apruebe de forma manual el resto de los equipos. No le recomendamos que apruebe automáticamente todos los clientes, excepto si tiene otros controles de acceso para impedir que los equipos que no sean de confianza puedan acceder a la red.  
 
 Para obtener más información sobre cómo aprobar equipos de forma manual, vea [Administrar clientes desde el nodo de dispositivos](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).  
 

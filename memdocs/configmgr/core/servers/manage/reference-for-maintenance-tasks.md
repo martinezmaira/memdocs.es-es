@@ -2,7 +2,7 @@
 title: Referencia de las tareas de mantenimiento
 titleSuffix: Configuration Manager
 description: Detalles de cada una de las tareas de mantenimiento del sitio de Configuration Manager
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9964834bf3a6bfa8e5c0a0bb70039554134490ec
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708543"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428594"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Referencia de las tareas de mantenimiento en Configuration Manager
 
@@ -96,6 +96,7 @@ Use esta tarea para eliminar de la base de datos del sitio todos los datos antig
 
 - Notificaciones de cliente vencidas o expiradas, como las solicitudes de descarga de la directiva de equipo o usuario.
 - Endpoint Protection, como solicitudes realizadas por un usuario administrativo para que los clientes ejecuten un examen o descarguen definiciones actualizadas.
+- Resultados de estado de ejecución de scripts
 
 |||
 |---------|---------|

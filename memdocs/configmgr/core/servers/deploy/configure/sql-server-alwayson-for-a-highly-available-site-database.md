@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9e2e4e85d9fb6a1ab34af8760e0ac61d6e4fab4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700893"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270878"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -263,6 +263,8 @@ Una vez completado el programa de instalación de Configuration Manager, los sig
 - SQL a través de TCP: **TCP 1433**  
 
 Puede usar puertos personalizados para estas configuraciones. Use los mismos puertos personalizados por el punto de conexión y en todas las réplicas del grupo de disponibilidad.
+
+Para que SQL replique datos entre sitios, cree una regla de equilibrio de carga para cada puerto en el equilibrador de carga de Azure. Para más información, consulte [Configuración de los puertos de alta disponibilidad para un equilibrador de carga interno](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>Agente de escucha
 

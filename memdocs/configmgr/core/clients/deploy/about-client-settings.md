@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877524"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347175"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -98,7 +98,7 @@ Habilita la [caché del mismo nivel](../../plan-design/hierarchy/client-peer-cac
 A partir de la versión 1906, especifique el tiempo mínimo durante el cual el cliente de Configuration Manager mantendrá el contenido almacenado en caché. Esta configuración de cliente define el tiempo mínimo que el agente de Configuration Manager debe esperar para quitar contenido de la memoria caché en caso de que se necesite más espacio.
 
 De forma predeterminada, este valor es de 1.440 minutos (24 horas).
-El valor máximo de esta configuración es de 10.080 minutos (1 semana).
+El valor máximo de esta configuración es de 10 080 minutos (una semana).
 
 Esta opción proporciona mayor control sobre la caché de cliente en diferentes tipos de dispositivos. Puede reducir el valor en clientes que tienen unidades de disco duro pequeñas y no necesitan mantener el contenido existente antes de que se ejecute otra implementación.
 
@@ -276,7 +276,7 @@ Configure cómo los usuarios pueden instalar software, actualizaciones de softwa
 
 Si los equipos requieren la indicación de PIN de BitLocker, esta opción omite el requisito de escribir un PIN cuando se reinicia el equipo después de una instalación de software.  
 
-- **Siempre**: Configuration Manager suspende temporalmente BitLocker después de que haya instalado software que requiere un reinicio y haya comenzado a reiniciar el equipo. Esta configuración solo se aplica a un reinicio del equipo iniciado por Configuration Manager. Esta configuración no suspende el requisito de escribir el PIN de BitLocker cuando el usuario reinicia el equipo. El requisito de indicación de PIN de BitLocker se reanuda tras el inicio de Windows.
+- **Siempre**: Configuration Manager suspende temporalmente BitLocker después de que haya instalado software que requiere un reinicio y reinicia el equipo. Esta configuración solo se aplica cuando Configuration Manager reinicia el equipo. Esta configuración no suspende el requisito de escribir el PIN de BitLocker cuando el usuario reinicia el equipo. El requisito de indicación de PIN de BitLocker se reanuda tras el inicio de Windows.
 
 - **Nunca**: Configuration Manager no suspende BitLocker después de instalar software que necesite un reinicio. En este escenario, la instalación del software no puede finalizar hasta que el usuario escriba el PIN para completar el proceso de inicio estándar y se cargue Windows.
 
@@ -329,29 +329,11 @@ Si quiere proporcionar a los usuarios más tiempo para instalar las implementaci
 
 Establezca un período de gracia de entre 0 y 120 horas. Use esta configuración junto con la propiedad de implementación **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario**. Para obtener más información, consulte [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period) (Implementar aplicaciones).
 
-
 ## <a name="computer-restart"></a>Reinicio de equipo
 
-Las opciones siguientes deben tener menos duración que la ventana de mantenimiento más corta que se aplique en el equipo:
+Para más información sobre esta configuración, consulte [Notificaciones de reinicio del dispositivo](device-restart-notifications.md).<!-- 7182335 -->
 
-- **Mostrar una notificación temporal al usuario que indique el intervalo antes de que el usuario se desconecte o el equipo se inicie (minutos)**
-- **Mostrar un cuadro de diálogo que el usuario no pueda cerrar, que muestre el intervalo de recuento antes de que el usuario se desconecte o el equipo se reinicie (minutos)**
-
-
-Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../manage/collections/use-maintenance-windows.md).
-
-- **Especifique la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (minutos)** (A partir de la versión 1906)<!--3976435-->
-  - El valor predeterminado es 240 minutos.
-  - El valor de duración de repetición debe ser menor que el valor de notificación temporal menos el valor para la notificación que el usuario no puede descartar.
-  - Para más información, consulte [Notificaciones de reinicio del dispositivo](device-restart-notifications.md).
-
-**Cuando una implementación requiere reiniciar, mostrar al usuario una ventana de diálogo en lugar de una notificación del sistema**<!--3555947-->: A partir de la versión 1902, al configurar este valor en **Sí**, la experiencia del usuario pasa a ser más intrusiva. Esta configuración se aplica a todas las implementaciones de aplicaciones, secuencias de tareas y actualizaciones de software. Para más información, consulte [Planeamiento del centro de software](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> En Configuration Manager 1902, en determinadas circunstancias, el cuadro de diálogo no reemplazará las notificaciones del sistema. Para resolver este problema, instale el [paquete acumulativo de actualizaciones para Configuration Manager versión 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>Optimización de entrega 
+## <a name="delivery-optimization"></a>Optimización de entrega
 
 <!-- 1324696 -->
 Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. Configure Optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
@@ -363,7 +345,7 @@ Los grupos de límites de Configuration Manager se usan para definir y regular l
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Uso de grupos de límites de Configuration Manager para el identificador del grupo de optimización de distribución
 
-Seleccione **Sí** para aplicar el identificador del grupo de límites como identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado. Al habilitar esta configuración, también se establece el modo de descarga Optimización de distribución en la opción Grupo (2) en los clientes de destino.
+Seleccione **Sí** para aplicar el identificador del grupo de límites como identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de Optimización de entrega, utiliza este identificador para buscar elementos del mismo nivel con el contenido. Al habilitar esta configuración, también se establece el modo de descarga Optimización de distribución en la opción Grupo (2) en los clientes de destino.
 
 > [!Note]
 > Microsoft recomienda permitir que el cliente configure esta opción a través de la directiva local, en lugar de la directiva de grupo. De esta manera, el identificador del grupo de límites puede establecerse como identificador del grupo de optimización de entrega en el cliente. Para obtener más información, consulte [Optimización de entrega](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -411,7 +393,7 @@ Elija **Sí** para suprimir un reinicio del equipo si es necesario después de i
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>Período de tiempo permitido que los usuarios pueden posponer un reinicio obligatorio para llevar a cabo la instalación de Endpoint Protection (horas)
 
-Si es necesario reiniciar una vez instalado el cliente de Endpoint Protection, esta configuración especifica el número de horas que los usuarios pueden posponer el reinicio obligatorio. Esta configuración requiere que la opción **Suprimir cualquier reinicio de equipo obligatorio después de instalar el cliente de Endpoint Protection** sea **No**.  
+Si es necesario reiniciar una vez instalado el cliente de Endpoint Protection, esta configuración especifica el número de horas que los usuarios pueden posponer el reinicio obligatorio. Esta configuración requiere que deshabilite la configuración siguiente: **Suprimir cualquier reinicio de equipo obligatorio después de instalar el cliente de Endpoint Protection**.
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>Deshabilitar orígenes alternativos (como Microsoft Windows Update, Microsoft Windows Server Update Services o recursos compartidos de UNC) para la actualización de definición inicial en los equipos cliente
 
@@ -423,7 +405,7 @@ Seleccione **Sí** si quiere que Configuration Manager solo instale la actualiza
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>Intervalo de sondeo para clientes heredados de dispositivos móviles
 
-Seleccione **Establecer intervalo** para especificar el período de tiempo (en horas o minutos) que los dispositivos móviles heredados sondean la directiva. Estos dispositivos incluyen plataformas como Windows CE, Mac OS X y Unix o Linux.
+Seleccione **Establecer intervalo** para especificar el período de tiempo (en horas o minutos) que los dispositivos móviles heredados sondean la directiva. Estos dispositivos incluyen plataformas como Windows CE, macOS y Unix o Linux.
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>Intervalo de sondeo para dispositivos modernos (minutos)
 
@@ -529,7 +511,7 @@ En la lista desplegable, seleccione **Sí** para permitir que los usuarios del C
 
 ### <a name="allow-network-wake-up"></a>Permitir reactivación de la red
 
-Se ha agregado en la versión 1810. Al establecer el permiso en **Habilitar**, se configuran las opciones de alimentación del adaptador de red para permitir que reactive el dispositivo. Al establecer el permiso en **Deshabilitar**, las opciones de alimentación del adaptador de red no se configuran para permitir que reactive el dispositivo.
+Cuando se habilita esta opción, el cliente establece la configuración de energía en el equipo para permitir que el adaptador de red reactive el dispositivo. Si deshabilita esta opción, el adaptador de red del equipo no podrá reactivar el dispositivo.
 
 ### <a name="enable-wake-up-proxy"></a>Habilitar proxy de reactivación
 
@@ -549,7 +531,7 @@ Después, configure las siguientes opciones adicionales según sea necesario:
     > [!IMPORTANT]  
     > Este número debe coincidir con el número en las **Propiedades**del sitio. Si cambia este número en un lugar, este no se actualizará automáticamente en el otro lugar.  
 
-- **Excepción del Firewall de Windows Defender para el proxy de reactivación**: El cliente de Configuration Manager configura automáticamente el número de puerto del proxy de reactivación en los dispositivos que ejecutan Firewall de Windows Defender. Seleccione **Configurar** para especificar los perfiles de firewall deseados.  
+- **Excepción del Firewall de Windows Defender para el proxy de reactivación**: El cliente de Configuration Manager configura automáticamente el número de puerto del proxy de reactivación en los dispositivos que ejecutan Firewall de Windows Defender. Seleccione **Configurar** para especificar los perfiles de firewall.  
 
     Si los clientes ejecutan otro firewall, necesita configurarlo manualmente para permitir el **Número de puerto de proxy de reactivación (UDP)** .  
 
@@ -671,7 +653,7 @@ Cuando esta opción está habilitada, las aplicaciones disponibles para el usuar
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a> Ocultar aplicaciones instaladas en el Centro de software
 
-Cuando esta opción está habilitada, las aplicaciones que ya están instaladas ya no se muestran en la pestaña Aplicaciones. Esta opción se establece como valor predeterminado al instalar o actualizar a Configuration Manager 1802. Las aplicaciones instaladas siguen estando disponibles para su revisión en la pestaña Estado de la instalación. <!--1357592-->
+Cuando esta opción está habilitada, las aplicaciones que ya están instaladas ya no se muestran en la pestaña Aplicaciones. Esta opción se establece como valor predeterminado al instalar o actualizar a Configuration Manager. Las aplicaciones instaladas siguen estando disponibles para su revisión en la pestaña Estado de la instalación. <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a> Ocultar el vínculo del catálogo de aplicaciones en el Centro de software
 
@@ -694,9 +676,9 @@ Pestañas disponibles:
 - **Estado de la instalación**
 - **Cumplimiento de dispositivos**
 - **Opciones**
-- Haga clic en el botón **Agregar pestaña** para agregar hasta 5 pestañas personalizadas.
+- Haga clic en el botón **Agregar pestaña** para agregar hasta cinco pestañas personalizadas.
   - Especifique los valores para **Nombre de la pestaña** y **Dirección URL de contenido** para la pestaña personalizada.
-  - Haga clic en **Eliminar pestaña** para quitar una pestaña personalizada.  
+  - Seleccione **Eliminar pestaña** para quitar una pestaña personalizada.  
 
   >[!Important]  
   > - Puede que algunas de las características de los sitios web no funcionen cuando se usen como una pestaña personalizada en el Centro de software. Asegúrese de probar los resultados antes de implementar esto en los clientes. <!--519659-->
@@ -731,9 +713,9 @@ Por ejemplo, si la organización no usa las directivas de cumplimiento y quiere 
 
   - Centro de software siempre usa la configuración predeterminada. Los usuarios pueden cambiar este filtro, pero el Centro de software no conserva sus preferencias.  
 
-- Establezca la **vista de aplicación predeterminada** como **vista de mosaico** o **vista de lista**. 
+- Establezca la **vista de aplicación predeterminada** como **vista de mosaico** o **vista de lista**.
 
-  - Si un usuario cambia esta configuración, el Centro de software mantiene la preferencia del usuario en el futuro. 
+  - Si un usuario cambia esta configuración, el Centro de software mantiene la preferencia del usuario en el futuro.
 
 
 ## <a name="software-deployment"></a>Implementación de software  
@@ -911,7 +893,7 @@ Cuando esta opción se establece en **Sí**, se habilita la configuración de op
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Habilitar la instalación de actualizaciones de software en la ventana de mantenimiento "Todas las implementaciones" cuando esté disponible la ventana de mantenimiento "Actualización de software"
 
-A partir de la versión 1810, al establecer esta opción en **Sí** y si el cliente tiene al menos una ventana de mantenimiento "Actualización de Software" definida, las actualizaciones de software se instalarán durante una ventana de mantenimiento "Todas las implementaciones".
+Al establecer esta opción en **Sí** y si el cliente tiene al menos una ventana de mantenimiento "Actualización de Software" definida, las actualizaciones de software se instalarán durante una ventana de mantenimiento "Todas las implementaciones".
 
 De forma predeterminada, esta opción está establecida en **No**. Este valor usa el mismo comportamiento que antes: si ambos tipos existen, se omite la ventana. <!--2839307-->
 
@@ -943,7 +925,7 @@ Esta nueva configuración de cliente proporciona estas opciones:
 
     - Configura el archivo setupconfig.ini en el dispositivo con la [opción de línea de comandos de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority Normal`.
 
-- **Bajo**: puede seguir trabajando en el dispositivo mientras se descarga y se actualiza en segundo plano. El tiempo de instalación total es superior, pero la interrupción del usuario es más corta. Es posible que necesite aumentar el tiempo máximo de ejecución de la actualización para evitar el agotamiento del tiempo de espera cuando utilice esta opción.  
+- **Bajo**: puede seguir trabajando en el dispositivo mientras se descarga y se actualiza en segundo plano. El tiempo de instalación total es superior, pero la interrupción del usuario es más corta. Es posible que necesite aumentar el tiempo máximo de ejecución de la actualización para evitar el agotamiento del tiempo de espera cuando use esta opción.  
 
     - Quita la [opción de línea de comandos de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority` desde el archivo setupconfig.ini.
 
