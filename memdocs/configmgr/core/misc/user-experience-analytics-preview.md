@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428682"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455130"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Análisis de puntos de conexión (versión preliminar)
 
@@ -56,7 +56,7 @@ Para empezar a usar Análisis de puntos de conexión, compruebe los requisitos p
 
 En esta versión preliminar, puede inscribir dispositivos a través de Configuration Manager o Microsoft Intune. 
 
-Para inscribir dispositivos mediante Intune, esta versión preliminar requiere lo siguiente:
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a> Para inscribir dispositivos mediante Intune, esta versión preliminar requiere lo siguiente:
 - Dispositivos inscritos en Intune que ejecutan Windows 10
 - La información del rendimiento de inicio solo está disponible para los dispositivos que ejecutan la versión 1903 o posterior de Windows 10 Enterprise (las ediciones Home y Pro no son actualmente compatibles), y los dispositivos deben estar unidos a Azure AD o Azure AD híbrido. Las máquinas unidas al espacio de trabajo no se admiten actualmente.
 - Conectividad de red desde dispositivos a la nube pública de Microsoft. Para obtener más información, consulte [Puntos de conexión](#bkmk_uea_endpoints).
@@ -64,11 +64,12 @@ Para inscribir dispositivos mediante Intune, esta versión preliminar requiere l
    - Al hacer clic en **Inicio**, acepta y reconoce que los datos del cliente pueden almacenarse fuera de la ubicación seleccionada al aprovisionar el inquilino de Microsoft Intune.
    - Después de hacer clic en **Iniciar** para recopilar datos, los otros roles con permiso de solo lectura podrán ver los datos.
 
-Para inscribir dispositivos a través de Configuration Manager, esta versión preliminar requiere lo siguiente:
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a> Para inscribir dispositivos a través de Configuration Manager, esta versión preliminar requiere lo siguiente:
 - Configuration Manager, versión 2002 o posterior.
 - Clientes actualizados a la versión 2002 o posterior.
 - [Asociación de inquilinos de Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) habilitada con una ubicación de inquilino de Azure de Norteamérica o Europa (pronto se ampliará a otras regiones).
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a> Los scripts de corrección proactiva requieren:
 Tanto si los dispositivos se inscriben a través de Intune como de Configuration Manager, el [**scripting de corrección proactiva**](#bkmk_uea_prs) tiene los requisitos siguientes:
 - Los dispositivos deben estar unidos a Azure AD o Azure AD híbrido y cumplir una de las condiciones siguientes:
 - Un dispositivo Windows 10 Enterprise, Professional o Education administrado por Intune
