@@ -464,6 +464,8 @@
           href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Administrar la infraestructura
   items:
+    - name: Centro de la comunidad
+      href: servers/manage/community-hub.md
     - name: Información de administración
       href: servers/manage/management-insights.md
     - name: CMPivot
@@ -777,6 +779,8 @@
           href: clients/manage/collections/prerequisites-for-collections.md
         - name: Procedimientos recomendados para recopilaciones
           href: clients/manage/collections/best-practices-for-collections.md
+        - name: Evaluación de colecciones
+          href: clients/manage/collections/collection-evaluation.md
         - name: Cómo crear recopilaciones
           href: clients/manage/collections/create-collections.md
         - name: Cómo administrar recopilaciones

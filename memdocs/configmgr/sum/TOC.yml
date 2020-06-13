@@ -68,6 +68,8 @@
       href: deploy-use/optimize-windows-10-update-delivery.md
     - name: Administración de archivos de instalación rápida para actualizaciones de Windows 10
       href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Administración de controladores de Surface
+      href: deploy-use/surface-drivers.md
     - name: Integración con Windows Update for Business en Windows 10
       href: deploy-use/integrate-windows-update-for-business-windows-10.md
     - name: Actualizaciones de software de terceros
