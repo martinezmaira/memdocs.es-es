@@ -1,5 +1,5 @@
 ---
-title: Asociación de inquilinos del administrador de puntos de conexión de Microsoft
+title: Asociación de inquilinos de Microsoft Endpoint Manager
 titleSuffix: Configuration Manager
 description: Cargue los dispositivos de Configuration Manager en el servicio en la nube y tome medidas del centro de administración.
 ms.date: 04/10/2020
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e2b8c07a64265d33ade0b1c2c08c2d9c4096b741
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693462"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795625"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Asociación de inquilinos de Microsoft Endpoint Manager: sincronización de dispositivos y acciones de dispositivo
 <!--3555758 live 3/4/2020-->
@@ -39,10 +39,7 @@ A partir de Configuration Manager versión 2002, puede cargar los dispositivos C
 ## <a name="internet-endpoints"></a>Puntos de conexión de Internet
 
 - `https://aka.ms/configmgrgateway`
-- `https://gateway.configmgr.manage.microsoft.com`
-- `https://us.gateway.configmgr.manage.microsoft.com`
-- `https://eu.gateway.configmgr.manage.microsoft.com`
-
+- `https://*.manage.microsoft.com` <!--7424742-->
 
 ## <a name="enable-device-upload"></a>Habilitar carga de dispositivo
 
@@ -55,40 +52,40 @@ A partir de Configuration Manager versión 2002, puede cargar los dispositivos C
 
 Si tiene la administración conjunta habilitada actualmente, edite las propiedades de administración conjunta para habilitar la carga de dispositivos con las instrucciones siguientes:
 
-1. En la consola de administración de Configuration Manager, vaya a **Administración** > **información general** > **Cloud Services** > **administración conjunta**.
-1. Haga clic con el botón derecho en la configuración de administración conjunta y seleccione **propiedades**.
-1. En la pestaña **configurar carga** , seleccione **cargar al centro de administración de Microsoft Endpoint Manager**. Haga clic en **Aplicar**.
-   - La configuración predeterminada para la carga de dispositivos es **todos mis dispositivos administrados por el punto de conexión de Microsoft Configuration Manager**. Si es necesario, puede limitar la carga a una sola recopilación de dispositivos.
+1. En la consola de administración de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios de nube** > **Co-management** (Administración conjunta).
+1. Haga clic con el botón derecho en la configuración de administración conjunta y seleccione **Propiedades**.
+1. En la pestaña **Configure upload** (Configurar carga), seleccione **Upload to Microsoft Endpoint Manager admin center** (Cargar en el centro de administración de Microsoft Endpoint Manager). Haga clic en **Aplicar**.
+   - El valor predeterminado para la carga de dispositivos es **All my devices managed by Microsoft Endpoint Configuration Manager** (Todos los dispositivos administrados por Microsoft Endpoint Configuration Manager). Si es necesario, puede limitar la carga a una sola recopilación de dispositivos.
 
    [![Asistente para configuración de administración conjunta](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
-1. Inicie sesión con su cuenta de *administrador global* cuando se le solicite.
-1. Haga clic en **sí** para aceptar la notificación de creación de la **aplicación de AAD** . Esta acción aprovisiona una entidad de servicio y crea un registro de aplicación Azure AD para facilitar la sincronización.
+1. Inicie sesión con la cuenta de *administrador global* cuando se le pida.
+1. Haga clic en **Sí** para aceptar la notificación **Crear aplicación de AAD**. Esta acción aprovisiona una entidad de servicio y crea un registro de aplicación de Azure AD para facilitar la sincronización.
 1. Haga clic en **Aceptar** para salir de las propiedades de administración conjunta una vez que haya terminado de realizar los cambios.
 
 
 ### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Usar el Asistente para configurar la administración conjunta para habilitar la carga de dispositivos
 Si no tiene la administración conjunta habilitada, use el Asistente para **configurar la administración conjunta** para habilitar la carga del dispositivo. Puede cargar los dispositivos sin habilitar la inscripción automática de cargas de trabajo de administración conjunta o cambio en Intune. Habilite la carga de dispositivos con las instrucciones siguientes:
 
-1. En la consola de administración de Configuration Manager, vaya a **Administración** > **información general** > **Cloud Services** > **administración conjunta**.
-1. En la cinta de opciones, haga clic en **configurar la administración conjunta** para abrir el asistente.
-1. En la página **incorporación de inquilinos** , seleccione **AzurePublicCloud** para su entorno. Azure Government nube no es compatible.
+1. En la consola de administración de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios de nube** > **Co-management** (Administración conjunta).
+1. En la cinta de opciones, haga clic en **Configure co-management** (Configurar la administración conjunta) para abrir el asistente.
+1. En la página **Tenant onboarding** (Incorporación de inquilinos), seleccione **AzurePublicCloud** para el entorno. La nube de Azure Government no es compatible.
 1. Haga clic en **Iniciar sesión**. Use la cuenta de *administrador global* para iniciar sesión.
 1. Asegúrese de que la opción **cargar en el centro de administración de Microsoft Endpoint Manager** está seleccionada en la página **incorporación de inquilinos** .
    - Asegúrese de que la opción **Habilitar la inscripción automática de clientes para la administración conjunta** no está activada si no desea habilitar la administración conjunta ahora. Si desea habilitar la administración conjunta, seleccione la opción.
    - Si habilita la administración conjunta junto con la carga del dispositivo, se le proporcionarán páginas adicionales en el Asistente para completar el asistente. Para más información, consulte [Habilitación de la administración conjunta](../comanage/how-to-enable.md).
 
    [![Asistente para configuración de administración conjunta](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Haga clic en **siguiente** y luego en **sí** para aceptar la notificación de creación de la **aplicación de AAD** . Esta acción aprovisiona una entidad de servicio y crea un registro de aplicación Azure AD para facilitar la sincronización.
+1. Haga clic en **Siguiente** y luego en **Sí** para aceptar la notificación **Crear aplicación de AAD**. Esta acción aprovisiona una entidad de servicio y crea un registro de aplicación de Azure AD para facilitar la sincronización.
 1. En la página **configurar carga** , seleccione la configuración de carga de dispositivo recomendada para **todos mis dispositivos administrados por el punto de conexión de Microsoft Configuration Manager**. Si es necesario, puede limitar la carga a una sola recopilación de dispositivos.
-1. Haga clic en **Resumen** para revisar la selección y, a continuación, haga clic en **siguiente**.
-1. Una vez completado el asistente, haga clic en **cerrar**.  
+1. Haga clic en **Resumen** para revisar la selección y luego en **Siguiente**.
+1. Cuando el asistente esté completo, haga clic en **Cerrar**.  
 
 
 ## <a name="review-your-upload"></a><a name="bkmk_review"></a>Revisión de la carga
 
-1. Abra **CMGatewaySyncUploadWorker. log** desde &lt;el directorio de instalación de Configuration Manager> \logs.
-1. La siguiente hora de sincronización se indica mediante entradas de registro `Next run time will be at approximately: 02/28/2020 16:35:31`similares a.
-1. En el caso de las cargas de dispositivo, busque entradas de `Batching N records`registro similares a. **N** es el número de dispositivos que se cargan en la nube. 
+1. Abra **CMGatewaySyncUploadWorker. log** desde el &lt; Directorio de instalación de Configuration Manager> \logs.
+1. La siguiente hora de sincronización se indica mediante entradas de registro similares a `Next run time will be at approximately: 02/28/2020 16:35:31` .
+1. En el caso de las cargas de dispositivo, busque entradas de registro similares a `Batching N records` . **N** es el número de dispositivos que se cargan en la nube. 
 1. La carga se produce cada 15 minutos para los cambios. Una vez que se cargan los cambios, los cambios del cliente pueden tardar entre 5 y 10 minutos en aparecer en el **centro de administración de Microsoft Endpoint Manager**.
 
 ## <a name="perform-device-actions"></a>Realizar acciones de dispositivo
@@ -98,9 +95,9 @@ Si no tiene la administración conjunta habilitada, use el Asistente para **conf
    [![Todos los dispositivos del centro de administración de Microsoft Endpoint Manager](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Haga clic en un dispositivo para cargar su página de **información general** .
 1. Haga clic en cualquiera de las siguientes acciones:
-   - **Sincronizar Directiva de equipo**
-   - **Sincronizar Directiva de usuario**
-   - **Ciclo de evaluación de la aplicación**
+   - **Sincronizar directiva de máquina**
+   - **Sincronizar directiva de usuario**
+   - **Ciclo de evaluación de aplicaciones**
 
    [![Información general del dispositivo en el centro de administración de Microsoft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
