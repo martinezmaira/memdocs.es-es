@@ -141,8 +141,12 @@
               href: configure-microsoft-launcher.md
             - name: "Configuración de Microsoft\_Edge"
               href: manage-microsoft-edge.md
+            - name: Configuración de Office
+              href: manage-microsoft-office.md
             - name: Configurar Outlook
               href: app-configuration-policies-outlook.md
+            - name: "Configuración de Microsoft\_Teams"
+              href: manage-microsoft-teams.md
             - name: "Configuración de Google\_Chrome para Android"
               href: apps-configure-chrome-android.md
             - name: Configuración de una VPN para Android Enterprise
