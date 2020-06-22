@@ -83,7 +83,7 @@
 ### [¿Qué ocurre si restablece el dispositivo con el Portal de empresa?](effects-of-device-reset-company-portal-ios.md)
 ### [Anulación de la inscripción de dispositivos](unenroll-your-device-from-intune-ios.md)
 #### [¿Qué ocurre al anular la inscripción de un dispositivo?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [Sincronizar el dispositivo manualmente](sync-your-device-manually-ios.md)
+### [Sincronizar el dispositivo iOS manualmente](sync-your-device-manually-ios.md)
 
 ### [Solución de problemas comunes con iOS](troubleshoot-your-device-iOS.md)
 #### [Volver a conectar un dispositivo iOS en riesgo](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [Inscripción de dispositivos macOS](enroll-your-device-in-intune-macos-cp.md)
 ### [Inscripción de un dispositivo macOS proporcionado por la organización](enroll-company-device-macos.md)  
 ### [Anular la inscripción del dispositivo macOS](unenroll-your-device-from-intune-macos.md)  
+### [Sincronizar el dispositivo macOS manualmente](sync-your-device-manually-macos.md)
 ### [Solucionar problemas habituales en macOS](troubleshoot-your-device-macos.md)
 #### [La versión de macOS aún no es compatible](your-macos-version-isnt-yet-supported.md)
 #### [Actualización de dispositivos macOS](you-need-to-update-your-macos-device.md)
