@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429762"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680411"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos macOS para permitir o restringir características mediante Intune
 
@@ -190,7 +190,7 @@ Esta característica se aplica a:
 
   - **Requisito de código**: escriba la firma de código para la aplicación o el proceso.
 
-    Se crea una firma de código cuando una aplicación o un archivo binario están firmados con un certificado de desarrollador. Para encontrar la designación, ejecute el comando `codesign` manualmente en la aplicación Terminal: `codesign --display -r -/path/to/app/binary`. La firma del código es todo lo que aparece después de `=>`.
+    Se crea una firma de código cuando una aplicación o un archivo binario están firmados con un certificado de desarrollador. Para encontrar la designación, ejecute el comando `codesign` manualmente en la aplicación Terminal: `codesign --display -r - /path/to/app/binary`. La firma del código es todo lo que aparece después de `=>`.
 
   - **Habilitar validación de código estática**: seleccione **Sí** para que la aplicación o el proceso validen estáticamente el requisito de código. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
 

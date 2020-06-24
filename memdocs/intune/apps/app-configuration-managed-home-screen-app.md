@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2c804618081a21aaf9dfd70b92d65fc14a7cc7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3bcb9d86cf413407bc1e0812be4b0c9e17d0f88d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988833"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093209"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configuración de la aplicación Managed Home Screen de Microsoft para Android Enterprise
 
@@ -34,7 +34,7 @@ Managed Home Screen es la aplicación que se usa para dispositivos Android Enter
 Normalmente, si las opciones están disponibles a través de Configuración del dispositivo, configúrelas ahí. De esta forma ahorra tiempo, minimiza los errores y obtendrá una mejor experiencia de soporte técnico de Intune. Sin embargo, actualmente algunas de las opciones de Managed Home Screen solo están disponibles a través del panel **Directivas de configuración de aplicaciones** de la consola de Intune. Use este documento para obtener información sobre cómo configurar las distintas opciones mediante el Diseñador de configuraciones o un script JSON. 
 
 > [!NOTE]
-> Actualmente es posible, y recomendable, establecer las aplicaciones permitidas y los vínculos web anclados a través de **Aplicaciones** y **Configuración del dispositivo**. Para obtener la lista completa de opciones disponibles en **Configuración del dispositivo** que afectan a Managed Home Screen, vea [ Configuración del dispositivo dedicado](../configuration/device-restrictions-android-for-work.md#dedicated-devices).  
+> Actualmente es posible, y recomendable, establecer las aplicaciones permitidas y los vínculos web anclados a través de **Aplicaciones** y **Configuración del dispositivo**. Para obtener la lista completa de opciones disponibles en **Configuración del dispositivo** que afectan a Managed Home Screen, vea [ Configuración del dispositivo dedicado](../configuration/device-restrictions-android-for-work.md#device-experience).  
 
 En primer lugar, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones**. Agregue una directiva de configuración para **Dispositivos administrados** que se ejecutan en **Android** y elija **Managed Home Screen** como la aplicación asociada. Haga clic en **Opciones de configuración** para configurar las distintas opciones disponibles de Managed Home Screen. 
 
@@ -382,7 +382,7 @@ Este es un ejemplo de script JSON con todas las claves de configuración disponi
 La aplicación de Pantalla principal administrada ahora proporciona acceso a la aplicación de directiva de dispositivo Android de Google. La aplicación de Pantalla principal administrada es un iniciador personalizado que se usa para dispositivos inscritos en Intune, como dispositivos dedicados de Android Enterprise (AE) que usan el modo de pantalla completa de varias aplicaciones. Puede acceder a la aplicación de directiva de dispositivo Android o guiar a los usuarios a esta aplicación, con fines de soporte técnico y depuración. Esta capacidad de inicio está disponible en el momento en que el dispositivo se inscribe y se bloquea en la Pantalla principal administrada. No se necesitan instalaciones adicionales para usar esta funcionalidad.
 
 ## <a name="managed-home-screen-debug-screen"></a>Pantalla de depuración de Managed Home Screen
-Para acceder a la pantalla de depuración de Managed Home Screen, haga clic en el botón **atrás** hasta que se muestre la pantalla de depuración (haga clic en el botón **atrás** 15 veces o más). En esta pantalla de depuración, puede iniciar la aplicación de directivas de dispositivos Android, ver y cargar registros o pausar temporalmente la pantalla completa para actualizar el dispositivo. Para más información sobre cómo pausar el modo de pantalla completa, consulte el elemento **Salir del modo de pantalla completa,** en la [configuración de dispositivo dedicada](../configuration/device-restrictions-android-for-work.md#dedicated-devices) de Android Enterprise. Si quiere que resulte más fácil acceder al menú Depurar de Managed Home Screen, puede establecer **Habilitar el menú Depurar de acceso fácil** en `True` con directivas de configuración de aplicación. 
+Para acceder a la pantalla de depuración de Managed Home Screen, haga clic en el botón **atrás** hasta que se muestre la pantalla de depuración (haga clic en el botón **atrás** 15 veces o más). En esta pantalla de depuración, puede iniciar la aplicación de directivas de dispositivos Android, ver y cargar registros o pausar temporalmente la pantalla completa para actualizar el dispositivo. Para más información sobre cómo pausar el modo de pantalla completa, consulte el elemento **Salir del modo de pantalla completa,** en la [configuración de dispositivo dedicada](../configuration/device-restrictions-android-for-work.md#device-experience) de Android Enterprise. Si quiere que resulte más fácil acceder al menú Depurar de Managed Home Screen, puede establecer **Habilitar el menú Depurar de acceso fácil** en `True` con directivas de configuración de aplicación. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -9,6 +9,7 @@ ms.date: 04/17/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e82d8f27b7ffbce663ee64030a6d933bf1684dc1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9a681020dded298e10d2bcb2fa20ebd7dd0c179e
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880600"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531781"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>Configuración de un dispositivo Android con Portal de empresa e Intercede
 

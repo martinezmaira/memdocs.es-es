@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/09/2020
 ms.topic: overview
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ad9d641bc59b9fee99abce4d05b3871eb90e189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cd2d7f5412eda30a169f657434626bb406ebfaac
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984846"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531815"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Introducción a los escenarios guiados de Intune 
 

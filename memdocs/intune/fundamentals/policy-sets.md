@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531647"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Uso de conjuntos de directivas para agrupar colecciones de objetos de administración
 

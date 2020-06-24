@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: faf63bd4d738278e41e90fe54e696f83e727a58d
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362516"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531849"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Escenario guiado: Aplicaciones móviles seguras de Microsoft Office
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862367"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093683"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listas de configuraciones de restricciones de dispositivos Android y Samsung Knox en Intune
 
@@ -193,4 +193,4 @@ La configuración de pantalla completa solo se aplica a dispositivos Samsung Kno
 
 [Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
-También puede crear perfiles de pantalla completa para dispositivos [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) y [Windows 10](kiosk-settings.md).
+También puede crear perfiles de pantalla completa para dispositivos [Android Enterprise](device-restrictions-android-for-work.md#device-experience) y [Windows 10](kiosk-settings.md).

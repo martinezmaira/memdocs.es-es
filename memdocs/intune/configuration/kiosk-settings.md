@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9be644a47a361cf29e7b7132b2c87a4921553ea
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f58e457a5868053a94e1f2c1185bbae0e4b69327
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989438"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093076"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Configuración de dispositivos con Windows 10 y Windows Holographic for Business para ejecutarse como una pantalla completa dedicada con Intune
 
@@ -31,7 +31,7 @@ Esta característica se aplica a:
 - Windows 10 y versiones posteriores
 - Windows Holographic for Business
 
-Para crear perfiles de quiosco para otras plataformas, consulte [Administrador de dispositivos Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) y [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Para crear perfiles de quiosco para otras plataformas, consulte [Administrador de dispositivos Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) y [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune admite un perfil de quiosco por dispositivo. Si necesita varios perfiles de quiosco en un único dispositivo, puede usar un [OMA-URI personalizado](custom-settings-windows-10.md).
 
@@ -89,6 +89,6 @@ Después de [asignar el perfil](device-profile-assign.md), [supervise su estado]
 Puede crear perfiles de pantalla completa para dispositivos que ejecutan las siguientes plataformas:
 
 - [Administrador de dispositivos Android](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
+- [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
 - [Windows 10 y versiones posteriores](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

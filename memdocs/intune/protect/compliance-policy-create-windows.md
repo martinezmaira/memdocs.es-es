@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906897"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107415"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Configuración de Windows 10 y versiones posteriores para marcar dispositivos como compatibles o no compatibles con Intune
 
@@ -46,13 +46,12 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
 - **Requerir BitLocker**:  
    La característica Cifrado de unidad BitLocker de Windows cifra todos los datos almacenados en el volumen del sistema operativo Windows. BitLocker usa el Módulo de plataforma segura (TPM) para ayudar a proteger el sistema operativo Windows y los datos de usuario. También ayuda a confirmar que un equipo no se manipule, incluso si se deja desatendido, se pierde o se lo roban. Si el equipo está equipado con un TPM compatible, BitLocker usa este para bloquear las claves de cifrado que protegen los datos. Como resultado, las claves no son accesibles hasta que el TPM comprueba el estado del equipo.  
 
-   - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.
-   - **Requerir**: el dispositivo puede proteger los datos almacenados en la unidad contra el acceso no autorizado cuando el sistema está apagado o hibernando.  
-
+  - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.
+  - **Requerir**: el dispositivo puede proteger los datos almacenados en la unidad contra el acceso no autorizado cuando el sistema está apagado o hibernando.  
 
 - **Debe estar habilitado el arranque seguro en el dispositivo**:  
-    - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.
-    - **Requerir**: se obliga al sistema a arrancar en un estado de fábrica de confianza. Los componentes principales que se usan para arrancar el equipo deben tener las firmas de cifrado correctas que son de confianza para la organización que fabricó el dispositivo. El firmware UEFI comprueba la firma antes de permitir iniciar el equipo. Si los archivos se manipulan, lo que rompe su firma, el sistema no arranca.
+  - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.
+  - **Requerir**: se obliga al sistema a arrancar en un estado de fábrica de confianza. Los componentes principales que se usan para arrancar el equipo deben tener las firmas de cifrado correctas que son de confianza para la organización que fabricó el dispositivo. El firmware UEFI comprueba la firma antes de permitir iniciar el equipo. Si los archivos se manipulan, lo que rompe su firma, el sistema no arranca.
 
   > [!NOTE]
   > La opción **Debe estar habilitado el arranque seguro en el dispositivo** se admite en algunos dispositivos TPM 1.2 y 2.0. Para los dispositivos que no son compatibles con TPM 2.0 o versiones posteriores, el estado de la directiva en Intune se muestra como **No conforme**. Para más información sobre las versiones compatibles, vea [Atestación de estado de dispositivo](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
@@ -60,7 +59,7 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
 - **Requiere integridad de código**:  
   la integridad de código es una característica que valida la integridad de un archivo del sistema o controlador cada vez que se carga en la memoria.
   - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.
-  -  **Requerir**: requerir la integridad de código, que detecta si se está cargando en el kernel un archivo del sistema o controlador sin firmar. También detecta si se ha modificado un archivo del sistema mediante software malintencionado o si lo ha ejecutado un usuario con privilegios de administrador.
+  - **Requerir**: requerir la integridad de código, que detecta si se está cargando en el kernel un archivo del sistema o controlador sin firmar. También detecta si se ha modificado un archivo del sistema mediante software malintencionado o si lo ha ejecutado un usuario con privilegios de administrador.
 
 Más recursos:
 
@@ -104,7 +103,7 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
 
 - **Requerir cumplimiento del dispositivo de Configuration Manager**:  
   - **Sin configurar** (*valor predeterminado*): Intune no comprueba ninguna configuración de Configuration Manager para el cumplimiento.
-  - **Requerir**: exija que toda la configuración (elementos de configuración) de Configuration Manager sea compatible.  
+  - **Requerir**: exija que toda la configuración (elementos de configuración) de Configuration Manager sea compatible.
 
     Por ejemplo, exige que todas las actualizaciones de software se instalen en los dispositivos. En Configuration Manager, este requisito tiene el estado "Instalado". Si algún programa del dispositivo se encuentra en un estado desconocido, dicho dispositivo no será conforme en Intune.
 
@@ -128,7 +127,7 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
   
   Cuando se establece en *Alfanumérico*, están disponibles las opciones siguientes:  
   - **Complejidad de la contraseña**:  
-    Las opciones son: 
+    Las opciones son:
     - **Requerir el uso de dígitos y letras minúsculas** (*valor predeterminado*)
     - **Requerir el uso de dígitos, letras minúsculas y mayúsculas**
     - **Requerir dígitos, letras minúsculas, letras mayúsculas y caracteres especiales**
@@ -172,7 +171,7 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
 
 - **Firewall**:  
   - **No configurado** (*valor predeterminado*): Intune no controla el firewall de Microsoft Defender ni cambia la configuración existente.
-  - **Requerir**: activa el firewall de Microsoft Defender y evita que los usuarios lo desactiven.  
+  - **Requerir**: activa el firewall de Microsoft Defender y evita que los usuarios lo desactiven.
 
   [CSP del firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
@@ -181,27 +180,21 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
 
 - **Módulo de plataforma segura (TPM)** :  
   - **No configurado** (*valor predeterminado*): Intune no comprueba si el dispositivo tiene una versión de chip de TPM.
-  - **Requerir**: Intune comprueba el cumplimiento de la versión del chip TPM. El dispositivo es conforme si la versión del chip TPM es mayor que **0** (cero). El dispositivo no es conforme si no hay una versión de TPM en el dispositivo.  
+  - **Requerir**: Intune comprueba el cumplimiento de la versión del chip TPM. El dispositivo es conforme si la versión del chip TPM es mayor que **0** (cero). El dispositivo no es conforme si no hay una versión de TPM en el dispositivo.
 
   [CSP de DeviceStatus CSP: nodo de DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus**:  
-  - **Sin configurar** (*valor predeterminado*): Intune no busca soluciones antivirus instaladas en el dispositivo. 
+  - **Sin configurar** (*valor predeterminado*): Intune no busca soluciones antivirus instaladas en el dispositivo.
   - **Requerir**: comprobar el cumplimiento mediante soluciones antivirus registradas con el [Centro de seguridad de Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), como Symantec y Microsoft Defender.
-  
-  [CSP de DeviceStatus: DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
-  > [!NOTE]
-  > El CSP de DeviceStatus para Antivirus no es compatible con *Windows 10 Home* y notifica un estado *No aplicable*. El equipo de Intune trabaja en una corrección. Para solucionar esta limitación, considere la posibilidad de usar la configuración de [Windows Defender](#defender) en la directiva de cumplimiento de dispositivos. La configuración de Windows Defender es compatible con Windows 10 Home.  
+  [CSP de DeviceStatus: DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 - **Antiespía**:  
   - **Sin configurar** (*valor predeterminado*): Intune no busca soluciones antiespía instaladas en el dispositivo.
-  - **Requerir**: comprobar el cumplimiento mediante soluciones antiespía registradas con el [Centro de seguridad de Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), como Symantec y Microsoft Defender.  
-  
-  [CSP de DeviceStatus: DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  - **Requerir**: comprobar el cumplimiento mediante soluciones antiespía registradas con el [Centro de seguridad de Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), como Symantec y Microsoft Defender.
 
-  > [!NOTE]
-  > El CSP de DeviceStatus para Antispyware no es compatible con *Windows 10 Home* y notifica un estado *No aplicable*. El equipo de Intune trabaja en una corrección. Para solucionar esta limitación, considere la posibilidad de usar la configuración de [Windows Defender](#defender) en la directiva de cumplimiento de dispositivos. La configuración de Windows Defender es compatible con Windows 10 Home. 
+  [CSP de DeviceStatus: DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -212,7 +205,7 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
   - **Requerir**: activa el servicio antimalware de Microsoft Defender y evita que los usuarios lo desactiven.
 
 - **Versión mínima de Antimalware de Microsoft Defender**:  
-  Escriba la versión mínima permitida del servicio antimalware de Microsoft Defender. Por ejemplo, escriba `4.11.0.0`. Cuando se deja en blanco, se puede usar cualquier versión del servicio antimalware de Microsoft Defender.  
+  Escriba la versión mínima permitida del servicio antimalware de Microsoft Defender. Por ejemplo, escriba `4.11.0.0`. Cuando se deja en blanco, se puede usar cualquier versión del servicio antimalware de Microsoft Defender.
 
   *De forma predeterminada, no se configura ninguna versión*.
 
@@ -244,7 +237,6 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
   - **Alto**: esta opción es la menos segura, ya que permite todos los niveles de amenaza. Quizás sea útil si utiliza esta solución solo con fines informativos.
   
   Para configurar ATP (protección contra amenazas avanzada) de Microsoft Defender como servicio de defensa contra amenazas, consulte [Habilitación de ATP de Microsoft Defender con acceso condicional](advanced-threat-protection.md).
-
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
