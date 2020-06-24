@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431623"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776878"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Directiva de firewall para la seguridad de puntos de conexión en Intune
 
-Use la directiva de firewall de seguridad de puntos de conexión de Intune para configurar un firewall integrado para los dispositivos que ejecutan macOS y Windows 10. Los firewalls integrados son BitLocker para los dispositivos Windows y FileVault para los dispositivos macOS.
+Use la directiva de firewall de seguridad de puntos de conexión de Intune para configurar un firewall integrado para los dispositivos que ejecutan macOS y Windows 10.
 
 Aunque se puede establecer la misma configuración de firewall usando perfiles de Endpoint Protection de configuración de dispositivos, los perfiles de configuración de dispositivos incluyen más categorías de configuración que no guardan relación con los firewalls y que podrían entorpecer la tarea de establecer únicamente la configuración de firewall en el entorno.
 

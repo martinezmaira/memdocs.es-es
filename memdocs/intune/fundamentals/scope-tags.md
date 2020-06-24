@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990748"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721914"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito para TI distribuida
 
@@ -81,7 +81,6 @@ Al trabajar con etiquetas de ámbito, recuerde estos detalles:
 - Puede asignar etiquetas de ámbito a un tipo de objeto de Intune si el inquilino puede tener varias versiones de ese objeto (como asignaciones de roles o aplicaciones).
   Los objetos de Intune siguientes son excepciones a esta regla y actualmente no admiten etiquetas de ámbito:
     - Perfiles ESP de Windows
-    - Categorías de dispositivos
     - Restricciones de inscripción
     - Identificadores de dispositivos corporativos
     - Dispositivos Autopilot

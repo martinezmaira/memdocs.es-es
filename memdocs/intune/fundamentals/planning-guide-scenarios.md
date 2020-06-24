@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f4e98a9c25121bacf1759dc73464e3a51dfe61d9
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357368"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795693"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identificación de escenarios de casos de uso de administración de dispositivos móviles
 
@@ -60,7 +60,6 @@ Aquí se muestran algunos ejemplos de escenarios de casos de uso y de casos de s
 | BYOD | Trabajador de la información |           
 | BYOD | Ejecutivos |
 
-Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para especificar los casos de uso y subuso de su organización.
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Grupos de la organización para los escenarios
 

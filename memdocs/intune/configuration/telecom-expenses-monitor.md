@@ -6,7 +6,7 @@ keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0db0c43d60b2b42d35e397924c8555b1ac3d64a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c3267bf4e59d6745e480a81f8bdc39cfa2827ea4
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988612"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506339"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Configuración de un servicio de administración de gastos de telecomunicaciones en Intune
 
@@ -46,9 +46,6 @@ Para usar el servicio Datalert con Intune, hay algunas opciones de configuració
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
 - Dispositivos del administrador de dispositivos Android 4.4 y versiones posteriores que sean compatibles con Knox (Samsung)
-
-  En el artículo sobre las [versiones de Android que admiten Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (se abre el sitio web de Samsung) se indican las versiones compatibles de Knox.
-
 - iOS 8.0 y versiones posteriores
 - IPadOS 13.0 y versiones más recientes
 
@@ -112,7 +109,7 @@ Intune se integra con los siguientes proveedores de administración de gastos de
 
 Después de completar el paso 1, la conexión se habilita automáticamente. En Intune, el estado de la conexión muestra **Activo**. Para confirmar que el estado es activo, siga estos pasos:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Administración de gastos de telecomunicaciones**. Busque el estado de conexión **Activo**:
 
