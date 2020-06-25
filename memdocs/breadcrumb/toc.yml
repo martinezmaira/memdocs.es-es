@@ -75,3 +75,6 @@
                 - name: Asociación de inquilinos
                   tocHref: /mem/configmgr/tenant-attach/
                   topicHref: /mem/configmgr/tenant-attach/
+            - name: Análisis de puntos de conexión
+              tocHref: /mem/analytics/
+              topicHref: /mem/analytics/
