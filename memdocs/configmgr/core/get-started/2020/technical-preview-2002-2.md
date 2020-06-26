@@ -10,12 +10,13 @@ ms.assetid: 78240d0a-aa90-4818-b41f-cbc972cf02b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bffbcc222f6898655c705335f3e457f4aa6203dc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ROBOTS: NOINDEX
+ms.openlocfilehash: 904d5c9a34bdae5a5424bd1515fda44f5d699fef
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691683"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383094"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-20022"></a>Características de la versión 2002.2 de Configuration Manager Technical Preview
 

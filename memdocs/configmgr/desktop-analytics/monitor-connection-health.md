@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864878"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746568"
 ---
 # <a name="monitor-connection-health"></a>Supervisión del estado de conexión
 
@@ -217,7 +217,7 @@ De lo contrario, podría mostrarse uno de los siguientes errores:
 
 - No se puede configurar la recopilación de datos de compatibilidad de aplicaciones del dispositivo (SetRequestAllAppraiserVersions). Compruebe los registros para obtener los detalles de la excepción.  
 
-- No se puede escribir RequestAllAppraiserVersions en la clave del Registro `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`. Compruebe los permisos.  
+- No se puede escribir RequestAllAppraiserVersions en la clave del Registro `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser`. Compruebe los permisos.  
 
 Compruebe los permisos de esta clave del Registro. Asegúrese de que la cuenta del sistema local pueda acceder a esta clave para establecer el cliente de Configuration Manager.  
 
@@ -343,7 +343,7 @@ El valor DisableEnterpriseAuthProxy está habilitado de forma predeterminada en 
 
 Esta propiedad puede mostrar los errores siguientes:
 
-- El proxy de autenticación está habilitado. Establezca DisableEnterpriseAuthProxy en 0 en `HKLM\Software\Policies\Microsoft\Windows\DataCollection`.
+- El proxy de autenticación está habilitado. Establezca DisableEnterpriseAuthProxy en 0 en `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`.
 
 - No se puede comprobar el estado del proxy de autenticación. Compruebe los registros para obtener los detalles de la excepción.
 

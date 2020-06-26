@@ -6,16 +6,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.date: 05/14/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 66e6156466d0432aaa8b3b162263f8207bdc9d78
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455113"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776895"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Preparación de dispositivos basados en Internet para la administración conjunta
 
