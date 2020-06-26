@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
-ms.openlocfilehash: ad725a2aeb01984d8bce71f66307792e8d1691ee
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.date: 06/05/2020
+ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226437"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466890"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -128,7 +128,6 @@ Las entidades son objetos que se pueden consultar desde el cliente. Actualmente 
 |ProtectedVolumeInformation|Información de volumen protegido|
 |Protocolo|Protocolo|
 |QuickFixEngineering|Ingeniería de corrección rápida|
-|Registry()|Todos los valores de una clave del Registro específica|
 |SCSIController|Controladora SCSI|
 |SerialPortConfiguration|Configuración de puerto serie|
 |SerialPorts|Puertos serie|
@@ -270,4 +269,5 @@ Las funciones escalares se pueden usar en expresiones. Actualmente se admiten la
 |Entidad|FileContent()|Contenido de un archivo específico|
 |Entidad|NAPClient|Cliente NAP|
 |Entidad|NAPSystemHealthAgent|Agente de mantenimiento del sistema de NAP|
+|Entidad|Registry()|Todos los valores de una clave del Registro específica<!--7371183-->|
 |Operador de tabla|render|Representa los resultados como salida gráfica|
