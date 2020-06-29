@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 83a00368c7f47568497669c940e3c2904a479372
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881989"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094033"
 ---
 # <a name="upload-and-email-logs"></a>Carga y envío por correo electrónico de registros  
 
@@ -34,6 +34,8 @@ La información del error real se conserva en su dispositivo en un documento esp
 
 > [!Note]
 > Para que el equipo de soporte técnico de la empresa pueda averiguar la causa del problema más fácilmente, active el _registro detallado_ en Portal de empresa. Si usa la aplicación Microsoft Intune, establezca **Log detail level** (Nivel de detalle del registro) en **Detallado**. El registro detallado recopila todos los detalles sobre un error e incluye esos detalles en el informe. Obtenga información sobre cómo [activar el registro detallado aquí](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
+>
+> Si usa un entorno de nube soberana, la funcionalidad de envío de registros en el Portal de empresa no estará disponible. Deberá enviar los registros por correo electrónico. 
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Carga y envío por correo electrónico de registros desde Portal de empresa  
 

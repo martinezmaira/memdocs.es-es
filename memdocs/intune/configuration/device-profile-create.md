@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988470"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093291"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Creación de un perfil de dispositivo en Microsoft Intune
 
-Los perfiles de dispositivo le permiten agregar y ajustar configuraciones y, luego, insertar esas configuraciones en dispositivos de su organización. El artículo [Aplicación de la configuración y características en dispositivos con perfiles de dispositivos Microsoft Intune](device-profiles.md) entra en más detalles, incluido lo que puede hacer el usuario.
+Los perfiles de dispositivo le permiten agregar y ajustar configuraciones y, luego, insertar esas configuraciones en dispositivos de su organización. Para obtener más información y saber qué puede hacer, vea [Aplicación de la configuración y características en dispositivos con perfiles de dispositivos](device-profiles.md).
 
 En este artículo:
 
@@ -84,6 +84,7 @@ A continuación, elija el tipo de perfil. En función de la plataforma que haya 
 - [Certificado de confianza](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [Redes cableadas (macOS)](wired-network-settings-macos.md)
 
 Por ejemplo, si selecciona **iOS/iPadOS** como plataforma, las opciones de perfil serán similares al perfil siguiente:
 
@@ -178,7 +179,7 @@ Al crear perfiles, tenga en cuenta las siguientes recomendaciones:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Plantilla de administración de Intune que se aplica a usuarios y dispositivos.":::
 
-- Cada vez que cree una directiva restrictiva, comunique este cambios a los usuarios. Por ejemplo, si va a cambiar el requisito de código de acceso de 4 a 6 caracteres, informe a los usuarios antes de asignar la directiva.
+- Cada vez que cree una directiva restrictiva, comunique este cambios a los usuarios. Por ejemplo, si va a cambiar el requisito de código de acceso de cuatro (4) a seis (6) caracteres, informe a los usuarios antes de asignar la directiva.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

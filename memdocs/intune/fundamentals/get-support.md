@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989501"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093113"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Cómo obtener asistencia para Microsoft Intune
 
@@ -41,9 +41,6 @@ Como administrador de Intune, puede usar la opción **Ayuda y soporte técnico**
 La experiencia de Ayuda y soporte técnico de Intune está disponible en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y en todas las hojas (o páginas) de Intune, en Azure Portal.
 
 La experiencia de *Ayuda y soporte técnico* es similar a la observada en el [centro de administración de Microsoft 365](https://admin.microsoft.com/) y reemplaza a la experiencia anterior de *Ayuda y soporte técnico*, que permanece vigente para otros servicios en Azure.
-
-> [!TIP]
-> A partir del 18 de noviembre de 2019, se está implantando en los inquilinos una experiencia en la consola actualizada y simplificada para obtener ayuda y soporte técnico para Intune. Si esta experiencia todavía no está disponible para usted, lo estará pronto.
 
 ### <a name="options-to-access-help-and-support"></a>Opciones para obtener acceso a ayuda y soporte técnico
 
@@ -66,16 +63,21 @@ Este problema se produce cuando no ha autenticado la nueva cuenta del inquilino 
 
 - **Desde el Centro de administración de Microsoft Endpoint Manager**
 
-  - Seleccione el icono **?** Desde cualquier nodo del Centro de administración de Microsoft Endpoint Manager. en la esquina superior derecha del portal y, luego, use la lista desplegable para seleccionar el tipo de administración con el que quiere ayuda. El Centro de administración de Microsoft Endpoint Manager admite los tipos de administración siguientes; debe seleccionar aquel para el que quiera ayuda, como Intune:
+  - Seleccione el icono **?** Desde cualquier nodo del Centro de administración de Microsoft Endpoint Manager. en la esquina superior derecha del portal para abrir el panel **Ayuda**. Seleccione **Ayuda y soporte técnico** para abrir la página **Seleccionar un tipo de administración**.
 
-    - Configuration Manager (incluye Análisis de escritorio)
+    > [!div class="mx-imgBorder"]
+    > ![Apertura de la página de selección del tipo de administración](./media/get-support/management-types.png)
+
+    Use la lista desplegable para seleccionar el tipo de administración para el que quiera obtener ayuda, que abre la página de ayuda y soporte técnico correspondiente. El Centro de administración de Microsoft Endpoint Manager admite los tipos de administración siguientes; debe seleccionar aquel para el que quiera ayuda, como Intune:
+
+    - Configuration Manager
     - Intune
-    - Administración conjunta  
+    - Administración conjunta
 
     > [!div class="mx-imgBorder"]
     > ![Selección del tipo de administración](./media/get-support/select-management-type.png)
 
-    Después de seleccionar un tipo de administración, se abre la página *Ayuda y soporte técnico*, donde puede especificar los detalles para [buscar soluciones](#find-solutions) para un problema concreto. Los detalles se filtran en función del tipo de administración que seleccione.
+    Después de seleccionar un tipo de administración, se abre la página *Ayuda y soporte técnico* correspondiente, donde puede especificar los detalles para [buscar soluciones](#find-solutions) para un problema concreto. Los detalles se filtran en función del tipo de administración que seleccione.
 
      Si no se ha seleccionado el tipo de administración correcto **(1)** , haga clic en *Seleccionar un tipo de administración* **(2)** para volver a la lista desplegable de selección del tipo de administración:
 

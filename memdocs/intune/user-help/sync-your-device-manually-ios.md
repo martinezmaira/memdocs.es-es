@@ -1,11 +1,11 @@
 ---
-title: Sincronizar manualmente el dispositivo iOS | Microsoft Docs
-description: ''
+title: Sincronización manual de un dispositivo iOS con Portal de empresa de Intune
+description: Inicie una sincronización manual desde Portal de empresa para corregir los retrasos, como las instalaciones de aplicaciones lentas o detenidas.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,32 +15,42 @@ ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: esmich
+ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 27bf115e6382b429d6555a19f655f0d5ba554ce7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f9b4424bc7eed109846b497684e6859c5f407011
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881816"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094147"
 ---
 # <a name="sync-your-ios-device-manually"></a>Sincronización manual del dispositivo iOS
 
-A veces, una aplicación puede tardar más tiempo en descargarse desde el Portal de empresa. Cuando esto suceda, intente sincronizar manualmente el dispositivo. De esta forma, se intentará obtener la información que el dispositivo no pudo descargar.
+Inicie una sincronización manual desde Portal de empresa para corregir los retrasos, como las instalaciones de aplicaciones lentas o detenidas. Durante una sincronización, el Portal de empresa se registra con el dispositivo para asegurarse de que cumple los requisitos de la organización. Sincroniza el dispositivo con directivas o actualizaciones que es posible que todavía no tenga y puede ayudar a resolver descargas u otros procesos en curso. 
+
+El Portal de empresa se registra periódicamente con el dispositivo, pero puede seguir los pasos que se indican a continuación para iniciar una sincronización en cualquier momento desde la aplicación. 
 
 1. Abra la aplicación del portal de empresa.
 
-2. Pulse en **Dispositivos**. Si tiene varios dispositivos, verá una lista de ellos. Elija el que está usando actualmente. Si solo tiene un dispositivo, irá directamente a la pantalla de detalles del dispositivo.
+2. Pulse en **Dispositivos**. 
+3. Si solo tiene un dispositivo, accederá directamente a la pantalla de detalles del dispositivo y puede ir al paso 4. Si tiene varios dispositivos, los verá en una lista. Pulse el que está usando actualmente. 
 
-    ![Captura de la pantalla Dispositivos, donde se muestran dos dispositivos. El dispositivo superior tiene el texto "Este es el iPhone 6 Plus que está usando actualmente".](./media/ios_sync_1_CP_after_1804.png)
+    ![Captura de la pantalla Dispositivos, en la que se muestran tres dispositivos, con el que el usuario usa actualmente resaltado. El dispositivo superior tiene el texto "Este es el iPhone que está usando actualmente".](./media/ios-sync-1-company-portal-2006.png)
 
-3. Pulse **Comprobar configuración** para sincronizar el dispositivo. Mientras dure la sincronización, aparecerá una barra en la pantalla.
+4. Pulse **Comprobar estado** para sincronizar el dispositivo. 
 
-    ![Captura de pantalla con los detalles del dispositivo, en los que se muestra la hora de la última comprobación del dispositivo y el vínculo Comprobar configuración.](./media/ios_sync_2_CP_after_1804.png)  
+    ![Captura de pantalla de los detalles del dispositivo, con el vínculo Comprobar estado resaltado.](./media/ios-sync-2-company-portal-2006.png)  
 
-   ![Captura de pantalla con los detalles del dispositivo y con la barra de carga después de que el usuario hace clic en Comprobar comprobación.](./media/ios_sync_3_CP-after_1804.png)
+ 5. Espere a que el Portal de empresa confirme el estado del dispositivo. El estado se actualizará en pantalla y le indicará si cumple los requisitos de seguridad de la organización. 
 
-¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+       ![Captura de pantalla de los detalles del dispositivo, con la barra de carga resaltada.](./media/ios-sync-3-company-portal-2006.png)
+
+
+## <a name="next-steps"></a>Pasos siguientes  
+Una vez que haya completado estos pasos, compruebe si se ha resuelto el problema inicial. Si no es así, podría resultar de ayudar reiniciar la tarea o la instalación detenida. ¿Aún necesita ayuda? Póngase en contacto con el personal de soporte técnico de TI. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+
+
 

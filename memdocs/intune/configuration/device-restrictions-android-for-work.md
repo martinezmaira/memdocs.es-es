@@ -5,23 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257042"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093714"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -87,93 +87,124 @@ Esta configuración se aplica a los tipos de inscripción Android Enterprise en 
 
 - **Examen de amenazas en las aplicaciones**: **Requerir** (valor predeterminado) permite a Google Play Protect examinar las aplicaciones antes y después de instalarlas. Si se detecta una amenaza, puede avisar a los usuarios para que quiten la aplicación del dispositivo. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no habilite ni ejecute Google Play Protect para examinar aplicaciones.
 
-### <a name="dedicated-devices"></a>Dispositivos dedicados
+### <a name="device-experience"></a>Experiencia del dispositivo
 
-Use estas opciones para configurar una experiencia de tipo pantalla completa de los dispositivos dedicados. Puede configurar dispositivos para ejecutar una o muchas aplicaciones. Cuando un dispositivo se establece con pantalla completa, solo están disponibles las aplicaciones que agregue. Esta configuración se aplica a dispositivos dedicados de Android Enterprise. No se aplica a dispositivos Android Enterprise totalmente administrados.
+Use estas opciones para configurar una experiencia de tipo pantalla completa en los dispositivos dedicados o totalmente administrados. Puede configurar dispositivos para ejecutar una o muchas aplicaciones. Cuando un dispositivo se establece con pantalla completa, solo están disponibles las aplicaciones que agregue.
 
-**Pantalla completa**: elija si el dispositivo ejecuta una aplicación o varias.
+**Tipo de perfil de inscripción**: seleccione un tipo de perfil de inscripción para empezar a configurar Microsoft Launcher o Microsoft Managed Home Screen en los dispositivos. Las opciones son:
 
-- **No configurado**: Intune no cambia ni actualiza esta configuración.
-- **Aplicación única**: los usuarios solo pueden acceder a una aplicación. Cuando se inicia el dispositivo, solo se inicia la aplicación específica. los usuarios no pueden abrir nuevas aplicaciones ni modificar la aplicación en ejecución.
+- **No configurado**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que los usuarios vean la experiencia de pantalla principal predeterminada del dispositivo.
+- **Dispositivo dedicado**: Configure una experiencia de tipo pantalla completa en los dispositivos dedicados. Antes de configurar estas opciones, asegúrese de [agregar](../apps/apps-add-android-for-work.md) y [asignar](../apps/apps-deploy.md) las aplicaciones que quiera en los dispositivos.
 
-  - **Seleccionar una aplicación administrada**: seleccione la aplicación administrada de Google Play en la lista.
+  - **Pantalla completa**: elija si el dispositivo ejecuta una aplicación o varias. Las opciones son:
 
-    Si no aparece ninguna aplicación, [agregue algunas aplicaciones Android](../apps/apps-add-android-for-work.md) al dispositivo. No olvide [asignar la aplicación al grupo de dispositivos creado para los dispositivos dedicados](../apps/apps-deploy.md).
+    - **No configurado**: Intune no cambia ni actualiza esta configuración.
+    - **Aplicación única**: los usuarios solo pueden acceder a una aplicación. Cuando se inicia el dispositivo, solo se inicia la aplicación específica. los usuarios no pueden abrir nuevas aplicaciones ni modificar la aplicación en ejecución.
 
-  > [!IMPORTANT]
-  > Cuando se usa la pantalla completa de una sola aplicación, es posible que las aplicaciones de teléfono y marcado no funcionen correctamente.
+      - **Seleccionar una aplicación para usarla en modo de pantalla completa**: seleccione la aplicación administrada de Google Play en la lista.
+
+      > [!IMPORTANT]
+      > Cuando se usa el modo de pantalla completa de una sola aplicación, es posible que las aplicaciones de teléfono y marcado no funcionen correctamente.
   
-- **Varias aplicaciones**: los usuarios pueden acceder a un conjunto limitado de aplicaciones en el dispositivo. Cuando se inicia el dispositivo, solo se inician las aplicaciones que agrega. También puede agregar algunos vínculos web que los usuarios pueden abrir. Al aplicar la directiva, los usuarios ven los iconos de las aplicaciones permitidas en la pantalla principal.
+    - **Varias aplicaciones**: los usuarios pueden acceder a un conjunto limitado de aplicaciones en el dispositivo. Cuando se inicia el dispositivo, solo se inician las aplicaciones que agrega. También puede agregar algunos vínculos web que los usuarios pueden abrir. Al aplicar la directiva, los usuarios ven los iconos de las aplicaciones permitidas en la pantalla principal.
 
-  > [!IMPORTANT]
-  > En los dispositivos dedicados con varias aplicaciones, la [aplicación Managed Home Screen](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) de Google Play **debe estar**:
-  >   - [Agregada como aplicación cliente](../apps/apps-add-android-for-work.md) en Intune
-  >   - [Asignada al grupo de dispositivos](../apps/apps-deploy.md) creado para los dispositivos dedicados
-  >
-  > No es necesario que la aplicación **Managed Home Screen** esté en el perfil de configuración, pero sí se debe agregar como aplicación cliente. Cuando la aplicación **Managed Home Screen** se agrega como aplicación cliente, cualquier otra aplicación que se agregue en el perfil de configuración aparece como icono en la aplicación **Managed Home Screen**.
-  >
-  > Cuando se usa la pantalla completa de varias aplicaciones, es posible que las aplicaciones de teléfono y marcado no funcionen correctamente. 
+      > [!IMPORTANT]
+      > En los dispositivos dedicados con varias aplicaciones, la [aplicación Managed Home Screen](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) de Google Play **debe estar**:
+      >   - [Agregado en Intune](../apps/apps-add-android-for-work.md)
+      >   - [Asignada al grupo de dispositivos](../apps/apps-deploy.md) creado para los dispositivos dedicados
+      >
+      > No es necesario que la aplicación **Managed Home Screen** esté en el perfil de configuración, pero es obligatorio que se agregue como aplicación. Cuando se agrega la aplicación **Managed Home Screen**, cualquier otra que se agregue en el perfil de configuración aparece como icono en la aplicación **Managed Home Screen**.
+      >
+      > Cuando se usa la pantalla completa de varias aplicaciones, es posible que las aplicaciones de teléfono y marcado no funcionen correctamente. 
 
-  - **Agregar**: seleccione las aplicaciones de la lista.
+      - **Agregar**: seleccione las aplicaciones de la lista.
 
-    Si la aplicación **Managed Home Screen** no aparece en la lista, [agréguela desde Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). No olvide [asignar la aplicación](../apps/apps-deploy.md) al grupo de dispositivos creado para los dispositivos dedicados.
+        Si la aplicación **Managed Home Screen** no aparece en la lista, [agréguela desde Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). No olvide [asignar la aplicación](../apps/apps-deploy.md) al grupo de dispositivos creado para los dispositivos dedicados.
 
-    También puede agregar al dispositivo otras [aplicaciones Android](../apps/apps-add-android-for-work.md) y [aplicaciones web](../apps/web-app.md) creadas por la organización. No olvide [asignar la aplicación al grupo de dispositivos creado para los dispositivos dedicados](../apps/apps-deploy.md).
+        También puede agregar al dispositivo otras [aplicaciones Android](../apps/apps-add-android-for-work.md) y [aplicaciones web](../apps/web-app.md) creadas por la organización. No olvide [asignar la aplicación al grupo de dispositivos creado para los dispositivos dedicados](../apps/apps-deploy.md).
 
-  - **Botón de inicio virtual**: botón de tecla programable que devuelve a los usuarios a Managed Home Screen para que puedan cambiar de aplicación. Las opciones son:
+      - **Botón de inicio virtual**: botón de tecla programable que devuelve a los usuarios a Managed Home Screen para que puedan cambiar de aplicación. Las opciones son:
+        - **Sin configurar** (valor predeterminado): No se muestra ningún botón Inicio. Los usuarios deben usar el botón Atrás para cambiar de aplicación.
+        - **Deslizar rápidamente hacia arriba**: se muestra un botón Inicio cuando un usuario desliza rápidamente el dedo hacia arriba en el dispositivo.
+        - **Flotante**: muestra un botón Inicio flotante y persistente en el dispositivo.
 
-    - **Sin configurar** (valor predeterminado): No se muestra ningún botón Inicio. Los usuarios deben usar el botón Atrás para cambiar de aplicación.
-    - **Deslizar rápidamente hacia arriba**: se muestra un botón Inicio cuando un usuario desliza rápidamente el dedo hacia arriba en el dispositivo.
-    - **Flotante**: muestra un botón Inicio flotante y persistente en el dispositivo.
-
-  - **Salir del modo de pantalla completa**: **Habilitar** permite que los administradores pausen temporalmente el modo de pantalla completa para actualizar el dispositivo. Para usar esta característica, el administrador hace lo siguiente:
+      - **Salir del modo de pantalla completa**: **Habilitar** permite que los administradores pausen temporalmente el modo de pantalla completa para actualizar el dispositivo. Para usar esta característica, el administrador hace lo siguiente:
   
-    1. Continúa y hace clic en el botón de retroceso hasta que aparece el botón **Exit Kiosk** (Salir de pantalla completa). 
-    2. Selecciona el botón **Exit kiosk** (Salir de pantalla completa) y escribe el PIN de **Leave kiosk mode code** (Código para salir del modo de pantalla completa).
-    3. Cuando termine, seleccione la aplicación **Managed Home Screen**. Este paso vuelve a bloquear el dispositivo para pantalla completa con varias aplicaciones.
+        1. Continúa y hace clic en el botón de retroceso hasta que aparece el botón **Exit Kiosk** (Salir de pantalla completa). 
+        2. Selecciona el botón **Exit kiosk** (Salir de pantalla completa) y escribe el PIN de **Leave kiosk mode code** (Código para salir del modo de pantalla completa).
+        3. Cuando termine, seleccione la aplicación **Managed Home Screen**. Este paso vuelve a bloquear el dispositivo para pantalla completa con varias aplicaciones.
 
-      Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir que los administradores pausen el modo de pantalla completa. Si el administrador sigue haciendo clic en el botón de retroceso y hace clic en el botón **Exit Kiosk** (Salir de pantalla completa), aparece un mensaje que indica que se requiere un código de acceso.
+        Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir que los administradores pausen el modo de pantalla completa. Si el administrador sigue haciendo clic en el botón de retroceso y hace clic en el botón **Exit Kiosk** (Salir de pantalla completa), aparece un mensaje que indica que se requiere un código de acceso.
 
-    - **Código para salir del modo de pantalla completa**: escriba un PIN numérico que tenga entre 4 y 6 dígitos. El administrador usa este PIN para pausar de manera temporal la pantalla completa.
+      - **Código para salir del modo de pantalla completa**: escriba un PIN numérico que tenga entre 4 y 6 dígitos. El administrador usa este PIN para pausar de manera temporal la pantalla completa.
 
-  - **Establecer fondo personalizado de la dirección URL**: escriba una dirección URL para personalizar la pantalla de fondo del dispositivo dedicado. Por ejemplo, escriba `http://contoso.com/backgroundimage.jpg`.
+      - **Establecer fondo personalizado de la dirección URL**: escriba una dirección URL para personalizar la pantalla de fondo del dispositivo dedicado. Por ejemplo, escriba `http://contoso.com/backgroundimage.jpg`.
 
-    > [!NOTE]
-    > Para la mayoría de los casos, se recomienda partir de imágenes cuyo tamaño es, al menos el siguiente:
-    >
-    > - Teléfono: 1080 x 1920 px
-    > - Tableta: 1920 x 1080 px
-    >
-    > Para obtener la mejor experiencia y detalles nítidos, se recomienda crear activos de imagen por dispositivo con las especificaciones de pantalla.
-    >
-    > Las pantallas modernas tienen mayores densidades de píxeles y pueden mostrar imágenes que equivalen a definiciones 2K o 4K.
+        > [!NOTE]
+        > Para la mayoría de los casos, se recomienda partir de imágenes cuyo tamaño es, al menos el siguiente:
+        >
+        > - Teléfono: 1080 x 1920 px
+        > - Tableta: 1920 x 1080 px
+        >
+        > Para obtener la mejor experiencia y detalles nítidos, se recomienda crear activos de imagen por dispositivo con las especificaciones de pantalla.
+        >
+        > Las pantallas modernas tienen mayores densidades de píxeles y pueden mostrar imágenes que equivalen a definiciones 2K o 4K.
 
-  - **Configuración de Wi-Fi**: **Habilitar** muestra el control de Wi-Fi en Managed Home Screen y permite que los usuarios conecten el dispositivo a distintas redes Wi-Fi. Si habilita esta característica, también se activa la ubicación del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de Wi-Fi en Managed Home Screen. Impide que los usuarios se conecten a redes Wi-Fi mientras usan Managed Home Screen.
+      - **Configuración de Wi-Fi**: **Habilitar** muestra el control de Wi-Fi en Managed Home Screen y permite que los usuarios conecten el dispositivo a distintas redes Wi-Fi. Si habilita esta característica, también se activa la ubicación del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de Wi-Fi en Managed Home Screen. Impide que los usuarios se conecten a redes Wi-Fi mientras usan Managed Home Screen.
 
-  - **Configuración de Bluetooth**: **Habilitar** muestra el control de Bluetooth en Managed Home Screen y permite a los usuarios emparejar dispositivos a través de Bluetooth. Si habilita esta característica, también se activa la ubicación del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de Bluetooth en Managed Home Screen. Impide que los usuarios configuren el Bluetooth y los dispositivos de emparejamiento mientras usan Managed Home Screen.
+      - **Configuración de Bluetooth**: **Habilitar** muestra el control de Bluetooth en Managed Home Screen y permite a los usuarios emparejar dispositivos a través de Bluetooth. Si habilita esta característica, también se activa la ubicación del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de Bluetooth en Managed Home Screen. Impide que los usuarios configuren el Bluetooth y los dispositivos de emparejamiento mientras usan Managed Home Screen.
 
-  - **Acceso a la linterna**: **Habilitar** muestra el control de la linterna en Managed Home Screen y permite a los usuarios activarla o desactivarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de la linterna en Managed Home Screen. Impide que los usuarios usen la linterna mientras usan Managed Home Screen.
+      - **Acceso a la linterna**: **Habilitar** muestra el control de la linterna en Managed Home Screen y permite a los usuarios activarla o desactivarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de la linterna en Managed Home Screen. Impide que los usuarios usen la linterna mientras usan Managed Home Screen.
 
-  - **Control de volumen de elementos multimedia**: **Habilitar** muestra el control de volumen de elementos multimedia en Managed Home Screen y permite a los usuarios ajustar el volumen de los elementos multimedia del dispositivo con un control deslizante. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de volumen de los elementos multimedia en Managed Home Screen. Impide que los usuarios ajusten el volumen multimedia del dispositivo mientras se usa Managed Home Screen, a menos que los botones de hardware lo admitan.
+      - **Control de volumen de elementos multimedia**: **Habilitar** muestra el control de volumen de elementos multimedia en Managed Home Screen y permite a los usuarios ajustar el volumen de los elementos multimedia del dispositivo con un control deslizante. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de volumen de los elementos multimedia en Managed Home Screen. Impide que los usuarios ajusten el volumen multimedia del dispositivo mientras se usa Managed Home Screen, a menos que los botones de hardware lo admitan.
 
-  - **Modo de protector de pantalla**: **Habilitar** muestra un protector de pantalla en Managed Home Screen cuando el dispositivo está bloqueado o agota el tiempo de espera. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre un protector de pantalla en Managed Home Screen.
+      - **Modo de protector de pantalla**: **Habilitar** muestra un protector de pantalla en Managed Home Screen cuando el dispositivo está bloqueado o agota el tiempo de espera. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre un protector de pantalla en Managed Home Screen.
 
-    Cuando esté habilitado, configure también:
+        Cuando esté habilitado, configure también:
 
-    - **Establecer imagen personalizada del protector de pantalla**: escriba la dirección URL de un archivo PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizado. Por ejemplo, escriba:
+        - **Establecer imagen personalizada del protector de pantalla**: escriba la dirección URL de un archivo PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizado. Si no escribe una dirección URL, se usará la imagen predeterminada del dispositivo, si la hay. 
+        
+          Por ejemplo, escriba:
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      Si no escribe una dirección URL, se usará la imagen predeterminada del dispositivo, si la hay.
+          > [!TIP]
+          > Se admite cualquier dirección URL de recurso de archivo que se pueda convertir a un mapa de bits.
 
-      > [!TIP]
-      > Se admite cualquier dirección URL de recurso de archivo que se pueda convertir a un mapa de bits.
+        - **Número de segundos que el dispositivo muestra el protector de pantalla antes de desactivar la pantalla**: elija el tiempo durante el cual el dispositivo muestra el protector de pantalla. Especifique un valor entre 0 y 9999999 segundos. El valor predeterminado es `0`segundos. Cuando se deja en blanco o se establece en cero (`0`), el protector de pantalla está activo hasta que un usuario interactúa con el dispositivo.
+        - **Número de segundos que el dispositivo está inactivo antes de mostrar el protector de pantalla**: elija el tiempo que va a estar inactivo el dispositivo antes de mostrar el protector de pantalla. Especifique un valor entre 1 y 9999999 segundos. El valor predeterminado es `30` segundos. Debe especificar un número mayor que cero (`0`).
+        - **Detectar elementos multimedia antes de iniciar el protector de pantalla**: **Habilitar** (valor predeterminado) no muestra el protector de pantalla si se está reproduciendo audio o vídeo en el dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar el protector de pantalla, incluso si se está reproduciendo audio o vídeo.
 
-    - **Número de segundos que el dispositivo muestra el protector de pantalla antes de desactivar la pantalla**: elija el tiempo durante el cual el dispositivo muestra el protector de pantalla. Especifique un valor entre 0 y 9999999 segundos. El valor predeterminado es `0`segundos. Cuando se deja en blanco o se establece en cero (`0`), el protector de pantalla está activo hasta que un usuario interactúa con el dispositivo.
-    - **Número de segundos que el dispositivo está inactivo antes de mostrar el protector de pantalla**: elija el tiempo que va a estar inactivo el dispositivo antes de mostrar el protector de pantalla. Especifique un valor entre 1 y 9999999 segundos. El valor predeterminado es `30` segundos. Debe especificar un número mayor que cero (`0`).
-    - **Detectar elementos multimedia antes de iniciar el protector de pantalla**: **Habilitar** (valor predeterminado) no muestra el protector de pantalla si se está reproduciendo audio o vídeo en el dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría mostrar el protector de pantalla, incluso si se está reproduciendo audio o vídeo.
+- **Totalmente administrado**: configura la aplicación Microsoft Launcher en los dispositivos totalmente administrados.
+
+  - **Hacer que Microsoft Launcher sea el iniciador predeterminado**: **Habilitar** establece Microsoft Launcher como el iniciador predeterminado en la pantalla principal. Si hace que Launcher sea el iniciador predeterminado, los usuarios no podrán usar otro. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, Microsoft Launcher no se fuerza como iniciador predeterminado.
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>Contraseña
 
@@ -231,7 +262,7 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa de 
 
 ### <a name="applications"></a>Aplicaciones
 
-- **Permitir la instalación desde orígenes desconocidos**: **Permitir** habilita a los usuarios para activar los **orígenes desconocidos**. Esta configuración permite que se instalen aplicaciones desde orígenes desconocidos, incluidos los orígenes que no sean Google Play Store. Permite a los usuarios cargar aplicaciones en el dispositivo mediante medios distintos de Google Play Store. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir que los usuarios activen los **orígenes desconocidos**.
+- **Permitir la instalación desde orígenes desconocidos**: **Permitir** habilita a los usuarios para activar los **orígenes desconocidos**. Esta configuración permite que se instalen aplicaciones desde orígenes desconocidos, incluidos los orígenes que no sean Google Play Store. Permite a los usuarios transferir localmente aplicaciones en el dispositivo mediante otros medios que no sean Google Play Store. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir que los usuarios activen los **orígenes desconocidos**.
 - **Permitir el acceso a todas las aplicaciones en Google Play Store**: si se establece en **Permitir**, los usuarios obtienen acceso a todas las aplicaciones de Google Play Store. No obtienen acceso a las aplicaciones que el administrador bloquee en [las aplicaciones cliente](../apps/apps-add-android-for-work.md).
 
   Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría:
@@ -298,8 +329,9 @@ Esta configuración se aplica a los tipos de inscripción Android Enterprise don
 
 - **Copiar y pegar entre perfiles personales y de trabajo**: **Bloquear** impide copiar y pegar entre aplicaciones personales y profesionales. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios compartan datos mediante copiar y pegar con aplicaciones en el perfil personal.
 - **Uso compartido de datos entre el perfil profesional y el personal**: elija si las aplicaciones del perfil de trabajo pueden compartirse con aplicaciones del perfil personal. Por ejemplo, puede controlar las acciones de uso compartido dentro de las aplicaciones, como la opción **Compartir…** en la aplicación del explorador Chrome. Esta configuración no se aplica al comportamiento del Portapapeles de copiar y pegar. Las opciones son:
-  - **Valor predeterminado del dispositivo**: el comportamiento predeterminado del uso compartido del dispositivo, que varía según la versión de Android. De manera predeterminada, se permite el uso compartido desde el perfil personal hasta el perfil de trabajo. También de manera predeterminada, el uso compartido desde el perfil de trabajo hasta el perfil personal está bloqueado. Esta opción evita que se compartan datos desde el perfil de trabajo hasta el perfil personal. En dispositivos que ejecutan versiones 6.0 y posteriores, Google no bloquea el uso compartido desde el perfil personal hacia el perfil de trabajo.
-  - **Impedir uso compartido más allá de los límites**: impide el uso compartido entre el perfil profesional y el personal.
+  - **Valor predeterminado del dispositivo**: el comportamiento predeterminado del uso compartido del dispositivo varía según la versión de Android:
+    - En los dispositivos que ejecutan Android 6.0 y versiones más recientes, el uso compartido desde el perfil de trabajo hasta el perfil personal está bloqueado. Se permite el uso compartido desde el perfil personal hasta el perfil de trabajo.
+    - En los dispositivos que ejecutan Android 5.0 y versiones anteriores, el uso compartido desde el perfil de trabajo hasta el perfil personal está bloqueado en ambas direcciones.
   - **Las aplicaciones del perfil profesional pueden controlar una solicitud de uso compartido del perfil personal**: habilita la característica de Android integrada que permite el uso compartido del perfil personal al perfil de trabajo. Cuando esta opción está habilitada, una solicitud de uso compartido que se inicia en una aplicación del perfil personal se podrá compartir con las aplicaciones del perfil de trabajo. Esta opción es el comportamiento predeterminado de los dispositivos Android que ejecutan versiones anteriores a 6.0.
   - **No hay restricciones para el uso compartido**: permite el uso compartido a través del límite del perfil de trabajo en ambas direcciones. Cuando selecciona esta configuración, las aplicaciones del perfil de trabajo pueden compartir datos con aplicaciones no administradas del perfil personal. Esta configuración permite administrar aplicaciones en el perfil de trabajo para compartirlas con aplicaciones del lado sin administrar del dispositivo. Por lo tanto, use esta configuración con precaución.
 

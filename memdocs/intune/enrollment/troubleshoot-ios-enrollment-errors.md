@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326931"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093343"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos iOS/iPadOS en Microsoft Intune
 
@@ -66,25 +66,6 @@ Recopile la siguiente información sobre el problema:
 4. En **Restricciones de tipo de dispositivo**, seleccione la restricción que desea establecer > **Propiedades** > **Seleccionar plataformas** > seleccione **Permitir** para **iOS** y, a continuación, haga clic en **Aceptar**.
 5. Seleccione **Configurar plataformas**, seleccione **Permitir** para dispositivos iOS/iPadOS de propiedad personal y, a continuación, haga clic en **Aceptar**.
 6. Vuelva a inscribir el dispositivo.
-
-**Causa:** Los registros CNAME necesarios en DNS no existen.
-
-#### <a name="resolution"></a>Solución
-Cree registros de recursos DNS CNAME para el dominio de su empresa. Por ejemplo, si el dominio de la empresa es contoso.com, cree un CNAME en DNS que redirija EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.
-
-Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
-
-Si hay más de un dominio comprobado, debe crear un registro CNAME para cada dominio. Los registros de recursos CNAME deben contener la siguiente información:
-
-|TYPE|Nombre de host|Apunta a|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Hr|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 Hr|
-
-Si su organización usa varios dominios para las credenciales de usuario, cree registros CNAME para cada dominio.
-
-> [!NOTE]
-> Los cambios en los registros DNS pueden tardar hasta 72 horas en propagarse. No se puede comprobar el cambio de DNS en Intune hasta que el registro DNS se propague.
 
 **Causa:** Inscribe un dispositivo que se ha inscrito previamente con una cuenta de usuario diferente y el usuario anterior no se ha quitado correctamente de Intune.
 
@@ -239,6 +220,16 @@ Al activar un dispositivo administrado por ADE que tiene asignado un perfil de i
 #### <a name="resolution"></a>Solución
 Deshabilite MFA y, después, vuelva a inscribir el dispositivo.
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>La autenticación no se redirige a la nube de administración pública 
+
+Los usuarios de administración pública que inician sesión desde otro dispositivo se redirigen a la nube pública para la autenticación en lugar de la nube de administración pública. 
+
+**Causa:** Azure AD todavía no admite el redireccionamiento a la nube de administración pública al iniciar sesión desde otro dispositivo. 
+
+#### <a name="resolution"></a>Solución 
+Use la opción **Nube** de Portal de empresa de iOS en la aplicación **Configuración** para redirigir la autenticación de los usuarios gubernamentales hacia la nube de administración pública. De forma predeterminada, el valor **Nube** se establece en **Automático** y Portal de empresa dirige la autenticación hacia la nube que el dispositivo detecta automáticamente (como Público o Administración Pública). Los usuarios de administración pública que inicien sesión desde otro dispositivo tendrán que seleccionar de forma manual la nube de administración pública para la autenticación. 
+
+Abra la aplicación **Configuración** y seleccione Portal de empresa. En la configuración de Portal de empresa, seleccione **Nube**. Establezca **Nube** en Administración Pública.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

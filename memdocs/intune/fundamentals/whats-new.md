@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223666"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263961"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
@@ -51,9 +51,239 @@ Obtenga información sobre las novedades que se producen cada semana en Microsof
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+### Scripts
+
 
 <!-- ########################## -->
 
+## <a name="week-of-june-22-2020"></a>Semana del 22 de junio de 2020
+
+### <a name="monitor-and-troubleshoot"></a>Supervisión y solución de problemas
+
+#### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>Corrección proactiva de los problemas del dispositivo del usuario final mediante paquetes de scripts<!-- 5933328 -->
+Puede crear y ejecutar paquetes de scripts en dispositivos de usuario final para buscar y corregir de forma proactiva los principales problemas de soporte técnico de la organización. La implementación de paquetes de scripts le ayudará a reducir las llamadas de soporte técnico. Cree su propio paquete de scripts o implemente uno de los que hemos escrito y usado en nuestro entorno para disminuir las incidencias de soporte técnico. Intune permite ver el estado de los paquetes de scripts implementados y supervisar los resultados de detección y corrección. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Informes** > **Análisis de puntos de conexión** > **Correcciones proactivas**. Para obtener más información, vea [Correcciones proactivas](https://aka.ms/uea_prs).
+
+### <a name="device-security"></a>Seguridad de dispositivos
+
+### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Uso de ATP de Microsoft Defender en directivas de cumplimiento para Android<!-- 4425686  -->
+
+Ahora puede usar Intune para [incorporar dispositivos Android a Advanced Threat Protection de Microsoft Defender](../protect/advanced-threat-protection.md#onboard-android-devices) (ATP de Microsoft Defender). Una vez que haya incorporado los dispositivos inscritos, las directivas de cumplimiento para Android podrán usar las señales de *nivel de amenaza* de ATP de Microsoft Defender. Estas son las mismas señales que se podían usar previamente para dispositivos Windows 10.
+
+### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Configuración de la protección web de ATP de Defender para dispositivos Android<!-- 6185563 WNReady -->
+
+Al usar Advanced Threat Protection de Microsoft Defender (ATP de Microsoft Defender) para dispositivos Android, puede [configurar la protección web de ATP de Microsoft Defender](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) para deshabilitar la característica de examen de suplantación de identidad (phishing) o impedir que el examen use la VPN.
+
+En función de cómo se inscriba el dispositivo Android con Intune, estarán disponibles las siguientes opciones:
+
+- Administrador de dispositivos Android: use la configuración de OMA-URI personalizada para deshabilitar la característica de protección web o para deshabilitar el uso de VPN solo durante los exámenes.
+- Perfil de trabajo de Android Enterprise: use un perfil de configuración de aplicaciones y el diseñador de configuraciones para deshabilitar todas las funciones de protección web.
+
+## <a name="week-of-june-15-2020--2006-service-release"></a>Semana del 15 de junio de 2020 (versión del servicio 2006)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Administración de aplicaciones  
+
+#### <a name="telecommunications-data-transfer-protection-for-managed-apps---6884491----"></a>Protección de la transferencia de datos de telecomunicaciones para aplicaciones administradas<!-- 6884491  -->
+Cuando se detecta un número de teléfono hipervinculado en una aplicación protegida, Intune comprueba si se ha aplicado una directiva de protección que permita transferir el número a una aplicación de marcador. Puede elegir cómo administrar este tipo de transferencia de contenido cuando se inicia desde una aplicación administrada por directiva. Al crear una directiva de protección de aplicaciones en Microsoft Endpoint Manager, seleccione una opción de aplicación administrada en **Enviar datos de la organización a otras aplicaciones** y, luego, elija una opción en **Transferir datos de telecomunicaciones a**. Para obtener más información sobre esta configuración de protección de datos, vea [Configuración de directivas de protección de aplicaciones Android en Microsoft Intune](../apps/app-protection-policy-settings-android.md) y [Configuración de directivas de protección de aplicaciones de iOS](../apps/app-protection-policy-settings-ios.md). 
+
+#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---7414033----"></a>Entrega unificada de aplicaciones de Azure AD Enterprise y Office Online en el Portal de empresa<!-- 7414033  -->
+En el panel **Personalización** de Intune, puede seleccionar **Ocultar** o **Mostrar** **Aplicaciones de Azure AD Enterprise** y **Aplicaciones de Office Online** en el Portal de empresa. Cada usuario final ve todo el catálogo de aplicaciones desde el servicio de Microsoft elegido. De forma predeterminada, cada origen de aplicación adicional se establecerá en **Ocultar**. Esta característica se va a aplicar en primer lugar en el sitio web del Portal de empresa y, luego, en el Portal de empresa de Windows. Para encontrar esta opción de configuración, seleccione **Administración de inquilinos** > **Personalización** en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Para obtener información relacionada, vea [Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune](../apps/company-portal-app.md).
+
+#### <a name="improvements-to-the-company-portal-for-macos-enrollment-experience---6444452----"></a>Mejoras en el Portal de empresa para la experiencia de inscripción de macOS<!-- 6444452  -->
+La experiencia de inscripción del Portal de empresa para macOS cuenta con un proceso de inscripción más sencillo que es más coherente con la experiencia de inscripción en el Portal de empresa para iOS. Los usuarios del dispositivo verán:  
+- Una interfaz de usuario más elegante.  
+- Una lista de comprobación de inscripción mejorada.  
+- Instrucciones más claras sobre cómo inscribir sus dispositivos.  
+- Mejores opciones de solución de problemas.  
+
+Para más información sobre el Portal de empresa de Intune, consulte [Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune](../apps/company-portal-app.md).
+
+#### <a name="improvements-to-devices-page-of-iosipados-and-macos-company-portals---6055001---"></a>Mejoras en la página Dispositivos de iOS/iPadOS y los portales de empresa de macOS<!-- 6055001 -->
+Hemos realizado cambios en la página **Dispositivos** del Portal de empresa para mejorar la experiencia de la aplicación para usuarios de iOS/iPadOS y Mac. Además de crear una apariencia más moderna, hemos reorganizado los detalles del dispositivo en una sola columna con encabezados de sección definidos para que a los usuarios les resulte más fácil ver el estado de los dispositivos. También hemos agregado una mensajería más clara y pasos de solución de problemas para los usuarios cuyos dispositivos no cumplen los requisitos. Para obtener más información sobre el Portal de empresa, vea [Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune](../apps/company-portal-app.md). Para sincronizar manualmente un dispositivo, vea [Sincronización manual del dispositivo iOS](../user-help/sync-your-device-manually-ios.md).  
+
+#### <a name="cloud-setting-for-iosipados-company-portal-app---7071303----"></a>Configuración de la nube para la aplicación Portal de empresa de iOS o iPadOS<!-- 7071303  -->
+La nueva configuración de la **nube** para el Portal de empresa de iOS o iPadOS permite a los usuarios redirigir la autenticación hacia la nube adecuada para la organización. De forma predeterminada, la opción está configurada en **Automático**, que dirige la autenticación a la nube que el dispositivo del usuario detecta automáticamente. Si la autenticación de la organización debe redirigirse a una nube distinta de la que se detecta automáticamente (como una pública o de administración pública), los usuarios pueden seleccionar manualmente la nube adecuada si eligen **Configuración** de la aplicación > **Portal de empresa** > **Nube**. Los usuarios solo deben cambiar el valor **Automático** de **Nube** si inician sesión desde otro dispositivo y este no detecta automáticamente la nube adecuada. 
+
+#### <a name="duplicate-apple-vpp-tokens---7101606----"></a>Tokens duplicados de VPP de Apple<!-- 7101606  -->
+Los tokens de VPP de Apple con la misma **Ubicación del token** ahora están marcados como **Duplicados** y se pueden sincronizar de nuevo cuando se ha quitado el token duplicado. Todavía puede asignar y revocar licencias para los tokens marcados como duplicados. Pero es posible que las licencias de las nuevas aplicaciones y los libros comprados no se reflejen una vez que un token se marca como duplicado. Para buscar los tokens de VPP de Apple del inquilino, en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Administración de inquilinos** > **Conectores y tokens** > **Tokens de VPP de Apple**. Para obtener más información relacionada con los tokens VPP, vea [Administración de aplicaciones de iOS y macOS compradas a través del Programa de Compras por Volumen de Apple con Microsoft Intune](../apps/vpp-apps-ios.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Configuración del dispositivo
+
+#### <a name="add-multiple-root-certificates-for-eap-tls-authentication-in-wi-fi-profiles-on-macos-devices---2077871----"></a>Adición de varios certificados raíz para la autenticación EAP-TLS en perfiles de Wi-Fi en dispositivos macOS<!-- 2077871  -->
+
+En los dispositivos macOS, puede crear un perfil de Wi-Fi y seleccionar el tipo de autenticación Protocolo de autenticación extensible (EAP) (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **macOS** para la plataforma > **Wi-Fi** para el perfil > **Tipo de Wi-Fi** establecido en Empresa).
+
+Al establecer el **Tipo de EAP** en la autenticación **EAP-TLS**, **EAP-TTLS** o **PEAP**, puede agregar varios certificados raíz. Antes solo se podía agregar un certificado raíz.
+
+Para obtener más información sobre las opciones que se pueden configurar, vea [Incorporación de la configuración de Wi-Fi para dispositivos macOS en Microsoft Intune](../configuration/wi-fi-settings-macos.md).
+
+Se aplica a:
+- macOS
+
+#### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-newer-devices---3246388-----"></a>Uso de certificados PKCS con perfiles de Wi-Fi en dispositivos Windows 10 y más recientes<!-- 3246388   -->
+Puede autenticar los perfiles de Wi-Fi de Windows con certificados SCEP (**Configuración de dispositivo** > **Perfiles** > **Crear perfil** > **Windows 10 y versiones posteriores** para la plataforma > **Wi-Fi** para el tipo de perfil > **Empresa** > **Tipo de EAP**). Ahora puede usar certificados PKCS con los perfiles de Wi-Fi de Windows. Esta característica permite a los usuarios autenticar perfiles de Wi-Fi mediante perfiles de certificado PKCS nuevos o existentes en el inquilino. 
+
+Para obtener más información sobre las opciones de Wi-Fi que se pueden configurar, vea [Agregar Wi-Fi para dispositivos Windows 10 y versiones posteriores en Intune](../configuration/wi-fi-settings-windows.md).
+
+Se aplica a:
+- Windows 10 y versiones posteriores
+
+#### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Perfiles de configuración de dispositivos de red cableada para dispositivos macOS<!-- 3508686  -->
+Se ha publicado un nuevo perfil de configuración de dispositivo macOS que configura redes cableadas (**Dispositivos** > **Perfiles de configuración > **Crear perfil** > **macOS** para plataforma > **Red cableada** para perfil). Use esta característica para crear perfiles de 802.1x con el fin de administrar redes cableadas e implementarlas en los dispositivos macOS.
+
+Para obtener más información sobre esta característica, vea [Redes cableadas en dispositivos macOS](../configuration/wired-networks-configure.md).
+
+Se aplica a:
+- macOS
+
+#### <a name="use-microsoft-launcher-as-the-default-launcher-for-fully-managed-android-enterprise-devices---4927976-----"></a>Uso de Microsoft Launcher como iniciador predeterminado para dispositivos empresariales Android totalmente administrados<!-- 4927976   -->
+En los dispositivos del propietario de dispositivos de Android Enterprise, puede configurar Microsoft Launcher como el iniciador predeterminado para dispositivos totalmente administrados (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **Android Enterprise**como plataforma > **Propietario del dispositivo** > **restricciones de dispositivos** para el perfil > **Experiencia de dispositivo**). Para configurar el resto de la configuración de Microsoft Launcher, use [directivas de configuración de aplicaciones](../apps/configure-microsoft-launcher.md). 
+
+Además, hay otras actualizaciones de la interfaz de usuario, entre las que se incluyen **Dispositivos dedicados**, cuyo nombre cambia a **Experiencia de dispositivo**.
+
+Para ver los valores que puede restringir, consulte [Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune](../configuration/device-restrictions-android-for-work.md). 
+
+Se aplica a:
+- Dispositivos totalmente administrados del propietario del dispositivo Android Enterprise (COBO)
+
+#### <a name="use-autonomous-single-app-mode-settings-to-configure-the-ios-company-portal-app-to-be-a-sign-insign-out-app---7055619-----"></a>Uso de la configuración de modo de aplicación única autónoma para configurar la aplicación de Portal de empresa de iOS con el fin de que sea una aplicación de inicio y cierre de sesión<!-- 7055619   -->
+En los dispositivos iOS o iPadOS, puede configurar las aplicaciones para que se ejecuten en el modo de aplicación única autónoma (ASAM). Ahora, la aplicación Portal de empresa admite ASAM y se puede configurar para que sea una aplicación de inicio y cierre de sesión. En este modo, los usuarios deben iniciar sesión en la aplicación Portal de empresa para usar otras aplicaciones y el botón Pantalla principal del dispositivo. Cuando cierran sesión en la aplicación Portal de empresa, el dispositivo vuelve al modo de aplicación única y se bloquea en la aplicación Portal de empresa.
+
+Para configurar el Portal de empresa de modo que esté en ASAM, vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **iOS/iPadOS** para plataforma > **Restricciones de dispositivos** para perfil > **Modo de aplicación única autónoma**.
+
+Para obtener más información, vea [Modo de aplicación única autónoma (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) y [Modo de aplicación única](https://support.apple.com/guide/mdm/single-app-mode-mdm80a981/1/web/1) (se abre el sitio web de Apple).
+
+Se aplica a:
+- iOS/iPadOS
+
+#### <a name="configure-content-caching-on-macos-devices---7106872-----"></a>Configuración del almacenamiento en caché de contenido en dispositivos macOS<!-- 7106872   -->
+En los dispositivos macOS, puede crear un perfil de configuración que configure el almacenamiento en caché de contenido (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **macOS** como plataforma > **Características del dispositivo** para tipo de perfil). Use esta configuración para eliminar la caché, permitir la caché compartida, establecer un límite de caché en el disco y mucho más.
+
+Para más información sobre el almacenamiento en caché de contenido, consulte [ContentCaching](https://developer.apple.com/documentation/devicemanagement/contentcaching) (abre el sitio web de Apple).
+
+Para ver los valores que se pueden configurar, vea [Configuración de características de dispositivos macOS en Intune](../configuration/macos-device-features-settings.md).
+
+Se aplica a:
+- macOS
+
+#### <a name="add-new-schema-settings-and-search-for-existing-schema-settings-using-oemconfig-on-android-enterprise---6394386-----"></a>Agregue una nueva configuración de esquema y busque la configuración de esquema existente con OEMConfig en Android Enterprise.<!-- 6394386   -->
+En Intune, puede usar OEMConfig para administrar la configuración de los dispositivos Android Enterprise (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **Android Enterprise** para plataforma > **OEMConfig** para el perfil). Al usar **Diseñador de configuraciones**, se muestran las propiedades del esquema de la aplicación. Ahora, en **Diseñador de configuraciones**, puede:
+
+- Agregar una nueva configuración al esquema de la aplicación.
+- Buscar valores nuevos y existentes en el esquema de la aplicación.
+
+Para más información sobre los perfiles OEMConfig en Intune, consulte [Uso y administración de dispositivos Android Enterprise con OEMConfig en Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+Se aplica a:
+- Android Enterprise
+
+#### <a name="block-shared-ipad-temporary-sessions-on-shared-ipad-devices---6613794----"></a>Bloqueo de sesiones temporales de iPad compartidas en dispositivos iPad compartidos<!-- 6613794  -->
+En Intune, hay una nueva opción para **bloquear sesiones temporales de iPad compartidas en dispositivos iPad compartidos** (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **iOS/iPadOS** como plataforma > **Restricciones de dispositivos** para tipo de perfil > **iPad compartido**). Cuando está habilitada, los usuarios finales no pueden usar la cuenta de invitado. Deben iniciar sesión en el dispositivo con el identificador y la contraseña de Apple administrados. 
+
+Para obtener más información, vea [Configuración de dispositivos iOS e iPadOS para permitir o restringir características](../configuration/device-restrictions-ios.md).
+
+Se aplica a:
+- Dispositivos iPad compartidos que ejecutan iOS/iPadOS 13.4 y versiones más recientes
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Inscripción de dispositivos
+
+#### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344----"></a>Los dispositivos de tipo Bring Your Own Device pueden usar la VPN para la implementación<!--5015344  -->
+El nuevo botón de alternancia **Omitir comprobación de conectividad del dominio** del perfil de Autopilot le permite implementar dispositivos de Unión a Azure AD híbrido sin acceso a la red corporativa mediante su propio cliente VPN Win32 de terceros. Para ver el nuevo botón de alternancia, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos**  > **Windows** > **Inscripción de Windows** > **Perfiles de implementación** > **Crear perfil** > **Configuración rápida (OOBE)** .
+
+#### <a name="enrollment-status-page-profiles-can-be-set-to-device-groups--3952138---"></a>Los perfiles de la página de estado de inscripción pueden establecerse en grupos de dispositivos<!--3952138 -->
+Antes, los perfiles de la página de estado de inscripción (ESP) solo podían destinarse a grupos de usuarios. Ahora también pueden establecerse en grupos de dispositivos. Para obtener más información, vea [Configuración de una página de estado de inscripción](../enrollment/windows-enrollment-status.md).
+
+#### <a name="automated-device-enrollment-sync-errors---6988214---"></a>Errores de sincronización de inscripción de dispositivos automatizada<!-- 6988214 -->
+Se notificarán nuevos errores para iOS/iPadOS y para dispositivos macOS, incluido lo siguiente:
+- Caracteres no válidos en el número de teléfono o si el campo está vacío. 
+- Nombre de configuración no válido o vacío en el perfil. 
+- Valor de cursor no válido o expirado, o si no se encuentra ningún cursor.
+- Token rechazado o expirado. 
+- El campo Departamento está vacío o la longitud es demasiado larga. 
+- Apple no encuentra el perfil y se debe crear uno nuevo. 
+- Se agregará un recuento de los dispositivos de Apple Business Manager eliminados a la página de información general en la que verá el estado de los dispositivos.
+
+#### <a name="shared-ipads-for-business--6367326-----"></a>iPad compartidos para la empresa<!--6367326   -->
+Puede usar Intune y Apple Business Manager para configurar de forma fácil y segura un iPad compartido de modo que varios empleados puedan compartir dispositivos. [iPad compartido](https://developer.apple.com/education/shared-ipad/) de Apple proporciona una experiencia personalizada para varios usuarios a la vez que conserva los datos de usuario. Con un identificador de Apple administrado, los usuarios pueden acceder a sus aplicaciones, datos y configuraciones después de iniciar sesión en cualquier iPad compartido de su organización. iPad compartido funciona con identidades federadas.
+
+Para ver esta característica, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tokens del programa de inscripción** > elija un token** > **Perfiles** > **Crear perfil** > **iOS**. En la página **Configuración de administración**, seleccione **Inscribir sin afinidad de usuario** y verá la opción **iPad compartido**.
+
+Requiere iPadOS 13.4 y versiones posteriores. En esta versión se ha agregado compatibilidad con sesiones temporales con iPad compartido para que los usuarios puedan acceder a un dispositivo sin un identificador de Apple administrado. Al cerrar sesión, el dispositivo borra todos los datos de usuario para que esté listo para su uso de forma inmediata, lo que elimina la necesidad de borrarlo. 
+
+#### <a name="updated-user-interface-for-apples-automated-device-enrollment--7430322---"></a>Interfaz de usuario actualizada para la inscripción de dispositivos automatizada de Apple<!--7430322 -->
+La interfaz de usuario se ha actualizado para reemplazar el Programa de inscripción de dispositivos de Apple por la inscripción de dispositivos automatizada, con el fin de reflejar la terminología de Apple.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Administración de dispositivos
+
+#### <a name="device-remote-lock-pin-available-for-macos--7281557-----"></a>Disponibilidad del PIN de bloqueo remoto de dispositivo para macOS<!--7281557   -->
+La disponibilidad de los PIN de bloqueo remoto para dispositivos macOS ha aumentado de 7 a 30 días.
+
+#### <a name="change-primary-user-on-co-managed-devices--7319183----"></a>Cambio del usuario primario en los dispositivos administrados conjuntamente<!--7319183  -->
+Puede cambiar el usuario primario de un dispositivo para dispositivos Windows administrados conjuntamente. Para más información sobre cómo buscarlo y cambiarlo, consulte [Búsqueda del usuario primario de un dispositivo de Intune](../remote-actions/find-primary-user.md). Esta característica se implementará gradualmente a lo largo de las próximas semanas.
+
+#### <a name="setting-the-intune-primary-user-also-sets-the-azure-ad-owner-property--7319227---"></a>Al establecer el usuario primario de Intune, también se establece la propiedad del propietario de Azure AD.<!--7319227 -->
+Esta nueva característica establece automáticamente la propiedad del propietario en los dispositivos unidos a Azure AD híbrido recién inscritos al mismo tiempo que se establece el usuario primario de Intune. Para más información sobre el usuario primario, consulte [Búsqueda del usuario primario de un dispositivo de Intune](../remote-actions/find-primary-user.md).
+
+Se trata de un cambio en el proceso de inscripción y solo se aplica a los dispositivos recién inscritos. En el caso de los dispositivos unidos a Azure AD híbrido existentes, debe actualizar manualmente la propiedad del propietario de Azure AD. Para ello, puede usar la característica [Cambiar el usuario primario](../remote-actions/find-primary-user.md#change-a-devices-primary-user) o [un script](https://github.com/microsoftgraph/powershell-intune-samples/tree/master/ManagedDevices).
+
+Cuando los dispositivos Windows 10 se unen a un directorio de Azure Active Directory híbrido, el primer usuario del dispositivo se convierte en el usuario primario de Endpoint Manager.  Actualmente, el usuario no está establecido en el objeto de dispositivo de Azure AD correspondiente. Esto produce una incoherencia al comparar la propiedad de *propietario* de un portal de Azure AD con la propiedad de *usuario primario* en el centro de administración de Microsoft Endpoint Manager. La propiedad de propietario de Azure AD se usa para proteger el acceso a las claves de recuperación de BitLocker. La propiedad no se rellena en los dispositivos unidos a Azure AD híbrido. Esta limitación evita la configuración del autoservicio de recuperación de BitLocker desde Azure AD. Esta próxima característica resuelve esta limitación.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Seguridad de dispositivos
+
+#### <a name="hide-the-recovery-key-from-users-during-filevault-2-encryption-for-macos-devices---5459801----"></a>Ocultación de la clave de recuperación de los usuarios durante el cifrado de FileVault 2 para dispositivos macOS<!-- 5459801  -->
+Se ha agregado una opción nueva a la categoría *FileVault* dentro de la plantilla [Endpoint Protection de macOS](../protect/endpoint-protection-macos.md#filevault): **Ocultar clave de recuperación**. Esta opción oculta la clave personal del usuario final durante el cifrado de FileVault 2. 
+
+Para ver la clave de recuperación personal de un dispositivo macOS cifrado, el usuario del dispositivo puede ir a cualquiera de las siguientes ubicaciones y hacer clic en *Obtener clave de recuperación* para el dispositivo macOS: 
+
+- Aplicación Portal de empresa de iOS/iPadOS
+- Aplicación de Intune
+- Sitio web del portal de empresa
+- Aplicación Portal de empresa de Android
+
+#### <a name="support-for-smime-signing-and-encryption-certificates-with-outlook-on-android-fully-managed--5896415-----"></a>Compatibilidad con certificados de firma S/MIME y cifrado con Outlook en Android totalmente administrado<!--5896415   -->
+Ahora puede usar certificados de firma S/MIME y cifrado con Outlook en dispositivos que ejecutan Android Enterprise totalmente administrado.
+
+Esto amplía la compatibilidad agregada el mes pasado para otras versiones de Android (compatibilidad con certificados de firma S/MIME y cifrado con Outlook en Android). Puede aprovisionar estos certificados mediante perfiles de certificado SCEP y PKCS importados.
+
+Para obtener más información, vea [Etiquetado de sensibilidad y protección en Outlook para iOS y Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) en la documentación de Exchange.
+
+#### <a name="add-a-link-to-your-company-portal-support-website-to-emails-for-noncompliance---7225498------"></a>Adición de un vínculo al sitio web de soporte técnico de Portal de empresa en correos electrónicos por incumplimiento<!-- 7225498    -->
+Cuando [configure una plantilla de mensaje de notificación](../protect/actions-for-noncompliance.md#create-a-notification-message-template) para enviar notificaciones por correo electrónico en caso de incumplimiento, use la nueva opción **Vínculo al sitio web de Portal de empresa** para incluir automáticamente un vínculo a dicho sitio web. Si establece esta opción en *Habilitar*, los usuarios con dispositivos no compatibles que reciban un correo electrónico basado en esta plantilla pueden usar el vínculo para abrir un sitio web y obtener más información sobre por qué su dispositivo no es compatible. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="licensing"></a>Licencias
+
+#### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Los administradores ya no necesitan una licencia de Intune para acceder a la consola de administración de Microsoft Endpoint Manager.<!--1335430 -->
+Ahora puede establecer una alternancia en todo el inquilino que elimine el requisito de licencia de Intune para que los administradores accedan a la consola de administración de MEM y a las API de grafos de consulta. Una vez que se elimine el requisito de licencia, nunca se puede volver a restablecer. 
+
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="scripts"></a>Scripts 
+
+#### <a name="availability-of-shell-scripts-on-macos-devices---7134839----"></a>Disponibilidad de scripts de shell en dispositivos macOS<!-- 7134839  -->
+Los scripts de shell para dispositivos macOS ya están disponibles para los clientes de China y de la nube de administración pública. Para obtener más información sobre los scripts de shell, vea [Uso de scripts de shell en dispositivos macOS en Intune](../apps/macos-shell-scripts.md).
+
+
+
+<!-- ########################## -->
+## <a name="week-of-june-8-2020"></a>Semana del 8 de junio de 2020   
+
+### <a name="app-management"></a>Administración de aplicaciones  
+
+#### <a name="updates-to-informational-screen-in-company-portal-for-iosipados---7032452---"></a>Actualizaciones de la pantalla informativa en Portal de empresa para iOS/iPadOS <!--7032452 -->
+Se ha actualizado una pantalla informativa en Portal de empresa para iOS/iPadOS a fin de explicar mejor lo que un administrador puede ver y hacer en los dispositivos. Estas aclaraciones solo se aplican a los dispositivos corporativos. Solo se ha actualizado el texto; no se han realizado modificaciones reales de lo que el administrador puede ver o hacer en los dispositivos de usuario. Para ver las pantallas actualizadas, vaya a [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](./whats-new-app-ui.md).
+
+#### <a name="updated-android-app-conditional-launch-end-user-experience---5736084---"></a>Actualización de la experiencia del usuario final de inicio condicional de la aplicación Android<!-- 5736084 -->
+La versión 2006 del Portal de empresa de Android incluye cambios basados en las actualizaciones de la versión 2005. En 2005, implementamos una actualización en la que los usuarios finales de dispositivos Android que son objeto de una advertencia, un bloqueo o un borrado por parte de una directiva de protección de aplicaciones ven un mensaje de página completa en el que se describe el motivo de dicha advertencia, bloqueo o borrado y los pasos para corregir los problemas. En 2006, los nuevos usuarios de aplicaciones Android a los que se asignó a una directiva de protección de aplicaciones seguirán un flujo guiado para corregir los problemas que hacen que el acceso a su aplicación se bloquee. 
+
+<!-- ########################## -->
 ## <a name="week-of-may-25-2020"></a>Semana del 25 de mayo de 2020
 
 ### <a name="app-management"></a>Administración de aplicaciones
@@ -64,6 +294,8 @@ Las aplicaciones Windows de 32 bits (x86) implementadas como disponibles en dis
 #### <a name="windows-company-portal-app-icon---7114635---"></a>Icono de la aplicación Portal de empresa de Windows<!-- 7114635 -->
 Se actualizó el icono de la aplicación Portal de empresa de Windows. Para más información sobre el Portal de empresa de Intune, consulte [Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune](../apps/company-portal-app.md).
 
+
+<!-- ########################## -->
 ## <a name="week-of-may-18-2020"></a>Semana del 18 de mayo de 2020
 
 ### <a name="app-management"></a>Administración de aplicaciones  
@@ -71,6 +303,7 @@ Se actualizó el icono de la aplicación Portal de empresa de Windows. Para más
 #### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Actualización de iconos de la aplicación Portal de empresa para iOS/iPados y macOS<!--6057697 -->
 Actualizamos los iconos en Portal de empresa para crear una apariencia más moderna que sea compatible en dispositivos de pantalla doble y se alinee con Microsoft Fluent Design System. Para ver los iconos actualizados, vaya a [Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune](./whats-new-app-ui.md). 
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>Seguridad de dispositivos
 
 #### <a name="use-endpoint-detection-and-response-policy-to-onboard-devices-to-defender-atp---7130165----"></a>Uso de la directiva de detección de puntos de conexión y respuesta para incorporar dispositivos a ATP de Defender<!-- 7130165  -->
@@ -84,6 +317,7 @@ Para usar la directiva para dispositivos de Configuration Manager, debe [configu
 - Sincronice las colecciones de dispositivos de la jerarquía con el Centro de administración de Microsoft Endpoint Manager.
 
 
+<!-- ########################## -->
 ## <a name="week-of-may-11-2020-2005-service-release"></a>Semana del 11 de mayo de 2020 (versión de servicio 2005)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -101,9 +335,7 @@ Para obtener más información, vea [Acciones de dispositivo de autoservicio de 
 Las aplicaciones que se publican como aplicaciones disponibles para el Programa de compras por volumen (PCV) se actualizarán de forma automática cuando se habilita **Actualizaciones automáticas de la aplicación** para el token de PCV. Anteriormente, las aplicaciones disponibles para VPP no se actualizaban de forma automática, sino que los usuarios finales debían ir al Portal de empresa y volver a instalar la aplicación si había disponible una versión más reciente. Las aplicaciones necesarias siguen admitiendo las actualizaciones automáticas.
 
 
-#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---4404429-----"></a>Entrega unificada de aplicaciones de Azure AD Enterprise y Office Online en el Portal de empresa<!-- 4404429   -->
-*Esta característica se ha retrasado.*
-En el panel **Personalización** de Intune, puede seleccionar **Ocultar** o **Mostrar** **Aplicaciones de Azure AD Enterprise** y **Aplicaciones de Office Online** en el Portal de empresa. Cada usuario final ve todo el catálogo de aplicaciones desde el servicio de Microsoft elegido. De forma predeterminada, cada origen de aplicación adicional se establecerá en **Ocultar**. Esta característica se va a aplicar en primer lugar en el sitio web del Portal de empresa y luego en los Portales de empresa de Windows, iOS/iPadOS y macOS. Para encontrar esta opción de configuración, seleccione **Administración de inquilinos** > **Personalización** en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Para obtener información relacionada, vea [Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune](../apps/company-portal-app.md).
+
 
 #### <a name="android-company-portal-user-experience---5736084----"></a>Experiencia del usuario del Portal de empresa de Android<!-- 5736084  -->
 En la versión 2005 de Portal de empresa de Android, los usuarios finales de dispositivos Android a los que una directiva de protección de aplicaciones emite una advertencia, un bloqueo o un borrado, verán una nueva experiencia de usuario. En lugar de la experiencia de cuadros de diálogo actual, los usuarios finales verán un mensaje de página completa en el que se describe el motivo de la advertencia, el bloqueo o el borrado, y los pasos para corregir el problema. Para obtener más información, vea [Experiencia de protección de aplicaciones para dispositivos Android](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) y [Configuración de directivas de protección de aplicaciones Android en Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -463,6 +695,7 @@ Esta característica se aplica a:
 
 - macOS
 
+<!-- ########################## -->
 ## <a name="week-of-march-16-2020-2003-service-release"></a>Semana del 16 de marzo de 2020 (versión del servicio 2003)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -853,411 +1086,6 @@ La pantalla **¿Cuál es el paso siguiente?** se ha quitado del flujo de inscrip
 
 #### <a name="company-portal-app-improved-performance---6178652---"></a>Rendimiento mejorado de la aplicación Portal de empresa<!-- 6178652 -->
 La aplicación Portal de empresa se ha actualizado para admitir un rendimiento mejorado en los dispositivos que usan procesadores ARM64, como Surface Pro X. Anteriormente, el Portal de empresa operaba en un modo ARM32 emulado. Ahora, en la versión 10.4.7080.0 y en versiones posteriores, la aplicación Portal de empresa se compila de forma nativa para ARM64. Para más información sobre la aplicación Portal de empresa, consulte [Configuración de la aplicación Portal de empresa de Microsoft Intune](../apps/company-portal-app.md).
-
-<!-- ########################## -->
-## <a name="week-of-january-27-2020"></a>Semana del 27 de enero de 2020
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="intune-support-for-additional-microsoft-edge-version-77-deployment-channel-for-macos---5983950----"></a>Compatibilidad de Intune con el canal de implementación adicional de Microsoft Edge versión 77 para macOS<!-- 5983950  -->
-Microsoft Intune ahora admite el canal de implementación **estable** para la aplicación Microsoft Edge para macOS. El canal **estable** es el canal recomendado para la implementación de Microsoft Edge en general en entornos empresariales. Se actualiza cada seis semanas y cada versión incorpora mejoras del canal **beta**. Además de canales **estable** y **beta**, Intune admite un canal de **desarrollo**. La versión preliminar pública ofrece los canales estable y de desarrollo para la versión 77 y posteriores de Microsoft Edge para macOS. Las actualizaciones automáticas del explorador están activadas de forma predeterminada. Para obtener más información, consulte [Adición de Microsoft Edge a dispositivos macOS con Microsoft Intune](../apps/apps-edge-macos.md).
-
-#### <a name="retirement-of-intune-managed-browser--5728447---"></a>Retirada de Intune Managed Browser<!--5728447 -->
-Se va a retirar Intune Managed Browser. Use Microsoft Edge para la experiencia de explorador de Intune protegida. 
-
-<!-- ########################## -->
-## <a name="week-of-january-20-2020-2001-service-release"></a>Semana del 20 de enero de 2020 (versión del servicio 2001)
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="user-experience-change-when-adding-apps-to-intune---4705829-----"></a>Cambio en la experiencia del usuario al agregar aplicaciones a Intune<!-- 4705829   -->
-Verá una nueva experiencia de usuario al agregar aplicaciones a través de Intune. Esta experiencia proporciona la misma configuración y los mismos detalles que ha usado anteriormente, pero la nueva experiencia emplea un proceso similar a un asistente antes de agregar una aplicación a Intune. Esta nueva experiencia también proporciona una página de revisión antes de agregar la aplicación. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**. Para más información, vea [Agregar aplicaciones a Microsoft Intune](../apps/apps-add.md).
-
-#### <a name="require-win32-apps-to-restart----5622282-----"></a>Requisito de reinicio de las aplicaciones Win32 <!-- 5622282   -->
-Puede requerir que una aplicación Win 32 se reinicie después de una instalación correcta. Además, puede elegir el tiempo (el período de gracia) que transcurrirá antes de que se produzca el reinicio.
-
-#### <a name="user-experience-change-when-configuring-apps-in-intune---4207990-----"></a>Cambio en la experiencia del usuario al configurar aplicaciones en Intune<!-- 4207990   -->
-Verá una nueva experiencia de usuario al crear directivas de configuración de aplicaciones en Intune. Esta experiencia proporciona la misma configuración y los mismos detalles que ha usado anteriormente, pero la nueva experiencia emplea un proceso similar a un asistente antes de agregar una directiva a Intune. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar**. Para obtener más información, vea [Directivas de configuración de aplicaciones para Microsoft Intune](../apps/app-configuration-policies-overview.md). 
-
-#### <a name="intune-support-for-additional-microsoft-edge-for-windows-10-deployment-channel---5861774---"></a>Compatibilidad de Intune con el canal de implementación adicional de Microsoft Edge para Windows 10<!-- 5861774 -->
-Microsoft Intune ahora admite el canal de implementación adicional **estable** para la aplicación Microsoft Edge (versión 77 y posteriores) para Windows 10. El canal **estable** es el canal recomendado para la implementación de Microsoft Edge para Windows 10 en general en entornos empresariales. Este canal se actualiza cada seis semanas y cada versión incorpora mejoras del canal **beta**. Además de canales **estable** y **beta**, Intune admite un canal de **desarrollo**. Para obtener más información, vea [Microsoft Edge para Windows 10 - Configuración de aplicaciones](../apps/apps-windows-edge.md#configure-app-settings).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-configuration"></a>Configuración del dispositivo
-
-#### <a name="improved-user-interface-experience-when-configuring-exchange-activesync-on-premises-connector-ui---5695492-----"></a>Mejor experiencia de interfaz de usuario al configurar la interfaz de usuario del conector local de Exchange ActiveSync<!-- 5695492   -->
-Hemos actualizado para experiencia para [configurar el conector local de Exchange ActiveSync](../protect/exchange-connector-install.md). La experiencia actualizada usa un solo panel para configurar, editar y resumir los detalles de los conectores locales.
-
-#### <a name="add-automatic-proxy-settings-to-wi-fi-profiles-for-android-enterprise-work-profiles---4490822-----"></a>Adición de configuración de proxy automática a perfiles de Wi-Fi para perfiles de trabajo de Android Enterprise<!-- 4490822   -->
-En los dispositivos de perfil de trabajo de Android Enterprise, puede crear perfiles de Wi-Fi. Al elegir el tipo Wi-Fi Enterprise, también puede especificar el tipo de protocolo de autenticación extensible (EAP) que se usa en la red Wi-Fi.
-
-Ahora, al elegir el tipo de empresa, también puede especificar la configuración de proxy automática, incluida una dirección URL del servidor proxy, como `proxy.contoso.com`.
-
-Para ver la configuración de Wi-Fi actual que puede establecer, vaya a [Incorporación de la configuración de Wi-Fi en Microsoft Intune para dispositivos que ejecutan Android Enterprise y el Quiosco de Android](../configuration/wi-fi-settings-android-enterprise.md#work-profile-only).
-
-Se aplica a:
-- Perfil de trabajo de Android Enterprise
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-enrollment"></a>Inscripción de dispositivos
-
-#### <a name="block-android-enrollments-by-device-manufacturer--5197392----"></a>Bloqueo de las inscripciones de Android por el fabricante del dispositivo<!--5197392  -->
-Puede bloquear la inscripción de dispositivos en función del fabricante del dispositivo. Esta característica se aplica al administrador de dispositivos Android y los dispositivos de perfil de trabajo de Android Enterprise. Para ver las restricciones de inscripción, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **Restricciones de inscripción**.
-
-#### <a name="improvements-to-the-iosipados-create-enrollment-type-profile-ui---6055005---"></a>Mejoras en la interfaz de usuario para Crear un perfil de tipo de inscripción en iOS/iPadOS<!-- 6055005 -->
-Para la inscripción de usuarios de iOS/iPadOS, se ha simplificado la página **Crear un perfil de tipo de inscripción** **Configuración** para mejorar el proceso de elección del **Tipo de inscripción** manteniendo la misma funcionalidad. Para ver la interfaz de usuario nueva, vaya a la página [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **iOS** > **Inscripción de iOS** > **Tipos de inscripción** > **Crear perfil** > **Configuración**. Para obtener más información, consulte [Creación de un perfil de inscripción de usuario en Intune](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-management"></a>Administración de dispositivos
-
-#### <a name="new-information-in-device-details---4471759-5604099----"></a>Nueva información en los detalles del dispositivo<!-- 4471759 5604099  -->
-La siguiente información está ahora en la página de **información general** para dispositivos:
-- Capacidad de memoria (cantidad de memoria física en el dispositivo)
-- Capacidad de almacenamiento (cantidad de almacenamiento físico en el dispositivo) 
-- Arquitectura de CPU
-
-#### <a name="ios-bypass-activation-lock-remote-action-renamed-to-disable-activation-lock---5904591----"></a>Cambio de nombre de la acción remota Omisión del bloqueo de activación de iOS a Deshabilitación del bloqueo de activación <!--5904591  -->
-Se ha cambiado el nombre de la acción remota **Omisión del bloqueo de activación** a **Deshabilitación del bloqueo de activación**. Para obtener más información, consulte [Deshabilitación del bloqueo de activación de iOS con Intune](../remote-actions/device-activation-lock-disable.md).
-
-#### <a name="windows-10-feature-update-deployment-support-for-autopilot-devices---5948137-----"></a>Compatibilidad con la implementación de actualizaciones de características de Windows 10 para dispositivos AutoPilot<!-- 5948137   -->
-Intune ahora admite dispositivos registrados con AutoPilot mediante [implementaciones de actualizaciones de características de Windows 10](../protect/windows-update-for-business-configure.md#windows-10-feature-updates).
-
-Las directivas de actualización de características de Windows 10 no se pueden aplicar durante la configuración rápida (OOBE) de Autopilot y solo se aplican en el primer análisis de Windows Update una vez que el dispositivo haya finalizado el aprovisionamiento (que suele ser un día).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="monitor-and-troubleshoot"></a>Supervisión y solución de problemas
-
-#### <a name="windows-autopilot-deployment-reports-preview----3856172-----"></a>Informes de implementación de Windows Autopilot (versión preliminar) <!-- 3856172   -->
-Un nuevo informe detalla cada dispositivo implementado mediante Windows Autopilot. Para más información, vea [Informe de implementaciones de Autopilot](../enrollment/enrollment-autopilot.md#autopilot-deployments-report).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="role-based-access-control"></a>Control de acceso basado en roles.
-
-#### <a name="new-intune-built-in-role-endpoint-security-manager--4253397-----"></a>Nuevo rol de Administrador de seguridad de los puntos de conexión integrado en Intune<!--4253397   -->
-Hay un nuevo rol integrado de Intune disponible: el administrador de seguridad de los puntos de conexión. Este nuevo rol concede a los administradores acceso completo al nodo del administrador de puntos de conexión en Intune y acceso de solo lectura a otras áreas. El rol es una expansión del rol "Administrador de seguridad" de Azure AD. Si actualmente solo tiene administradores globales como roles, no es necesario realizar ningún cambio. Si usa roles y desea la granularidad que proporciona el Administrador de seguridad de puntos de conexión, asigne ese rol cuando esté disponible. Para más información acerca de roles integrados, vea [Control de acceso basado en rol](role-based-access-control.md).
-
-<!-- ########################## -->
-## <a name="week-of-january-6-2020"></a>Semana del 6 de enero de 2020
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="smime-support-for-microsoft-outlook-for-ios---2669398---"></a>Compatibilidad de S/MIME con Microsoft Outlook para iOS<!-- 2669398 -->
-Intune admite la entrega de certificados de cifrado y firma S/MIME que se pueden usar con Outlook para iOS en dispositivos iOS. Para más información, consulte [Etiquetado de sensibilidad y protección en Outlook para iOS y Android](https://aka.ms/omsmime).
-
-#### <a name="cache-win32-app-content-using-microsoft-connected-cache-server---6030314---"></a>Almacenamiento en caché del contenido de la aplicación Win32 mediante el servidor de caché con conexión de Microsoft<!-- 6030314 -->
-Puede instalar un servidor de caché con conexión de Microsoft en los puntos de distribución de Configuration Manager para almacenar en caché el contenido de la aplicación Win32 de Intune. Para más información, consulte [Caché con conexión de Microsoft en Configuration Manager - Compatibilidad con aplicaciones Win32 de Intune](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="role-based-access-control"></a>Control de acceso basado en roles.
-
-#### <a name="windows-10-administrative-templates-admx-profiles-now-support-scope-tags---5137390---"></a>Los perfiles de plantillas administrativas de Windows 10 (ADMX) ahora admiten etiquetas de ámbito <!--5137390 -->
-Ahora puede asignar etiquetas de ámbito a los perfiles de plantilla administrativa (ADMX). Para ello, vaya a **Intune** > **Dispositivos** > **Perfiles de configuración** > elija un perfil de plantillas administrativas en la lista > **Propiedades** > **Etiquetas de ámbito**. Para más información sobre las etiquetas de ámbito, vea [Asignar etiquetas de ámbito a otros objetos](../fundamentals/scope-tags.md#assign-scope-tags-to-other-objects).
-
-<!-- ########################## -->
-## <a name="week-of-december-30-2019"></a>Semana del 30 de diciembre de 2019
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices---4851745---"></a>Recuperación de una clave de recuperación personal desde dispositivos macOS con cifrado de MEM<!-- 4851745 -->
-Los usuarios finales pueden recuperar su clave de recuperación personal (clave de FileVault) mediante la aplicación Portal de empresa de iOS. El dispositivo que tiene la clave de recuperación personal se debe inscribir en Intune y cifrar con FileVault a través de Intune. Con la aplicación Portal de empresa de iOS, un usuario final puede recuperar su clave de recuperación personal en su dispositivo macOS cifrado haciendo clic en **Obtener clave de recuperación**. También puede recuperar la clave de recuperación en Intune si selecciona **Dispositivos** > *el dispositivos macOS cifrado e inscrito* > **Obtener clave de recuperación**. Para más información sobre FileVault, consulte [Cifrado de FileVault para macOS](../protect/encrypt-devices-filevault.md).
-
-#### <a name="ios-and-ipados-user-licensed-vpp-apps---5619268---"></a>Aplicaciones de VPP con licencia de usuario de iOS y iPadOS<!-- 5619268 -->
-En el caso de los dispositivos iOS y iPadOS inscritos por el usuario, los usuarios finales ya no verán las aplicaciones de VPP con licencia de dispositivo recién creadas implementadas como disponibles. Sin embargo, los usuarios finales seguirán viendo todas las aplicaciones de VPP con licencia de usuario en el Portal de empresa. Para más información relacionada con las aplicaciones VPP, vea [Administración de aplicaciones de iOS y macOS compradas a través del Programa de Compras por Volumen de Apple con Microsoft Intune](../apps/vpp-apps-ios.md).
-
-<!-- ########################## -->
-## <a name="week-of-december-23-2019"></a>Semana del 23 de diciembre de 2019
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="notice---windows-10-1703-rs2-will-be-moving-out-of-support----5026679---"></a>Aviso: La compatibilidad de Windows 10 1703 (RS2) finalizará <!-- 5026679 -->
-A partir del 9 de octubre de 2018, finalizó la compatibilidad de Windows 10 1703 (RS2) con la plataforma de Microsoft para las ediciones Home, Pro y Pro for Workstations. En el caso de las ediciones Windows 10 Enterprise y Education, la compatibilidad de Windows 10 1703 (RS2) con la plataforma finalizó el 8 de octubre de 2019. A partir del 26 de diciembre de 2019, actualizaremos la versión mínima de la aplicación Portal de empresa de Windows a Windows 10 1709 (RS3). Los equipos que ejecutan versiones anteriores a 1709 dejarán de recibir las versiones actualizadas de la aplicación desde Microsoft Store. Comunicamos anteriormente este cambio a los clientes que administran versiones anteriores de Windows 10 a través del centro de mensajes. Para más información, consulte [Hoja de datos del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
-
-<!-- ########################## -->
-
-## <a name="week-of-december-16-2019"></a>Semana del 16 de diciembre de 2019
-
-### <a name="device-configuration"></a>Configuración del dispositivo
-
-#### <a name="updates-to-administrative-templates-for-windows-10-devices----5941568---"></a>Actualizaciones de Plantillas administrativas para dispositivos Windows 10 <!-- 5941568 -->
-
-Puede usar plantillas ADMX en Microsoft Intune para controlar y administrar la configuración de Microsoft Edge, Office y Windows. Las Plantillas administrativas en Intune realizaron estas actualizaciones en la configuración de las directivas:
-
-- Se agregó compatibilidad con las versiones 78 y 79 de Microsoft Edge.
-- Incluye los archivos ADMX del 11 de noviembre de 2019 en [Archivos de Plantillas administrativas (ADMX/ADML) y la Herramienta de personalización de Office para Office 365 ProPlus, Office 2019 y Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
-
-Para más información sobre las plantillas ADMX en Intune, consulte [Usar plantillas de Windows 10 para configurar opciones de directiva de grupo en Microsoft Intune](../configuration/administrative-templates-windows.md).
-
-Se aplica a:
-
-- Windows 10 y versiones posteriores
-
-## <a name="week-of-december-9-2019-1912-service-release"></a>Semana del 9 de diciembre de 2019 (versión del servicio 1912)
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="migrating-to-microsoft-edge-for-managed-browsing-scenarios---5173762---"></a>Migración a Microsoft Edge para escenarios de exploración administrados<!-- 5173762 -->
-A medida que se acerca la retirada de Intune Managed Browser, se han realizado cambios en las directivas de protección de aplicaciones para simplificar los pasos necesarios para trasladar a los usuarios a Edge. Se han actualizado las opciones de la configuración de directiva de protección de aplicaciones **Restringir la transferencia de contenido web con otras aplicaciones** para que sea una de las siguientes:
-
-- Cualquier aplicación
-- Intune Managed Browser
-- Microsoft Edge
-- Explorador no administrado 
-
-Al seleccionar **Microsoft Edge**, los usuarios finales verán que la mensajería de acceso condicional les notifica que Microsoft Edge es necesario para escenarios de exploración administrados. Se les pedirá que descarguen e inicien sesión en Microsoft Edge con sus cuentas de AAD, si todavía no lo han hecho.  Este será el equivalente a tener como destino las aplicaciones habilitadas para MAM con la configuración de la aplicación `com.microsoft.intune.useEdge` establecida en **true**. Las directivas de protección de aplicaciones existentes en las que se usaba la opción **Exploradores administrados por directivas** ahora tendrán **Intune Managed Browser** seleccionado y no verá ningún cambio de comportamiento. Esto significa que los usuarios verán mensajes para usar Microsoft Edge si ha establecido la opción de configuración de la aplicación **useEdge** en **true**. Animamos a todos los clientes que aprovechan los escenarios de exploración administrados para actualizar sus directivas de protección de aplicaciones con **Restringir la transferencia de contenido web con otras aplicaciones** para asegurarse de que los usuarios vean las instrucciones adecuadas para realizar la transición a Microsoft Edge, con independencia de la aplicación desde la que inicien los vínculos. 
-
-#### <a name="configure-app-notification-content-for-organization-accounts---2576686----"></a>Configuración del contenido de las notificaciones de una aplicación para las cuentas de organización<!-- 2576686  -->
-Las directivas de protección de aplicaciones (APP) de Intune en dispositivos iOS y Android permiten controlar el contenido de las notificaciones de una aplicación para las cuentas de organización. Puede seleccionar una opción (permitir, bloquear datos de la organización o bloqueado) para especificar cómo se muestran las notificaciones de las cuentas de la organización para la aplicación seleccionada. Esta característica requiere compatibilidad de las aplicaciones y puede que no esté disponible para todas las aplicaciones habilitadas para la aplicación. Outlook para iOS versión 4.15.0 (o posterior) y Outlook para Android 4.83.0 (o posterior) serán compatibles con esta configuración. La configuración está disponible en la consola, pero la funcionalidad entrará en vigor después del 16 de diciembre de 2019. Consulte [¿Qué son las directivas de protección de aplicaciones?](../apps/app-protection-policy.md) para obtener más información sobre APP.
-
-#### <a name="microsoft-app-icons-update--4677605----"></a>Actualización de los iconos de las aplicaciones de Microsoft<!--4677605  -->
-Se han actualizado los iconos que se usan para las aplicaciones de Microsoft en el panel de la aplicación objetivo para las directivas de protección de aplicaciones y las directivas de configuración de aplicaciones.
-
-#### <a name="require-use-of-approved-keyboards-on-android--4761794----"></a>Requerir el uso de teclados aprobados en Android<!--4761794  -->
-Como parte de una directiva de protección de aplicaciones, puede especificar la configuración [**Teclados aprobados**](../apps/app-protection-policy-settings-android.md#data-protection) para administrar los teclados Android que se pueden usar con aplicaciones Android administradas. Cuando un usuario abra la aplicación administrada y aún no use un teclado aprobado para esa aplicación, se le pedirá que cambie a uno de los teclados aprobados que ya están instalados en el dispositivo. Si es necesario, verá un vínculo para descargar un teclado aprobado en Google Play Store, que puede instalar y configurar. El usuario solo puede editar campos de texto en una aplicación administrada cuando su teclado activo no sea uno de los teclados aprobados.
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-configuration"></a>Configuración del dispositivo
-
-#### <a name="updated-single-sign-on-experience-for-apps-and-websites-on-your-ios-ipados-and-macos-devices---4999578----"></a>Experiencia de inicio de sesión único actualizada para aplicaciones y sitios web en dispositivos iOS, iPadOS y macOS<!-- 4999578  -->
-Intune agregó una configuración de inicio de sesión único (SSO) para dispositivos iOS, iPadOS y macOS. Ahora puede configurar las extensiones de aplicación de SSO de redireccionamiento escritas por su organización o por el proveedor de identidades. Use estas opciones para configurar una experiencia de inicio de sesión único sin problemas para aplicaciones y sitios web que usan métodos de autenticación modernos, como OAuth y SAML2. 
-
-Estas nuevas opciones expanden la configuración anterior de las extensiones de aplicación SSO y la extensión Kerberos integrada de Apple (**Dispositivos** > **Configuración del dispositivo** > **Perfiles** > **Crear perfil** > **iOS/iPadOS** o **macOS** para el tipo de plataforma > **Características del dispositivo** para el tipo de perfil). 
-
-Para ver todas las opciones de la extensión de aplicación SSO que puede configurar, vaya a [SSO en iOS](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) y [SSO en macOS](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
-
-Se aplica a:
-
-- iOS/iPadOS
-- macOS
-
-#### <a name="we-have-updated-two-device-restriction-settings-for-ios-and-ipados-devices-to-correct-their-behavior---5701352------"></a>Actualizamos dos opciones de restricción de dispositivos para dispositivos iOS e iPados para corregir su comportamiento<!-- 5701352    -->
-En los dispositivos iOS, puede crear los perfiles de restricción de dispositivos **Permitir actualizaciones móviles de PKI** y **Bloqueo del modo restringido de USB** (**Dispositivos** > **Configuración del dispositivo** > **Perfiles** > **Crear perfil** > **iOS/iPadOS** para la plataforma > **Restricciones de dispositivos** para el tipo de perfil). Antes de esta versión, la configuración de la interfaz de usuario y las descripciones de las siguientes opciones no eran correctas, algo que ahora se corrigió. A partir de esta versión, el comportamiento de la configuración es el siguiente:
-
-**Bloquear actualizaciones móviles de PKI**: **Bloquear** impide que los usuarios reciban actualizaciones de software, a menos que el dispositivo esté conectado a un equipo. **No configurado** (valor predeterminado): permite que un dispositivo reciba actualizaciones de software sin estar conectado a un equipo.
-- Anteriormente, esta configuración le permitía configurarla como: **Permitir**, que permite a los usuarios recibir actualizaciones de software sin tener que conectar los dispositivos a un equipo.
-**Permitir accesorios USB con el dispositivo bloqueado**: **Permitir** permite que los accesorios USB intercambien datos con un dispositivo que ha estado bloqueado durante más de una hora. **No configurado** (valor predeterminado) no actualiza el modo restringido de USB en el dispositivo y los accesorios USB no podrán transferir datos del dispositivo si están bloqueados durante más de una hora.
-- Anteriormente, esta configuración le permitía configurarla como: **Bloquear** para deshabilitar el modo restringido de USB en los dispositivos supervisados.
-
-Para más información sobre los valores que puede configurar, consulte [Configuración de dispositivos iOS e iPadOS para permitir o restringir características mediante Intune](../configuration/device-restrictions-ios.md).
-
-Esta característica se aplica a:
-
-- OS/iPadOS
-
-#### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Perfiles de configuración de dispositivos de red cableada para dispositivos macOS<!-- 3508686  -->
-   > [!NOTE]
-   > Esta característica se ha retrasado, pero se publicará pronto.
-
-#### <a name="block-users-from-configuring-certificate-credentials-in-the-managed-keystore-on-android-enterprise-device-owner-devices---3311998---"></a>Impedir que los usuarios configuren las credenciales de certificado en el almacén de claves administrado en dispositivos propietarios de dispositivos Android Enterprise<!-- 3311998 -->
-En dispositivos propietarios de dispositivos Android Enterprise, puede establecer una nueva configuración que impide que los usuarios configuren sus credenciales de certificado en el almacén de claves administrado (**Configuración del dispositivo** > **Perfiles** > **Crear perfil** > **Android Enterprise** para la plataforma > **Solo el propietario del dispositivo > Restricciones de dispositivos** para el tipo de perfil > **Users + Accounts** [Usuarios y cuentas]).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-management"></a>Administración de dispositivos
-
-#### <a name="protected-wipe-action-now-available--51150000---"></a>La acción de borrado protegido ya está disponible<!--51150000 -->
-Ahora tiene la opción de usar la acción Borrar dispositivo para realizar el borrado protegido de un dispositivo. Los borradores protegidos equivalen a los borrados estándar, salvo que no se pueden eludir apagando el dispositivo. Un borrado protegido seguirá intentando restablecer el dispositivo hasta que se complete de forma correcta. En algunas configuraciones, esta acción puede hacer que el dispositivo no se pueda reiniciar. Para más información, consulte [Retirada o borrado de los dispositivos](../remote-actions/devices-wipe.md).
-
-#### <a name="device-ethernet-mac-address-added-to-devices-overview-page--5562275---"></a>Dirección MAC de Ethernet de un dispositivo agregada a la página Información general del dispositivo<!--5562275 -->
-Ahora puede ver la dirección MAC de Ethernet de un dispositivo en la página de detalles del dispositivo (**Dispositivos** > **Todos los dispositivos** > elija un dispositivo > **Información general**).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-security"></a>Seguridad de dispositivos
-
-#### <a name="improved-experience-on-a-shared-device-when-device-based-conditional-access-policies-are-enabled---1734096----"></a>Experiencia mejorada en un dispositivo compartido cuando se habilitan las directivas de acceso condicional basadas en el dispositivo<!-- 1734096  -->
-Mejoramos la experiencia en un dispositivo compartido con varios usuarios a los que se les aplica la directiva de acceso condicional basada en los dispositivos mediante la comprobación de la evaluación de cumplimiento más reciente para el usuario al aplicar la directiva. Para más información, consulte estos artículos de información general:
-- [Información general de Azure sobre el Acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [Información general sobre el cumplimiento de los dispositivos de Intune](../protect/device-compliance-get-started.md)
-
-#### <a name="use-pkcs-certificate-profiles-to-provision-devices-with-certificates---2317124-2317130-2317139-2340517-2340528-2340529----"></a>Uso de perfiles de certificado PKCS para aprovisionar dispositivos con certificados<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
-Ahora puede usar perfiles de certificado PKCS para emitir certificados a *dispositivos* que ejecuten Android for Work, iOS/iPadOS y Windows, cuando estén asociados a perfiles como los de Wi-Fi y VPN. Anteriormente, estas tres plataformas solo admitían certificados basados en el usuario, con la compatibilidad basada en dispositivos limitada a macOS.
-
-> [!NOTE]
-> No se admiten los perfiles de certificado PKCS con perfiles Wi-FI. En su lugar, use perfiles de certificado SCEP cuando use un [tipo EAP](../configuration/wi-fi-settings-windows.md#enterprise-profile).
-
-Para usar un certificado basado en dispositivos, al [crear un perfil de certificado PKCS](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) para las plataformas admitidas, seleccione **Configuración**. Ahora verá el valor de **Tipo de certificado**, que admite las opciones de dispositivo o usuario.
-
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="monitor-and-troubleshoot"></a>Supervisión y solución de problemas
-
-#### <a name="centralized-audit-logs--5603185-5697164---"></a>Registros de auditoría centralizados<!--5603185, 5697164 -->
-Una nueva experiencia de registros de auditoría centralizados ahora recopila los registros de auditoría de todas las categorías en una sola página. Puede filtrar los registros para obtener los datos que está buscando. Para ver los registros de auditoría, vaya a **Administración de inquilinos** > **Registros de auditoría**. 
-
-#### <a name="scope-tag-information-included-in-audit-log-activity-details--5763534---"></a>Información de etiqueta de ámbito incluida en los detalles de la actividad de registro de auditoría<!--5763534 -->
-Los detalles de la actividad de registro de auditoría ahora incluyen información de etiqueta de ámbito (para los objetos de Intune que admiten etiquetas de ámbito). Para más información sobre los registros de auditoría, consulte [Uso de registros de auditoría para realizar un seguimiento de los eventos y supervisarlos](monitor-audit-logs.md).
-
-<!-- ########################## -->
-## <a name="week-of-december-2-2019"></a>Semana del 2 de diciembre de 2019
-
-#### <a name="new-microsoft-endpoint-configuration-manager-co-management-licensing--5027281--"></a>Nueva licencia de administración conjunta de Microsoft Endpoint Configuration Manager<!--5027281-->
-Los clientes de Configuration Manager con Software Assurance pueden obtener la administración conjunta de Intune para equipos con Windows 10 sin tener que comprar una licencia de Intune adicional para la administración conjunta. Los clientes ya no necesitan asignar licencias de Intune y EMS individuales a los usuarios finales para la administración conjunta de Windows 10.
-- Los dispositivos administrados por Configuration Manager e inscritos en la administración conjunta tienen casi los mismos derechos que los equipos administrados por MDM de Intune independiente. Pero después de restablecerlos, no se pueden volver a aprovisionar con Autopilot.
-- Los dispositivos Windows 10 inscritos en Intune mediante otros medios requieren licencias completas de Intune.
-- Los dispositivos de otras plataformas siguen requiriendo licencias de Intune completas.
-
-Para más información, vea [Términos de Licencia](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
-
-<!-- ########################## -->
-## <a name="week-of-november-18-2019-1911-service-release"></a>Semana del 18 de noviembre de 2019 (versión del servicio 1911)
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="ui-update-when-selectively-wiping-app-data---4102028---"></a>Actualización de la interfaz de usuario al borrar datos de la aplicación de forma selectiva<!-- 4102028 -->
-La interfaz de usuario para borrar selectivamente los datos de la aplicación en Intune se ha actualizado. Los cambios de la UI son:
-- Una experiencia más sencilla, dado el uso de un formato de tipo asistente condensado dentro de un panel.
-- Una actualización del flujo de creación para incluir asignaciones.
-- Una página de resumen de todos los elementos establecidos al ver las propiedades, antes de crear una nueva directiva o al editar una propiedad. Además, al editar las propiedades, el resumen solo mostrará una lista de elementos de la categoría de propiedades que se están editando.
-
-Para obtener más información, consulte [Borrado solo de datos corporativos de aplicaciones administradas por Intune](../apps/apps-selective-wipe.md).
-
-#### <a name="ios-and-ipados-third-party-keyboard-support---4922950---"></a>Compatibilidad con el teclado de terceros de iOS y iPadOS<!-- 4922950 -->
-En marzo de 2019, anunciamos el fin del la compatibilidad del parámetro de la directiva de protección de aplicaciones de iOS "Teclados de terceros". La característica está de vuelta en Intune con compatibilidad tanto con iOS como con iPadOS. Para habilitar esta configuración, visite la pestaña **Protección de datos** de una directiva de protección de aplicaciones iOS/iPadOS nueva o existente y busque la opción **Teclados de terceros** en **Transferencia de datos**.
-
-El comportamiento de esta configuración de directiva difiere ligeramente de la implementación anterior. En las aplicaciones de varias identidades que usan la versión de SDK 12.0.16 y versiones posteriores que son el destino de directivas de protección de aplicaciones con esta opción configurada en **Bloquear**, los usuarios finales no podrán elegir los teclados de terceros en sus cuentas personales y de organización. Las aplicaciones que usan versiones de SDK 12.0.12 y anteriores seguirán mostrando el comportamiento documentado en la entrada de blog que lleva por título [Problema conocido: Los teclados de terceros no se bloquean en iOS para cuentas personales](https://aka.ms/3rdparty_iOS_Intune).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-configuration"></a>Configuración del dispositivo
-
-#### <a name="target-macos-user-groups-to-require-jamf-management---4061739----"></a>Requerimiento de administración de Jamf a grupos de usuarios de macOS<!-- 4061739  --> 
-Puede dirigirse a grupos específicos de usuarios cuyos [dispositivos macOS serán administrados por Jamf](../protect/conditional-access-integrate-jamf.md). Esto le permite aplicar la integración de cumplimiento de Jamf a un subconjunto de dispositivos macOS mientras que otros dispositivos se administran mediante Intune. Si ya usa la integración de Jamf, la integración se destinará a todos los usuarios de manera predeterminada.
-
-#### <a name="new-exchange-activesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824-----"></a>Nueva configuración de Exchange ActiveSync al crear un perfil de configuración de dispositivo de correo electrónico en dispositivos iOS<!-- 4892824   --> 
-En dispositivos iOS/iPadOS, puede configurar la conectividad del correo electrónico en un perfil de configuración de dispositivos (**Configuración de dispositivos** > **Perfiles** > **Crear perfil** > **iOS/iPadOS** como plataforma > **Correo electrónico** para tipo de perfil). 
-
-Hay nuevas opciones de configuración de Exchange ActiveSync disponibles, entre las que se incluyen:
-- **Datos de Exchange para sincronizar**: elija los servicios de Exchange que se sincronizarán (o cuya sincronización se bloqueará) con el calendario, los contactos, los recordatorios, las notas y el correo electrónico.
-- **Permitir a los usuarios cambiar la configuración de sincronización**: permita (o impida) a los usuarios cambiar la configuración de sincronización para estos servicios en sus dispositivos.  
-
-Para obtener más información sobre esta configuración, vaya a [Incorporación de la configuración de correo electrónico para dispositivos iOS en Microsoft Intune](../configuration/email-settings-ios.md). 
-
-Se aplica a:
-
-- iOS 13.0 y versiones más recientes
-- IPadOS 13.0 y versiones más recientes
-
-#### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-fully-managed-and-dedicated-devices---5353228-----"></a>Evitación de que los usuarios agreguen cuentas personales de Google a dispositivos Android Enterprise dedicados y totalmente administrados<!-- 5353228   -->
-En los dispositivos Android Enterprise dedicados y totalmente administrados, hay una nueva opción que impide que los usuarios creen cuentas de Google personales (**Configuración de dispositivos** > **Perfiles** > **Crear perfil** > **Android Enterprise** para plataforma > **Solo el propietario del dispositivo > Restricciones de dispositivos** para tipo de perfil > **configuración de Usuarios y cuentas** > **Cuentas personales de Google**).
-
-Para ver los valores que puede configurar, vaya a [Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune](../configuration/device-restrictions-android-for-work.md).
-
-Se aplica a:
-
-- Dispositivos totalmente administrados de Android Enterprise
-- Dispositivos Android Enterprise dedicados
-
-#### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-iosipados-device-restrictions-profile----5468501-----"></a>Eliminación del parámetro de registro del servidor para los comandos de Siri en el perfil de restricciones de dispositivos de iOS/iPadOS <!-- 5468501   -->
-En dispositivos iOS y iPadOS, el parámetro **Registro del servidor para los comandos de Siri** se ha quitado de la consola de administración de Microsoft Endpoint Manager (**Configuración de dispositivo** > **Perfiles** > **Crear perfil** > **iOS/iPadOS** para plataforma &gt; **Restricciones de dispositivos** para tipo de perfil &gt; **Aplicaciones integradas**). 
-
-Esta configuración no tiene ningún efecto en los dispositivos. Para quitar el parámetro de los perfiles existentes, abra el perfil, realice cualquier cambio y, a continuación, guarde el perfil. El perfil se actualiza y la configuración se elimina de los dispositivos.
-
-Para ver todos los valores que puede configurar, vea [Configuración de dispositivos iOS y iPadOS para permitir o restringir características mediante Intune](../configuration/device-restrictions-ios.md).
-
-Se aplica a:
-
-- iOS/iPadOS
-
-#### <a name="windows-10-feature-updates-public-preview---2384877---"></a>Actualizaciones de características de Windows 10 (versión preliminar pública)<!-- 2384877 -->
-Ahora puede implementar [actualizaciones de características de Windows 10](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) en dispositivos Windows 10. Las actualizaciones de características de Windows 10 son una nueva directiva de actualización de software que establece la versión de Windows 10 que desea que se instale y permanezca en los dispositivos. Puede usar este nuevo tipo de directiva junto con los anillos de actualización de Windows 10 existentes.
-
-Los dispositivos que reciben la directiva de actualizaciones de características de Windows 10 instalarán la versión especificada de Windows y, a continuación, permanecerán con esa versión hasta que se edite o se quite la directiva. Los dispositivos que ejecutan una versión posterior de Windows permanecen en su versión actual. Los dispositivos que se encuentran en una versión específica de Windows pueden seguir instalando actualizaciones de calidad y seguridad para esa versión desde los anillos de actualización de Windows 10.
-
-Este nuevo tipo de directiva comienza a implementarse en los inquilinos esta semana. Si esta directiva todavía no está disponible para el inquilino, lo estará pronto.
-
-#### <a name="add-and-change-key-information-in-plist-files-for-macos-applications---4736278---"></a>Adición y cambio de información clave en archivos PLIST para aplicaciones macOS<!-- 4736278 -->
-En los dispositivos macOS, ahora puede crear un perfil de configuración de dispositivos que cargue un archivo de lista de propiedades (. plist) asociado a una aplicación o el dispositivo (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **macOS** para la plataforma > **Archivo de preferencias** para el tipo de perfil).
-
-Solo algunas aplicaciones admiten preferencias administradas, y es posible que estas aplicaciones no le permitan administrar toda la configuración. Asegúrese de cargar un archivo de lista de propiedades que configure los valores del canal del dispositivo, no la configuración del canal del usuario.
-
-Para obtener más información sobre esta característica, consulte [Adición de un archivo de lista de propiedades a dispositivos macOS mediante Microsoft Intune](../configuration/preference-file-settings-macos.md).
-
-Se aplica a:
-
-- dispositivos macOS con 10.7 y versiones más recientes
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-management"></a>Administración de dispositivos
-
-#### <a name="edit-device-name-value-for-autopilot-devices---2640074---"></a>Edición del valor de nombre de dispositivo para dispositivos Autopilot<!-- 2640074 -->
-Puede editar el valor del nombre de dispositivo para los dispositivos Autopilot unidos a Azure AD.  Para obtener más información, consulte [Edición de atributos de dispositivo Autopilot](../enrollment/enrollment-autopilot.md#edit-autopilot-device-attributes).
-
-#### <a name="edit-group-tag-value-for-autopilot-devices---4816775-----"></a>Edición del valor de etiqueta de grupo para dispositivos Autopilot<!-- 4816775   -->
-Puede editar el valor Etiqueta de grupo para dispositivos Autopilot. Para obtener más información, consulte [Edición de atributos de dispositivo Autopilot](../enrollment/enrollment-autopilot.md#edit-autopilot-device-attributes).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="monitor-and-troubleshoot"></a>Supervisión y solución de problemas
-
-#### <a name="updated-support-experience---5012398---"></a>Experiencia de soporte técnico actualizada<!-- 5012398 -->
-
-A partir de hoy, se está implantando en los inquilinos una experiencia actualizada y simplificada en la consola para [obtener ayuda y soporte técnico para Intune](get-support.md). Si esta experiencia todavía no está disponible para usted, lo estará pronto.
-
-Se ha mejorado la búsqueda en la consola, los comentarios de incidencias comunes y el flujo de trabajo que se usa para ponerse en contacto con el servicio de soporte técnico. Al abrir una incidencia de soporte técnico, verá estimaciones en tiempo real de cuándo pueda esperar una devolución de llamada o una respuesta por correo electrónico; los clientes de soporte técnico Premier y Unified pueden especificar fácilmente la gravedad de su incidencia con el fin de obtener soporte técnico más rápido.
-
-#### <a name="improved-intune-reporting-experience-public-preview----3791418---"></a>Mejora de la experiencia de informes de Intune (versión preliminar pública) <!-- 3791418 -->
-Intune ahora proporciona una experiencia de informes mejorada, con nuevos tipos de informes, una mejor organización de informes, vistas más centradas y una funcionalidad de informes más eficiente, así como datos más coherentes y precisos. Los nuevos tipos de informe se centran en lo siguientes aspectos:
-
-- **Operativo**: proporciona registros nuevos con un enfoque de estado negativo. 
-- **Organizativo**: proporciona un resumen más amplio del estado general.
-- **Histórico**: proporciona patrones y tendencias a lo largo de un período de tiempo.
-- **Especialista**: le permite usar datos sin procesar para crear sus propios informes personalizados.
-
-El primer conjunto de informes nuevos se centra en el cumplimiento de los dispositivos. Para obtener más información, vea [Blog:marco de creación de informes de Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) e [Informes de Intune](reports.md).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="role-based-access-control"></a>Control de acceso basado en roles.
-
-#### <a name="duplicate-custom-or-built-in-roles----1081938-----"></a>Duplicación de roles personalizados o integrados <!-- 1081938   -->
-Ahora puede copiar tanto roles integrados como roles personalizados. Para obtener más información, vea [Copia de un rol](../fundamentals/create-custom-role.md#copy-a-role).
-
-#### <a name="new-permissions-for-school-administrator-role----5621805----"></a>Nuevos permisos para el rol de administrador escolar <!-- 5621805  -->  
-Se han agregado dos nuevos permisos, **Asignar perfil** y **Sincronizar dispositivo**, al rol de administrador escolar > **Permisos** > **Programas de inscripción**. El permiso de sincronizar perfil permite a los administradores de grupos sincronizar dispositivos Windows Autopilot. El permiso de asignar perfil les permite eliminar perfiles de inscripción de Apple iniciados por el usuario. También les concede permiso para administrar las asignaciones de dispositivos Autopilot y las asignaciones del perfil de implementación de Autopilot. Para obtener una lista de todos los permisos de administrador de grupo y administrador escolar, consulte [Asignación de un grupo de administración](https://docs.microsoft.com/intune-education/group-admin-delegate).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="security"></a>Seguridad
-
-#### <a name="bitlocker-key-rotation---2564951----"></a>Rotación de clave de BitLocker<!-- 2564951  -->
-Puede usar una acción de dispositivo de Intune para [rotar de forma remota las claves de recuperación de BitLocker](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) para dispositivos administrados que ejecutan la versión 1909 o posterior de Windows. Para que se puedan rotar las claves de recuperación, los dispositivos deben configurarse para admitir la rotación de claves de recuperación.  
-
-#### <a name="updates-to-dedicated-device-enrollment-to-support-scep-device-certificate-deployment----5198878----"></a>Actualizaciones en la inscripción de dispositivos dedicada para admitir la implementación de certificados de dispositivos SCEP <!-- 5198878  -->
-Intune ahora admite la implementación de certificados de dispositivos SCEP en dispositivos Android Enterprise dedicados para permitir el acceso basado en certificados a los perfiles de Wi-Fi. La aplicación Microsoft Intune debe estar presente en el dispositivo para que funcione la implementación. Como resultado, hemos actualizado la experiencia de inscripción para dispositivos Android Enterprise dedicados. Las nuevas inscripciones siguen empezando de la misma manera (con QR, NFC, sin interacción o con identificador de dispositivo) pero ahora tienen un paso que requiere que los usuarios instalen la aplicación Intune. Los dispositivos existentes comenzarán a instalar la aplicación automáticamente de manera gradual.
-
-#### <a name="intune-audit-logs-for-business-to-business-collaboration--5670211---"></a>Registros de auditoría de Intune para colaboración de negocio a negocio<!--5670211 -->
-La colaboración de negocio a negocio (B2B) le permite compartir de forma segura las aplicaciones y los servicios de la empresa con usuarios invitados de cualquier otra organización, manteniendo al mismo tiempo el control sobre sus propios datos corporativos. Intune ahora admite registros de auditoría para usuarios invitados de B2B. Por ejemplo, cuando los usuarios invitados realizan cambios, Intune podrá capturar estos datos a través de registros de auditoría. Para obtener más información, consulte [¿Qué es el acceso de usuarios invitados en Azure Active Directory B2B?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
-
-<!-- ########################## -->
-## <a name="week-of-november-11-2019"></a>Semana del 11 de noviembre de 2019  
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="app-management"></a>Administración de aplicaciones  
-
-#### <a name="improved-macos-enrollment-experience-in-company-portal----5074349----"></a>Experiencia mejorada de inscripción de macOS en el Portal de empresa <!-- 5074349  -->  
-La experiencia de inscripción del Portal de empresa para macOS cuenta con un proceso de inscripción más sencillo que es más coherente con la experiencia de inscripción en el Portal de empresa para iOS. Los usuarios del dispositivo ahora ven lo siguiente:  
-
-- Una interfaz de usuario más elegante.  
-- Una lista de comprobación de inscripción mejorada.  
-- Instrucciones más claras sobre cómo inscribir sus dispositivos.  
-- Mejores opciones de solución de problemas.  
-
-#### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Aplicaciones web iniciadas desde la aplicación Portal de empresa de Windows<!-- 5030972 -->
-Los usuarios finales ahora pueden iniciar aplicaciones web directamente desde la aplicación Portal de empresa de Windows. Los usuarios finales pueden seleccionar la aplicación web y, a continuación, elegir la opción **Abrir en el explorador**. La dirección URL web publicada se abre directamente en un explorador web. Esta funcionalidad se implementará durante la próxima semana. Para más información sobre las aplicaciones web, consulte[Agregar aplicaciones web a Microsoft Intune](../apps/web-app.md).  
-
-#### <a name="new-assignment-type-column-in-company-portal-for-windows-10----5459950----"></a>Nueva columna de tipo de asignación en el Portal de empresa para Windows 10 <!-- 5459950  -->
-Se ha cambiado el nombre de la columna Portal de empresa > **Aplicaciones instaladas** > **Tipo de asignación** a **Requerida por la organización**.  En esa columna, los usuarios verán un valor de **Sí** o **No** para indicar si una aplicación es obligatoria o es opcional para su organización. La razón de estos cambios es la confusión que despertaba en los usuarios de los dispositivos el concepto de aplicaciones disponibles. Los usuarios pueden obtener más información sobre cómo instalar aplicaciones en el Portal de empresa en [Instalar y compartir aplicaciones en el dispositivo](../user-help/install-apps-cpapp-windows.md). Para obtener más información sobre cómo configurar la aplicación Portal de empresa para sus usuarios, vea [Configuración de la aplicación Portal de empresa de Microsoft Intune](../apps/company-portal-app.md).  
-
-<!-- ########################## -->
-## <a name="week-of-november-4-2019"></a>Semana del 4 de noviembre de 2019
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-security"></a>Seguridad de dispositivos
-
-#### <a name="security-baselines-are-supported-on-microsoft-azure-government---4062552---"></a>Las líneas de base de seguridad se admiten en Microsoft Azure Government<!-- 4062552 -->
-
-Las instancias de Intune que se hospedan en *Microsoft Azure Government* ahora pueden usar [líneas base de seguridad](../protect/security-baselines.md) para ayudarle a proteger sus usuarios y dispositivos.
 
 ## <a name="whats-new-archive"></a>Archivo de novedades
 Para ver los meses anteriores, consulte el [archivo de novedades](whats-new-archive.md).

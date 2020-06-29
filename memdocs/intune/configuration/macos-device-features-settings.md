@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d4bc2de9e16cfcf9322cf343badafe3c9a35c70
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428901"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093558"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Configuración de características de dispositivos macOS en Intune
 
@@ -106,11 +106,114 @@ Esta característica se aplica a:
 > [!TIP]
 > Para solucionar problemas, en el dispositivo macOS, abra **Preferencias del Sistema** > **Perfiles**. Confirme que el perfil que ha creado está en la lista de perfiles del dispositivo. Si aparece en la lista, asegúrese de que la **configuración de dominios asociados** está en el perfil e incluye el id. de la aplicación y los dominios correctos.
 
+## <a name="content-caching"></a>Almacenamiento en caché de contenido
+
+El almacenamiento en caché de contenido guarda una copia local del contenido. Otros dispositivos de Apple pueden recuperar esta información sin necesidad de conectarse a Internet. Este almacenamiento en caché acelera las descargas al guardar las actualizaciones de software, las aplicaciones, las fotografías y otros contenidos la primera vez que se descargan. Como las aplicaciones se descargan una vez y se comparten en otros dispositivos, las escuelas y las organizaciones con muchos dispositivos ahorran ancho de banda.
+
+> [!NOTE]
+> Use solo un perfil para esta configuración. Si asigna varios perfiles con esta configuración, se produce un error.
+>
+> Para obtener más información sobre la supervisión del almacenamiento en caché de contenido, vea [Visualización de registros y estadísticas de almacenamiento en caché de contenido](https://support.apple.com/guide/mac-help/view-content-caching-logs-statistics-mac-mchl0d8533cd/10.15/mac/10.15) (abre el sitio web de Apple).
+
+Esta característica se aplica a:
+
+- macOS 10.13.4 y versiones más recientes
+
+### <a name="settings-apply-to-all-enrollment-types"></a>Las opciones se aplican a: Todos los tipos de inscripción
+
+Para obtener más información sobre esta configuración, vea [Configuración de carga de almacenamiento en caché de contenido](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (abre el sitio web de Apple).
+
+**Habilitar almacenamiento en caché de contenido**: **Sí** activa el almacenamiento en caché de contenido y los usuarios no pueden deshabilitarlo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede desactivarlo.
+
+- **Tipos de contenidos almacenados en caché**: Las opciones son:
+  - **Todo el contenido**: almacena en caché el contenido de iCloud y el contenido compartido.
+  - **Solo contenido de usuario**: almacena en caché el contenido de iCloud del usuario, incluidas las fotos y los documentos.
+  - **Solo contenido compartido**: almacena en caché las aplicaciones y las actualizaciones de software.
+
+- **Tamaño de caché máximo**: escriba la cantidad máxima de espacio en disco (en bytes) que se usa para almacenar en caché el contenido. Cuando se deja en blanco (el valor predeterminado), Intune no lo cambia ni actualiza. De forma predeterminada, el sistema operativo puede establecer este valor en cero (`0`) bytes, lo que proporciona espacio en disco ilimitado a la caché.
+
+  Asegúrese de que no supere el espacio disponible en los dispositivos. Para obtener más información sobre la capacidad de almacenamiento del dispositivo, vea [Cómo se indica la capacidad de almacenamiento en iOS y macOS](https://support.apple.com/HT201402) (abre el sitio web de Apple).
+
+- **Ubicación de la caché**: escriba la ruta de acceso para almacenar el contenido en caché. La ubicación predeterminada es `/Library/Application Support/Apple/AssetCache/Data`. Se recomienda no cambiar esta ubicación.
+
+  Si cambia este valor, el contenido en caché no se mueve a la nueva ubicación. Para moverlo de forma automática, los usuarios deben cambiar la ubicación en el dispositivo (**Preferencias del sistema** > **Uso compartido** > **Almacenamiento en caché del contenido**).
+
+- **Puerto**: escriba el número de puerto TCP en los dispositivos para que la caché acepte las solicitudes de descarga y carga, desde 0-65535. Escriba cero (`0`) (valor predeterminado) para usar cualquier puerto que esté disponible.
+- **Bloquear conexión a Internet y uso compartido de contenido de caché**: también se conoce como almacenamiento en caché anclado a red. **Sí** impide el uso compartido de la conexión a Internet, además del uso compartido de contenido almacenado en caché con dispositivos iOS/iPadOS conectados mediante USB al equipo Mac. Los usuarios no pueden habilitar esta característica. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
+
+- **Habilitar conexión compartida a Internet**: también se conoce como almacenamiento en caché anclado a red. **Sí** permite el uso compartido de la conexión a Internet, además del uso compartido de contenido almacenado en caché con dispositivos iOS/iPadOS conectados mediante USB al equipo Mac. Los usuarios no pueden deshabilitar esta característica. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría desactivarlo.
+
+  Esta característica se aplica a:
+
+  - macOS 10.15.4 y versiones más recientes
+
+- **Habilitar caché para registrar detalles de clientes**: **Sí** registra la dirección IP y el número de puerto de los dispositivos que solicitan contenido. Si va a solucionar problemas del dispositivo, este archivo de registro puede ayudar. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no registre esta información.
+
+- **Mantener siempre el contenido de la caché, incluso cuando el sistema necesite espacio en disco para otras aplicaciones**: **Sí** mantiene el contenido en la caché y se asegura de que no se elimine nada, incluso cuando el espacio en disco es bajo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría purgar automáticamente el contenido de la memoria caché cuando necesita espacio de almacenamiento para otras aplicaciones.
+
+  Esta característica se aplica a:
+
+  - macOS 10.15 y versiones más recientes
+
+- **Mostrar alertas de estado**: **Sí** muestra las alertas como notificaciones del sistema. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre estas alertas como notificaciones del sistema.
+
+  Esta característica se aplica a:
+
+  - macOS 10.15 y versiones más recientes
+
+- **Impedir que el dispositivo entre en reposo mientras el almacenamiento en caché está activado**: **Sí** impide que el equipo entre en suspensión cuando el almacenamiento en caché está activado. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo permita que el dispositivo entre en reposo.
+
+  Esta característica se aplica a:
+
+  - macOS 10.15 y versiones más recientes
+
+- **Dispositivos para almacenar en caché**: elija los dispositivos que pueden almacenar contenido en caché. Las opciones son:
+  - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. 
+  - **Los dispositivos que usan la misma red local**: la caché de contenido ofrece contenido a los dispositivos de la misma red local inmediata. No se ofrece contenido a los dispositivos de otras redes, incluidos aquellos a los que puede acceder la caché de contenido.
+  - **Los dispositivos que usan la misma dirección IP pública**: la caché de contenido ofrece contenido a los dispositivos que usan la misma dirección IP pública. No se ofrece contenido a los dispositivos de otras redes, incluidos aquellos a los que puede acceder la caché de contenido.
+  - **Los dispositivos que usan redes locales personalizados**: la caché de contenido proporciona contenido a los dispositivos en los intervalos IP que especifique.
+    - **Intervalos de escucha de clientes**: escriba el intervalo de direcciones IP que pueden recibir la caché de contenido.
+  - **Los dispositivos que usan redes locales personalizados con reserva**: la caché de contenido proporciona contenido a los dispositivos en los intervalos de escucha, los intervalos de escucha del mismo nivel y las direcciones IP principales.
+    - **Intervalos de escucha de clientes**: escriba el intervalo de direcciones IP que pueden recibir la caché de contenido.
+
+- **Direcciones IP públicas personalizadas**: escriba un intervalo de direcciones IP públicas. Los servidores en la nube usan este intervalo para hacer coincidir los dispositivos cliente con las cachés.
+
+- **Compartir el contenido con otras cachés**: cuando la red tiene más de una caché de contenido, las cachés de otros dispositivos se convierten automáticamente en elementos del mismo nivel. Estos dispositivos pueden consultar y compartir el software almacenado en caché. 
+
+  Cuando un elemento solicitado no está disponible en una caché de contenido, comprueba los elementos del mismo nivel del elemento. Si el elemento está disponible, se descarga de la caché de contenido en el dispositivo del mismo nivel. Si sigue sin estar disponible, la caché de contenido descarga el elemento de:
+
+  - Una dirección IP principal, si se ha configurado alguna.
+  
+    O bien,
+    
+  - Desde Apple a través de Internet.
+
+  Cuando hay más de una caché de contenido disponible, los dispositivos seleccionan de forma automática la correcta. 
+
+  Las opciones son:
+
+  - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración.
+  - **Las cachés de contenido que usan las mismas redes locales**: la caché de contenido solo se empareja con otras de la misma red local inmediata.
+  - **Las cachés de contenido que usan la misma dirección IP pública**: la caché de contenido solo se empareja con otras en la misma dirección IP pública.
+  - **Las cachés de contenido que usan redes locales personalizadas**: la caché de contenido solo se empareja con otras en el intervalo de escucha de direcciones IP que escriba:
+
+    - **Intervalos de escucha de pares**: escriba las direcciones IPv4 o IPv6 inicial y final para el intervalo. La caché de contenido solo responde a las solicitudes de caché del mismo nivel procedentes de cachés de contenido en los intervalos de direcciones IP que especifique.
+    - **Intervalos de filtro de pares**: escriba las direcciones IPv4 o IPv6 inicial y final para el intervalo. La caché de contenido filtra su lista de elementos del mismo nivel con los intervalos de direcciones IP que especifique.
+
+- **Direcciones IP principales**: escriba la dirección IP local de otra caché de contenido para agregarla como caché primaria. La caché carga y descarga contenido en estas cachés, en lugar de cargarlo o descargarlo directamente con Apple. Solo tiene que agregar una dirección IP principal una vez.
+- **Política de selección de principal**: cuando haya muchas cachés primarias, seleccione cómo se elige la dirección IP principal. Las opciones son:
+  - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración.
+  - **Round robin**: use las direcciones IP principales en orden. Esta opción es adecuada para los escenarios de equilibrio de carga.
+  - **Primera disponible**: use siempre la primera dirección IP disponible en la lista.
+  - **Hash**: crea un valor hash para la parte de la ruta de acceso de la dirección URL solicitada. Esta opción garantiza que siempre se use la misma dirección IP principal para la misma dirección URL.
+  - **Aleatorio**: se usa una dirección IP aleatoria de la lista. Esta opción es adecuada para los escenarios de equilibrio de carga.
+  - **Nota adhesiva disponible**: use siempre la primera dirección IP de la lista. Si no está disponible, use la segunda dirección IP de la lista. Para continuar, use la segunda dirección IP hasta que no esté disponible, etc.
+
 ## <a name="login-items"></a>Elementos de inicio de sesión
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Las opciones se aplican a: Todos los tipos de inscripción
 
-- **Agregue los archivos, carpetas y aplicaciones personalizadas que se iniciarán durante el inicio de sesión**: **agregue** la ruta de acceso de un archivo, una carpeta, una aplicación personalizada o una aplicación del sistema que quiera abrir cuando los usuarios inicien sesión en los dispositivos. Indique también:
+- **Agregue los archivos, carpetas y aplicaciones personalizadas que se iniciarán durante el inicio de sesión**: **agregue** la ruta de acceso de un archivo, una carpeta, una aplicación personalizada o una aplicación del sistema que se abra cuando los usuarios inicien sesión en los dispositivos. Indique también:
 
   - **Ruta de acceso del elemento**: Escriba la ruta de acceso al archivo, la carpeta o la aplicación. Las aplicaciones del sistema o las aplicaciones creadas o personalizadas para su organización suelen estar en la carpeta `Applications`, con una ruta de acceso similar a `/Applications/AppName.app`.
 
@@ -124,7 +227,7 @@ Esta característica se aplica a:
     Al agregar una aplicación, una carpeta o un archivo, asegúrese de escribir la ruta de acceso correcta. No todos los elementos se encuentran en la carpeta `Applications`. Si un usuario mueve un elemento de una ubicación a otra, la ruta de acceso cambia. Este elemento movido no se abrirá cuando el usuario inicie sesión.
 
   - **Ocultar**: elija entre mostrar u ocultar la aplicación. Las opciones son:
-    - **No configurado**: Es el valor predeterminado. Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo mostrará los elementos en la lista de elementos de inicio de sesión de usuarios y grupos con la opción Ocultar desactivada.
+    - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo muestre los elementos en la lista de elementos de inicio de sesión de usuarios y grupos con la opción Ocultar desactivada.
     - **Sí**: Oculta la aplicación en la lista de elementos de inicio de sesión de usuarios y grupos.
 
 ## <a name="login-window"></a>Ventana de inicio de sesión
@@ -161,7 +264,7 @@ Esta característica se aplica a:
 
 ### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Las opciones se aplican a: Inscripción de dispositivos aprobada por el usuario e inscripción de dispositivos automatizada
 
-- **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO de credenciales. Las opciones son:
+- **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO. Las opciones son:
 
   - **No configurado**: no se usan las extensiones de la aplicación. Para deshabilitar una extensión de aplicación, cambie el tipo de extensión de la aplicación de SSO a **Sin configurar**.
   - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce la extensión y el identificador del equipo correspondiente a la extensión de la aplicación de su organización.
@@ -186,7 +289,7 @@ Esta característica se aplica a:
 - **Direcciones URL** (solo redireccionamiento): escriba los prefijos de dirección URL de los proveedores de identidades en cuyo nombre la extensión de la aplicación de redireccionamiento usa el inicio de sesión único. Cuando se redirige a los usuarios a estas direcciones URL, la extensión de la aplicación de inicio de sesión único interviene y solicita el inicio de sesión único.
 
   - Todas las direcciones URL de los perfiles de extensión de la aplicación de inicio de sesión único de Intune deben ser únicas. No se puede repetir un dominio en ningún perfil de extensión de la aplicación de SSO, aunque se usen distintos tipos de extensiones de la aplicación de SSO.
-  - Las direcciones URL deben comenzar por http:// o https://.
+  - Las direcciones URL deben comenzar por `http://` or `https://`.
 
 - **Configuración adicional** (redireccionamiento y credenciales): escriba datos adicionales específicos de la extensión para pasarlos a la extensión de la aplicación de SSO:
   - **Clave**: escriba el nombre del elemento que quiere agregar, como `user name`.
@@ -214,10 +317,10 @@ Esta característica se aplica a:
 - **Sincronización de contraseñas** (solo Kerberos): elija **Habilitar** para sincronizar las contraseñas locales de los usuarios con Azure AD. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría deshabilitar la sincronización de contraseñas en Azure AD. Use esta opción como alternativa o copia de seguridad en SSO. Esta configuración no funciona si los usuarios han iniciado sesión con una cuenta móvil de Apple.
 - **Complejidad de contraseña de Windows Server Active Directory** (solo Kerberos): elija **Requerir** para exigir que las contraseñas de usuario cumplan los requisitos de complejidad de contraseñas de Active Directory. Para obtener más información, consulte [Las contraseñas deben cumplir los requisitos de complejidad](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no requerir que los usuarios cumplan los requisitos de contraseña de Active Directory.
 - **Longitud mínima de contraseña** (solo Kerberos): escriba el número mínimo de caracteres que pueden formar las contraseñas de los usuarios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir una longitud de contraseña mínima en los usuarios.
-- **Límite de reutilización de contraseñas** (solo Kerberos): escriba el número de contraseñas nuevas, de 1 a 24, que deben usarse hasta que se pueda reutilizar una contraseña anterior en el dominio. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no aplicar un límite de reutilización de contraseñas.
-- **Vigencia mínima de la contraseña** (solo Kerberos): escriba el número de días que se debe usar una contraseña en el dominio antes de que los usuarios puedan cambiarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir una vigencia mínima para las contraseñas antes de que se puedan cambiar.
+- **Límite de reutilización de contraseñas** (solo Kerberos): escriba el número de contraseñas nuevas, de 1 a 24, que se usan hasta que se pueda reutilizar una contraseña anterior en el dominio. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no aplicar un límite de reutilización de contraseñas.
+- **Vigencia mínima de la contraseña** (solo Kerberos): escriba el número de días que se usa una contraseña en el dominio antes de que los usuarios puedan cambiarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir una vigencia mínima para las contraseñas antes de que se puedan cambiar.
 - **Días hasta la notificación de expiración de la contraseña** (solo Kerberos): escriba el número de días antes de que una contraseña expire en que los usuarios recibirán una notificación en la que se les indicará que la contraseña va a expirar. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría usar `15` días.
-- **Caducidad de la contraseña** (solo Kerberos): Especifique el número de días antes de que se deba cambiar la contraseña del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría establecer que las contraseñas no expiren nunca.
+- **Caducidad de la contraseña** (solo Kerberos): escriba el número de días antes de que se deba cambiar la contraseña del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría establecer que las contraseñas no expiren nunca.
 - **Dirección URL de cambio de contraseña** (solo Kerberos): escriba la dirección URL que se abre cuando los usuarios inician un cambio de contraseña de Kerberos.
 - **Nombre de la entidad de seguridad** (solo Kerberos): escriba el nombre de usuario de la entidad de seguridad de Kerberos. No es necesario incluir el nombre de dominio. Por ejemplo, en `user@contoso.com`, `user` es el nombre de la entidad de seguridad y `contoso.com` es el nombre de dominio.
 
@@ -227,7 +330,7 @@ Esta característica se aplica a:
   
 - **Código de sitio de Active Directory** (solo Kerberos): escriba el nombre del sitio de Active Directory que la extensión de Kerberos debe usar. Es posible que no necesite cambiar este valor, ya que la extensión de Kerberos puede encontrar automáticamente el código del sitio de Active Directory.
 - **Nombre de la caché** (solo Kerberos): escriba el nombre de los servicios de seguridad genéricos (GSS) de la memoria caché de Kerberos. Lo más probable es que no tenga que establecer este valor.  
-- **Mensaje de requisitos de contraseñas** (solo Kerberos): escriba una versión de texto de los requisitos de contraseña de su organización que se muestra a los usuarios. El mensaje se muestra si no necesita los requisitos de complejidad de la contraseña de Active Directory o no escribe una longitud mínima de la contraseña.  
+- **Mensaje de requisitos de contraseñas** (solo Kerberos): escriba una versión de texto de los requisitos de contraseña de su organización que se muestra a los usuarios. El mensaje se muestra si no necesita los requisitos de complejidad de la contraseña de Active Directory, o bien no escribe una longitud mínima de la contraseña.  
 - **Identificadores de lote de las aplicaciones** (solo Kerberos): **agregue** los identificadores de lote de aplicaciones que deben usar el inicio de sesión único en los dispositivos. Estas aplicaciones obtienen acceso al vale de concesión de vales de Kerberos y al vale de autenticación. Las aplicaciones también autentican a los usuarios en los servicios a los que están autorizados a acceder.
 - **Asignación de dominio** (solo Kerberos): **agregue** los sufijos DNS de dominio que se deben asignar al dominio. Use esta opción cuando los nombres DNS de los hosts no coincidan con el nombre de dominio. Lo más probable es que no tenga que crear esta asignación personalizada de dominio a dominio.
 - **Certificado PKINIT** (solo Kerberos): **seleccione** el certificado de criptografía de clave pública de la autenticación inicial (PKINIT) que se puede usar en la autenticación Kerberos. Puede elegir entre los certificados [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) que ha agregado en Intune. Para más información sobre los certificados, consulte [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).

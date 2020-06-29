@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f74308e5c59adee6810d54ce44cf104514f83056
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254782"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795591"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos Windows en Microsoft Intune
 
@@ -60,7 +60,7 @@ Error 80180003: "Se ha producido un problema. Este usuario no está autorizado p
 Hay varias posibles soluciones a este problema:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Quitar los dispositivos inscritos
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).    
 2. Vaya a **Usuarios** > **Todos los usuarios**.    
 3. Seleccione la cuenta de usuario afectada y, después, haga clic en **Dispositivos**.    
 4. Seleccione los dispositivos no usados o no deseados y, después, haga clic en **Eliminar**. 
@@ -70,7 +70,7 @@ Hay varias posibles soluciones a este problema:
 > [!NOTE]
 > Este método aumenta el límite de inscripción de dispositivos para todos los usuarios, no solo para el usuario afectado.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vaya a **Dispositivos** > **Restricciones de inscripción** > **Valores predeterminados** (en **Restricciones de límite de dispositivos**) > **Propiedades** > **Editar** (junto a **Límite de dispositivos**) > aumente el **Límite de dispositivos** (máximo 15) > **Revisar y guardar**.    
  
 
@@ -278,6 +278,12 @@ Asegúrese de que el formato de nombre cumple los requisitos siguientes:
 #### <a name="resolution"></a>Solución
 Asegúrese de que el acceso necesario a los servicios basados en Internet para Autopilot no está bloqueado. Para más información, vea [Requisitos de red de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
+### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>Error en la inscripción de dispositivo Autopilot: HRESULT = 0x80180022
+
+**Causa:** el dispositivo que se aprovisiona ejecuta Windows Home Edition.
+
+#### <a name="resolution"></a>Solución
+Actualice el dispositivo a la edición Pro o una versión posterior.
 
 ### <a name="registering-your-device-for-mobile-management-failed3-0x801c03ea"></a>Registrando el dispositivo para la administración móvil (Error: 3, 0x801C03EA).
 

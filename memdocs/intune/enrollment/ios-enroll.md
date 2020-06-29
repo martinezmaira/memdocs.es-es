@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988942"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093065"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscripción de dispositivos iOS/iPadOS en Intune
 
@@ -61,7 +61,7 @@ También puede inscribir dispositivos iOS/iPadOS de empresa con una cuenta de [a
 
 ## <a name="automated-device-enrollment"></a>Inscripción de dispositivo automatizada
 
-Las organizaciones pueden adquirir dispositivos iOS/iPadOS con la Inscripción de dispositivo automatizada (ADE) de Apple. ADE permite implementar un perfil de inscripción "de forma inalámbrica" para incluir los dispositivos en la administración. Para más información, consulte la información sobre el [Programa de inscripción de dispositivos](device-enrollment-program-enroll-ios.md).
+Las organizaciones pueden adquirir dispositivos iOS/iPadOS con la Inscripción de dispositivo automatizada (ADE) de Apple. ADE permite implementar un perfil de inscripción "de forma inalámbrica" para incluir los dispositivos en la administración. Para obtener más información, vea [Inscripción automática de dispositivos iOS/iPadOS con Inscripción de dispositivos automatizada de Apple](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Inscripción de usuarios
 La inscripción de usuario proporciona a los administradores un subconjunto de opciones de administración en comparación con otros métodos de inscripción. Para más información, vea [Acciones admitidas en la inscripción de usuarios, contraseñas y otras opciones](ios-user-enrollment-supported-actions.md) y [Configuración de la inscripción de usuarios de iOS/iPadOS y iPadOS](ios-user-enrollment.md).

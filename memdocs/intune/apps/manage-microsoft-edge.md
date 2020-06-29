@@ -1,12 +1,12 @@
 ---
 title: Administración de Edge para iOS y Android con Intune
 titleSuffix: ''
-description: Use las directivas de protección de aplicaciones de Intune con Edge para iOS y Android a fin de garantizar que siempre se apliquen medidas de seguridad al acceder a los sitios web corporativos.
+description: Use las directivas de configuración y protección de aplicaciones de Intune con Edge para iOS y Android a fin de garantizar que siempre se apliquen medidas de seguridad al acceder a los sitios web corporativos.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973067"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Administración del acceso web mediante Edge para iOS y Android con Microsoft Intune
 
@@ -55,7 +55,7 @@ Las directivas de protección de aplicaciones (APP) definen qué aplicaciones es
 
 El marco de protección de datos de APP se organiza en tres niveles de configuración distintos, cada uno de ellos basado en el nivel anterior:
 
-- La **protección de datos empresariales básica** (nivel 1) garantiza que las aplicaciones estén protegidas con un PIN y cifradas y realiza operaciones de borrado selectivo. En el caso de los dispositivos Android, este nivel valida la certificación de dispositivos Android. Se trata de una configuración de nivel de entrada que proporciona un control de protección de datos similar en las directivas de buzón de Exchange Online y que introduce tecnologías informáticas y la población de usuarios en APP.
+- La **protección de datos empresariales básica** (nivel 1) garantiza que las aplicaciones estén protegidas con un PIN y cifradas, y realiza operaciones de borrado selectivo. En el caso de los dispositivos Android, este nivel valida la certificación de dispositivos Android. Se trata de una configuración de nivel de entrada que proporciona un control de protección de datos similar en las directivas de buzón de Exchange Online y que introduce tecnologías informáticas y el rellenado de usuarios en APP.
 - La **protección de datos empresariales mejorada** (nivel 2) incorpora mecanismos para la prevención de la pérdida de datos de APP y requisitos mínimos para el sistema operativo. Esta es la configuración aplicable a la mayoría de los usuarios móviles que acceden a datos profesionales o educativos.
 - La **protección de datos empresariales alta** (nivel 3) incorpora mecanismos avanzados para la protección de datos, configuración de PIN mejorada y defensa contra amenazas móviles de APP. Esta configuración es conveniente para los usuarios que acceden a datos de alto riesgo.
 
@@ -63,7 +63,7 @@ Para ver las recomendaciones específicas para cada nivel de configuración y la
 
 Independientemente de si el dispositivo está inscrito en una solución de administración de puntos de conexión unificada (UEM), es necesario crear una directiva de protección de aplicaciones de Intune para las aplicaciones iOS y Android con los pasos descritos en [Creación y asignación de directivas de protección de aplicaciones](app-protection-policies.md). Estas directivas deben cumplir como mínimo las siguientes condiciones:
 
-1. Deben incluir todas las aplicaciones móviles de Microsoft, como Outlook, OneDrive, Office o Teams, ya que esto garantizará que los usuarios puedan acceder a los datos profesionales o educativos y manipularlos desde cualquier aplicación de Microsoft de forma segura.
+1. Deben incluir todas las aplicaciones para dispositivos móviles de Microsoft 365, como Outlook, OneDrive, Office o Teams, ya que esto garantizará que los usuarios puedan acceder a los datos profesionales o educativos, y manipularlos desde cualquier aplicación de Microsoft de forma segura.
 
 2. Deben asignarse a todos los usuarios. Esto garantiza que todos los usuarios estén protegidos, independientemente de si usan Edge para iOS o Android.
 
@@ -443,3 +443,4 @@ Para ver cómo se pueden consultar los registros en dispositivos Android, vea [E
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [¿Qué son las directivas de protección de aplicaciones?](app-protection-policy.md) 
+- [Directivas de configuración de aplicaciones para Microsoft Intune](app-configuration-policies-overview.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428664"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093486"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Implementación de dispositivos unidos a Azure AD híbrido mediante Intune y Windows Autopilot
 Puede usar Intune y Windows Autopilot para configurar dispositivos unidos a Azure Active Directory (Azure AD) híbrido. Para ello, siga los pasos de este artículo.
@@ -111,20 +111,18 @@ El conector de Intune para Active Directory se debe instalar en un equipo que ej
 
 El conector de Intune requiere los [mismos puntos de conexión que Intune](../fundamentals/intune-endpoints.md).
 
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Windows** > **Inscripción de Windows** > **Conector de Intune para Active Directory** > **Agregar**. 
-2. Siga las instrucciones para descargar el conector.
-3. Abra el archivo de instalación del conector que ha descargado, *ODJConnectorBootstrapper.exe*, para instalar el conector.
-4. Al final del programa de instalación, haga clic en **Configurar**.
-5. Haga clic en **Iniciar sesión**.
-6. Escriba las credenciales del rol de usuario Administrador global o Administrador de Intune.  
+1. Desactivación de la configuración de seguridad mejorada de Internet Explorer. De manera predeterminada, Windows Server tiene activada la configuración de seguridad mejorada de Internet Explorer. Si no puede iniciar sesión en el conector de Intune para Active Directory, deshabilite la configuración de seguridad mejorada de Internet Explorer para el administrador. [Procedimiento para desactivar la configuración de seguridad mejorada de Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
+2. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Windows** > **Inscripción de Windows** > **Conector de Intune para Active Directory** > **Agregar**. 
+3. Siga las instrucciones para descargar el conector.
+4. Abra el archivo de instalación del conector que ha descargado, *ODJConnectorBootstrapper.exe*, para instalar el conector.
+5. Al final del programa de instalación, haga clic en **Configurar**.
+6. Haga clic en **Iniciar sesión**.
+7. Escriba las credenciales del rol de usuario Administrador global o Administrador de Intune.  
    La cuenta de usuario debe tener una licencia de Intune asignada.
-7. Vaya a **Dispositivos** > **Windows** > **Inscripción de Windows** > **Conector de Intune para Active Directory** y confirme que el estado de la conexión es **Activo**.
+8. Vaya a **Dispositivos** > **Windows** > **Inscripción de Windows** > **Conector de Intune para Active Directory** y confirme que el estado de la conexión es **Activo**.
 
 > [!NOTE]
 > Después de iniciar sesión en el conector, es posible que tarde un par de minutos en aparecer en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Solo aparece si se puede comunicar correctamente con el servicio Intune.
-
-### <a name="turn-off-ie-enhanced-security-configuration"></a>Desactivación de la configuración de seguridad mejorada de Internet Explorer
-De manera predeterminada, Windows Server tiene activada la configuración de seguridad mejorada de Internet Explorer. Si no puede iniciar sesión en el conector de Intune para Active Directory, deshabilite la configuración de seguridad mejorada de Internet Explorer para el administrador. [Desactivación de la configuración de seguridad mejorada de Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
 
 ### <a name="configure-web-proxy-settings"></a>Establecer la configuración del proxy web
 
@@ -193,12 +191,13 @@ Los perfiles de implementación de Autopilot sirven para configurar los disposit
 4. Seleccione **Siguiente**.
 5. En la página **Configuración rápida (OOBE)** , para **Modo de implementación**, seleccione **Controlado por el usuario**.
 6. En el cuadro **Unirse a Azure AD como**, seleccione **Unidos a Azure AD híbrido**.
-7. Configure las opciones restantes en la página **Configuración rápida (OOBE)** , según sea necesario.
-8. Seleccione **Siguiente**.
-9. En la página **Etiquetas de ámbito**, seleccione las [etiquetas de ámbito](../fundamentals/scope-tags.md) para este perfil.
-10. Seleccione **Siguiente**.
-11. En la página **Asignaciones**, seleccione **Seleccionar grupos para incluir** > busque y seleccione el grupo de dispositivos > **Seleccionar**.
-12. Seleccione **Siguiente** > **Crear**.
+7. Si va a implementar dispositivos fuera de la red de la organización que aprovecha la compatibilidad con VPN, establezca la opción **Omitir comprobación de conectividad del dominio** en **Sí**.  Vea [Modo controlado por el usuario para la unión híbrida a Azure Active Directory a través de VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) para obtener más información.
+8. Configure las opciones restantes en la página **Configuración rápida (OOBE)** , según sea necesario.
+9. Seleccione **Siguiente**.
+10. En la página **Etiquetas de ámbito**, seleccione las [etiquetas de ámbito](../fundamentals/scope-tags.md) para este perfil.
+11. Seleccione **Siguiente**.
+12. En la página **Asignaciones**, seleccione **Seleccionar grupos para incluir** > busque y seleccione el grupo de dispositivos > **Seleccionar**.
+13. Seleccione **Siguiente** > **Crear**.
 
 El cambio de estado del perfil de dispositivo de *No asignado* a *Asignando* y, por último, a *Asignado*, tarda unos 15 minutos.
 

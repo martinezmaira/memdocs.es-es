@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364609"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264114"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Uso de una configuración personalizada para dispositivos Android en Microsoft Intune
 
@@ -35,6 +35,7 @@ Si usa un perfil personalizado, puede configurar y asignar los siguientes valore
 - [Crear un perfil de Wi-Fi con una clave precompartida](/intune/wi-fi-profile-shared-key)
 - [Creación de un perfil de VPN por aplicación](/intune/android-pulse-secure-per-app-vpn)
 - [Uso de directivas personalizadas para permitir y bloquear aplicaciones para dispositivos Samsung Knox Standard](/intune/samsung-knox-apps-allow-block)
+- [Configuración de la protección web en Advanced Threat Protection de Microsoft Defender para Android](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
 
 >[!IMPORTANT]
 > Solo se pueden configurar los valores enumerados mediante un perfil personalizado. Los dispositivos Android no exponen una lista completa de opciones de OMA-URI que pueda configurar. Si quiere ver más valores, vote por ellos en el [sitio de Uservoice de Intune](https://microsoftintune.uservoice.com/forums/291681-ideas).
@@ -43,7 +44,7 @@ En este artículo se muestra cómo crear un perfil personalizado para dispositiv
 
 ## <a name="create-the-profile"></a>Creación del perfil
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 3. Escriba los valores siguientes:
 

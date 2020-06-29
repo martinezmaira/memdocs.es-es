@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364193"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506220"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Incorporación de la configuración de correo electrónico para dispositivos iOS y iPadOS en Microsoft Intune
 
@@ -64,7 +64,7 @@ En este artículo se enumeran y describen todas las configuraciones de correo el
 - **SSL**: **Habilitar** usa la comunicación de Capa de sockets seguros (SSL) al enviar y recibir correos electrónicos y al comunicarse con el servidor de Exchange.
 - **OAuth**: **Habilitar** usa la comunicación Open Authorization (OAuth) al enviar y recibir correos electrónicos y al comunicarse con Exchange. Si su servidor OAuth usa la autenticación de certificado, elija **Certificado** como **método de autenticación** e incluya el certificado con el perfil. Si no, elija **Nombre de usuario y contraseña** como **método de autenticación**. Al utilizar OAuth, no olvide:
 
-  - Comprobar que su solución de correo electrónico es compatible con OAuth antes de fijar este perfil como destino para sus usuarios. Office 365 Exchange Online es compatible con OAuth. Exchange local y otras soluciones de asociados o de terceros podrían no ser compatibles con OAuth. Exchange local se puede configurar para la autenticación moderna (consulte la entrada de blog [Announcing Hybrid Modern Authentication for Exchange On-Premises](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/) [Anuncio de la autenticación moderna híbrida para Exchange local]).
+  - Comprobar que su solución de correo electrónico es compatible con OAuth antes de fijar este perfil como destino para sus usuarios. Office 365 Exchange Online es compatible con OAuth. Exchange local y otras soluciones de asociados o de terceros podrían no ser compatibles con OAuth. Exchange local puede configurarse para la autenticación moderna. Para obtener más información, vea [Introducción a la autenticación moderna híbrida y requisitos previos para su uso con servidores locales de Skype Empresarial y Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
     Si el perfil de correo electrónico usa OAuth y el servicio de correo electrónico no lo admite, la opción **Vuelva a escribir la contraseña** aparecerá como dañada. Por ejemplo, no ocurrirá nada cuando el usuario seleccione **Vuelva a escribir la contraseña** en la configuración de los dispositivos de Apple.
 

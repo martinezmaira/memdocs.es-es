@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988250"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746602"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Uso de TeamViewer para administrar dispositivos de Intune de forma remota
 
@@ -47,7 +47,7 @@ Al usar TeamViewer, permite que el conector de TeamViewer para Intune cree sesio
 
 Para proporcionar asistencia remota a los dispositivos, configure el conector de TeamViewer para Intune siguiendo estos pasos:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conector de TeamViewer**.
 3. Seleccione **Conectar** y acepte el contrato de licencia.
 4. Seleccione **Inicie sesión en TeamViewer para autorizar**.
@@ -69,6 +69,6 @@ Al iniciar una sesión remota, los usuarios verán una marca de notificación en
 > [!NOTE]
 > Los dispositivos Windows inscritos con métodos "sin usuarios", como Administrador de inscripción de dispositivos (DEM) o Windows Configuration Designer (WCD), no muestran la notificación de TeamViewer en la aplicación Portal de empresa. En estos casos, se recomienda usar el portal de TeamViewer para generar la sesión.
 
-En TeamViewer, puede completar una serie de acciones en el dispositivo, incluida la toma del control de este. Para obtener más detalles sobre lo que puede hacer, consulte los [manuales de TeamViewer](https://www.teamviewer.com/support/documents/).
+En TeamViewer, puede completar una serie de acciones en el dispositivo, incluida la toma del control de este. Para obtener más detalles sobre lo que puede hacer, consulte la [página de la comunidad de TeamViewer](https://community.teamviewer.com/).
 
 Cuando haya finalizado, cierre la ventana de TeamViewer.

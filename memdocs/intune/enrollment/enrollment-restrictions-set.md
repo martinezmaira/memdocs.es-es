@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989081"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746500"
 ---
 # <a name="set-enrollment-restrictions"></a>Establecer restricciones de inscripción
 
@@ -64,7 +64,7 @@ Las restricciones predeterminadas se proporcionan automáticamente para las rest
 3. Elija **Siguiente** para ir a la página **Configuración de plataforma**.
 4. En **Plataforma**, elija **Permitir** para las plataformas en las que quiera que esta restricción se permita.
     ![Captura de pantalla de la elección de configuración de plataforma](./media/enrollment-restrictions-set/choose-platform-settings.png)
-5. En **Versiones**, elija las versiones mínima y máxima que quiera que admita la plataforma permitida. Las restricciones de versión solo se aplican a los dispositivos inscritos en el Portal de empresa.
+5. En **Versiones**, elija las versiones mínima y máxima que quiera que admita la plataforma permitida. Para iOS y Android, las restricciones de versión solo se aplican a los dispositivos inscritos con el Portal de empresa.
      Entre los formatos de las versiones admitidas se incluyen los siguientes:
     - El administrador de dispositivos Android y el perfil de trabajo de Android Enterprise admiten major.minor.rev.build.
     - iOS/iPadOS admite major.minor.rev. Las versiones de sistema operativo no son relevantes en dispositivos Apple que se inscriban en el Programa de inscripción de dispositivos, Apple School Manager ni la aplicación Apple Configurator.

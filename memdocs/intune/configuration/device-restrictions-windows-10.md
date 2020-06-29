@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311193"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216491"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para permitir o restringir características mediante Intune
 
@@ -141,6 +141,10 @@ Estas opciones de configuración usan [CSP de directiva de Bluetooth](https://do
 - **Anuncios de Bluetooth**: **Bloquear** evita que el dispositivo envíe anuncios de Bluetooth. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que el dispositivo envíe anuncios de Bluetooth.
 
   [CSP de Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **Conexiones Bluetooth próximas**: **Bloquear** impide que un dispositivo de usuario utilice Emparejamiento rápido y otros escenarios basados en proximidad. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que el dispositivo envíe anuncios de Bluetooth.
+
+  [CSP Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Servicios Bluetooth permitidos**: **agregue** una lista de perfiles y servicios Bluetooth permitidos como cadenas hexadecimales, por ejemplo, `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
 
@@ -322,6 +326,9 @@ Estas opciones de configuración usan [CSP de directiva de mensajería](https://
 ## <a name="microsoft-edge-browser"></a>Explorador Microsoft Edge
 
 Estas opciones de configuración usan [browser policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) (CSP de directiva de explorador), que también indica las ediciones de Windows compatibles.
+
+> [!NOTE]
+> El uso del CSP de directiva de explorador se aplica a la versión 45 y anteriores de Microsoft Edge. Para Microsoft Edge Enterprise versión 77 y posteriores, vea [Configuración de opciones de directiva de Microsoft Edge con Microsoft Intune](/DeployEdge/configure-edge-with-intune).
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>Usar el modo de pantalla completa de Microsoft Edge
 

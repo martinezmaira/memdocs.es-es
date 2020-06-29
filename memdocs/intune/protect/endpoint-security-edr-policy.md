@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206339"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879667"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Directiva de detección y respuesta de puntos de conexión para la seguridad de puntos de conexión en Intune
 
-Al integrar Advanced Threat Protection de Microsoft Defender (ATP de Defender) con Intune, puede usar directivas de seguridad de punto de conexión para la detección de puntos de conexión y respuesta (EDR) a fin de administrar la configuración de EDR e incorporar dispositivos a ATP de Defender.
+Al integrar Advanced Threat Protection de Microsoft Defender (ATP de Microsoft Defender) con Intune, puede usar directivas de seguridad de punto de conexión para la detección de puntos de conexión y respuesta (EDR) a fin de administrar la configuración de EDR e incorporar dispositivos a ATP de Defender.
 
-Las funcionalidades de detección de puntos de conexión y respuesta de ATP de Defender proporcionan detecciones de ataques avanzadas casi en tiempo real y procesables. Los analistas de seguridad pueden priorizar las alertas de forma eficaz, obtener visibilidad sobre el ámbito completo de una vulneración y tomar medidas de respuesta para corregir las amenazas.
+Las funciones de detección de puntos de conexión y respuesta de ATP de Microsoft Defender proporcionan detecciones de ataques avanzadas casi en tiempo real y procesables. Los analistas de seguridad pueden priorizar las alertas de forma eficaz, obtener visibilidad sobre el ámbito completo de una vulneración y tomar medidas de respuesta para corregir las amenazas.
 
-Las directivas de EDR incluyen perfiles específicos de la plataforma para administrar la configuración de EDR. Los perfiles incluyen automáticamente un *paquete de incorporación* para ATP de Defender. Los paquetes de incorporación son cómo se configuran los dispositivos para que funcionen con ATP de Defender. Una vez que se incorpora un dispositivo, puede empezar a usar los datos de amenazas de ese dispositivo.
+Las directivas de EDR incluyen perfiles específicos de la plataforma para administrar la configuración de EDR. Los perfiles incluyen automáticamente un *paquete de incorporación* para ATP de Microsoft Defender. La incorporación de paquetes es la manera de configurar los dispositivos de modo que funcionen con ATP de Microsoft Defender. Una vez que se incorpora un dispositivo, puede empezar a usar los datos de amenazas de ese dispositivo.
 
 Las directivas de EDR se implementan en grupos de dispositivos en Azure Active Directory (Azure AD) que se administran con Intune y en colecciones de dispositivos locales que se administran con Configuration Manager, incluidos los servidores de Windows. Las directivas de EDR para las distintas rutas de administración requieren otros paquetes de incorporación. Por tanto, creará directivas de EDR independientes para los diferentes tipos de dispositivos que administra.
 
@@ -44,7 +44,7 @@ Vea [Configuración del perfil de respuesta y detección de puntos de conexión]
 
 **General**:
 
-- **Inquilino de Advanced Threat Protection de Microsoft Defender**: el inquilino de ATP de Defender se debe integrar con el de Microsoft Endpoint Manager (suscripción de Intune) para poder crear directivas de EDR. Vea [Uso de ATP de Microsoft Defender](advanced-threat-protection.md) en la documentación de Intune.
+- **Inquilino de Advanced Threat Protection de Microsoft Defender**: el inquilino de ATP de Microsoft Defender se debe integrar con el de Microsoft Endpoint Manager (suscripción de Intune) para poder crear directivas de EDR. Vea [Uso de ATP de Microsoft Defender](advanced-threat-protection.md) en la documentación de Intune.
 
 **Para admitir dispositivos desde Configuration Manager**:
 
@@ -258,12 +258,9 @@ Puede ver los detalles de las directivas de EDR que implemente en el centro de a
 
 - En el caso de las directivas que tienen como destino la plataforma **Windows 10 y versiones posteriores** (Intune), verá información general del cumplimiento de la directiva. También puede seleccionar el gráfico para ver una lista de los dispositivos que han recibido la directiva y profundizar en dispositivos individuales para obtener más detalles.
 
-  En el gráfico **Dispositivos con sensor ATP** solo se muestran los dispositivos que se incorporan correctamente a ATP de Defender mediante el uso del perfil **Windows 10 y versiones posteriores**. Para asegurarse de que tiene una representación completa de los dispositivos en este gráfico, implemente el perfil de incorporación en todos los dispositivos. Los dispositivos que se incorporan a ATP de Defender por medios externos, como la directiva de grupo o PowerShell, se cuentan como **Dispositivos sin el sensor ATP**.
+  En el gráfico **Dispositivos con sensor ATP** solo se muestran los dispositivos que se incorporan correctamente a ATP de Microsoft Defender mediante el uso del perfil **Windows 10 y versiones posteriores**. Para asegurarse de que tiene una representación completa de los dispositivos en este gráfico, implemente el perfil de incorporación en todos los dispositivos. Los dispositivos que se incorporan a ATP de Microsoft Defender por medios externos, como la directiva de grupo o PowerShell, se cuentan como **Dispositivos sin el sensor ATP**.
 
 - En el caso de las directivas que tienen como destino la plataforma **Windows 10 y Windows Server** (Configuration Manager), verá información general sobre el cumplimiento de la directiva, pero no puede profundizar para ver detalles adicionales. La vista está limitada porque el centro de administración recibe detalles de estado limitados de Configuration Manager, que administra la implementación de la directiva en los dispositivos de Configuration Manager.
-
-
-
 
 
 [Vea las opciones](endpoint-security-edr-profile-settings.md) que puede configurar para plataformas y perfiles.

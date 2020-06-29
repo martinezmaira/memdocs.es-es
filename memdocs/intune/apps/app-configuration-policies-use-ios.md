@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973033"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Agregar directivas de configuración de aplicaciones para dispositivos iOS/iPadOS administrados
 
@@ -50,7 +50,7 @@ Una vez haya seleccionado los grupos incluidos para la directiva de configuraci�
 
 ## <a name="create-an-app-configuration-policy"></a>Crear una directiva de configuración de aplicaciones
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Elija **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar** > **Dispositivos administrados**. Observe que puede elegir entre **Dispositivos administrados** y **Aplicaciones administradas**. Para más información, consulte [Aplicaciones que admiten la configuración de aplicaciones](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. En la página **Aspectos básicos**, establezca los detalles siguientes:
     - **Nombre**: nombre del perfil que aparece en Azure Portal.
@@ -106,11 +106,11 @@ Los caracteres \{\{ y \}\} solo se usan para los tipos de token y no deben usars
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Permitir solo cuentas de organización configuradas en aplicaciones de varias identidades 
 
-Como administrador de Microsoft Intune, puede controlar qué cuentas de usuario se agregan a las aplicaciones de Microsoft en dispositivos administrados. Puede limitar el acceso solo a las cuentas de usuario de la organización permitidas y bloquear las cuentas personales en los dispositivos inscritos. Para dispositivos iOS/iPadOS, use los siguientes pares clave-valor:
+Como administrador de Microsoft Intune, puede controlar qué cuentas profesionales o educativas se agregan a las aplicaciones de Microsoft en dispositivos administrados. Puede limitar el acceso solo a las cuentas de usuario de la organización permitidas y bloquear las cuentas personales en los dispositivos inscritos. En el caso de dispositivos iOS/iPadOS, use los siguientes pares clave-valor en una directiva de configuración de aplicaciones de dispositivos administrados:
 
 | **Clave** | **Valores** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**Habilitado**: la única cuenta permitida es la cuenta de usuario administrado definida por la clave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Deshabilitado** (o cualquier valor que no sea una coincidencia con **Habilitado**, sin distinguir mayúsculas de minúsculas): se permite cualquier cuenta.</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Habilitada**: la única cuenta permitida es la cuenta de usuario administrado definida por la clave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Deshabilitada** (o cualquier valor que no sea una coincidencia con **Habilitada**, sin distinguir mayúsculas de minúsculas): se permite cualquier cuenta.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN de la cuenta con permiso para iniciar sesión en la aplicación.</li><li> Para los dispositivos inscritos en Intune, el token <code>{{userprincipalname}}</code> se puede usar para representar la cuenta de usuario inscrito.</li></ul>  |
 
    > [!NOTE]

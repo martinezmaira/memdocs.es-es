@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551934"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814947"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
@@ -78,6 +78,11 @@ Esta característica se aplica a:
 - IPadOS 13.0 y versiones más recientes
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivo automatizada (supervisado)
+
+> [!NOTE]
+> Agregue solo una aplicación al Dock, una página o una carpeta en una página. Si se agrega la misma aplicación en todos los lugares, se impide que la aplicación se vea en los dispositivos y se pueden mostrar errores de informes.
+>
+> Por ejemplo, si agrega la aplicación de cámara a un Dock y a una página, no se mostrará, y es posible que los informes muestren un error en la directiva. Para agregar la aplicación de cámara al diseño de la pantalla principal, elija solo el Dock o una página, no ambos.
 
 ### <a name="dock"></a>Acoplar
 
@@ -210,7 +215,7 @@ Esta característica se aplica a:
 
 - **Nota al pie de pantalla de bloqueo**: si pierde el dispositivo o se lo roban, escriba una nota que pueda ayudar a que se lo devuelvan. Puede escribir el texto que quiera. Por ejemplo, escriba algo parecido a `If found, call Contoso at ...`.
 
-  Los tokens de dispositivo también se pueden usar para agregar información específica sobre el dispositivo a estos campos. Por ejemplo, para que se muestre el número de serie, escriba `Serial Number: {{serialnumber}}`. En la pantalla de bloqueo, el texto tendrá un aspecto similar a este: `Serial Number 123456789ABC`. Al especificar variables, no olvide usar llaves: `{{ }}`. En los [tokens de configuración de aplicación](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) podrá ver una lista de las variables que puede usar. También puede usar `deviceName` o cualquier otro valor específico del dispositivo.
+  Los tokens de dispositivo también se pueden usar para agregar información específica sobre el dispositivo a estos campos. Por ejemplo, para que se muestre el número de serie, escriba `Serial Number: {{serialnumber}}` o `Device ID: {{DEVICEID}}`. En la pantalla de bloqueo, el texto tendrá un aspecto similar a este: `Serial Number 123456789ABC`. Al especificar variables, no olvide usar llaves: `{{ }}`. En los [tokens de configuración de aplicación](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) podrá ver una lista de las variables que puede usar. También puede usar `DEVICENAME` o cualquier otro valor específico del dispositivo.
 
   > [!NOTE]
   > Las variables no se validan en la interfaz de usuario y distinguen mayúsculas de minúsculas. Como resultado, es posible que vea perfiles guardados con entradas incorrectas. Por ejemplo, si escribe `{{DeviceID}}` en lugar de `{{deviceid}}` o "{{DEVICEID}}", se muestra la cadena literal en lugar del identificador único del dispositivo. Asegúrese de especificar la información correcta. Se admiten todas las variables en minúsculas o mayúsculas, pero no una mezcla de ambas. 
@@ -314,6 +319,10 @@ Esta característica se aplica a:
 - **Modo de dispositivo compartido** (solo Microsoft Azure AD): elija **Habilitar** si se va a implementar el complemento de Microsoft Enterprise Single Sign-On en dispositivos iOS/iPados configurados para la característica de modo de dispositivo compartido de Azure AD. Los dispositivos en modo compartido permiten a muchos usuarios iniciar sesión de forma global y fuera de las aplicaciones que admiten el modo de dispositivo compartido. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración. De forma predeterminada, los dispositivos iOS/iPad no están diseñados para compartirse entre varios usuarios.
 
   Para obtener más información sobre el modo de dispositivo compartido y cómo habilitarlo, vea [Información general del modo de dispositivo compartido](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) y [Modo de dispositivo compartido para dispositivos iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+
+  Esta característica se aplica a:
+  
+  - iOS/iPadOS 13.5 y versiones más recientes
 
 - **Id. de extensión** (redireccionamiento y credenciales): escriba el identificador de lote que identifica la extensión de la aplicación de SSO, como `com.apple.extensiblesso`.
 

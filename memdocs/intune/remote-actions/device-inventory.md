@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c8b8599c7b207900d6e4a14b7580a324a238dfe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989912"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795676"
 ---
 # <a name="see-device-details-in-intune"></a>Ver detalles del dispositivo en Intune
 
@@ -33,28 +33,28 @@ En este artículo se explica cómo se pueden ver todos los dispositivos y sus pr
 
 ## <a name="view-the-device-details"></a>Ver los detalles del dispositivo
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Seleccione **Dispositivos** > **Todos los dispositivos** > seleccione uno de los dispositivos que aparecen para que se muestren los detalles correspondientes:
 
    - En **Información general** se indica el nombre del dispositivo y algunas de sus propiedades clave, como, por ejemplo, si se trata de un dispositivo personal o corporativo, el número de serie, el usuario principal, etc. Puede realizar lo siguiente en el dispositivo:
       - [Retirar](devices-wipe.md#retire)
-      - [Eliminación de datos](devices-wipe.md#wipe)
+      - [Borrar](devices-wipe.md#wipe)
       - [Eliminar](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Bloqueo remoto](device-remote-lock.md)
-      - [Sincronizar](device-sync.md)
+      - [Sincronización](device-sync.md)
       - [Restablecer el código de acceso](device-passcode-reset.md)
       - [Reiniciar](device-restart.md) (solo para Windows)
       - [Comienzo de cero](device-fresh-start.md) (solo para Windows)
       - [Restablecimiento de Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (solo Windows)
       - [Examen rápido](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
       - [Examen completo](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
-      - Actualizar la inteligencia de seguridad de Windows Defender
+      - [Actualización de la inteligencia de seguridad de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
       - [Rotación de clave de BitLocker](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
       - [Cambio de nombre de un dispositivo](device-rename.md)
       - [Nueva sesión de Asistencia remota](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Use **Propiedades** para asignar una [categoría de dispositivo que cree](../enrollment/device-group-mapping.md) y cambie la propiedad del dispositivo a un dispositivo personal o a un dispositivo de empresa.
    - **Hardware** incluye muchos detalles sobre el dispositivo, como el identificador del dispositivo, el sistema operativo y la versión, el espacio de almacenamiento y más detalles.
-   - **Aplicaciones detectadas**: muestra todas las aplicaciones que Intune encuentra instaladas en el dispositivo, así como las versiones de las aplicaciones. Para más información, consulte [Aplicaciones detectadas de Intune](../apps/app-discovered-apps.md).
+   - **Aplicaciones detectadas**: muestra todas las aplicaciones que Intune encuentra instaladas en el dispositivo, así como las versiones de las aplicaciones. Para más información, consulte [Aplicaciones descubiertas de Intune](../apps/app-discovered-apps.md).
    - En **Conformidad de dispositivos** figuran todas las directivas de cumplimiento asignadas y se indica si el dispositivo es compatible o no.
    - En **Configuración del dispositivo** se muestran todas las directivas de configuración de dispositivos asignadas al dispositivo. También se indica si la directiva se ha aplicado correctamente o no.
    - **Configuración de aplicaciones** 
@@ -68,7 +68,7 @@ En función del operador que usen los dispositivos, puede que no se recopilen to
 > [!Note]  
 > El inventario de hardware y de software se actualiza cada 7 días en el servicio de Intune.
 
-|Detalle|Description|Plataforma| 
+|Detalle|Descripción|Plataforma| 
 |--------------|----------------------|----|  
 |Nombre|Nombre del dispositivo.|Windows, iOS|
 |Nombre de administración|Nombre de dispositivo usado solo en la consola. Si se cambia, el nombre del dispositivo permanece inalterado.|Windows, iOS|

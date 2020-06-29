@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983094"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107335"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Bloqueo remoto de dispositivos con Intune
 
@@ -45,7 +45,7 @@ La acción de dispositivo **Bloqueo remoto** bloquea el dispositivo. Para desblo
 - Windows 10 Escritorio
 
 > [!NOTE]
-> Para los dispositivos MacOS, establezca un PIN de recuperación de 6 dígitos. Una vez bloqueado el dispositivo, en **Información general del dispositivo** se muestra el PIN hasta que se envía otra acción de dispositivo. Asegúrese de anotar el PIN, ya que solo estará disponible durante 7 días después de enviar el comando de bloqueo remoto. Pasados los 7 días, Intune ya no dispondrá del PIN. Además, no inicie este comando de nuevo para el mismo dispositivo hasta que se use el PIN original a fin de desbloquear el dispositivo correctamente. Debe enviar este comando, anotar el PIN y, hasta que lo use para entrar en el dispositivo macOS correctamente, no vuelva a enviar este comando al mismo dispositivo.  
+> Para los dispositivos MacOS, establezca un PIN de recuperación de 6 dígitos. Una vez bloqueado el dispositivo, en **Información general del dispositivo** se muestra el PIN hasta que se envía otra acción de dispositivo. Asegúrese de anotar el PIN, ya que solo estará disponible durante 30 días después de enviar el comando de bloqueo remoto. Una vez transcurridos los 30 días, Intune ya no dispondrá del PIN. Además, no inicie este comando de nuevo para el mismo dispositivo hasta que se use el PIN original a fin de desbloquear el dispositivo correctamente. Debe enviar este comando, anotar el PIN y, hasta que lo use para entrar en el dispositivo macOS correctamente, no vuelva a enviar este comando al mismo dispositivo.  
 
 
 ## <a name="remote-lock-a-device"></a>Bloquear de forma remota un dispositivo

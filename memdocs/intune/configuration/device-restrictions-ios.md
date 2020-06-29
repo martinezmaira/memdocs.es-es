@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 06/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269021"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093667"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos iOS e iPadOS para permitir o restringir características mediante Intune
 
@@ -72,7 +73,7 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
   - iOS 9.3 y versiones más recientes
   - IPadOS 13.0 y versiones más recientes
 
-- **Observación de pantalla sin mensajes por la aplicación Classroom**: **Permitir** habilita a los profesores para observar de manera silenciosa la pantalla de los dispositivos iOS/iPadOS de los alumnos con la aplicación Classroom sin que estos lo sepan. Los dispositivos de alumnos inscritos en una clase con la aplicación Classroom automáticamente dan permiso al profesor de ese curso. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir esta característica.
+- **Observación de pantalla sin mensajes por la aplicación Classroom**: **Permitir** habilita a los profesores para observar de manera silenciosa las pantallas iOS/iPadOS de los alumnos con la aplicación Classroom sin que estos lo sepan. Los dispositivos de alumnos inscritos en una clase con la aplicación Classroom automáticamente dan permiso al profesor de ese curso. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir esta característica.
 
   Para usar esta opción, establezca **Captura de pantalla** en **Bloquear**.
 
@@ -198,7 +199,7 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
   - **10**: la pantalla se bloquea tras 10 minutos de inactividad.
   - **15**: la pantalla se bloquea tras 15 minutos de inactividad.
 
-  Si un valor no se aplica a iOS ni iPadOS, Apple usa el valor *inferior* más cercano. Por ejemplo, si especifica `4` minutos, los dispositivos iPadOS usan `2` minutos. Si especifica `10` minutos, los dispositivos iOS usan `5` minutos. Se trata de una limitación de Apple.
+  Si un valor no se aplica a iOS ni iPadOS, Apple usa el valor *inferior* más cercano. Por ejemplo, si especifica `4` minutos, los dispositivos iPadOS usan `2` minutos. Si especifica `10` minutos, los dispositivos iOS usan `5` minutos. Este comportamiento es una limitación de Apple.
   
   > [!NOTE]
   > La interfaz de usuario de Intune para esta configuración no separa los valores admitidos de iOS e iPadOS. La interfaz de usuario podría actualizarse en una versión futura.
@@ -429,6 +430,25 @@ Para agregar aplicaciones a estas listas, puede:
 > [!IMPORTANT]
 > Se deben asignar perfiles de dispositivo que usen configuración de aplicaciones restringidas para grupos de usuarios.
 
+## <a name="shared-ipad"></a>iPad compartido
+
+Esta característica se aplica a:
+
+- IPadOS 13.4 y versiones más recientes
+- iPad compartido
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivo automatizada (supervisado)
+
+- **Bloqueo de sesiones temporales de iPad compartido**: las sesiones temporales permiten a los usuarios iniciar sesión como invitado, sin necesidad de escribir una contraseña o un identificador de Apple administrado.
+
+  Cuando se establece en **Sí**:
+
+  - los usuarios de iPad compartido no pueden usar sesiones temporales.
+  - Los usuarios tendrán que iniciar sesión en el dispositivo con el identificador y la contraseña de Apple administrados.
+  - La opción Cuenta de invitado no se muestra en la pantalla de bloqueo de los dispositivos.
+
+  Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo permite a un usuario de iPad compartido iniciar sesión en el dispositivo con la cuenta de invitado. Cuando el usuario cierra la sesión, sus datos no se guardan ni se sincronizan con iCloud.
+
 ## <a name="show-or-hide-apps"></a>Aplicaciones visibles u ocultas
 
 Esta característica se aplica a:
@@ -599,12 +619,17 @@ Para agregar aplicaciones, puede:
 
 Use estos valores para configurar los dispositivos iOS/iPadOS de modo que ejecuten aplicaciones específicas en modo de aplicación única autónoma (ASAM). Si se configura este modo y los usuarios inician una de las aplicaciones configuradas, el dispositivo se bloqueará para esa aplicación. La conmutación de tareas y aplicaciones se deshabilitará hasta que los usuarios salgan de la aplicación permitida.
 
-Por ejemplo, en un entorno educativo o universitario, agregue una aplicación que permita que los usuarios realicen una prueba en el dispositivo. Otra opción es bloquear el dispositivo en la aplicación Portal de empresa hasta que el usuario se autentique. Cuando los usuarios completen las acciones de la aplicación o quite esta directiva, el dispositivo volverá a su estado normal.
+- Por ejemplo, en un entorno educativo o universitario, agregue una aplicación que permita que los usuarios realicen una prueba en el dispositivo. Otra opción es bloquear el dispositivo en la aplicación Portal de empresa hasta que el usuario se autentique. Cuando los usuarios completen las acciones de la aplicación o quite esta directiva, el dispositivo volverá a su estado normal.
 
-> [!NOTE]
-> No todas las aplicaciones admiten el modo de aplicación única autónoma. Para activar el modo de aplicación única autónoma, normalmente se requiere un identificador de lote de aplicaciones o un par clave-valor entregado por una directiva de configuración de aplicaciones. Para obtener más información, consulte el artículo sobre la [restricción `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) en la documentación MDM de Apple. Para obtener más información sobre la configuración específica necesaria para la aplicación que vaya a configurar, consulte la documentación del proveedor.
+- No todas las aplicaciones admiten el modo de aplicación única autónoma. Para activar el modo de aplicación única autónoma, normalmente se requiere un identificador de lote de aplicaciones o un par clave-valor entregado por una directiva de configuración de aplicaciones. Para obtener más información, consulte el artículo sobre la [restricción `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) en la documentación MDM de Apple. Para obtener más información sobre la configuración específica necesaria para la aplicación que vaya a configurar, consulte la documentación del proveedor.
 
-Por ejemplo, para configurar las salas de Zoom en el modo de aplicación única autónoma, Zoom indica que es necesario usar el id. de lote de aplicaciones `us.zoom.zpcontroller`. En esta instancia, también se realiza un cambio en el portal web de Zoom. Para obtener más información, consulte el [centro de ayuda de Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+  Por ejemplo, para configurar las salas de Zoom en el modo de aplicación única autónoma, Zoom indica que es necesario usar el id. de lote de aplicaciones `us.zoom.zpcontroller`. En esta instancia, también se realiza un cambio en el portal web de Zoom. Para obtener más información, consulte el [centro de ayuda de Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+
+- En dispositivos iOS/iPadOS, la aplicación Portal de empresa admite ASAM. Cuando la aplicación Portal de empresa está en ASAM, el dispositivo se bloquea en ella hasta que el usuario se autentique. Cuando los usuarios inician sesión en la aplicación Portal de empresa, pueden usar otras aplicaciones y el botón Pantalla principal del dispositivo. Cuando cierran sesión en la aplicación Portal de empresa, el dispositivo vuelve al modo de aplicación única y se bloquea en la aplicación Portal de empresa.
+
+  Para convertir la aplicación Portal de empresa en una aplicación de "inicio y cierre de sesión" (habilitar ASAM), escriba el nombre de la aplicación Portal de empresa, como `Microsoft Intune Company Portal`y el identificador de paquete (`com.microsoft.CompanyPortal`) en esta configuración. Una vez que se haya asignado este perfil, debe abrir la aplicación Portal de empresa para bloquearla de modo que los usuarios puedan iniciar y cerrar sesión en ella.
+  
+  Cuando se quita el perfil de configuración del dispositivo y el usuario cierra la sesión, el dispositivo no está bloqueado en la aplicación Portal de empresa.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Las opciones se aplican a: Inscripción de dispositivo automatizada (supervisado)
 

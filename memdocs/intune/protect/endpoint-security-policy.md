@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879729"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Administración de la seguridad de los dispositivos con directivas seguridad de puntos de conexión en Microsoft Intune
 
@@ -35,13 +35,13 @@ Encontrará estas directivas en *Administrar*, en el nodo **Seguridad de los pun
 
 Aquí se describe brevemente de cada tipo de directiva de seguridad de puntos de conexión. Para obtener más información al respecto, incluidos los perfiles disponibles para cada una de ellas, use los vínculos que llevan a contenido dedicado a cada tipo de directiva:
 
-- [Antivirus](../protect/endpoint-security-antivirus-policy.md): las directivas de antivirus ayudan a los administradores de seguridad a centrarse en administrar el grupo diferenciado de opciones de antivirus para dispositivos administrados. Para usar una directiva de antivirus, integre Intune con Advanced Threat Protection de Microsoft Defender (ATP de Defender) como una solución de Mobile Threat Defense.
+- [Antivirus](../protect/endpoint-security-antivirus-policy.md): las directivas de antivirus ayudan a los administradores de seguridad a centrarse en administrar el grupo diferenciado de opciones de antivirus para dispositivos administrados. Para usar una directiva de antivirus, integre Intune con Advanced Threat Protection de Microsoft Defender (ATP de Microsoft Defender) como una solución de Mobile Threat Defense.
 
 - [Cifrado de disco](../protect/endpoint-security-disk-encryption-policy.md): los perfiles de cifrado de disco de seguridad de puntos de conexión se centran únicamente en las opciones que son relevantes para un método de cifrado integrado de dispositivos concreto, como FileVault o BitLocker. Este método permite a los administradores de seguridad administrar fácilmente las opciones de cifrado de disco sin tener que desplazarse por numerosas opciones que no tienen nada que ver.
 
-- [Firewall](../protect/endpoint-security-firewall-policy.md): use la directiva de firewall de seguridad de puntos de conexión de Intune para configurar un firewall integrado para los dispositivos que ejecutan macOS y Windows 10. Los firewalls integrados son BitLocker para los dispositivos Windows y FileVault para los dispositivos macOS.
+- [Firewall](../protect/endpoint-security-firewall-policy.md): use la directiva de firewall de seguridad de puntos de conexión de Intune para configurar un firewall integrado para los dispositivos que ejecutan macOS y Windows 10. 
 
-- [Detección de puntos de conexión y respuesta](../protect/endpoint-security-edr-policy.md): si integra ATP de Defender con Intune, use las directivas de seguridad de puntos de conexión para la detección de puntos de conexión y respuesta (EDR) para administrar la configuración de EDR y los dispositivos incorporados a ATP de Defender.
+- [Detección de puntos de conexión y respuesta](../protect/endpoint-security-edr-policy.md): si integra ATP de Microsoft Defender con Intune, use las directivas de seguridad de puntos de conexión para la detección de puntos de conexión y respuesta (EDR) a fin de administrar la configuración de EDR e incorporar dispositivos a ATP de Microsoft Defender.
 
 - [Reducción de la superficie expuesta a ataques](../protect/endpoint-security-asr-policy.md): si hace uso del antivirus de defender en los dispositivos Windows 10, use las directivas de seguridad de puntos de conexión de Intune para reducir la superficie de ataque y administrar esas opciones de los dispositivos.
 

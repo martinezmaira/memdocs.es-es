@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985847"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795710"
 ---
 # <a name="configure-microsoft-launcher"></a>Configuración de Microsoft Launcher
 
@@ -70,7 +70,7 @@ En la tabla siguiente se enumeran las claves de configuración disponibles de Mi
 |    Habilitación de fuente    |    Boolean    |    True    |    Permite habilitar la fuente de Launcher en el dispositivo cuando el usuario se desliza hacia la derecha en la pantalla principal.<ul><li>Si se establece en **True**, se habilitará la fuente.</li><li>Si se establece en **False**, se deshabilitará la fuente.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Permiso para el usuario para cambiar la habilitación de la fuente    |    Boolean    |    True    |     Le permite especificar si el usuario final puede cambiar el valor de la opción de **habilitar fuente**.<ul><li>Si se establece en **True**, la fuente solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, la fuente se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
 |    Ubicación de la barra de búsqueda   |    String    |    Inferior    |  Permite especificar la **ubicación de la barra de búsqueda** en la pantalla principal. <ul><li>Si se establece en **Inferior**, la barra de búsqueda se encontrará en la parte inferior de la pantalla principal.</li><li>Si se establece en **Superior**, la barra de búsqueda se encontrará en la parte superior de la pantalla principal.</li><li>Si se establece en **Ocultar**, la barra de búsqueda se quitará de la pantalla principal.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    Permiso para el usuario a fin de cambiar la ubicación de la barra de búsqueda   |    Bool    |    True    |  Permite especificar si el usuario final puede cambiar el valor de la opción **Ubicación de la barra de búsqueda**. <ul><li>Si se establece en **True**, la ubicación de la barra de búsqueda solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, la ubicación de la barra de búsqueda se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Permiso para el usuario a fin de cambiar la ubicación de la barra de búsqueda   |    Bool    |    True    |  Permite especificar si el usuario final puede cambiar el valor de la opción **Ubicación de la barra de búsqueda**. <ul><li>Si se establece en **True**, la ubicación de la barra de búsqueda solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, la ubicación de la barra de búsqueda se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**NOTA:** En Microsoft Launcher versión 6.2 y posteriores, ya no se aplicará esta configuración. Por lo tanto, si establece este valor en `True`, no tendrá ningún efecto. Los usuarios finales no podrán personalizar la ubicación de la barra de búsqueda en el dispositivo.    |
 |    Modo de acoplamiento  |    String    |    Mostrar    | Permite habilitar el acoplamiento en el dispositivo cuando el usuario se desliza hacia la derecha en la pantalla principal.<ul><li>Si se establece en **Mostrar**, se habilitará el acoplamiento.</li><li>Si se establece en **Ocultar**, el acoplamiento se ocultará en la pantalla principal, pero el usuario podrá mostrarlo cuando sea necesario.</li><li>Si se establece en **Deshabilitado**, el acoplamiento se deshabilitará.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   Permiso para el usuario a fin de cambiar el modo de acoplamiento   |    String    |    True    |  Permite especificar si el usuario final puede cambiar el valor de la opción Modo de acoplamiento.<ul><li>Si se establece en **True**, el modo de acoplamiento solo se aplicará para la implementación inicial. Posteriormente, la directiva no se aplicará para respetar los cambios que el usuario pueda haber realizado.</li><li>Si se establece en **False**, el modo de acoplamiento se aplicará en cada sincronización.</li></ul><br>Nombre de clave JSON:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 

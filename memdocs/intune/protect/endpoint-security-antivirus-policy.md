@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 2f3a378cdb3b5e24371edb2fd6dc240962f80342
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879654"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Directiva de antivirus para la seguridad de puntos de conexión en Intune
 
@@ -89,4 +89,4 @@ En esta vista solo aparecen los dispositivos en los que se han detectado problem
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configuración de directivas de seguridad de puntos de conexión](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configuración de directivas de seguridad de los puntos de conexión](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

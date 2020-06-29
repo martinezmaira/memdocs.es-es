@@ -1,11 +1,11 @@
 ---
-title: 'Agregar Endpoint Protection de macOS en Microsoft Intune: Azure | Microsoft Docs'
-description: En los dispositivos macOS, use el equipo selector para determinar dónde se pueden instalar las aplicaciones, incluidas las de Mac App Store. Además, habilite o configure un firewall para permitir aplicaciones concretas, bloquear otras, usar el modo sigiloso e incluso bloquear determinados tipos de conexiones entrantes mediante Microsoft Intune.
+title: Configuración de Endpoint Protection en dispositivos macOS con Microsoft Intune | Microsoft Docs
+description: Utilice Intune para configurar el uso del firewall integrado en dispositivos macOS para permitir o bloquear aplicaciones específicas, o bien use el modo sigiloso, para utilizar Gatekeeper a fin de determinar dónde se instalan las aplicaciones y para usar el cifrado de disco FileVault.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,122 +15,136 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaca235305507065cb716e3427e52c679c1a5dad
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 506bb4672b84423204df5fce1401748ffbce0484
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427803"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107499"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Configuración de Endpoint Protection de macOS en Intune  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Configuración de Endpoint Protection de macOS en Intune
 
-En este artículo se muestran las opciones de Endpoint Protection que se pueden configurar para los dispositivos con macOS. Estas opciones se configuran mediante un perfil de configuración de dispositivo macOS para [Endpoint Protection](endpoint-protection-configure.md) en Intune.  
+En este artículo se muestran las opciones de Endpoint Protection que se pueden configurar para los dispositivos con macOS. Estas opciones se configuran mediante un perfil de configuración de dispositivo macOS para [Endpoint Protection](endpoint-protection-configure.md) en Intune.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
 [Cree un perfil de Endpoint Protection de macOS](endpoint-protection-configure.md).
 
+## <a name="firewall"></a>Firewall
+
+Use el firewall para controlar conexiones por aplicación en lugar de por puerto. La configuración por aplicación permite aprovechar las ventajas de la protección del firewall con más facilidad. También ayuda a evitar que aplicaciones no deseadas tomen el control de los puertos de red que están abiertos para las aplicaciones legítimas.
+
+- **Habilitar firewall**
+
+  Active el uso del firewall en macOS y después configure cómo se administran las conexiones entrantes en el entorno.
+
+  - **Sin configurar** (*valor predeterminado*).
+  - **Sí**
+
+- **Bloquear todas las conexiones entrantes**
+
+  Bloquee todas las conexiones entrantes excepto las necesarias para los servicios básicos de Internet, como DHCP, Bonjour e IPSec. Esta característica también bloquea todos los servicios de uso compartido, como Uso compartido de archivos y Pantalla compartida. Si usa servicios de uso compartido, mantenga este valor como *No configurado*.
+
+  - **Sin configurar** (*valor predeterminado*).
+  - **Sí**
+
+  Al establecer *Bloquear todas las conexiones entrantes* en *No configurado*, puede configurar qué aplicaciones pueden o no recibir conexiones entrantes.
+
+  **Aplicaciones permitidas**: configure una lista de las aplicaciones con permiso para recibir conexiones entrantes.
+
+  - **Agregar aplicaciones por id. de agrupación**: escriba el [id. de agrupación](../configuration/bundle-ids-built-in-ios-apps.md) de la aplicación. El sitio web de Apple tiene una lista de [aplicaciones de Apple integradas](https://support.apple.com/HT208094).
+  - **Agregar aplicación de la tienda**: seleccione una aplicación de la tienda que haya agregado previamente a Intune. Para más información, vea [Agregar aplicaciones a Microsoft Intune](../apps/apps-add.md).
+
+  **Aplicaciones bloqueadas**: configure una lista de las aplicaciones que tienen bloqueadas las conexiones entrantes.
+
+  - **Agregar aplicaciones por id. de agrupación**: escriba el [id. de agrupación](../configuration/bundle-ids-built-in-ios-apps.md) de la aplicación. El sitio web de Apple tiene una lista de [aplicaciones de Apple integradas](https://support.apple.com/HT208094).
+  - **Agregar aplicación de la tienda**: seleccione una aplicación de la tienda que haya agregado previamente a Intune. Para más información, vea [Agregar aplicaciones a Microsoft Intune](../apps/apps-add.md).
+
+- **Habilitar el modo sigiloso**
+
+  Habilite el modo sigiloso para impedir que el equipo responda a solicitudes de sondeo. El dispositivo sigue respondiendo a las solicitudes entrantes de las aplicaciones autorizadas. Las solicitudes inesperadas, como ICMP (ping), se ignoran.
+
+  - **Sin configurar** (*valor predeterminado*).
+  - **Sí**
+
+## <a name="gatekeeper"></a>Equipo selector
+
+- **Permitir aplicaciones descargadas desde estas ubicaciones**
+
+  Limitar las aplicaciones que puede iniciar un dispositivo, en función de dónde se hayan descargado las aplicaciones. El fin es proteger los dispositivos frente al malware y permitir únicamente aplicaciones de orígenes de confianza.
+
+  - **Sin configurar** (*valor predeterminado*).
+  - **Mac App Store**
+  - **Mac App Store y desarrolladores identificados**
+  - **Cualquier ubicación**
+
+- **No permitir que el usuario invalide Gatekeeper**
+
+  Impide que los usuarios invaliden el valor del equipo selector y que presionen Control+clic para instalar una aplicación. Si está habilitado, los usuarios pueden presionar Control+clic en cualquier aplicación e instalarla.
+
+  - **No configurado** (*valor predeterminado*): los usuarios pueden presionar la tecla Control y hacer clic para instalar aplicaciones.
+  - **Sí**: impide que los usuarios usen la combinación de la tecla Control y hacer clic para instalar aplicaciones.
+
 ## <a name="filevault"></a>FileVault
 
-Para obtener más información sobre la configuración de FileVault de Apple, vea [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) en el contenido para desarrolladores de Apple. 
+Para obtener más información sobre la configuración de FileVault de Apple, vea [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) en el contenido para desarrolladores de Apple.
 
-> [!IMPORTANT]  
-> A partir de macOS 10.15, la configuración de FileVault requiere la inscripción de MDM aprobada por el usuario. 
+> [!IMPORTANT]
+> A partir de macOS 10.15, la configuración de FileVault requiere la inscripción de MDM aprobada por el usuario.
 
 - **Habilitación de FileVault**  
-  Puede *habilitar* el cifrado de disco completo mediante XTS-AES 128 con FileVault en dispositivos que ejecuten macOS 10.13 y versiones posteriores.  
-  - **No configurado**.  
-  - **Sí**  
 
-  **Valor predeterminado**: No configurado  
+  Puede *habilitar* el cifrado de disco completo mediante XTS-AES 128 con FileVault en dispositivos que ejecuten macOS 10.13 y versiones posteriores.
 
-  - **Tipo de clave de recuperación**  
-    Las claves de recuperación de *Clave personal* se crean para los dispositivos. Configure las opciones siguientes para la clave personal.  
+  - **Sin configurar** (*valor predeterminado*).
+  - **Sí**
 
-    - **Descripción de la ubicación secundaria de la clave de recuperación personal**: especifique un mensaje breve para el usuario en el que se explique cómo y dónde puede recuperar su clave de recuperación personal. Este texto se inserta en el mensaje que el usuario ve en la pantalla de inicio de sesión cuando se le pide que escriba su clave de recuperación personal en caso de que se haya olvidado una contraseña.  
+  Cuando *Habilitar FileVault* se establece en *Sí*, se pueden configurar los valores siguientes:
 
-    - **Rotación de clave de recuperación personal**: especifique la frecuencia con la que se rotará la clave de recuperación personal para un dispositivo. Puede seleccionar el valor predeterminado, que es **No configurado**, o un valor de **1** a **12** meses.  
+  - **Tipo de clave de recuperación**
 
-  - **Deshabilitar mensaje al cerrar sesión**  
-    Evite el mensaje en el que se solicita al usuario que habilite FileVault cuando cierre la sesión.  Cuando se establece en Deshabilitar, al cerrar la sesión el mensaje está deshabilitado y, en su lugar, se le solicita cuando el usuario inicia sesión.  
-    - **No configurado**.  
+    Las claves de recuperación de *Clave personal* se crean para los dispositivos. Configure las opciones siguientes para la clave personal.
+
+  - **Descripción de la ubicación secundaria de la clave de recuperación personal**
+
+    Especifique un mensaje breve para el usuario en el que se explique cómo y dónde puede recuperar su clave de recuperación personal. Este texto se inserta en el mensaje que el usuario ve en la pantalla de inicio de sesión cuando se le solicita que escriba su clave de recuperación personal en caso de que se haya olvidado una contraseña.
+
+  - **Rotación de clave de recuperación personal**
+
+    Especifique la frecuencia con la que se rotará la clave de recuperación personal para un dispositivo. Puede seleccionar el valor predeterminado, que es **No configurado**, o un valor de **1** a **12** meses.
+
+  - **Ocultar clave de recuperación**
+
+    Elija ocultar la clave personal de un usuario del dispositivo durante el cifrado de FileVault 2.
+
+    - **No configurado** (*valor predeterminado*): la clave personal es visible para el usuario del dispositivo durante el cifrado.
+    - **Sí**: la clave personal se oculta al usuario del dispositivo durante el cifrado.
+
+    Después del cifrado, los usuarios del dispositivo pueden ver su clave de recuperación personal para un dispositivo macOS cifrado desde las ubicaciones siguientes:
+    - Aplicación Portal de empresa de iOS/iPadOS
+    - Aplicación de Intune
+    - Sitio web del Portal de empresa
+    - Aplicación del portal de la compañía de Android
+
+    Para ver la clave, desde la aplicación o el sitio web, vaya a los detalles del dispositivo macOS cifrado y seleccione *Obtener la clave de recuperación*.
+
+  - **Deshabilitar mensaje al cerrar sesión**
+
+    Evite el mensaje en el que se solicita al usuario que habilite FileVault cuando cierre la sesión.  Cuando se establece en Deshabilitar, al cerrar la sesión el mensaje está deshabilitado y, en su lugar, se le solicita cuando el usuario inicia sesión.
+
+    - **Sin configurar** (*valor predeterminado*).
     - **Sí**: se deshabilita el mensaje al cerrar sesión.
 
-    **Valor predeterminado**: No configurado  
+  - **Número de veces que se permite omitir**
 
-  - **Número de veces que se permite omitir**  
-  Establece el número de veces que un usuario puede pasar por alto los mensajes para habilitar FileVault antes de que sea necesario para iniciar sesión. 
+    Establece el número de veces que un usuario puede pasar por alto los mensajes para habilitar FileVault antes de que sea necesario para iniciar sesión.
 
-    > [!IMPORTANT]
-    >
-    > Hay un problema conocido con el valor **No hay límite, avisar siempre**. En lugar de permitir que un usuario omita el cifrado al iniciar sesión, esta configuración requiere el cifrado del dispositivo en el siguiente inicio de sesión. Se espera que esta incidencia se solucione a finales de junio y se notifique en MC210922.
-    >
-    > Cuando se haya corregido, este valor tendrá una nueva opción de cero (**0**), que requerirá que los dispositivos se cifren la próxima vez que un usuario inicie sesión en el dispositivo. Además, cuando las actualizaciones de Intune incluyan esta corrección, cualquier directiva que esté establecida en **No hay límite, avisar siempre** se actualizará para usar el nuevo valor de **0**, que mantiene el comportamiento actual de requerir el cifrado.
-    >
-    > Una vez que se haya corregido este problema, podrá usar la capacidad de omitir el cifrado si vuelve a configurar esta opción para establecer **No hay límite, avisar siempre**, ya que el valor funcionará como se esperaba originalmente y permitirá a los usuarios omitir el cifrado del dispositivo.
-    >
-    > Si tiene dispositivos macOS inscritos y quiere obtener más información, inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Administración de inquilinos** > **Estado de inquilino**, seleccione **Estado del servicio y centro de mensajes**, y busque el id. de mensaje **MC210922**.
+    - **No configurado**: se requiere cifrado en el dispositivo antes de que se permita el siguiente inicio de sesión.
+    - **0**: se requiere que los dispositivos se cifren la próxima vez que un usuario inicie sesión en el dispositivo.
+    - De **1** a **10**: permite al usuario omitir el mensaje de 1 a 10 veces antes de requerir el cifrado en el dispositivo.
+    - **No hay límite, avisar siempre**: se solicita al usuario que habilite FileVault, pero el cifrado nunca es necesario.
 
-    - **No configurado**: se requiere cifrado en el dispositivo antes de que se permita el siguiente inicio de sesión.  
-    - De **1** a **10**: permite al usuario omitir el mensaje de 1 a 10 veces antes de requerir el cifrado en el dispositivo.  
-    - **No hay límite, avisar siempre**: se solicita al usuario que habilite FileVault, pero el cifrado nunca es necesario.  
- 
-    **Valor predeterminado**: *Varía*: cuando la opción *Deshabilitar mensaje al cerrar sesión* está establecida en **No configurado**, este valor se establece de forma predeterminada en **No configurado**. Cuando *Deshabilitar mensaje al cerrar sesión* se establece en **Deshabilitar**, el valor predeterminado es **1** y el valor **No configurado** no es una opción.
-
-Para obtener más información sobre FileVault con Intune, vea [Administración de FileVault](../protect/encrypt-devices-filevault.md#manage-filevault).
-
-## <a name="firewall"></a>Firewall  
-
-Use el firewall para controlar conexiones por aplicación en lugar de por puerto. La configuración por aplicación permite aprovechar las ventajas de la protección del firewall con más facilidad. También ayuda a evitar que aplicaciones no deseadas tomen el control de los puertos de red que están abiertos para las aplicaciones legítimas.  
-
-- **Habilitar firewall**  
-  Habilite el firewall para configurar la administración de las conexiones entrantes en el entorno.  
-  - **No configurado**.  
-  - **Sí**  
-
-  **Valor predeterminado**: No configurado  
-
-- **Bloquear todas las conexiones entrantes**  
-  Bloquee todas las conexiones entrantes excepto las necesarias para los servicios básicos de Internet, como DHCP, Bonjour e IPSec. Esta característica también bloquea todos los servicios de uso compartido, como Uso compartido de archivos y Pantalla compartida. Si usa servicios de uso compartido, mantenga este valor como *No configurado*.  
-  - **No configurado**.  
-  - **Sí**  
-
-  **Valor predeterminado**: No configurado  
-
-- **Permitir conexiones entrantes para las siguientes aplicaciones**: seleccione las aplicaciones con permiso para recibir conexiones entrantes. Las opciones son:
-  - **Agregar aplicaciones por id. de agrupación**: escriba el [id. de agrupación](../configuration/bundle-ids-built-in-ios-apps.md) de la aplicación. El sitio web de Apple tiene una lista de [aplicaciones de Apple integradas](https://support.apple.com/HT208094).
-  - **Agregar aplicación de la tienda**: seleccione una aplicación de la tienda que haya agregado previamente a Intune. Para más información, vea [Agregar aplicaciones a Microsoft Intune](../apps/apps-add.md).
-
-- **Bloquear las conexiones entrantes para las siguientes aplicaciones**: seleccione las aplicaciones que no tengan permiso para recibir conexiones entrantes. Las opciones son:
-  - **Agregar aplicaciones por id. de agrupación**: escriba el [id. de agrupación](../configuration/bundle-ids-built-in-ios-apps.md) de la aplicación. El sitio web de Apple tiene una lista de [aplicaciones de Apple integradas](https://support.apple.com/HT208094).
-  - **Agregar aplicación de la tienda**: seleccione una aplicación de la tienda que haya agregado previamente a Intune. Para más información, vea [Agregar aplicaciones a Microsoft Intune](../apps/apps-add.md).
-
-- **Habilitar el modo sigiloso**  
-  Habilite el modo sigiloso para impedir que el equipo responda a solicitudes de sondeo. El dispositivo sigue respondiendo a las solicitudes entrantes de las aplicaciones autorizadas. Las solicitudes inesperadas, como ICMP (ping), se ignoran.  
-  - **No configurado**.  
-  - **Sí**  
-
-  **Valor predeterminado**: No configurado  
-
-## <a name="gatekeeper"></a>Equipo selector  
-
-- **Permitir aplicaciones descargadas desde estas ubicaciones**  
-  Limitar las aplicaciones que puede iniciar un dispositivo, en función de dónde se hayan descargado las aplicaciones. El fin es proteger los dispositivos frente al malware y permitir únicamente aplicaciones de orígenes de confianza.  
-
-  - **No configurado**.  
-  - **Mac App Store**  
-  - **Mac App Store y desarrolladores identificados**  
-  - **Cualquier ubicación**  
-
-  **Valor predeterminado**: No configurado  
-
-- **No permitir que el usuario invalide Gatekeeper**  
-  Impide que los usuarios invaliden el valor del equipo selector y que presionen Control+clic para instalar una aplicación. Si está habilitado, los usuarios pueden presionar Control+clic en cualquier aplicación e instalarla.  
-
-  - **No configurado**: los usuarios pueden presionar la tecla Control y hacer clic para instalar aplicaciones.  
-  - **Sí**: impide que los usuarios usen la combinación de la tecla Control y hacer clic para instalar aplicaciones.  
-
-  **Valor predeterminado**: No configurado  
+    El valor predeterminado de esta opción depende de la configuración de *Deshabilitar mensaje al cerrar sesión*. Cuando la opción *Deshabilitar mensaje al cerrar sesión* se establece en **No configurado**, este valor se establece de forma predeterminada en **No configurado**. Cuando *Deshabilitar mensaje al cerrar sesión* se establece en **Sí**, el valor predeterminado es **1** y el valor **No configurado** no es una opción.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

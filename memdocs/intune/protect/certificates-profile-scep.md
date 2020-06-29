@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988647"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531747"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creación y asignación de perfiles de certificado SCEP en Intune
 
@@ -226,7 +226,17 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
 
    - **Direcciones URL de servidor SCEP**:
 
-     especifique una o varias direcciones URL para los servidores SCEP que emiten certificados mediante SCEP. Por ejemplo, escriba algo parecido a `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. Puede agregar direcciones URL de SCEP adicionales para el equilibrio de carga según sea necesario, ya que las direcciones URL se insertan de forma aleatoria en el dispositivo con el perfil. Si uno de los servidores SCEP no está disponible, se producirá un error en la solicitud de SCEP y es posible que, en las comprobaciones posteriores del dispositivo, la solicitud de certificado se realice en el mismo servidor inactivo.
+     especifique una o varias direcciones URL para los servidores SCEP que emiten certificados mediante SCEP. Por ejemplo, escriba algo parecido a `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
+
+     Puede agregar direcciones URL de SCEP adicionales para el equilibrio de carga según sea necesario. Los dispositivos realizan tres llamadas independientes al servidor NDES: para obtener las capacidades de los servidores, para obtener una clave pública y, luego, para enviar una solicitud de firma. Si usa varias direcciones URL, es posible que el equilibrio de carga tenga como resultado que se use una dirección URL diferente para las llamadas posteriores a un servidor NDES. Si se contacta con un servidor diferente para una llamada posterior durante la misma solicitud, se producirá un error en la solicitud.
+
+     El comportamiento para administrar la dirección URL del servidor NDES es específico de cada plataforma de dispositivo:
+
+     - **Android**: el dispositivo aleatoriza la lista de direcciones URL recibidas en la directiva de SCEP y recorre la lista hasta que encuentra un servidor NDES accesible. Después, el dispositivo usa la misma dirección URL y el mismo servidor durante todo el proceso. Si el dispositivo no puede acceder a ninguno de los servidores NDES, se produce un error en el proceso.
+     - **iOS/iPadOS**: Intune vuelve a aleatorizar las direcciones URL y proporciona una sola dirección URL a un dispositivo. Si el dispositivo no puede acceder al servidor NDES, se produce un error en la solicitud de SCEP.
+     - **Windows**: la lista de direcciones URL de NDES se aleatoriza y, luego, se pasa al dispositivo Windows, que las prueba en el orden recibido hasta encontrar una disponible. Si el dispositivo no puede acceder a ninguno de los servidores NDES, se produce un error en el proceso.
+
+     Si un dispositivo no puede acceder al mismo servidor NDES correctamente durante alguna de las tres llamadas al servidor NDES, se produce un error en la solicitud de SCEP. Esto puede ocurrir, por ejemplo, cuando una solución de equilibrio de carga proporciona una dirección URL diferente para la segunda o la tercera llamada al servidor NDES, o bien cuando proporciona un servidor NDES real distinto en función de una dirección URL virtualizada para NDES. Después de una solicitud con error, el dispositivo intenta llevar a cabo el proceso de nuevo en el siguiente ciclo de la directiva, empezando por la lista aleatorizada de direcciones URL de NDES (o por una dirección URL única para iOS/iPadOS).  
 
 8. Seleccione **Siguiente**.
 

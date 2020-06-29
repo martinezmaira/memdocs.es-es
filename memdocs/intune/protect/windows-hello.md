@@ -1,12 +1,12 @@
 ---
 title: Integración de Windows Hello para empresas con Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Obtenga información sobre cómo crear una directiva para controlar el uso de Windows Hello para empresas en dispositivos administrados".
+description: Obtenga información sobre cómo crear una directiva para controlar el uso de Windows Hello para empresas en dispositivos administrados durante la inscripción de dispositivos.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,27 +17,25 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 00f617d91541c1a580f6dec0b6b844abfc8d0d97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990929"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531900"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integración de Windows Hello para empresas con Microsoft Intune  
 
-Puede integrar Windows Hello para empresas (anteriormente Microsoft Passport for Work) con Microsoft Intune.
+Puede integrar Windows Hello para empresas (anteriormente Microsoft Passport for Work) con Microsoft Intune durante la inscripción de dispositivos.
 
- Hello para empresas es un método alternativo de inicio de sesión que usa Active Directory o una cuenta de Azure Active Directory para reemplazar una contraseña, tarjeta inteligente o tarjeta inteligente virtual. Permite usar un *gesto de usuario* para iniciar sesión, en lugar de una contraseña. Un gesto de usuario podría ser una autenticación biométrica con un PIN, como Windows Hello, o un dispositivo externo como un lector de huellas digitales.
+Hello para empresas es un método alternativo de inicio de sesión que usa Active Directory o una cuenta de Azure Active Directory para reemplazar una contraseña, tarjeta inteligente o tarjeta inteligente virtual. Permite usar un *gesto de usuario* para iniciar sesión, en lugar de una contraseña. Un gesto de usuario podría ser una autenticación biométrica con un PIN, como Windows Hello, o un dispositivo externo como un lector de huellas digitales.
 
 Intune se integra con Hello para empresas de dos maneras:
 
-- Se puede crear una directiva de Intune en **Inscripción de dispositivos**. Esta directiva se destina a toda la organización (a todos los inquilinos). Es compatible con la configuración rápida (OOBE) de Windows AutoPilot y se aplica cuando se inscribe un dispositivo. 
-- Se puede crear un perfil de protección de identidad en **Configuración del dispositivo**. Este perfil se destina a los usuarios y dispositivos asignados, y se aplica durante la inserción en el repositorio. 
+- **En todos los inquilinos**: se puede crear una directiva de Intune en *Inscripción de dispositivos*. Esta directiva se destina a toda la organización (a todos los inquilinos). Es compatible con la configuración rápida (OOBE) de Windows AutoPilot y se aplica cuando se inscribe un dispositivo.
+- **Grupos discretos**: puede implementar directivas que administren Windows Hello para empresas en los dispositivos que se han inscrito con Intune. Entre los tipos de directivas que pueden administrar Windows Hello se incluyen los perfiles de *Identity Protection* que se crean en la *configuración del dispositivo*, diversas *líneas de base de seguridad* y los perfiles de *protección de cuentas* de seguridad de los puntos de conexión. Estos tipos de perfiles se dirigen a dispositivos o usuarios asignados y se aplican durante la sincronización.
 
 Use este artículo para crear una directiva de Windows Hello para empresas predeterminada destinada a toda la organización. Para crear un perfil de protección de identidad que se aplique a grupos de usuarios y dispositivos concretos, vea [Configuración de un perfil de protección de identidad](identity-protection-configure.md).  
-
-<!--- - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
 > [!IMPORTANT]
 > En las versiones de escritorio y móvil de Windows 10 anteriores a la Actualización de aniversario, era posible establecer dos PIN diferentes para autenticarse en los recursos:
@@ -53,14 +51,16 @@ Use este artículo para crear una directiva de Windows Hello para empresas prede
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Crear una directiva de Windows Hello para empresas
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Vaya a **Dispositivos** >  **Inscripción** > **Inscribir dispositivos** > **Inscripción de Windows** > **Windows Hello para empresas**. Se abre el panel de Windows Hello para empresas.
 
 3. En **Configurar Windows Hello para empresas**, seleccione entre las opciones siguientes.
 
-    - **Deshabilitado**. Si no quiere usar Windows Hello para empresas, seleccione esta opción. Si está deshabilitada, los usuarios no pueden aprovisionar Windows Hello para empresas excepto en teléfonos móviles unidos a Azure Active Directory donde puede ser necesario el aprovisionamiento.
-    - **Habilitado**. Seleccione esta opción si quiere configurar Windows Hello para empresas.  Cuando se selecciona *Habilitado*, los otros valores de configuración de Windows Hello se vuelven visibles.
+     - **Habilitado**. Seleccione esta opción si quiere configurar Windows Hello para empresas.  Cuando se selecciona *Habilitado*, los otros valores de configuración de Windows Hello se vuelven visibles y se pueden configurar para los dispositivos.
+
+    - **Deshabilitado**. Si no quiere habilitar Windows Hello para empresas durante la inscripción de los dispositivos, seleccione esta opción. Cuando está deshabilitado, los usuarios no pueden aprovisionar Windows Hello para empresas excepto en teléfonos móviles unidos a Azure Active Directory donde puede ser necesario el aprovisionamiento. Cuando está establecido en *Deshabilitado*, las opciones siguientes pueden configurarse igualmente para Windows Hello para empresas, aunque esta directiva no habilite Windows Hello para empresas.
+
     - **No configurado**. Seleccione esta opción si no quiere usar Intune para controlar la configuración de Windows Hello para empresas. No se cambia ninguna de las opciones de configuración de Windows Hello para empresas existentes en los dispositivos Windows 10. Todas las demás configuraciones del panel no están disponibles.
 
 4. Si ha seleccionado **Habilitado** en el paso anterior, configure las opciones necesarias que se aplicarán en todos los dispositivos Windows 10 y Windows 10 Mobile inscritos. Después de configurar estos valores, seleccione **Guardar**.

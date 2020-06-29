@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973101"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados
 
@@ -34,7 +34,7 @@ Las directivas de configuración de aplicaciones en Microsoft Intune proporcion
 > [!NOTE]  
 > No todas las aplicaciones admiten la configuración de aplicaciones. Póngase en contacto con el desarrollador de la aplicación para comprobar si la aplicación admite directivas de configuración de aplicaciones.
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Elija **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar** > **Dispositivos administrados**. Observe que puede elegir entre **Dispositivos administrados** y **Aplicaciones administradas**. Para más información, consulte [Aplicaciones que admiten la configuración de aplicaciones](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. En la página **Aspectos básicos**, establezca los detalles siguientes:
     - **Nombre**: nombre del perfil que aparece en Azure Portal.
@@ -103,7 +103,7 @@ Puede elegir las opciones siguientes si elige una variable como tipo de valor:
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Permitir solo cuentas de organización configuradas en aplicaciones de varias identidades 
 
-Como administrador de Microsoft Intune, puede controlar qué cuentas de usuario se agregan a las aplicaciones de Microsoft en dispositivos administrados. Puede limitar el acceso solo a las cuentas de usuario de la organización permitidas y bloquear las cuentas personales en los dispositivos inscritos. Para dispositivos Android, use los siguientes pares de clave/valor:
+Como administrador de Microsoft Intune, puede controlar qué cuentas profesionales o educativas se agregan a las aplicaciones de Microsoft en dispositivos administrados. Puede limitar el acceso solo a las cuentas de usuario de la organización permitidas y bloquear las cuentas personales en los dispositivos inscritos. En el caso de dispositivos Android, use los siguientes pares clave-valor en una directiva de configuración de aplicaciones de dispositivos administrados:
 
 | **Clave** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|

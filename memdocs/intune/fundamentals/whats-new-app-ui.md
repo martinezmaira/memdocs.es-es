@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166193"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740895"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune
 
@@ -34,6 +34,14 @@ Obtenga información sobre las actualizaciones más recientes para las aplicacio
 
 Si es un empleado o un alumno, asegúrese de consultar las capturas de pantalla y los vínculos de la documentación de ayuda del Portal de empresa. Para obtener más información sobre cómo usar la aplicación Portal de empresa, vea la [documentación de ayuda al usuario del Portal de empresa](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+
+## <a name="week-of-june-8-2020"></a>Semana del 8 de junio de 2020 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>Actualizaciones de la pantalla informativa en Portal de empresa para iOS/iPadOS <!-- 7032452 -->
+Hemos actualizado una pantalla informativa en Portal de empresa para iOS/iPadOS a fin de explicar mejor lo que un administrador puede ver y hacer en los dispositivos. Estas aclaraciones solo se aplican a los dispositivos corporativos. Solo se ha actualizado el texto, no se han realizado modificaciones reales de lo que el administrador puede ver o realizar en los dispositivos de usuario. Para obtener más información sobre lo que puede ver un administrador, vea [¿Qué información puede ver mi organización cuando inscribo mi dispositivo?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+
+
+[![Captura de pantalla de la pantalla informativa de Portal de empresa en la que se muestra texto actualizado.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>Semana del 18 de mayo de 2020  
@@ -62,12 +70,6 @@ Los usuarios también verán un nuevo vínculo **Obtener aplicaciones** en el ca
 Para dejar espacio a estas experiencias nuevas y mejoradas, se ha quitado la pestaña **APLICACIONES** que se muestra en la siguiente imagen.  
 
 ![Imagen de ejemplo de la pestaña Aplicaciones del Portal de empresa que se ha quitado ahora.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>Semana del 2 de marzo de 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Experiencia de inicio de sesión mejorada en la aplicación Portal de empresa para Android   

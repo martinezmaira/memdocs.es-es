@@ -1,11 +1,11 @@
 ---
 title: 'Acciones y mensajes en caso de incumplimiento con Microsoft Intune: Azure | Microsoft Docs'
-description: Cree un correo electrónico de notificación para enviar a los dispositivos no compatibles. Agregue acciones después de que un dispositivo se marque como no compatible (como agregar un período de gracia hasta que lo sea) o bien cree una programación para bloquear el acceso hasta que el dispositivo sea compatible. Haga esto mediante Microsoft Intune en Azure.
+description: Cree un correo electrónico de notificación para enviar a los dispositivos no compatibles. Agregue acciones para aplicarlas a los dispositivos que no cumplen las directivas de cumplimiento. Las acciones pueden incluir un período de gracia para cumplir con la directiva, bloquear el acceso a los recursos de red o retirar el dispositivo no compatible.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989314"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093744"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configuración de acciones para dispositivos no compatibles en Intune
 
@@ -29,11 +29,11 @@ Para aquellos dispositivos que no cumplen las reglas o las directivas de cumplim
 
 ## <a name="overview"></a>Introducción
 
-De forma predeterminada, cada directiva de cumplimiento incluye la acción de incumplimiento de **Marcar el dispositivo no compatible** con una programación de cero días (**0**). El resultado de este valor predeterminado es que cuando Intune detecta un dispositivo que no es compatible, lo marca inmediatamente como tal. Después, el [Acceso condicional](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) de Azure Active Directory (AD) puede bloquear el dispositivo.
+De forma predeterminada, cada directiva de cumplimiento incluye la acción de incumplimiento de **Marcar el dispositivo no compatible** con una programación de cero días (**0**). El resultado de este valor predeterminado es que cuando Intune detecta un dispositivo que no es compatible, lo marca inmediatamente como tal. Una vez que un dispositivo se ha marcado como no compatible, el [Acceso condicional](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) de Azure Active Directory (AD) puede bloquear el dispositivo.
 
 Mediante la configuración de **Acciones en caso de incumplimiento** se obtiene flexibilidad para decidir qué hacer respecto a los dispositivos no compatibles y cuándo hacerlo. Por ejemplo, puede elegir no bloquear el dispositivo inmediatamente y conceder al usuario un período de gracia para convertirlo en compatible.
 
-Para cada acción que se establezca, se puede configurar una programación que determine cuándo surte efecto la acción en función del número de días después de que se marque el dispositivo como no compatible. También se pueden configurar varias instancias de una acción. Cuando se establecen varias instancias de una acción en una directiva, la acción se ejecutará de nuevo en esa hora programada más tarde en caso de que el dispositivo siga siendo no compatible.
+Para cada acción que establezca, puede configurar una programación que determine cuándo surte efecto la acción. La programación debe indicar el número de días pasados los cuales el dispositivo se marcará como no compatible. También se pueden configurar varias instancias de una acción. Cuando se establecen varias instancias de una acción en una directiva, la acción se ejecutará de nuevo en esa hora programada más tarde en caso de que el dispositivo siga siendo no compatible.
 
 No todas las acciones están disponibles para todas las plataformas.
 
@@ -48,7 +48,7 @@ A continuación se muestran las acciones disponibles en caso de incumplimiento. 
 - **Enviar correo electrónico a usuario final**: esta acción envía una notificación por correo electrónico al usuario.
 Al habilitar esta acción, se ha de hacer lo siguiente:
 
-  - Seleccione una *plantilla de mensaje de notificación* que envíe esta acción. Debe [crear una plantilla de mensaje de notificación](#create-a-notification-message-template) antes de poder asignar una a esta acción. Al crear la notificación personalizada, se personaliza el asunto y el cuerpo del mensaje, y puede incluir el logotipo de la empresa, el nombre de la empresa e información adicional de contacto.
+  - Seleccione una *plantilla de mensaje de notificación* que envíe esta acción. [Cree una plantilla de mensaje de notificación](#create-a-notification-message-template) para poder asignar una a esta acción. Al crear la notificación personalizada, se personaliza el asunto y el cuerpo del mensaje, y puede incluir el logotipo de la empresa, el nombre de la empresa e información adicional de contacto.
   - Para enviar el mensaje a destinatarios adicionales, seleccione uno o varios de los grupos de Azure AD.
 
 Cuando se envía el correo electrónico, Intune incluye información sobre los dispositivos no compatibles en la notificación de este correo.
@@ -105,7 +105,7 @@ Cuando se envía el correo electrónico, Intune incluye información sobre los d
   Tenga en cuenta lo siguiente:
   - En el caso de una sola directiva que incluya varias instancias de un conjunto de notificaciones de inserción para el mismo día, solo se envía una notificación única para ese día.
 
-  - Cuando hay varias directivas de cumplimiento que incluyen las mismas condiciones de cumplimiento y la acción de notificación de inserción con la misma programación, se envían varias notificaciones al mismo dispositivo en el mismo día.
+  - Cuando hay varias directivas de cumplimiento que incluyen las mismas condiciones de cumplimiento y la acción de notificación de inserción con la misma programación, Intune envía varias notificaciones al mismo dispositivo en el mismo día.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
@@ -126,22 +126,22 @@ A fin de crear una directiva de cumplimiento de dispositivos, vea la guía sigui
 Para enviar correo electrónico a los usuarios, cree una plantilla de mensaje de notificación. Cuando un dispositivo no es compatible, los detalles que especifica en la plantilla se muestran en el correo electrónico enviado a los usuarios.
 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Seleccione **Dispositivos** > **Directivas de cumplimiento** > **Notificaciones** > **Crear notificación**.
+2. Seleccione **Seguridad de punto de conexión** > **Conformidad de dispositivos** > **Notificaciones** > **Crear notificación**.
 3. En *Aspectos básicos*, especifique la información siguiente:
 
    - **Nombre**
    - **Asunto**
    - **Message**
 
-4. También en *Aspectos básicos*, configure las siguientes opciones para la notificación, todas las cuales tienen como valor predeterminado *Habilitado*:
+4. También en *Aspectos básicos*, configure las siguientes opciones para la notificación:
 
-   - **Encabezado de correo electrónico: incluir logotipo de la empresa**
-   - **Pie de página de correo electrónico: incluir nombre de la empresa**
-   - **Pie de página de correo electrónico: incluir información de contacto**
+   - **Encabezado de correo electrónico: incluir logotipo de la empresa** (valor predeterminado = *Habilitar*): el logotipo que se carga como parte de la personalización de marca del Portal de empresa se usa para las plantillas de correo electrónico. Para más información sobre la personalización de marca del Portal de empresa, vea [Personalización de la marca de empresa](../apps/company-portal-app.md#customizing-the-user-experience).
+   - **Pie de página de correo electrónico: incluir nombre de la empresa** (valor predeterminado = *Habilitar*).
+   - **Pie de página de correo electrónico: incluir información de contacto** (valor predeterminado = *Habilitar*).
+   - **Vínculo del sitio web de Portal de empresa** (valor predeterminado = *Deshabilitar*): cuando se establece en *Habilitar*, el correo electrónico incluye un vínculo al sitio web de Portal de empresa.
 
-   El logotipo que se carga como parte de la personalización de marca del Portal de empresa se usa para las plantillas de correo electrónico. Para más información sobre la personalización de marca del Portal de empresa, vea [Personalización de la marca de empresa](../apps/company-portal-app.md#customizing-the-user-experience).
-
-   ![Ejemplo de un mensaje de notificación compatible en Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![Ejemplo de un mensaje de notificación compatible en Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    Seleccione **Siguiente** para continuar.
 
@@ -185,7 +185,7 @@ Puede agregar acciones opcionales al crear una directiva de cumplimiento o bien 
 
    En la directiva de cumplimiento, por ejemplo, también desea notificar al usuario. Puede agregar la acción **Enviar correo electrónico a usuario final**. En la acción **Enviar correo electrónico**, debe establecer el valor de **Programación** en dos días. Si el dispositivo o el usuario final se siguen evaluando como no conformes el día 2, su correo electrónico se enviará dicho día. Si quiere volver a enviar al usuario un correo electrónico de incumplimiento el día 5, agregue otra acción y establezca **Programación** en cinco días.
 
-  Para obtener más información sobre el cumplimiento y las acciones integradas, consulte la [información general de cumplimiento](device-compliance-get-started.md).
+   Para obtener más información sobre el cumplimiento y las acciones integradas, consulte la [información general de cumplimiento](device-compliance-get-started.md).
 
 6. Cuando termine, haga clic en **Agregar** > **Aceptar** para guardar los cambios.
 

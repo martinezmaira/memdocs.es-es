@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,27 +19,27 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: fe405b66892ec7777d8d1572b2fb6ab6ce1aaa91
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882414"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094193"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Inscripción de un dispositivo macOS con Portal de empresa  
 
 Inscriba un dispositivo macOS con la aplicación Portal de empresa de Intune para obtener acceso seguro a las aplicaciones, los archivos y la dirección de correo electrónico profesional o educativa de su organización.
 
-Las organizaciones suelen requerir a los usuarios que inscriban sus dispositivos antes de poder acceder a datos confidenciales. Después de haber inscrito el dispositivo, se convierte en *administrado*. La organización puede asignar directivas y aplicaciones al dispositivo mediante un proveedor de administración de dispositivos móviles (MDM), como Intune. Para obtener acceso continuo a la información profesional o educativa del dispositivo, debe configurarlo para que coincida con la configuración de directiva de su organización.  
+Las organizaciones suelen requerir a los usuarios que inscriban sus dispositivos antes de poder acceder a datos confidenciales. Después de haber inscrito el dispositivo, se convierte en *administrado*. La organización puede asignar directivas y aplicaciones al dispositivo mediante un proveedor de administración de dispositivos móviles (MDM), como Intune. Para obtener acceso continuo a la información profesional o educativa del dispositivo, debe configurarlo para que coincida con la configuración de directiva de la organización.  
 
-En este artículo se describe cómo usar la aplicación Portal de empresa para que macOS inscriba, configure y mantenga su dispositivo para que cumpla los requisitos de su organización.  
+En este artículo se describe cómo usar la aplicación Portal de empresa para que macOS configure y mantenga el dispositivo de modo que cumpla los requisitos de la organización.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Qué esperar de la aplicación Portal de empresa
 
 Durante la instalación inicial, la aplicación Portal de empresa requiere que inicie sesión y se autentique con su organización. Portal de empresa le informa de cualquier configuración de dispositivo que haya que configurar para satisfacer los requisitos de su organización. Por ejemplo, las organizaciones suelen definir requisitos de caracteres mínimos o máximos para las contraseñas que tendrá que cumplir.    
 
-Después de inscribir el dispositivo, Portal de empresa siempre se asegurará de que el dispositivo esté protegido según los requisitos de su organización. Por ejemplo, si instala una aplicación desde un origen que no es de confianza, Portal de empresa le avisará y podría restringir el acceso a los recursos de su organización. Las directivas de protección de aplicaciones como esta son bastante habituales. Para recuperar el acceso, es probable que deba desinstalar la aplicación que no es de confianza. 
+Después de inscribir el dispositivo, Portal de empresa siempre se asegurará de que el dispositivo esté protegido según los requisitos de su organización. Por ejemplo, si instala una aplicación desde un origen que no es de confianza, el Portal de empresa le avisará y podría restringir el acceso a los recursos de la organización. Las directivas de protección de aplicaciones como esta son bastante habituales. Para recuperar el acceso, es probable que deba desinstalar la aplicación. 
 
 Si después de la inscripción, la organización exige un nuevo requisito de seguridad, como la autenticación multifactor, Portal de empresa se lo notificará. Tendrá la oportunidad de ajustar la configuración para poder seguir trabajando desde su dispositivo.  
 
@@ -67,19 +67,20 @@ Realice los siguientes pasos para inscribir un dispositivo macOS en su organizac
 
 1. Inicie sesión en el Portal de empresa con su cuenta profesional o educativa.  
 2. Cuando la aplicación se abra, seleccione **Comenzar**.  
-3. Revise lo que su organización puede y no puede ver en el dispositivo inscrito. Luego, seleccione **Continue** (Continuar).
-4.  Si se le solicita, escriba la contraseña del dispositivo en la pantalla **Install management profile** (Instalar perfil de administración).
+3. Revise [lo que su organización puede y no puede ver](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) en el dispositivo inscrito. Luego, seleccione **Continue** (Continuar).
+4. En la pantalla **Instalar el perfil de administración**, seleccione **Descargar perfil**.  
 
-    ![Captura de pantalla de ejemplo de la pantalla Install management profile (Instalar perfil de administración) de Portal de empresa](./media/install-management-profile-macos-1912.PNG)   
-5. En la pantalla **Confirmar la administración de dispositivos**, seleccione **Preferencias de sistema abierto**.  
+    ![Captura de pantalla de ejemplo de la pantalla Install management profile (Instalar perfil de administración) de Portal de empresa](./media/install-management-profile-macos-2006.png)   
 
-    ![Captura de pantalla de ejemplo de la pantalla Confirmar la administración de dispositivos con el botón "Preferencias de sistema abierto" resaltado](./media/confirm-device-management-macos-1912.PNG)  
-6. Se abrirán las preferencias de sistema del dispositivo. Seleccione **Management Profile** (Perfil de administración) en la lista perfiles de dispositivo y, después, **Aprobar** > **Aprobar**.  
-    ![Captura de pantalla de ejemplo la pantalla Management Profile (Perfil de administración) de las preferencias del sistema con el botón "Aprobar" resaltado](./media/management-profile-approve-macos-1912.PNG)   
-1. Vuelva a Portal de empresa y seleccione **Continuar**.    
-2. Es posible que su organización requiera que actualice la configuración del dispositivo. Cuando haya terminado de actualizar la configuración, seleccione **Comprobar configuración**.  
+5. Se abrirán las preferencias de sistema del dispositivo.  
+    a. Seleccione **Instalar** y, luego, otra vez **Instalar**.  
+    b. Si se le solicita, escriba la contraseña del dispositivo.   
+6. Una vez que el perfil se haya instalado, aparecerá en la lista de perfiles en **Administración de perfiles**.
+    ![Captura de pantalla de ejemplo la pantalla Management Profile (Perfil de administración) de las preferencias del sistema con el botón "Aprobar" resaltado](./media/management-profile-approve-macos-2006.png)   
+7. Vuelva al Portal de empresa.    
+8. Es posible que su organización requiera que actualice la configuración del dispositivo. Cuando haya terminado de actualizar la configuración, seleccione **Reintentar**.  
 
-    ![Captura de pantalla de ejemplo la pantalla Actualizar configuración del dispositivo de Portal de empresa con el botón Comprobar configuración resaltado](./media/update-settings-mac-1911.PNG)  
+    ![Captura de pantalla de ejemplo de la pantalla Actualizar configuración del dispositivo del Portal de empresa, con el botón Reintentar resaltado.](./media/update-settings-mac-2006.png)  
 9. Una vez finalizada la instalación, seleccione **Listo**.  
 
 

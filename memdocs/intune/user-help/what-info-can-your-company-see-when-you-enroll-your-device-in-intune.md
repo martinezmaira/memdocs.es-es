@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882075"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107312"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>¿Qué información puede ver mi organización cuando inscribo mi dispositivo?
 
@@ -64,6 +64,6 @@ Su organización no puede ver su información personal cuando inscribe un dispos
 
 - Número de teléfono: en el caso de los dispositivos propiedad de la empresa, se puede ver el número de teléfono completo. En el caso de los dispositivos personales, su organización solo puede ver los últimos cuatro dígitos de su número de teléfono. Puede ver el tipo de propiedad de cada dispositivo en la página **Detalles del dispositivo** correspondiente.
 - Espacio de almacenamiento del dispositivo: si no puede instalar una aplicación necesaria, su organización podría consultar el espacio de almacenamiento del dispositivo para averiguar si el espacio es insuficiente.  
-- Ubicación: su organización nunca puede ver la ubicación de su dispositivo, a menos que necesite recuperar un dispositivo iOS perdido supervisado. Visite la [documentación de Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) para más información sobre los dispositivos supervisados.  
-- Detalles del inventario de aplicaciones: si su organización usa Mobile Threat Defense, esta podrá consultar información adicional sobre las aplicaciones instaladas en su dispositivo iOS. Obtenga más información sobre [Mobile Threat Defense](set-up-mobile-threat-defense.md). Si tiene un dispositivo personal, su organización solo puede ver el inventario de aplicaciones administradas. Si tiene un dispositivo de propiedad corporativa, su organización puede ver todo el inventario de aplicaciones.
+- Ubicación: En el caso de los dispositivos de propiedad corporativa, la organización puede ver la ubicación de un dispositivo perdido. En cuanto a los dispositivos personales, la organización nunca puede ver la ubicación del dispositivo, a menos que intente encontrar un dispositivo iOS supervisado que se haya perdido. Visite la [documentación de Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) para más información sobre los dispositivos supervisados.  
+- Detalles del inventario de aplicaciones: si su organización usa Mobile Threat Defense, esta podrá consultar información adicional sobre las aplicaciones instaladas en su dispositivo iOS. Obtenga más información sobre [Mobile Threat Defense](set-up-mobile-threat-defense.md). En el caso de los dispositivos personales, la organización solo puede ver el inventario de aplicaciones administradas. En cuanto a los dispositivos de propiedad corporativa, la organización puede ver todo el inventario de aplicaciones.
 - Información de red: parte de la información sobre las conexiones de red de los dispositivos Android puede estar disponible para el soporte técnico de su organización. Por ejemplo, si su organización exige que los dispositivos permanezcan dentro de cierto edificio, el dispositivo podría identificar la red donde está conectado. 
