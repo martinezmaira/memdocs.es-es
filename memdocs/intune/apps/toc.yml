@@ -135,8 +135,6 @@
               href: app-configuration-managed-home-screen-app.md
             - name: Configuración del Portal de empresa
               href: company-portal-app.md
-            - name: Configuración de Managed Browser
-              href: app-configuration-managed-browser.md
             - name: "Configuración de Microsoft\_Launcher"
               href: configure-microsoft-launcher.md
             - name: "Configuración de Microsoft\_Edge"
