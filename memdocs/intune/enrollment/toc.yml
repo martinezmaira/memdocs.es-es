@@ -88,6 +88,20 @@
         - name: Samsung Knox Mobile Enrollment
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
+        - name: Marco de trabajo de configuración de seguridad de Android Enterprise
+          items:
+            - name: Marco de trabajo de configuración de seguridad de Android Enterprise
+              href: android-configuration-framework.md
+            - name: Metodología de implementación del marco de trabajo
+              href: framework-deployment-methodology.md
+            - name: Restricciones en la inscripción de dispositivos
+              href: device-enrollment-restrictions.md
+            - name: Establecimiento de directivas de configuración de aplicaciones
+              href: android-app-configuration-policies.md
+            - name: Configuración de seguridad para perfiles de trabajo de Android
+              href: android-work-profile-security-settings.md
+            - name: Configuración de seguridad totalmente administrada de Android
+              href: android-fully-managed-security-settings.md
     - name: Configuración de la inscripción de iOS/iPadOS
       href: ios-enroll.md
       items:
