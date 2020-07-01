@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268919"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107301"
 ---
 # <a name="assets-in-desktop-analytics"></a>Recursos de Análisis de escritorio
 
@@ -56,7 +56,7 @@ Configure la **importancia** de las aplicaciones mediante una de las siguientes 
 
 Cuando la opción **App Versions Details** (Detalles de versiones de la aplicación) está desactivada, el panel Detalles de la aplicación muestra el número de versiones de la aplicación y los idiomas que combina. Los cambios en los detalles de la aplicación que se guarden, se aplican a todas las versiones. Por ejemplo, establezca la **importancia** o el **propietario**. Algunos valores mostrarán "varios", lo que significa que no hay un valor coherente en todas las versiones.
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> Decisión de actualización automática de las aplicaciones del sistema y de la tienda
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> Decisión de actualización automática de las aplicaciones del sistema y de la tienda
 
 <!-- 3587232 -->
 La identificación de **Importancia** y **Decisión de actualización** es fundamental para todas las aplicaciones destacadas del flujo de trabajo de Análisis de escritorio. Para ayudar a reducir el trabajo de anotar estas aplicaciones, determinados tipos de aplicaciones se marcan automáticamente como *No importante*. La decisión de actualizar el plan de implementación de estas aplicaciones también se marca como *Preparado*. Las siguientes aplicaciones son compatibles y deben seguir funcionando después de actualizar Windows:

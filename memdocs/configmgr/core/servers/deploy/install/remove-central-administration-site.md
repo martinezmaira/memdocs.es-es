@@ -2,7 +2,7 @@
 title: Eliminación del CAS
 titleSuffix: Configuration Manager
 description: Quite el sitio de administración central (CAS) para simplificar la infraestructura de Configuration Manager a un único sitio primario independiente.
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6704075d707306f55a50a937185c9bdd28b18cc5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613969"
 ---
 # <a name="remove-the-central-administration-site"></a>Quitar el sitio de administración central
 
@@ -143,7 +143,7 @@ Después de quitar el CAS, revise los pasos siguientes según se apliquen a su e
 
 - Si conecta Configuration Manager con [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), debe restablecer la conexión. El primer paso para resolver cualquier problema es [renovar la clave secreta](../configure/azure-services-wizard.md#bkmk_renew). Si esto no resuelve el problema, vuelva a crear la conexión.<!-- 5584635 -->
 
-- En la versión 2002, si habilita la sincronización de controladores de Surface, vuelva a configurar esta característica después de quitar el sitio de administración central. Para obtener más información, vea la sección [Incluir actualizaciones de controladores y firmware de Microsoft Surface](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface).<!-- 5728727 -->
+- En la versión 2002, si habilita la sincronización de controladores de Surface, vuelva a configurar esta característica después de quitar el sitio de administración central. Para más información, consulte el artículo sobre [actualizaciones de firmware y controladores de Microsoft Surface](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
 - Si administra actualizaciones de software de terceros:
 

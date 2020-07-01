@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 385a7222b33275951de294554a870d8e490a5ddc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702023"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353605"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -1869,6 +1869,12 @@ Habilite esta opción para generar información más detallada en el archivo de 
 
 Use este paso para ejecutar la línea de comandos especificada.  
 
+El comando que se está ejecutando debe cumplir los siguientes criterios:  
+
+- No debe interactuar con el escritorio. El comando debe ejecutarse en modo silencioso o en modo desatendido.  
+
+- No debe iniciarse ni reiniciarse por sí misma. El comando debe solicitar un reinicio mediante el código estándar de reinicio: 3010. Este comportamiento garantiza que la secuencia de tareas controla correctamente el reinicio. Si el comando devuelve un código de salida 3010, el motor de secuencia de tareas reinicia el equipo. Tras el reinicio, la secuencia de tareas continúa automáticamente.
+
 Este paso se puede ejecutar en el sistema operativo completo o Windows PE.
 
 Para agregar este paso en el editor de secuencia de tareas,seleccione **Agregar**, **General** y **Ejecutar línea de comandos**.
@@ -1976,6 +1982,12 @@ Incluya otros códigos de salida del script que el paso debería valorar como co
 ## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> Ejecutar script de PowerShell
 
 Use este paso para ejecutar el script de Windows PowerShell especificado.  
+
+El script debe cumplir los criterios siguientes:  
+
+- No debe interactuar con el escritorio. El script debe ejecutarse en modo silencioso o en modo desatendido.  
+
+- No debe iniciarse ni reiniciarse por sí misma. El script debe solicitar un reinicio mediante el código de reinicio estándar: 3010. Este comportamiento garantiza que la secuencia de tareas controla correctamente el reinicio. Si el script devuelve un código de salida 3010, el motor de secuencia de tareas reinicia el equipo. Tras el reinicio, la secuencia de tareas continúa automáticamente.
 
 Este paso se puede ejecutar en el sistema operativo completo o Windows PE. Para ejecutar este paso en Windows PE, habilite PowerShell en la imagen de arranque. Habilite el componente WinPE-PowerShell desde la pestaña **Componentes opcionales** de las propiedades de la imagen de arranque. Para obtener más información sobre cómo modificar una imagen de arranque, consulte [Administrar imágenes de arranque](../get-started/manage-boot-images.md).  
 

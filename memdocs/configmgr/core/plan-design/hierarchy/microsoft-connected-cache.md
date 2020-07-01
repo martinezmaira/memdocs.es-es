@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455283"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814923"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Caché de conexión de Microsoft en Configuration Manager
 
@@ -37,7 +37,7 @@ Esta caché es independiente del contenido del punto de distribución de Configu
 
 ## <a name="how-it-works"></a>Cómo funciona
 
-Cuando se configuran los clientes para que usen el servidor de caché de conexión, ya no necesitan solicitar contenido administrado por Microsoft Cloud desde Internet, sino desde el servidor de caché instalado en el punto de distribución. El servidor local almacena en caché este contenido mediante la característica IIS de Enrutamiento de solicitud de aplicaciones (ARR). Después, el servidor de caché puede responder rápidamente a las solicitudes futuras del mismo contenido. Si el servidor de caché de conexión no está disponible o el contenido todavía no está almacenado en caché, los clientes descargan el contenido de Internet. Los clientes también usan la Optimización de distribución, por lo que debe descargar partes del contenido de los elementos del mismo nivel en su red.
+Cuando se configuran los clientes para que usen el servidor de caché de conexión, ya no necesitan solicitar contenido administrado por Microsoft Cloud desde Internet, sino desde el servidor de caché instalado en el punto de distribución. El servidor local almacena en caché este contenido mediante la característica IIS de Enrutamiento de solicitud de aplicaciones (ARR). Después, el servidor de caché puede responder rápidamente a las solicitudes futuras del mismo contenido. Si el servidor de caché de conexión no está disponible o el contenido todavía no está almacenado en caché, los clientes descargan el contenido de Internet. Los clientes también usan la Optimización de distribución para descargar partes del contenido de los elementos del mismo nivel en su red.
 
 ![Diagrama de cómo funciona la caché de conexión](media/3555764-microsoft-connected-cache.png)
 

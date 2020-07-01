@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270878"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383162"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -256,11 +256,7 @@ El programa de instalación de Configuration Manager necesita conectarse a cada 
 
 - SQL a través de TCP: **TCP 1433**
 
-Una vez completado el programa de instalación de Configuration Manager, los siguientes puertos deben mantenerse abiertos para Configuration Manager:  
-
-- SQL Server Service Broker: **TCP 4022**  
-
-- SQL a través de TCP: **TCP 1433**  
+Una vez finalizada la instalación, estos puertos deben permanecer abiertos para Configuration Manager y Replication Link Analyzer.<!-- MEMDocs#375 -->
 
 Puede usar puertos personalizados para estas configuraciones. Use los mismos puertos personalizados por el punto de conexión y en todas las réplicas del grupo de disponibilidad.
 

@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430137"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383247"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Crear una secuencia de tareas para actualizar un SO en Configuration Manager
 
@@ -222,8 +222,10 @@ Una de estas herramientas es Windows [SetupDiag](https://docs.microsoft.com/wind
 - En Configuration Manager, [cree un paquete](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) para la herramienta.  
 
 - Agregue un paso [Ejecutar línea de comandos](../understand/task-sequence-steps.md#BKMK_RunCommandLine) a este grupo de la secuencia de tareas. Use la opción **Paquete** para hacer referencia a la herramienta. La siguiente cadena es una **línea de comandos** de ejemplo:  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> Use siempre la versión más reciente de SetupDiag para contar con la funcionalidad y las correcciones más recientes de los problemas conocidos. Para más información, consulte [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Otras recomendaciones
 

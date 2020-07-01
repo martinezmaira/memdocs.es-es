@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428589"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715703"
 ---
 # <a name="deploy-bitlocker-management"></a>Implementación de la administración de BitLocker
 
@@ -126,7 +126,7 @@ Al crear más de una directiva, puede configurar su prioridad relativa. Si imple
 
 1. Si quiere que el dispositivo cifre o descifre potencialmente sus unidades en cualquier momento, seleccione la opción para **permitir la corrección fuera de la ventana de mantenimiento**. Si la colección tiene ventanas de mantenimiento, seguirá corrigiendo esta directiva de BitLocker.
 
-1. Configure una programación **simple** o **personalizada**. De forma predeterminada, el cliente evalúa su cumplimiento con esta directiva cada 12 horas.
+1. Configure una programación **simple** o **personalizada**. El cliente evalúa su cumplimiento según la configuración especificada en la programación.
 
 1. Seleccione **Aceptar** para implementar la directiva.
 
@@ -191,7 +191,7 @@ Si está usando Microsoft BitLocker Administration and Monitoring (MBAM), puede 
 
 Configuration Manager no vuelve a cifrar las unidades que ya están protegidas con Cifrado de unidad BitLocker. Si implementa una directiva de administración de BitLocker que no coincide con la protección actual de la unidad, lo notificará como no conforme. La unidad sigue protegida.
 
-Por ejemplo, ha usado MBAM para cifrar la unidad sin protección por PIN, pero la directiva de Configuration Manager requiere un PIN. La unidad no es conforme con la directiva, aunque la unidad esté cifrada.
+Por ejemplo, ha utilizado MBAM para cifrar la unidad con el algoritmo de cifrado AES-XTS 128, pero la directiva de Configuration Manager exige AES-XTS 256. La unidad no es conforme con la directiva, aunque la unidad esté cifrada.
 
 Para evitar este comportamiento, deshabilite primero BitLocker en el dispositivo. A continuación, implemente una nueva directiva con la nueva configuración.
 
@@ -201,7 +201,7 @@ Para evitar este comportamiento, deshabilite primero BitLocker en el dispositivo
 
 El controlador del cliente de Configuration Manager para BitLocker es compatible con la administración conjunta. Si el dispositivo está administrado conjuntamente y cambia la [carga de trabajo de Endpoint Protection](../../../comanage/workloads.md#endpoint-protection) a Intune, el cliente de Configuration Manager omite su directiva de BitLocker. El dispositivo obtiene la directiva de cifrado de Windows de Intune.
 
-Al cambiar las autoridades de administración de cifrado, planee un [nuevo cifrado](#re-encryption).
+Al cambiar las autoridades de administración del cifrado, y si el algoritmo de cifrado deseado también cambia, tendrá que planear un [nuevo cifrado](#re-encryption).
 
 Para obtener más información sobre la administración de BitLocker con Intune, consulte los siguientes artículos:
 

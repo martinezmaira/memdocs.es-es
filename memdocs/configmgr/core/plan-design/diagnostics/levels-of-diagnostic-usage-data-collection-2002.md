@@ -10,12 +10,12 @@ ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a56a9c869435bb8fd41aa6e46483277854d25b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8521120de444d4c9725a297c63a9c0c72d4bf2fb
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703823"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506371"
 ---
 # <a name="diagnostic-and-usage-data-for-version-2002"></a>Datos de diagnóstico y uso en la versión 2002
 
@@ -342,7 +342,7 @@ En el caso de la versión 2002 de Configuration Manager, este nivel incluye los
 
 - Directiva de Windows Hello para empresas (creada, implementada).  
 
-- Recuento de directivas del explorador Microsoft Edge implementadas  
+- Recuento de directivas del explorador Microsoft Edge (versión heredada) implementadas  
 
 - Recuento de directivas de OneDrive (creadas, implementadas)
 

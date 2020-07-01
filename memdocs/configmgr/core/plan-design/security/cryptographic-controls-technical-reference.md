@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906561"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353452"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
@@ -70,7 +70,7 @@ No todos los dispositivos admiten la aplicación del hash al contenido. Entre es
  Para cada paquete de implementación de sistema operativo, puede habilitar el cifrado cuando el paquete se transfiere a los equipos mediante multidifusión. El cifrado usa el Estándar de cifrado avanzado (AES, por sus siglas en inglés). Si se habilita el cifrado, no se requiere ninguna configuración de certificado adicional. El punto de distribución habilitado para multidifusión genera automáticamente claves simétricas para cifrar el paquete. Cada paquete tiene su propia clave de cifrado. La clave se almacena en el punto de distribución habilitado para multidifusión mediante el uso de API de Windows estándar. Cuando el cliente se conecta con la sesión de multidifusión, el intercambio de claves se realiza a través de un canal cifrado con el certificado de autenticación de cliente emitido por PKI, si el cliente utiliza HTTPS, o con el certificado autofirmado, si el cliente utiliza HTTP. El cliente almacena la clave en la memoria sólo durante la sesión de multidifusión.  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>Cifrado de los medios usados para implementar sistemas operativos  
- Si se utilizan medios para implementar sistemas operativos, y se especifica una contraseña para protegerlos, las variables de entorno se cifran mediante el Estándar de cifrado avanzado (AES, por sus siglas en inglés). El resto de datos de los medios, incluidos los paquetes y contenido para las aplicaciones, no se cifra.  
+ Cuando se utilizan medios para implementar sistemas operativos y se especifica una contraseña para protegerlos, las variables de entorno se cifran mediante el Estándar de cifrado avanzado (AES) con un tamaño de clave de 128 bits. El resto de datos de los medios, incluidos los paquetes y contenido para las aplicaciones, no se cifra.  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>Cifrado para el contenido hospedado en puntos de distribución basados en la nube  
  A partir de System Center 2012 Configuration Manager SP1, si se usan puntos de distribución basados en la nube, el contenido que se carga en estos puntos de distribución se cifra mediante el Estándar de cifrado avanzado (AES) con un tamaño de clave de 256 bits. El contenido se cifrará de nuevo cada vez que lo actualice. Cuando los clientes descargan el contenido, la conexión HTTPS lo cifra y protege.  

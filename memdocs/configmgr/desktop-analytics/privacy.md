@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223648"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795642"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Privacidad de datos de Análisis de escritorio
 
@@ -57,6 +57,8 @@ En la ilustración siguiente se muestra cómo fluyen los datos de diagnóstico d
 
 3. Los dispositivos envían datos de diagnóstico al servicio de administración de datos de diagnóstico de Microsoft para Windows. Todos los datos de diagnóstico se cifran a través de HTTPS y usan el anclaje de certificados durante la transferencia desde el dispositivo a este servicio. El servicio Administración de datos de Microsoft se hospeda en Estados Unidos.
 
+      - La API de informe de errores de Windows se encarga de enviar informes de problemas específicos de la aplicación a Microsoft, como errores de aplicación, errores de kernel, aplicaciones que no responden y otros problemas específicos. Consulte [Uso de WER](https://docs.microsoft.com/windows/win32/wer/using-wer) para obtener detalles específicos sobre este flujo de datos.
+      
 4. Cada día, Microsoft genera una instantánea de la información centrada en TI. Esta instantánea combina los datos de diagnóstico de Windows con la entrada de dispositivos inscritos. Este proceso se produce en el almacenamiento transitorio, que solo se usa en Análisis de escritorio. El almacenamiento transitorio se hospeda en centros de datos de Microsoft en Estados Unidos. Todos los datos se envían a través de un canal cifrado SSL (HTTPS). Las instantáneas se segregan por identificador comercial.  
 
 5. Después, las instantáneas se copian en el área de trabajo de Azure Log Analytics. Esta transferencia de datos se realiza sobre HTTPS a través del protocolo de ingesta de webhook, que es una característica de Log Analytics. Análisis de escritorio no tiene permisos de lectura o escritura en el almacenamiento de Log Analytics. Análisis de escritorio llama a la API de webhook con un URI de firma de acceso compartido (SAS). Después, Log Analytics obtiene los datos de las tablas de almacenamiento a través de HTTPS.
@@ -78,6 +80,8 @@ Para obtener más información sobre aspectos de privacidad, vea los artículos 
 - [Campos y eventos de diagnóstico de Windows en el nivel básico de Windows 10, versión 1809](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Campos y eventos de datos de diagnóstico mejorados de Windows 10, versión 1709, usados por Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Informe de errores de instalación de Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [Introducción al Visor de datos de diagnóstico](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c1c5231ab67e11ee01b968a2e7238ea13c02fca
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3790e9eaf864a991bc23ee8b55dace2c6a59833
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695223"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506145"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1810"></a>Datos de diagnóstico y uso en la versión 1810
 
@@ -306,7 +306,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 
 - Directiva de Windows Hello para empresas (creada, implementada).  
 
-- Recuento de directivas del explorador Microsoft Edge implementadas  
+- Recuento de directivas del explorador Microsoft Edge (versión heredada) implementadas  
 
 
 ### <a name="content"></a>Content  

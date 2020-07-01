@@ -5,17 +5,17 @@ description: Haga lo siguiente para configurar los productos y clasificaciones d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614077"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Configurar las clasificaciones y los productos que va a sincronizar  
 
@@ -47,9 +47,9 @@ Los metadatos de las actualizaciones de software se recuperan durante el proceso
      - **Paquetes acumulativos de revisiones**: especifica un conjunto acumulativo y probado de revisiones, actualizaciones de seguridad, actualizaciones críticas y actualizaciones que se incluyen en un producto de forma conjunta para facilitar su implementación. Un paquete acumulativo de actualizaciones suele relacionarse, por lo general, con un área específica (por ejemplo, un componente del producto o de la seguridad).  
      - **Actualizaciones**: especifica una corrección de amplia distribución para un problema específico. Una actualización proporciona una solución para un error de código no crítico y no relacionado con la seguridad.  
      - **Actualización**: especifica una actualización para las características y funciones de Windows 10. Los sitios y los puntos de actualización de software tienen que ejecutar como mínimo WSUS 6.2 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) para obtener la clasificación **Actualización**. Para obtener más información sobre la instalación de esta actualización, y otras, para las **actualizaciones**, vea [Requisitos previos para las actualizaciones de software en Configuration Manager](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
-
+    
     > [!NOTE]
-    > Puede activar la casilla **Incluir actualizaciones de controladores y firmware de Microsoft Surface** para sincronizar los controladores de Microsoft Surface.<!--1098490--> Para obtener más información, vea la sección [Incluir controladores y actualizaciones de firmware de Microsoft Surface](#bkmk_Surface).
+    > Puede activar la casilla **Incluir actualizaciones de controladores y firmware de Microsoft Surface** para sincronizar los controladores de Microsoft Surface.<!--1098490--> Todos los puntos de actualización de software deben ejecutar Windows Server 2016 o versiones posteriores para sincronizar correctamente los controladores de Surface. Si habilita un punto de actualización de software en un equipo que ejecuta Windows Server 2012 después de habilitar a los controladores de Surface, los resultados del examen de las actualizaciones de controladores no serán precisos. Esto genera datos de cumplimiento incorrectos que se muestran en la consola y en los informes de Configuration Manager. Para más información, consulte [Administración de controladores de dispositivos Surface con Configuration Manager](../deploy-use/surface-drivers.md).
 
 5. En la pestaña **Productos** , especifique los productos para los que desea sincronizar las actualizaciones de software y, a continuación, haga clic en **Cerrar**.  
 
@@ -67,13 +67,6 @@ Los metadatos de las actualizaciones de software se recuperan durante el proceso
     > - Las [reglas de implementación automática](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) que contienen el producto **Windows 10** se actualizarán para incluir **Windows 10, versión 1903 y versiones posteriores**.
     > - Los [planes de mantenimiento](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) se actualizan para incluir el producto **Windows 10, versión 1903 y posteriores**.
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a>Incluir actualizaciones de controladores y firmware de Microsoft Surface
-
-Puede activar la casilla **Incluir actualizaciones de controladores y firmware de Microsoft Surface** para sincronizar los controladores de Microsoft Surface.<!--1098490--> Todos los puntos de actualización de software deben ejecutar Windows Server 2016 con la actualización acumulativa [KB 4025339](https://support.microsoft.com/help/4025339) o posterior instalada para sincronizar correctamente los controladores de Surface. Si habilita un punto de actualización de software en un equipo que ejecuta Windows Server 2012 después de habilitar a los controladores de Surface, los resultados del examen de las actualizaciones de controladores no serán precisos. Esto genera datos de cumplimiento incorrectos que se muestran en la consola y en los informes de Configuration Manager.  
-
-- Esta característica se introdujo por primera vez en la versión 1706 como una [característica de versión preliminar](../../core/servers/manage/pre-release-features.md). A partir de la versión 1710, ya no es una característica de versión preliminar.  
-- Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
-- Los controladores de los dispositivos ARM no se admiten para la sincronización.
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>Configuración de productos para versiones de Windows 10
 

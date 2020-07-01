@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268358"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353469"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Preguntas frecuentes sobre la retirada de Ready for modern desktop
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Estado de adopción de Ready for Windows
+
+El estado de adopción se basa en la información de los dispositivos comerciales que comparten datos con Microsoft. El estado se integra con las instrucciones de soporte técnico de los proveedores de software.
+
+Análisis de escritorio proporciona el estado de adopción para cada versión de un recurso que se encuentra en dispositivos comerciales. Este estado no incluye datos de los dispositivos de consumidor ni de aquellos que no comparten datos. El estado puede no ser representativo de la tasa de adopción en todos los dispositivos Windows 10.
+
+Las categorías posibles son:
+
+- **Adopción alta**: al menos 100 000 dispositivos comerciales de Windows 10 tienen instalada esta aplicación.
+
+- **Adoptada**: al menos 10 000 dispositivos comerciales de Windows 10 tienen instalada esta aplicación.
+
+- **Datos insuficientes**: son muy pocos los dispositivos comerciales de Windows 10 que están compartiendo información de esta aplicación como para que Microsoft clasifique su adopción.
+
+- **Ponerse en contacto con el desarrollador**: puede que haya problemas de compatibilidad con esta versión de la aplicación. Microsoft recomienda ponerse en contacto con el proveedor de software para obtener más información.
+
+- **Desconocido**: no hay información disponible para esta versión de esta aplicación. Puede que haya información disponible para otras versiones de la aplicación.
 
 ## <a name="general"></a>General
 

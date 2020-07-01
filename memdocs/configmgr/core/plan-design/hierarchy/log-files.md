@@ -2,7 +2,7 @@
 title: Referencia del archivo de registro
 titleSuffix: Configuration Manager
 description: Una referencia de todos los archivos de registro del cliente, el servidor y los componentes dependientes de Configuration Manager.
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166549"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715584"
 ---
 # <a name="log-file-reference"></a>Referencia del archivo de registro
 
@@ -384,7 +384,9 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|Registra actividades de mensajes de cliente en el extremo.|Servidor de sistema de sitio|  
+|CcmIsapi.log|Registra actividades de mensajes de cliente en el extremo.|Servidor de sistema de sitio|
+|CCM_STS.log|Registra actividades de los tokens de autenticación, ya sea desde Azure Active Directory o desde tokens de cliente emitidos por el sitio.|Servidor de sistema de sitio|
+|ClientAuth.log|Registra la actividad de firma y de autenticación.|Servidor de sistema de sitio|
 |MP_CliReg.log|Registra la actividad de registro de cliente procesada por el punto de administración.|Servidor de sistema de sitio|  
 |MP_Ddr.log|Registra la conversión de registros XML.ddr de clientes y luego los copia en el servidor de sitio.|Servidor de sistema de sitio|  
 |MP_Framework.log|Registra las actividades de los componentes principales del punto de administración y del marco de cliente.|Servidor de sistema de sitio|  
@@ -394,6 +396,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |MP_Location.log|Registra actividades de respuesta y solicitud de ubicación de clientes.|Servidor de sistema de sitio|  
 |MP_OOBMgr.log|Registra las actividades de punto de administración relacionadas con la recepción de una OTP de un cliente.|Servidor de sistema de sitio|  
 |MP_Policy.log|Registra la comunicación de directivas.|Servidor de sistema de sitio|  
+|MP_RegistrationManager.log|Registra las actividades relacionadas con el registro de cliente, como la validación de certificados, la CRL y los tokens.|Servidor de sistema de sitio|
 |MP_Relay.log|Registra la transferencia de archivos recopilados del cliente.|Servidor de sistema de sitio|  
 |MP_Retry.log|Registra procesos de reintento de inventario de hardware.|Servidor de sistema de sitio|  
 |MP_Sinv.log|Registra detalles acerca de la conversión de registros XML de inventario de software de clientes y los copia en el servidor de sitio.|Servidor de sistema de sitio|  
@@ -481,6 +484,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |SMSdpmon.log|Registra los detalles acerca de la tarea programada de supervisión de estado de punto de distribución configurada en un punto de distribución.|Servidor de sitio|  
 |SoftwareCatalogUpdateEndpoint.log|Registra actividades para administrar la dirección URL del catálogo de aplicaciones que se muestra en el Centro de software.|Cliente|  
 |SoftwareCenterSystemTasks.log|Registra actividades relacionadas con la validación de componente de requisito previo del Centro de software.|Cliente|  
+|TSDTHandler.log|Para el tipo de implementación de secuencia de tareas. Se registra el proceso de obligatoriedad de las aplicaciones (instalación o desinstalación) al inicio de la secuencia de tareas. Úselo con AppEnforce.log y smsts.log.|Cliente|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>Paquetes y programas
 

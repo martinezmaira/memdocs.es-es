@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268749"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795659"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitación del uso compartido de datos en Análisis de escritorio
 
@@ -35,8 +35,8 @@ La funcionalidad básica de Análisis de escritorio funciona en el [nivel de dat
 
 - Uso de la aplicación
 - [Información adicional de la aplicación](compat-assessment.md#additional-insights)
-- Código de estado de implementación
-- Datos de supervisión de estado
+- [Datos de estado de implementación](deploy-prod.md#address-deployment-alerts)
+- [Datos de supervisión de estado](health-status-monitoring.md)
 
 Microsoft recomienda habilitar el nivel de datos de diagnóstico **Mejorado (limitado)** con Análisis de escritorio para maximizar las ventajas que obtiene de él.
 

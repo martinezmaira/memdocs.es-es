@@ -2,7 +2,7 @@
 title: Planear para Cloud Management Gateway
 titleSuffix: Configuration Manager
 description: Planee y diseñe Cloud Management Gateway (CMG) para simplificar la administración de clientes basados en Internet.
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254629"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715652"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -85,9 +85,12 @@ La implementación y el funcionamiento de CMG incluye los componentes siguientes
 
 - El rol de sistema de sitio del [**punto de conexión del servicio**](../../../servers/deploy/configure/about-the-service-connection-point.md) ejecuta el componente del administrador del servicio en la nube, que controla todas las tareas de implementación de CMG. Además, supervisa y notifica la información de estado y el registro del servicio de Azure AD. Asegúrese de que el punto de conexión del servicio está en [modo en línea](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).  
 
-- El rol de sistema de sitio del **punto de administración** atiende las solicitudes de cliente de manera normal.  
+- El rol de sistema de sitio del **punto de administración** atiende las solicitudes de cliente de manera normal.
 
-- El rol de sistema de sitio del **punto de actualización de software** atiende las solicitudes de cliente de manera normal.  
+- El rol de sistema de sitio del **punto de actualización de software** atiende las solicitudes de cliente de manera normal.
+
+    > [!NOTE]
+    > Las instrucciones de ajuste de tamaño de los puntos de administración y de los puntos de actualización de software no cambian ya sean servicios locales o clientes basados en Internet. Para más información, consulte [Números de tamaño y escala](../../../plan-design/configs/size-and-scale-numbers.md#management-point).
 
 - Los **clientes basados en Internet** se conectan a CMG para tener acceso a los componentes locales de Configuration Manager.
 
@@ -151,15 +154,33 @@ Cuando los clientes se mueven en Internet, se comunican con el CMG de la región
 > [!TIP]
 > No es necesario implementar más de una puerta de enlace de administración en la nube para fines de ubicación geográfica. El cliente de Configuration Manager no resulta apenas afectado por la ligera latencia que se puede producir con el servicio en la nube, incluso cuando está geográficamente lejos.
 
+### <a name="test-environments"></a>Entornos de prueba
+<!-- SCCMDocs#1225 -->
+Muchas organizaciones cuentan con entornos independientes para la producción, las pruebas, el desarrollo o la garantía de calidad. Al planear la implementación de CMG, tenga en cuenta las siguientes preguntas:
+
+- ¿Cuántos inquilinos de Azure AD tiene su organización?
+  - ¿Hay un inquilino independiente para las pruebas?
+  - ¿Están las identidades de los usuarios y de los dispositivos en el mismo inquilino?
+
+- ¿Cuántas suscripciones hay en cada inquilino?
+  - ¿Hay suscripciones específicas para las pruebas?
+
+El servicio de Azure de Configuration Manager para la **administración en la nube** admite varios inquilinos. Varios sitios Configuration Manager pueden conectarse al mismo inquilino. Un solo sitio puede implementar varios servicios de CMG en distintas suscripciones. Varios sitios pueden implementar servicios de CMG en la misma suscripción. Configuration Manager proporciona flexibilidad para distintos entornos y requisitos empresariales.
+
+Para más información, vea las siguientes preguntas frecuentes: [¿Las cuentas de usuario deben estar en el mismo inquilino de Azure AD que la suscripción que hospeda el servicio en la nube de CMG?](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## <a name="requirements"></a>Requisitos
 
 - Una **suscripción de Azure** para hospedar CMG.
+
+    > [!IMPORTANT]
+    > CMG no admite suscripciones con un proveedor de servicios en la nube (CSP) de Azure.<!-- MEMDocs#320 -->
 
 - Su cuenta de usuario ha de ser de **Administrador total** o de **Administrador de infraestructura** en Configuration Manager.<!-- SCCMDocs#2146 -->
 
 - Es necesario que un **administrador de Azure** participe en la creación inicial de determinados componentes, en función del diseño. Esta persona puede ser el administrador de Configuration Manager o ser distinto. Si es distinto, no necesita permisos en Configuration Manager.
 
-  - Para implementar la instancia de CMG, necesita un **administrador de suscripciones**.
+  - Para implementar la instancia de CMG, necesita un **propietario de suscripciones**.
   - Para integrar el sitio con Azure AD a fin de implementar la instancia de CMG con Azure Resource Manager, necesita un **administrador global**.
 
 - Al menos un servidor local de Windows para hospedar el **punto de conexión de CMG**. Puede colocalizar este rol con otros roles de sistema de sitio de Configuration Manager.  
@@ -193,7 +214,7 @@ Cuando los clientes se mueven en Internet, se comunican con el CMG de la región
 
 - Los puntos de actualización de software que usan un equilibrador de carga de red no funcionan con CMG. <!--505311-->  
 
-- Las implementaciones de CMG que usan el modelo de implementación de Azure no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, vea [Servicios de Azure disponibles en el programa CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+- Las implementaciones de CMG que usan el modelo de implementación de Azure no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para más información, consulte [Servicios de Azure disponibles en el programa CSP de Azure](https://docs.microsoft.com/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Compatibilidad con características de Configuration Manager
 
@@ -333,6 +354,9 @@ El diagrama siguiente es un flujo de datos conceptual básico para CMG:
 
 3. El cliente se conecta a CMG a través del puerto HTTPS 443. Para la autenticación, usa Azure AD o el certificado de autenticación de cliente.  
 
+    > [!NOTE]
+    > Si habilita CMG para servir contenido o usar un punto de distribución de nube, el cliente se conecta directamente al almacenamiento de blobs de Azure a través del puerto HTTPS 443. Para más información, consulte [Usar un punto de distribución de nube](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).<!-- SCCMDocs#2332 -->
+
 4. CMG reenvía la comunicación de cliente a través de la conexión existente al punto de conexión de CMG local. No es necesario abrir ningún puerto de firewall de entrada.  
 
 5. El punto de conexión de CMG reenvía la comunicación de cliente al punto de administración local y al punto de actualización de software.  
@@ -350,6 +374,7 @@ En esta tabla se enumeran los protocolos y los puertos de red requeridos. El *cl
 | Punto de conexión de CMG | HTTPS | 443 | Servicio de CMG | Protocolo de reserva para crear el canal de CMG para una sola instancia de máquina virtual <sup>[Nota 2](#bkmk_port-note2)</sup> |
 | Punto de conexión de CMG | HTTPS | 10124-10139 | Servicio de CMG | Protocolo de reserva para crear el canal de CMG para dos o más instancias de máquina virtual <sup>[Nota 3](#bkmk_port-note3)</sup> |
 | Cliente | HTTPS | 443 | CMG | Comunicación de cliente general |
+| Cliente | HTTPS | 443 | Blob Storage | Descarga de contenido basado en la nube |
 | Punto de conexión de CMG | HTTPS o HTTP | 443 o 80 | Punto de administración | Para el tráfico local, el puerto depende de la configuración del punto de administración |
 | Punto de conexión de CMG | HTTPS o HTTP | 443 o 80 | Punto de actualización de software | Para el tráfico local, el puerto depende de la configuración del punto de actualización de software |
 

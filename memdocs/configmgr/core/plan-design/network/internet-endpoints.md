@@ -2,7 +2,7 @@
 title: Requisitos de acceso a Internet
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los puntos de conexión de Internet para permitir la funcionalidad completa de las características de Configuration Manager.
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454977"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740781"
 ---
 # <a name="internet-access-requirements"></a>Requisitos de acceso a Internet
 
@@ -77,7 +77,8 @@ Para más información sobre esta función, consulte [Administración de Windows
 
 Para más información sobre esta función, consulte [Configuración de servicios de Azure para utilizarlos con Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`  
+- `management.azure.com` (nube pública de Azure)
+- `management.usgovcloudapi.net` (nube de Azure US Government)
 
 ## <a name="co-management"></a>Administración conjunta
 
@@ -110,31 +111,66 @@ En esta sección se tratan las características siguientes:
 - Integración de Azure Active Directory (Azure AD)
 - Detección basada en Azure AD
 
-Para implementar el servicio de CMG/CDP, el **punto de conexión de servicio** necesita acceso a:
+Para más información sobre CMG, consulte [Planear para Cloud Management Gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Los puntos de conexión específicos de Azure son diferentes para cada entorno, en función de la configuración. Configuration Manager almacena estos puntos de conexión en la base de datos del sitio. Consulte la tabla **AzureEnvironments** de SQL Server para obtener la lista de puntos de conexión de Azure.  
+En las secciones siguientes se enumeran los puntos de conexión por rol. Algunos puntos de conexión hacen referencia a un servicio por `<name>`, que es el nombre del servicio en la nube de CMG o CDP. Por ejemplo, si CMG es `GraniteFalls.CloudApp.Net`, el punto de conexión de almacenamiento real es `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
 
-El **punto de conexión de CMG** necesita acceso a los puntos de conexión de servicio siguientes:
+### <a name="service-connection-point"></a>Punto de conexión de servicio
+
+Para implementar el servicio CMG o CDP, el punto de conexión de servicio necesita acceso a:
+
+- Los puntos de conexión específicos de Azure son diferentes para cada entorno, en función de la configuración. Configuration Manager almacena estos puntos de conexión en la base de datos del sitio. Consulte la tabla **AzureEnvironments** de SQL Server para obtener la lista de puntos de conexión de Azure.
+
+- [Servicios de Azure](#azure-services)
+
+- Detección de usuarios de Azure AD:
+
+  - Versión 1902 y posteriores: Punto de conexión de Microsoft Graph `https://graph.microsoft.com/`
+
+  - Versión 1810 y anteriores: Punto de conexión de Azure AD Graph `https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>Punto de conexión de CMG
+
+El punto de conexión de CMG necesita acceso a los puntos de conexión de servicio siguientes:
+
+- Nombre del servicio en la nube (para CMG o CDP):
+  - `<name>.cloudapp.net` (nube pública de Azure)
+  - `<name>.usgovcloudapp.net` (nube de Azure US Government)
 
 - Punto de conexión de la administración de servicios: `https://management.core.windows.net/`  
 
-- Punto de conexión de almacenamiento: `<name>.blob.core.windows.net` y `<name>.table.core.windows.net`
+- Punto de conexión de almacenamiento (para CMG o CDP habilitados para contenido):
+  - `<name>.blob.core.windows.net` (nube pública de Azure)
+  - `<name>.blob.core.usgovcloudapi.net` (nube de Azure US Government)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    Donde `<name>` es el nombre del servicio en la nube de CMG o CDP. Por ejemplo, si CMG es `GraniteFalls.CloudApp.Net`, el primer punto de conexión de almacenamiento que se va a permitir es `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
+El sistema de sitio del punto de conexión de CMG admite el uso de un proxy web. Para obtener más información sobre cómo configurar este rol para un proxy, vea [Compatibilidad de servidor proxy](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). El punto de conexión de CMG solo necesita conectarse a los puntos de conexión de servicio de CMG. No necesita acceso a otros puntos de conexión de Azure.
 
-Para recuperar el token de Azure AD mediante el **cliente** y la **consola de Configuration Manager**:
+### <a name="configuration-manager-client"></a>Cliente de Configuration Manager
 
-- ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
+- Nombre del servicio en la nube (para CMG o CDP):
+  - `<name>.cloudapp.net` (nube pública de Azure)
+  - `<name>.usgovcloudapp.net` (nube de Azure US Government)
 
-Para la detección del usuario de Azure AD, el **punto de conexión de servicio** necesita acceso a:
+- Punto de conexión de almacenamiento (para CMG o CDP habilitados para contenido):
+  - `<name>.blob.core.windows.net` (nube pública de Azure)
+  - `<name>.blob.core.usgovcloudapi.net` (nube de Azure US Government)
 
-- Versión 1810 y anteriores: Punto de conexión de Azure AD Graph `https://graph.windows.net/`  
+- Para la recuperación de tokens de Azure AD, el punto de conexión de Azure AD:
+  - `login.microsoftonline.com` (nube pública de Azure)
+  - `login.microsoftonline.us` (nube de Azure US Government)
 
-- Versión 1902 y posteriores: Punto de conexión de Microsoft Graph `https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Consola de Configuration Manager
 
-El sistema de sitio del punto de conexión de Cloud Management Gateway (CMG) admite el uso de un proxy web. Para obtener más información sobre cómo configurar este rol para un proxy, vea [Compatibilidad de servidor proxy](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). El punto de conexión de CMG solo necesita conectarse a los puntos de conexión de servicio de CMG. No necesita acceso a otros puntos de conexión de Azure.
+- Para la recuperación de tokens de Azure AD, el punto de conexión de Azure AD:
 
-Para más información sobre CMG, consulte [Planear para Cloud Management Gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).
+  - Nube pública de Azure
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Nube de Azure US Government
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a> Actualizaciones de software
 
@@ -204,18 +240,23 @@ Los equipos con la consola de Configuration Manager requieren acceso a los punto
 
 Para más información sobre esta característica, consulte [Comentarios sobre el producto](../../understand/find-help.md#product-feedback).
 
-### <a name="community-workspace-documentation-node"></a>Área de trabajo Comunidad, nodo Documentación
+### <a name="community-workspace"></a>Área de trabajo de la comunidad
+
+#### <a name="documentation-node"></a>Nodo de documentación
+
+Para más información sobre este nodo de la consola, consulte [Uso de la consola de Configuration Manager](../../servers/manage/admin-console.md).
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-Para más información sobre este nodo de la consola, consulte [Uso de la consola de Configuration Manager](../../servers/manage/admin-console.md).
+#### <a name="community-hub"></a>Centro de la comunidad
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+Para más información sobre esta característica, consulte [Centro de comunidad](../../servers/manage/community-hub.md).
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>Área de trabajo Supervisión, nodo Jerarquía de sitios
 

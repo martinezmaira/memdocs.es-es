@@ -5,17 +5,17 @@ description: Revise la información sobre los dispositivos Surface mediante el p
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906291"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613935"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Panel de dispositivos Surface en Configuration Manager
 
@@ -59,7 +59,7 @@ En el panel de dispositivos Surface se muestran tres gráficos para el entorno.
 
 Para obtener más información acerca de los dispositivos Surface, consulte el sitio web de [Surface](https://www.microsoft.com/surface).
 
-Para obtener más información sobre cómo implementar actualizaciones de firmware de Surface en Configuration Manager, vea [Administración de actualizaciones de controlador de Surface](https://support.microsoft.com/help/4098906).
+Para más información sobre cómo implementar actualizaciones de firmware de Surface en Configuration Manager, consulte [Administración de actualizaciones de controladores de dispositivos Surface](../../../sum/deploy-use/surface-drivers.md).
 
 
 

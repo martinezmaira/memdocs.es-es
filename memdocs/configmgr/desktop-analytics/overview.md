@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428642"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353486"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -81,7 +81,7 @@ Para usar Análisis de escritorio, asegúrese de que el entorno cumple los requi
 
     - Para acceder al portal después de la incorporación, necesita:
 
-      - El rol de [**administrador de Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) y los permisos de [**propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) o [**colaborador**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) en el grupo de recursos donde se creó el área de trabajo.
+      - El rol [**Administrador de Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) y los permisos de [**Propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) o de [**Colaborador**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) en el grupo de recursos donde se creó el área de trabajo de Log Analytics.
 
 - Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571), o posterior Para obtener más información, vea [Actualización de Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 

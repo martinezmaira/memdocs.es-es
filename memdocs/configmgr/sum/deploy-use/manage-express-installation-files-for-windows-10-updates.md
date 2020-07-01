@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 4093eafe9f8a337ce322165a529f630a759b365f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff018bc81ecdb3d11ebb71f1850804a5679c67f7
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701383"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746585"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Administración de archivos de instalación rápida para actualizaciones de Windows 10
 
@@ -59,7 +59,9 @@ Una vez que implemente la configuración de cliente para habilitar esta caracter
 3. Seleccione la configuración de cliente adecuada y, después, haga clic en **Propiedades** en la cinta de opciones.  
 
 4. Seleccione el grupo **Actualizaciones de software**. Establezca la configuración en **Sí** para **Enable installation of Express Updates on clients** (Habilitar la instalación de actualizaciones rápidas en clientes). Configure el puerto que ha usado el agente de escucha HTTP en el cliente en la opción **Port used to download content for Express Updates** (Puerto usado para descargar el contenido de las actualizaciones rápidas).
+    - En la versión 1902, **Enable installation of Express Updates on clients** (Permitir la instalación de actualizaciones rápidas en los clientes) cambió a **Permitir que los clientes descarguen contenido diferencial cuando esté disponible**.
     - En la versión 1902, el **Puerto usado para descargar el contenido de las actualizaciones rápidas** ha cambiado al **Puerto que los clientes usan para recibir solicitudes para el contenido diferencial**.
+    
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -2,7 +2,7 @@
 title: Versiones compatibles de SQL Server
 titleSuffix: Configuration Manager
 description: Obtenga los requisitos de configuración y versión de SQL Server para hospedar una base de datos de sitio de Configuration Manager.
-ms.date: 04/03/2020
+ms.date: 06/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904645"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383179"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versiones de SQL Server compatibles con Configuration Manager
 
@@ -74,7 +74,7 @@ A menos que se especifique lo contrario, las versiones siguientes de SQL Server 
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019: Standard, Enterprise
 
-A partir de la versión 1910 de Configuration Manager, puede usar esta versión con cualquier actualización acumulativa, siempre y cuando dicha versión sea compatible con el ciclo de vida de SQL.
+A partir de la versión 1910 de Configuration Manager, puede usar esta versión con la actualización acumulativa 5 (CU5), siempre y cuando dicha versión sea compatible con el ciclo de vida de SQL. CU5 es el requisito mínimo para SQL Server 2019 a medida dado que resuelve un problema con la [inserción de UDG escalar](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
 
 Esta versión de SQL se puede usar para los sitios siguientes:
 
@@ -82,19 +82,20 @@ Esta versión de SQL se puede usar para los sitios siguientes:
 - Un sitio primario
 - Un sitio secundario
 
-#### <a name="known-issue-with-sql-server-2019"></a>Problema conocido con SQL Server 2019
+<!--
+#### Known issue with SQL Server 2019
 
-Este es un problema conocido<!--6436234--> con la nueva característica [inserción de UDF escalar](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) en SQL 2019. Para solucionar este problema y deshabilitar la inserción de UDF, ejecute el siguiente script en el servidor SQL 2019:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-Aunque no siempre es necesario, es posible que tenga que reiniciar el servidor SQL después de ejecutar este script. Para obtener más información, vea [Deshabilitación de la inserción de UDF escalares sin cambiar el nivel de compatibilidad](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
-Puede deshabilitar esta característica de SQL de forma segura para el servidor de base de datos del sitio porque Configuration Manager no la usa.
+You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
-Si no deshabilita la inserción de UDF escalar en SQL 2019, el servidor de sitio no podrá consultar la base de datos del sitio de forma aleatoria. Por ejemplo, verá los siguientes errores en **hman.log**:
+If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
 
 ```hman.log
 *** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
@@ -103,13 +104,14 @@ Si no deshabilita la inserción de UDF escalar en SQL 2019, el servidor de siti
 Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
 ```
 
-Es posible que vea errores similares en otros registros, como **SmsAdminUI.log**.
+You may see similar errors in other logs, such as **SmsAdminUI.log**.
 
-La versión 2019 de SQL Server registra el siguiente error:
+SQL Server version 2019 logs the following error:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-También verá volcados de memoria (archivos `.mdump`) de SQL en su directorio de registro, que de forma predeterminada es `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+-->
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enterprise
 

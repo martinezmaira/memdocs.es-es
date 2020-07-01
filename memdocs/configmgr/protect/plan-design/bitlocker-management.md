@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531475"
 ---
 # <a name="plan-for-bitlocker-management"></a>Planeamiento de la administración de BitLocker
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764125"
 
 <!-- 3601034 -->
 
-A partir de la versión 1910, use Configuration Manager para administrar el Cifrado de unidad BitLocker (BDE) para clientes Windows locales. Ofrece una administración completa del ciclo de vida de BitLocker que puede sustituir el uso de Microsoft BitLocker Administration and Monitoring (MBAM).
+A partir de la versión 1910, use Configuration Manager para administrar el Cifrado de unidad BitLocker (BDE) para clientes Windows locales, que están unidos a Active Directory. No se admiten clientes de grupo de trabajo ni unidos a Azure Active Directory. Ofrece una administración completa del ciclo de vida de BitLocker que puede sustituir el uso de Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!Note]  
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
@@ -92,7 +92,7 @@ Permita que los usuarios se ayuden con una clave de un solo uso para desbloquear
     > [!NOTE]
     > Instale solo el portal de autoservicio y el sitio web de administración y supervisión con una base de datos de sitio primario. En una jerarquía, instale estos sitios web para cada sitio primario.
 
-- En el servidor web que hospedará el portal de autoservicio, instale [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4).
+- En el servidor web que hospedará el portal de autoservicio, instale [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) y la característica .NET Framework 3.5 antes de iniciar el proceso de instalación. Otros roles y características de Windows Server necesarios se instalarán automáticamente durante el proceso de instalación del portal.
 
 - La cuenta de usuario que ejecuta el script del instalador del portal necesita derechos **sysadmin** de SQL en el servidor de base de datos del sitio. Durante el proceso de configuración, el script establece el inicio de sesión, el usuario y los derechos de rol de SQL de la cuenta del equipo del servidor web. Puede quitar esta cuenta de usuario del rol sysadmin después de completar la instalación del portal de autoservicio y el sitio web de administración y supervisión.
 
