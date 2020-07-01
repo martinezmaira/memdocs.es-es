@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093683"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502381"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listas de configuraciones de restricciones de dispositivos Android y Samsung Knox en Intune
 
@@ -178,7 +178,7 @@ Agregue sus aplicaciones para cada configuración:
 
 La configuración de pantalla completa solo se aplica a dispositivos Samsung Knox Standard y exclusivamente a las aplicaciones que administra mediante Intune.
 
-- Agregue las aplicaciones que quiere ejecutar cuando el dispositivo está en pantalla completa. En pantalla completa, solo se ejecutan las aplicaciones que se agregan; las que no se agregan no se ejecutan. Los exploradores instalados previamente no se ejecutan como aplicación cuando el dispositivo está en modo de pantalla completa. Si se necesita un explorador, puede utilizar [Managed Browser](../apps/app-configuration-managed-browser.md).
+- Agregue las aplicaciones que quiere ejecutar cuando el dispositivo está en pantalla completa. En pantalla completa, solo se ejecutan las aplicaciones que se agregan; las que no se agregan no se ejecutan. Los exploradores instalados previamente no se ejecutan como aplicación cuando el dispositivo está en modo de pantalla completa. Si se necesita un explorador, puede utilizar [Managed Browser](../apps/manage-microsoft-edge.md).
 
   Las opciones de la aplicación:
 

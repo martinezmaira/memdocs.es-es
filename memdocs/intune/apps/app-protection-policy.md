@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989613"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502602"
 ---
 # <a name="app-protection-policies-overview"></a>Introducción general a las directivas de protección de aplicaciones
 
@@ -312,7 +312,7 @@ Si el usuario está utilizando la aplicación cuando se inicia el borrado select
 La protección de aplicaciones de Intune depende de la identidad del usuario para ser coherente entre la aplicación y el [SDK de Intune](../developer/app-sdk.md). La única manera de garantizar esto es a través de la autenticación moderna. Hay escenarios en los que las aplicaciones pueden funcionar con una configuración local, pero no son coherentes ni ofrecen garantías.
 
 **Forma segura de abrir vínculos web desde aplicaciones administradas**<br>
-El administrador de TI puede implementar y establecer una directiva de protección de aplicaciones para [Microsoft Edge](app-configuration-managed-browser.md), un explorador web que puede administrarse fácilmente con Intune. El administrador de TI puede requerir que todos los vínculos web en aplicaciones administradas de Intune se abran con la aplicación Managed Browser.
+El administrador de TI puede implementar y establecer una directiva de protección de aplicaciones para [Microsoft Edge](manage-microsoft-edge.md), un explorador web que puede administrarse fácilmente con Intune. El administrador de TI puede requerir que todos los vínculos web en aplicaciones administradas de Intune se abran con la aplicación Managed Browser.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Experiencia de protección de aplicaciones para dispositivos iOS
 

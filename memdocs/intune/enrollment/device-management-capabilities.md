@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989843"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502636"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funcionalidades de administración de dispositivos inscritos en Microsoft Intune
 
@@ -55,7 +55,7 @@ Los usuarios obtienen acceso al Portal de empresa que les permite instalar aplic
 |Administración de aplicaciones móviles|Use la administración de aplicaciones móviles para configurar restricciones para las aplicaciones, tanto en los dispositivos administrados con Intune como en los no administrados por Intune. Puede aumentar la seguridad de los datos de su compañía mediante la restricción de operaciones como copiar y pegar, la realización de copias de seguridad externas de los datos y la transferencia de datos entre las aplicaciones.|[Configurar e implementar directivas de administración de aplicaciones móviles en la consola de Microsoft Intune](../developer/app-wrapper-prepare-android.md)|
 |Configuración de aplicaciones móviles iOS|Usa las directivas de configuración de aplicaciones móviles para proporcionar la configuración de aplicaciones iOS/iPadOS que puede ser necesaria cuando el usuario ejecuta la aplicación. Por ejemplo, una aplicación puede necesitar que el usuario especifique un número de puerto o la información de inicio de sesión. Puede simplificar la configuración de la aplicación y reducir el número de llamadas al servicio de soporte técnico.|[Configurar aplicaciones iOS/iPadOS con directivas de configuración de aplicaciones móviles en Microsoft Intune](../apps/app-configuration-policies-use-ios.md)|
 |Perfiles de aprovisionamiento de aplicaciones móviles iOS/iPadOS|Le ayuda a implementar el aprovisionamiento de perfiles en aplicaciones iOS/iPadOS que están a punto de expirar. |[Uso de directivas de perfil de aprovisionamiento móvil iOS/iPadOS para evitar que las aplicaciones expiren](../apps/app-provisioning-profile-ios.md)|
-|Explorador administrado|Configura las directivas de explorador administrado para controlar los sitios web que los usuarios del dispositivo pueden visitar. Además, también puede aplicar directivas de administración de aplicaciones móviles al explorador administrado.|[Administrar el acceso a Internet mediante directivas de Managed Browser con Microsoft Intune](../apps/app-configuration-managed-browser.md)|
+|Explorador administrado|Configura las directivas de explorador administrado para controlar los sitios web que los usuarios del dispositivo pueden visitar. Además, también puede aplicar directivas de administración de aplicaciones móviles al explorador administrado.|[Administrar el acceso a Internet mediante directivas de Managed Browser con Microsoft Intune](../apps/manage-microsoft-edge.md)|
 |Windows Hello para empresas|Le permite la integración con Windows Hello para empresas, que es un método de inicio de sesión alternativo para Windows 10 que usa Active Directory local o Azure Active Directory para reemplazar contraseñas, tarjetas inteligentes o tarjetas inteligentes virtuales.|[Controlar la configuración de Windows Hello para empresas en dispositivos que tienen Microsoft Intune](../protect/windows-hello.md)|
 |Aplicaciones de programas de compras por volumen|Le ayuda a administrar las aplicaciones compradas mediante un programa de compras por volumen. Para ello, importa la información de licencia desde la App Store, efectúa el seguimiento de la cantidad de licencias usadas y le impide instalar más copias de la aplicación de las que posee.|[Administrar aplicaciones compradas por volumen con Microsoft Intune](../apps/vpp-apps.md)|
 

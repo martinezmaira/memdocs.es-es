@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b988e4ddeb306c7da290c87e8a32fa0571627257
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431675"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353639"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Directiva de antivirus para la seguridad de los puntos de conexión en Intune
 
@@ -64,5 +64,5 @@ Después de implementar la directiva para cifrar un disco de dispositivo, consul
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Para crear un perfil de FileVault](../protect/encrypt-devices-filevault.md#create-an-endpoint-security-policy-for-filevault)
+- [Para crear un perfil de FileVault](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
 - [Para crear un perfil de BitLocker](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-bitlocker)
