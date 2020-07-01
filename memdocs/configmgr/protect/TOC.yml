@@ -59,7 +59,7 @@
         - name: Directivas de Firewall de Windows
           href: deploy-use/create-windows-firewall-policies.md
         - name: "Protección contra amenazas avanzada de Microsoft\_Defender"
-          href: deploy-use/windows-defender-advanced-threat-protection.md
+          href: deploy-use/defender-advanced-threat-protection.md
         - name: Crear e implementar una directiva de Protección contra vulnerabilidades de seguridad
           href: deploy-use/create-deploy-exploit-guard-policy.md
         - name: Crear e implementar de una directiva de Protección de aplicaciones
