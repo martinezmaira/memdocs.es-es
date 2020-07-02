@@ -10,12 +10,12 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61296321251be45cfa0449a3e4f21ba79a024753
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78e89307e66107b259d818a84fa4dbca878a843c
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590905"
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>Uso del software cliente de Configuration Manager para obtener una interoperabilidad extendida con futuras versiones de un sitio de la Rama actual
 
@@ -48,8 +48,10 @@ Planee la actualización del cliente de interoperabilidad extendida en dispositi
 
 1. Obtenga una versión compatible del EIC desde la carpeta `\SMSSETUP\Client` de los soportes de instalación de actualización de Configuration Manager. Asegúrese de copiar todo el contenido de la carpeta.  
 
-    > [!TIP]  
-    > Para buscar el medio de Configuration Manager en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), vaya a la pestaña **Downloads and Keys** (Descargas y claves), busque `System Center Config` y, después, seleccione **System Center Config Mgr (rama actual)** .
+<!--
+    > [!TIP]
+    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, and search for **Microsoft Endpoint Configmgr (current branch)**.
+-->
 
 1. Instale manualmente el EIC en dichos dispositivos. Para obtener más información, vea [Manually install the client](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) (Instalar el cliente de forma manual).  
 

@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590446"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novedades de la versión 2002 de la rama actual de Configuration Manager
 
@@ -325,9 +325,9 @@ Para obtener más información, consulte [Sincronización de actualizaciones de 
 ## <a name="protection"></a><a name="bkmk_protect"></a> Protección
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Expansión de la incorporación de Protección contra amenazas avanzada (ATP) de Microsoft Defender
-
+ 
 <!-- 5229962 -->
-Configuration Manager ha ampliado su compatibilidad con la incorporación de dispositivos a ATP de Microsoft Defender. Para obtener más información, consulte [Protección contra amenazas avanzada de Microsoft Defender (ATP)](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+Configuration Manager ha ampliado su compatibilidad con la incorporación de dispositivos a ATP de Microsoft Defender. Para obtener más información, consulte [Protección contra amenazas avanzada de Microsoft Defender (ATP)](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Incorporación de clientes Configuration Manager a ATP de Microsoft Defender a través del Centro de administración de Microsoft Endpoint Manager
 <!--5691658-->

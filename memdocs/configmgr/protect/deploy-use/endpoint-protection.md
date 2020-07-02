@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0a7ee54e3bfa4a4231d0d57b48caa49cf9869b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591109"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -80,7 +80,7 @@ Windows Defender ya está instalado en equipos con versiones a partir de Windows
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Microsoft Defender
 
-Endpoint Protection administra y supervisa Advanced Threat Protection (ATP) de Microsoft Defender (anteriormente conocido como ATP de Windows Defender). El servicio ATP de Microsoft Defender ayuda a las empresas a detectar e investigar ataques avanzados en la red corporativa, y responder a ellos. Para obtener más información, consulte [Protección contra amenazas avanzada de Microsoft Defender (ATP)](windows-defender-advanced-threat-protection.md).
+Endpoint Protection administra y supervisa Advanced Threat Protection (ATP) de Microsoft Defender (anteriormente conocido como ATP de Windows Defender). El servicio ATP de Microsoft Defender ayuda a las empresas a detectar e investigar ataques avanzados en la red corporativa, y responder a ellos. Para obtener más información, consulte [Protección contra amenazas avanzada de Microsoft Defender (ATP)](defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Flujo de trabajo de Endpoint Protection  
  Use el siguiente diagrama para entender mejor el flujo de trabajo para implementar Endpoint Protection en su jerarquía de Configuration Manager.  

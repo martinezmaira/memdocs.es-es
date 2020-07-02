@@ -2,7 +2,7 @@
 title: Technical Preview 2006
 titleSuffix: Configuration Manager
 description: Conozca las nuevas características disponibles en la versión 2006 de la rama Technical Preview de Configuration Manager.
-ms.date: 06/25/2020
+ms.date: 06/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: fa0fe290-2eb7-4be2-8f42-b84751774bca
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d36b969199b85d10b1bab7a1e622f2b98dad6910
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 4c63421c283189a20dd46e71cb533d1a40fb058b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85397685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590545"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-2006"></a>Características de la versión 2006 de Technical Preview de Configuration Manager
 
@@ -43,11 +43,9 @@ En las secciones siguientes se describen las características nuevas para probar
 [!INCLUDE [Improved support for Windows Virtual Desktop](includes/2006/6527576.md)]
 [!INCLUDE [Direct links to Configuration Manager Community hub items](includes/2006/4224406.md)]
 
-<!--
-## General known issues
+## <a name="general-known-issues"></a>Problemas conocidos generales
 
-[!INCLUDE [Can't delete collections](includes/2006/known-issue-6215446.md)]
--->
+[!INCLUDE [Azure AD authentication doesn't work](includes/2006/known-issue-7569264.md)]
 
 ## <a name="next-steps"></a>Pasos siguientes
 
