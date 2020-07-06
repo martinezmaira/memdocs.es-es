@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977285"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383264"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Administración de experiencias de colaboración mediante Office para iOS y Android con Microsoft Intune
 
@@ -108,7 +108,13 @@ Estos valores se pueden implementar en la aplicación independientemente del est
 
 ### <a name="manage-file-transfers"></a>Administración de transferencias de archivos
 
-De forma predeterminada, Office permite a los usuarios compartir archivos con usuarios cercanos y transferir archivos a sistemas de escritorio.
+De forma predeterminada, Office para iOS y Android permite a los usuarios compartir contenido mediante diversos mecanismos:
+
+- Si el archivo se hospeda en OneDrive o SharePoint, los usuarios pueden iniciar una solicitud de recurso compartido directamente en el archivo.
+- Los usuarios pueden transferir archivos a sistemas de escritorio mediante la acción **Transferir archivos**.
+- Los usuarios pueden compartir archivos con dispositivos móviles cercanos mediante la acción **Compartir cercanos**.
+
+Las acciones **Transferir archivos** y **Compartir cercanos** solo funcionan con elementos multimedia, archivos locales y archivos que no están protegidos por una directiva de protección de aplicaciones. 
 
 |    Key    |    Valor    |
 |-------------------------------------------------------------------|-------------|

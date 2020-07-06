@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise incluye Microsoft Intune. Vea cómo Intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223639"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353622"
 ---
 # <a name="device-management-overview"></a>Información general sobre la administración de dispositivos
 
-Una tarea esencial para cualquier administrador es la de proteger y asegurar los recursos y los datos de la organización. Esta tarea se conoce como *administración de dispositivos*. Los usuarios tienen muchos dispositivos donde que abren y comparten archivos personales, visitan sitios web e instalan aplicaciones y juegos. Estos mismos usuarios también son empleados o alumnos que quieren usar sus dispositivos para acceder a recursos educativos o profesionales, como el correo electrónico y OneNote.
+Una tarea esencial de cualquier administrador es la de proteger los recursos y los datos de los dispositivos de los usuarios de la organización. Esta tarea se conoce como **administración de dispositivos**. Los usuarios reciben y envían correo electrónico de cuentas personales, exploran sitios web desde casa y restaurantes, e instalan aplicaciones y juegos. Estos usuarios también son empleados y alumnos que quieren usar sus dispositivos para acceder a recursos educativos y profesionales, como el correo electrónico y OneNote, rápidamente. Como administrador, el objetivo es proteger estos recursos y proporcionar un acceso fácil para los usuarios en sus muchos dispositivos, todos al mismo tiempo.
 
 La administración de dispositivos permite a las organizaciones proteger y asegurar sus recursos y datos, y desde diferentes dispositivos.
 

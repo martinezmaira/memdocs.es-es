@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591126"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS importados con Intune
 
@@ -271,6 +271,12 @@ Los siguientes asociados proporcionan métodos o herramientas compatibles que pu
 Si usa el servicio de la plataforma PKI DigiCert, puede usar la **herramienta de importación de certificados S/MIME para Intune de DigiCert** con el fin de importar los certificados PFX en Intune. El uso de esta herramienta permite obviar las instrucciones de la sección [Importación de certificados PFX en Intune](#import-pfx-certificates-to-intune) que se detallaron anteriormente en este artículo.
 
 Para obtener más información sobre la herramienta de importación de DigiCert y cómo obtenerla, consulte https://knowledge.digicert.com/tutorials/microsoft-intune.html en la base de conocimiento de DigiCert.
+
+### <a name="keytalk"></a>KeyTalk
+
+Si usa el servicio KeyTalk, puede configurarlo para importar los certificados PFX a Intune. Tras finalizar la integración, no necesitará seguir las instrucciones de la sección [Importación de certificados PFX en Intune](#import-pfx-certificates-to-intune) que se detallaron anteriormente en este artículo.
+
+Para más información sobre la integración de KeyTalk con Intune, consulte https://keytalk.com/support en la base de conocimiento de KeyTalk.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

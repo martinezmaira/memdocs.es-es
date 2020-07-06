@@ -6,30 +6,33 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2019
+ms.date: 06/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
-ms.reviewer: davidra
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aa02c58f2a2d75389be357ac7c700c2bac99027
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351583"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332850"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integración de Mobile Threat Defense con Intune
 
 Intune puede integrar datos de un proveedor de Mobile Threat Defense (MTD) como un origen de información para las directivas de cumplimiento de dispositivos y reglas de acceso condicional de dispositivos. Puede usar esta información para proteger mejor los recursos corporativos, como Exchange y SharePoint, bloqueando el acceso de dispositivos móviles en peligro.
 
 Intune puede usar estos mismos datos como origen para los dispositivos no inscritos mediante directivas de protección de aplicaciones de Intune. Por tanto, los administradores pueden usar esta información para facilitar la protección de los datos corporativos dentro de una [aplicación protegida de Microsoft Intune](../apps/apps-supported-intune-apps.md) y emitir un bloqueo o un borrado selectivo.
+
+> [!NOTE]
+> Actualmente *no* se admite la integración de Mobile Threat Defense con la oferta de GCC High y DoD de Intune. Más información sobre la [compatibilidad con GCC High para la Administración Pública de Estados Unidos](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## <a name="protect-corporate-resources"></a>Protección de los recursos corporativos
 

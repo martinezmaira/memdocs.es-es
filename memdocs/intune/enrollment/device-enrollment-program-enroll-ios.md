@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb6b4df9e3834ce447b176b5dfab158deb0d543
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094078"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332879"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscripción automática de dispositivos iOS/iPadOS con la Inscripción de dispositivos automatizada de Apple
 
@@ -69,7 +69,7 @@ La compatibilidad con dispositivos ADE no supervisados entró en desuso en iOS/i
 - Número máximo de perfiles de inscripción por token: 1.000  
 - Número máximo de dispositivos de inscripción de dispositivos automatizada por perfil: sin límite (dentro del número máximo de dispositivos por token)
 - Número máximo de tokens de inscripción de dispositivos automatizada por cuenta de Intune: 2,000
-- Número máximo de dispositivos de inscripción de dispositivos automatizada por token: 75 000
+- Número máximo de dispositivos de inscripción de dispositivos automatizada por token: El límite de la primera sincronización es de 75 000 a 80 000 dispositivos. Intune se seguirá sincronizando con ABN o ASM con cada sincronización de 12 horas para agregar otros 80 000 dispositivos cada vez. Una sincronización manual también agrega 80 000 dispositivos más. Las sincronizaciones seguirán produciéndose y los dispositivos continuarán sincronizándose desde ABN o ASM con Intune en los lotes de 75 000 a 80 000 dispositivos. 
 
 ## <a name="get-an-apple-ade-token"></a>Obtención de un token de ADE de Apple
 

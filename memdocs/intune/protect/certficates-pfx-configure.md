@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2694897e0a9e0ebf0744615e65d76f29416811d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990407"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332843"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS con Intune
 
@@ -144,7 +144,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 > [!IMPORTANT]  
 > Microsoft Intune Certificate Connector no puede instalarse en la entidad emisora de certificados (CA) y debe instalarse en una instancia independiente de Windows Server.  
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificados** >  **+ Agregar**.
 
@@ -173,7 +173,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 
 ## <a name="create-a-trusted-certificate-profile"></a>Creación de un perfil de certificado de confianza
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
@@ -214,7 +214,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Creación de un perfil de certificado PKCS
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione y vaya a **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
@@ -365,3 +365,5 @@ El *conector de certificados PFX para Microsoft Intune* [admite actualizaciones
 Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](../configuration/device-profile-assign.md) y [supervise el estado](../configuration/device-profile-monitor.md).
 
 [Use SCEP para los certificados](certificates-scep-configure.md), o bien [emita certificados PKCS a partir de un servicio web de administración de PKI de Symantec](certificates-digicert-configure.md).
+
+[Solución de problemas de los perfiles de certificado PKCS](../protect/troubleshoot-pkcs-certificate-profiles.md)

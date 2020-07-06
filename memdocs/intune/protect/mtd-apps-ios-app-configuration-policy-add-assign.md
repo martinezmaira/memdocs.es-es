@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb83a8e5b907ee55dd1c02d3af0dc04002790a18
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 03dbdccd1626db5ad97bc230a3d6b9a82060ee2e
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590497"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Agregar y asignar aplicaciones de Mobile Threat Defense (MTD) con Intune
 
@@ -49,107 +49,9 @@ Para los dispositivos iOS, necesita [Microsoft Authenticator](https://docs.micro
 
 Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use esta [dirección URL de la tienda de aplicaciones de Microsoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) al configurar la **información de la aplicación**.
 
-## <a name="configure-mtd-applications"></a>Configuración de aplicaciones de MTD
+## <a name="configure-your-mtd-apps-with-an-app-configuration-policy"></a>Configuración de aplicaciones de MTD con una directiva de configuración de aplicaciones
 
-Elija la sección que corresponda, según su proveedor MTD:
-
-- [Lookout for Work](#configure-lookout-for-work-apps)
-- [Symantec Endpoint Protection Mobile (SEP Mobile)](#configure-symantec-endpoint-protection-mobile-apps)
-- [SandBlast Mobile de Check Point](#configure-check-point-sandblast-mobile-apps)
-- [Zimperium](#configure-zimperium-apps)
-- [Pradeo](#configure-pradeo-apps)
-- [Better Mobile](#configure-better-mobile-apps)
-- [Sophos Mobile](#configure-sophos-apps)
-- [Wandera](#configure-wandera-apps)
-
-### <a name="configure-lookout-for-work-apps"></a>Configuración de aplicaciones Lookout for Work
-
-- **Android**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Lookout for Work en la tienda de aplicaciones de Google](https://play.google.com/store/apps/details?id=com.lookout.enterprise) como la **dirección URL de la tienda App Store**.
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Lookout for Work en la App Store de iOS](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) como la **dirección URL de la tienda App Store**.
-
-- **Aplicación Lookout for Work fuera de la tienda de Apple**
-  - Debe volver a firmar la aplicación Lookout for Work de iOS. Lookout distribuye su aplicación Lookout for Work de iOS fuera de la tienda App Store de iOS. Antes de distribuir la aplicación, deberá volver a firmar la aplicación con su certificado de desarrollador empresarial de iOS.  
-  - Para obtener información sobre cómo volver a firmar las aplicaciones Lookout for Work de iOS, vea [el proceso de volver a firmar la aplicación Lookout for Work de iOS](https://personal.support.lookout.com/hc/articles/114094038714) en el sitio web de Lookout.
-
-  - **Habilite la autenticación de Azure AD para los usuarios de la aplicación Lookout for Work para iOS**.
-
-    1. Vaya a [Azure Portal](https://portal.azure.com), inicie sesión con sus credenciales y, después, vaya a la página de la aplicación.
-
-    2. Agregue la **aplicación Lookout for Work de iOS** como una **aplicación de cliente nativo**.
-
-    3. Reemplace **com.lookout.enterprise.yourcompanyname** por el id. de agrupación del cliente que ha seleccionado al registrar el IPA.
-
-    4. Agregue un URI de redireccionamiento adicional: **&lt;companyportal://code/>** seguido de una versión codificada por URL del URI de redireccionamiento original.
-
-    5. Agregue los **permisos delegados** a la aplicación.
-
-    > [!NOTE]
-    > Para obtener más información, vea [Configurar una aplicación de cliente nativo con Azure AD](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
-
-  - **Agregue el archivo IPA de Lookout for Work**.
-
-    - Cargue el archivo .ipa que se ha vuelto a firmar como se describe en el artículo [Agregar aplicaciones LOB para iOS con Intune](../apps/lob-apps-ios.md). También necesita establecer la versión mínima del sistema operativo en iOS 8.0 o posterior.
-
-### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Configuración de aplicaciones Symantec Endpoint Protection Mobile
-
-- **Android**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de SEP Mobile en la tienda App Store](https://play.google.com/store/apps/details?id=com.skycure.skycure) como la **dirección URL de la tienda App Store**.  En **Versión mínima del sistema operativo**, seleccione **Android 4.0 (Ice Cream Sandwich)** .
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de SEP Mobile en la tienda App Store](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) como la **dirección URL de la tienda App Store**.
-
-### <a name="configure-check-point-sandblast-mobile-apps"></a>Configuración de aplicaciones SandBlast Mobile de Check Point
-
-- **Android**  
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de SandBlast Mobile de Check Point](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) como la **dirección URL de la tienda App Store**.
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de SandBlast Mobile de Check Point](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) como la **dirección URL de la tienda App Store**.  
-
-### <a name="configure-zimperium-apps"></a>Configuración de aplicaciones Zimperium
-
-- **Android**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Zimperium en la tienda App Store](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) como la **dirección URL de la tienda App Store**.
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Zimperium en la tienda App Store](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) como la **dirección URL de la tienda App Store**.  
- 
-### <a name="configure-pradeo-apps"></a>Configuración de aplicaciones Pradeo
-
-- **Android**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Pradeo en la tienda App Store](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) como la **dirección URL de la tienda App Store**.
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Pradeo en la tienda App Store](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) como la **dirección URL de la tienda App Store**.
-
-### <a name="configure-better-mobile-apps"></a>Configuración de aplicaciones de Better Mobile
-
-- **Android**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Active Shield en la tienda App Store](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) como la **dirección URL de la tienda App Store**.
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Active Shield en la tienda App Store](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) como la **dirección URL de la tienda App Store**.
-
-### <a name="configure-sophos-apps"></a>Configuración de aplicaciones de Sophos
-
-- **Android**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Sophos en la tienda App Store](https://play.google.com/store/apps/details?id=com.sophos.smsec) como la **dirección URL de la tienda App Store**.
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Active Shield en la tienda App Store](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) como la **dirección URL de la tienda App Store**.
-
-### <a name="configure-wandera-apps"></a>Configuración de aplicaciones de Wandera
-
-- **Android**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Wandera Mobile en la tienda App Store](https://play.google.com/store/apps/details?id=com.wandera.android) como la **dirección URL de la tienda App Store**. En **Versión mínima del sistema operativo**, seleccione **Android 5.0**.
-
-- **iOS**
-  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Wandera Mobile en la tienda App Store](https://itunes.apple.com/app/wandera/id605469330) como la **dirección URL de la tienda App Store**.
-
-## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Configuración de aplicaciones de MTD con una directiva de configuración de aplicaciones iOS
+Para simplificar la incorporación de usuarios, las aplicaciones de Mobile Threat Defense en dispositivos administrados por MDM usan la configuración de la aplicación. En el caso de los dispositivos no inscritos, la configuración de aplicaciones basada en MDM no está disponible, por lo que debe consultar [Incorporación de aplicaciones de Mobile Threat Defense a dispositivos no inscritos](../protect/mtd-add-apps-unenrolled-devices.md).
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Directiva de configuración de aplicaciones Lookout for Work
 
@@ -228,32 +130,134 @@ Cree la directiva de configuración de aplicaciones para iOS como se describe en
 
 ### <a name="wandera-app-configuration-policy"></a>Directiva de configuración de aplicaciones de Wandera
 
-Consulte las instrucciones para [usar las directivas de configuración de aplicaciones de Microsoft Intune para iOS](../apps/app-configuration-policies-use-ios.md) para agregar la directiva de configuración de aplicaciones de Wandera para iOS.
+> [!NOTE]
+> Para las pruebas iniciales, use un grupo de prueba al asignar usuarios y dispositivos en la sección Asignaciones de la directiva de configuración. 
 
-- En **Formato de opciones de configuración**, seleccione **Especificar datos XML**.
+- **Android**
+  - Consulte las instrucciones para [usar las directivas de configuración de aplicaciones de Microsoft Intune para Android](../apps/app-configuration-policies-use-android.md) para agregar la directiva de configuración de aplicaciones de Wandera para Android mediante la siguiente información cuando se le solicite.
 
-Inicie sesión en el portal RADAR de Wandera y vaya a **Configuración** > **Integración de EMM** > **App Push** (Inserción de aplicación). Seleccione **Intune** y, luego, copie el contenido siguiente y péguelo en el cuerpo de la directiva de configuración.  
+1. En **RADAR Wandera Portal** (Portal de RADAR de Wandera), haga clic en el botón **Agregar+** que aparece en **Formato de opciones de configuración**.
+2. Seleccione **Activation Profile URL** (Dirección URL del perfil de activación) en la lista de **Claves de configuración**. Haga clic en **Aceptar**.
+3. En **Activation Profile URL** (Dirección URL del perfil de activación), seleccione **cadena** en el menú **Tipo de valor** y, luego, copie y pegue la **dirección URL de vínculo compartible** del perfil de activación deseado de RADAR.
+4. En **Configuración**, defina **Formato de opciones de configuración > Use Configuration Designer** (Usar el diseñador de configuración) y siga estos pasos.
 
-  ```
-  <dict><key>secretKey</key>
-  <string>SeeRADAR</string>
-  <key>apiKey</key>
-  <string> SeeRADAR </string>
-  <key>customerId</key>
-  <string> SeeRADAR </string>
-  <key>email</key>
-  <string>{{mail}}</string>
-  <key>firstName</key>
-  <string>{{username}}</string>
-  <key>lastName</key>
-  <string></string>
-  <key>activationType</key>
-  <string>PROVISION_THEN_AWP</string></dict>
-  ```
+> [!NOTE] 
+> A diferencia de iOS, tendrá que definir una directiva de configuración de aplicaciones de Android Enterprise única para cada perfil de activación de Wandera. Si no necesita varios perfiles de activación de Wandera, puede usar una sola configuración de aplicaciones de Android en todos los dispositivos de destino. Al crear perfiles de activación en Wandera, asegúrese de seleccionar "Azure Active Directory" en la configuración de usuario asociada para asegurarse de Wandera puede sincronizar el dispositivo con Microsoft Endpoint Manager a través de UEM Connect.
 
-## <a name="assign-apps-to-groups"></a>Asignación de aplicaciones a grupos
+- **iOS**
+  - Consulte las instrucciones para [usar las directivas de configuración de aplicaciones de Microsoft Intune para iOS](../apps/app-configuration-policies-use-ios.md) para agregar la directiva de configuración de aplicaciones de Wandera para iOS mediante la siguiente información cuando se le solicite.
 
-Este paso se aplica a todos los asociados de MTD. Consulte las instrucciones para [asignar aplicaciones a grupos con Intune](../apps/apps-deploy.md).
+1. En **RADAR Wandera Portal** (Portal de RADAR de Wandera), vaya a **Dispositivos > Activaciones** y seleccione un perfil de activación. Haga clic en **Estrategias de implementación > Dispositivos administrados > Microsoft Intune** y busque la **opción de configuración de aplicaciones iOS**.  
+2. Expanda el cuadro para mostrar el XML de configuración de aplicaciones iOS y cópielo en el Portapapeles del sistema.  
+3. En **Configuración**, defina **Formato de opciones de configuración > especificar datos XML** y siga estos pasos:
+4. Pegue el código XML en el cuadro de texto de configuración de aplicaciones de Microsoft Endpoint Manager.
+
+> [!NOTE]
+> Se puede usar una única directiva de configuración de iOS en todos los dispositivos que se van a aprovisionar con Wandera.  
+
+## <a name="assigning-mobile-threat-defense-apps-to-end-users-via-intune"></a>Asignación de aplicaciones de Mobile Threat Defense a los usuarios finales mediante Intune
+
+Para instalar la aplicación Mobile Threat Defense en el dispositivo del usuario final, puede seguir los pasos que se indican a continuación en Azure Portal. Asegúrese de conocer los siguientes procesos:
+
+- [Asignación de aplicaciones a grupos con Intune](../apps/apps-deploy.md)
+
+Elija la sección que corresponda, según su proveedor MTD:
+
+- [Lookout for Work](#assigning-lookout-for-work)
+- [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
+- [SandBlast Mobile de Check Point](#assigning-check-point-sandblast-mobile)
+- [Zimperium](#assigning-zimperium)
+- [Pradeo](#assigning-pradeo)
+- [Better Mobile](#assigning-better-mobile)
+- [Sophos Mobile](#assigning-sophos)
+- [Wandera](#assigning-wandera)
+
+### <a name="assigning-lookout-for-work"></a>Asignación de Lookout for Work
+
+- **Android**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Lookout for Work en la tienda de aplicaciones de Google](https://play.google.com/store/apps/details?id=com.lookout.enterprise) como la **dirección URL de la tienda App Store**.
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Lookout for Work en la App Store de iOS](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) como la **dirección URL de la tienda App Store**.
+
+- **Aplicación Lookout for Work fuera de la tienda de Apple**
+  - Debe volver a firmar la aplicación Lookout for Work de iOS. Lookout distribuye su aplicación Lookout for Work de iOS fuera de la tienda App Store de iOS. Antes de distribuir la aplicación, deberá volver a firmar la aplicación con su certificado de desarrollador empresarial de iOS.  
+  - Para obtener información sobre cómo volver a firmar las aplicaciones Lookout for Work de iOS, vea [el proceso de volver a firmar la aplicación Lookout for Work de iOS](https://personal.support.lookout.com/hc/articles/114094038714) en el sitio web de Lookout.
+
+  - **Habilite la autenticación de Azure AD para los usuarios de la aplicación Lookout for Work para iOS**.
+
+    1. Vaya a [Azure Portal](https://portal.azure.com), inicie sesión con sus credenciales y, después, vaya a la página de la aplicación.
+
+    2. Agregue la **aplicación Lookout for Work de iOS** como una **aplicación de cliente nativ**.
+
+    3. Reemplace **com.lookout.enterprise.yourcompanyname** por el id. de agrupación del cliente que ha seleccionado al registrar el IPA.
+
+    4. Agregue un URI de redireccionamiento adicional: **&lt;companyportal://code/>** seguido de una versión codificada por URL del URI de redireccionamiento original.
+
+    5. Agregue los **permisos delegados** a la aplicación.
+
+    > [!NOTE]
+    > Para obtener más información, vea [Configurar una aplicación de cliente nativo con Azure AD](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+
+  - **Agregue el archivo IPA de Lookout for Work**.
+
+    - Cargue el archivo .ipa que se ha vuelto a firmar como se describe en el artículo [Agregar aplicaciones LOB para iOS con Intune](../apps/lob-apps-ios.md). También necesita establecer la versión mínima del sistema operativo en iOS 8.0 o posterior.
+
+### <a name="assigning-symantec-endpoint-protection-mobile"></a>Asignación de Symantec Endpoint Protection Mobile
+
+- **Android**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de SEP Mobile en la tienda App Store](https://play.google.com/store/apps/details?id=com.skycure.skycure) como la **dirección URL de la tienda App Store**.  En **Versión mínima del sistema operativo**, seleccione **Android 4.0 (Ice Cream Sandwich)** .
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de SEP Mobile en la tienda App Store](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) como la **dirección URL de la tienda App Store**.
+
+### <a name="assigning-check-point-sandblast-mobile"></a>Asignación de SandBlast Mobile de Check Point
+
+- **Android**  
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de SandBlast Mobile de Check Point](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) como la **dirección URL de la tienda App Store**.
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de SandBlast Mobile de Check Point](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) como la **dirección URL de la tienda App Store**.  
+
+### <a name="assigning-zimperium"></a>Asignación de Zimperium
+
+- **Android**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Zimperium en la tienda App Store](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) como la **dirección URL de la tienda App Store**.
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Zimperium en la tienda App Store](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) como la **dirección URL de la tienda App Store**.  
+ 
+### <a name="assigning-pradeo"></a>Asignación de Pradeo
+
+- **Android**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Pradeo en la tienda App Store](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) como la **dirección URL de la tienda App Store**.
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Pradeo en la tienda App Store](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) como la **dirección URL de la tienda App Store**.
+
+### <a name="assigning-better-mobile"></a>Asignación de Better Mobile
+
+- **Android**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Active Shield en la tienda App Store](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) como la **dirección URL de la tienda App Store**.
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Active Shield en la tienda App Store](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) como la **dirección URL de la tienda App Store**.
+
+### <a name="assigning-sophos"></a>Asignación de Sophos
+
+- **Android**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Sophos en la tienda App Store](https://play.google.com/store/apps/details?id=com.sophos.smsec) como la **dirección URL de la tienda App Store**.
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Active Shield en la tienda App Store](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) como la **dirección URL de la tienda App Store**.
+
+### <a name="assigning-wandera"></a>Asignación de Wandera
+
+- **Android**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda Android en Microsoft Intune](../apps/store-apps-android.md). Use la [dirección URL de Wandera Mobile en la tienda App Store](https://play.google.com/store/apps/details?id=com.wandera.android) como la **dirección URL de la tienda App Store**. En **Versión mínima del sistema operativo**, seleccione **Android 5.0**.
+
+- **iOS**
+  - Vea las instrucciones para [agregar aplicaciones de la tienda iOS en Microsoft Intune](../apps/store-apps-ios.md). Use la [dirección URL de Wandera Mobile en la tienda App Store](https://itunes.apple.com/app/wandera/id605469330) como la **dirección URL de la tienda App Store**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

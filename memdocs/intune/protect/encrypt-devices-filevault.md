@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989693"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353585"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Uso del cifrado de discos FileVault para macOS con Intune
 
@@ -30,18 +30,18 @@ Intune es compatible con el cifrado de discos FileVault de macOS. FileVault es u
 
 Use alguno de los siguientes tipos de directiva para configurar FileVault en los dispositivos administrados:
 
-- **[Directiva de seguridad de puntos de conexión para FileVault de macOS](#create-an-endpoint-security-policy-for-filevault)** . El perfil de FileVault de *Seguridad de los puntos de conexión* es un grupo prioritario de opciones dedicado a la configuración de FileVault.
+- **[Directiva de seguridad de puntos de conexión para FileVault de macOS](#create-endpoint-security-policy-for-filevault)** . El perfil de FileVault de *Seguridad de los puntos de conexión* es un grupo prioritario de opciones dedicado a la configuración de FileVault.
 
   Vea las [Opciones de FileVault disponibles en los perfiles de la directiva de cifrado de discos](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Perfil de configuración de dispositivos para la protección de puntos de conexión para FileVault de macOS](#create-an-endpoint-security-policy-for-filevault)** . La configuración de FileVault es una de las categorías de configuración disponibles para la protección de punto de conexión de macOS. Para obtener más información sobre el uso de un perfil de configuración de dispositivos, vea [Creación de un perfil de dispositivo en Microsoft Intune](../configuration/device-profile-create.md).
+- **[Perfil de configuración de dispositivos para la protección de puntos de conexión para FileVault de macOS](#create-endpoint-security-policy-for-filevault)** . La configuración de FileVault es una de las categorías de configuración disponibles para la protección de punto de conexión de macOS. Para obtener más información sobre el uso de un perfil de configuración de dispositivos, vea [Creación de un perfil de dispositivo en Microsoft Intune](../configuration/device-profile-create.md).
 
   Vea las [opciones de FileVault disponibles en los perfiles de protección de puntos de conexión de la directiva de configuración de dispositivos](../protect/endpoint-protection-macos.md#filevault).
 
 Para administrar BitLocker para Windows 10, vea [Directiva de administración de BitLocker](../protect/encrypt-devices.md).
 
 > [!TIP]
-> [Informe de cifrado](encryption-monitor.md) que presenta detalles sobre el estado de cifrado de los dispositivos en todos los dispositivos administrados.
+> Intune proporciona un [informe de cifrado](encryption-monitor.md) integrado que presenta los detalles sobre el estado de cifrado de los dispositivos en todos los dispositivos administrados.
 
 Después de crear una directiva para cifrar dispositivos con FileVault, la directiva se aplica a los dispositivos en dos fases. En primer lugar, el dispositivo se prepara para habilitar a Intune a recuperar y hacer una copia de seguridad de la clave de recuperación. Esta acción se denomina custodia. Una vez que se ha custodiado la clave, se puede iniciar el cifrado de disco.
 
@@ -60,17 +60,15 @@ A continuación se muestran los permisos de FileVault, que forman parte de la ca
 - **Rotar la clave de FileVault**
   - Operador del departamento de soporte técnico
 
-## <a name="create-and-deploy-policy"></a>Creación e implementación de directiva
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>Creación de una directiva de seguridad de los puntos de conexión para FileVault
+## <a name="create-endpoint-security-policy-for-filevault"></a>Creación de una directiva de seguridad de los puntos de conexión para FileVault
 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Seguridad de los puntos de conexión** > **Cifrado de disco** > **Crear directiva**.
 
 3. En la página **Aspectos básicos**, especifique las siguientes propiedades y seleccione **Siguiente**.
-   1. **Plataforma**: macOS
-   2. **Perfil**: FileVault
+   - **Plataforma**: macOS
+   - **Perfil**: FileVault
 
    ![Selección del perfil de FileVault](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -94,33 +92,49 @@ Seleccione **Siguiente**.
 
 8. Cuando haya terminado, elija **Crear** en la página **Revisar y crear**. El nuevo perfil se muestra en la lista cuando se selecciona el tipo de directiva del perfil creado.
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>Creación de una directiva de configuración de dispositivos para FileVault
+## <a name="create-device-configuration-policy-for-filevault"></a>Creación de una directiva de configuración de dispositivos para FileVault
 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Dispositivos** > **Perfiles de configuración** > **Crear perfil**.
 
-3. Establece las siguientes opciones:
-   1. **Plataforma**: macOS
-   2. **Perfil**: Endpoint Protection
+3. En la página **Crear un perfil**, establezca las siguientes opciones y, luego, haga clic en **Crear**:
+   - **Plataforma**: macOS
+   - **Perfil**: Endpoint Protection
 
    ![Selección del perfil de FileVault](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. Seleccione **Configuración** > **FileVault**.
+4. En la página **Aspectos básicos**, especifique las siguientes propiedades:
 
-   ![Configuración de FileVault](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva adecuado podría incluir el tipo de perfil y la plataforma.
 
-5. En *FileVault*, seleccione **Habilitar**.
+   - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
 
-6. En *Tipo de clave de recuperación*, solo se admite **Clave personal**.
+5. En la página **Opciones de configuración**, seleccione **FileVault** para expandir las opciones disponibles:
 
-   Considere la posibilidad de agregar un mensaje para guiar a los usuarios en el proceso de recuperación de la clave de recuperación de su dispositivo. Esta información puede ser útil para los usuarios cuando se usa la opción Rotación de clave de recuperación personal, que puede generar automáticamente una nueva clave de recuperación para un dispositivo de forma periódica.
+   > [!div class="mx-imgBorder"]
+   > ![Configuración de FileVault](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   Por ejemplo: para recuperar una clave de recuperación perdida o girada recientemente, inicie sesión en el sitio web Portal de empresa de Intune desde cualquier dispositivo. En el portal, vaya a *Dispositivos*, seleccione el dispositivo que tiene habilitado FileVault y, después, seleccione *Obtener clave de recuperación*. Se muestra la clave de recuperación actual.
+6. Configure las siguientes opciones:
+  
+   - En *Habilitar FileVault*, seleccione **Sí**.
 
-7. Configure el resto de [valores de FileVault](endpoint-protection-macos.md#filevault) para cumplir con sus necesidades empresariales y luego seleccione **Aceptar**.
+   - En *Tipo de clave de recuperación*, seleccione **Clave personal**.
 
-8. Complete la configuración de valores adicionales y luego guarde el perfil.
+   - En *Descripción de la ubicación secundaria de la clave de recuperación personal*, agregue un mensaje para que los usuarios sepan cómo recobrar la clave de recuperación de sus dispositivos. Esta información puede ser útil para los usuarios cuando se usa la opción Rotación de clave de recuperación personal, que puede generar automáticamente una nueva clave de recuperación para un dispositivo de forma periódica.
+
+     Por ejemplo: para recuperar una clave de recuperación perdida o girada recientemente, inicie sesión en el sitio web Portal de empresa de Intune desde cualquier dispositivo. En el portal, vaya a *Dispositivos*, seleccione el dispositivo que tiene habilitado FileVault y, después, seleccione *Obtener clave de recuperación*. Se muestra la clave de recuperación actual.
+
+   Configure el resto de [valores de FileVault](endpoint-protection-macos.md#filevault) para satisfacer con sus necesidades empresariales y, luego, seleccione **Siguiente**.
+
+7. En la página **Ámbito (etiquetas)** , seleccione **Seleccionar etiquetas de ámbito** para abrir el panel Seleccionar etiquetas a fin de asignar etiquetas de ámbito al perfil.
+
+   Seleccione **Siguiente** para continuar.
+
+8. En la página **Asignaciones**, seleccione los grupos que recibirán este perfil. Para obtener más información sobre la asignación de perfiles, vea Asignación de perfiles de usuario y dispositivo.
+Seleccione **Siguiente**.
+
+9. Cuando haya terminado, elija **Crear** en la página **Revisar y crear**. El nuevo perfil se muestra en la lista cuando se selecciona el tipo de directiva del perfil creado.
 
 ## <a name="manage-filevault"></a>Administración de FileVault
 

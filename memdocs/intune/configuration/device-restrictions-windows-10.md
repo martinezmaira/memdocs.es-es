@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591075"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para permitir o restringir características mediante Intune
 
@@ -30,6 +30,8 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 
 > [!Note]
 > No todas las opciones están disponibles en todas las ediciones de Windows. Para ver las ediciones admitidas, consulte los [CSP de directiva](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (se abre otro sitio web de Microsoft).
+>  
+> La mayoría de los valores configurables de un perfil de restricciones de dispositivos Windows 10 se implementan en el nivel de dispositivo. Las directivas que se implementan en grupos de usuarios surtirán efecto tanto para el usuario de destino como para otros usuarios que inicien sesión posteriormente en ese dispositivo y tengan una licencia de Intune.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 

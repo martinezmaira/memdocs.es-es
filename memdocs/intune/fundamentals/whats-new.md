@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263961"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502296"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
@@ -58,18 +58,32 @@ Obtenga información sobre las novedades que se producen cada semana en Microsof
 
 ## <a name="week-of-june-22-2020"></a>Semana del 22 de junio de 2020
 
+### <a name="app-management"></a>Administración de aplicaciones
+
+#### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Nuevas aplicaciones protegidas disponibles para Intune<!-- 7248952 -->
+Ya están disponibles las siguientes aplicaciones protegidas:
+- BlueJeans Video Conferencing
+- Cisco Jabber para Intune
+- Tableau Mobile para Intune
+- ZERO para Intune
+
+Para obtener más información sobre las aplicaciones protegidas, vea [Aplicaciones protegidas de Microsoft Intune](../apps/apps-supported-intune-apps.md).
+
 ### <a name="monitor-and-troubleshoot"></a>Supervisión y solución de problemas
+
+#### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>Uso del análisis de puntos de conexión para mejorar la productividad del usuario y reducir los costos de soporte técnico de TI<!-- 5653063 --> 
+Durante la semana siguiente se implementará esta característica. El análisis de puntos de conexión tiene como objetivo mejorar la productividad del usuario y reducir los costos de soporte técnico de TI, gracias a la información detallada que se proporciona sobre la experiencia del usuario. La información permite que TI optimice la experiencia del usuario final con soporte técnico proactivo y detecte regresiones a la experiencia del usuario mediante la evaluación del impacto de los cambios de configuración en el usuario. Para más información, consulte [Análisis de puntos de conexión (versión preliminar)](https://aka.ms/uea).
 
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>Corrección proactiva de los problemas del dispositivo del usuario final mediante paquetes de scripts<!-- 5933328 -->
 Puede crear y ejecutar paquetes de scripts en dispositivos de usuario final para buscar y corregir de forma proactiva los principales problemas de soporte técnico de la organización. La implementación de paquetes de scripts le ayudará a reducir las llamadas de soporte técnico. Cree su propio paquete de scripts o implemente uno de los que hemos escrito y usado en nuestro entorno para disminuir las incidencias de soporte técnico. Intune permite ver el estado de los paquetes de scripts implementados y supervisar los resultados de detección y corrección. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Informes** > **Análisis de puntos de conexión** > **Correcciones proactivas**. Para obtener más información, vea [Correcciones proactivas](https://aka.ms/uea_prs).
 
 ### <a name="device-security"></a>Seguridad de dispositivos
 
-### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Uso de ATP de Microsoft Defender en directivas de cumplimiento para Android<!-- 4425686  -->
+#### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Uso de ATP de Microsoft Defender en directivas de cumplimiento para Android<!-- 4425686  -->
 
 Ahora puede usar Intune para [incorporar dispositivos Android a Advanced Threat Protection de Microsoft Defender](../protect/advanced-threat-protection.md#onboard-android-devices) (ATP de Microsoft Defender). Una vez que haya incorporado los dispositivos inscritos, las directivas de cumplimiento para Android podrán usar las señales de *nivel de amenaza* de ATP de Microsoft Defender. Estas son las mismas señales que se podían usar previamente para dispositivos Windows 10.
 
-### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Configuración de la protección web de ATP de Defender para dispositivos Android<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Configuración de la protección web de ATP de Defender para dispositivos Android<!-- 6185563 WNReady -->
 
 Al usar Advanced Threat Protection de Microsoft Defender (ATP de Microsoft Defender) para dispositivos Android, puede [configurar la protección web de ATP de Microsoft Defender](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) para deshabilitar la característica de examen de suplantación de identidad (phishing) o impedir que el examen use la VPN.
 

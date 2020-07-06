@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990384"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383213"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Uso de certificados para la autenticación en Microsoft Intune
 
@@ -104,6 +104,11 @@ Cree e implemente un perfil de certificado de confianza antes de crear un perfil
 Los perfiles de certificado SCEP hacen referencia directamente a un perfil de certificado de confianza. Los perfiles de certificado PKCS no hacen referencia directamente al perfil de certificado de confianza, pero sí al servidor que hospeda la entidad de certificación. Los perfiles de certificado PKCS importados no hacen referencia directamente al perfil de certificado de confianza, pero pueden usarlo en el dispositivo. La implementación de un perfil de certificado de confianza en los dispositivos garantiza que se establece esta confianza. Cuando un dispositivo no confía en la entidad de certificación raíz, se producirá un error en la directiva de perfil de certificado SCEP o PKCS.
 
 Cree un perfil de certificado de confianza independiente para cada plataforma de dispositivo que quiera admitir, como lo haría con los perfiles de certificado SCEP, PKCS y PKCS importados.
+
+> [!IMPORTANT]
+> Los perfiles raíz de confianza que cree para la plataforma *Windows 10 y versiones posteriores* se muestran en el centro de administración de Microsoft Endpoint Manager como perfiles de la plataforma *Windows 8.1 y versiones posteriores*. 
+>
+> Se trata de un problema conocido con la presentación de la plataforma de los perfiles de certificado de confianza. Aunque el perfil muestra una plataforma de Windows 8.1 y versiones posteriores, es funcional para Windows 10 y versiones posteriores.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Para crear un perfil de certificado de confianza
 
