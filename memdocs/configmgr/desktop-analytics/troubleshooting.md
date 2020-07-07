@@ -2,7 +2,7 @@
 title: Solución de problemas de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Detalles técnicos para ayudarle a solucionar problemas con Análisis de escritorio.
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
-ms.translationtype: HT
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828982"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de Análisis de escritorio
 
@@ -205,7 +204,7 @@ Hay dos tipos de datos en el portal de Análisis de escritorio: **datos de admin
 
 - Los **datos de diagnóstico** hacen referencia a los metadatos del sistema cargados desde dispositivos cliente a Microsoft. Estos datos alimentan a Análisis de escritorio. Incluye atributos como el inventario de dispositivos y el estado de actualización de características y seguridad.
 
-De forma predeterminada, todos los datos del portal de Análisis de escritorio se actualizan de forma automática diariamente. Esta actualización incluye los cambios en los datos de diagnóstico y los cambios que realice en la configuración (datos de administrador). Debe estar visible en el portal de Análisis de escritorio a las 08:00 A.M. UTC cada día.
+De forma predeterminada, todos los datos del portal de Análisis de escritorio se actualizan de forma automática diariamente. Esta actualización incluye los cambios en los datos de diagnóstico de hace dos días y los que realice en la configuración (datos de administrador). Debe estar visible en el portal de Análisis de escritorio a las 08:00 A.M. UTC cada día.
 
 Al realizar cambios en los datos de administrador, puede desencadenar una actualización a petición de los datos del administrador en el área de trabajo. En cualquier página del portal de Análisis de escritorio, abra el control flotante de la divisa de datos:
 
@@ -221,3 +220,39 @@ Si no ve los cambios actualizados dentro de los intervalos de tiempo indicados a
 
 > [!IMPORTANT]
 > La opción de Análisis de escritorio para **Ver datos recientes** está en desuso. Esta acción se quitará en una versión futura del servicio de Análisis de escritorio. Para más información, vea [Deprecated Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md) (Características en desuso).<!--7080949-->  
+
+## <a name="service-notifications"></a>Notificaciones del servicio
+
+<!-- 4982509 -->
+
+El portal de Análisis de escritorio puede mostrar banners de notificación a los administradores. Estas notificaciones permiten a Microsoft comunicarle eventos e incidencias importantes. En las secciones siguientes se detallan las notificaciones que es posible que vea.
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>Vea las novedades de este mes de Análisis de escritorio
+
+Esta notificación informativa le permite conocer los cambios en el servicio. Para obtener más información, vea [Novedades de Análisis de escritorio](whats-new.md) (`https://aka.ms/danews`).
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>Hay requisitos previos nuevos. Para seguir usando Análisis de escritorio, revise los requisitos nuevos
+
+Esta notificación informativa le permite conocer los cambios en los requisitos previos. Por ejemplo, un nuevo punto de conexión de Internet o una actualización de software. Para obtener más información, vea [Requisitos previos](overview.md#prerequisites) (`https://aka.ms/daprereqs`).
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>Estamos investigando una incidencia que afecta a Análisis de escritorio
+
+Esta notificación de advertencia indica que Microsoft tiene constancia de una incidencia que afecta al servicio Análisis de escritorio. La incidencia suele estar relacionada con la generación de instantáneas. Cuando vea esta notificación, Microsoft está investigando la incidencia para determinar el ámbito y el origen de impacto. No es necesario que se ponga en contacto con Soporte técnico de Microsoft. Para obtener más información, vea [Flujo de datos](privacy.md#data-flow).
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Estamos investigando una incidencia con la latencia de los datos. Si ha inscrito dispositivos nuevos o ha modificado recursos en las últimas 24 horas, es posible que no aparezcan de inmediato
+
+Esta notificación de advertencia indica que Microsoft tiene constancia de una incidencia que afecta al servicio Análisis de escritorio. Microsoft supervisa continuamente el servicio para confirmar que todos los componentes actualizan las instantáneas en los momentos correctos. Durante esta supervisión, uno de estos componentes no se ha completado de la forma esperada. Cuando vea esta notificación, Microsoft está investigando la incidencia. No es necesario que se ponga en contacto con Soporte técnico de Microsoft. Para obtener más información, vea [Flujo de datos](privacy.md#data-flow).
+
+Si recientemente ha [inscrito dispositivos](enroll-devices.md) o ha modificado [activos](about-assets.md), espere a que Microsoft resuelva la incidencia. No es necesario repetir ninguna acción.
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>Se ha resuelto una incidencia temporal con la latencia de datos. Se ha retrasado la actualización diaria de datos del portal
+
+Esta notificación le permite saber que se ha producido una incidencia con la latencia de datos. El servicio sigue procesando la instantánea y se ha retrasado la actualización de los datos. Para más información, consulte [Latencia de datos](#data-latency).
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Se ha resuelto una incidencia con la latencia de datos. Si ha inscrito dispositivos nuevos o ha modificado recursos en las últimas 24 horas, es posible que no aparezcan de inmediato
+
+Esta notificación le permite saber que Microsoft ha resuelto una incidencia con la latencia de datos notificada anteriormente. Es posible que vea datos obsoletos de la instantánea de mañana. Si ha [inscrito dispositivos](enroll-devices.md) o realizado cambios en la configuración del dispositivo en las últimas 24 horas, no los verá de inmediato en el portal. Puede seguir usando Análisis de escritorio para clasificar [recursos](about-assets.md) y preparar [planes de implementación](about-deployment-plans.md). Estas acciones pueden usar datos de la instantánea anterior.
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>Se ha resuelto una incidencia con Análisis de escritorio. La actualización diaria de datos del portal está en marcha
+
+Esta notificación le permite saber que Microsoft ha identificado un componente de instantánea que ha dejado de funcionar durante el procesamiento. Microsoft ha reiniciado el componente, lo que tardará tiempo en procesar la instantánea. Microsoft supervisa continuamente el servicio para confirmar que todos los componentes actualizan las instantáneas en los momentos correctos.

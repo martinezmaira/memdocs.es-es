@@ -10,12 +10,11 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
-ms.translationtype: HT
+ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591041"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Administrar secuencias de tareas para automatizar tareas
 
@@ -190,7 +189,8 @@ Cuando se inicia la secuencia de tareas, en la mayoría de los escenarios regist
 
 <!-- 5554928 -->
 
-Debe crear una nueva implementación de la secuencia de tareas para habilitar o deshabilitar esta configuración para alto rendimiento. La nueva configuración aparece en las implementaciones existentes, pero no se aplica.<!-- SCCMDocs#2107 -->
+Normalmente, al cambiar la configuración en las propiedades de la secuencia de tareas, se actualizan todas las implementaciones existentes. Al cambiar esta configuración de rendimiento en las propiedades de la secuencia de tareas, las implementaciones existentes de la secuencia de tareas no se ven afectadas. Para habilitar o deshabilitar esta configuración para alto rendimiento, cree una implementación de la secuencia de tareas.
+<!-- MEMDocs#437, SCCMDocs#2107 -->
 
 ## <a name="distribute-referenced-content"></a><a name="BKMK_DistributeTS"></a> Distribución del contenido al que se hace referencia  
 

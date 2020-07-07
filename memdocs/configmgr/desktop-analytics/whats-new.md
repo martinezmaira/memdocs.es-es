@@ -2,7 +2,7 @@
 title: Novedades de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Resumen de las nuevas características de la última versión mensual del servicio en la nube Análisis de escritorio.
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
-ms.translationtype: HT
+ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819988"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novedades de Análisis de escritorio
 
@@ -27,6 +26,28 @@ Conozca las novedades mensuales de Análisis de escritorio.
 
 Para obtener una notificación cuando se actualice esta página, copie y pegue la siguiente dirección URL en su lector de fuentes RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="july-2020"></a>Julio de 2020
+
+### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Windows 10, versión 2004, ahora disponible en Análisis de escritorio
+
+<!-- 7370207 -->
+
+En el portal de Análisis de escritorio, cuando supervise la seguridad y las actualizaciones de características, ahora verá Windows 10, versión 2004. Al crear un plan de implementación, puede seleccionar Windows 10, versión 2004, como la versión de destino.
+
+### <a name="improved-support-for-viewing-the-portal-from-any-device"></a>Compatibilidad mejorada para ver el portal desde cualquier dispositivo
+
+<!-- 6270240 -->
+
+Ahora puede ver el portal de Análisis de escritorio en el centro de administración de Microsoft Endpoint Manager desde diversos tipos de dispositivos. Ahora cumple con las instrucciones de accesibilidad de contenido web (WCAG) 2.1 para una resolución de pantalla tan baja de hasta 320 x 256 píxeles. Por ejemplo, la imagen siguiente es del portal en un iPhone 8 de Apple:
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="Portal de Análisis de escritorio en un iPhone 8":::
+
+### <a name="notifications-for-service-impacting-events"></a>Notificaciones de eventos que afectan al servicio
+
+<!-- 4982509 -->
+
+Ahora el portal de Análisis de escritorio puede mostrar banners de notificación. Estas notificaciones permiten a Microsoft comunicarle eventos e incidencias importantes. Por ejemplo, problemas conocidos con el servicio, la latencia de datos o nuevos requisitos previos. Para obtener más información, vea [Notificaciones del servicio](troubleshooting.md#service-notifications).
 
 ## <a name="june-2020"></a>Junio de 2020
 

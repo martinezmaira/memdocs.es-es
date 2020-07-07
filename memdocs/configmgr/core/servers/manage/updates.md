@@ -2,7 +2,7 @@
 title: Actualizaciones y mantenimiento
 titleSuffix: Configuration Manager
 description: Conozca el método de servicio en la consola denominado Actualizaciones y mantenimiento con el que es más fácil encontrar e instalar actualizaciones recomendadas.
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
-ms.translationtype: HT
+ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591024"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Actualizaciones y servicio para Configuration Manager
 
@@ -73,11 +72,11 @@ La **fecha de disponibilidad** es cuando se publica el [anillo de actualización
 > [!Note]  
 > <sup>**Nota 1:** </sup> El medio de línea de base está disponible como parte de las versiones siguientes en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 >
-> - System Center Config Mgr (rama actual)
-> - System Center 2016 Datacenter
-> - System Center 2016 Standard  
+> - Microsoft Endpoint ConfigMgr (rama actual)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> Por ejemplo, busque `System Center Config Mgr (current branch)` en el VLSC. Busque el medio de línea de base en la lista de archivos y descargue el de esa versión.  
+> Por ejemplo, busque `Microsoft Endpoint Configmgr (current branch)` en el VLSC. Busque el medio de línea de base en la lista de archivos y descargue el de esa versión.  
 
 #### <a name="historical-versions"></a>Historial de versiones
 

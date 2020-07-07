@@ -2,7 +2,7 @@
 title: Requisitos de acceso a Internet
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los puntos de conexión de Internet para permitir la funcionalidad completa de las características de Configuration Manager.
-ms.date: 06/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
-ms.translationtype: HT
+ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819957"
 ---
 # <a name="internet-access-requirements"></a>Requisitos de acceso a Internet
 
@@ -230,6 +229,8 @@ Si usa Configuration Manager para implementar y actualizar Aplicaciones de Micro
 
 - `config.office.com` para crear configuraciones personalizadas para implementaciones de Aplicaciones de Microsoft 365 para empresas
 
+- `contentstorage.osi.office.net` para admitir la evaluación de la preparación de complementos de Office<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Consola de Configuration Manager
 
 Los equipos con la consola de Configuration Manager requieren acceso a los puntos de conexión de Internet siguientes para características específicas:
@@ -267,6 +268,14 @@ Si usa la **vista geográfica**, permita el acceso al punto de conexión siguien
 ## <a name="desktop-analytics"></a>Análisis de escritorio
 
 Para más información sobre los puntos de conexión requeridos para el servicio en la nube Análisis de escritorio, consulte [Habilitación del uso compartido de datos](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+## <a name="tenant-attach"></a>Asociación de inquilinos
+
+Para obtener más información sobre los puntos de conexión necesarios para las características de asociación de inquilinos, vea [Habilitación de la asociación de inquilinos](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+
+## <a name="endpoint-analytics"></a>Análisis de puntos de conexión
+
+Para obtener más información sobre los puntos de conexión necesarios para al análisis de puntos de conexión, vea [Configuración de proxy para el análisis de puntos de conexión](../../../../analytics/troubleshoot.md#bkmk_endpoints).
 
 ## <a name="microsoft-public-ip-addresses"></a>Direcciones IP públicas de Microsoft
 

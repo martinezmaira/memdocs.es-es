@@ -10,12 +10,11 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
-ms.translationtype: HT
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590463"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -147,7 +146,7 @@ Para obtener más información, vea [Compatibilidad con Windows BranchCache](../
 <!-- 1324696 -->
 Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. Configure Optimización de entrega para usar los grupos de límites al compartir contenido entre iguales. La configuración de cliente aplica el identificador del grupo de límites como el identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de Optimización de entrega, utiliza este identificador para buscar elementos del mismo nivel con el contenido. Para obtener más información, vea la configuración de cliente de [optimización de distribución](../../clients/deploy/about-client-settings.md#delivery-optimization).
 
-La Optimización de distribución es la tecnología recomendada para optimizar la distribución de actualizaciones de Windows 10 de archivos de instalación rápida para actualizaciones de calidad de Windows 10. A partir de la versión 1910 de Configuration Manager, el acceso al servicio en la nube Optimización de distribución a través de Internet es un requisito para usar su funcionalidad punto a punto. Para obtener información sobre los puntos de conexión de Internet necesarios, vea [Preguntas más frecuentes sobre Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). La optimización se puede usar para todas las actualizaciones de Windows. Para obtener más información, vea [Optimización de la distribución de actualizaciones de Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+La Optimización de distribución es la tecnología recomendada para optimizar la distribución de actualizaciones de Windows 10 de archivos de instalación rápida para actualizaciones de calidad de Windows 10. A partir de la versión 1910 de Configuration Manager, el acceso a través de Internet al servicio en la nube Optimización de distribución es un requisito para usar su funcionalidad punto a punto. Para obtener información sobre los puntos de conexión de Internet necesarios, vea [Preguntas más frecuentes sobre Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). La optimización se puede usar para todas las actualizaciones de Windows. Para obtener más información, vea [Optimización de la distribución de actualizaciones de Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Caché conectada de Microsoft

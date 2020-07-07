@@ -11,17 +11,20 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
-ms.translationtype: HT
+ms.openlocfilehash: 96a014f4919480854b57bae82e982ce783f5f59b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590973"
 ---
 # <a name="updates-in-desktop-analytics"></a>Actualizaciones de Análisis de escritorio
 
 En el portal de Análisis de escritorio, vea el estado de las actualizaciones de características y seguridad. Seleccione estos nodos del grupo de supervisión del menú principal de Análisis de escritorio. Estos nodos proporcionan información detallada sobre el estado de estas actualizaciones en el entorno.
 
+<!--7362999-->
+
+> [!IMPORTANT]
+> Análisis de escritorio muestra el estado de actualización de la seguridad y las características de los dispositivos con el id. comercial asociado al área de trabajo de Análisis de escritorio. Este comportamiento se produce con independencia de que haya inscrito o no los dispositivos con Configuration Manager. El número total de dispositivos en estos iconos puede no coincidir con el número de dispositivos inscritos en [**Servicios conectados**](monitor-connection-health.md#commercial-id-configuration).
 
 ## <a name="security-updates"></a>Actualizaciones de seguridad
 
