@@ -10,12 +10,11 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
-ms.translationtype: HT
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383043"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854412"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Acerca de los parámetros y propiedades de instalación de cliente en Configuration Manager
 
@@ -601,7 +600,11 @@ Para obtener más información, vea [Cómo configurar el estado de cliente](conf
 
 A partir de la versión 2002, use esta propiedad para iniciar una secuencia de tareas en un cliente después de que se registre correctamente en el sitio.
 
+> [!NOTE]
+> Si la secuencia de tareas instala actualizaciones de software o aplicaciones, los clientes necesitan un certificado de autenticación de cliente válido. La autenticación de token no funciona por sí sola. Para obtener más información, consulte [Notas de la versión: implementación del SO](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
+      
 Por ejemplo, puede aprovisionar un nuevo dispositivo Windows 10 con Windows Autopilot, inscribirlo de forma automática en Microsoft Intune y, después, instalar el cliente de Configuration Manager para la administración conjunta. Si especifica esta nueva opción, el cliente recién aprovisionado ejecutará una secuencia de tareas. Este proceso ofrece flexibilidad adicional para instalar aplicaciones y actualizaciones de software, o bien para configurar opciones.
+
 
 Use el procedimiento siguiente:
 
@@ -617,6 +620,8 @@ Use el procedimiento siguiente:
       > Este método puede tener requisitos previos adicionales. Por ejemplo, la inscripción del sitio en Azure Active Directory o la creación de una instancia de Cloud Management Gateway habilitada para el contenido.
 
 Una vez que el cliente se instala y se registra correctamente en el sitio, inicia la secuencia de tareas a la que se hace referencia. Si se produce un error en el registro del cliente, la secuencia de tareas no se iniciará.
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

@@ -2,7 +2,7 @@
 title: CMPivot para datos en tiempo real
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar CMPivot en Configuration Manager para realizar consultas en clientes en tiempo real.
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702093"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914636"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -46,6 +45,7 @@ Los siguientes componentes son necesarios para usar CMPivot:
   - IPConfig
   - SMBConfig
 
+- CMPivot y el instalador de [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) se firman con el certificado **Firma de código de Microsoft**. Si el certificado no aparece en el almacén **Editores de confianza**, deberá agregarlo. De lo contrario, CMPivot y el instalador de Microsoft Edge no se ejecutarán cuando la directiva de ejecución de PowerShell esté establecida en **AllSigned**. <!--7585106-->
 
 - Permisos para CMPivot:
   - Permiso de **L¡lectura** en el objeto **Scripts SMS**
@@ -56,6 +56,8 @@ Los siguientes componentes son necesarios para usar CMPivot:
 
 >[!NOTE]
 > **Ejecutar scripts** es un superconjunto del permiso **Ejecutar CMPivot**.
+
+CMPivot y el instalador de Microsoft Edge se firman con el certificado **Firma de código de Microsoft**. Si el certificado no aparece en el almacén **Editores de confianza**, deberá agregarlo. De lo contrario, CMPivot y el instalador de Microsoft Edge no se ejecutarán cuando la directiva de ejecución de PowerShell esté establecida en **AllSigned**.
  
 ## <a name="limitations"></a>Limitaciones
 

@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre productos y licencias
 titleSuffix: Configuration Manager
 description: Encuentre respuestas a las preguntas comunes sobre productos y licencias de Configuration Manager.
-ms.date: 02/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63e53c502e67d2bfbfc5f8a706006c6ec14f8fcd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706843"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854429"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
@@ -68,19 +67,54 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager no está incluido en el plan [Microsoft 365 Empresa](https://www.microsoft.com/microsoft-365/business).
 
-### <a name="does-anything-change-with-the-rebrand-to-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> ¿Ha cambiado algo con el cambio de personalización de marca a Microsoft Endpoint Manager?
+### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> ¿Qué es lo que cambia con las licencias para administración conjunta en Microsoft Endpoint Manager?
 
-Sí. A partir del 1 de diciembre de 2019, si ya tiene una licencia de Configuration Manager, también se le concederá automáticamente una licencia de Intune para inscribir equipos Windows en la [administración conjunta](../../comanage/overview.md). Este cambio facilita la administración de dispositivos con Microsoft Endpoint Manager.
+<!-- 7202432 -->
 
-Ahora hay disponible una nueva licencia con la que los clientes de Configuration Manager con Software Assurance obtendrán derechos de administración de equipos de Intune sin tener que adquirir una licencia de Intune adicional para la administración conjunta. Ya no es necesario comprar ni asignar licencias individuales de Intune a los usuarios.
+La licencia de administración conjunta permite a los clientes de Configuration Manager con Software Assurance obtener derechos de administración de equipos de Intune sin tener que adquirir ni asignar licencias de Intune individuales a los usuarios. Esta licencia le facilita la administración de dispositivos Windows con Microsoft Endpoint Manager.
 
-- Los dispositivos administrados por Configuration Manager e inscritos en la administración conjunta tienen casi los mismos derechos que un equipo administrado de manera independiente de Intune, pero después de un restablecimiento no se pueden volver a aprovisionar con AutoPilot.
+- Los dispositivos ya administrados por Configuration Manager que inscriba en Intune para la administración conjunta tienen casi los mismos derechos que un equipo administrado de manera independiente de Intune. Si restablece Windows en este dispositivo, no podrá aprovisionarlo con Windows Autopilot. Autopilot requiere una licencia completa de Intune.
 
-- Los dispositivos Windows 10 inscritos en Intune mediante otros medios requieren licencias de Intune completas.
+- Si inscribe un dispositivo con Windows 10 en Intune por otros medios, seguirá necesitando una licencia completa de Intune. Por ejemplo, utiliza Autopilot para aprovisionar un dispositivo o un usuario lleva a cabo la inscripción de autoservicio manualmente.
 
-- Si quiere usar Intune para administrar dispositivos iOS, Android o macOS, necesitará la suscripción a Intune adecuada a través de una licencia de Intune independiente, Enterprise Mobility + Security (EMS) o Microsoft 365.
+- Para que los dispositivos administrados por Configuration Manager existentes se inscriban en Intune para la administración conjunta a escala sin interacción del usuario, la administración conjunta usa una característica de Azure Active Directory (Azure AD) denominada inscripción automática de Windows 10. La inscripción automática requiere una licencia de Azure AD Premium (AADP1), que es independiente de Microsoft Endpoint Manager. Para que la administración conjunta funcionase en este escenario, solía requerir que asignase una licencia de AADP1 y una de Intune a cada usuario individual. Las licencias de administración conjunta cambiaron a partir del 1 de diciembre de 2019. Ahora no necesita asignar licencias de Intune individuales para este escenario, pero se siguen requiriendo en otros escenarios de inscripción. El requisito de licencia de AADP1 sigue siendo el mismo para que funcionen la inscripción automática y la administración conjunta.
+
+- Si quiere usar Intune para administrar dispositivos iOS, Android o macOS, necesitará la suscripción a Intune adecuada mediante una licencia de Intune independiente, Enterprise Mobility + Security (EMS) o Microsoft 365.
+
+- Si no tiene ningún plan de suscripción relacionado con Intune, para admitir la administración conjunta debe comprar al menos una licencia de Intune. Esta licencia sirve para que un administrador pueda acceder al centro de administración de Microsoft Endpoint Manager.
+
+- Si usa la característica [Movilidad y seguridad básicas](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0) integrada de Microsoft 365, no podrá usar la nueva licencia de administración conjunta para un usuario que también tenga dispositivos administrados por Movilidad y seguridad básicas. Para usar la licencia de administración conjunta del dispositivo administrado por Configuration Manager del usuario, realice una de las acciones siguientes:
+
+  - Asigne una licencia completa de Intune al usuario y administre sus dispositivos con Intune.
+  - Anule la inscripción de los dispositivos de Movilidad y seguridad básicas.
 
 - La licencia que tenía anteriormente para System Center Configuration Manager seguirá siendo válida en Microsoft Endpoint Configuration Manager. Si instala un nuevo sitio, use las claves de producto existentes.
+
+|Característica | Directiva de administración conjunta | Licencia completa de Intune |
+|---------|---------|---------|
+|Inscripción de Windows 10|Sí (solo para dispositivos administrados por Configuration Manager existentes)|Sí|
+|Inscripción de iOS, Android y macOS|No|Sí|
+|Autopilot|No|Sí|
+|Administración de aplicaciones móviles (MAM)|No|Sí|
+|Acceso condicional<br>(Se requiere licencia de AADP1 adicional).|Sí|Sí|
+|Perfiles de dispositivo|Sí|Sí|
+|Administración de actualizaciones de software|Sí|Sí|
+|Tema de|Sí|Sí|
+|Administración de aplicaciones|Sí|Sí|
+|Asistencia remota<br>(Se requiere licencia de TeamViewer).|Sí|Sí|
+|Análisis de escritorio<br>(Se requieren licencias de suscripción de Windows).|Sí|No aplicable|
+|Asociación de inquilinos|Sí|No aplicable|
+|Análisis de puntos de conexión|Sí|Sí|
+
+Vea los siguientes artículos para más información:
+
+- [Requisitos previos de la administración conjunta](../../comanage/overview.md#prerequisites)
+- [Requisitos de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Requisitos previos de Análisis de escritorio](../../desktop-analytics/overview.md#prerequisites)
+- [Requisitos previos de asociación de inquilinos](../../tenant-attach/device-sync-actions.md#prerequisites)
+- [Requisitos previos de licencias de análisis de puntos de conexión](../../../analytics/overview.md#licensing-prerequisites)
+- [Uso del acceso condicional con Intune](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [Requisitos previos de TeamViewer](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a> Tengo Enterprise Mobility + Security y ha expirado, ¿qué debo hacer ahora?  
 

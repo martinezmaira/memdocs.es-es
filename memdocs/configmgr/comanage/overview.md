@@ -5,17 +5,16 @@ description: Obtenga información sobre cómo administrar simultáneamente dispo
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
-ms.translationtype: HT
+ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347192"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854446"
 ---
 # <a name="what-is-co-management"></a>¿Qué es administración conjunta?
 
@@ -88,7 +87,7 @@ La administración conjunta tiene estos requisitos previos en las áreas siguien
     > [!Tip]
     > Asegúrese de asignar una licencia de Intune a la cuenta que usa para iniciar sesión en el inquilino. De lo contrario, no se podrá iniciar sesión y aparecerá el mensaje de error "Usuario no reconocido".
     >
-    > Ya no es necesario comprar ni asignar licencias individuales de Intune o EMS a los usuarios. Para más información, vea [Preguntas más frecuentes sobre productos y licencias](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+    > Es posible que no necesite comprar ni asignar licencias individuales de Intune o EMS a los usuarios. Para más información, vea [Preguntas más frecuentes sobre productos y licencias](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### <a name="configuration-manager"></a>Configuration Manager
 

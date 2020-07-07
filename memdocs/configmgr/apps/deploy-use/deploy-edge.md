@@ -2,7 +2,7 @@
 title: Implementación y actualización de Microsoft Edge, versión 77 y posteriores
 titleSuffix: Configuration Manager
 description: Implementación y actualización de Microsoft Edge, versión 77 y versiones posteriores con Configuration Manager
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
-ms.translationtype: HT
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776946"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914570"
 ---
 # <a name="microsoft-edge-management"></a>Administración de Microsoft Edge
 
@@ -33,6 +32,8 @@ Clientes con una implementación de Microsoft Edge:
 
 - No se puede establecer la [Directiva de ejecución](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) de PowerShell en Restringida.
   - PowerShell se ejecuta para realizar la instalación.
+
+- El instalador de Microsoft Edge y [CMPivot](../../core/servers/manage/cmpivot.md) se firman con el certificado **Firma de código de Microsoft**. Si el certificado no aparece en el almacén **Editores de confianza**, deberá agregarlo. De lo contrario, el instalador de Microsoft Edge y CMPivot no se ejecutarán cuando la directiva de ejecución de PowerShell esté establecida en **AllSigned**. <!--7585106-->
 
 El dispositivo que ejecuta la consola de Configuration Manager necesita acceso a los puntos de conexión siguientes:
 
@@ -135,6 +136,22 @@ Habilite las siguientes propiedades en las clases de [inventario de hardware](..
 En el área de trabajo **Biblioteca de software**, haga clic en **Administración de Microsoft Edge** para ver el panel. Haga clic en **Examinar** y seleccione otra colección para los datos del gráfico. De forma predeterminada, la lista desplegable incluye las cinco colecciones más grandes. Al seleccionar una colección que no está en la lista, la colección recién seleccionada pasa a ocupar la parte inferior de la lista desplegable.
 
 [![Panel Administración de Microsoft Edge](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>Problemas conocidos
+
+### <a name="hardware-inventory-may-fail-to-process"></a>Es posible que no se pueda procesar el inventario de hardware.
+<!--7535675-->
+Es posible que no se pueda procesar el inventario de hardware de los dispositivos. Pueden aparecer errores similares al siguiente en el archivo Dataldr.log:
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**Mitigación:** Para solucionar este problema, deshabilite la recopilación de la clase de inventario de hardware Uso del explorador (SMS_BrowerUsage). Esta clase no se usa actualmente.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
