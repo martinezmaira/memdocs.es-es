@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216508"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088486"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Puntos de conexión de red de Microsoft Intune  
 
@@ -67,7 +67,6 @@ En las siguientes tablas se enumeran los puertos y los servicios a los que acced
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -130,8 +129,8 @@ Para obtener más información, vea los artículos de Apple [Puertos TCP y UDP u
 
 En función de cómo decida administrar los dispositivos Android, es posible que tenga que abrir los puertos de Google Android Enterprise y/o la notificación de inserción de Android. Para obtener más información sobre los métodos de administración de Android admitidos, vea la [documentación de inscripción de Android](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
 
-[!NOTE]
-Como Google Mobile Services no está disponible en China, los clientes en China administrados por Intune no pueden usar características que requieran Google Mobile Services. Estas características incluyen: funciones de Google Play Protect como la atestación de dispositivos SafetyNet, la administración de aplicaciones desde Google Play Store, las funciones de Android Enterprise (consulte esta [documentación de Google](https://support.google.com/work/android/answer/6270910)). Además, la aplicación Portal de empresa de Intune para Android usa Google Mobile Services para comunicarse con el servicio Microsoft Intune. Como los servicios de Google Play no están disponible en China, algunas tareas pueden tardar hasta ocho horas en completarse. Para más información, consulte este [artículo](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+> [!NOTE]
+> Como Google Mobile Services no está disponible en China, los clientes en China administrados por Intune no pueden usar características que requieran Google Mobile Services. Estas características incluyen: funciones de Google Play Protect como la atestación de dispositivos SafetyNet, la administración de aplicaciones desde Google Play Store, las funciones de Android Enterprise (consulte esta [documentación de Google](https://support.google.com/work/android/answer/6270910)). Además, la aplicación Portal de empresa de Intune para Android usa Google Mobile Services para comunicarse con el servicio Microsoft Intune. Como los servicios de Google Play no están disponible en China, algunas tareas pueden tardar hasta ocho horas en completarse. Para más información, consulte este [artículo](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -141,3 +140,6 @@ Google proporciona documentación sobre los puertos de red y los nombres de host
 
 Intune aprovecha la Mensajería en la nube de Firebase (FCM) de Google para notificaciones de inserción a fin de desencadenar acciones e inserciones de dispositivo. Esto es necesario para el Administrador de dispositivos Android y Android Enterprise. Para obtener información sobre los requisitos de red de FCM, vea [Los puertos de FCM y el firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall) de Google.
 
+## <a name="endpoint-analytics"></a>Análisis de puntos de conexión
+
+Para obtener más información sobre los puntos de conexión necesarios para al análisis de puntos de conexión, vea [Configuración de proxy para el análisis de puntos de conexión](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).

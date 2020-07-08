@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791738"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088384"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Información general sobre Microsoft Endpoint Manager
 
@@ -43,7 +43,6 @@ Endpoint Manager incluye los siguientes servicios:
   Si tiene una infraestructura local, como Exchange o una instancia de Active Directory, también están disponibles los conectores de Intune:
 
   - El **conector de Intune para Active Directory** agrega entradas al dominio de Active Directory local para los equipos que se inscriben con Windows Autopilot. Para obtener más información, vea [Implementación de dispositivos unidos a Azure AD híbridos](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - **Intune Exchange Connector** permite (o bloquea) el acceso de los dispositivos a los servidores de Exchange si los dispositivos están inscritos en Intune y cumplen con las directivas. Para obtener más información, consulte [Configuración de Intune Exchange Connector local](/mem/intune/protect/exchange-connector-install).
   - **Intune Certificate Connector** procesa las solicitudes de certificado de los dispositivos que usan certificados para la autenticación y el cifrado de correo electrónico S/MIME. Para obtener más información, vea [Uso de certificados para la autenticación](/mem/intune/protect/certificates-configure).
 
   Como parte de Endpoint Manager, use Intune para crear y comprobar la compatibilidad e implementar aplicaciones, características y configuraciones en los dispositivos mediante la nube.
