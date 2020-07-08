@@ -52,6 +52,8 @@
       items:
         - name: Información general sobre el cumplimiento
           href: device-compliance-get-started.md
+        - name: Asociados de cumplimiento de dispositivos
+          href: device-compliance-partners.md
         - name: Creación de una directiva
           href: create-compliance-policy.md
         - name: Cumplimiento basado en la ubicación
