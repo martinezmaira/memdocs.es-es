@@ -2,20 +2,20 @@
 title: Asociación de inquilinos de Microsoft Endpoint Manager
 titleSuffix: Configuration Manager
 description: Cargue los dispositivos de Configuration Manager en el servicio en la nube y tome medidas del centro de administración.
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795625"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210299"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Asociación de inquilinos de Microsoft Endpoint Manager: sincronización de dispositivos y acciones de dispositivo
 <!--3555758 live 3/4/2020-->
@@ -56,8 +56,9 @@ Si tiene la administración conjunta habilitada actualmente, edite las propiedad
 1. Haga clic con el botón derecho en la configuración de administración conjunta y seleccione **Propiedades**.
 1. En la pestaña **Configure upload** (Configurar carga), seleccione **Upload to Microsoft Endpoint Manager admin center** (Cargar en el centro de administración de Microsoft Endpoint Manager). Haga clic en **Aplicar**.
    - El valor predeterminado para la carga de dispositivos es **All my devices managed by Microsoft Endpoint Configuration Manager** (Todos los dispositivos administrados por Microsoft Endpoint Configuration Manager). Si es necesario, puede limitar la carga a una sola recopilación de dispositivos.
+1. Active la opción **Habilitar el análisis de puntos de conexión para dispositivos cargados en el administrador de puntos de conexión de Microsoft** si también quiere obtener información para optimizar la experiencia del usuario final en el análisis de puntos de [conexión](../../analytics/overview.md).
 
-   [![Asistente para configuración de administración conjunta](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Carga de dispositivos en el centro de administración de Microsoft Endpoint Manager](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Inicie sesión con la cuenta de *administrador global* cuando se le pida.
 1. Haga clic en **Sí** para aceptar la notificación **Crear aplicación de AAD**. Esta acción aprovisiona una entidad de servicio y crea un registro de aplicación de Azure AD para facilitar la sincronización.
 1. Haga clic en **Aceptar** para salir de las propiedades de administración conjunta una vez que haya terminado de realizar los cambios.
@@ -77,6 +78,7 @@ Si no tiene la administración conjunta habilitada, use el Asistente para **conf
    [![Asistente para configuración de administración conjunta](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Haga clic en **Siguiente** y luego en **Sí** para aceptar la notificación **Crear aplicación de AAD**. Esta acción aprovisiona una entidad de servicio y crea un registro de aplicación de Azure AD para facilitar la sincronización.
 1. En la página **configurar carga** , seleccione la configuración de carga de dispositivo recomendada para **todos mis dispositivos administrados por el punto de conexión de Microsoft Configuration Manager**. Si es necesario, puede limitar la carga a una sola recopilación de dispositivos.
+1. Active la opción **Habilitar el análisis de puntos de conexión para dispositivos cargados en el administrador de puntos de conexión de Microsoft** si también quiere obtener información para optimizar la experiencia del usuario final en el análisis de puntos de [conexión](../../analytics/overview.md) .
 1. Haga clic en **Resumen** para revisar la selección y luego en **Siguiente**.
 1. Cuando el asistente esté completo, haga clic en **Cerrar**.  
 
@@ -120,4 +122,4 @@ Use los registros siguientes ubicados en el punto de conexión de servicio:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los archivos de registro de datos adjuntos de inquilinos, consulte [solucionar problemas de Asociación de inquilino](technical-reference.md).
+Para obtener más información sobre los archivos de registro de datos adjuntos de inquilinos, consulte [solucionar problemas de Asociación de inquilino](troubleshoot.md).
