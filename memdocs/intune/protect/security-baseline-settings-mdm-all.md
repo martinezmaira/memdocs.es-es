@@ -5,7 +5,7 @@ description: Revise los valores predeterminados y los valores disponibles para l
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943916"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022235"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Configuración de líneas de base de seguridad de MDM para Windows para Intune
 
@@ -1851,7 +1851,7 @@ Para más información, vea [Policy CSP - RemoteDesktopServices](https://docs.mi
   **Valor predeterminado**: Habilitado
 
 - **Bloquear la redirección de unidad**:  
-  Esta configuración de directiva especifica si se debe impedir la asignación de unidades cliente en una sesión de Servicios de Escritorio remoto (redirección de unidad). De forma predeterminada, el servidor host de sesión de Escritorio remoto asigna unidades cliente automáticamente al conectarse. Las unidades asignadas aparecen en el árbol de carpetas de sesión en el Explorador de archivos o en Equipo con el formato *\<letraDeUnidad>* en *\<nombreDeEquipo>* . Puede usar esta directiva para invalidar este comportamiento. Si habilita esta configuración de directiva, no se permitirá la redirección de unidades cliente en sesiones de Servicios de Escritorio remoto ni se permitirá la redirección de copias de archivos del Portapapeles en equipos que ejecuten Windows Server 2003, Windows 8 y Windows XP. Si deshabilita esta configuración de directiva, se permitirá siempre la redirección de unidades cliente. Además, la redirección de copias de archivo del Portapapeles siempre se permite si se permite la redirección del Portapapeles. Si no establece esta configuración de directiva, la redirección de unidades cliente y la redirección de copias de archivo del Portapapeles no se especificarán en el nivel de directiva de grupo.  
+  Esta configuración de directiva especifica si se debe impedir la asignación de unidades cliente en una sesión de Servicios de Escritorio remoto (redirección de unidad). De forma predeterminada, el servidor host de sesión de Escritorio remoto asigna unidades cliente automáticamente al conectarse. Las unidades asignadas aparecen en el árbol de carpetas de sesión en el Explorador de archivos o en Equipo con el formato *\<driveletter>* en *\<computername>* . Puede usar esta directiva para invalidar este comportamiento. Si habilita esta configuración de directiva, no se permitirá la redirección de unidades cliente en sesiones de Servicios de Escritorio remoto ni se permitirá la redirección de copias de archivos del Portapapeles en equipos que ejecuten Windows Server 2003, Windows 8 y Windows XP. Si deshabilita esta configuración de directiva, se permitirá siempre la redirección de unidades cliente. Además, la redirección de copias de archivo del Portapapeles siempre se permite si se permite la redirección del Portapapeles. Si no establece esta configuración de directiva, la redirección de unidades cliente y la redirección de copias de archivo del Portapapeles no se especificarán en el nivel de directiva de grupo.  
   [Más información](https://go.microsoft.com/fwlink/?linkid=2067197).
 
   **Valor predeterminado**: Habilitado
@@ -1968,7 +1968,7 @@ Para más información, vea [Policy CSP - SmartScreen](https://docs.microsoft.co
   **Valor predeterminado**: Sí
 
 ::: zone-end
-::: zone pivot="mdm-may-201"
+::: zone pivot="mdm-may-2019"
 
 - **Activar Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -1980,7 +1980,9 @@ Para más información, vea [Policy CSP - SmartScreen](https://docs.microsoft.co
 - **Impedir que los usuarios descarten advertencias de SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Al establecerlo en Sí, SmartScreen no presentará una opción para que el usuario ignore la advertencia y ejecute la aplicación. Se presentará la advertencia, pero el usuario podrá omitirla. Si se establece en No configurado, la opción volverá al valor predeterminado de Windows, que permitir la invalidación por parte del usuario. Este valor requiere que se habilite "SmartScreen para aplicaciones y archivos".
+  Si se establece en "Sí", SmartScreen está habilitado y los usuarios no pueden ignorar las advertencias sobre archivos o aplicaciones malintencionados. Si se establece en "No", los usuarios pueden ignorar las advertencias de SmartScreen sobre archivos o aplicaciones malintencionados.  
+
+  Esta configuración requiere que la opción "Activar Windows SmartScreen" esté establecida en "Sí".
 
   **Valor predeterminado**: Sí
 

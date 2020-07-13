@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 5b33be56975713c801d2ad3fdea17e6303687274
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776878"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946919"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Directiva de firewall para la seguridad de puntos de conexión en Intune
 
@@ -56,7 +56,7 @@ Planee aplicar directivas del Firewall a un dispositivo a través de solamente u
 
 - Esta forma de conflicto de directivas se aplica al perfil del **Firewall de Microsoft Defender**, lo que puede entrar en conflicto con otros perfiles del Firewall de Microsoft Defender o con una configuración de firewall que se entregue por medio de otro tipo de directiva, como la configuración del dispositivo.
 
-  Los *perfiles del Firewall de Microsoft Defender* no entran en conflicto con los *perfiles de reglas del Firewall de Microsoft Defender*.
+  Los *perfiles del Firewall de Microsoft Defender* no entran en conflicto con los perfiles de *reglas del Firewall de Microsoft Defender*.
 
 Cuando se usan perfiles de **reglas del Firewall de Microsoft Defender**, se pueden aplicar varios perfiles de reglas al mismo dispositivo, pero cuando existen reglas diferentes para la misma cosa con distintas configuraciones, ambas se envían al dispositivo y se crea un conflicto en ese dispositivo.
 
@@ -68,4 +68,4 @@ Cuando las reglas de varios perfiles de reglas no entran en conflicto entre sí,
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configuración de directivas de seguridad de puntos de conexión](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configuración de directivas de seguridad de los puntos de conexión](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022405"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de reducción de la superficie expuesta a ataques de Seguridad de los puntos de conexión en Intune
 
@@ -92,7 +92,7 @@ Perfiles y plataformas compatibles:
 - **Permiso de impresión en impresoras locales de Protección de aplicaciones**  
 
   - **Sin configurar** (*valor predeterminado*).
-  - **Sí**: permite la impresión en impresoras locales.
+  - **Sí**: permite imprimir en impresoras locales.
 
 - **Permiso de impresión en impresoras de red de Protección de aplicaciones**  
 
@@ -114,7 +114,7 @@ Perfiles y plataformas compatibles:
   - **Sin configurar** (*valor predeterminado*).
   - **Sí**: configura la directiva de aislamiento de red de Windows.  
   
-  Cuando se establece en *Configurar*, puede configurar estos valores.
+  Si se establece en *Sí*, se pueden configurar estos valores.
 
   - **Intervalos IP**  
     Expanda la lista desplegable, seleccione **Agregar** y especifique una *dirección inferior* y luego una *dirección superior*.
@@ -186,9 +186,9 @@ Perfiles y plataformas compatibles:
 - **Impedir que los usuarios descarten advertencias de SmartScreen**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Este valor requiere que se habilite "SmartScreen para aplicaciones y archivos".
-  - **Sin configurar** (*valor predeterminado*): devuelve la opción al valor predeterminado de Windows, que permite la invalidación del usuario.
-  - **Sí**: SmartScreen no presenta una opción para que el usuario omita la advertencia y ejecute la aplicación. Se presenta la advertencia, pero el usuario no puede omitirla.
+  - **No configurado** (*predeterminado*): los usuarios pueden ignorar las advertencias de SmartScreen sobre aplicaciones y archivos malintencionados.
+  - **Sí**: SmartScreen está habilitado y los usuarios no pueden ignorar las advertencias sobre aplicaciones y archivos malintencionados.
+
 
 - **Activar Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)

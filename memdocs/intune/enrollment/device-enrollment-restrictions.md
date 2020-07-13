@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d26040c5a009a9c3877abbc25512e317f584f114
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 6629f416dbbc9555514dfc305db8f224f6b76526
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85503031"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088452"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Restricciones de inscripción de dispositivos de Android Enterprise
 
-Antes de inscribir los dispositivos para el [marco de configuración de la seguridad de Android Enterprise](), las organizaciones deben configurar las restricciones adecuadas. Estas restricciones garantizan que los usuarios solo puedan inscribir:
+Antes de inscribir los dispositivos para el [marco de configuración de la seguridad de Android Enterprise](android-configuration-framework.md), las organizaciones deben configurar las restricciones adecuadas. Estas restricciones garantizan que los usuarios solo puedan inscribir:
+
 - dispositivos aprobados.
 - un número de dispositivos especificado.
 - dispositivos con las plataformas especificadas.
@@ -54,7 +55,12 @@ En el caso de la seguridad alta del perfil de trabajo de Android Enterprise (niv
 | Administrador de dispositivos Android| Bloquear | Todas las versiones | Sí |
 
 ## <a name="fully-managed-security-restrictions"></a>Restricciones de seguridad totalmente administrada
-Asegúrese de que la organización admita la inscripción de dispositivos totalmente administrados de Android Enterprise, para lo cual debe revisar la inscripción totalmente administrada de Android Enterprise. 
+Consulte [Inscribir dispositivos totalmente administrados](android-fully-managed-enroll.md#enroll-the-fully-managed-devices) para asegurarse de que la organización admita la inscripción de dispositivos totalmente administrados de Android Enterprise. 
+
+## <a name="conditional-access-policies"></a>Directivas de acceso condicional
+Las organizaciones pueden usar directivas de acceso condicional de Azure AD para asegurarse de que los usuarios solo puedan acceder al contenido profesional o educativo en dispositivos Android inscritos. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de dispositivos administrados para el acceso a aplicaciones en la nube mediante el acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+
+Siga los pasos descritos en el [escenario relativo a la obligatoriedad de la inscripción para dispositivos iOS y Android](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), que garantiza que solo los dispositivos móviles inscritos conformes se puedan conectar a los puntos de conexión de Office 365.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

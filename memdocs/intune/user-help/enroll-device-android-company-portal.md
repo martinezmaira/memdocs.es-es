@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 82272fd4239b50657b887bf6c310b280eeecae7a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880081"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022320"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Inscribir dispositivos con Portal de empresa  
 Inscriba el dispositivo corporativo o personal Android para obtener acceso seguro al correo electrónico, las aplicaciones y los datos corporativos. Portal de empresa admite dispositivos Android, incluido Samsung Knox, con Android 4.4 y posterior.  
@@ -35,7 +35,7 @@ Inscriba el dispositivo corporativo o personal Android para obtener acceso segur
 > Samsung Knox es un tipo de seguridad que usan determinados dispositivos Samsung para lograr una protección adicional a la ofrecida por Android de forma nativa. Para comprobar si tiene un dispositivo Samsung Knox, vaya a **Configuración** > **Acerca del dispositivo**. Si no ve **Versión Knox** en la lista, tiene un dispositivo Android nativo.
 
 ## <a name="enroll-device"></a>Inscribir un dispositivo  
-Asegúrese de [instalar la aplicación Portal de empresa de Intune desde Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Consulte [Instalación de la aplicación Portal de empresa en la China continental](install-company-portal-android-china.md) para obtener una lista de tiendas que ofrecen la aplicación en la China continental.    
+Asegúrese de [instalar la aplicación Portal de empresa de Intune desde Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Consulte [Instalación de la aplicación Portal de empresa en la China continental](install-company-portal-android-china.md) para obtener una lista de tiendas que ofrecen la aplicación en la República Popular China.
 
 Durante la inscripción, es posible que se le pida que elija la categoría que mejor describa la forma en que usa el dispositivo. El equipo de soporte técnico de la empresa usa la respuesta para comprobar las aplicaciones a las que se tiene acceso.  
 

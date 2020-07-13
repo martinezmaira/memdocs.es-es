@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/15/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206322"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088333"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Uso de directivas de cumplimiento para establecer reglas para los dispositivos que administra con Intune
 
@@ -31,7 +31,9 @@ Las directivas de cumplimiento en Intune:
 
 - Definen las reglas y la configuración que los usuarios y los dispositivos deben cumplir para ser compatibles.
 - Incluyen las acciones que se aplican a los dispositivos que no son compatibles. Las acciones en caso de no cumplimiento pueden alertar a los usuarios de las condiciones de no cumplimiento y proteger los datos en dispositivos no compatibles.
-- Se pueden [combinar con el acceso condicional](#integrate-with-conditional-access), que luego puede bloquear a los usuarios y dispositivos que no cumplen las reglas.
+- Se pueden [combinar con el acceso condicional](#integrate-with-conditional-access) para bloquear a los usuarios y dispositivos que no cumplan las reglas y que se hayan marcado como no conformes.
+
+  El acceso condicional también puede trabajar con datos de estado de cumplimiento de los dispositivos administrados por partners externos de administración de dispositivos móviles. Para habilitar esta funcionalidad, hay que agregar compatibilidad con el partner a Azure AD e Intune. Para obtener más información, consulte Adición de compatibilidad para partners de cumplimiento de dispositivos. 
 
 Las directivas de cumplimiento de Intune tienen dos partes:
 

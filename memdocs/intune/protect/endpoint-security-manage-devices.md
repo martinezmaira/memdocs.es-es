@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8171eb3cf484c61e2b99046b36553a633d92044e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431467"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088537"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Administración de dispositivos con seguridad de puntos de conexión en Microsoft Intune
 
@@ -66,6 +66,8 @@ Tenga en cuenta los campos siguientes:
     Con la administración conjunta, se [eligen diferentes cargas de trabajo de administración conjunta](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) para determinar qué aspectos se administran mediante Configuration Manager o Intune. Estas opciones afectarán a las directivas que se aplican al dispositivo y al modo en que se envían los datos de cumplimiento al centro de administración.
 
     Por ejemplo, puede usar Intune para configurar la directiva del antivirus, el firewall y el cifrado. Estos tipos de directivas se consideran una directiva para *Endpoint Protection*. Para que un dispositivo administrado de forma conjunta use las directivas de Intune y no las de Configuration Manager, establezca el control deslizante de administración conjunta de Endpoint Protection en *Intune* o *Intune piloto*. Si el control deslizante se establece en Configuration Manager, el dispositivo usa las directivas y la configuración de Configuration Manager en su lugar.
+
+  - **Workspace ONE**: estos dispositivos están administrados por Workspace ONE, el partner externo de cumplimiento de dispositivos. Para obtener más información, vea [Partners de cumplimiento de dispositivos](../protect/device-compliance-partners.md).
 
 - **Cumplimiento**: el cumplimiento se evalúa de acuerdo a las directivas de cumplimiento que se asignan al dispositivo. El origen de estas directivas y la información que se encuentra en la consola depende de cómo se administre el dispositivo: mediante Intune, Configuration Manager o administración conjunta. Para que los dispositivos administrados conjuntamente notifiquen cumplimiento, establezca el control deslizante de administración conjunta para Conformidad de dispositivos en Intune o Intune piloto.  
 

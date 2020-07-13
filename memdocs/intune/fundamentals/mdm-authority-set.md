@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 9b0fab472f9bef682666d743c8a53b1308f32b40
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270963"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022439"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Establecer la entidad de administración de dispositivos móviles
 
@@ -36,9 +36,9 @@ Las configuraciones posibles son:
 
 - **Administración conjunta de Intune**: integración de la solución de nube de Intune con Configuration Manager para dispositivos Windows 10. Intune se configura mediante la consola de Configuration Manager. [Configuración de la inscripción automática de dispositivos en Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Administración de dispositivos móviles para Office 365**: si activó MDM para Office 365, verá la entidad de MDM establecida en "Office 365". Si quiere empezar a usar Intune, deberá adquirir licencias de Intune.
+- **Basic Mobility and Security for Office 365** (Movilidad y seguridad básica para Office 365): si tiene esta configuración activada, verá la entidad de MDM establecida en "Office 365". Si quiere empezar a usar Intune, deberá adquirir licencias de Intune.
 
-- **Coexistencia de MDM de Office 365**: puede agregar Intune a su inquilino si ya usa MDM para Office 365 y establece la entidad de administración en Intune o en MDM para Office 365 para que cada usuario indique qué servicio se usará para administrar sus dispositivos inscritos en MDM. La entidad de administración del usuario se define en función de la licencia asignada al usuario: Si el usuario tiene solo una licencia básica o estándar de Microsoft 365, los dispositivos se administrarán mediante MDM para Office. Si el usuario tiene una licencia de Intune, los dispositivos se administrarán mediante Intune. Si agrega una licencia de Intune a un usuario administrado previamente por MDM para Office, sus dispositivos se cambiarán a la administración de Intune. Asegúrese de tener las configuraciones de Intune asignadas a los usuarios para reemplazar MDM para Office antes de cambiar de usuario a Intune; de lo contrario, sus dispositivos perderán la configuración de MDM para Office y no recibirán ningún reemplazo de Intune.
+- **Basic Mobility and Security for Office 365 Coexistence** (Coexistencia de Movilidad y seguridad básica para Office 365): puede agregar Intune a su inquilino si ya usa Basic Mobility and Security for Office 365 y establece la entidad de administración en Intune o en Basic Mobility and Security for Office 365 para que cada usuario indique qué servicio se usará para administrar sus dispositivos inscritos en MDM. La entidad de administración del usuario se define en función de la licencia asignada al usuario: Si el usuario tiene solo una licencia básica o estándar de Microsoft 365, los dispositivos se administrarán mediante Basic Mobility and Security for Office 365. Si el usuario tiene una licencia de Intune, los dispositivos se administrarán mediante Intune. Si agrega una licencia de Intune a un usuario administrado previamente por Basic Mobility and Security for Office 365, sus dispositivos se cambiarán a la administración de Intune. Asegúrese de tener las configuraciones de Intune asignadas a los usuarios para reemplazar Basic Mobility and Security for Office 365 antes de cambiar de usuario a Intune; de lo contrario, sus dispositivos perderán la configuración de Basic Mobility and Security for Office 365 y no recibirán ningún reemplazo de Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Establecimiento de la entidad de MDM en Intune
 
@@ -77,7 +77,7 @@ El certificado MDM se renueva automáticamente cuando los dispositivos móviles 
 
 ## <a name="remove-mdm-authority"></a>Eliminación de la entidad de MDM
 
-No se puede cambiar la entidad de MDM a Desconocido. El servicio usa la entidad de MDM para determinar qué dispositivos inscritos en el portal informan a (Microsoft Intune u Office 365 MDM).
+No se puede cambiar la entidad de MDM a Desconocido. El servicio usa la entidad de MDM para determinar qué dispositivos inscritos en el portal informan a (Microsoft Intune o Basic Mobility and Security for Office 365).
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Qué esperar después de cambiar la entidad de MDM
 

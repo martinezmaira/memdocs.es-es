@@ -5,7 +5,7 @@ description: Solucione los problemas comunes del Microsoft Intune Exchange Conne
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350634"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972137"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Solución de problemas comunes con Intune Exchange Connector
  
@@ -74,7 +74,7 @@ Revise las siguientes secciones para solucionar problemas de notificación de co
    También puede probar el servicio de detección automática desde Internet en https://testconnectivity.microsoft.com. O probarlo desde un dominio local mediante la herramienta Analizador de conectividad de Microsoft. Para más información, consulte [Herramienta Analizador de conectividad de Microsoft](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
-### <a name="check-autodiscovery"></a>Comprobación de la detección automática
+### <a name="check-autodiscover"></a>Comprobación de la detección automática
 
 Si se produce un error en la detección automática, pruebe con los pasos siguientes:
 

@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da332528854af2b53879d30d6de90c927b49a889
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358213"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022218"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Impulso de la adopción de usuarios finales con acceso condicional en Microsoft Intune
 
@@ -73,7 +73,7 @@ Elija una de las siguientes opciones:
 
 - [Configurar directivas de acceso condicional basado en la aplicación para SharePoint Online](../protect/app-based-conditional-access-intune-create.md)
 
-- [Bloquear las aplicaciones que no usan la autenticación moderna (ADAL)](../protect/app-modern-authentication-block.md)
+- [Bloquear las aplicaciones que no usan la autenticación moderna (ADAL o MSAL)](../protect/app-modern-authentication-block.md) 
 
 ## <a name="next-steps"></a>Pasos siguientes
 

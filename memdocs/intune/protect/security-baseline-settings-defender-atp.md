@@ -5,7 +5,7 @@ description: Configuración de la línea de base de seguridad compatible con Int
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429352"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022199"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -859,9 +859,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Impedir que los usuarios descarten advertencias de SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   Este valor requiere que se habilite "SmartScreen para aplicaciones y archivos".
-  - **Sí** (*valor predeterminado*): SmartScreen no presentará una opción para que el usuario ignore la advertencia y ejecute la aplicación. Se presentará la advertencia, pero el usuario podrá omitirla.
-  - **No configurado**: devuelve la opción al valor predeterminado de Windows, que permite la invalidación del usuario.
+   Esta configuración requiere que la opción "Activar Windows SmartScreen" esté establecida en "Sí".
+  - **Sí** (*predeterminado*): SmartScreen está habilitado y los usuarios no pueden ignorar las advertencias sobre archivos o aplicaciones malintencionados.
+  - **No configurado**: los usuarios pueden ignorar las advertencias de SmartScreen sobre archivos y aplicaciones malintencionados.
 
 - **Requerir solo aplicaciones de la tienda**  
 

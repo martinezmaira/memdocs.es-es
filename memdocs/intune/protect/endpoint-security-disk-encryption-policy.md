@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353639"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972084"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Directiva de antivirus para la seguridad de los puntos de conexión en Intune
 
@@ -29,7 +29,7 @@ Los perfiles de cifrado de disco de seguridad de los puntos de conexión se cent
 
 Aunque se puede establecer la misma configuración de dispositivos mediante perfiles de *Endpoint Protection* para la configuración de dispositivos, los perfiles de configuración de dispositivos incluyen más categorías de configuración. Esta configuración no guarda relación con el cifrado de discos y podría entorpecer la tarea de establecer únicamente el cifrado de discos en el entorno.
 
-Encontrará las directivas de seguridad de los puntos de conexión para las directivas de cifrado de discos en *Administrar*, en el nodo **Seguridad de los puntos de conexión** del [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+Encontrará las directivas de seguridad de los puntos de conexión para el cifrado de discos en *Administrar*, en el nodo **Seguridad de los puntos de conexión** del [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>Requisitos previos de la directiva de cifrado de disco
 

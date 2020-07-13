@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7955afb2aef88e3787546843cc477bce22369a4d
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074799"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022388"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Uso de Intune en entornos sin Google Mobile Services
 
@@ -31,13 +31,13 @@ Microsoft Intune usa Google Mobile Services (GMS) para comunicarse con el Porta
 
 ## <a name="install-the-intune-company-portal-app-without-access-to-the-google-play-store"></a>Instalación de la aplicación Portal de empresa de Intune sin acceso a Google Play Store 
 
-### <a name="for-users-outside-of-mainland-china"></a>Para usuarios fuera de la China continental 
+### <a name="for-users-outside-of-peoples-republic-of-china"></a>Para usuarios fuera de la República Popular China
 
 Si Google Play no está disponible, los dispositivos Android pueden descargar el  [Portal de empresa de Microsoft Intune para Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) y transferir localmente la aplicación. Cuando se instala este modo, la aplicación no recibe las actualizaciones o correcciones automáticamente. Debe asegurarse de actualizar y aplicar revisiones periódicamente a la aplicación de forma manual. 
 
-### <a name="for-users-in-mainland-china"></a>Para usuarios de la China continental 
+### <a name="for-users-in-peoples-republic-of-china"></a>Para usuarios de la República Popular China
 
-Como Google Play Store no está disponible actualmente en la China continental, los dispositivos Android deben obtener aplicaciones de mercados de aplicaciones chinos. Para obtener más información, consulte [Instalación de la aplicación Portal de empresa en la China continental](../user-help/install-company-portal-android-china.md).
+Como Google Play Store no está disponible actualmente en la República Popular China, los dispositivos Android deben obtener aplicaciones de mercados de aplicaciones chinos. Para obtener más información, consulte [Instalación de la aplicación Portal de empresa en la China continental](../user-help/install-company-portal-android-china.md).
 
 ## <a name="limitations-of-intune-device-administrator-management-when-gms-is-unavailable"></a>Limitaciones de administración para los administradores de dispositivos de Intune cuando GMS no está disponible 
 
