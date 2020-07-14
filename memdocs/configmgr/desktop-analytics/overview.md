@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590922"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195657"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -71,7 +72,7 @@ Para usar Análisis de escritorio, asegúrese de que el entorno cumple los requi
 - Una suscripción de Azure global activa, con permisos de [administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions). No se admiten [cuentas Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts).  
 
     > [!IMPORTANT]
-    > Análisis de escritorio es un servicio de Windows hospedado en Azure global que usa datos de diagnóstico de Windows. El servicio global de Azure está disponible para los clientes de la administración pública de Estados Unidos, pero no cumple con los atributos de [cumplimiento de US Government Community (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance). Para obtener una lista de las ofertas de cumplimiento para los productos y servicios de Microsoft, vea el [Centro de confianza de Microsoft](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Análisis de escritorio no está disponible para clientes de GCC High o del Departamento de Defensa (DOD) de Estados Unidos. No se admite el uso de suscripciones de Azure Government para hospedar áreas de trabajo de Análisis de escritorio.
+    > Análisis de escritorio es un servicio de Windows hospedado en Azure global que usa datos de diagnóstico de Windows. Si bien Análisis de escritorio es un servicio global de Azure que está disponible para los clientes de la administración pública de Estados Unidos, no cumple con los atributos de [cumplimiento de US Government Community (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance). Para obtener una lista de las ofertas de cumplimiento para los productos y servicios de Microsoft, vea el [Centro de confianza de Microsoft](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Análisis de escritorio no está disponible para clientes de GCC High o del Departamento de Defensa (DOD) de Estados Unidos. No se admite el uso de suscripciones de Azure Government para hospedar áreas de trabajo de Análisis de escritorio.
 
     - Permisos de **propietario del área de trabajo** para **configurar el área de trabajo** y los roles siguientes:  
 

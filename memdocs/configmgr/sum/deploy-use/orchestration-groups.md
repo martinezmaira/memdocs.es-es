@@ -2,7 +2,7 @@
 title: Grupos de orquestaciones
 titleSuffix: Configuration Manager
 description: Cree grupos de orquestaciones e implemente actualizaciones en ellos.
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5b42a0260b347fb12444e8611e7ec02be38cc387
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254918"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088418"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Grupos de orquestaciones en Configuration Manager
 <!--3098816-->
@@ -89,7 +89,7 @@ La característica **Grupos de orquestaciones** es la evolución de la caracter�
 
 1. En la página **Script previo**, escriba un script de PowerShell para ejecutarlo en cada dispositivo *antes* de que se ejecute la implementación. El script debe devolver un valor de `0` si se completa correctamente o `3010`, si se completa correctamente pero requiere reiniciar.
 
-1. En la página **Script posterior**, escriba un script de PowerShell para ejecutarlo en cada dispositivo *después* de que se ejecute la implementación. De lo contrario, el comportamiento es el mismo que con PreScript.
+1. En la página **Script posterior**, escriba un script de PowerShell para ejecutarlo en cada dispositivo *después* de que se ejecute la implementación y, si es necesario, de que se produzca un reinicio. De lo contrario, el comportamiento es el mismo que con PreScript.
 
 1. Complete el asistente.
 
@@ -123,7 +123,8 @@ Para eliminar un grupo de orquestación, selecciónelo y, después, haga clic en
        - escriba un script de PowerShell para ejecutarlo en cada dispositivo *antes* de que se ejecute la implementación. El script debe devolver un valor de `0` si se completa correctamente o `3010`, si se completa correctamente pero requiere reiniciar.
        
    - **Script posterior**:
-      - escriba un script de PowerShell para ejecutarlo en cada dispositivo *después* de que se ejecute la implementación. El script debe devolver un valor de `0` si se completa correctamente o `3010`, si se completa correctamente pero requiere reiniciar.
+      - escriba un script de PowerShell para ejecutarlo en cada dispositivo *después* de que se ejecute la implementación y de que se produzca un reinicio, si es necesario. El script debe devolver un valor de `0` si se completa correctamente o `3010`, si se completa correctamente pero requiere reiniciar.
+  
    > [!WARNING]
    > Asegúrese de que los scripts previos y posteriores se prueban antes de usarlos con los grupos de orquestaciones. Los scripts previos y posteriores no tienen tiempo de espera y se ejecutarán hasta que se alcanza el tiempo de espera del miembro del grupo de orquestación.
 

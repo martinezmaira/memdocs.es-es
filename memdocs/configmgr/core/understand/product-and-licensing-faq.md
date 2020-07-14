@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre productos y licencias
 titleSuffix: Configuration Manager
 description: Encuentre respuestas a las preguntas comunes sobre productos y licencias de Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854429"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157831"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
@@ -77,11 +78,11 @@ La licencia de administración conjunta permite a los clientes de Configuration 
 
 - Si inscribe un dispositivo con Windows 10 en Intune por otros medios, seguirá necesitando una licencia completa de Intune. Por ejemplo, utiliza Autopilot para aprovisionar un dispositivo o un usuario lleva a cabo la inscripción de autoservicio manualmente.
 
-- Para que los dispositivos administrados por Configuration Manager existentes se inscriban en Intune para la administración conjunta a escala sin interacción del usuario, la administración conjunta usa una característica de Azure Active Directory (Azure AD) denominada inscripción automática de Windows 10. La inscripción automática requiere una licencia de Azure AD Premium (AADP1), que es independiente de Microsoft Endpoint Manager. Para que la administración conjunta funcionase en este escenario, solía requerir que asignase una licencia de AADP1 y una de Intune a cada usuario individual. Las licencias de administración conjunta cambiaron a partir del 1 de diciembre de 2019. Ahora no necesita asignar licencias de Intune individuales para este escenario, pero se siguen requiriendo en otros escenarios de inscripción. El requisito de licencia de AADP1 sigue siendo el mismo para que funcionen la inscripción automática y la administración conjunta.
+- Para que los dispositivos administrados por Configuration Manager existentes se inscriban en Intune para la administración conjunta a escala sin interacción del usuario, la administración conjunta usa una característica de Azure Active Directory (Azure AD) denominada inscripción automática de Windows 10. La inscripción automática con administración conjunta requiere licencias tanto para Azure AD Premium (AADP1) como para Intune. A partir del 1 de diciembre de 2019, ya no es necesario asignar licencias de Intune individuales para este escenario. Microsoft Endpoint Manager ahora incluye licencias de Intune para la administración conjunta. El requisito de licencia de AADP1 independiente sigue siendo el mismo para que funcione este escenario. De todos modos tiene que asignar licencias de Intune para otros escenarios de inscripción.
 
 - Si quiere usar Intune para administrar dispositivos iOS, Android o macOS, necesitará la suscripción a Intune adecuada mediante una licencia de Intune independiente, Enterprise Mobility + Security (EMS) o Microsoft 365.
 
-- Si no tiene ningún plan de suscripción relacionado con Intune, para admitir la administración conjunta debe comprar al menos una licencia de Intune. Esta licencia sirve para que un administrador pueda acceder al centro de administración de Microsoft Endpoint Manager.
+- Si no tiene ningún plan de suscripción relacionado con Intune, para admitir la administración conjunta debe comprar al menos una licencia de Intune. Esta licencia es para que un administrador active el plan de suscripción y obtenga acceso al centro de administración de Microsoft Endpoint Manager.
 
 - Si usa la característica [Movilidad y seguridad básicas](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0) integrada de Microsoft 365, no podrá usar la nueva licencia de administración conjunta para un usuario que también tenga dispositivos administrados por Movilidad y seguridad básicas. Para usar la licencia de administración conjunta del dispositivo administrado por Configuration Manager del usuario, realice una de las acciones siguientes:
 

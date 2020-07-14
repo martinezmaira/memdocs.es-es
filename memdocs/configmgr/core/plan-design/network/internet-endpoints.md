@@ -2,7 +2,7 @@
 title: Requisitos de acceso a Internet
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los puntos de conexión de Internet para permitir la funcionalidad completa de las características de Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,17 +10,25 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819957"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137346"
 ---
 # <a name="internet-access-requirements"></a>Requisitos de acceso a Internet
 
 Algunas características de Configuration Manager se basan en la conectividad de Internet para obtener la funcionalidad completa. Si la organización restringe la comunicación de red con Internet mediante un dispositivo proxy o firewall, asegúrese de permitir estos puntos de conexión.
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager usa estos servicios de reenvío de URL de Microsoft en todo el producto:
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+Incluso si no aparecen explícitamente en las secciones siguientes, siempre debe permitir estos puntos de conexión.
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a> Punto de conexión de servicio
 
@@ -276,6 +284,14 @@ Para obtener más información sobre los puntos de conexión necesarios para las
 ## <a name="endpoint-analytics"></a>Análisis de puntos de conexión
 
 Para obtener más información sobre los puntos de conexión necesarios para al análisis de puntos de conexión, vea [Configuración de proxy para el análisis de puntos de conexión](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+## <a name="asset-intelligence"></a>Asset Intelligence
+
+<!-- memdocs#470 -->
+Si usa [Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md), permita estos puntos de conexión para que el servicio se sincronice:
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
 
 ## <a name="microsoft-public-ip-addresses"></a>Direcciones IP públicas de Microsoft
 

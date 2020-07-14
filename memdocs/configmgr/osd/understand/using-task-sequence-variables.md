@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c043cfabc411dbd5ae4984110fc2904d37669300
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700213"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022269"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Uso de variables en una secuencia de tareas en Configuration Manager
 
@@ -157,7 +157,7 @@ Para más información sobre este paso, vea [Ejecutar script de PowerShell](task
 
 #### <a name="example-scenario-with-run-powershell-script-step"></a>Escenario de ejemplo con el paso Ejecutar script de PowerShell
 
-Su entorno tiene usuarios en varios países, por lo que desea consultar el idioma del sistema operativo para establecerlo como una condición en varios pasos de **Aplicar sistema operativo** específicos del idioma.
+Su entorno tiene usuarios en varios países o regiones, por lo que desea consultar el idioma del sistema operativo para establecerlo como una condición en varios pasos de **Aplicar sistema operativo** específicos del idioma.
 
 1. Agregue una instancia de **Ejecutar script de PowerShell** a la secuencia de tareas antes de que se apliquen los pasos de **Aplicar sistema operativo**.
 

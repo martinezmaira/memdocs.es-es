@@ -10,11 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
+ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914570"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86212298"
 ---
 # <a name="microsoft-edge-management"></a>Administración de Microsoft Edge
 
@@ -141,7 +142,7 @@ En el área de trabajo **Biblioteca de software**, haga clic en **Administració
 
 ### <a name="hardware-inventory-may-fail-to-process"></a>Es posible que no se pueda procesar el inventario de hardware.
 <!--7535675-->
-Es posible que no se pueda procesar el inventario de hardware de los dispositivos. Pueden aparecer errores similares al siguiente en el archivo Dataldr.log:
+Es posible que no se procese el inventario de hardware de los dispositivos. Pueden aparecer errores similares al siguiente en el archivo Dataldr.log:
 
 ```text
 Begin transaction: Machine=<machine>
@@ -151,7 +152,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Mitigación:** Para solucionar este problema, deshabilite la recopilación de la clase de inventario de hardware Uso del explorador (SMS_BrowerUsage). Esta clase no se usa actualmente.
+**Mitigación:** Para solucionar este problema, deshabilite la recopilación de la clase de inventario de hardware Uso del explorador (SMS_BrowerUsage).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

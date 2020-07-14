@@ -2,7 +2,7 @@
 title: Referencia del archivo de registro
 titleSuffix: Configuration Manager
 description: Una referencia de todos los archivos de registro del cliente, el servidor y los componentes dependientes de Configuration Manager.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715584"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210332"
 ---
 # <a name="log-file-reference"></a>Referencia del archivo de registro
 
@@ -77,6 +77,8 @@ En las secciones siguientes se proporcionan detalles sobre los diferentes archiv
 
   - [Detección](#BKMK_DiscoveryLog)  
 
+  - [Análisis de puntos de conexión](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Extensiones](#BKMK_Extensions)  
@@ -171,7 +173,10 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 |SCClient_&lt;*dominio*\>@&lt;*nombreUsuario*\>_2.log|Registra la actividad histórica del Centro de software para el usuario especificado en el equipo cliente.|  
 |Scheduler.log|Registra las actividades de las tareas programadas para todas las operaciones de cliente.|  
 |SCNotify_&lt;*dominio*\>@&lt;*nombreUsuario*\>_1.log|Registra la actividad para informar a los usuarios acerca del software para el usuario especificado.|  
-|SCNotify_&lt;*dominio*\>@&lt;*nombreUsuario*\>_1-&lt;*fecha_hora*>.log|Registra la información histórica de notificación de los usuarios acerca del software para el usuario especificado.|  
+|SCNotify_&lt;*dominio*\>@&lt;*nombreUsuario*\>_1-&lt;*fecha_hora*>.log|Registra la información histórica de notificación de los usuarios acerca del software para el usuario especificado.|
+|SensorWmiProvider.log|Registra la actividad del proveedor de WMI para el sensor de análisis de puntos de conexión.|
+|SensorEndpoint.log|Registra la ejecución de la directiva de análisis de puntos de conexión y la carga de datos de cliente en el servidor de sitio.|
+|SensorManagedProvider.log|Registra la recopilación y el procesamiento de eventos e información para el análisis de puntos de conexión.|
 |setuppolicyevaluator.log|Registra la creación de directivas de configuración e inventario en WMI.|  
 |SleepAgent_&lt;*dominio*\>@SYSTEM_0.log|Archivo de registro principal para el proxy de reactivación.|  
 |smscliui.log|Registra el uso del cliente de Configuration Manager en el Panel de control.|  
@@ -344,7 +349,8 @@ En la tabla siguiente se incluyen los archivos de registro que se encuentra en l
 |srsrpsetup.log|Registra los resultados del proceso de instalación del punto de notificación.|Servidor de sistema de sitio|  
 |statesys.log|Registra el procesamiento de mensajes de sistema de estado.|Servidor de sitio|  
 |statmgr.log|Registra la escritura de todos los mensajes de estado en la base de datos.|Servidor de sitio|  
-|swmproc.log|Registra el procesamiento de archivos y configuraciones de disponibilidad.|Servidor de sitio|  
+|swmproc.log|Registra el procesamiento de archivos y configuraciones de disponibilidad.|Servidor de sitio|
+|UXAnalyticsUploadWorker.log|Registra la carga de datos en el servicio para el análisis de puntos de conexión.|Servidor de sitio|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Instalación del servidor del sitio
 
@@ -427,6 +433,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |objreplmgr.log|Registra el procesamiento de directivas y asignaciones.|Servidor de sitio primario|  
 |policypv.log|Registra la generación de directivas de todas las directivas.|Servidor de sitio|  
 |outgoingcontentmanager.log|Registra el contenido cargado en Microsoft Intune.|Equipo con el punto de conexión de servicio|  
+|ServiceConnectionTool.log|Registra los detalles sobre el uso de la [herramienta de conexión de servicio](../../servers/manage/use-the-service-connection-tool.md) en función del parámetro que usa. Cada vez que se ejecuta la herramienta, reemplaza cualquier archivo de registro existente.|La misma ubicación de la herramienta|
 |sitecomp.log|Registra los detalles de la instalación del de punto de conexión de servicio.|Servidor de sitio|  
 |SmsAdminUI.log|Registra la actividad de consola de Configuration Manager.|Equipo que ejecuta la consola de Configuration Manager|  
 |SMS_CLOUDCONNECTION.log|Registra información sobre los servicios en la nube.|Equipo con el punto de conexión de servicio|
@@ -643,6 +650,15 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |ddm.log|Registra actividades del administrador de datos de detección.|Servidor de sitio|  
 |InventoryAgent.log|Registra actividades de acciones de inventario de hardware, inventario de software y detección de latido en el cliente.|Cliente|  
 |netdisc.log|Registra acciones de detección de redes.|Servidor de sitio|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> Análisis de puntos de conexión
+
+|Nombre del registro|Descripción|Equipo con el archivo de registro|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|Registra la carga de datos en el servicio para el análisis de puntos de conexión.|Servidor de sitio|  
+|SensorWmiProvider.log|Registra la actividad del proveedor de WMI para el sensor de análisis de puntos de conexión.|Cliente|  
+|SensorEndpoint.log|Registra la ejecución de la directiva de análisis de puntos de conexión y la carga de datos de cliente en el servidor de sitio.|Cliente|
+|SensorManagedProvider.log|Registra la recopilación y el procesamiento de eventos e información para el análisis de puntos de conexión.|Cliente|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 
