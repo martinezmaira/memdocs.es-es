@@ -18,7 +18,9 @@
   "notification_subscribers": [
     "dougeby@microsoft.com"
   ],
-  "sync_notification_subscribers": [],
+  "sync_notification_subscribers": [
+    "ceicnotifications@microsoft.com"
+  ],
   "branches_to_filter": [
     "live",
     "master-sxs",
@@ -30,7 +32,7 @@
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "contribution_branch_mappings": {
-		       "live-sxs": "live"
+    "live-sxs": "live"
   },
   "dependent_repositories": [
     {
@@ -55,7 +57,7 @@
       }
     }
   ],
- "branch_target_mapping": {
+  "branch_target_mapping": {
     "live": [
       "Publish",
       "Pdf"
