@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367ac927650ebf08c245b1ff554ad01db3bf3792
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a351255fa0574e9b92d096b3895f9469ed9ced2a
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990161"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137365"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Use un perfil personalizado de Microsoft Intune para crear un perfil de VPN por aplicación para dispositivos Android
 
 Puede crear un perfil de VPN por aplicación para dispositivos Android 5.0 y versiones posteriores administrados con Intune. Primero, cree un perfil de VPN que use el tipo de conexión Pulse Secure o Citrix. Después, cree una directiva de configuración personalizada que asocie el perfil de VPN con las aplicaciones específicas.
 
 > [!NOTE]
-> Para usar una VPN por aplicación en dispositivos Android Enterprise, también puede seguir estos pasos. Sin embargo, se recomienda usar una [directiva de configuración de aplicaciones](../apps/app-configuration-policies-use-android.md) para la aplicación cliente VPN.
+> Para usar una VPN por aplicación en dispositivos Android Enterprise, también puede seguir estos pasos. Sin embargo, se recomienda usar una [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md) para la aplicación cliente VPN.
 
 Después de asignar la directiva al dispositivo Android o a los grupos de usuarios, los usuarios deben iniciar el cliente de la VPN Pulse Secure o Citrix. El cliente de VPN permite entonces el tráfico solo desde las aplicaciones especificadas para usar la conexión VPN abierta.
 

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/24/2020
-ms.topic: how-to
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23d8b972be753da2ff0c2c75d839e5a5a7e8b077
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 05d0cb3db60ed0f54a66bc4128e5528e789537a8
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85503037"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195708"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Configuraciones de seguridad del perfil de trabajo de Android Enterprise
 

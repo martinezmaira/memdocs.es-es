@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/15/2020
-ms.topic: how-to
+ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c4b06e8c81e04e067156929dfe7637cf04fb9d1
-ms.sourcegitcommit: bc8c9d957dac46d95070c433d3a83408e5e48d82
+ms.openlocfilehash: e87b9aaffc9a6252f8d14645fb477588479a684e
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289468"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157899"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscripción de dispositivos Windows en Intune con Windows Autopilot  
 Windows Autopilot simplifica el proceso de inscripción de dispositivos en Intune. Crear y mantener imágenes personalizadas de sistemas operativos es un proceso que conlleva mucho tiempo. También se requiere tiempo para aplicar estas imágenes en dispositivos nuevos a la hora de prepararlos para que los puedan usar los usuarios finales. Con Microsoft Intune y Autopilot, puede proporcionar nuevos dispositivos a los usuarios finales sin necesidad de crear, mantener y aplicar imágenes personalizadas del sistema operativo a los dispositivos. Al usar Intune para administrar dispositivos Autopilot, puede administrar directivas, perfiles y aplicaciones (entre otros) después de inscribirlos. Para obtener información general sobre las ventajas, los escenarios y los requisitos previos, vea [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) (Introducción a Windows Autopilot).

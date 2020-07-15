@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093486"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285307"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Implementación de dispositivos unidos a Azure AD híbrido mediante Intune y Windows Autopilot
 Puede usar Intune y Windows Autopilot para configurar dispositivos unidos a Azure Active Directory (Azure AD) híbrido. Para ello, siga los pasos de este artículo.
@@ -35,7 +35,7 @@ Configure correctamente los [dispositivos unidos a Azure AD híbrido](https://do
 Los dispositivos que se inscriban también deben:
 - Ejecutar la versión 1809 o superiores de Windows 10.
 - Tener acceso a Internet [siguiendo los requisitos de red documentados de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
-- Tener acceso a un controlador de dominio de Active Directory, por lo que debe estar conectado a la red de la organización (donde puede resolver los registros DNS para el dominio de AD y el controlador de dominio de AD, y comunicarse con el controlador de dominio para autenticar al usuario). La conexión VPN no se admite en este momento.
+- Tener acceso a un controlador de dominio de Active Directory, por lo que debe estar conectado a la red de la organización (donde puede resolver los registros DNS para el dominio de AD y el controlador de dominio de AD, y comunicarse con el controlador de dominio para autenticar al usuario).
 - Ser capaces de hacer ping al controlador de dominio del dominio al que está intentando unirse.
 - Si utiliza el proxy, la opción de configuración del proxy WPAD debe estar activada y configurada.
 - Realizar la configuración rápida (OOBE).

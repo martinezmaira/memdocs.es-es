@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/24/2020
-ms.topic: how-to
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4c2a9aa48d17b9cb2b386a4e4cb4df8fb36caac
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 99b17cc165fc8d24fdf1b0f48525f3b23d8cc9b7
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85503040"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195640"
 ---
 # <a name="android-enterprise-fully-managed-security-configurations"></a>Configuraciones de seguridad totalmente administrada de Android Enterprise
 

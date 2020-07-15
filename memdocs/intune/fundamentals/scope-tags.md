@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: a229b9159c4c3613edc2d718db1fd0931f94cf9f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721914"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240751"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito para TI distribuida
 
@@ -81,13 +81,11 @@ Al trabajar con etiquetas de ámbito, recuerde estos detalles:
 - Puede asignar etiquetas de ámbito a un tipo de objeto de Intune si el inquilino puede tener varias versiones de ese objeto (como asignaciones de roles o aplicaciones).
   Los objetos de Intune siguientes son excepciones a esta regla y actualmente no admiten etiquetas de ámbito:
     - Perfiles ESP de Windows
-    - Restricciones de inscripción
     - Identificadores de dispositivos corporativos
     - Dispositivos Autopilot
     - Ubicaciones de cumplimiento de dispositivos
     - Dispositivos Jamf
 - Las aplicaciones de VPP y los libros electrónicos asociados al token de VPP heredan las etiquetas de ámbito asignadas al token de VPP asociado.
-- Los dispositivos del Programa de inscripción de dispositivos (DEP) y los perfiles de DEP asociados al token de DEP heredan las etiquetas de ámbito asignadas al token de DEP asociado.
 - Cuando un administrador crea un objeto en Intune, todas las etiquetas de ámbito asignadas a ese administrador se asignan automáticamente al nuevo objeto.
 - El RBAC de Intune no se aplica a los roles de Azure Active Directory. Por lo tanto, los roles Administradores de servicios de Intune y Administradores globales tienen acceso de administrador completo a Intune independientemente de las etiquetas de ámbito que tengan.
 - Si una asignación de roles no tiene etiqueta de ámbito, el administrador de TI puede ver todos los objetos en función de los permisos de los administradores de TI. Los administradores que no tienen etiquetas de ámbito esencialmente tienen todas las etiquetas de ámbito.

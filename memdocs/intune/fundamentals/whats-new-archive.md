@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/28/2020
-ms.topic: archived
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502398"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195725"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novedades de Microsoft Intune: meses anteriores
 
