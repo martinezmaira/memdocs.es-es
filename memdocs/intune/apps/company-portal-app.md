@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165726"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239953"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -110,9 +110,7 @@ En la tabla siguiente se proporcionan detalles de configuración específicos de
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Disponible, con avisos    |    La experiencia predeterminada con avisos para inscribirse en todas las ubicaciones posibles.    |    Sí    |    Sí    |    Sí    |    Sí    |
 |    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    No    |    No    |    Sí    |    Sí    |
-|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    No    |    No    |    No<sup>(1)</sup>    |
-
-<sup>(1)</sup> **Problema conocido:** si establece las aplicaciones para que sea necesaria la inscripción para instalarse y también establece la inscripción de dispositivos en "No disponible", la aplicación Portal de empresa en Android seguirá indicando a los usuarios que se inscriban. Esto se quitará en breve.
+|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    No    |    No    |    No    |
 
 ### <a name="privacy"></a>Privacidad
 
@@ -221,7 +219,7 @@ Para personalizar las acciones de autoservicio de usuario disponibles, vea [Pers
 
 Algunas plataformas y configuraciones no realizar permiten acciones de autoservicio en el dispositivo. En la tabla siguiente se ofrecen más detalles sobre las acciones de autoservicio:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Acción | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Retirar | Disponible<sup>(1)</sup> | Disponible<sup>(9)</sup> | Disponible | Disponible<sup>(7)</sup> |
 | Eliminación de datos | Disponible | Disponible<sup>(5)</sup><sup>(9)</sup> | N/D | Disponible<sup>(7)</sup> |
