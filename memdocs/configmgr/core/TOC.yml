@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: Recomendaciones de seguridad e información de privacidad
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: 'Declaración de privacidad: biblioteca de cmdlets de Configuration Manager'
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: Información de privacidad adicional
           href: plan-design/security/additional-privacy.md
         - name: Configurar la seguridad
