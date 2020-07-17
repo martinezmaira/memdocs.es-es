@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.author: mstewart
+ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906663"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240480"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Creación de líneas base de configuración en Configuration Manager
 

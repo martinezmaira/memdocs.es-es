@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: de8168d7d699998117eff8821929c654815f1a49
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: c375b5d773775e1be89f1e9dda38ee04e7f9f63f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692403"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240259"
 ---
 # <a name="manage-configuration-data-in-configuration-manager"></a>Administración de datos de configuración en Configuration Manager
 

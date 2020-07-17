@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 1ccb0f0a042a0dd82817e030f96bbbc729e752f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5920229331bca8d2a47b0bf1ab663530ef63c51e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692223"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240667"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-configuration-manager-client"></a>Tareas comunes para administrar el cumplimiento en dispositivos con el cliente de Configuration Manager
 

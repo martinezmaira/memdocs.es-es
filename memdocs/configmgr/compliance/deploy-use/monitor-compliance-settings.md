@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 839c08c8782a815703a19999bf1315fd65980ed8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: e2a378c1f54eb9bccbcc21f50419176bd39cb3ac
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692393"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240055"
 ---
 # <a name="monitor-compliance-settings-in-configuration-manager"></a>Supervisión de la configuración de cumplimiento en Configuration Manager
 

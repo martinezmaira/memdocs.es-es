@@ -2,7 +2,7 @@
 title: HTTP mejorado
 titleSuffix: Configuration Manager
 description: Use la autenticación moderna para proteger la comunicación de cliente sin necesidad de certificados PKI.
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb14830e99600da1b71c516a44d51a0090cdc673
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703573"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239766"
 ---
 # <a name="enhanced-http"></a>HTTP mejorado
 
@@ -93,8 +93,6 @@ Las características siguientes de Configuration Manager admiten o requieren HT
 - Un punto de distribución configurado para conexiones de cliente HTTP. Establezca esta opción en la pestaña **Comunicación** de las propiedades del rol de punto de distribución. No habilite la opción **Permitir a los clientes conectarse de forma anónima**.  
 
 - Incorpore el sitio a Azure AD para administración en la nube.  
-
-    - Si ya se ha cumplido este requisito previo para el sitio, debe actualizar la aplicación de Azure AD. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y seleccione **Inquilinos de Azure Active Directory**. Seleccione el inquilino de Azure AD, seleccione la aplicación web en el panel **Aplicaciones** y luego haga clic en **Actualizar configuración de la aplicación** en la cinta.  
 
 - *Solo para el [escenario 3](#bkmk_scenario3)* : Un cliente con Windows 10 versión 1803 o posterior y unido a Azure AD. El cliente requiere esta configuración para la autenticación de dispositivos de Azure AD.<!-- SCCMDocs issue 1126 -->
 

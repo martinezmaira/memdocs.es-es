@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: c9a06e1b7c14cda02a8029925785c2109ea4204b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692473"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240123"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Perfiles de conexión remota en Configuration Manager
 

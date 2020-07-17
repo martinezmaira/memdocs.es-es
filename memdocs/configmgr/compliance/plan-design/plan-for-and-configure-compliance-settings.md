@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 73ccec4ca318b522c0714bc8e5cc89f6c8899edd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5e048b6155e9ba7b1f4146498afec6be5af30fba
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692193"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240618"
 ---
 # <a name="plan-for-and-configure-compliance-settings-in-configuration-manager"></a>Planeamiento y configuración de cumplimiento en Configuration Manager
 

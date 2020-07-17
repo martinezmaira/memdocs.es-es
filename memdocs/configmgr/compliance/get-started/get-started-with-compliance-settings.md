@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f0a26d02770ff8460787ee9897bdc8f1218a2c12
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 5d8ae26c5e9cbf9f3a45d3584341e79de8ab3402
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506169"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240718"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Introducción a la configuración de cumplimiento en Configuration Manager
 

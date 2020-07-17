@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.author: mstewart
+ms.openlocfilehash: 51c97ae3cd947e0bdfa82c595cb6446351412d21
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075309"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240378"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>Creación de elementos de configuración de perfiles y datos de usuario en Configuration Manager
 

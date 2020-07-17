@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 06/05/2020
-ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.date: 07/13/2020
+ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
+ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84466890"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381055"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -20,7 +20,7 @@ Las consultas se pueden usar para buscar términos, identificar tendencias, anal
 En el ejemplo siguiente, la entidad es `CCMRecentlyUsedApplications` (una referencia a las aplicaciones usadas recientemente) y el operador es where (que filtra los registros a partir de su entrada según ciertos predicados por registro):
 
 ```
-CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project CompanyName, ExplorerFileName, LastUsedTime, LaunchCount, FolderPath
 ```
 
 ## <a name="entities"></a>Entities
