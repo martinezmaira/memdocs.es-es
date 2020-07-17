@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093904"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210377"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Inscripción automática de dispositivos macOS con Apple Business Manager o Apple School Manager
 
@@ -62,10 +62,9 @@ Use el portal de Apple para crear un token. También puede usar el portal de App
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Paso 1. Descargue el certificado de clave pública de Intune necesario para crear el token.
 
-1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **macOS** > **Inscripción en macOS**. 
-> **Tokens del programa de inscripción** > **Agregar**.
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **macOS** > **Inscripción de macOS** > **Tokens del programa de inscripción** > **Agregar**.
 
-    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Obtenga un token del programa de inscripción.](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. Conceda a Microsoft permiso para enviar información de usuario y dispositivo a Apple al seleccionar **Acepto**.
 
@@ -106,7 +105,7 @@ En el cuadro **Token de Apple**, vaya al archivo de certificado (.pem), seleccio
 Ahora que ha instalado el token, puede crear un perfil de inscripción para dispositivos. Un perfil de inscripción de dispositivos define la configuración que se aplica a un grupo de dispositivos durante la inscripción.
 
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **macOS** > **Inscripción de macOS** > **Tokens del programa de inscripción**.
-2. Seleccione un token, elija **Perfiles** y después **Crear perfil**.
+2. Seleccione un token, elija **Perfiles** y después **Crear perfil** > **macOS**.
 
     ![Cree una captura de pantalla del perfil.](./media/device-enrollment-program-enroll-macos/image04.png)
 
@@ -123,13 +122,11 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 
     - **Inscribir sin afinidad de usuario**: seleccione esta opción para dispositivos no afiliados con un usuario único. Use esta opción para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones como Portal de empresa no funcionan.
 
-6. Si ha seleccionado **Inscribir con afinidad de usuario**, en **Método de autenticación** elija **Asistente para la configuración (heredado)** o **Asistente de configuración con autenticación moderna**.
+6. Para **Inscripción bloqueada**, elija si quiere o no que la inscripción de dispositivos esté bloqueada con este perfil. **Sí** deshabilita la configuración de macOS que permite que el perfil de administración se quite del menú **Preferencias del sistema** o a través del **Terminal**. Tras la inscripción del dispositivo, no se puede cambiar esta configuración sin borrar el dispositivo.
 
-7. Para **Inscripción bloqueada**, elija si quiere o no que la inscripción de dispositivos esté bloqueada con este perfil. **Sí** deshabilita la configuración de macOS que permite que el perfil de administración se quite del menú **Preferencias del sistema** o a través del **Terminal**. Tras la inscripción del dispositivo, no se puede cambiar esta configuración sin borrar el dispositivo.
+7. Seleccione **Siguiente** para ir a la página **Asistente de configuración**.
 
-8. Seleccione **Siguiente** para ir a la página **Asistente de configuración**.
-
-9. En la página **Asistente de configuración**, establezca las siguientes opciones del perfil:
+8. En la página **Asistente de configuración**, establezca las siguientes opciones del perfil:
 
     ![Personalización del Asistente de configuración.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -163,9 +160,9 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
     | <strong>Tiempo de pantalla</strong> | Se mostrará la pantalla Tiempo de pantalla. En macOS 10.15 y versiones posteriores e iOS/iPadOS 12.0 y versiones posteriores. |
     | <strong>Privacidad</strong> | Se mostrará la pantalla Privacidad al usuario. En macOS 10.13.4 y versiones posteriores e iOS/iPadOS 11.3 y versiones posteriores. |
     
-10. Elija **Siguiente** para ir a la página **Revisar y crear**.
+9. Elija **Siguiente** para ir a la página **Revisar y crear**.
 
-11. Para guardar el perfil, elija **Crear**.
+10. Para guardar el perfil, elija **Crear**.
 
 ## <a name="sync-managed-devices"></a>Sincronizar dispositivos administrados
 

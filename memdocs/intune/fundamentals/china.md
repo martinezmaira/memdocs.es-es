@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022354"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137384"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune ofrecido por 21Vianet en China  
 
@@ -39,6 +39,7 @@ Dado que los servicios de China operan en un partner de dentro de China, hay alg
 - Intune ofrecido por 21Vianet solo admite implementaciones independientes. La compatibilidad de la administración conjunta con System Center Configuration Manager está actualmente en desarrollo.
 - No se admiten migraciones de nubes públicas a nubes independientes. Los clientes interesados en pasar a Intune ofrecido por 21Vianet deben migrar manualmente.
 - Actualmente no se admite la característica de asociación de inquilinos (la sincronización de dispositivos a Intune sin inscripción para admitir escenarios de la consola en la nube).
+- Las credenciales derivadas no se admiten cuando Intune lo ofrece 21Vianet.
 - Intune ofrecido por 21Vianet no admite el agente de Intune y, por tanto, no admite la administración de equipos heredada.
 - Se admite la administración de Windows 10 mediante el canal de MDM moderno.
 - Intune ofrecido por 21Vianet no admite el conector de Exchange local.

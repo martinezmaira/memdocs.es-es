@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093667"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303443"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos iOS e iPadOS para permitir o restringir características mediante Intune
 
@@ -161,6 +161,10 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
   - **Valor predeterminado de dispositivo**
   - **Numérica**: la contraseña solo debe contener números, por ejemplo, 123456789.
   - **Alfanumérica**: incluye letras mayúsculas, minúsculas y caracteres numéricos.
+
+  > [!NOTE]
+  > La selección de caracteres alfanuméricos puede afectar a un Apple Watch emparejado. Para más información, vea [Configurar las restricciones de código en un Apple Watch](https://support.apple.com/HT204953) (abre el sitio web de Apple).
+
 - **Número de caracteres no alfanuméricos en la contraseña**: Escriba el número de caracteres de símbolo, como `#` o `@`, que deben incluirse en la contraseña, entre 1 y 4. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 
 - **Longitud mínima de la contraseña**: escriba la longitud mínima que debe tener la contraseña, entre 4 y 16 caracteres. En dispositivos inscritos por el usuario, especifique una longitud de entre 4 y 6 caracteres.
@@ -414,7 +418,7 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
 - **Tipo de lista de aplicaciones restringidas**: cree una lista de aplicaciones que los usuarios no pueden instalar ni usar. Las opciones son:
 
   - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir el acceso a las aplicaciones que se asignen y a las aplicaciones integradas.
-  - **Aplicaciones prohibidas**: enumere las aplicaciones (que no se administran mediante Intune) que los usuarios no pueden instalar ni ejecutar. No se evita que los usuarios instalen una aplicación prohibida. Si un usuario instala una aplicación de esta lista, se notifica en Intune.
+  - **Aplicaciones prohibidas**: enumere las aplicaciones (que no se administran mediante Intune) que los usuarios no pueden instalar ni ejecutar. No se evita que los usuarios instalen una aplicación prohibida. Si un usuario instala una aplicación de esta lista, el dispositivo se muestra en el informe **Dispositivos con aplicaciones restringidas** (centro de administración de [Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **Supervisar** > **Dispositivos con aplicaciones restringidas**). 
   - **Aplicaciones aprobadas**: Enumerar las aplicaciones que los usuarios pueden instalar. Para mantener el cumplimiento, los usuarios no deben instalar otras aplicaciones. Las aplicaciones que se administran mediante Intune están permitidas automáticamente, incluido el Portal de empresa. No se impide a los usuarios que instalen una aplicación que no se encuentra en la lista aprobada, Pero si lo hacen, se notifica en Intune.
 
 Para agregar aplicaciones a estas listas, puede:
@@ -619,15 +623,17 @@ Para agregar aplicaciones, puede:
 
 Use estos valores para configurar los dispositivos iOS/iPadOS de modo que ejecuten aplicaciones específicas en modo de aplicación única autónoma (ASAM). Si se configura este modo y los usuarios inician una de las aplicaciones configuradas, el dispositivo se bloqueará para esa aplicación. La conmutación de tareas y aplicaciones se deshabilitará hasta que los usuarios salgan de la aplicación permitida.
 
+Para que se aplique la configuración de ASAM, los usuarios deben abrir manualmente la aplicación específica. Esta tarea también se aplica a la aplicación Portal de empresa.
+
 - Por ejemplo, en un entorno educativo o universitario, agregue una aplicación que permita que los usuarios realicen una prueba en el dispositivo. Otra opción es bloquear el dispositivo en la aplicación Portal de empresa hasta que el usuario se autentique. Cuando los usuarios completen las acciones de la aplicación o quite esta directiva, el dispositivo volverá a su estado normal.
 
 - No todas las aplicaciones admiten el modo de aplicación única autónoma. Para activar el modo de aplicación única autónoma, normalmente se requiere un identificador de lote de aplicaciones o un par clave-valor entregado por una directiva de configuración de aplicaciones. Para obtener más información, consulte el artículo sobre la [restricción `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) en la documentación MDM de Apple. Para obtener más información sobre la configuración específica necesaria para la aplicación que vaya a configurar, consulte la documentación del proveedor.
 
   Por ejemplo, para configurar las salas de Zoom en el modo de aplicación única autónoma, Zoom indica que es necesario usar el id. de lote de aplicaciones `us.zoom.zpcontroller`. En esta instancia, también se realiza un cambio en el portal web de Zoom. Para obtener más información, consulte el [centro de ayuda de Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
-- En dispositivos iOS/iPadOS, la aplicación Portal de empresa admite ASAM. Cuando la aplicación Portal de empresa está en ASAM, el dispositivo se bloquea en ella hasta que el usuario se autentique. Cuando los usuarios inician sesión en la aplicación Portal de empresa, pueden usar otras aplicaciones y el botón Pantalla principal del dispositivo. Cuando cierran sesión en la aplicación Portal de empresa, el dispositivo vuelve al modo de aplicación única y se bloquea en la aplicación Portal de empresa.
+- En dispositivos iOS/iPadOS, la aplicación Portal de empresa admite ASAM. Cuando la aplicación Portal de empresa está en ASAM, los usuarios deben abrirla manualmente. Después, el dispositivo se bloquea en la aplicación Portal de empresa hasta que el usuario se autentica. Cuando los usuarios inician sesión en la aplicación Portal de empresa, pueden usar otras aplicaciones y el botón Pantalla principal del dispositivo. Cuando cierran sesión en la aplicación Portal de empresa, el dispositivo vuelve al modo de aplicación única y se bloquea en la aplicación Portal de empresa.
 
-  Para convertir la aplicación Portal de empresa en una aplicación de "inicio y cierre de sesión" (habilitar ASAM), escriba el nombre de la aplicación Portal de empresa, como `Microsoft Intune Company Portal`y el identificador de paquete (`com.microsoft.CompanyPortal`) en esta configuración. Una vez que se haya asignado este perfil, debe abrir la aplicación Portal de empresa para bloquearla de modo que los usuarios puedan iniciar y cerrar sesión en ella.
+  Para convertir la aplicación Portal de empresa en una aplicación de "inicio y cierre de sesión" (habilitar ASAM), escriba el nombre de la aplicación Portal de empresa, como `Microsoft Intune Company Portal`y el identificador de paquete (`com.microsoft.CompanyPortal`) en esta configuración. Una vez que se haya asignado este perfil, debe abrir la aplicación Portal de empresa para bloquearla de modo que los usuarios puedan iniciar y cerrar sesión en ella. Para que se aplique la configuración de ASAM, los usuarios deben abrir manualmente la aplicación Portal de empresa.
   
   Cuando se quita el perfil de configuración del dispositivo y el usuario cierra la sesión, el dispositivo no está bloqueado en la aplicación Portal de empresa.
 

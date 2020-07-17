@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270898"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285290"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Solucionar problemas de instalación de aplicaciones
 
@@ -119,6 +119,9 @@ Entre los tipos de aplicaciones que se admiten en dispositivos ARM64 se incluyen
 - Aplicaciones LOB de MSI para móviles
 - Aplicaciones Win32 con la regla de requisitos de 32 bits.
 - Aplicaciones de hacer clic y ejecutar de Windows Office si está seleccionada la arquitectura de 32 bits o x86.
+
+> [!NOTE]
+> Para reconocer mejor las aplicaciones ARM64 en el Portal de empresa, considere la posibilidad de agregar **ARM64** al nombre de las aplicaciones ARM64. 
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Solucionar problemas de aplicaciones de la Microsoft Store
 

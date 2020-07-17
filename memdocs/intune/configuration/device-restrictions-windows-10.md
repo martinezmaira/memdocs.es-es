@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591075"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303460"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para permitir o restringir características mediante Intune
 
@@ -31,7 +31,7 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 > [!Note]
 > No todas las opciones están disponibles en todas las ediciones de Windows. Para ver las ediciones admitidas, consulte los [CSP de directiva](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (se abre otro sitio web de Microsoft).
 >  
-> La mayoría de los valores configurables de un perfil de restricciones de dispositivos Windows 10 se implementan en el nivel de dispositivo. Las directivas que se implementan en grupos de usuarios surtirán efecto tanto para el usuario de destino como para otros usuarios que inicien sesión posteriormente en ese dispositivo y tengan una licencia de Intune.
+> En un perfil de restricciones de dispositivos Windows 10, la mayoría de los valores configurables se implementan en el nivel de dispositivo mediante grupos de dispositivos. Las directivas implementadas en grupos de usuarios se aplican a los usuarios de destino y a los usuarios que tienen una licencia de Intune e inician sesión en ese dispositivo.
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
@@ -1108,7 +1108,7 @@ Estas opciones de configuración usan [defender policy CSP](https://docs.microso
   - **Habilitar**: Microsoft Defender detecta las aplicaciones potencialmente no deseadas, y los elementos detectados se bloquean. Estos elementos se muestran en el historial junto con otras amenazas.
   - **Auditar**: Microsoft Defender detecta las aplicaciones potencialmente no deseadas, pero no realiza ninguna acción. Puede revisar la información sobre las aplicaciones contra las que Microsoft Defender tomaría medidas. Por ejemplo, busque eventos creados por Microsoft Defender en el Visor de eventos.
 
-  Para obtener más información sobre aplicaciones potencialmente no deseadas, vea [Detectar y bloquear aplicaciones potencialmente no deseadas](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
+  Para obtener más información sobre aplicaciones potencialmente no deseadas, vea [Detectar y bloquear aplicaciones potencialmente no deseadas](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
   [CSP de Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

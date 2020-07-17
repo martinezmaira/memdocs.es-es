@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973033"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239987"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Agregar directivas de configuración de aplicaciones para dispositivos iOS/iPadOS administrados
 
@@ -193,20 +193,33 @@ Las inscripciones de DEP (Programa de inscripción de dispositivos de Apple) no 
 2. Vaya a **Aplicaciones** > **Directivas de configuración de aplicaciones** para crear una directiva de configuración de aplicaciones para la aplicación Portal de empresa.
 3. Cree una directiva de configuración de aplicaciones con el código XML siguiente. Puede encontrar más información sobre cómo crear una directiva de configuración de aplicaciones y escribir datos XML en [Agregar directivas de configuración de aplicaciones para dispositivos iOS/iPadOS administrados](app-configuration-policies-use-ios.md).
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **Uso del Portal de empresa en un dispositivo DEP inscrito con afinidad de usuario:**
 
-3. Implemente el Portal de empresa en dispositivos con la directiva de configuración de aplicaciones destinada a grupos deseados. Asegúrese de implementar solo la directiva en grupos de dispositivos que ya están inscritos en DEP.
-4. Indique a los usuarios finales que inicien sesión en la aplicación Portal de empresa cuando se instale automáticamente.
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **Uso del Portal de empresa en un dispositivo DEP inscrito sin afinidad de usuario**:
+
+        > [!NOTE]
+        > El usuario que inicia sesión en el Portal de empresa se establece como el usuario principal del dispositivo.
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. Implemente el Portal de empresa en dispositivos con la directiva de configuración de aplicaciones destinada a grupos deseados. Asegúrese de implementar solo la directiva en grupos de dispositivos que ya están inscritos en DEP.
+5. Indique a los usuarios finales que inicien sesión en la aplicación Portal de empresa cuando se instale automáticamente.
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Supervisión del estado de configuración de aplicaciones iOS/iPadOS por dispositivo 
 Una vez que se ha asignado una directiva de configuración, puede supervisar el estado de configuración de aplicaciones iOS/iPadOS de cada dispositivo administrado. Desde **Microsoft Intune** en Azure Portal, seleccione **Dispositivos** > **Todos los dispositivos**. En la lista de dispositivos administrados, seleccione un dispositivo específico para mostrar un panel para el dispositivo. En el panel del dispositivo, seleccione **Configuración de aplicaciones**.  
