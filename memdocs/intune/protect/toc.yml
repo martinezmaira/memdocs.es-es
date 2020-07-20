@@ -52,8 +52,6 @@
       items:
         - name: Información general sobre el cumplimiento
           href: device-compliance-get-started.md
-        - name: Asociados de cumplimiento de dispositivos
-          href: device-compliance-partners.md
         - name: Creación de una directiva
           href: create-compliance-policy.md
         - name: Cumplimiento basado en la ubicación
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: ATP de Microsoft Defender
           href: advanced-threat-protection.md
+        - name: Migración de reglas de firewall
+          href: endpoint-security-firewall-rule-tool.md
         - name: Cifrado de discos
           items:
             - name: Directiva de administración de BitLocker
