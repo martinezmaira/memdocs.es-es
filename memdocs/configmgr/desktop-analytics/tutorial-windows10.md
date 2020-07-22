@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268205"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422837"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación de Windows 10 en el piloto
 
@@ -236,7 +236,7 @@ Use este procedimiento para crear un plan de implementación en Análisis de esc
 
     - **Nombre**: un nombre exclusivo para el plan de implementación, como `Windows 10 pilot`.  
 
-    - **Productos y versiones**: seleccione el producto de **Windows** y la versión recomendada más reciente disponible. Por ejemplo, **Windows 10, versión 1809 (recomendado)** .  
+    - **Productos y versiones**: elija la versión de Windows 10 que se va a implementar. Microsoft recomienda crear planes de implementación que usen la versión más reciente.
 
     - **Grupos de dispositivos**: seleccione uno o varios grupos en la pestaña Configuration Manager y, a continuación, seleccione **Establecer como grupos de objetivo**. Estos grupos son recopilaciones sincronizadas desde Configuration Manager.  
 

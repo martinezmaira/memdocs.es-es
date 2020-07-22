@@ -2,7 +2,7 @@
 title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Planeamiento para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383162"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384849"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -247,6 +247,9 @@ Cada miembro de la réplica debe tener las siguiente configuración:
 #### <a name="replica-member-location"></a>Ubicación del miembro de réplica
 
 Hospede todas las réplicas en un grupo de disponibilidad en el entorno local o bien en Microsoft Azure. No se admite un escenario en el que un grupo incluya un miembro en el entorno local y otro en Azure.
+
+> [!NOTE]
+> Si usa una máquina virtual de Azure para SQL Server, habilite **IP flotante**. Para más información, consulte [Configuración de un equilibrador de carga para un grupo de disponibilidad de SQL Server Always On en Azure Virtual Machines](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 El programa de instalación de Configuration Manager necesita conectarse a cada réplica. Si configura un grupo de disponibilidad en Azure y el grupo está detrás de un equilibrador de carga interno o externo, abra estos puertos predeterminados:
 

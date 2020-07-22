@@ -2,7 +2,7 @@
 title: Creación de una secuencia de tareas de actualización de SO
 titleSuffix: Configuration Manager
 description: Use una secuencia de tareas para actualizar automáticamente de Windows 7 o una versión posterior a Windows 10
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383247"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384899"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Crear una secuencia de tareas para actualizar un SO en Configuration Manager
 
@@ -253,13 +253,17 @@ Use la [variable de secuencia de tareas](../understand/task-sequence-variables.m
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    Este comando hace que el símbolo del sistema finalice con el código de salida distinto de cero especificado, lo que la secuencia de tareas considera un error.
+
 1. En la pestaña **Opciones** , agregue la siguiente condición:
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-Este código de retorno es el equivalente decimal de MOSETUP_E_COMPAT_SCANONLY (0xC1900210), que es un examen de compatibilidad en el que no se detecta ningún problema. Si el paso *Evaluación de actualización* se realiza correctamente y devuelve este código, la secuencia de tareas omite este paso. En caso contrario, si el paso de la evaluación devuelve cualquier otro código de retorno, este paso produce un error en la secuencia de tareas con el código de retorno del examen de compatibilidad del programa de instalación de Windows. Para obtener más información sobre **_SMSTSOSUpgradeActionReturnCode**, vea [Task sequence variables](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode) (Variables de secuencia de tareas).
+    Esta condición significa que la secuencia de tareas solo ejecuta este paso **Ejecutar línea de comandos** si el código de retorno no es un código de éxito.
 
-Para obtener más información, consulte [Actualizar el sistema operativo](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
+El código de retorno `3247440400` es el equivalente decimal de MOSETUP_E_COMPAT_SCANONLY (0xC1900210), que es un examen de compatibilidad correcto en el que no se detecta ningún problema. Si el paso *Evaluación de actualización* se realiza correctamente y devuelve `3247440400`, la secuencia de tareas omitirá el paso **Ejecutar línea de comandos** y continuará. Si el paso de evaluación devuelve cualquier otro código de retorno, el paso **Ejecutar línea de comandos** se ejecutará. Dado que el comando se cierra con un código de retorno distinto de cero, también se produce un error en la secuencia de tareas. El registro de la secuencia de tareas y los mensajes de estado incluyen el código de retorno del examen de compatibilidad del programa de instalación de Windows. Para obtener más información sobre **_SMSTSOSUpgradeActionReturnCode**, vea [Task sequence variables](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode) (Variables de secuencia de tareas).
+
+Para más información, consulte el paso de secuencia de tareas [Actualizar el sistema operativo](../understand/task-sequence-steps.md#BKMK_UpgradeOS).
 
 ### <a name="convert-from-bios-to-uefi"></a>Conversión de BIOS a UEFI
 

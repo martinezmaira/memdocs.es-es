@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 06/25/2020
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383145"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384832"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -91,9 +91,10 @@ Microsoft admite cada versión de Technical Preview hasta que hay disponibles tr
 
 ### <a name="active-baseline-versions"></a>Versiones de base de referencia activas
 
-Instale una versión de base de referencia hasta un año después de su lanzamiento. Al instalar un nuevo sitio de Technical Preview, use la versión de línea de base más reciente.
+Instale una versión de base de referencia hasta un año después de su lanzamiento. Al instalar un nuevo sitio de Technical Preview, use la versión de línea de base más reciente. Las siguientes versiones de la rama Technical Preview de Configuration Manager están disponibles como actualizaciones en la consola y como nuevas versiones de línea base:
 
-- **Versión 2002 de Technical Preview**: la versión 2002 de la rama Technical Preview de Configuration Manager está disponible como actualización en la consola y como nueva versión de línea de base.
+- **Versión 2007, Technical Preview**
+- **Versión 2002, Technical Preview**
 
 Descargue las versiones de línea de base del [Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -116,25 +117,17 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
 
 Las características siguientes están disponibles con la versión de Technical Preview de Configuration Manager más reciente:
 
-### <a name="technical-preview-version-2006"></a>Technical Preview, versión 2006
+### <a name="technical-preview-version-2007"></a>Versión 2007, Technical Preview
 
-- [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [Mejoras en las aplicaciones disponibles a través de CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Los clientes de la intranet pueden usar un punto de actualización de software de CMG](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [Mejoras de las secuencias de tareas a través de CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [Información de administración para optimizar a los trabajadores remotos](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [Mejoras del tipo de límite de VPN](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [Asociación de inquilinos: Mejoras en las acciones de Configuration Manager del centro de administración de Microsoft Endpoint Manager](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [Compatibilidad de CMG con las directivas de protección de los puntos de conexión](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [Importación de aplicaciones de Azure AD creadas anteriormente durante la incorporación de la asociación de inquilinos](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [Mejoras de la actualización de clientes en conexiones de uso medido](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [Mejoras en la administración de los reinicios de los dispositivos](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Compatibilidad mejorada con Windows Virtual Desktop](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Vínculos directos a elementos del Centro de comunidad de Configuration Manager](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+- [Asociación de inquilinos: Vista del inventario de hardware en el Centro de administración de Microsoft Endpoint Manager](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Mejoras en el panel de orígenes de datos de cliente](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Fuente con ancho fijo que se usa ahora en algunas áreas de la consola](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Administración del tamaño de la directiva de secuencia de tareas](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Mejoras en la escala de tiempo del dispositivo en el centro de administración](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 > [!NOTE]
 > Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.
@@ -151,6 +144,22 @@ Las características siguientes se publicaron con versiones anteriores de la ram
 
 > [!TIP]
 > Cuando esté disponible una nueva versión de la rama actual, se mostrarán las características que disponibles en esa versión en el último artículo sobre las *novedades*. Para obtener más información, vea [Novedades en las versiones incrementales](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2006"></a>Technical Preview, versión 2006
+
+- [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Mejoras en las aplicaciones disponibles a través de CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Los clientes de la intranet pueden usar un punto de actualización de software de CMG](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Mejoras de las secuencias de tareas a través de CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Información de administración para optimizar a los trabajadores remotos](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Mejoras del tipo de límite de VPN](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Asociación de inquilinos: Mejoras en las acciones de Configuration Manager del centro de administración de Microsoft Endpoint Manager](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [Compatibilidad de CMG con las directivas de protección de los puntos de conexión](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Importación de aplicaciones de Azure AD creadas anteriormente durante la incorporación de la asociación de inquilinos](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Mejoras de la actualización de clientes en conexiones de uso medido](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Mejoras en la administración de los reinicios de los dispositivos](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Compatibilidad mejorada con Windows Virtual Desktop](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Vínculos directos a elementos del Centro de comunidad de Configuration Manager](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 ### <a name="technical-preview-version-2005"></a>Versión 2005 Technical Preview
 

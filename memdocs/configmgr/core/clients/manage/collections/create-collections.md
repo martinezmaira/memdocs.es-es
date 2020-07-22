@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e3f178b41fbb305ef938063bd9b9743daa6b5c69
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695343"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422811"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Creación de recopilaciones en Configuration Manager
 
@@ -229,11 +229,11 @@ Puede habilitar la sincronización de las pertenencias a recopilaciones con un g
 
 La sincronización con Azure AD se realiza cada cinco minutos. Es un proceso unidireccional, desde Configuration Manager a Azure AD. Los cambios realizados en Azure AD no se reflejan en las recopilaciones de Configuration Manager, pero Configuration Manager no las sobrescribe. Por ejemplo, si la recopilación de Configuration Manager tiene dos dispositivos y el grupo de Azure AD tiene tres dispositivos diferentes, después de la sincronización el grupo de Azure AD tendrá cinco dispositivos.
 
-
 ### <a name="prerequisites"></a>Requisitos previos
 
-- [Administración en la nube](../../../servers/deploy/configure/azure-services-wizard.md)
+- Integración con Azure AD para [Administración en la nube](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Detección de usuarios de Azure Active Directory](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
+- Punto de administración habilitado para HTTPS o [HTTP mejorado](../../../plan-design/hierarchy/enhanced-http.md)
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Creación de un grupo y establecimiento del propietario en Azure AD
 

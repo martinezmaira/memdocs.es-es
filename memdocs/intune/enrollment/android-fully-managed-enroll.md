@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e270afc0c2ef84af0f44c0b9fc767319bdf2d30b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990412"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461715"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configuración de la inscripción en Intune de dispositivos Android Enterprise totalmente administrados 
 
@@ -68,6 +68,6 @@ Cuando esta opción se establece en **Sí**, proporciona un token de inscripció
 Ahora puede [inscribir sus dispositivos totalmente administrados](android-dedicated-devices-fully-managed-enroll.md) (pero no al usar cuentas de DEM).
 
 ## <a name="next-steps"></a>Pasos siguientes
-- [Agregar directivas de configuración de dispositivos Android Enterprise totalmente administrados](../configuration/device-restrictions-android-for-work.md#device-owner-only)
+- [Agregar directivas de configuración de dispositivos Android Enterprise totalmente administrados](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Configurar directivas de configuración de aplicaciones para dispositivos Android Enterprise totalmente administrados](../apps/app-configuration-policies-use-android.md)
 

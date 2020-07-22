@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195657"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411021"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -103,7 +103,7 @@ Para usar Análisis de escritorio, asegúrese de que el entorno cumple los requi
     - Los dispositivos necesitan también el cliente Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571), o posterior. Para obtener más información, vea [Actualización de Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Análisis de escritorio no es compatible con las actualizaciones al canal de mantenimiento a largo plazo (LTSC) de Windows 10. Para más información, consulte [Administración de Windows como servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > La característica Análisis de escritorio no es compatible con las actualizaciones con el Canal de mantenimiento a largo plazo (LTSC) de Windows 10 como origen o destino. Para más información, consulte [Administración de Windows como servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Análisis de escritorio está diseñado para ofrecer el mejor respaldo a las actualizaciones en contexto. Si necesita realizar cambios importantes, como, por ejemplo, pasar de la arquitectura de 32 bits a 64 bits, utilice un escenario de creación de imágenes. Aunque la información de Análisis de escritorio sigue siendo valiosa en estos escenarios de implementación de sistema operativo clásicos, se pueden omitir las instrucciones específicas de la actualización local. Para obtener más información, consulte [Escenarios para implementar sistemas operativos de empresa con Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cb1d4917e94528dc64fa336df8eacc085a4d685c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990153"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461987"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Usar y administrar dispositivos Zebra con extensiones de movilidad de Zebra en Microsoft Intune
 
@@ -117,7 +117,7 @@ Al crear el perfil en StageNow, en el último paso, seleccione **Export to MDM**
   O bien, puede usar las características integradas en Intune para obtener estos cambios, incluyendo:
 
   - Características de administración de aplicaciones para [agregar](../apps/apps-add.md), [implementar](../apps/apps-deploy.md), actualizar, y [supervisar](../apps/apps-monitor.md) aplicaciones.
-  - Administrar [actualizaciones del sistema y de aplicaciones](device-restrictions-android-for-work.md#device-owner-only) en dispositivos que ejecutan Android Enterprise.
+  - Administrar [actualizaciones del sistema y de aplicaciones](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) en dispositivos que ejecutan Android Enterprise.
 
 Después de probar el archivo, el siguiente paso es implementar el perfil en dispositivos con Intune.
 

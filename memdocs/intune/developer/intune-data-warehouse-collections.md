@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b58a24340741621a4034ed4f77ad1298251a692
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165879"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462004"
 ---
 # <a name="intune-data-warehouse-collections"></a>Colecciones de almacenamiento de datos de Intune
 
@@ -193,6 +193,8 @@ La entidad **DeviceConfigurationProfileUserActivity** muestra el número de usua
 | OSVersion                  | Versión del SO.                                                                                                                                                                          |
 | JailBroken                 | Si el dispositivo está liberado.                                                                                                                                         |
 | DeviceCategoryKey          | Clave del atributo de categoría de dispositivo para este dispositivo.                                                                                                                                    |
+| physicalMemoryInBytes      | La memoria física en bytes.                                                                                                                                    |
+| totalStorageSpaceInBytes      | Capacidad de almacenamiento total en bytes.                                                                                                                                    |
 
 
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
@@ -224,6 +226,7 @@ La entidad **device** muestra todos los dispositivos inscritos en administració
 | DeviceRegistrationState    | Clave del atributo de estado de registro de cliente de este dispositivo.                                                                                                                      |
 | OwnerTypeKey               | Clave del atributo de tipo de propietario de este dispositivo: corporativo, personal o desconocido.                                                                                                    |
 | EnrolledDateTime           | Fecha y hora en que se inscribió este dispositivo.                                                                                                                                         |
+| ethernetMacAddress           | Identificador de red único de este dispositivo.                                                                                                                                         |
 | LastSyncDateTime           | Última inserción conocida del dispositivo en el repositorio con Intune.                                                                                                                                              |
 | ManagementAgentKey         | Clave del agente de administración asociada a este dispositivo.                                                                                                                             |
 | ManagementStateKey         | Clave del estado de administración asociada a este dispositivo, que indica el estado más reciente de una acción remota o si estaba liberado o modificado.                                                |
@@ -232,6 +235,7 @@ La entidad **device** muestra todos los dispositivos inscritos en administració
 | DeviceCategoryKey          | Clave de la categoría asociada a este dispositivo.                                                                                                                                     |
 | DeviceEnrollmentType       | Clave del tipo de inscripción asociada a este dispositivo, que indica el método de inscripción.                                                                                             |
 | ComplianceStateKey         | Clave del estado de cumplimiento de normas asociada a este dispositivo.                                                                                                                             |
+| office365Version           | La versión de Office 365 instalada en el dispositivo.                                                                                                                             |
 | OSVersion                  | Versión del sistema operativo del dispositivo.                                                                                                                                                |
 | EasDeviceId                | Identificador de Exchange ActiveSync del dispositivo.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |

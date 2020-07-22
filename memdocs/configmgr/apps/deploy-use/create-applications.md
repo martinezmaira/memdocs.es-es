@@ -2,7 +2,7 @@
 title: Crear aplicaciones
 titleSuffix: Configuration Manager
 description: Cree aplicaciones con tipos de implementación, métodos de detección y requisitos para instalar el software.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33a95ae78fdc80c6c08b59cfe5ec5b2e88485a8f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074663"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240344"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Crear aplicaciones en Configuration Manager
 
@@ -311,7 +311,7 @@ Este procedimiento configura un método de detección que indica la presencia de
 
         - **Nombre de archivo o carpeta** (obligatorio): especifique el nombre de archivo o carpeta específico para detectar en la ruta de acceso anterior. Si el cliente detecta este archivo o carpeta en el dispositivo, considera la aplicación como instalada en el dispositivo.  
 
-        - **Este archivo o carpeta está asociado a una aplicación de 32 bits en sistemas de 64 bits**: Esta opción está seleccionada de forma predeterminada. En primer lugar, el cliente comprueba las ubicaciones de archivos de 32 bits para la carpeta o archivo especificado. Si no se encuentra el archivo o la carpeta, el cliente busca en ubicaciones de 64 bits.  
+        - **Este archivo o carpeta está asociado a una aplicación de 32 bits en sistemas de 64 bits**: En primer lugar, el cliente comprueba las ubicaciones de archivos de 32 bits para la carpeta o archivo especificado. Si no se encuentra el archivo o la carpeta, el cliente busca en ubicaciones de 64 bits.  
 
     - **Registro**: detecte si existe una clave del Registro especificada o un valor del Registro en un dispositivo cliente. Esta detección indica que la aplicación está instalada. Especifique la siguiente información adicional:  
 
@@ -540,7 +540,7 @@ Configuration Manager comprueba estos requisitos en los dispositivos antes de in
 
 3. En la lista desplegable **Condición**, seleccione la condición para evaluar si el usuario o el dispositivo cumplen los requisitos de instalación. El contenido de esta lista varía según la categoría seleccionada.  
 
-4. En la lista desplegable **Operador**, seleccione el operador que se va a usar. Este operador compara la condición seleccionada con el valor especificado. Evalúa si el usuario o el dispositivo cumplen los requisitos de instalación. Los operadores disponibles varían según la condición seleccionada.  
+4. En la lista desplegable **Operador**, seleccione el operador que se va a usar. Este operador compara la condición seleccionada con el valor especificado. Evalúa si el usuario o el dispositivo cumplen los requisitos de instalación. Los operadores disponibles varían según la condición seleccionada. Al utilizar el operador `One Of`, el campo Valores tiene una validación para la que hay que especificar una entrada por fila.
 
     > [!Note]  
     > Los requisitos disponibles varían en función del tipo de dispositivo que use el tipo de implementación.  

@@ -5,17 +5,17 @@ description: Implementación automática de actualizaciones de software usando r
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709441"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240038"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -197,7 +197,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
         -  **Prioridad de envío**: especifique la prioridad de envío del paquete de implementación. Configuration Manager usa esta prioridad cuando envía el paquete a los puntos de distribución. Los paquetes de implementación se envían en orden de prioridad: alta, media o baja. Los paquetes con prioridades idénticas se envían en el orden en que se crearon. Si no hay ningún trabajo pendiente, el paquete se procesa inmediatamente sin tener en cuenta su prioridad.  
 
-        - **Habilitar replicación diferencial binaria**: habilite esta opción para minimizar el tráfico de red entre sitios. La replicación diferencial binaria (BDR) solo actualiza el contenido que ha cambiado en el paquete, en lugar de actualizar todo el contenido del paquete. Para obtener más información, vea [Replicación diferencial binaria](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
+        - **Habilitar replicación diferencial binaria**: Habilite esta opción para utilizar la replicación diferencial binaria para el paquete de implementación. Para obtener más información, vea [Replicación diferencial binaria](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
     - **Sin paquete de implementación**: a partir de la versión 1806, las actualizaciones de software se implementan en los dispositivos sin antes descargar y distribuir el contenido a los puntos de distribución. Esta configuración es útil cuando se trabaja con contenido de actualización extremadamente grande. También puede usarla cuando quiera que los clientes siempre obtengan contenido desde el servicio en la nube de Microsoft Update. En este escenario, los clientes también pueden descargar el contenido desde los equipos del mismo nivel que ya tienen el contenido necesario. El cliente de Configuration Manager sigue administrando la descarga del contenido, por lo que puede usar la característica de caché del mismo nivel de Configuration Manager u otras tecnologías como, por ejemplo, Optimización de distribución. Esta característica es compatible con cualquier tipo de actualización admitida por la administración de actualizaciones de software de Configuration Manager, incluidas las actualizaciones de Windows y Office.<!--1357933-->  
 

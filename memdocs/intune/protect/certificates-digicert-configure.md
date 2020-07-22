@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990353"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565706"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Configuración de Intune Certificate Connector para la plataforma de PKI de DigiCert
 
@@ -51,30 +51,32 @@ Si va a usar el conector solo con la CA de DigiCert, puede utilizar las instrucc
 
 1. Guarde el fragmento de código siguiente en un archivo denominado **certreq.ini** y actualícelo según corresponda (por ejemplo: *el nombre del firmante en formato CN*).
 
-        [Version] 
-        Signature="$Windows NT$" 
-        
-        [NewRequest] 
-        ;Change to your,country code, company name and common name 
-        Subject = "Subject Name in CN format"
-        
-        KeySpec = 1 
-        KeyLength = 2048 
-        Exportable = TRUE 
-        MachineKeySet = TRUE 
-        SMIME = False 
-        PrivateKeyArchive = FALSE 
-        UserProtected = FALSE 
-        UseExistingKeySet = FALSE 
-        ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
-        ProviderType = 12 
-        RequestType = PKCS10 
-        KeyUsage = 0xa0 
-        
-        [EnhancedKeyUsageExtension] 
-        OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
-        
-        ;----------------------------------------------- 
+   ```
+   [Version] 
+   Signature="$Windows NT$" 
+
+   [NewRequest] 
+   ;Change to your,country code, company name and common name 
+   Subject = "Subject Name in CN format"
+
+   KeySpec = 1 
+   KeyLength = 2048 
+   Exportable = TRUE 
+   MachineKeySet = TRUE 
+   SMIME = False 
+   PrivateKeyArchive = FALSE 
+   UserProtected = FALSE 
+   UseExistingKeySet = FALSE 
+   ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
+   ProviderType = 12 
+   RequestType = PKCS10 
+   KeyUsage = 0xa0 
+
+   [EnhancedKeyUsageExtension] 
+   OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
+
+   ;----------------------------------------------- 
+   ```
 
 2. Abra un símbolo del sistema con privilegios elevados y genere una solicitud de firma de certificado (CSR) con el comando siguiente:
 
@@ -82,13 +84,14 @@ Si va a usar el conector solo con la CA de DigiCert, puede utilizar las instrucc
 
 3. Abra el archivo request.csr en el Bloc de notas y copie el contenido CSR con el formato siguiente:
 
-        -----BEGIN NEW CERTIFICATE REQUEST-----
-        MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
-        …
-        …
-        fzpeAWo=
-        -----END NEW CERTIFICATE REQUEST-----
-
+   ``` 
+   -----BEGIN NEW CERTIFICATE REQUEST-----
+   MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
+   …
+   …
+   fzpeAWo=
+   -----END NEW CERTIFICATE REQUEST-----
+   ```
 
 4. Inicie sesión en la CA de DigiCert y vaya a **Obtener certificado RA** en las tareas.
 
@@ -136,7 +139,7 @@ Si va a usar el conector solo con la CA de DigiCert, puede utilizar las instrucc
 
    g. Registre una copia de la huella digital del certificado de RA sin ningún espacio. Observe la huella digital de ejemplo:
 
-        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
+      `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
 
     > [!NOTE]
     > Para recibir ayuda a la hora de obtener el certificado de RA de la CA de DigiCert, póngase en contacto con la [asistencia al cliente de DigiCert](mailto:enterprise-pkisupport@digicert.com).
@@ -196,8 +199,10 @@ De forma predeterminada, Intune Certificate Connector está instalado en **%Prog
 
    a. Actualice el valor de clave `RACertThumbprint` con el valor de huella digital de certificado que copió en la sección anterior. Por ejemplo:
 
-        <add key="RACertThumbprint"
-        value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
+      <add key="RACertThumbprint"
+      value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
 
    b. Guarde y cierre el archivo.
 
@@ -272,7 +277,7 @@ El OID del perfil de certificado está asociado con una plantilla de perfil de c
 3. Seleccione el perfil de certificado que desea usar.
 4. Copie el OID del perfil de certificado. Es similar al ejemplo siguiente:
 
-       Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
+   `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109`
 
 > [!NOTE]
 > Si necesita ayuda para obtener el OID del perfil de certificado, póngase en contacto con la [asistencia al cliente de DigiCert](mailto:enterprise-pkisupport@digicert.com).

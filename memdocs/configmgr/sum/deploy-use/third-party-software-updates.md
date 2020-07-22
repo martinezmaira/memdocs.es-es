@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906743"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240769"
 ---
 # <a name="enable-third-party-updates"></a>Habilitar actualizaciones de terceros 
 
@@ -35,6 +35,7 @@ A partir de la versión 1806, el nodo **Catálogos de actualizaciones de softwar
     - Para la lista de catálogos de asociados se necesita download.microsoft.com a través del puerto HTTPS 443. 
     -  Acceso de Internet a los catálogos de terceros y los archivos de contenido de actualización. Pueden ser necesarios puertos distintos al 443.
     - Las actualizaciones de terceros usan la misma configuración de proxy que el SUP.
+- En el caso de versiones de Configuration Manager anteriores a la 1910, el rol de seguridad **Administrador de actualizaciones de software** no puede sincronizar catálogos de terceros. Necesitará el rol de seguridad **Administrador total** para sincronizar los catálogos.
 
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Requisitos adicionales cuando el SUP es remoto con respecto al servidor de sitio de nivel superior 

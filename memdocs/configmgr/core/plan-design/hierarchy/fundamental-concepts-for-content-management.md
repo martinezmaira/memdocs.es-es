@@ -2,7 +2,7 @@
 title: Conceptos básicos de administración de contenido
 titleSuffix: Configuration Manager
 description: Use herramientas y opciones en Configuration Manager para administrar el contenido que implemente.
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590463"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384951"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -84,7 +85,7 @@ En las listas siguientes se resumen las diferencias entre la *replicación difer
 - Diferencias de nivel de *bloque*
 - Siempre habilitada para las aplicaciones
 - Opcional en los paquetes heredados
-- Si ya existe un archivo en el punto de distribución y hay un cambio, el sitio usará BDR para replicar el cambio de nivel de bloque en lugar de todo el archivo.
+- Si ya existe un archivo en el punto de distribución y hay un cambio, el sitio usará BDR para replicar el cambio de nivel de bloque en lugar de todo el archivo. Este comportamiento solo se aplica cuando se habilita el objeto para usar el BDR.<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>Resumen de la replicación diferencial
 
@@ -219,7 +220,9 @@ A continuación se indican las ubicaciones desde las que los clientes tienen acc
 
 ## <a name="content-source-priority"></a>Prioridad de origen de contenido
 
-Cuando un cliente necesita contenido, realiza una solicitud de ubicación de contenido al punto de administración. El punto de administración devuelve una lista de ubicaciones de origen que son válidas para el contenido solicitado. Esta lista varía según el escenario específico, las tecnologías usadas, el diseño del sitio, los grupos de límites y la configuración de implementación. La lista siguiente contiene todas las posibles ubicaciones de orígenes de contenido que un cliente puede usar en el orden en que se prioricen:  
+Cuando un cliente necesita contenido, realiza una solicitud de ubicación de contenido al punto de administración. El punto de administración devuelve una lista de ubicaciones de origen que son válidas para el contenido solicitado. Esta lista varía según el escenario específico, las tecnologías usadas, el diseño del sitio, los grupos de límites y la configuración de implementación. Por ejemplo, cuando se ejecuta una secuencia de tareas, el cliente completo de Configuration Manager no siempre está en ejecución, por lo que los comportamientos pueden diferir.<!-- SCCMDocs#1960 -->
+
+La lista siguiente contiene todas las posibles ubicaciones de orígenes de contenido que un cliente de Configuration Manager puede usar, por orden de prioridad:  
 
 1. El punto de distribución en el mismo equipo que el cliente
 2. Un origen del mismo nivel en la misma subred de red

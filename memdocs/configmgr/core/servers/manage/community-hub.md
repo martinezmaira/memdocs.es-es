@@ -2,7 +2,7 @@
 title: GitHub y Centro de comunidad
 titleSuffix: Configuration Manager
 description: Habilitación y uso del Centro de comunidad en Configuration Manager
-ms.date: 06/12/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
+ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740799"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86236416"
 ---
 # <a name="community-hub-and-github"></a>GitHub y Centro de comunidad
 <!--3555935, 3555936-->
@@ -28,11 +28,13 @@ La comunidad de administradores de TI ha desarrollado una gran cantidad de conoc
 ## <a name="about-community-hub"></a>Acerca del Centro de comunidad
 
 El Centro de comunidad admite los siguientes objetos:
+
+- Consultas de CMPivot
+- Aplicaciones
+- Secuencias de tareas
+- Elementos de configuración
 - Scripts de PowerShell
 - Informes
-- Secuencias de tareas
-- Aplicaciones
-- Elementos de configuración  
 
 ## <a name="prerequisites"></a>Requisitos previos
 

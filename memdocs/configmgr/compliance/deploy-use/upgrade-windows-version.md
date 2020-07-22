@@ -2,20 +2,20 @@
 title: Actualización de dispositivos Windows a una versión diferente
 titleSuffix: Configuration Manager
 description: Use Configuration Manager para actualizar automáticamente los dispositivos Windows 10 a otra edición de Windows.
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 77ef255a820104ef2042a370b5056677fddb9d12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692303"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390847"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Actualización de dispositivos Windows a una edición nueva con Configuration Manager
 
@@ -37,7 +37,7 @@ Antes de empezar a actualizar dispositivos a la versión más reciente, consulte
 
 - Para las ediciones de escritorio de Windows 10: una clave de producto válida para la nueva versión de Windows en todos los dispositivos donde quiera aplicar la directiva. Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. <!--496871-->  
 
-- Para Windows 10 Mobile: un archivo de licencia XML del Centro de servicios de licencias por volumen (VLSC) de Microsoft. Este archivo contiene la información de licencia para la nueva versión de Windows en todos los dispositivos de destino de la directiva.
+- Para Windows 10 Mobile: un archivo de licencia XML del Centro de servicios de licencias por volumen (VLSC) de Microsoft. Este archivo contiene la información de licencia para la nueva versión de Windows en todos los dispositivos de destino de la directiva. Descargue el archivo ISO para **Windows 10 Mobile Enterprise**, que incluye el XML de licencia.<!-- SCCMDocs#2033 -->
 
 - Para administrar este tipo de directiva, debe ocupar el rol de seguridad de **Administrador total** de Configuration Manager.
 

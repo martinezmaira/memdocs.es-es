@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715244"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410882"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
@@ -246,6 +246,9 @@ Después de crear una instancia de CMG, puede modificar algunas de sus configura
 #### <a name="settings"></a>Configuración
 
 - **Archivo de certificado**: cambiar el certificado de autenticación de servidor para la instancia de CMG. Esta opción es útil al actualizar el certificado antes de que caduque.  
+
+  > [!NOTE]
+  > Cuando se renueva el certificado de autenticación del servidor para CMG, el nombre de dominio completo (FQDN) especificado para el nombre común (CN) del certificado distingue mayúsculas de minúsculas.  Por ejemplo, si el certificado en uso tiene un CN `https://contoso-cmg.contoso.com`, cree el otro certificado con el mismo CN en minúsculas. El asistente no aceptará un certificado con el CN `https://CONTOSO-CMG.CONTOSO.COM`.
 
 - **Instancia de VM**: cambiar el número de máquinas virtuales que usa el servicio en Azure. Esta configuración permite escalar horizontal o verticalmente el servicio de forma dinámica en función de consideraciones de uso o costo.  
 
