@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390881"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891469"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ Tutoriales guiados que le ayudarán a solucionar problemas de características y
 
 ## <a name="new-and-updated-support-articles"></a>Artículos de soporte técnico nuevos y actualizados
 
-Artículos de soporte técnico que son nuevos o se han actualizado entre el 16 de mayo y el 22 de junio de 2020.
+Artículos de soporte técnico que son nuevos o se han actualizado entre el 16 de mayo y el 17 de julio de 2020.
 
+- [KB 4560496 Paquete acumulativo de actualizaciones para Microsoft Endpoint Configuration Manager, versión 2002](https://support.microsoft.com/help/4560496)
+- [KB 4569513 Error "no encontrado" al intentar editar Actualizar tablas del catálogo de aplicaciones](https://support.microsoft.com/help/4569513)
+- [KB 4574419 Error de tiempo de espera en el centro de administración de Microsoft Endpoint Configuration Manager](https://support.microsoft.com/help/4574416)
 - [(KB 4564442) Se producen errores en la implementación de Windows 10 con Microsoft Deployment Toolkit en equipos con firmware de tipo BIOS](https://support.microsoft.com/help/4564442)
 - [(KB 4563473) Paquete acumulativo de actualizaciones para Configuration Manager versión 2002: problemas de la asociación de inquilinos](https://support.microsoft.com/help/4563473)
 - [(KB 4567007) Errores de arranque de PXE o retrasos de secuencia de tareas después de actualizar a la rama actual de Configuration Manager, versión 2002](https://support.microsoft.com/help/4567007)
