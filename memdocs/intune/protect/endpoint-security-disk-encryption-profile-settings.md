@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633280"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462038"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de cifrado de discos para seguridad de los puntos de conexión en Intune
 
@@ -66,6 +66,11 @@ Perfiles y plataformas compatibles:
     Evite el mensaje en el que se solicita al usuario que habilite FileVault cuando cierre la sesión. Cuando se establece en Deshabilitar, al cerrar la sesión el mensaje está deshabilitado y, en su lugar, se le solicita cuando el usuario inicia sesión.
     - **Sin configurar** (*valor predeterminado*).
     - **Sí**: deshabilite el aviso para habilitar FileVault que aparece en el cierre de sesión.
+
+  - **Ocultar clave de recuperación**  
+     La clave de recuperación personal del usuario del dispositivo macOS se oculta durante el cifrado. Una vez cifrado el disco, un usuario puede usar cualquier dispositivo para ver su clave de recuperación personal a través del sitio web del Portal de empresa de Intune o la aplicación Portal de empresa en una plataforma compatible.
+    - **Sin configurar** (*valor predeterminado*).
+    - **Sí**: se oculta la clave de recuperación personal durante el cifrado del dispositivo.
 
 ## <a name="bitlocker"></a>BitLocker
 

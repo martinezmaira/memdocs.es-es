@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: cdfec1d82d68e97544172c56cecc416846b4a0f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353585"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460491"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Uso del cifrado de discos FileVault para macOS con Intune
 
@@ -45,6 +45,8 @@ Para administrar BitLocker para Windows 10, vea [Directiva de administración d
 
 Después de crear una directiva para cifrar dispositivos con FileVault, la directiva se aplica a los dispositivos en dos fases. En primer lugar, el dispositivo se prepara para habilitar a Intune a recuperar y hacer una copia de seguridad de la clave de recuperación. Esta acción se denomina custodia. Una vez que se ha custodiado la clave, se puede iniciar el cifrado de disco.
 
+Además de usar la directiva de Intune para cifrar un dispositivo con FileVault, puede implementar la directiva en un dispositivo administrado para permitir que Intune [asuma la administración de FileVault cuando el usuario haya cifrado el dispositivo](#assume-management-of-filevault-on-previously-encrypted-devices). Este escenario requiere que el dispositivo reciba la directiva de FileVault de Intune y, después, que el usuario cargue su clave de recuperación personal en Intune.
+
 La inscripción de dispositivos aprobados por el usuario es necesaria para que FileVault funcione en un dispositivo. El usuario debe aprobar manualmente el perfil de administración en las preferencias del sistema para que la inscripción se considere aprobada por el usuario.
 
 ## <a name="permissions-to-manage-filevault"></a>Permisos para administrar FileVault
@@ -59,38 +61,6 @@ A continuación se muestran los permisos de FileVault, que forman parte de la ca
 
 - **Rotar la clave de FileVault**
   - Operador del departamento de soporte técnico
-
-## <a name="create-endpoint-security-policy-for-filevault"></a>Creación de una directiva de seguridad de los puntos de conexión para FileVault
-
-1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Seleccione **Seguridad de los puntos de conexión** > **Cifrado de disco** > **Crear directiva**.
-
-3. En la página **Aspectos básicos**, especifique las siguientes propiedades y seleccione **Siguiente**.
-   - **Plataforma**: macOS
-   - **Perfil**: FileVault
-
-   ![Selección del perfil de FileVault](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
-4. En la página **Opciones de configuración**:
-   1. Establezca *Habilitar FileVault* en **Sí**.
-   2. En *Tipo de clave de recuperación* solo se admite **Clave de recuperación personal**.
-   3. Configure opciones adicionales para satisfacer los requisitos.
-
-   Considere la posibilidad de agregar un mensaje para guiar a los usuarios en el proceso de recuperación de la clave de recuperación de su dispositivo. Esta información puede ser útil para los usuarios cuando se usa la opción Rotación de clave de recuperación personal, que puede generar automáticamente una nueva clave de recuperación para un dispositivo de forma periódica.
-
-   Por ejemplo: para recuperar una clave de recuperación perdida o girada recientemente, inicie sesión en el sitio web Portal de empresa de Intune desde cualquier dispositivo. En el portal, vaya a Dispositivos, seleccione el dispositivo que tiene habilitado FileVault y luego *Obtener clave de recuperación*. Se muestra la clave de recuperación actual.
-
-5. Cuando haya finalizado la configuración, seleccione **Siguiente**.
-
-6. En la página **Ámbito (etiquetas)** , seleccione **Seleccionar etiquetas de ámbito** para abrir el panel Seleccionar etiquetas a fin de asignar etiquetas de ámbito al perfil.
-
-   Seleccione **Siguiente** para continuar.
-
-7. En la página **Asignaciones**, seleccione los grupos que recibirán este perfil. Para obtener más información sobre la asignación de perfiles, vea Asignación de perfiles de usuario y dispositivo.
-Seleccione **Siguiente**.
-
-8. Cuando haya terminado, elija **Crear** en la página **Revisar y crear**. El nuevo perfil se muestra en la lista cuando se selecciona el tipo de directiva del perfil creado.
 
 ## <a name="create-device-configuration-policy-for-filevault"></a>Creación de una directiva de configuración de dispositivos para FileVault
 
@@ -121,7 +91,7 @@ Seleccione **Siguiente**.
 
    - En *Tipo de clave de recuperación*, seleccione **Clave personal**.
 
-   - En *Descripción de la ubicación secundaria de la clave de recuperación personal*, agregue un mensaje para que los usuarios sepan cómo recobrar la clave de recuperación de sus dispositivos. Esta información puede ser útil para los usuarios cuando se usa la opción Rotación de clave de recuperación personal, que puede generar automáticamente una nueva clave de recuperación para un dispositivo de forma periódica.
+   - En *Descripción de la ubicación secundaria de la clave de recuperación personal*, agregue un mensaje para que los usuarios sepan [cómo obtener la clave de recuperación](#retrieve-a-personal-recovery-key) de sus dispositivos. Esta información puede ser útil para los usuarios cuando se usa la opción Rotación de clave de recuperación personal, que puede generar automáticamente una nueva clave de recuperación para un dispositivo de forma periódica.
 
      Por ejemplo: para recuperar una clave de recuperación perdida o girada recientemente, inicie sesión en el sitio web Portal de empresa de Intune desde cualquier dispositivo. En el portal, vaya a *Dispositivos*, seleccione el dispositivo que tiene habilitado FileVault y, después, seleccione *Obtener clave de recuperación*. Se muestra la clave de recuperación actual.
 
@@ -136,6 +106,38 @@ Seleccione **Siguiente**.
 
 9. Cuando haya terminado, elija **Crear** en la página **Revisar y crear**. El nuevo perfil se muestra en la lista cuando se selecciona el tipo de directiva del perfil creado.
 
+## <a name="create-endpoint-security-policy-for-filevault"></a>Creación de una directiva de seguridad de los puntos de conexión para FileVault
+
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Seleccione **Seguridad de los puntos de conexión** > **Cifrado de disco** > **Crear directiva**.
+
+3. En la página **Aspectos básicos**, especifique las siguientes propiedades y seleccione **Siguiente**.
+   - **Plataforma**: macOS
+   - **Perfil**: FileVault
+
+   ![Selección del perfil de FileVault](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
+
+4. En la página **Opciones de configuración**:
+   1. Establezca *Habilitar FileVault* en **Sí**.
+   2. En *Tipo de clave de recuperación* solo se admite **Clave de recuperación personal**.
+   3. Configure opciones adicionales para satisfacer los requisitos.
+
+   Considere la posibilidad de agregar un mensaje para que los usuarios sepan [cómo obtener la clave de recuperación](#retrieve-a-personal-recovery-key) de sus dispositivos. Esta información puede ser útil para los usuarios cuando se usa la opción Rotación de clave de recuperación personal, que puede generar automáticamente una nueva clave de recuperación para un dispositivo de forma periódica.
+
+   Por ejemplo: para recuperar una clave de recuperación perdida o girada recientemente, inicie sesión en el sitio web Portal de empresa de Intune desde cualquier dispositivo. En el portal, vaya a Dispositivos, seleccione el dispositivo que tiene habilitado FileVault y luego *Obtener clave de recuperación*. Se muestra la clave de recuperación actual.
+
+5. Cuando haya finalizado la configuración, seleccione **Siguiente**.
+
+6. En la página **Ámbito (etiquetas)** , seleccione **Seleccionar etiquetas de ámbito** para abrir el panel Seleccionar etiquetas a fin de asignar etiquetas de ámbito al perfil.
+
+   Seleccione **Siguiente** para continuar.
+
+7. En la página **Asignaciones**, seleccione los grupos que recibirán este perfil. Para obtener más información sobre la asignación de perfiles, vea Asignación de perfiles de usuario y dispositivo.
+Seleccione **Siguiente**.
+
+8. Cuando haya terminado, elija **Crear** en la página **Revisar y crear**. El nuevo perfil se muestra en la lista cuando se selecciona el tipo de directiva del perfil creado.
+
 ## <a name="manage-filevault"></a>Administración de FileVault
 
 Para ver información sobre los dispositivos que reciben la directiva de FileVault, vea [Supervisión de cifrado de discos](../protect/encryption-monitor.md).
@@ -144,17 +146,60 @@ Cuando Intune cifra por primera vez un dispositivo macOS con FileVault, se crea 
 
 En el caso de los dispositivos administrados, Intune puede custodiar una copia de la clave de recuperación personal. La custodia de las claves habilita a los administradores de Intune para girar claves con el fin de ayudar a proteger los dispositivos y a los usuarios para recuperar una clave de recuperación personal perdida o girada.
 
-Después de que Intune cifre un dispositivo macOS con FileVault:
+Intune custodia una clave de recuperación cuando la directiva de Intune cifra un dispositivo o después de que un usuario cargue su clave de recuperación para un dispositivo cifrado manualmente.
 
-- Los administradores pueden ver y administrar las claves de recuperación de FileVault mediante el informe de cifrado de Intune.
-- Los usuarios pueden ver la clave de recuperación personal de un dispositivo desde el Portal de empresa web en el dispositivo. En el Portal de empresa web, seleccione el dispositivo macOS cifrado y luego "Obtener clave de recuperación" como acción de dispositivo remota.
+Después de que Intune custodie la clave de recuperación personal:
+
+- Los administradores pueden administrar y rotar las claves de recuperación de FileVault para cualquier dispositivo macOS administrado mediante el informe de cifrado de Intune.
+- Los administradores solo pueden ver la clave de recuperación personal correspondiente a dispositivos macOS administrados que estén marcados como *corporativos*. No pueden ver la clave de recuperación de los dispositivos personales.
+- Los usuarios pueden ver y [obtener su clave de recuperación personal desde una ubicación admitida](#retrieve-a-personal-recovery-key). Por ejemplo, desde el sitio web del Portal de empresa, el usuario puede elegir *Obtener clave de recuperación* como acción disponible para un dispositivo remoto.
+
+### <a name="assume-management-of-filevault-on-previously-encrypted-devices"></a>Adopción de la administración de FileVault en dispositivos ya cifrados
+
+Intune puede administrar el cifrado de discos de FileVault en dispositivos macOS cifrados mediante el uso de directivas de Intune. Intune también puede asumir la administración de FileVault en los dispositivos cifrados por los usuarios del dispositivo y no a través de la directiva de Intune.
+
+#### <a name="prerequisites-to-assume-management-of-filevault"></a>Requisitos previos para la adopción de la administración de FileVault
+
+Para asumir la administración de un dispositivo cifrado anteriormente, deben cumplirse las siguientes condiciones:
+
+1. **Implementación de una directiva de FileVault en el dispositivo**: el dispositivo cifrado anteriormente debe recibir una directiva de Intune que active el cifrado de discos FileVault.
+
+   En este escenario, la directiva no descifra ni vuelve a cifrar el dispositivo. En su lugar, la directiva permite que Intune asuma la administración del cifrado de FileVault ya habilitado en el dispositivo.  Puede usar una directiva de cifrado de discos de seguridad de punto de conexión, o bien una directiva de protección de punto de conexión para la configuración de dispositivos con el fin de cifrar los dispositivos con FileVault.
+
+   Consulte [Creación de una directiva de configuración de dispositivos para FileVault](#create-device-configuration-policy-for-filevault).
+
+2. **Carga de la clave de recuperación personal en Intune por parte de los usuarios**:  después de que el dispositivo reciba la directiva de FileVault, indique al usuario del dispositivo que lo cifró que cargue su clave de recuperación personal en Intune. Si la clave se escribe correctamente, Intune asumirá la administración del cifrado de FileVault y se creará otra clave de recuperación personal para el dispositivo y el usuario.
+
+   > [!IMPORTANT]
+   > Intune no avisa a los usuarios de que deben cargar su clave de recuperación personal para completar el cifrado. En su lugar, use los canales de comunicación de TI habituales para indicar a los usuarios que hayan cifrado previamente su dispositivo macOS con FileVault que deben cargar su clave de recuperación personal en Intune.  
+   >
+   > En función de la directiva de cumplimiento, es posible que se bloquee el acceso de los dispositivos a los recursos corporativos hasta que Intune asuma correctamente la administración del cifrado FileVault en el dispositivo.
+
+#### <a name="upload-a-personal-recovery-key"></a>Carga de una clave de recuperación personal
+
+Para permitir que Intune administre FileVault en un dispositivo cifrado anteriormente, el usuario del dispositivo debe usar el sitio web del Portal de empresa para cargar la clave de recuperación personal actual del dispositivo en Intune.  Tras la carga, Intune la rotará para crear otra clave de recuperación personal, que luego almacenará para su futura recuperación si fuera necesario.
+
+En el sitio web del Portal de empresa, el usuario debe localizar su dispositivo macOS cifrado y seleccionar la opción pertinente para **almacenar la clave de recuperación**. Al escribir la clave de recuperación personal, Intune intentará rotar la clave para generar una nueva clave. La rotación se realiza para validar que la clave introducida sea la precisa para ese dispositivo. La nueva clave se almacena y administra mediante Intune para su uso futuro en el caso de que el usuario tenga que recuperar el dispositivo.
+
+Si se produce un error en la rotación de la clave, significa que el dispositivo no ha procesado la directiva de FileVault o que la clave especificada no es la precisa para el dispositivo.
+
+Tras una rotación correcta, un usuario puede [obtener su nueva clave de recuperación personal desde una ubicación admitida](#retrieve-a-personal-recovery-key).
+
+ Consulte el [contenido para el usuario final relativo a la carga de la clave de recuperación personal](../user-help/store-recovery-key.md).
 
 > [!IMPORTANT]
-> Intune no puede administrar los dispositivos que, en vez de cifrar Intune, son los usuarios quienes los cifran. Esto significa que Intune no puede custodiar la recuperación personal de estos dispositivos ni administrar el giro de la clave de recuperación. Antes de que Intune pueda administrar FileVault y las claves de recuperación para el dispositivo, el usuario debe descifrar el dispositivo y, después, dejar que Intune cifre el dispositivo.
+> En el caso de un dispositivo cifrado por un usuario y no por Intune, Intune no podrá administrar el cifrado de FileVault del dispositivo hasta que este reciba una directiva de FileVault y el usuario cargue correctamente su clave de recuperación personal.
 
-### <a name="retrieve-personal-recovery-key"></a>Recuperación de clave de recuperación personal
+### <a name="retrieve-a-personal-recovery-key"></a>Recuperación de una clave de recuperación personal
 
-En un dispositivo macOS cifrado mediante Intune, los usuarios finales pueden recuperar su clave de recuperación personal (clave de FileVault) mediante la aplicación Portal de empresa de iOS, la aplicación Portal de empresa de Android o la aplicación Intune para Android.
+En el caso de un dispositivo macOS cuyo cifrado de FileVault esté administrado por Intune, los usuarios finales podrán recuperar su clave de recuperación personal (clave de FileVault) desde las siguientes ubicaciones, con cualquier dispositivo:
+
+- sitio web del Portal de empresa
+- Aplicación Portal de empresa de iOS/iPadOS
+- Aplicación Portal de empresa de Android
+- Aplicación de Intune
+
+Los administradores pueden ver las claves de recuperación personales de los dispositivos macOS cifrados marcados como *corporativo*. No pueden ver la clave de recuperación de un dispositivo personal.
 
 El dispositivo que tiene la clave de recuperación personal se debe inscribir en Intune y cifrar con FileVault a través de Intune. Con la aplicación Portal de empresa de iOS, la aplicación Portal de empresa de Android, la aplicación Intune para Android o el sitio web Portal de empresa, el usuario puede ver la clave de recuperación de **FileVault** necesaria para acceder a sus dispositivos Mac.
 

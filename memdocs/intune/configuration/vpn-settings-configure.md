@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990262"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565609"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Creación de perfiles de VPN para conectarse a servidores VPN en Intune
 
@@ -49,6 +49,7 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 - Check Point Capsule VPN
   - Administrador de dispositivos Android
   - Perfiles de trabajo de Android Enterprise
+  - Perfil de trabajo de propiedad corporativa y totalmente administrado de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -58,7 +59,7 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 - Cisco AnyConnect
   - Administrador de dispositivos Android
   - Perfiles de trabajo de Android Enterprise
-  - Propietario del dispositivo Android Enterprise (totalmente administrado)
+  - Perfil de trabajo de propiedad corporativa y totalmente administrado de Android Enterprise
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 
 - SSO de Citrix
   - Administrador de dispositivos Android
-  - Perfiles de trabajo de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-policies-use-android.md)
-  - Propietario del dispositivo Android Enterprise (totalmente administrado): uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-policies-use-android.md)
+  - Perfiles de trabajo de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md)
+  - Perfiles de trabajo de propiedad corporativa y totalmente administrados de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -81,7 +82,7 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 - F5 Access
   - Administrador de dispositivos Android
   - Perfiles de trabajo de Android Enterprise
-  - Propietario del dispositivo Android Enterprise (totalmente administrado)
+  - Perfil de trabajo de propiedad corporativa y totalmente administrado de Android Enterprise
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -96,7 +97,8 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Perfiles de trabajo de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-policies-use-android.md)
+  - Perfiles de trabajo de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md)
+  - Perfil de trabajo de propiedad corporativa y totalmente administrado de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -106,7 +108,7 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 - Pulse Secure
   - Administrador de dispositivos Android
   - Perfiles de trabajo de Android Enterprise
-  - Propietario del dispositivo Android Enterprise (totalmente administrado)
+  - Perfil de trabajo de propiedad corporativa y totalmente administrado de Android Enterprise
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -115,6 +117,7 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 - SonicWall Mobile Connect
   - Administrador de dispositivos Android
   - Perfiles de trabajo de Android Enterprise
+  - Perfil de trabajo de propiedad corporativa y totalmente administrado de Android Enterprise
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -122,7 +125,8 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
   - Windows Phone 8.1
 
 - Zscaler
-  - Perfiles de trabajo de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-policies-use-android.md)
+  - Perfiles de trabajo de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md)
+  - Perfil de trabajo de propiedad corporativa y totalmente administrado de Android Enterprise: uso de la [directiva de configuración de aplicaciones](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ Puede crear perfiles de VPN mediante los siguientes tipos de conexión:
 
     - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:
       - **Administrador de dispositivos Android**
-      - **Android Enterprise** > **Solo el propietario del dispositivo**
-      - **Android Enterprise** > **Solo perfil de trabajo**
+      - **Android Enterprise** > **Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado**
+      - **Android Enterprise** > **Perfil de trabajo**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 y versiones posteriores**

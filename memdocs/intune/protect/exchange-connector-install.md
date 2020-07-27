@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990851"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462205"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Configuración de Intune Exchange Connector local
 
+> [!IMPORTANT]
+> La información de este artículo se aplica a los clientes que admiten el uso de Exchange Connector.
+>
+> A partir de julio de 2020, el soporte técnico para Exchange Connector queda en desuso y se reemplaza por la [autenticación moderna híbrida (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) de Exchange.  Si tiene una instancia de Exchange Connector configurada en su entorno, su inquilino de Intune sigue siendo compatible con su uso, y seguirá teniendo acceso a la interfaz de usuario que admite su configuración. Puede seguir usando el conector o configurar HMA y después desinstalar el conector.
+>
+>El uso de HMA no requiere que Intune configure y use Exchange Connector. Con este cambio, la interfaz de usuario para configurar y administrar Exchange Connector para Intune se ha quitado del centro de administración de Microsoft Endpoint Manager, salvo que ya use Exchange Connector con su suscripción.
+
 Para ayudar a proteger el acceso a Exchange, Intune se basa en un componente local conocido como Microsoft Intune Exchange Connector. Este conector también se conoce como *Exchange ActiveSync Connector local* en algunas ubicaciones de la consola de Intune.
+
+> [!IMPORTANT]
+> Intune retirará el soporte técnico para la característica Exchange On-Premises Connector del servicio Microsoft Intune a partir de la versión 2007 (julio). En este momento, los clientes existentes con un conector activo podrán continuar con la funcionalidad actual. Los nuevos clientes y los clientes existentes que no tengan un conector activo ya no podrán crear otros conectores ni administrar dispositivos de Exchange ActiveSync (EAS) desde Intune. En el caso de esos inquilinos, Microsoft recomienda el uso de la [autenticación moderna híbrida (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) de Exchange para proteger el acceso a Exchange local. HMA habilita las dos directivas de Intune App Protection (también conocidas como MAM) y el acceso condicional a través de Outlook Mobile para Exchange local.
 
 La información de este artículo puede ayudarle a instalar y supervisar Intune Exchange Connector. Puede usar el conector con las [directivas de acceso condicional](conditional-access-exchange-create.md) para permitir o bloquear el acceso a los buzones locales de Exchange.
 
@@ -45,6 +55,35 @@ Para configurar una conexión que permita a Intune comunicarse con una instancia
 2. Instale y configure Exchange Connector en un equipo de la organización de Exchange local.
 3. Valide la conexión de Exchange.
 4. Repita estos pasos para cada organización adicional de Exchange que quiera conectar a Intune.
+
+## <a name="how-conditional-access-for-exchange-on-premises-works"></a>Funcionamiento del acceso condicional en Exchange local
+
+El acceso condicional para Exchange local funciona de manera distinta a las directivas basadas en el acceso condicional de Azure. Instale Intune Exchange Connector local para interactuar directamente con el servidor Exchange. Intune Exchange Connector extrae todos los registros de Exchange Active Sync (EAS) que existen en el servidor de Exchange de forma que Intune pueda tomar estos registros y asignarlos a registros de dispositivos de Intune. Estos registros son de dispositivos inscritos y reconocidos por Intune. El proceso permite o bloquea el acceso al correo electrónico.
+
+Si el registro de EAS es nuevo e Intune no lo sabe, emite un cmdlet (se pronuncia "comandlet") que dirige el servidor Exchange para bloquear el acceso al correo electrónico. A continuación encontrará más detalles sobre cómo funciona este proceso:
+
+> [!div class="mx-imgBorder"]
+> ![Exchange local con diagrama de flujo de la entidad de certificación](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. El usuario intenta acceder al correo electrónico corporativo, que está hospedado en Exchange local 2010 SP1 o posterior.
+
+2. Si el dispositivo no se administra mediante Intune, el acceso al correo electrónico estará bloqueado. Intune envía una notificación de bloqueo al cliente de EAS.
+
+3. EAS recibe la notificación de bloqueo, mueve el dispositivo a cuarentena y envía el correo electrónico de cuarentena con pasos de corrección que contienen vínculos para que los usuarios puedan inscribir sus dispositivos.
+
+4. Tiene lugar el proceso de unirse al área de trabajo, que es el primer paso para que el dispositivo se administre mediante Intune.
+
+5. El dispositivo se inscribe en Intune.
+
+6. Intune asigna el registro de EAS a un registro del dispositivo y guarda el estado de cumplimiento del dispositivo.
+
+7. El id. de cliente de EAS se registra mediante el proceso de Registro de dispositivos de Azure AD, que crea una relación entre el registro del dispositivo de Intune y el id. de cliente de EAS.
+
+8. El Registro de dispositivos de Azure AD guarda la información de estado del dispositivo.
+
+9. Si el usuario satisface las directivas de acceso condicional, Intune emite un cmdlet mediante Intune Exchange Connector que permite sincronizar el buzón de correo.
+
+10. El servidor de Exchange envía la notificación al cliente de EAS para que el usuario pueda acceder al correo electrónico.
 
 ## <a name="intune-exchange-connector-requirements"></a>Requisitos de Intune Exchange Connector
 
@@ -83,7 +122,7 @@ Cree una cuenta de usuario Active Directory para Intune Exchange Connector. La 
 
 En un servidor de Windows compatible con Intune Exchange Connector:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  Use una cuenta que sea administrador en el servidor local de Exchange y que tenga una licencia para usar Exchange Server.
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).  Use una cuenta que sea administrador en el servidor local de Exchange y que tenga una licencia para usar Exchange Server.
 
 2. Seleccione **Administración de inquilinos** > **Acceso de Exchange**.
 
@@ -214,7 +253,7 @@ Es posible que deba reinstalar una instancia de Intune Exchange Connector. Dado 
 
 Después de haber configurado correctamente la instancia de Exchange Connector, puede ver el estado de las conexiones y la última sincronización correcta:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Administración de inquilinos** > **Acceso de Exchange**.
 
@@ -234,7 +273,7 @@ Una instancia de Intune Exchange Connector sincroniza automáticamente registros
 
 Puede forzar que un conector ejecute una sincronización mediante las opciones **Sincronización rápida** o **Sincronización completa** en el panel de Intune:
 
-   1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+   1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
    2. Seleccione **Administración de inquilinos** > **Acceso a Exchange** >  **Exchange ActiveSync Connector local**.
 

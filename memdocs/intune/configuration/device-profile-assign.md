@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989026"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565689"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Asignación de perfiles de dispositivo en Microsoft Intune
 
@@ -85,11 +85,13 @@ Por ejemplo:
 
 - En algunos dispositivos Windows específicos, siempre le interesará controlar algunos valores de configuración de Microsoft Edge, con independencia de quién use el dispositivo. Por ejemplo, si quiere bloquear todas las descargas, limite todas las cookies a la sesión de exploración actual y elimine el historial de exploración. En este escenario, coloque estos dispositivos Windows específicos en un grupo de dispositivos. Luego, cree una [plantilla administrativa en Intune](administrative-templates-windows.md), agregue esta configuración de dispositivo y, luego, asigne este perfil al grupo dispositivos.
 
-En resumen, use grupos de dispositivos cuando no le preocupe quién haya iniciado sesión en el dispositivo, o si alguien ha iniciado sesión. Le interesa que la configuración esté siempre en el dispositivo.
+En resumen, use grupos de dispositivos cuando no le preocupe quién haya iniciado sesión en el dispositivo o si alguien lo hace. Le interesa que la configuración esté siempre en el dispositivo.
 
 ### <a name="user-groups"></a>Grupos de usuarios
 
 La configuración del perfil que se aplica a los grupos de usuarios siempre acompaña al usuario y va con él cuando inicia sesión en sus muchos dispositivos. Es normal que los usuarios tengan muchos dispositivos, como un equipo Surface Pro para trabajar o un dispositivo iOS/iPadOS personal. Además, es normal que una persona acceda al correo electrónico y a otros recursos de la organización desde estos dispositivos.
+
+Siga esta regla general: si una característica pertenece a un usuario, por ejemplo, los certificados de usuario o el correo electrónico, asígnela a los grupos de usuarios.
 
 Por ejemplo:
 

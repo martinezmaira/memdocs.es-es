@@ -2,7 +2,7 @@
 title: Actualizaciones y mantenimiento
 titleSuffix: Configuration Manager
 description: Conozca el método de servicio en la consola denominado Actualizaciones y mantenimiento con el que es más fácil encontrar e instalar actualizaciones recomendadas.
-ms.date: 06/30/2020
+ms.date: 07/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: a177c51aad6bfd85adc0da8019646453eb969517
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422802"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871979"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Actualizaciones y servicio para Configuration Manager
 
@@ -40,7 +40,7 @@ Una vez que instala una versión de línea de base, las versiones adicionales de
 
 - Las actualizaciones en la consola se instalan para actualizar la versión del sitio de primer nivel.  
 
-- Las actualizaciones que se instalan en el sitio de administración central se instalan automáticamente en los sitios primarios y secundarios. Controle esta sincronización mediante una ventana de mantenimiento en el sitio primario.  
+- Las actualizaciones que se instalan en el sitio de administración central se instalan automáticamente en los sitios primarios y secundarios. Controle esta temporalización mediante una ventana de servicio en el sitio primario. Para obtener más información, vea [Ventanas de servicio](service-windows.md).  
 
 - Actualice manualmente los sitios secundarios a una nueva versión de actualización desde la consola.  
 
@@ -92,7 +92,7 @@ En la siguiente tabla se enumeran las versiones históricas de la rama actual de
 | **1702** <br /> (5.00.8498) | 27 de marzo de 2017 | 27 de marzo de 2018 | Sí | Sí |
 | **1610** <br /> (5.00.8458) | 18 de noviembre de 2016 | 18 de noviembre de 2017 | No | Sí |
 | **1606** <br /> (5.00.8412.1000) | 22 de julio de 2016 | 22 de julio de 2017 | No | Sí |
-| **1606 con KB 3186654** <br />(5.00.8412.1307) | 12 de octubre de 2016 | 12 de octubre de 2017 | Sí | No |
+| **1606 con KB 3186654** <br />(5.00.8412.1307) | 12 de octubre de 2016 | 12 de octubre de 2017 | Sí | Sin |
 | **1602** <br /> (5.00.8355) | 11 de marzo de 2016 | 11 de marzo de 2017 | No | Sí |
 | **1511** <br /> (5.00.8325) | 8 de diciembre de 2015 | 8 de diciembre de 2016 | Sí | No |  
 

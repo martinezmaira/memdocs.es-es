@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e95ceb3aabf4e97d020c52983deea683646fa85d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 45317cc9c43f4f25f0adc043ce784a7b3dc4b9fd
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983142"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461783"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Reinicio remoto de los dispositivos con Intune
 
@@ -34,7 +34,9 @@ La acción de dispositivo **Reiniciar** permite que se reinicie el dispositivo e
 
 - Windows: compatible con Windows 8.1 y versiones posteriores
 - Windows Phone: compatible con Windows Phone 8.1 y versiones posteriores
-- Dispositivos de quiosco de Android: compatibles con Android 7.0 y versiones posteriores
+- Dispositivos dedicados de Android Enterprise: compatibles con Android 7.0 y versiones posteriores
+- Dispositivos Android Enterprise totalmente administrados: compatibles con Android 6.0 y versiones posteriores
+- Dispositivos corporativos de Android Enterprise con un perfil de trabajo: compatibles con Android 8.0 y versiones posteriores
 - iOS/iPados: compatible
 
     > [!Note]  
@@ -44,7 +46,7 @@ La acción de dispositivo **Reiniciar** permite que se reinicie el dispositivo e
 
 ## <a name="restart-a-device"></a>Reiniciar un dispositivo
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Seleccione **Dispositivos** > **Todos los dispositivos**.
 4. En la lista de dispositivos que administra, seleccione un dispositivo > **Reiniciar** > **Sí**.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022218"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462225"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Impulso de la adopción de usuarios finales con acceso condicional en Microsoft Intune
 
@@ -67,7 +67,7 @@ Elija una de las siguientes opciones:
 
 - [Configurar el acceso condicional en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Instalar el conector de Exchange local con Intune](../protect/exchange-connector-install.md)
+- [Configuración de la autenticación moderna híbrida](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Configurar directivas de acceso condicional basado en la aplicación para Exchange Online](../protect/app-based-conditional-access-intune-create.md)
 

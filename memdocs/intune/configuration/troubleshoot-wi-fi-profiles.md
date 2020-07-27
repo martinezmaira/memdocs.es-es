@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987854"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872059"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Solución de problemas de perfiles de configuración de dispositivos de Wi-Fi en Microsoft Intune
 
@@ -177,7 +177,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## <a name="common-issues"></a>Problemas comunes
 
-### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>Problema 1: El perfil de Wi-Fi no está implementado en el dispositivo.
+### <a name="the-wi-fi-profile-isnt-deployed-to-the-device"></a>El perfil de Wi-Fi no está implementado en el dispositivo.
 
 - Confirme que el perfil de Wi-Fi está asignado al grupo correcto:
 
@@ -248,7 +248,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     Si ve un error en el registro, copie la marca de tiempo del error y anule el filtrado del registro. A continuación, use la opción de buscar con la marca de tiempo para ver lo que sucedió justo antes del error.
 
-### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Problema 2: El perfil de Wi-Fi se implementa en el dispositivo, pero el dispositivo no se puede conectar a la red.
+### <a name="the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>El perfil de Wi-Fi se implementa en el dispositivo, pero el dispositivo no se puede conectar a la red.
 
 Normalmente, este problema se debe a algo ajeno a Intune. Las tareas siguientes pueden ayudarle a comprender y solucionar problemas de conectividad:
 
@@ -256,6 +256,22 @@ Normalmente, este problema se debe a algo ajeno a Intune. Las tareas siguientes 
 
   Si puede conectarse, examine las propiedades del certificado en la conexión manual. A continuación, actualice el perfil de Wi-Fi de Intune con las mismas propiedades de certificado.
 - Normalmente, los errores de conectividad se registran en el registro del servidor Radius. Por ejemplo, debería mostrar si el dispositivo intentó conectarse con el perfil de Wi-Fi.
+
+### <a name="users-dont-get-new-profile-after-changing-password-on-existing-profile"></a>Perfil nuevo no disponible para los usuarios tras cambiar la contraseña en el perfil existente
+
+Después de crear un perfil de Wi-Fi corporativo, implementar el perfil en un grupo, cambiar la contraseña y guardar el perfil, cuando este cambia, puede que algunos usuarios no obtengan el nuevo perfil.
+
+Para mitigar este problema, configure una Wi-Fi de invitado. Si se produce un error en la Wi-Fi corporativa, los usuarios pueden conectarse a la Wi-Fi de invitado. Debe habilitar todas las opciones de configuración de conexión automáticamente. Implemente el perfil de Wi-Fi de invitado para todos los usuarios.
+
+Algunas recomendaciones adicionales:  
+
+- Si la red Wi-Fi a la que se está conectando usa una contraseña o frase de contraseña, asegúrese de que puede conectarse directamente al enrutador Wi-Fi. Lo puede comprobar con un dispositivo iOS/iPadOS.
+- Después de conectarse correctamente al punto de conexión Wi-Fi (enrutador Wi-Fi), anote el SSID y las credenciales que se han usado (este valor es la contraseña o frase de contraseña).
+- Escriba el SSID y la credencial (contraseña o frase de contraseña) en el campo Clave precompartida. 
+- Realice la implementación en un grupo de prueba que tenga un número de usuarios limitado, preferiblemente solo del equipo de TI. 
+- Sincronice el dispositivo iOS/iPadOS con Intune. Inscríbalo si aún no lo ha hecho. 
+- Vuelva a probar la conexión al mismo punto de conexión Wi-Fi (mencionado en el primer paso).
+- Realice la implementación en grupos más grandes y, finalmente, en todos los usuarios relevantes de la organización. 
 
 ## <a name="need-more-help"></a>¿Necesita más ayuda?
 

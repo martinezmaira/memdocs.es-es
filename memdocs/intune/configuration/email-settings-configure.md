@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989163"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565655"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Agregar la configuración de correo electrónico a dispositivos que usan Intune
 
@@ -75,15 +75,35 @@ En este artículo se explica cómo crear un perfil de correo electrónico en Mic
 
     Seleccione **Siguiente**.
 
-10. En **Asignaciones**, seleccione los usuarios o grupos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md).
+10. En **Asignaciones**, seleccione los usuarios o grupos de dispositivos que van a recibir el perfil. Para obtener más información sobre la asignación de perfiles, vea [Aspectos que debe saber](#what-you-need-to-know), en este artículo. [Asignación de perfiles de usuario y dispositivo](device-profile-assign.md), además de algunas instrucciones.
 
     Seleccione **Siguiente**.
 
 11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
+## <a name="what-you-need-to-know"></a>Aspectos que debe saber
+
+- Se implementan perfiles de correo electrónico para el usuario que ha inscrito el dispositivo. Para configurar el perfil de correo electrónico, Intune usa las propiedades de Azure Active Directory (AD) del perfil de correo electrónico del usuario durante la inscripción.
+
+- Microsoft Outlook para iOS/iPadOS y dispositivos Android no admite perfiles de correo electrónico. En su lugar, implemente una directiva de configuración de aplicaciones. Para más información, consulte [Opciones de configuración de Microsoft Outlook](../apps/app-configuration-policies-outlook.md).
+
+  En los dispositivos Android Enterprise, implemente Gmail o Nine for Work mediante la instancia administrada de Google Play Store. En [Agregar aplicaciones de Google Play administrado](../apps/apps-add-android-for-work.md) se enumeran los pasos.
+
+- El correo electrónico se basa en la configuración de identidad y usuario. Los perfiles de correo electrónico se asignan normalmente a grupos de usuarios, no a grupos de dispositivos. Algunas consideraciones que hay que tener en cuenta:
+
+  - Si el perfil de correo electrónico incluye certificados de usuario, asígnelo a los grupos de usuarios. Puede tener varios perfiles de certificado de usuario asignados. Estos perfiles crean una cadena de implementaciones de perfil. Implemente esta cadena de perfil en grupos de usuarios.
+
+    Si un perfil de esta cadena se implementa en un grupo de dispositivos, es posible que se pida continuamente a los usuarios que escriban su contraseña.
+
+  - Los grupos de dispositivos suelen usarse cuando no hay usuarios primarios, o si no se sabe quién es el usuario. Es posible que los perfiles de correo electrónico destinados a grupos de dispositivos (no a grupos de usuarios) no se entreguen en el dispositivo.
+
+    Por ejemplo, si el perfil de correo electrónico se dirige a un grupo de dispositivos en los que todos sean iOS/iPadOS, asegúrese de que todos ellos tengan un usuario. Si algún dispositivo no tiene un usuario, es posible que no se implemente el perfil de correo electrónico. Después, se limita el perfil y se podrían perder algunos dispositivos. Si el dispositivo tiene un usuario primario, la implementación en grupos de dispositivos debería funcionar.
+
+    Para obtener más información sobre las posibles incidencias con el uso de los grupos de dispositivos, vea [Problemas comunes y resoluciones con perfiles de correo electrónico en Microsoft Intune](troubleshoot-email-profiles-in-microsoft-intune.md).
+
 ## <a name="remove-an-email-profile"></a>Eliminación de un perfil de correo electrónico
 
-Los perfiles de correo electrónico se asignan a grupos de dispositivos, no a grupos de usuarios. Hay varias maneras de eliminar un perfil de correo electrónico de un dispositivo, incluso cuando hay un solo perfil de este tipo en el dispositivo:
+Hay varias maneras de eliminar un perfil de correo electrónico de un dispositivo, incluso cuando hay un solo perfil de este tipo en el dispositivo:
 
 - **Opción 1**: abra el perfil de correo electrónico (**Dispositivos** > **Perfiles de configuración**, seleccione su perfil y elija **Asignaciones**. En la pestaña **Incluir** se muestran los grupos que están asignados al perfil. Haga clic con el botón derecho en el grupo > **Quitar**. Asegúrese de **Guardar** los cambios.
 
@@ -95,7 +115,7 @@ Puede ayudar a proteger los perfiles de correo electrónico con las siguientes o
 
 - **Certificados**: cuando se crea el perfil de correo electrónico, puede elegir un perfil de certificado creado anteriormente en Intune. Este certificado se conoce como "certificado de identidad". Se autentica con un perfil de certificado de confianza o un certificado raíz para confirmar que el dispositivo de un usuario tiene permiso para conectarse. El certificado de confianza se asigna al equipo que autentica la conexión de correo electrónico. Suele ser el servidor de correo nativo.
 
-  Si usa la autenticación basada en certificados para el perfil de correo electrónico, implemente el perfil de correo electrónico, el de certificado y el perfil raíz de confianza en los mismos grupos para asegurarse de que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación.
+  Si usa la autenticación basada en certificados para el perfil de correo electrónico, implemente el perfil de correo electrónico, el de certificado y el perfil raíz de confianza en los mismos grupos. Esta implementación garantiza que cada dispositivo pueda reconocer la legitimidad de la entidad de certificación.
 
   Para más información sobre cómo crear y usar perfiles de certificado en Intune, consulte [Secure resource access with certificate profiles](../protect/certificates-configure.md) (Protección del acceso a recursos con perfiles de certificado).
 
@@ -111,7 +131,7 @@ Si el usuario ya ha configurado una cuenta de correo electrónico, el perfil de 
 
 - **Android Samsung Knox Standard**: Se detecta un perfil de correo electrónico existente duplicado en función de la dirección de correo electrónico y se sobrescribe con el perfil de Intune. Android no usa el nombre de host para identificar el perfil. No cree varios perfiles de correo electrónico con la misma dirección de correo electrónico en diferentes hosts. Los perfiles se sobrescriben entre sí.
 
-- **Perfiles de trabajo Android**: Intune proporciona dos perfiles de correo electrónico de trabajo Android, uno para la aplicación de Gmail y otro para la aplicación de Nine Work. Estas aplicaciones están disponibles en Google Play Store e instalan el perfil de trabajo del dispositivo. Estas aplicaciones no crean perfiles duplicados. Ambas aplicaciones admiten conexiones a Exchange. Para usar la conectividad de correo electrónico, implemente una de estas aplicaciones de correo electrónico en los dispositivos de los usuarios. A continuación, cree e implemente el perfil de correo electrónico adecuado. Puede usar perfiles de configuración de correo electrónico de Gmail y Nine que funcionarán con los tipos de inscripción de perfil de trabajo y de propietario del dispositivo, e incluirán el uso de perfiles de certificado en ambos tipos de configuración de correo electrónico. Todas las directivas de Gmail o Nine que haya creado en la configuración del dispositivo para perfiles de trabajo seguirán aplicándose al dispositivo, sin necesidad de trasladarlas a las directivas de configuración de aplicaciones. Puede que algunas aplicaciones de correo electrónico, como Nine Work, no sean gratuitas. Revise los detalles de la licencia de la aplicación o póngase en contacto con la empresa de la aplicación si tiene alguna pregunta. 
+- **Perfiles de trabajo Android**: Intune proporciona dos perfiles de correo electrónico de trabajo Android, uno para la aplicación de Gmail y otro para la aplicación de Nine Work. Estas aplicaciones están disponibles en Google Play Store y se instalan en el perfil de trabajo del dispositivo. Estas aplicaciones no crean perfiles duplicados. Ambas aplicaciones admiten conexiones a Exchange. Para usar la conectividad de correo electrónico, implemente una de estas aplicaciones de correo electrónico en los dispositivos del usuario. Después, cree e implemente el perfil de correo electrónico. Puede usar perfiles de configuración de correo electrónico de Gmail y Nine que funcionarán con los tipos de inscripción de Perfil de trabajo y de Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado, incluido el uso de perfiles de certificado en ambos tipos de configuración de correo electrónico. Cualquier directiva de Gmail o Nine que se cree en Configuración de dispositivo para Perfiles de trabajo seguirán aplicándose al dispositivo. No es necesario moverlas a las directivas de configuración de aplicaciones. Puede que algunas aplicaciones de correo electrónico, como Nine Work, no sean gratuitas. Revise los detalles de la licencia de la aplicación o póngase en contacto con la empresa de la aplicación si tiene alguna pregunta.
 
 ## <a name="changes-to-assigned-email-profiles"></a>Cambios realizados en los perfiles de correo electrónico asignados
 

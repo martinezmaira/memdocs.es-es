@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879667"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462072"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Directiva de detección y respuesta de puntos de conexión para la seguridad de puntos de conexión en Intune
 
@@ -32,9 +32,6 @@ Las funciones de detección de puntos de conexión y respuesta de ATP de Microso
 Las directivas de EDR incluyen perfiles específicos de la plataforma para administrar la configuración de EDR. Los perfiles incluyen automáticamente un *paquete de incorporación* para ATP de Microsoft Defender. La incorporación de paquetes es la manera de configurar los dispositivos de modo que funcionen con ATP de Microsoft Defender. Una vez que se incorpora un dispositivo, puede empezar a usar los datos de amenazas de ese dispositivo.
 
 Las directivas de EDR se implementan en grupos de dispositivos en Azure Active Directory (Azure AD) que se administran con Intune y en colecciones de dispositivos locales que se administran con Configuration Manager, incluidos los servidores de Windows. Las directivas de EDR para las distintas rutas de administración requieren otros paquetes de incorporación. Por tanto, creará directivas de EDR independientes para los diferentes tipos de dispositivos que administra.
-
-> [!TIP]
-> La compatibilidad con los dispositivos que administra con Configuration Manager está en *versión preliminar pública*.
 
 Busque las directivas de seguridad de puntos de conexión para EDR en *Administrar*, en el nodo **Seguridad de los puntos de conexión** del [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -74,10 +71,10 @@ para admitir el uso de directivas de EDR con dispositivos de Configuration Manag
 - Plataforma: **Windows 10 y versiones posteriores**: Intune implementa la directiva en los dispositivos de los grupos de Azure AD.
 - Perfil: **Detección y respuesta de puntos de conexión (MDM)**
 
-**Configuration Manager** *(en versión preliminar)* : los dispositivos que administra con Configuration Manager admiten lo siguiente:
+**Configuration Manager**: los dispositivos que se administran con Configuration Manager admiten lo siguiente:
 
 - Plataforma: **Windows 10 y Windows Server**: Configuration Manager implementa la directiva en los dispositivos de las colecciones de Configuration Manager.
-- Perfil: **Detección de puntos de conexión y respuesta (ConfigMgr) (versión preliminar)**
+- Perfil: **Detección de puntos de conexión y respuesta (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Configurar Configuration Manager para admitir la directiva de EDR
 
@@ -223,7 +220,7 @@ Antes de implementar la directiva en los dispositivos administrados por Configur
 
    - Configuration Manager: Configuration Manager implementa la directiva en los dispositivos de las colecciones de Configuration Manager. Al crear la directiva, seleccione lo siguiente:
      - Plataforma: **Windows 10 y Windows Server**
-     - Perfil: **Detección de puntos de conexión y respuesta (ConfigMgr) (versión preliminar)**
+     - Perfil: **Detección de puntos de conexión y respuesta (ConfigMgr)**
 
 4. Seleccione **Crear**.
 

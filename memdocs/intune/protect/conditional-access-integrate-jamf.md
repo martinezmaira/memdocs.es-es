@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 479dd1fede23c902d7be0f38ad0f16aa9f4917cf
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989132"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565520"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integración de Jamf Pro con Intune para cumplimiento
 
@@ -102,7 +102,7 @@ Para conectar Intune con Jamf Pro:
 
 9. En la página **Request API permissions** (Solicitar permisos de API), seleccione **Intune** y, luego, **Permisos de aplicación**. Active solo la casilla para **update_device_attributes** y guarde el permiso nuevo.
 
-10. Después, para conceder consentimiento de administrador para esta aplicación, seleccione **Conceder consentimiento de administrador para _\<su inquilino>_** en la parte superior izquierda de la página **Permisos de API**. Es posible que tenga que volver a autenticar la cuenta en la nueva ventana y seguir las indicaciones para conceder acceso a la aplicación.  
+10. Después, para conceder consentimiento de administrador para esta aplicación, seleccione **Conceder consentimiento de administrador para _\<your tenant>_** en la parte superior izquierda de la página **Permisos de API**. Es posible que tenga que volver a autenticar la cuenta en la nueva ventana y seguir las indicaciones para conceder acceso a la aplicación.  
 
 11. Para actualizar la página, haga clic en el botón **Actualizar** de la parte superior de la página. Confirme que se ha concedido el consentimiento del administrador para el permiso **update_device_attributes**. 
 
@@ -110,10 +110,10 @@ Para conectar Intune con Jamf Pro:
 
    ![Permisos correctos](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   El proceso de registro de la aplicación en Azure AD se completó.
+El proceso de registro de la aplicación en Azure AD se completó.
 
-    > [!NOTE]
-    > Si el secreto de cliente expira, debe crear otro secreto de cliente en Azure y luego actualizar los datos de acceso condicional en Jamf Pro. Azure permite tener activo tanto el secreto anterior como la clave nueva para evitar las interrupciones del servicio.
+> [!NOTE]
+> Si el secreto de cliente expira, debe crear otro secreto de cliente en Azure y luego actualizar los datos de acceso condicional en Jamf Pro. Azure permite tener activo tanto el secreto anterior como la clave nueva para evitar las interrupciones del servicio.
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Habilitación de Intune para su integración con Jamf Pro
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984829"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461545"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Asignación de aplicaciones a grupos con Microsoft Intune
 
@@ -36,7 +36,7 @@ Después de [agregar una aplicación](apps-add.md) a Microsoft Intune, puede asi
 
 En esta tabla se muestran las diversas opciones para asignar aplicaciones a usuarios y dispositivos:
 
-|   | Dispositivos inscritos en Intune | Dispositivos no inscritos en Intune |
+| Opción  | Dispositivos inscritos en Intune | Dispositivos no inscritos en Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Asignar a usuarios | Sí | Sí |
 | Asignar a dispositivos | Sí | No |
@@ -55,7 +55,7 @@ En esta tabla se muestran las diversas opciones para asignar aplicaciones a usua
 
 ## <a name="assign-an-app"></a>Asignación de una aplicación
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones**.
 3. En el panel **Aplicaciones**, seleccione la aplicación que quiere asignar.
 4. En la sección **Administrar** del menú, seleccione **Asignaciones**.
@@ -122,7 +122,7 @@ En dispositivos Android, en un escenario de implementación de directiva de prot
 
 Pasos para asignar una aplicación de Google Play administrado a dispositivos no administrados:
 
-1. Conecte su inquilino de Intune a Google Play administrado. Si ya lo ha hecho para administrar perfiles de trabajo de Android Enterprise o dispositivos dedicados o completamente administrados, omita este paso.
+1. Conecte su inquilino de Intune a Google Play administrado. Si ya lo ha hecho para administrar el perfil de trabajo Android Enterprise, Android Enterprise dedicado, completamente administrado o de propiedad corporativa, omita este paso.
 2. Agregue las aplicaciones de Google Play administrado a la consola de Intune.
 3. Dirija las aplicaciones de Google Play administrado como **Disponible con o sin inscripción** al grupo de usuarios deseado. Los destinos de aplicaciones **Requerido** y **Desinstalar** no se admiten en dispositivos no inscritos.
 4. Asigne una directiva de protección de aplicaciones al grupo de usuarios.

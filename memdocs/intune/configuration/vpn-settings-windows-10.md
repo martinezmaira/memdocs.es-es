@@ -1,11 +1,11 @@
 ---
 title: 'Configuración de VPN de Windows 10 en Microsoft Intune: Azure | Microsoft Docs'
-description: Obtenga información sobre toda la configuración de VPN que está disponible en Microsoft Intune, para qué se usa y qué hace, incluidas las reglas de tráfico, el acceso condicional y la configuración de DNS y proxy para dispositivos con Windows 10 y Windows Holographic for Business.
+description: Obtenga información sobre toda la configuración de VPN que está disponible en Microsoft Intune, para qué se usa y qué hace. Vea las reglas de tráfico, el acceso condicional, y la configuración de DNS y de proxy para dispositivos Windows 10 y Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429490"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461359"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Configuración de dispositivos con Windows 10 y Windows Holographic para agregar conexiones VPN mediante Intune
 
-Puede agregar y configurar conexiones VPN para dispositivos con Microsoft Intune. En este artículo se enumeran y describen las características y los valores de configuración más usados al crear redes privadas virtuales (VPN). Estas características y valores de configuración de VPN se usan en los perfiles de configuración de dispositivo en Intune que se insertan o implementan en dispositivos.
+Puede agregar y configurar conexiones VPN para dispositivos con Microsoft Intune. En este artículo se enumeran y describen características y valores de configuración habituales al crear redes privadas virtuales (VPN). Estas características y valores de configuración de VPN se usan en los perfiles de configuración de dispositivo en Intune que se insertan o implementan en dispositivos.
 
 Como parte de la solución de administración de dispositivos móviles (MDM), use esta configuración para permitir o deshabilitar características, como el uso de un proveedor de VPN, la habilitación de Always On, el uso de DNS, la adición de un servidor proxy y mucho más.
 
@@ -65,16 +65,69 @@ Según la configuración que elija, es posible que no se puedan configurar todos
   - **L2TP**
   - **PPTP**
 
-  Al elegir un tipo de conexión de VPN; puede que también se le solicite la siguiente configuración:  
+  Al elegir un tipo de conexión de VPN; puede que también se le solicite la siguiente configuración:
+
   - **Siempre disponible**: **Habilitar** permite conectarse automáticamente a la VPN cuando se producen estas situaciones:
     - Los usuarios inicien sesión en sus dispositivos
     - La red del dispositivo cambie
     - La pantalla del dispositivo se vuelva a activar después de haberse desactivado
 
-  - **Método de autenticación**: seleccione cómo quiere que los usuarios se autentiquen en el servidor VPN. El uso de **certificados** ofrece características mejoradas, como experiencia sin interacción del usuario, VPN a petición y VPN por aplicación.
+    Para usar conexiones de túnel de dispositivo, como IKEv2, **habilite** esta configuración.
+
+  - **Método de autenticación**: seleccione cómo quiere que los usuarios se autentiquen en el servidor VPN. Las opciones son:
+    - **Nombre de usuario y contraseña**: pida a los usuarios que escriban su nombre de usuario y contraseña de dominio para autenticarse, por ejemplo, `user@contoso.com` o `contoso\user`.
+    - **Certificados**: seleccione un perfil de certificado de cliente de usuario existente para autenticar el usuario. Esta opción ofrece características mejoradas, como experiencia sin interacción del usuario, VPN a petición y VPN por aplicación.
+
+      Para crear perfiles de certificados en Intune, vea [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
+
+    - **Certificados de máquina** (solo IKEv2): seleccione un perfil de certificado de cliente de dispositivo existente para autenticar el dispositivo.
+
+      Si usa [conexiones de túnel de dispositivo](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), debe seleccionar esta opción.
+
+      Para crear perfiles de certificados en Intune, vea [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
+
+    - **EAP** (solo IKEv2): seleccione un perfil existente de certificado de cliente del protocolo de autenticación extensible (EAP) para autenticarse. Escriba los parámetros de autenticación en la opción **XML de EAP**.
   - **Recordar credenciales en cada inicio de sesión**: copie en la caché las credenciales de autenticación.
   - **XML personalizado**: escriba cualquier comando XML personalizado que configure la conexión VPN.
-  - **XML de EAP**: escriba cualquier comando de XML de EAP que configure la conexión VPN.
+  - **XML de EAP**: escriba cualquier comando de XML de EAP que configure la conexión VPN. Para obtener más información, vea [Configuración de EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+
+  - **Túnel de dispositivo** (solo IKEv2): **Habilitar** conecta el dispositivo a la VPN automáticamente sin intervención del usuario ni inicio de sesión. Esta configuración se aplica a los equipos unidos a Azure Active Directory (AD).
+
+    Para usar esta característica, se requiere lo siguiente:
+
+    - La opción **Tipo de conexión** debe estar establecida en **IKEv2**.
+    - La opción **Always On** debe estar establecida en **Habilitar**.
+    - La opción **Método de autenticación** debe estar establecida en **Certificados de máquina**.
+
+    Si **Túnel de dispositivo** está habilitado, asigne solo un perfil por dispositivo.
+
+  **Parámetros de asociaciones de seguridad de IKE** (solo IKEv2): esta configuración de criptografía se usa durante las negociaciones sobre la asociación de seguridad de IKE (también conocidas como `main mode` o `phase 1`) para las conexiones de IKEv2. Esta configuración debe coincidir con la del servidor VPN. Si no coincide, el perfil de VPN no se conectará.
+
+  - **Algoritmo de cifrado**: seleccione el algoritmo de cifrado que se usa en el servidor VPN. Por ejemplo, si el servidor VPN usa AES de 128 bits, seleccione **AES-128** en la lista.
+
+    Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+
+  - **Algoritmo de comprobación de integridad**: seleccione el algoritmo de integridad que se usa en el servidor VPN. Por ejemplo, si el servidor VPN usa SHA1-96, seleccione **SAH1-96** en la lista.
+
+    Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+
+  - **Grupo Diffie-Hellman**: seleccione el grupo de cálculo Diffie-Hellman que se usa en el servidor VPN. Por ejemplo, si el servidor VPN usa Group2 (1024 bits), seleccione **2** en la lista.
+
+    Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+
+  **Parámetros de asociaciones de seguridad de tipo secundario** (solo IKEv2): esta configuración de criptografía se usa durante las negociaciones sobre la asociación de seguridad de tipo secundario (también conocidas como `quick mode` o `phase 2`) para las conexiones de IKEv2. Esta configuración debe coincidir con la del servidor VPN. Si no coincide, el perfil de VPN no se conectará.
+
+  - **Algoritmo de transformación de cifrado**: seleccione el algoritmo que se usa en el servidor VPN. Por ejemplo, si el servidor VPN usa AES-CBC de 128 bits, seleccione **CBC-AES-128** en la lista.
+
+    Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+
+  - **Algoritmo de transformación de autenticación**: seleccione el algoritmo que se usa en el servidor VPN. Por ejemplo, si el servidor VPN usa AES-GCM de 128 bits, seleccione **GCM-AES-128** en la lista.
+
+    Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+
+  - **Grupo de confidencialidad directa total (PFS)** : seleccione el grupo de cálculo Diffie-Hellman que se usa para la confidencialidad directa total (PFS) en el servidor VPN. Por ejemplo, si el servidor VPN usa Group2 (1024 bits), seleccione **2** en la lista.
+
+    Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
 
 ### <a name="pulse-secure-example"></a>Ejemplo de Pulse Secure
 

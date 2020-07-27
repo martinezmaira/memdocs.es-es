@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 771741ed0e07a6373c63dd2e81745fe53adc4242
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236399"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410851"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Administración de transferencias de datos entre aplicaciones iOS en Microsoft Intune
 
 Para ayudar a proteger los datos de la empresa, restrinja las transferencias de archivos a solo las aplicaciones que administre. Puede administrar aplicaciones iOS de la siguiente manera:
 
-- Proteja los datos de la organización para las cuentas profesionales o educativas mediante la configuración de una directiva de protección de aplicaciones para las aplicaciones, a las que llamamos *aplicaciones administradas por directiva*.  Vea [todas las aplicaciones administradas de Intune que puede administrar con la directiva de protección de aplicaciones](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
+- Proteja los datos de la organización para las cuentas profesionales o educativas mediante la configuración de una directiva de protección de aplicaciones para las aplicaciones, a las que llamamos *aplicaciones administradas por directiva*.  Vea [Aplicaciones protegidas de Microsoft Intune](apps-supported-intune-apps.md).
 
 - Implemente y administre aplicaciones a través de la administración de dispositivos iOS, que requiere que los dispositivos se inscriban en una solución de administración de dispositivos móviles (MDM). Las aplicaciones que implemente pueden ser *aplicaciones administradas por directiva* u otras aplicaciones administradas iOS.
 
@@ -40,10 +40,10 @@ Use directivas de protección de aplicaciones con la característica de **admini
 
 - **Dispositivos no administrados por una solución MDM:** Puede establecer la configuración de la directiva de protección de aplicaciones para controlar el uso compartido de datos con otras aplicaciones mediante *Open in* o *Extensiones de recurso compartido*.  Para ello, configure el valor**Enviar datos de la organización a otras aplicaciones** en el valor **Filtrado de aplicaciones administradas por directivas con Open-In/Recurso compartido**.  El comportamiento *Open-in/Share* (Open-In/Recurso compartido) en una *aplicación administrada por directivas* solo presenta otras *aplicaciones administradas por directivas* como opción para el uso compartido. 
 
-- **Dispositivos administrados por soluciones MDM**: Para los dispositivos inscritos en las soluciones MDM de Intune o de terceros, el uso compartido de datos entre las aplicaciones con directivas de protección de aplicaciones y otras aplicaciones iOS administradas que se implementan mediante MDM está controlado por las directivas de Intune App y la característica de iOS de **administración Open in**. Para asegurarse de que las aplicaciones que implementa mediante una solución de MDM también están asociadas a las directivas de protección de aplicaciones de Intune, configure el valor de UPN de usuario como se describe en la sección siguiente, [Configurar el valor de UPN de usuario](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Para especificar cómo quiere permitir la transferencia de datos a otras aplicaciones, habilite **Enviar datos de la organización a otras aplicaciones** y elija el nivel de uso compartido que prefiera. Para especificar cómo quiere permitir que una aplicación reciba datos de otras aplicaciones, habilite **Recibir datos de otras aplicaciones** y elija el nivel de recepción de datos que prefiera. Para obtener más información sobre cómo recibir y compartir datos de la aplicación, vea [Configuración de reubicación de datos](app-protection-policy-settings-ios.md#data-protection).
+- **Dispositivos administrados por soluciones MDM**: Para los dispositivos inscritos en las soluciones MDM de Intune o de terceros, el uso compartido de datos entre las aplicaciones con directivas de protección de aplicaciones y otras aplicaciones iOS administradas que se implementan mediante MDM está controlado por las directivas de Intune App y la característica de iOS de **administración Open in**. Para asegurarse de que las aplicaciones que implementa mediante una solución de MDM también están asociadas a las directivas de protección de aplicaciones de Intune, configure el valor de UPN de usuario como se describe en la sección siguiente, [Configurar el valor de UPN de usuario](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Para especificar cómo quiere permitir la transferencia de datos a otras *aplicaciones administradas por directivas* y aplicaciones administradas de iOS, establezca la configuración **Enviar datos de la organización a otras aplicaciones** en **Aplicaciones administradas por directivas con uso compartido del sistema operativo**. Para especificar cómo quiere permitir que una aplicación reciba datos de otras aplicaciones, habilite **Recibir datos de otras aplicaciones** y elija el nivel de recepción de datos que prefiera. Para obtener más información sobre cómo recibir y compartir datos de la aplicación, vea [Configuración de reubicación de datos](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Configurar el valor de UPN de usuario para Microsoft Intune o para una solución EMM de terceros
-La configuración del valor de UPN de usuario es **necesaria** para los dispositivos administrados por Intune o por una solución EMM de terceros para identificar la cuenta de usuario inscrita. La configuración de UPN funciona con las directivas de protección de aplicaciones que implementa desde Intune. El procedimiento siguiente es un flujo general para la configuración del valor de UPN y la experiencia del usuario resultante:
+La configuración del valor de UPN de usuario es **necesaria** para los dispositivos que administra Intune o una solución EMM de terceros a fin de identificar la cuenta de usuario inscrita para la *aplicación administrada por la directiva* de envío cuando se transfieren los datos a una aplicación administrada por iOS. La configuración de UPN funciona con las directivas de protección de aplicaciones que se implementan desde Intune. El procedimiento siguiente es un flujo general para la configuración del valor de UPN y la experiencia del usuario resultante:
 
 1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), [cree y asigne una directiva de protección de aplicaciones](app-protection-policies.md) para iOS/iPadOS. Configure las directivas según los requisitos de su empresa y seleccione las aplicaciones iOS que debe tener esta directiva.
 
@@ -70,7 +70,7 @@ La configuración del valor de UPN de usuario es **necesaria** para los disposit
 
 1. Vaya a la consola de administración de Intune o de su proveedor de MDM externo. Vaya a la sección de la consola en la que se implementan las opciones de configuración de la aplicación en los dispositivos iOS inscritos.
 
-2. En la sección Configuración de la aplicación, escriba lo siguiente:
+2. En la sección Configuración de la aplicación, escriba la configuración siguiente para cada *aplicación administrada por la directiva* que transferirá los datos a las aplicaciones administradas de iOS:
 
    **clave** = IntuneMAMUPN, **valor** = <username@company.com>
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: dd53ec47435ba9dc416d2b152719b393d1647f90
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824003"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460423"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de detección de puntos de conexión y respuesta para la seguridad de puntos de conexión en Intune
 
@@ -33,9 +33,7 @@ Plataformas y perfiles compatibles:
   - Perfil: **Detección de puntos de conexión y respuesta (MDM)**
 
 - **Windows 10 y Windows Server**: use esta plataforma para la directiva que implemente en dispositivos administrados mediante Configuration Manager.
-  - Perfil: **Detección de puntos de conexión y respuesta (ConfigMgr) (versión preliminar)**
-  
-  *Esta plataforma y perfil están en versión preliminar pública*.
+  - Perfil: **Detección de puntos de conexión y respuesta (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>Detección de puntos de conexión y respuesta (MDM)
 
@@ -70,7 +68,7 @@ Plataformas y perfiles compatibles:
   - **No configurado** (*valor predeterminado*)
   - **Sí**: aumente la frecuencia de informes de telemetría de Advanced Threat Protection de Microsoft Defender.
 
-## <a name="endpoint-detection-and-response-configmgr-preview"></a>Detección de puntos de conexión y respuesta (ConfigMgr) (versión preliminar)
+## <a name="endpoint-detection-and-response-configmgr"></a>Detección de puntos de conexión y respuesta (ConfigMgr)
 
 **Detección de puntos de conexión y respuesta**:
 

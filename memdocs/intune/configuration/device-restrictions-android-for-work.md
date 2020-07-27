@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303477"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491259"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -31,9 +31,18 @@ En este artículo se enumeran y describen los diferentes valores de configuraci�
 
 [Cree un perfil de configuración de dispositivo](device-restrictions-configure.md).
 
-## <a name="device-owner-only"></a>Solo el propietario del dispositivo
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado
 
-Esta configuración se aplica a los tipos de inscripción Android Enterprise en los que Intune controla todo el dispositivo, como los Android Enterprise totalmente administrados o dedicados.
+Esta configuración se aplica a los tipos de inscripción Android Enterprise donde Intune controla todo el dispositivo, como los dispositivos de perfil de trabajo Android Enterprise de propiedad corporativa, dedicado y totalmente administrado.
+
+Ciertos tipos de inscripción no admiten algunos valores de configuración. Para ver qué configuración se admite con qué tipos de inscripción, consulte la interfaz de usuario. Cada configuración está bajo un encabezado que indica los tipos de inscripción que pueden utilizar esa configuración.
+
+![Establecimiento de los encabezados](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Algunos valores de configuración solo se aplican en el nivel de perfil de trabajo en dispositivos de propiedad corporativa con un perfil de trabajo. Esta configuración se seguirá aplicando a todo el dispositivo en el caso de los dispositivos de perfil de trabajo dedicado y totalmente administrado. Esta configuración se marca con el descriptor *(nivel de perfil de trabajo)* en la interfaz de usuario.
+
+![Establecimiento de los encabezados](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>General
 
@@ -115,7 +124,9 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa en 
       >
       > No es necesario que la aplicación **Managed Home Screen** esté en el perfil de configuración, pero es obligatorio que se agregue como aplicación. Cuando se agrega la aplicación **Managed Home Screen**, cualquier otra que se agregue en el perfil de configuración aparece como icono en la aplicación **Managed Home Screen**.
       >
-      > Cuando se usa la pantalla completa de varias aplicaciones, es posible que las aplicaciones de teléfono y marcado no funcionen correctamente. 
+      > Cuando se usa la pantalla completa de varias aplicaciones, es posible que las aplicaciones de teléfono y marcado no funcionen correctamente.
+      >
+      > Para más información sobre Managed Home Screen, consulte el artículo sobre [configuración de Microsoft Managed Home Screen en dispositivos dedicados en pantalla completa con varias aplicaciones](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       - **Agregar**: seleccione las aplicaciones de la lista.
 
@@ -123,6 +134,28 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa en 
 
         También puede agregar al dispositivo otras [aplicaciones Android](../apps/apps-add-android-for-work.md) y [aplicaciones web](../apps/web-app.md) creadas por la organización. No olvide [asignar la aplicación al grupo de dispositivos creado para los dispositivos dedicados](../apps/apps-deploy.md).
 
+      - **Icono de carpeta**: seleccione el color y la forma del icono de carpeta que se muestra en Managed Home Screen. Las opciones son:
+        - No configurado 
+        - Rectángulo de tema oscuro
+        - Círculo de tema oscuro
+        - Rectángulo de tema claro
+        - Círculo de tema claro
+      - **Tamaño de los iconos de aplicación y carpeta**: seleccione el tamaño del icono de carpeta que se muestra en Managed Home Screen. Las opciones son:
+        - No configurado 
+        - Extrapequeño
+        - Pequeño
+        - Promedio
+        - Grande
+        - Extragrande
+
+          Según el tamaño de la pantalla, puede que el tamaño real del icono sea diferente.
+
+      - **Orientación de la pantalla**: seleccione la dirección en la que Managed Home Screen se muestra en los dispositivos. Las opciones son:
+        - No configurado
+        - Vertical
+        - Horizontal
+        - Rotar automáticamente
+      - **Señales de notificación de la aplicación**: **Habilitar** muestra el número de notificaciones nuevas y no leídas en los iconos de la aplicación. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
       - **Botón de inicio virtual**: botón de tecla programable que devuelve a los usuarios a Managed Home Screen para que puedan cambiar de aplicación. Las opciones son:
         - **Sin configurar** (valor predeterminado): No se muestra ningún botón Inicio. Los usuarios deben usar el botón Atrás para cambiar de aplicación.
         - **Deslizar rápidamente hacia arriba**: se muestra un botón Inicio cuando un usuario desliza rápidamente el dedo hacia arriba en el dispositivo.
@@ -150,7 +183,31 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa en 
         >
         > Las pantallas modernas tienen mayores densidades de píxeles y pueden mostrar imágenes que equivalen a definiciones 2K o 4K.
 
+      - **Acceso directo al menú de configuración**: **Deshabilitar** oculta el acceso directo a la configuración administrada en Managed Home Screen. Los usuarios seguirán pudiendo deslizarse rápidamente hacia abajo para acceder a la configuración. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el acceso directo a la configuración administrada se muestra en los dispositivos. Los usuarios también pueden deslizarse hacia abajo para acceder a esta configuración.
+
+      - **Acceso rápido al menú de depuración**: esta configuración controla el modo en el que los usuarios acceden al menú de depuración. Las opciones son:
+
+        - **Habilitar**: Los usuarios pueden acceder más fácilmente al menú de depuración. En concreto, pueden deslizarse hacia abajo o usar el acceso directo de configuración administrada. Como siempre, pueden continuar seleccionando el botón Atrás 15 veces.
+        - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración. De forma predeterminada, el acceso sencillo al menú de depuración está desactivado. Los usuarios deben seleccionar el botón Atrás 15 veces para abrir el menú de depuración.
+
+        Mediante el menú de depuración, los usuarios pueden:
+
+        - Ver y cargar registros de Managed Home Screen
+        - Abrir la aplicación Administrador de directivas de dispositivos Android de Google
+        - Abrir la [aplicación Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Salir del modo de pantalla completa
+
       - **Configuración de Wi-Fi**: **Habilitar** muestra el control de Wi-Fi en Managed Home Screen y permite que los usuarios conecten el dispositivo a distintas redes Wi-Fi. Si habilita esta característica, también se activa la ubicación del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de Wi-Fi en Managed Home Screen. Impide que los usuarios se conecten a redes Wi-Fi mientras usan Managed Home Screen.
+
+        - **Lista de redes Wi-Fi permitidas**: cree una lista de nombres de red inalámbrica válidos, también conocidos como identificadores de red (SSID). Los usuarios de Managed Home Screen solo pueden conectarse a los SSID que se especifiquen.
+
+          Cuando se deja en blanco, Intune no cambia ni actualiza esta configuración. De forma predeterminada, se permiten todas las redes Wi-Fi disponibles.
+
+          **Importe** un archivo .csv que incluya una lista de SSID válidos.
+
+          **Exporte** la lista actual en un archivo .csv.
+
+        - **SSID**: También puede especificar los nombres de red Wi-Fi (SSID) a los que los usuarios de Managed Home Screen pueden conectarse. Asegúrese de indicar SSID válidos.
 
       - **Configuración de Bluetooth**: **Habilitar** muestra el control de Bluetooth en Managed Home Screen y permite a los usuarios emparejar dispositivos a través de Bluetooth. Si habilita esta característica, también se activa la ubicación del dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de Bluetooth en Managed Home Screen. Impide que los usuarios configuren el Bluetooth y los dispositivos de emparejamiento mientras usan Managed Home Screen.
 
@@ -158,17 +215,19 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa en 
 
       - **Control de volumen de elementos multimedia**: **Habilitar** muestra el control de volumen de elementos multimedia en Managed Home Screen y permite a los usuarios ajustar el volumen de los elementos multimedia del dispositivo con un control deslizante. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre el control de volumen de los elementos multimedia en Managed Home Screen. Impide que los usuarios ajusten el volumen multimedia del dispositivo mientras se usa Managed Home Screen, a menos que los botones de hardware lo admitan.
 
+      - **Acceso rápido a la información del dispositivo**: **Habilitar** permite a los usuarios deslizar el dedo hacia abajo para ver la información del dispositivo en Managed Home Screen, como el número de serie, la marca, el número de modelo y el nivel de SDK. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que no se muestre la información del dispositivo.
+
       - **Modo de protector de pantalla**: **Habilitar** muestra un protector de pantalla en Managed Home Screen cuando el dispositivo está bloqueado o agota el tiempo de espera. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, es posible que el sistema operativo no muestre un protector de pantalla en Managed Home Screen.
 
         Cuando esté habilitado, configure también:
 
-        - **Establecer imagen personalizada del protector de pantalla**: escriba la dirección URL de un archivo PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizado. Si no escribe una dirección URL, se usará la imagen predeterminada del dispositivo, si la hay. 
-        
+        - **Establecer imagen personalizada del protector de pantalla**: escriba la dirección URL de un archivo PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizado. Si no escribe una dirección URL, se usará la imagen predeterminada del dispositivo, si la hay.
+
           Por ejemplo, escriba:
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > Se admite cualquier dirección URL de recurso de archivo que se pueda convertir a un mapa de bits.
@@ -180,30 +239,27 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa en 
 - **Totalmente administrado**: configura la aplicación Microsoft Launcher en los dispositivos totalmente administrados.
 
   - **Hacer que Microsoft Launcher sea el iniciador predeterminado**: **Habilitar** establece Microsoft Launcher como el iniciador predeterminado en la pantalla principal. Si hace que Launcher sea el iniciador predeterminado, los usuarios no podrán usar otro. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, Microsoft Launcher no se fuerza como iniciador predeterminado.
+  - **Configurar papel tapiz personalizado**: **Habilitar** permite aplicar una imagen propia como papel tapiz de la pantalla principal y elegir si los usuarios pueden cambiarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el dispositivo conserva el papel tapiz actual.
+    - **Escribir URL de la imagen de papel tapiz**: escriba la dirección URL de la imagen del papel tapiz. Esta imagen se muestra en la pantalla principal del dispositivo. Por ejemplo, escriba `http://www.contoso.com/image.jpg`. 
+    - **Permitir al usuario modificar el papel tapiz**: **Habilitar** permite a los usuarios cambiar la imagen del papel tapiz. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, los usuarios no pueden cambiarla.
+  - **Habilitar fuente de Launcher**: **Habilitar** activa la fuente de Launcher, que muestra los calendarios, los documentos y las actividades recientes. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, esta fuente no se muestra.
+    - **Permitir al usuario habilitar o deshabilitar la fuente**: **Habilitar** permite a los usuarios habilitar o deshabilitar la fuente de Launcher. **Habilitar** solo aplica esta configuración la primera vez que se asigna el perfil. Las futuras asignaciones de perfil no aplicarán esta configuración. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, los usuarios no pueden cambiar la configuración de la fuente de Launcher.
+  - **Presencia del Dock**: el Dock proporciona a los usuarios acceso rápido a sus aplicaciones y herramientas. Las opciones son:
+    - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración.
+    - **Mostrar**: El Dock se muestra en los dispositivos.
+    - **Ocultar**: El Dock está oculto. Los usuarios deben deslizarse hacia arriba para acceder al Dock.
+    - **Disabled**: El Dock no se muestra en los dispositivos, y los usuarios no pueden mostrarlo.
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **Permitir al usuario cambiar la presencia del Dock**: **Habilitar** permite a los usuarios mostrar u ocultar el Dock. **Habilitar** solo aplica esta configuración la primera vez que se asigna el perfil. Las futuras asignaciones de perfil no aplicarán esta configuración. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, los usuarios no pueden cambiar la configuración de Dock del dispositivo.
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **Reemplazo de la barra de búsqueda**: elija dónde colocar la barra de búsqueda. Las opciones son:
+    - **Sin configurar** (valor predeterminado): Intune no cambia ni actualiza esta configuración.
+    - **Superior**: la barra de búsqueda se muestra en la parte superior de los dispositivos.
+    - **Inferior**: la barra de búsqueda se muestra en la parte inferior de los dispositivos.
+    - **Ocultar**: La barra de búsqueda se oculta.
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>Contraseña
@@ -240,7 +296,7 @@ End of comment -->
 - **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 
   > [!NOTE]
-  > No se pedirá a los dispositivos del Propietario del dispositivo que establezcan una contraseña. La configuración se aplicará y tendrá que establecer la contraseña manualmente. La directiva que aplique esto se notificará como errónea hasta que se establezca la contraseña que cumpla sus requisitos.
+  > No se pedirá a los dispositivos de perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado que establezcan una contraseña. La configuración se aplicará y tendrá que establecer la contraseña manualmente. La directiva que aplique esto se notificará como errónea hasta que se establezca la contraseña que cumpla sus requisitos.
 
 ### <a name="power-settings"></a>Configuración de energía
 
@@ -255,7 +311,7 @@ End of comment -->
 - **Cambios de cuenta** (solo dispositivos dedicados): **Bloquear** impide que los usuarios modifiquen cuentas. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios actualicen las cuentas de usuario en el dispositivo.
 
   > [!NOTE]
-  > Esta configuración no se aplica a los dispositivos del propietario del dispositivo (totalmente administrados). Si configura esta opción, se omitirá la configuración y no tendrá efecto.
+  > Esta configuración no se aplica a los dispositivos de perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado. Si configura esta opción, se omitirá la configuración y no tendrá efecto.
 
 - **El usuario puede configurar las credenciales**: **Bloquear** impide que los usuarios configuren certificados asignados a dispositivos, incluso aunque se trate de dispositivos que no estén asociados a una cuenta de usuario. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios configuren o cambien sus credenciales al acceder a ellas en el almacén de claves.
 - **Cuentas personales de Google**: **Bloquear** impide que los usuarios agreguen la cuenta personal de Google al dispositivo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir a los usuarios agregar su cuenta personal de Google.

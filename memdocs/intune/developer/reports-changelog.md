@@ -6,7 +6,7 @@ keywords: Almacenamiento de datos de Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165862"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461222"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Registro de cambios en la API Almacenamiento de datos de Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Manténgase al día de los cambios producidos en el Almacén de datos de Intune.
+
+## <a name="2007"></a>2007 
+_Fecha de publicación: julio de 2020_
+
+### <a name="v10-changes"></a>Cambios en la versión 1.0
+
+En la tabla siguiente se indica la propiedad agregada a la entidad [device](../developer/intune-data-warehouse-collections.md#devices) en el almacenamiento de datos de Intune.
+
+|    Colección                          |    Cambio     |    Información de descripción                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Adición    |    Identificador de red único de este dispositivo.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Adición    |    La versión de Office 365 instalada en el dispositivo.                                                                                                                                                                                                                                                                     |
+
+En la tabla siguiente se indican las propiedades agregadas a la entidad [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) en el almacenamiento de datos de Intune.
+
+|    Colección                          |    Cambio     |    Información de descripción                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    Adición    |    La memoria física en bytes.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes    |    Adición    |    Capacidad de almacenamiento total en bytes.                                                                                                                                                                                                                                                                     |
 
 ## <a name="2004"></a>2004 
 _Fecha de publicación: abril de 2020_

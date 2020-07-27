@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,32 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078250"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871990"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Preguntas comunes, problemas y su solución con perfiles y directivas de dispositivos en Microsoft Intune
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Preguntas y respuestas habituales sobre los perfiles y las directivas de los dispositivos en Microsoft Intune
 
 Obtenga respuestas a preguntas comunes al trabajar con directivas y perfiles de dispositivo en Intune. En este artículo también se muestran los intervalos de tiempo de sincronización, se proporcionan más detalles sobre los conflictos, etc.
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>¿Por qué un usuario no obtiene un perfil nuevo cuando cambia una contraseña o una frase de contraseña en un perfil de Wi-Fi existente?
-
-Después de crear un perfil de Wi-Fi corporativo, implementar el perfil en un grupo, cambiar la contraseña y guardar el perfil, cuando este cambia, puede que algunos usuarios no obtengan el nuevo perfil.
-
-Para mitigar este problema, configure una Wi-Fi de invitado. Si se produce un error en la Wi-Fi corporativa, los usuarios pueden conectarse a la Wi-Fi de invitado. Debe habilitar todas las opciones de configuración de conexión automáticamente. Implemente el perfil de Wi-Fi de invitado para todos los usuarios.
-
-Algunas recomendaciones adicionales:  
-
-- Si la red Wi-Fi a la que se está conectando usa una contraseña o frase de contraseña, asegúrese de que puede conectarse directamente al enrutador Wi-Fi. Lo puede comprobar con un dispositivo iOS/iPadOS.
-- Después de conectarse correctamente al punto de conexión Wi-Fi (enrutador Wi-Fi), anote el SSID y las credenciales que se han usado (este valor es la contraseña o frase de contraseña).
-- Escriba el SSID y la credencial (contraseña o frase de contraseña) en el campo Clave precompartida. 
-- Realice la implementación en un grupo de prueba que tenga un número de usuarios limitado, preferiblemente solo del equipo de TI. 
-- Sincronice el dispositivo iOS/iPadOS con Intune. Inscríbalo si aún no lo ha hecho. 
-- Vuelva a probar la conexión al mismo punto de conexión Wi-Fi (mencionado en el primer paso).
-- Realice la implementación en grupos más grandes y, finalmente, en todos los usuarios relevantes de la organización. 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>¿Cuánto tiempo tardan los dispositivos en obtener una directiva, un perfil o una aplicación después de que se hayan asignado?
 

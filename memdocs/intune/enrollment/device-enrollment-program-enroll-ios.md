@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240786"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891520"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscripción automática de dispositivos iOS/iPadOS con la Inscripción de dispositivos automatizada de Apple
 
@@ -71,7 +71,7 @@ La compatibilidad con dispositivos ADE no supervisados entró en desuso en iOS/i
 - Número máximo de tokens de inscripción de dispositivos automatizada por cuenta de Intune: 2,000
 - Número máximo de dispositivos de inscripción de dispositivos automatizada por token: El límite de la primera sincronización es de 75 000 a 80 000 dispositivos. Intune se seguirá sincronizando con ABN o ASM con cada sincronización de 12 horas para agregar más dispositivos cada vez. Una sincronización manual (que se puede desencadenar una vez cada 15 minutos) también agregará otro lote de dispositivos a Intune. Las sincronizaciones seguirán produciéndose y los dispositivos continuarán sincronizándose desde ABN o ASM con Intune en grandes cantidades. 
 
-## <a name="get-an-apple-ade-token"></a>Obtención de un token de ADE de Apple
+## <a name="get-an-apple-automated-device-enrollment-token"></a>Obtención de un token de inscripción de dispositivo automatizada de Apple
 
 Para poder inscribir dispositivos iOS/iPadOS con ADE, necesita un archivo de token de ADE (.p7m) de Apple. Este token permite a Intune sincronizar información sobre dispositivos corporativos de ADE. También permite a Intune cargar perfiles de inscripción en Apple y asignar dispositivos a esos perfiles.
 
@@ -323,7 +323,7 @@ Ha habilitado la administración y sincronización entre Apple e Intune, y ha as
 
 Vea [Inscribir el dispositivo iOS/iPadOS en Intune con el Programa de inscripción de dispositivos](../user-help/enroll-your-device-dep-ios.md).
 
-## <a name="renew-an-ade-token"></a>Renovación de un token de ADE  
+## <a name="renew-an-automated-device-enrollment-token"></a>Renovación de un token de inscripción de dispositivo automatizada  
 
 > [!NOTE]
 > Además de renovar anualmente el token de ADE, deberá renovar el token del programa de inscripción en Intune y Apple Business Manager cuando cambien la contraseña y el identificador de Apple administrados para el usuario que ha configurado el token en Apple Business Manager o si el usuario abandona la organización de Apple Business Manager.
@@ -347,7 +347,7 @@ Vea [Inscribir el dispositivo iOS/iPadOS en Intune con el Programa de inscripci�
 9. Elija **Renovar token**. Verá la confirmación de que el token se renovó.   
     ![Captura de pantalla de confirmación.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## <a name="delete-an-ade-token-from-intune"></a>Eliminación de un token ADE de Intune
+## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Eliminación de un token de inscripción de dispositivo automatizada de Intune
 
 Puede eliminar tokens de perfil de inscripción de Intune siempre y cuando:
 - No haya dispositivos asignados al token

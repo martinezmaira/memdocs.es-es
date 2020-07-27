@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a3a9ae0c697cb6cd60f0f9bddce50057bcfcd3a3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988327"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462106"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Uso de líneas de base de seguridad para configurar dispositivos Windows 10 en Intune
 
@@ -75,12 +75,12 @@ Cuando esté listo para pasar a una versión más reciente de una línea base qu
 Cada nueva instancia de versión de una línea de base puede agregar o quitar la configuración, o aplicar otros cambios. Por ejemplo, a medida que la nueva configuración de Windows 10 está disponible con nuevas versiones de Windows 10, la línea de base de seguridad MDM podría recibir una nueva instancia de versión con la configuración más reciente.
 
 En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), en **Seguridad de los puntos de conexión** > **Líneas de base de seguridad** verá una lista de las líneas de base disponibles. La lista incluye lo siguiente:
-- el nombre de la plantilla de línea base
-- cuántos perfiles tiene que usen ese tipo de línea base
-- cuántas instancias independientes (versiones) del tipo base hay disponibles
-- una fecha de *Última publicación* que identifica cuándo estuvo disponible la versión más reciente de la plantilla de línea base
+- Nombre de la plantilla de línea base.
+- Cuántos perfiles tiene que usen ese tipo de línea base.
+- Cuántas instancias independientes (versiones) del tipo base hay disponibles.
+- Fecha de *Última publicación* que identifica cuándo estuvo disponible la versión más reciente de la plantilla de línea base.
 
-Para ver más información sobre las versiones de línea base que usa, seleccione una línea base para abrir su panel *Información general* y luego seleccione **Versiones**. Intune muestra detalles sobre las versiones de esa línea de base que se encuentran en uso por parte de sus perfiles. Los detalles incluyen la versión de línea base más reciente y actual. Puede seleccionar una sola versión para ver más detalles sobre los perfiles en los que se usa.
+Si quiere ver más información sobre las versiones de línea base que usa, seleccione un tipo de línea base, como *Línea de base de seguridad de MDM*, para abrir su panel *Perfiles* y, luego, elija **Versiones**. Intune muestra detalles sobre las versiones de esa línea de base que se encuentran en uso por parte de sus perfiles. Los detalles incluyen la versión de línea base más reciente y actual. Puede seleccionar una sola versión para ver más detalles sobre los perfiles en los que se usa.
 
 Puede optar por [cambiar la versión](#change-the-baseline-version-for-a-profile) de una línea de base que está en uso con un perfil determinado. Al cambiar de versión, no es necesario crear un nuevo perfil de línea base para aprovechar las versiones actualizadas, sino que se puede seleccionar un perfil de línea base y usar la opción integrada para cambiar la versión de la instancia de ese perfil por una nueva.
 

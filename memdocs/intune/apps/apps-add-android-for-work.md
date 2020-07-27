@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9cd6d0292c07b2f1a987efba6d1ad9f8d81d99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989566"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461953"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adición de aplicaciones de Google Play administrado a dispositivos Android Enterprise con Intune
 
-Google Play administrado es la tienda de aplicaciones empresariales de Google y el único origen de aplicaciones para Android Enterprise. Puede usar Intune para orquestar la implementación de la aplicación mediante Google Play administrado para cualquier escenario de Android Enterprise (incluido el perfil de trabajo y las inscripciones dedicadas y completamente administradas). La forma de agregar aplicaciones de Google Play administrado a Intune es diferente de cómo se agregan las aplicaciones Android a un dispositivo que no es Android Enterprise. Las aplicaciones de la tienda, las de línea de negocio (LOB) y las aplicaciones web se aprueban o se agregan a Google Play administrado y después se sincronizan en Intune para que aparezcan en la lista de aplicaciones cliente. Cuando aparecen en la lista de aplicaciones de cliente, puede administrar la asignación de cualquier aplicación de Google Play administrado como lo haría con cualquier otra aplicación.
+Google Play administrado es la tienda de aplicaciones empresariales de Google y el único origen de aplicaciones para Android Enterprise. Puede usar Intune a fin de orquestar la implementación de la aplicación mediante Google Play administrado para cualquier escenario de Android Enterprise (incluidas las inscripciones de perfil de trabajo y de perfil de trabajo dedicado, totalmente administrado y corporativo). La forma de agregar aplicaciones de Google Play administrado a Intune es diferente de cómo se agregan las aplicaciones Android a un dispositivo que no es Android Enterprise. Las aplicaciones de la tienda, las de línea de negocio (LOB) y las aplicaciones web se aprueban o se agregan a Google Play administrado y después se sincronizan en Intune para que aparezcan en la lista de aplicaciones cliente. Cuando aparecen en la lista de aplicaciones de cliente, puede administrar la asignación de cualquier aplicación de Google Play administrado como lo haría con cualquier otra aplicación.
 
 Para facilitarle la configuración y el uso de la administración de Android Enterprise, tras conectarse el inquilino de Intune a Google Play administrado, Intune agregará automáticamente cuatro aplicaciones comunes relacionadas con Android Enterprise a la consola de administración de Intune. Las cuatro aplicaciones son las siguientes:
 
@@ -179,7 +179,7 @@ Si se ha aprobado una aplicación desde la tienda y todavía no la ve en la carg
 6. En el Centro de administración de Microsoft Endpoint Manager, seleccione **Aplicaciones** > **Todas las aplicaciones**.  
     Se muestra la aplicación Google Play administrado que se ha publicado recientemente.
 
-## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Asignación de una aplicación de Google Play administrado para dispositivos de perfil de trabajo de Android Enterprise
+## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Asignación de una aplicación de Google Play administrado para dispositivos de perfil de trabajo y corporativos de perfil de trabajo de Android Enterprise
 
 Cuando la aplicación se muestre en el nodo **Licencias de aplicación** del panel de la carga de trabajo **Aplicaciones**, podrá [asignarla igual que haría con cualquier otra aplicación](/mem/intune/apps/apps-deploy) asignando la aplicación a grupos de usuarios.
 
@@ -219,7 +219,7 @@ En las aplicaciones de Google Play administrado implementadas en dispositivos de
 
 ## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Uso de canales de pruebas cerradas de Google Play administrado
 
-Puede distribuir una versión que no sea de producción de una aplicación de Google Play administrado a los dispositivos inscritos en un escenario de Android Enterprise (**Perfil de trabajo de Android Enterprise**, **Totalmente administrado** y **Dedicado**) para realizar pruebas. En Intune, también puede ver si una aplicación tiene publicado un canal de compilación de pruebas de preproducción, así como asignar ese canal a grupos de dispositivos o de usuarios de AAD. El flujo de trabajo para asignar una versión de producción a un grupo que actualmente existe es igual que asignar un canal que no es de producción. Después de la implementación, el estado de instalación de cada canal se corresponderá con el número de versión del canal en Google Play administrado. Para obtener más información, vea el artículo sobre [canales de pruebas cerradas de Google Play para las pruebas de versión preliminar de la aplicación](https://support.google.com/googleplay/android-developer/answer/3131213).
+Puede distribuir una versión que no sea de producción de una aplicación de Google Play administrado a los dispositivos inscritos en un escenario de Android Enterprise (**Perfil de trabajo de Android Enterprise**, **Totalmente administrado**, **Dedicado** y **Perfil de trabajo corporativo**) para realizar pruebas. En Intune, también puede ver si una aplicación tiene publicado un canal de compilación de pruebas de preproducción, así como asignar ese canal a grupos de dispositivos o de usuarios de AAD. El flujo de trabajo para asignar una versión de producción a un grupo que actualmente existe es igual que asignar un canal que no es de producción. Después de la implementación, el estado de instalación de cada canal se corresponderá con el número de versión del canal en Google Play administrado. Para obtener más información, vea el artículo sobre [canales de pruebas cerradas de Google Play para las pruebas de versión preliminar de la aplicación](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Eliminación de aplicaciones de Google Play administrado
 Cuando sea necesario, podrá eliminar aplicaciones de Google Play administrado desde Microsoft Intune. Para eliminar una aplicación de Google Play administrado, abra Microsoft Intune en Azure Portal y seleccione **Aplicaciones** > **Todas las aplicaciones**. En la lista de aplicaciones, seleccione los puntos suspensivos (...) a la derecha de la aplicación de Google Play administrado y luego seleccione **Eliminar** en la lista que aparece. Cuando se elimina una aplicación de Google Play administrada de la lista de aplicaciones, automáticamente se desactiva la aprobación de la aplicación administrada de Google Play.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086429"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461698"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Incorporación de configuración de Wi-Fi para dispositivos Android Enterprise dedicados y totalmente administrados en Microsoft Intune
 
@@ -33,7 +33,7 @@ Ambas se describen en este artículo. [Adición y uso de la configuración de Wi
 
 [Creación de un perfil de dispositivo en Microsoft Intune](wi-fi-settings-configure.md).
 
-## <a name="device-owner-only"></a>Solo el propietario del dispositivo
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado
 
 Seleccione esta opción si va a realizar la implementación en un dispositivo Android Enterprise dedicado o totalmente administrado.  Los dispositivos Android Enterprise dedicados y totalmente administrados admiten actualmente la implementación de certificados SCEP, pero no PKCS.
 

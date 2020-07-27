@@ -1,7 +1,7 @@
 ---
-title: Inscripción de dispositivos dedicados o totalmente administrados de Android Enterprise en Intune
+title: Inscripción de dispositivos dedicados, totalmente administrados o corporativos de perfil de trabajo de Android Enterprise en Intune
 titleSuffix: Microsoft Intune
-description: Obtenga información sobre cómo inscribir dispositivos Android dedicados o totalmente administrados en Intune.
+description: Obtenga información sobre cómo inscribir dispositivos dedicados, totalmente administrados o corporativos de perfil de trabajo de Android Enterprise en Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93cd7c7e852e3d8d8fe576cec66ce7a7020f06b7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990216"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461732"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Inscripción de dispositivos dedicados o totalmente administrados de Android Enterprise
+# <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Inscripción de los dispositivos dedicados, totalmente administrados o corporativos de Android Enterprise con un perfil de trabajo
 
-Después de configurar los [dispositivos Android Enterprise dedicados](android-kiosk-enroll.md) o [totalmente administrados](android-fully-managed-enroll.md) en Intune, puede inscribir los dispositivos. La inscripción de Intune tanto de dispositivos dedicados como de dispositivos totalmente administrados comienza con un restablecimiento de fábrica. La forma de inscribir los dispositivos Android Enterprise depende del sistema operativo.
+Después de configurar los [dispositivos dedicados](android-kiosk-enroll.md), los [totalmente administrados](android-fully-managed-enroll.md) o los [de perfil de trabajo corporativo](android-corporate-owned-work-profile-enroll.md) de Android Enterprise en Intune, podrá inscribir los dispositivos. La inscripción de Intune tanto de dispositivos dedicados como de dispositivos totalmente administrados comienza con un restablecimiento de fábrica. La forma de inscribir los dispositivos Android Enterprise depende del sistema operativo.
 
 | Método de inscripción | Versión mínima del SO Android para dispositivos dedicados y totalmente administrados |
 | ----- | ----- |

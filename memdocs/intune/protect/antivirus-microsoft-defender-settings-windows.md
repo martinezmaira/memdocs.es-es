@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 0eae6837ff2ef1d8b2e47118a20d4aa4e6b0f22b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430094"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461290"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Configuración de la directiva antivirus de Microsoft Defender para Windows 10 en Microsoft Intune
 
@@ -282,6 +282,18 @@ Obtener más información
   CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Especifique el intervalo de 0 a 24 (en horas) que se usa para comprobar las firmas. Un valor de cero se traduce en no comprobar las nuevas firmas. Un valor de 2 comprobará cada dos horas, etc.
+
+- **Definir recursos compartidos de archivos para descargar actualizaciones de definiciones**  
+  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+  Administre ubicaciones, por ejemplo, un recurso compartido de archivos UNC,como origen de la descarga para obtener actualizaciones de las definiciones. Una vez que se hayan descargado correctamente las actualizaciones de las definiciones de un origen especificado, no se contactarán los orígenes restantes de la lista.
+
+  Puede **Agregar** ubicaciones individuales o **Importar** una lista de ubicaciones como un archivo .csv.
+
+- **Definir orden de los orígenes para descargar actualizaciones de definiciones**  
+  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+
+  Especifique el orden en el que hay que contactar con las ubicaciones de origen que ha especificado para obtener actualizaciones de las definiciones. Una vez que se hayan descargado correctamente las actualizaciones de las definiciones de un origen especificado, no se contactarán los orígenes restantes de la lista.
 
 ## <a name="user-experience"></a>Experiencia del usuario
 

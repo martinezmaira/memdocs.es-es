@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239953"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461970"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -157,6 +157,17 @@ Están disponibles las siguientes acciones:
 
 > [!NOTE]
 > Estas acciones se pueden usar para restringir las acciones de dispositivo en la aplicación Portal de empresa y el sitio web, y no implementan ninguna directiva de restricción de dispositivos. Para impedir que los usuarios realicen el restablecimiento de fábrica o la eliminación de MDM desde la configuración, debe configurar directivas de restricción de dispositivos. 
+
+## <a name="opening-web-company-portal-applications"></a>Apertura de las aplicaciones web del Portal de empresa
+En el caso de las aplicaciones web del Portal de empresa, si los usuarios finales tienen instalada la aplicación Portal de empresa, verán un cuadro de diálogo en el que se les preguntará cómo quieren abrir la aplicación al iniciarla fuera del explorador. Si la aplicación no se encuentra en la ruta de acceso del Portal de empresa, abrirá la página principal. Si la aplicación sí que está en la ruta de acceso, el Portal de empresa abrirá la aplicación específica. 
+
+Al seleccionar el Portal de empresa, se le dirigirá al usuario a la página correspondiente de la aplicación cuando la ruta de acceso del URI sea una de las siguientes:
+
+- `/apps`: el Portal de empresa web abrirá la página Aplicaciones, en la que se muestran todas las aplicaciones.
+- `/apps/[appID]`: el Portal de empresa web abrirá la página Detalles de la aplicación correspondiente.
+- *Ruta de acceso del URI diferente o inesperada*: se mostrará la página principal del Portal de empresa web.
+
+Si el usuario no tiene instalada la aplicación Portal de empresa, se dirigirá al usuario al Portal de empresa web.
 
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Credenciales derivadas del Portal de empresa para dispositivos iOS o iPadOS
 

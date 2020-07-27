@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436812"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405926"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparar aplicaciones iOS para directivas de protección de aplicaciones con la herramienta de ajuste de aplicaciones de Intune
 
@@ -225,7 +225,7 @@ En la carpeta IntuneMAMPackager/Contents/MacOS, abra `Parameters.plist`, que es 
 | Id. de cliente de ADAL |String|vacío| Igual que -ac|
 | URI de respuesta de ADAL |String|vacío| Igual que -ar|
 | Modo detallado habilitado |Boolean|false| Igual que -v|
-| Quitar los derechos que faltan |Boolean|false| Igual que -c|
+| Quitar los derechos que faltan |Boolean|false| Igual que -e|
 | Impedir la actualización de la compilación predeterminada |Boolean|false| Equivale a usar -b sin argumentos|
 | Invalidación de la cadena de compilación |String|vacío| Valor de CFBundleVersion personalizado de la aplicación de salida ajustada.|
 | Incluir el SDK de aplicaciones de Citrix XenMobile (variante solo de red)|Boolean|false| Igual que -citrix|

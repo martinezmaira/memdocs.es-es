@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989654"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460474"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Supervisión del cifrado de dispositivos con Intune
 
@@ -118,7 +118,7 @@ Cuando se selecciona un dispositivo desde el informe de cifrado, Intune muestra 
 
   - El dispositivo ya está cifrado. El usuario del dispositivo debe descifrar el dispositivo para continuar.
 
-    *Tenga en cuenta lo siguiente: Intune no puede configurar FileVault en un dispositivo que ya está cifrado. En lugar de eso, el usuario debe descifrar de forma manual el dispositivo antes de que se pueda administrar mediante una directiva de configuración de dispositivo e Intune.*
+    *Tenga en cuenta lo siguiente: Intune no puede configurar FileVault en un dispositivo que ya está cifrado. Sin embargo, después de que un dispositivo reciba la directiva para habilitar FileVault, un usuario puede [cargar su clave de recuperación personal a fin de permitir que Intune administre el cifrado en ese dispositivo](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Como alternativa, aunque no es una opción recomendada, ya que puede provocar que un dispositivo esté sin cifrar durante un tiempo, el usuario puede descifrar previamente su dispositivo de forma manual, de modo que se pueda cifrar mediante la directiva de Intune.*
 
   - FileVault necesita que el usuario apruebe su perfil de administración en macOS Catalina y versiones posteriores.
 
@@ -174,7 +174,7 @@ Este informe se puede usar para identificar problemas en grupos de dispositivos.
 Para obtener detalles sobre la administración de claves de recuperación, vea lo siguiente en la documentación de Intune:
 
 FileVault de macOS:
-- [Recuperación de clave de recuperación personal](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Recuperación de clave de recuperación personal](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Giro de claves de recuperación](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Recuperación de claves de recuperación](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

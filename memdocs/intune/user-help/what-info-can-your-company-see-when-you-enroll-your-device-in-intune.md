@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: bc3ff7b10d3b0ae5779db26fae711bc335c8ec62
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107312"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461681"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>¿Qué información puede ver mi organización cuando inscribo mi dispositivo?
 
@@ -38,13 +38,14 @@ Su organización no puede ver su información personal cuando inscribe un dispos
 - Contraseñas
 - Imágenes, ni siquiera lo que hay en la aplicación de fotos ni en el álbum de cámara
 - Archivos
+- En el caso de los dispositivos de propiedad corporativa con un perfil de trabajo, las aplicaciones y los datos de su perfil personal. 
 
 **Contenido que puede ver siempre su organización:**
 
 - Modelo del dispositivo, como Google Pixel
 - Fabricante del dispositivo (por ejemplo, Microsoft)
 - Sistema operativo y versión (por ejemplo, iOS 12.0.1)
-- Inventario de aplicaciones y nombres de aplicaciones (por ejemplo, Microsoft Word). en los dispositivos personales, su organización solo puede ver el inventario de aplicaciones administradas. En los dispositivos de propiedad corporativa, su organización puede ver todo el inventario de aplicaciones.
+- Inventario de aplicaciones y nombres de aplicaciones (por ejemplo, Microsoft Word). en los dispositivos personales, su organización solo puede ver el inventario de aplicaciones administradas. En cuanto a los dispositivos de propiedad corporativa y dedicados, la organización puede ver todo el inventario de aplicaciones. En lo que respecta a los dispositivos de propiedad corporativa con un perfil de trabajo, su organización solo puede ver el inventario de aplicaciones de su perfil de trabajo.
 - Propietario del dispositivo
 - Nombre del dispositivo
 - Número de serie del dispositivo

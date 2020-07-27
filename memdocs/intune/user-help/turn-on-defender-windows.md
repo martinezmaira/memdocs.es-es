@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2017
+ms.date: 07/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f29cc024b34736a0a6d759179af70ceb51e12ea1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2169abf9955446d6299a64c7ce2ae03723faa792
+ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881118"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447983"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Activar Windows Defender para tener acceso a los recursos de la empresa
 
@@ -41,12 +41,12 @@ Existen algunas opciones de configuración que puede que tenga que cambiar en Wi
 
 ## <a name="turn-on-real-time-protection"></a>Activar Protección en tiempo real
 
-Asegúrese de que Protección en tiempo real está activada; para ello, vaya a **Inicio** y busque **Centro de seguridad de Windows Defender**. Seleccione **Configuración de antivirus y protección contra amenazas** y confirme que tanto **Protección en tiempo real** como **Protección que proporciona la nube** están en estado **Activado**. Si estas opciones no aparecen, haga lo siguiente para habilitarlas:
+Asegúrese de que la protección en tiempo real está activada; para ello, vaya a **Inicio** y busque **Seguridad de Windows**. Seleccione **Configuración de antivirus y protección contra amenazas** y confirme que tanto **Protección en tiempo real** como **Protección que proporciona la nube** están en estado **Activado**. Si estas opciones no aparecen, haga lo siguiente para habilitarlas:
 
 1. En **Inicio**, abra el **Panel de Control**.
 2. Abra **Herramientas administrativas** > **Editar directiva de grupo**. Se abrirá el **Editor de directivas de grupo local** en una ventana nueva.
-3. Abra **Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Centro de seguridad de Windows Defender** > **Protección antivirus y contra amenazas**.
-4. Abra la opción **Protección antivirus y contra amenazas** y establézcala en **Deshabilitado**.
+3. Abra **Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Seguridad de Windows** > **Protección antivirus y contra amenazas**.
+4. Abra la opción **Ocultar el área de protección antivirus y contra amenazas** y establézcala en **Deshabilitado**.
 
 ## <a name="update-your-antivirus-definitions"></a>Actualizar las definiciones de antivirus
 

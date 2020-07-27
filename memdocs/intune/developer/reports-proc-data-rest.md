@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4f00ba5049401c07f5112061172dc3e7cda4f46c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022422"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437368"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obtener datos de la API de almacenamiento de datos de Intune con un cliente de REST
 
@@ -63,6 +63,7 @@ Ahora tiene una aplicación definida en Azure. Conceda acceso a la API de Micros
 6. Seleccione la casilla **Permisos delegados** y haga clic en la opción **Obtener información del almacén de datos de Microsoft Intune**.
 7. Haga clic en **Agregar permisos**.
 8. Opcionalmente, seleccione **Conceder consentimiento del administrador para Microsoft** en el panel Permisos configurados y, después, seleccione **Sí**. Esto concederá acceso a todas las cuentas del directorio actual. Se impedirá que el cuadro de diálogo de consentimiento se muestre para cada usuario del inquilino. Para obtener más información, consulte [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+9. Seleccione **Certificados y secretos** >  **+ Nuevo secreto de cliente** y genere un secreto nuevo. Asegúrese de copiarlo en un lugar seguro porque no podrá volver a acceder a él.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Obtener datos de la API de Microsoft Intune con Postman
 
@@ -79,6 +80,7 @@ Necesita la información siguiente para realizar una llamada REST mediante Postm
 | Dirección URL de autenticación         | Se trata de la dirección URL usada para autenticación. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | Dirección URL del token de acceso | Se trata de la dirección URL usada para conceder el token.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | Identificador de cliente        | Se trata de un elemento que ha creado y anotado al crear la aplicación nativa en Azure.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| Secreto de cliente        | Se trata de un elemento que ha creado y anotado al crear la aplicación nativa en Azure.                                                                                               | Ksml3dhDJs+jfK1f8Mwc8                                                          |
 | Ámbito (opcional) | En blanco                                                                                                                                                                               | Puede dejar el campo en blanco.                                                                     |
 | Tipo de concesión       | El token es un código de autorización.                                                                                                                                                  | Código de autorización                                                                            |
 
@@ -122,14 +124,18 @@ Para obtener un nuevo token de acceso de Postman, debe agregar la dirección URL
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. Seleccione **Código de autorización** y Solicitar token de acceso localmente.
+11. Agregue el **Secreto de cliente** que se ha generado desde la aplicación nativa que se ha creado en Azure. Debería tener un aspecto parecido a este:  
 
-12. Seleccione **Solicitar token**.
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. Seleccione **Código de autorización** como Tipo de concesión.
+
+13. Seleccione **Solicitar token**.
 
     ![Información para el token de acceso](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. Escriba sus credenciales en la página de autorización de Azure AD. La lista de tokens en Postman contiene ahora el token con el nombre `Bearer`.
-14. Seleccione **Usar token**. La lista de encabezados contiene el nuevo valor de clave de autorización y el valor `Bearer <your-authorization-token>`.
+14. Escriba sus credenciales en la página de autorización de Azure AD. La lista de tokens en Postman contiene ahora el token con el nombre `Bearer`.
+15. Seleccione **Usar token**. La lista de encabezados contiene el nuevo valor de clave de autorización y el valor `Bearer <your-authorization-token>`.
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Enviar la llamada al punto de conexión mediante Postman
 

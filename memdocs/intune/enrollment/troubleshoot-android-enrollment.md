@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79363335"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461256"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Solución de problemas de dispositivos Android Enterprise en Microsoft Intune
 
@@ -76,6 +76,8 @@ Samsung ha comenzado a aplicar esta restricción en dispositivos con Android 8.
 
 ### <a name="wipe-factory-reset-option-isnt-available-for-work-profile-enrolled-device"></a>Opción Borrar (Restablecimiento de fábrica) no disponible para dispositivos inscritos en el perfil de trabajo
 Este comportamiento es normal. En el escenario de perfil de trabajo, el proveedor de MDM no dispone de control total sobre el dispositivo. La única opción disponible es Retirar (Eliminar datos de la compañía), que quita todo el perfil de trabajo y su contenido.
+
+El borrado es compatible con los [dispositivos corporativos de Android Enterprise con un perfil de trabajo](android-corporate-owned-work-profile-enroll.md).
 
 ### <a name="is-device-passcode-reset-supported"></a>¿Se admite el restablecimiento del código de acceso de un dispositivo?
 En los dispositivos inscritos en el perfil de trabajo, solo se puede restablecer el código de acceso del perfil de trabajo en dispositivos Android 8.0 o versiones posteriores en los casos siguientes:

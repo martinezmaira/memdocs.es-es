@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746500"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491208"
 ---
 # <a name="set-enrollment-restrictions"></a>Establecer restricciones de inscripción
 
@@ -164,7 +164,7 @@ También se bloquearán los siguientes métodos de inscripción personal:
 
 ## <a name="blocking-personal-iosipados-devices"></a>Bloquear dispositivos iOS/iPadOS personales
 De forma predeterminada, Intune clasifica los dispositivos iOS/iPadOS como de propiedad personal. Para que se clasifiquen como de propiedad de la empresa, un dispositivo iOS/iPadOS debe cumplir una de las siguientes condiciones:
-- Estar registrado con un número de serie o IMEI.
+- [Estar registrado con un número de serie](corporate-identifiers-add.md).
 - Estar inscrito mediante la Inscripción de dispositivo automatizada (anteriormente Programa de inscripción de dispositivos)
 
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988812"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461443"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creación de una directiva de cumplimiento en Microsoft Intune
 
@@ -75,7 +75,7 @@ Para usar las directivas de cumplimiento de dispositivos, asegúrese de lo sigui
    - *Windows 10 y versiones posteriores*
 
     Para *Android Enterprise*, también seleccionará un **tipo de directiva**:
-     - *Directiva de cumplimiento del propietario del dispositivo Android*
+     - *Directiva de Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado de Android*
      - *Directiva de cumplimiento del perfil de trabajo Android*
 
     Luego, seleccione **Crear** para abrir la ventana de configuración **Crear directiva**.

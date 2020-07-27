@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d994960e28deb3e48e4f778b6b496440037052
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ee71bdcf45c4dc99b9c6b3eb889ba373ecadca9
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984744"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461851"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Incorporación de aplicaciones del sistema Android Enterprise a Microsoft Intune
 
-Antes de asignar una aplicación a un dispositivo o a un grupo de usuarios, primero debe agregar la aplicación a Microsoft Intune. Las aplicaciones del sistema son compatibles con dispositivos de Android Enterprise. Puede habilitar una aplicación del sistema en [dispositivos dedicados de Android Enterprise](../enrollment/android-kiosk-enroll.md) o [dispositivos totalmente administrados](../enrollment/android-fully-managed-enroll.md).
+Antes de asignar una aplicación a un dispositivo o a un grupo de usuarios, primero debe agregar la aplicación a Microsoft Intune. Las aplicaciones del sistema son compatibles con dispositivos de Android Enterprise. Puede habilitar una aplicación del sistema para los [servicios dedicados de Android Enterprise](../enrollment/android-kiosk-enroll.md), los [dispositivos totalmente administrados](../enrollment/android-fully-managed-enroll.md) o los [corporativos de Android Enterprise con un perfil de trabajo](../enrollment/android-corporate-owned-work-profile-enroll.md).
 
 ## <a name="add-the-app"></a>Agregar la aplicación
 

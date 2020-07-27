@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383213"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491191"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Uso de certificados para la autenticación en Microsoft Intune
 
@@ -109,6 +109,9 @@ Cree un perfil de certificado de confianza independiente para cada plataforma de
 > Los perfiles raíz de confianza que cree para la plataforma *Windows 10 y versiones posteriores* se muestran en el centro de administración de Microsoft Endpoint Manager como perfiles de la plataforma *Windows 8.1 y versiones posteriores*. 
 >
 > Se trata de un problema conocido con la presentación de la plataforma de los perfiles de certificado de confianza. Aunque el perfil muestra una plataforma de Windows 8.1 y versiones posteriores, es funcional para Windows 10 y versiones posteriores.
+
+> [!NOTE]
+> El perfil *Certificado de confianza* de Intune solo se puede usar para proporcionar certificados raíz o intermedios. El propósito de implementar estos certificados es establecer una cadena de confianza. Microsoft no admite el uso del perfil de certificado de confianza para ofrecer certificados que no sean raíz o intermedios. Es posible que se le impida importar certificados que no se consideren raíz o intermedios al seleccionar el perfil de certificado de confianza en el portal de Intune. Aunque pueda importar e implementar un certificado que no sea raíz o intermedio con este tipo de perfil, es probable que se produzcan resultados inesperados entre distintas plataformas, como iOS y Android.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Para crear un perfil de certificado de confianza
 

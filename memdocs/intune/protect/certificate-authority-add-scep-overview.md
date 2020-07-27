@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3b7316cd496f7ae8ae97bd2d896695c0c11e156
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c757688dec9d7c484ec2c71f86177ffbdf3a92d3
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990367"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872008"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Adición de entidades de certificación de asociado en Intune mediante SCEP
 
@@ -101,10 +101,6 @@ Asegúrese de que tiene los permisos necesarios para registrar una aplicación d
    
    El proceso de registro de la aplicación en Azure AD se completó.
 
-
-
-
-
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Configurar e implementar un perfil de certificado SCEP
 Como administrador, cree un perfil de certificado SCEP destinado a los usuarios o dispositivos. Después, asigne el perfil.
 
@@ -119,15 +115,16 @@ Al anular la inscripción o borrar el dispositivo, se quitan los certificados. L
 ## <a name="third-party-certification-authority-partners"></a>Asociados de entidad de certificación de terceros
 Las entidades de certificación de terceros siguientes son compatibles con Intune:
 
+- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
 - [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
-- [Versión de código abierto de GitHub EJBCA](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
-- [Sectigo](https://sectigo.com/products)
-- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
-- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
+- [Sectigo](https://sectigo.com/products)
+- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
+
 
 Si es una entidad de certificación de terceros interesada en la integración de su producto con Intune, revise las instrucciones de la API:
 

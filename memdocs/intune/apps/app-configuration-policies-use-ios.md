@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239987"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410978"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Agregar directivas de configuración de aplicaciones para dispositivos iOS/iPadOS administrados
 
@@ -117,7 +117,8 @@ Como administrador de Microsoft Intune, puede controlar qué cuentas profesiona
    > Las siguientes aplicaciones procesan la configuración de aplicaciones anterior y solo permiten cuentas de organización:
    > - Edge para iOS (44.8.7 y versiones posteriores)
    > - OneDrive para iOS (10.34 y versiones posteriores)
-   > - Outlook para iOS (2.99.0 o versiones posteriores)
+   > - Outlook para iOS (2.99.0 y versiones posteriores)
+   > - Teams para iOS (2.0.15 y versiones posteriores)
 
 ## <a name="enter-xml-data"></a>Especificar datos XML
 

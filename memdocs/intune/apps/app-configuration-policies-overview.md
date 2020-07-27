@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988783"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461664"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Directivas de configuración de aplicaciones para Microsoft Intune
 
@@ -75,15 +75,15 @@ La selección de **Aplicaciones administradas** como el **Tipo de inscripción d
 
 ## <a name="android-app-configuration-policies"></a>Directivas de configuración de aplicaciones de Android
 
-Para las directivas de configuración de aplicaciones de Android, puede seleccionar el tipo de inscripción del dispositivo antes de crear un perfil de configuración de aplicación. Puede dar cuenta de los perfiles de certificado que se basan en el tipo de inscripción (perfil de trabajo o propietario del dispositivo). En esta actualización se ofrece lo siguiente:
+Para las directivas de configuración de aplicaciones de Android, puede seleccionar el tipo de inscripción del dispositivo antes de crear un perfil de configuración de aplicación. Puede dar cuenta de los perfiles de certificado que se basan en el tipo de inscripción (perfil de trabajo, perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado). En esta actualización se ofrece lo siguiente:
 
-1. Si se crea un perfil y se han seleccionado los perfiles de trabajo y de propietario del dispositivo para el tipo de inscripción del dispositivo, no podrá asociar un perfil de certificado a la directiva de configuración de la aplicación.
+1. Si se crea un perfil y se selecciona **Todos los tipos de perfil** como tipo de inscripción del dispositivo, no podrá asociar un perfil de certificado a la directiva de configuración de aplicaciones.
 2. Si se crea un perfil y solo se selecciona el perfil de trabajo, se podrán usar las directivas de certificado del perfil de trabajo creadas en la configuración del dispositivo.
-3. Si se crea un perfil y solo se selecciona el perfil de propietario del dispositivo, se podrán usar las directivas de certificado del propietario del dispositivo creadas en la configuración del dispositivo. 
+3. Si se crea un perfil y se selecciona **Solo perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado**, se pueden usar las directivas de certificado de **Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado** creadas en Configuración de dispositivos. 
 4. Si implementa un perfil de configuración de Gmail o Nine en un dispositivo dedicado Android Enterprise que no implica a un usuario, se producirá un error porque Intune no puede resolver el usuario.
 
 > [!IMPORTANT]
-> Las directivas existentes creadas antes del lanzamiento de esta característica (versión de abril de 2020: 2004) que no tengan ningún perfil de certificado asociado usarán de forma predeterminada los perfiles de trabajo y de propietario del dispositivo para el tipo de inscripción del dispositivo. Además, las directivas existentes creadas antes del lanzamiento de esta característica que tengan perfiles de certificado asociados usarán de forma predeterminada únicamente el perfil de trabajo.
+> Las directivas existentes creadas antes del lanzamiento de esta característica (versión de abril de 2020: 2004) que no tengan ningún perfil de certificado asociado a la directiva usarán de forma predeterminada **Todos los tipos de perfil** como tipo de inscripción del dispositivo. Además, las directivas existentes creadas antes del lanzamiento de esta característica que tengan perfiles de certificado asociados usarán de forma predeterminada únicamente el perfil de trabajo.
 > 
 > Las directivas existentes no corregirán ni emitirán nuevos certificados.
 

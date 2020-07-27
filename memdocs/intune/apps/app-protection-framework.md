@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853577"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410936"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Marco de protección de datos mediante directivas de protección de aplicaciones 
 
@@ -148,8 +148,10 @@ La configuración de directiva que se aplica en el nivel 2 incluye todas las co
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Transferencia de datos |       Realizar una copia de seguridad de datos de la organización en…  |          Bloquear  |          iOS/iPadOS, Android  |                  |
 | Transferencia de datos |       Enviar datos de la organización a otras aplicaciones  |          Aplicaciones administradas por directivas  |          iOS/iPadOS, Android  |          <p>Con iOS/iPadOS, los administradores pueden configurar este valor para que sea "Aplicaciones administradas por directivas", "Aplicaciones administradas por directivas con uso compartido de SO" o "Aplicaciones administradas por directivas con filtrado de apertura/uso compartido". </p><p>Las aplicaciones administradas por directivas con uso compartido de SO están disponibles cuando el dispositivo también se inscribe con Intune. Esta configuración permite la transferencia de datos a otras aplicaciones administradas por directivas, así como las transferencias de archivos a otras aplicaciones administradas por Intune. </p><p>Las aplicaciones administradas por directivas con filtrado de Abrir en/Compartir del sistema operativo filtra los cuadros de diálogo correspondientes a estos filtros para mostrar solo dichas aplicaciones. </p><p> Para obtener más información, vea [Configuración de directiva de protección de aplicaciones de iOS](app-protection-policy-settings-ios.md).</p> |
+| Transferencia de datos |       Seleccionar las aplicaciones que quedan exentas  |          Predeterminado / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Transferencia de datos |       Guardar copias de los datos de la organización  |          Bloquear  |          iOS/iPadOS, Android  |                  |
 | Transferencia de datos |       Permitir al usuario guardar copias en los servicios seleccionados  |          OneDrive para la Empresa, SharePoint Online |          iOS/iPadOS, Android  |                  |
+| Transferencia de datos |       Transferir datos de telecomunicaciones a  |          Todas las aplicaciones |          iOS/iPadOS, Android  |                  |
 | Transferencia de datos |       Restringir cortar, copiar y pegar entre aplicaciones  |          Aplicaciones administradas por directivas con pegar  |          iOS/iPadOS, Android  |                  |
 | Transferencia de datos |       Captura de pantalla y Asistente de Google  |          Bloquear  |          Android  |                  |
 | Funcionalidad |       Restringir la transferencia de contenido web con otras aplicaciones  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
@@ -173,15 +175,18 @@ La configuración de directiva que se aplica en el nivel 3 incluye todas las co
 
 | Setting | Descripción del valor |             Valor  |             Plataforma        | Notas |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Transferencia de datos |       Transferir datos de telecomunicaciones a  |          Cualquier aplicación de marcador administrada por directivas |          Android  | Los administradores también pueden configurar esta opción para usar una aplicación de marcador que no admita las directivas de protección de aplicaciones seleccionando **una aplicación de marcador específica** y proporcionando los valores **Id. del paquete de la aplicación de marcador** y **Nombre de la aplicación de marcador**.   |
+| Transferencia de datos |       Transferir datos de telecomunicaciones a  |          Aplicación de marcador específica |          iOS/iPadOS  |  |
+| Transferencia de datos |       Esquema de la dirección URL de la aplicación de marcador  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | En iOS/iPadOS, este valor debe reemplazarse por el esquema de la dirección URL para la aplicación de marcador personalizada que se está usando. Si no se conoce el esquema de la dirección URL, póngase en contacto con el desarrollador de la aplicación para obtener más información. Para obtener más información sobre los esquemas de la dirección URL, vea [Definición de un esquema de dirección URL personalizado para la aplicación](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Transferencia de datos |       Recibir datos de otras aplicaciones  |          Aplicaciones administradas por directivas  |          iOS/iPadOS, Android         |  |
-| Transferencia de datos |       Teclados de terceros  |          Bloquear  |          iOS/iPadOS        | En iOS, esto impide que todos los teclados de terceros funcionen dentro de la aplicación.  |
-| Transferencia de datos |       Teclados aprobados  |          Requerir  |          Android        | Con Android, se deben seleccionar los teclados para poder usarlos en función de los dispositivos Android implementados.  |
+| Transferencia de datos |       Teclados de terceros  |          Bloquear  |          iOS/iPadOS        | En iOS/iPadOS, esto impide que todos los teclados de terceros funcionen en la aplicación.  |
+| Transferencia de datos |       Teclados aprobados  |          Requerir  |          Android        |  |
 | Transferencia de datos |       Seleccionar teclados para su aprobación  |          *Agregar o quitar teclados*  |          Android        | Con Android, se deben seleccionar los teclados para poder usarlos en función de los dispositivos Android implementados.  |
 | Funcionalidad |       Impresión de datos de la organización  |          Bloquear  |          iOS/iPadOS, Android         |  |
 
 #### <a name="access-requirements"></a>Requisitos de acceso
 
-|       Setting  |          Valor  |          Plataforma  |
+|       Configuración  |          Valor  |          Plataforma  |
 |-----------------------------------------------------------|--------------------|---------------------------------|
 |       PIN simple  |          Bloquear  |          iOS/iPadOS, Android  |
 |       Seleccionar la longitud mínima del PIN  |          6  |          iOS/iPadOS, Android  |

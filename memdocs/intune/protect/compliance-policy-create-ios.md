@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729254"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871923"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Configuración de iOS/iPadOS para marcar los dispositivos como compatibles o no compatibles con Intune
 
@@ -149,7 +149,7 @@ Para más información sobre los perfiles de correo, vea [Configurar el acceso a
   Puede restringir aplicaciones si agrega sus identificadores de lote a la directiva. Si un dispositivo tiene instalada la aplicación, el dispositivo se marca como no compatible.
 
   - **Nombre de la aplicación**: escriba un nombre descriptivo que ayude a identificar el identificador de lote.
-  - **Identificador de lote de aplicaciones**: escriba el identificador de lote único asignado por el proveedor de la aplicación. Para buscar el identificador de lote, consulte [Cómo buscar el identificador de lote para una aplicación iOS/iPadOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (abre otro sitio web de Microsoft).  
+  - **Identificador de lote de aplicaciones**: escriba el identificador de lote único asignado por el proveedor de la aplicación. Para buscar el id. de la agrupación, vea [Id. de agrupación de las aplicaciones nativas para iOS y iPadOS](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) en Support.apple.com o póngase en contacto con el proveedor de software de la aplicación.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

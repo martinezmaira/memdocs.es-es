@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: aa70da636d619a52c0ec8591a43e85e11ff7f9f2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973067"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410902"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Administración del acceso web mediante Edge para iOS y Android con Microsoft Intune
 
@@ -436,7 +436,7 @@ Los usuarios que tengan instalado Edge para iOS y Android en el dispositivo iOS 
 2. Escriba `about:intunehelp` en el cuadro de dirección.
 3. Edge para iOS y Android inicia el modo de solución de problemas.
 
-Para obtener una lista de las opciones de configuración almacenadas en los registros de la aplicación, consulte [Revisión de los registros de protección de aplicaciones en Managed Browser](app-protection-policy-settings-log.md).
+Para obtener una lista de las opciones de configuración almacenadas en los registros de la aplicación, vea [Revisión de los registros de protección de aplicaciones cliente](app-protection-policy-settings-log.md).
 
 Para ver cómo se pueden consultar los registros en dispositivos Android, vea [Enviar registros al administrador de TI por correo electrónico](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 

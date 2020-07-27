@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332843"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461596"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS con Intune
 
@@ -221,7 +221,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 3. Escriba las propiedades siguientes:
    - **Plataforma**: seleccione la plataforma de los dispositivos. Las opciones son:
      - Administrador de dispositivos Android
-     - Android Enterprise > solo propietario del dispositivo
+     - Android Enterprise > Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado
      - Android Enterprise > solo perfil de trabajo
      - iOS/iPadOS
      - macOS
