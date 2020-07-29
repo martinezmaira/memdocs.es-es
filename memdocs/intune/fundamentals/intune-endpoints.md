@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58c3db997e8ec5ec45f93ce466f2efd0792ca3cb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565629"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262547"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Puntos de conexión de red de Microsoft Intune  
 
@@ -64,7 +64,6 @@ En las siguientes tablas se enumeran los puertos y los servicios a los que acced
 |fef.msua01.manage.microsoft.com|138.91.243.97|
 |fef.msua02.manage.microsoft.com|52.177.194.236|
 |fef.msua04.manage.microsoft.com|23.96.112.28|
-|fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|

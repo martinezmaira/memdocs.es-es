@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264046"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262768"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Escenario guiado: Escritorio moderno administrado en la nube
 
@@ -47,7 +47,7 @@ Si quiere evaluar un escritorio moderno administrado en la nube en su propia org
 
 ## <a name="step-1---introduction"></a>Paso 1: introducción
 
-Con este escenario guiado, configurará un usuario de prueba, inscribirá un dispositivo en Intune y lo implementará con la configuración recomendada de Intune, así como con Windows 10 y Aplicaciones de Microsoft 365. El dispositivo también se configurará para Protección contra amenazas avanzada de Microsoft Defender, si elige [habilitar esta protección en Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). El usuario que configure y el dispositivo que inscriba se agregarán a un nuevo grupo de seguridad y se configurarán con la configuración recomendada para la seguridad y la productividad.
+Con este escenario guiado, configurará un usuario de prueba, inscribirá un dispositivo en Intune y lo implementará con la configuración recomendada de Intune, así como con Windows 10 y Aplicaciones de Microsoft 365. El dispositivo también se configurará para Protección contra amenazas avanzada de Microsoft Defender, si elige [habilitar esta protección en Intune](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune). El usuario que configure y el dispositivo que inscriba se agregarán a un nuevo grupo de seguridad y se configurarán con la configuración recomendada para la seguridad y la productividad.
 
 ### <a name="what-you-will-need-to-continue"></a>Qué se necesita para continuar
 
@@ -127,5 +127,5 @@ Una vez que el usuario une el dispositivo a Azure Active Directory, se aplicar
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Si usa Protección contra amenazas avanzada de Microsoft Defender, cree una [directiva de cumplimiento de Intune](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level) para requerir que el análisis de amenazas de Defender satisfaga los requisitos de cumplimiento.
-- Cree una [directiva de acceso condicional basada en dispositivos](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) para bloquear el acceso si el dispositivo no satisface los requisitos de cumplimiento de Intune.
+- Si usa Protección contra amenazas avanzada de Microsoft Defender, cree una [directiva de cumplimiento de Intune](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) para requerir que el análisis de amenazas de Defender satisfaga los requisitos de cumplimiento.
+- Cree una [directiva de acceso condicional basada en dispositivos](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy) para bloquear el acceso si el dispositivo no satisface los requisitos de cumplimiento de Intune.

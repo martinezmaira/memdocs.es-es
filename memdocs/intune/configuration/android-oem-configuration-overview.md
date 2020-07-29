@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 3f493b6c6f9ee100c15a3958ec435261da271f7c
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264131"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262819"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Uso y administración de dispositivos Android Enterprise con OEMConfig en Microsoft Intune
 
@@ -160,7 +160,6 @@ En comparación con las aplicaciones estándar, las aplicaciones OEMConfig expan
 | Archos | com.archos.oemconfig | |
 | Ascom | com.ascom.myco.oemconfig | |
 | Bluebird | com.bluebird.android.oemconfig | |
-| Cipherlab | com.cipherlab.oemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal: 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 

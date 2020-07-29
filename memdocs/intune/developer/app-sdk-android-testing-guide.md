@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093372"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262054"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Guía de pruebas para desarrolladores de Android sobre del SDK para aplicaciones de Microsoft Intune
 
 La guía de pruebas de Microsoft Intune App SDK para Android está diseñada para ayudarle a probar su aplicación Android administrada por Intune.
 
 ## <a name="demo-tenant-setup"></a>Configuración del inquilino de demostración
-Si aún no tiene un inquilino con la empresa, puede crear un inquilino de demostración con o sin datos pregenerados. Debe registrarse como [partner de Microsoft](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) para acceder a Microsoft CDX. Para crear una cuenta:
+Si aún no tiene un inquilino con la empresa, puede crear un inquilino de demostración con o sin datos pregenerados. Debe registrarse como [partner de Microsoft](https://partner.microsoft.com/business-opportunities/why-microsoft) para acceder a Microsoft CDX. Para crear una cuenta:
 1. Vaya al [sitio de creación de inquilinos de Microsoft CDX](https://cdx.transform.microsoft.com/my-tenants/create-tenant) y cree un inquilino de Microsoft 365 Enterprise.
 2. [Configure Intune](../fundamentals/setup-steps.md) para habilitar la administración de dispositivos móviles (MDM).
 3. [Cree usuarios](../fundamentals/users-add.md).

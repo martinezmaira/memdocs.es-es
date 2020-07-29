@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891554"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262887"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
@@ -290,11 +290,11 @@ Puede crear y ejecutar paquetes de scripts en dispositivos de usuario final para
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Uso de ATP de Microsoft Defender en directivas de cumplimiento para Android<!-- 4425686  -->
 
-Ahora puede usar Intune para [incorporar dispositivos Android a Advanced Threat Protection de Microsoft Defender](../protect/advanced-threat-protection.md#onboard-android-devices) (ATP de Microsoft Defender). Una vez que haya incorporado los dispositivos inscritos, las directivas de cumplimiento para Android podrán usar las señales de *nivel de amenaza* de ATP de Microsoft Defender. Estas son las mismas señales que se podían usar previamente para dispositivos Windows 10.
+Ahora puede usar Intune para [incorporar dispositivos Android a Advanced Threat Protection de Microsoft Defender](../protect/advanced-threat-protection-configure.md#onboard-devices) (ATP de Microsoft Defender). Una vez que haya incorporado los dispositivos inscritos, las directivas de cumplimiento para Android podrán usar las señales de *nivel de amenaza* de ATP de Microsoft Defender. Estas son las mismas señales que se podían usar previamente para dispositivos Windows 10.
 
 #### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>Configuración de la protección web de ATP de Defender para dispositivos Android<!-- 6185563  -->
 
-Al usar Advanced Threat Protection de Microsoft Defender (ATP de Microsoft Defender) para dispositivos Android, puede [configurar la protección web de ATP de Microsoft Defender](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) para deshabilitar la característica de examen de suplantación de identidad (phishing) o impedir que el examen use la VPN.
+Al usar Advanced Threat Protection de Microsoft Defender (ATP de Microsoft Defender) para dispositivos Android, puede [configurar la protección web de ATP de Microsoft Defender](../protect/advanced-threat-protection-manage-android.md) para deshabilitar la característica de examen de suplantación de identidad (phishing) o impedir que el examen use la VPN.
 
 En función de cómo se inscriba el dispositivo Android con Intune, estarán disponibles las siguientes opciones:
 

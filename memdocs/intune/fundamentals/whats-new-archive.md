@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 0c1029c4641d9ff07bf4254427cb08dfa583b5f8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461426"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262632"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novedades de Microsoft Intune: meses anteriores
 
@@ -2562,7 +2562,7 @@ En [Presentamos Windows 10 en modo S](https://www.microsoft.com/windows/s-mode) 
 Se aplica a: la compilación más reciente de [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (todavía en versión preliminar).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Paquete de configuración de ATP de Windows Defender agregado automáticamente al perfil de configuración<!-- 2144658 -->
-Cuando se usa la [Protección contra amenazas avanzada y la incorporación](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile) de dispositivos en Intune, antes era necesario descargar un paquete de configuración y agregarlo al perfil de configuración. Con esta actualización, Intune obtiene de forma automática el paquete del Centro de seguridad avanzada de Windows Defender y lo agrega al perfil.
+Cuando se usa la [Protección contra amenazas avanzada y la incorporación](../protect/advanced-threat-protection-configure.md#onboard-devices) de dispositivos en Intune, antes era necesario descargar un paquete de configuración y agregarlo al perfil de configuración. Con esta actualización, Intune obtiene de forma automática el paquete del Centro de seguridad avanzada de Windows Defender y lo agrega al perfil.
 Se aplica a Windows 10 y versiones posteriores.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Requerir que los usuarios se conecten durante la instalación del dispositivo<!--2311457-->

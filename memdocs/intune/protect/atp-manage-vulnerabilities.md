@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989762"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262598"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Uso de Intune para corregir las vulnerabilidades que identifica ATP de Microsoft Defender
 
@@ -75,7 +75,7 @@ Un flujo de trabajo de ejemplo:
 - Configure una conexión de servicio a servicio con ATP de Microsoft Defender.
 - Implemente una directiva de configuración de dispositivos con un tipo de perfil de **ATP de Microsoft Defender (Windows 10 Escritorio)** en dispositivos en los que ATP evaluará el riesgo.
 
-  Para información sobre cómo configurar Intune para que trabaje junto con ATP, consulte [Aplicación del cumplimiento de ATP de Windows Defender con acceso condicional en Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
+  Para información sobre cómo configurar Intune para que trabaje junto con ATP, consulte [Aplicación del cumplimiento de ATP de Windows Defender con acceso condicional en Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
 
 ## <a name="work-with-security-tasks"></a>Trabajo con tareas de seguridad
 
@@ -103,6 +103,7 @@ Un flujo de trabajo de ejemplo:
 Una vez que la corrección se realiza correctamente, la puntuación de exposición a riesgos puede disminuir en función de la información nueva proveniente de los dispositivos corregidos.
 
 ## <a name="next-steps"></a>Pasos siguientes
+
 Más información sobre Intune y [ATP de Microsoft Defender](advanced-threat-protection.md).
 
 Revise [Mobile Threat Defense](mobile-threat-defense.md) de Intune.

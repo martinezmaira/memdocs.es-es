@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264114"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262785"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Uso de una configuración personalizada para dispositivos Android en Microsoft Intune
 
@@ -35,7 +35,7 @@ Si usa un perfil personalizado, puede configurar y asignar los siguientes valore
 - [Crear un perfil de Wi-Fi con una clave precompartida](/intune/wi-fi-profile-shared-key)
 - [Creación de un perfil de VPN por aplicación](/intune/android-pulse-secure-per-app-vpn)
 - [Uso de directivas personalizadas para permitir y bloquear aplicaciones para dispositivos Samsung Knox Standard](/intune/samsung-knox-apps-allow-block)
-- [Configuración de la protección web en Advanced Threat Protection de Microsoft Defender para Android](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
+- [Configuración de la protección web en Advanced Threat Protection de Microsoft Defender para Android](../protect/advanced-threat-protection-manage-android.md)
 
 >[!IMPORTANT]
 > Solo se pueden configurar los valores enumerados mediante un perfil personalizado. Los dispositivos Android no exponen una lista completa de opciones de OMA-URI que pueda configurar. Si quiere ver más valores, vote por ellos en el [sitio de Uservoice de Intune](https://microsoftintune.uservoice.com/forums/291681-ideas).
