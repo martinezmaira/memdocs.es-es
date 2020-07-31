@@ -1,6 +1,6 @@
 - name: Administrar aplicaciones
   href: index.yml
-- name: Introducción
+- name: Información general
   expanded: true
   items:
     - name: Introducción a la administración de aplicaciones
@@ -149,7 +149,7 @@
               href: manage-microsoft-teams.md
             - name: "Configuración de Google\_Chrome para Android"
               href: apps-configure-chrome-android.md
-            - name: Configuración de una VPN para Android Enterprise
+            - name: VPN y VPN por aplicación en Android Enterprise
               href: app-configuration-vpn-ae.md
         - name: Aplicaciones y libros comprados por volumen
           items:

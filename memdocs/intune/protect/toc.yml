@@ -1,6 +1,6 @@
 - name: Protección de datos y dispositivos con Intune
   href: index.yml
-- name: Introducción
+- name: Información general
   expanded: true
   items:
     - name: Información general sobre la protección de dispositivos
@@ -90,7 +90,15 @@
             - name: Protección de cuentas
               href: endpoint-security-account-protection-policy.md
         - name: ATP de Microsoft Defender
-          href: advanced-threat-protection.md
+          items:
+            - name: ATP de Microsoft Defender
+              href: advanced-threat-protection.md
+            - name: Configuración de ATP de Defender
+              href: advanced-threat-protection-configure.md
+            - name: Protección web de Android
+              href: advanced-threat-protection-manage-android.md
+            - name: Supervisión de ATP de Defender
+              href: advanced-threat-protection-monitor.md
         - name: Migración de reglas de firewall
           href: endpoint-security-firewall-rule-tool.md
         - name: Cifrado de discos
