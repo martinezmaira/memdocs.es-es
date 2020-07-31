@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461868"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262683"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configuración de acciones para dispositivos no compatibles en Intune
 
@@ -147,8 +147,12 @@ Para enviar correo electrónico a los usuarios, cree una plantilla de mensaje de
 
 5. En **Revisar y crear**, revise las configuraciones para asegurarse de que la plantilla de mensaje de notificación está lista para usarse. Seleccione **Crear** para terminar de crear la notificación.
 
-> [!NOTE]
-> También puede seleccionar una plantilla de notificación existente creada anteriormente y **Editar** su información para actualizar la plantilla.
+### <a name="view-and-edit-notifications"></a>Visualización y edición de notificaciones
+
+Las notificaciones que se han creado están disponibles en la página *Directivas de cumplimiento* > *Notificaciones*. En la página puede seleccionar una notificación para ver su configuración y:
+
+- Seleccionar **Enviar una vista previa del correo electrónico** para enviar una vista previa del correo electrónico de notificación a la cuenta que ha usado para iniciar sesión en Intune. 
+- Seleccionar **Editar** para *Conceptos básicos* o *Etiquetas de ámbito* para hacer un cambio.
 
 ## <a name="add-actions-for-noncompliance"></a>Adición de acciones en caso de incumplimiento
 

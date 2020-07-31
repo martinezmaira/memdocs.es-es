@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4bf8a9327f43efc613c7210370e29c46551182
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: e74817c21f7869fdfdabcc2947766b5af9dea335
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506203"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365498"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Adición de la configuración de VPN en dispositivos iOS y iPadOS en Microsoft Intune
 
@@ -31,7 +31,7 @@ Microsoft Intune incluye muchas opciones de configuración de VPN que se pueden 
 [Cree un perfil de configuración de dispositivo](vpn-settings-configure.md).
 
 > [!NOTE]
-> Estas configuraciones están disponibles con todos los tipos de inscripción. Para más información sobre los tipos de inscripción, consulte [Inscripción en iOS/iPadOS](../enrollment/ios-enroll.md).
+> Esta configuración está disponible para todos los tipos de inscripción, excepto para la inscripción de usuarios. La inscripción de usuarios está limitada a [VPN por aplicación](/vpn-setting-configure-per-app.md). Para más información sobre los tipos de inscripción, consulte [Inscripción en iOS/iPadOS ](../enrollment/ios-enroll.md).
 
 ## <a name="connection-type"></a>Tipo de conexión
 

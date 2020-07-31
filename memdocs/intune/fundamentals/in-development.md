@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caec61f93b3b651c18d2c4fd81467d462de75fc1
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b55c8cced4e559655018b36843e1599cc6e2d1bf
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491242"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262744"
 ---
 # <a name="in-development-for-microsoft-intune"></a>En desarrollo para Microsoft Intune
 
@@ -73,7 +73,61 @@ El Portal de empresa ahora admite aplicaciones de Configuration Manager. Esta ca
 ## <a name="device-configuration"></a>Configuración del dispositivo
 
 ### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>Establecimiento del estado de cumplimiento de dispositivos desde partners de MDM de terceros<!-- 6361689   -->
-Los clientes de Microsoft 365 que posean soluciones de MDM de terceros podrán aplicar directivas de acceso condicional para aplicaciones de Microsoft 365 en iOS y Android a través de la integración con el servicio de cumplimiento de dispositivos de Microsoft Intune. Un proveedor de MDM de terceros aprovechará el servicio Cumplimiento de dispositivos de Intune para enviar datos de cumplimiento de dispositivos a Intune. Después, Intune evaluará para determinar si el dispositivo es de confianza y establecerá los atributos de acceso condicional en Azure AD.  A los clientes se les pedirá que establezcan directivas de acceso condicional de Azure AD desde el centro de administración de Microsoft Endpoint Manager o desde el portal de Azure AD.  
+Los clientes de Microsoft 365 que posean soluciones de MDM de terceros podrán aplicar directivas de acceso condicional para aplicaciones de Microsoft 365 en iOS y Android a través de la integración con el servicio de cumplimiento de dispositivos de Microsoft Intune. Un proveedor de MDM de terceros aprovechará el servicio Cumplimiento de dispositivos de Intune para enviar datos de cumplimiento de dispositivos a Intune. Después, Intune evaluará para determinar si el dispositivo es de confianza y establecerá los atributos de acceso condicional en Azure AD.  A los clientes se les pedirá que establezcan directivas de acceso condicional de Azure AD desde el centro de administración de Microsoft Endpoint Manager o desde el portal de Azure AD.
+
+### <a name="create-pkcs-certificate-profiles-for-android-enterprise-fully-managed-devices-cobo---4839686---"></a>Creación de perfiles de certificado de PKCS para dispositivos Android Enterprise totalmente administrados (COBO)<!-- 4839686 -->
+Puede crear perfiles de certificado de PKCS para implementar certificados en dispositivos de perfil de trabajo y propietario del dispositivo Android Enterprise (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **Android Enterprise > solo propietario del dispositivo** o **Android Enterprise > solo perfil de trabajo** para plataforma > **PKCS** para perfil).
+
+Pronto podrá crear perfiles de certificado PKCS para dispositivos Android Enterprise totalmente administrados. Se requiere el conector de certificado PFX de Intune. Si no usa SCEP y solo usa PKCS, puede quitar el conector NDES después de instalar el nuevo conector PFX. El nuevo conector PFX importa los archivos PFX e implementa los certificados PKCS en todas las plataformas.
+
+Para más información sobre certificados PKCS, consulte [Configuración y uso de certificados PKCS con Intune](../protect/certficates-pfx-configure.md).
+
+Se aplica a:
+- Android Enterprise totalmente administrado (COBO)
+
+### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631---"></a>Uso de NetMotion como un tipo de conexión VPN para iOS/iPadOS y dispositivos macOS<!-- 1333631 -->
+Al crear un perfil de VPN, NetMotion está disponible como tipo de conexión VPN (**Dispositivos** > **Configuración de dispositivos** > **Crear perfil** > **iOS/iPadOS** o **macOS** para plataforma > **VPN** para perfil > **NetMotion** para tipo de conexión).
+
+Para obtener más información sobre los perfiles de VPN en Intune, consulte [Creación de perfiles de VPN para conectarse a servidores VPN](../configuration/vpn-settings-configure.md).
+
+Se aplica a:
+- iOS/iPadOS
+- macOS
+
+### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024---"></a>Más opciones del protocolo de autenticación extensible protegido (PEAP) para perfiles Wi-Fi de Windows 10<!-- 3805024 -->
+En los dispositivos Windows 10, puede crear perfiles de Wi-Fi con el protocolo de autenticación extensible (EAP) para autenticar las conexiones Wi-Fi (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **Windows 10 y posteriores** para plataforma > **Wi-Fi** para perfil > **Empresa**). Al seleccionar EAP protegido (PEAP), hay nuevas opciones de configuración disponibles:
+
+- **Realizar validación del servidor en PEAP fase 1**: en la fase 1 de la negociación de PEAP, los dispositivos validan el certificado y comprueban el servidor.
+  - **Deshabilitar los mensajes de usuario para la validación del servidor en PEAP fase 1**: en la fase 1 de la negociación de PEAP, no se muestran los mensajes de usuario que soliciten autorizar nuevos servidores PEAP para entidades de certificación de confianza.
+- **Requerir enlace criptográfico**: impide las conexiones a servidores PEAP que no utilizan el enlace criptográfico durante la negociación PEAP.
+
+Para ver la configuración que puede configurar actualmente, vaya a [Agregar Wi-Fi para dispositivos Windows 10 y versiones posteriores en Intune](../configuration/wi-fi-settings-windows.md).
+
+Se aplica a: 
+- Windows 10 y versiones posteriores
+
+### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576---"></a>Configuración del complemento Microsoft Enterprise SSO de macOS<!-- 5627576 -->
+El equipo de Microsoft Azure AD creó una extensión de aplicación de inicio de sesión único (SSO) de redireccionamiento que permite a los usuarios de macOS 10.15 + obtener acceso con un inicio de sesión a las aplicaciones de Microsoft, a las aplicaciones de la organización y a los sitios web que admiten la característica SSO de Apple y que se autentican mediante Azure AD. Con la versión del complemento Microsoft Enterprise SSO, puede configurar la extensión de SSO con el nuevo tipo de extensión de aplicación de Microsoft Azure AD (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **macOS** para plataforma > **Características del dispositivo** para perfil > **Extensión de aplicación de inicio de sesión único** > tipo de extensión de aplicación de SSO > **Microsoft Azure AD**).
+
+Para lograr el SSO con el tipo de extensión de aplicación de SSO de Microsoft Azure AD, los usuarios deben instalar la aplicación de Portal de empresa en sus dispositivos macOS e iniciar sesión en ella. 
+
+Para obtener más información sobre las extensiones de aplicación de SSO de macOS, consulte [Extensión de aplicación de inicio de sesión único](../configuration/device-features-configure.md#single-sign-on-app-extension).
+
+Se aplica a:
+- macOS 10.15 y versiones más recientes
+
+### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991---"></a>Uso de extensiones de aplicación de SSO en más aplicaciones iOS/iPadOS con el complemento de Microsoft Enterprise SSO<!-- 7369991 -->
+El complemento [Microsoft Enterprise SSO para dispositivos Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) se puede usar con todas las aplicaciones que admiten las extensiones de aplicación SSO. En Intune, esta característica significa que el complemento funciona con aplicaciones móviles iOS/iPadOS que no usan la biblioteca de autenticación de Microsoft (MSAL) para dispositivos Apple. Las aplicaciones no necesitan usar MSAL, pero tienen que autenticarse con puntos de conexión de Azure AD.
+
+Para configurar las aplicaciones de iOS/iPadOS para usar SSO con el complemento, agregue los identificadores de lote de aplicaciones en un perfil de configuración de iOS/iPadOS (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **iOS/iPadOS** para plataforma > **Características del dispositivo** para perfil > **Extensión de aplicación de inicio de sesión único** > **Microsoft Azure AD** > para tipo de extensión de aplicación de SSO > **Identificadores de lote de las aplicaciones**).
+
+Para ver la configuración actual de la extensión de la aplicación de SSO que puede configurar, vaya a [Extensión de aplicación de inicio de sesión único](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+
+Se aplica a:
+- iOS/iPadOS
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>Mejora en la página Actualizar configuración del dispositivo en la aplicación Portal de empresa para Android para mostrar descripciones<!-- 7414768 -->
+En la aplicación Portal de empresa en dispositivos Android, la página **Actualizar configuración del dispositivo** muestra la configuración que un usuario debe actualizar para que sea compatible. Hemos mejorado la experiencia del usuario para que la configuración de la lista se expanda de forma predeterminada para mostrar la descripción y el botón **Resolver** (cuando proceda). Anteriormente, el valor predeterminado era la vista contraída. Este nuevo comportamiento predeterminado reduce el número de clics, por lo que los usuarios pueden resolver los problemas más rápidamente.
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
@@ -108,6 +162,9 @@ En la actualidad, si un cliente restablece la imagen inicial de un dispositivo y
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Implementación de actualizaciones de software en dispositivos macOS <!-- 3194876 -->
 Podrá implementar actualizaciones de software en grupos de dispositivos macOS. Esta característica incluye, entre otras, actualizaciones de archivos críticos, de archivos de configuración y del firmware. Podrá enviar actualizaciones en la siguiente sincronización de dispositivos o seleccionar una programación semanal para implementar actualizaciones dentro o fuera de los períodos que establezca. De esta manera, podrá actualizar los dispositivos fuera de las horas de trabajo estándar o cuando el departamento de soporte técnico tiene a todo el personal ocupado. También obtendrá un informe detallado de todos los dispositivos macOS con actualizaciones implementadas. Puede profundizar en el informe en función de cada dispositivo para ver los estados de determinadas actualizaciones.
 
+### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322---"></a>Revocación de licencias asociadas revocadas antes de eliminar el token de VPP de Apple<!--6195322 -->
+En una actualización futura, cuando se elimina un token de VPP de Apple en Microsoft Endpoint Manager, todas las licencias asignadas a Intune asociadas a ese token se revocarán automáticamente antes de la eliminación.
+
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
@@ -119,10 +176,9 @@ Podrá implementar actualizaciones de software en grupos de dispositivos macOS. 
 Los administradores podrán actualizar la versión de la plantilla de informe de cumplimiento de Power BI de V1.0 a V2.0. En V2.0 se incluirá un diseño mejorado, así como cambios en los cálculos y los datos que se muestran como parte de la plantilla. Para obtener información relacionada, vea [Conexión con el almacenamiento de datos con Power BI](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
-## <a name="role-based-access-control"></a>Control de acceso basado en roles.
-
-### <a name="scope-tag-support-for-customization-policies--6182440---"></a>Compatibilidad de etiquetas de ámbito con directivas de personalización<!--6182440 -->
-Podrá asignar etiquetas de ámbito a las directivas de personalización. Para ello, vaya al [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Administración de inquilinos**> **Personalización** donde verá las opciones de configuración de **Etiquetas de ámbito**.
+<!--
+## Role-based access control
+-->
 
 <!-- ***********************************************-->
 ## <a name="security"></a>Seguridad
@@ -135,6 +191,20 @@ En octubre de 2019, la directiva de protección de aplicaciones de Intune agreg�
 - **Symantec Endpoint Security** en Android, iOS y iPadOS
 
 Para más información sobre el uso de la directiva de protección de aplicaciones con asociados de MTD, consulte [Creación de una directiva de protección de aplicaciones de Mobile Threat Defense con Intune](../protect/mtd-app-protection-policy.md).
+
+### <a name="microsoft-defender-atp-creates-endpoint-manager-security-task-with-vulnerability-details---5568193----"></a>ATP de Microsoft Defender crea una tarea de seguridad de Endpoint Manager con detalles de la vulnerabilidad<!-- 5568193  -->
+La administración de amenazas y vulnerabilidades (TVM) de ATP de Microsoft Defender detecta una configuración de seguridad incorrecta en los dispositivos. Los administradores usan esta información para actualizar los dispositivos vulnerables.
+
+Pronto, ATP de Microsoft Defender podrá generar una tarea de seguridad de Endpoint Manager (**Endpoint Manager** > **Seguridad de los puntos de conexión** > **Tareas de seguridad**) con los detalles de la vulnerabilidad y mostrar los dispositivos afectados. Los administradores de TI pueden aceptar la tarea de seguridad e implementar la configuración necesaria. 
+
+Para más información sobre cómo las tareas de seguridad, vea [Uso de Intune para corregir las vulnerabilidades que identifica ATP de Microsoft Defender](../protect/atp-manage-vulnerabilities.md).
+
+### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119----"></a>Cambios para las exclusiones de la directiva de antivirus para la seguridad de los puntos de conexión<!--5583940, 6018119  -->
+Vamos a introducir dos cambios para administrar las listas de exclusión del antivirus de Microsoft Defender que se configuran como parte de una directiva de antivirus de seguridad de los puntos de conexión. (**Seguridad de los puntos de conexión** > **Antivirus** > **Crear directiva** > **Windows 10 y versiones posteriores** para plataforma). Estos dos cambios ayudan a evitar conflictos entre las directivas, y las directivas existentes que estuvieran en conflicto dejarán de estarlo para la lista de exclusiones:
+
+- En primer lugar, vamos a agregar un nuevo tipo de perfil para Windows 10 y versiones posteriores: **Exclusiones del antivirus de Microsoft Defender**.  Este nuevo tipo de perfil incluye solo la configuración para especificar una lista de *procesos*, *extensiones de archivos* y *archivos* y *carpetas* que no quiere que analice Microsoft Defender. Esto puede ayudarle a simplificar la administración de las listas de exclusión separándolas de otras configuraciones de directiva.
+- El segundo cambio es que la lista de exclusiones que se define en distintos perfiles se combinará en una única lista de exclusiones para cada dispositivo o usuario, en función de las directivas individuales que se aplican a un usuario o dispositivo específico. Por ejemplo, si el destino es un usuario con tres directivas independientes, las listas de exclusión de esas tres directivas se combinan en un único superconjunto de exclusiones del antivirus de Microsoft Defender, que se aplican de este modo al usuario. Esta combinación incluye las listas de exclusiones del nuevo tipo de perfil que se estaban agregando, así como las directivas existentes que se hubieran configurado en un perfil *Antivirus de Microsoft Defender*.
+
 
 
 <!-- ***********************************************-->

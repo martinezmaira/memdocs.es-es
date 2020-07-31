@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531900"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262870"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integración de Windows Hello para empresas con Microsoft Intune  
 
@@ -32,13 +32,21 @@ Hello para empresas es un método alternativo de inicio de sesión que usa Activ
 
 Intune se integra con Hello para empresas de dos maneras:
 
-- **En todos los inquilinos**: se puede crear una directiva de Intune en *Inscripción de dispositivos*. Esta directiva se destina a toda la organización (a todos los inquilinos). Es compatible con la configuración rápida (OOBE) de Windows AutoPilot y se aplica cuando se inscribe un dispositivo.
-- **Grupos discretos**: puede implementar directivas que administren Windows Hello para empresas en los dispositivos que se han inscrito con Intune. Entre los tipos de directivas que pueden administrar Windows Hello se incluyen los perfiles de *Identity Protection* que se crean en la *configuración del dispositivo*, diversas *líneas de base de seguridad* y los perfiles de *protección de cuentas* de seguridad de los puntos de conexión. Estos tipos de perfiles se dirigen a dispositivos o usuarios asignados y se aplican durante la sincronización.
+- **Todo el inquilino** (*este artículo)* : Se puede crear una directiva de Intune en *Inscripción de dispositivos*. Esta directiva se destina a toda la organización (a todos los inquilinos). Es compatible con la configuración rápida (OOBE) de Windows AutoPilot y se aplica cuando se inscribe un dispositivo.
+- **Grupos discretos**: En el caso de los dispositivos que se hayan inscrito previamente con Intune, use un perfil de [**Identity Protection**](../protect/identity-protection-configure.md) de configuración de dispositivo para configurar dispositivos para Windows Hello para empresas. Los perfiles de Identity Protection pueden dirigirse a usuarios o dispositivos asignados y aplicarse durante la sincronización.
 
-Use este artículo para crear una directiva de Windows Hello para empresas predeterminada destinada a toda la organización. Para crear un perfil de protección de identidad que se aplique a grupos de usuarios y dispositivos concretos, vea [Configuración de un perfil de protección de identidad](identity-protection-configure.md).  
+Además, Intune admite los siguientes tipos de directivas para administrar algunas opciones de configuración de Windows Hello para empresas:
+
+- [**Líneas de base de seguridad**](../protect/security-baselines.md). Las siguientes líneas de base incluyen la configuración de Windows Hello para empresas:
+  - [Configuración de línea de base de Advanced Threat Protection de Microsoft Defender](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Configuración de línea de base de seguridad de MDM de Windows](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- Directiva de seguridad para los puntos de conexión para la [**protección de cuentas**](../protect/endpoint-security-account-protection-policy.md). Vea la [configuración de protección de cuentas](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
+
+El resto de este artículo se centra en la creación de una directiva de Windows Hello para empresas predeterminada destinada a toda la organización.
 
 > [!IMPORTANT]
 > En las versiones de escritorio y móvil de Windows 10 anteriores a la Actualización de aniversario, era posible establecer dos PIN diferentes para autenticarse en los recursos:
+>
 > - El **PIN de dispositivo** se usaba para desbloquear el dispositivo y conectarse a recursos de nube.
 > - El **PIN de trabajo** se usaba para acceder a recursos de Azure AD en los dispositivos personales del usuario (BYOD).
 > 

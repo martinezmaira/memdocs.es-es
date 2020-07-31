@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0e5e3e0b142b47dba64b1cb26dfb5d798e877c9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ff08d1424866a0f18a44aa51b97ffc6f92e58789
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983861"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262700"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>Adición y asignación de la aplicación Portal de empresa de Windows 10 para dispositivos aprovisionados con Autopilot
 
@@ -52,7 +52,7 @@ Portal de empresa (sin conexión) se elige para instalarse mediante los pasos si
 ## <a name="assign-the-company-portal-app"></a>Asignación de la aplicación Portal de empresa
 
 1. Inicie sesión en el  [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431)  con la cuenta de administrador. 
-2. Seleccione la pestaña **Aplicaciones** en el panel de la derecha.
+2. Seleccione la pestaña **Aplicaciones** en el panel derecho.
 3. En **Por plataforma**, seleccione **Windows**.
 4. Seleccione **Portal de empresa (sin conexión)** .
 5. Debe esperar a que se complete la programación de sincronización, o bien realizar una sincronización manual desde el Centro de administración del Administrador de puntos de conexión de Microsoft.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461970"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365549"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -178,9 +178,9 @@ Intune admite las credenciales derivadas de tarjeta de verificación de identida
 
 Para obtener más información sobre las credenciales derivadas de dispositivos iOS/iPadOS, vea [Uso de credenciales derivadas en Microsoft Intune](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-iosipados-company-portal"></a>Modo oscuro para el Portal de empresa de iOS o iPadOS
+## <a name="dark-mode-for-the-company-portal"></a>Modo oscuro para el Portal de empresa
 
-El modo oscuro está disponible para el Portal de empresa de iOS o iPadOS. Los usuarios pueden descargar aplicaciones, administrar sus dispositivos y obtener soporte técnico de TI en la combinación de colores de su elección en función de la configuración del dispositivo. El Portal de empresa de iOS o iPadOS hará coincidir automáticamente la configuración del dispositivo del usuario final con el modo oscuro o claro.
+El modo oscuro está disponible para el Portal de empresa de iOS/iPadOS, macOS y Windows. Los usuarios pueden descargar aplicaciones, administrar sus dispositivos y obtener soporte técnico de TI en la combinación de colores de su elección en función de la configuración del dispositivo. El Portal de empresa de iOS/iPadOS, macOS y Windows hará coincidir automáticamente la configuración del dispositivo del usuario final con el modo oscuro o claro.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Métodos abreviados de teclado del Portal de empresa de Windows
 

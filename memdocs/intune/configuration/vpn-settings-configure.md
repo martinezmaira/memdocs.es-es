@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565609"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365430"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Creación de perfiles de VPN para conectarse a servidores VPN en Intune
 
 Las redes privadas virtuales (VPN) ofrecen a los usuarios acceso remoto seguro a la red de la empresa. Los dispositivos usan un perfil de conexión VPN para iniciar una conexión con el servidor VPN. Los **perfiles de VPN** en Microsoft Intune asignan la configuración de VPN en los usuarios y los dispositivos de la organización. Use esta configuración para que los usuarios puedan conectarse de forma fácil y segura a la red de la organización.
 
 Por ejemplo, quiere configurar todos los dispositivos iOS/iPadOS con las opciones de configuración necesarias para conectarse a un recurso compartido de archivos de la red de la empresa. Cree un perfil de VPN que incluya estas opciones de configuración. Después, asigne este perfil a todos los usuarios que tengan dispositivos iOS/iPadOS. Los usuarios verán la conexión VPN en la lista de redes disponibles y podrán conectarse con un esfuerzo mínimo.
+
+> [!NOTE]
+> La inscripción de usuarios para iOS/iPadOS y macOS solo admite [VPN por aplicación](vpn-setting-configure-per-app.md).
 
 > [!NOTE]
 > Puede usar [directivas de configuración personalizadas](custom-settings-configure.md) de Intune para crear perfiles de VPN para las siguientes plataformas:

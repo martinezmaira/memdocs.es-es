@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989376"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946667"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Administración de actualizaciones de software de Windows 10 en Intune
 
@@ -221,6 +221,8 @@ Deben cumplirse los requisitos previos siguientes para usar las actualizaciones 
   - Las actualizaciones de características para el anillo de actualización deben estar *en ejecución*. No se deben pausar.
 
 - Las directivas de actualización de características de Windows 10 no se pueden aplicar durante la configuración rápida (OOBE) de Autopilot y solo se aplican en el primer análisis de Windows Update una vez que el dispositivo haya finalizado el aprovisionamiento (que suele ser un día).
+
+- Aunque las actualizaciones de características de Windows 10 permanecen en la versión preliminar pública, cuando los dispositivos se administran de forma conjunta con Configuration Manager e Intune, existe una limitación por la que es posible que las directivas de actualización de características no surtan efecto de inmediato, lo que provoca que los dispositivos se actualicen con una actualización de características posterior a la configurada en Intune. Esta limitación se quitará con una actualización futura para Configuration Manager.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Creación y asignación de actualizaciones de características de Windows 10
 

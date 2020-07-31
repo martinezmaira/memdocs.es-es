@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461953"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262666"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adición de aplicaciones de Google Play administrado a dispositivos Android Enterprise con Intune
 
@@ -122,6 +122,8 @@ Hay dos maneras de agregar aplicaciones de línea de negocio a Google Play admin
 5. Seleccione **Aplicaciones privadas** (junto al icono de *candado*) en la ventana de Google Play. 
 6. Haga clic en el botón **"+"** en la esquina inferior derecha para agregar una aplicación nueva.
 7. Agregue un **Título** de aplicación y haga clic en **Cargar APK** para agregar el paquete de aplicación APK.
+   > [!NOTE]
+   > El nombre del paquete de la aplicación debe ser único globalmente en Google Play (no solo único dentro de su empresa o cuenta de desarrollador de Google Play). De lo contrario, aparecerá un error solicitándole que **cargue un nuevo archivo APK con un nombre de paquete diferente**.
 8. Haga clic en **Crear**.
 9. Cierre el panel de Google Play administrado si ha terminado de agregar aplicaciones.
 10. Haga clic en **Sincronizar** en el panel **Aprobar aplicación** para realizar la sincronización con el servicio de Google Play administrado. 
@@ -154,7 +156,7 @@ Los vínculos web de Google Play administrado se pueden instalar y administrar c
 
 Los vínculos web se abrirán con Microsoft Edge o con cualquier otra aplicación del explorador que decida implementar. Asegúrese de implementar al menos una aplicación de explorador en los dispositivos para que los vínculos web puedan abrirse correctamente. Sin embargo, todas las opciones de **presentación** disponibles para vínculos web (interfaz de usuario de pantalla completa, independiente y mínima) solo funcionarán con el explorador Chrome. 
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En el panel **Seleccionar tipo de aplicación**, en los tipos de **Aplicación de la Tienda** disponibles, seleccione la **Aplicación de Google Play administrado**.
 4. Haga clic en **Seleccionar**. Se muestra la aplicación de la Tienda **Google Play administrado** dentro de Intune.

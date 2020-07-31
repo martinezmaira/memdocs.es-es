@@ -1,12 +1,12 @@
 ---
-title: Configuración de una VPN para dispositivos Android Enterprise
+title: Configuración de VPN o VPN por aplicación para dispositivos Android Enterprise en Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Puede usar una directiva de protección de aplicaciones con el fin de configurar una VPN para dispositivos Android Enterprise.
+description: Use una directiva de configuración de aplicaciones para agregar o crear un perfil de VPN o VPN por aplicación para Android Enterprise en Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,155 +18,209 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcb7bd506d92befa3c73faf7270de28765f5b192
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 7e869ad933e86d9330dbb8d6a26b1886a71cee07
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347423"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262904"
 ---
-# <a name="configure-a-vpn-for-android-enterprise-devices"></a>Configuración de una VPN para dispositivos Android Enterprise
+# <a name="use-a-vpn-and-per-app-vpn-policy-on-android-enterprise-devices-in-microsoft-intune"></a>Use una directiva de VPN y VPN por aplicación en dispositivos Android Enterprise en Microsoft Intune
 
-En este tema se describe cómo crear una directiva de configuración de aplicaciones, que se puede implementar en combinación con un cliente VPN en dispositivos Android Enterprise. Esta configuración permitirá el tráfico de red a las aplicaciones que elija, de modo que puedan acceder a recursos empresariales.
+Las redes privadas virtuales (VPN) permiten a los usuarios acceder a los recursos de la organización de forma remota; por ejemplo, desde casa, un hotel o una cafetería. En Microsoft Intune, puede configurar aplicaciones cliente VPN en dispositivos Android Enterprise mediante una directiva de configuración de aplicaciones. A continuación, implemente esta directiva con su configuración de VPN en los dispositivos de su organización.
+
+También puede crear directivas de VPN que se usan por aplicaciones específicas. Esta característica se denomina "VPN por aplicación". Cuando la aplicación está activa, puede conectarse a la VPN y acceder a los recursos a través de la VPN. Cuando la aplicación no está activa, no se usa la VPN.
+
+Esta característica se aplica a:
+
+- Android Enterprise
+
+Hay dos formas de crear la directiva de configuración para su aplicación cliente VPN:
+
+- Diseñador de configuraciones
+- Datos JSON
+
+En este artículo se muestra cómo crear una VPN por aplicación y una directiva de configuración de la aplicación VPN mediante ambas opciones.
 
 > [!NOTE]
-> La plataforma Android actualmente no permite activar de forma automática la conexión de un cliente VPN cuando una de las aplicaciones elegidas está abierta. En primer lugar, la conexión VPN se debe iniciar manualmente, o bien puede usar una [VPN que siempre esté activa](../configuration/vpn-settings-android-enterprise.md).
+> Muchos de los parámetros de configuración del cliente VPN son similares. Sin embargo, cada aplicación tiene sus claves y opciones únicas. Si tiene alguna pregunta, diríjase a su proveedor de VPN.
 
-Los requisitos previos para crear una directiva de configuración con el fin de lograr un acceso VPN correcto incluyen el hecho de que el cliente VPN en cuestión admita los perfiles de configuración de aplicaciones administradas. Algunos de los clientes VPN que actualmente admiten la directiva de configuración de aplicaciones de Intune son los siguientes:
-- Cisco AnyConnect
-- SSO de Citrix
-- F5Access
-- Global Connect de Palo Alto
-- Pulse Secure
-- SonicWall Mobile Connect
+## <a name="before-you-begin"></a>Antes de comenzar
 
-Si el método de autenticación de acceso al punto de conexión de la VPN requiere el uso de certificados de cliente, será necesario crear los perfiles de los certificados de antemano para rellenar los valores necesarios de la directiva de configuración de aplicaciones.
+- Android no desencadena automáticamente una conexión de cliente VPN cuando se abre una aplicación. La conexión VPN debe iniciarse manualmente. O bien, puede usar [VPN siempre activa](../configuration/vpn-settings-android-enterprise.md) para iniciar la conexión.
 
-> [!NOTE]
-> Si bien para los perfiles de trabajo de Android Enterprise se admiten certificados SCEP y PKCS, para propietarios de dispositivos Android Enterprise actualmente solo se admiten los SCEP. 
+- Los siguientes clientes VPN admiten las directivas de configuración de aplicaciones de Intune:
 
-El flujo básico para crear y probar el perfil de VPN por aplicación es el siguiente:
-1.  Elija la aplicación del cliente VPN que sea adecuada para su infraestructura.
-2.  Identifique los id. de los paquetes de las aplicaciones de productividad que quiera usar con la conexión VPN.
-3.  Implemente los perfiles de los certificados necesarios para cumplir los requisitos de autenticación de la conexión VPN. Asegúrese de comprobar que la implementación sea correcta.
-4.  Implemente la aplicación del cliente VPN.
-5.  Prepare el perfil de VPN basado en la configuración de la aplicación mediante la información obtenida en pasos anteriores.
-6.  Implemente el perfil de VPN recién creado.
-7.  Valide que la aplicación del cliente VPN se conecte correctamente a la infraestructura del servidor VPN.
-8.  Valide que el tráfico de las aplicaciones de productividad circule correctamente por la VPN, cuando esta esté activa.
+  - Cisco AnyConnect
+  - SSO de Citrix
+  - F5 Access
+  - Palo Alto Networks GlobalProtect
+  - Pulse Secure
+  - SonicWall Mobile Connect
+
+- Al crear la directiva de VPN en Intune, seleccionará claves diferentes para configurar. Estos nombres de clave varían con las distintas aplicaciones de cliente VPN. Por lo tanto, los nombres de clave de su entorno pueden ser diferentes de los ejemplos de este artículo.
+
+- El Diseñador de configuraciones y los datos JSON pueden usar correctamente la autenticación basada en certificados. Si la autenticación VPN requiere certificados de cliente, cree los perfiles de certificado antes de crear la directiva de VPN. Las directivas de configuración de aplicaciones de VPN usan los valores de los perfiles de certificado.
+
+  Los dispositivos de perfil de trabajo de Android Enterprise admiten certificados SCEP y PKCS. Los dispositivos de perfil de trabajo de propiedad corporativa, dedicados y totalmente administrados de Android Enterprise solo admiten certificados SCEP. Para más información, consulte [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
+
+## <a name="per-app-vpn-overview"></a>Introducción a VPN por aplicación
+
+Al crear y probar una VPN por aplicación, el flujo básico incluye los pasos siguientes:
+
+1. Seleccione la aplicación cliente VPN. En la sección [Antes de comenzar](#before-you-begin) (de este artículo) se enumeran las aplicaciones compatibles.
+2. Obtenga los identificadores de paquete de aplicación de las aplicaciones que usarán la conexión VPN. En la sección [Obtención del id. del paquete de las aplicaciones](#get-the-app-package-id) (en este artículo) se muestra cómo hacerlo.
+3. Si usa certificados para autenticar la conexión VPN, cree e implemente los perfiles de certificado antes de implementar la directiva de VPN. Asegúrese de que los perfiles de certificado se implementan correctamente. Para más información, consulte [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
+4. Agregue la [aplicación cliente VPN](apps-add-android-for-work.md) a Intune e implemente la aplicación en los usuarios y los dispositivos.
+5. Cree una directiva de configuración de aplicaciones de VPN. Use los identificadores de paquete de la aplicación y la información del certificado en la directiva.
+6. Implemente la nueva directiva de VPN.
+7. Confirme que la aplicación cliente VPN se conecta correctamente al servidor VPN.
+8. Cuando la aplicación esté activa, confirme que el tráfico de la aplicación atraviesa correctamente la VPN.
 
 ## <a name="get-the-app-package-id"></a>Obtención del id. del paquete de las aplicaciones
 
-Identifique el id. del paquete de cada aplicación a la que quiera conceder acceso a la VPN. En el caso de las aplicaciones disponibles públicamente, puede obtener los id. de paquete de cada una de las aplicaciones en Google Play Store. La dirección URL que se muestra para cada aplicación incluye el id. del paquete. Por ejemplo, el id. del paquete de la versión para Android del explorador Microsoft Edge es `com.microsoft.emmx`. El id. del paquete se incluye como parte de la dirección URL.
+Obtenga el identificador de paquete para cada aplicación que vaya a usar la VPN. En el caso de las aplicaciones disponibles públicamente, puede obtener el identificador del paquete de la aplicación en la tienda Google Play. La dirección URL que se muestra para cada aplicación incluye el id. del paquete.
 
-![Ejemplo de cómo encontrar el id. del paquete de la aplicación.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png)
+En el ejemplo siguiente, el identificador del paquete de la aplicación del explorador Microsoft Edge es `com.microsoft.emmx`. El identificador de paquete forma parte de la dirección URL:
 
-En el caso de las aplicaciones de línea de negocio (LOB), deberá solicitar al proveedor o equipo de desarrollo que se lo faciliten.
+:::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png" alt-text="Obtenga el identificador del paquete de la aplicación en la dirección URL de la tienda Google Play.":::
+
+En el caso de las aplicaciones de línea de negocio (LOB), obtenga el identificador del paquete del desarrollador de la aplicación o del proveedor.
 
 ## <a name="certificates"></a>Certificados
 
-En este tema, daremos por hecho que su conexión VPN usa la autenticación basada en certificados y que ya ha implementado correctamente todos ellos en la cadena necesaria para la adecuada autenticación del cliente. Normalmente, sería el caso del certificado de cliente, cualquier certificado intermedio y el certificado raíz.
-Para obtener más información sobre la implementación de certificados para Android Enterprise, consulte el tema [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
+En este artículo se supone que la conexión VPN utiliza la autenticación basada en certificados. También se supone que ha implementado correctamente todos los certificados de la cadena necesarios para que los clientes se autentiquen correctamente. Normalmente, esta cadena de certificados incluye el certificado de cliente, los certificados intermedios y el certificado raíz.
 
-Una vez implementado el perfil de certificado para la autenticación del cliente, necesitará algunos detalles sobre dicho perfil para crear la directiva de configuración de la aplicación VPN.
-Para familiarizarse con la creación de perfiles de configuración de aplicaciones, consulte el tema [Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados](../apps/app-configuration-policies-use-android.md).
- 
+Para más información sobre los certificados, consulte [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
 
-## <a name="build-the-vpn-profile"></a>Creación del perfil de VPN
+Cuando se implementa el perfil de certificado de autenticación de cliente, se crea un token de certificado en el perfil de certificado. Este token se usa para crear la directiva de configuración de la aplicación de VPN.
 
-Hay dos formas de crear la directiva de configuración para su aplicación VPN. Puede usar el **diseñador de configuración** o la opción **Datos JSON**. La opción **Datos JSON** es necesaria cuando en el método del **diseñador de configuración** no están disponibles todos los valores de configuración necesarios para la VPN. Si determina que la opción JSON es la adecuada en su caso, diríjase a su proveedor de VPN para obtener ayuda. En este tema, se mostrarán ejemplos de ambos métodos. En ambos métodos, tanto para la opción **Datos JSON** como el **diseñador de configuración**, puede incorporar correctamente la autenticación basada en certificados. Al emplear el método **Datos JSON**, puede empezar utilizando el **diseñador de configuración** para extraer los valores del perfil que sean necesarios.
+Para familiarizarse con la creación de perfiles de configuración de aplicaciones, consulte [Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados](app-configuration-policies-use-android.md).
 
-> [!NOTE]
-> Aunque muchos de los parámetros de la configuración del cliente VPN son similares, cada aplicación tiene sus claves y opciones únicas. Si tiene alguna pregunta, diríjase a su proveedor de VPN. 
+## <a name="use-the-configuration-designer"></a>Uso del Diseñador de configuraciones
 
-## <a name="use-the-configuration-designer-flow"></a>Uso del flujo del diseñador de configuración
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar** > **Dispositivos administrados**.
+3. En **Básico**, escriba las propiedades siguientes:
 
-1.  Para empezar, agregue una nueva directiva de configuración de aplicaciones para **dispositivos administrados**.
-2.  Escriba un nombre adecuado.
-3.  Seleccione **Android Enterprise** como plataforma.
-4.  Si la autenticación basada en certificados es necesaria, seleccione **Solo perfil de trabajo** o **Solo el propietario del dispositivo** como tipo de perfil. La opción **Perfil de trabajo y perfil del propietario del dispositivo** no es compatible con la autenticación basada en certificados.
-5.  Para la aplicación de destino, seleccione el cliente VPN que ha implementado; en este ejemplo, se usa el cliente VPN Cisco AnyConnect que se ha implementado anteriormente.
+    - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva válido es **Directiva de configuración de la aplicación: directiva de VPN de Cisco AnyConnect para dispositivos de perfil de trabajo de Android Enterprise**.
+    - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
+    - **Plataforma**: seleccione **Android Enterprise**.
+    - **Tipo de perfil**: Las opciones son:
+      - **Todos los tipos de perfil**: esta opción admite la autenticación mediante nombre de usuario y contraseña. Si usa la autenticación basada en certificados, no utilice esta opción.
+      - **Solo perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado**: esta opción admite la autenticación basada en certificados y la autenticación de nombre de usuario y contraseña.
+      - **Solo perfil de trabajo**: esta opción admite la autenticación basada en certificados y la autenticación de nombre de usuario y contraseña.
+    - **Aplicación de destino**: seleccione la aplicación cliente VPN que agregó anteriormente. En el ejemplo siguiente, se usa la aplicación cliente VPN de Cisco AnyConnect:
 
-  ![Ejemplo del proceso de creación de una directiva de configuración de la aplicación (conceptos básicos).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png)
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png" alt-text="Cree una directiva de configuración de aplicaciones para configurar una VPN o una VPN por aplicación en Microsoft Intune":::
 
-6. En la página siguiente, abra el menú desplegable de los valores de configuración y seleccione la opción **Usar diseñador de configuraciones**.
+4. Seleccione **Siguiente**.
+5. En **Configuración**, escriba las propiedades siguientes:
 
-  ![Ejemplo del uso del flujo del diseñador de configuraciones (configuración).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png)
+    - **Formato de opciones de configuración**: seleccione **Uso del Diseñador de configuraciones**:
 
-7. Haga clic en **Agregar** para mostrar la lista de claves de configuración.
-8.  Seleccione todas las claves de configuración que necesite para la configuración que elija. En este ejemplo, se usa una lista mínima para establecer una VPN de AnyConnect, incluida la autenticación basada en certificados y la VPN por aplicación.
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png" alt-text="Creación de una directiva de VPN de configuración de aplicaciones en Microsoft Intune mediante el Diseñador de configuraciones: ejemplo.":::
+
+    - **Agregar**: muestra la lista de claves de configuración. Seleccione todas las claves de configuración necesarias para la configuración > **Aceptar**.
+
+      En este ejemplo, seleccionamos una lista mínima para una VPN de AnyConnect, incluida la autenticación basada en certificados y la VPN por aplicación:
   
-  <img alt="Example of using the Configuration Designer Flow - Configuration keys." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" width="350">
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" alt-text="Adición de claves de configuración a una directiva de configuración de aplicaciones de VPN en Microsoft Intune mediante el Diseñador de configuraciones (ejemplo).":::
 
-9. Escriba los valores apropiados para las claves **Nombre de conexión**, **Host** y **Protocolo**.
+    - **Valor de configuración:** Escriba los valores de las claves de configuración que ha seleccionado. Recuerde que los nombres de clave varían en función de la aplicación cliente VPN que esté usando. En las claves seleccionadas en nuestro ejemplo:
 
-  ![Ejemplo del uso del flujo del diseñador de configuraciones (selección de las clave de configuración).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png)  
+      - **Aplicaciones permitidas de VPN por aplicación**: escriba el identificador de paquete de aplicación que recopiló anteriormente. Por ejemplo:
 
-  > [!NOTE]
-  > Los nombres de estas claves pueden variar en función de la aplicación del cliente VPN para la que cree la directiva.
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png" alt-text="Escritura de los identificadores de paquete de aplicación permitidos en una directiva de configuración de aplicaciones de VPN en Microsoft Intune mediante el Diseñador de configuraciones: ejemplo.":::
 
-10. Escriba los id. de los paquetes de aplicaciones que ha recopilado anteriormente en la clave **Per App VPN Allowed Apps** (Aplicaciones VPN permitidas por aplicación).
+      - **Alias de certificado de cadena de claves** (opcional): cambie **Tipo de valor** de **cadena** a **certificado**. Seleccione el perfil de certificado de cliente que se usará con la autenticación de VPN. Por ejemplo:
 
-  ![Ejemplo del uso del flujo del diseñador de configuraciones (id. de los paquetes de aplicaciones).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png" alt-text="Cambio del alias del certificado de cliente de cadena de claves en una directiva de configuración de aplicaciones de VPN en Microsoft Intune mediante el Diseñador de configuraciones: ejemplo.":::
 
-11. En la clave opcional **KeyChain Certificate Alias** (Alias de certificado de cadena de claves), cambie **Tipo de valor** de **cadena** a **certificado**. De este modo, podrá elegir el perfil de certificado de cliente correcto que se utilizará con la autenticación de la VPN.
+      - **Protocolo**: seleccione **SSL** o el protocolo de túnel **IPsec** de la VPN.
+      - **Nombre de la conexión**: escriba un nombre descriptivo para esta conexión VPN. Los usuarios ven este nombre de conexión en sus dispositivos. Por ejemplo, escriba `ContosoVPN`.
+      - **Host**: escriba la dirección URL del nombre de host para el enrutador de cabecera. Por ejemplo, escriba `vpn.contoso.com`.
 
-  ![Ejemplo del uso del flujo del diseñador de configuraciones (actualización del alias de certificado de cadena de bloques).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png" alt-text="Ejemplos de protocolo, nombre de conexión y nombre de host en una directiva de configuración de aplicaciones de VPN en Microsoft Intune mediante el Diseñador de configuraciones":::
 
-12. En la página siguiente, elija las etiquetas de ámbito adecuadas.
-13. En la página siguiente, indique los grupos en los que quiera implementar la directiva de configuración de aplicaciones.
-14. Seleccione **Crear** para completar la creación e implementación de la directiva.
+6. Seleccione **Siguiente**.
+7. En **Asignaciones**, seleccione los grupos para asignar la directiva de configuración de la aplicación de VPN.
 
-  ![Ejemplo del uso del flujo del diseñador de configuraciones (revisión).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png)  
+    Seleccione **Siguiente**.
 
-## <a name="use-the-json-flow"></a>Uso del flujo JSON
+8. En **Revisar y crear**, revise la configuración. Al seleccionar **Crear**, los cambios se guardan y la directiva se implementa en los grupos. La directiva también se muestra en la lista de directivas de configuración de la aplicación.
 
-Crear un perfil temporal:
-1.  Para empezar, agregue una nueva directiva de configuración de aplicaciones para **dispositivos administrados**.
-2.  Escriba un nombre adecuado (el uso de este perfil es temporal, ya que NO se guardará).
-3.  Seleccione **Android Enterprise** como plataforma.
-4.  Para la aplicación de destino, seleccione el cliente VPN que ha implementado.
-5.  Si la autenticación basada en certificados es necesaria, seleccione **Solo perfil de trabajo** o **Solo el propietario del dispositivo** como tipo de perfil. La opción **Perfil de trabajo y perfil del propietario del dispositivo** no es compatible con la autenticación basada en certificados.
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png" alt-text="Revisión de la directiva de configuración de la aplicación mediante el flujo del Diseñador de configuraciones en Microsoft Intune: ejemplo.":::
 
-  ![Ejemplo del uso del flujo JSON (conceptos básicos).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-09.png)  
+## <a name="use-json"></a>Uso de JSON
 
-6.  En la página siguiente, abra el menú desplegable **Opciones de configuración** y seleccione la opción **Usar diseñador de configuraciones**.
+Utilice esta opción si no tiene o no conoce toda la configuración de VPN necesaria del **Diseñador de configuraciones**. Si necesita ayuda, póngase en contacto con su proveedor de VPN.
 
-  ![Ejemplo del uso del flujo JSON (formato de las opciones de configuración).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-10.png)  
+### <a name="get-the-certificate-token"></a>Obtención del token de certificado
 
-7.  Haga clic en **Agregar** para mostrar la lista de claves de configuración.
-8.  Seleccione cualquiera de las claves que tenga la opción **Tipo de valor** establecida como **cadena** y haga clic en **Aceptar**.
+En estos pasos, cree una directiva temporal. No se guardará la directiva. La intención es copiar el token de certificado. Usará este token al crear la directiva de VPN mediante JSON (sección siguiente).
 
-  <img alt="Example of using the JSON Flow - Select a key." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" width="350">
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar** > **Dispositivos administrados**.
+2. En **Básico**, escriba las propiedades siguientes:
 
-9.  Ahora cambie **Tipo de valor** de **cadena** a **certificado**. De este modo, podrá elegir el perfil de certificado de cliente correcto que se utilizará con la autenticación de la VPN.
+    - **Nombre**: Escriba cualquier nombre. Esta directiva es temporal y no se guardará.
+    - **Plataforma**: seleccione **Android Enterprise**.
+    - **Tipo de perfil**: seleccione **Solo perfil de trabajo**.
+    - **Aplicación de destino**: seleccione la aplicación cliente VPN que agregó anteriormente.
 
-  ![Ejemplo del uso del flujo JSON (nombre de la conexión).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png)  
+3. Seleccione **Siguiente**.
+4. En **Configuración**, escriba las propiedades siguientes:
 
-10. Vuelva a cambiar **Tipo de valor** a **cadena** de inmediato. Observe que la opción **Valor de configuración** cambia a un token de formato `{{cert:GUID}}`.
-11. Seleccione la representación del token del certificado y cópiela en otra ubicación, por ejemplo, un editor de texto.
+    - **Formato de opciones de configuración**: seleccione **Uso del Diseñador de configuraciones**.
+    - **Agregar**: muestra la lista de claves de configuración. Seleccione cualquier clave con un **Tipo de valor** de **cadena**. Seleccione **Aceptar**.
 
-  ![Ejemplo del uso del flujo JSON (valor de configuración).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png)  
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" alt-text="En el diseñador de configuración, selección de cualquier clave con un tipo de valor de cadena en la directiva de configuración de la aplicación de VPN de Microsoft Intune":::.
 
-12. Descarte el perfil que está creando, ya que el único objetivo del paso anterior era determinar el token del certificado.
+5. Ahora cambie **Tipo de valor** de **cadena** a **certificado**. Este paso le permite seleccionar el perfil de certificado de cliente correcto que autentica la VPN:
 
-### <a name="create-the-vpn-profile"></a>Creación del perfil de VPN
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png" alt-text="Cambio del nombre de conexión en una directiva de configuración de la aplicación de VPN en Microsoft Intune: ejemplo":::
 
-1.  Para empezar, agregue un nuevo perfil de configuración de aplicaciones para **dispositivos administrados**.
-2.  Escriba un nombre adecuado.
-3.  Seleccione **Android Enterprise** como plataforma.
-4.  Para la aplicación de destino, seleccione el cliente VPN que ha implementado.
-5.  Si la autenticación basada en certificados es necesaria, seleccione **Solo perfil de trabajo** o **Solo el propietario del dispositivo** como tipo de perfil. La opción **Perfil de trabajo y perfil del propietario del dispositivo** no es compatible con la autenticación basada en certificados.
-6.  Abra el menú desplegable **Opciones de configuración** y seleccione la opción **Especificar datos JSON**.
-7.  Puede editar los datos JSON directamente, o bien, si lo prefiere, usar el botón **Descargar plantilla JSON** para descargar la plantilla y, luego, modificarla en el editor externo que prefiera. Tenga cuidado con los editores de texto que emplean las **comillas inteligentes**, ya que su uso invalidaría los datos JSON.
+6. Vuelva a cambiar **Tipo de valor** a **cadena** de inmediato. El **valor de configuración** cambia a un token `{{cert:GUID}}`:
 
-  ![Ejemplo del uso del flujo JSON (edición de JSON).](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png)  
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png" alt-text="Valor de configuración con token de certificado en una directiva de configuración de la aplicación de VPN en Microsoft Intune":::
 
-8.  Con independencia del método que use, una vez que haya rellenado los valores que necesite para su configuración, deberá eliminar de los datos JSON el resto de opciones de configuración que tengan un valor "STRING_VALUE" o STRING_VALUE.
+7. Copie y pegue este token de certificado en otro archivo, como un editor de texto.
 
-#### <a name="example-json-for-f5-access-vpn"></a>Ejemplo de JSON para el cliente VPN de F5Access.
+8. Descarte esta directiva. No la guarde. El único propósito es copiar y pegar el token de certificado.
 
-A continuación tiene un ejemplo de datos JSON para el cliente VPN de F5Access.
+### <a name="create-the-vpn-policy-using-json"></a>Creación de la directiva de VPN mediante JSON
+
+1. En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Aplicaciones** > **Directivas de configuración de aplicaciones** > **Agregar** > **Dispositivos administrados**.
+
+2. En **Básico**, escriba las propiedades siguientes:
+
+    - **Nombre**: escriba un nombre descriptivo para la directiva. Asígnele un nombre a las directivas para que pueda identificarlas de manera sencilla más adelante. Por ejemplo, un nombre de directiva válido es **Directiva de configuración de la aplicación: directiva de VPN de Cisco AnyConnect de JSON para dispositivos de perfil de trabajo de Android Enterprise en toda la compañía**.
+    - **Descripción**: escriba una descripción para la directiva. Esta configuración es opcional pero recomendada.
+    - **Plataforma**: seleccione **Android Enterprise**.
+    - **Tipo de perfil**: Las opciones son:
+      - **Todos los tipos de perfil**: esta opción admite la autenticación mediante nombre de usuario y contraseña. Si usa la autenticación basada en certificados, no utilice esta opción.
+      - **Solo perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado**: esta opción admite la autenticación basada en certificados y la autenticación de nombre de usuario y contraseña.
+      - **Solo perfil de trabajo**: esta opción admite la autenticación basada en certificados y la autenticación de nombre de usuario y contraseña.
+    - **Aplicación de destino**: seleccione la aplicación cliente VPN que agregó anteriormente. 
+
+3. Seleccione **Siguiente**.
+4. En **Configuración**, escriba las propiedades siguientes:
+
+    - **Formato de opciones de configuración**: seleccione **Especificar datos JSON**. Puede editar el archivo JSON directamente.
+    - **Descargar plantilla JSON**: use esta opción para descargar y actualizar la plantilla en cualquier editor externo. Tenga cuidado con los editores de texto que emplean las **comillas inteligentes**, ya que podrían crear JSON no válido.
+
+    Después de escribir los valores necesarios para la configuración, quite todas las configuraciones que tengan `"STRING_VALUE"` o `STRING_VALUE`.
+
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png" alt-text="Ejemplo del uso del flujo JSON: edición de JSON":::.
+
+5. Seleccione **Siguiente**.
+6. En **Asignaciones**, seleccione los grupos para asignar la directiva de configuración de la aplicación de VPN.
+
+    Seleccione **Siguiente**.
+
+7. En **Revisar y crear**, revise la configuración. Al seleccionar **Crear**, los cambios se guardan y la directiva se implementa en los grupos. La directiva también se muestra en la lista de directivas de configuración de la aplicación.
+
+#### <a name="json-example-for-f5-access-vpn"></a>Ejemplo de JSON para la VPN de acceso de F5
 
 ``` JSON
 {
@@ -238,14 +292,9 @@ A continuación tiene un ejemplo de datos JSON para el cliente VPN de F5Access.
 }
 ```
 
-## <a name="summary"></a>Resumen
-
-El uso de una directiva de configuración de aplicaciones para dispositivos Android Enterprise inscritos permite aprovechar el comportamiento de VPN por aplicación, a pesar de no ser directamente compatible con la plataforma. 
-
 ## <a name="additional-information"></a>Información adicional
 
-Para obtener información relacionada, consulte los temas siguientes:
-- [Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados](../apps/app-configuration-policies-use-android.md)
+- [Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados](app-configuration-policies-use-android.md)
 - [Configuración de dispositivos Android Enterprise para configurar VPN en Intune](../configuration/vpn-settings-android-enterprise.md)
 
 ## <a name="next-steps"></a>Pasos siguientes

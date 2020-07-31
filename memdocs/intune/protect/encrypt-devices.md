@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989674"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334630"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Administración de la directiva de BitLocker para Windows 10 en Intune
 
@@ -168,11 +168,11 @@ Los dispositivos deben cumplir los siguientes requisitos previos para admitir la
 
 - Deben ejecutar Windows 10, versión 1909 o posterior.
 
-- Los dispositivos unidos a Azure AD o híbridos deben tener habilitada la compatibilidad con la rotación de claves:
+- Los dispositivos unidos a Azure AD e híbridos deben tener habilitada la compatibilidad con la rotación de claves mediante la configuración de directiva de BitLocker:
 
-  - **Rotación de contraseña de recuperación controlada por el cliente**
-
-  Esta configuración se encuentra en *Cifrado de Windows* como parte de una directiva de configuración de dispositivos para Windows 10 Endpoint Protection.
+  - **Rotación de contraseña de recuperación controlada por el cliente** para *Habilitar la rotación en los dispositivos unidos a Azure AD* o *Habilitar la rotación en los dispositivos unidos a Azure AD e híbridos*
+  - **Guardar información de recuperación de BitLocker en Azure Active Directory** en *Habilitado*
+  - **Almacenar la información de recuperación en Azure Active Directory antes de habilitar BitLocker** en *Obligatorio*
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>Para rotar la clave de recuperación de BitLocker:
 
