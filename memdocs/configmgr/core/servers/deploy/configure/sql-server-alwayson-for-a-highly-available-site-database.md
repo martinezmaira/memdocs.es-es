@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384849"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438589"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager admite el uso de grupos de disponibilidad:
 - En sitos primarios y el sitio de administración central.
 - De forma local, o en Microsoft Azure.
 
-Al utilizar grupos de disponibilidad en Microsoft Azure, puede aumentar aún más la disponibilidad de la base de datos de sitio mediante *conjuntos de disponibilidad de Azure*. Para más información sobre los conjuntos de disponibilidad de Azure, consulte [Administrar la disponibilidad de las máquinas virtuales](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
+Al utilizar grupos de disponibilidad en Microsoft Azure, puede aumentar aún más la disponibilidad de la base de datos de sitio mediante *conjuntos de disponibilidad de Azure*. Para más información sobre los conjuntos de disponibilidad de Azure, consulte [Administrar la disponibilidad de las máquinas virtuales](/azure/virtual-machines/windows/manage-availability).
 
 > [!Important]
 > Antes de continuar, familiarícese con la configuración de SQL Server y los grupos de disponibilidad de SQL Server. La siguiente información hace referencia a la biblioteca de documentación y los procedimientos de SQL Server.
