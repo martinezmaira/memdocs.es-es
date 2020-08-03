@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: b6d1ee82e116a6d4375e37ccca84c8b35707f8e1
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270827"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334596"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Procedimientos para administrar clientes en Configuration Manager
 
@@ -249,22 +249,24 @@ La ubicación predeterminada de la caché de cliente de Configuration Manager es
 
 ### <a name="about-the-client-cache"></a>Acerca de la caché de cliente  
 
-El cliente de Configuration Manager descarga el contenido del software necesario en cuanto recibe la implementación, pero espera el tiempo programado para ejecutar la implementación. Cuando llega el momento programado, el cliente de Configuration Manager comprueba si el contenido está disponible en la caché. Si el contenido está en la caché y es la versión correcta, el cliente usa el contenido almacenado en caché. Cuando cambia la versión requerida del contenido, o bien si el cliente elimina el contenido para hacer sitio a otro paquete, el cliente descarga de nuevo el contenido en la caché.  
+El cliente de Configuration Manager descarga el contenido del software necesario en cuanto la implementación esté disponible, pero espera hasta el momento programado para ejecutarla. Cuando llega el momento programado, el cliente de Configuration Manager comprueba si el contenido está disponible en la caché. Si el contenido está en la caché y es la versión correcta, el cliente usa el contenido almacenado en caché. Cuando cambia la versión requerida del contenido, o bien si el cliente elimina el contenido para hacer sitio a otro paquete, el cliente descarga de nuevo el contenido en la caché.  
 
 Si el cliente trata de descargar el contenido de un programa o aplicación cuyo tamaño es mayor que el de la caché, se produce un error de implementación debido a la falta de espacio en la caché. El cliente genera el mensaje de estado 10050 de tamaño de caché insuficiente. Si aumenta el tamaño de caché más adelante, el resultado es el siguiente:  
 
 - Para un programa necesario: el cliente no reintenta descargar el contenido de forma automática. Vuelva a implementar el paquete y el programa en el cliente.  
 - Para una aplicación requerida: el cliente vuelve a intentar descargar el contenido automáticamente cuando descarga su directiva de cliente.  
 
-Si el cliente intenta descargar un paquete cuyo tamaño es inferior al de la caché, pero la caché está llena, se reintentan todas las implementaciones *requeridas* hasta que:
+Si el cliente intenta descargar un contenido cuyo tamaño es inferior al de la caché, pero la caché está llena, se reintentan todas las implementaciones *requeridas* hasta que:
 
 - La caché disponga de espacio
 - Se agote el tiempo de espera de la descarga
 - Se alcance el límite de número de reintentos
 
-Si después aumenta el tamaño de la caché, el cliente intenta volver a descargar el paquete durante el próximo intervalo de reintento. El cliente intenta descargar el contenido cada cuatro horas hasta un máximo de 18 veces.  
+Si después aumenta el tamaño de la caché, el cliente intenta volver a descargar el contenido durante el próximo intervalo de reintento. El cliente intenta descargar el contenido cada cuatro horas hasta un máximo de 18 veces.  
 
-El contenido en caché no se elimina de forma automática. Permanece en la caché al menos durante un día después de que el cliente use ese contenido. Si configura las propiedades del paquete con la opción para conservar el contenido de la caché del cliente, el cliente no lo elimina automáticamente. Si los paquetes descargados en las últimas 24 horas ocupan el espacio de la caché y el cliente debe descargar paquetes nuevos, puede aumentar el tamaño de la caché u optar por eliminar el contenido conservado en la caché.  
+El contenido en caché no se elimina de forma automática. Permanece en la caché al menos durante un día después de que el cliente use ese contenido. Si configura el contenido con la opción para conservarlo en la caché del cliente, el cliente no lo elimina automáticamente. Si el contenido descargado en las últimas 24 horas ocupa el espacio de la caché y el cliente debe descargar contenido, puede aumentar el tamaño de la caché u optar por eliminar dicho contenido conservado en la caché.
+
+En el caso exclusivo de las aplicaciones, si actualmente hay en la memoria caché contenido de una implementación relacionada, el cliente solo descarga archivos nuevos o modificados. Entre las implementaciones relacionadas se incluyen las de revisiones anteriores del mismo tipo de implementación y las aplicaciones reemplazadas.
 
 Utilice los procedimientos siguientes para configurar la caché del cliente durante la instalación manual del cliente, o después de instalar el cliente.  
 

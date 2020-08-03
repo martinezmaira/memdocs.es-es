@@ -2,7 +2,7 @@
 title: Planes de implementación en Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Aprenda sobre los planes de implementación de Análisis de escritorio.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268494"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400722"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en Análisis de escritorio
 
@@ -47,6 +47,8 @@ Como parte del plan de implementación, realizará las siguientes acciones:
 De forma predeterminada, Análisis de escritorio actualiza los datos del plan de implementación diariamente. Los cambios que realice en un plan de implementación, como asignar importancia a una aplicación o elegir un dispositivo para incluirlo en un piloto, tardan hasta 24 horas en procesarse. Para acelerar este proceso, solicite una actualización de datos a petición. Para más información, consulte [Preguntas frecuentes sobre Análisis de escritorio](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 Después de conectar Análisis de escritorio a Configuration Manager, seleccione sus recopilaciones en los planes de implementación. Esta integración le permite implementar Windows en una recopilación basada en los datos de Análisis de escritorio.
+
+Los planes de implementación admiten las tres versiones más recientes de Windows 10. La característica Análisis del escritorio agregará compatibilidad con una nueva versión de Windows 10 en un plazo de 45 días después de que esté disponible. En ese momento, también se quitará la versión más antigua del servicio. No podrá usar ningún plan de implementación que tenga como destino la versión más antigua. Si actualmente tiene algún plan de implementación que tenga como destino la versión más antigua admitida en Análisis de escritorio, complete la implementación en un plazo de 45 días después de que haya disponible una nueva versión de Windows 10.
 
 ## <a name="readiness-rules"></a>Reglas de preparación
 

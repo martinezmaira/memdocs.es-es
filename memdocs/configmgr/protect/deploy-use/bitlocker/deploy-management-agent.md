@@ -2,7 +2,7 @@
 title: Implementación de la administración de BitLocker
 titleSuffix: Configuration Manager
 description: Implementación del agente de administración de BitLocker en clientes de Configuration Manager y el servicio de recuperación en puntos de administración
-ms.date: 04/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715703"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262836"
 ---
 # <a name="deploy-bitlocker-management"></a>Implementación de la administración de BitLocker
 
@@ -179,7 +179,13 @@ Si está usando Microsoft BitLocker Administration and Monitoring (MBAM), puede 
 
 - La configuración de la administración de BitLocker es totalmente compatible con la configuración de la directiva de grupo de MBAM. Si los dispositivos reciben la configuración de la directiva de grupo y las directivas de Configuration Manager, configúrelas para que coincidan.
 
+  > [!NOTE]
+  > Si existe una configuración de directiva de grupo para MBAM independiente, esta invalidará la equivalente que intente aplicar Configuration Manager. La MBAM independiente usa la directiva de grupo de dominio, mientras que Configuration Manager establece las directivas locales para la administración de BitLocker. Las directivas de dominio invalidarán las de administración de BitLocker de Configuration Manager local. Si la directiva de grupo de dominio de MBAM independiente no coincide con la de Configuration Manager, se producirá un error de administración de BitLocker de Configuration Manager. Por ejemplo, si una directiva de grupo de dominio establece el servidor de MBAM independiente para los servicios de recuperación de claves, la administración de BitLocker de Configuration Manager no podrá establecer la misma configuración para el punto de administración. Este comportamiento hace que los clientes no notifiquen sus claves de recuperación al servicio de recuperación de claves de administración de BitLocker de Configuration Manager en el punto de administración.
+
 - Configuration Manager no implementa todas las configuraciones de directiva de grupo de MBAM. Si configura opciones adicionales en la directiva de grupo, el agente de administración de BitLocker en los clientes de Configuration Manager respeta esta configuración.
+
+  > [!IMPORTANT]
+  > No establezca una directiva de grupo para una configuración que ya especifique la administración de BitLocker de Configuration Manager. Establezca únicamente directivas de grupo para los valores que no existen actualmente en la administración de BitLocker de Configuration Manager. La versión 2002 de Configuration Manager cuenta con paridad de características con MBAM independiente. Con la versión 2002 de Configuration Manager y versiones posteriores, en la mayoría de los casos no debería haber ninguna razón para establecer directivas de grupo de dominio para configurar directivas de BitLocker. Para evitar conflictos y problemas, procure no usar directivas de grupo para BitLocker. Configure todas las opciones mediante directivas de administración de BitLocker de Configuration Manager.
 
 ### <a name="tpm-password-hash"></a>Hash de contraseña del TPM
 

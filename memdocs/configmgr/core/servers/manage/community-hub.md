@@ -2,7 +2,7 @@
 title: GitHub y Centro de comunidad
 titleSuffix: Configuration Manager
 description: Habilitación y uso del Centro de comunidad en Configuration Manager
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236416"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262088"
 ---
 # <a name="community-hub-and-github"></a>GitHub y Centro de comunidad
 <!--3555935, 3555936-->
@@ -44,10 +44,7 @@ El Centro de comunidad admite los siguientes objetos:
       - Windows Server no es compatible, por lo que la consola de Configuration Manager debe instalarse en un dispositivo Windows 10 distinto del servidor de sitio.
    - La cuenta de usuario de inicio de sesión no puede ser la cuenta de administrador integrada.
 
-- Para descargar los informes, necesita activar la opción **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**  en el sitio en el que va a realizar la importación. Para más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. Vaya a **Administración** > **Configuración de sitio** > **Sitios**.
-   1. Seleccione el sitio y haga clic en **Propiedades** en la cinta.
-   1. En la pestaña **Seguridad de la comunicación**, seleccione la opción **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**.
+- El [servicio de administración](../../../develop/adminservice/set-up.md) de Configuration Manager debe estar configurado y encontrarse en funcionamiento.
 
 - Si la organización restringe la comunicación de red con Internet mediante un dispositivo proxy o un firewall, tiene que permitir que la consola de Configuration Manager acceda a los puntos de conexión de Internet. Para más información, consulte los [requisitos de acceso a Internet](../../plan-design/network/internet-endpoints.md#community-hub).
 

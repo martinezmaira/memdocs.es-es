@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239766"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262105"
 ---
 # <a name="enhanced-http"></a>HTTP mejorado
 
@@ -53,10 +53,10 @@ Los siguientes escenarios aprovechan estas mejoras:
 ### <a name="scenario-1-client-to-management-point"></a><a name="bkmk_scenario1"></a> Escenario 1: Cliente a punto de administración
 
 <!--1356889-->
-[Los dispositivos unidos a Azure Active Directory (Azure AD)](/azure/active-directory/devices/concept-azure-ad-join) se pueden comunicar con un punto de administración configurado para HTTP. El servidor de sitio genera un certificado para el punto de administración para que pueda comunicarse a través de un canal seguro.
+Los [dispositivos unidos a Azure Active Directory (Azure AD)](/azure/active-directory/devices/concept-azure-ad-join) y aquellos con un [token emitido por Configuration Manager](../../clients/deploy/deploy-clients-cmg-token.md) pueden comunicarse con un punto de administración configurado para HTTP mediante la habilitación del HTTP mejorado en el sitio. Con el HTTP mejorado habilitado, el servidor de sitio genera un certificado para el punto de administración, de modo que pueda comunicarse mediante un canal seguro.
 
 > [!Note]  
-> Este comportamiento se ha cambiado a partir de la versión 1802 de la rama actual de Configuration Manager, que requiere un punto de administración habilitado para HTTPS para los clientes unidos a Azure AD que se comunican a través de una instancia de Cloud Management Gateway. Para obtener más información, vea [Enable management point for HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).  
+> Este escenario no requiere el uso de un punto de administración habilitado para HTTPS, pero se admite como alternativa al uso del HTTP mejorado. Para obtener más información sobre el uso de un punto de administración habilitado para HTTPS, consulte [Habilitar un punto de administración para HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 ### <a name="scenario-2-client-to-distribution-point"></a><a name="bkmk_scenario2"></a> Escenario 2: Cliente a punto de distribución
 

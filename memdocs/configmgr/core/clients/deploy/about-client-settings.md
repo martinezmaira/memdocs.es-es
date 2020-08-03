@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347175"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365515"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -328,6 +328,11 @@ Si los clientes tienen que instalar las actualizaciones de software en la fecha 
 Si quiere proporcionar a los usuarios más tiempo para instalar las implementaciones de actualizaciones de software o aplicaciones necesarias después de la fecha límite, establezca un valor para esta opción. Este período de gracia es para un equipo desactivado durante un período prolongado y el usuario tiene que instalar muchas implementaciones de aplicación o actualización. Por ejemplo, este ajuste es útil si un usuario vuelve de vacaciones y tiene que esperar mucho tiempo mientras el cliente instala las implementaciones de aplicación atrasadas.
 
 Establezca un período de gracia de entre 0 y 120 horas. Use esta configuración junto con la propiedad de implementación **Retrasar el cumplimiento de esta implementación de acuerdo con las preferencias del usuario**. Para obtener más información, consulte [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period) (Implementar aplicaciones).
+
+
+### <a name="enable-endpoint-analytics-data-collection"></a>Habilitación de la recopilación de datos del análisis de puntos de conexión
+
+Esta opción permite habilitar la recopilación de datos locales en el cliente para cargarlos en el análisis de puntos de conexión. Establezca esta opción en **Sí** para configurar los dispositivos para la recopilación de datos locales. De lo contrario, establézcala en **No** para deshabilitar la recopilación de los datos locales. Para obtener más información, consulte [Inscripción de dispositivos de Configuration Manager en el análisis de puntos de conexión](../../../../analytics/enroll-configmgr.md).
 
 ## <a name="computer-restart"></a>Reinicio de equipo
 
