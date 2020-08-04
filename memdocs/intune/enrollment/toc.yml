@@ -1,6 +1,6 @@
 - name: Inscripción en Microsoft Intune
   href: index.yml
-- name: Introducción
+- name: Información general
   expanded: true
   items:
     - name: Introducción a la inscripción de dispositivos
@@ -136,5 +136,7 @@
           href: troubleshoot-ios-enrollment-errors.md
         - name: Solución de problemas de inscripción de dispositivos Windows
           href: troubleshoot-windows-enrollment-errors.md
+        - name: Solución de problemas de inscripción automática de Windows
+          href: troubleshoot-windows-auto-enrollment.md
         - name: Solución de problemas de inscripción de dispositivos Android
           href: troubleshoot-android-enrollment.md
