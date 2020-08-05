@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo se puede encontrar el número de serie de un dispositivo iOS? | Microsoft Docs
+title: ¿Cómo se puede encontrar el número de serie de un dispositivo iOS?
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 68eb6055e8002697ae312f7ddc52ee1a235d54fd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: d4c994d7664331b817de05d20ff64155415f86c8
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881222"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546678"
 ---
-# <a name="how-do-i-find-the-serial-number-on-my-device"></a>¿Cómo se puede encontrar el número de serie de un dispositivo?
+# <a name="how-do-i-find-the-serial-number-on-my-ios-device"></a>¿Cómo se puede encontrar el número de serie de un dispositivo iOS?
 
 El número de serie de su dispositivo lo identifica de manera exclusiva y puede ayudar al equipo de soporte técnico de su empresa con determinadas tareas, como reemplazar su dispositivo por otro nuevo. Para buscar el número de serie:
 
