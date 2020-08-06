@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8bbeb0c3db963e858230ce9a45f45f976bbfbbef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984301"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443894"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inclusión y exclusión de asignaciones de aplicaciones en Microsoft Intune
 
@@ -88,7 +88,12 @@ Para asignar una aplicación a grupos mediante la asignación de inclusión y ex
 
 Cuando se realizan asignaciones de grupos, los grupos que se han asignado ya no están disponibles para modificarse. Si quiere seleccionar un grupo que actualmente no está disponible, quite primero la aplicación de lista asignada de aplicaciones.
 
-Para editar las asignaciones, en la lista de **asignaciones** de aplicaciones, seleccione la fila que contiene la asignación específica que quiere cambiar. Otra forma de quitar una asignación es seleccionar los puntos suspensivos ( **…** ) al final de una fila y, luego, seleccionar **Quitar**. Para cambiar la vista de la lista **Asignaciones**, agrupe por **Tipo de asignación** o por **Incluidos o excluidos**.
+Para editar las asignaciones, en la lista de **asignaciones** de aplicaciones, seleccione la fila que contiene la asignación específica que quiere cambiar. Otra forma de quitar una asignación es seleccionar los puntos suspensivos ( **…** ) al final de una fila y, luego, seleccionar **Quitar**. 
+
+> [!NOTE]
+> La eliminación de una asignación de grupo no quita la aplicación relacionada. La aplicación instalada permanecerá en el dispositivo.  
+
+Para cambiar la vista de la lista **Asignaciones**, agrupe por **Tipo de asignación** o por **Incluidos o excluidos**.
 
 ![Asignaciones de aplicaciones de Intune: completar](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

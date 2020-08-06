@@ -1,5 +1,5 @@
 ---
-title: Envío de registros al equipo de soporte técnico de su empresa para dispositivos Windows 10 | Microsoft Docs
+title: Envío de registros mediante la aplicación de configuración para Windows
 description: Inscribir un dispositivo Windows 10 versión 1511 en Intune
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ef75b3a678c60fd2683feb269210d70baed9c46a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ae7fd722918d6d88d96b0c2114dd6c9dd49fc
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881960"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546732"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Envío de registros al equipo de soporte técnico de su empresa desde la aplicación Configuración para Windows 10
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365549"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758353"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -105,12 +105,14 @@ En la tabla siguiente se proporcionan detalles de configuración específicos de
 
 > [!IMPORTANT]
 > Los valores siguientes no se aplican a los dispositivos iOS/iPadOS configurados para inscribirse con [Inscripción de dispositivo automatizada](../enrollment/device-enrollment-program-enroll-ios.md). Con independencia de cómo se configuren estas opciones, los dispositivos iOS/iPadOS configurados para inscribirse con Inscripción de dispositivo automatizada se inscribirán durante el flujo predefinido, y a los usuarios se les solicitará que inicien sesión cuando inicien el Portal de empresa.
+> 
+> La configuración siguiente se aplica a los dispositivos Android configurados con [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). Si un dispositivo se ha configurado para KME y la inscripción de dispositivos está establecida en no disponible, el dispositivo no podrá inscribirse durante el flujo predefinido.
 
 |    Opciones de inscripción de dispositivos    |    Descripción    |    Avisos de lista de comprobación    |    Notificación    |    Detalles de estado del dispositivo    |    Detalles de estado de la aplicación (de una aplicación que requiere inscripción)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Disponible, con avisos    |    La experiencia predeterminada con avisos para inscribirse en todas las ubicaciones posibles.    |    Sí    |    Sí    |    Sí    |    Sí    |
-|    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    No    |    No    |    Sí    |    Sí    |
-|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    No    |    No    |    No    |
+|    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    No    |    Sin    |    Sí    |    Sí    |
+|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    No    |    Sin    |    No    |
 
 ### <a name="privacy"></a>Privacidad
 

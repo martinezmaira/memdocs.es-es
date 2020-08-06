@@ -1,5 +1,5 @@
 ---
-title: Marco de trabajo de configuración de seguridad de Android Enterprise
+title: Perfil de trabajo de configuraciones de seguridad de Android Enterprise
 titleSuffix: Microsoft Intune
 description: Conozca las restricciones y los valores de configuración sugeridos para seguridad básica y alta de dispositivos Android Enterprise.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05d0cb3db60ed0f54a66bc4128e5528e789537a8
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195708"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546833"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Configuraciones de seguridad del perfil de trabajo de Android Enterprise
 

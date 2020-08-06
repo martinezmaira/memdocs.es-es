@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491259"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526073"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -440,7 +440,7 @@ Esta configuración se aplica a los tipos de inscripción Android Enterprise don
 
   En los dispositivos, los usuarios no pueden establecer un valor de tiempo mayor que el tiempo configurado en el perfil. Los usuarios pueden establecer un valor de tiempo menor. Por ejemplo, si el perfil está establecido en `15` minutos, los usuarios pueden establecer el valor en 5 minutos. Pero no podrán establecerlo en 30 minutos.
 
-- **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
+- **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el perfil de trabajo en el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 
 - **Expiración de la contraseña (días)** : escriba el número de días hasta que se deba cambiar las contraseñas de un usuario (**1**-**365**).
 - **Tipo de contraseña requerida**: especifique el nivel requerido de complejidad de la contraseña y si se pueden usar dispositivos biométricos. Las opciones son:
@@ -468,7 +468,7 @@ Esta configuración de contraseña se aplica a los perfiles personales de los di
 
   En los dispositivos, los usuarios no pueden establecer un valor de tiempo mayor que el tiempo configurado en el perfil. Los usuarios pueden establecer un valor de tiempo menor. Por ejemplo, si el perfil está establecido en `15` minutos, los usuarios pueden establecer el valor en 5 minutos. Pero no podrán establecerlo en 30 minutos.
 
-- **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
+- **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el perfil de trabajo en el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 - **Expiración de la contraseña (días)** : escriba el número de días, entre 1 y 365, hasta que se deba cambiar la contraseña del dispositivo. Por ejemplo, escriba `90` para que la contraseña caduque pasados 90 días. Cuando la contraseña expire, se le solicitará a los usuarios que creen una nueva contraseña. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 - **Tipo de contraseña requerida**: especifique el nivel requerido de complejidad de la contraseña y si se pueden usar dispositivos biométricos. Las opciones son:
   - **Valor predeterminado de dispositivo**

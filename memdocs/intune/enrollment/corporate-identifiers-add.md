@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491123"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473685"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar dispositivos como corporativos
 
@@ -52,7 +52,10 @@ Esta característica es compatible con las siguientes plataformas:
 | Windows | Compatible (Windows Phone) | No compatible |
 | iOS/macOS | No compatible (consulte Importante a continuación)  | Compatible. |
 | Administrador de dispositivos del sistema operativo Android v10 administrado | No compatible | No compatible |
-| Otros Android | No compatible | Compatible. |
+| Perfil de trabajo de Android Enterprise | No compatible | Compatible. |
+| Android Enterprise totalmente administrado | No compatible | Compatible |
+| Dispositivos Android Enterprise dedicados | No compatibles | No compatible |
+| Perfil de trabajo corporativo de Android Enterprise | No compatible | Compatible. |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ Esta característica es compatible con las siguientes plataformas:
 Para crear la lista, cree una lista de dos columnas de valores separados por comas (.csv) sin un encabezado. Agregue los números de serie o IMEI de catorce dígitos en la columna izquierda y los detalles en la columna derecha. Solo puede importarse un tipo de identificador, número IMEI o de serie en un único archivo .csv. Los detalles están limitados a 128 caracteres y son solo de uso administrativo. Los detalles no se muestran en el dispositivo. El límite actual es 5000 filas por archivo. csv.
 
 **Cargar un archivo .csv con números de serie**: cree una lista de valores separados por comas (.csv) de dos columnas sin encabezado y limítela a 5000 dispositivos o a 5 MB por archivo .csv.
-
-|||
-|-|-|
-|&lt;ID #1&gt;|&lt;Detalles del dispositivo n.º 1&gt;|
-|&lt;ID #2&gt;|&lt;Detalles del dispositivo n.º 2&gt;|
 
 Este archivo .csv, cuando se ve en un editor de texto, aparece como:
 

@@ -1,5 +1,5 @@
 ---
-title: Límite de dispositivos que se pueden registrar alcanzado | Microsoft Docs
+title: Límite de dispositivos iOS que se pueden registrar alcanzado
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7920450185bbc3d198777893a303f4fdec1cd5f7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9e808ced9ad2d4f8ce8aded4fe572fea8d55884f
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880502"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546406"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>Límite de dispositivos que se pueden registrar alcanzado
+# <a name="the-limit-of-ios-devices-you-can-register-has-been-reached"></a>El límite de dispositivos iOS que se pueden registrar se ha alcanzado.
 
 Cada empresa establece un límite sobre el número de dispositivos que cada persona puede utilizar para acceder a los recursos corporativos. Esto permite a la empresa garantizar la seguridad de la información y asegurarse de que cada usuario tenga autorización para acceder a ella desde ubicaciones y dispositivos concretos. Si recibe un mensaje en el que se le indica que **no se puede registrar el dispositivo** porque se ha alcanzado el límite permitido, puede hacer tres cosas:
 

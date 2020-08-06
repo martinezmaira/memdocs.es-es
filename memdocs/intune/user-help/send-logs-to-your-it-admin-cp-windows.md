@@ -1,5 +1,5 @@
 ---
-title: Envío de registros al equipo de soporte técnico de su empresa para dispositivos Windows 10 | Microsoft Docs
+title: Envío de registros mediante la aplicación Portal de empresa para Windows
 description: Enviar detalles de errores y registros por correo electrónico para ayudar al equipo de soporte técnico de la empresa a solucionar problemas de las aplicaciones
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b2adca8ed11148e80967c231f79f33b18bb3b113
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1212dae09da7f4420913d18adc404db266f70c45
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881979"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546749"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Enviar al equipo de soporte técnico de la empresa información sobre problemas por correo electrónico desde el Portal de empresa para Windows
 

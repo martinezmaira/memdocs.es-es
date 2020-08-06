@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491208"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443898"
 ---
 # <a name="set-enrollment-restrictions"></a>Establecer restricciones de inscripción
 
@@ -175,6 +175,10 @@ La prioridad se usa cuando un usuario existe en varios grupos a los que se asign
 Cuando se crea una restricción, se agrega a la lista justo encima de la predeterminada.
 
 La inscripción de dispositivos incluye restricciones predeterminadas para el tipo y límite de dispositivo. Estas dos restricciones se aplican a todos los usuarios a menos que se reemplacen por restricciones de prioridad más alta.
+
+>[!NOTE]
+>Las restricciones de inscripción se aplican a los usuarios. En escenarios de inscripción que no están basados en usuarios (por ejemplo, el modo de autoimplementación de Windows Autopilot o el aprovisionamiento preferencial), solo se aplicarán las restricciones de prioridad predeterminadas (destinadas a "Todos los usuarios").
+
 
 Puede cambiar la prioridad de cualquier restricción que no sea la predeterminada.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461545"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443822"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Asignación de aplicaciones a grupos con Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "86461545"
 Después de [agregar una aplicación](apps-add.md) a Microsoft Intune, puede asignarla a los usuarios y los dispositivos. Es importante que sepa que puede asignar una aplicación a un dispositivo tanto si el dispositivo está administrado por Intune como si no.
 
 > [!NOTE]
-> No se admite el intento de implementación disponible para grupos de dispositivos; solo se admiten grupos de usuarios.
+> La intención de implementación **Disponible** solo se admite para los **grupos de dispositivos** al tener como destino dispositivos totalmente administrados de Android Enterprise (COBO) y dispositivos corporativos con habilitación personal de Android Enterprise (COPE).
 
 En esta tabla se muestran las diversas opciones para asignar aplicaciones a usuarios y dispositivos:
 

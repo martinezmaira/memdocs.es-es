@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
+ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332850"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87412348"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integración de Mobile Threat Defense con Intune
 
 Intune puede integrar datos de un proveedor de Mobile Threat Defense (MTD) como un origen de información para las directivas de cumplimiento de dispositivos y reglas de acceso condicional de dispositivos. Puede usar esta información para proteger mejor los recursos corporativos, como Exchange y SharePoint, bloqueando el acceso de dispositivos móviles en peligro.
+
+> [!NOTE]
+> Este artículo trata sobre los proveedores de Mobile Threat Defense de terceros. Para obtener más información sobre Microsoft Defender, vea [ATP de Microsoft Defender](../protect/advanced-threat-protection.md).
 
 Intune puede usar estos mismos datos como origen para los dispositivos no inscritos mediante directivas de protección de aplicaciones de Intune. Por tanto, los administradores pueden usar esta información para facilitar la protección de los datos corporativos dentro de una [aplicación protegida de Microsoft Intune](../apps/apps-supported-intune-apps.md) y emitir un bloqueo o un borrado selectivo.
 
@@ -97,3 +100,4 @@ Aprenda a proteger el acceso a los recursos de la compañía según el riesgo de
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Microsoft Defender](../protect/advanced-threat-protection.md)

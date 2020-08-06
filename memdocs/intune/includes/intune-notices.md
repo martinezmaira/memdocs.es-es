@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
+ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84637518"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87507524"
 ---
 Estos avisos proporcionan información importante que puede ayudarle a prepararse para las características y los cambios futuros de Intune.
 
@@ -75,6 +75,9 @@ La [menor compatibilidad de Google con el administrador de dispositivos](https:/
 - Establecer la **Longitud mínima de la contraseña**
 - Establecer el **Número de días hasta que expire la contraseña**
 - Establecer el **Número de contraseñas anteriores que no se pueden reutilizar**
+
+
+![Captura de pantalla de la página de la directiva de cumplimiento de Android](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### <a name="additional-impacts-based-on-android-os-version"></a>Otras consecuencias en función de la versión del sistema operativo Android
 

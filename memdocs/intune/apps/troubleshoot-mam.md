@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b91751e9879d06b40bdd9518926759da2331115f
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334098"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758268"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Solucionar problemas de la administración de aplicaciones móviles
 
@@ -102,7 +102,7 @@ Cuadro de diálogo/mensaje de error | Causa | Corrección |
 -- | --- | --- |
 **Aplicación no configurada**: esta aplicación no se configuró para uso. Póngase en contacto con el administrador de TI para obtener ayuda. | Error al detectar una directiva de protección de aplicación requerida para la aplicación. |Asegúrese de que haya una directiva de protección de aplicaciones Android implementada en el grupo de seguridad del usuario y que se dirige a esta aplicación.
 **Error al iniciar la aplicación**: se produjo un error en el inicio de la aplicación. Intente actualizar la aplicación o la aplicación Portal de empresa de Intune. Si necesita ayuda, póngase en contacto con el Administrador de TI. | Intune detectó una directiva de protección de aplicación válida para la aplicación, pero la aplicación se bloquea cuando se inicializa MAM. | Asegúrese de que la versión de la aplicación esté actualizada. <br><br> Asegúrese de que la aplicación Portal de empresa de Intune esté instalada y actualizada en el dispositivo. <br><br> Si el error persiste, use la aplicación Portal de empresa para enviar registros a Intune o cree una [incidencia de soporte técnico](../fundamentals/get-support.md#create-an-online-support-ticket).
-**No se encontraron aplicaciones**: no hay ninguna aplicación en este dispositivo que su organización admita para abrir este contenido. Póngase en contacto con el administrador de TI para obtener ayuda. | El usuario intentó abrir datos profesionales o educativos con otra aplicación, pero Intune no puede encontrar ninguna otra aplicación administrada que pueda abrir los datos. | Asegúrese de que haya una directiva de protección de aplicación de Android implementada para la seguridad del usuario y que se dirija al menos a otra aplicación habilitada para MAM que pueda abrir los datos en cuestión.
+**No se encontraron aplicaciones**: no hay ninguna aplicación en este dispositivo que su organización admita para abrir este contenido. Póngase en contacto con el administrador de TI para obtener ayuda. | El usuario intentó abrir datos profesionales o educativos con otra aplicación, pero Intune no puede encontrar ninguna otra aplicación administrada que pueda abrir los datos. | Asegúrese de que haya una directiva de protección de aplicación de Android implementada para el grupo de seguridad del usuario y que se dirija al menos a otra aplicación habilitada para MAM que pueda abrir los datos en cuestión.
 **Error de inicio de sesión**: vuelva a intentar iniciar la sesión. Si este problema persiste, póngase en contacto con el administrador de TI para obtener ayuda. | Error al autenticar la cuenta con la que el usuario intentó iniciar sesión. | Asegúrese de que el usuario inicia sesión con la cuenta profesional o educativa que ya está inscrita con el servicio MAM de Intune (la primera cuenta profesional o educativa con que se inició sesión correctamente en esta aplicación). <br><br> Borre los datos de la aplicación. <br><br> Asegúrese de que la versión de la aplicación esté actualizada. <br><br> Asegúrese de que la versión de Portal de empresa está actualizada.
 **Se requiere conexión a Internet**: debe conectarse a Internet para comprobar si puede usar esta aplicación. | El dispositivo no está conectado a Internet. | Conecte el dispositivo a una red de datos o WiFi.
 **Dispositivo no conforme**: no se puede usar esta aplicación porque está usando un dispositivo liberado. Póngase en contacto con el administrador de TI para obtener ayuda. | Intune detectó que el usuario usa un dispositivo liberado. | Restablezca los valores de fábrica predeterminados del dispositivo.

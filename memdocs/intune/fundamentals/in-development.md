@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b55c8cced4e559655018b36843e1599cc6e2d1bf
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262744"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443841"
 ---
 # <a name="in-development-for-microsoft-intune"></a>En desarrollo para Microsoft Intune
 
@@ -66,8 +66,8 @@ Vamos a actualizar los iconos de dispositivos de las aplicaciones del Portal de 
 ### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707----"></a>El Portal de empresa de iOS admitirá la Inscripción de dispositivos automatizada de Apple sin afinidad de usuario<!-- 7282707  --> 
 Este portal se admitirá en los dispositivos inscritos con la Inscripción de dispositivos automatizada de Apple sin necesidad de un usuario asignado. Un usuario final puede iniciar sesión en el Portal de empresa de iOS para establecerse como usuario primario de un dispositivo iOS o iPad inscrito sin afinidad de dispositivo. Para más información sobre la Inscripción de dispositivos automatizada, consulte [Inscripción automática de dispositivos iOS/iPadOS con Inscripción de dispositivos automatizada de Apple](../enrollment/device-enrollment-program-enroll-ios.md).
 
-### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>El Portal de empresa agrega compatibilidad con las aplicaciones de Configuration Manager<!-- 4297660 -->
-El Portal de empresa ahora admite aplicaciones de Configuration Manager. Esta característica permite a los usuarios finales ver las aplicaciones implementadas de Configuration Manager y de Intune en el Portal de empresa de los clientes administrados conjuntamente. Esta compatibilidad ayuda a los administradores a consolidar sus diferentes experiencias del portal de usuario final. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
+### <a name="the-windows-company-portal-adds-configuration-manager-application-support---4297660---"></a>El Portal de empresa de Windows agrega compatibilidad con las aplicaciones de Configuration Manager<!-- 4297660 -->
+El Portal de empresa de Windows ahora admite aplicaciones de Configuration Manager. Esta característica permite a los usuarios finales ver las aplicaciones implementadas de Configuration Manager y de Intune en el Portal de empresa de Windows de los clientes administrados conjuntamente. Esta compatibilidad ayuda a los administradores a consolidar sus diferentes experiencias del portal de usuario final. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Configuración del dispositivo
@@ -155,9 +155,6 @@ Podrá incorporar la eficacia de [CMPivot](../../configmgr/tenant-attach/cmpivot
 
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>Asociación de inquilinos: ejecución de scripts desde el centro de administración<!--7220536, CM6234688 -->
 Podrá incorporar la eficacia de la característica [Ejecutar scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) local de Configuration Manager al centro de administración de Microsoft Endpoint Manager. Permita que otros roles, como el de Departamento de soporte técnico, ejecuten scripts de PowerShell desde la nube en un dispositivo administrado de Configuration Manager individual. Esto proporciona todas las ventajas tradicionales de los scripts de PowerShell que ya se han definido y aprobado por el administrador de Configuration Manager en este nuevo entorno. Para más información, consulte [Technical Preview 2005 para Configuration Manager](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts). 
-
-### <a name="new-merge-logic-for-windows-10-devices--179048--"></a>Nueva lógica de combinación para dispositivos Windows 10<!--179048-->
-En la actualidad, si un cliente restablece la imagen inicial de un dispositivo y luego lo vuelve a inscribir, aparecerán varios registros para el dispositivo en la consola de administración de Microsoft Endpoint Manager. La nueva lógica de combinación está en desarrollo para combinar estos registros duplicados para dispositivos Windows 10.
 
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Implementación de actualizaciones de software en dispositivos macOS <!-- 3194876 -->
 Podrá implementar actualizaciones de software en grupos de dispositivos macOS. Esta característica incluye, entre otras, actualizaciones de archivos críticos, de archivos de configuración y del firmware. Podrá enviar actualizaciones en la siguiente sincronización de dispositivos o seleccionar una programación semanal para implementar actualizaciones dentro o fuera de los períodos que establezca. De esta manera, podrá actualizar los dispositivos fuera de las horas de trabajo estándar o cuando el departamento de soporte técnico tiene a todo el personal ocupado. También obtendrá un informe detallado de todos los dispositivos macOS con actualizaciones implementadas. Puede profundizar en el informe en función de cada dispositivo para ver los estados de determinadas actualizaciones.

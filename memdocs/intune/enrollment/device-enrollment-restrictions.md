@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6629f416dbbc9555514dfc305db8f224f6b76526
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 5c2689e010c0ec75340e1a96952cf6ac162322da
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088452"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758285"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Restricciones de inscripción de dispositivos de Android Enterprise
 
