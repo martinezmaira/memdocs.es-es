@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428408"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526022"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funciones de Technical Preview 1703 de Configuration Manager
 
@@ -31,9 +31,8 @@ En este artículo se presentan las características disponibles en la versión 
 
 Ahora puede implementar aplicaciones con licencia para dispositivos y usuarios. Dependiendo de la capacidad de las aplicaciones para admitir licencias de dispositivo, se solicitará una licencia adecuada al realizar la implementación, como sigue:
 
-|||||
-|-|-|-|-|
-|Versión de Configuration Manager|¿La aplicación admite licencias de dispositivo?|Tipo de colección de implementación|Licencia exigida|
+| Versión de Configuration Manager | ¿La aplicación admite licencias de dispositivo? | Tipo de colección de implementación | Licencia exigida |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Anterior a 1702|Sí|Usuario|Licencia de usuario|
 |Anterior a 1702|No|Usuario|Licencia de usuario|
 |Anterior a 1702|Sí|Dispositivo|Licencia de usuario|

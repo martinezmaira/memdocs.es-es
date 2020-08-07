@@ -2,7 +2,7 @@
 title: Pasos de la secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los pasos que puede agregar a una secuencia de tareas de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353605"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546627"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -1599,7 +1599,7 @@ Seleccione esta opción para impedir que Sysprep restablezca la marca de activac
 <!--SCCMDocs-pr issue 2695-->
 Esta opción indica a Sysprep que apague el equipo en lugar de su comportamiento de reinicio predeterminado.
 
-La secuencia de tareas [Windows Autopilot para dispositivos existentes](../deploy-use/windows-autopilot-for-existing-devices.md) usa este paso con esta opción.
+La secuencia de tareas [Windows Autopilot para dispositivos existentes](../../../autopilot/existing-devices.md) usa este paso con esta opción.
 
 - Si desea que la secuencia de tareas actualice el dispositivo y, a continuación, inicie inmediatamente OOBE de Autopilot, deje esta opción desactivada.  
 

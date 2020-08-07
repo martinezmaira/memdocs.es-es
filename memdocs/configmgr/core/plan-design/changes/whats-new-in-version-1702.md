@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427938"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912301"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novedades de la versión 1702 de Configuration Manager
 
@@ -271,9 +271,8 @@ A partir de la versión 1702, la administración de dispositivos móviles híbri
 
 Ahora puede implementar aplicaciones con licencia para dispositivos y usuarios. Dependiendo de la capacidad de las aplicaciones para admitir licencias de dispositivo, se solicitará una licencia adecuada al realizar la implementación, como sigue:
 
-|||||
-|-|-|-|-|
-|Versión de Configuration Manager|¿La aplicación admite licencias de dispositivo?|Tipo de colección de implementación|Licencia exigida|
+| Versión de Configuration Manager | ¿La aplicación admite licencias de dispositivo? | Tipo de colección de implementación | Licencia exigida |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Anterior a 1702|Sí|Usuario|Licencia de usuario|
 |Anterior a 1702|No|Usuario|Licencia de usuario|
 |Anterior a 1702|Sí|Dispositivo|Licencia de usuario|

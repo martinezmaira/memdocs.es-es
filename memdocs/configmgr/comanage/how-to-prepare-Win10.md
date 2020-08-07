@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo preparar los dispositivos Windows�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776895"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546423"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Preparación de dispositivos basados en Internet para la administración conjunta
 
@@ -25,7 +25,7 @@ Este artículo se centra en la segunda ruta a la administración conjunta, para 
 
 En los dispositivos Windows 10 nuevos, puede usar el servicio Autopilot para definir la configuración rápida (OOBE). Este proceso incluye unir el dispositivo a Azure AD e inscribir el dispositivo en Intune.  
 
-Para más información, consulte [Resumen de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).
+Para más información, consulte [Resumen de Windows Autopilot](../../autopilot/windows-autopilot.md).
 
 Para configurar los dispositivos para que se inscriban automáticamente en Intune al unirse a Azure AD, consulte  [Configuración de la inscripción de dispositivos Windows](https://docs.microsoft.com/intune/windows-enroll).  
 
@@ -46,9 +46,9 @@ Para más información, consulte [Agregar dispositivos en Intune](https://docs.m
 ### <a name="autopilot-for-existing-devices"></a>Autopilot para dispositivos existentes
 <!--1358333-->
 
-[Windows Autopilot para los dispositivos existentes](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) está disponible en Windows 10, versión 1809 o posterior. Esta característica permite volver a crear una imagen y aprovisionar un dispositivo de Windows 7 para el [modo controlado por el usuario de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mediante una única secuencia de tareas nativa de Configuration Manager.
+[Windows Autopilot para los dispositivos existentes](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) está disponible en Windows 10, versión 1809 o posterior. Esta característica permite volver a crear una imagen y aprovisionar un dispositivo de Windows 7 para el [modo controlado por el usuario de Windows Autopilot](../../autopilot/user-driven.md) mediante una única secuencia de tareas nativa de Configuration Manager.
 
-Para más información, consulte el artículo sobre [Windows Autopilot para la secuencia de tareas de dispositivos existentes](../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Para más información, consulte el artículo sobre [Windows Autopilot para la secuencia de tareas de dispositivos existentes](../../autopilot/existing-devices.md).
 
 ## <a name="install-the-configuration-manager-client"></a>Instalación del cliente de Configuration Manager
 

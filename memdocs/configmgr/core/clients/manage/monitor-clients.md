@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1f31ac96f29fc302e601b8da071b1486f4e7df90
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696753"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525920"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Supervisión de clientes en Configuration Manager
 
@@ -53,8 +53,8 @@ Configuration Manager proporciona los siguientes tipos de información como esta
 
     Los iconos al principio de cada fila indican el estado de conexión del dispositivo:  
 
-    |||  
-    |-|-|  
+    | Icono | Descripción |
+    | ---- | ----------- |  
     |![icono de estado conectado para los clientes](../../../core/clients/manage/media/online-status-icon.png)|El dispositivo está conectado|  
     |![icono de estado desconectado para los clientes](../../../core/clients/manage/media/offline-status-icon.png)|El dispositivo está desconectado|  
     |![icono de estado desconocido para los clientes](../../../core/clients/manage/media/unknown-status-icon.png)|Se desconoce el estado de conexión|  
@@ -108,7 +108,7 @@ Este icono muestra el estado general del cliente en la jerarquía.
 
 Un cliente correcto de Configuration Manager presenta estas propiedades:
 
-- Online  
+- En línea  
 - Envía datos de forma activa  
 - Pasa todas las comprobaciones de evaluación de estado del cliente  
 

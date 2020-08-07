@@ -2,7 +2,7 @@
 title: Escenarios para implementar sistemas operativos de empresa
 titleSuffix: Configuration Manager
 description: Obtenga información sobre distintos escenarios para implementar sistemas operativos de empresa con Configuration Manager.
-ms.date: 02/22/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07e8623928cbfe0bcd562d3d6efdf3a9ceee85ae
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8304ba7384eba2fc7bfa41d4caf5a256380931c5
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708393"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546644"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-configuration-manager"></a>Escenarios para implementar sistemas operativos de empresa con Configuration Manager
 
@@ -28,13 +28,11 @@ Este escenario actualiza el sistema operativo en equipos que ejecutan actualment
 
 Para más información, consulte [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md).
 
-
 #### <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot para dispositivos existentes
 <!--3607717, fka 1358333-->
 A partir de la versión 1810, Windows Autopilot para dispositivos existentes está disponible con Windows 10, versión 1809 o posteriores. Esta característica permite crear una imagen y aprovisionar un dispositivo de Windows 7 para el modo controlado por el usuario de Windows Autopilot mediante una única secuencia de tareas de Configuration Manager.
 
-Para obtener más información, consulte [Windows Autopilot para dispositivos existentes](windows-autopilot-for-existing-devices.md).
-
+Para obtener más información, consulte [Windows Autopilot para dispositivos existentes](../../../autopilot/existing-devices.md).
 
 #### <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Actualizar un equipo existente con una nueva versión de Windows
 Este escenario realiza la partición y formatea (borra) un equipo existente, e instala un sistema operativo nuevo en el equipo. Puede migrar la configuración y los datos de usuario después de instalar el sistema operativo.  

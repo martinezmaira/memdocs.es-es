@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905823"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526039"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funciones de Technical Preview 1601 de Configuration Manager
 
@@ -130,8 +130,8 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 
 ### <a name="icons-for-client-status"></a>Iconos de estado de cliente  
 
-|||  
-|-|-|  
+| Icono | Descripción |
+| ---- | ----------- |
 |![icono de estado conectado para los clientes](media/online-status-icon.png)|El cliente está en línea.|  
 |![icono de estado desconectado para los clientes](media/offline-status-icon.png)|El cliente está sin conexión.|  
 |![icono de estado desconocido para los clientes](media/unknown-status-icon.png)|Se desconoce el estado de cliente.|  
