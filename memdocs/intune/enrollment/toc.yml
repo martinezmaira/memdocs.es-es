@@ -121,6 +121,8 @@
       items:
         - name: Inscripción de dispositivo automatizada
           href: device-enrollment-program-enroll-macos.md
+        - name: Inscripción directa para dispositivos macOS
+          href: device-enrollment-direct-enroll-macos.md
     - name: Informe de inscripción incompleta
       href: enrollment-report-company-portal-abandon.md
     - name: Solución de problemas de inscripción
