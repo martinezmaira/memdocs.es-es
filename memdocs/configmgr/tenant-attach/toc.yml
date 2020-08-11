@@ -6,6 +6,8 @@
       href: device-sync-actions.md
     - name: Detalles del cliente (versión preliminar)
       href: client-details.md
+    - name: Instalación de aplicaciones (versión preliminar)
+      href: applications.md
 - name: CMPivot para dispositivos conectados al inquilino (versión preliminar)
   items:
     - name: Información general de CMPivot
@@ -18,3 +20,5 @@
       href: troubleshoot.md
     - name: Detalles del cliente (versión preliminar)
       href: troubleshoot-client-details.md
+    - name: Instalación de la aplicación (versión preliminar)
+      href: troubleshoot-applications.md

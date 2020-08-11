@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732880"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912383"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Administración de imágenes de arranque con Configuration Manager
 
@@ -80,8 +80,8 @@ Si una imagen de arranque se basa en otra versión de Windows ADK instalada en u
 
 Durante la instalación de sitio, Configuration Manager agrega automáticamente imágenes de arranque basadas en una versión de WinPE desde la versión admitida de Windows ADK. Según la versión de Configuration Manager, puede agregar imágenes de arranque basadas en una versión de WinPE desde la versión admitida de Windows ADK. Se produce un error al intentar agregar una imagen de arranque que contiene una versión no admitida de WinPE. En la lista siguiente se muestran las versiones de Windows ADK y WinPE que se admiten actualmente:
 
-|  |  |
-|---------|---------|
+| Tipo Windows | Versiones compatibles |
+|--------------|--------------------|
 | Versión de Windows ADK | Windows ADK para Windows 10 |
 | Versiones de Windows PE para imágenes de arranque personalizables desde la consola de Configuration Manager | Windows PE 10 |
 | Versiones admitidas de Windows PE para imágenes de arranque *que no se pueden personalizar* desde la consola de Configuration Manager | - Windows PE 3.1<sup>[Nota 1](#bkmk_note1)</sup> <br> - Windows PE 5 |

@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428618"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815470"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
 
@@ -96,7 +96,7 @@ Acerca de este certificado:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Identificación de un nombre único para la instancia de Cloud Management Gateway en Azure
 
-Cuando solicita el certificado de autenticación de servidor de CMG, especifica un nombre que debe ser único para identificar su *servicio en la nube (clásico)* en Azure. De forma predeterminada, la nube pública de Azure usa *cloudapp.net* y la instancia de CMG se hospeda dentro del dominio cloudapp.net como *\<suNombreDnsÚnico>.cloudapp.net*.  
+Cuando solicita el certificado de autenticación de servidor de CMG, especifica un nombre que debe ser único para identificar su *servicio en la nube (clásico)* en Azure. De forma predeterminada, la nube pública de Azure usa *cloudapp.net*, y la instancia de CMG se hospeda dentro del dominio cloudapp.net como *\<YourUniqueDnsName>.cloudapp.net*.  
 
 > [!TIP]  
 > En este tutorial, el **certificado de autenticación de servidor CMG** utiliza un FQDN que termina en *contoso.com*.  Después de crear la instancia de CMG, vamos a configurar un registro de nombre canónico (CNAME) en el DNS público de nuestra organización. Este registro crea un alias para la instancia de CMG que se asigna al nombre que usamos en el certificado público.  
@@ -125,7 +125,9 @@ Solicite un tipo de proveedor de claves de la versión 2 al generar un CSR. Se a
 > [!TIP]  
 > Cuando se implementa la instancia de CMG, también se instalará un punto de distribución de nube (CDP) al mismo tiempo. De manera predeterminada, al implementar una instancia de CMG, la opción **Permitir que CMG funcione como un punto de distribución en la nube y sirva contenido desde el almacenamiento de Azure** está activa. La ubicación conjunta del CDP en el servidor con el CMG elimina la necesidad de que los certificados y configuraciones sean independientes para admitir el CDP. Aunque el CDP no es necesario para usar la administración conjunta, es útil en la mayoría de los entornos.  
 >
-> Si va a usar puntos de distribución de nube adicionales para la administración conjunta, deberá solicitar certificados independientes para cada servidor adicional. Para solicitar un certificado púbico para el CDP, use los mismos detalles que para la CSR de Cloud Management Gateway. Solo necesita cambiar el nombre común para que sea único para cada CDP.  
+> Si usa cualquier CDP independiente adicional, debe solicitar certificados independientes para cada CDP adicional. Para solicitar un certificado púbico para un CDP, use los mismos detalles que para la CSR de Cloud Management Gateway. Solo necesita cambiar el nombre común para que sea único para cada CDP.
+>
+> El uso de un CDP independiente adicional está en desuso y ya no se recomienda. Para más información, vea [Deprecated Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features) (Características en desuso).
 
 #### <a name="details-for-the-cloud-management-gateway-csr"></a>Detalles para la CSR de Cloud Management Gateway
 
@@ -395,7 +397,7 @@ Por ejemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 
    - **Publicador**: Microsoft  
 
-   - **Argumentos de línea de comandos**:  *\<Especifique la línea de comandos **CCMSETUPCMD**. Puede usar la línea de comandos que guardó en la página*  Habilitación  *del Asistente para la configuración de administración conjunta. Esta línea de comandos incluye los nombres de su servicio en la nube y los valores adicionales que permiten a los dispositivos instalar el software de cliente de Configuration Manager. >*  
+   - **Argumentos de la línea de comandos**: *\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      La estructura de la línea de comandos debe ser similar a este ejemplo, usando solo los parámetros CCMSETUPCMD y SMSSiteCode:  
 
@@ -414,7 +416,7 @@ El procedimiento siguiente implementa la aplicación para instalar el cliente de
 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://endpoint.microsoft.com). Seleccione **Aplicaciones** > **Todas las aplicaciones** y elija **ConfigMgr Client Setup Bootstrap**, la aplicación que creó para implementar el cliente de Configuration Manager.  
 
-2. Haga clic en **Propiedades** y luego en **Editar** para **Asignaciones**. Seleccione **Agregar grupo** en **Requerido** (asignaciones) para establecer los grupos de Azure Active Directory (AD) que tienen los usuarios y los dispositivos que quiere que participen en la administración conjunta.  
+2. Seleccione **Propiedades** y luego **Editar** para **Asignaciones**. Seleccione **Agregar grupo** en **Requerido** (asignaciones) para establecer los grupos de Azure Active Directory (AD) que tienen los usuarios y los dispositivos que quiere que participen en la administración conjunta.  
 
 3. Seleccione **Revisar + guardar** y luego **Guardar** para guardar la configuración.
 Ahora la aplicación es obligatoria para los usuarios y dispositivos que le asigne. Después de que la aplicación instale el cliente de Configuration Manager en un dispositivo, se administra mediante la administración conjunta.

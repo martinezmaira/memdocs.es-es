@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ba72e9accb7cbc5a7dc1149c6c9d947cb3e0692b
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262836"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526090"
 ---
 # <a name="deploy-bitlocker-management"></a>Implementación de la administración de BitLocker
 
@@ -131,6 +131,10 @@ Al crear más de una directiva, puede configurar su prioridad relativa. Si imple
 1. Seleccione **Aceptar** para implementar la directiva.
 
 Puede crear varias implementaciones de la misma directiva. Para consultar información adicional sobre cada implementación, seleccione la directiva en el nodo **Administración de BitLocker** y, a continuación, en el panel de detalles, cambie a la pestaña **Implementaciones**.
+
+> [!IMPORTANT]
+> El cliente de MBAM no inicia las acciones de Cifrado de unidad BitLocker si está activa una conexión de protocolo de escritorio remoto. Todas las conexiones de la consola remota deben estar cerradas, y un usuario debe haber iniciado sesión en una sesión de consola física antes de que se inicie el Cifrado de unidad BitLocker.
+
 
 ## <a name="monitor"></a>Supervisión
 

@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438604"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865496"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Creación de recopilaciones en Configuration Manager
 
@@ -171,9 +171,8 @@ En el cuadro de diálogo **Propiedades de regla de consulta**, especifique la si
 
 - **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta**, donde puede crear una consulta para usarla como regla para la recopilación. Para más información sobre las consultas, vea [Introducción a las consultas](../../../servers/manage/introduction-to-queries.md).  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > En la pestaña General, al activar la casilla **Omitir filas duplicadas (seleccionar distinto)** , pueden devolverse menos filas y los resultados se pueden obtener más rápido.
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a> Regla de categoría de dispositivos
 

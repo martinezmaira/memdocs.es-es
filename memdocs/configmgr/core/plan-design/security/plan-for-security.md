@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110158"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526005"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planeación de la seguridad en Configuration Manager
 
@@ -160,9 +160,11 @@ En muchos casos, la configuración y el comportamiento predeterminados son sufic
 
 3.  El certificado es válido, no se revocó y no expiró. La comprobación de validez también comprueba que la clave privada es accesible.  
 
-4.  El certificado tiene capacidad de autenticación de cliente, o se ha emitido con el nombre del equipo.  
+4.  El certificado tiene la capacidad de autenticación de cliente.
 
-5.  El certificado tiene el periodo de validez más largo.  
+5.  El nombre del firmante del certificado contiene el nombre del equipo local como una subcadena.  
+
+6.  El certificado tiene el periodo de validez más largo.  
 
 Configure los clientes para que usen la lista de emisores de certificados mediante los mecanismos siguientes:  
 
@@ -208,7 +210,10 @@ En la siguiente tabla aparecen los valores de atributo que Configuration Manager
 |2.5.4.12|T o Title|Título|  
 |2.5.4.42|G o GN o GivenName|Nombre dado|  
 |2.5.4.43|I o Initials|Iniciales|  
-|2.5.29.17|(ningún valor)|Nombre alternativo del sujeto|  
+|2.5.29.17|(ningún valor)|Nombre alternativo del sujeto| 
+
+  > [!NOTE]
+  > Si configura cualquiera de los métodos de selección de certificados alternativos anteriores, no es necesario que el nombre del firmante del certificado contenga el nombre del equipo local.
 
 Si se encuentra más de un certificado adecuado después de aplicar los criterios de selección, se puede invalidar la configuración predeterminada para seleccionar el certificado que tenga el periodo de validez más largo y, en su lugar, especificar que no se seleccione ningún certificado. En este escenario, el cliente no podrá comunicarse con los sistemas de sitio de IIS con un certificado PKI. El cliente envía un mensaje de error al punto de estado de reserva asignado para alertar acerca del error de selección de certificados de manera que se puedan cambiar o refinar los criterios de selección de certificados. El comportamiento del cliente luego dependerá de si la conexión con errores era HTTPS o HTTP:  
 
