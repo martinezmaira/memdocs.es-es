@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 080b7237eb95ba729e4152e646ff8de7466309a0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077895"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912272"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Administrar contratos de licencia de software de equipos Windows en Microsoft Intune
 
@@ -178,10 +178,8 @@ Se muestra la vista de lista **Todos los contratos** .
 ## <a name="manage-license-agreements"></a>Administrar contratos de licencia
 Los contratos de licencias de software pueden agregarse a grupos de licencias. Puede utilizar grupos de licencias para organizar los contratos de licencias en unidades lógicas para la organización. Igualmente, puede eliminar los contratos de licencia que haya creado anteriormente.
 
-
-|                            |                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            Tarea            |                                                                                                                                                                                 Detalles                                                                                                                                                                                  |
+| Tarea | Detalles |
+| ---- | ------- |
 |   Crear un grupo de licencias   |                                                            En la página <strong>Información general</strong> del área de trabajo <strong>Licencias</strong>, elija <strong>Crear grupo de licencias</strong> en el menú <strong>Tareas</strong>. <strong>Nota:</strong> Puede crear como máximo 500 grupos de licencias.                                                             |
 |   Cambiar el nombre de un grupo de licencias   |                                                                                                      En el área de trabajo <strong>Licencias</strong>, elija un grupo de licencias y, después, elija <strong>Editar grupo de licencias</strong> en el menú <strong>Tareas</strong>.                                                                                                       |
 |   Eliminar un grupo de licencias   |                                 En el área de trabajo <strong>Licencias</strong>, elija un grupo de licencias y, después, elija <strong>Eliminar grupo de licencias</strong> en el menú <strong>Tareas</strong>. <strong>Sugerencia</strong>: Todas las licencias del grupo eliminado se mueven al grupo de licencias <strong>Acuerdos sin asignar</strong>.                                 |

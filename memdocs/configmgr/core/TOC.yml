@@ -14,12 +14,18 @@
           href: understand/find-help.md
         - name: Cómo usar los documentos
           href: understand/use-docs.md
-        - name: Procedimiento para usar la consola
-          href: servers/manage/admin-console.md
         - name: Características de accesibilidad
           href: understand/accessibility-features.md
         - name: Manual del usuario del Centro de software
           href: understand/software-center.md
+    - name: Procedimiento para usar la consola
+      items:
+        - name: Procedimiento para usar la consola
+          href: servers/manage/admin-console.md
+        - name: Notificaciones de la consola
+          href: servers/manage/admin-console-notifications.md
+        - name: Cambios y sugerencias de la consola
+          href: servers/manage/admin-console-tips.md
     - name: Conceptos básicos
       items:
         - name: Aspectos básicos de Configuration Manager
@@ -76,6 +82,8 @@
           href: plan-design/changes/features-and-capabilities.md
         - name: Novedades de versiones incrementales
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: Novedades de la versión 2006
+          href: plan-design/changes/whats-new-in-version-2006.md
         - name: "Novedades de la versión\_2002"
           href: plan-design/changes/whats-new-in-version-2002.md
         - name: Novedades de la versión 1910
@@ -84,8 +92,6 @@
           href: plan-design/changes/whats-new-in-version-1906.md
         - name: Novedades de la versión 1902
           href: plan-design/changes/whats-new-in-version-1902.md
-        - name: Novedades de la versión 1810
-          href: plan-design/changes/whats-new-in-version-1810.md
         - name: Cambios desde Configuration Manager 2012
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: Elementos eliminados y en desuso
@@ -212,6 +218,8 @@
           items:
             - name: Información general sobre los niveles
               href: plan-design/diagnostics/levels-overview.md
+            - name: Datos de la versión 2006
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
             - name: "Datos de la versión\_2002"
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
             - name: Datos de la versión 1910
@@ -220,8 +228,6 @@
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
             - name: Datos de la versión 1902
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-            - name: Datos de la versión 1810
-              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
         - name: Preguntas más frecuentes (P+F)
           href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Seguridad y privacidad de Configuration Manager
@@ -470,6 +476,8 @@
           href: servers/manage/cmpivot-overview.md
         - name: Usar CMPivot
           href: servers/manage/cmpivot.md
+        - name: Cambios de CMPivot
+          href: servers/manage/cmpivot-changes.md
         - name: Solución de problemas de CMPivot
           href: servers/manage/cmpivot-tsg.md
     - name: Tareas de mantenimiento
@@ -512,6 +520,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: Uso del instalador de revisiones
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: Lista de comprobación para la instalación de la actualización 2006
+          href: servers/manage/checklist-for-installing-update-2006.md
         - name: "Lista de comprobación para la instalación de la actualización\_2002"
           href: servers/manage/checklist-for-installing-update-2002.md
         - name: Lista de comprobación para la instalación de la actualización 1910
@@ -520,8 +530,6 @@
           href: servers/manage/checklist-for-installing-update-1906.md
         - name: Lista de comprobación para la instalación de la actualización 1902
           href: servers/manage/checklist-for-installing-update-1902.md
-        - name: Lista de comprobación para la instalación de la actualización 1810
-          href: servers/manage/checklist-for-installing-update-1810.md
         - name: Compatibilidad con las versiones de la rama actual
           href: servers/manage/current-branch-versions-supported.md
     - name: Copia de seguridad y recuperación

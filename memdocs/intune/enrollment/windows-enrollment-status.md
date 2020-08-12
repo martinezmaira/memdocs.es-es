@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093449"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051598"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Configuración de la página de estado de la inscripción
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093449"
  
 La página de estado de la inscripción (ESP) muestra el progreso de aprovisionamiento después de que se haya inscrito un nuevo dispositivo, así como tras el inicio de sesión de un nuevo usuario en el dispositivo.  Esto permite a los administradores de TI impedir (bloquear) de forma opcional el acceso al dispositivo hasta que se haya aprovisionado por completo, al mismo tiempo que proporciona a los usuarios información sobre las tareas pendientes del proceso de aprovisionamiento.
 
-ESP se puede usar como parte de cualquier escenario de aprovisionamiento de [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) y también se puede usar por separado de Windows Autopilot como parte de la configuración rápida (OOBE) predeterminada para la Unión a Azure AD, así como para cualquier usuario nuevo que inicie sesión por primera vez en el dispositivo.
+ESP se puede usar como parte de cualquier escenario de aprovisionamiento de [Windows Autopilot](../../autopilot/index.yml) y también se puede usar por separado de Windows Autopilot como parte de la configuración rápida (OOBE) predeterminada para la Unión a Azure AD, así como para cualquier usuario nuevo que inicie sesión por primera vez en el dispositivo.
 
 Puede crear varios perfiles de la página de estado de la inscripción con diferentes configuraciones que especifiquen lo siguiente:
 

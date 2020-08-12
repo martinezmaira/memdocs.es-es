@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443898"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051662"
 ---
 # <a name="set-enrollment-restrictions"></a>Establecer restricciones de inscripción
 
@@ -147,7 +147,7 @@ Los métodos siguientes se consideran como autorizados como una inscripción cor
 - El usuario que se inscribe usa una [cuenta de administrador de inscripción de dispositivos]( device-enrollment-manager-enroll.md).
 - El dispositivo se inscribe a través de [Windows AutoPilot](enrollment-autopilot.md).
 - El dispositivo está registrado con Windows Autopilot, pero no es la única opción de inscripción de MDM que encontrará en la configuración de Windows.
-- El número IMEI del dispositivo aparece en **Inscripción del dispositivo** >  **[Identificadores de dispositivo corporativos](corporate-identifiers-add.md)** . (No se admite para Windows Phone 8.1).
+- El número IMEI del dispositivo aparece en **Inscripción del dispositivo** >  **[Identificadores de dispositivo corporativos](corporate-identifiers-add.md)** .
 - El dispositivo se inscribe a través de un [paquete de aprovisionamiento en masa](windows-bulk-enroll.md).
 - El dispositivo se inscribe a través de GPO, o la [inscripción automática de Configuration Manager para la administración conjunta](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  

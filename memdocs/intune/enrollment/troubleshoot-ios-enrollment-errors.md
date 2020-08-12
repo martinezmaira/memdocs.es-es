@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093343"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865479"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos iOS/iPadOS en Microsoft Intune
 
@@ -109,8 +109,9 @@ Recopile la siguiente información sobre el problema:
 1. Quite la aplicación Portal de empresa del dispositivo.
 2. Descargue e instale la aplicación **Portal de empresa de Microsoft Intune** en el **App Store**.
 3. Vuelva a inscribir el dispositivo.
- > [!NOTE]
-    > Este error también puede producirse si el usuario intenta inscribir más dispositivos de los que permite la configuración establecida para la inscripción de dispositivos. Siga los pasos descritos en **Se alcanzó el límite de dispositivos** a continuación en caso de que este procedimiento no resuelva el problema.
+
+> [!NOTE]
+> Este error también puede producirse si el usuario intenta inscribir más dispositivos de los que permite la configuración establecida para la inscripción de dispositivos. Siga los pasos descritos en **Se alcanzó el límite de dispositivos** a continuación en caso de que este procedimiento no resuelva el problema.
 
 ### <a name="device-cap-reached"></a>Se alcanzó el límite de dispositivos
 
@@ -186,7 +187,7 @@ Renueve el certificado de APNs y, después, vuelva a inscribir el dispositivo.
 
 Al activar un dispositivo administrado por ADE que tiene asignado un perfil de inscripción, se produce un error en la inscripción y recibe el mensaje de error siguiente:
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection

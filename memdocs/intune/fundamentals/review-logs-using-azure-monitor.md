@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990774"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912527"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envío de datos de registro al almacenamiento, a Event Hubs o a Log Analytics en Intune (versión preliminar)
 
@@ -139,20 +139,20 @@ En las siguientes tablas se muestra una estimación de costos según el tamaño 
 
 **Registro de auditoría con 100 000 usuarios**
 
-| | |
-|---|---|
+| Category | Value |
+| -------- | ----- |
 |Eventos por día| 1,5 millones|
 |Volumen estimado de datos al mes| 90 GB|
-|Costo estimado al mes (USD)| 1,93 USD|
-|Costo estimado al año (USD)| 23,12 USD|
+|Costo estimado al mes (USD)| 1,93 USD|
+|Costo estimado al año (USD)| 23,12 USD|
 
 **Registro de auditoría con 1000 usuarios**
 
-| | |
-|---|---|
-|Eventos por día| 15.000|
-|Volumen estimado de datos al mes| 900 MB|
-|Costo estimado al mes (USD)| 0,02 USD|
+| Category | Value |
+| -------- | ----- |
+|Eventos por día| 15,000|
+|Volumen estimado de datos al mes| 900 MB|
+|Costo estimado al mes (USD)| 0,02 USD|
 |Costo estimado al año (USD)| 0,24 USD|
 
 ### <a name="event-hub-messages-for-activity-logs"></a>Mensajes del centro de eventos para los registros de actividad
@@ -161,33 +161,33 @@ Los eventos normalmente se realizan por lotes en intervalos de cinco minutos y s
 
 Por ejemplo, normalmente tienen lugar unos 18 eventos por segundo para un inquilino de gran tamaño de más de 100 000 usuarios. Esto equivale a 5400 eventos cada cinco minutos (300 segundos x 18 eventos). Los registros de auditoría tienen un tamaño aproximado de 2 KB por evento. Esto equivale a 10,8 MB de datos. Por lo tanto, se envían 43 mensajes al centro de eventos en ese intervalo de cinco minutos.
 
-La tabla siguiente contiene costos estimados por mes para un centro de eventos básico en la región Oeste de EE. UU., dependiendo del volumen de datos de evento. Para obtener una estimación del volumen de datos que espera para sus registros, use la [calculadora de precios de Event Hubs](https://azure.microsoft.com/pricing/details/event-hubs/).
+La siguiente tabla contiene los costos aproximados al mes para un centro de eventos básico en la región Oeste de EE. UU., en función del volumen de datos de eventos. Para obtener una estimación del volumen de datos que espera para sus registros, use la [calculadora de precios de Event Hubs](https://azure.microsoft.com/pricing/details/event-hubs/).
 
 **Registro de auditoría con 100 000 usuarios**
 
-| | |
-|---|---|
+| Category | Value |
+| -------- | ----- |
 |Eventos por segundo| 18|
-|Eventos por intervalo de cinco minutos| 5400|
+|Eventos por intervalo de cinco minutos| 5 400|
 |Volumen por intervalo| 10,8 MB|
 |Mensajes por intervalo| 43|
-|Mensajes al mes| 371 520|
-|Costo estimado al mes (USD)| 10,83 USD|
+|Mensajes al mes| 371,520|
+|Costo estimado al mes (USD)| 10,83 USD|
 
 **Registro de auditoría con 1000 usuarios**
 
-| | |
-|---|---|
+| Category | Value |
+| -------- | ----- |
 |Eventos por segundo|0,1 |
 |Eventos por intervalo de cinco minutos| 52|
 |Volumen por intervalo|104 KB |
 |Mensajes por intervalo|1 |
-|Mensajes al mes|8640 |
-|Costo estimado al mes (USD)|10,80 USD |
+|Mensajes al mes|8 640 |
+|Costo estimado al mes (USD)|10,80 USD |
 
 ### <a name="log-analytics-cost-considerations"></a>Consideraciones sobre el costo de Log Analytics
 
-Para revisar los costos relacionados con la administración del área de trabajo de Log Analytics, consulte [Administración del uso y los costos para Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
+Para revisar los costos relacionados con la administración del área de trabajo de Log Analytics, consulte [Administración de los costos mediante el control del volumen de datos y la retención en Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
@@ -215,11 +215,11 @@ Los costos de almacenamiento dependen del tamaño de los registros y del períod
 
 ### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>¿Cuánto cuesta transmitir mis datos a un centro de eventos?
 
-Los costos de transmisión dependen del número de mensajes que se reciben por minuto. Para detalles sobre cómo se calculan los costos y las estimaciones de costos en función del número de mensajes, consulte [Mensajes del centro de eventos para los registros de actividad](#event-hub-messages-for-activity-logs) (en este artículo).
+El costo del streaming depende del número de mensajes que reciba por minuto. Para detalles sobre cómo se calculan los costos y las estimaciones de costos en función del número de mensajes, consulte [Mensajes del centro de eventos para los registros de actividad](#event-hub-messages-for-activity-logs) (en este artículo).
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>¿Cómo integro los registros de auditoría de Intune con mi sistema SIEM?
 
-Use Azure Monitor con Event Hubs para transmitir registros al sistema SIEM. En primer lugar, [transmita los registros a un centro de eventos](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). A continuación, [configure la herramienta SIEM](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con el centro de eventos configurado. 
+Use Azure Monitor con Event Hubs para hacer streaming de los registros en el sistema SIEM. En primer lugar, [transmita los registros a un centro de eventos](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). A continuación, [configure la herramienta SIEM](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con el centro de eventos configurado. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>¿Qué herramientas SIEM se admiten actualmente?
 
@@ -227,14 +227,14 @@ Actualmente, [Splunk](https://docs.microsoft.com/azure/active-directory/reports-
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>¿Puedo acceder a los datos desde un centro de eventos sin usar una herramienta SIEM externa?
 
-Sí. Para acceder a los registros desde su aplicación personalizada, puede usar la [API de Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Sí. Para acceder a los registros desde la aplicación personalizada, puede usar la [API de Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
 ### <a name="what-data-is-stored"></a>¿Dónde se almacenan los datos?
 
-Intune no almacena los datos enviados a través de la canalización. Intune enruta los datos a la canalización de Azure Monitor, con la autorización del inquilino. Para más información, vea [Introducción a Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
+Intune no almacena los datos enviados a través de la canalización. Intune enruta los datos a la canalización de Azure Monitor, con la autorización del inquilino. Para más información, consulte [Introducción a Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Archivo de los registros de actividad en una cuenta de almacenamiento](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [Archivado de registros de actividad en una cuenta de almacenamiento](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
 * [Enrutamiento de registros de actividad a un centro de eventos](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Integración de los registros de actividad con Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Integración de registros de actividad en Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

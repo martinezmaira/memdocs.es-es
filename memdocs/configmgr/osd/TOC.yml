@@ -24,22 +24,6 @@
           href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
         - name: Reemplazar un equipo existente y transferir la configuración
           href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
-    - name: Métodos para implementar sistemas operativos de empresa
-      items:
-        - name: Métodos de implementación del SO
-          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
-        - name: Usar PXE para implementar Windows a través de la red
-          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
-        - name: Usar Centro de software para implementar Windows a través de la red
-          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
-        - name: Usar medios de arranque para implementar Windows a través de la red
-          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
-        - name: Usar medios independientes para implementar Windows sin usar la red
-          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
-        - name: Usar multidifusión para implementar Windows a través de la red
-          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
-        - name: Creación de una imagen para un OEM en fábrica o en un almacén local
-          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
     - name: Seguridad y privacidad para la implementación de sistema operativo
       href: plan-design/security-and-privacy-for-operating-system-deployment.md
     - name: Planear la interoperabilidad de la implementación del sistema operativo
@@ -78,6 +62,26 @@
       href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
 - name: Implementar y usar
   items:
+    - name: Métodos para implementar sistemas operativos de empresa
+      items:
+        - name: Métodos de implementación del SO
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: Usar PXE para implementar Windows a través de la red
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Usar Centro de software para implementar Windows a través de la red
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Usar medios de arranque para implementar Windows a través de la red
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Usar medios independientes para implementar Windows sin usar la red
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Usar multidifusión para implementar Windows a través de la red
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Creación de una imagen para un OEM en fábrica o en un almacén local
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+        - name: Crear una secuencia de tareas para implementaciones que no son de sistema operativo
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+        - name: Implementar Windows to Go
+          href: deploy-use/deploy-windows-to-go.md
     - name: Administrar y crear secuencias de tareas
       href: deploy-use/manage-task-sequences-to-automate-tasks.md
     - name: Creación de secuencias de tareas para automatizar tareas
@@ -94,8 +98,6 @@
           href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
         - name: Crear una secuencia de tareas personalizada
           href: deploy-use/create-a-custom-task-sequence.md
-        - name: Crear una secuencia de tareas para implementaciones que no son de sistema operativo
-          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
     - name: Implementar una secuencia de tareas
       href: deploy-use/deploy-a-task-sequence.md
     - name: Creación de una implementación por fases
@@ -104,8 +106,6 @@
       href: deploy-use/manage-monitor-phased-deployments.md
     - name: Administración de Windows como servicio
       href: deploy-use/manage-windows-as-a-service.md
-    - name: Implementar Windows to Go
-      href: deploy-use/deploy-windows-to-go.md
     - name: Supervisar implementaciones del sistema operativo
       href: deploy-use/monitor-operating-system-deployments.md
     - name: Depurar una secuencia de tareas

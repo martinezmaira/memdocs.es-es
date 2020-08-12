@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89f6c1d4498151eed87cf90ae24d0cc7a846d3f7
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262564"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912580"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Administración de aplicaciones de iOS y macOS compradas a través del Programa de Compras por Volumen de Apple con Microsoft Intune
 
@@ -46,8 +46,8 @@ Los tokens de ubicación también se conocen como tokens del Programa de Compras
 ## <a name="how-are-purchased-apps-licensed"></a>¿Cómo se concede la licencia a las aplicaciones adquiridas?
 Las aplicaciones compradas se pueden asignar a grupos con dos tipos de licencias que Apple ofrece para dispositivos iOS/iPadOS y macOS.
 
-|  | Licencias de dispositivo | Licencias de usuario |
-|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Acción | Licencias de dispositivo | Licencias de usuario |
+|------- | -----------------| ---------------|
 | Inicio de sesión en App Store | No es necesario. | Cada usuario final debe usar un ID de Apple único cuando se le pida que inicie sesión en App Store. |
 | Configuración del dispositivo que bloquea el acceso a App Store | Las aplicaciones se pueden instalar y actualizar mediante el Portal de empresa. | La invitación para unirse al VPP de Apple requiere acceso a App Store. Si ha configurado una directiva para deshabilitar App Store, las licencias de aplicaciones de VPP basadas en usuario no funcionarán. |
 | Actualización automática de la aplicación | Tal y como lo configuró el administrador de Intune en la configuración del token de VPP de Apple.<p>Si el tipo de asignación está disponible para los dispositivos inscritos, las actualizaciones de aplicaciones disponibles también se pueden instalar desde el Portal de empresa seleccionando la acción **Actualizar** en la página de detalles de la aplicación. | Tal y como lo configuró el usuario final en la configuración personal de App Store. El administrador de Intune no puede administrarlo. |
@@ -143,9 +143,9 @@ El usuario final recibirá solicitudes para que instale la aplicación de VPP en
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
 | 1 | BYOD: usuario con licencia (no dispositivo de inscripción de usuario)                             | S                                                                                               | S                                           | S                                 |
 | 2 | Corp: usuario con licencia (dispositivo no supervisado)     | S                                                                                               | S                                           | S                                 |
-| 3 | Corp: usuario con licencia (dispositivo supervisado)         | S                                                                                               | No                                           | S                                 |
-| 4 | BYOD: dispositivo con licencia                           | No                                                                                               | S                                           | No                                 |
-| 5 | Corp: dispositivo con licencia (dispositivo no supervisado)                           | No                                                                                               | S                                           | No                                 |
+| 3 | Corp: usuario con licencia (dispositivo supervisado)         | S                                                                                               | N                                           | S                                 |
+| 4 | BYOD: dispositivo con licencia                           | No                                                                                               | Y                                           | No                                 |
+| 5 | Corp: dispositivo con licencia (dispositivo no supervisado)                           | No                                                                                               | Y                                           | No                                 |
 | 6 | Corp: dispositivo con licencia (dispositivo supervisado)                           | No                                                                                               | No                                           | No                                 |
 | 7 | Pantalla completa (dispositivo supervisado): dispositivo con licencia | No                                                                                               | No                                           | No                                 |
 | 8 | Pantalla completa (dispositivo supervisado): usuario con licencia   | --- | ---                                          | ---                                |
@@ -157,8 +157,8 @@ El usuario final recibirá solicitudes para que instale la aplicación de VPP en
 
 Puede revocar todas las licencias de aplicación del Programa de Compras por Volumen de Apple (VPP) de iOS/iPadOS o macOS asociadas en función de un dispositivo, usuario o aplicación determinados.  Sin embargo, hay algunas diferencias entre las plataformas iOS/iPadOS y macOS. 
 
-|  | iOS/iPadOS | macOS |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Acción | iOS/iPadOS | macOS |
+|------- | ---------- | ----- |
 | Eliminación de la asignación de aplicaciones | Si quita una aplicación que estaba asignada a un usuario, Intune reclama la licencia de usuario o dispositivo y desinstala la aplicación del dispositivo. | Al quitar una aplicación que se asignó a un usuario, Intune reclama la licencia de usuario o dispositivo. La aplicación no se desinstala del dispositivo. |
 | Revocación de la licencia de la aplicación | La revocación de una licencia de aplicación recupera la licencia de aplicación del usuario o dispositivo. Debe cambiar la asignación a **Desinstalar** para quitar la aplicación del dispositivo. | La revocación de una licencia de aplicación recupera la licencia de aplicación del usuario o dispositivo. La aplicación macOS a la que se le revocó la licencia se puede seguir usando en el dispositivo, pero no se puede actualizar hasta que se vuelva a asignar una licencia al usuario o al dispositivo. Según Apple, estas aplicaciones se quitan después de un período de gracia de 30 días. Sin embargo, Apple no proporciona un medio para que Intune quite la aplicación mediante la acción de asignación Desinstalar. |
 

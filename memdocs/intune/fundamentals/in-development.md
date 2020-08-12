@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443841"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048028"
 ---
 # <a name="in-development-for-microsoft-intune"></a>En desarrollo para Microsoft Intune
 
@@ -125,9 +125,6 @@ Para ver la configuración actual de la extensión de la aplicación de SSO que 
 
 Se aplica a:
 - iOS/iPadOS
-
-### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>Mejora en la página Actualizar configuración del dispositivo en la aplicación Portal de empresa para Android para mostrar descripciones<!-- 7414768 -->
-En la aplicación Portal de empresa en dispositivos Android, la página **Actualizar configuración del dispositivo** muestra la configuración que un usuario debe actualizar para que sea compatible. Hemos mejorado la experiencia del usuario para que la configuración de la lista se expanda de forma predeterminada para mostrar la descripción y el botón **Resolver** (cuando proceda). Anteriormente, el valor predeterminado era la vista contraída. Este nuevo comportamiento predeterminado reduce el número de clics, por lo que los usuarios pueden resolver los problemas más rápidamente.
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
