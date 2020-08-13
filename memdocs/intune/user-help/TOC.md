@@ -135,7 +135,6 @@
 #### [Introducción a la inscripción de Windows](windows-enrollment-company-portal.md)
 #### [Inscripción de dispositivos Windows 10](enroll-windows-10-device.md)
 #### [Inscripción de dispositivos Windows 8.1 o Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
-#### [Inscripción de dispositivos Windows Phone 8.1](enroll-your-wp81-windows.md)
 ### [Cifrado del dispositivo](encrypt-your-device-windows.md)
 ### [Hacer que el dispositivo esté más seguro con la contraseña correcta](set-or-change-your-password-windows.md)
 ### [Anular la inscripción del dispositivo en Intune](unenroll-your-device-from-intune-windows.md)
