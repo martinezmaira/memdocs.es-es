@@ -5,17 +5,17 @@ description: Use Configuration Manager para instalar un sistema operativo en un 
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a70269839b4a550fbef4dc5cab1b7ff3d426d87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7eb880b6cb6f45de06b602bc9caa8ca7b98022d5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690673"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125089"
 ---
 # <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-configuration-manager"></a>Instalación de una nueva versión de Windows en un equipo nuevo (sin sistema operativo) con Configuration Manager
 

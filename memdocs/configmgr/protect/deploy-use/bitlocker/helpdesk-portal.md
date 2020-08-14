@@ -5,17 +5,17 @@ description: Procedimiento para usar el sitio web de administración y supervisi
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84725ac494e1d9497524303b841207bd05cd3859
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699843"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129263"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>Sitio web de administración y supervisión de BitLocker
 

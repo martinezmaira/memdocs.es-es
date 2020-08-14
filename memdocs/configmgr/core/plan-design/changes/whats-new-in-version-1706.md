@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904690"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129025"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novedades de la versión 1706 de Configuration Manager
 
@@ -78,7 +78,7 @@ Esta versión incluye mejoras para el modo en que los puntos de actualización d
 - Independientemente de la configuración de la reserva, un cliente intenta alcanzar el último punto de actualización de software que utilizó durante 120 minutos. Tras no conseguir alcanzar ese servidor durante 120 minutos, el cliente consulta su grupo de puntos de actualización de software disponibles para encontrar otro nuevo.
 - Transcurridas dos horas sin conseguir alcanzar su servidor original, el cliente cambia a un ciclo más corto para establecer contacto con un nuevo punto de actualización de software. Esto significa que si un cliente no puede conectar con un nuevo servidor, selecciona rápidamente el siguiente servidor de su grupo de servidores disponibles e intenta ponerse en contacto con él.
 
-Para obtener más información, vea [Puntos de actualización de software](../../servers/deploy/configure/boundary-groups.md#software-update-points) en el tema de Configuración de grupos de límites para la Rama actual.
+Para obtener más información, vea [Puntos de actualización de software](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) en el tema de Configuración de grupos de límites para la Rama actual.
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Integración de Azure AD con Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -228,7 +228,7 @@ Ahora puede configurar directivas de aplazamiento para actualizaciones de caract
 Para detalles, consulte [Integración con Windows Update for Business en Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Mejora en las notificaciones de usuario para las actualizaciones de Office 365
-Se han hecho mejoras para aprovechar la experiencia de usuario Hacer clic y ejecutar de Office cuando un cliente instala una actualización de Office 365. Esto incluye notificaciones emergentes y en la aplicación y una experiencia de cuenta atrás. Para obtener más información, consulte [Comportamiento al reiniciar y notificaciones de cliente para las actualizaciones de Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates).
+Se han hecho mejoras para aprovechar la experiencia de usuario Hacer clic y ejecutar de Office cuando un cliente instala una actualización de Office 365. Esto incluye notificaciones emergentes y en la aplicación y una experiencia de cuenta atrás. Para obtener más información, consulte [Comportamiento al reiniciar y notificaciones de cliente para las actualizaciones de Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="reporting"></a>Generación de informes
 

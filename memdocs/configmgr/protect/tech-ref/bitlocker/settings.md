@@ -5,17 +5,17 @@ description: Toda la configuración de administración de BitLocker disponible e
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce6a9c566fec22e69c0a4a7fde01b911330ec1d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708623"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127890"
 ---
 # <a name="bitlocker-settings-reference"></a>Referencia de la configuración de BitLocker
 
@@ -25,7 +25,7 @@ ms.locfileid: "81708623"
 
 Las directivas de administración de BitLocker incluidas en Configuration Manager contienen los siguientes grupos de directivas:
 
-- Setup
+- Configurar
 - Unidad de sistema operativo
 - Unidad fija
 - Unidad extraíble
@@ -36,7 +36,7 @@ En las secciones siguientes se describen y se sugieren opciones para la configur
 > [!NOTE]
 > Esta configuración se basa en la versión 2002 de Configuration Manager. La versión 1910 no incluye todas estas opciones.
 
-## <a name="setup"></a>Setup
+## <a name="setup"></a>Configurar
 
 Mediante las opciones de esta página se configuran las opciones de cifrado globales de BitLocker.
 
@@ -54,9 +54,9 @@ Para dispositivos Windows 8.1, habilite la opción **Método de cifrado de unid
 - AES, 128 bits con difusor
 - AES, 256 bits con difusor
 - AES, 128 bits (valor predeterminado)
-- AES, 256 bits
+- AES de 256 bits
 
-#### <a name="windows-10-devices"></a>Dispositivos Windows 10
+#### <a name="windows-10-devices"></a>Dispositivos Windows 10
 
 En el caso de los dispositivos Windows 10, habilite la opción **Método de cifrado de unidades e intensidad de cifrado (Windows 10)** . A continuación, seleccione individualmente uno de los métodos de cifrado siguientes para las unidades de sistema operativo, las unidades de datos fijas y las unidades de datos extraíbles:
 
@@ -66,7 +66,7 @@ En el caso de los dispositivos Windows 10, habilite la opción **Método de cif
 - XTS-AES, 256 bits
 
 > [!TIP]
-> BitLocker usa el Estándar de cifrado avanzado (AES) como algoritmo de cifrado con longitudes de clave configurables de 128 o 256 bits. En los dispositivos Windows 10, el cifrado AES admite el encadenamiento de bloques de cifrado (CBC) o el robo de texto cifrado (XTS).
+> BitLocker usa el Estándar de cifrado avanzado (AES) como algoritmo de cifrado con longitudes de claves configurables de 128 o 256 bits. En los dispositivos Windows 10, el cifrado AES admite el encadenamiento de bloques de cifrado (CBC) o el robo de texto cifrado (XTS).
 >
 > Si necesita usar una unidad extraíble en dispositivos que no ejecutan Windows 10, use AES-CBC.
 
@@ -88,7 +88,7 @@ Configure esta directiva para mejorar el rendimiento de reinicio sin sobrescribi
 
 Si no se configura esta directiva, BitLocker quita sus secretos de la memoria cuando se reinicia el equipo.
 
-### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>Validar el cumplimiento de regla de uso de certificado de tarjeta inteligente
+### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>Validar el cumplimiento de reglas de uso de certificados de tarjetas inteligentes
 
 *Configuración sugerida*: **No configurado**.
 
@@ -100,7 +100,7 @@ Si no se configura esta directiva, BitLocker usa el identificador de objeto pred
 
 *Configuración sugerida*: **No configurado**.
 
-Configure esta directiva para utilizar un agente de recuperación de datos basado en certificados o el lector de BitLocker To Go.
+Configure esta directiva para utilizar un agente de recuperación de datos basado en certificados o el Lector de BitLocker To Go.
 
 Si no se configura esta directiva, BitLocker no usa el campo de **Identificación**.
 
@@ -110,7 +110,7 @@ Si su organización requiere más medidas de seguridad, configure el campo **Ide
 
 Mediante las opciones de esta página se configuran las opciones de cifrado para la unidad en la que está instalado Windows.
 
-### <a name="operating-system-drive-encryption-settings"></a>Configuración de cifrado para unidades de sistema operativo
+### <a name="operating-system-drive-encryption-settings"></a>Configuración de cifrado de la unidad del sistema operativo
 
 *Configuración sugerida*: **Habilitado**
 
@@ -161,13 +161,13 @@ Use esta configuración para establecer las restricciones de las contraseñas co
 
 - **Requerir contraseñas solo de ASCII para unidades de sistema operativo extraíbles**
 
-Si habilita esta configuración de directiva, los usuarios podrán configurar una contraseña que cumpla los requisitos que se hayan definido.
+Si habilita esta configuración de directiva, los usuarios pueden configurar una contraseña que cumpla los requisitos que se hayan definido.
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>Notas de uso general de la directiva de contraseñas de unidades de sistema operativo
 
 - Para que la configuración de los requisitos de complejidad sea eficaz, habilite también la configuración de directiva de grupo **Las contraseñas deben cumplir los requisitos de complejidad**, que se encuentra en **Configuración del equipo** > **Configuración de Windows** > **Configuración de seguridad** > **Directivas de cuenta** > **Directiva de contraseñas**.
 
-- BitLocker aplica esta configuración al activarlo, no al desbloquear un volumen. BitLocker le permite desbloquear una unidad con cualquiera de los protectores que están disponibles en la unidad.
+- BitLocker aplica esta configuración al activarlo, no al desbloquear un volumen. BitLocker permite desbloquear una unidad con cualquiera de los protectores que están disponibles en la unidad.
 
 - Si usa la directiva de grupo para habilitar los algoritmos compatibles con FIPS para el cifrado, el uso de hash y la firma, no puede permitir que las contraseñas actúen como un protector de BitLocker.
 
@@ -274,7 +274,7 @@ Si no se configura la directiva, BitLocker admite contraseñas con la configurac
 
 - Para que la configuración de los requisitos de complejidad sea eficaz, habilite también la configuración de directiva de grupo **Las contraseñas deben cumplir los requisitos de complejidad**, que se encuentra en **Configuración del equipo** > **Configuración de Windows** > **Configuración de seguridad** > **Directivas de cuenta** > **Directiva de contraseñas**.
 
-- BitLocker aplica esta configuración al activarlo, no al desbloquear un volumen. BitLocker le permite desbloquear una unidad con cualquiera de los protectores que están disponibles en la unidad.
+- BitLocker aplica esta configuración al activarlo, no al desbloquear un volumen. BitLocker permite desbloquear una unidad con cualquiera de los protectores que están disponibles en la unidad.
 
 - Si usa la directiva de grupo para habilitar los algoritmos compatibles con FIPS para el cifrado, el uso de hash y la firma, no puede permitir que las contraseñas actúen como un protector de BitLocker.
 
@@ -365,7 +365,7 @@ Si no se configura la directiva, BitLocker admite contraseñas con la configurac
 
 - Para que la configuración de los requisitos de complejidad sea eficaz, habilite también la configuración de directiva de grupo **Las contraseñas deben cumplir los requisitos de complejidad**, que se encuentra en **Configuración del equipo** > **Configuración de Windows** > **Configuración de seguridad** > **Directivas de cuenta** > **Directiva de contraseñas**.
 
-- BitLocker aplica esta configuración al activarlo, no al desbloquear un volumen. BitLocker le permite desbloquear una unidad con cualquiera de los protectores que están disponibles en la unidad.
+- BitLocker aplica esta configuración al activarlo, no al desbloquear un volumen. BitLocker permite desbloquear una unidad con cualquiera de los protectores que están disponibles en la unidad.
 
 - Si usa la directiva de grupo para habilitar los algoritmos compatibles con FIPS para el cifrado, el uso de hash y la firma, no puede permitir que las contraseñas actúen como un protector de BitLocker.
 

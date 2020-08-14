@@ -2,7 +2,7 @@
 title: Características en desuso
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las características que Configuration Manager ya no admite.
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905056"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129059"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Características en desuso y eliminadas de Configuration Manager
 
@@ -31,7 +31,6 @@ Las siguientes características están en desuso. Ahora todavía puede usarlas, 
 
 |Característica|Primer anuncio del desuso|Soporte técnico&nbsp;eliminado|
 |-----------|---|--------------|
-| Opción de Análisis de escritorio para **Ver datos recientes** para la inscripción de dispositivos y las actualizaciones de seguridad.<!-- 7080949 --> Para más información, consulte [Latencia de datos](../../../../desktop-analytics/troubleshooting.md#data-latency).|Mayo de 2020|Julio de 2020|
 |Ha cambiado la implementación para compartir contenido de Azure. Use una puerta de enlace de administración en la nube habilitada para contenido. No podrá crear un punto de distribución en la nube tradicional en el futuro.|Febrero de 2019|Por determinar<sup>[Nota 1](#bkmk_note1)</sup>|
 |Implementación del servicio clásico en Azure para la puerta de enlace de administración y el punto de distribución en la nube. Para obtener más información, vea [Planificación de Cloud Management Gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|Noviembre de 2018|Por determinar<sup>[Nota 1](#bkmk_note1)</sup>|
 
@@ -45,6 +44,7 @@ Ya no se admiten las características siguientes. En algunos casos, ya no están
 
 |Característica|Primer anuncio del desuso|Soporte técnico&nbsp;eliminado|  
 |-----------|---|--------------|  
+| Opción de Análisis de escritorio para **Ver datos recientes** para la inscripción de dispositivos y las actualizaciones de seguridad.<!-- 7080949 --> Para más información, consulte [Latencia de datos](../../../../desktop-analytics/troubleshooting.md#data-latency).|Mayo de 2020|Julio de 2020|
 | Integración de Windows Analytics y Upgrade Readiness. Para más información, consulte [KB 4521815: Windows Analytics se retirará el 31 de enero de 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14 de octubre de 2019 | 31 de enero de 2020 |
 | Evaluación de la atestación de estado de dispositivo para las directivas de cumplimiento de acceso condicional <!--1235616 aka 3608202--> Para obtener más información, vea [¿Qué ha ocurrido con la MDM híbrida?](../../../../mdm/understand/what-happened-to-hybrid.md)| 3 de julio de 2019 | Versión 1910 |
 | La aplicación Portal de empresa para Configuration Manager | 21 de mayo de 2019 | Versión 1910 |

@@ -5,17 +5,17 @@ description: Use un medio independiente para implementar el sistema operativo en
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e477d08ed97fe46bbe51b62a0ed024d437c2626
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690573"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125192"
 ---
 # <a name="create-stand-alone-media"></a>Crear medios independientes
 

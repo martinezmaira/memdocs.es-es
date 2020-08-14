@@ -5,17 +5,17 @@ description: Cómo usar el portal de autoservicio de usuario en Configuration Ma
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 88e0ad46-7f0c-4f5c-9b48-54773c23768d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda719aed4d70cd9783d158e17d546b698497997
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ad1f79bb439e0a426229680960092a5f0d8fb3c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699693"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129246"
 ---
 # <a name="bitlocker-self-service-portal"></a>Portal de autoservicio de BitLocker
 

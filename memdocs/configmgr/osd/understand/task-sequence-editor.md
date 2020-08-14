@@ -5,17 +5,17 @@ description: Procedimiento para usar el editor de secuencias de tareas en la con
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2047ae9e276ac94b633d1dc30814ed641cd34d03
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405617277953eae61fbfce4fdb9b3a7d280aedcf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691153"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124455"
 ---
 # <a name="use-the-task-sequence-editor"></a>Uso del editor de secuencias de tareas
 

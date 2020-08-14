@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078794"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126763"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funciones de Technical Preview 1706 de Configuration Manager
 
@@ -72,7 +72,7 @@ Esta versión incluye mejoras para el modo en que los puntos de actualización d
   - Este ciclo continúa hasta que el cliente se conecte a un punto de actualización de software que pueda usar.
   - Hasta el momento en que el cliente encuentre un punto de actualización de software, los servidores adicionales se agregarán al grupo de servidores disponibles cuando se cumpla el tiempo de reserva para cada grupo de límites vecino.
 
-Para obtener más información, vea [Puntos de actualización de software](../servers/deploy/configure/boundary-groups.md#software-update-points) en el tema de Configuración de grupos de límites para la Rama actual.
+Para obtener más información, vea [Puntos de actualización de software](../servers/deploy/configure/boundary-groups.md#bkmk_sup) en el tema de Configuración de grupos de límites para la Rama actual.
 
 
 ## <a name="site-server-role-high-availability"></a>Alta disponibilidad del rol del servidor de sitio

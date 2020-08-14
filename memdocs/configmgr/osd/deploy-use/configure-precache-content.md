@@ -5,17 +5,17 @@ description: Conozca cómo pueden los clientes descargar el contenido de la impl
 ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: cf312d1bc706ace1336caed26f3ee31f81abeaa2
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455232"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125672"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Configuración del contenido de la caché previa para secuencias de tareas
 

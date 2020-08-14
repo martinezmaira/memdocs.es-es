@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 69178f9ac1c1acb1ee2a2931c88a55a0784435b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708023"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128280"
 ---
 # <a name="troubleshoot-cmpivot"></a>Solución de problemas de CMPivot
 
@@ -27,7 +27,7 @@ En algunas ocasiones, es posible que tenga que solucionar problemas de CMPivot. 
 
 En la versión 1902 y versiones posteriores de Configuration Manager, puede ejecutar CMPivot desde el sitio de administración central (CAS) en una jerarquía. El sitio primario sigue controlando la comunicación con el cliente.
 
-Al ejecutar CMPivot desde CAS, se usa el canal de suscripción de mensajes de alta velocidad para comunicarse con el sitio primario. CMPivot no usa la replicación de SQL estándar entre sitios. Si la instancia de SQL Server o el proveedor de SQL son remotos, o bien si usa SQL Server Always On, tendrá un "escenario de salto doble" para CMPivot. Para obtener información sobre cómo definir la delegación restringida para un "escenario de salto doble", consulte [CMPivot a partir de la versión 1902](cmpivot.md#bkmk_cmpivot1902).
+Al ejecutar CMPivot desde CAS, se usa el canal de suscripción de mensajes de alta velocidad para comunicarse con el sitio primario. CMPivot no usa la replicación de SQL estándar entre sitios. Si la instancia de SQL Server o el proveedor de SQL son remotos, o bien si usa SQL Server Always On, tendrá un "escenario de salto doble" para CMPivot. Para obtener información sobre cómo definir la delegación restringida para un "escenario de salto doble", consulte [CMPivot a partir de la versión 1902](cmpivot-changes.md#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
 > Para solucionar problemas de CMPivot, habilite el registro detallado en los puntos de administración (MP) y en el componente SMS_MESSAGE_PROCESSING_ENGINE del servidor de sitio para más información. Además, si el resultado del cliente es superior a 80 KB, habilite el registro detallado en el módulo de administración y el componente SMS_STATE_SYSTEM del servidor de sitio. Para más información sobre cómo habilitar el registro detallado, consulte las [opciones de registro del servidor de sitio](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site).
@@ -45,7 +45,7 @@ Busque estas líneas en `smsprov.log`:
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` es el GUID de script para CMPivot. También puede ver este GUID en los [mensajes de estado de auditoría de CMPivot](cmpivot.md#cmpivot-audit-status-messages).
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` es el GUID de script para CMPivot. También puede ver este GUID en los [mensajes de estado de auditoría de CMPivot](cmpivot-changes.md#cmpivot-audit-status-messages).
 
 A continuación, busque el identificador en la ventana de CMPivot. Este identificador es el `ClientOperationID`.
 

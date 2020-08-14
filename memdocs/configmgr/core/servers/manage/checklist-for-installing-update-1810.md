@@ -10,12 +10,13 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f4acb19d1b3a28a4a53b30dd7838d24eda6c260
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ROBOTS: NOINDEX
+ms.openlocfilehash: a0e20915a8f3cda71fa3b23170ad6d3a6a34a756
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707593"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126195"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1810 de Configuration Manager
 

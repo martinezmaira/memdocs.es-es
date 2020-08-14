@@ -5,17 +5,17 @@ description: Agregue información personalizada específica de la organización 
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3f4fdb0d6a41c2b40c9e35840dfc27261a42e68b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693503"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123908"
 ---
 # <a name="customize-the-self-service-portal"></a>Personalización del portal de autoservicio
 

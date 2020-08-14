@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905187"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126797"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funciones de Technical Preview 1806 de Configuration Manager
 
@@ -240,7 +240,7 @@ La Herramienta de personalización de Office está ahora integrada con el progra
  Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities-in-technical-preview-1804.md#bkmk_feedback) para que sepamos cómo le ha ido.
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software** y seleccione el nodo **Administración de clientes de Office 365**.
-2. En el panel, haga clic en el mosaico del **Instalador de Office 365** para iniciar el Asistente para instalación de cliente de Office 365. Para obtener más información, consulte [Implementación de aplicaciones de Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+2. En el panel, haga clic en el mosaico del **Instalador de Office 365** para iniciar el Asistente para instalación de cliente de Office 365. Para obtener más información, consulte [Implementación de aplicaciones de Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. En la página **Office Setting** (Configuración de Office), haga clic en **Go To Office Web Page** (Ir a la página web de Office). Utilice la Herramienta de personalización de Office online para especificar la configuración de esta implementación. 
 4. Cuando haya finalizado, haga clic en **Enviar** en la esquina superior derecha. Finalice el Asistente para la instalación de cliente de Office 365.
 

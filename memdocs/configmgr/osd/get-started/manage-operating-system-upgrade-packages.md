@@ -5,17 +5,17 @@ description: Aprenda a administrar paquetes de actualización del sistema operat
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc50fc60601b63bca7b4a4b01ba3fb4a39fd8b91
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a50592815ed4581c01489f90b6c3701e53bb4981
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708873"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124421"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Administrar paquetes de actualización del sistema operativo con Configuration Manager
 

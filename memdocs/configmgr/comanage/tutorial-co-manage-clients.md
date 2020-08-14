@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268086"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127348"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager
 
@@ -169,13 +169,9 @@ Con Azure AD híbrido configurado y las configuraciones cliente de Configuratio
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>Habilitación de la administración conjunta a partir de la versión 1906
 
-Para habilitar la administración conjunta a partir de la versión 1906 de Configuration Manager, siga estas instrucciones:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>Habilitación de la administración conjunta en la versión 1902 y versiones anteriores
-
-Para habilitar la administración conjunta para la versión 1902 y versiones anteriores de Configuration Manager, siga estas instrucciones:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
