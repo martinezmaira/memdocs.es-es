@@ -5,17 +5,17 @@ description: Una secuencia de tareas de generación y captura crea un equipo de 
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ceb63560c6000b1a76116d0791c98219a66066b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 349ae2b8d574904d25f6f23bfb1707bb11df8af0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707393"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125515"
 ---
 # <a name="create-a-task-sequence-to-capture-an-os"></a>Crear una secuencia de tareas para capturar un sistema operativo
 

@@ -5,17 +5,17 @@ description: Referencia técnica de los posibles códigos de un cliente de Confi
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6c28fa29-fc97-49ef-9fc3-cb062bdba908
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e8ee130929605f8087eb7fbef55e8a27618c3aed
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2cb6c17802319b0d559474fa8ff208346c2811e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705963"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127940"
 ---
 # <a name="non-compliance-codes"></a>Códigos de no conformidad
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795642"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997956"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Privacidad de datos de Análisis de escritorio
 
@@ -94,7 +94,5 @@ Para obtener más información sobre aspectos de privacidad, vea los artículos 
 - [Confíe en su nube](https://azure.microsoft.com/overview/trusted-cloud/)  
 
 - [Centro de confianza](https://www.microsoft.com/trustcenter)  
-
-- [Escudo de la privacidad](https://www.privacyshield.gov/)  
 
 De forma independiente a Análisis de escritorio, Configuration Manager envía a Microsoft datos de diagnóstico y uso. Microsoft usa estos datos para mejorar la experiencia de instalación, la calidad y la seguridad de las versiones futuras de Configuration Manager. Para obtener más información, vea [Diagnósticos y datos de uso para Configuration Manager](../core/plan-design/diagnostics/diagnostics-and-usage-data.md).

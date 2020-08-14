@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702343"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128957"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -296,7 +296,7 @@ Para obtener más información, vea [Creación de aplicaciones Windows](../../..
 <!--1358149-->
 La Herramienta de personalización de Office está ahora integrada con el programa de instalación de Office 365 en la consola de Configuration Manager. Al crear una implementación de Office 365, configure de manera dinámica la capacidad de administración más reciente de Office. Microsoft actualiza la Herramienta de personalización de Office cuando publica nuevas compilaciones de Office 365. Esta integración permite aprovechar la nueva capacidad de administración de Office 365 en cuanto está disponible. 
 
-Para obtener más información, consulte [Implementación de aplicaciones de Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+Para obtener más información, consulte [Implementación de aplicaciones de Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows
@@ -546,7 +546,7 @@ Las siguientes secciones del área de trabajo **Supervisión** ahora permiten co
 
 Haga clic con el botón derecho en el recurso y seleccione **Copiar**. Esta acción copia los recursos seleccionados como una lista delimitada por comas que incluye todos los detalles. El método abreviado de teclado **CTRL** + **C** también funciona en estas vistas. 
 
-Para obtener más información, vea [Console improvements in version 1806](../../servers/manage/admin-console.md#copy-details-in-monitoring-views) (Mejoras en la consola en la versión 1806).
+Para obtener más información, vea [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views) (Mejoras en la consola en la versión 1806).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Mejoras en el panel de Surface
@@ -568,7 +568,7 @@ Para obtener más información, vea [Panel de dispositivos Surface](../../client
 <!--1358202-->
 Ahora, de forma predeterminada, el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** muestra una columna para el **Usuario que ha iniciado sesión actualmente**. También se muestra para cualquier lista de dispositivos específicos de una colección. Este valor es tan actual como el [estado de cliente](../../clients/manage/monitor-clients.md#bkmk_indStatus). Cuando el usuario cierra la sesión, el cliente borra este valor. Si ningún usuario ha iniciado sesión, el valor está en blanco. 
 
-Para obtener más información, vea [Console improvements in version 1806](../../servers/manage/admin-console.md#view-users-for-a-device) (Mejoras en la consola en la versión 1806).
+Para obtener más información, vea [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device) (Mejoras en la consola en la versión 1806).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Envío de comentarios desde la consola de Configuration Manager  
@@ -576,7 +576,7 @@ Para obtener más información, vea [Console improvements in version 1806](../..
 
 Enviar una sonrisa Ahora puede contar directamente al equipo de Configuration Manager sus experiencias. Enviar comentarios es fácil desde la consola de Configuration Manager. Nos gustaría recibir todos sus comentarios: sugerencias, problemas y elogios. En la consola de Configuration Manager, haga clic en el botón de sonrisa en la esquina superior derecha encima de la cinta de opciones. Esta información va directamente al equipo de producto de Microsoft de Configuration Manager. Si bien aún se admite el uso del centro de opiniones de Windows 10, le recomendamos que use el mecanismo de comentarios incluido en la consola.  
 
-Para obtener más información, vea [Console improvements in version 1806](../../servers/manage/admin-console.md#send-feedback) (Mejoras en la consola en la versión 1806) y [Buscar ayuda para Configuration Manager](../../understand/find-help.md#BKMK_1806Feedback).
+Para obtener más información, vea [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#send-feedback) (Mejoras en la consola en la versión 1806) y [Buscar ayuda para Configuration Manager](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 
