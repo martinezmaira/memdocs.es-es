@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 4e3d777be9c4deb9c3e167ef53c82249f97f78b4
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: e1380a38fb66ce2771d3cf91ecd9117b19ff31c4
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757021"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217135"
 ---
 # <a name="windows-autopilot-requirements"></a>Requisitos de Windows Autopilot
 
@@ -82,7 +82,7 @@ Si no se puede acceder al servicio de optimización de entrega, el proceso de Au
 Si no se pueden enviar datos de diagnóstico, el proceso de AutoPilot seguirá continuando, pero los servicios que dependen de datos de diagnóstico, como Windows Analytics, no funcionarán.
 <tr><td><b>Indicador de estado de conexión de red (NCSI)<b><td>Windows debe ser capaz de indicar que el dispositivo puede acceder a Internet. Para obtener más información, consulte <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator">indicador de estado de conexión de red (NCSI)</a>.
 
-<a href="http://www.msftconnecttest.com">www.msftconnecttest.com</a> se debe poder resolver a través de DNS y estar accesible a través de http.
+<code>www.msftconnecttest.com</code> se debe poder resolver a través de DNS y estar accesible a través de HTTP.
 <tr><td><b>Notification Services de Windows (WNS)<b><td>Este servicio se usa para permitir que Windows reciba notificaciones de aplicaciones y servicios. Consulte <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a> para obtener más información.<br>
 
 Si los servicios de WNS no están disponibles, el proceso de AutoPilot seguirá continuando sin notificaciones.
@@ -95,7 +95,7 @@ Si el Microsoft Store no es accesible, el proceso de AutoPilot seguirá continua
 <tr><td><b>Unión híbrida de AAD<b><td>El dispositivo puede estar unido a una AAD híbrida. El equipo debe estar en la red corporativa para que la Unión de AAD híbrida funcione. Ver los detalles en <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">el modo controlado por el usuario de Windows AutoPilot</a>
 <tr><td><b>Modo Autoimplementación AutoPilot y la guante blanca de autopiloto<b><td>Los dispositivos TPM de firmware, que solo son proporcionados por Intel, AMD o Qualcomm, no incluyen todos los certificados necesarios en el momento del arranque y deben ser capaces de recuperarlos del fabricante al usarse por primera vez. Los dispositivos con chips de TPM discretos (incluidos los dispositivos de cualquier otro fabricante) incluyen estos certificados preinstalados. Consulte las <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">recomendaciones de TPM</a> para obtener más detalles. Asegúrese de que se puede acceder a estas direcciones URL para cada proveedor de TPM de firmware para que los certificados se puedan solicitar correctamente: 
 
-  <br>Intel- https://ekop.intel.com/ekcertservice  <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1  <br>PowerNowhttps://ftpm.amd.com/pki/aia
+  <br>Intel- https://www.intel.com/  <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1  <br>PowerNow https://ftpm.amd.com/pki/aia
 
 </table>
 
