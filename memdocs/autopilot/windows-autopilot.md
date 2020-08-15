@@ -14,22 +14,27 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 171070e1560796763f3c3851afe239237098f756
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: da15ea9ceae46c9c54858a6be0f724c5d67d22ce
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757005"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252178"
 ---
 # <a name="overview-of-windows-autopilot"></a>Información general de Windows AutoPilot
 
 **Se aplica a**
 
--   Windows 10
+-  Windows 10
 
 Windows AutoPilot es una colección de tecnologías que se usan para configurar y preconfigurar nuevos dispositivos y prepararlos para su uso productivo. También puede usar Windows AutoPilot para restablecer, reasignar y recuperar dispositivos. Esta solución permite al Departamento de ti lograr lo anterior con poca o ninguna infraestructura que administrar, con un proceso fácil y sencillo.
 
-Windows AutoPilot está diseñado para simplificar todas las partes del ciclo de vida de los dispositivos Windows, tanto de ti como de los usuarios finales, desde la implementación inicial hasta el final de la vida. Aprovechando los servicios basados en la nube, puede reducir los costos generales de la implementación, la administración y la retirada de dispositivos reduciendo la cantidad de tiempo que es necesario gastar en estos procesos y la cantidad de infraestructura que necesitan mantener, a la vez que se asegura la facilidad de uso para todos los tipos de usuarios finales. Vea el siguiente vídeo y diagrama:
+Windows AutoPilot simplifica el ciclo de vida de los dispositivos Windows, tanto para los usuarios de ti como para los finales, desde la implementación inicial hasta el final de su ciclo de vida. Usar servicios basados en la nube, Windows AutoPilot:
+- reduce el tiempo que dedica a implementar, administrar y retirar dispositivos.
+- reduce la infraestructura necesaria para mantener los dispositivos.
+- maximiza la facilidad de uso para todos los tipos de usuarios finales.
+
+Vea el siguiente vídeo y diagrama:
 
 &nbsp;
 
@@ -37,12 +42,21 @@ Windows AutoPilot está diseñado para simplificar todas las partes del ciclo de
 
 ![Información general del proceso](images/image1.png)
 
-Cuando se implementan inicialmente nuevos dispositivos Windows, Windows AutoPilot aprovecha la versión optimizada para OEM de Windows 10 que está preinstalada en el dispositivo, lo que ahorra a las organizaciones el esfuerzo de tener que mantener imágenes y controladores personalizados para cada modelo de dispositivo que se está usando. En lugar de volver a crear la imagen del dispositivo, la instalación existente de Windows 10 se puede transformar en un estado "listo para la empresa", aplicar la configuración y las directivas, instalar aplicaciones e incluso cambiar la edición de Windows 10 que se usa (por ejemplo, de Windows 10 Pro a Windows 10 Enterprise) para admitir características avanzadas.
+Cuando se implementan inicialmente nuevos dispositivos Windows, Windows AutoPilot usa la versión optimizada para OEM de Windows 10. Esta versión está preinstalada en el dispositivo, por lo que no tiene que mantener las imágenes y los controladores personalizados para cada modelo de dispositivo. En lugar de volver a crear la imagen del dispositivo, la instalación existente de Windows 10 se puede transformar en un estado "listo para la empresa" que pueda:
+- aplicar la configuración y las directivas
+- instalar aplicaciones
+- cambie la edición de Windows 10 que se usa (por ejemplo, de Windows 10 Pro a Windows 10 Enterprise) para admitir características avanzadas.
 
-Una vez implementados, los dispositivos de Windows 10 pueden administrarse mediante herramientas como Microsoft Intune, Windows Update para empresas, Configuration Manager de puntos de conexión de Microsoft y otras herramientas similares. Windows AutoPilot también puede usarse para cambiar el propósito de un dispositivo mediante el uso del restablecimiento de Windows AutoPilot para preparar rápidamente un dispositivo para un nuevo usuario o en escenarios de interrupción y corrección para permitir que un dispositivo se vuelva rápidamente a un estado listo para la empresa.
+Una vez implementado, puede administrar dispositivos de Windows 10 con:
+- Microsoft Intune
+- Windows Update para empresas
+- Microsoft Endpoint Configuration Manager
+- u otras herramientas similares.
+
+Con Windows AutoPilot, puede preparar rápidamente un dispositivo para un nuevo usuario con el restablecimiento de Windows AutoPilot. También puede usar el restablecimiento en escenarios de interrupción y corrección para devolver rápidamente un dispositivo a un estado listo para la empresa.
 
 Windows AutoPilot le permite:
-* Unir dispositivos automáticamente a Azure Active Directory (Azure AD) o Active Directory (a través de Unión a Azure AD híbrido).  Vea [Introducción a la administración de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) para obtener más información acerca de las diferencias entre estas dos opciones de combinación.
+* Unir dispositivos automáticamente a Azure Active Directory (Azure AD) o Active Directory (a través de Unión a Azure AD híbrido). Para obtener más información sobre las diferencias entre estas dos opciones de combinación, vea [Introducción a la administración de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
 * Inscripción automática de dispositivos en servicios MDM, como Microsoft Intune ([*requiere una suscripción Azure ad Premium para la configuración*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067)).
 * Restrinja la creación de la cuenta de administrador.
 * Crear y asignar automáticamente dispositivos a grupos de configuración según el perfil de un dispositivo.
@@ -58,7 +72,7 @@ Desde el punto de vista del profesional de ti, la única interacción requerida 
 
 ## <a name="requirements"></a>Requisitos
 
-Se requiere una [versión compatible](https://docs.microsoft.com/windows/release-information/) del canal semianual de Windows 10 para usar Windows AutoPilot. También se admite Windows 10 Enterprise LTSC 2019. Consulte [requisitos de Windows AutoPilot](windows-autopilot-requirements.md) para obtener información detallada sobre el software, la configuración, la red y los requisitos de licencia.
+Se requiere una [versión compatible](https://docs.microsoft.com/windows/release-information/) del canal semianual de Windows 10 para usar Windows AutoPilot. También se admite Windows 10 Enterprise LTSC 2019. Para obtener más información, consulte requisitos de software, [redes](networking-requirements.md), [configuración](configuration-requirements.md)y [licencias](licensing-requirements.md) de [Windows AutoPilot](software-requirements.md).
 
 ## <a name="related-topics"></a>Temas relacionados
 

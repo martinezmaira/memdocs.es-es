@@ -10,14 +10,14 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127552"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251871"
 ---
-# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Asociación de inquilinos de Microsoft Endpoint Manager: sincronización de dispositivos y acciones de dispositivo
+# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Asociación de inquilinos de Microsoft Endpoint Manager: sincronización de dispositivos y acciones de dispositivo
 <!--3555758 live 3/4/2020-->
 *Se aplica a: Configuration Manager (rama actual)*
 
@@ -25,7 +25,7 @@ Microsoft Endpoint Manager es una solución integrada para administrar todos los
 
 A partir de Configuration Manager versión 2002, puede cargar los dispositivos Configuration Manager en el servicio en la nube y tomar medidas en la hoja **dispositivos** del centro de administración.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Una cuenta que sea un *administrador global* para iniciar sesión cuando aplique este cambio. Para obtener más información, consulte [roles de administrador de Azure Active Directory (Azure ad)](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - La incorporación crea una aplicación de terceros y una entidad de servicio de primera entidad en el inquilino de Azure AD.
@@ -34,13 +34,13 @@ A partir de Configuration Manager versión 2002, puede cargar los dispositivos C
    - Se ha descubierto con la [detección de usuarios de Azure Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) y la [detección de Active Directory usuario](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
       - Esto significa que la cuenta de usuario debe ser un objeto de usuario sincronizado en Azure AD.
    - El permiso **iniciar Configuration Manager acción** en **tareas remotas** en el centro de administración de Microsoft Endpoint Manager.
-
+- Si el sitio de administración central tiene un [proveedor remoto](../core/plan-design/hierarchy/plan-for-the-sms-provider.md), siga las instrucciones para el escenario de [CAS tiene un proveedor remoto](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) en el artículo de CMPivot. <!--7796824-->
 
 ## <a name="internet-endpoints"></a>Puntos de conexión de Internet
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Habilitar la carga de dispositivos cuando la administración conjunta ya está habilitada
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Habilitar la carga de dispositivos cuando la administración conjunta ya está habilitada
 
 Si tiene la administración conjunta habilitada actualmente, usará las propiedades de administración conjunta para habilitar la carga del dispositivo. Si la administración conjunta todavía no está habilitada, [use el Asistente para **configurar la administración conjunta** ](#bkmk_config) para habilitar la carga del dispositivo en su lugar.
 
@@ -58,7 +58,7 @@ Cuando la administración conjunta ya esté habilitada, edite las propiedades de
 1. Elija **Aceptar** para salir de las propiedades de administración conjunta una vez que haya terminado de realizar los cambios.
 
 
-## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Habilitar la carga de dispositivos cuando la administración conjunta no está habilitada
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a> Habilitar la carga de dispositivos cuando la administración conjunta no está habilitada
 
 Si no tiene la administración conjunta habilitada, use el Asistente para **configurar la administración conjunta** para habilitar la carga del dispositivo. Puede cargar los dispositivos sin habilitar la inscripción automática de cargas de trabajo de administración conjunta o cambio en Intune. Se cargarán todos los dispositivos administrados por Configuration Manager que tengan el **valor sí** en la columna **cliente** . Si es necesario, puede limitar la carga a una sola recopilación de dispositivos. Si la administración conjunta ya está habilitada en su entorno, [edite las propiedades de administración conjunta](#bkmk_edit) para habilitar la carga del dispositivo en su lugar.
 
@@ -82,7 +82,7 @@ Si la administración conjunta no está habilitada, siga estas instrucciones par
 
 ## <a name="perform-device-actions"></a>Realizar acciones de dispositivo
 
-1. En un explorador, vaya a`endpoint.microsoft.com`
+1. En un explorador, vaya a `endpoint.microsoft.com`
 1. Seleccione **dispositivos** y, a continuación, **todos los dispositivos** para ver los dispositivos cargados. Verá **ConfigMgr** en la columna **administrado por** para los dispositivos cargados.
    [![Todos los dispositivos del centro de administración de Microsoft Endpoint Manager](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Seleccione un dispositivo para cargar su página de **información general** .
@@ -93,7 +93,7 @@ Si la administración conjunta no está habilitada, siga estas instrucciones par
 
    [![Información general del dispositivo en el centro de administración de Microsoft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Importar una aplicación Azure AD creada anteriormente (opcional)
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a> Importar una aplicación Azure AD creada anteriormente (opcional)
 <!--6479246-->
 *(Introducido en la versión 2006)*
 
