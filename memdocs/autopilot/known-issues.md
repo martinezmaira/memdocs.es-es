@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 9e620892adc8a6db4ba76f8058bcb6105dba5a18
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 5e0177097d1ff08ceeca6f6692f943856c40e6de
+ms.sourcegitcommit: 69a6829ace9fc1999e58e5f31348521b638ef0ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757198"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239502"
 ---
 # <a name="windows-autopilot---known-issues"></a>Windows AutoPilot: problemas conocidos
 
@@ -28,7 +28,7 @@ ms.locfileid: "87757198"
 - Windows 10
 
 <table>
-<th>Incidencia<th>Más información
+<th>Problema<th>Más información
 
 <tr><td>Las aplicaciones de bloqueo especificadas en un perfil de estado de inscripción dirigido al usuario se omiten durante el ESP del dispositivo.</td>
 <td>Los servicios responsables de determinar la lista de aplicaciones que deben bloquearse durante el ESP del dispositivo no pueden determinar el perfil ESP correcto que contiene la lista de aplicaciones, ya que no conocen la identidad del usuario.  Como solución alternativa, habilite el perfil ESP predeterminado (que tiene como destino a todos los usuarios y dispositivos) y coloque la lista de aplicaciones de bloqueo allí.  En el futuro, será posible establecer como destino el perfil ESP en grupos de dispositivos para evitar este problema.</tr>
@@ -59,7 +59,7 @@ Esto sucede porque Windows 10, versión 1903 y 1909 elimina el AutopilotConfigur
 - La característica Windows AutoPilot para dispositivos existentes no elimina correctamente la página "actividades" durante OOBE.  (Por este motivo, verá esa página adicional durante OOBE).
 - Sysprep/generalize no borra el estado de la atestación de TPM, lo que produce un error en la atestación de TPM durante el flujo de OOBE posterior.  (Esto no es un problema especialmente común, pero podría encontrarlo mientras realiza pruebas si está ejecutando Sysprep/generalize y, a continuación, reinicie o vuelva a crear la imagen del dispositivo para volver a través de un escenario de inspección automática o una visita a un piloto de AutoPilot).
 - Se puede producir un error en la atestación de TPM si el dispositivo tiene un certificado de AIK válido, pero no un certificado de EK.  (Está relacionado con el elemento anterior).
-- Si se produce un error en la atestación de TPM durante el proceso de la guante en blanco de Windows AutoPilot, la página de aterrizaje parece estar bloqueada.  (Básicamente, la página de aterrizaje de la guante blanca, donde se hace clic en "aprovisionamiento" para comenzar el proceso de la guante blanca, no informa correctamente de los errores).
+- Si se produce un error en la atestación de TPM durante el proceso de la guante en blanco de Windows AutoPilot, parece que la página de aterrizaje no responde.  (Básicamente, la página de aterrizaje de la guante blanca, donde se hace clic en "aprovisionamiento" para comenzar el proceso de la guante blanca, no informa correctamente de los errores).
 - Se produce un error en la atestación de TPM en los TPM de Infineon más recientes (versión de firmware > 7,69).  (Antes de esta corrección, solo se aceptó una lista específica de versiones de firmware).
 - Las plantillas de nomenclatura de dispositivos pueden truncar el nombre del equipo con 14 caracteres en lugar de 15.
 - Las directivas de acceso asignadas provocan un reinicio que puede interferir con la configuración de dispositivos de quiosco de una sola aplicación.
@@ -79,7 +79,7 @@ Esto sucede porque Windows 10, versión 1903 y 1909 elimina el AutopilotConfigur
 <tr><td>0xc1036501<td>El dispositivo no puede realizar una inscripción automática de MDM porque hay varias configuraciones de MDM en Azure AD. Vea <a href="https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/">dentro del modo de Autoimplementación de Windows AutoPilot</a>.
 </table>
 <tr><td>La guante blanca proporciona una pantalla roja y el registro de eventos de <b>registro/administración de dispositivos Microsoft-Windows-usuario</b> muestra el <b>código de error HRESULT 0x801C03F3</b><td>Esto puede ocurrir si Azure AD no encuentra un objeto de dispositivo AAD para el dispositivo que está intentando implementar. Esto ocurrirá si elimina manualmente el objeto. Para corregirlo, quite el dispositivo de AAD, Intune y AutoPilot y, a continuación, vuelva a registrarlo con AutoPilot, que volverá a crear el objeto de dispositivo de AAD.<br> 
-<br>Para obtener los registros de solución de problemas, use: <b>área deMdmdiagnosticstool.exe AutoPilot; TPM: c:\autopilot.cabCAB</b>
+<br>Para obtener los registros de solución de problemas, use: <b> área deMdmdiagnosticstool.exe AutoPilot; TPM: c:\autopilot.cabCAB </b>
 <tr><td>La guante blanca proporciona una pantalla roja<td>La guante blanca no es compatible con una máquina virtual.
 <tr><td>Error al importar dispositivos Windows AutoPilot desde un archivo. csv<td>Asegúrese de que no ha editado el archivo. csv en Microsoft Excel o un editor que no sea el Bloc de notas. Algunos de estos editores pueden introducir caracteres adicionales que hacen que el formato de archivo no sea válido. 
 <tr><td>Windows AutoPilot para dispositivos existentes no sigue la experiencia de OOBE de AutoPilot.<td>Asegúrese de que el archivo de perfil JSON se guarda en formato <b>ANSI/ASCII</b> , no Unicode o UTF-8.
