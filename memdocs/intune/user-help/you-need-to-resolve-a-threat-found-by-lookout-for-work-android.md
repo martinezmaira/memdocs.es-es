@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 225006df484d0e65d6a78960d96a7fc70f251991
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 38f5b4ba6d243af74462046c243de34dc5cd8544
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878118"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866050"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Resolver una amenaza detectada por Lookout for Work  
+# <a name="resolve-a-threat-found-by-lookout-for-work-on-android"></a>Resolución de una amenaza detectada por Lookout for Work en Android
 
 La aplicación Lookout for Work es un servicio de Mobile Threat Defender que identifica posibles amenazas en los dispositivos Android. Estas amenazas se notifican a la aplicación Portal de empresa y aparecen allí como problemas de no conformidad sin resolver. Mientras estas amenazas estén presentes, es posible que no pueda:
 

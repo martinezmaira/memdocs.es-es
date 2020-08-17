@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461613"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048079"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de reducción de la superficie expuesta a ataques de Seguridad de los puntos de conexión en Intune
 
@@ -181,10 +181,10 @@ Perfiles y plataformas compatibles:
   - **Aplicar componentes y aplicaciones de Store**
   - **Auditar componentes y aplicaciones de Store**
   - **Aplicar componentes, aplicaciones de Store y Smartlocker**
-  - **Auditar componentes, aplicaciones de Store y Smartlocker**
+  - CSP de **Auditar componentes, Aplicaciones de la Tienda y Smartlocker**: [CSP de AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 - **Impedir que los usuarios descarten advertencias de SmartScreen**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **No configurado** (*predeterminado*): los usuarios pueden ignorar las advertencias de SmartScreen sobre aplicaciones y archivos malintencionados.
   - **Sí**: SmartScreen está habilitado y los usuarios no pueden ignorar las advertencias sobre aplicaciones y archivos malintencionados.

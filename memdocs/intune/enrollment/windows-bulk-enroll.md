@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216542"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110739"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscripción masiva para dispositivos Windows
 
@@ -100,4 +100,4 @@ Puede comprobar si la configuración del paquete se ha realizado correctamente o
 Cuando no se usa una red abierta, debe usar [certificados de nivel de dispositivo](../protect/certificates-configure.md) para iniciar conexiones. Los dispositivos inscritos de forma masiva n o pueden usar certificados de usuarios específicos para el acceso a la red. 
 
 ### <a name="conditional-access"></a>Acceso condicional
-El acceso condicional no está disponible para los dispositivos Windows inscritos mediante la inscripción masiva.
+El acceso condicional no está disponible para los dispositivos Windows inscritos mediante la inscripción masiva, con la excepción de Windows 10 1803+.

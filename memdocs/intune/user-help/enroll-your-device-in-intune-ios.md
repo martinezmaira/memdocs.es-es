@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882410"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048045"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configuración del acceso de dispositivos iOS a los recursos de la empresa  
 
@@ -35,12 +35,12 @@ Después de haber inscrito el dispositivo, se convierte en *administrado*. La or
 > [!NOTE]
 > No vendemos ningún dato recogido por nuestro servicio a terceros por ningún motivo.  
 
-Para conservar el acceso a la información profesional o educativa desde el dispositivo, deberá configurarlo para que coincida con la configuración preferida de la organización. En este artículo se describe cómo usar Portal de empresa para inscribir el dispositivo y mantener los requisitos de configuración de su organización.  
+Para conservar el acceso a la información profesional o educativa desde el dispositivo, deberá configurarlo para que coincida con la configuración preferida de la organización. En este artículo se describe cómo usar Portal de empresa para inscribir el dispositivo y mantener los requisitos de acceso.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> Este artículo le interesará si ha intentado acceder al correo electrónico de la empresa en la aplicación Correo y se le ha pedido que administrara su dispositivo. Siga estas instrucciones para acceder a su correo electrónico y a otros recursos de la empresa en su dispositivo iOS.  
+> Este artículo le interesará si ha intentado acceder al correo electrónico del trabajo en la aplicación Correo y se le ha pedido que administre el dispositivo. Siga estas instrucciones para recuperar el acceso al correo electrónico y a otros recursos de trabajo en el dispositivo iOS.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Qué esperar de la aplicación Portal de empresa  
@@ -56,13 +56,17 @@ Si después de la inscripción, la organización exige un nuevo requisito de seg
 
 Para obtener más información sobre la inscripción, vea [¿Qué ocurre si instalo la aplicación de Portal de empresa e inscribo el dispositivo?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
+## <a name="prerequisties"></a>Requisitos previos  
+
+* Vaya al App Store para descargar e instalar la [aplicación Portal de empresa de Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) en su dispositivo. 
+* Mantenga una conexión Wi-Fi hasta que se completen todos los pasos.
+* Debe tener acceso al explorador web Safari en el dispositivo.
+
 ## <a name="enroll-your-ios-device"></a>Inscripción de dispositivos iOS  
 
-Vaya al App Store para descargar e instalar la [aplicación Portal de empresa de Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) en su dispositivo. También tendrá que mantener una conexión Wi-Fi y tener acceso a Safari durante la inscripción. 
+Si hace una pausa de varios minutos durante la inscripción, es posible que la aplicación Portal de empresa se cierre o que finalice la configuración. En ese caso, vuelva a abrir la aplicación e inténtelo de nuevo.  
 
-Si hace una pausa de más de unos minutos durante la inscripción, puede provocar que la aplicación se cierre o que finalice la configuración. Si ocurre esto, abra la aplicación Portal de empresa y vuelva a intentarlo.  
-
-1. Abra el Portal de empresa de Intune e inicie sesión con su cuenta profesional o educativa.  
+1. Abra la aplicación Portal de empresa e inicie sesión con su cuenta profesional o educativa.  
 
 2. Cuando se le pregunte si quiere recibir notificaciones de Portal de empresa, pulse **Permitir**. Portal de empresa usa notificaciones para indicarle, por ejemplo, si se debe actualizar la configuración del dispositivo.  
 

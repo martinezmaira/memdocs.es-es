@@ -1,12 +1,12 @@
 ---
-title: Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune
+title: Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Averigüe qué ha cambiado en la interfaz de usuario para las aplicaciones que funcionan en dispositivos de usuario final con Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740895"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048164"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune
 
@@ -34,6 +34,13 @@ Obtenga información sobre las actualizaciones más recientes para las aplicacio
 
 Si es un empleado o un alumno, asegúrese de consultar las capturas de pantalla y los vínculos de la documentación de ayuda del Portal de empresa. Para obtener más información sobre cómo usar la aplicación Portal de empresa, vea la [documentación de ayuda al usuario del Portal de empresa](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+## <a name="week-of-august-10-2020"></a>Semana del 10 de agosto de 2020
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>Mejora en la página Actualizar configuración del dispositivo de la aplicación Portal de empresa para Android para mostrar descripciones<!-- 7414768 -->
+
+En la aplicación Portal de empresa de dispositivos Android, en la página **Actualizar configuración del dispositivo** se muestra la configuración que debe actualizar un usuario para que sea compatible. Los usuarios expanden el problema para ver más información y verán el botón **Resolver**.
+
+Esta experiencia del usuario se ha mejorado. Las opciones enumeradas se expanden de forma predeterminada para mostrar la descripción y el botón **Resolver**, cuando proceda. Anteriormente, los problemas estaban contraídos de forma predeterminada. Este nuevo comportamiento predeterminado reduce el número de clics, por lo que los usuarios pueden resolver los problemas más rápidamente.
 
 ## <a name="week-of-june-8-2020"></a>Semana del 8 de junio de 2020 
 

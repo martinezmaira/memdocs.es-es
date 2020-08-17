@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d9507b5aaefce58df9e4ce0c833c1da88e7e93f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 8421ee84c38727b9732dddf0ed63c62e940eab66
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882549"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866152"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Resolución de una amenaza detectada por Zimperium zIPS
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-android"></a>Resolución de una amenaza detectada por Zimperium zIPS en Android
 
 Zimperium zIPS es un servicio de Mobile Threat Defender que identifica posibles amenazas en los dispositivos Android. Estas amenazas se notifican a la aplicación Portal de empresa y aparecen como problemas de no conformidad sin resolver. Si el dispositivo se identifica como no compatible, es posible que no pueda:
 

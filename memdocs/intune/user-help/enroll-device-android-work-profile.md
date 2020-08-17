@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 39d68f7cec9cdd4baef84d07d7284f6407f659c5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531407"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048062"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Inscribir dispositivos con perfil profesional Android
 
-Inscriba un dispositivo personal Android para obtener acceso al correo electrónico, las aplicaciones y otros datos profesionales o educativos. Durante la inscripción, se configura un perfil profesional Android. Este perfil separa los datos personales del dispositivo de los profesionales. Su organización administra el perfil de trabajo, que se compone de los datos y los archivos de trabajo. El equipo de soporte técnico de la empresa no puede administrar los datos personales del dispositivo.  
+Inscriba un dispositivo personal Android para obtener acceso al correo electrónico, las aplicaciones y otros datos profesionales o educativos. Durante la inscripción, tendrá que configurar un perfil de trabajo de Android, que separa los datos personales del dispositivo de los datos de trabajo. Si tiene que realizar este tipo de instalación, la organización le informará a través de su canal de comunicación preferido o de la aplicación Portal de empresa de Intune. 
+
+Una vez que se haya configurado el perfil, la organización administrará el lado del trabajo, que solo consta de los archivos y los datos de trabajo. El equipo de soporte técnico de la empresa no puede administrar los datos personales del dispositivo.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 

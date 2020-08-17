@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546816"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051643"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
@@ -55,6 +55,15 @@ Obtenga información sobre las novedades que se producen cada semana en Microsof
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>Semana del 10 de agosto de 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Administración de dispositivos
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>Asociación de inquilinos: instalación de una aplicación desde el centro de administración <!-- IN7220536 CM6024389-->
+Ahora puede iniciar la instalación de una aplicación en tiempo real para un dispositivo asociado al inquilino desde el centro de administración de Microsoft Endpoint Manager. Para más información, consulte [Asociación de inquilinos: instalación de una aplicación desde el centro de administración](../../configmgr/tenant-attach/applications.md).
+
+<!-- ########################## -->
 ## <a name="week-of-july-27-2020"></a>Semana del 27 de julio de 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -68,9 +77,6 @@ Las aplicaciones de plantilla de Power BI permiten a los asociados de Power BI
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Administración de aplicaciones
-
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Notificaciones de instalación de aplicaciones Win32 y el Portal de empresa<!-- 7485945  -->
-Los usuarios finales ahora pueden decidir si las aplicaciones que se muestran en el [Portal de empresa web de Microsoft Intune](https://portal.manage.microsoft.com/) deben abrirse con la aplicación o el sitio web Portal de empresa. Esta opción solo está disponible si el usuario final tiene instalada la aplicación del Portal de empresa e inicia una aplicación del Portal de empresa web fuera de un explorador. 
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Compatibilidad con Exchange On-Premises Connector<!-- 7138486  -->
 Intune está retirando la compatibilidad con la característica Exchange On-Premises Connector del servicio Intune a partir de la versión 2007 (julio). En este momento, los clientes existentes con un conector activo podrán continuar con la función actual. Los clientes nuevos y los existentes que no tengan un conector activo ya no podrán crear otros conectores ni administrar dispositivos de Exchange ActiveSync (EAS) desde Intune. En el caso de esos clientes, Microsoft recomienda el uso de la [autenticación moderna híbrida (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) de Exchange para proteger el acceso a Exchange local. HMA habilita las dos directivas de Intune App Protection (también conocidas como MAM) y el acceso condicional a través de Outlook Mobile para Exchange local.

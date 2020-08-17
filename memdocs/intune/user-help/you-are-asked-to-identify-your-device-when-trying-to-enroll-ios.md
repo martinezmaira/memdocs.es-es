@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 567942ca0e859c26d8cae11b5f0ba93bfa45524a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: bc8ef369ae5072447fdd52a4fc7a3df45cfebfca
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881351"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866271"
 ---
-# <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Necesita identificar el dispositivo cuando está intentando la inscripción
+# <a name="youre-asked-to-identify-your-ios-device-during-enrollment"></a>Se le pide que identifique el dispositivo iOS durante la inscripción.
 
 Si intenta inscribir el dispositivo iOS en Intune y ve una pantalla que le pide que identifique el dispositivo, al menos uno de los dispositivos ya se ha inscrito y asignado a la cuenta con un método distinto de la aplicación Portal de empresa. Para que la aplicación de portal de empresa funcione correctamente, debe identificar si el dispositivo que está usando ya se ha inscrito en Intune.
 

@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 06e6b170667d16afa699706e2349e01710a0dc6e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 27a251a4f0bacd41d5cbf2e69d194b01c0a93def
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880887"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866254"
 ---
-# <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Necesita identificar el dispositivo cuando está intentando la inscripción
+# <a name="youre-asked-to-identify-your-macos-device-during-enrollment"></a>Se le pide que identifique el dispositivo macOS durante la inscripción.
 
 Si intenta inscribir el dispositivo macOS en Intune y ve una pantalla que le pide que identifique el dispositivo, al menos uno de los dispositivos ya se ha inscrito y asignado a la cuenta con un método distinto de la aplicación Portal de empresa. Para que la aplicación de portal de empresa funcione correctamente, debe identificar si el dispositivo que está usando ya se ha inscrito en Intune.
 

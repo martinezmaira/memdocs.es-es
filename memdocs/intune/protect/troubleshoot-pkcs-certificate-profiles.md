@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7667cf1d62040c4435f41ffbe377452d3666a3ec
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85343122"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110688"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Solución de problemas de la implementación de certificados PKCS en Microsoft Intune
 
@@ -129,6 +129,19 @@ En el caso de los dispositivos que ejecutan Windows, use los registros de evento
 En el dispositivo, abra **Visor de eventos** > **Registros de aplicaciones y servicios-**  > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
 
 ![Registros de eventos de Windows](../protect/media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+
+## <a name="antivirus-exclusions"></a>Exclusiones del antivirus
+
+Considere la posibilidad de agregar exclusiones de antivirus en servidores que hospeden NDES o el conector de certificado cuando:
+
+- Las solicitudes de certificado llegan al servidor o a Intune Certificate Connector, pero no se procesan correctamente. 
+- Los certificados se emiten con lentitud
+
+A continuación se muestran ejemplos de ubicaciones que podría excluir:
+
+- *%program_files%* \Microsoft Intune\PfxRequest
+- *%program_files%* \Microsoft Intune\CertificateRequestStatus
+- *%program_files%* \Microsoft Intune\CertificateRevocationStatus
 
 ## <a name="common-errors"></a>Errores comunes
 

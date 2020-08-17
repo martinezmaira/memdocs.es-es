@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 86e2305692c1e50af7cc2518f394b5c91cfed4f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2f6ba59ccc2832a66eb1a7b081008aa43b0c75bc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882285"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866237"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Resolver una amenaza detectada por SandBlast Mobile Protect
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-android"></a>Resolución de una amenaza detectada por SandBlast Mobile Protect en Android
 
 La aplicación SandBlast Mobile Protect es un servicio de Mobile Threat Defender que identifica posibles amenazas en los dispositivos Android. Informa de las amenazas que después puede ver desde la aplicación de Portal de empresa. Las amenazas aparecen en la aplicación como problemas de no conformidad sin resolver. Mientras estas amenazas estén presentes, es posible que no pueda:   
 

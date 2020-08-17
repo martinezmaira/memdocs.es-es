@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093504"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865829"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos en Microsoft Intune
 
@@ -225,7 +225,7 @@ Para corregir el problema, importe los certificados a los certificados personale
 4. Elija la pestaña **Ruta de certificación** para ver los certificados primarios del certificado.
 5. En cada certificado primario, elija **Ver certificado**.
 6. Elija **Detalles** > **Copiar en archivo...**
-7. Siga las instrucciones del asistente para exportar o guardar la clave pública del certificado primario en una ubicación de archivo de su elección.
+7. Siga las instrucciones del asistente para exportar o guardar la clave pública del certificado primario en la ubicación de archivo que prefiera.
 8. Haga clic derecho en **Certificados** > **Todas las tareas** > **Importar**.
 9. Siga el asistente para importar los certificados primarios en **Equipo local\Personal\Certificados**.
 10. Reinicie los servidores AD FS.
@@ -290,7 +290,9 @@ Una vez inscrito, los dispositivos vuelven a un estado correcto y recuperan el a
 
 La inscripción de dispositivos ADE con afinidad de usuario requiere que el punto de conexión WS-Trust 1.3 Username/Mixed esté habilitado para solicitar los tokens de usuario. Active Directory permite este punto de conexión de forma predeterminada. Para obtener una lista de puntos de conexión habilitados, use el cmdlet Get-AdfsEndpoint PowerShell y busque el extremo trust/13/UsernameMixed. Por ejemplo:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 Para obtener más información, consulte la [documentación de Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
@@ -422,7 +424,7 @@ El certificado de cuenta de la cuenta anterior sigue estando presente en el equi
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |El reloj del equipo cliente no está configurado en la hora correcta.|Asegúrese de que el reloj y la zona horaria del equipo cliente se hayan configurado en la hora y la zona horaria correctas.|
 |0x80240438, 0x80CF0438, 0x80CF402C|no se puede conectar con el servicio de Intune. Compruebe la configuración del proxy del cliente.|Compruebe que Intune admite la configuración de proxy en el equipo cliente. Compruebe de que el equipo cliente tiene acceso a Internet.|
-|0x80240438, 0x80CF0438|La configuración del proxy en Internet Explorer y el sistema local no se ha establecido.|no se puede conectar con el servicio de Intune. Compruebe la configuración de proxy de cliente. Compruebe que Intune admite la configuración de proxy en el equipo cliente. Compruebe de que el equipo cliente tiene acceso a Internet.|
+|0x80240438, 0x80CF0438|La configuración del proxy en Internet Explorer y el sistema local no se ha establecido.|no se puede conectar con el servicio de Intune. Compruebe la configuración del proxy del cliente. Compruebe que Intune admite la configuración de proxy en el equipo cliente. Compruebe de que el equipo cliente tiene acceso a Internet.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|El paquete de inscripción no está actualizado.|Descargue e instale el paquete de software cliente actual del área de trabajo Administración.|
 |0x80043002, 0x80CF3002|La cuenta está en modo de mantenimiento.|No es posible inscribir nuevos equipos cliente cuando la cuenta está en modo de mantenimiento. Para ver la configuración de la cuenta, inicie sesión en la cuenta.|
 |0x80043003, 0x80CF3003|Se ha eliminado la cuenta.|Compruebe que su cuenta y la suscripción a Intune todavía están activas. Para ver la configuración de la cuenta, inicie sesión en la cuenta.|

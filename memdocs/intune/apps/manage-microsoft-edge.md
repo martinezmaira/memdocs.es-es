@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758370"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912556"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Administración del acceso web mediante Edge para iOS y Android con Microsoft Intune
 
@@ -114,7 +114,7 @@ Este escenario de configuración solo funciona con dispositivos inscritos. Aun a
 
 ## <a name="general-app-configuration-scenarios"></a>Escenarios generales de configuración de aplicaciones
 
-Edge para iOS y Android ofrece a los administradores la posibilidad de personalizar la configuración predeterminada para varias configuraciones de aplicación. Esta función solo se ofrece actualmente cuando Edge para iOS y Android tiene una directiva de protección de aplicaciones de Intune establecida en la cuenta profesional o educativa en la que se ha iniciado sesión en la aplicación.
+Edge para iOS y Android ofrece a los administradores la posibilidad de personalizar la configuración predeterminada para varias configuraciones de aplicación. Actualmente, esta función solo se ofrece cuando Edge para iOS y Android tiene una directiva de Intune App Protection aplicada en la cuenta profesional o educativa en la que se ha iniciado sesión en la aplicación y las opciones de la directiva se proporcionan a través de una directiva de configuración de aplicaciones administradas.
 
 > [!IMPORTANT]
 > Edge para Android no es compatible con la configuración de Chromium disponible en Google Play administrado.
@@ -246,12 +246,12 @@ Edge para Android se puede habilitar como aplicación de pantalla completa con l
 |    Key    |    Valor    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** habilita la pantalla completa en Edge para Android.<br>**false** (valor predeterminado) deshabilita la pantalla completa.    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** muestra la barra de direcciones en pantalla completa.<br> **false** (valor predeterminado) oculta la barra de direcciones en pantalla completa.    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** muestra la barra de acciones inferior en pantalla completa.<br> **false** (valor predeterminado) oculta la barra inferior en pantalla completa.    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** muestra la barra de direcciones en pantalla completa.<br> **false** (valor predeterminado) oculta la barra de direcciones cuando se ha habilitado la pantalla completa.    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** muestra la barra de acciones inferior en pantalla completa.<br> **false** (valor predeterminado) oculta la barra inferior cuando se ha habilitado la pantalla completa.    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Escenarios de configuración de aplicaciones de protección de datos
 
-Edge para iOS y Android admite directivas de configuración de aplicaciones para la siguiente configuración de protección de datos cuando la aplicación se administra mediante Microsoft Endpoint Manager con una directiva de protección de aplicaciones de Intune aplicada a la cuenta profesional o educativa en la que se ha iniciado sesión en la aplicación:
+Edge para iOS y Android admite directivas de configuración de aplicaciones para la siguiente configuración de protección de datos cuando la aplicación se administra mediante Microsoft Endpoint Manager con una directiva de Intune App Protection aplicada a la cuenta profesional o educativa en la que se ha iniciado sesión en la aplicación y las opciones de la directiva se proporcionan a través de una directiva de configuración de aplicaciones administradas:
 
 - Administración de la sincronización de cuentas
 - Administración de sitios web restringidos

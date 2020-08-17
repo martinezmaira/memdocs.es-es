@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997977"
 ---
 # <a name="app-protection-policies-overview"></a>Introducción general a las directivas de protección de aplicaciones
 
@@ -323,6 +323,11 @@ La finalidad de este proceso es seguir manteniendo los datos de la organización
   
 ### <a name="ios-share-extension"></a>Extensión de recursos compartidos de iOS
 Puede usar la extensión de recursos compartidos de iOS/iPadOS para abrir los datos profesionales o educativos en aplicaciones no administradas, incluso con la directiva de transferencia de datos establecida en **solo aplicaciones administradas** o **ninguna aplicación**. La directiva de protección de aplicaciones de Intune no puede controlar la extensión de recursos compartidos de iOS/iPadOS sin administrar el dispositivo. Por lo tanto, Intune _**cifra los datos "corporativos" antes de compartirlos fuera de la aplicación**_. Puede validar este comportamiento de cifrado intentando abrir un archivo "corporativo" fuera de la aplicación administrada. El archivo debe estar cifrado y no debe poder abrirse fuera de la aplicación administrada.
+
+### <a name="universal-links-support"></a>Compatibilidad con vínculos universales
+De forma predeterminada, las directivas de protección de aplicaciones de Intune impedirán el acceso a contenido de aplicaciones no autorizado. En iOS/iPadOS, hay funciones para abrir contenido o aplicaciones específicas mediante [Vínculos universales](https://developer.apple.com/ios/universal-links/). 
+
+Los usuarios pueden deshabilitar los vínculos universales de una aplicación si los visitan en Safari y seleccionan **Abrir en una nueva pestaña** o **Abrir**. Para poder usar vínculos universales con directivas de protección de aplicaciones de Intune, es importante volver a habilitarlos. El usuario final tendría que seleccionar **Abrir en** <***nombre de la aplicación***> en Safari después de presionar el vínculo correspondiente. Esto debería solicitar a cualquier aplicación protegida adicional que enrute todos los vínculos universales a la aplicación protegida en el dispositivo.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Varias configuraciones de acceso de protección de aplicaciones de Intune para el mismo conjunto de aplicaciones y usuarios
 Las directivas de protección de aplicaciones de Intune para el acceso se aplicarán en un orden específico en los dispositivos de usuario final cuando intenten obtener acceso a una aplicación de destino desde su cuenta corporativa. En general, tendría prioridad un borrado, seguido de un bloqueo y, después, una advertencia descartable. Por ejemplo, si es aplicable a la aplicación o usuario específico, una configuración de sistema operativo mínima de iOS/iPadOS que advierte al usuario que actualice la versión de iOS/iPadOS se aplicará después de la configuración de sistema operativo mínima de iOS/iPadOS que bloquea el acceso del usuario. Por tanto, en el caso en que el administrador de TI configure el sistema operativo mínimo de iOS en 11.0.0.0 y el sistema operativo mínimo de iOS (solo advertencia) en 11.1.0.0, mientras el dispositivo que intenta obtener acceso a la aplicación esté en iOS 10, se bloquearía al usuario final en función del valor más restrictivo para la versión de sistema operativo de iOS mínima que provoque el bloqueo del acceso.
