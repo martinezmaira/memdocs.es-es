@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946667"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252578"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Administración de actualizaciones de software de Windows 10 en Intune
 
@@ -60,7 +60,6 @@ Deben cumplirse los requisitos previos siguientes para usar las actualizaciones 
 
   > [!NOTE]
   > **Versiones y ediciones no compatibles**:
-  > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. Actualmente, Windows Update para empresas (WUfB) no admite versiones de *canal de servicio a largo plazo*. Planee usar métodos de revisión alternativos, como WSUS o Configuration Manager.
 
 - En los dispositivos Windows, **Comentarios y diagnósticos** > **Datos de uso y diagnóstico** debe establecerse en **Básico**, **Mejorado** o **Total**.

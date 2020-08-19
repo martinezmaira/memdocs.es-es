@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461443"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252261"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creación de una directiva de cumplimiento en Microsoft Intune
 
@@ -53,7 +53,6 @@ Para usar las directivas de cumplimiento de dispositivos, asegúrese de lo sigui
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Inscriba dispositivos en Intune (necesario para ver el estado de cumplimiento)
 
@@ -70,7 +69,6 @@ Para usar las directivas de cumplimiento de dispositivos, asegúrese de lo sigui
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
-   - *Windows Phone 8.1*
    - *Windows 8.1 y versiones posteriores*
    - *Windows 10 y versiones posteriores*
 
@@ -89,7 +87,7 @@ Para usar las directivas de cumplimiento de dispositivos, asegúrese de lo sigui
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
-   - [Windows Phone 8.1, Windows 8.1 y versiones posteriores](compliance-policy-create-windows-8-1.md)
+   - [Windows 8.1 y versiones posteriores](compliance-policy-create-windows-8-1.md)
    - [Windows 10 y versiones posteriores](compliance-policy-create-windows.md)  
 
 6. En la pestaña **Ubicaciones**, puede forzar el cumplimiento según la ubicación del dispositivo. Elija entre las ubicaciones existentes. Si aún no tiene una ubicación disponible, consulte [Usar ubicaciones (límite de red)](use-network-locations.md) para obtener instrucciones.

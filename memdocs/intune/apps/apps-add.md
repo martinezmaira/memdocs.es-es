@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2020
-ms.topic: how-to
+ms.date: 08/12/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428628"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252816"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Incorporación de aplicaciones a Microsoft Intune 
 
@@ -54,7 +54,6 @@ En la tabla siguiente se enumeran los tipos de aplicaciones específicas y cómo
 | Aplicaciones de Google Play Store  | Aplicación de la tienda  | Seleccione **Android** como el **tipo de aplicación** y escriba la dirección URL de Google Play Store de la aplicación. |
 | Aplicaciones de Android Enterprise  | Aplicación de la tienda  | Seleccione **Android** como **tipo de aplicación** y escriba la dirección URL de Google Play Store administrado de la aplicación. <sup>1</sup> |
 | Aplicaciones de la Tienda iOS/iPadOS  | Aplicación de la tienda  | Seleccione **iOS** como el **tipo de aplicación**, busque la aplicación y selecciónela en Intune. |
-| Aplicaciones de la Tienda Windows Phone 8.1  | Aplicación de la tienda  | Seleccione **Windows Phone 8.1** como el **tipo de aplicación** y escriba la dirección URL de Microsoft Store de la aplicación. |
 | Aplicaciones de Microsoft Store  | Aplicación de la tienda  | Seleccione **Windows** como el **tipo de aplicación** y escriba la dirección URL de Microsoft Store de la aplicación. |
 | Aplicaciones administradas de Google Play | Aplicación de la tienda  | Seleccione **Google Play administrado** para **Tipo de aplicación**, busque la aplicación y selecciónela en Intune. |
 | Aplicaciones de Office 365 para Windows 10  | Aplicación de la tienda (Office 365) | Seleccione **Windows 10** en **Aplicaciones de Microsoft 365**  como el **tipo de aplicación** y, después, seleccione la aplicación de Office 365 que quiera instalar.  |
@@ -63,7 +62,6 @@ En la tabla siguiente se enumeran los tipos de aplicaciones específicas y cómo
 | Microsoft Edge versión 77 y posteriores para macOS | Aplicación de la tienda | Seleccione **macOS** en **Microsoft Edge, versión 77 y posteriores**, como el **tipo de aplicación**. |
 | Aplicaciones de línea de negocio (LOB) Android | Aplicación LOB | Seleccione la aplicación de **línea de negocio** como **tipo de aplicación**, seleccione el **archivo de paquete de aplicación** y después introduzca un archivo de instalación de Android con la extensión **.apk** .  |
 | Aplicaciones de línea de negocio de la Tienda iOS/iPadOS | Aplicación LOB | Seleccione la aplicación de **línea de negocio** como **tipo de aplicación**, seleccione el **archivo de paquete de aplicación** y después introduzca un archivo de instalación de iOS/iPadOS con la extensión **.ipa**.  |
-| Aplicaciones de LOB para Windows Phone | Aplicación LOB | Seleccione la aplicación de **línea de negocio** como **tipo de aplicación**, seleccione el **archivo del paquete de aplicaciones** y, después, indique un archivo de instalación de Windows Phone con la extensión **.xap**.  |
 | Aplicaciones de LOB de Windows | Aplicación LOB | Seleccione la aplicación de **línea de negocio** como el tipo de aplicación, seleccione el **archivo del paquete de aplicaciones** y, después, escriba un archivo de instalación de Windows con la extensión **.msi**, **.appx**, **.appxbundle**, **.msix** y **.msixbundle**. |
 | Aplicación iOS/iPadOS integrada  | Aplicación integrada | Seleccione **Aplicación integrada** como el **tipo de aplicación** y después seleccione la aplicación integrada en la lista de aplicaciones proporcionadas.  |
 | Aplicación de Android integrada  | Aplicación integrada | Seleccione **Aplicación integrada** como el **tipo de aplicación** y después seleccione la aplicación integrada en la lista de aplicaciones proporcionadas.  |
@@ -221,8 +219,6 @@ Para información sobre cómo agregar aplicaciones para cada plataforma a Intune
 - [Aplicaciones LOB para iOS](lob-apps-ios.md)
 - [Aplicaciones de LOB para macOS](lob-apps-macos.md)
 - [Aplicaciones web (para todas las plataformas)](web-app.md)
-- [Aplicaciones de la Tienda Windows Phone 8.1](store-apps-windows-phone-8-1.md)
-- [Aplicaciones de línea de negocio de Windows Phone](lob-apps-windows-phone.md)
 - [Aplicaciones de Microsoft Store](store-apps-windows.md)
 - [Aplicación de línea de negocio de Windows](lob-apps-windows.md)
 - [Aplicaciones de Office 365 para Windows 10](apps-add-office365.md)

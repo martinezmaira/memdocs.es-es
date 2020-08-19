@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
-ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
+ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87473685"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252731"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar dispositivos como corporativos
 
@@ -49,7 +49,7 @@ Esta característica es compatible con las siguientes plataformas:
 
 | Plataforma | Números IMEI | Números de serie |
 |---|---|---|
-| Windows | Compatible (Windows Phone) | No compatible |
+| Windows | No compatible | No compatible |
 | iOS/macOS | No compatible (consulte Importante a continuación)  | Compatible. |
 | Administrador de dispositivos del sistema operativo Android v10 administrado | No compatible | No compatible |
 | Perfil de trabajo de Android Enterprise | No compatible | Compatible. |

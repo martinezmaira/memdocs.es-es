@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262683"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252782"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configuración de acciones para dispositivos no compatibles en Intune
 
@@ -63,8 +63,6 @@ Cuando se envía el correo electrónico, Intune incluye información sobre los d
     - Dispositivos de quiosco de Android Enterprise
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 y versiones posteriores
 
 - **Retirar el dispositivo no compatible**: esta acción quita todos los datos de empresa del dispositivo y quita este de la administración de Intune. Para evitar el borrado accidental de un dispositivo, esta acción admite una programación mínima de **30** días.
 
@@ -75,8 +73,6 @@ Cuando se envía el correo electrónico, Intune incluye información sobre los d
     - Perfil de trabajo de Android Enterprise
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 y versiones posteriores
 
   Más información sobre la [retirada de los dispositivos](../remote-actions/devices-wipe.md#retire).
 

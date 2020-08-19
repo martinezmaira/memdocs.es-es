@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 219ece146d5855084d3cf6aaeb90bf08dcc8bbae
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8a212872097c1f89267e84f40130f139aaf112de
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988585"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217272"
 ---
 # <a name="manage-volume-purchased-apps-and-books-with-microsoft-intune"></a>Administración de aplicaciones y libros comprados por volumen con Microsoft Intune
 

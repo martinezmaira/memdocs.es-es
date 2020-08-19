@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881497"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179594"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Inscribir dispositivos Windows 10 en Portal de empresa de Intune
 
@@ -37,7 +37,7 @@ Windows 10 es compatible con distintos tipos de dispositivos, incluidos equipos 
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Inscribir un dispositivo de la versión 1607 y posteriores de Windows 10 
 Estos pasos explican cómo inscribir un dispositivo con Windows 10, versión 1607 y posteriores.  
 
-1. Vaya a **Inicio**. Si se encuentra en un dispositivo Windows 10 Mobile, vaya a la lista **Todas las aplicaciones**.
+1. Vaya a **Inicio**. 
 
 2. Abra la aplicación **Configuración**. Si la aplicación no está disponible en la lista de aplicaciones, vaya a la barra de búsqueda y escriba "configuración".
 
@@ -72,7 +72,7 @@ Estos pasos explican cómo inscribir un dispositivo con Windows 10, versión 160
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Inscribir un dispositivo de la versión 1511 y anteriores de Windows 10  
 Estos pasos explican cómo inscribir un dispositivo con Windows 10, versión 1511 y anteriores.  
 
-1. Vaya a **Inicio**. Si se encuentra en un dispositivo Windows 10 Mobile, vaya a la lista **Todas las aplicaciones**.
+1. Vaya a **Inicio**. 
 
 2. Abra la aplicación **Configuración**. Si la aplicación no está disponible en la lista de aplicaciones, vaya a la barra de búsqueda y escriba "configuración".
 
