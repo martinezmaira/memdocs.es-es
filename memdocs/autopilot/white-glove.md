@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: ac0b8d5262e774902dc79dace5c94e49002e2569
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252008"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559557"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Implementación de Windows AutoPilot para la guante blanca
 
@@ -34,11 +34,9 @@ Con la **implementación de Windows AutoPilot para la guante blanca**, se divide
 
  ![OEM](images/wg02.png)
 
-Las implementaciones de la guante blanca usan Microsoft Intune en Windows 10, versión 1903 y posteriores. Estas implementaciones se basan en escenarios de Windows AutoPilot existentes basados en [el usuario](user-driven.md) y admiten escenarios de modo controlado por el usuario para ambos:
-- Azure Active Directory join
--  Azure Active Directory join
+Las implementaciones de la guante blanca usan Microsoft Intune en Windows 10, versión 1903 y posteriores. Estas implementaciones se basan en escenarios de Windows AutoPilot existentes basados en [el usuario](user-driven.md) y admiten escenarios de modo controlado por el usuario para dispositivos Azure Active Directory Unidos e híbridos Unidos Azure Active Directory.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Además de [los requisitos de Windows AutoPilot](software-requirements.md), la implementación de Windows AutoPilot para la guante blanca también requiere:
 
