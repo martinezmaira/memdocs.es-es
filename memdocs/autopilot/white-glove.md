@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559557"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614693"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Implementación de Windows AutoPilot para la guante blanca
 
@@ -36,7 +36,7 @@ Con la **implementación de Windows AutoPilot para la guante blanca**, se divide
 
 Las implementaciones de la guante blanca usan Microsoft Intune en Windows 10, versión 1903 y posteriores. Estas implementaciones se basan en escenarios de Windows AutoPilot existentes basados en [el usuario](user-driven.md) y admiten escenarios de modo controlado por el usuario para dispositivos Azure Active Directory Unidos e híbridos Unidos Azure Active Directory.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Además de [los requisitos de Windows AutoPilot](software-requirements.md), la implementación de Windows AutoPilot para la guante blanca también requiere:
 
@@ -59,7 +59,7 @@ Para estar listo para probar la implementación de Windows AutoPilot para la gua
 
 Si no se pueden completar estos escenarios, la implementación de Windows AutoPilot para la guante blanca tampoco se realizará correctamente, ya que se basa en estos escenarios.
 
-Antes de comenzar el proceso de la guante blanca en la instalación del servicio de aprovisionamiento, debe configurar un perfil de AutoPilot adicional mediante la cuenta rIntune:
+Antes de comenzar el proceso de la guante blanca en la instalación del servicio de aprovisionamiento, debe configurar una configuración de perfil AutoPilot adicional mediante su cuenta de Intune:
 
  ![permitir la guante blanca](images/allow-white-glove-oobe.png)
 
