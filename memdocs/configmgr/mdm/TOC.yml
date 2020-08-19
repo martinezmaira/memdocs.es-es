@@ -35,9 +35,9 @@
         - name: Importar perfiles de certificado PFX
           href: deploy-use/import-pfx-certificate-profiles.md
         - name: Perfiles de Wi-Fi
-          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
         - name: Perfiles de VPN
-          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
 - name: Conector de Exchange Server
   items:
     - name: Administración de dispositivos con Exchange

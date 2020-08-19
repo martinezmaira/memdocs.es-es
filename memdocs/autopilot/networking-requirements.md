@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 24566a248017caa29fb286c59161fd1ea2ad9e3c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253362"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590909"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Requisitos de red de Windows AutoPilot
 
@@ -65,7 +65,7 @@ Si no se puede acceder al servicio de optimización de entrega, el proceso de Au
 Si no se pueden enviar datos de diagnóstico, el proceso de AutoPilot continúa. Sin embargo, los servicios que dependen de datos de diagnóstico, como Windows Analytics, no funcionarán.
 <tr><td><b>Indicador de estado de conexión de red (NCSI)<b><td>Windows debe ser capaz de indicar que el dispositivo puede acceder a Internet. Para obtener más información, consulte <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator">indicador de estado de conexión de red (NCSI)</a>.
 
-<a href="http://www.msftconnecttest.com">www.msftconnecttest.com</a> se debe poder resolver a través de DNS y estar accesible a través de http.
+<code>www.msftconnecttest.com</code> se debe poder resolver a través de DNS y estar accesible a través de HTTP.
 <tr><td><b>Notification Services de Windows (WNS)<b><td>Este servicio se usa para permitir que Windows reciba notificaciones de aplicaciones y servicios. Para obtener más información, vea <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>.<br>
 
 Si los servicios de WNS no están disponibles, el proceso de AutoPilot seguirá continuando sin notificaciones.
@@ -76,9 +76,11 @@ Si el Microsoft Store no es accesible, el proceso de AutoPilot seguirá continua
 <tr><td><b>Office 365<b><td>Como parte de la configuración del dispositivo de Intune, es posible que sea necesaria la instalación de Microsoft 365 aplicaciones para la empresa. Para obtener más información, consulte <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">direcciones URL e intervalos de direcciones IP de Office 365</a>. En este artículo se incluyen todos los servicios de Office, nombres DNS y direcciones IP. También incluye Azure AD y otros servicios que pueden superponerse con los servicios mencionados anteriormente.
 <tr><td><b>Listas de revocación de certificados (CRL)<b><td>Algunos de estos servicios también necesitarán comprobar las listas de revocación de certificados (CRL) para los certificados que se usan en los servicios.Para obtener una lista completa, consulte <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">direcciones URL e intervalos de direcciones IP de office 365</a> y <a href="https://aka.ms/o365chains">cadenas de certificados de Office 365</a>.
 <tr><td><b>Unión a Azure AD híbrido<b><td>El dispositivo puede ser híbrido Azure AD Unido. El equipo debe estar en la red corporativa para que la Unión Azure AD híbrida funcione. Ver los detalles en <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">el modo controlado por el usuario de Windows AutoPilot</a>
-<tr><td><b>Modo Autoimplementación AutoPilot y la guante blanca de autopiloto<b><td>Los dispositivos TPM de firmware, que solo son proporcionados por Intel, AMD o Qualcomm, no incluyen todos los certificados necesarios en el momento del arranque y deben ser capaces de recuperarlos del fabricante al usarse por primera vez. Los dispositivos con chips de TPM discretos (incluidos los dispositivos de cualquier otro fabricante) incluyen estos certificados preinstalados. Para obtener más información, vea <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">recomendaciones del TPM</a>. Para cada proveedor de TPM de firmware, asegúrese de que se pueda acceder a estas direcciones URL para que los certificados se puedan solicitar correctamente: 
+<tr><td><b>Modo Autoimplementación AutoPilot y la guante blanca de autopiloto<b><td>Los dispositivos TPM de firmware, que solo son proporcionados por Intel, AMD o Qualcomm, no incluyen todos los certificados necesarios en el momento del arranque y deben ser capaces de recuperarlos del fabricante al usarse por primera vez. Los dispositivos con chips de TPM discretos (incluidos los dispositivos de cualquier otro fabricante) incluyen estos certificados preinstalados. Para obtener más información, vea <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">recomendaciones del TPM</a>. Para cada proveedor de TPM de firmware, asegúrese de que se pueda acceder a estas direcciones URL para que los certificados se puedan solicitar correctamente:
 
- <br>Intel- https://ekop.intel.com/ekcertservice <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1 <br>PowerNow https://ftpm.amd.com/pki/aia
+ <br>Procesador <code>https://ekop.intel.com/ekcertservice</code>
+ <br>Qualcomm <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
+ <br>PowerNow <code>https://ftpm.amd.com/pki/aia</code>
 
 </table>
 

@@ -42,7 +42,7 @@
         - name: Implementar aplicaciones
           href: deploy-use/deploy-applications.md
         - name: Creación de una implementación por fases
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
         - name: Aprobar aplicaciones
           href: deploy-use/app-approval.md
         - name: Instalación de aplicaciones para un dispositivo
@@ -62,7 +62,7 @@
         - name: Supervisión de aplicaciones desde la consola
           href: deploy-use/monitor-applications-from-the-console.md
         - name: Administración y supervisión de implementaciones por fases
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
         - name: Supervisar el uso de aplicaciones a través de la medición de software
           href: deploy-use/monitor-app-usage-with-software-metering.md
     - name: Administración de aplicaciones

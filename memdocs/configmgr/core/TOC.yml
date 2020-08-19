@@ -750,7 +750,7 @@
         - name: Cómo administrar clientes de Linux y UNIX
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
         - name: Sincronizar datos con Azure Monitor
-          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context'
         - name: Mantenimiento de clientes Mac
           href: clients/manage/maintain-mac-clients.md
         - name: Panel de dispositivos Surface
