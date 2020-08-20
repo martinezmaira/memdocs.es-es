@@ -60,6 +60,8 @@
           href: actions-for-noncompliance.md
         - name: Supervisión del cumplimiento del dispositivo
           href: compliance-policy-monitor.md
+        - name: Asociados de cumplimiento de dispositivos
+          href: device-compliance-partners.md
     - name: Seguridad de los puntos de conexión
       href: endpoint-security.md
       items:
