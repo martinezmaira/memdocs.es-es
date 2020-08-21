@@ -10,12 +10,12 @@ ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 00f07e20c24ea9bb7d06b18f300e0206696c5e20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d5f0c9127cc5c5819368eb0454d7bc63546ccc1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707943"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699507"
 ---
 # <a name="extend-and-migrate-on-premises-site-to-microsoft-azure"></a>Extensión y migración de un sitio local a Microsoft Azure
 
@@ -68,7 +68,7 @@ Microsoft.KeyVault/vaults/deploy/action <br>
 Microsoft.KeyVault/vaults/read <br>
 
 
-Para más información sobre los permisos y la asignación de roles, vea [Administración del acceso a los recursos de Azure mediante RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
+Para más información sobre los permisos y la asignación de roles, vea [Administración del acceso a los recursos de Azure mediante RBAC](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="run-the-tool"></a>Ejecutar la herramienta
 
@@ -105,15 +105,15 @@ Para más información sobre los permisos y la asignación de roles, vea [Admini
     |**Subred**|Seleccione la subred que se va a usar. Si necesita crear una subred, use [Azure Portal](https://portal.azure.com).|
     |**Nombre de la máquina**|Escriba el nombre de la máquina virtual del servidor de sitio pasivo en Azure. Es el mismo nombre que se muestra en [Azure Portal](https://portal.azure.com).|
     |**Nombre de usuario de administrador local**|Escriba el nombre del usuario administrativo local que la máquina virtual crea antes de unirse al dominio.|
-    |**Contraseña de administrador local**|La contraseña del usuario administrativo local. Para proteger la contraseña durante la implementación de Azure, almacene la contraseña como secreto en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). A continuación, use la referencia que aparece aquí. Si es necesario, cree una nueva en [Azure Portal](https://portal.azure.com).|
+    |**Contraseña de administrador local**|La contraseña del usuario administrativo local. Para proteger la contraseña durante la implementación de Azure, almacene la contraseña como secreto en [Azure Key Vault](/azure/key-vault/key-vault-overview). A continuación, use la referencia que aparece aquí. Si es necesario, cree una nueva en [Azure Portal](https://portal.azure.com).|
     |**FQDN del dominio**|El nombre de dominio completo del dominio de Active Directory que se va a combinar. De manera predeterminada, la herramienta obtiene este valor de la máquina actual.|
     |**Nombre de usuario de dominio**|El nombre del usuario de dominio que tiene permiso para unirse al dominio. De manera predeterminada, la herramienta usa el nombre del usuario que ha iniciado sesión actualmente.|
-    |**Contraseña de dominio**|La contraseña del usuario de dominio que se va a unir al dominio. La herramienta lo comprueba después de que selecciona **Iniciar**. Para proteger la contraseña durante la implementación de Azure, almacene la contraseña como secreto en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). A continuación, use la referencia que aparece aquí. Si es necesario, cree una nueva en [Azure Portal](https://portal.azure.com).|
+    |**Contraseña de dominio**|La contraseña del usuario de dominio que se va a unir al dominio. La herramienta lo comprueba después de que selecciona **Iniciar**. Para proteger la contraseña durante la implementación de Azure, almacene la contraseña como secreto en [Azure Key Vault](/azure/key-vault/key-vault-overview). A continuación, use la referencia que aparece aquí. Si es necesario, cree una nueva en [Azure Portal](https://portal.azure.com).|
     |**Dirección IP de DNS de dominio**|Se usa para unirse al dominio. De manera predeterminada, la herramienta usa el DNS actual de la máquina actual.|
     |**Tipo**|Solo lectura. Muestra *Servidor de sitio pasivo* como el tipo.|
 
     > [!IMPORTANT]
-    > De forma predeterminada, las máquinas virtuales se establecen en **No** para **Usar la licencia de Windows Server existente**. Si desea usar sus licencias de Windows Server locales con Software Assurance, configure esta opción en [Azure Portal](https://portal.azure.com) después de aprovisionar las máquinas virtuales. Para obtener más información, vea [Ventaja para uso híbrido de Azure para Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > De forma predeterminada, las máquinas virtuales se establecen en **No** para **Usar la licencia de Windows Server existente**. Si desea usar sus licencias de Windows Server locales con Software Assurance, configure esta opción en [Azure Portal](https://portal.azure.com) después de aprovisionar las máquinas virtuales. Para obtener más información, vea [Ventaja para uso híbrido de Azure para Windows Server](/windows-server/get-started/azure-hybrid-benefit).
 
 1. Para iniciar el aprovisionamiento de la máquina virtual de Azure, seleccione **Iniciar**. Para supervisar el estado de la implementación, cambie a la pestaña **Implementaciones en Azure** de la herramienta. Para ver el estado más reciente, seleccione **Refresh deployment status** (Actualizar el estado de la implementación).
 

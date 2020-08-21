@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8c5cc09b7c2723a5dbdd1030cb0053ae75b1ff22
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906131"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699473"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Uso del instalador de revisiones para instalar actualizaciones de Configuration Manager
 
@@ -207,7 +207,7 @@ El catálogo de Updates Publisher se llama **SCUPCatalog.cab** y se encuentra en
 > [!IMPORTANT]  
 > Ya que el archivo SCUPCatalog.cab se crea mediante rutas de acceso específicas del servidor de sitio en el que se instala la agrupación de actualizaciones, no se puede usar en otros servidores de sitio.  
 
-Cuando el asistente termine, podrá importar el catálogo en Updates Publisher y usar las actualizaciones de software de Configuration Manager para implementar las actualizaciones. Para obtener más información sobre Updates Publisher, consulte [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+Cuando el asistente termine, podrá importar el catálogo en Updates Publisher y usar las actualizaciones de software de Configuration Manager para implementar las actualizaciones. Para obtener más información sobre Updates Publisher, consulte [Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Utilice el siguiente procedimiento para importar el archivo SCUPCatalog.cab en Updates Publisher y publicar las actualizaciones.  
 
@@ -261,4 +261,4 @@ Puede implementar determinadas actualizaciones en los clientes correspondientes.
 > [!NOTE]  
 > Para actualizar una base de datos del sitio, implemente la actualización en el servidor de sitio para ese sitio.  
 
-Para más información sobre cómo crear recopilaciones, vea [Cómo crear recopilaciones](../../../core/clients/manage/collections/create-collections.md).  
+Para más información sobre cómo crear recopilaciones, vea [Cómo crear recopilaciones](../../../core/clients/manage/collections/create-collections.md).

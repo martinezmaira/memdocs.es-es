@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 5250d3296df19c454f55ed166e998f8c940c98db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997956"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700807"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Privacidad de datos de Análisis de escritorio
 
 Análisis del escritorio mantiene un firme compromiso con la privacidad de los datos del cliente centrándose en estos principios:
 
-- **Transparencia**: documentamos por completo los eventos de diagnóstico de Windows. Revíselos con los equipos de cumplimiento y seguridad de su empresa. El visor de datos de diagnóstico de Windows le permite ver los datos de diagnóstico enviados desde un dispositivo determinado. para más información, consulte [Introducción al Visor de datos de diagnóstico](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview).  
+- **Transparencia**: documentamos por completo los eventos de diagnóstico de Windows. Revíselos con los equipos de cumplimiento y seguridad de su empresa. El visor de datos de diagnóstico de Windows le permite ver los datos de diagnóstico enviados desde un dispositivo determinado. para más información, consulte [Introducción al Visor de datos de diagnóstico](/windows/configuration/diagnostic-data-viewer-overview).  
 
 - **Control:** puede controlar el nivel de los datos de diagnóstico que se van a compartir con Microsoft. Windows 10, versión 1709, agrega una nueva directiva para limitar los datos de diagnóstico mejorados al mínimo requerido por Análisis de escritorio.  
 
@@ -30,7 +30,7 @@ Análisis del escritorio mantiene un firme compromiso con la privacidad de los d
 
 - **Confianza:** Análisis de escritorio respeta la [declaración de privacidad](https://privacy.microsoft.com/privacystatement) y los [términos de servicio en línea](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) de Microsoft.  
 
-Para obtener más información, consulte [Servicios de Windows donde Microsoft es el encargado de tratamiento de los datos personales según la GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
+Para obtener más información, consulte [Servicios de Windows donde Microsoft es el encargado de tratamiento de los datos personales según la GDPR](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
 
 ## <a name="data-flow"></a>Flujo de datos
 
@@ -57,7 +57,7 @@ En la ilustración siguiente se muestra cómo fluyen los datos de diagnóstico d
 
 3. Los dispositivos envían datos de diagnóstico al servicio de administración de datos de diagnóstico de Microsoft para Windows. Todos los datos de diagnóstico se cifran a través de HTTPS y usan el anclaje de certificados durante la transferencia desde el dispositivo a este servicio. El servicio Administración de datos de Microsoft se hospeda en Estados Unidos.
 
-      - La API de informe de errores de Windows se encarga de enviar informes de problemas específicos de la aplicación a Microsoft, como errores de aplicación, errores de kernel, aplicaciones que no responden y otros problemas específicos. Consulte [Uso de WER](https://docs.microsoft.com/windows/win32/wer/using-wer) para obtener detalles específicos sobre este flujo de datos.
+      - La API de informe de errores de Windows se encarga de enviar informes de problemas específicos de la aplicación a Microsoft, como errores de aplicación, errores de kernel, aplicaciones que no responden y otros problemas específicos. Consulte [Uso de WER](/windows/win32/wer/using-wer) para obtener detalles específicos sobre este flujo de datos.
       
 4. Cada día, Microsoft genera una instantánea de la información centrada en TI. Esta instantánea combina los datos de diagnóstico de Windows con la entrada de dispositivos inscritos. Este proceso se produce en el almacenamiento transitorio, que solo se usa en Análisis de escritorio. El almacenamiento transitorio se hospeda en centros de datos de Microsoft en Estados Unidos. Todos los datos se envían a través de un canal cifrado SSL (HTTPS). Las instantáneas se segregan por identificador comercial.  
 
@@ -71,23 +71,23 @@ Para ver las preguntas más frecuentes relacionadas con la privacidad de Anális
 
 Para obtener más información sobre aspectos de privacidad, vea los artículos siguientes:
 
-- [Windows 10 y GDPR: información para administradores de TI y toma de decisiones](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 y GDPR: información para administradores de TI y toma de decisiones](/windows/privacy/gdpr-it-guidance)  
 
-- [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Configurar los datos de diagnóstico de Windows en la organización](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Campos y eventos de datos de diagnóstico del evaluador de Windows 7, Windows 8 y Windows 8.1](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
+- [Campos y eventos de datos de diagnóstico del evaluador de Windows 7, Windows 8 y Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
 
-- [Campos y eventos de diagnóstico de Windows en el nivel básico de Windows 10, versión 1809](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Campos y eventos de diagnóstico de Windows en el nivel básico de Windows 10, versión 1809](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [Campos y eventos de datos de diagnóstico mejorados de Windows 10, versión 1709, usados por Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [Campos y eventos de datos de diagnóstico mejorados de Windows 10, versión 1709, usados por Windows Analytics](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [Informe de errores de instalación de Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [Informe de errores de instalación de Windows](/windows/deployment/upgrade/windows-error-reporting)
 
-- [Introducción al Visor de datos de diagnóstico](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [Introducción al Visor de datos de diagnóstico](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Términos de licencia y documentación](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Seguridad de datos de Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Seguridad de datos de Log Analytics](/azure/azure-monitor/platform/data-security)
 
 - [Seguridad y privacidad en centros de datos de Microsoft Azure](https://azure.microsoft.com/global-infrastructure/)  
 

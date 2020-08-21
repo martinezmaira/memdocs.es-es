@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692763"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700170"
 ---
 # <a name="plan-for-the-sms-provider"></a>Plan para el proveedor de SMS
 
@@ -165,7 +165,7 @@ Están disponibles los siguientes niveles:
 
 - **Autenticación de certificado**: requiere la autenticación con un certificado válido emitido por una entidad de certificación PKI de confianza. No configure este certificado en Configuration Manager. Configuration Manager requiere que el administrador inicie sesión en Windows mediante PKI.  
 
-- **Autenticación de Windows Hello para empresas**: requiere la autenticación sólida en dos fases vinculada a un dispositivo y usa biometrías o un PIN. Para obtener más información, vea [Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
+- **Autenticación de Windows Hello para empresas**: requiere la autenticación sólida en dos fases vinculada a un dispositivo y usa biometrías o un PIN. Para obtener más información, vea [Windows Hello para empresas](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 ### <a name="exclusions"></a>Exclusiones
 

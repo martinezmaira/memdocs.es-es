@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87820001"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700606"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>Uso de la configuración de directiva de grupo para administrar Endpoint Protection en versiones anteriores de Windows
 
@@ -42,7 +42,7 @@ Puede administrar Endpoint Protection en estos dispositivos con la configuració
     - [Dispositivo local](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> Para obtener información sobre cómo usar la configuración de directiva de grupo para administrar el Antivirus de Microsoft Defender en Windows 10, Windows Server 2019 y Windows Server 2016, vea [Usar la configuración de directiva de grupo para configurar y administrar Antivirus de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
+> Para obtener información sobre cómo usar la configuración de directiva de grupo para administrar el Antivirus de Microsoft Defender en Windows 10, Windows Server 2019 y Windows Server 2016, vea [Usar la configuración de directiva de grupo para configurar y administrar Antivirus de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>Copia de definiciones de directiva de Endpoint Protection
 
@@ -75,7 +75,7 @@ Si usa un [almacén central de plantillas administrativas de la directiva de gru
     
     donde **DC** es el nombre del controlador de dominio y **contoso.com** es su dominio.
 
-3. Abra la [Consola de administración de directivas de grupo](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) y cree un objeto de directiva de grupo (GPO) en el dominio; por ejemplo, **Endpoint Protection**.
+3. Abra la [Consola de administración de directivas de grupo](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) y cree un objeto de directiva de grupo (GPO) en el dominio; por ejemplo, **Endpoint Protection**.
 4. Haga clic con el botón derecho en el GPO para Endpoint Protection y haga clic en **Editar**.
 5. En el Editor de administración de directivas de grupo, vaya a **Configuración del equipo** > **Directivas** > **Plantillas administrativas: Definiciones de directiva** > **Componentes de Windows** > **Endpoint Protection**.
 

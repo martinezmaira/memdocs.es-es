@@ -10,12 +10,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d9d7cea7e5653b338a3eb4adb01d9fded99035e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1334603bcf60ea3eb8c3d18b73d511570cdc5d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704063"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699745"
 ---
 # <a name="how-to-enable-tls-12"></a>Habilitación de TLS 1.2
 
@@ -86,7 +86,7 @@ Básicamente, hay cinco áreas en las que Configuration Manager usa protocolos d
 
 ### <a name="what-determines-which-encryption-protocol-is-used"></a>¿Qué determina el protocolo de cifrado que se usa?
 
-HTTPS siempre negociará la versión más alta del protocolo compatible con el cliente y el servidor en una conversación cifrada. Al establecer una conexión, el cliente envía un mensaje al servidor con el protocolo más alto disponible. Si el servidor admite la misma versión, envía un mensaje con esa versión. Esta versión negociada es la que se usa para la conexión. Si el servidor no admite la versión presentada por el cliente, el mensaje del servidor especificará la versión más alta que pueda usar. Para obtener más información sobre el protocolo de enlace TLS, vea [Establecimiento de una sesión segura mediante TLS](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
+HTTPS siempre negociará la versión más alta del protocolo compatible con el cliente y el servidor en una conversación cifrada. Al establecer una conexión, el cliente envía un mensaje al servidor con el protocolo más alto disponible. Si el servidor admite la misma versión, envía un mensaje con esa versión. Esta versión negociada es la que se usa para la conexión. Si el servidor no admite la versión presentada por el cliente, el mensaje del servidor especificará la versión más alta que pueda usar. Para obtener más información sobre el protocolo de enlace TLS, vea [Establecimiento de una sesión segura mediante TLS](/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
 
 ### <a name="what-determines-which-protocol-version-the-client-and-server-can-use"></a>¿Qué determina la versión del protocolo que pueden usar el cliente y el servidor?
 
@@ -103,7 +103,7 @@ Por lo general, los elementos siguientes pueden determinar la versión del proto
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - [Referencia técnica de controles criptográficos](cryptographic-controls-technical-reference.md)
-- Para obtener más información, consulte [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry).
+- Para obtener más información, consulte [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry).
 - [KB 3135244: Compatibilidad con TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server).
 
 ## <a name="next-steps"></a>Pasos siguientes

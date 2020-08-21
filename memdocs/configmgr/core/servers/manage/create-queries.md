@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d15252c3b3c93c7e90e517c502c4c3dd2dfcf20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906158"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700051"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Creación de consultas en Configuration Manager
 
@@ -49,9 +49,9 @@ En este artículo se describe cómo crear e importar consultas en Configuration 
     > [!TIP]  
     > Puede usar la siguiente documentación de referencia para que le ayude a construir sus propias consultas WQL:  
     >   
-    > -   [WQL (SQL para WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
-    > -   [Cláusula WHERE](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
-    > -   [Operadores WQL](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
+    > -   [WQL (SQL para WMI)](/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [Cláusula WHERE](/windows/win32/wmisdk/where-clause)  
+    > -   [Operadores WQL](/windows/win32/wmisdk/wql-operators)  
 
 8.  En la pestaña **Criterios** del cuadro de diálogo **Propiedades de instrucción** de &lt;nombre de consulta\>, especifique los criterios que se usan para refinar los resultados de la consulta. Por ejemplo, podría devolver solo los recursos que tienen un código de sitio de **XYZ**. Puede configurar varios criterios para una consulta.  
 

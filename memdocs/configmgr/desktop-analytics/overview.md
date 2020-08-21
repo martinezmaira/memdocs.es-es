@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411021"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700808"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -69,22 +69,22 @@ Para usar Análisis de escritorio, asegúrese de que el entorno cumple los requi
 
 ### <a name="technical"></a>Técnicos
 
-- Una suscripción de Azure global activa, con permisos de [administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions). No se admiten [cuentas Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts).  
+- Una suscripción de Azure global activa, con permisos de [administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions). No se admiten [cuentas Microsoft](/windows/security/identity-protection/access-control/microsoft-accounts).  
 
     > [!IMPORTANT]
-    > Análisis de escritorio es un servicio de Windows hospedado en Azure global que usa datos de diagnóstico de Windows. Si bien Análisis de escritorio es un servicio global de Azure que está disponible para los clientes de la administración pública de Estados Unidos, no cumple con los atributos de [cumplimiento de US Government Community (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance). Para obtener una lista de las ofertas de cumplimiento para los productos y servicios de Microsoft, vea el [Centro de confianza de Microsoft](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Análisis de escritorio no está disponible para clientes de GCC High o del Departamento de Defensa (DOD) de Estados Unidos. No se admite el uso de suscripciones de Azure Government para hospedar áreas de trabajo de Análisis de escritorio.
+    > Análisis de escritorio es un servicio de Windows hospedado en Azure global que usa datos de diagnóstico de Windows. Si bien Análisis de escritorio es un servicio global de Azure que está disponible para los clientes de la administración pública de Estados Unidos, no cumple con los atributos de [cumplimiento de US Government Community (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance). Para obtener una lista de las ofertas de cumplimiento para los productos y servicios de Microsoft, vea el [Centro de confianza de Microsoft](/microsoft-365/compliance/offering-home?view=o365-worldwide). Análisis de escritorio no está disponible para clientes de GCC High o del Departamento de Defensa (DOD) de Estados Unidos. No se admite el uso de suscripciones de Azure Government para hospedar áreas de trabajo de Análisis de escritorio.
 
     - Permisos de **propietario del área de trabajo** para **configurar el área de trabajo** y los roles siguientes:  
 
-      - Rol de [**administrador de Análisis de escritorio**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions).
+      - Rol de [**administrador de Análisis de escritorio**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions).
 
-      - [**Colaborador de Log Analytics**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [**administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
+      - [**Colaborador de Log Analytics**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [**administrador de acceso de usuario** ](/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
 
-      - Permisos de [**propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), o [**colaborador**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) y [**administrador de acceso de usuario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en la suscripción para crear un área de trabajo en un nuevo grupo de recursos.  
+      - Permisos de [**propietario**](/azure/role-based-access-control/built-in-roles#owner), o [**colaborador**](/azure/role-based-access-control/built-in-roles#contributor) y [**administrador de acceso de usuario**](/azure/role-based-access-control/built-in-roles#user-access-administrator) en la suscripción para crear un área de trabajo en un nuevo grupo de recursos.  
 
     - Para acceder al portal después de la incorporación, necesita:
 
-      - El rol [**Administrador de Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) y los permisos de [**Propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) o de [**Colaborador**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) en el grupo de recursos donde se creó el área de trabajo de Log Analytics.
+      - El rol [**Administrador de Desktop Analytics**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) y los permisos de [**Propietario**](/azure/role-based-access-control/built-in-roles#owner) o de [**Colaborador**](/azure/role-based-access-control/built-in-roles#contributor) en el grupo de recursos donde se creó el área de trabajo de Log Analytics.
 
 - Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571), o posterior Para obtener más información, vea [Actualización de Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
@@ -103,7 +103,7 @@ Para usar Análisis de escritorio, asegúrese de que el entorno cumple los requi
     - Los dispositivos necesitan también el cliente Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571), o posterior. Para obtener más información, vea [Actualización de Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > La característica Análisis de escritorio no es compatible con las actualizaciones con el Canal de mantenimiento a largo plazo (LTSC) de Windows 10 como origen o destino. Para más información, consulte [Administración de Windows como servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > La característica Análisis de escritorio no es compatible con las actualizaciones con el Canal de mantenimiento a largo plazo (LTSC) de Windows 10 como origen o destino. Para más información, consulte [Administración de Windows como servicio](/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Análisis de escritorio está diseñado para ofrecer el mejor respaldo a las actualizaciones en contexto. Si necesita realizar cambios importantes, como, por ejemplo, pasar de la arquitectura de 32 bits a 64 bits, utilice un escenario de creación de imágenes. Aunque la información de Análisis de escritorio sigue siendo valiosa en estos escenarios de implementación de sistema operativo clásicos, se pueden omitir las instrucciones específicas de la actualización local. Para obtener más información, consulte [Escenarios para implementar sistemas operativos de empresa con Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
@@ -139,7 +139,7 @@ Para usar Análisis de escritorio, asegúrese de que el entorno cumple los requi
   - Acceso a Windows Virtual Desktop E3 o E5  
 
 > [!NOTE]
-> Además del costo de suscripción de estas licencias, no hay ningún costo adicional por el uso de Azure Log Analytics. Los tipos de datos ingeridos por Análisis de escritorio no tienen ningún cargo por ingesta y retención de datos de Log Analytics. Como son tipos de datos no facturables, estos datos tampoco están sujetos a ningún límite de ingesta diaria de datos de Log Analytics. Para obtener más información, vea [Uso y costo de Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+> Además del costo de suscripción de estas licencias, no hay ningún costo adicional por el uso de Azure Log Analytics. Los tipos de datos ingeridos por Análisis de escritorio no tienen ningún cargo por ingesta y retención de datos de Log Analytics. Como son tipos de datos no facturables, estos datos tampoco están sujetos a ningún límite de ingesta diaria de datos de Log Analytics. Para obtener más información, vea [Uso y costo de Log Analytics](/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

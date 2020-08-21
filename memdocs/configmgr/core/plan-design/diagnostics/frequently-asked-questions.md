@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60634ed8e275ff8496a08969054aa912a81b9d07
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb14f909238e86a7aa4a87493b17a218a21f0909
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688483"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700204"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data"></a>Preguntas frecuentes acerca de datos de diagnóstico y uso
 
@@ -26,9 +26,9 @@ En este artículo encontrará respuestas a preguntas frecuentes sobre datos de d
 
 ## <a name="can-i-turn-off-diagnostic-and-usage-data"></a><a name="bkmk_off"></a> ¿Puedo desactivar los datos de diagnóstico y uso?
 
-Para administrar cuándo el sitio envía datos, use el punto de conexión de servicio en el modo sin conexión. Después, utilice la herramienta de conexión de servicio para enviar los datos manualmente. Vea los siguientes artículos para más información:
+Para administrar cuándo el sitio envía datos, use el punto de conexión de servicio en el modo sin conexión. Después, utilice la herramienta de conexión de servicio para enviar los datos manualmente. Para más información, consulte los siguientes artículos.
 
-- [Acerca del punto de conexión de servicio](../../servers/deploy/configure/about-the-service-connection-point.md)
+- [Punto de conexión de servicio](../../servers/deploy/configure/about-the-service-connection-point.md)
 - [Uso de la herramienta de conexión de servicio](../../servers/manage/use-the-service-connection-tool.md)
 
 Para admitir la nuevas versiones de Windows 10 y servicios en la nube como Microsoft Intune, debe actualizar la rama actual de Configuration Manager de forma regular. Microsoft necesita como mínimo el nivel básico de datos de diagnóstico y uso. Estos datos sirven para mantener el producto actualizado, mejorar la experiencia de actualización y mejorar la calidad y la seguridad del producto.
@@ -61,7 +61,7 @@ Los datos incluyen información sobre la zona horaria de cada sitio. Esto puede 
 
 ## <a name="can-you-see-data-in-custom-sql-tables"></a><a name="bkmk_tables"></a> ¿Se pueden ver datos en tablas de SQL personalizadas?
 
-No. Configuration Manager recopila datos de uso y diagnóstico a través de procedimientos almacenados de SQL. Estos procedimientos almacenados se ejecutan en tablas de productos predeterminadas de la base de datos. Todas estas tablas SQL tienen el prefijo **TEL_** . Como parte de la consulta de detección de esquemas SQL, a todos los nombres de tabla se les aplica un algoritmo hash para establecer comparaciones con los valores predeterminados conocidos. Este comportamiento determina que hay tablas personalizadas en la base de datos. La presencia de tablas personalizadas indica a Microsoft que usted ha extendido el esquema de la base de datos desde el valor predeterminado. No incluye ninguno de los datos almacenados en esas tablas.
+No. Configuration Manager recopila datos de uso y diagnóstico a través de procedimientos almacenados de SQL. Estos procedimientos almacenados se ejecutan en tablas de productos predeterminadas de la base de datos. Todas estas tablas SQL tienen el prefijo **TEL_**. Como parte de la consulta de detección de esquemas SQL, a todos los nombres de tabla se les aplica un algoritmo hash para establecer comparaciones con los valores predeterminados conocidos. Este comportamiento determina que hay tablas personalizadas en la base de datos. La presencia de tablas personalizadas indica a Microsoft que usted ha extendido el esquema de la base de datos desde el valor predeterminado. No incluye ninguno de los datos almacenados en esas tablas.
 
 ## <a name="can-you-see-other-databases"></a><a name="bkmk_databases"></a> ¿Se pueden ver otras bases de datos?
 
@@ -74,8 +74,8 @@ Sí, al integrar estos servicios con Configuration Manager. Cuando se produce un
 Por ejemplo, los siguientes servicios en la nube forman parte de Microsoft Endpoint Manager:
 
 - [Privacidad de datos de Análisis de escritorio](../../../desktop-analytics/privacy.md)
-- [Privacidad y datos personales en Intune](https://docs.microsoft.com/intune/protect/privacy-personal-data)
-- [Requisitos de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Privacidad y datos personales en Intune](/intune/protect/privacy-personal-data)
+- [Requisitos de Windows Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 
 ## <a name="does-configuration-manager-collect-any-personal-data"></a><a name="bkmk_personal"></a> ¿Configuration Manager recopila datos personales?
 

@@ -10,12 +10,12 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a32f0a59a0b3ce3ad864fecf61fe7281b8ebbdd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 068511c5b3b0c15eb355c484b241a76d9dd512e2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704423"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700187"
 ---
 # <a name="plan-for-the-site-database-for-configuration-manager"></a>Planeación de la base de datos de sitio de Configuration Manager
 
@@ -31,7 +31,7 @@ El servidor de base de datos de sitio es un equipo que ejecuta una versión comp
 
 -  Para el uso del grupo de disponibilidad no de SQL, el modelo de recuperación de base de datos debe establecerse en SIMPLE  
 
-Encontrará más información sobre los modos de recuperación de SQL en [Modelos de recuperación (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Encontrará más información sobre los modos de recuperación de SQL en [Modelos de recuperación (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 Las siguientes configuraciones de SQL Server se pueden utilizar para hospedar la base de datos del sitio:  
 
@@ -61,4 +61,4 @@ Si usa un equipo de servidor de base de datos remoto, asegúrese de que la conex
 -   No puede utilizar un SQL Server en clúster para el servidor de base de datos del sitio cuando la base de datos del sitio comparte ubicación con el servidor de sitio.  
 
 
-Normalmente, un servidor de sistema de sitio admite roles de sistema de sitio de un único sitio de Configuration Manager. En cambio, puede usar distintas instancias de SQL Server (en servidores en clúster o que no estén en clúster que ejecuten SQL Server) para hospedar una base de datos de varios sitios de Configuration Manager. Para admitir bases de datos de sitios diferentes, debe configurar cada instancia de SQL Server para usar puertos exclusivos para la comunicación.  
+Normalmente, un servidor de sistema de sitio admite roles de sistema de sitio de un único sitio de Configuration Manager. En cambio, puede usar distintas instancias de SQL Server (en servidores en clúster o que no estén en clúster que ejecuten SQL Server) para hospedar una base de datos de varios sitios de Configuration Manager. Para admitir bases de datos de sitios diferentes, debe configurar cada instancia de SQL Server para usar puertos exclusivos para la comunicación.

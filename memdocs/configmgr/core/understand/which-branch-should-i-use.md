@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906020"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700674"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -85,7 +85,7 @@ LTSB se basa en la versión 1606. Esta rama no recibe las actualizaciones en la 
 Para instalar LTSB como un sitio nuevo o una actualización de un sitio compatible de System Center 2012 Configuration Manager, use la versión 1606 del [medio de línea base](../servers/manage/updates.md#bkmk_Baselines) que se obtiene con System Center 2016. Puede usar los medios de línea base para instalar un nuevo sitio que ejecuta la versión 1606 de la rama actual o un nuevo sitio que ejecuta la rama de mantenimiento a largo plazo.
 
 > [!TIP]  
-> Para obtener información sobre System Center 2016, consulte la [documentación de System Center 2016](https://docs.microsoft.com/system-center/index). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.  
+> Para obtener información sobre System Center 2016, consulte la [documentación de System Center 2016](/system-center/index). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.  
 >  
 > Para encontrar la versión 1606 de Configuration Manager en el Centro de servicios de licencias por volumen (VLSC), vaya a la pestaña **Downloads and Keys** (Descargas y claves) de [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), busque `System Center 2016` y luego seleccione **System Center 2016 Datacenter** o **System Center 2016 Standard**.  
 >  

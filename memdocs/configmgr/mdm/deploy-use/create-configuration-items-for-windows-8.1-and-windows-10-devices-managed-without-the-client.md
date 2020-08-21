@@ -369,14 +369,14 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
 - **Examinar mensajes de correo electrónico**: defender examina los mensajes de correo electrónico cuando llegan al dispositivo.
 - **Examinar unidades extraíbles**: defender examina unidades extraíbles, como sticks USB.
 - **Examinar unidades asignadas**: defender examina las unidades asignadas a recursos compartidos de red. Por ejemplo, `H:` se asigna a la unidad personal de un usuario. Si los archivos de la unidad son de solo lectura, defender no puede quitar ningún malware que encuentre allí.
-- **Examinar archivos abiertos desde carpetas compartidas de red**: defender examina los archivos cuando un usuario los abre desde una ruta de acceso de red compartida. Por ejemplo, `\\server\share\file.doc`. Si el archivo del recurso compartido es de solo lectura, defender no puede quitar ningún malware que encuentre.
+- **Examinar archivos abiertos desde carpetas compartidas de red**: defender examina los archivos cuando un usuario los abre desde una ruta de acceso de red compartida. Por ejemplo: `\\server\share\file.doc`. Si el archivo del recurso compartido es de solo lectura, defender no puede quitar ningún malware que encuentre.
 - **Intervalo de actualización de firma**: elija el intervalo de tiempo en el que defender comprueba si hay nuevos archivos de firma.
 - **Permitir protección**en la nube: defender usa Microsoft Cloud para recibir información acerca de la actividad de malware y habilitar características como bloque en la primera vista.
 - **Solicitar a los usuarios el envío de muestras**: elija el comportamiento de defender cuando los archivos puedan requerir un análisis más exhaustivo. Por ejemplo, defender puede enviar archivos automáticamente a Microsoft para determinar si son malintencionados.
 - **Detección de aplicaciones potencialmente no deseadas**: protege el dispositivo contra la ejecución de software clasificado por defender como potencialmente no deseado. Puede protegerse de estas aplicaciones en ejecución o usar el modo auditoría para informar cuando un usuario instala una aplicación potencialmente no deseada.
 - **Exclusiones de archivos y carpetas**: agregue uno o varios archivos y carpetas a la lista de exclusiones.  Por ejemplo, `C:\Path` o `%ProgramFiles%\Path\filename.exe`. Defender no incluye estos archivos y carpetas en ningún examen en tiempo real ni programado.
 - **Exclusiones de extensiones de archivo**: agregue una o más extensiones de archivo a la lista de exclusiones.  Por ejemplo, `java` o `exe`. Defender no incluye ningún archivo con estas extensiones en ningún examen en tiempo real ni programado.
-- **Exclusiones de procesos**: agregue procesos específicos a la lista de exclusiones. Por ejemplo, `C:\path\myproc.exe`. Este tipo de exclusión solo admite las siguientes extensiones: `exe` , `com` o `scr` . Defender no incluye estos procesos en ningún examen en tiempo real ni programado.
+- **Exclusiones de procesos**: agregue procesos específicos a la lista de exclusiones. Por ejemplo: `C:\path\myproc.exe`. Este tipo de exclusión solo admite las siguientes extensiones: `exe` , `com` o `scr` . Defender no incluye estos procesos en ningún examen en tiempo real ni programado.
 
 ### <a name="additional-settings"></a>Configuración adicional
 

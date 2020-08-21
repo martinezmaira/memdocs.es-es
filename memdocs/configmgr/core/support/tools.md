@@ -10,12 +10,12 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e308a54ee9636a7781667823e7b7f98ae6f25c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb2529dbbe923a5035f0b7586dab696cd6fc917e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701273"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699422"
 ---
 # <a name="configuration-manager-tools"></a>Herramientas de Configuration Manager
 
@@ -25,19 +25,19 @@ Las herramientas de Configuration Manager incluyen [herramientas basadas en clie
 
 A partir de Configuration Manager versión 1806, estas herramientas están incluidas en la carpeta `CD.Latest\SMSSETUP\Tools` del servidor de sitio. No se necesita ninguna otra instalación.<!--1357145--> Use estas versiones de las herramientas con Configuration Manager versión 1806 y versiones posteriores.
 
-Todos los sistemas operativos Windows que se indican como clientes compatibles en [Sistemas operativos compatibles con clientes y dispositivos](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) se pueden usar con estas herramientas.
+Todos los sistemas operativos Windows que se indican como clientes compatibles en [Sistemas operativos compatibles con clientes y dispositivos](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) se pueden usar con estas herramientas.
 
 > [!Note]  
 > El [kit de herramientas de System Center 2012 R2 Configuration Manager](https://www.microsoft.com/download/details.aspx?id=50012) sigue estando disponible en el Centro de descarga de Microsoft. En Configuration Manager versión 1806 y versiones posteriores, use las versiones de las herramientas de la carpeta CD.Latest del servidor de sitio. Antes, algunas herramientas se encontraban en el kit de herramientas, pero no se incluían en la versión 1806. Estas herramientas heredadas ya no se admiten.
 
 
-## <a name="client-tools"></a>Herramientas cliente
+## <a name="client-tools"></a>Herramientas de cliente
 
 Estas herramientas están en la subcarpeta `ClientTools`:
 
 - [CMTrace](cmtrace.md): sirve para ver, supervisar y analizar archivos de registro de Configuration Manager  
 
-- [Client Spy](clispy.md): soluciona problemas relacionados con la distribución de software, el inventario y la medición.
+- [Cliente Spy](clispy.md): soluciona problemas relacionados con la distribución de software, el inventario y la medición
 
 - [Deployment Monitoring Tool](deployment-monitoring-tool.md): permite solucionar los problemas de aplicaciones, actualizaciones e implementaciones de línea de base  
 
@@ -45,7 +45,7 @@ Estas herramientas están en la subcarpeta `ClientTools`:
 
 - [Power Viewer Tool](power-viewer-tool.md): permite ver el estado de la característica de administración de energía  
 
-- [Send Schedule Tool](send-schedule-tool.md): desencadena programaciones y evaluaciones de líneas base de configuración.  
+- [Send Schedule Tool](send-schedule-tool.md): desencadena programaciones y evaluaciones de líneas de base de configuración  
 
 > [!Note]  
 > La carpeta `ClientTools` también incluye el archivo Microsoft.Diagnostics.Tracing.EventSource.dll. Varias herramientas de cliente necesitan esta biblioteca. No se puede usar directamente.  
@@ -67,7 +67,7 @@ Estas herramientas están en la subcarpeta `ServerTools`:
 
 - [Role-based Administration and Auditing Tool](rbaviewer.md): ayuda a los administradores a auditar la configuración de roles  
 
-- [Herramienta Run Meter Summarization](run-meter-summ.md): ejecuta una tarea de resumen de medición y analiza los datos de medición.
+- [Run Meter Summarization Tool](run-meter-summ.md): Ejecuta la tarea de resumen de medición y analiza los datos de medición
 
 > [!Note]  
 > La carpeta ServerTools también incluye los siguientes archivos:
@@ -86,13 +86,13 @@ Estas herramientas están en la subcarpeta `ServerTools`:
 
 - [Extensión y migración de un sitio local a Microsoft Azure](azure-migration-tool.md): sirve para crear máquinas virtuales (VM) de Azure para Configuration Manager mediante programación. <!--3556022--> 
 
-- [Content Library Cleanup Tool](../plan-design/hierarchy/content-library-cleanup-tool.md): use **ContentLibraryCleanup.exe** en `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` para quitar contenido huérfano desde un punto de distribución.  
+- [Content library cleanup tool](../plan-design/hierarchy/content-library-cleanup-tool.md): use **ContentLibraryCleanup.exe** en `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` para quitar contenido huérfano de un punto de distribución.  
 
 - [Hierarchy Maintenance Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): use **Preinst.exe** en la carpeta compartida `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` del servidor de sitio para pasar comandos al componente Administrador de jerarquía.  
 
-- [Herramienta de restablecimiento de actualizaciones](../servers/manage/update-reset-tool.md): use **CMUpdateReset.exe** en `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` para corregir los problemas de descarga o replicación de las actualizaciones en la consola.  
+- [Update reset tool](../servers/manage/update-reset-tool.md): use **CMUpdateReset.exe** en `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` para solucionar los problemas de descarga o replicación de las actualizaciones en la consola.  
 
-- [Herramienta de conexión de servicio](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): use **ServiceConnectionTool.exe** en `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` para mantener actualizado el sitio cuando el punto de conexión de servicio esté sin conexión.   
+- [Service Connection Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): use **ServiceConnectionTool.exe** en `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` para mantener actualizado el sitio cuando el punto de conexión de servicio está sin conexión.   
 
 - [Microsoft Deployment Toolkit (MDT)](../../mdt/use-the-mdt.md): Una colección de herramientas, procesos y guías para automatizar las implementaciones de SO de escritorio y servidor.
 

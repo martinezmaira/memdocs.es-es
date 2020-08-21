@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353469"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700776"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Preguntas frecuentes sobre la retirada de Ready for modern desktop
 
@@ -49,10 +49,10 @@ Muchos clientes tienen dificultades para estar siempre actualizados con Windows�
 
 En el directorio *Ready for modern desktop* se enumeraban las soluciones de software admitidas y en uso en dispositivos comerciales que ejecutaban Windows 10 y Office 365 ProPlus. El directorio ayuda a los administradores de TI que están pensado en implementar las versiones más recientes de Windows 10 y Office 365.
 
-Los administradores de TI expresan en sus comentarios que quieren que esta información se integre con las herramientas que ya usan para crear sus planes de implementación. Use [Análisis de escritorio](https://aka.ms/dadocs) y las [características de preparación para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) de Configuration Manager para planear y administrar los proyectos de actualización de Windows 10 y Office 365 ProPlus. 
+Los administradores de TI expresan en sus comentarios que quieren que esta información se integre con las herramientas que ya usan para crear sus planes de implementación. Use [Análisis de escritorio](https://aka.ms/dadocs) y las [características de preparación para Office 365 ProPlus](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) de Configuration Manager para planear y administrar los proyectos de actualización de Windows 10 y Office 365 ProPlus. 
 
 > [!Note]
-> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
 
 ### <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -114,12 +114,12 @@ Si las declaraciones de compatibilidad no están asociadas correctamente a los r
 
 Evalúe el rendimiento de las soluciones con informes de estado y métricas a través del centro para desarrolladores: 
 
-- [Tienda Windows](https://docs.microsoft.com/windows/uwp/publish/health-report)
-- [Escritorio](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-- [Complementos de Office](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
+- [Tienda Windows](/windows/uwp/publish/health-report)
+- [Escritorio](/windows/desktop/appxpkg/windows-desktop-application-program)
+- [Complementos de Office](/office/dev/store/update-unpublish-and-view-metrics) 
 
 ### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>¿Cómo puedo desarrollar recursos compatibles para Windows 10 y Office 365 ProPlus?
 
 Asegúrese de que las aplicaciones de escritorio sean compatibles con Windows 10 ahora y en el futuro. Para más información, consulte [Compatibilidad de aplicaciones para desarrolladores](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Si desarrolla soluciones para Office 365 ProPlus, consulte [Procedimientos de desarrollo recomendados para complementos COM, VSTO y VBA en Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Si desarrolla soluciones para Office 365 ProPlus, consulte [Procedimientos de desarrollo recomendados para complementos COM, VSTO y VBA en Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

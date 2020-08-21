@@ -10,12 +10,12 @@ ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f6c7321301e5705c4188012ba53b50f4c37b57
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e0b59ffa73bb2c7524f2eed29326f238d856adef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906034"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699320"
 ---
 # <a name="microsoft-endpoint-configuration-manager-faq"></a>Preguntas más frecuentes sobre Microsoft Endpoint Configuration Manager
 
@@ -37,10 +37,10 @@ Microsoft Endpoint Manager es una solución integrada para administrar todos los
 
 Las siguientes soluciones de administración de Microsoft forman parte ahora de la marca **Microsoft Endpoint Manager**:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Análisis de escritorio](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Otras características de la [consola de administración de dispositivos](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760).
 
 Para más información, consulte las siguientes entradas de Brad Anderson, vicepresidente corporativo de Microsoft para Microsoft 365:

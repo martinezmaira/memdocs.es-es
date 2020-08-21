@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b75ebe7e768080a1239e817c514b634cdcf64179
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 2495c0d7b5b19b5d6f7741d3b28b6a9a0e213fc3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587165"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700153"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -759,7 +759,7 @@ Si un SQL Server hospeda una base de datos de más de un sitio, cada base de dat
 
 Si habilita un firewall basado en host en SQL Server, configúrelo para que permita los puertos correctos. También puede configurar los firewalls de red entre los equipos que se comunican con SQL Server.  
 
-Para obtener un ejemplo de cómo configurar SQL Server para usar un determinado puerto, consulte [Configurar un servidor para que escuche en un puerto TCP específico](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+Para obtener un ejemplo de cómo configurar SQL Server para usar un determinado puerto, consulte [Configurar un servidor para que escuche en un puerto TCP específico](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ### <a name="discovery-and-publishing"></a><a name="bkmk_discovery"> </a> Detección y publicación
 

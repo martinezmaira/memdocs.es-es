@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701343"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699456"
 ---
 # <a name="support-center-user-interface-reference"></a>Referencia de la interfaz de usuario del Centro de soporte técnico
 
@@ -585,16 +585,16 @@ La pestaña **Configuración** de la herramienta Visor del Centro de soporte té
 En esta vista se muestra la misma información que en la pestaña **Cliente** del Centro de soporte técnico.
 
 #### <a name="operating-system"></a>Sistema operativo
-Detalles sobre el sistema operativo del cliente. Usa la clase [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem).
+Detalles sobre el sistema operativo del cliente. Usa la clase [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem).
 
 #### <a name="computer"></a>Equipo
-Detalles sobre el equipo cliente. Usa la clase [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem).
+Detalles sobre el equipo cliente. Usa la clase [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem).
 
 #### <a name="services"></a>Servicios
-Detalles sobre los servicios que se ejecutan en el equipo cliente. Usa la clase [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service).
+Detalles sobre los servicios que se ejecutan en el equipo cliente. Usa la clase [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service).
 
 #### <a name="network-adapters"></a>Adaptadores de red
-Detalles sobre los adaptadores de red instalados en el equipo cliente. Usa la clase [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration).
+Detalles sobre los adaptadores de red instalados en el equipo cliente. Usa la clase [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration).
 
 
 ### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a> Pestaña Registros

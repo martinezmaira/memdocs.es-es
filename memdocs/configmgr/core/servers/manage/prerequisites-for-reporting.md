@@ -10,12 +10,12 @@ ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e08833a5ef560a0f958fe68b4ade0d4717dffc73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0b082ae578052a92c0afacd3d1f62fdb2e21bd6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703523"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699541"
 ---
 # <a name="prerequisites-for-reporting-in-configuration-manager"></a>Requisitos previos de informes en Configuration Manager
 
@@ -31,7 +31,7 @@ La generación de informes en Configuration Manager tiene las dependencias sigui
 
 Para poder usar los informes en Configuration Manager, instale y configure SQL Server Reporting Services.
 
-Para obtener más información sobre la planeación e implementación de Reporting Services, vea [Instalar SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).
+Para obtener más información sobre la planeación e implementación de Reporting Services, vea [Instalar SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).
 
 Instale la base de datos de Reporting Services en la instancia predeterminada o en una instancia con nombre de una instalación de SQL Server de 64 bits. Coloque la instancia de SQL Server con el servidor de sistema de sitio, o configúrela en un equipo remoto.
 

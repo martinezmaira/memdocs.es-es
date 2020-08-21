@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: bda64f11d5d2ee9498ce69224ec9a52efc0df902
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383179"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700340"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versiones de SQL Server compatibles con Configuration Manager
 
@@ -63,9 +63,9 @@ En una jerarquía con varios sitios, cada sitio puede usar una versión diferent
 
 - Configuration Manager admite las versiones de SQL Server que se usan.
 - Las versiones de SQL Server que se usan siguen teniendo soporte técnico de Microsoft.
-- SQL Server admite replicación entre las dos versiones de SQL Server. Para más información, vea [Compatibilidad con versiones anteriores de replicación](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
+- SQL Server admite replicación entre las dos versiones de SQL Server. Para más información, vea [Compatibilidad con versiones anteriores de replicación](/sql/relational-databases/replication/replication-backward-compatibility).
 
-Por SQL Server 2016 y versiones anteriores, la compatibilidad con cada versión de SQL y Service Pack sigue la [directiva de ciclo de vida de Microsoft](https://aka.ms/sqllifecycle). La compatibilidad para un Service Pack de SQL Server específico incluye actualizaciones acumulativas a menos que interrumpan la compatibilidad con versiones anteriores para la versión del Service Pack base. A partir de SQL Server 2017, no se publicarán Service Pack, ya que sigue un [modelo de servicio moderno](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). El equipo de SQL Server recomienda la instalación [continua y proactiva de actualizaciones acumulativas](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) a medida que estén disponibles.
+Por SQL Server 2016 y versiones anteriores, la compatibilidad con cada versión de SQL y Service Pack sigue la [directiva de ciclo de vida de Microsoft](https://aka.ms/sqllifecycle). La compatibilidad para un Service Pack de SQL Server específico incluye actualizaciones acumulativas a menos que interrumpan la compatibilidad con versiones anteriores para la versión del Service Pack base. A partir de SQL Server 2017, no se publicarán Service Pack, ya que sigue un [modelo de servicio moderno](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). El equipo de SQL Server recomienda la instalación [continua y proactiva de actualizaciones acumulativas](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) a medida que estén disponibles.
 
 A menos que se especifique lo contrario, las versiones siguientes de SQL Server son compatibles con todas las versiones activas de Configuration Manager. Si se agrega soporte para una nueva versión de SQL Server, se notifica la versión de Configuration Manager que agrega dicha compatibilidad. De forma similar, si la compatibilidad está en desuso, busque detalles sobre las versiones afectadas de Configuration Manager.
 
@@ -74,7 +74,7 @@ A menos que se especifique lo contrario, las versiones siguientes de SQL Server 
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019: Standard, Enterprise
 
-A partir de la versión 1910 de Configuration Manager, puede usar esta versión con la actualización acumulativa 5 (CU5), siempre y cuando dicha versión sea compatible con el ciclo de vida de SQL. CU5 es el requisito mínimo para SQL Server 2019 a medida dado que resuelve un problema con la [inserción de UDG escalar](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
+A partir de la versión 1910 de Configuration Manager, puede usar esta versión con la actualización acumulativa 5 (CU5), siempre y cuando dicha versión sea compatible con el ciclo de vida de SQL. CU5 es el requisito mínimo para SQL Server 2019 a medida dado que resuelve un problema con la [inserción de UDG escalar](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
 
 Esta versión de SQL se puede usar para los sitios siguientes:
 
@@ -85,13 +85,13 @@ Esta versión de SQL se puede usar para los sitios siguientes:
 <!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -187,7 +187,7 @@ Configuration Manager admite dos excepciones a esta intercalación para el está
 
 ### <a name="database-compatibility-level"></a>Nivel de compatibilidad de la base de datos
 
-Configuration Manager requiere que el nivel de compatibilidad para la base de datos del sitio no sea inferior a la versión mínima compatible de SQL Server para su versión de Configuration Manager. Por ejemplo, a partir de la versión 1702, debe tener un [nivel de compatibilidad de la base de datos](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) mayor o igual a 110. <!-- SMS.506266-->
+Configuration Manager requiere que el nivel de compatibilidad para la base de datos del sitio no sea inferior a la versión mínima compatible de SQL Server para su versión de Configuration Manager. Por ejemplo, a partir de la versión 1702, debe tener un [nivel de compatibilidad de la base de datos](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) mayor o igual a 110. <!-- SMS.506266-->
 
 ### <a name="sql-server-features"></a>Características de SQL Server
 
@@ -205,7 +205,7 @@ Use una instancia dedicada de SQL Server para cada sitio. La instancia puede ser
 
 ### <a name="sql-server-memory"></a>Memoria de SQL Server
 
-Reserve memoria para SQL Server mediante SQL Server Management Studio. Establezca la opción **Cantidad mínima de memoria del servidor** en **Opciones de memoria del servidor**. Para obtener más información acerca de cómo configurar esta opción, consulte [Opciones de configuración de memoria del servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
+Reserve memoria para SQL Server mediante SQL Server Management Studio. Establezca la opción **Cantidad mínima de memoria del servidor** en **Opciones de memoria del servidor**. Para obtener más información acerca de cómo configurar esta opción, consulte [Opciones de configuración de memoria del servidor](/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
 
 - **Para un servidor de bases de datos que instale en el mismo equipo que el servidor de sitio**: Limite la memoria para SQL Server al 50-80 % de la memoria de sistema direccionable disponible.  
 
@@ -219,11 +219,11 @@ Reserve memoria para SQL Server mediante SQL Server Management Studio. Establezc
 
 ### <a name="sql-nested-triggers"></a>Desencadenadores anidados de SQL
 
-Los desencadenadores anidados de SQL deben estar habilitados. Para obtener más información, consulte [Establecer la opción de configuración del servidor Desencadenadores anidados](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option).
+Los desencadenadores anidados de SQL deben estar habilitados. Para obtener más información, consulte [Establecer la opción de configuración del servidor Desencadenadores anidados](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option).
 
 ### <a name="sql-server-clr-integration"></a>Integración de CLR de SQL Server
 
-La base de datos de sitio requiere Common Language Runtime (CLR) para habilitarse. Esta opción se habilita de forma automática cuando se instala Configuration Manager. Para obtener más información sobre CLR, consulte [Introducción a la integración CLR de SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
+La base de datos de sitio requiere Common Language Runtime (CLR) para habilitarse. Esta opción se habilita de forma automática cuando se instala Configuration Manager. Para obtener más información sobre CLR, consulte [Introducción a la integración CLR de SQL Server](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
 ### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
 
@@ -231,7 +231,7 @@ SQL Server Service Broker es necesario tanto para la replicación entre sitios c
 
 ### <a name="trustworthy-setting"></a>Opción TRUSTWORTHY
 
-Configuration Manager habilita automáticamente la [propiedad de base de datos TRUSTWORTHY](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property). Configuration Manager requiere que esta propiedad sea **ON**.
+Configuration Manager habilita automáticamente la [propiedad de base de datos TRUSTWORTHY](/sql/relational-databases/security/trustworthy-database-property). Configuration Manager requiere que esta propiedad sea **ON**.
 
 ## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> Configuraciones opcionales para SQL Server
 
@@ -255,7 +255,7 @@ Cuando el equipo que ejecuta SQL Server no usa su cuenta de sistema local para e
 
 Para obtener información acerca de los SPN para la base de datos de sitio, consulte [Administrar el SPN para el servidor de base de datos del sitio](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN).  
 
-Para obtener información sobre cómo cambiar la cuenta que usa el servicio SQL Server, consulte [Servicios SCM: cambiar la cuenta de inicio de servicio](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
+Para obtener información sobre cómo cambiar la cuenta que usa el servicio SQL Server, consulte [Servicios SCM: cambiar la cuenta de inicio de servicio](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services
 
@@ -290,7 +290,7 @@ Si un equipo que ejecuta SQL Server hospeda una base de datos de más de un siti
 
 Si tiene un firewall habilitado en el equipo que ejecuta SQL Server, asegúrese de que está configurado para permitir los puertos utilizados por su implementación en todas las ubicaciones en la red entre los equipos que se comunican con SQL Server.  
 
-Para obtener un ejemplo de cómo configurar SQL Server para usar un determinado puerto, consulte [Configurar un servidor para que escuche en un puerto TCP específico](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+Para obtener un ejemplo de cómo configurar SQL Server para usar un determinado puerto, consulte [Configurar un servidor para que escuche en un puerto TCP específico](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ## <a name="upgrade-options-for-sql-server"></a>Opciones de actualización de SQL Server
 

@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381055"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88704584"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>Consultas
 
-Las consultas se pueden usar para buscar términos, identificar tendencias, analizar patrones y proporcionar mucha más información basada en sus datos. CMPivot usa un subconjunto del modelo de flujo de datos de [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) para la instrucción de expresión tabular. La estructura típica de una instrucción de expresión tabular es una composición de entidades cliente y operadores de datos tabulares (como filtros y proyecciones). La composición se representa mediante el carácter de barra vertical (|), lo cual confiere a la instrucción un formato regular que representa visualmente el flujo de datos tabulares de izquierda a derecha. Cada operador acepta un conjunto de datos tabulares "de la canalización", así como entradas adicionales (incluidos otros conjuntos de datos tabulares) del cuerpo del operador y, después, emite un conjunto de datos tabulares para el operador siguiente: `entity | operator1 | operator2 | ...`
+Las consultas se pueden usar para buscar términos, identificar tendencias, analizar patrones y proporcionar mucha más información basada en sus datos. CMPivot usa un subconjunto del modelo de flujo de datos de [Azure Log Analytics](/azure/kusto/query) para la instrucción de expresión tabular. La estructura típica de una instrucción de expresión tabular es una composición de entidades cliente y operadores de datos tabulares (como filtros y proyecciones). La composición se representa mediante el carácter de barra vertical (|), lo cual confiere a la instrucción un formato regular que representa visualmente el flujo de datos tabulares de izquierda a derecha. Cada operador acepta un conjunto de datos tabulares "de la canalización", así como entradas adicionales (incluidos otros conjuntos de datos tabulares) del cuerpo del operador y, después, emite un conjunto de datos tabulares para el operador siguiente: `entity | operator1 | operator2 | ...`
 
 En el ejemplo siguiente, la entidad es `CCMRecentlyUsedApplications` (una referencia a las aplicaciones usadas recientemente) y el operador es where (que filtra los registros a partir de su entrada según ciertos predicados por registro):
 

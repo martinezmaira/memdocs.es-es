@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746568"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700844"
 ---
 # <a name="monitor-connection-health"></a>Supervisión del estado de conexión
 
@@ -334,7 +334,7 @@ Para más información, revise M365AHandler.log en el cliente.
 <!--1004-->
 Si esta comprobación no se realiza correctamente, significa que el usuario seleccionó un nivel inferior de datos de diagnóstico de Windows en el dispositivo. También puede deberse al conflicto de un objeto de directiva de grupo. Para más información, consulte [Configuración de Windows](enroll-devices.md#windows-settings).
 
-En función de los requisitos de su empresa, puede deshabilitar la elección del usuario a través de la directiva de grupo. Use la opción **Configure telemetry opt-in setting user interface** (Configurar la interfaz de usuario de establecimiento de participación en la telemetría). Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+En función de los requisitos de su empresa, puede deshabilitar la elección del usuario a través de la directiva de grupo. Use la opción **Configure telemetry opt-in setting user interface** (Configurar la interfaz de usuario de establecimiento de participación en la telemetría). Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 ### <a name="check-user-proxy"></a>Comprobar proxy de usuario
 
@@ -455,7 +455,7 @@ Análisis de escritorio usa el servicio de cuentas Microsoft para aumentar la co
 
 Asegúrese de que el servicio **Ayudante para el inicio de sesión de cuenta Microsoft** no esté deshabilitado. El tipo de inicio debe ser **Manual (desencadenar inicio)** .
 
-Para deshabilitar el acceso a la cuenta Microsoft del usuario final, use la configuración de directiva en lugar de bloquear este punto de conexión. Para más información, consulte [La cuenta de Microsoft en la empresa](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
+Para deshabilitar el acceso a la cuenta Microsoft del usuario final, use la configuración de directiva en lugar de bloquear este punto de conexión. Para más información, consulte [La cuenta de Microsoft en la empresa](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Participación en datos de diagnóstico de Windows
 

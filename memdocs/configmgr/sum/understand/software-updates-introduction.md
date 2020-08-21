@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3cb8d07c9bcc31353e16f01de9e60857d47d49e4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906761"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700429"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Introducción a las actualizaciones de software en Configuration Manager
 
@@ -275,7 +275,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
  Para obtener más información sobre cómo Configuration Manager administra los dispositivos insertados que usan filtros de escritura, consulte [Planeación de implementación de cliente en dispositivos de Windows Embedded](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Extender las actualizaciones de software en Configuration Manager  
- Use System Center Updates Publisher para administrar las actualizaciones de software que no estén disponibles en Microsoft Update. Después de publicar las actualizaciones de software en el servidor de actualización y sincronizarlas en Configuration Manager, puede implementar las actualizaciones de software en los clientes de Configuration Manager. Para obtener más información sobre Updates Publisher, consulte [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+ Use System Center Updates Publisher para administrar las actualizaciones de software que no estén disponibles en Microsoft Update. Después de publicar las actualizaciones de software en el servidor de actualización y sincronizarlas en Configuration Manager, puede implementar las actualizaciones de software en los clientes de Configuration Manager. Para obtener más información sobre Updates Publisher, consulte [Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Planear las actualizaciones de software](../plan-design/plan-for-software-updates.md)

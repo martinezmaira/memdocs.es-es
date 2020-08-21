@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128974"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699847"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novedades de la versión 1810 de la rama actual de Configuration Manager
 
@@ -236,7 +236,7 @@ Para obtener más información, consulte [Crear aplicaciones](../../../apps/depl
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Compatibilidad de la secuencias de tareas de Windows Autopilot con dispositivos existentes
 
 <!--3607717, fka 1358333-->
-[Windows Autopilot para los dispositivos existentes](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ahora está disponible con Windows 10, versión 1809 o posterior. Esta nueva característica permite volver a crear una imagen y aprovisionar un dispositivo de Windows 7 para el [modo controlado por el usuario de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mediante una única secuencia de tareas nativa de Configuration Manager.
+[Windows Autopilot para los dispositivos existentes](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ahora está disponible con Windows 10, versión 1809 o posterior. Esta nueva característica permite volver a crear una imagen y aprovisionar un dispositivo de Windows 7 para el [modo controlado por el usuario de Windows Autopilot](/windows/deployment/windows-autopilot/user-driven) mediante una única secuencia de tareas nativa de Configuration Manager.
 
 Para obtener más información, consulte [Windows Autopilot para dispositivos existentes](../../../../autopilot/existing-devices.md).
 
@@ -287,7 +287,7 @@ Para más información, vea [Task sequence variables](../../../osd/understand/ta
 <!--1358146-->
 Cree implementaciones por fases de actualizaciones de software. Las Implementaciones por fases permiten organizar un lanzamiento de software coordinado y secuencial según criterios y grupos personalizables.
 
-Para más información, vea [Crear implementaciones por fases](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Para más información, vea [Crear implementaciones por fases](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>Mejoras en las ventanas de mantenimiento para actualizaciones de software
@@ -427,7 +427,7 @@ El requisito previo de MDM local para configurar una suscripción de Microsoft I
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, vea [Resumen de cambios en la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4482169).
 
-Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [las notas de la versión de PowerShell 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
+Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [las notas de la versión de PowerShell 1810](/powershell/sccm/1810-release-notes?view=sccm-ps).
 
 El siguiente paquete acumulativo de actualizaciones (4488598) está disponible en la consola desde el 25 de octubre de 2019: [Paquete acumulativo de actualizaciones 2 de la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4488598). Este paquete acumulativo de actualizaciones reemplaza el anterior (KB 4486457).
 

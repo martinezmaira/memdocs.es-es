@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: 4ae2d837179e3b661bfbfa68d1db429674e20de5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343191"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699405"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Buscar ayuda para usar Configuration Manager
 
@@ -37,7 +37,7 @@ Para obtener ayuda sobre la accesibilidad del producto, vea [Características de
 
 ##  <a name="product-documentation"></a><a name="bkmk_Info"></a> Documentación del producto  
 
-Para acceder a la documentación más reciente del producto, comience en el [índice de biblioteca](https://docs.microsoft.com/sccm/).  
+Para acceder a la documentación más reciente del producto, comience en el [índice de biblioteca](/sccm/).  
 
 <a name="BKMK_SearchTips"></a>  
 

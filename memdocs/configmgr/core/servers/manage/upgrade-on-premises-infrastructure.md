@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 033c5de1a85ce2fa8b11fe7a187fcc4d5c023931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704303"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699490"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Actualizar la infraestructura local compatible con Configuration Manager
 
@@ -52,9 +52,9 @@ Para actualizar un servidor, use los procedimientos de actualización que propor
 
 - [Windows Server Upgrade Center](https://aka.ms/upgradecenter)  
 
-- [Upgrade and conversion options for Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths) (Opciones de actualización y conversión de Windows Server 2016)  
+- [Upgrade and conversion options for Windows Server 2016](/windows-server/get-started/supported-upgrade-paths) (Opciones de actualización y conversión de Windows Server 2016)  
 
-- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) (Opciones de actualización de Windows Server 2012 R2)  
+- [Upgrade Options for Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) (Opciones de actualización de Windows Server 2012 R2)  
 
 ### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a> Actualizar Windows Server 2016 o 2019
 
@@ -140,7 +140,7 @@ Al hacer la actualización de Windows Server 2008 R2 o Windows Server 2012 a W
 
 - En Windows Server 2012: Quite el rol de WSUS del servidor si está instalado. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS.  
 
-- En Windows Server 2008 R2: Antes de actualizar a Windows Server 2012 R2, debe desinstalar WSUS 3.2 del servidor. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS. Para más información, vea [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality) (Introducción a Windows Server Update Services).  
+- En Windows Server 2008 R2: Antes de actualizar a Windows Server 2012 R2, debe desinstalar WSUS 3.2 del servidor. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS. Para más información, vea [Windows Server Update Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality) (Introducción a Windows Server Update Services).  
 
 - Si va a actualizar el sistema operativo del servidor de sitio, asegúrese de que la [replicación basada en archivos](../../plan-design/hierarchy/file-based-replication.md) es correcta para el sitio. Compruebe todas las bandejas de entrada en busca de trabajos pendientes, tanto en sitios de envío como en sitios de recepción. Si hay muchos trabajos de replicación bloqueados o pendientes, espere hasta que desaparezca.<!-- SCCMDocs#1792 -->
     - En el sitio de envío, revise el archivo **sender.log**.
@@ -242,15 +242,15 @@ Para identificar el nivel de compatibilidad de la estimación de cardinalidad de
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-Para obtener más información sobre los niveles de compatibilidad de CE de SQL y cómo establecerlos, consulte [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+Para obtener más información sobre los niveles de compatibilidad de CE de SQL y cómo establecerlos, consulte [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
 
 Para más información sobre la actualización de SQL Server, consulte los siguientes artículos de SQL Server:  
 
-- [Actualización a SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+- [Actualización a SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Actualización a SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Actualización a SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
-- [Actualización a SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Actualización a SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Para actualizar SQL Server en el servidor de base de datos del sitio  
 
@@ -261,4 +261,4 @@ Para más información sobre la actualización de SQL Server, consulte los sigui
 3. Reinicie los servicios de Configuration Manager.  
 
 > [!NOTE]  
-> Cuando cambia la edición de SQL Server en uso en el sitio de administración central de Standard a Enterprise o Datacenter, la partición de la base de datos no cambia. Esta partición de la base de datos limita el número de clientes que admite la jerarquía.  
+> Cuando cambia la edición de SQL Server en uso en el sitio de administración central de Standard a Enterprise o Datacenter, la partición de la base de datos no cambia. Esta partición de la base de datos limita el número de clientes que admite la jerarquía.

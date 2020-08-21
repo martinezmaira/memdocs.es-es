@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3871b51c85d0474c4bea2da24fc5a2f31d02f59f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c37fab775cdb90667ff1bc9f77dbbcaa1864b6f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702943"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696793"
 ---
 # <a name="uup-private-preview-instructions"></a>Instrucciones de la versión preliminar privada de UUP
 
@@ -159,7 +159,7 @@ Después de sincronizar las actualizaciones de UUP en el entorno, búsquelas en 
 
 ### <a name="updates-available-during-preview"></a>Actualizaciones disponibles durante la versión preliminar
 
-Para obtener más información sobre todas las actualizaciones de Windows 10 que ha publicado Microsoft, consulte [Información de versión de Windows 10](https://docs.microsoft.com/windows/release-information/).
+Para obtener más información sobre todas las actualizaciones de Windows 10 que ha publicado Microsoft, consulte [Información de versión de Windows 10](/windows/release-information/).
 
 #### <a name="cumulative-updates-to-test"></a>Actualizaciones acumulativas para pruebas
 

@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301442"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699524"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Recuperar un sitio de Configuration Manager
 
@@ -181,7 +181,7 @@ Use esta opción si ya ha recuperado la base de datos de sitio de Configuration 
     Después de restaurar la base de datos de sitio con un método ajeno a Configuration Manager, ejecute el programa de instalación y seleccione esta opción para completar la recuperación de la base de datos de sitio.  
 
     > [!NOTE]  
-    > Si usa DPM para realizar la copia de seguridad de la base de datos del sitio, emplee los procedimientos de DPM para restaurar la base de datos del sitio en una ubicación determinada antes de continuar con el proceso de restauración en Configuration Manager. Para obtener más información sobre DPM, vea la biblioteca de documentación de [Data Protection Manager](https://docs.microsoft.com/system-center/dpm).  
+    > Si usa DPM para realizar la copia de seguridad de la base de datos del sitio, emplee los procedimientos de DPM para restaurar la base de datos del sitio en una ubicación determinada antes de continuar con el proceso de restauración en Configuration Manager. Para obtener más información sobre DPM, vea la biblioteca de documentación de [Data Protection Manager](/system-center/dpm).  
 
 - En una jerarquía, al recuperar una base de datos de sitio primario, el proceso de recuperación recupera del sitio de administración central los cambios realizados en la base de datos de sitio después de la última copia de seguridad. Al restaurar el sitio de administración central, el proceso de recuperación recupera estos cambios desde un sitio primario de referencia. Si recupera la base de datos de sitio de un sitio primario independiente, pierde los cambios del sitio desde la última copia de seguridad.  
 
@@ -193,7 +193,7 @@ Use esta opción si no se ha producido ninguna pérdida de datos en el servidor 
 
 Configuration Manager habilita el seguimiento de cambios de la base de datos de sitio de SQL Server. El seguimiento de cambios permite a Configuration Manager consultar información sobre los cambios realizados en las tablas de base de datos a partir de un punto concreto en el tiempo. El período de retención especifica cuánto tiempo se conserva la información de seguimiento de cambios. De forma predeterminada, la base de datos de sitio está configurada para tener un período de retención de cinco días. Cuando se recupera una base de datos del sitio, el proceso de recuperación variará en función de si la copia de seguridad pertenece o no al período de retención. Por ejemplo, si se produce un error en SQL Server y la última copia de seguridad se hizo hace siete días, está fuera del período de retención.
 
-Para obtener más información sobre los datos internos de seguimiento de cambios de SQL Server, vea las siguientes entradas de blog del equipo de SQL Server: [Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) (Limpieza de seguimiento de cambios: Parte 1) y [Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2) (Limpieza de seguimiento de cambios: Parte 2).
+Para obtener más información sobre los datos internos de seguimiento de cambios de SQL Server, vea las siguientes entradas de blog del equipo de SQL Server: [Change Tracking Cleanup - part 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) (Limpieza de seguimiento de cambios: Parte 1) y [Change Tracking Cleanup - part 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2) (Limpieza de seguimiento de cambios: Parte 2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Reinicialización de los datos globales o del sitio
 
@@ -378,7 +378,7 @@ Tras una recuperación del sitio, debe reinstalar las [revisiones extraordinaria
 
 ### <a name="recover-custom-reports"></a>Recuperar informes personalizados
 
-Algunos clientes crean informes personalizados en SQL Server Reporting Services. Cuando se produce un error en este componente, recupere los informes a partir de una copia de seguridad del servidor de informes. Para obtener más información sobre la restauración de los informes personalizados de Reporting Services, vea [Operaciones de copia de seguridad y restauración de Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
+Algunos clientes crean informes personalizados en SQL Server Reporting Services. Cuando se produce un error en este componente, recupere los informes a partir de una copia de seguridad del servidor de informes. Para obtener más información sobre la restauración de los informes personalizados de Reporting Services, vea [Operaciones de copia de seguridad y restauración de Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
 
 ### <a name="recover-content-files"></a>Recuperación de archivos de contenido
 
@@ -410,7 +410,7 @@ Como parte de las propiedades de punto de migración de estado, se especifican l
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>Regeneración de los certificados para puntos de distribución
 
-Después de restaurar un sitio, **distmgr.log** podría contener la siguiente entrada para uno o varios puntos de distribución: `Failed to decrypt cert PFX data`. Esta entrada indica que el sitio no puede descifrar los datos del certificado de punto de distribución. Para resolver este problema, vuelva a generar o a importar el certificado de los puntos de distribución afectados. Use el cmdlet [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) de PowerShell.
+Después de restaurar un sitio, **distmgr.log** podría contener la siguiente entrada para uno o varios puntos de distribución: `Failed to decrypt cert PFX data`. Esta entrada indica que el sitio no puede descifrar los datos del certificado de punto de distribución. Para resolver este problema, vuelva a generar o a importar el certificado de los puntos de distribución afectados. Use el cmdlet [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) de PowerShell.
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Actualizar certificados usados para puntos de distribución basados en la nube
 

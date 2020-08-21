@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904083"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700102"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Extensiones de esquema para Configuration Manager
 
@@ -25,7 +25,7 @@ Puede extender el esquema de Active Directory para admitir Configuration Manager
 
 -   Le recomendamos que extienda el esquema de Active Directory, aunque no es obligatorio.  
 
-Antes de [extender el esquema de Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), debe estar familiarizado con los Servicios de dominio de Active Directory y sentirse cómodo con la [modificación del esquema de Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
+Antes de [extender el esquema de Active Directory](/sccm/core/plan-design/network/extend-the-active-directory-schema), debe estar familiarizado con los Servicios de dominio de Active Directory y sentirse cómodo con la [modificación del esquema de Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Consideraciones para extender el esquema de Active Directory para Configuration Manager  
 
@@ -142,4 +142,4 @@ Si extiende el esquema para Configuration Manager, las siguientes clases y atrib
 > - Atributo: cn=MS-SMS-Site-Boundaries  
 >   -   Clase: cn=MS-SMS-Server-Locator-Point  
 
-Para asegurarse de que las listas anteriores están actualizadas, consulte el archivo **ConfigMgr_ad_schema.LDF** de la carpeta **\SMSSETUP\BIN\x64** del medio de instalación de Configuration Manager.  
+Para asegurarse de que las listas anteriores están actualizadas, consulte el archivo **ConfigMgr_ad_schema.LDF** de la carpeta **\SMSSETUP\BIN\x64** del medio de instalación de Configuration Manager.

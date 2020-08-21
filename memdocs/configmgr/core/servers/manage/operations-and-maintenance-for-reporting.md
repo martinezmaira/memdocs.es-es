@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 21bb81e9851ab80d7807df337a67005e5b6b292a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815419"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699660"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Operaciones y mantenimiento de informes en Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager almacena los informes en SQL Server Reporting Services. El
 Al ejecutar un informe, el título, la descripción y la categoría del informe se muestran en el idioma del sistema operativo local. Para obtener más información, consulte [Idiomas para los informes](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> El Administrador de informes es una herramienta de administración y acceso a informes basada en web. Puede usarlo para administrar una única instancia del servidor de informes a través de una conexión HTTPS. Use el Administrador de informes para las tareas operativas, es decir, ver los informes, modificar las propiedades de los informes y administrar suscripciones a informes asociados. En este artículo se indican los pasos que hay que seguir para ver un informe y modificar sus propiedades en el Administrador de informes. Para obtener más información sobre otras opciones del Administrador de informes, consulte [Administrador de informes](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server).
+> El Administrador de informes es una herramienta de administración y acceso a informes basada en web. Puede usarlo para administrar una única instancia del servidor de informes a través de una conexión HTTPS. Use el Administrador de informes para las tareas operativas, es decir, ver los informes, modificar las propiedades de los informes y administrar suscripciones a informes asociados. En este artículo se indican los pasos que hay que seguir para ver un informe y modificar sus propiedades en el Administrador de informes. Para obtener más información sobre otras opciones del Administrador de informes, consulte [Administrador de informes](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server).
 
 Utilice los procedimientos siguientes para ejecutar un informe de Configuration Manager.
 
@@ -261,7 +261,7 @@ Utilice el procedimiento siguiente para crear una suscripción de informe para e
 Cuando crea una suscripción de informe para entregar un informe por correo electrónico, Reporting Services envía un correo electrónico a los destinatarios configurados. El correo electrónico incluye el informe como datos adjuntos. El servidor de informes no valida las direcciones de correo electrónico ni las obtiene de un servidor de correo electrónico. Puede enviar informes a través del correo electrónico a cualquier cuenta de correo electrónico válida dentro o fuera de su organización.
 
 > [!NOTE]
-> Para habilitar la opción de suscripción **Correo electrónico**, debe configurar las opciones de correo electrónico en Reporting Services. Para obtener más información, consulte [Entrega por correo electrónico en Reporting Services](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
+> Para habilitar la opción de suscripción **Correo electrónico**, debe configurar las opciones de correo electrónico en Reporting Services. Para obtener más información, consulte [Entrega por correo electrónico en Reporting Services](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
 
 Puede seleccionar las dos opciones de entrega de correo electrónico siguientes:
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: a6e406d55524caca71bf75b087c9fd78a470c939
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556037"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699388"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Características de accesibilidad de Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager incluye características que ayudan a que sea accesible pa
 > [!Note]  
 > A partir de la versión 1902, para mejorar las características de accesibilidad de la consola de Configuration Manager, actualice .NET a la versión 4.7 o posterior en el equipo que ejecuta la consola. <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> Para más información sobre los cambios de accesibilidad realizados en .NET 4.7.1 y 4.7.2, consulte [Novedades de accesibilidad en .NET Framework](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility).  
+> Para más información sobre los cambios de accesibilidad realizados en .NET 4.7.1 y 4.7.2, consulte [Novedades de accesibilidad en .NET Framework](/dotnet/framework/whats-new/whats-new-in-accessibility).  
 
 
 
@@ -98,5 +98,4 @@ Para más información sobre los fundamentos de navegar por las interfaces de us
 - [Manual del usuario del Centro de software](software-center.md)
 
 > [!NOTE]  
-> Es posible que la información de este artículo solo sea válida para los usuarios con licencia de productos de Microsoft en Estados Unidos. Si ha obtenido este producto fuera de los Estados Unidos, puede usar la tarjeta de información de filiales incluida en el paquete de software o visitar el [sitio web de accesibilidad de Microsoft](https://www.microsoft.com/accessibility/) para obtener la información de contacto de los servicios de soporte técnico de Microsoft. Puede ponerse en contacto con su distribuidor para conocer si el tipo de productos y servicios que se describen en esta sección están disponibles en su área. La información acerca de la accesibilidad está disponible en otros idiomas, incluido el japonés y el francés.  
-
+> Es posible que la información de este artículo solo sea válida para los usuarios con licencia de productos de Microsoft en Estados Unidos. Si ha obtenido este producto fuera de los Estados Unidos, puede usar la tarjeta de información de filiales incluida en el paquete de software o visitar el [sitio web de accesibilidad de Microsoft](https://www.microsoft.com/accessibility/) para obtener la información de contacto de los servicios de soporte técnico de Microsoft. Puede ponerse en contacto con su distribuidor para conocer si el tipo de productos y servicios que se describen en esta sección están disponibles en su área. La información acerca de la accesibilidad está disponible en otros idiomas, incluido el japonés y el francés.

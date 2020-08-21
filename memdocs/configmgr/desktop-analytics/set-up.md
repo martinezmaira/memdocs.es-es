@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: facfb2be1972933524c7ad632537fc8306939c1c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268158"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700759"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Configuración de Análisis de escritorio
 
@@ -39,7 +39,7 @@ Use este procedimiento para iniciar sesión en Análisis de escritorio y configu
 
         Aunque no seleccione esta opción, Análisis de escritorio agregará usuarios como miembros del grupo de seguridad. Un **administrador global** debe asignar manualmente el rol de **administrador de Análisis de escritorio** para los usuarios.
 
-        Para obtener más información sobre la asignación de permisos de rol de administrador en Azure Active Directory y los permisos asignados a **administradores de Análisis de escritorio**, consulte [Permisos de roles de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Para obtener más información sobre la asignación de permisos de rol de administrador en Azure Active Directory y los permisos asignados a **administradores de Análisis de escritorio**, consulte [Permisos de roles de administrador en Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Análisis de escritorio preconfigura el grupo de seguridad de **propietarios del área de trabajo** en Azure Active Directory para crear y administrar áreas de trabajo y planes de implementación.
 
@@ -82,4 +82,4 @@ Azure Portal muestra la página **Inicio** de Análisis de escritorio.
 
 Siga con el artículo siguiente para conectar Configuration Manager con Análisis de escritorio.
 > [!div class="nextstepaction"]  
-> [Conexión de Configuration Manager](connect-configmgr.md)  
+> [Conexión de Configuration Manager](connect-configmgr.md)

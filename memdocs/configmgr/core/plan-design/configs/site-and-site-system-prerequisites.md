@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d4fb94d0ab64cb7c3dc3128c982b0c2b162b22b7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce3420a6e229b5987616c5c0c1c41d50cdc499c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702163"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700357"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Sitio y requisitos previos de sistema de sitio para Configuration Manager
 
@@ -93,7 +93,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-adk"></a>Windows ADK  
@@ -129,7 +129,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ Redistributable
@@ -214,7 +214,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Configuración de IIS  
@@ -270,7 +270,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Configuración de IIS
@@ -312,7 +312,7 @@ Instale una versión compatible de .NET Framework 4.5 o una versión posterior.
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -334,7 +334,7 @@ Instale una versión compatible de .NET Framework 4.5 o una versión posterior.
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Configuración de IIS
@@ -446,7 +446,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Configuración de IIS
@@ -497,7 +497,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Configuración de IIS
@@ -560,7 +560,7 @@ Instale una versión compatible de .NET Framework 4.5 o una versión posterior.
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Configuración de IIS
@@ -592,7 +592,7 @@ Instale una versión compatible de .NET Framework 4.5 o una versión posterior.
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
@@ -621,7 +621,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ Redistributable
@@ -651,7 +651,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-server-update-services"></a>Windows Server Update Services  
@@ -690,7 +690,7 @@ Instale también un versión compatible de .NET Framework 4.5 o una versión po
 
 Para más información sobre las versiones de .NET Framework, vea los siguientes artículos:
 
-- [Dependencias y versiones de .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Dependencias y versiones de .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Preguntas frecuentes del ciclo de vida: .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Configuración de IIS
@@ -716,4 +716,3 @@ Para más información sobre las versiones de .NET Framework, vea los siguientes
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
 Cuando se instala un sitio nuevo, Configuration Manager instala de forma automática SQL Server Native Client como un componente redistribuible. Después de instalar el sitio, Configuration Manager no actualiza SQL Server Native Client. Asegúrese de que este componente está actualizado. Para más información, vea [Comprobaciones de requisitos previos: SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
-

@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906099"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699371"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Obtenga información sobre la rama de mantenimiento a largo plazo de Configuration Manager.
 
@@ -26,7 +26,7 @@ La rama de mantenimiento a largo plazo (LTSB) de System Center Configuration Man
 Basada en la versión 1606 de Configuration Manager, la LTSB tiene menor funcionalidad cuando se compara con la rama actual de Configuration Manager.
 
 > [!TIP]   
-> La LTSB de Configuration Manager no está relacionado con el canal de mantenimiento a largo plazo (LTSC) del conjunto de System Center. Para obtener más información, vea [Información general de las opciones de publicación de System Center](https://docs.microsoft.com/system-center/ltsc-and-sac-overview).
+> La LTSB de Configuration Manager no está relacionado con el canal de mantenimiento a largo plazo (LTSC) del conjunto de System Center. Para obtener más información, vea [Información general de las opciones de publicación de System Center](/system-center/ltsc-and-sac-overview).
 
 ## <a name="features-that-arent-available"></a>Características que no están disponibles
 
@@ -53,7 +53,7 @@ Las integraciones en la nube, así como las características incluidas con la ve
 
 ## <a name="find-ltsb-documentation"></a>Búsqueda de documentación de LTSB
 
-La LTSB se basa en la versión 1606 de la rama actual. Use la [documentación de la rama actual](https://docs.microsoft.com/mem/configmgr/), con advertencias y limitaciones que son específicas de la LTSB. Estas advertencias y limitaciones se identifican en los artículos siguientes:
+La LTSB se basa en la versión 1606 de la rama actual. Use la [documentación de la rama actual](../../index.yml), con advertencias y limitaciones que son específicas de la LTSB. Estas advertencias y limitaciones se identifican en los artículos siguientes:
 
 - [Instalar la rama de mantenimiento a largo plazo](install-the-ltsb.md)
 - [Actualizar la rama de mantenimiento a largo plazo a la rama actual](convert-to-current-branch.md)

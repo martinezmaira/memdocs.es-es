@@ -10,12 +10,12 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e8e65571a3902661176ca3840690c159faef416
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4f9266668a488b6331857bf860d874a48161fcd0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688593"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700221"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Compatibilidad con las características y redes de Windows en Configuration Manager
 
@@ -49,11 +49,11 @@ Agregue la característica **Windows BranchCache** al servidor del sistema de si
 - Los clientes que pueden admitir BranchCache deben configurarse para el modo Caché distribuida de BranchCache.  
 - La opción de sistema operativo de la configuración del cliente de BITS debe estar habilitada para admitir BranchCache.  
 
-Para obtener información, vea [Configurar clientes de BranchCache](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) en la documentación de Windows.
+Para obtener información, vea [Configurar clientes de BranchCache](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) en la documentación de Windows.
 
 Todas las versiones compatibles de Configuration Manager admiten BranchCache de forma predeterminada.
 
-Para obtener más información, vea [BranchCache para Windows](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) en la documentación de Windows Server.  
+Para obtener más información, vea [BranchCache para Windows](/windows-server/networking/branchcache/branchcache) en la documentación de Windows Server.  
 
 ## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> Equipos en grupos de trabajo  
 
@@ -75,7 +75,7 @@ Para más información, vea las siguientes publicaciones:
 
 - [Punto de distribución de Configuration Manager y desduplicación de datos de Windows Server 2012](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385) en el blog del equipo de Configuration Manager.
 
-- [Información general sobre la desduplicación de datos](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview) en la documentación de Windows Server
+- [Información general sobre la desduplicación de datos](/windows-server/storage/data-deduplication/overview) en la documentación de Windows Server
 
 ## <a name="directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 
@@ -129,4 +129,4 @@ Los roles del servidor de sitio requieren NTFS, para que Configuration Manager p
 
      Además, la caché de un cliente de Configuration Manager no se admite en un volumen habilitado para SIS.  
 
-- **Unidad de disco extraíble**: Configuration Manager no admite la instalación de clientes o sistemas de sitio de Configuration Manager en una unidad de disco extraíble.  
+- **Unidad de disco extraíble**: Configuration Manager no admite la instalación de clientes o sistemas de sitio de Configuration Manager en una unidad de disco extraíble.

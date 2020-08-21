@@ -10,12 +10,12 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 12753b3800b3b304bd13c992b57d22bf9e1bfad8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2e85b36d0caeb6ceb99f56220e271774dc0db0f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704803"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699252"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuración de grupos de disponibilidad AlwaysOn de SQL Server para Configuration Manager
 
@@ -45,7 +45,7 @@ Utilice el procedimiento siguiente para crear un grupo de disponibilidad y, a co
     ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
     ```
 
-    Los grupos de disponibilidad solo admiten el modelo de copia de seguridad COMPLETA. Para más información, vea [Ver o cambiar el modelo de recuperación de una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+    Los grupos de disponibilidad solo admiten el modelo de copia de seguridad COMPLETA. Para más información, vea [Ver o cambiar el modelo de recuperación de una base de datos](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 3. Use SQL Server para crear una copia de seguridad completa de la base de datos de sitio. Elija una de las siguientes opciones:
 
@@ -55,13 +55,13 @@ Utilice el procedimiento siguiente para crear un grupo de disponibilidad y, a co
 
     Para más información, vea los siguientes artículos en la documentación de SQL Server:
 
-    - [Crear una copia de seguridad completa de base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
-    - [Restauración de una copia de seguridad de la base de datos con SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+    - [Crear una copia de seguridad completa de base de datos](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+    - [Restauración de una copia de seguridad de la base de datos con SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
     > [!NOTE]  
     > Si planea pasar de un grupo de disponibilidad a una base de datos independiente en una réplica existente, primero quite la base de datos del grupo de disponibilidad.
 
-4. En el servidor que hospedará la réplica principal inicial del grupo, use el [Asistente para nuevo grupo de disponibilidad](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) para crear el grupo de disponibilidad. En el asistente:
+4. En el servidor que hospedará la réplica principal inicial del grupo, use el [Asistente para nuevo grupo de disponibilidad](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) para crear el grupo de disponibilidad. En el asistente:
 
     - En la página **Seleccionar base de datos**, elija la base de datos para el sitio de Configuration Manager.  
 
@@ -82,7 +82,7 @@ Utilice el procedimiento siguiente para crear un grupo de disponibilidad y, a co
 
     2. Ejecute el [script de verificación](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites) para confirmar que la base de datos de sitio de cada réplica está configurada correctamente.
 
-    3. Si hay que ajustar parámetros en las réplicas secundarias, antes de continuar, debe conmutar por error manualmente la réplica principal en la secundaria. porque solo puede configurar la base de datos de una réplica principal. Para más información, vea [Realización de una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) en la documentación de SQL Server.
+    3. Si hay que ajustar parámetros en las réplicas secundarias, antes de continuar, debe conmutar por error manualmente la réplica principal en la secundaria. porque solo puede configurar la base de datos de una réplica principal. Para más información, vea [Realización de una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) en la documentación de SQL Server.
 
 6. Una vez que todas las réplicas cumplan los requisitos, el grupo de disponibilidad estará listo para su uso con Configuration Manager.
 
@@ -121,7 +121,7 @@ A partir de la versión 1906, ejecute el programa de instalación de Configurati
 
 1. Agregue una réplica secundaria con los procedimientos de SQL Server.
 
-    1. [Agregue una réplica secundaria a un grupo de disponibilidad Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+    1. [Agregue una réplica secundaria a un grupo de disponibilidad Always On](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
     1. Vea el estado en SQL Management Studio. Espere a que el grupo de disponibilidad vuelva al estado completo.
 
@@ -137,7 +137,7 @@ Para más información sobre cómo realizar este proceso manualmente en la versi
 
 A partir de la versión 1906, puede usar el programa de instalación de Configuration Manager para quitar un miembro de la réplica. Use el mismo procedimiento para [agregar un nuevo miembro de réplica sincrónica](#bkmk_sync-add).
 
-Para más información sobre cómo realizar este proceso manualmente en la versión 1902 o versiones anteriores, vea [Quitar una réplica secundaria de un grupo de disponibilidad](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
+Para más información sobre cómo realizar este proceso manualmente en la versión 1902 o versiones anteriores, vea [Quitar una réplica secundaria de un grupo de disponibilidad](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
 
 
 ## <a name="asynchronous-replicas"></a><a name="bkmk_async"></a> Réplicas asincrónicas
@@ -146,7 +146,7 @@ Puede usar una réplica asincrónica en el grupo de disponibilidad que use con C
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configuración de una réplica de confirmación asincrónica
 
-Para más información, vea [Adición de una réplica secundaria a un grupo de disponibilidad Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+Para más información, vea [Adición de una réplica secundaria a un grupo de disponibilidad Always On](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Uso de la réplica asincrónica para la recuperación del sitio
 
@@ -163,14 +163,14 @@ Utilice el procedimiento siguiente cuando ya no desee hospedar la base de datos 
 
 1. Para detener el sitio de Configuration Manager, use el siguiente comando: `preinst.exe /stopsite`. Para más información, vea [Herramienta de mantenimiento de jerarquía](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
-2. Use SQL Server para crear una copia de seguridad completa de la base de datos de sitio desde la réplica principal. Para más información, vea [Crear una copia de seguridad completa de base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
+2. Use SQL Server para crear una copia de seguridad completa de la base de datos de sitio desde la réplica principal. Para más información, vea [Crear una copia de seguridad completa de base de datos](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
-3. Utilice SQL Server para restaurar la copia de seguridad de la base de datos de sitio en el servidor que hospedará la base de datos de sitio. Para más información, vea [Restauración de la copia de seguridad de una base de datos con SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
+3. Utilice SQL Server para restaurar la copia de seguridad de la base de datos de sitio en el servidor que hospedará la base de datos de sitio. Para más información, vea [Restauración de la copia de seguridad de una base de datos con SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
     > [!Note]  
     > Si el servidor de la réplica principal del grupo de disponibilidad hospedará la única instancia de la base de datos del sitio, omita este paso.
 
-4. En el servidor que hospedará la base de datos del sitio, cambie el modelo de copia de seguridad de la base de datos del sitio de **COMPLETA** a **SENCILLA**. Para más información, vea [Ver o cambiar el modelo de recuperación de una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+4. En el servidor que hospedará la base de datos del sitio, cambie el modelo de copia de seguridad de la base de datos del sitio de **COMPLETA** a **SENCILLA**. Para más información, vea [Ver o cambiar el modelo de recuperación de una base de datos](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 5. Ejecute el **programa de instalación de Configuration Manager**: `\BIN\X64\setup.exe` desde la carpeta de instalación del sitio de Configuration Manager.
 
@@ -188,4 +188,4 @@ Utilice el procedimiento siguiente cuando ya no desee hospedar la base de datos 
 
 9. Después de proporcionar la información de la nueva ubicación de la base de datos, complete el programa de instalación con los procesos y las configuraciones habituales. Cuando finaliza la instalación, el sitio se reinicia y comienza a utilizar la nueva ubicación de la base de datos.
 
-10. Para limpiar los servidores que eran miembros del grupo de disponibilidad, siga las instrucciones de [Quitar un grupo de disponibilidad (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).
+10. Para limpiar los servidores que eran miembros del grupo de disponibilidad, siga las instrucciones de [Quitar un grupo de disponibilidad (SQL Server)](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).

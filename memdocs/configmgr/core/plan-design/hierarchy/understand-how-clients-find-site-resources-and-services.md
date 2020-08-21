@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269004"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700119"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Información sobre cómo los clientes buscan servicios y recursos de sitio para Configuration Manager
 
@@ -62,7 +62,7 @@ Un cliente selecciona un punto de administración con el cual comunicarse en fun
 
 Puede usar puntos de administración preferidos. Los puntos de administración preferidos son los puntos de administración de un sitio asignado del cliente que se asocian a un grupo de límites que el cliente usa para buscar servidores de sistema de sitio. La asociación de un punto de administración preferido a un grupo de límites como servidor de sistema de sitio es similar a la forma en que los puntos de distribución o puntos de migración de estado se asocian a un grupo de límites. Si habilita puntos de administración preferidos para la jerarquía, cuando un cliente usa un punto de administración desde su sitio asignado intentará usar un punto de administración preferido antes de usar otros puntos de administración desde su sitio asignado.  
 
-También puede usar la información del blog sobre [afinidad de puntos de administración](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) para configurar la afinidad del punto de administración. La afinidad de puntos de administración invalida el comportamiento predeterminado de los puntos de administración asignados y permite al cliente usar uno o varios puntos de administración específicos.  
+También puede usar la información del blog sobre [afinidad de puntos de administración](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) para configurar la afinidad del punto de administración. La afinidad de puntos de administración invalida el comportamiento predeterminado de los puntos de administración asignados y permite al cliente usar uno o varios puntos de administración específicos.  
 
 Cada vez que un cliente necesita contactar con un punto de administración, consulta la lista de puntos de administración que almacena localmente en Instrumental de administración de Windows (WMI). El cliente crea una lista de puntos de administración inicial cuando se instala. Luego, actualiza periódicamente la lista con detalles sobre cada punto de administración de la jerarquía.  
 
@@ -244,4 +244,4 @@ Cuando se produce un error en otros mecanismos de ubicación de servicio, los cl
 
 De forma predeterminada, un sitio primario publica en WINS el primer punto de administración en el sitio que está configurado para HTTP y el primer punto de administración está configurado para HTTPS.  
 
-Si no desea que los clientes encuentren un punto de administración HTTP en WINS, configure los clientes con la propiedad Client.msi de CCMSetup.exe **SMSDIRECTORYLOOKUP=NOWINS**.  
+Si no desea que los clientes encuentren un punto de administración HTTP en WINS, configure los clientes con la propiedad Client.msi de CCMSetup.exe **SMSDIRECTORYLOOKUP=NOWINS**.

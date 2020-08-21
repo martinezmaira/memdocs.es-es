@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706323"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700000"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Introducción a los perfiles de certificado en Configuration Manager
 
@@ -59,11 +59,11 @@ Hay tres tipos de perfiles de certificado:
 
 ## <a name="requirements"></a>Requisitos
 
-Para implementar perfiles de certificado que usen SCEP, instale el punto de registro de certificados en un servidor de sistema de sitio. Instale también un módulo de directivas para NDES, el módulo de directivas de Configuration Manager, en un servidor que ejecute Windows Server 2012 R2 o posterior. Este servidor requiere el rol de Servicios de certificados de Active Directory. También requiere un NDES de trabajo que sea accesible a los dispositivos que requieran los certificados. Si los dispositivos necesitan inscribirse para los certificados en Internet, el servidor de NDES debe ser accesible desde Internet. Por ejemplo, para habilitar de forma segura el tráfico hacia el servidor NDES desde Internet, puede usar [Azure Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+Para implementar perfiles de certificado que usen SCEP, instale el punto de registro de certificados en un servidor de sistema de sitio. Instale también un módulo de directivas para NDES, el módulo de directivas de Configuration Manager, en un servidor que ejecute Windows Server 2012 R2 o posterior. Este servidor requiere el rol de Servicios de certificados de Active Directory. También requiere un NDES de trabajo que sea accesible a los dispositivos que requieran los certificados. Si los dispositivos necesitan inscribirse para los certificados en Internet, el servidor de NDES debe ser accesible desde Internet. Por ejemplo, para habilitar de forma segura el tráfico hacia el servidor NDES desde Internet, puede usar [Azure Application Proxy](/azure/active-directory/manage-apps/application-proxy).
 
 Los certificados PFX también requieren un punto de registro de certificados. Especifique también la entidad de certificación (CA) del certificado y las credenciales de acceso pertinentes. Puede especificar Microsoft o Entrust como entidades de certificación.  
 
-Para obtener más información sobre la compatibilidad de NDES con un módulo de directivas para que Configuration Manager pueda implementar certificados, vea [Uso de un módulo de directivas con el Servicio de inscripción de dispositivos de red](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
+Para obtener más información sobre la compatibilidad de NDES con un módulo de directivas para que Configuration Manager pueda implementar certificados, vea [Uso de un módulo de directivas con el Servicio de inscripción de dispositivos de red](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
 
 Según cuáles sean los requisitos, Configuration Manager admite la implementación de certificados en distintos almacenes de certificados de varios tipos de dispositivo y sistemas operativos. Se admiten los dispositivos y los sistemas operativos siguientes:  
 

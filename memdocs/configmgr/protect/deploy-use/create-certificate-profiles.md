@@ -10,12 +10,12 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 159afbf2c5aae9516fc5244ee06a2aa484290c20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f1ea48887f89cf06ed4b41d0de0dfc24e9d508
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705773"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697133"
 ---
 # <a name="create-certificate-profiles"></a>Crear perfiles de certificado
 
@@ -114,7 +114,7 @@ Complete la página **Inscripción de SCEP** del Asistente para crear perfil de 
 
   - **Instalar en Módulo de plataforma segura (TPM) o se producirá un error**: instala la clave en el TPM. Si el módulo TPM no está presente, se producirá un error en la instalación.  
 
-  - **Instalar en Windows Hello para empresas o generar un error**: esta opción está disponible para dispositivos Windows 10. Permite almacenar el certificado en la tienda de Windows Hello para empresas, que está protegida con autenticación multifactor. Para obtener más información, vea [Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+  - **Instalar en Windows Hello para empresas o generar un error**: esta opción está disponible para dispositivos Windows 10. Permite almacenar el certificado en la tienda de Windows Hello para empresas, que está protegida con autenticación multifactor. Para obtener más información, vea [Windows Hello para empresas](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
     > [!NOTE]  
     > Esta opción no admite el inicio de sesión con tarjeta inteligente para el uso mejorado de clave en la página Propiedades del certificado.

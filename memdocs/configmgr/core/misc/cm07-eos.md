@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: dc954a3c2047d8f4b90a95003c2830fb727d35ac
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f57cc205ce0e705deaed2de3510699d65307e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693383"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696521"
 ---
 # <a name="product-end-of-support"></a>Fin de soporte técnico del producto
 
@@ -47,4 +47,4 @@ Vea los siguientes artículos para más información:
 - [Documentation on how to migrate to Configuration Manager current branch](../migration/migrate-data-between-hierarchies.md) (Documentación sobre cómo migrar a Configuration Manager, rama actual)  
     En este artículo también se incluye un vídeo que analiza y muestra los escenarios de migración habituales.
 
-La [biblioteca de documentación de Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb735860\(v=technet.10\)) todavía está disponible en Microsoft TechNet.
+La [biblioteca de documentación de Configuration Manager 2007](/previous-versions/system-center/configuration-manager-2007/bb735860\(v=technet.10\)) todavía está disponible en Microsoft TechNet.

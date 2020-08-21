@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814900"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699592"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integración con Power BI Report Server
 
@@ -23,13 +23,13 @@ ms.locfileid: "84814900"
 
 <!--3721603-->
 
-A partir de la versión 2002, puede integrar [Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started) con los informes de Configuration Manager. Esta integración proporciona una visualización moderna y un mejor rendimiento. Además, la consola admite informes de Power BI de manera similar a como ya ocurre con SQL Server Reporting Services.
+A partir de la versión 2002, puede integrar [Power BI Report Server](/power-bi/report-server/get-started) con los informes de Configuration Manager. Esta integración proporciona una visualización moderna y un mejor rendimiento. Además, la consola admite informes de Power BI de manera similar a como ya ocurre con SQL Server Reporting Services.
 
 Guarde archivos de informes de Power BI Desktop (.PBIX) e impleméntelos en el Power BI Report Server. Este proceso es similar al de los archivos de informes de SQL Server Reporting Services (.RDL). También puede iniciar los informes en el explorador directamente desde la consola de Configuration Manager.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Licencia de Power BI Report Server. Para más información, vea [Licencias de Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server).
+- Licencia de Power BI Report Server. Para más información, vea [Licencias de Power BI Report Server](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
 - Descargue [Microsoft Power BI Report Server de septiembre de 2019](https://www.microsoft.com/download/details.aspx?id=57270), o posterior.
 
@@ -40,7 +40,7 @@ Guarde archivos de informes de Power BI Desktop (.PBIX) e impleméntelos en el 
 
     > [!IMPORTANT]
     > - Use solo las versiones de Power BI Desktop del [centro de descarga de Microsoft ](https://www.microsoft.com/download/), no use una versión de Microsoft Store.
-    > - Use solo una versión de [Power BI Desktop que indique que se ha **optimizado para Power BI Report Server**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > - Use solo una versión de [Power BI Desktop que indique que se ha **optimizado para Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop).
 
 - La integración de Power BI usa la misma administración basada en roles para la generación de informes.
     > [!NOTE]
@@ -54,7 +54,7 @@ Este proceso varía en función de si ya tiene este rol en el sitio.
 
 Use este proceso solo si ya tiene un punto de servicios de informes en el sitio. Siga todos los pasos de este proceso en el mismo servidor:
 
-1. En **Administrador de configuración del servidor de informes**, haga una copia de seguridad de las **Claves de cifrado**. Para obtener más información, vea [Claves de cifrado de SSRS: copia de seguridad y restauración de claves de cifrado](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. En **Administrador de configuración del servidor de informes**, haga una copia de seguridad de las **Claves de cifrado**. Para obtener más información, vea [Claves de cifrado de SSRS: copia de seguridad y restauración de claves de cifrado](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > Si omite este paso, perderá el acceso a los informes personalizados en SQL Server Reporting Services.
