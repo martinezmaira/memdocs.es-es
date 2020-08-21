@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: Cambio de cargas de trabajo a Intune
       href: how-to-switch-workloads.md
+    - name: Aplicaciones del Portal de empresa
+      href: company-portal.md
     - name: Supervisión de la administración conjunta
       href: how-to-monitor.md
