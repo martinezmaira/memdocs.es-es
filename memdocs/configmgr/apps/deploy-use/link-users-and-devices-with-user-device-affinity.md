@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689273"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695246"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>Vinculación de usuarios y dispositivos con afinidad en Configuration Manager
 
@@ -162,4 +162,4 @@ Si deshabilita la configuración de cliente **Configurar automáticamente la afi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-También puede usar Microsoft Intune para buscar el usuario primario de un dispositivo inscrito. Para obtener más información, consulte el artículo [Búsqueda del usuario primario de un dispositivo de Intune](https://docs.microsoft.com/intune/find-primary-user) en la documentación de Intune.
+También puede usar Microsoft Intune para buscar el usuario primario de un dispositivo inscrito. Para obtener más información, consulte el artículo [Búsqueda del usuario primario de un dispositivo de Intune](/intune/find-primary-user) en la documentación de Intune.

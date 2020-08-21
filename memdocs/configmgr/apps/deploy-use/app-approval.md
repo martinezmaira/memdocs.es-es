@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802062"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695350"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Aprobar aplicaciones en Configuration Manager
 
@@ -49,7 +49,7 @@ Después de aprobar una aplicación para la instalación, puede **Denegar** la s
 
 A partir de la versión 1906, si aprueba una solicitud de aplicación en la consola y después la deniega, ahora la puede volver a aprobar. Después de que apruebe la aplicación, se vuelve a instalar en el cliente.  <!-- 4224910 -->
 
-Automatice el proceso de aprobación con el cmdlet [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) de PowerShell. A partir de la versión 1902, este cmdlet incluye el parámetro **InstallActionBehavior**. Use este parámetro para especificar si quiere instalar la aplicación de inmediato o fuera del horario laboral.<!-- SCCMDocs-pr issue #3418 -->
+Automatice el proceso de aprobación con el cmdlet [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) de PowerShell. A partir de la versión 1902, este cmdlet incluye el parámetro **InstallActionBehavior**. Use este parámetro para especificar si quiere instalar la aplicación de inmediato o fuera del horario laboral.<!-- SCCMDocs-pr issue #3418 -->
 
 A partir de la versión 1906, puede ver qué implementaciones requieren aprobación. Seleccione una aplicación en el nodo **Aplicaciones**. En el panel de detalles, cambie a la pestaña **Implementaciones**. Se muestra una nueva columna de forma predeterminada: **Requiere aprobación**.
 

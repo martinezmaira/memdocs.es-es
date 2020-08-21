@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: 920f3c9aabcdec1242a6f5e5fc8e6b65c5cc0b53
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390847"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694617"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Actualización de dispositivos Windows a una edición nueva con Configuration Manager
 
@@ -35,7 +35,7 @@ Los dispositivos deben ejecutar el software cliente de Configuration Manager. No
 
 Antes de empezar a actualizar dispositivos a la versión más reciente, consulte los requisitos previos siguientes:  
 
-- Para las ediciones de escritorio de Windows 10: una clave de producto válida para la nueva versión de Windows en todos los dispositivos donde quiera aplicar la directiva. Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. <!--496871-->  
+- Para las ediciones de escritorio de Windows 10: una clave de producto válida para la nueva versión de Windows en todos los dispositivos donde quiera aplicar la directiva. Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. <!--496871-->  
 
 - Para Windows 10 Mobile: un archivo de licencia XML del Centro de servicios de licencias por volumen (VLSC) de Microsoft. Este archivo contiene la información de licencia para la nueva versión de Windows en todos los dispositivos de destino de la directiva. Descargue el archivo ISO para **Windows 10 Mobile Enterprise**, que incluye el XML de licencia.<!-- SCCMDocs#2033 -->
 
@@ -89,16 +89,16 @@ Supervise esta implementación desde el nodo **Implementaciones** del espacio de
 
 Estos errores no significan que hubo un error en la implementación. En el dispositivo de destino, compruebe que la actualización se realizó correctamente.
 
-Una vez que el cliente haya evaluado la directiva de destino, aplicará la actualización en un plazo de dos horas. [Algunas versiones de Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades) pueden requerir un reinicio en ese momento. Asegúrese de informar a los usuarios a los que implemente la directiva o prográmela para que se ejecute fuera del horario laboral de los usuarios.
+Una vez que el cliente haya evaluado la directiva de destino, aplicará la actualización en un plazo de dos horas. [Algunas versiones de Windows](/windows/deployment/upgrade/windows-10-edition-upgrades) pueden requerir un reinicio en ese momento. Asegúrese de informar a los usuarios a los que implemente la directiva o prográmela para que se ejecute fuera del horario laboral de los usuarios.
 
-Si aparece el siguiente error en **DcmWmiProvider.log** en el cliente, asegúrese de usar la clave correcta para su escenario de activación. Para obtener más información, consulte la sección [Antes de empezar](#before-you-start). Si usa un servicio de administración de claves (KMS) para la activación, asegúrese de usar una [clave de configuración de cliente KMS](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->
+Si aparece el siguiente error en **DcmWmiProvider.log** en el cliente, asegúrese de usar la clave correcta para su escenario de activación. Para obtener más información, consulte la sección [Antes de empezar](#before-you-start). Si usa un servicio de administración de claves (KMS) para la activación, asegúrese de usar una [clave de configuración de cliente KMS](/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
 
 ## <a name="see-also"></a>Vea también
 
-- [Planeación de activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [Planeación de activación por volumen](/windows/deployment/volume-activation/plan-for-volume-activation-client)
 
-- [Actualización de edición de Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+- [Actualización de edición de Windows 10](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Actualización de las ediciones de Windows 10 o desactivación del modo S en dispositivos con Microsoft Intune](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
+- [Actualización de las ediciones de Windows 10 o desactivación del modo S en dispositivos con Microsoft Intune](/intune/edition-upgrade-configure-windows-10)

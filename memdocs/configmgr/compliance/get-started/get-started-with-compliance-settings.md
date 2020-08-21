@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d8ae26c5e9cbf9f3a45d3584341e79de8ab3402
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: d5e042980a1fa6fb8a92abcff6d3938874cf6b38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240718"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694600"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Introducción a la configuración de cumplimiento en Configuration Manager
 
@@ -105,6 +105,6 @@ Para obtener más información, vea [Actualizar dispositivos de Windows con la d
 
 ## <a name="microsoft-edge-legacy-browser-profiles"></a>Perfiles del explorador Microsoft Edge (versión heredada)
 <!-- 1357310 -->
-Para los clientes que usan el explorador web [Microsoft Edge (versión heredada)](https://docs.microsoft.com/microsoft-edge/deploy/) en los clientes de Windows 10, cree una directiva de cumplimiento de Configuration Manager para configurar las opciones del explorador.
+Para los clientes que usan el explorador web [Microsoft Edge (versión heredada)](/microsoft-edge/deploy/) en los clientes de Windows 10, cree una directiva de cumplimiento de Configuration Manager para configurar las opciones del explorador.
 
 Para más información, consulte [Perfiles del explorador Microsoft Edge (versión heredada)](../deploy-use/browser-profiles.md).

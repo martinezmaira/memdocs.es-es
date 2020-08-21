@@ -38,11 +38,17 @@
 #### [Solución de problemas comunes con Samsung Knox](samsung-knox-errors-android.md)
 #### [Actualización del dispositivo para instalar Outlook](update-device-outlook-android.md)
 
-#### Registro
-##### [Activación del registro detallado](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Carga y envío por correo electrónico de registros](send-logs-to-your-it-admin-by-email-android.md)
-##### [Envío de registros por cable USB](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Envío de errores a Microsoft](send-logs-to-microsoft-android.md)
+### Registro
+#### [Activación del registro detallado](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+#### [Carga y envío por correo electrónico de registros](send-logs-to-your-it-admin-by-email-android.md)
+#### [Envío de registros por cable USB](send-logs-to-your-it-admin-using-cable-android.md)
+#### [Envío de errores a Microsoft](send-logs-to-microsoft-android.md)
+
+### Resolución de una amenaza en la aplicación MTD  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)  
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)    
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ### Preguntas sobre el sistema operativo
 #### [Actualización de dispositivos](you-need-to-update-your-android-device.md)
@@ -55,16 +61,6 @@
 #### [Revisión de seguridad no compatible](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Dispositivos con errores de cifrado](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Aplicaciones Mobile Threat Defense 
-#### [Instalación de Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
-#### [Instalación de Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
-#### [Instalación de SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
-#### [Instalación de zIPS de Zimperium](you-are-prompted-to-install-zips-android.md)
-#### [Resolución de amenazas](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-##### [Uso de Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
-##### [Uso de Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
-##### [Uso de SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
-##### [Uso de zIPS de Zimperium](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [Uso de dispositivos iOS](using-your-iOS-device-with-intune.md)
 ### [Efectos del restablecimiento del dispositivo iOS](effects-of-device-reset-company-portal-ios.md)
@@ -99,16 +95,12 @@
 #### [Actualización del dispositivo para instalar Outlook](update-device-outlook-ios.md)
 #### [La versión de iOS aún no es compatible](your-ios-version-isnt-yet-supported.md)
 
-### Aplicaciones Mobile Threat Defense
-#### [Instalación de Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-#### [Instalación de Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
-#### [Instalación de SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
-#### [Instalación de zIPS de Zimperium](you-are-prompted-to-install-zips-ios.md)
-#### [Resolución de amenazas](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
-##### [Uso de Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
-##### [Uso de Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
-##### [Uso de SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
-##### [Uso de zIPS de Zimperium](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+### Resolución de una amenaza en la aplicación MTD  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)  
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)    
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)    
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+
 
 ## Uso de dispositivos macOS
 ### [¿Qué ocurre al inscribir un dispositivo macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905199"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694379"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funcionalidades de la versión 1807 Technical Preview de Configuration Manager 
 
@@ -73,7 +73,7 @@ Para más información sobre un elemento disponible, haga clic en la central. En
 
 El área de trabajo **Comunidad** también incluye estos nodos:
 
-- **Documentación**: muestra la [biblioteca de documentación](https://docs.microsoft.com/sccm/) de Configuration Manager  
+- **Documentación**: muestra la [biblioteca de documentación](/sccm/) de Configuration Manager  
 
 - **Comentarios**: muestra el [sitio de UserVoice](https://configurationmanager.uservoice.com/) de Configuration Manager  
 
@@ -82,7 +82,7 @@ El área de trabajo **Comunidad** también incluye estos nodos:
 
 - Use la consola de Configuration Manager en un SO cliente.  
 
-    - Si bien no se recomienda, también existe esta opción: en un SO servidor, deshabilite [Internet Explorer: configuración de seguridad mejorada](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
+    - Si bien no se recomienda, también existe esta opción: en un SO servidor, deshabilite [Internet Explorer: configuración de seguridad mejorada](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - El equipo con la consola requiere acceso a internet y la conectividad a los sitios siguientes:  
     - `https://aka.ms`  
@@ -121,7 +121,7 @@ Revise el archivo de registro **OfflineServicingMgr.log**.
 ## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> Actividad de sincronización de dispositivos administrados conjuntamente desde Intune
 <!--1358565-->
 
-Muestre en la consola de Configuration Manager si un dispositivo administrado conjuntamente está activo con Microsoft Intune. Este estado se basa en los datos del [Almacenamiento de datos de Intune](https://docs.microsoft.com/intune/reports-nav-create-intune-reports). El panel **Estado de cliente** de la consola de Configuration Manager muestra **Clientes inactivos que usan Intune**. Esta categoría nueva es para los dispositivos administrados conjuntamente que están inactivos con Configuration Manager, pero que se sincronizaron con el servicio de Intune durante la última semana.
+Muestre en la consola de Configuration Manager si un dispositivo administrado conjuntamente está activo con Microsoft Intune. Este estado se basa en los datos del [Almacenamiento de datos de Intune](/intune/reports-nav-create-intune-reports). El panel **Estado de cliente** de la consola de Configuration Manager muestra **Clientes inactivos que usan Intune**. Esta categoría nueva es para los dispositivos administrados conjuntamente que están inactivos con Configuration Manager, pero que se sincronizaron con el servicio de Intune durante la última semana.
 
 
 ### <a name="try-it-out"></a>Haga la prueba

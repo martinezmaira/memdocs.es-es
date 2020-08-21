@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07c5488b0ea28f37f7f8a07b532c67fb64aad810
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2eea75f39430f1cc38ff994280425ca918eaa432
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694013"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694566"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Cómo implementar clientes en equipos Windows con Configuration Manager
 
@@ -63,7 +63,7 @@ Los archivos de registro de cliente proporcionan información más detallada sob
     > [!NOTE]  
     > Cuando se usa la inserción de cliente para instalar el cliente de Configuration Manager, el servidor de sitio crea una conexión remota al cliente. A partir de la versión 1806, el sitio puede requerir la autenticación mutua de Kerberos al no permitir el retroceso a NTLM antes de establecer la conexión. Esta mejora ayuda a proteger la comunicación entre el servidor y el cliente.  
     >
-    > En función de las directivas de seguridad, puede que el entorno ya prefiera o requiera Kerberos en lugar de la autenticación NTLM anterior. Para más información sobre las consideraciones de seguridad de estos protocolos de autenticación, lea sobre la [configuración de la directiva de seguridad de Windows para restringir NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
+    > En función de las directivas de seguridad, puede que el entorno ya prefiera o requiera Kerberos en lugar de la autenticación NTLM anterior. Para más información sobre las consideraciones de seguridad de estos protocolos de autenticación, lea sobre la [configuración de la directiva de seguridad de Windows para restringir NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
     >
     > Para usar esta característica, los clientes deben estar en un bosque de Active Directory de confianza. Kerberos en Windows se basa en Active Directory para la autenticación mutua.  
 
@@ -326,7 +326,7 @@ Después de instalar el cliente de Configuration Manager, no se anula la inscrip
     > [!NOTE]  
     > Para ver un ejemplo de comando para usar con un cliente de Windows 10 moderno mediante la autenticación de Azure AD, consulte [Preparación de dispositivos basados en Internet para la administración conjunta](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).  
 
-3. [Asigne la aplicación](https://docs.microsoft.com/mem/intune/apps/apps-deploy) a un grupo de equipos Windows inscritos.  
+3. [Asigne la aplicación](../../../../intune/apps/apps-deploy.md) a un grupo de equipos Windows inscritos.  
 
 ## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a> Instalación de la imagen de sistema operativo
 
@@ -543,4 +543,4 @@ En el medio de instalación de Configuration Manager se proporciona una plantill
 
 4. En el cuadro **CCMSetup** , escriba las propiedades de línea de comandos de CCMSetup necesarias. Para obtener una lista de las propiedades de la línea de comandos de CCMSetup y ejemplos de su uso, vea [Acerca de los parámetros y propiedades de instalación de clientes](about-client-installation-properties.md).  
 
-5. Asigne el objeto de directiva de grupo a los equipos que quiera aprovisionar con las propiedades de instalación de cliente de Configuration Manager.  
+5. Asigne el objeto de directiva de grupo a los equipos que quiera aprovisionar con las propiedades de instalación de cliente de Configuration Manager.

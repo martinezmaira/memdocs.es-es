@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9663f71118836513d95ec914d0f70b09cda9954f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906311"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693070"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>Cómo configurar el inventario de software en Configuration Manager
 
@@ -44,7 +44,7 @@ Este procedimiento configura las opciones de cliente predeterminadas para el inv
    > [!TIP]
    >   El código de error 80041006 en inventoryprovider.log significa que el proveedor de WMI no tiene memoria suficiente. Es decir, se ha alcanzado el límite de cuota de memoria para un proveedor y el proveedor de inventario no puede continuar.
    > En este caso, el agente de inventario crea un informe con 0 entradas, por lo que no se informa de ningún elemento de inventario. <br/>
-   > Una posible solución para este error sería reducir el ámbito de la recopilación de inventario de software. En los casos en los que el error se produce después de limitar el ámbito de inventario, aumentar la propiedad [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) definida en la clase [_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration) puede proporcionar una solución.
+   > Una posible solución para este error sería reducir el ámbito de la recopilación de inventario de software. En los casos en los que el error se produce después de limitar el ámbito de inventario, aumentar la propiedad [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) definida en la clase [_ProviderHostQuotaConfiguration](/windows/win32/wmisdk/--providerhostquotaconfiguration) puede proporcionar una solución.
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

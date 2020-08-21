@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905846"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694515"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funciones de Technical Preview 1511 de Configuration Manager
 
@@ -34,7 +34,7 @@ Configuration Manager no podrá informar sobre el estado de cumplimiento (incluy
 
 -   Versión 1511 o posterior de Windows 10 Desktop Pro o Windows 10 Enterprise Edition  
 
--   Equipos que serán administrados a través de [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).  
+-   Equipos que serán administrados a través de [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).  
 
 ### <a name="try-it-out"></a>Haga la prueba  
  Intente realizar la siguiente tarea y después use la información de comentarios que se encuentra al principio de este tema para hacernos saber cómo ha funcionado:  
@@ -67,7 +67,7 @@ Cuando Microsoft publica una nueva actualización de cliente para equipos de esc
 
 4. Puede comprobar el funcionamiento de las actualizaciones de Office 365 supervisándolas o creando informes con la consola.  
 
-   Para obtener los pasos detallados, vea [Administrar las actualizaciones de cliente de Office 365 con Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Para obtener los pasos detallados, vea [Administrar las actualizaciones de cliente de Office 365 con Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Compatibilidad con SQL Server AlwaysOn para bases de datos de alta disponibilidad  
  Configuration Manager ahora admite el uso de grupos de disponibilidad de SQL Server AlwaysOn para hospedar la base de datos del sitio.  Cuando instale un sitio nuevo, podrá indicar al programa de instalación que use el grupo de disponibilidad en lugar de una instancia normal de SQL Server.  
@@ -110,7 +110,7 @@ Intente realizar las siguientes tareas y después use la información de comenta
  Use los siguientes procedimientos para crear y configurar por primera vez el grupo de disponibilidad y, luego, instale un nuevo sitio de Configuration Manager que use el grupo de disponibilidad.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Para crear el grupo de disponibilidad de SQL Server AlwaysOn  
-El proceso para [crear un grupo de disponibilidad de SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) se documenta en la biblioteca de documentación de SQL Server.  Cuando cree el grupo de disponibilidad, asegúrese de que se cumplan los siguientes requisitos para poder usarlo con Configuration Manager:  
+El proceso para [crear un grupo de disponibilidad de SQL Server](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) se documenta en la biblioteca de documentación de SQL Server.  Cuando cree el grupo de disponibilidad, asegúrese de que se cumplan los siguientes requisitos para poder usarlo con Configuration Manager:  
 
 -   Un máximo de tres miembros:  
 
@@ -202,4 +202,4 @@ Intente realizar la siguiente tarea y después use la información de comentario
 
 1.  [Implemente actualizaciones de software](../../sum/deploy-use/deploy-software-updates.md) en la colección del clúster de servidores.  
 
-2.  [Supervise la implementación de la actualización de software](../../sum/deploy-use/monitor-software-updates.md).  
+2.  [Supervise la implementación de la actualización de software](../../sum/deploy-use/monitor-software-updates.md).

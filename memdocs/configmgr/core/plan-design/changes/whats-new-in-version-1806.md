@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128957"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692645"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -280,9 +280,9 @@ Cree una implementación por fases para una aplicación. Las Implementaciones po
 
 Vea los siguientes artículos para más información:  
 
-- [Creación de una implementación por fases](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Creación de una implementación por fases](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Administración y supervisión de implementaciones por fases](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Administración y supervisión de implementaciones por fases](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Aprovisionar los paquetes de aplicación de Windows para todos los usuarios en un dispositivo
@@ -308,7 +308,7 @@ Para obtener más información, vea [Creación de aplicaciones Windows](../../..
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Desinstalación de aplicaciones al revocarse la aprobación
 <!--1357891-->
-El comportamiento de revocar la aprobación de una aplicación ha cambiado. Ahora cuando se deniega la solicitud de la aplicación, el cliente desinstala la aplicación del dispositivo del usuario. Este comportamiento exige que se habilite la [característica opcional](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Aprobación de solicitudes de aplicación para los usuarios por dispositivo**. 
+El comportamiento de revocar la aprobación de una aplicación ha cambiado. Ahora cuando se deniega la solicitud de la aplicación, el cliente desinstala la aplicación del dispositivo del usuario. Este comportamiento exige que se habilite la [característica opcional](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Aprobación de solicitudes de aplicación para los usuarios por dispositivo**. 
 
 Para obtener más información, consulte [Deploy applications](../../../apps/deploy-use/deploy-applications.md#bkmk_approval) (Implementar aplicaciones).
 
@@ -348,7 +348,7 @@ Para obtener más información, vea [Configuración de fase](../../../osd/deploy
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Mejoras en la secuencia de tareas de actualización en contexto de Windows 10
 <!--1358500-->
-La plantilla de secuencia de tareas predeterminada para la actualización local de Windows 10 ahora incluye otro grupo adicional con las acciones recomendadas que se deben agregar en caso de error del proceso de actualización. Estas acciones facilitan la solución de problemas. Una de estas herramientas es Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Es una herramienta de diagnóstico independiente para obtener detalles sobre el motivo de que una actualización de Windows 10 se haya realizado incorrectamente. 
+La plantilla de secuencia de tareas predeterminada para la actualización local de Windows 10 ahora incluye otro grupo adicional con las acciones recomendadas que se deben agregar en caso de error del proceso de actualización. Estas acciones facilitan la solución de problemas. Una de estas herramientas es Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). Es una herramienta de diagnóstico independiente para obtener detalles sobre el motivo de que una actualización de Windows 10 se haya realizado incorrectamente. 
 
 Para obtener más información, vea [Crear una secuencia de tareas para actualizar un sistema operativo](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
 
@@ -584,7 +584,7 @@ Para obtener más información, vea [Console improvements in version 1806](../..
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, vea [Resumen de cambios en la rama actual de Configuration Manager, versión 1806](https://support.microsoft.com/help/4459701).
 
-Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps) (Notas de la versión de PowerShell 1806).
+Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [PowerShell 1806 Release Notes](/powershell/sccm/1806_release_notes?view=sccm-ps) (Notas de la versión de PowerShell 1806).
 
 El siguiente paquete acumulativo de actualizaciones (4462978) está disponible en la consola desde el 24 de octubre de 2018: [Paquete acumulativo de actualizaciones de la rama actual de Configuration Manager, versión 1806](https://support.microsoft.com/help/4462978).
 

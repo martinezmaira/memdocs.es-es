@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400722"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693393"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en Análisis de escritorio
 
@@ -70,7 +70,7 @@ Consulte la **decisión de actualización de Windows** de cada dispositivo del p
 
 La decisión de actualización de Windows a **Reemplazar dispositivo** puede deberse a uno de los siguientes motivos:
 
-- No se pudo realizar una comprobación del procesador necesaria para Windows 10. Para más información, consulte [Requisitos mínimos de hardware](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- No se pudo realizar una comprobación del procesador necesaria para Windows 10. Para más información, consulte [Requisitos mínimos de hardware](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - Hay un bloqueo del BIOS.
 - No hay suficiente memoria.
 - Un componente crítico para el arranque en el sistema tiene un controlador bloqueado.
@@ -132,4 +132,4 @@ Después de crear un plan de implementación, use Configuration Manager para imp
 
 - [Más información sobre la actualizaciones de características y seguridad](about-updates.md)  
 
-- [Creación de un plan de implementación](create-deployment-plans.md)  
+- [Creación de un plan de implementación](create-deployment-plans.md)

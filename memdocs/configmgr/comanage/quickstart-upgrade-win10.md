@@ -10,16 +10,16 @@ ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e11a6130fb9f7d86b7d3377cc4120d4e61c43d2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d41a0806a33ac627eceaafab54c73c31ea013365
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691203"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694838"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Actualización de Windows 10 para la administración conjunta
 
-A medida que trabaja para incorporar su organización a la administración conjunta, ponerse al día es un obstáculo importante para algunos clientes. La administración conjunta requiere [Windows 10, versión 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) o posterior. Una vez que actualiza Windows y configura la inscripción automática, los clientes se inscriben automáticamente en la administración conjunta.
+A medida que trabaja para incorporar su organización a la administración conjunta, ponerse al día es un obstáculo importante para algunos clientes. La administración conjunta requiere [Windows 10, versión 1709](/windows/whats-new/whats-new-windows-10-version-1709) o posterior. Una vez que actualiza Windows y configura la inscripción automática, los clientes se inscriben automáticamente en la administración conjunta.
 
 En el siguiente vídeo, el Jefe de Programas Senior Rob York y el Jefe de Marketing de Productos Locky Ainley abordan la actualización a Windows 10 para la administración conjunta y demuestran su funcionamiento:
 
@@ -31,7 +31,7 @@ En el siguiente vídeo, el Jefe de Programas Senior Rob York y el Jefe de Market
 
 Entre otros avances de plataforma, la versión 1709 y posteriores de Windows 10 admiten la inscripción automática. Este comportamiento hace que un dispositivo se inscriba automáticamente en Intune cuando se une a Azure Active Directory (Azure AD). 
 
-Para más información, consulte [Habilitar la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
+Para más información, consulte [Habilitar la inscripción automática de Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment).
 
 
 ## <a name="how-to-do-it"></a>Cómo hacerlo
@@ -61,5 +61,4 @@ Un fabricante europeo de software de gran tamaño usa exitosamente un grupo de u
 
 Si necesita ayuda con la actualización de Windows 10 en cualquier punto del proceso, vaya a [Microsoft FastTrack](https://Microsoft.com/FastTrack/), inicie sesión y solicite ayuda. 
 
-Para más información, consulte [Ayuda de FastTrack](quickstart-fasttrack.md). 
-
+Para más información, consulte [Ayuda de FastTrack](quickstart-fasttrack.md).

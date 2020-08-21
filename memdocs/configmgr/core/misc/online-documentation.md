@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01b6587d1d223675fdc240c20913e21854d55821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701123"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695518"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Documentación en línea de Configuration Manager
 
@@ -26,7 +26,7 @@ Esta es la biblioteca de documentación de Configuration Manager. Encuentre la b
 
 ### <a name="online-documentation"></a>Documentación en línea
 
-Vea la documentación en línea de la rama actual de Configuration Manager en [docs.microsoft.com/configmgr](https://docs.microsoft.com/configmgr):  
+Vea la documentación en línea de la rama actual de Configuration Manager en [docs.microsoft.com/configmgr](/configmgr):  
 
 - [Introducción a Configuration Manager](../understand/introduction.md)  
 
@@ -76,33 +76,33 @@ Para las siguientes versiones:
 
 Vea la documentación en línea en las siguientes ubicaciones:  
 
-- [Introducción a System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
+- [Introducción a System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [Site Administration for System Center 2012 Configuration Manager (Administración del sitio de System Center 2012 Configuration Manager) (Administración del sitio de System Center 2012 Configuration Manager)](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [Site Administration for System Center 2012 Configuration Manager (Administración del sitio de System Center 2012 Configuration Manager) (Administración del sitio de System Center 2012 Configuration Manager)](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
-- [Migración de jerarquías en System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
+- [Migración de jerarquías en System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 
-- [Implementación de clientes para System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
+- [Implementación de clientes para System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
 
-- [Implementación de software y sistemas operativos en System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
+- [Implementación de software y sistemas operativos en System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
 
-- [Activos y compatibilidad en System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
+- [Activos y compatibilidad en System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
 
-- [Seguridad y privacidad en System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
+- [Seguridad y privacidad en System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
 
-- [Escenarios y soluciones para System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
+- [Escenarios y soluciones para System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
 
 ### <a name="release-notes-and-technical-publications"></a>Notas de la versión y publicaciones técnicas
 
 las notas de la versión y las publicaciones técnicas complementan las guías de Configuration Manager. Las notas de la versión contienen información que no está disponible en la documentación del producto y que es necesaria para instalar Configuration Manager correctamente. Las publicaciones técnicas proporcionan información adicional relativa a Configuration Manager.  
 
-- [Notas de la versión de System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
+- [Notas de la versión de System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
 
-- [Publicaciones técnicas de System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
+- [Publicaciones técnicas de System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
 ### <a name="accessibility"></a>Accesibilidad
 
-Para más información sobre las características, los productos y los servicios que permiten que Configuration Manager sea más accesible para aquellas personas con discapacidades, consulte [Características de accesibilidad de Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\)).
+Para más información sobre las características, los productos y los servicios que permiten que Configuration Manager sea más accesible para aquellas personas con discapacidades, consulte [Características de accesibilidad de Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\)).
 
 ### <a name="downloadable-documentation"></a>Documentación descargable
 

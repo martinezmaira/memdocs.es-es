@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ff992361959fcaad51acf3b78f5618e95f5af9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906188"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692611"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Ubicaciones personalizadas para archivos de base de datos del sitio de Configuration Manager
 
@@ -36,6 +36,6 @@ ms.locfileid: "82906188"
 
 -   En el servidor de sitio de Configuration Manager, detenga el servicio **SMS_Executive**.  
 
--   Para obtener más información sobre cómo se mueve una base de datos de usuario, vea [Mover bases de datos de usuario](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014).  
+-   Para obtener más información sobre cómo se mueve una base de datos de usuario, vea [Mover bases de datos de usuario](/sql/relational-databases/databases/move-user-databases?view=sql-server-2014).  
 
--   Después de completar el movimiento de archivos de la base de datos, reinicie el servicio **SMS_Executive** en el servidor de sitio de Configuration Manager.  
+-   Después de completar el movimiento de archivos de la base de datos, reinicie el servicio **SMS_Executive** en el servidor de sitio de Configuration Manager.

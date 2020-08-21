@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270861"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695195"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Crear aplicaciones Windows en Configuration Manager
 
@@ -58,7 +58,7 @@ Para configurar un tipo de implementación de aplicación de Windows para esta c
 
 Configuration Manager admite los formatos de paquete de aplicaciones (.msix) y lote de aplicaciones (.msixbundle) de Windows 10. Windows 10, versión 1809 o posteriores, admite estos formatos.
 
-- Para obtener información general de MSIX, consulte [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix) (Análisis exhaustivo de MSIX).  
+- Para obtener información general de MSIX, consulte [A closer look at MSIX](/archive/blogs/sgern/a-closer-look-at-msix) (Análisis exhaustivo de MSIX).  
 
 - Para crear una aplicación MSIX, vea [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376) (Compatibilidad de MSIX introducida en la compilación 17682 de Insider).  
 
@@ -79,7 +79,7 @@ Convierta las aplicaciones existentes de Windows Installer (.msi) al formato MSI
 
   - Instale la [herramienta de empaquetado MSIX](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) desde Microsoft Store.  
 
-  - Instale el [controlador de la herramienta de empaquetado MSIX](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Instale el [controlador de la herramienta de empaquetado MSIX](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 No instale ningún otro servicio o aplicación en este dispositivo. Es el sistema de referencia.
 
@@ -104,8 +104,8 @@ Si se produce un error en el proceso, la página de resumen apunta al archivo de
 
 Para usar esta aplicación MSIX, primero deberá firmarla digitalmente para que los clientes confíen en ella. Para más información sobre este proceso, vea los siguientes artículos:
 
-- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package) (MSIX; la herramienta de empaquetado MSIX: firma del paquete MSIX)
-- [How to sign an app package using SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool) (Cómo firmar un paquete de la aplicación con SignTool)
+- [MSIX – The MSIX Packaging Tool – signing the MSIX package](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package) (MSIX; la herramienta de empaquetado MSIX: firma del paquete MSIX)
+- [How to sign an app package using SignTool](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool) (Cómo firmar un paquete de la aplicación con SignTool)
 
 Una vez firmada la aplicación, cree un tipo de implementación en la aplicación en Configuration Manager. Para obtener más información, consulte [Crear tipos de implementación de la aplicación](../deploy-use/create-applications.md#bkmk_create-dt).
 
@@ -182,4 +182,4 @@ Cuando se usa este tipo de implementación, tenga en cuenta los aspectos siguien
 
 - Se instalan paquetes MSI por equipo para todos los usuarios del dispositivo.  
 
-- Configuration Manager admite las actualizaciones de aplicaciones. El código de producto MSI de cada versión debe ser el mismo.  
+- Configuration Manager admite las actualizaciones de aplicaciones. El código de producto MSI de cada versión debe ser el mismo.

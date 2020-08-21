@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e408bbe7ea88d70c5a9d02368c2d820584cae2b8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905325"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694447"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Funciones de Technical Preview 1710 de Configuration Manager
 
@@ -97,17 +97,17 @@ Esta versión agrega compatibilidad con la Protección contra vulnerabilidades d
 
 Los datos de cumplimiento de la implementación de la directiva de Protección contra vulnerabilidades de seguridad están disponibles en la consola de Configuration Manager.
 
-Para más información sobre la Protección contra vulnerabilidades de seguridad y las reglas y los componentes específicos, consulte [Protección contra vulnerabilidades de seguridad de Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) en la biblioteca de documentación de Windows.
+Para más información sobre la Protección contra vulnerabilidades de seguridad y las reglas y los componentes específicos, consulte [Protección contra vulnerabilidades de seguridad de Windows Defender](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) en la biblioteca de documentación de Windows.
 
 ### <a name="prerequisites"></a>Requisitos previos
 Los dispositivos administrados deben ejecutar Windows 10 1709 Fall Creators Update o una versión posterior y cumplir los siguientes requisitos, según las reglas y los componentes configurados:
 
 |Componente Protección contra vulnerabilidades de seguridad |Requisitos previos adicionales|
 |------------------------|------------------------|
-| Reducción de la superficie expuesta a ataques  | Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).  |
-| Acceso controlado a carpetas  | Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).   |
+| Reducción de la superficie expuesta a ataques  | Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).  |
+| Acceso controlado a carpetas  | Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).   |
 | Protección contra vulnerabilidades  | Ninguno  |
-| Protección de redes  |  Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).  |
+| Protección de redes  |  Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Creación de una directiva de Protección contra vulnerabilidades de seguridad  <!--1355468 -->
 1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Endpoint Protection** y, a continuación, haga clic en **Protección contra vulnerabilidades de seguridad de Windows Defender**.
@@ -125,7 +125,7 @@ Después de crear directivas de Protección contra vulnerabilidades de seguridad
 
 ## <a name="limited-support-for-cng-certificates"></a>Compatibilidad limitada con certificados CNG
 <!-- 1356191 -->
-A partir de esta versión, ahora se pueden usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) en los escenarios siguientes:
+A partir de esta versión, ahora se pueden usar plantillas de certificado [Cryptography API: Next Generation (CNG)](/windows/win32/seccng/cng-features) en los escenarios siguientes:
 
 - Registro de cliente y comunicación con un punto de administración de HTTPS.   
 - Distribución de software e implementación de aplicaciones con un punto de distribución de HTTPS.   
@@ -210,7 +210,7 @@ Para crear una directiva y examinar la configuración disponible:
     > [!NOTE]
     > Los equipos con Windows 10 solo almacenan una lista de aislamiento de red en el cliente. En esta versión, puede crear dos tipos diferentes de listas de aislamiento de red (una de Windows Information Protection y otra de Windows Defender Application Guard) e implementarlas en el cliente. Si implementa ambas directivas, deben coincidir con estas listas de aislamiento de red. Si implementa listas que no coincidan con el mismo cliente, se producirá un error en la implementación.
 
-    Puede encontrar más información sobre cómo especificar definiciones de red en la [documentación de Windows Information Protection]- [Proteger los datos de la empresa con Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+    Puede encontrar más información sobre cómo especificar definiciones de red en la [documentación de Windows Information Protection]- [Proteger los datos de la empresa con Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Cuando haya terminado, complete el asistente e implemente la directiva en uno o varios dispositivos de Windows 10.
 
@@ -219,4 +219,4 @@ Para crear una directiva y examinar la configuración disponible:
 Para obtener más información acerca de Protección de aplicaciones de Windows Defender, consulte [esta entrada de blog](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Además, para obtener más información sobre el modo independiente de Protección de aplicaciones de Windows Defender, consulte [esta entrada de blog](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para más información sobre cómo instalar o actualizar la rama de Technical Preview, vea [Technical Preview de Configuration Manager](technical-preview.md).    
+Para más información sobre cómo instalar o actualizar la rama de Technical Preview, vea [Technical Preview de Configuration Manager](technical-preview.md).

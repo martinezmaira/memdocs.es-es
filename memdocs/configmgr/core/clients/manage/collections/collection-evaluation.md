@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: af90154b848ddcd7cbff21917ef122ab10585098
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: 15b58b841ca87cf2b5e04c98dfd35c487c941e78
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663865"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693325"
 ---
 # <a name="collection-evaluation-in-configuration-manager"></a>Evaluación de recopilación en Configuration Manager
 
@@ -27,7 +27,7 @@ Es importante comprender el comportamiento de la evaluación de recopilación po
 
 ## <a name="evaluation-process"></a>Proceso de evaluación
 
-El archivo [colleval.log](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) registra cuando el evaluador de recopilación crea, cambia y elimina recopilaciones.
+El archivo [colleval.log](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs) registra cuando el evaluador de recopilación crea, cambia y elimina recopilaciones.
 
 En un alto nivel, cada evaluación y actualización de una recopilación individual sigue estos pasos:
 
@@ -105,5 +105,5 @@ En el ejemplo siguiente, instalar DNS en el servidor existente lo convierte en m
 ## <a name="next-steps"></a>Pasos siguientes
 - [Cómo crear recopilaciones](create-collections.md)
 - [Procedimientos recomendados para recopilaciones](best-practices-for-collections.md)
-- [Collection Evaluation Viewer](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer)
+- [Collection Evaluation Viewer](../../../support/ceviewer.md)
 - Sesión [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) en TechEd Australia

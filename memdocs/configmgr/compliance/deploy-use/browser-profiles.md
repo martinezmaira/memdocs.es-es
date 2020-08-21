@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 57eb9bbaed39ec463afc00d12202a9829729a086
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: deededfe18275837ae93859c4075837eac870c35
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240553"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694787"
 ---
 # <a name="configure-microsoft-edge-legacy-settings-in-configuration-manager"></a>Configuración de opciones de Microsoft Edge (versión heredada) en Configuration Manager
 
@@ -27,11 +27,11 @@ ms.locfileid: "86240553"
 *Se aplica a: Configuration Manager (rama actual)*
 
 <!-- 1357310 -->
-Para los clientes que usan el explorador web [Microsoft Edge (versión heredada)](https://docs.microsoft.com/microsoft-edge/deploy/) en los clientes de Windows 10, cree una directiva de cumplimiento de Configuration Manager para configurar las opciones del explorador.
+Para los clientes que usan el explorador web [Microsoft Edge (versión heredada)](/microsoft-edge/deploy/) en los clientes de Windows 10, cree una directiva de cumplimiento de Configuration Manager para configurar las opciones del explorador.
 
 Esta directiva solo se aplica a los clientes en la versión 1703 o posteriores de Windows 10 y a la versión 45 y anteriores de Microsoft Edge (versión heredada). <!--511552-->
 
-Para más información sobre cómo administrar la versión 77 o versiones posteriores de Microsoft Edge con Configuration Manager, consulte [Implementación de Microsoft Edge, versión 77 y posteriores](../../apps/deploy-use/deploy-edge.md). Para más información sobre cómo configurar directivas para Microsoft Edge, versión 77 o posteriores, consulte [Microsoft Edge: directivas](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
+Para más información sobre cómo administrar la versión 77 o versiones posteriores de Microsoft Edge con Configuration Manager, consulte [Implementación de Microsoft Edge, versión 77 y posteriores](../../apps/deploy-use/deploy-edge.md). Para más información sobre cómo configurar directivas para Microsoft Edge, versión 77 o posteriores, consulte [Microsoft Edge: directivas](/DeployEdge/microsoft-edge-policies).
 
 ## <a name="policy-settings"></a>Configuración de la directiva
 
@@ -39,42 +39,42 @@ Actualmente, esta directiva incluye las siguientes opciones:
 
 - **Set Microsoft Edge browser as default** (Establecer el explorador Microsoft Edge como predeterminado): configura los parámetros de la aplicación predeterminada de Windows 10 en cuanto a explorador web para que sea Microsoft Edge.
 
-- **Permitir función desplegable de la barra de direcciones**: requiere Windows 10, versión 1703 o posteriores. Para obtener más información, consulte [AllowAddressBarDropdown browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown) (Directiva de explorador AllowAddressBarDropdown).
+- **Permitir función desplegable de la barra de direcciones**: requiere Windows 10, versión 1703 o posteriores. Para obtener más información, consulte [AllowAddressBarDropdown browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown) (Directiva de explorador AllowAddressBarDropdown).
 
-- **Permitir sincronizar favoritos entre exploradores de Microsoft**: requiere Windows 10, versión 1703 o posteriores. Para obtener más información, consulte [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge) (Directiva de explorador SyncFavoritesBetweenIEAndMicrosoftEdge).
+- **Permitir sincronizar favoritos entre exploradores de Microsoft**: requiere Windows 10, versión 1703 o posteriores. Para obtener más información, consulte [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge) (Directiva de explorador SyncFavoritesBetweenIEAndMicrosoftEdge).
 
-- **Permitir borrar datos de exploración al salir**: requiere Windows 10, versión 1703 o posteriores. Para obtener más información, consulte [ClearBrowsingDataOnExit browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit) (Directiva de explorador ClearBrowsingDataOnExit).
+- **Permitir borrar datos de exploración al salir**: requiere Windows 10, versión 1703 o posteriores. Para obtener más información, consulte [ClearBrowsingDataOnExit browser policy](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit) (Directiva de explorador ClearBrowsingDataOnExit).
 
-- **Permitir encabezados Do Not Track**: para obtener más información, vea [AllowDoNotTrack browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack) (Directiva de explorador AllowDoNotTrack).
+- **Permitir encabezados Do Not Track**: para obtener más información, vea [AllowDoNotTrack browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack) (Directiva de explorador AllowDoNotTrack).
 
-- **Permitir autorrelleno**: para obtener más información, vea [AllowAutofill browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill) (Directiva de explorador AllowAutofill).
+- **Permitir autorrelleno**: para obtener más información, vea [AllowAutofill browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill) (Directiva de explorador AllowAutofill).
 
-- **Permitir cookies**: para obtener más información, vea [AllowCookies browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies). (Directiva de explorador AllowCookies).
+- **Permitir cookies**: para obtener más información, vea [AllowCookies browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies). (Directiva de explorador AllowCookies).
 
-- **Permitir bloqueador de elementos emergentes**: para obtener más información, vea [AllowPopups browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups). (Directiva de explorador AllowPopups).
+- **Permitir bloqueador de elementos emergentes**: para obtener más información, vea [AllowPopups browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups). (Directiva de explorador AllowPopups).
 
-- **Permitir sugerencias de búsqueda en la barra de direcciones**: para obtener más información, vea [AllowSearchSuggestionsinAddressBar browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar) (Directiva de explorador AllowSearchSuggestionsinAddressBar).
+- **Permitir sugerencias de búsqueda en la barra de direcciones**: para obtener más información, vea [AllowSearchSuggestionsinAddressBar browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar) (Directiva de explorador AllowSearchSuggestionsinAddressBar).
 
-- **Permitir el envío de tráfico de la intranet a Internet Explorer**: para obtener más información, vea [SendIntranetTraffictoInternetExplorer browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer) (Directiva de explorador SendIntranetTraffictoInternetExplorer).
+- **Permitir el envío de tráfico de la intranet a Internet Explorer**: para obtener más información, vea [SendIntranetTraffictoInternetExplorer browser policy](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer) (Directiva de explorador SendIntranetTraffictoInternetExplorer).
 
-- **Permitir administrador de contraseñas**: para obtener más información, vea [AllowPasswordManager browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager) (Directiva de explorador AllowPasswordManager).
+- **Permitir administrador de contraseñas**: para obtener más información, vea [AllowPasswordManager browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager) (Directiva de explorador AllowPasswordManager).
 
-- **Permitir Herramientas de desarrollo**: para obtener más información, vea [AllowDeveloperTools browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools) (Directiva de explorador AllowDeveloperTools).
+- **Permitir Herramientas de desarrollo**: para obtener más información, vea [AllowDeveloperTools browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools) (Directiva de explorador AllowDeveloperTools).
 
-- **Permitir extensiones**: para obtener más información, vea [AllowExtensions browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions) (Directiva de explorador AllowExtensions).
+- **Permitir extensiones**: para obtener más información, vea [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions) (Directiva de explorador AllowExtensions).
 
 > [!TIP]
-> Para más información sobre cómo usar una directiva de grupo para configurar estas y otras opciones, consulte el artículo sobre las [directivas de grupo de Microsoft Edge (versión heredada)](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/).
+> Para más información sobre cómo usar una directiva de grupo para configurar estas y otras opciones, consulte el artículo sobre las [directivas de grupo de Microsoft Edge (versión heredada)](/microsoft-edge/deploy/group-policies/).
 
 ### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge-legacy"></a>Configuración de SmartScreen de Windows Defender para Microsoft Edge (versión heredada)
 <!--1353701-->
-Esta directiva agrega tres opciones para [SmartScreen de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). La directiva ahora incluye los siguientes valores adicionales en la página **Configuración de SmartScreen**:
+Esta directiva agrega tres opciones para [SmartScreen de Windows Defender](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). La directiva ahora incluye los siguientes valores adicionales en la página **Configuración de SmartScreen**:
 
-- **Permitir SmartScreen**: especifica si se permite SmartScreen de Windows Defender. Para obtener más información, consulte la [directiva de explorador AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Permitir SmartScreen**: especifica si se permite SmartScreen de Windows Defender. Para obtener más información, consulte la [directiva de explorador AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
 
-- **Los usuarios pueden invalidar los avisos de SmartScreen para los sitios**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre sitios web potencialmente malintencionados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Los usuarios pueden invalidar los avisos de SmartScreen para los sitios**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre sitios web potencialmente malintencionados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
 
-- **Los usuarios pueden invalidar los avisos de SmartScreen para los archivos**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre la descarga de archivos no comprobados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+- **Los usuarios pueden invalidar los avisos de SmartScreen para los archivos**: especifica si los usuarios pueden invalidar las advertencias del filtro SmartScreen de Windows Defender sobre la descarga de archivos no comprobados. Para obtener más información, consulte la [directiva de explorador PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 ## <a name="create-the-browser-profile"></a>Creación del perfil del explorador
 

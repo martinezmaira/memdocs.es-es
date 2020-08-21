@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b8d22d7f011fb87dc1105fd8447d2e93adc80c6e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268477"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693376"
 ---
 # <a name="how-to-close-your-account"></a>Cierre de la cuenta
 
@@ -114,9 +114,9 @@ Si no quiere que los dispositivos sigan enviando datos de diagnóstico, siga est
 Establezca estos valores con uno de los métodos siguientes:
 
 - Directiva de grupo: en **Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Recopilación de datos y versiones preliminares**
-- Administración de dispositivos móviles (MDM), como [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- Administración de dispositivos móviles (MDM), como [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
-Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 > [!NOTE]  
 > Al aplicar estos cambios, los dispositivos dejan de enviar datos de diagnóstico inmediatamente. Microsoft puede tardar entre 24 y 48 horas en detener el procesamiento de las conclusiones del área de trabajo. Microsoft elimina estos datos de sus servicios en la nube en un plazo de 30 días como máximo.

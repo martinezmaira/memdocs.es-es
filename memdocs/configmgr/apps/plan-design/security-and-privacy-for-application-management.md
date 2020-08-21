@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f7085b7ee6f0f723c9bcf9d10cb85b03f990a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3ceb036180d002956eb0f62348ad317dfce6e7e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689073"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695144"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Seguridad y privacidad para la administración de aplicaciones en Configuration Manager
 
@@ -182,7 +182,7 @@ Cuando instala el rol del sistema de sitio del punto de sitios web del catálogo
 
 Si establece la opción **Permitir que las aplicaciones de Silverlight se ejecuten en modo de confianza elevado** en **No**, los clientes no quitan el certificado de firma de Microsoft.  
 
-Para más información acerca de las aplicaciones de confianza en Silverlight, vea [Aplicaciones de confianza](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
+Para más información acerca de las aplicaciones de confianza en Silverlight, vea [Aplicaciones de confianza](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
 
 
 ## <a name="privacy-information-for-application-management"></a>Información de privacidad para la administración de aplicaciones  
@@ -239,4 +239,4 @@ Las características siguientes ayudan a la implementación eficaz del software:
 
 - El catálogo de aplicaciones permite al administrador de Configuration Manager publicar aplicaciones, programas o scripts para que los ejecuten los usuarios. Configuration Manager no ejerce ningún control acerca de los tipos de programas o scripts que se publican en el catálogo, o acerca de el tipo de información que transmiten.  
 
-- Configuration Manager puede transmitir información entre clientes y los roles de sistema de sitio del catálogo de aplicaciones. La información permite identificar las cuentas de equipo y de inicio de sesión. La información que se transmite entre el cliente y los servidores no se cifra, a menos que se configuren los roles de sistema de sitio para requerir que los clientes se conecten mediante HTTPS.  
+- Configuration Manager puede transmitir información entre clientes y los roles de sistema de sitio del catálogo de aplicaciones. La información permite identificar las cuentas de equipo y de inicio de sesión. La información que se transmite entre el cliente y los servidores no se cifra, a menos que se configuren los roles de sistema de sitio para requerir que los clientes se conecten mediante HTTPS.

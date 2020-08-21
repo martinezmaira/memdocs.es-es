@@ -11,12 +11,12 @@ metadata:
   author: aczechowski
   ms.author: aaroncz
   ms.date: 12/31/2019
-  ms.openlocfilehash: d9e3c95272c9e0d6596d214f73ea53f572b54c6b
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: e3135dfa5397004553f537efb9e280e05d6495f5
+  ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741806"
+  ms.lasthandoff: 08/20/2020
+  ms.locfileid: "88693733"
 landingContent:
 - title: Acerca de la MDM local
   linkLists:
@@ -49,10 +49,10 @@ landingContent:
   - linkListType: overview
     links:
     - text: ¿Qué es Intune?
-      url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+      url: /intune/fundamentals/what-is-intune
     - text: Información general sobre la administración de dispositivos
-      url: https://docs.microsoft.com/intune/fundamentals/what-is-device-management
+      url: /intune/fundamentals/what-is-device-management
   - linkListType: tutorial
     links:
     - text: Tutorial de Intune en Microsoft Endpoint Manager
-      url: https://docs.microsoft.com/intune/fundamentals/tutorial-walkthrough-endpoint-manager
+      url: /intune/fundamentals/tutorial-walkthrough-endpoint-manager

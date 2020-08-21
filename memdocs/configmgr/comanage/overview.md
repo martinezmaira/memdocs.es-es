@@ -10,11 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854446"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695059"
 ---
 # <a name="what-is-co-management"></a>¿Qué es administración conjunta?
 
@@ -101,15 +102,15 @@ Habilitar la administración conjunta no requiere que incorpore su sitio con Azu
 
 - Los dispositivos Windows 10 se deben conectar a Azure AD. Pueden ser cualquiera de los siguientes tipos:  
 
-  - [Unido a Azure AD híbrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), en el que el dispositivo está unido a Active Directory local y registrado con Azure Active Directory.
+  - [Unido a Azure AD híbrido](/azure/active-directory/devices/concept-azure-ad-join-hybrid), en el que el dispositivo está unido a Active Directory local y registrado con Azure Active Directory.
 
-  - Solo [Unido a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan). (Este tipo se conoce a veces como "unido al dominio en la nube")<!--SCCMDocs issue 605-->  
+  - Solo [Unido a Azure AD](/azure/active-directory/devices/azureadjoin-plan). (Este tipo se conoce a veces como "unido al dominio en la nube")<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [Configurar Intune](https://docs.microsoft.com/intune/setup-steps)  
+- [Configurar Intune](/intune/setup-steps)  
 
-- [Habilitar la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Habilitar la inscripción automática de Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -128,7 +129,7 @@ Actualice los dispositivos a Windows 10, versión 1709 o posterior. Para más i
 | Importar aplicaciones de Azure en Configuration Manager | **Administrador total** de Configuration Manager<br>No se necesitan roles adicionales de Azure |
 | Habilitación de la administración conjunta en Configuration Manager | Un usuario de Azure AD<br>**Administrador total** de Configuration Manager con **todos** los derechos de ámbito.<!--SCCMDoc issue 626--> |
 
-Para obtener más información sobre los roles de Azure, vea [Entender los distintos roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+Para obtener más información sobre los roles de Azure, vea [Entender los distintos roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 Para más información sobre los roles de Configuration Manager, consulte [Conceptos básicos de la administración basada en roles](../core/understand/fundamentals-of-role-based-administration.md).
 
@@ -166,4 +167,4 @@ Para más información, consulte [cómo supervisar la administración conjunta](
 
 - [Obtenga más información sobre el valor inmediato y empiece a trabajar con la administración conjunta](quickstarts.md)  
 
-- [Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager](tutorial-co-manage-clients.md)  
+- [Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager](tutorial-co-manage-clients.md)

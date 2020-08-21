@@ -10,12 +10,12 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c243897a4c52eff04263325b998c4b23d6b3dde4
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 5f0993f6120735f8a614801f9ac14c29870ffefe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166594"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692594"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Usar un punto de distribución de extracción con Configuration Manager
 
@@ -151,7 +151,7 @@ Al configurar el punto de distribución de extracción, especifique uno o varios
 > 1. En el punto de distribución de origen, establezca el siguiente valor del Registro: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
 > 1. Reinicie el servidor del punto de distribución de origen.
 >
-> Después, el punto de distribución de extracción debe empezar a descargar contenido del origen. Para obtener más información sobre esta clave del Registro, vea [Información general sobre TLS-SSL (Schannel SSP)](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
+> Después, el punto de distribución de extracción debe empezar a descargar contenido del origen. Para obtener más información sobre esta clave del Registro, vea [Información general sobre TLS-SSL (Schannel SSP)](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
 
 ## <a name="see-also"></a>Vea también  
 

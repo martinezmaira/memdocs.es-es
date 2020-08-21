@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427734"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692713"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instalación de un punto de distribución de nube para Configuration Manager
 
@@ -91,7 +91,7 @@ Para habilitar un punto de distribución de nube para que use Windows BranchCach
 
 - Si el servidor de sitio tiene un rol de sistema de sitio de punto de distribución local, configure la opción de las propiedades de ese rol en **Habilitar y configurar BranchCache**. Para obtener más información, vea [Configuración de puntos de distribución](install-and-configure-distribution-points.md#bkmk_config-general).
 
-- Si el servidor de sitio no tiene un rol de punto de distribución, instale la característica BranchCache en Windows. Para más información, vea [Instalación de la característica BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+- Si el servidor de sitio no tiene un rol de punto de distribución, instale la característica BranchCache en Windows. Para más información, vea [Instalación de la característica BranchCache](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
 
 Si ya ha distribuido contenido a un punto de distribución de nube y después decide habilitar BranchCache, instale primero la característica. Después, vuelva a distribuir el contenido al punto de distribución de nube.
 
@@ -234,7 +234,7 @@ Configure umbrales para la cantidad de datos que quiere almacenar en el punto de
 Especifique los umbrales para cada punto de distribución de nube durante la instalación, o bien use la pestaña **Alertas** de las propiedades del punto de distribución de nube.  
 
 > [!NOTE]  
-> Las alertas para un punto de distribución de nube dependen de las estadísticas de uso de Azure, que pueden tardar hasta 24 horas en estar disponibles. Para obtener más información sobre Storage Analytics para Azure, vea [Storage Analytics](https://docs.microsoft.com/rest/api/storageservices/storage-analytics).  
+> Las alertas para un punto de distribución de nube dependen de las estadísticas de uso de Azure, que pueden tardar hasta 24 horas en estar disponibles. Para obtener más información sobre Storage Analytics para Azure, vea [Storage Analytics](/rest/api/storageservices/storage-analytics).  
 
 En un ciclo de una hora, el sitio primario que supervisa el punto de distribución de nube descarga los datos de transacciones desde Azure. Almacena estos datos de transacción en el archivo `CloudDP-<ServiceName>.log` del servidor de sitio. Después, Configuration Manager evalúa esta información en función de las cuotas de transferencia y almacenamiento de cada punto de distribución de nube. Si la transferencia de datos alcanza o supera el volumen especificado de alertas de advertencia o de alertas críticas, Configuration Manager generará la alerta correspondiente.  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-El ejemplo siguiente es un archivo **diagnostics.wadcfgx** de ejemplo como se hace referencia en la variable **public_config** en el script de PowerShell anterior. Para obtener más información, vea [Historial de versiones del esquema de configuración de la extensión Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
+El ejemplo siguiente es un archivo **diagnostics.wadcfgx** de ejemplo como se hace referencia en la variable **public_config** en el script de PowerShell anterior. Para obtener más información, vea [Historial de versiones del esquema de configuración de la extensión Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

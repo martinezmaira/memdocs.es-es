@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127890"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693529"
 ---
 # <a name="bitlocker-settings-reference"></a>Referencia de la configuración de BitLocker
 
@@ -119,7 +119,7 @@ si habilita esta opción, el usuario tiene que proteger la unidad del sistema op
 > [!NOTE]
 > Si la unidad ya está cifrada y deshabilita esta configuración, BitLocker descifra la unidad.  
 
-Si tiene dispositivos sin un [Módulo de plataforma segura (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), use la opción **Permitir BitLocker sin un TPM compatible (requiere una contraseña)** . Esta configuración permite que BitLocker cifre la unidad de sistema operativo, incluso aunque el dispositivo no tenga un TPM. Si permite esta opción, Windows solicitará al usuario que especifique una contraseña de BitLocker.
+Si tiene dispositivos sin un [Módulo de plataforma segura (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node), use la opción **Permitir BitLocker sin un TPM compatible (requiere una contraseña)** . Esta configuración permite que BitLocker cifre la unidad de sistema operativo, incluso aunque el dispositivo no tenga un TPM. Si permite esta opción, Windows solicitará al usuario que especifique una contraseña de BitLocker.
 
 En dispositivos con un TPM compatible, se pueden usar dos tipos de métodos de autenticación durante el inicio para ofrecer una protección adicional para los datos cifrados. Cuando se inicia el equipo, se puede utilizar únicamente el TPM para la autenticación o también se puede requerir la entrada de un número de identificación personal (PIN). Configure las siguientes opciones:
 

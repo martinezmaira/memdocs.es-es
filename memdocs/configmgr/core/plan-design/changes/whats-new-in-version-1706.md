@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129025"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692832"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novedades de la versión 1706 de Configuration Manager
 
@@ -213,7 +213,7 @@ Ahora puede usar Configuration Manager para administrar las actualizaciones de c
 
 #### <a name="prerequisites"></a>Requisitos previos
 - Todos los puntos de actualización de software deben ejecutar Windows Server 2016.    
-- Esta es una característica de versión preliminar que debe activar para que esté disponible. Para más información, consulte [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
+- Esta es una característica de versión preliminar que debe activar para que esté disponible. Para más información, consulte [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Uso de características de la versión preliminar a partir de las actualizaciones).
 
 #### <a name="to-manage-surface-driver-updates"></a>Para administrar actualizaciones de controladores de Surface
 

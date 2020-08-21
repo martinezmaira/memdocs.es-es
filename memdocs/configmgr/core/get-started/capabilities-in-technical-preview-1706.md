@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8c3624f9fc903395b36846170ff3552f32db59dd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126763"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692951"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funciones de Technical Preview 1706 de Configuration Manager
 
@@ -104,7 +104,7 @@ Para instalar un servidor de sitio en modo pasivo, use el **Asistente para crear
 
 - El equipo que ejecutará el servidor de sitio en modo pasivo:
 
-    - Debe cumplir los [requisitos previos para instalar un sitio primario](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
+    - Debe cumplir los [requisitos previos para instalar un sitio primario](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
     - Se instala mediante archivos de origen que coinciden con la versión del servidor de sitio en modo activo.
 
@@ -261,7 +261,7 @@ Los requisitos previos para una conexión a Upgrade Readiness son los mismos que
 
 **Requisitos previos**
 - Para agregar la conexión, el entorno de Configuration Manager debe configurar primero un [punto de conexión de servicio](../servers/deploy/configure/about-the-service-connection-point.md) en un [modo en línea](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes). Al agregar la conexión en el entorno, también se instala Microsoft Monitoring Agent en el equipo que ejecuta este rol de sistema de sitio.
-- Registre Configuration Manager como una herramienta de administración de "Aplicación web o API web" y obtenga el [identificador de cliente de este registro](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Registre Configuration Manager como una herramienta de administración de "Aplicación web o API web" y obtenga el [identificador de cliente de este registro](/azure/active-directory/develop/quickstart-register-app).
 - Cree una clave de cliente para la herramienta de administración registrada en Azure Active Directory.
 - En Azure Portal, indique la aplicación web registrada con permiso para acceder a OMS.
 

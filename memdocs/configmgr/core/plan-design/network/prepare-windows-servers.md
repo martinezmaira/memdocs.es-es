@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8585f04e6cedf9cb5158dbebc41b00565eabd989
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904095"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692730"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Preparar los servidores de Windows para admitir Configuration Manager
 
@@ -98,7 +98,7 @@ Se requieren los siguientes roles de Windows para admitir determinadas funcional
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> Filtrado de solicitudes IIS para puntos de distribución  
 De forma predeterminada, IIS usa el filtrado de solicitudes para impedir el acceso a varias extensiones de nombre de archivo y ubicaciones de carpetas mediante la comunicación HTTP o HTTPS. En un punto de distribución, esto impide que los clientes descarguen paquetes que tienen extensiones o ubicaciones de carpeta bloqueadas.  
 
-Cuando los archivos de origen de paquete tienen extensiones bloqueadas en IIS por la configuración del filtrado de solicitudes, debe configurar el filtrado de solicitudes de modo que las permita. Para ello, [edite la característica Filtrado de solicitudes](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) en el Administrador de IIS en los equipos de los puntos de distribución.  
+Cuando los archivos de origen de paquete tienen extensiones bloqueadas en IIS por la configuración del filtrado de solicitudes, debe configurar el filtrado de solicitudes de modo que las permita. Para ello, [edite la característica Filtrado de solicitudes](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) en el Administrador de IIS en los equipos de los puntos de distribución.  
 
 Además, Configuration Manager usa las siguientes extensiones de nombre de archivo para paquetes y aplicaciones. Asegúrese de que la configuración de Filtrado de solicitudes no bloquea estas extensiones de archivo:  
 
@@ -136,4 +136,4 @@ Por ejemplo, puede que los archivos de origen de una implementación de software
 - HEAD
 - PROPFIND
 
-Para obtener más información, vea [Configure request filtering in IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs) (Configurar el filtrado de solicitudes en IIS). 
+Para obtener más información, vea [Configure request filtering in IIS](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs) (Configurar el filtrado de solicitudes en IIS).

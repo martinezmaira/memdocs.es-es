@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e53c61052b8ee1b217a5268e8877dc4f4415f477
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823986"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692628"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configuración de la generación de informes en Configuration Manager
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services es una plataforma de generación de informes basa
 
 Cuando se ejecuta un informe, el componente de Reporting Services se conecta con la base de datos de sitio de Configuration Manager para recuperar los datos.  
 
-Para poder instalar el punto de servicios de informes en un sitio de Configuration Manager, instale y configure SQL Server Reporting Services en el sistema de sitio de destino. Para obtener más información, consulte [Instalación de SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).  
+Para poder instalar el punto de servicios de informes en un sitio de Configuration Manager, instale y configure SQL Server Reporting Services en el sistema de sitio de destino. Para obtener más información, consulte [Instalación de SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).  
 
 ### <a name="verify-sql-server-reporting-services-installation"></a>Comprobación de la instalación de SQL Server Reporting Services
 
@@ -241,7 +241,7 @@ Lea este archivo de registro a partir de la hora en la que se instaló correctam
 Existen muchas opciones para crear informes de SQL Server Reporting Services. Cuando se crean o editan informes en la consola de Configuration Manager, Configuration Manager abre el Generador de informes para usarlo como entorno de creación. Independientemente de cómo cree los informes de Configuration Manager, necesita un certificado autofirmado para la autenticación del servidor en el servidor de base de datos del sitio.
 
 > [!NOTE]  
-> Para obtener más información acerca de la creación de informes con SQL Server Reporting Services, consulte [Entorno de creación del Generador de informes](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
+> Para obtener más información acerca de la creación de informes con SQL Server Reporting Services, consulte [Entorno de creación del Generador de informes](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
 
 Configuration Manager instala automáticamente el certificado en el servidor de sitio y los roles del Proveedor de SMS. Puede crear o modificar informes desde la consola de Configuration Manager cuando esta se ejecuta desde uno de estos servidores.
 

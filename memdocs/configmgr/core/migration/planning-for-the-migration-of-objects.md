@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 996cff4b8b333a59b774afb979bbdd89aae536a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905130"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692900"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Planear la migración de objetos de Configuration Manager a la rama actual de Configuration Manager
 
@@ -123,7 +123,7 @@ Puede migrar los siguientes objetos de implementación de sistema operativo de u
 Puede migrar elementos de configuración y líneas de base de configuración.  
 
 > [!NOTE]  
->  Los elementos de configuración no interpretados de jerarquías de origen de Configuration Manager 2007 no se admiten para la migración. No puede migrar o importar estos elementos de configuración a la jerarquía de destino. Para más información sobre los elementos de configuración no interpretados, vea Uninterpreted configuration items (Elementos de configuración no interpretados) en el tema [About Configuration Items in Desired Configuration Management (Acerca de los elementos de configuración en la administración de configuración deseada)](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) de la biblioteca de documentación de Configuration Manager 2007.  
+>  Los elementos de configuración no interpretados de jerarquías de origen de Configuration Manager 2007 no se admiten para la migración. No puede migrar o importar estos elementos de configuración a la jerarquía de destino. Para más información sobre los elementos de configuración no interpretados, vea Uninterpreted configuration items (Elementos de configuración no interpretados) en el tema [About Configuration Items in Desired Configuration Management (Acerca de los elementos de configuración en la administración de configuración deseada)](/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) de la biblioteca de documentación de Configuration Manager 2007.  
 
 Puede importar paquetes de configuración de Configuration Manager 2007. El proceso de importación convierte automáticamente los paquetes de configuración para que sean compatibles con la rama actual de Configuration Manager.  
 
@@ -160,4 +160,4 @@ Para obtener más información sobre los informes, consulte [Introducción a los
 ##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> Plan para migrar personalizaciones de reglas de disponibilidad de software  
  No hay ningún cambio significativo en la medición de software entre Configuration Manager 2007 y la rama actual de Configuration Manager. Puede migrar las reglas de disponibilidad de software de una jerarquía de origen admitida a una jerarquía de destino.  
 
- De manera predeterminada, las reglas de disponibilidad de software que se migran a una jerarquía de destino no están asociadas a un sitio en la jerarquía de destino, sino que se aplican a todos los clientes en la jerarquía. Para aplicar una regla de disponibilidad de software a clientes de un determinado sitio, debe editar la regla de disponibilidad después de su migración.  
+ De manera predeterminada, las reglas de disponibilidad de software que se migran a una jerarquía de destino no están asociadas a un sitio en la jerarquía de destino, sino que se aplican a todos los clientes en la jerarquía. Para aplicar una regla de disponibilidad de software a clientes de un determinado sitio, debe editar la regla de disponibilidad después de su migración.

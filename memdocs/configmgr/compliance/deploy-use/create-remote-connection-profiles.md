@@ -10,12 +10,12 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1434d7802eb1ed68cb0a575778bdae1e5e99c9ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240123"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694753"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Perfiles de conexión remota en Configuration Manager
 
@@ -35,7 +35,7 @@ Configuration Manager crea un grupo de seguridad en los clientes, **Conexión de
 
 ### <a name="external-dependencies"></a>Dependencias externas  
 
-- Si desea permitir que los usuarios se conecten desde Internet, instale y configure un servidor de puerta de enlace de Escritorio remoto. Para más información sobre cómo instalar y configurar un servidor de puerta de enlace de Escritorio remoto, consulte [Servicios de Escritorio remoto: Acceso desde cualquier lugar](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
+- Si desea permitir que los usuarios se conecten desde Internet, instale y configure un servidor de puerta de enlace de Escritorio remoto. Para más información sobre cómo instalar y configurar un servidor de puerta de enlace de Escritorio remoto, consulte [Servicios de Escritorio remoto: Acceso desde cualquier lugar](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
 
 - Si los clientes ejecutan un firewall basado en host, debe habilitar el programa mstsc.exe. Si configura un perfil de conexión remota, habilite la configuración **Permitir excepción del Firewall de Windows para conexiones en dominios de Windows y en redes privadas**. Esta configuración permite a Configuration Manager configurar automáticamente el Firewall de Windows.
 
@@ -83,7 +83,7 @@ Cuando un usuario se conecta de forma remota a un equipo de trabajo, descarga un
         - Aparte de los puntos (`.`) entre los segmentos y un signo de dos puntos (`:`) antes del puerto, los únicos caracteres especiales son los guiones (`–`) y los guiones bajos (`_`).
         - Configuration Manager no admite el uso de un nombre de dominio internacionalizado para este valor.
 
-    - **Permitir conexiones solamente de equipos que ejecutan Escritorio remoto con Autenticación a nivel de red**: esta opción está habilitada de forma predeterminada y agrega un nivel de seguridad adicional para la conexión. Para más información, consulte cómo [conceder acceso de Escritorio remoto](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
+    - **Permitir conexiones solamente de equipos que ejecutan Escritorio remoto con Autenticación a nivel de red**: esta opción está habilitada de forma predeterminada y agrega un nivel de seguridad adicional para la conexión. Para más información, consulte cómo [conceder acceso de Escritorio remoto](/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
 
     - Habilite esta configuración de conexión:
 
@@ -162,4 +162,4 @@ Configuration Manager incluye informes integrados que se pueden usar para superv
 > [!IMPORTANT]  
 > Use el carácter comodín (`%`) cuando use los parámetros **Filtro del dispositivo** y **Filtro de usuarios** en los informes de configuración de cumplimiento.  
 
-Para obtener más información sobre cómo configurar informes en Configuration Manager, vea [Introducción a los informes](../../core/servers/manage/introduction-to-reporting.md).  
+Para obtener más información sobre cómo configurar informes en Configuration Manager, vea [Introducción a los informes](../../core/servers/manage/introduction-to-reporting.md).

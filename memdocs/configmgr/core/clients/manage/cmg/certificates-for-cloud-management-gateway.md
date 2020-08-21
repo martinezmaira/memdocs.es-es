@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: a2e032e2aecfd53dc3a92cfb9c40798b4dcd1db9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715618"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692781"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -258,8 +258,8 @@ Configure un punto de administración local con el modo de conexión de cliente 
 
 - *Grupo de trabajo*: el dispositivo no está unido a un dominio ni a Azure AD, pero tiene un [certificado de autenticación del cliente](#bkmk_clientauth).
 - *Unido a dominio de AD*: el dispositivo se une un dominio de Active Directory local.
-- *Unido a Azure AD*: también conocido como unido a un dominio de la nube, el dispositivo se une a un inquilino de Azure AD. Para más información, consulte [Dispositivos unidos a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Unido a híbrido*: puede unir el dispositivo a la instancia local de Active Directory y registrarlo con Azure AD. Para más información, consulte [Dispositivos híbridos unidos a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Unido a Azure AD*: también conocido como unido a un dominio de la nube, el dispositivo se une a un inquilino de Azure AD. Para más información, consulte [Dispositivos unidos a Azure AD](/azure/active-directory/devices/concept-azure-ad-join).
+- *Unido a híbrido*: puede unir el dispositivo a la instancia local de Active Directory y registrarlo con Azure AD. Para más información, consulte [Dispositivos híbridos unidos a Azure AD](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**.
 - *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**.
 - *E-HTTP*: en las propiedades del sitio, en la pestaña **Communication Security** (Seguridad de la comunicación), la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).
@@ -282,9 +282,9 @@ Para crear la instancia de CMG en Azure, el punto de conexión de servicio de Co
 
 Para obtener más información e instrucciones sobre cómo cargar un certificado de administración, vea los artículos siguientes de la documentación de Azure:
 
-- [Servicios en la nube y certificados de administración](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [Servicios en la nube y certificados de administración](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Cargar un certificado de administración de Azure Service](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [Cargar un certificado de administración de Azure Service](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Asegúrese de copiar el identificador de suscripción asociado al certificado de administración, Lo usará para crear la instancia de CMG en la consola de Configuration Manager.
@@ -295,4 +295,4 @@ Para obtener más información e instrucciones sobre cómo cargar un certificado
 
 - [Preguntas más frecuentes sobre Cloud Management Gateway](cloud-management-gateway-faq.md)  
 
-- [Seguridad y privacidad de la puerta de enlace de administración en la nube](security-and-privacy-for-cloud-management-gateway.md)  
+- [Seguridad y privacidad de la puerta de enlace de administración en la nube](security-and-privacy-for-cloud-management-gateway.md)

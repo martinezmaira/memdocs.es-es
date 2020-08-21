@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905216"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694413"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funciones de Technical Preview 1806.2 de Configuration Manager
 
@@ -147,7 +147,7 @@ Al crear una implementación por fases y configurar una fase manualmente, en la 
 <!--1357427-->
 Configuration Manager admite ahora la implementación de nuevos formatos del paquete de la aplicación (.msix) y del lote de aplicaciones (.msixbundle) de Windows 10. La compatibilidad con estos formatos está disponible en la [versión preliminar de Windows Insider](https://insider.windows.com/).
 
-Para obtener información general de MSIX, consulte [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix) (Análisis exhaustivo de MSIX).
+Para obtener información general de MSIX, consulte [A closer look at MSIX](/archive/blogs/sgern/a-closer-look-at-msix) (Análisis exhaustivo de MSIX).
 
 Para crear una aplicación MSIX, vea [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376) (Compatibilidad de MSIX introducida en la compilación 17682 de Insider).
 
@@ -168,7 +168,7 @@ Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities
 <!--1358204-->
 Cuando se usa el método de [inserción de cliente](../clients/deploy/plan/client-installation-methods.md#client-push-installation) para instalar el cliente de Configuration Manager, el servidor de sitio crea una conexión remota al cliente para iniciar la instalación. A partir de esta versión, el sitio puede requerir la autenticación mutua de Kerberos al no permitir el retroceso a NTLM antes de establecer la conexión. Esta mejora ayuda a proteger la comunicación entre el servidor y el cliente. 
 
-En función de las directivas de seguridad, puede que el entorno ya prefiera o requiera Kerberos en lugar de la autenticación NTLM anterior. Para más información sobre las consideraciones de seguridad de estos protocolos de autenticación, vea la [configuración de la directiva de seguridad de Windows para restringir NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
+En función de las directivas de seguridad, puede que el entorno ya prefiera o requiera Kerberos en lugar de la autenticación NTLM anterior. Para más información sobre las consideraciones de seguridad de estos protocolos de autenticación, vea la [configuración de la directiva de seguridad de Windows para restringir NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
 
 
 ### <a name="prerequisite"></a>Requisito previo
@@ -218,7 +218,7 @@ Vea los siguientes artículos para más información:
 
 - [Administración conjunta para dispositivos Windows 10](../../comanage/overview.md)  
 
-- [¿Qué es la administración de aplicaciones de Microsoft Intune?](https://docs.microsoft.com/intune/app-management)  
+- [¿Qué es la administración de aplicaciones de Microsoft Intune?](/intune/app-management)  
 
 
 
@@ -319,7 +319,7 @@ Esta versión incluye las siguientes mejoras:
 
     - Implementación de un [punto de distribución en la nube con Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- Los clientes usan Windows AutoPilot para aprovisionar Windows 10 en dispositivos unidos a Azure Active Directory que están conectados a la red local. Para instalar o actualizar el cliente de Configuration Manager en estos dispositivos, ahora no es necesario un punto de distribución en la nube o punto de distribución local configurado para **permitir a los clientes conectarse de forma anónima**. En su lugar, habilite la opción del sitio para **usar certificados generados por Configuration Manager para sistemas de sitio HTTP**, que permite a un cliente unido a un dominio en la nube comunicarse con un punto de distribución local habilitado para HTTP. Para más información, vea [Comunicaciones de cliente seguras mejoradas](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+- Los clientes usan Windows AutoPilot para aprovisionar Windows 10 en dispositivos unidos a Azure Active Directory que están conectados a la red local. Para instalar o actualizar el cliente de Configuration Manager en estos dispositivos, ahora no es necesario un punto de distribución en la nube o punto de distribución local configurado para **permitir a los clientes conectarse de forma anónima**. En su lugar, habilite la opción del sitio para **usar certificados generados por Configuration Manager para sistemas de sitio HTTP**, que permite a un cliente unido a un dominio en la nube comunicarse con un punto de distribución local habilitado para HTTP. Para más información, vea [Comunicaciones de cliente seguras mejoradas](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
 
 
 
@@ -338,4 +338,4 @@ El informe incluye las siguientes partes:
 
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para más información sobre cómo instalar o actualizar la rama de Technical Preview, vea [Technical Preview de Configuration Manager](technical-preview.md).    
+Para más información sobre cómo instalar o actualizar la rama de Technical Preview, vea [Technical Preview de Configuration Manager](technical-preview.md).

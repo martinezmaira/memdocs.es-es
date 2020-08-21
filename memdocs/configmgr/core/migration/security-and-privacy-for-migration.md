@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f219c6c6d4c9a5cbf04b1295c99184f345e68b83
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906213"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692866"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Seguridad y privacidad de la migración a la rama actual de Configuration Manager
 
@@ -48,9 +48,9 @@ Al migrar datos desde un sitio de origen a un sitio de destino, perderá cualqui
 
  Para obtener más información acerca de la información de seguridad y privacidad, consulte uno de los siguientes temas:  
 
--   Para obtener más información sobre la información de privacidad de Configuration Manager 2007, consulte [Security and Privacy for Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) (Seguridad y privacidad para Configuration Manager 2007) en la biblioteca de documentación de Configuration Manager 2007.  
+-   Para obtener más información sobre la información de privacidad de Configuration Manager 2007, consulte [Security and Privacy for Configuration Manager 2007](/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) (Seguridad y privacidad para Configuration Manager 2007) en la biblioteca de documentación de Configuration Manager 2007.  
 
--   Para obtener más información sobre la información de privacidad de System Center 2012 Configuration Manager, consulte [Seguridad y privacidad en System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) en la biblioteca de documentación de System Center 2012 Configuration Manager.  
+-   Para obtener más información sobre la información de privacidad de System Center 2012 Configuration Manager, consulte [Seguridad y privacidad en System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) en la biblioteca de documentación de System Center 2012 Configuration Manager.  
 
 -   Para más información sobre la información de privacidad de Configuration Manager, vea [Seguridad y privacidad de Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
 
@@ -58,4 +58,4 @@ Puede migrar algunos o todos los datos admitidos desde un sitio de origen a una 
 
 La migración no está habilitada de forma predeterminada y requiere varios pasos de configuración. La información de migración no se envía a Microsoft.  
 
-Antes de migrar datos de una jerarquía de origen, tenga en cuenta los requisitos de privacidad.  
+Antes de migrar datos de una jerarquía de origen, tenga en cuenta los requisitos de privacidad.

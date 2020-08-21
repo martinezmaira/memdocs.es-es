@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: "Configuración de directivas de cumplimiento (Windows\_8.1)"
           href: compliance-policy-create-windows-8-1.md
-        - name: "Configuración de directivas de cumplimiento (Windows\_Phone\_8.1)"
-          href: compliance-policy-create-windows-8-1.md
     - name: Configuración de directiva de seguridad de puntos de conexión
       items:
         - name: Configuración de directivas antivirus

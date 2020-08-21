@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129076"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692798"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novedades de la versión 1702 de Configuration Manager
 
@@ -118,7 +118,7 @@ Utilice la herramienta [Content Library Cleanup Tool](../hierarchy/content-libra
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>Uso del conector de OMS con la nube de Azure Government
-Puede usar el conector de OMS para conectarse a Log Analytics de OMS en la nube de Microsoft Azure Government. Para ello, debe modificar un archivo de configuración antes de instalar el conector de OMS para que el conector pueda trabajar con la nube de Government. Para más información, vea [Uso del conector de OMS con la nube de Azure Government](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+Puede usar el conector de OMS para conectarse a Log Analytics de OMS en la nube de Microsoft Azure Government. Para ello, debe modificar un archivo de configuración antes de instalar el conector de OMS para que el conector pueda trabajar con la nube de Government. Para más información, vea [Uso del conector de OMS con la nube de Azure Government](/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Los puntos de actualización de software se agregan a grupos de límites
 A partir de la versión 1702, los clientes utilizan grupos de límites para encontrar un nuevo punto de actualización de software, además de para reservar y buscar un nuevo punto de actualización de software si ya no pueden acceder al actual. Puede agregar puntos de actualización de software individuales a grupos de límites diferentes para controlar qué servidores puede encontrar un cliente. Para más información, vea [puntos de actualización de software](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) en el tema de [configuración de grupos de límites](../../servers/deploy/configure/boundary-groups.md).

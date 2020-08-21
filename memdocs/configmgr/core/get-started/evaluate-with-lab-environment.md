@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694603"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692883"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>Evaluación de Configuration Manager mediante la creación de su propio entorno de laboratorio
 
@@ -48,7 +48,7 @@ Las máquinas cliente se instalan en Hyper-V. El laboratorio en sí también pue
  Al compilar este laboratorio, tendrá un entorno funcional en el que trabajar. Pero este entorno no estará optimizado para factores como el rendimiento del sistema, la administración del espacio del disco duro y el almacenamiento de SQL Server.  
 
 ##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a> Lecturas recomendadas antes de compilar el laboratorio  
- Hay una gran cantidad de contenido disponible en la [documentación de Configuration Manager](https://docs.microsoft.com/sccm/). Se recomienda que lea los siguientes temas de esta biblioteca antes de empezar a compilar el laboratorio:  
+ Hay una gran cantidad de contenido disponible en la [documentación de Configuration Manager](/sccm/). Se recomienda que lea los siguientes temas de esta biblioteca antes de empezar a compilar el laboratorio:  
 
 -   Obtenga información sobre los conceptos básicos de la consola de Configuration Manager, los portales de usuario final y los escenarios de ejemplo en [Introducción a Configuration Manager](../../core/understand/introduction.md).  
 
@@ -60,4 +60,4 @@ Las máquinas cliente se instalan en Hyper-V. El laboratorio en sí también pue
 
 -   Obtenga información sobre la administración de contenido en [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) (Conceptos de la administración de contenido).  
 
--   Obtenga información sobre cómo admitir correctamente las operaciones diarias de su implementación en [Más información sobre cómo los clientes buscan servicios y recursos de sitio para Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
+-   Obtenga información sobre cómo admitir correctamente las operaciones diarias de su implementación en [Más información sobre cómo los clientes buscan servicios y recursos de sitio para Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).

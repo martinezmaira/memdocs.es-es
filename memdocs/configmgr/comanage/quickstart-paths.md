@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: a685e10ecdb2f6fac8d5634fd932facf52fddcb0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746466"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694957"
 ---
 # <a name="paths-to-co-management"></a>Rutas hacia la administración conjunta
 
@@ -34,10 +34,10 @@ Si toma esta ruta, puede inscribir rápidamente sus dispositivos existentes admi
 
 Tendrá que configurar lo siguiente:
 - Azure AD híbrido
-    - Una de las siguientes [opciones de identidad híbrida de Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin):  
-       - [Sincronización de hash de contraseña](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) con [ inicio de sesión único de conexión directa (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Autenticación de paso a través](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) con [inicio de sesión único de conexión directa (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [SSO federado (Servicios de federación de Active Directory [AD FS])](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - Una de las siguientes [opciones de identidad híbrida de Azure AD](/azure/active-directory/hybrid/plan-connect-user-signin):  
+       - [Sincronización de hash de contraseña](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) con [ inicio de sesión único de conexión directa (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Autenticación de paso a través](/azure/active-directory/hybrid/how-to-connect-pta) con [inicio de sesión único de conexión directa (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [SSO federado (Servicios de federación de Active Directory [AD FS])](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Licencia de Azure AD Premium
     - Configure la unión a Azure AD híbrido (elija una opción):
@@ -61,4 +61,3 @@ Tendrá que configurar lo siguiente:
 4. [Uso de Intune para implementar el cliente de Configuration Manager](how-to-prepare-Win10.md)  
 
 Para ver un tutorial sobre esta ruta, consulte [Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet](tutorial-co-manage-new-devices.md).
-

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526022"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692968"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funciones de Technical Preview 1703 de Configuration Manager
 
@@ -82,7 +82,7 @@ Con Technical Preview 1703, con este asistente solo se configura la Tienda Windo
 
 - Use la información de este tema de vista previa para reemplazar los pasos de configuración de la sección [Configuración de la sincronización de la Tienda Windows para empresas](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) del tema de la rama actual [Administración de aplicaciones desde la Tienda Windows para empresas con Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
-- Para obtener más información sobre las aplicaciones web, vea [Autenticación y autorización en el Servicio de aplicaciones de Azure](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview) e [Introducción a Aplicaciones web](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- Para obtener más información sobre las aplicaciones web, vea [Autenticación y autorización en el Servicio de aplicaciones de Azure](/azure/app-service/app-service-authentication-overview) e [Introducción a Aplicaciones web](/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Requisitos previos y planeamiento
 Cuando establezca una conexión entre Configuration Manager y la Tienda Windows para empresas, deberá proporcionar una carpeta donde se conservará el contenido de la aplicación sincronizado desde la tienda. Para asegurarse de que esta carpeta sea segura y que su contenido se pueda implementar en dispositivos, compruebe que se hayan aplicado los permisos siguientes:

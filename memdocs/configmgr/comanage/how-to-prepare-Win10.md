@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: c20f5e883c1b33c90218532dd6ae31f510fd8294
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546423"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695042"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Preparación de dispositivos basados en Internet para la administración conjunta
 
@@ -27,7 +27,7 @@ En los dispositivos Windows 10 nuevos, puede usar el servicio Autopilot para de
 
 Para más información, consulte [Resumen de Windows Autopilot](../../autopilot/windows-autopilot.md).
 
-Para configurar los dispositivos para que se inscriban automáticamente en Intune al unirse a Azure AD, consulte  [Configuración de la inscripción de dispositivos Windows](https://docs.microsoft.com/intune/windows-enroll).  
+Para configurar los dispositivos para que se inscriban automáticamente en Intune al unirse a Azure AD, consulte  [Configuración de la inscripción de dispositivos Windows](/intune/windows-enroll).  
 
 ### <a name="gather-information-from-configuration-manager"></a>Recopilación de información desde Configuration Manager
 
@@ -41,7 +41,7 @@ Use Configuration Manager para recopilar y entregar la información de dispositi
 
 4. Después de guardar el archivo, cargue los datos en Intune.  
 
-Para más información, consulte [Agregar dispositivos en Intune](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices).
+Para más información, consulte [Agregar dispositivos en Intune](/intune/enrollment-autopilot#add-devices).
 
 ### <a name="autopilot-for-existing-devices"></a>Autopilot para dispositivos existentes
 <!--1358333-->

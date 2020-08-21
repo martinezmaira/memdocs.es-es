@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605191"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695373"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -205,7 +205,7 @@ La sección de validación del cuadro de diálogo **Propiedades de parámetros d
 
 Una expresión regular es una forma compacta de programación para comprobar una cadena de caracteres en una validación codificada. Por ejemplo, podría comprobar la ausencia de un carácter alfabético en mayúsculas en el campo *FirstName* colocando `[^A-Z]` en el campo *RegEx*.
 
-.NET Framework admite el procesamiento de la expresión regular para este cuadro de diálogo. Para obtener instrucciones sobre el uso de expresiones regulares, consulte [Expresiones regulares de .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) y [Lenguaje de expresiones regulares](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
+.NET Framework admite el procesamiento de la expresión regular para este cuadro de diálogo. Para obtener instrucciones sobre el uso de expresiones regulares, consulte [Expresiones regulares de .NET](/dotnet/standard/base-types/regular-expressions) y [Lenguaje de expresiones regulares](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## <a name="script-examples"></a>Ejemplos de scripts
@@ -294,7 +294,7 @@ Una vez iniciada la ejecución de un script en una recopilación de dispositivos
 
 ## <a name="script-output"></a>Salida del script
 
-El cliente devuelve la salida del script con formato JSON mediante la canalización de los resultados del script al cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json). El formato JSON devuelve una salida de script legible de manera uniforme. Para los scripts que no devuelven objetos como salida, el cmdlet ConvertTo-Json convierte el resultado en una cadena simple que el cliente devuelve en lugar de JSON.  
+El cliente devuelve la salida del script con formato JSON mediante la canalización de los resultados del script al cmdlet [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json). El formato JSON devuelve una salida de script legible de manera uniforme. Para los scripts que no devuelven objetos como salida, el cmdlet ConvertTo-Json convierte el resultado en una cadena simple que el cliente devuelve en lugar de JSON.  
 
 - Los scripts que obtengan un resultado desconocido o en los que el cliente estaba sin conexión no se mostrarán en los gráficos ni en el conjunto de datos. <!--507179-->
 - Evite devolver una salida de script grande, ya que se trunca en 4 KB. <!--508488-->
@@ -302,7 +302,7 @@ El cliente devuelve la salida del script con formato JSON mediante la canalizaci
 
    ![Conversión de un objeto de enumeración en un valor de cadena](./media/run-scripts/enum-tostring-JSON.png)
 
-Puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla. Si el script devuelve texto con formato JSON válido o la salida se puede convertir a JSON mediante el cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) de PowerShell, puede ver la salida detallada como **Salida JSON** o **Salida sin formato**. En caso contrario, la única opción es **Salida de script**.
+Puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla. Si el script devuelve texto con formato JSON válido o la salida se puede convertir a JSON mediante el cmdlet [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) de PowerShell, puede ver la salida detallada como **Salida JSON** o **Salida sin formato**. En caso contrario, la única opción es **Salida de script**.
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>Ejemplo: la salida del script se puede convertir a JSON válido
 

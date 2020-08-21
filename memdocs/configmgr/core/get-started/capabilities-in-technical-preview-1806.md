@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126797"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694430"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funciones de Technical Preview 1806 de Configuration Manager
 
@@ -81,10 +81,10 @@ SCUP continúa siendo compatible con otros catálogos y escenarios. La lista de 
 
     > [!Tip]  
     > El punto de actualización de software requiere HTTPS porque es un requisito para las API de WSUS que se usan para administrar certificados de firma. No es necesario que los clientes también estén habilitados para HTTPS. Para obtener más información sobre cómo habilitar HTTPS en WSUS, vea los artículos siguientes para obtener ayuda:  
-    > - [Secure WSUS with the Secure Sockets Layer Protocol](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (Protección de WSUS con el protocolo Capa de sockets seguros) 
-    > - [Entrada del blog de soporte técnico de WSUS](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (Protección de WSUS con el protocolo Capa de sockets seguros) 
+    > - [Entrada del blog de soporte técnico de WSUS](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Espacio en disco suficiente en el punto de actualización de software (la carpeta WSUSContent) para almacenar el contenido binario de origen de las actualizaciones de software de terceros. La cantidad de almacenamiento necesaria varía según el proveedor, los tipos de actualizaciones y las actualizaciones específicas que se publican para la implementación. Si necesita mover la carpeta WSUSContent a otra unidad con más espacio disponible, consulte el artículo del blog del equipo de soporte técnico de WSUS sobre [cómo cambiar la ubicación donde WSUS almacena las actualizaciones localmente](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
+- Espacio en disco suficiente en el punto de actualización de software (la carpeta WSUSContent) para almacenar el contenido binario de origen de las actualizaciones de software de terceros. La cantidad de almacenamiento necesaria varía según el proveedor, los tipos de actualizaciones y las actualizaciones específicas que se publican para la implementación. Si necesita mover la carpeta WSUSContent a otra unidad con más espacio disponible, consulte el artículo del blog del equipo de soporte técnico de WSUS sobre [cómo cambiar la ubicación donde WSUS almacena las actualizaciones localmente](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Habilite e implemente la configuración de cliente [Habilitar actualizaciones de software de terceros](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) en el grupo **Actualizaciones de software**.  
 
@@ -354,4 +354,4 @@ En [Configuration Manager versión 1710](../plan-design/changes/whats-new-in-ver
 
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para más información sobre cómo instalar o actualizar la rama de Technical Preview, vea [Technical Preview de Configuration Manager](technical-preview.md).    
+Para más información sobre cómo instalar o actualizar la rama de Technical Preview, vea [Technical Preview de Configuration Manager](technical-preview.md).

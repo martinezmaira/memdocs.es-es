@@ -10,16 +10,16 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: a8125f55215fd597d9611723e1d36629850bff44
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643219"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695229"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Administración de aplicaciones desde Microsoft Store para Empresas y Educación con Configuration Manager
 
-[Microsoft Store para Empresas y Educación](https://docs.microsoft.com/microsoft-store/) es el lugar donde buscar y comprar aplicaciones de Windows para la organización. Cuando se conecta la tienda a Configuration Manager, después se sincroniza la lista de aplicaciones que se han comprado. Puede ver estas aplicaciones en la consola de Configuration Manager e implementarlas como cualquier otra aplicación.
+[Microsoft Store para Empresas y Educación](/microsoft-store/) es el lugar donde buscar y comprar aplicaciones de Windows para la organización. Cuando se conecta la tienda a Configuration Manager, después se sincroniza la lista de aplicaciones que se han comprado. Puede ver estas aplicaciones en la consola de Configuration Manager e implementarlas como cualquier otra aplicación.
 
 ## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a> Aplicaciones en línea y sin conexión
 
@@ -29,7 +29,7 @@ Microsoft Store para Empresas y Educación admite dos tipos de aplicaciones:
 
 - **Sin conexión**: este tipo permite almacenar las aplicaciones y licencias en caché para implementarlas directamente en la red local. No es necesario que los dispositivos se conecten a la tienda o tengan una conexión a Internet.
 
-Para obtener más información, vea [Introducción a Microsoft Store para Empresas y Educación](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview).
+Para obtener más información, vea [Introducción a Microsoft Store para Empresas y Educación](/microsoft-store/microsoft-store-for-business-overview).
 
 ### <a name="summary-of-capabilities"></a>Resumen de funcionalidades
 
@@ -64,7 +64,7 @@ Antes de implementar aplicaciones de Microsoft Store para Empresas y Educación 
 
 - Cuando la cuenta de administrador local inicia sesión en el dispositivo, no puede acceder a las aplicaciones de Microsoft Store para Empresas y Educación.  
 
-- Los dispositivos deben tener una conexión activa de Internet con Microsoft Store para Empresas y Educación. Para obtener más información, incluida la configuración de proxy, vea [Requisitos previos](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business).  
+- Los dispositivos deben tener una conexión activa de Internet con Microsoft Store para Empresas y Educación. Para obtener más información, incluida la configuración de proxy, vea [Requisitos previos](/microsoft-store/prerequisites-microsoft-store-for-business).  
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>Notas para los dispositivos que ejecutan versiones anteriores de Windows 10
 
@@ -110,17 +110,17 @@ Al sincronizar la lista de aplicaciones de Microsoft Store para Empresas y Educ
 
 Conecte el sitio de Configuration Manager a Azure AD y Microsoft Store para Empresas y Educación. Para obtener más información y detalles de este proceso, vea [Configuración de servicios de Azure](../../core/servers/deploy/configure/azure-services-wizard.md). Cree una conexión al servicio **Microsoft Store para Empresas**.
 
-Asegúrese de que el punto de conexión de servicio y los dispositivos de destino pueden acceder al servicio en la nube. Para obtener más información, vea [Requisitos previos de Microsoft Store para Empresas y Educación: configuración del proxy](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Asegúrese de que el punto de conexión de servicio y los dispositivos de destino pueden acceder al servicio en la nube. Para obtener más información, vea [Requisitos previos de Microsoft Store para Empresas y Educación: configuración del proxy](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a> Configuración e información complementaria
 
 En la página **Aplicación** del Asistente para servicios de Azure, configure en primer lugar **Entorno de Azure** y **Aplicación web**. Después, lea la sección **Más información** en la parte inferior de la página. Esta información incluye las acciones adicionales siguientes en el portal de Microsoft Store para Empresas y Educación:  
 
-- Configurar Configuration Manager como la herramienta de administración de la tienda. Para obtener más información, vea [Configurar un proveedor de MDM](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
+- Configurar Configuration Manager como la herramienta de administración de la tienda. Para obtener más información, vea [Configurar un proveedor de MDM](/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
 
-- Habilitar la compatibilidad con las aplicaciones con licencia sin conexión. Para obtener más información, vea [Distribuir aplicaciones sin conexión](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).  
+- Habilitar la compatibilidad con las aplicaciones con licencia sin conexión. Para obtener más información, vea [Distribuir aplicaciones sin conexión](/microsoft-store/distribute-offline-apps).  
 
-- Comprar al menos una aplicación. Para obtener más información, vea [Buscar y comprar aplicaciones](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview).  
+- Comprar al menos una aplicación. Para obtener más información, vea [Buscar y comprar aplicaciones](/microsoft-store/find-and-acquire-apps-overview).  
 
 En la página **Configuraciones** del Asistente para servicios de Azure, especifique la información siguiente:  
 
@@ -161,7 +161,7 @@ Para cada aplicación de la tienda que administre, puede ver la información sig
 
 Después de implementar aplicaciones en línea, las actualizaciones de esa aplicación provienen directamente de Microsoft Store. Además, Configuration Manager no comprueba la compatibilidad de versión de las aplicaciones en línea, al igual que Windows informa de la aplicación como instalada.  
 
-Al implementar aplicaciones sin conexión en dispositivos Windows 10 con el cliente de Configuration Manager, no permita a los usuarios actualizar aplicaciones externas en implementaciones de Configuration Manager. El control de las actualizaciones de las aplicaciones sin conexión es especialmente importante en entornos de varios usuarios como clases. Una opción para deshabilitar Microsoft Store es mediante la [directiva de grupo](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
+Al implementar aplicaciones sin conexión en dispositivos Windows 10 con el cliente de Configuration Manager, no permita a los usuarios actualizar aplicaciones externas en implementaciones de Configuration Manager. El control de las actualizaciones de las aplicaciones sin conexión es especialmente importante en entornos de varios usuarios como clases. Una opción para deshabilitar Microsoft Store es mediante la [directiva de grupo](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
 
 Después de que el administrador de Microsoft Store para Empresas y Educación compre una aplicación sin conexión, no publique la aplicación para los usuarios a través de la tienda. Esta configuración garantiza que los usuarios no puedan instalar ni actualizar en línea. Los usuarios solo reciben las actualizaciones de aplicaciones sin conexión a través de Configuration Manager.
 

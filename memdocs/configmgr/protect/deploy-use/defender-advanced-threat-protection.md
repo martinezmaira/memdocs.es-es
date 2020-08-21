@@ -10,19 +10,20 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbf7dd3e35db8d2020e96e2511017e43863f724e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5feaf05a6829d902b1d8dcbe57722dfce410de6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85613478"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693546"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Microsoft Defender
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-Endpoint Protection puede ayudar a administrar y supervisar [Protección contra amenazas avanzada (ATP) de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (anteriormente conocido como ATP de Windows Defender). ATP de Microsoft Defender ayuda a las empresas a detectar e investigar ataques avanzados en sus redes, y responder ante ellos. Las directivas de Configuration Manager pueden ayudarlo a incorporar y supervisar clientes de Windows 10.
+Endpoint Protection puede ayudar a administrar y supervisar [Protección contra amenazas avanzada (ATP) de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (anteriormente conocido como ATP de Windows Defender). ATP de Microsoft Defender ayuda a las empresas a detectar e investigar ataques avanzados en sus redes, y responder ante ellos. Las directivas de Configuration Manager pueden ayudarlo a incorporar y supervisar clientes de Windows 10.
 
-ATP de Microsoft Defender es un servicio del [Centro de seguridad de Microsoft Defender](https://securitycenter.windows.com). Al agregar e implementar un archivo de configuración de incorporación de cliente, Configuration Manager puede supervisar el estado de implementación y el mantenimiento del agente de ATP de Microsoft Defender. ATP de Microsoft Defender es compatible con equipos que ejecutan el cliente de Configuration Manager o que se [administran mediante Microsoft Intune](https://docs.microsoft.com/intune/protect/advanced-threat-protection).
+ATP de Microsoft Defender es un servicio del [Centro de seguridad de Microsoft Defender](https://securitycenter.windows.com). Al agregar e implementar un archivo de configuración de incorporación de cliente, Configuration Manager puede supervisar el estado de implementación y el mantenimiento del agente de ATP de Microsoft Defender. ATP de Microsoft Defender es compatible con equipos que ejecutan el cliente de Configuration Manager o que se [administran mediante Microsoft Intune](/intune/protect/advanced-threat-protection).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -219,6 +220,6 @@ Seleccione **Implementar** para dirigir la directiva de ATP de Microsoft Defend
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Protección contra amenazas avanzada de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Protección contra amenazas avanzada de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Solución de problemas de incorporación de Protección contra amenazas avanzada de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Solución de problemas de incorporación de Protección contra amenazas avanzada de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

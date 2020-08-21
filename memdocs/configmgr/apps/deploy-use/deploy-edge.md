@@ -10,18 +10,18 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212298"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695381"
 ---
 # <a name="microsoft-edge-management"></a>Administración de Microsoft Edge
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-La nueva versión de Microsoft Edge está lista para empresas. A partir de la versión 1910 de Configuration Manager, ahora puede implementar [Microsoft Edge, versión 77 y posteriores](https://docs.microsoft.com/deployedge/) para los usuarios. Se usa un script de PowerShell para instalar la compilación de Edge seleccionada. El script también desactiva las actualizaciones automáticas para Edge de modo que se puedan administrar con Configuration Manager.
+La nueva versión de Microsoft Edge está lista para empresas. A partir de la versión 1910 de Configuration Manager, ahora puede implementar [Microsoft Edge, versión 77 y posteriores](/deployedge/) para los usuarios. Se usa un script de PowerShell para instalar la compilación de Edge seleccionada. El script también desactiva las actualizaciones automáticas para Edge de modo que se puedan administrar con Configuration Manager.
 
 ## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a> Implementación de Microsoft Edge
 <!--4561024-->
@@ -31,7 +31,7 @@ Los administradores pueden elegir el canal de la versión beta, de desarrollo o 
 
 Clientes con una implementación de Microsoft Edge:
 
-- No se puede establecer la [Directiva de ejecución](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) de PowerShell en Restringida.
+- No se puede establecer la [Directiva de ejecución](/powershell/module/microsoft.powershell.core/about/about_execution_policies) de PowerShell en Restringida.
   - PowerShell se ejecuta para realizar la instalación.
 
 - El instalador de Microsoft Edge y [CMPivot](../../core/servers/manage/cmpivot.md) se firman con el certificado **Firma de código de Microsoft**. Si el certificado no aparece en el almacén **Editores de confianza**, deberá agregarlo. De lo contrario, el instalador de Microsoft Edge y CMPivot no se ejecutarán cuando la directiva de ejecución de PowerShell esté establecida en **AllSigned**. <!--7585106-->
@@ -47,7 +47,7 @@ El dispositivo que ejecuta la consola de Configuration Manager necesita acceso a
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager, versión 1910
 
-En la versión 1910, cuando se implementa Microsoft Edge, el script de instalación desactiva las actualizaciones automáticas de Microsoft Edge para que se puedan administrar con Configuration Manager. Puede cambiar este comportamiento mediante la directiva de grupo. Para obtener más información, vea [Planear tu implementación de Microsoft Edge](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) y [Directivas de actualización de Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies).
+En la versión 1910, cuando se implementa Microsoft Edge, el script de instalación desactiva las actualizaciones automáticas de Microsoft Edge para que se puedan administrar con Configuration Manager. Puede cambiar este comportamiento mediante la directiva de grupo. Para obtener más información, vea [Planear tu implementación de Microsoft Edge](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) y [Directivas de actualización de Microsoft Edge](/DeployEdge/microsoft-edge-update-policies).
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Versión 2002 y posteriores de Configuration Manager
 <!--4561024-->
