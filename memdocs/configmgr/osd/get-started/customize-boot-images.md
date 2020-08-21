@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124568"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697796"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Personalización de imágenes de arranque con Configuration Manager
 
@@ -49,7 +49,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
 
 - **WinPE-WDS-Tools**: instala las herramientas de Servicios de implementación de Windows.  
 
-  Hay otros paquetes de Windows PE que puede agregar. Para obtener más información sobre los componentes opcionales que puede agregar a la imagen de arranque, consulte [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+  Hay otros paquetes de Windows PE que puede agregar. Para obtener más información sobre los componentes opcionales que puede agregar a la imagen de arranque, consulte [WinPE: agregar paquetes (referencia de los componentes opcionales)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Al arrancar en WinPE desde una imagen de arranque personalizada que incluye herramientas que se han agregado, puede abrir un símbolo del sistema desde WinPE y escribir el nombre de archivo de la herramienta para ejecutarla. La ubicación de estas herramientas se agrega automáticamente a la variable de ruta de acceso. Solo se puede agregar el símbolo del sistema si está seleccionada la opción **Habilitar compatibilidad de comando (solo prueba)** en la pestaña **Personalización** de las propiedades de la imagen de arranque.
@@ -72,7 +72,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     En la que C:\WinPEWAIK es la carpeta que contiene la imagen de arranque y C:\WinPEMount es la carpeta montada.  
 
    > [!NOTE]
-   >  Para obtener más información, consulte la referencia de [DISM (administración y mantenimiento de imágenes de implementación)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   >  Para obtener más información, consulte la referencia de [DISM (administración y mantenimiento de imágenes de implementación)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 5, los componentes opcionales de 64 bits se encuentran en <*ruta de instalación*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -108,7 +108,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Archivos de programa (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Para obtener más información sobre los componentes opcionales que puede agregar a la imagen de arranque, consulte el tema [Referencia de los componentes opcionales de Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+   >  Para obtener más información sobre los componentes opcionales que puede agregar a la imagen de arranque, consulte el tema [Referencia de los componentes opcionales de Windows PE](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Use DISM para agregar controladores a la imagen de arranque cuando sea necesario. Escriba lo siguiente para agregar controladores a la imagen de arranque:  
 
@@ -194,7 +194,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     En la que C:\WinPEWAIK es la carpeta que contiene la imagen de arranque y C:\WinPEMount es la carpeta montada.  
 
    > [!NOTE]
-   > Para obtener más información, consulte la referencia de [DISM (administración y mantenimiento de imágenes de implementación)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   > Para obtener más información, consulte la referencia de [DISM (administración y mantenimiento de imágenes de implementación)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Después de montar la imagen de arranque, use DISM para agregar componentes opcionales a la imagen de arranque. En Windows PE 3.1, por ejemplo, los componentes opcionales se encuentran en <*rutaDeInstalación*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
@@ -224,7 +224,7 @@ Cada versión de Configuration Manager admite una determinada versión de Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Archivos de programa\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Para más información sobre los diferentes paquetes que puede agregar a la imagen de arranque, consulte el tema [Agregar un paquete a una imagen de Windows PE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
+   >  Para más información sobre los diferentes paquetes que puede agregar a la imagen de arranque, consulte el tema [Agregar un paquete a una imagen de Windows PE](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Use DISM para agregar controladores a la imagen de arranque cuando sea necesario. Escriba lo siguiente para agregar controladores a la imagen de arranque:  
 
@@ -290,4 +290,4 @@ Cada versión de Configuration Manager admite una determinada versión de Window
 
     3.  Haga clic en la imagen de arranque que se identificó en el paso 3.  
 
-    4.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Actualizar puntos de distribución**.  
+    4.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Actualizar puntos de distribución**.

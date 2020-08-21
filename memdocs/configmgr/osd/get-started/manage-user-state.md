@@ -10,12 +10,12 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124370"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697592"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Administración del estado de usuario en Configuration Manager
 
@@ -27,7 +27,7 @@ Puede usar secuencias de tareas de Configuration Manager para capturar y restaur
 
 - Implementaciones de actualizaciones donde desea capturar y restaurar el estado de usuario en el mismo equipo.  
 
-Configuration Manager usa la Herramienta de migración de estado de usuario (USMT) 10.0 para administrar la migración de datos de estado de usuario de un equipo de origen a un equipo de destino una vez completada la instalación del sistema operativo. Para más información acerca de escenarios de migración habituales de USMT 10.0, consulte  [Escenarios de migración habituales](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios).
+Configuration Manager usa la Herramienta de migración de estado de usuario (USMT) 10.0 para administrar la migración de datos de estado de usuario de un equipo de origen a un equipo de destino una vez completada la instalación del sistema operativo. Para más información acerca de escenarios de migración habituales de USMT 10.0, consulte  [Escenarios de migración habituales](/windows/deployment/usmt/usmt-common-migration-scenarios).
 
 En las secciones siguientes obtendrá ayuda para la captura y la restauración de datos de usuario.
 
@@ -129,4 +129,4 @@ Cree una asociación de equipos para definir una relación entre un equipo de or
 
 ## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Restaurar datos de estado de usuario si se produce un error de implementación de sistema operativo
 
-Si se produce un error de implementación de sistema operativo, use la característica LoadState de USMT 10.0 para recuperar los datos de estado de usuario que se capturaron durante el proceso de implementación. Se incluyen los datos que se almacenan en un punto de migración de estado o los datos que se guardan localmente en el equipo de destino. Para obtener más información acerca de esta característica de USMT, consulte [Sintaxis de LoadState](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+Si se produce un error de implementación de sistema operativo, use la característica LoadState de USMT 10.0 para recuperar los datos de estado de usuario que se capturaron durante el proceso de implementación. Se incluyen los datos que se almacenan en un punto de migración de estado o los datos que se guardan localmente en el equipo de destino. Para obtener más información acerca de esta característica de USMT, consulte [Sintaxis de LoadState](/windows/deployment/usmt/usmt-loadstate-syntax).

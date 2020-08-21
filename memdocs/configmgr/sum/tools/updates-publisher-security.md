@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701613"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696011"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Administrar certificados y seguridad de Updates Publisher
 
@@ -76,7 +76,7 @@ El siguiente ejemplo muestra cómo configurar el certificado de firma en equipos
    -   Para los certificados emitidos por entidades de certificación (CA): Agregue el certificado al almacén de certificados **Editores de confianza**.
 
    > [!NOTE]
-   > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10)).
+   > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](/previous-versions/bb530967(v=technet.10)).
 
 
 

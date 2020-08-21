@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526039"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695824"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funciones de Technical Preview 1601 de Configuration Manager
 
@@ -75,11 +75,11 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
     -   Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager.  
 
-    -   [Requisitos previos para el registro automático en Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   [Requisitos previos para el registro automático en Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     Para usar esta opción, debe crear una directiva de cumplimiento en Configuration Manager con las reglas específicas que se describen a continuación y establecer una directiva de acceso condicional en la consola de Intune.  Además, para asegurarse de que se permita el acceso únicamente a los equipos compatibles, debe establecer el requisito de equipo Windows en la opción **Los dispositivos deben ser compatibles**. Aquí se detallan las reglas de directiva de cumplimiento que se aplican a los equipos administrados por Configuration Manager.  
 
-    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Requiere registro en Azure Active Directory:** esta regla comprueba si el dispositivo del usuario está unido al área de trabajo en Azure AD y, si no, se registra automáticamente en Azure AD. El registro automático solo se admite en Windows 8.1. Para equipos con Windows 7, implemente un archivo MSI para realizar el registro automático. Para más información, vea [aquí](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     -   **Todas las actualizaciones necesarias que se instalan con una fecha límite anterior a un número determinado de días:** esta regla comprueba si el dispositivo del usuario tiene todas las actualizaciones necesarias (especificadas en la regla **Actualizaciones automáticas requeridas**) dentro de la fecha límite y el período de gracia que usted especifique, e instala automáticamente cualquier actualización necesaria pendiente.  
 
@@ -213,4 +213,4 @@ Un cliente está en línea si en ese momento está conectado a un rol de sistema
 
  Para ver las nuevas opciones, elija **Pantalla completa: Samsung KNOX** en la página **Configuración del dispositivo** del elemento de configuración del asistente **Crear elemento de configuración**.  
 
- Para más información, vea [Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de Configuration Manager](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ Para más información, vea [Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de Configuration Manager](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).

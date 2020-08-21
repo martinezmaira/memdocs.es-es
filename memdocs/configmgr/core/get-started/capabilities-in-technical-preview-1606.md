@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905670"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695603"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funciones de Technical Preview 1606 de Configuration Manager
 
@@ -80,9 +80,9 @@ Se han agregado opciones similares al asistente para la implementación de actua
 
 Device Guard es una característica de Windows 10 que emplea características de hardware y software para controlar de forma estricta lo que se puede ejecutar en el dispositivo.
 
-Para obtener más información, consulte [Introducción a Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+Para obtener más información, consulte [Introducción a Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-En esta versión, Configuration Manager puede interoperar con Device Guard y [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) para que los archivos ejecutables y DLL implementados con Configuration Manager se consideren de confianza automáticamente por proceder de un instalador administrado, lo que significa que se podrán ejecutar en el dispositivo de destino y no se permitirá ejecutar otro software a menos que se permita explícitamente mediante otras reglas de AppLocker.  
+En esta versión, Configuration Manager puede interoperar con Device Guard y [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) para que los archivos ejecutables y DLL implementados con Configuration Manager se consideren de confianza automáticamente por proceder de un instalador administrado, lo que significa que se podrán ejecutar en el dispositivo de destino y no se permitirá ejecutar otro software a menos que se permita explícitamente mediante otras reglas de AppLocker.  
 
 De momento, esta capacidad no se puede configurar desde la consola de Configuration Manager. La configuración de la directiva exige configurar una clave del Registro en cada cliente y configurar servicios de Windows en el cliente.
 Una vez hecho esto, configure el archivo de directiva de AppLocker. Después de configurar el archivo de directiva, puede implementarlo en cualquier dispositivo de cliente compatible.
@@ -95,9 +95,9 @@ Como todas las directivas de AppLocker, las directivas con reglas de instalador 
 
 Vea los siguientes artículos para más información:
 
-- [Introducción a Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Introducción a Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Planificación e introducción al proceso de implementación de controles de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Planificación e introducción al proceso de implementación de controles de aplicaciones de Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Varios puntos de administración de dispositivos para la administración local de dispositivos móviles  
   Con Technical Preview 1606, la administración local de dispositivos móviles (MDM) admite una nueva capacidad de Windows 10 Anniversary Update que automáticamente configura un dispositivo inscrito para que tenga más de un punto de administración de dispositivos disponible. Esta capacidad permite al dispositivo retroceder a otro punto de administración de dispositivos cuando el que usa normalmente no está disponible. Esta capacidad solo funciona con equipos que tienen instalado Windows 10 Anniversary Update.  
@@ -170,8 +170,8 @@ La manera más sencilla de exportar la raíz de los certificados de cliente usad
 #### <a name="upload-the-management-certificate-to-azure"></a>Cargar el certificado de administración en Azure
 
 Se necesita un certificado de administración de Azure para que Configuration Manager acceda a la API de Azure y para configurar el servicio de proxy en la nube. Para obtener más información e instrucciones sobre cómo cargar un certificado de administración, vea los artículos siguientes de la documentación de Azure:
-- [Introducción a los certificados para los servicios en la nube de Azure](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Carga de un certificado de administración de API de Administración de Azure](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
+- [Introducción a los certificados para los servicios en la nube de Azure](/azure/cloud-services/cloud-services-certs-create)
+- [Carga de un certificado de administración de API de Administración de Azure](/previous-versions/azure/azure-api-management-certs).
 
 Asegúrese de copiar el identificador de suscripción asociado al certificado de administración, dado que lo necesitará para configurar el servicio de proxy en la nube en la consola de Configuration Manager.
 

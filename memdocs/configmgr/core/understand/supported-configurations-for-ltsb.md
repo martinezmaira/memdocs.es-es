@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906436"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698929"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
@@ -72,7 +72,7 @@ Puede usar la LTSB para administrar los siguientes sistemas operativos de equipo
 - La instalación Server Core de Windows Server 2012 (x64) (Nota 2)
 
 **(Nota 1)** Las versiones de Datacenter son compatibles pero no están certificadas para Configuration Manager.  
-**(Nota 2)** Para admitir la instalación de inserción de cliente, el equipo que ejecuta esta versión del sistema operativo debe ejecutar el servicio de rol Servidor de archivos para el rol de servidor Servicios de archivos y almacenamiento. Para obtener más información sobre cómo instalar características de Windows en un equipo Server Core, consulte [Instalar roles de servidor y características en un servidor Server Core](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
+**(Nota 2)** Para admitir la instalación de inserción de cliente, el equipo que ejecuta esta versión del sistema operativo debe ejecutar el servicio de rol Servidor de archivos para el rol de servidor Servicios de archivos y almacenamiento. Para obtener más información sobre cómo instalar características de Windows en un equipo Server Core, consulte [Instalar roles de servidor y características en un servidor Server Core](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 Puede usar la LTSB para administrar los siguientes dispositivos de Windows Embedded mediante la instalación del software cliente en el dispositivo.  Para obtener más información, vea [Planeación de la implementación del cliente en dispositivos Windows Embedded](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).

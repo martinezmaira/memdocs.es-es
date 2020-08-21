@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125192"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697983"
 ---
 # <a name="create-stand-alone-media"></a>Crear medios independientes
 
@@ -140,7 +140,7 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
 
         - Configuration Manager escribe un archivo de texto denominado `MediaLabel.txt` en la raíz del medio. De forma predeterminada, el archivo incluye una sola línea de texto: `label=Configuration Manager`. Si personaliza la etiqueta del medio, esta línea usa la etiqueta personalizada en lugar del valor predeterminado.  
 
-    - **Incluir archivo autorun.inf en el medio**:<!-- 4090666 -->: a partir de la versión 1906, Configuration Manager no agrega un archivo autorun.inf de forma predeterminada. Normalmente, los productos antimalware bloquean este archivo. Para obtener más información sobre la característica de ejecución automática de Windows, vea [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay) (Creación de una aplicación de CD-ROM con ejecución automática habilitada). Si todavía lo necesita en su escenario, seleccione esta opción para incluir el archivo.  
+    - **Incluir archivo autorun.inf en el medio**:<!-- 4090666 -->: a partir de la versión 1906, Configuration Manager no agrega un archivo autorun.inf de forma predeterminada. Normalmente, los productos antimalware bloquean este archivo. Para obtener más información sobre la característica de ejecución automática de Windows, vea [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay) (Creación de una aplicación de CD-ROM con ejecución automática habilitada). Si todavía lo necesita en su escenario, seleccione esta opción para incluir el archivo.  
 
 5. En la página **Seguridad**, especifique las siguientes opciones:
 
@@ -151,7 +151,7 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
         >
         > En un medio independiente, solo se cifran los pasos de la secuencia de tareas y sus variables. No se cifra el contenido restante del medio. No incluya información confidencial en los scripts de la secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
 
-    - **Seleccionar el intervalo de fechas de validez de este medio independiente**: establezca fechas de inicio y expiración opcionales en los medios. Esta configuración está deshabilitada de manera predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps).  
+    - **Seleccionar el intervalo de fechas de validez de este medio independiente**: establezca fechas de inicio y expiración opcionales en los medios. Esta configuración está deshabilitada de manera predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps).  
 
 6. En la página **CD/DVD independiente**, seleccione la secuencia de tareas que implementa el sistema operativo. Solo se pueden seleccionar esas secuencias de tareas que están asociadas con una imagen de arranque. Compruebe la lista de contenido al que hace referencia la secuencia de tareas.  
 

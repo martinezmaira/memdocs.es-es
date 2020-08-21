@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777031"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698493"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
@@ -553,7 +553,7 @@ Si tiene puntos de distribución de Configuration Manager 2007 o sitios secundar
 > [!NOTE]  
 > La cuenta de sitio de origen y la [cuenta de base de datos del sitio de origen](#source-site-database-account) se identifican como **Administrador de migraciones** en el nodo **Cuentas** del área de trabajo **Administración** en la consola de Configuration Manager.  
 
-Para más información, vea [Migración de datos entre jerarquías](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Para más información, vea [Migración de datos entre jerarquías](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="source-site-database-account"></a>Cuenta de base de datos del sitio de origen  
@@ -569,7 +569,7 @@ Si usa la cuenta de equipo de Configuration Manager (rama actual), asegúrese de
 > [!NOTE]  
 > La cuenta de sitio de origen y la [cuenta de base de datos del sitio de origen](#source-site-database-account) se identifican como **Administrador de migraciones** en el nodo **Cuentas** del área de trabajo **Administración** en la consola de Configuration Manager.  
 
-Para más información, vea [Migración de datos entre jerarquías](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Para más información, vea [Migración de datos entre jerarquías](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="task-sequence-domain-join-account"></a>Cuenta de unión de dominio de secuencia de tareas 

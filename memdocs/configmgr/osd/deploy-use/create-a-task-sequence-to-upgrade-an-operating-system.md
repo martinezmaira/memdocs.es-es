@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125464"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698102"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Crear una secuencia de tareas para actualizar un SO en Configuration Manager
 
@@ -66,7 +66,7 @@ Para actualizar el sistema operativo en los clientes, puede crear una secuencia 
     - **Clave de producto**: especifique la clave de producto de Windows para el sistema operativo que quiera instalar. Puede especificar claves de licencia por volumen codificadas o claves de producto estándar. Si usa una clave de producto estándar, separe cada grupo de cinco caracteres por un guion (`-`). Por ejemplo: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Si se trata de una actualización de una edición de licencia por volumen, la clave de producto puede no ser necesaria.  
 
         > [!Note]  
-        > Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server.
+        > Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server.
 
     - **Omitir cualquier mensaje de compatibilidad descartable**: seleccione esta opción si va a actualizar a Windows Server 2016. Si no selecciona esta configuración, la secuencia de tareas no se completará, ya que el programa de instalación de Windows espera a que el usuario seleccione **Confirmar** en un cuadro de diálogo de compatibilidad de aplicaciones de Windows.  
 
@@ -217,7 +217,7 @@ para recopilar registros del cliente, agregue pasos en este grupo.
 
 para ejecutar herramientas de diagnóstico adicionales, agregue pasos en este grupo. Automatice estas herramientas para recopilar información adicional del sistema justo después del error.  
 
-Una de estas herramientas es Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Es una herramienta de diagnóstico independiente para obtener detalles sobre el motivo de que una actualización de Windows 10 se haya realizado incorrectamente.  
+Una de estas herramientas es Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). Es una herramienta de diagnóstico independiente para obtener detalles sobre el motivo de que una actualización de Windows 10 se haya realizado incorrectamente.  
 
 - En Configuration Manager, [cree un paquete](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) para la herramienta.  
 
@@ -225,13 +225,13 @@ Una de estas herramientas es Windows [SetupDiag](https://docs.microsoft.com/wind
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> Use siempre la versión más reciente de SetupDiag para contar con la funcionalidad y las correcciones más recientes de los problemas conocidos. Para más información, consulte [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
+> Use siempre la versión más reciente de SetupDiag para contar con la funcionalidad y las correcciones más recientes de los problemas conocidos. Para más información, consulte [SetupDiag](/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Otras recomendaciones
 
 ### <a name="windows-documentation"></a>Documentación de Windows
 
-Consulte la documentación de Windows para [solucionar los errores de actualización de Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). En este artículo también se incluye información detallada sobre el proceso de actualización.  
+Consulte la documentación de Windows para [solucionar los errores de actualización de Windows 10](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). En este artículo también se incluye información detallada sobre el proceso de actualización.  
 
 ### <a name="check-minimum-disk-space"></a>Comprobación del espacio mínimo en disco
 
@@ -272,12 +272,12 @@ Si desea cambiar el dispositivo de BIOS a UEFI durante esta secuencia de tareas,
 ### <a name="manage-bitlocker"></a>Administración de BitLocker
 
 <!--SCCMDocs issue #494-->
-Si usa el cifrado de disco BitLocker, en ese caso, de forma predeterminada el programa de instalación de Windows la suspende automáticamente durante la actualización. A partir de Windows 10, versión 1803, el programa de instalación de Windows incluye el parámetro de línea de comandos `/BitLocker` para controlar este comportamiento. Si los requisitos de seguridad exigen mantener el cifrado de disco activo en todo momento, utilice la [variable de secuencia de tareas](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** en el grupo **Preparar para actualización** para incluir `/BitLocker TryKeepActive`. Para más información, consulte [Opciones de la línea de comandos del programa de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+Si usa el cifrado de disco BitLocker, en ese caso, de forma predeterminada el programa de instalación de Windows la suspende automáticamente durante la actualización. A partir de Windows 10, versión 1803, el programa de instalación de Windows incluye el parámetro de línea de comandos `/BitLocker` para controlar este comportamiento. Si los requisitos de seguridad exigen mantener el cifrado de disco activo en todo momento, utilice la [variable de secuencia de tareas](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** en el grupo **Preparar para actualización** para incluir `/BitLocker TryKeepActive`. Para más información, consulte [Opciones de la línea de comandos del programa de instalación de Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Eliminación de aplicaciones predeterminadas
 
 <!--SCCMDocs issue #526-->
-Algunos clientes quitan las aplicaciones predeterminadas aprovisionadas en Windows 10. Por ejemplo, la aplicación Bing El Tiempo o la Microsoft Solitaire Collection. En algunas situaciones, estas aplicaciones vuelven después de actualizar Windows 10. Para obtener más información, vea [How to keep apps removed from Windows 10 (Cómo mantener las aplicaciones eliminadas en Windows 10)](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update).
+Algunos clientes quitan las aplicaciones predeterminadas aprovisionadas en Windows 10. Por ejemplo, la aplicación Bing El Tiempo o la Microsoft Solitaire Collection. En algunas situaciones, estas aplicaciones vuelven después de actualizar Windows 10. Para obtener más información, vea [How to keep apps removed from Windows 10 (Cómo mantener las aplicaciones eliminadas en Windows 10)](/windows/application-management/remove-provisioned-apps-during-update).
 
 Agregue un paso **Ejecutar línea de comandos** a la secuencia de tareas en el grupo **Preparar para actualización**. Especifique una línea de comandos similar al ejemplo siguiente:
 

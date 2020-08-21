@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643242"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699150"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Uso de un clúster de SQL Server para la base de datos del sitio
 
@@ -63,7 +63,7 @@ Tenga en cuenta los siguientes requisitos previos:
 - Para admitir la autenticación Kerberos, habilite el protocolo de comunicación de red **TCP/IP** para la conexión de red de cada nodo del clúster de SQL Server. No hace falta el protocolo de **canalizaciones con nombre**, pero puede usarse para solucionar problemas de autenticación Kerberos. Las opciones de protocolo de red se configuran en **Administrador de configuración de SQL Server**, en **Configuración de red de SQL Server**.  
 
 - Hay requisitos de certificado específicos cuando se usa el clúster de SQL Server para la base de datos del sitio. Vea los siguientes artículos para más información:
-  - [Instalación de un certificado en una configuración de clúster de conmutación por error de SQL](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Instalación de un certificado en una configuración de clúster de conmutación por error de SQL](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
   - [Requisitos de certificados PKI para Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager no admite la copia de seguridad de Data Protection Manager
 
 Estas son las principales tareas que debe llevar a cabo para preparar la base de datos del sitio:
 
-- Cree el clúster virtual de SQL Server para hospedar la base de datos del sitio en un entorno de clúster de Windows Server existente. Para conocer pasos específicos para instalar y configurar un clúster de SQL Server, vea la documentación específica de la versión de SQL Server. Para obtener más información, consulte [Crear un nuevo clúster de conmutación por error](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Cree el clúster virtual de SQL Server para hospedar la base de datos del sitio en un entorno de clúster de Windows Server existente. Para conocer pasos específicos para instalar y configurar un clúster de SQL Server, vea la documentación específica de la versión de SQL Server. Para obtener más información, consulte [Crear un nuevo clúster de conmutación por error](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
 
 - En cada equipo del clúster de SQL Server, coloque un archivo en la carpeta raíz de cada unidad en donde no quiere que Configuration Manager instale componentes del sitio. Ponga al archivo el nombre `NO_SMS_ON_DRIVE.SMS`. De forma predeterminada, Configuration Manager instala algunos componentes en cada nodo físico para admitir operaciones como la copia de seguridad.  
 
@@ -117,4 +117,4 @@ Para instalar un sitio que usa una base de datos del sitio en clúster, ejecute 
 - En la página **Información de base de datos** , especifique el nombre de la instancia virtual de clúster de SQL Server que hospedará la base de datos del sitio. La instancia virtual reemplaza el nombre del equipo que ejecuta SQL Server.  
 
     > [!IMPORTANT]  
-    > Cuando escriba el nombre de la instancia virtual de clúster de SQL Server, no escriba el nombre virtual de Windows Server creado por el clúster de Windows Server. Si usa el nombre virtual de Windows Server, la base de datos del sitio se instala en la unidad de disco duro local del nodo de clúster activo de Windows Server. Esto impide que la conmutación por error se lleve a cabo correctamente si se produce un error en ese nodo.  
+    > Cuando escriba el nombre de la instancia virtual de clúster de SQL Server, no escriba el nombre virtual de Windows Server creado por el clúster de Windows Server. Si usa el nombre virtual de Windows Server, la base de datos del sitio se instala en la unidad de disco duro local del nodo de clúster activo de Windows Server. Esto impide que la conmutación por error se lleve a cabo correctamente si se produce un error en ese nodo.

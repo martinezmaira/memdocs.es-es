@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 5a1d9d4ce8cdd19efb440d4d73fafdc96a514bcd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613969"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699167"
 ---
 # <a name="remove-the-central-administration-site"></a>Quitar el sitio de administración central
 
@@ -141,7 +141,7 @@ Después de quitar el CAS, revise los pasos siguientes según se apliquen a su e
 
   - Vuelva a crear [medios de implementación de sistemas operativos](../../../../osd/deploy-use/create-task-sequence-media.md).
 
-- Si conecta Configuration Manager con [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), debe restablecer la conexión. El primer paso para resolver cualquier problema es [renovar la clave secreta](../configure/azure-services-wizard.md#bkmk_renew). Si esto no resuelve el problema, vuelva a crear la conexión.<!-- 5584635 -->
+- Si conecta Configuration Manager con [Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), debe restablecer la conexión. El primer paso para resolver cualquier problema es [renovar la clave secreta](../configure/azure-services-wizard.md#bkmk_renew). Si esto no resuelve el problema, vuelva a crear la conexión.<!-- 5584635 -->
 
 - En la versión 2002, si habilita la sincronización de controladores de Surface, vuelva a configurar esta característica después de quitar el sitio de administración central. Para más información, consulte el artículo sobre [actualizaciones de firmware y controladores de Microsoft Surface](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 

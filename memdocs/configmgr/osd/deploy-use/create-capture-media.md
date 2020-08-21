@@ -10,12 +10,12 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f8f8d6512e0ddd9881005c5916eeb804aac59e2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125379"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698017"
 ---
 # <a name="create-capture-media"></a>Crear medios de captura
 
@@ -84,7 +84,7 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
 
         - Configuration Manager escribe un archivo de texto denominado `MediaLabel.txt` en la raíz del medio. De forma predeterminada, el archivo incluye una sola línea de texto: `label=Configuration Manager`. Si personaliza la etiqueta del medio, esta línea usa la etiqueta personalizada en lugar del valor predeterminado.  
 
-    - **Incluir archivo autorun.inf en el medio**:<!-- 4090666 -->: a partir de la versión 1906, Configuration Manager no agrega un archivo autorun.inf de forma predeterminada. Normalmente, los productos antimalware bloquean este archivo. Para obtener más información sobre la característica de ejecución automática de Windows, vea [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay) (Creación de una aplicación de CD-ROM con ejecución automática habilitada). Si todavía lo necesita en su escenario, seleccione esta opción para incluir el archivo.  
+    - **Incluir archivo autorun.inf en el medio**:<!-- 4090666 -->: a partir de la versión 1906, Configuration Manager no agrega un archivo autorun.inf de forma predeterminada. Normalmente, los productos antimalware bloquean este archivo. Para obtener más información sobre la característica de ejecución automática de Windows, vea [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay) (Creación de una aplicación de CD-ROM con ejecución automática habilitada). Si todavía lo necesita en su escenario, seleccione esta opción para incluir el archivo.  
 
 5. En la página **Imagen de arranque**, especifique las opciones siguientes:  
 

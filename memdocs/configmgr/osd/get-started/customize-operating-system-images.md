@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f1d89707fa3e1765067c264d2abec12116bde88
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906916"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697728"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Personalizar imágenes de sistema operativo con Configuration Manager
 
@@ -95,7 +95,7 @@ Las imágenes de sistema operativo de Configuration Manager son archivos WIM y 
     > [!IMPORTANT]  
     >  En el paso de la secuencia de tareas [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) (Preparar Windows para la captura) se intenta restablecer la contraseña del administrador local del equipo de referencia en un valor en blanco antes de que se ejecute Sysprep. Si la directiva de seguridad local **La contraseña debe cumplir los requisitos de complejidad** está habilitada, este paso de la secuencia de tareas no restablece la contraseña del administrador. En este escenario, deshabilite esta directiva antes de ejecutar la secuencia de tareas.  
 
-     Para más información acerca de Sysprep, consulte [Información general sobre Sysprep (preparación del sistema)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+     Para más información acerca de Sysprep, consulte [Información general sobre Sysprep (preparación del sistema)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Herramientas y scripts adecuados necesarios para minimizar escenarios de instalación**  
 
@@ -131,4 +131,4 @@ Las imágenes de sistema operativo de Configuration Manager son archivos WIM y 
 ##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> Usar una secuencia de tareas para compilar un equipo de referencia  
  Puede automatizar el proceso para crear un equipo de referencia usando una secuencia de tareas para implementar el sistema operativo, los controladores, las aplicaciones, etc.  Use las etapas siguientes para compilar el equipo de referencia y, después, para capturar la imagen de sistema operativo del equipo de referencia.  
 
--   Use una secuencia de tareas para compilar y capturar la imagen de sistema operativo del equipo de referencia.  Para conocer los pasos detallados, consulte [Usar una secuencia de tareas para compilar y capturar un equipo de referencia](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
+-   Use una secuencia de tareas para compilar y capturar la imagen de sistema operativo del equipo de referencia.  Para conocer los pasos detallados, consulte [Usar una secuencia de tareas para compilar y capturar un equipo de referencia](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).

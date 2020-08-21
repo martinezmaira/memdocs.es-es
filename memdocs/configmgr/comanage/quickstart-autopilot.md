@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f77cb76e3cfd9c932a6f3789f98e5616cdaa27eb
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 9888190f516bd8e876e9f197b6d15c26a6e6e3cf
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695076"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot con administración conjunta
 
@@ -95,6 +95,6 @@ Cree satisfacción en su organización mediante la creación de una mejor experi
 
 Vea los siguientes artículos para más información:
 
-[Inscripción de dispositivos Windows en Intune con Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot)
+[Inscripción de dispositivos Windows en Intune con Windows Autopilot](/intune/enrollment-autopilot)
 
 [Windows Autopilot para dispositivos existentes](../../autopilot/existing-devices.md)

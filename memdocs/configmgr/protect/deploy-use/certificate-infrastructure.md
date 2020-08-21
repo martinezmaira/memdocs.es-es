@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210118"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697252"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 
@@ -34,7 +34,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>Para instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias  
 
-1. En un servidor que ejecute Windows Server 2012 R2, instale y configure el servicio de rol Servicio de inscripción de dispositivos de red para el rol de servidor Servicios de certificados de Active Directory. Para obtener más información, vea [Instrucciones del servicio de inscripción de dispositivos de red](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
+1. En un servidor que ejecute Windows Server 2012 R2, instale y configure el servicio de rol Servicio de inscripción de dispositivos de red para el rol de servidor Servicios de certificados de Active Directory. Para obtener más información, vea [Instrucciones del servicio de inscripción de dispositivos de red](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Compruebe y, si es necesario, modifique los permisos de seguridad para las plantillas de certificado que está utilizando el Servicio de inscripción de dispositivos de red:  
 
@@ -44,7 +44,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
    -   Para la cuenta de servicio SCEP que el grupo de aplicaciones del Servicio de inscripción de dispositivos de red utiliza: los permisos **Leer** e **Inscribir**.  
 
-        Este requisito no es específico de Configuration Manager, sino que es parte de la configuración del Servicio de inscripción de dispositivos de red. Para obtener más información, vea [Instrucciones del servicio de inscripción de dispositivos de red](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
+        Este requisito no es específico de Configuration Manager, sino que es parte de la configuración del Servicio de inscripción de dispositivos de red. Para obtener más información, vea [Instrucciones del servicio de inscripción de dispositivos de red](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  Para identificar las plantillas de certificado que el Servicio de inscripción de dispositivos de red utiliza, consulte la siguiente clave del Registro en el servidor que ejecuta el Servicio de inscripción de dispositivos de red: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -79,7 +79,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
    - **Cadena de consulta máxima (bytes)** : **65534**  
 
-     Para obtener más información sobre estas opciones y cómo configurarlas, vea [Límites de solicitudes de IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
+     Para obtener más información sobre estas opciones y cómo configurarlas, vea [Límites de solicitudes de IIS](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. Si desea poder solicitar un certificado con un período de validez inferior al de la plantilla de certificado que está utilizando: Esta configuración está deshabilitada de forma predeterminada para una entidad de certificación (CA) empresarial. Para habilitar esta opción en una CA empresarial, utilice la herramienta de línea de comandos Certutil y, a continuación, detenga y reinicie el servicio de certificado mediante el uso de los comandos siguientes:  
 
@@ -89,7 +89,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
    3. **net start certsvc**  
 
-      Para obtener más información, vea [Herramientas y configuración de servicios de certificados](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
+      Para obtener más información, vea [Herramientas y configuración de servicios de certificados](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
 8. Compruebe que el Servicio de inscripción de dispositivos de red funciona, mediante el vínculo siguiente de ejemplo: `https://server.contoso.com/certsrv/mscep/mscep.dll`. Se debería visualizar la página web integrada de Servicio de inscripción de dispositivos de red. En esta página web se define el servicio y se indica que los dispositivos de red utilizan la dirección URL para enviar solicitudes de certificados.  
 
@@ -201,4 +201,4 @@ Debe instalar y configurar el módulo de directivas de Configuration Manager en
    Si quiere desinstalar el módulo de directivas de Configuration Manager, use **Programas y características** en el Panel de control. 
 
  
-Ahora que ha completado los pasos de configuración, está listo para implementar certificados para usuarios y dispositivos mediante la creación e implementación de perfiles de certificado. Para más información sobre cómo crear perfiles de certificado, consulte [Creación de perfiles de certificado](../../protect/deploy-use/create-certificate-profiles.md).  
+Ahora que ha completado los pasos de configuración, está listo para implementar certificados para usuarios y dispositivos mediante la creación e implementación de perfiles de certificado. Para más información sobre cómo crear perfiles de certificado, consulte [Creación de perfiles de certificado](../../protect/deploy-use/create-certificate-profiles.md).

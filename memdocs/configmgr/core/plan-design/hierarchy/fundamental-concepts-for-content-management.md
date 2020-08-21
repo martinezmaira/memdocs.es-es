@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 11649452012de33ef1e62007d71466d5a45c56ca
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384951"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698612"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -132,7 +132,7 @@ Use la siguiente tabla para comparar las principales características de estas t
 
 ## <a name="branchcache"></a>BranchCache
 
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) es una tecnología de Windows. Los clientes que admiten BranchCache y que han descargado una implementación configurada para BranchCache, después actúan como un origen de contenido para otros clientes habilitados para BranchCache.  
+[BranchCache](/windows-server/networking/branchcache/branchcache) es una tecnología de Windows. Los clientes que admiten BranchCache y que han descargado una implementación configurada para BranchCache, después actúan como un origen de contenido para otros clientes habilitados para BranchCache.  
 
 Por ejemplo, tiene un punto de distribución en el que se ejecuta Windows Server 2012 o una versión posterior, y está configurado como un servidor de BranchCache. Cuando el primer cliente habilitado para BranchCache solicita contenido desde este servidor, el cliente descarga el contenido y lo almacena en caché.  
 
@@ -145,9 +145,9 @@ Para obtener más información, vea [Compatibilidad con Windows BranchCache](../
 ## <a name="delivery-optimization"></a>Optimización de entrega
 
 <!-- 1324696 -->
-Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. Configure Optimización de entrega para usar los grupos de límites al compartir contenido entre iguales. La configuración de cliente aplica el identificador del grupo de límites como el identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de Optimización de entrega, utiliza este identificador para buscar elementos del mismo nivel con el contenido. Para obtener más información, vea la configuración de cliente de [optimización de distribución](../../clients/deploy/about-client-settings.md#delivery-optimization).
+Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. Configure Optimización de entrega para usar los grupos de límites al compartir contenido entre iguales. La configuración de cliente aplica el identificador del grupo de límites como el identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de Optimización de entrega, utiliza este identificador para buscar elementos del mismo nivel con el contenido. Para obtener más información, vea la configuración de cliente de [optimización de distribución](../../clients/deploy/about-client-settings.md#delivery-optimization).
 
-La Optimización de distribución es la tecnología recomendada para optimizar la distribución de actualizaciones de Windows 10 de archivos de instalación rápida para actualizaciones de calidad de Windows 10. A partir de la versión 1910 de Configuration Manager, el acceso a través de Internet al servicio en la nube Optimización de distribución es un requisito para usar su funcionalidad punto a punto. Para obtener información sobre los puntos de conexión de Internet necesarios, vea [Preguntas más frecuentes sobre Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). La optimización se puede usar para todas las actualizaciones de Windows. Para obtener más información, vea [Optimización de la distribución de actualizaciones de Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+La Optimización de distribución es la tecnología recomendada para optimizar la distribución de actualizaciones de Windows 10 de archivos de instalación rápida para actualizaciones de calidad de Windows 10. A partir de la versión 1910 de Configuration Manager, el acceso a través de Internet al servicio en la nube Optimización de distribución es un requisito para usar su funcionalidad punto a punto. Para obtener información sobre los puntos de conexión de Internet necesarios, vea [Preguntas más frecuentes sobre Optimización de distribución](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). La optimización se puede usar para todas las actualizaciones de Windows. Para obtener más información, vea [Optimización de la distribución de actualizaciones de Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Caché conectada de Microsoft

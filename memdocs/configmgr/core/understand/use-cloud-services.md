@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e5ea198f944cf44909e54e123889a3f0f29b1db5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906422"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699116"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Usar servicios en la nube con Configuration Manager
 
@@ -78,4 +78,4 @@ Para usar estas capacidades adicionales no es necesario tener una suscripción a
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> Seguridad de los servicios en la nube  
  Configuration Manager usa certificados para aprovisionar y acceder a su contenido en Azure y para administrar los servicios que use. Configuration Manager cifra los datos que se almacenan en Azure, pero no incluye controles adicionales de seguridad o de datos más allá de los que proporciona Azure.  
 
- Para obtener más información, consulte los detalles de los distintos escenarios de recursos basados en la nube. Consulte también [Introducción a la seguridad de Azure](https://docs.microsoft.com/azure/security/fundamentals/overview).
+ Para obtener más información, consulte los detalles de los distintos escenarios de recursos basados en la nube. Consulte también [Introducción a la seguridad de Azure](/azure/security/fundamentals/overview).

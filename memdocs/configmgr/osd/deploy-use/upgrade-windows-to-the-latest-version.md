@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eb7e2e5c564263c7172d70ec33bb33c0dd73409c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124780"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697830"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Actualización de Windows a la última versión con Configuration Manager
 
@@ -55,7 +55,7 @@ Los dispositivos deben ejecutar una de las siguientes versiones del sistema oper
 - Windows 8.1
 - Una versión anterior de Windows 10. Por ejemplo, se puede actualizar Windows 10 de la versión 1809 a la versión 1903.  
 
-Para obtener más información, vea [Rutas de actualización de Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths).
+Para obtener más información, vea [Rutas de actualización de Windows 10](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -64,7 +64,7 @@ Para obtener más información, vea [Rutas de actualización de Windows 10](htt
 - Una versión anterior de Windows Server 2016.
 - Una versión anterior de Windows Server 2019.
 
-Para obtener más información sobre las rutas de actualización compatibles con Windows Server, vea [Rutas de actualización compatibles con Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) y [Centro de actualización de Windows Server](https://aka.ms/upgradecenter).
+Para obtener más información sobre las rutas de actualización compatibles con Windows Server, vea [Rutas de actualización compatibles con Windows Server 2016](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) y [Centro de actualización de Windows Server](https://aka.ms/upgradecenter).
 
 
 ## <a name="plan"></a><a name="BKMK_Plan"></a> Plan  
@@ -125,4 +125,4 @@ Para implementar el sistema operativo, use uno de los métodos de implementació
 
 ## <a name="monitor"></a>Supervisión  
 
-Para supervisar la implementación de la secuencia de tareas con el objetivo de actualizar el sistema operativo, vea [Supervisar implementaciones del sistema operativo](monitor-operating-system-deployments.md).  
+Para supervisar la implementación de la secuencia de tareas con el objetivo de actualizar el sistema operativo, vea [Supervisar implementaciones del sistema operativo](monitor-operating-system-deployments.md).

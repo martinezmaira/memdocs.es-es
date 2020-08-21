@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701213"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695586"
 ---
 # <a name="mms-2019-docathon"></a>Docatón MMS 2019
 
@@ -51,7 +51,7 @@ Creación de una [cuenta de GitHub](https://github.com/join)
 
 - Los empleados de Microsoft tienen algunos pasos únicos necesarios más y un proceso de contribución levemente distinto  
 
-Para más información, consulte la [configuración de una cuenta de GitHub](https://docs.microsoft.com/contribute/get-started-setup-github) en la guía para colaboradores de docs.microsoft.com.
+Para más información, consulte la [configuración de una cuenta de GitHub](/contribute/get-started-setup-github) en la guía para colaboradores de docs.microsoft.com.
 
 ## <a name="scope"></a>Ámbito
 
@@ -68,7 +68,7 @@ También le agradecemos hacer cambios en otro tipo de contenido de docs.microsof
 Lea la información sobre [cómo informar problemas](../understand/use-docs.md#bkmk_docfeedback) y [cómo colaborar](../understand/use-docs.md#bkmk_contribute). La mayoría de los cambios básicos se pueden realizar a través de la experiencia de explorador de GitHub.  
 
 > [!Note]  
-> Si está interesado en el flujo de trabajo más complejo con Git y VSCode, consulte [Install content authoring tools](https://docs.microsoft.com/contribute/get-started-setup-tools) (Instalación de herramientas de creación de contenido). O puede pedirle ayuda a Aaron o a Erik. Las acciones siguientes son algunos de los motivos por los cuales usar el flujo de trabajo más complejo:
+> Si está interesado en el flujo de trabajo más complejo con Git y VSCode, consulte [Install content authoring tools](/contribute/get-started-setup-tools) (Instalación de herramientas de creación de contenido). O puede pedirle ayuda a Aaron o a Erik. Las acciones siguientes son algunos de los motivos por los cuales usar el flujo de trabajo más complejo:
 >
 > - Creación de un artículo
 > - Incorporación de imágenes
@@ -134,13 +134,13 @@ Los premios siguientes se calculan según el número de contribuciones válidas 
 
 - [Estilo de Microsoft](https://aka.ms/MicrosoftStyle)
 
-    - [Inicio rápido](https://docs.microsoft.com/contribute/style-quick-start)
+    - [Inicio rápido](/contribute/style-quick-start)
 
-    - [10 principales consejos sobre el estilo y el tono de Microsoft](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [10 principales consejos sobre el estilo y el tono de Microsoft](/style-guide/top-10-tips-style-voice)
 
-- [Guía para colaboradores](https://docs.microsoft.com/contribute)
+- [Guía para colaboradores](/contribute)
 
-- [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference) (Cómo usar Markdown para escribir documentos)
+- [How to use Markdown for writing Docs](/contribute/markdown-reference) (Cómo usar Markdown para escribir documentos)
 
 ## <a name="official-rules"></a>Reglas oficiales
 
@@ -166,7 +166,7 @@ REGLAS OFICIALES del concurso Evento Docatón de MMS 2019 de aprendizaje y conte
 
 5. CÓMO PARTICIPAR
 
-    Para crear una entrada, envíe ediciones de los artículos en los repositorios GitHub siguientes: IntuneDocs, SCCMDocs, sccm-docs-powershell-ref. Para más información sobre el proceso de envío, consulte [cómo colaborar](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute).
+    Para crear una entrada, envíe ediciones de los artículos en los repositorios GitHub siguientes: IntuneDocs, SCCMDocs, sccm-docs-powershell-ref. Para más información sobre el proceso de envío, consulte [cómo colaborar](/sccm/core/understand/use-docs#bkmk_contribute).
 
     Para enviar una entrada, envíe una solicitud de incorporación de cambios en GitHub.
 

@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cc05ae5a9be6c437fab60f8c4c5a45d61e8c3e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127348"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694889"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager
 
@@ -50,7 +50,7 @@ Use este tutorial cuando:
 
 Si no está ya presente en su entorno, durante este tutorial, necesitará:
 
-- Configurar [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) entre su instancia de Active Directory local y su inquilino de Azure Active Directory (AD).
+- Configurar [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) entre su instancia de Active Directory local y su inquilino de Azure Active Directory (AD).
 
 > [!TIP]
 > Ya no es necesario comprar ni asignar licencias individuales de Intune o EMS a los usuarios. Para más información, vea [Preguntas más frecuentes sobre productos y licencias](../core/understand/product-and-licensing-faq.md#bkmk_mem).
@@ -78,10 +78,10 @@ Cuando configura un entorno híbrido de Azure AD, realmente está configurando l
 >
 > Para obtener más información acerca de Azure AD híbrido, comience con los siguientes artículos en la documentación de Azure Active Directory:
 >
-> - [Planeación de la implementación de la unión a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [Planeamiento de la implementación de la unión a Azure Active Directory híbrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [Control de la unión a Azure AD híbrido de los dispositivos](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [Configuración de dispositivos híbridos unidos a Azure Active Directory para dominios federados](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [Planeación de la implementación de la unión a Azure AD](/azure/active-directory/devices/azureadjoin-plan)
+> - [Planeamiento de la implementación de la unión a Azure Active Directory híbrido](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [Control de la unión a Azure AD híbrido de los dispositivos](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [Configuración de dispositivos híbridos unidos a Azure Active Directory para dominios federados](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### <a name="set-up-azure-ad-connect"></a>Configuración de Azure AD Connect
 
@@ -92,7 +92,7 @@ A partir de la versión 1.1.819.0, Azure AD Connect proporciona un asistente par
 Para configurar Azure AD Connect, necesita credenciales de administrador global para Azure AD.  
 
 > [!TIP]  
-> El siguiente procedimiento no debe considerarse autoritativo para la configuración de Azure AD Connect, pero se proporciona aquí para ayudar a simplificar la configuración de la administración conjunta entre Intune y Configuration Manager. Para ver el contenido autoritativo sobre este y otros procedimientos relacionados para la configuración de Azure AD, consulte [Configuración de dispositivos híbridos unidos a Azure Active Directory para dominios administrados](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) en la documentación de Azure AD.  
+> El siguiente procedimiento no debe considerarse autoritativo para la configuración de Azure AD Connect, pero se proporciona aquí para ayudar a simplificar la configuración de la administración conjunta entre Intune y Configuration Manager. Para ver el contenido autoritativo sobre este y otros procedimientos relacionados para la configuración de Azure AD, consulte [Configuración de dispositivos híbridos unidos a Azure Active Directory para dominios administrados](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) en la documentación de Azure AD.  
 
 #### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Configuración de una unión a Azure AD híbrida con Azure AD Connect
 
@@ -107,7 +107,7 @@ Para configurar Azure AD Connect, necesita credenciales de administrador global 
    Puede seleccionar la opción para admitir los dispositivos unidos al dominio de nivel inferior de Windows, pero tenga en cuenta que la administración conjunta de dispositivos solo se admite para Windows 10.
 8. En la página **SCP**, para cada bosque local que desee que Azure AD Connect configure para el punto de conexión de servicio (SCP), realice los siguientes pasos y luego seleccione **Siguiente**:  
    1. Seleccione el bosque.  
-   2. Seleccione el servicio de autenticación.  Si tiene un dominio federado, seleccione el servidor de AD FS, a menos que su organización tenga exclusivamente clientes de Windows 10 y haya configurado la sincronización de equipo o dispositivo o su organización use [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
+   2. Seleccione el servicio de autenticación.  Si tiene un dominio federado, seleccione el servidor de AD FS, a menos que su organización tenga exclusivamente clientes de Windows 10 y haya configurado la sincronización de equipo o dispositivo o su organización use [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Haga clic en **Agregar** para escribir las credenciales de administrador de empresa.  
 9. Si tiene un dominio administrado, omita este paso.  
 
@@ -115,7 +115,7 @@ Para configurar Azure AD Connect, necesita credenciales de administrador global 
 10. En la página **Listo para configurar**, seleccione **Configurar**.
 11. En la página **Configuración completada**, seleccione **Salir**.
 
-Si experimenta problemas con la finalización de la unión a Azure AD híbrido para dispositivos Windows unidos a dominio, vea [Solución de problemas de dispositivos híbridos de Windows 10 y Windows Server 2016 unidos a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+Si experimenta problemas con la finalización de la unión a Azure AD híbrido para dispositivos Windows unidos a dominio, vea [Solución de problemas de dispositivos híbridos de Windows 10 y Windows Server 2016 unidos a Azure Active Directory](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 ## <a name="configure-client-settings-to-direct-clients-to-register-with-azure-ad"></a>Configuración del cliente para dirigir a los clientes al registro con Azure AD
 
@@ -155,7 +155,7 @@ La inscripción automática también permite a los usuarios inscribir sus dispos
     > [!NOTE]
     > Es posible que algunos inquilinos no tengan estas opciones para configurar.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** es la forma de configurar la aplicación MDM para Azure AD. **Inscripción de Microsoft Intune** es una aplicación concreta de Azure AD que se crea al aplicar directivas de autenticación multifactor para la inscripción de iOS y Android. Para obtener más información, vea [Autenticación multifactor para las inscripciones de dispositivos de Intune](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** es la forma de configurar la aplicación MDM para Azure AD. **Inscripción de Microsoft Intune** es una aplicación concreta de Azure AD que se crea al aplicar directivas de autenticación multifactor para la inscripción de iOS y Android. Para obtener más información, vea [Autenticación multifactor para las inscripciones de dispositivos de Intune](/intune/enrollment/multi-factor-authentication).
 
 5. Para el ámbito de usuario de MDM, seleccione **Todos** y, a continuación, **Guardar**.  
 

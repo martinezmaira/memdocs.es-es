@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268902"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699082"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Evaluación de compatibilidad en Análisis de escritorio
 
@@ -180,13 +180,13 @@ Al actualizar el sitio y los clientes de Configuration Manager a la versión 190
 
 #### <a name="16-bit-apps"></a>Aplicaciones de 16 bits
 
-Quite todos los componentes de 16 bits de las aplicaciones y reemplácelos por sus equivalentes de 32 o 64 bits. Para más información, consulte [La historia de los desarrolladores de Windows Vista y Windows Server 2008: Recetas de compatibilidad de aplicaciones](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)).
+Quite todos los componentes de 16 bits de las aplicaciones y reemplácelos por sus equivalentes de 32 o 64 bits. Para más información, consulte [La historia de los desarrolladores de Windows Vista y Windows Server 2008: Recetas de compatibilidad de aplicaciones](/previous-versions/aa480152\(v=msdn.10\)).
 
 La otra opción consiste en habilitar NT Virtual DOS Machine (NTVDM) para la compatibilidad con Windows 10.
 
 #### <a name="requires-admin-privileges"></a>Requiere privilegios de administrador
 
-La aplicación requiere que el usuario tenga acceso administrativo al dispositivo. Use un manifiesto de aplicación para las aplicaciones que requieran permisos de administrador. Para más información, consulte [Creación e inserción de un manifiesto de aplicación](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+La aplicación requiere que el usuario tenga acceso administrativo al dispositivo. Use un manifiesto de aplicación para las aplicaciones que requieran permisos de administrador. Para más información, consulte [Creación e inserción de un manifiesto de aplicación](/previous-versions/bb756929\(v=msdn.10\)).
 
 Análisis de escritorio recomienda la prueba piloto de la aplicación para detectar posibles regresiones.
 
@@ -196,7 +196,7 @@ Muchas aplicaciones Java dependen de una instancia de Java Runtime Environment i
 
 #### <a name="not-dpi-aware"></a>No compatible con PPP
 
-Es posible que la aplicación tenga problemas de visualización con las resoluciones de pantalla avanzadas de Windows 10. Use un manifiesto de aplicación para evitar problemas con resoluciones de PPP altas. Para más información, consulte [Manifiestos de la aplicación](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+Es posible que la aplicación tenga problemas de visualización con las resoluciones de pantalla avanzadas de Windows 10. Use un manifiesto de aplicación para evitar problemas con resoluciones de PPP altas. Para más información, consulte [Manifiestos de la aplicación](/windows/desktop/SbsCs/application-manifests).
 
 Análisis de escritorio recomienda la prueba piloto de la aplicación para detectar posibles regresiones.
 
@@ -220,13 +220,13 @@ La versión 1.0 de .NET Framework no se admite en Windows 10. La versión 1.1 n
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-Los marcos .NET 2.0 y 3.5 se admiten en Windows 10. Es posible que tenga que habilitar la característica de Windows. Para más información, consulte [Instalar .NET Framework 3.5 en Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+Los marcos .NET 2.0 y 3.5 se admiten en Windows 10. Es posible que tenga que habilitar la característica de Windows. Para más información, consulte [Instalar .NET Framework 3.5 en Windows 10](/dotnet/framework/install/dotnet-35-windows-10).
 
 #### <a name="ui-access"></a>Acceso a la interfaz de usuario
 
 Las aplicaciones con acceso a la interfaz de usuario pueden omitir los niveles de control de la interfaz de usuario para dirigir la entrada a ventanas de privilegios más elevados en el escritorio. Use esta opción solo para aplicaciones de tecnología de asistencia de interfaz de usuario.
 
-Si no va a usar las características de accesibilidad de la aplicación, la marca de acceso a la interfaz de usuario en el manifiesto de la aplicación se debe establecer en false. Para más información, consulte [Creación e inserción de un manifiesto de aplicación](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+Si no va a usar las características de accesibilidad de la aplicación, la marca de acceso a la interfaz de usuario en el manifiesto de la aplicación se debe establecer en false. Para más información, consulte [Creación e inserción de un manifiesto de aplicación](/previous-versions/bb756929\(v=msdn.10\)).
 
 Análisis de escritorio recomienda la prueba piloto de la aplicación para detectar posibles regresiones.
 
@@ -245,4 +245,4 @@ Puede encontrar la evaluación sobre el controlador en Análisis de escritorio. 
 
 ## <a name="see-also"></a>Vea también
 
-Ventajas del Centro de FastTrack para Windows 10 proporciona acceso a **Asesoría de aplicaciones de escritorio**. Esta ventaja es un nuevo servicio diseñado para solucionar problemas con la compatibilidad de Windows 10 y Aplicaciones de Microsoft 365 para empresas. Para más información, consulte [Asesoría de aplicaciones de escritorio](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Ventajas del Centro de FastTrack para Windows 10 proporciona acceso a **Asesoría de aplicaciones de escritorio**. Esta ventaja es un nuevo servicio diseñado para solucionar problemas con la compatibilidad de Windows 10 y Aplicaciones de Microsoft 365 para empresas. Para más información, consulte [Asesoría de aplicaciones de escritorio](/fasttrack/win-10-desktop-app-assure).

@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1845b381d8b37fed3a785475e961cd39c54cf42d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d9dcefe942309ad57c823ec669b7aa6630974fa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125277"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698034"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Crear implementaciones por fases con Configuration Manager
 
@@ -122,7 +122,7 @@ Include a timeline diagram
 6. Confirme las selecciones en la pestaña **Resumen** y después haga clic en **Siguiente** para completar el asistente.  
 
 > [!NOTE]
-> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo el nombre anterior en el producto y la documentación de Configuration Manager mientras se está actualizando la consola.  
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](/deployoffice/name-change). Es posible que siga viendo el nombre anterior en el producto y la documentación de Configuration Manager mientras se está actualizando la consola.  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Creación de una implementación por fases con fases configuradas manualmente
 <!--1358148--> 
@@ -187,7 +187,7 @@ Después de crear una implementación por fases, abra sus propiedades para reali
 ## <a name="next-steps"></a>Pasos siguientes
 
 Administre y supervise las implementaciones por fases:
-- [Aplicación](manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
-- [Actualización de software](manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Aplicación](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Actualización de software](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Secuencia de tareas](manage-monitor-phased-deployments.md)  
 

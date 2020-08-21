@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c92423316f83841875aed2493442881bc3a1d74
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821604"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695773"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
@@ -110,7 +110,7 @@ La licencia de administración conjunta permite a los clientes de Configuration 
 Vea los siguientes artículos para más información:
 
 - [Requisitos previos de la administración conjunta](../../comanage/overview.md#prerequisites)
-- [Requisitos de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Requisitos de Windows Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 - [Requisitos previos de Análisis de escritorio](../../desktop-analytics/overview.md#prerequisites)
 - [Requisitos previos de asociación de inquilinos](../../tenant-attach/device-sync-actions.md#prerequisites)
 - [Requisitos previos de licencias de análisis de puntos de conexión](../../../analytics/overview.md#licensing-prerequisites)

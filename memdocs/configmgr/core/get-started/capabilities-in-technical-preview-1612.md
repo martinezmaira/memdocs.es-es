@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705413"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693036"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Funciones de Technical Preview 1612 de Configuration Manager
 
@@ -185,7 +185,7 @@ Para ejecutar la herramienta:
 2. Después, escriba una línea de comandos que incluya los modificadores de línea de comandos necesarios y modificadores opcionales que quiera usar.
 
 **Problema conocido** Cuando se ejecuta la herramienta, se podría devolver un error similar al siguiente cuando se produce cualquier error en algún paquete o implementación, o bien cuando está en progreso:
--  *System.InvalidOperationException: esta biblioteca de contenido no puede limpiarse ahora porque el paquete \<packageID> no está completamente instalado.*
+-  *System.InvalidOperationException: esta biblioteca de contenido no puede limpiarse ahora porque el paquete \<packageID> no está totalmente instalado.*
 
 **Solución alternativa:** Ninguna. La herramienta no puede identificar archivos huérfanos con confianza cuando la implementación del contenido está en curso o si se ha producido algún error en dicho proceso. Por lo tanto, la herramienta no le permitirá limpiar contenido hasta que se solucione el problema.
 
@@ -317,4 +317,4 @@ Después de que realice estos cambios de configuración, puede crear una directi
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Cambiar para configurar Multi-Factor Authentication para la inscripción de dispositivos
 
-Ahora que puede configurar Multi-Factor Authentication (MFA) para la inscripción de dispositivos en Azure Portal, la opción de MFA se ha quitado de la consola de Configuration Manager. Puede encontrar más información sobre la configuración de MFA para la inscripción [en este tema de Microsoft Intune](/mem/intune/enrollment/multi-factor-authentication).
+Ahora que puede configurar Multi-Factor Authentication (MFA) para la inscripción de dispositivos en Azure Portal, la opción de MFA se ha quitado de la consola de Configuration Manager. Puede encontrar más información sobre la configuración de MFA para la inscripción [en este tema de Microsoft Intune](../../../intune/enrollment/multi-factor-authentication.md).

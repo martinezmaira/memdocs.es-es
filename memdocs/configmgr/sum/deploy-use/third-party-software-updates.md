@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240769"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696895"
 ---
 # <a name="enable-third-party-updates"></a>Habilitar actualizaciones de terceros 
 
@@ -30,7 +30,7 @@ A partir de la versión 1806, el nodo **Catálogos de actualizaciones de softwar
 ## <a name="prerequisites"></a>Requisitos previos 
 - Espacio en disco suficiente en la carpeta WSUSContent del punto de actualización de software de nivel superior para almacenar el contenido binario de origen de las actualizaciones de software de terceros.
     - La cantidad de almacenamiento necesaria varía según el proveedor, los tipos de actualizaciones y las actualizaciones específicas que se publican para la implementación.
-    - Si necesita mover la carpeta WSUSContent a otra unidad con más espacio disponible, vea la entrada de blog sobre [cómo cambiar la ubicación donde WSUS almacena las actualizaciones localmente](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).
+    - Si necesita mover la carpeta WSUSContent a otra unidad con más espacio disponible, vea la entrada de blog sobre [cómo cambiar la ubicación donde WSUS almacena las actualizaciones localmente](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).
 - El servicio de sincronización de actualizaciones de software de terceros necesita acceso a Internet.
     - Para la lista de catálogos de asociados se necesita download.microsoft.com a través del puerto HTTPS 443. 
     -  Acceso de Internet a los catálogos de terceros y los archivos de contenido de actualización. Pueden ser necesarios puertos distintos al 443.
@@ -41,7 +41,7 @@ A partir de la versión 1806, el nodo **Catálogos de actualizaciones de softwar
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Requisitos adicionales cuando el SUP es remoto con respecto al servidor de sitio de nivel superior 
 
 1. SSL debe estar habilitado en el SUP cuando es remoto. Para ello hace falta un certificado de autenticación de servidor generado a partir de una entidad emisora de certificados interna o a través de un proveedor público.
-    - [Configurar SSL en WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Configurar SSL en WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Al configurar SSL en WSUS, tenga en cuenta que algunos de los servicios web y los directorios virtuales siempre son HTTP y no HTTPS. 
         - Configuration Manager descarga el contenido de terceros de los paquetes de actualización de software desde el directorio de contenido de WSUS a través de HTTP.   
     - [Configurar SSL en el SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -93,7 +93,7 @@ Si tiene que configurar manualmente el certificado, por ejemplo, porque necesita
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>Habilitar actualizaciones de terceros en los clientes
-Habilite las actualizaciones de terceros en los clientes en la configuración de cliente. El valor establece la directiva del agente de Windows Update para [Permitir actualizaciones firmadas procedentes de una ubicación del servicio Microsoft Update en la intranet](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Este valor de cliente además instala el certificado de firma de WSUS en el almacén Editores de confianza del cliente. El registro de administración de certificados se ve en `updatesdeployment.log` en los clientes.  Ejecute estos pasos para cada valor de cliente personalizado que quiera usar para las actualizaciones de terceros. Para obtener más información, vea el artículo [Acerca de la configuración de cliente](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates).
+Habilite las actualizaciones de terceros en los clientes en la configuración de cliente. El valor establece la directiva del agente de Windows Update para [Permitir actualizaciones firmadas procedentes de una ubicación del servicio Microsoft Update en la intranet](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Este valor de cliente además instala el certificado de firma de WSUS en el almacén Editores de confianza del cliente. El registro de administración de certificados se ve en `updatesdeployment.log` en los clientes.  Ejecute estos pasos para cada valor de cliente personalizado que quiera usar para las actualizaciones de terceros. Para obtener más información, vea el artículo [Acerca de la configuración de cliente](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates).
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración** y seleccione el nodo **Configuración de cliente**.
 2. Seleccione un valor de cliente personalizado existente o cree uno nuevo. 
@@ -235,7 +235,7 @@ La sincronización de actualizaciones de software de terceros se controla median
 -  Configuration Manager tiene una nueva versión del formato de archivo cab de catálogo. La nueva versión incluye los certificados para los archivos binarios del proveedor. Estos certificados se agregan al nodo **Certificados** de la sección **Seguridad** del área de trabajo **Administración** una vez que se aprueba el catálogo y se considera de confianza.  
      - Puede seguir usando la versión anterior del archivo cab de catálogo siempre que la dirección URL de descarga sea https y las actualizaciones estén firmadas. El contenido no se publicará porque los certificados para los archivos binarios no están en el archivo cab ni se han aprobado aún. Puede solucionar este problema si busca el certificado en el nodo **Certificados**, lo desbloquea y luego vuelve a publicar la actualización. Si va a publicar varias actualizaciones firmadas con diferentes certificados, tiene que desbloquear cada certificado que se use.
      - Para obtener más información, vea los mensajes de estado 11523 y 11524 de la siguiente tabla de mensajes de estado.
--  Cuando el servicio de sincronización de actualizaciones de software de terceros en el punto de actualización de software de nivel superior requiera un servidor proxy para el acceso a Internet, las comprobaciones de firmas digitales podrían dar error. Para solucionar este problema, configure los ajustes del proxy WinHTTP en el sistema de sitio. Para obtener más información, consulte [Netsh commands for WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)) (Comandos Netsh para WinHTTP).
+-  Cuando el servicio de sincronización de actualizaciones de software de terceros en el punto de actualización de software de nivel superior requiera un servidor proxy para el acceso a Internet, las comprobaciones de firmas digitales podrían dar error. Para solucionar este problema, configure los ajustes del proxy WinHTTP en el sistema de sitio. Para obtener más información, consulte [Netsh commands for WinHTTP](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)) (Comandos Netsh para WinHTTP).
 - Cuando se usa CMG para el almacenamiento de contenido, el contenido de las actualizaciones de terceros no se descarga en los clientes si está habilitada la [opción de cliente](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Descarga de contenido diferencial cuando esté disponible**. <!--6598587-->
 
 ## <a name="status-messages"></a>Mensajes de estado

@@ -10,12 +10,12 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3825ef9b9b1efd576a31742e0fdbe7c2bc3b1628
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f73a556f28f8ebe4abf6e762104776b40b0cd0e8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906847"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697031"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-configuration-manager"></a>Seguridad y privacidad de perfiles de certificados en Configuration Manager
 
@@ -27,7 +27,7 @@ ms.locfileid: "82906847"
 
 |Práctica recomendada de seguridad|Más información|  
 |----------------------------|----------------------|  
-|Identifique y siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red, como la configuración del sitio web de Servicio de inscripción de dispositivos de red en Internet Information Services (IIS) para que requiera SSL y omita certificados de cliente.|Para obtener más información, vea [Instrucciones del servicio de inscripción de dispositivos de red](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).|  
+|Identifique y siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red, como la configuración del sitio web de Servicio de inscripción de dispositivos de red en Internet Information Services (IIS) para que requiera SSL y omita certificados de cliente.|Para obtener más información, vea [Instrucciones del servicio de inscripción de dispositivos de red](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).|  
 |Al configurar los perfiles de certificado SCEP, elija las opciones más seguras que puedan admitir los dispositivos y la infraestructura.|Identifique, implemente y siga las recomendaciones de seguridad indicadas para los dispositivos y la infraestructura.|  
 |Especifique manualmente la afinidad de dispositivo del usuario en lugar de permitir a los usuarios identificar su dispositivo primario. Además, no habilite la configuración basada en el uso.|Si hace clic en **Permitir la inscripción de certificados solo en el dispositivo primario de los usuarios** en un perfil de certificado de SCEP, no considere la información recopilada de los usuarios ni del dispositivo como relevante. Si implementa perfiles de certificado de SCEP con esta configuración y un usuario administrativo confiable no especifica la afinidad de dispositivo de usuario, es posible que se conceda a usuarios no autorizados certificados de autenticación y privilegios elevados.<br /><br /> **Nota:** Si habilita la configuración basada en el uso, esta información se recopila mediante mensajes de estado que no están protegidos por Configuration Manager. Para mitigar esta amenaza, utilice la firma SMB o IPsec entre equipos cliente y el punto de administración.|  
 |No agregue permisos de lectura ni de inscripción para los usuarios a las plantillas de certificado ni configure el punto de Registro de certificado para omitir la comprobación de la plantilla de certificado.|Aunque Configuration Manager admita la comprobación adicional si agrega los permisos de seguridad de Leer e Inscribir para los usuarios, y usted pueda configurar el punto de registro de certificados para que omita esta comprobación si no es posible la autenticación, no se recomienda ninguna de estas configuraciones. Para más información, consulte [Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).|  
@@ -42,4 +42,4 @@ ms.locfileid: "82906847"
 
  De manera predeterminada, los dispositivos no evalúan perfiles de certificado. Además, debe configurar los perfiles de certificado y luego implementarlos en usuarios o dispositivos.  
 
- Antes de configurar los perfiles de certificado, tenga en cuenta sus requisitos de privacidad.  
+ Antes de configurar los perfiles de certificado, tenga en cuenta sus requisitos de privacidad.

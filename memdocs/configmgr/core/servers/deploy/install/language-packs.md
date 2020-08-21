@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f07f1277a9e87ea3266473fc54dc96907a0f0e6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906169"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698980"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Paquetes de idioma en Configuration Manager
 
@@ -42,7 +42,7 @@ Cuando ejecuta el programa de instalación de Configuration Manager, descarga lo
 
 ## <a name="server-languages"></a>Idiomas del servidor  
 
-Utilice la tabla siguiente para asignar un identificador de configuración regional al idioma que desee admitir en servidores. Para obtener más información sobre los identificadores de configuración regional, vea [Locale IDs assigned by Microsoft (Identificadores de configuración regional asignados por Microsoft)](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+Utilice la tabla siguiente para asignar un identificador de configuración regional al idioma que desee admitir en servidores. Para obtener más información sobre los identificadores de configuración regional, vea [Locale IDs assigned by Microsoft (Identificadores de configuración regional asignados por Microsoft)](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Idioma del servidor|Identificador de configuración regional (LCID)|Código de tres letras|  
 |---------------------|------------------------|-----------------------|  
@@ -69,7 +69,7 @@ Utilice la tabla siguiente para asignar un identificador de configuración regio
 
 ## <a name="client-languages"></a>Idiomas del cliente  
 
-Utilice la tabla siguiente para asignar un identificador de configuración regional al idioma que desee admitir en equipos cliente. Para obtener más información sobre los identificadores de configuración regional, vea [Locale IDs assigned by Microsoft (Identificadores de configuración regional asignados por Microsoft)](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+Utilice la tabla siguiente para asignar un identificador de configuración regional al idioma que desee admitir en equipos cliente. Para obtener más información sobre los identificadores de configuración regional, vea [Locale IDs assigned by Microsoft (Identificadores de configuración regional asignados por Microsoft)](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Idioma del cliente|Identificador de configuración regional (LCID)|Código de tres letras|  
 |---------------------|------------------------|-----------------------|  

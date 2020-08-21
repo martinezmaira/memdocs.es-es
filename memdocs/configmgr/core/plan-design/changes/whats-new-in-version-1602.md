@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904888"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698578"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Novedades de la versión 1602 de Configuration Manager
 
@@ -42,9 +42,9 @@ La actualización 1602 de Configuration Manager solo está disponible como una 
 > [!WARNING]  
 >  Antes de actualizar a Windows Server 2012 R2, debe desinstalar WSUS 3.2 del servidor.  
 >   
->  Para más información sobre este paso crítico, consulte la sección "Funcionalidad nueva y modificada" en [Introducción a Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+>  Para más información sobre este paso crítico, consulte la sección "Funcionalidad nueva y modificada" en [Introducción a Windows Server Update Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
- Para actualizar un servidor, use los procedimientos de actualización de Windows Server 2012 R2. No es necesario ejecutar una restauración del servidor de sitio de Configuration Manager después de la actualización. Para conocer los procedimientos de actualización, consulte [Opciones de actualización para Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) en la documentación de Windows Server.  
+ Para actualizar un servidor, use los procedimientos de actualización de Windows Server 2012 R2. No es necesario ejecutar una restauración del servidor de sitio de Configuration Manager después de la actualización. Para conocer los procedimientos de actualización, consulte [Opciones de actualización para Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) en la documentación de Windows Server.  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> Grupos de disponibilidad AlwaysOn de SQL Server  
  Use grupos de disponibilidad AlwaysOn de SQL Server para hospedar la base de datos de sitio en sitios primarios y el sitio de administración central como una solución de alta disponibilidad y recuperación ante desastres.  
@@ -209,4 +209,4 @@ Configuration Manager puede solicitar el estado de bloqueo de activación de los
 
 -   **No conforme**: los usuarios han aceptado una versión de los términos y condiciones, pero no la más reciente.  
 
--   **Desconocido**: los usuarios no han aceptado nunca los términos y condiciones, incluidos aquellos sin un dispositivo inscrito.  
+-   **Desconocido**: los usuarios no han aceptado nunca los términos y condiciones, incluidos aquellos sin un dispositivo inscrito.

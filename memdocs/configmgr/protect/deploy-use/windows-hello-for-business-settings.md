@@ -10,12 +10,12 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c60f30e306c6ff52849cfcdd4696d67a7d26f395
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4c8029cdda80d327cbed2a4c60c71ff1811e4723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706223"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698704"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuración de Windows Hello para empresas en Configuration Manager
 
@@ -31,7 +31,7 @@ Configuration Manager se integra con Windows Hello para empresas. Esta caracter�
 >
 > En el caso de los dispositivos administrados conjuntamente, considere la posibilidad de mover la [carga de trabajo de las **directivas de acceso a recursos**](../../comanage/workloads.md#resource-access-policies) a Intune. Posteriormente, use las directivas de Intune para administrar estos certificados. Para más información, consulte el artículo sobre el [cambio de las cargas de trabajo](../../comanage/how-to-switch-workloads.md).
 
-Para obtener más información, vea [Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+Para obtener más información, vea [Windows Hello para empresas](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 > [!Note]  
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  

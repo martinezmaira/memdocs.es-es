@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f34c803cb2b43a2c69cee4c16f5029474e318eb2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9bb07bd2b82a9411bc527d04a9a64a0bb6e12f8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709343"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697677"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Requisitos de infraestructura para la implementación de SO en Configuration Manager
 
@@ -33,9 +33,9 @@ Windows Assessment and Deployment Kit (ADK) es un conjunto de herramientas y doc
 
 Vea los siguientes artículos para más información:  
 
-- [Escenarios de Windows ADK para Windows 10 para profesionales de TI](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [Escenarios de Windows ADK para Windows 10 para profesionales de TI](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [Descargar Windows ADK para Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [Descargar Windows ADK para Windows 10](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > Asegúrese de descargar **Windows ADK para Windows 10** y el **complemento de Windows PE para el ADK**.
@@ -79,7 +79,7 @@ Configuration Manager usa un paquete USMT que incluye los archivos de código fu
 
 Vea los siguientes artículos para más información:  
 
-- [Escenarios de migración habituales para USMT 10](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [Escenarios de migración habituales para USMT 10](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [Administrar el estado de usuario](../get-started/manage-user-state.md)  
 

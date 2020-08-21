@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943797"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698963"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
@@ -279,7 +279,7 @@ Para obtener más información, vea el artículo del Soporte técnico de Microso
 
 La instancia de SQL Server está configurada para usar la intercalación **SQL_Latin1_General_CP1_CI_AS**.
 
-Si la base de datos de sitio de Configuration Manager ya está instalada, esta comprobación también se aplica a la base de datos. Para obtener información sobre cómo cambiar las intercalaciones de base de datos y la instancia de SQL Server, vea [SQL collation and unicode support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support) (Compatibilidad con la intercalación y Unicode de SQL).
+Si la base de datos de sitio de Configuration Manager ya está instalada, esta comprobación también se aplica a la base de datos. Para obtener información sobre cómo cambiar las intercalaciones de base de datos y la instancia de SQL Server, vea [SQL collation and unicode support](/sql/relational-databases/collations/collation-and-unicode-support) (Compatibilidad con la intercalación y Unicode de SQL).
 
 Si usa un sistema operativo chino y necesita compatibilidad con GB18030, esta comprobación no se aplica. Para obtener más información sobre cómo habilitar la compatibilidad con GB18030, vea [Compatibilidad internacional](../../../plan-design/hierarchy/international-support.md).
 
@@ -379,7 +379,7 @@ Al usar Always On de SQL Server, las réplicas del grupo de disponibilidad se e
 <!-- SCCMDocs-pr#3899 -->
 *Se aplica a: servidor de base de datos del sitio*
 
-A partir de la versión 1906, al usar SQL Server Always On, debe configurar las réplicas del grupo de disponibilidad con el mismo [modo de propagación](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+A partir de la versión 1906, al usar SQL Server Always On, debe configurar las réplicas del grupo de disponibilidad con el mismo [modo de propagación](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>Las réplicas del grupo de disponibilidad de SQL deben estar en buen estado
 
@@ -741,7 +741,7 @@ La cuenta que ha configurado para ejecutar el servicio SQL Server para la instan
 
 A partir de la versión 1810, compruebe si la base de datos del sitio tiene algún trabajo pendiente de datos de seguimiento de cambios de SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Haga manualmente esta comprobación ejecutando un procedimiento de diagnóstico almacenado en la base de datos. En primer lugar, cree una [conexión de diagnóstico](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) a la base de datos de sitio. El método más sencillo consiste en usar el editor de consultas del Motor de base de datos de SQL Server Management Studio y conectarse a `admin:<instance name>`.
+Haga manualmente esta comprobación ejecutando un procedimiento de diagnóstico almacenado en la base de datos. En primer lugar, cree una [conexión de diagnóstico](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) a la base de datos de sitio. El método más sencillo consiste en usar el editor de consultas del Motor de base de datos de SQL Server Management Studio y conectarse a `admin:<instance name>`.
 
 En una ventana de consulta de conexión de administrador dedicada, ejecute los siguientes comandos:
 
@@ -804,7 +804,7 @@ Configuration Manager usa SQL Server Native Client en los siguientes roles de si
 
 SQL Server reserva un mínimo de 8 GB de memoria para el sitio de administración central y el sitio primario, y un mínimo de 4 GB de memoria para el sitio secundario.
 
-Para obtener más información, vea [Cómo configurar las opciones de memoria con SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
+Para obtener más información, vea [Cómo configurar las opciones de memoria con SQL Server Management Studio](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > Esta comprobación no se aplica a SQL Server Express en un sitio secundario. Esta edición está limitada a 1 GB de memoria reservada.  
@@ -849,7 +849,7 @@ Para más información, vea [Preparar Active Directory para la publicación de s
 
 WinRM 1.1 está instalado en el servidor de sitio primario o en el equipo de la consola de Configuration Manager para ejecutar la consola de administración fuera de banda.
 
-WinRM se instala automáticamente con todas las versiones de Windows admitidas actualmente. Para más información, vea [Instalación y configuración de Administración remota de Windows](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+WinRM se instala automáticamente con todas las versiones de Windows admitidas actualmente. Para más información, vea [Instalación y configuración de Administración remota de Windows](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### <a name="wsus-on-site-server"></a>WSUS en servidor de sitio
 
@@ -857,4 +857,4 @@ WinRM se instala automáticamente con todas las versiones de Windows admitidas a
 
 Hay una versión compatible de Windows Server Update Services (WSUS) instalada en el servidor de sitio.
 
-Cuando se utiliza un punto de actualización de software en un servidor distinto al servidor del sitio, debe instalar la consola de administración de WSUS en el servidor de sitio. Para obtener más información sobre WSUS, vea [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+Cuando se utiliza un punto de actualización de software en un servidor distinto al servidor del sitio, debe instalar la consola de administración de WSUS en el servidor de sitio. Para obtener más información sobre WSUS, vea [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).

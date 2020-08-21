@@ -10,12 +10,12 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6b6d4eab77d0543f9001cef2c1e2b618ba3e4328
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c3b74ceab892c67abbd56e8cb2a5c123374a92be
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703623"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663318"
 ---
 # <a name="data-transfers-between-sites"></a>Transferencias de datos entre sitios
 
@@ -25,13 +25,13 @@ Configuration Manager usa la *replicación basada en archivos* y la *replicació
 
 ## <a name="types-of-replication"></a>Tipos de replicación
 
-### <a name="file-based-replication"></a><a name="bkmk_fileroute" /> Replicación basada en archivos
+### <a name="file-based-replication"></a><a name="bkmk_fileroute" /></a> File-based replication
 
 Configuration Manager usa la replicación basada en archivos para transferir datos basados en archivos entre sitios de la jerarquía. Estos datos incluyen las aplicaciones y los paquetes que quiere implementar en puntos de distribución de sitios secundarios. También controla los registros de datos de detección no procesados que el sitio transfiere a su sitio principal y que posteriormente procesa.  
 
 Para más información, consulte [Replicación basada en archivos](file-based-replication.md).
 
-### <a name="database-replication"></a><a name="bkmk_dbrep" /> Replicación de base de datos
+### <a name="database-replication"></a><a name="bkmk_dbrep" /></a> Database replication
 
 La replicación de base de datos de Configuration Manager utiliza SQL Server para transferir datos. Utiliza este método para combinar los cambios en su base de datos de sitio con la información de la base de datos de otros sitios de la jerarquía.
 

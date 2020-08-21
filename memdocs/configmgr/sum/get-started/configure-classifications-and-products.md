@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 7dc3ef2ceb22f1c15c96127c593965ea31bdd7eb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614077"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696827"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Configurar las clasificaciones y los productos que va a sincronizar  
 
@@ -129,7 +129,7 @@ Para obtener más información sobre la compatibilidad de Windows Insider en Con
 ### <a name="prerequisites"></a>Requisitos previos
 
 - Configuration Manager, versión 1906 o posterior, configurada para la [administración de actualización de software](../plan-design/plan-for-software-updates.md).
-- Dispositivos Windows 10 que ejecutan la [compilación de Windows Insider Preview](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started).
+- Dispositivos Windows 10 que ejecutan la [compilación de Windows Insider Preview](/windows-insider/at-work-pro/wip-4-biz-get-started).
 - Colección que contiene los dispositivos de Windows Insider.
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>Habilitación de actualizaciones de Windows Insider
@@ -160,7 +160,7 @@ Implemente las actualizaciones de características para Windows Insider en la re
 - Hay términos de licencia que debe aceptar para poder instalar la implementación.
 - Considere la posibilidad de utilizar la [prioridad del subproceso en la configuración de cliente](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority).
 - La actualización dinámica instala automáticamente las actualizaciones críticas, incluida la actualización acumulativa más reciente, directamente desde Microsoft Update. Este comportamiento comenzó con las actualizaciones de características para Windows 10, versión 1903. 
-  - Puede deshabilitar explícitamente la [actualización dinámica en la configuración de cliente](../../core/clients/deploy/about-client-settings.md#bkmk_du) o usando un [archivo setupconfig.ini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - Puede deshabilitar explícitamente la [actualización dinámica en la configuración de cliente](../../core/clients/deploy/about-client-settings.md#bkmk_du) o usando un [archivo setupconfig.ini](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - Para obtener más información, vea la entrada de blog [Actualización dinámica de Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847).
 
 Para obtener más información sobre cómo implementar actualizaciones, vea [Administración de Windows como servicio](../../osd/deploy-use/manage-windows-as-a-service.md).
@@ -168,7 +168,7 @@ Para obtener más información sobre cómo implementar actualizaciones, vea [Adm
 
 ### <a name="keeping-insider-devices-up-to-date"></a>Mantenimiento de los dispositivos internos actualizados
 
-Las actualizaciones acumulativas para Windows Insider estarán disponibles para WSUS y, por extensión, para Configuration Manager. Estas actualizaciones acumulativas se lanzarán con una frecuencia similar a la de las actualizaciones acumulativas de Windows 10, versión 1903. Las actualizaciones acumulativas de Windows Insider se encuentran en la categoría de producto **Versión preliminar de Windows Insider** y se clasifican como **Actualizaciones de seguridad** o **Actualizaciones**. Puede implementar las actualizaciones acumulativas para Windows Insider mediante el proceso de actualización de software habitual, como mediante [reglas de implementación automática](../deploy-use/automatically-deploy-software-updates.md) o [implementaciones por fases](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Las actualizaciones acumulativas para Windows Insider estarán disponibles para WSUS y, por extensión, para Configuration Manager. Estas actualizaciones acumulativas se lanzarán con una frecuencia similar a la de las actualizaciones acumulativas de Windows 10, versión 1903. Las actualizaciones acumulativas de Windows Insider se encuentran en la categoría de producto **Versión preliminar de Windows Insider** y se clasifican como **Actualizaciones de seguridad** o **Actualizaciones**. Puede implementar las actualizaciones acumulativas para Windows Insider mediante el proceso de actualización de software habitual, como mediante [reglas de implementación automática](../deploy-use/automatically-deploy-software-updates.md) o [implementaciones por fases](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 ## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Actualizaciones de seguridad extendida y Configuration Manager
 

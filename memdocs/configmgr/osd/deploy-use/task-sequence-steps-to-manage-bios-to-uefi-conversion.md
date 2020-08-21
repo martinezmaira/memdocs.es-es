@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124892"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697915"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
 
@@ -91,7 +91,7 @@ Windows 10 incluye una sencilla herramienta de conversión, **MBR2GPT**. Automa
     > [!TIP]
     > También puede ejecutar la herramienta MBR2GPT.EXE en Windows PE en lugar de en el sistema operativo completo. Agregue un paso para reiniciar el equipo en Windows PE antes del paso para ejecutar la herramienta MBR2GPT.EXE. Quite entonces la opción **/AllowFullOS** de la línea de comandos.
 
-    Para más información sobre la herramienta y las opciones disponibles, consulte [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Para más información sobre la herramienta y las opciones disponibles, consulte [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 
     1. Agregue un paso para ejecutar la herramienta de OEM que convierte el firmware de BIOS a UEFI. Este paso suele ser **Ejecutar línea de comandos**, con una línea de comandos para ejecutar la herramienta de OEM.
 

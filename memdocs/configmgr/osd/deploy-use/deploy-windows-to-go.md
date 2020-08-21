@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c2861214bcdc9162b0121304b342d1d9d48be170
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125124"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697949"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Implementación de Windows to Go con Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88125124"
 
 En este tema se proporcionan los pasos para aprovisionar Windows To Go en Configuration Manager. Windows To Go es una función empresarial de Windows 8 que habilita la creación de un área de trabajo Windows To Go que se puede arrancar desde una unidad externa conectada mediante USB en equipos que cumplan los requisitos de certificados de Windows 7 o Windows 8, sin tener en cuenta el sistema operativo que se ejecute en el equipo. Las áreas de trabajo de Windows To Go pueden utilizar la misma imagen que usan las empresas en los equipos de escritorio y portátiles, y se puede administrar de la misma manera.  
 
- Para obtener más información sobre Windows To Go, consulte [Windows To Go: Introducción a las características](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
+ Para obtener más información sobre Windows To Go, consulte [Windows To Go: Introducción a las características](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Aprovisionar Windows To Go  
  Windows To Go es un sistema operativo almacenado en una unidad externa conectada mediante USB. Puede aprovisionar la unidad de Windows To Go del mismo modo que aprovisiona otras implementaciones de sistema operativo. Sin embargo, como Windows To Go está diseñado para ser una solución de gran movilidad y centrada en el usuario, debe adoptar un enfoque ligeramente diferente para aprovisionar estas unidades.  
@@ -461,4 +461,4 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en Config
  Después de que el equipo reinicie la unidad de Windows To Go, la unidad arrancará en Windows PE y se conectará al punto de administración para obtener la directiva y finalizar la implementación de sistema operativo. Configuration Manager configura y crea etapas en la unidad. Después de que Configuration Manager cree etapas en la unidad, el usuario puede reiniciar el equipo para finalizar el proceso de aprovisionamiento (por ejemplo, unirse a un dominio o instalar aplicaciones). Este proceso es el mismo para todos los medios preconfigurados.  
 
 ###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> El usuario inicia sesión en Windows 8  
- Cuando Configuration Manager finaliza el proceso de aprovisionamiento y se muestra la pantalla de bloqueo de Windows 8, el usuario puede iniciar sesión en el sistema operativo.  
+ Cuando Configuration Manager finaliza el proceso de aprovisionamiento y se muestra la pantalla de bloqueo de Windows 8, el usuario puede iniciar sesión en el sistema operativo.

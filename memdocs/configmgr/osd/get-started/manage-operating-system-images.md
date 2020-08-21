@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124294"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697660"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Administración de imágenes del sistema operativo con Configuration Manager
 
@@ -89,7 +89,7 @@ Para poder usar una imagen de sistema operativo, primero debe agregarla a su sit
 
 5. Complete el asistente.  
 
-Para conocer el cmdlet de PowerShell equivalente de este asistente para la consola, vea [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+Para conocer el cmdlet de PowerShell equivalente de este asistente para la consola, vea [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Después, distribuya la imagen de sistema operativo por los puntos de distribución.  
 
@@ -122,4 +122,4 @@ Use las implementaciones de multidifusión para permitir que más de un equipo d
 
          Si selecciona **Transferir este paquete solo mediante multidifusión**, también deberá especificar la opción de implementación de la secuencia de tareas para **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**. Para obtener más información, vea [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
-5. Haga clic en **Aceptar** para guardar la configuración y cierre las propiedades de la imagen.  
+5. Haga clic en **Aceptar** para guardar la configuración y cierre las propiedades de la imagen.

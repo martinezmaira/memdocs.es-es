@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: aca3322c245fa22a7c87f30e328833d8a8a128bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746527"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699048"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Cómo usar los documentos de Configuration Manager
 
@@ -61,7 +61,7 @@ Usa los consejos de búsqueda siguientes para tratar de encontrar la informació
 
 ## <a name="feedback"></a><a name="bkmk_docfeedback"></a> Comentarios
 
-Seleccione el vínculo **Comentarios** de la esquina superior derecha de cualquier artículo para ir a la sección Comentarios de la parte inferior. Esta sección se integra con Incidencias con de GitHub. Para obtener más información sobre la integración con Problemas de GitHub, vea la [entrada de blog de la plataforma de documentos](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+Seleccione el vínculo **Comentarios** de la esquina superior derecha de cualquier artículo para ir a la sección Comentarios de la parte inferior. Esta sección se integra con Incidencias con de GitHub. Para obtener más información sobre la integración con Problemas de GitHub, vea la [entrada de blog de la plataforma de documentos](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Para compartir comentarios sobre el propio producto Configuration Manager, seleccione **Comentarios sobre el producto**. Para obtener más información, vea [Comentarios sobre el producto](find-help.md#product-feedback).
 
@@ -93,11 +93,11 @@ Para compartir comentarios sobre la plataforma docs.microsoft.com, consulte el a
 
 Para recibir notificaciones cuando cambie el contenido de la biblioteca de documentación, siga estos pasos:
 
-1. Use la [búsqueda de documentos](https://docs.microsoft.com/search/index?scope=ConfigMgr) para buscar un artículo o un conjunto de artículos. Por ejemplo:
+1. Use la [búsqueda de documentos](/search/index?scope=ConfigMgr) para buscar un artículo o un conjunto de artículos. Por ejemplo:
 
-    - Buscar un único artículo por título: ["Archivos de registro para la solución de problemas: Configuration Manager"](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)
+    - Buscar un único artículo por título: ["Archivos de registro para la solución de problemas: Configuration Manager"](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22)
 
-    - Buscar cualquier artículo relacionado con [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr)
+    - Buscar cualquier artículo relacionado con [SQL](/search/index?scope=ConfigMgr&search=SQL)
 
 2. En la esquina superior derecha, seleccione el vínculo **RSS**.
 
@@ -108,7 +108,7 @@ Para recibir notificaciones cuando cambie el contenido de la biblioteca de docum
 
 ## <a name="contribute"></a><a name="bkmk_contribute"></a> Contribuir
 
-La biblioteca de documentación de Configuration Manager, al igual que la mayor parte del contenido de docs.microsoft.com, es de código abierto en GitHub. Esta biblioteca acepta y fomenta contribuciones de la comunidad. Para obtener más información sobre cómo empezar, vea la [guía para colaboradores](https://docs.microsoft.com/contribute). El único requisito previo es crear una [cuenta de GitHub](https://github.com/join).
+La biblioteca de documentación de Configuration Manager, al igual que la mayor parte del contenido de docs.microsoft.com, es de código abierto en GitHub. Esta biblioteca acepta y fomenta contribuciones de la comunidad. Para obtener más información sobre cómo empezar, vea la [guía para colaboradores](/contribute). El único requisito previo es crear una [cuenta de GitHub](https://github.com/join).
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>Pasos básicos para contribuir a SCCMdocs
 
@@ -116,7 +116,7 @@ La biblioteca de documentación de Configuration Manager, al igual que la mayor 
 
 2. Para editar el archivo de origen, seleccione el icono de lápiz.
 
-3. Realice cambios en el origen Markdown. Para obtener más información, vea [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference) (Cómo usar Markdown para escribir documentos).
+3. Realice cambios en el origen Markdown. Para obtener más información, vea [How to use Markdown for writing Docs](/contribute/markdown-reference) (Cómo usar Markdown para escribir documentos).
 
 4. En la sección Propose file change (Proponer cambio de archivo), escriba el comentario de confirmación público que describe *qué* ha modificado. Luego, seleccione **Propose file change** (Proponer cambio de archivo).
 
@@ -148,7 +148,7 @@ Siga estas pautas generales al contribuir en documentación de Configuration Man
 
 - No nos sorprenda con grandes solicitudes de incorporación de cambios. En su lugar, [notifique un problema](#bkmk_docfeedback) e inicie una discusión. Así podremos acordar un rumbo antes de invertir una gran cantidad de tiempo.
 
-- Lea la [guía de estilo de Microsoft](https://aka.ms/MicrosoftStyle). Conozca los [10 principales consejos sobre el estilo y el tono de Microsoft](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).
+- Lea la [guía de estilo de Microsoft](https://aka.ms/MicrosoftStyle). Conozca los [10 principales consejos sobre el estilo y el tono de Microsoft](/style-guide/top-10-tips-style-voice).
 
 - Use la [plantilla de solicitud de incorporación de cambios](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md) como punto de partida de su trabajo.
 
@@ -160,7 +160,7 @@ Siga estas pautas generales al contribuir en documentación de Configuration Man
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidación de la documentación sobre Microsoft Endpoint Manager
 
-Para mejorar la compatibilidad con escenarios combinados de Intune y Configuration Manager, sus bibliotecas de documentación están consolidadas en el [sitio de Microsoft Endpoint Manager](https://docs.microsoft.com/mem). La documentación de Intune ahora está en [docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune), y la documentación de Configuration Manager ahora está en [docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). Si todavía usa una URL antigua, se redirigirá automáticamente, por lo que no es necesario realizar ningún cambio para leer este contenido.
+Para mejorar la compatibilidad con escenarios combinados de Intune y Configuration Manager, sus bibliotecas de documentación están consolidadas en el [sitio de Microsoft Endpoint Manager](/mem). La documentación de Intune ahora está en [docs.microsoft.com/mem/intune](../../../intune/index.yml), y la documentación de Configuration Manager ahora está en [docs.microsoft.com/mem/configmgr](../../index.yml). Si todavía usa una URL antigua, se redirigirá automáticamente, por lo que no es necesario realizar ningún cambio para leer este contenido.
 
 Si proporciona algún comentario o contribuye en algún artículo, serán necesarios algunos cambios:
 
