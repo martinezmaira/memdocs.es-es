@@ -11,12 +11,12 @@ ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d854e4b70a59a364b8611947feea89d4678e7e6
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: e0db550369ca2d81f42a25e68960b5f8f27be168
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724849"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700487"
 ---
 # <a name="install-and-configure-the-exchange-connector"></a>Instalación y configuración de Exchange Connector
 
@@ -76,10 +76,10 @@ Los siguientes roles de administración de Exchange Server incluyen estos cmdlet
 - Administración de la organización de solo vista
 - Servidor de administración
 
-Para obtener más información, consulte Descripción de los [grupos de roles de administración](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help) en la documentación de Exchange Server 2013.
+Para obtener más información, consulte Descripción de los [grupos de roles de administración](/exchange/understanding-management-role-groups-exchange-2013-help) en la documentación de Exchange Server 2013.
 
 > [!TIP]  
-> Si intenta instalar o usar el conector de Exchange Server sin los cmdlets necesarios, verá el siguiente error en el archivo EasDisc. log en el equipo de servidor de sitio: `Invoking cmdlet <cmdlet> failed`.
+> Si intenta instalar o usar el conector de Exchange Server sin los cmdlets necesarios, verá el siguiente error en el archivo EasDisc. log en el equipo de servidor de sitio: `Invoking cmdlet <cmdlet> failed` .
 
 ## <a name="install-the-connector"></a>Instalación del conector
 
@@ -91,7 +91,7 @@ Para obtener más información, consulte Descripción de los [grupos de roles de
 
     - **Exchange Server local**: especifique un solo servidor o una matriz de servidores de acceso de cliente para cada sitio de Active Directory.
 
-        Si el servidor o la matriz están desconectados, Configuration Manager intentará detectar un servidor de acceso de cliente para usarlo. Si esta opción no produce el resultado esperado, Configuration Manager recurrirá al uso de un servidor de buzones de correo para realizar una conexión con el servidor de acceso de cliente. Cuando vuelve a intentar la conexión, registra las siguientes advertencias en el archivo EasDisc. log en el equipo de servidor de sitio `Failed to open runspace for site <site_name>`:.
+        Si el servidor o la matriz están desconectados, Configuration Manager intentará detectar un servidor de acceso de cliente para usarlo. Si esta opción no produce el resultado esperado, Configuration Manager recurrirá al uso de un servidor de buzones de correo para realizar una conexión con el servidor de acceso de cliente. Cuando vuelve a intentar la conexión, registra las siguientes advertencias en el archivo EasDisc. log en el equipo de servidor de sitio: `Failed to open runspace for site <site_name>` .
 
     - **Hosted Exchange Server**: especifique la dirección del servidor de su entorno de Exchange Online.
 
@@ -113,7 +113,7 @@ Para obtener más información, consulte Descripción de los [grupos de roles de
 
     Si también inscribe dispositivos móviles mediante Configuration Manager [MDM local](../understand/manage-mobile-devices-with-on-premises-infrastructure.md), habilite la opción para **permitir la administración externa de dispositivos móviles**. Esta configuración permite que estos dispositivos móviles sigan recibiendo correo electrónico de Exchange después de que Configuration Manager los inscriba.
 
-1. Complete el asistente.
+1. Finalice el asistente.
 
 ## <a name="verify-and-monitor"></a>Comprobar y supervisar
 
@@ -123,7 +123,7 @@ Compruebe la instalación del conector de Exchange Server con mensajes de estado
 
     Se puede producir un error en la instalación si el servidor de acceso de cliente especificado está sin conexión. Si Configuration Manager no puede instalar correctamente el conector, Configuration Manager reintenta la instalación cada 60 minutos. Continúa intentándolo hasta que la instalación se realiza correctamente o se quita el conector de Exchange Server.
 
-- En el equipo de servidor de sitio, revise **SiteComp. log** para obtener la `Component SMS_EXCHANGE_CONNECTOR flagged for installation`siguiente entrada:. Después, registra la instalación correcta con el siguiente texto: `STATMSG: ID=1015`.
+- En el equipo de servidor de sitio, revise **SiteComp. log** para obtener la siguiente entrada: `Component SMS_EXCHANGE_CONNECTOR flagged for installation` . Después, registra la instalación correcta con el siguiente texto: `STATMSG: ID=1015` .
 
 Después de completar la instalación, supervise los dispositivos móviles encontrados y administrados por el conector. Ver las recopilaciones de dispositivos móviles y utilizar los informes para dispositivos móviles.
 

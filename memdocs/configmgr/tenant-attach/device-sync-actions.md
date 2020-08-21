@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251871"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700412"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Asociación de inquilinos de Microsoft Endpoint Manager: sincronización de dispositivos y acciones de dispositivo
 <!--3555758 live 3/4/2020-->
@@ -25,9 +25,9 @@ Microsoft Endpoint Manager es una solución integrada para administrar todos los
 
 A partir de Configuration Manager versión 2002, puede cargar los dispositivos Configuration Manager en el servicio en la nube y tomar medidas en la hoja **dispositivos** del centro de administración.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
-- Una cuenta que sea un *administrador global* para iniciar sesión cuando aplique este cambio. Para obtener más información, consulte [roles de administrador de Azure Active Directory (Azure ad)](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- Una cuenta que sea un *administrador global* para iniciar sesión cuando aplique este cambio. Para obtener más información, consulte [roles de administrador de Azure Active Directory (Azure ad)](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - La incorporación crea una aplicación de terceros y una entidad de servicio de primera entidad en el inquilino de Azure AD.
 - Un entorno de nube pública de Azure.
 - Las cuentas de usuario que desencadenan acciones de dispositivo tienen los siguientes requisitos previos:
@@ -118,13 +118,13 @@ El uso de una aplicación creada anteriormente durante la incorporación a la As
    - CmCollectionData. Write
 
 - Microsoft Graph permisos:
-   - Permiso Directory. Read. All [Applications](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Directory. Read. todos los [permisos de directorio delegado](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Permiso Directory. Read. All [Applications](/graph/permissions-reference#application-permissions)
+   - Directory. Read. todos los [permisos de directorio delegado](/graph/permissions-reference#directory-permissions)
 
-- Asegúrese de que **conceder el consentimiento de administrador para el inquilino** está seleccionado para la aplicación Azure ad. Para obtener más información, consulte [conceder consentimiento de administrador en registros de aplicaciones](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+- Asegúrese de que **conceder el consentimiento de administrador para el inquilino** está seleccionado para la aplicación Azure ad. Para obtener más información, consulte [conceder consentimiento de administrador en registros de aplicaciones](/azure/active-directory/manage-apps/grant-admin-consent).
 
 - La aplicación importada debe configurarse de la siguiente manera:
-   - **Solo se registra para las cuentas de este directorio de la organización**. Para obtener más información, vea [cambiar quién puede tener acceso a la aplicación](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   - **Solo se registra para las cuentas de este directorio de la organización**. Para obtener más información, vea [cambiar quién puede tener acceso a la aplicación](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
    -  Tiene un URI de ID. de aplicación y un secreto válidos
 
 

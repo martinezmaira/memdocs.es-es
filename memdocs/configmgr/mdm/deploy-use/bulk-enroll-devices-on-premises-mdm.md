@@ -10,12 +10,12 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfe2d395187f8af86e2d09156a45f7398a5bc670
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 474d59ec22d1edaf8e662298e90555e6772d302b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724619"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698803"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mdm-in-configuration-manager"></a>Cómo inscribir dispositivos en masa con MDM local en Configuration Manager
 
@@ -86,13 +86,13 @@ El perfil de inscripción permite especificar la configuración necesaria para l
     > [!TIP]
     > Si no usa un perfil de Wi-Fi para el paquete de inscripción, omita este paso.
 
-1. Complete el asistente.
+1. Finalice el asistente.
 
-## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a>Crear un paquete de inscripción
+## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a> Crear un paquete de inscripción
 
 El paquete de inscripción (ppkg) es el archivo que se usa para la inscripción masiva de dispositivos para MDM local. Cree este archivo con Configuration Manager. Aunque puede crear tipos similares de paquetes con Windows ICD, solo los paquetes que cree en Configuration Manager se pueden usar para inscribir dispositivos para MDM local. Un paquete que se crea con Windows ICD solo puede proporcionar el nombre principal de usuario (UPN) necesario para la inscripción, no puede iniciar el proceso de inscripción real.
 
-El proceso para crear el paquete de inscripción requiere Windows Assessment and Deployment Kit (ADK) para Windows 10. En el equipo que ejecuta la consola de Configuration Manager, instale la versión más reciente de Windows ADK. Seleccione la característica del **Diseñador de imágenes y configuración (ICD)** y las dependencias. (Esta versión no tiene que coincidir con la versión usada para la implementación del sistema operativo en el sitio de Configuration Manager). Para obtener más información, consulte [Descargar Windows ADK para Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install).
+El proceso para crear el paquete de inscripción requiere Windows Assessment and Deployment Kit (ADK) para Windows 10. En el equipo que ejecuta la consola de Configuration Manager, instale la versión más reciente de Windows ADK. Seleccione la característica del **Diseñador de imágenes y configuración (ICD)** y las dependencias. (Esta versión no tiene que coincidir con la versión usada para la implementación del sistema operativo en el sitio de Configuration Manager). Para obtener más información, consulte [Descargar Windows ADK para Windows 10](/windows-hardware/get-started/adk-install).
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **activos y compatibilidad** , expanda **todos los dispositivos propiedad de la empresa**, expanda **Windows**y seleccione el nodo **perfiles de inscripción** .
 
@@ -109,14 +109,14 @@ El proceso para crear el paquete de inscripción requiere Windows Assessment and
         > [!IMPORTANT]
         > Configuration Manager no guarda la contraseña y no se puede personalizar ni cambiar. Una vez que se cierra la ventana que muestra la contraseña, no hay forma de recuperar la contraseña.
 
-1. Seleccione **Exportar**. Configuration Manager usa Windows ADK para crear el paquete de inscripción.
+1. Seleccione **Export** (Exportar). Configuration Manager usa Windows ADK para crear el paquete de inscripción.
 
 Configuration Manager realiza un seguimiento de los paquetes de inscripción válidos. En la consola de, expanda el nodo **Perfil de inscripción** y seleccione **paquetes exportados**.
 
 > [!TIP]
 > Si quita un paquete de inscripción de la consola de Configuration Manager, no podrá usarlo para inscribir dispositivos. Use este método para administrar paquetes de inscripción que no desea que otros usuarios usen para la inscripción masiva.
 
-## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a>Inscripción masiva de un dispositivo
+## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Inscripción masiva de un dispositivo
 
 Puede usar un paquete para inscribir dispositivos antes o después del proceso de la experiencia rápida (OOBE) del dispositivo. El paquete de inscripción también se puede incluir como parte del paquete de aprovisionamiento de un fabricante de equipos originales (OEM).
 
@@ -144,7 +144,7 @@ Para usar el paquete para la inscripción masiva, debe entregarlo físicamente a
 
 Se inicia el proceso de inscripción.
 
-## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a>Comprobar la inscripción
+## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a> Comprobar la inscripción
 
 ### <a name="verify-bulk-enrollment-on-the-device"></a>Comprobar la inscripción masiva en el dispositivo
 

@@ -10,12 +10,12 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc63a21970bb522407c86d027690b83894b3cb99
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 4ac8d416e05b97b824ae236c2b1a2ff958b946b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724669"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700034"
 ---
 # <a name="set-up-certificates-for-trusted-communications-with-on-premises-mdm"></a>Configuración de certificados para comunicaciones de confianza con MDM local
 
@@ -34,9 +34,9 @@ En el caso de los dispositivos inscritos de forma masiva, puede incluir el certi
 Si usa una entidad de certificación pública conocida como VeriSign o GoDaddy para emitir los certificados de servidor, puede evitar tener que instalar manualmente el certificado raíz de confianza en cada dispositivo. La mayoría de los dispositivos confían de forma nativa en estas entidades públicas. Este método es una alternativa útil para los dispositivos inscritos por el usuario, en lugar de instalar el certificado a través de otros medios.
 
 > [!IMPORTANT]  
-> Hay muchas maneras de configurar los certificados para las comunicaciones de confianza entre los dispositivos y los servidores de sistema de sitio para MDM local. La información de este artículo es un ejemplo de una manera de hacerlo. Este método requiere Active Directory servicios de Certificate Server, con una entidad de certificación y el rol de inscripción Web de entidad de certificación. Para obtener más información, consulte [Active Directory servicios de Certificate Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
+> Hay muchas maneras de configurar los certificados para las comunicaciones de confianza entre los dispositivos y los servidores de sistema de sitio para MDM local. La información de este artículo es un ejemplo de una manera de hacerlo. Este método requiere Active Directory servicios de Certificate Server, con una entidad de certificación y el rol de inscripción Web de entidad de certificación. Para obtener más información, consulte [Active Directory servicios de Certificate Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
 
-## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a>Publicar la CRL
+## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a> Publicar la CRL
 
 De forma predeterminada, el Active Directory entidad de certificación (CA) utiliza listas de revocación de certificados (CRL) basadas en LDAP. Permite conexiones a la CRL para dispositivos Unidos a un dominio. Para permitir que los dispositivos que no están Unidos a un dominio confíen en los certificados emitidos por la CA, agregue una CRL basada en HTTP.
 
@@ -60,7 +60,7 @@ De forma predeterminada, el Active Directory entidad de certificación (CA) util
 
 1. En la ventana publicar CRL, seleccione **solo diferencias CRL**y, a continuación, seleccione **Aceptar** para cerrar la ventana.
 
-## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a>Crear la plantilla de certificado
+## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a> Crear la plantilla de certificado
 
 La entidad de certificación usa la plantilla de certificado de servidor web para emitir certificados para los servidores que hospedan los roles de sistema de sitio. Estos servidores serán puntos de conexión SSL para las comunicaciones de confianza entre los roles de sistema de sitio y los dispositivos inscritos.
 
@@ -95,7 +95,7 @@ La entidad de certificación usa la plantilla de certificado de servidor web par
 
 1. En la ventana **Habilitar plantillas de certificados** , seleccione la nueva plantilla. Por ejemplo, **servidor Web MDM de ConfigMgr**. Después, seleccione **Aceptar** para guardar y cerrar la ventana.
 
-## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a>Solicitar el certificado
+## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a> Solicitar el certificado
 
 Este proceso describe cómo solicitar el certificado de servidor web para IIS. Realice este proceso para cada servidor de sistema de sitio que hospede uno de los roles para MDM local.
 
@@ -121,7 +121,7 @@ Este proceso describe cómo solicitar el certificado de servidor web para IIS. R
 
 Cada servidor necesita un certificado de servidor Web único. Repita este proceso para cada servidor que hospede uno de los roles de sistema de sitio necesarios. Si un servidor hospeda todos los roles de sistema de sitio, solo será necesario solicitar un certificado de servidor web.
 
-## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a>Enlazar el certificado
+## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a> Enlazar el certificado
 
 El siguiente paso consiste en enlazar el nuevo certificado al servidor Web. Siga este proceso para cada servidor que hospede los roles de sistema de sitio de punto de *inscripción* y *punto de proxy de inscripción* . Si un servidor hospeda todos los roles de sistema de sitio, solo necesita realizar este proceso una vez.
 
@@ -138,7 +138,7 @@ El siguiente paso consiste en enlazar el nuevo certificado al servidor Web. Siga
 
 1. En la consola del administrador de IIS, en la lista de conexiones, seleccione el servidor Web. En el panel acción, en el lado derecho, seleccione **reiniciar**. Esta acción reinicia el servicio servidor Web.
 
-## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a>Exportar el certificado raíz de confianza
+## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a> Exportar el certificado raíz de confianza
 
 Active Directory servicios de Certificate Server instala automáticamente el certificado necesario de la entidad de certificación en todos los dispositivos Unidos a un dominio. Para obtener el certificado necesario para que los dispositivos que no están Unidos a un dominio se comuniquen con los roles de sistema de sitio, expórtelo desde el certificado enlazado al servidor Web.
 
