@@ -10,12 +10,12 @@ ms.assetid: e9e0da6d-bd5a-48d9-930a-e74b34b9286c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d07a014cdcb3f371a90028ec09be3c0c939b8424
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 95ac4160895394eb075589ed18a317923f317b45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724659"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695399"
 ---
 # <a name="what-happened-to-hybrid-mdm"></a>¿Qué ha ocurrido con la MDM híbrida?
 
@@ -32,7 +32,7 @@ Si el sitio de Configuration Manager tenía una suscripción de Microsoft Intun
 
 1. En el **Asistente para quitar suscripciones de Microsoft Intune**, seleccione la opción para **quitar Microsoft Intune suscripción de Configuration Manager**y, a continuación, haga clic en **siguiente**.
 
-1. Complete el asistente.
+1. Finalice el asistente.
 
 ## <a name="deprecation-announcement"></a>Anuncio de desuso
 
@@ -47,7 +47,7 @@ La siguiente nota es el anuncio de desuso original:
 >
 > Este cambio no afecta a Configuration Manager local ni a la [administración conjunta para dispositivos con Windows 10](../../comanage/overview.md). Si no está seguro de si está usando la MDM híbrida, vaya al área de trabajo **Administración** de la consola de Configuration Manager, expanda **Cloud Services**y seleccione **Microsoft Intune suscripciones**. Si tiene una suscripción a Microsoft Intune configurada, el inquilino está configurado para MDM híbrida.
 >
-> **¿Cómo me afecta esto?**
+> **¿Cómo me afecta esto a mí?**
 >
 > - Microsoft seguirá permitiendo el uso de MDM híbrida durante el próximo año. La característica continuará recibiendo importantes correcciones de errores. Microsoft brindará soporte a la funcionalidad existente en nuevas versiones de sistemas operativos, como la inscripción en iOS 12. No habrá ninguna característica nueva para MDM híbrida.  
 >
@@ -68,7 +68,7 @@ La siguiente nota es el anuncio de desuso original:
 >
 >     Para más información, consulte [Acceso condicional con administración conjunta](../../comanage/quickstart-conditional-access.md).
 >
-> **¿Qué debo hacer para prepararme para este cambio?**
+> **¿Qué he de hacer para prepararme para este cambio?**
 >
 > - Comience a planear la migración de MDM desde la consola de Configuration Manager a Azure. Muchos clientes, incluidos los informáticos de Microsoft, han llevado a cabo este proceso. Para obtener más información, consulte este [caso práctico de Microsoft](https://aka.ms/Intune_MSFT).  
 >
@@ -80,6 +80,6 @@ La siguiente nota es el anuncio de desuso original:
 
 Para obtener más información sobre las características admitidas para administrar dispositivos MDM, consulte los siguientes artículos:
 
-- [¿Qué es Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune)
+- [¿Qué es Microsoft Intune?](/intune/what-is-intune)
 - [¿Qué es MDM local?](manage-mobile-devices-with-on-premises-infrastructure.md)
 - [Administración de dispositivos con Exchange](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)

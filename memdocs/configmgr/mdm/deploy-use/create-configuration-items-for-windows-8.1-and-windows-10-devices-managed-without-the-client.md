@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 26846066aa713d40fdacfe75810d43cafd1c3f04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506264"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693682"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Crear elementos de configuración para dispositivos Windows con MDM local en Configuration Manager
 
@@ -71,11 +71,11 @@ Para obtener más información general sobre la configuración de cumplimiento e
     > [!IMPORTANT]
     > Los dispositivos no evalúan el cumplimiento de la configuración no admitida.
 
-1. Complete el asistente.
+1. Finalice el asistente.
 
 Puede ver el nuevo elemento de configuración en el nodo **Elementos de configuración** del área de trabajo **Activos y compatibilidad** .
 
-## <a name="settings-reference"></a><a name="bkmk_setref"></a>Referencia de configuración  
+## <a name="settings-reference"></a><a name="bkmk_setref"></a> Referencia de configuración  
 
 En las secciones siguientes se detallan los valores específicos disponibles en cada grupo. Configure estas opciones en la página **configuración del dispositivo** del **Asistente para crear elemento de configuración** para Windows 8.1 y los dispositivos de **Windows 10** administrados *sin* el cliente de Configuration Manager.
 
@@ -141,7 +141,7 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
 - **Usar solo el almacén privado**: requerir a los usuarios que descarguen aplicaciones de la tienda privada.
 - **Game DVR**: deshabilitar la transmisión y la grabación de juegos de Windows
 
-### <a name="browser"></a>Explorador
+### <a name="browser"></a>Browser
 
 Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.
 
@@ -242,7 +242,7 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
         - **WPA2**
         - **WPA2-PSK**
     - **Cifrado de datos**: elija el método de cifrado que usa esta conexión. Los valores disponibles cambian en función del método de **autenticación** que seleccione:
-        - **Deshabilitado**
+        - **Deshabilitada**
         - **WEP**
         - **TKIP**
         - **AES**
@@ -325,7 +325,7 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 Team.
 
 ### <a name="windows-information-protection"></a>Windows Information Protection  
 
-Para obtener más información sobre cómo configurar la protección de datos de empresa con Configuration Manager, consulte [protección de los datos de la empresa mediante Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Para obtener más información sobre cómo configurar la protección de datos de empresa con Configuration Manager, consulte [protección de los datos de la empresa mediante Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 ### <a name="microsoft-edge-legacy"></a>Heredado de Microsoft Edge
 
@@ -369,14 +369,14 @@ Esta configuración es solo para dispositivos que ejecutan Windows 10 y versione
 - **Examinar mensajes de correo electrónico**: defender examina los mensajes de correo electrónico cuando llegan al dispositivo.
 - **Examinar unidades extraíbles**: defender examina unidades extraíbles, como sticks USB.
 - **Examinar unidades asignadas**: defender examina las unidades asignadas a recursos compartidos de red. Por ejemplo, `H:` se asigna a la unidad personal de un usuario. Si los archivos de la unidad son de solo lectura, defender no puede quitar ningún malware que encuentre allí.
-- **Examinar archivos abiertos desde carpetas compartidas de red**: defender examina los archivos cuando un usuario los abre desde una ruta de acceso de red compartida. Por ejemplo: `\\server\share\file.doc`. Si el archivo del recurso compartido es de solo lectura, defender no puede quitar ningún malware que encuentre.
+- **Examinar archivos abiertos desde carpetas compartidas de red**: defender examina los archivos cuando un usuario los abre desde una ruta de acceso de red compartida. Por ejemplo, `\\server\share\file.doc`. Si el archivo del recurso compartido es de solo lectura, defender no puede quitar ningún malware que encuentre.
 - **Intervalo de actualización de firma**: elija el intervalo de tiempo en el que defender comprueba si hay nuevos archivos de firma.
 - **Permitir protección**en la nube: defender usa Microsoft Cloud para recibir información acerca de la actividad de malware y habilitar características como bloque en la primera vista.
 - **Solicitar a los usuarios el envío de muestras**: elija el comportamiento de defender cuando los archivos puedan requerir un análisis más exhaustivo. Por ejemplo, defender puede enviar archivos automáticamente a Microsoft para determinar si son malintencionados.
 - **Detección de aplicaciones potencialmente no deseadas**: protege el dispositivo contra la ejecución de software clasificado por defender como potencialmente no deseado. Puede protegerse de estas aplicaciones en ejecución o usar el modo auditoría para informar cuando un usuario instala una aplicación potencialmente no deseada.
-- **Exclusiones de archivos y carpetas**: agregue uno o varios archivos y carpetas a la lista de exclusiones. Por ejemplo, `C:\Path` o `%ProgramFiles%\Path\filename.exe`. Defender no incluye estos archivos y carpetas en ningún examen en tiempo real ni programado.
-- **Exclusiones de extensiones de archivo**: agregue una o más extensiones de archivo a la lista de exclusiones. Por ejemplo, `java` o `exe`. Defender no incluye ningún archivo con estas extensiones en ningún examen en tiempo real ni programado.
-- **Exclusiones de procesos**: agregue procesos específicos a la lista de exclusiones. Por ejemplo: `C:\path\myproc.exe`. Este tipo de exclusión solo admite las siguientes extensiones: `exe` , `com` o `scr` . Defender no incluye estos procesos en ningún examen en tiempo real ni programado.
+- **Exclusiones de archivos y carpetas**: agregue uno o varios archivos y carpetas a la lista de exclusiones.  Por ejemplo, `C:\Path` o `%ProgramFiles%\Path\filename.exe`. Defender no incluye estos archivos y carpetas en ningún examen en tiempo real ni programado.
+- **Exclusiones de extensiones de archivo**: agregue una o más extensiones de archivo a la lista de exclusiones.  Por ejemplo, `java` o `exe`. Defender no incluye ningún archivo con estas extensiones en ningún examen en tiempo real ni programado.
+- **Exclusiones de procesos**: agregue procesos específicos a la lista de exclusiones. Por ejemplo, `C:\path\myproc.exe`. Este tipo de exclusión solo admite las siguientes extensiones: `exe` , `com` o `scr` . Defender no incluye estos procesos en ningún examen en tiempo real ni programado.
 
 ### <a name="additional-settings"></a>Configuración adicional
 
