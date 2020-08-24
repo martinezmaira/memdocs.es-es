@@ -10,22 +10,22 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 47d44c96e0ae63504278c58a5838c54648665505
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ca7d81ba112c9eb79fb8bcfff96fb213b87b44c3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692313"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694821"
 ---
 # <a name="onedrive-for-business-profiles"></a>Perfiles de OneDrive para la Empresa
 
-A partir de la versión 1902 de Configuration Manager, puede crear perfiles de OneDrive para la Empresa con el fin de mover las carpetas conocidas de Windows a OneDrive para la Empresa. Estas carpetas incluyen Escritorio, Documentos e Imágenes. En cada perfil, puede especificar opciones para mover las carpetas conocidas de Windows. Para más información sobre OneDrive para la Empresa, consulte [Redirigir y mover las carpetas conocidas de Windows a OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders). <!--3556021-->
+A partir de la versión 1902 de Configuration Manager, puede crear perfiles de OneDrive para la Empresa con el fin de mover las carpetas conocidas de Windows a OneDrive para la Empresa. Estas carpetas incluyen Escritorio, Documentos e Imágenes. En cada perfil, puede especificar opciones para mover las carpetas conocidas de Windows. Para más información sobre OneDrive para la Empresa, consulte [Redirigir y mover las carpetas conocidas de Windows a OneDrive](/onedrive/redirect-known-folders). <!--3556021-->
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Búsqueda del identificador de inquilino de Office 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Busque el identificador de inquilino de Microsoft 365](/onedrive/find-your-office-365-tenant-id).  
 
-- Implemente la versión de cliente de sincronización de OneDrive 18.111.0603.0004 o una versión posterior. Para más información, consulte [Implementar aplicaciones de OneDrive con System Center Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+- Implemente la versión de cliente de sincronización de OneDrive 18.111.0603.0004 o una versión posterior. Para más información, consulte [Implementar aplicaciones de OneDrive con System Center Configuration Manager](/onedrive/deploy-on-windows).  
 
 ## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a> Mover las carpetas conocidas de Windows a OneDrive
 <!--3556021-->
@@ -44,7 +44,7 @@ Utilice Configuration Manager para mover las carpetas conocidas de Windows a One
 
 5. En la página **Configuración**:
 
-    1. Especifique el identificador del inquilino de Office 365.  
+    1. especifique el identificador de inquilino de Microsoft 365.  
 
     2. Seleccione una de las siguientes opciones para trasladar las carpetas conocidas a OneDrive:  
 

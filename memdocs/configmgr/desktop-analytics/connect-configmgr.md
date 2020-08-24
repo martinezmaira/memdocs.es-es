@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268868"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126008"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Conexión de Configuration Manager con Análisis de escritorio
 
@@ -84,8 +84,11 @@ Use este procedimiento para conectar Configuration Manager a Análisis de escrit
 
     - **Id. comercial**: este valor se debe rellenar automáticamente con el identificador de la organización. Si no es así, asegúrese de que el servidor proxy esté configurado para permitir todos los [puntos de conexión](enable-data-sharing.md#endpoints) necesarios antes de continuar. También puede recuperar el identificador comercial manualmente desde el [portal de Análisis de escritorio](monitor-connection-health.md#bkmk_ViewCommercialID).
 
-    - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **Básico**. Consulte [Niveles de datos de diagnóstico](enable-data-sharing.md#diagnostic-data-levels).
-  
+    - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **Requerido**. para más información, consulte [Niveles de datos de diagnóstico](enable-data-sharing.md#diagnostic-data-levels).
+
+        > [!TIP]
+        > En Configuration Manager versión 2002 y versiones anteriores, este valor se llamaba **Básico**.<!-- 7363467 -->
+
     - **Permitir nombre del dispositivo en los datos de diagnóstico**: seleccione **Habilitar**.
 
         > [!NOTE]

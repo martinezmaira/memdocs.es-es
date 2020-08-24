@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd58fb2ad105d3fb94fcc1d2fe56f0ae64f766f1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 157adee0ce6bbf677bb88c4ae404f92ed0506c42
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697073"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128821"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-configuration-manager"></a>Niveles de recopilación de datos de uso de diagnóstico de la versión 1606 de Configuration Manager
 
@@ -350,7 +350,7 @@ A partir de la versión 1606 de Configuration Manager, este nivel incluye lo si
 
 - ***[Nuevo]*** **Varios**
 
-    - ***[Nuevo]*** Recuento de sitios con Wake On Lan (WOL)
+    - ***[Nuevo]*** Recuento de sitios con Wake on LAN (WOL)
 
 
 

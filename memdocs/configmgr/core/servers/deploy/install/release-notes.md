@@ -2,20 +2,20 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823969"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126298"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -29,10 +29,10 @@ Este artículo contiene notas de la versión de la rama actual de Configuration 
 
 Para obtener información sobre las características que presentan las distintas versiones, consulte los siguientes artículos:
 
+- [Novedades de la versión 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Novedades de la versión 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Novedades de la versión 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Novedades de la versión 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [Novedades de la versión 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 Para obtener información sobre las nuevas características de Análisis de escritorio, consulte [Novedades de Análisis de escritorio](../../../../desktop-analytics/whats-new.md).
 
@@ -121,24 +121,15 @@ Hay dos casos en los que no se pueden ejecutar secuencias de tareas en un dispos
 
 - Ha configurado el sitio para HTTP mejorado y el punto de administración es HTTP.<!-- 6358851 -->
 
-    Para solucionar esta incidencia, configure el punto de administración para HTTPS.
+    Para solucionar este problema, actualice a la versión 2006. Otra alternativa es configurar el punto de administración para HTTP.
 
 - Ha instalado y registrado el cliente con un token de registro en masa para la autenticación.<!-- 6377921 -->
 
-    Para solucionar esta incidencia, use uno de los métodos de autenticación siguientes:
+    Para solucionar este problema, actualice a la versión 2006. También puede usar uno de los siguientes métodos de autenticación:
 
   - Registro previo del dispositivo en la red interna
   - Configuración del dispositivo con un certificado de autenticación del cliente
   - Unión del dispositivo a Azure AD
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Tras promover el servidor de sitio pasivo, los paquetes de imágenes de arranque predeterminadas todavía tendrán el paquete de origen en el servidor activo anterior.
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Se aplica a: Configuration Manager, versión 1810*
-
-Si tiene un servidor de sitio en modo pasivo (servidor B), cuando lo promueva a activo, la ubicación del contenido para las imágenes de arranque predeterminadas continuará haciendo referencia al servidor activo anterior (servidor A). Si el servidor A tiene un error de hardware, no podrá actualizar ni cambiar las imágenes de arranque predeterminadas.
-
-No hay ninguna solución para este problema.
 
 ## <a name="software-updates"></a>Actualizaciones de software
 
@@ -171,7 +162,7 @@ Para obtener más información, vea [Crear roles de seguridad personalizados](..
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Una actualización de seguridad extendida para Windows 7 hace que aparezca como **No se puede inscribir**
 
 <!-- 7283186 -->
-_Se aplica a: Configuration Manager, versiones 1902, 1906, 1910 y 2002_
+_Se aplica a: Configuration Manager, versiones 2002 y anteriores_
 
 La actualización de seguridad extendida (ESU) de abril de 2020 para Windows 7 cambió la versión mínima requerida de diagtrack.dll de 10586 a 10240. Este cambio hace que los dispositivos de Windows 7 se muestren como **No se pueden inscribir** en el panel **Estado de conexión** de Análisis de escritorio. Al explorar en profundidad la vista de dispositivos para este estado, la propiedad **Configuración del servicio DiagTrack** muestra el estado siguiente: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 

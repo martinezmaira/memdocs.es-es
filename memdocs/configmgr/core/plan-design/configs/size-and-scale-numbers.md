@@ -2,7 +2,7 @@
 title: Tamaño y escala
 titleSuffix: Configuration Manager
 description: Determine el número de roles de sistema de sitio y los sitios que necesitará para admitir los dispositivos en el entorno.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715635"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126705"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Números de tamaño y escala para Configuration Manager
 
@@ -184,6 +184,8 @@ limite el número de ámbitos de seguridad en reglas de implementación automát
 Cada instancia del proveedor de SMS admite conexiones simultáneas de varias solicitudes. Las únicas limitaciones de estas conexiones son el número de conexiones de servidor disponibles en Windows y los recursos disponibles en el servidor para atender las solicitudes de conexión.
 
 Para más información, vea [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md) (Planear el proveedor de SMS).
+
+El servicio de administración es una API REST en cada instancia del proveedor de SMS. Admite hasta 5000 solicitudes por segundo y 200 solicitudes por dirección IP del cliente.
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> Número de clientes para sitios y jerarquías
 

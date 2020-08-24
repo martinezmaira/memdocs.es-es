@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: a6e27e2d03983fdf627016d0e3b41aaa378afe29
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110430"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693478"
 ---
 # <a name="deploy-software-updates"></a>Implementar actualizaciones de software  
 
@@ -69,8 +69,8 @@ En la lista siguiente se indica el flujo de trabajo general de la implementació
 Para obtener más información y pasos detallados, vea [Implementar actualizaciones de software manualmente](manually-deploy-software-updates.md).
 
 > [!Note]
-> - A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
-> - Cuando implemente manualmente las actualizaciones de cliente de Office 365, búsquelas en el nodo **Actualizaciones de Office 365** bajo **Administración de clientes de Office 365** del área de trabajo **Biblioteca de software**. 
+> - A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
+> - Cuando implemente manualmente las actualizaciones de cliente de Aplicaciones de Microsoft 365, búsquelas en el nodo **Actualizaciones de Office 365** bajo **Administración de clientes de Office 365** del área de trabajo **Biblioteca de software**. 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Implementar actualizaciones de software automáticamente
 
@@ -115,5 +115,5 @@ Para obtener más información y pasos detallados, vea [Implementar actualizacio
 <!--1358146-->
 A partir de la versión 1810, cree implementaciones por fases de actualizaciones de software. Las Implementaciones por fases permiten organizar un lanzamiento de software coordinado y secuencial según criterios y grupos personalizables.
 
-Para más información, vea [Crear implementaciones por fases](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Para más información, vea [Crear implementaciones por fases](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 

@@ -2,20 +2,20 @@
 title: Herramienta de conexión de servicio
 titleSuffix: Configuration Manager
 description: Obtenga información sobre esta herramienta que le permite conectarse al servicio en la nube de Configuration Manager para cargar manualmente la información de uso.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946851"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126093"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Uso de la herramienta de conexión de servicio para Configuration Manager
 
@@ -78,7 +78,7 @@ Para modificar este comportamiento, use uno de los parámetros siguientes para c
 - **-downloadsiteversion**: descarga actualizaciones y revisiones con una versión posterior a la versión del sitio.
 
     > [!IMPORTANT]
-    > Debido a un problema conocido en la versión 2002 de Configuration Manager, el comportamiento predeterminado no funciona según lo previsto. Use el parámetro **-downloadsiteversion** para descargar las actualizaciones necesarias para la versión 2002.<!-- 7594517 -->
+    > Debido a un problema conocido en la versión 2002 de Configuration Manager, el comportamiento predeterminado no funciona según lo previsto. Actualice a la versión 2006 o use el parámetro **-downloadsiteversion** para descargar las actualizaciones necesarias para la versión 2002.<!-- 7594517 -->
 
 Para más información, consulte [Parámetros de línea de comandos](#bkmk_cmd).
 

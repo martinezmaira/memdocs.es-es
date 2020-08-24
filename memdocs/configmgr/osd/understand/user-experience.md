@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703223"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124091"
 ---
 # <a name="user-experiences-for-os-deployment"></a>Experiencias de usuario para la implementación de sistemas operativos
 
@@ -146,8 +146,7 @@ El número total de pasos no incluye los siguientes elementos en la secuencia de
 
 - Pasos que se deshabilitan explícitamente. Un paso deshabilitado no se ejecuta durante la secuencia de tareas.
 
-    > [!NOTE]
-    > Los pasos habilitados en un grupo deshabilitado todavía se incluyen en el recuento total.
+- A partir de la versión 2006, no se cuentan los pasos habilitados en un grupo deshabilitado.<!--6448412--> En la versión 2002, los pasos habilitados en un grupo deshabilitado todavía se incluyen en el recuento total.
 
 ## <a name="task-sequence-error"></a>Error de secuencia de tareas
 

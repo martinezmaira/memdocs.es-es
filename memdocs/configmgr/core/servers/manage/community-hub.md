@@ -2,7 +2,7 @@
 title: GitHub y Centro de comunidad
 titleSuffix: Configuration Manager
 description: Habilitación y uso del Centro de comunidad en Configuration Manager
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262088"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128178"
 ---
 # <a name="community-hub-and-github"></a>GitHub y Centro de comunidad
 <!--3555935, 3555936-->
@@ -66,6 +66,37 @@ El Centro de comunidad admite los siguientes objetos:
 
 [![Todos los elementos descargados del Centro de comunidad](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> Vínculos directos a elementos del Centro de comunidad
+<!--4224406-->
+*(Se incorporó en la versión 2006)* Puede desplazarse fácilmente hasta los elementos del nodo Centro de comunidad de la consola de Configuration Manager, y hacer referencia a ellos, con un vínculo directo. Esta característica tiene como fin facilitar la colaboración y poder compartir vínculos a elementos del Centro de comunidad con los compañeros. Actualmente, estos vínculos profundos solo son para los elementos del nodo Centro de comunidad de la consola.
+
+### <a name="prerequisites-for-direct-links"></a>Requisitos previos de los vínculos directos
+
+- Consola de Configuration Manager, versión 2006 o posterior
+- No se puede usar la cuenta predefinida de administrador local al seguir un vínculo del Centro de comunidad.
+
+### <a name="sharing-and-opening-direct-links"></a>Compartir y abrir vínculos directos
+
+Para compartir un elemento:
+1. Vaya al elemento en el centro y seleccione **Compartir**.
+1. Pegue el vínculo copiado y compártalo con otros usuarios.
+
+Para abrir un vínculo compartido:
+1. Haga clic en el vínculo desde un equipo que tenga instalada la consola de Configuration Manager.
+   - Por ejemplo, use este vínculo para compartir el [script de configuración de la actualización automática de Edge](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
+1. Seleccione **Iniciar el Centro de comunidad** cuando se le solicite.
+1. La consola se abre directamente en el script del Centro de comunidad.
+
+## <a name="known-issues"></a><a name="bkmk_known"></a> Problemas conocidos
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>No se puede acceder al nodo Centro de comunidad cuando se ejecuta la consola como un usuario diferente
+<!--7826897-->
+Si ha iniciado sesión como un usuario con derechos más restringidos y elige **Ejecutar como** otro usuario para abrir la consola de Configuration Manager, es posible que no pueda acceder al nodo **Centro de comunidad**.
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>Los informes descargados no se quitan de la página de descargas
+<!--7851305-->
+Si elimina un informe descargado del nodo **Supervisión** > **Informes**, el informe no se elimina de la página **Centro de comunidad** > **Sus descargas** y no puede volver a descargar el informe. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 

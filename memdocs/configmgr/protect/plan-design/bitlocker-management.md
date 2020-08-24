@@ -2,7 +2,7 @@
 title: Planeamiento de la administración de BitLocker
 titleSuffix: Configuration Manager
 description: Planeamiento de la administración de Cifrado de unidad BitLocker con Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531475"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699966"
 ---
 # <a name="plan-for-bitlocker-management"></a>Planeamiento de la administración de BitLocker
 
@@ -25,10 +25,10 @@ ms.locfileid: "84531475"
 
 A partir de la versión 1910, use Configuration Manager para administrar el Cifrado de unidad BitLocker (BDE) para clientes Windows locales, que están unidos a Active Directory. No se admiten clientes de grupo de trabajo ni unidos a Azure Active Directory. Ofrece una administración completa del ciclo de vida de BitLocker que puede sustituir el uso de Microsoft BitLocker Administration and Monitoring (MBAM).
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Para obtener más información, vea [Información general de BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
+Para obtener más información, vea [Información general de BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Para administrar el cifrado en dispositivos Windows 10 de administración conjunta con el servicio en la nube de Microsoft Endpoint Manager, cambie la [carga de trabajo de **Endpoint Protection**](../../comanage/workloads.md#endpoint-protection) a Intune. Para obtener más información sobre el uso de Intune, vea [Cifrado de Windows](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -82,6 +82,8 @@ Permita que los usuarios se ayuden con una clave de un solo uso para desbloquear
 
   Para obtener más información, consulte el artículo [Cifrado de los datos de recuperación](../deploy-use/bitlocker/encrypt-recovery-data.md).
 
+- Aunque el servicio de recuperación de BitLocker se instala en un punto de administración que usa una réplica de base de datos, los clientes no pueden custodiar claves de recuperación. Después, BitLocker no cifrará la unidad. Para usar el servicio de recuperación, necesita al menos un punto de administración que no esté en una configuración de réplica. Deshabilite el servicio de recuperación de BitLocker en cualquier punto de administración con una réplica de base de datos.<!-- 7813149 -->
+
 - Para usar los informes de administración de BitLocker, instale el rol de sistema de sitio del punto de servicios de informes. Para más información, consulte [Configuración de informes](../../core/servers/manage/configuring-reporting.md).
 
     > [!NOTE]
@@ -92,7 +94,7 @@ Permita que los usuarios se ayuden con una clave de un solo uso para desbloquear
     > [!NOTE]
     > Instale solo el portal de autoservicio y el sitio web de administración y supervisión con una base de datos de sitio primario. En una jerarquía, instale estos sitios web para cada sitio primario.
 
-- En el servidor web que hospedará el portal de autoservicio, instale [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) y la característica .NET Framework 3.5 antes de iniciar el proceso de instalación. Otros roles y características de Windows Server necesarios se instalarán automáticamente durante el proceso de instalación del portal.
+- En el servidor web que hospedará el portal de autoservicio, instale [Microsoft ASP.NET MVC 4.0](/aspnet/mvc/mvc4) y la característica .NET Framework 3.5 antes de iniciar el proceso de instalación. Otros roles y características de Windows Server necesarios se instalarán automáticamente durante el proceso de instalación del portal.
 
 - La cuenta de usuario que ejecuta el script del instalador del portal necesita derechos **sysadmin** de SQL en el servidor de base de datos del sitio. Durante el proceso de configuración, el script establece el inicio de sesión, el usuario y los derechos de rol de SQL de la cuenta del equipo del servidor web. Puede quitar esta cuenta de usuario del rol sysadmin después de completar la instalación del portal de autoservicio y el sitio web de administración y supervisión.
 

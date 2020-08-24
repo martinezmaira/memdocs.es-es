@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842230"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127229"
 ---
 # <a name="co-management-workloads"></a>Administración conjunta de cargas de trabajo
 
@@ -104,7 +104,7 @@ Para más información sobre la característica de Intune, consulte [Creación d
 
 <!--1357841-->
 
-Esta carga de trabajo administra aplicaciones de Office 365 en dispositivos administrados en conjunto.
+Esta carga de trabajo administra Aplicaciones de Microsoft 365 en dispositivos administrados conjuntamente.
 
 - Después de mover la carga de trabajo, la aplicación se muestra en el **Portal de empresa** en el dispositivo.  
 

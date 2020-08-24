@@ -2,7 +2,7 @@
 title: Referencia del archivo de registro
 titleSuffix: Configuration Manager
 description: Una referencia de todos los archivos de registro del cliente, el servidor y los componentes dependientes de Configuration Manager.
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210332"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700555"
 ---
 # <a name="log-file-reference"></a>Referencia del archivo de registro
 
@@ -331,6 +331,7 @@ En la tabla siguiente se incluyen los archivos de registro que se encuentra en l
 |sitestat.log|Registra el proceso de supervisión de disponibilidad y espacio en disco de todos los sistemas de sitio.|Servidor de sitio|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Archivo de registro para la detección de usuarios y grupos de usuarios de Azure Active Directory (Azure AD). En la versión 1910 y anteriores, también se incluía la sincronización de los resultados de la pertenencia a colecciones en Azure AD.| Servidor de sitio|
 |SMS_BUSINESS_APP_PROCESS_MANAGER. log|Archivo de registro del componente que sincroniza las aplicaciones de Microsoft Store para Empresas.|Servidor de sitio|
+|SMS_DataEngine.log|Archivo de registro de información de administración.|Servidor de sitio|
 |SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.|
 |SMS_OrchestrationGroup.log| Archivo de registro para grupos de orquestaciones|Servidor de sitio|
 |SMS_PhasedDeployment.log| Archivo de registro de las implementaciones por fases|Sitio de nivel superior de la jerarquía de Configuration Manager|
@@ -350,7 +351,7 @@ En la tabla siguiente se incluyen los archivos de registro que se encuentra en l
 |statesys.log|Registra el procesamiento de mensajes de sistema de estado.|Servidor de sitio|  
 |statmgr.log|Registra la escritura de todos los mensajes de estado en la base de datos.|Servidor de sitio|  
 |swmproc.log|Registra el procesamiento de archivos y configuraciones de disponibilidad.|Servidor de sitio|
-|UXAnalyticsUploadWorker.log|Registra la carga de datos en el servicio para el análisis de puntos de conexión.|Servidor de sitio|   
+|UXAnalyticsUploadWorker.log|Registra la carga de datos en el servicio para el análisis de puntos de conexión.|Servidor de sitio|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Instalación del servidor del sitio
 
@@ -783,7 +784,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |MP_ClientIDManager.log|Registra las respuestas de punto de administración a las solicitudes de identificador de cliente que las secuencias de tareas inician desde el entorno PXE o medios de arranque.|Servidor de sistema de sitio|  
 |MP_DriverManager.log|Registra las respuestas de puntos de administración a las solicitudes de acciones de secuencias de tareas de aplicación automática de controladores.|Servidor de sistema de sitio|  
 |OfflineServicingMgr.log|Registra detalles de los planes de mantenimiento sin conexión y de las acciones de aplicación de actualizaciones en archivos Windows Imaging Format (WIM) de sistema operativo.|Servidor de sistema de sitio|  
-|Setupact.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows. Para obtener más información, consulte [Archivos de registro](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Cliente|  
+|Setupact.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows. Para obtener más información, consulte [Archivos de registro](/windows/deployment/upgrade/log-files).|Cliente|  
 |Setupapi.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows.|Cliente|  
 |Setuperr.log|Registra los detalles acerca de los registros de instalación y SysPrep de Windows.|Cliente|  
 |smpisapi.log|Registra los detalles acerca de las acciones de restauración y captura de estado de cliente, así como información sobre umbrales.|Cliente|  
@@ -893,7 +894,7 @@ El servicio utiliza la misma infraestructura y el mismo proceso que las actualiz
 |DISM.log|Registra todas las acciones mediante DISM. Si es necesario, DISM.log apuntará a CBS.log para obtener más detalles.|Cliente|
 |setupact.log|Archivo de registro principal para la mayoría de los errores que se producen durante el proceso de instalación de Windows. El archivo de registro se encuentra en la carpeta %windir%\$Windows.~BT\sources\panther.|Cliente|
 
-Para más información, consulte el artículo sobre [archivos de registro relacionados con los servicios en línea](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+Para más información, consulte el artículo sobre [archivos de registro relacionados con los servicios en línea](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Agente de Windows Update
 
@@ -903,7 +904,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Registra detalles sobre la conexión del agente de Windows Update con el servidor WSUS y recupera las actualizaciones de software para evaluar el cumplimiento y determinar si hay actualizaciones de los componentes del agente.|Cliente|  
 
-Para más información, consulte el artículo sobre los [archivos de registro de Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+Para más información, consulte el artículo sobre los [archivos de registro de Windows Update](/windows/deployment/update/windows-update-logs).
 
 ### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> Servidor WSUS
 

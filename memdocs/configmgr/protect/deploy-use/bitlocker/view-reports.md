@@ -2,20 +2,20 @@
 title: Consulta de los informes de BitLocker
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los informes de administración de BitLocker en Configuration Manager
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d10717f980922e1f6d1fca9224e288b4df709da2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7c44ec9a9ed91d8543fedbdd5fba191b3989da19
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699623"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129226"
 ---
 # <a name="view-bitlocker-reports"></a>Consulta de los informes de BitLocker
 
@@ -49,7 +49,7 @@ Puede acceder a todos estos informes directamente desde el sitio web del punto d
 
 Use este informe para recopilar información específica de un equipo. Proporciona información de cifrado detallada sobre la unidad del sistema operativo y las unidades de datos fijas. Para ver los detalles de cada unidad, expanda la entrada Nombre del equipo. También indica la directiva que se aplica a cada uno de los tipos de unidades del equipo.
 
-[![Captura de pantalla de ejemplo del informe Cumplimiento de equipos de BitLocker](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
+:::image type="content" source="media/bitlocker-computer-compliance.png" alt-text="Captura de pantalla de ejemplo del informe Cumplimiento de equipos de BitLocker" lightbox="media/bitlocker-computer-compliance.png":::
 
 También puede usar este informe para determinar el último estado conocido de cifrado de BitLocker de equipos perdidos o robados. Configuration Manager determina la compatibilidad del dispositivo en función de las directivas de BitLocker que implemente. Antes de intentar determinar el estado de cifrado de BitLocker de un dispositivo, compruebe las directivas que ha implementado.
 
@@ -100,7 +100,7 @@ En este informe se proporcionan los gráficos siguientes, que muestran el estado
 
 - Distribución del estado de cumplimiento por tipo de unidad
 
-[![Captura de pantalla de ejemplo del panel de cumplimiento de BitLocker Enterprise](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-dashboard.png" alt-text="Captura de pantalla de ejemplo del panel de cumplimiento de BitLocker Enterprise" lightbox="media/bitlocker-enterprise-compliance-dashboard.png":::
 
 ### <a name="compliance-status-distribution"></a>Distribución del estado de cumplimiento
 
@@ -148,7 +148,7 @@ Este gráfico de barras muestra el estado actual de cumplimiento de BitLocker po
 
 En este informe se muestra información sobre el cumplimiento general de BitLocker en la organización para la colección de equipos en los que ha implementado la directiva de administración de BitLocker.
 
-[![Captura de pantalla de ejemplo de Detalles de cumplimiento de BitLocker Enterprise](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-details.png" alt-text="Captura de pantalla de ejemplo de Detalles de cumplimiento de BitLocker Enterprise" lightbox="media/bitlocker-enterprise-compliance-details.png":::
 
 |Nombre de columna|Descripción|
 |--- |--- |
@@ -180,7 +180,7 @@ En este informe se muestra información sobre el cumplimiento general de BitLock
 
 Use este informe para mostrar el cumplimiento general de BitLocker en toda la organización. También se muestra la compatibilidad de los equipos individuales en los que se ha implementado la directiva de administración de BitLocker.
 
-[![Captura de pantalla de ejemplo de Resumen de cumplimiento de BitLocker Enterprise](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-summary.png" alt-text="Captura de pantalla de ejemplo de Resumen de cumplimiento de BitLocker Enterprise" lightbox="media/bitlocker-enterprise-compliance-summary.png":::
 
 |Nombre de columna|Descripción|
 |--- |--- |
@@ -199,9 +199,7 @@ Use este informe para mostrar el cumplimiento general de BitLocker en toda la or
 ## <a name="recovery-audit-report"></a><a name="bkmk-audit"></a> Informe de auditoría de recuperación
 
 > [!NOTE]
-> Este informe también está disponible en el [sitio web de administración y supervisión de BitLocker](helpdesk-portal.md#reports).
->
-> Para ver este informe en la consola de Configuration Manager, vaya al área de trabajo **Supervisión**. En el panel de navegación, expanda el nodo **Informes**, luego **Informes** y después la carpeta **Administración de BitLocker**. Seleccione la subcarpeta de la versión localizada del informe, por ejemplo, **es-es**.
+> A partir de la versión 2002, este informe solo está disponible en el [sitio web de administración y supervisión de BitLocker](helpdesk-portal.md#reports).<!-- 7629549 -->
 
 Use este informe para auditar a los usuarios que han solicitado acceso a las claves de recuperación de BitLocker. Puede filtrar según los criterios siguientes:
 
@@ -210,7 +208,7 @@ Use este informe para auditar a los usuarios que han solicitado acceso a las cla
 - El tipo específico de la clave solicitada: contraseña de clave de recuperación, id. de la clave de recuperación o hash de contraseña del TPM
 - Intervalo de fechas durante el que se ha producido la recuperación
 
-[![Captura de pantalla de ejemplo del informe de auditoría de recuperación de BitLocker](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+:::image type="content" source="media/bitlocker-recovery-audit-report.png" alt-text="Captura de pantalla de ejemplo del informe de auditoría de recuperación de BitLocker" lightbox="media/bitlocker-recovery-audit-report.png":::
 
 |Nombre&nbsp;de columna|Descripción|
 |----------------|----|
@@ -219,6 +217,6 @@ Use este informe para auditar a los usuarios que han solicitado acceso a las cla
 |Resultado de la solicitud|Estado de la solicitud. Los valores válidos son **Correcto** o **Con errores**.|
 |Usuario de soporte técnico|El usuario administrativo que ha solicitado la clave. Si un administrador del departamento de soporte técnico recupera la clave sin especificar el nombre de usuario, el campo **Usuario final** está en blanco. Un usuario estándar del departamento de soporte técnico debe especificar el nombre de usuario, que aparece en este campo. Para la recuperación a través del portal de autoservicio, en este campo y en el campo **Usuario final** se muestra el nombre del usuario que realiza la solicitud.|
 |Usuario final|Nombre del usuario que ha solicitado la recuperación de la clave.|
-|Equipo|Nombre del equipo que se ha recuperado.|
+|Computer|Nombre del equipo que se ha recuperado.|
 |Tipo de clave|Tipo de clave que ha solicitado el usuario. Los tres tipos de claves son los siguientes:<br/><br/>- **Contraseña de clave de recuperación**: se usa para recuperar un equipo en modo de recuperación<br/>- **Id. de la clave de recuperación**: se usa para recuperar un equipo en modo de recuperación para otro usuario<br/>- **Hash de contraseña del TPM**: se usa para recuperar un equipo con un TPM bloqueado|
 |Descripción del motivo|Por qué el usuario ha solicitado el tipo de clave especificado, en función de la opción seleccionada en el formulario.|

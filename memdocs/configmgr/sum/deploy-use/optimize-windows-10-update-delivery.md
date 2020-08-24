@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267797"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129321"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimización de la distribución de actualizaciones de Windows 10 con Configuration Manager
 
@@ -70,7 +70,7 @@ Para usar Optimización de distribución para todos los archivos de instalación
 > [!IMPORTANT]
 > - Optimización de entrega debe estar habilitada (opción predeterminada) y no se puede omitir. Para más información, consulte la referencia [Optimización de entrega de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Compruebe la [configuración de cliente para Optimización de distribución](../../core/clients/deploy/about-client-settings.md#delivery-optimization) al cambiar la [configuración de cliente para las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates) para el contenido diferencial.
-> - No se puede usar Optimización de entrega para las actualizaciones de cliente de Office 365 si Office COM está habilitado. Configuration Manager usa Office COM para administrar las actualizaciones de los clientes de Office 365. Puede anular el registro de Office COM para permitir el uso de Optimización de entrega para las actualizaciones de Office 365. Cuando Office COM está deshabilitado, la tarea programada de Actualizaciones automáticas de Office 2.0 predeterminada administra las actualizaciones de software para Office 365. Esto significa que Configuration Manager no dicta ni supervisa el proceso de instalación de las actualizaciones de Office 365. Configuration Manager seguirá recopilando información del inventario de hardware para rellenar el panel de administración de cliente de Office 365 en la consola. Para obtener información sobre cómo anular el registro de Office COM, consulte [Habilite los clientes de Office 365 para recibir actualizaciones desde la red CDN de Office en lugar de Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+> - No se puede usar la Optimización de distribución para las actualizaciones de cliente de Aplicaciones de Microsoft 365 si Office COM está habilitado. Configuration Manager usa Office COM para administrar las actualizaciones de los clientes de Aplicaciones de Microsoft 365. Puede anular el registro de Office COM para permitir el uso de la Optimización de distribución para las actualizaciones de Aplicaciones de Microsoft 365. Cuando Office COM está deshabilitado, la tarea programada de Actualizaciones automáticas de Office 2.0 predeterminada administra las actualizaciones de software de las Aplicaciones de Microsoft 365. Esto significa que Configuration Manager no dicta ni supervisa el proceso de instalación de las actualizaciones de las Aplicaciones de Microsoft 365. Configuration Manager seguirá recopilando información del inventario de hardware para rellenar el panel de administración de cliente de Office 365 en la consola. Para obtener información sobre cómo anular el registro de Office COM, consulte [Habilite los clientes de Office 365 para recibir actualizaciones desde la red CDN de Office en lugar de Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - Cuando se usa CMG para el almacenamiento de contenido, el contenido de las actualizaciones de terceros no se descarga en los clientes si está habilitada la [opción de cliente](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Descarga de contenido diferencial cuando esté disponible**. <!--6598587-->
 
 
@@ -98,8 +98,8 @@ La selección de la tecnología correcta de almacenamiento en la memoria caché 
 |---------|---------|---------|---------|
 | Compatible entre subredes | Sí | Sí | No |
 | Límite de ancho de banda | Sí (Nativo) | Sí (mediante BITS) | Sí (mediante BITS) |
-| Compatibilidad de contenido parcial | Sí, para todos los tipos de contenido admitidos que aparecen en la siguiente fila de esta columna. | Solo para Office 365 y las actualizaciones rápidas | Sí, para todos los tipos de contenido admitidos que aparecen en la siguiente fila de esta columna. |
-| Tipos de contenido admitidos | **Mediante ConfigMgr:** </br> - Actualizaciones rápidas </br> - Todas las actualizaciones de Windows (a partir de la versión 1910). Esto no incluye las actualizaciones de Office.</br> </br> **Mediante Microsoft Cloud:**</br> - Actualizaciones de Windows y de seguridad</br> - Controladores</br> - Aplicaciones de la Tienda Windows</br> - Aplicaciones empresariales de la Tienda Windows | Todos los tipos de contenido de ConfigMgr, incluidas las imágenes descargadas en [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Todos los tipos de contenido de ConfigMgr, salvo las imágenes |
+| Compatibilidad de contenido parcial | Sí, para todos los tipos de contenido admitidos que aparecen en la siguiente fila de esta columna. | Solo para Aplicaciones de Microsoft 365 y actualizaciones rápidas | Sí, para todos los tipos de contenido admitidos que aparecen en la siguiente fila de esta columna. |
+| Tipos de contenido admitidos | **Mediante ConfigMgr:** </br> - Actualizaciones rápidas </br> - Todas las actualizaciones de Windows (a partir de la versión 1910). Esto no incluye las actualizaciones de Aplicaciones de Microsoft 365.</br> </br> **Mediante Microsoft Cloud:**</br> - Actualizaciones de Windows y de seguridad</br> - Controladores</br> - Aplicaciones de la Tienda Windows</br> - Aplicaciones empresariales de la Tienda Windows | Todos los tipos de contenido de ConfigMgr, incluidas las imágenes descargadas en [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Todos los tipos de contenido de ConfigMgr, salvo las imágenes |
 | Control del tamaño en disco de la caché | Sí | Sí | Sí |
 | Detección de un origen del mismo nivel | Automático | Manual (configuración de agente de cliente) | Automático |
 | Detección de elemento del mismo nivel | Mediante el servicio en la nube Optimización de distribución (requiere acceso a Internet) | Mediante el punto de administración (basado en los grupos de límites del cliente) | Multidifusión |

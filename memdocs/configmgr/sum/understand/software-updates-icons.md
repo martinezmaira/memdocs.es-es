@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700053"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129430"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Iconos usados para las actualizaciones de software en Configuration Manager
 
@@ -59,7 +59,7 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
 
 - Mejora la eficacia del paquete de archivos de actualización de software, que los clientes instalan si la actualización de software se aprueba para la instalación. Por ejemplo, la actualización de software sustituida podría contener archivos que ya no son relevantes para la revisión o para los sistemas operativos que se admiten en la nueva actualización de software; por tanto, esos archivos ya no se incluyen en el paquete de archivos de sustitución de la actualización de software.  
 
-- Actualiza las versiones más recientes de un producto o, en otras palabras, ya no se aplica a las versiones o configuraciones más antiguas de un producto. Las actualizaciones de software también pueden sustituir a otras actualizaciones de software si se realizaron modificaciones para ampliar la compatibilidad de idioma. Por ejemplo, una revisión posterior de la actualización de un producto para Microsoft Office puede quitar la compatibilidad para un sistema operativo más antiguo, pero podría agregar compatibilidad adicional para nuevos idiomas en la versión de actualización de software inicial.  
+- Actualiza las versiones más recientes de un producto o, en otras palabras, ya no se aplica a las versiones o configuraciones más antiguas de un producto. Las actualizaciones de software también pueden sustituir a otras actualizaciones de software si se realizaron modificaciones para ampliar la compatibilidad de idioma. Por ejemplo, una revisión posterior de la actualización de un producto para Aplicaciones de Microsoft 365 puede eliminar la compatibilidad con versiones anteriores de un sistema operativo, pero podría agregar compatibilidad adicional con nuevos idiomas en la versión de actualización de software inicial.  
 
   En la ficha Reglas de sustitución en las propiedades de componente de punto de actualización de software, puede especificar cómo administrar las actualizaciones de software sustituidas. Para obtener más información, consulte [Reglas de sustitución](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 

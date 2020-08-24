@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 3f49d7d001de07a7d3d6a7bdbb5f9ff90de018c9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240038"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699881"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -47,9 +47,9 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
          - La plantilla **Patch Tuesday** proporciona opciones de configuración comunes para implementar actualizaciones de software en un ciclo mensual.  
 
-         - La plantilla **Actualizaciones de cliente de Office 365** proporciona opciones de configuración comunes que se usarán al implementar las actualizaciones para los clientes de Office 365 Pro Plus.
+         - La plantilla **Actualizaciones de cliente de Office 365** proporciona opciones de configuración comunes que se usarán al implementar las actualizaciones para los clientes de Aplicaciones de Microsoft 365.
              > [!Note]
-             > A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Si las ADR se basan en la propiedad "Title", deberá editarlo a partir del 9 de junio de 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` es un ejemplo del nuevo título. Para más información sobre cómo modificar las reglas de implementación automática (ADR) para el cambio de título, consulte el artículo sobre [canales de actualización para aplicaciones de Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Para más información sobre el cambio de nombre, consulte [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Si las ADR se basan en la propiedad "Title", deberá editarlo a partir del 9 de junio de 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` es un ejemplo del nuevo título. Para más información sobre cómo modificar las reglas de implementación automática (ADR) para el cambio de título, consulte el artículo sobre [canales de actualización para aplicaciones de Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Para más información sobre el cambio de nombre, consulte [Cambio de nombre para Office 365 ProPlus](/deployoffice/name-change).
 
          - La plantilla **Actualizaciones de SCEP y Antivirus de Windows Defender** proporciona opciones de configuración comunes que se usarán cuando implemente actualizaciones de definiciones de Endpoint Protection.  
 
@@ -199,7 +199,7 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
         - **Habilitar replicación diferencial binaria**: Habilite esta opción para utilizar la replicación diferencial binaria para el paquete de implementación. Para obtener más información, vea [Replicación diferencial binaria](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **Sin paquete de implementación**: a partir de la versión 1806, las actualizaciones de software se implementan en los dispositivos sin antes descargar y distribuir el contenido a los puntos de distribución. Esta configuración es útil cuando se trabaja con contenido de actualización extremadamente grande. También puede usarla cuando quiera que los clientes siempre obtengan contenido desde el servicio en la nube de Microsoft Update. En este escenario, los clientes también pueden descargar el contenido desde los equipos del mismo nivel que ya tienen el contenido necesario. El cliente de Configuration Manager sigue administrando la descarga del contenido, por lo que puede usar la característica de caché del mismo nivel de Configuration Manager u otras tecnologías como, por ejemplo, Optimización de distribución. Esta característica es compatible con cualquier tipo de actualización admitida por la administración de actualizaciones de software de Configuration Manager, incluidas las actualizaciones de Windows y Office.<!--1357933-->  
+    - **Sin paquete de implementación**: a partir de la versión 1806, las actualizaciones de software se implementan en los dispositivos sin antes descargar y distribuir el contenido a los puntos de distribución. Esta configuración es útil cuando se trabaja con contenido de actualización extremadamente grande. También puede usarla cuando quiera que los clientes siempre obtengan contenido desde el servicio en la nube de Microsoft Update. En este escenario, los clientes también pueden descargar el contenido desde los equipos del mismo nivel que ya tienen el contenido necesario. El cliente de Configuration Manager sigue administrando la descarga del contenido, por lo que puede usar la característica de caché del mismo nivel de Configuration Manager u otras tecnologías como, por ejemplo, Optimización de distribución. Esta característica es compatible con cualquier tipo de actualización admitida por la administración de actualizaciones de software de Configuration Manager, incluidas las actualizaciones de Windows y Aplicaciones de Microsoft 365.<!--1357933-->  
 
         > [!Note]  
         > Una vez que seleccione esta opción y aplique la configuración, ya no podrá cambiarse. Las demás opciones están atenuadas.<!--SCCMDocs-pr issue 3003-->  
@@ -244,7 +244,7 @@ Después de crear una ADR, agregue implementaciones adicionales a la regla. Esta
      - Alertas
      - Configuración de descarga  
 
-Las implementaciones también se pueden agregar mediante programación con los cmdlets de Windows PowerShell. Para obtener una descripción completa del uso de este método, vea [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment).
+Las implementaciones también se pueden agregar mediante programación con los cmdlets de Windows PowerShell. Para obtener una descripción completa del uso de este método, vea [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment).
 
 Para obtener más información sobre el proceso de implementación, consulte [Proceso de implementación de actualizaciones de software](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 

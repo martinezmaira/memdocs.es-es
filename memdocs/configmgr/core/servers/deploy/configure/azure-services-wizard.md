@@ -2,20 +2,20 @@
 title: Configurar los servicios de Azure
 titleSuffix: Configuration Manager
 description: Conecte el entorno de Configuration Manager con los servicios de Azure para la administración en la nube, Microsoft Store para Empresas y Log Analytics.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 7cb0a2c71a3ea326348b87d6b34e3109a8ef9f20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715329"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700136"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuración de servicios de Azure para utilizarlos con Configuration Manager
 
@@ -39,10 +39,10 @@ Configure los servicios de Azure siguientes mediante este asistente:
 
   - [Notificaciones por correo electrónico de aprobación de aplicaciones](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Conector de Log Analytics**: [conéctese a Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Sincronice los datos de la recopilación con Log Analytics.  
+- **Conector de Log Analytics**: [conéctese a Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Sincronice los datos de la recopilación con Log Analytics.  
 
     > [!Note]  
-    > Este artículo se refiere al *conector de Log Analytics*, que anteriormente se denominaba *conector de OMS*. No hay ninguna diferencia funcional. Para obtener más información, vea [Administración de Azure: supervisión](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
+    > Este artículo se refiere al *conector de Log Analytics*, que anteriormente se denominaba *conector de OMS*. No hay ninguna diferencia funcional. Para obtener más información, vea [Administración de Azure: supervisión](/azure/azure-monitor/terminology#log-analytics).  
 
 - **Microsoft Store para Empresas**: conéctese a [Microsoft Store para Empresas](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Obtenga aplicaciones de la tienda para la organización que se puedan implementar con Configuration Manager.  
 
@@ -78,10 +78,10 @@ Para obtener más información sobre los permisos de aplicación necesarios y la
 
 Para obtener más información sobre las aplicaciones de Azure, empiece con los artículos siguientes:
 
-- [Autenticación y autorización en Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Introducción a Web Apps](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Autenticación y autorización en Azure App Service](/azure/app-service/app-service-authentication-overview)
+- [Introducción a Web Apps](/azure/app-service-web/app-service-web-overview)
 - [Conceptos básicos sobre el registro de una aplicación en Azure AD](/azure/active-directory/develop/authentication-scenarios)  
-- [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [Integración de aplicaciones con Azure Active Directory](/azure/active-directory/active-directory-app-registration)
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
@@ -93,7 +93,7 @@ Una vez decidido el servicio al que quiere conectarse, consulte la tabla de la s
 
 Algunos servicios requieren que las aplicaciones de Azure AD tengan permisos específicos. Revise la información de cada servicio para determinar los permisos necesarios. Por ejemplo, para poder importar una aplicación web, un administrador de Azure debe crearla primero en [Azure Portal](https://portal.azure.com).
 
-Al configurar el conector de Log Analytics, conceda permisos de *colaborador* a la aplicación web recién registrada en el grupo de recursos que contiene el área de trabajo pertinente. Este permiso permite que Configuration Manager tenga acceso a esa área de trabajo. Al asignar el permiso, busque el nombre del registro de aplicación en el área **Agregar usuarios** de Azure Portal. Este proceso es el mismo que la [concesión de permisos a Configuration Manager para acceder a Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Un administrador de Azure debe asignar estos permisos antes de importar la aplicación en Configuration Manager.
+Al configurar el conector de Log Analytics, conceda permisos de *colaborador* a la aplicación web recién registrada en el grupo de recursos que contiene el área de trabajo pertinente. Este permiso permite que Configuration Manager tenga acceso a esa área de trabajo. Al asignar el permiso, busque el nombre del registro de aplicación en el área **Agregar usuarios** de Azure Portal. Este proceso es el mismo que la [concesión de permisos a Configuration Manager para acceder a Log Analytics](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Un administrador de Azure debe asignar estos permisos antes de importar la aplicación en Configuration Manager.
 
 ## <a name="start-the-azure-services-wizard"></a>Inicio del Asistente para servicios de Azure
 
@@ -174,7 +174,7 @@ Haga clic en **Iniciar sesión** para autenticarse en Azure como un usuario admi
 Haga clic en **Aceptar** para crear la aplicación web en Azure AD y cerrar el cuadro de diálogo Crear aplicación de servidor. Esta acción devuelve al [cuadro de diálogo Aplicación de servidor](#server-app-dialog).
 
 > [!NOTE]
-> Si tiene una directiva de acceso condicional de Azure AD definida y se aplica a **todas las aplicaciones en la nube**, debe excluir la aplicación de servidor creada de esta directiva. Para obtener más información sobre cómo excluir aplicaciones específicas, vea [ Documentación de acceso condicional de Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Si tiene una directiva de acceso condicional de Azure AD definida y se aplica a **todas las aplicaciones en la nube**, debe excluir la aplicación de servidor creada de esta directiva. Para obtener más información sobre cómo excluir aplicaciones específicas, vea [ Documentación de acceso condicional de Azure AD](/azure/active-directory/conditional-access/).
 
 ### <a name="native-client-app"></a>Aplicación cliente nativa
 
@@ -222,13 +222,24 @@ Después de especificar las aplicaciones web y nativas en la página Aplicacione
 
 - Servicio **Administración en la nube**, página **Detección**: [Configuración de la detección de usuarios de Azure AD](configure-discovery-methods.md#azureaadisc).  
 
-- Servicio **Conector de Log Analytics**, página **Configuración**: [Configuración de la conexión a Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- Servicio **Conector de Log Analytics**, página **Configuración**: [Configuración de la conexión a Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - Servicio **Microsoft Store para Empresas**, página **Configuraciones**: [Configuración de la sincronización de Microsoft Store para Empresas](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Por último, complete al Asistente para servicios de Azure a través de las páginas Resumen, Progreso y Finalización. Ha completado la configuración de un servicio de Azure en Configuration Manager. Repita este proceso para configurar otros servicios de Azure.
 
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> Renovar clave secreta
+
+Debe renovar la clave secreta de la aplicación de Azure AD antes de que finalice el período de validez. Si deja que la clave expire, Configuration Manager no puede autenticarse con Azure AD, lo que hará que los servicios de Azure conectados dejen de funcionar.
+
+A partir de la versión 2006, en la consola de Configuration Manager se muestran notificaciones para las siguientes circunstancias:<!--6386392-->
+
+- Una o más claves secretas de la aplicación de Azure AD expirarán pronto.
+- Una o más claves secretas de la aplicación de Azure AD han expirado.
+
+Para mitigar ambos casos, renueve la clave secreta.
+
+Para más información sobre cómo interactuar con estas notificaciones, vea [Notificaciones de la consola de Configuration Manager](../../manage/admin-console-notifications.md).
 
 ### <a name="renew-key-for-created-app"></a>Renovación de la clave de la aplicación creada
 

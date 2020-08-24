@@ -2,7 +2,7 @@
 title: Dispositivos y clientes compatibles
 titleSuffix: Configuration Manager
 description: Obtenga información sobre qué versiones de SO admite Configuration Manager para clientes y dispositivos.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904531"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700323"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versiones de SO admitidas para clientes y dispositivos de Configuration Manager
 
@@ -44,7 +44,7 @@ Para administrar las siguientes versiones del sistema operativo Windows, use el 
 #### <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) es un servicio de virtualización de escritorio y aplicaciones que se ejecuta en Microsoft Azure. A partir de la versión 1906, use Configuration Manager para administrar estos dispositivos virtuales que ejecutan Windows en Azure.
+[Windows Virtual Desktop](/azure/virtual-desktop/) es un servicio de virtualización de escritorio y aplicaciones que se ejecuta en Microsoft Azure. A partir de la versión 1906, use Configuration Manager para administrar estos dispositivos virtuales que ejecutan Windows en Azure.
 
 Al igual que un servidor de terminal, algunos de estos dispositivos virtuales permiten varias sesiones de usuario activas simultáneas. Para facilitar el rendimiento del cliente, ahora en Configuration Manager se deshabilitan las directivas de usuario en todos los dispositivos que admiten estas sesiones de usuario múltiples. Aunque se habiliten directivas de usuario, el cliente las deshabilita de forma predeterminada en estos dispositivos, que incluyen sesiones múltiples de Windows 10 Enterprise y servidores de Terminal Server.
 
@@ -58,6 +58,16 @@ Si requiere una directiva de usuario en este escenario y acepta cualquier posibl
 
 > [!Note]  
 > No se puede usar la administración conjunta con un cliente que ejecuta varias sesiones de Windows 10 Enterprise. <!-- SCCMDocs-pr#3950 -->
+
+A partir de la versión 2006, la plataforma de **sesión múltiple de Windows 10 Enterprise** está disponible en la lista de versiones de sistema operativo admitidas en objetos con reglas de requisitos o listas de aplicabilidad.<!--6527576-->
+
+> [!NOTE]
+> Si previamente ha seleccionado la plataforma de nivel superior **Windows 10**, esta acción ha seleccionado automáticamente todas las plataformas secundarias. Esta nueva plataforma no se selecciona automáticamente. Si desea agregar la **sesión múltiple de Windows 10 Enterprise**, selecciónela manualmente en la lista.
+
+Para más información, consulte los siguientes artículos.
+
+- [Compatibilidad con entornos de virtualización](support-for-virtualization-environments.md)
+- [Administración de clientes de Configuration Manager en una infraestructura de escritorio virtual (VDI)](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>Versiones compatibles del sistema operativo del servidor
 
@@ -96,7 +106,7 @@ Configuration Manager prueba y admite las ediciones de Windows Server Datacenter
 
 #### <a name="note-2"></a><a name="bkmk_note2"></a> Nota 2
 
-Para admitir la [instalación de inserción de cliente](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), agregue el servicio del servidor de archivos del rol del servidor de Servicios de archivos y almacenamiento. Para más información sobre cómo instalar características de Windows en Server Core, vea [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets) (Instalar roles, servicios de roles y características mediante los cmdlets de Windows PowerShell).  
+Para admitir la [instalación de inserción de cliente](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), agregue el servicio del servidor de archivos del rol del servidor de Servicios de archivos y almacenamiento. Para más información sobre cómo instalar características de Windows en Server Core, vea [Install roles, role services, and features by using Windows PowerShell cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets) (Instalar roles, servicios de roles y características mediante los cmdlets de Windows PowerShell).  
 
 #### <a name="note-3"></a><a name="bkmk_note3"></a> Nota 3
 
@@ -125,7 +135,7 @@ Administre dispositivos de Windows Embedded mediante la instalación del cliente
 - **Windows 10 Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para más información, vea [Información general de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para más información, vea [Información general de Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8.1 Industry** (x86, x64)
 
@@ -151,8 +161,8 @@ Administre dispositivos de Windows CE con el cliente heredado de dispositivos m�
 
 - Windows CE 7.0 (procesadores ARM y x86)  
 
-    > [!Note]
-    > El soporte técnico está en desuso para Windows CE 7.0 en Configuration Manager. Para obtener más información, consulte [Elementos eliminados y en desuso para clientes de Configuration Manager](../changes/deprecated/removed-and-deprecated-client.md).
+    > [!IMPORTANT]
+    > La versión 2006 de Configuration Manager anula la compatibilidad con Windows CE 7.0 como cliente. El anuncio del desuso se realizó con la [versión 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 #### <a name="supported-languages-include"></a>Los idiomas admitidos son
 
@@ -325,7 +335,7 @@ Configuration Manager tiene características integradas para administrar disposi
 - **Windows 10 Pro Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para más información, vea [Información general de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para más información, vea [Información general de Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT Mobile Enterprise**  
 
@@ -335,9 +345,8 @@ Configuration Manager tiene características integradas para administrar disposi
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > El soporte técnico está en desuso para Windows 10 Mobile y Windows 10 Mobile Enterprise en Configuration Manager. Para obtener más información, consulte [Elementos eliminados y en desuso para clientes de Configuration Manager](../changes/deprecated/removed-and-deprecated-client.md).
-
+    > [!IMPORTANT]
+    > La versión 2006 de Configuration Manager anula la compatibilidad con Windows 10 Mobile y Windows 10 Mobile Enterprise como cliente. El anuncio del desuso se realizó con la [versión 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Conector de Exchange Server  
 

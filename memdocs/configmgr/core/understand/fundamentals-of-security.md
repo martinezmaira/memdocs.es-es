@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707063"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126076"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Fundamentos de seguridad de Configuration Manager
 
@@ -82,7 +82,7 @@ La capa final de seguridad se basa en los permisos de objetos de la base de dato
 
  Un administrador asigna *roles de seguridad* a los usuarios administrativos y los permisos de grupo. Los permisos se conectan a diferentes tipos de objeto de Configuration Manager, por ejemplo para crear o cambiar la configuración de cliente. 
 
- Los *ámbitos de seguridad* agrupan instancias específicas de objetos que un usuario administrativo se encarga de administrar, como una aplicación que instala Microsoft Office. 
+ Los *ámbitos de seguridad* agrupan instancias específicas de objetos que un usuario administrativo se encarga de administrar, como una aplicación que instala Aplicaciones de Microsoft 365. 
 
  La combinación de roles de seguridad, ámbitos de seguridad y recopilaciones define los objetos que un usuario administrativo puede ver y administrar. Configuration Manager instala algunos roles de seguridad predeterminados para tareas de administración habituales. Cree roles de seguridad propios para satisfacer requisitos empresariales específicos.  
 

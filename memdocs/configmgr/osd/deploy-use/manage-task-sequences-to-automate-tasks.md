@@ -2,19 +2,20 @@
 title: Administrar secuencias de tareas
 titleSuffix: Configuration Manager
 description: Cree, edite, implemente, importe y exporte secuencias de tareas para administrarlas y automatizar las tareas en su entorno.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591041"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125072"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Administrar secuencias de tareas para automatizar tareas
 
@@ -39,6 +40,30 @@ Cree secuencias de tareas con el Asistente para crear secuencia de tareas. Este 
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a> Editar  
 
 Modifique una secuencia de tareas, agregue o quite pasos, agregue o quite grupos, o cambie el orden de los pasos. Para más información, vea [Uso del editor de secuencias de tareas](../understand/task-sequence-editor.md).
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a> Reducción del tamaño de la directiva de secuencia de tareas
+
+<!--6982275-->
+Cuando el tamaño de la directiva de secuencia de tareas supera los 32 MB, el cliente no puede procesar la directiva de gran tamaño. En consecuencia, el cliente no puede ejecutar la implementación de la secuencia de tareas.
+
+El tamaño de la secuencia de tareas almacenada en la base de datos del sitio es menor, pero puede producir problemas si es demasiado grande. Cuando el cliente procesa toda la directiva de secuencia de tareas, el tamaño expandido puede ocasionar problemas si supera 32 MB.
+
+A partir de la versión 2006, para comprobar el tamaño de la directiva de secuencia de tareas de 32 MB en los clientes, use la [Información de administración](../../core/servers/manage/management-insights.md#operating-system-deployment).
+
+Para ayudar a reducir el tamaño general de la directiva de una implementación de secuencia de tareas, haga lo siguiente:
+
+- Separe los segmentos funcionales en secuencias de tareas secundarias y use el paso [Ejecutar secuencia de tareas](../understand/task-sequence-steps.md#child-task-sequence). Cada secuencia de tareas tiene un límite de 32 MB independiente en el tamaño de la directiva.
+
+    > [!NOTE]
+    > La reducción del número total de pasos y grupos de una secuencia de tareas tiene una repercusión mínima en el tamaño de la directiva. Cada paso suele ser un par de KB en la directiva. El traslado de grupos de pasos a una secuencia de tareas secundaria afecta en mayor medida.
+
+- Reduzca el número de actualizaciones de software de las implementaciones a la misma colección que la secuencia de tareas.
+
+- En lugar de escribir un script en el paso [Ejecutar script de PowerShell](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript), haga referencia a él a través de un paquete.
+
+- Hay un límite de 8 KB en el tamaño del entorno de la secuencia de tareas cuando se ejecuta. Revise el uso de variables personalizadas de las secuencias de tareas, que también pueden contribuir al tamaño de la directiva.
+
+- Como último recurso, divida una secuencia de tareas dinámica y compleja en secuencias de tareas independientes con implementaciones distintas en colecciones diferentes.
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a> Propiedades del Centro de software
 

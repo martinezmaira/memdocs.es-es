@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701453"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146089"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Websites para servidores de sistema de sitio en Configuration Manager
 
@@ -83,7 +83,7 @@ Consideraciones adicionales:
 -   Los puertos TCP/IP que se configuran en IIS para el sitio web personalizado tienen que coincidir con los puertos de solicitud de cliente del sitio.  
 
 ## <a name="switch-between-default-and-custom-websites"></a>Cambiar entre sitios web predeterminados y personalizados  
-Aunque puede activar o desactivar la casilla para usar sitios web personalizados en un sitio primario en cualquier momento (la casilla se encuentra en la pestaña General de las Propiedades del sitio), planee detenidamente el cambio antes de realizarlo. Al cambiar esta configuración, es necesario desinstalar y reinstalar todos los roles de sistema de sitio correspondientes en el sitio primario y en los sitios secundarios:  
+Aunque puede activar o desactivar la casilla para usar sitios web personalizados en un sitio primario en cualquier momento (la casilla se encuentra en la pestaña Puertos de las Propiedades del sitio), planee detenidamente el cambio antes de realizarlo. Al cambiar esta configuración, es necesario desinstalar y reinstalar todos los roles de sistema de sitio correspondientes en el sitio primario y en los sitios secundarios:  
 
 Los siguientes roles **se reinstalan automáticamente**:  
 

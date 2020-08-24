@@ -5,18 +5,18 @@ description: Obtenga información sobre los niveles de datos de diagnóstico y u
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87049bb9799ba5764a3cdd5a14fbf622e7056f3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 02b1eb010cc874e75b733b567ce4f41e59eab82e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81698143"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128804"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-configuration-manager"></a>Niveles de recopilación de datos de uso de diagnóstico de la versión 1610 de Configuration Manager
 
@@ -365,7 +365,7 @@ En el caso de la versión 1610 de Configuration Manager, este nivel incluye lo 
 
 - **Varios**
 
-    - Recuento de sitios con Wake On Lan (WOL)
+    - Recuento de sitios con Wake on LAN (WOL)
 
     - ***[Nuevo]*** Informes de uso y estadísticas de rendimiento  
 

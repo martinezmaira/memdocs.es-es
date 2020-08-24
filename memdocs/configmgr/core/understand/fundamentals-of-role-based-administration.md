@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 62faf2fd736f9751e8b33e821cb814f527a1197c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c39d3380212debe97c2d2f33de6a98fecfb8402e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707093"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126059"
 ---
 # <a name="fundamentals-of-role-based-administration-for-configuration-manager"></a>Aspectos básicos de la administración basada en roles de Configuration Manager
 
@@ -27,7 +27,7 @@ Con Configuration Manager, la administración basada en roles sirve para protege
 
 - Los *roles de seguridad* se asignan a los usuarios administrativos para proporcionar a dichos usuarios (o grupos de usuarios) permisos de diferentes objetos de Configuration Manager. Por ejemplo, permiso para crear o cambiar la configuración del cliente.  
 
-- Los *ámbitos de seguridad* se usan para agrupar instancias específicas de objetos que un usuario administrativo se encarga de administrar, como una aplicación que instala Microsoft Office 2010.  
+- Los *ámbitos de seguridad* se usan para agrupar instancias específicas de objetos que un usuario administrativo se encarga de administrar, como una aplicación que instala Aplicaciones de Microsoft 365.  
 
 - Las *recopilaciones* se usan para especificar grupos de recursos de usuarios y de dispositivos que el usuario administrativo puede administrar.  
 

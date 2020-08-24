@@ -2,7 +2,7 @@
 title: HTTP mejorado
 titleSuffix: Configuration Manager
 description: Use la autenticación moderna para proteger la comunicación de cliente sin necesidad de certificados PKI.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262105"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997903"
 ---
 # <a name="enhanced-http"></a>HTTP mejorado
 
@@ -118,6 +118,11 @@ Puede ver estos certificados en la consola de Configuration Manager. Vaya al ár
 
 Para obtener más información sobre cómo se comunica el cliente con el punto de administración y punto de distribución con esta configuración, vea [Comunicaciones desde los clientes a los sistemas de sitio y servicios](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
+## <a name="validate-the-certificate"></a>Validación del certificado
+
+Cuando se habilita HTTP mejorado, el servidor de sitio genera un certificado autofirmado llamado **certificado SSL de rol de SMS**. Este certificado se emite con el certificado de **emisión de SMS** raíz. El punto de administración agrega este certificado al sitio web predeterminado de IIS enlazado al puerto 443.
+
+Para ver el estado de la configuración, revise **mpcontrol.log**.
 
 ## <a name="see-also"></a>Vea también
 

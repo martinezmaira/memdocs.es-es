@@ -2,20 +2,20 @@
 title: Parámetros y propiedades de instalación de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los parámetros y propiedades de la línea de comandos de ccmsetup para instalar el cliente de Configuration Manager.
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1de2cd1645687740986cc62514dbc990461cbbf6
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: efc2cc22dc4edeacc00e521233eda383314b0b92
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240582"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693444"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Acerca de los parámetros y propiedades de instalación de cliente en Configuration Manager
 
@@ -36,9 +36,9 @@ El comando CCMSetup.exe descarga los archivos necesarios para instalar el client
 > [!NOTE]
 > No se puede instalar client.msi directamente.  
 
-CCMSetup.exe proporciona *parámetros* de línea de comandos para personalizar la instalación. Los parámetros van precedidos de una barra diagonal (`/`) y, por convención, están en minúsculas. Puede especificar el valor de un parámetro en caso necesario mediante el uso de dos puntos (`:`) inmediatamente seguidos del valor. Para obtener más información, vea [Parámetros de línea de comandos de CCMSetup.exe](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe proporciona *parámetros* de línea de comandos para personalizar la instalación. Los parámetros llevan como prefijo una barra diagonal (`/`) y suelen escribirse en minúsculas. Puede especificar el valor de un parámetro en caso necesario mediante el uso de dos puntos (`:`) inmediatamente seguidos del valor. Para obtener más información, vea [Parámetros de línea de comandos de CCMSetup.exe](#ccmsetupexe-command-line-parameters).
 
-También puede proporcionar *propiedades* en la línea de comandos de CCMSetup.exe para modificar el comportamiento de client.msi. Las propiedades, por convención, van en mayúsculas. Puede especificar un valor para una propiedad mediante el uso de un signo igual (`=`) inmediatamente seguido del valor. Para obtener más información, vea [Propiedades de Client.msi](#clientMsiProps).
+También puede suministrar *propiedades* en la línea de comandos de CCMSetup.exe para modificar el comportamiento de client.msi. Las propiedades por convención se escriben en mayúsculas. Puede especificar un valor para una propiedad mediante el uso de un signo igual (`=`) inmediatamente seguido del valor. Para obtener más información, vea [Propiedades de Client.msi](#clientMsiProps).
 
 > [!IMPORTANT]  
 > Especifique los parámetros de CCMSetup antes de especificar propiedades para client.msi.  
@@ -76,16 +76,100 @@ Muestra los parámetros de línea de comandos disponibles para ccmsetup.exe.
 
 Ejemplo: `ccmsetup.exe /?`
 
-### <a name="source"></a>/source
+### <a name="allowmetered"></a>/AllowMetered
 
-Especifica la ubicación de descarga de archivos. Use una ruta de acceso local o UNC. El dispositivo descarga los archivos mediante el protocolo de bloque de mensajes del servidor (SMB). Para usar **/source**, la cuenta de usuario de Windows para la instalación de cliente debe tener permisos de **lectura** para la ubicación.
+<!--6976145-->
 
-Para obtener más información sobre cómo ccmsetup descarga el contenido, consulte [Grupos de límites: instalación de cliente](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). En ese artículo también se incluyen detalles del comportamiento de ccmsetup si usa los parámetros **/mp** y **/source**.
+A partir de la versión 2006, use este parámetro para controlar el comportamiento del cliente en una red de uso medido. Este parámetro no acepta valores. Cuando se permite la comunicación de cliente en una red de uso medido para ccmsetup, esta descarga el contenido, se registra en el sitio y descarga la directiva inicial. Cualquier comunicación de cliente posterior sigue la configuración del valor de cliente de esa directiva. Para más información, vea [Acerca de la configuración de cliente](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections).
 
-> [!TIP]  
-> Puede usar el parámetro **/source** más de una vez en una línea de comandos para especificar ubicaciones de descarga alternativas.  
+Si vuelve a instalar el cliente de en un dispositivo existente, usa la siguiente prioridad para determinar su configuración:
 
-Ejemplo: `ccmsetup.exe /source:"\\server\share"`
+1. Directiva de cliente local existente
+1. La última línea de comandos almacenada en el Registro de Windows
+1. Parámetros en la línea de comandos de ccmsetup
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+Este parámetro especifica si un cliente se actualizará automáticamente al habilitar [**Actualización de cliente automática**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+
+Valores admitidos:
+
+- `TRUE`: el cliente no se actualizará automáticamente.
+- `FALSE`: el cliente se actualiza automáticamente (valor predeterminado).
+
+Por ejemplo:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Para más información, consulte [Cliente de interoperabilidad extendida](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> Cuando se usa el parámetro **/AlwaysExcludeUpgrade**, la actualización automática se sigue ejecutando. Sin embargo, cuando se ejecuta CCMSetup para realizar la actualización, advertirá que se ha establecido el parámetro **/AlwaysExcludeUpgrade** y se registrará la siguiente línea en **ccmsetup.log**:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> Luego, CCMSetup se cerrará inmediatamente y no realizará la actualización.
+
+### <a name="bitspriority"></a>/BITSPriority
+
+Cuando el dispositivo descargue los archivos de instalación del cliente a través de una conexión HTTP, use este parámetro para especificar la prioridad de la descarga. Especifique uno de los siguientes valores posibles:
+
+- `FOREGROUND`
+
+- `HIGH`
+
+- `NORMAL` (valor predeterminado)
+
+- `LOW`
+
+Ejemplo: `ccmsetup.exe /BITSPriority:HIGH`
+
+### <a name="config"></a>/config
+
+Este parámetro especifica un archivo de texto que enumera las propiedades de la instalación de cliente.
+
+- Si CCMSetup se ejecuta como un servicio, coloque este archivo en la carpeta del sistema CCMSetup: `%Windir%\Ccmsetup`.
+
+- Si especifica el parámetro [ **/noservice**](#noservice), coloque este archivo en la misma carpeta que CCMSetup.exe.
+
+Ejemplo: `CCMSetup.exe /config:"configuration file name.txt"`
+
+Para proporcionar el formato de archivo correcto, use el archivo **mobileclienttemplate.tcf** de la carpeta `\bin\<platform>` en el directorio de instalación de Configuration Manager del servidor de sitio. Este archivo tiene comentarios sobre las secciones y cómo se usan. Especifique las propiedades de la instalación del cliente en la sección `[Client Install]`, después del texto siguiente: `Install=INSTALL=ALL`.
+
+Ejemplo de entrada de la sección `[Client Install]`: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`.  
+
+### <a name="downloadtimeout"></a>/downloadtimeout
+
+Si CCMSetup no puede descargar los archivos de instalación del cliente, este parámetro especifica el tiempo de espera máximo en minutos. Después de este tiempo de espera, CCMSetup deja de intentar descargar los archivos de instalación. El valor predeterminado es **1440** minutos (un día).
+
+Use el parámetro [ **/retry**](#retry) para especificar el intervalo entre reintentos.
+
+Ejemplo: `ccmsetup.exe /downloadtimeout:100`
+
+### <a name="excludefeatures"></a>/ExcludeFeatures
+
+Este parámetro especifica que CCMSetup.exe no instala la característica especificada.
+
+Ejemplo: `CCMSetup.exe /ExcludeFeatures:ClientUI` no instala el Centro de software en el cliente.  
+
+> [!NOTE]  
+> `ClientUI` es el único valor compatible con el parámetro **/ExcludeFeatures**.
+
+### <a name="forceinstall"></a>/forceinstall
+
+Especifica que CCMSetup.exe desinstala los clientes existentes e instala un cliente nuevo.  
+
+### <a name="forcereboot"></a>/forcereboot
+
+Use este parámetro para exigir que el equipo se reinicie si es necesario para completar la instalación. Si no especifica este parámetro, CCMSetup se cierra cuando es necesario reiniciar. Después, continúa tras el siguiente reinicio manual.
+
+Ejemplo: `CCMSetup.exe /forcereboot`
+
+### <a name="logon"></a>/logon
+
+Si ya hay instalada una versión del cliente, este parámetro especifica que la instalación del cliente debe detenerse.  
+
+Ejemplo: `ccmsetup.exe /logon`  
 
 ### <a name="mp"></a>/mp
 
@@ -123,6 +207,18 @@ Ejemplo para cuando use la dirección URL de la instancia de Cloud Management Ga
 > [!Important]
 > Cuando especifique la dirección URL de una instancia de Cloud Management Gateway para el parámetro **/mp**, debe comenzar con `https://`.
 
+### <a name="nocrlcheck"></a>/NoCRLCheck
+
+Especifica que un cliente no debe comprobar la lista de revocación de certificados (CRL) cuando se comunica a través de HTTPS con un certificado PKI. Cuando no se especifica este parámetro, el cliente comprueba la CRL antes de establecer una conexión HTTPS. Para obtener más información sobre la comprobación de CRL de cliente, vea [Planear la revocación de certificados PKI](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+
+Ejemplo: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
+
+### <a name="noservice"></a>/noservice
+
+Este parámetro impide que CCMSetup se ejecute como un servicio, algo que hace de forma predeterminada. Cuando CCMSetup se ejecuta como un servicio, se ejecuta en el contexto de la cuenta de sistema local del equipo. Esta cuenta podría no disponer de los derechos suficientes para tener acceso a los recursos de red necesarios para la instalación. Con **/noservice**, CCMSetup.exe se ejecuta en el contexto de la cuenta de usuario usada para iniciar la instalación.
+
+Ejemplo: `ccmsetup.exe /noservice`  
+
 ### <a name="regtoken"></a>/regtoken
 
 <!--5686290-->
@@ -146,12 +242,6 @@ Si CCMSetup.exe no puede descargar los archivos de instalación, use este parám
 
 Ejemplo: `ccmsetup.exe /retry:20`  
 
-### <a name="noservice"></a>/noservice
-
-Este parámetro impide que CCMSetup se ejecute como un servicio, algo que hace de forma predeterminada. Cuando CCMSetup se ejecuta como un servicio, se ejecuta en el contexto de la cuenta de sistema local del equipo. Esta cuenta podría no disponer de los derechos suficientes para tener acceso a los recursos de red necesarios para la instalación. Con **/noservice**, CCMSetup.exe se ejecuta en el contexto de la cuenta de usuario usada para iniciar la instalación.
-
-Ejemplo: `ccmsetup.exe /noservice`  
-
 ### <a name="service"></a>/service
 
 Especifica que CCMSetup debe ejecutarse como un servicio que usa la cuenta de sistema local.  
@@ -160,77 +250,6 @@ Especifica que CCMSetup debe ejecutarse como un servicio que usa la cuenta de si
 > Si usa un script para ejecutar CCMSetup.exe con el parámetro **/service**, CCMSetup.exe se cierra después del inicio del servicio. Es posible que no proporcione los detalles de la instalación correctamente.
 
 Ejemplo: `ccmsetup.exe /service`  
-
-### <a name="uninstall"></a>/uninstall
-
-Use este parámetro para desinstalar el cliente de Configuration Manager. Para obtener más información, consulte [Desinstalación del cliente](../manage/manage-clients.md#BKMK_UninstalClient).
-
-Ejemplo: `ccmsetup.exe /uninstall`  
-
-### <a name="logon"></a>/logon
-
-Si ya hay instalada una versión del cliente, este parámetro especifica que la instalación del cliente debe detenerse.  
-
-Ejemplo: `ccmsetup.exe /logon`  
-
-### <a name="forcereboot"></a>/forcereboot
-
-Use este parámetro para exigir que el equipo se reinicie si es necesario para completar la instalación. Si no especifica este parámetro, CCMSetup se cierra cuando es necesario reiniciar. Después, continúa tras el siguiente reinicio manual.
-
-Ejemplo: `CCMSetup.exe /forcereboot`
-
-### <a name="bitspriority"></a>/BITSPriority
-
-Cuando el dispositivo descargue los archivos de instalación del cliente a través de una conexión HTTP, use este parámetro para especificar la prioridad de la descarga. Especifique uno de los siguientes valores posibles:
-
-- `FOREGROUND`
-
-- `HIGH`
-
-- `NORMAL` (valor predeterminado)
-
-- `LOW`
-
-Ejemplo: `ccmsetup.exe /BITSPriority:HIGH`
-
-### <a name="downloadtimeout"></a>/downloadtimeout
-
-Si CCMSetup no puede descargar los archivos de instalación del cliente, este parámetro especifica el tiempo de espera máximo en minutos. Después de este tiempo de espera, CCMSetup deja de intentar descargar los archivos de instalación. El valor predeterminado es **1440** minutos (un día).
-
-Use el parámetro [ **/retry**](#retry) para especificar el intervalo entre reintentos.
-
-Ejemplo: `ccmsetup.exe /downloadtimeout:100`
-
-### <a name="usepkicert"></a>/UsePKICert
-
-Especifique este parámetro para que el cliente use un certificado de autenticación de cliente PKI. Si no incluye este parámetro, o si el cliente no encuentra un certificado válido, usa una conexión HTTP con un certificado autofirmado.
-
-Ejemplo: `CCMSetup.exe /UsePKICert`  
-
-> [!NOTE]
-> En algunos escenarios, no será necesario especificar este parámetro, pero siga usando un certificado de cliente. Por ejemplo, la instalación de cliente basada en inserciones de cliente y actualizaciones de software. Use este parámetro cuando instale manualmente un cliente y use el parámetro **/mp** con un punto de administración habilitado para HTTPS.
->
-> Especifique también este parámetro cuando instale un cliente para comunicarse solo a través de Internet. Use la propiedad **CCMALWAYSINF=1** junto con las propiedades para el punto de administración basado en Internet (**CCMHOSTNAME**) y el código de sitio (**SMSSITECODE**). Para obtener más información sobre la administración de clientes basada en Internet, vea [Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
-### <a name="nocrlcheck"></a>/NoCRLCheck
-
-Especifica que un cliente no debe comprobar la lista de revocación de certificados (CRL) cuando se comunica a través de HTTPS con un certificado PKI. Cuando no se especifica este parámetro, el cliente comprueba la CRL antes de establecer una conexión HTTPS. Para obtener más información sobre la comprobación de CRL de cliente, vea [Planear la revocación de certificados PKI](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
-
-Ejemplo: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
-
-### <a name="config"></a>/config
-
-Este parámetro especifica un archivo de texto que enumera las propiedades de la instalación de cliente.
-
-- Si CCMSetup se ejecuta como un servicio, coloque este archivo en la carpeta del sistema CCMSetup: `%Windir%\Ccmsetup`.
-
-- Si especifica el parámetro [ **/noservice**](#noservice), coloque este archivo en la misma carpeta que CCMSetup.exe.
-
-Ejemplo: `CCMSetup.exe /config:"configuration file name.txt"`
-
-Para proporcionar el formato de archivo correcto, use el archivo **mobileclienttemplate.tcf** de la carpeta `\bin\<platform>` en el directorio de instalación de Configuration Manager del servidor de sitio. Este archivo tiene comentarios sobre las secciones y cómo se usan. Especifique las propiedades de la instalación del cliente en la sección `[Client Install]`, después del texto siguiente: `Install=INSTALL=ALL`.
-
-Ejemplo de entrada de la sección `[Client Install]`: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`.  
 
 ### <a name="skipprereq"></a>/skipprereq
 
@@ -244,40 +263,33 @@ Ejemplos:
 
 Para obtener más información sobre los requisitos previos de cliente, vea [Requisitos previos de cliente de Windows](prerequisites-for-deploying-clients-to-windows-computers.md).
 
-### <a name="forceinstall"></a>/forceinstall
+### <a name="source"></a>/source
 
-Especifica que CCMSetup.exe desinstala los clientes existentes e instala un cliente nuevo.  
+Especifica la ubicación de descarga de archivos. Use una ruta de acceso local o UNC. El dispositivo descarga los archivos mediante el protocolo de bloque de mensajes del servidor (SMB). Para usar **/source**, la cuenta de usuario de Windows para la instalación de cliente debe tener permisos de **lectura** para la ubicación.
 
-### <a name="excludefeatures"></a>/ExcludeFeatures
+Para obtener más información sobre cómo ccmsetup descarga el contenido, consulte [Grupos de límites: instalación de cliente](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). En ese artículo también se incluyen detalles del comportamiento de ccmsetup si usa los parámetros **/mp** y **/source**.
 
-Este parámetro especifica que CCMSetup.exe no instala la característica especificada.
+> [!TIP]  
+> Puede usar el parámetro **/source** más de una vez en una línea de comandos para especificar ubicaciones de descarga alternativas.  
 
-Ejemplo: `CCMSetup.exe /ExcludeFeatures:ClientUI` no instala el Centro de software en el cliente.  
+Ejemplo: `ccmsetup.exe /source:"\\server\share"`
 
-> [!NOTE]  
-> `ClientUI` es el único valor compatible con el parámetro **/ExcludeFeatures**.
+### <a name="uninstall"></a>/uninstall
 
-### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+Use este parámetro para desinstalar el cliente de Configuration Manager. Para obtener más información, consulte [Desinstalación del cliente](../manage/manage-clients.md#BKMK_UninstalClient).
 
-Este parámetro especifica si un cliente se actualizará automáticamente al habilitar [**Actualización de cliente automática**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+Ejemplo: `ccmsetup.exe /uninstall`  
 
-Valores admitidos:
+### <a name="usepkicert"></a>/UsePKICert
 
-- `TRUE`: el cliente no se actualizará automáticamente.
-- `FALSE`: el cliente se actualiza automáticamente (valor predeterminado).
+Especifique este parámetro para que el cliente use un certificado de autenticación de cliente PKI. Si no incluye este parámetro, o si el cliente no encuentra un certificado válido, usa una conexión HTTP con un certificado autofirmado.
 
-Por ejemplo:  
+Ejemplo: `CCMSetup.exe /UsePKICert`  
 
-`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
-
-Para más información, consulte [Cliente de interoperabilidad extendida](../../understand/interoperability-client.md).
-
-> [!NOTE]  
-> Cuando se usa el parámetro **/AlwaysExcludeUpgrade**, la actualización automática se sigue ejecutando. Sin embargo, cuando se ejecuta CCMSetup para realizar la actualización, advertirá que se ha establecido el parámetro **/AlwaysExcludeUpgrade** y se registrará la siguiente línea en **ccmsetup.log**:
+> [!NOTE]
+> En algunos escenarios, no será necesario especificar este parámetro, pero siga usando un certificado de cliente. Por ejemplo, la instalación de cliente basada en inserciones de cliente y actualizaciones de software. Use este parámetro cuando instale manualmente un cliente y use el parámetro **/mp** con un punto de administración habilitado para HTTPS.
 >
-> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
->
-> Luego, CCMSetup se cerrará inmediatamente y no realizará la actualización.
+> Especifique también este parámetro cuando instale un cliente para comunicarse solo a través de Internet. Use la propiedad **CCMALWAYSINF=1** junto con las propiedades para el punto de administración basado en Internet (**CCMHOSTNAME**) y el código de sitio (**SMSSITECODE**). Para obtener más información sobre la administración de clientes basada en Internet, vea [Consideraciones sobre las comunicaciones de cliente desde Internet o desde un bosque que no es de confianza](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> Códigos de retorno de CCMSetup.exe
 
@@ -311,7 +323,7 @@ Las siguientes propiedades pueden modificar el comportamiento de la instalación
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-Especifica el identificador de aplicación cliente de Azure Active Directory (Azure AD). La aplicación cliente se crea o importa al [configurar servicios de Azure](../../servers/deploy/configure/azure-services-wizard.md) para la administración en la nube. Un administrador de Azure puede obtener el valor de esta propiedad desde Azure Portal. Para obtener más información, vea [Obtención del id. y la clave de autenticación de la aplicación](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Para la propiedad **AADCLIENTAPPID**, este identificador de aplicación es para el tipo de aplicación **Native**.
+Especifica el identificador de aplicación cliente de Azure Active Directory (Azure AD). La aplicación cliente se crea o importa al [configurar servicios de Azure](../../servers/deploy/configure/azure-services-wizard.md) para la administración en la nube. Un administrador de Azure puede obtener el valor de esta propiedad desde Azure Portal. Para obtener más información, vea [Obtención del id. y la clave de autenticación de la aplicación](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Para la propiedad **AADCLIENTAPPID**, este identificador de aplicación es para el tipo de aplicación **Native**.
 
 Ejemplo: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -332,7 +344,7 @@ Especifica el identificador de inquilino de Azure AD. Configuration Manager vinc
 - En la sección Estado del dispositivo, busque el valor **TenantId**. Por ejemplo, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`.
 
   > [!Note]
-  > Un administrador de Azure también puede obtener este valor en Azure Portal. Para obtener más información, vea [Obtención del identificador de inquilino](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+  > Un administrador de Azure también puede obtener este valor en Azure Portal. Para obtener más información, vea [Obtención del identificador de inquilino](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
 Ejemplo: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -781,4 +793,4 @@ Configuration Manager admite los siguientes valores de atributos para los criter
 |2.5.4.12|T o Title|Título|  
 |2.5.4.42|G o GN o GivenName|Nombre dado|  
 |2.5.4.43|I o Initials|Iniciales|  
-|2.5.29.17|(ningún valor)|Nombre alternativo del sujeto|  
+|2.5.29.17|(ningún valor)|Nombre alternativo del sujeto|

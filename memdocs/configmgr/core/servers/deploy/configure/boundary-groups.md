@@ -2,7 +2,7 @@
 title: Configurar grupos de límites
 titleSuffix: Configuration Manager
 description: Ayude a los clientes a encontrar sistemas de sitio mediante grupos de límites para organizar de manera lógica las ubicaciones de red relacionadas denominadas límites.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 7a925c29b5d186f3ca6f320741f5ca602b0bbb79
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153416"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128399"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuración de grupos de límites para Configuration Manager
 
@@ -312,7 +312,7 @@ En la versión 1902, esta configuración ahora se denomina **Prefer cloud based 
 - Puntos de distribución en la nube
 - Microsoft Update (agregado en la versión 1902)
 
-## <a name="software-update-points"></a>Puntos de actualización de software
+## <a name="software-update-points"></a><a name="bkmk_sup"></a> Puntos de actualización de software 
 
 Los clientes usan grupos de límites para buscar un punto de actualización de software nuevo. Para controlar qué servidores puede buscar un cliente, agregue puntos de actualización de software individuales a otros grupos de límites.
 
@@ -365,6 +365,13 @@ Cuando se cambia a un nuevo servidor, los dispositivos utilizan la reserva para 
 Revise las configuraciones de los grupos de límites. Antes de iniciar este cambio, asegúrese de que los puntos de actualización de software se encuentran en los grupos de límites correctos.
 
 Para obtener más información, consulte [Cambio manual de clientes a un nuevo punto de actualización de software](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
+
+### <a name="intranet-clients-can-use-a-cmg-software-update-point"></a><a name="bkmk_cmg-sup"></a> Los clientes de la intranet pueden usar un punto de actualización de software de CMG
+<!--7102873-->
+A partir de la versión 2006, los clientes de la intranet pueden acceder a un punto de actualización de software de CMG cuando se asigna a un grupo de límites y la opción [**Permitir tráfico de Cloud Management Gateway en Configuration Manager** está habilitada](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) en el punto de actualización de software. Puede permitir que los dispositivos de la intranet examinen con un punto de actualización de software de CMG en los siguientes escenarios:
+
+- Cuando un equipo de Internet se conecta a la VPN, seguirá examinando con el punto de actualización de software CMG a través de Internet.
+- Si el único punto de actualización de software para el grupo de límites es el punto de actualización de software de CMG, todos los dispositivos de la intranet y de Internet explorarán con él.
 
 ## <a name="management-points"></a>Puntos de administración
 

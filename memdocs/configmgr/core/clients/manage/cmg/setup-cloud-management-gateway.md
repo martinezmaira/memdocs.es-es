@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410882"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693342"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
@@ -40,7 +40,7 @@ Use la lista de comprobación siguiente para asegurarse de que tiene la informac
 
   - Integración con [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) para la **administración en la nube**. La detección de usuarios de Azure AD no es necesaria. Para integrar el sitio con Azure AD a fin de implementar la instancia de CMG con Azure Resource Manager, necesita un **administrador global**.
 
-  - El proveedor de recursos **Microsoft.ClassicCompute** & **Microsoft.Storage** debe estar registrado en la suscripción de Azure. Para obtener más información, vea [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - El proveedor de recursos **Microsoft.ClassicCompute** & **Microsoft.Storage** debe estar registrado en la suscripción de Azure. Para obtener más información, vea [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services).
 
   - Un **propietario de suscripción** debe iniciar sesión para implementar la instancia de CMG.
 
@@ -141,7 +141,7 @@ El punto de conexión de CMG es el rol de sistema de sitio para comunicarse con 
 
 Para solucionar problemas de estado de CMG, use **CMGService.log** y **SMS_Cloud_ProxyConnector.log**. Para obtener más información, vea [Archivos de registro](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Configurar roles para el cliente para el tráfico de CMG
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a> Configuración de roles para el cliente para el tráfico de CMG
 
 Configure los sistemas de sitio de punto de administración y punto de actualización de software para aceptar el tráfico de CMG. Siga estos pasos en el sitio primario, para todos los puntos de administración y de actualización de software que dan servicio a los clientes basados en Internet.  
 
@@ -158,7 +158,7 @@ Configure los sistemas de sitio de punto de administración y punto de actualiza
 Repita estos pasos para otros puntos de administración según sea necesario y para cualquier punto de actualización de software.
 
 ## <a name="configure-boundary-groups"></a>Configurar grupos de límites
-
+ 
 <!--3640932-->
 A partir de la versión 1902, puede asociar una instancia de CMG con un grupo de límites. Esta configuración permite a los clientes predeterminar o recurrir a dicha puerta de enlace para la comunicación con el cliente de acuerdo con las relaciones de grupo de límites.
 
@@ -207,7 +207,7 @@ Para instalar el cliente de Configuration Manager en sistemas que no están cone
 
 Para las opciones 1 y 2, cuando ejecute **ccmsetup.exe**, use el parámetro **/mp** para especificar la dirección URL de la instancia de CMG. Para obtener más información, vea [Acerca de los parámetros y propiedades de instalación de cliente](../../deploy/about-client-installation-properties.md#mp).
 
-Para la opción 3, a partir de la versión 2002 de Configuration Manager, puede instalar el cliente en sistemas que no estén conectados a la intranet con un token de registro masivo. Para más información sobre este método, vea [Creación de un token de registro masivo](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+Para la opción 3, a partir de la versión 2002 de Configuration Manager, puede instalar el cliente en sistemas que no estén conectados a la intranet con un token de registro masivo. Para más información sobre este método, vea [Creación de un token de registro masivo](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>Configuración de clientes no locales para CMG
 

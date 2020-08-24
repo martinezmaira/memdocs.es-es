@@ -2,7 +2,7 @@
 title: Actualización en la consola
 titleSuffix: Configuration Manager
 description: Instalación de actualizaciones en Configuration Manager desde Microsoft Cloud
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: f22a28c173c980bdf598a5afc8a969a86ec96cc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637676"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699779"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Instalar actualizaciones en consola para Configuration Manager
 
@@ -96,13 +96,13 @@ Revise los pasos siguientes antes de instalar una actualización desde la consol
 
 Revise la lista de comprobación de actualización aplicable para las acciones que deben realizarse antes de iniciar la actualización:
 
+- [Lista de comprobación para la instalación de la actualización 2006](checklist-for-installing-update-2006.md)
+
 - [Lista de comprobación para la instalación de la actualización 2002](checklist-for-installing-update-2002.md)
 
 - [Lista de comprobación para la instalación de la actualización 1910](checklist-for-installing-update-1910.md)  
 
 - [Lista de comprobación para la instalación de la actualización 1906](checklist-for-installing-update-1906.md)  
-
-- [Lista de comprobación para la instalación de la actualización 1902](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a> Paso 2: ejecutar el comprobador de requisitos previos antes de instalar una actualización  
 
@@ -362,13 +362,13 @@ Vaya al área de trabajo **Supervisión** y seleccione el nodo **Estado de mante
 
 Una vez que se actualice el sitio, revise la lista de comprobación posterior a la actualización para la versión correspondiente:  
 
+- [Lista de comprobación posterior a la actualización para la versión 2006](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [Lista de comprobación posterior a la actualización para la versión 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Lista de comprobación posterior a la actualización para la versión 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [Lista de comprobación posterior a la actualización para la versión 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [Lista de comprobación posterior a la actualización para la versión 1902](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a> Habilitar características opcionales de las actualizaciones  
 
@@ -378,7 +378,7 @@ Para ver las características disponibles y su estado, en la consola, vaya al á
 
 Cuando una característica no es opcional, se instala automáticamente. No aparece en el nodo **Características**.  
 
-> [!Important]  
+> [!IMPORTANT]
 > En una jerarquía multisitio, solo se pueden habilitar características opcionales o de versión preliminar desde el sitio de administración central. Con este comportamiento se procura que no haya ningún conflicto en la jerarquía. <!--507197-->  
 
 Al habilitar una característica nueva o de versión preliminar, el Administrador de jerarquía de Configuration Manager (HMAN) debe procesar el cambio antes de que dicha característica esté disponible. El procesamiento del cambio suele ser inmediato. Según el ciclo de procesamiento de HMAN, puede tardar hasta 30 minutos en completarse. Una vez procesado el cambio, reinicie la consola antes de usar la característica.
@@ -391,32 +391,33 @@ Las siguientes características son opcionales en la versión más reciente de C
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
 - [Centro de la comunidad](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Grupos de orquestaciones](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Tipo de implementación de la secuencia de tareas](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [Administración de BitLocker](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [Sincronización de los resultados de pertenencia a recopilaciones con Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Detección de grupos de usuarios de Azure Active Directory](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Grupos de aplicaciones](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Depurador de secuencia de tareas](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Administrador de conversión de paquetes](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Aplicaciones cliente para dispositivos administrados conjuntamente](../../../comanage/workloads.md#client-apps) (antes denominadas *aplicaciones móviles para dispositivos administrados conjuntamente*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Actualizaciones de software de terceros](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Aprobación de solicitudes de aplicación para los usuarios por dispositivo](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [Creación y ejecución de scripts](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
 - [Actualizaciones de controladores de Surface](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Puerta de enlace de administración en la nube](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [Creación de PFX](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
-- [Conector de Log Analytics de Azure](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Conector de Log Analytics de Azure](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Directiva de Protección contra vulnerabilidades de seguridad de Windows Defender](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [VPN para Windows 10](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Mantenimiento de una recopilación compatible con clústeres (grupos de servidores)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello para empresas](../../../protect/deploy-use/windows-hello-for-business-settings.md) (conocido anteriormente como *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > Para obtener más información sobre las características cuya habilitación requiere consentimiento, consulte las [características de versión preliminar](pre-release-features.md).  
 >
 > Para más información sobre las características que solo están disponibles en la rama de Technical Preview, vea [Technical Preview](../../get-started/technical-preview.md).
@@ -435,4 +436,4 @@ Si no encuentra una actualización específica en la consola después de una sin
 
     Si cree que tiene las configuraciones necesarias y otros requisitos previos para una actualización que falta, confirme que su punto de conexión de servicio se encuentre en el modo en línea. Después, use la opción **Buscar actualizaciones** en el nodo **Actualizaciones y mantenimiento** para forzar una comprobación. Cuando el punto de conexión de servicio está en el modo sin conexión, se usa la herramienta de conexión de servicio para ejecutar manualmente la sincronización con el servicio en la nube.  
 
-- La cuenta no dispone de los permisos de administración basada en roles correctos para ver las actualizaciones en la consola de Configuration Manager. Para obtener más información, vea [Permisos para administrar actualizaciones](#assign-permissions-to-view-and-manage-updates-and-features).  
+- La cuenta no dispone de los permisos de administración basada en roles correctos para ver las actualizaciones en la consola de Configuration Manager. Para obtener más información, vea [Permisos para administrar actualizaciones](#assign-permissions-to-view-and-manage-updates-and-features).

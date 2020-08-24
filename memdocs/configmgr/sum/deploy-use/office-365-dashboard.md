@@ -1,30 +1,30 @@
 ---
 title: Panel de administración de clientes de Office 365
 titleSuffix: Configuration Manager
-description: Revisión de la información de los clientes de Office 365 en el panel de administración de clientes de Office 365
+description: Revisión de la información de los clientes de Aplicaciones de Microsoft 365 en el panel de administración de clientes de Office 365
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: 7e6ed38d0f4217bfc70d3ddb196527d421e5d7c1
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: bae995b0704e2b2774d5f002cbf907777a3edcf0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110396"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697048"
 ---
 # <a name="office-365-client-management-dashboard"></a>Panel de administración de clientes de Office 365
 
 *Se aplica a: Configuration Manager (rama actual)*
 
 > [!Note]
-> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
 
-A partir de la versión 1802 de Configuration Manager, puede revisar la información del cliente de Office 365 en el panel de administración de clientes de Office 365. En el panel de administración de clientes de Office 365 se muestra una lista de los dispositivos correspondientes al seleccionar las secciones de un gráfico. <!--1357281 -->
+A partir de la versión 1802 de Configuration Manager, puede revisar la información de los clientes de Aplicaciones de Microsoft 365 en el panel de administración de clientes de Office 365. En el panel de administración de clientes de Office 365 se muestra una lista de los dispositivos correspondientes al seleccionar las secciones de un gráfico. <!--1357281 -->
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -53,13 +53,13 @@ El servidor de sitio de nivel superior necesita acceso al siguiente punto de con
 > [!NOTE]
 > No se requiere conectividad a Internet para los dispositivos cliente en ninguno de estos escenarios.
 
-### <a name="enable-data-collection-for-office-365-proplus"></a>Habilitación de la recopilación de datos para Office 365 ProPlus
+### <a name="enable-data-collection-for-microsoft-365-apps"></a>Habilitación de la recopilación de datos para Aplicaciones de Microsoft 365
 
 *(Introducido en la versión 1910 como requisito previo)*
 
-A partir de la versión 1910, deberá habilitar la recopilación de datos para Office 365 ProPlus para rellenar la información en el **Panel de estado y piloto de Office 365 ProPlus**. Los datos se almacenan en la base de datos de sitio de Configuration Manager y no se envían a Microsoft.
+A partir de la versión 1910, deberá habilitar la recopilación de datos para Aplicaciones de Microsoft 365 para rellenar la información en el **Panel de estado y piloto de Office 365 ProPlus**. Los datos se almacenan en la base de datos de sitio de Configuration Manager y no se envían a Microsoft.
 
-Estos datos son diferentes de los datos de diagnóstico, que se describen en [Datos de diagnóstico enviados desde Office 365 ProPlus a Microsoft](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Estos datos son diferentes de los datos de diagnóstico, que se describen en [Datos de diagnóstico enviados desde Aplicaciones de Microsoft 365 a Microsoft](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 Puede habilitar la recopilación de datos usando una directiva de grupo o editando el registro.
 
@@ -67,7 +67,7 @@ Puede habilitar la recopilación de datos usando una directiva de grupo o editan
 
 1. Descargue los [archivos de plantillas administrativas más recientes desde el Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=49030).
 2. Habilite la configuración de directiva **Activar la recopilación de datos de telemetría** en `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard`.
-    - Alternativamente, puede aplicar la configuración de directiva con el [servicio de directivas de la nube de Office](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service).
+    - Alternativamente, puede aplicar la configuración de directiva con el [servicio de directivas de la nube de Office](/DeployOffice/overview-office-cloud-policy-service).
     - La configuración de directiva también se usa en el panel de telemetría de Office, que no es necesario implementar para esta recopilación de datos.
 
 #### <a name="enable-data-collection-from-the-registry"></a>Habilitación de la recopilación de datos del registro
@@ -80,32 +80,32 @@ reg add HKCU\Software\Policies\Microsoft\office\16.0\OSM /v EnableLogging /t REG
 
 ## <a name="viewing-the-office-365-client-management-dashboard"></a>Visualización del panel de administración de clientes de Office 365
 
-Para ver el panel de administración de clientes de Office 365 en la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de clientes de Office 365**. En la parte superior del panel, use la opción desplegable **Colección** para filtrar los datos del panel por miembros de una colección determinada. A partir de Configuration Manager versión 1802, en el panel de administración de clientes de Office 365 se muestra una lista de los dispositivos correspondientes al seleccionar las secciones de un gráfico.
+Para ver el panel de administración de clientes de Office 365 en la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de clientes de Office 365**. En la parte superior del panel, use la opción desplegable **Colección** para filtrar los datos del panel por miembros de una colección determinada. A partir de la versión 1802 de Configuration Manager, en el panel de administración se muestra una lista de los dispositivos correspondientes al seleccionar las secciones de un gráfico.
 
 El panel de administración de clientes de Office 365 proporciona una serie de gráficos con la siguiente información:
 
-- Número de clientes de Office 365
-- Versiones de cliente de Office 365
-- Idiomas de cliente de Office 365
-- Canales de cliente de Office 365. Para más información, consulte [Información general de los canales de actualización para Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+- Número de clientes de Aplicaciones de Microsoft 365
+- Versiones de clientes de Aplicaciones de Microsoft 365
+- Idiomas de clientes de Aplicaciones de Microsoft 365
+- Canales de clientes de Aplicaciones de Microsoft 365. Para más información, vea [Información general sobre los canales de actualización de Aplicaciones de Microsoft 365](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 
-## <a name="integration-for-office-365-proplus-readiness"></a><a name="bkmk_o365_readiness"></a> Integración para la preparación de Office 365 ProPlus
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a> Integración de la preparación de Aplicaciones de Microsoft 365
 <!--3735402-->
-Desde la versión 1902 de Configuration Manager, se puede usar el panel para identificar los dispositivos con una confianza alta que estén listos para actualizar a Office 365 ProPlus. Esta integración proporciona conclusiones sobre los posibles problemas de compatibilidad con los complementos y las macros de Office usados en su entorno. Después, use Configuration Manager para implementar Office en los dispositivos que estén listos.
+A partir de la versión 1902 de Configuration Manager, se puede usar el panel para identificar los dispositivos con una confianza alta de que estén listos para actualizar a Aplicaciones de Microsoft 365. Esta integración proporciona conclusiones sobre los posibles problemas de compatibilidad con los complementos y las macros usados en su entorno. Después, use Configuration Manager para implementar Aplicaciones de Microsoft 365 en los dispositivos que estén listos.
 
 El panel de administración de clientes de Office365 incluye un nuevo icono, **Office 365 ProPlus Upgrade Readiness**. Este icono es un gráfico de barras de los dispositivos con los siguientes estados:
 - No evaluado
 - Preparado para la actualización
 - Necesita revisión
 
-Seleccione un estado para obtener los detalles en una lista de dispositivos. En este informe de preparación se muestran más detalles sobre los dispositivos. Se incluyen columnas para el estado de compatibilidad de los complementos y las macros de Office.
+Seleccione un estado para obtener los detalles en una lista de dispositivos. En este informe de preparación se muestran más detalles sobre los dispositivos. Se incluyen columnas para el estado de compatibilidad de los complementos y las macros.
 
-### <a name="prerequisites-for-office-365-proplus-readiness-integration"></a>Requisitos previos para la integración de la preparación de Office 365 ProPlus
+### <a name="prerequisites-for-microsoft-365-apps-readiness-integration"></a>Requisitos previos para la integración de la preparación de Aplicaciones de Microsoft 365
 
 - Habilite el inventario de hardware en la configuración de cliente. Para más información, consulte la sección [Requisitos previos](#prerequisites).  
 
-- El dispositivo necesita disponer de conectividad a la red de entrega de contenido (CDN) de Office para poder descargar el archivo de preparación de un complemento. Para obtener más información, vea [Redes de entrega de contenido](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Si el dispositivo no puede descargar el archivo, el estado de los complementos será *Necesita revisión*.  
+- El dispositivo necesita disponer de conectividad a la red de entrega de contenido (CDN) de Office para poder descargar el archivo de preparación de un complemento. Para obtener más información, vea [Redes de entrega de contenido](/office365/enterprise/content-delivery-networks). Si el dispositivo no puede descargar el archivo, el estado de los complementos será *Necesita revisión*.  
 
     > [!Note]  
     > No se envía ningún dato a Microsoft en relación con esta característica.  
@@ -116,7 +116,7 @@ De manera predeterminada, el agente de detección busca en la lista de archivos 
 - Formatos de archivos de Office habilitados para macros, como libros habilitados para macros de Excel (.xlsm) o documentos habilitados para macros de Word (.docm).  
 - Formatos de Office más antiguos que no indican si hay contenido de macro, como un libro de Excel 97-2003 (.xls).
 
-Si necesita información más detallada sobre la compatibilidad con macros, implemente **Readiness Toolkit for Office** para analizar el código de los archivos de macro. Comprueba si hay cualquier posible problema de compatibilidad. Por ejemplo, que un archivo use una función que pueda cambiar en una versión más reciente de Office. Después de ejecutar Readiness Toolkit for Office y seleccionar la opción **Complementos instalados y documentos de Office usados recientemente en este equipo**, o usar la marca `-mru` en la línea de comandos, el agente de inventario de hardware de Configuration Manager puede seleccionar los resultados. Estos datos adicionales permiten mejorar el cálculo de la preparación del dispositivo. Para más información, consulte [Usar Readiness Toolkit para evaluar la compatibilidad de aplicaciones de Office 365 ProPlus](https://aka.ms/readinesstoolkit).
+Si necesita información más detallada sobre la compatibilidad con macros, implemente **Readiness Toolkit for Office** para analizar el código de los archivos de macro. Comprueba si hay cualquier posible problema de compatibilidad. Por ejemplo, que un archivo use una función que pueda cambiar en una versión más reciente de Office. Después de ejecutar Readiness Toolkit for Office y seleccionar la opción **Complementos instalados y documentos de Office usados recientemente en este equipo**, o usar la marca `-mru` en la línea de comandos, el agente de inventario de hardware de Configuration Manager puede seleccionar los resultados. Estos datos adicionales permiten mejorar el cálculo de la preparación del dispositivo. Para más información, vea [Uso de Readiness Toolkit para evaluar la compatibilidad de aplicaciones para Aplicaciones de Microsoft 365](https://aka.ms/readinesstoolkit).
 
 Tenga en cuenta que no es necesario que Readiness Toolkit esté instalado en todos los dispositivos de destino para poder realizar el análisis. Puede usar la opción de línea de comandos de ejemplo siguiente para examinar cada dispositivo deseado.  La marca de salida es necesaria, pero los archivos no se usarán para generar los resultados en el panel, por lo que se puede seleccionar cualquier ubicación válida.
 
@@ -126,12 +126,12 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 Para obtener más información, vea [Obtener información de preparación para varios usuarios en una empresa](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
 
-## <a name="office-365-proplus-upgrade-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Panel de Upgrade Readiness para Office 365 ProPlus
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Panel de preparación de Aplicaciones de Microsoft 365
 
 *(Se introdujo en la versión 1906)*
 
 <!--4021125-->
-Para ayudarle a determinar qué dispositivos están listos para actualizar a Office 365 ProPlus, hay un panel de preparación a partir de la versión 1906. Incluye el icono de **Upgrade Readiness para Office 365 ProPlus** que se publicó en la versión 1902 de la rama actual de Configuration Manager. Los siguientes iconos nuevos de este panel le ayudan a evaluar la preparación de las macros y los complementos de Office:
+Para ayudar a determinar qué dispositivos están listos para actualizar a Aplicaciones de Microsoft 365, hay un panel de preparación a partir de la versión 1906. Incluye el icono de **Upgrade Readiness para Office 365 ProPlus** que se publicó en la versión 1902 de la rama actual de Configuration Manager. Los siguientes iconos nuevos de este panel le ayudan a evaluar la preparación de las macros y los complementos:
 
 - Implementación
 - Preparación de los dispositivos
@@ -148,31 +148,31 @@ El siguiente vídeo es una sesión de Ignite 2019, que incluye más informació
 
 [Prácticas recomendadas para la evaluación de compatibilidad y actualizaciones de Microsoft Office 365 ProPlus con Office Readiness en Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
 
-### <a name="using-the-office-365-proplus-upgrade-readiness-dashboard"></a>Uso del panel de Upgrade Readiness para Office 365 ProPlus
+### <a name="using-the-microsoft-365-apps-upgrade-readiness-dashboard"></a>Uso del panel de Upgrade Readiness para Aplicaciones de Microsoft 365
 
 Después de comprobar que cumple con los [requisitos previos](#prerequisites), utilice las siguientes instrucciones para usar el panel:
  
 1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software** y expanda **Administración de clientes de Office 365**.
-1. Seleccione el nodo **Upgrade Readiness para Office 365 ProPlus**.
+1. Seleccione el nodo **Upgrade Readiness para Aplicaciones de Microsoft 365**.
 1. Cambie la **arquitectura de Office de colección** y **destino** para cambiar la información retransmitida en el panel.
 
-![Panel de Upgrade Readiness para Office 365 ProPlus](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+[![Panel de Upgrade Readiness para Aplicaciones de Microsoft 365](./media/4021125-office-365-upgrade-readiness-dashboard.png)](./media/4021125-office-365-upgrade-readiness-dashboard.png#lightbox)
 
-![Panel de Upgrade Readiness para Office 365 ProPlus](./media/4021125-office-365-to-add-ins.png)
+[![Complementos del panel de Upgrade Readiness para Aplicaciones de Microsoft 365](./media/4021125-office-365-to-add-ins.png)](./media/4021125-office-365-to-add-ins.png#lightbox)
 
-![Panel de Upgrade Readiness para Office 365 ProPlus](./media/4021125-office-365-macro-advisories.png)
+[![Advertencias de macros del panel de Upgrade Readiness para Aplicaciones de Microsoft 365](./media/4021125-office-365-macro-advisories.png)](./media/4021125-office-365-macro-advisories.png#lightbox)
 
 ### <a name="device-readiness-information"></a>Información de preparación de los dispositivos
 
 Cuando se haya evaluado el complemento y el inventario de macros en cada dispositivo, los dispositivos se agrupan de acuerdo con la información. Es probable que los dispositivos cuyo estado aparece como **Listo para actualizar** no tengan ningún problema de compatibilidad.
 
-Al seleccionar la categoría **Listo para actualizar** en el gráfico se muestran más detalles sobre los dispositivos en la recopilación de restricción. Puede revisar la lista de dispositivos, hacer selecciones según sus requisitos empresariales y crear una nueva recopilación de dispositivos a partir de la selección. Use la nueva colección para implementar Office 365 ProPlus con Configuration Manager.
+Al seleccionar la categoría **Listo para actualizar** en el gráfico se muestran más detalles sobre los dispositivos en la recopilación de restricción. Puede revisar la lista de dispositivos, hacer selecciones según sus requisitos empresariales y crear una nueva recopilación de dispositivos a partir de la selección. Use la nueva colección para implementar Aplicaciones de Microsoft 365 con Configuration Manager.
 
-Los dispositivos que pueden estar en riesgo de incidencias de compatibilidad se marcan como **Necesita revisión**. Es posible que estos dispositivos requieran realizar alguna acción antes de actualizarlos a Office 365 ProPlus. Por ejemplo, puede actualizar los complementos críticos a una versión más reciente.
+Los dispositivos que pueden estar en riesgo de incidencias de compatibilidad se marcan como **Necesita revisión**. Es posible que estos dispositivos requieran realizar alguna acción antes de actualizarlos a Aplicaciones de Microsoft 365. Por ejemplo, puede actualizar los complementos críticos a una versión más reciente.
 
 ### <a name="add-in-information"></a>Información de complementos
 
- En cada dispositivo se recopila un inventario de todos los complementos instalados. Después, el inventario se compara con la información que Microsoft tiene sobre el rendimiento del complemento en Office 365 ProPlus. Si se encuentra un complemento que es probable que cause problemas después de la actualización, todos los dispositivos con el complemento se marcan para su revisión.
+ En cada dispositivo se recopila un inventario de todos los complementos instalados. Después, el inventario se compara con la información que Microsoft tiene sobre el rendimiento del complemento en Aplicaciones de Microsoft 365. Si se encuentra un complemento que es probable que cause problemas después de la actualización, todos los dispositivos con el complemento se marcan para su revisión.
 
 ### <a name="macro-information"></a>Información de macros
 
@@ -181,7 +181,7 @@ Configuration Manager examina los archivos usados más recientemente en cada dis
 - Formatos de archivo de Office habilitados para macros.
 - Formatos de Office anteriores, que no indican si hay contenido de macros.
 
-Este informe se puede usar para identificar los dispositivos que han usado recientemente archivos que podrían contener macros. Después, puede implementarse **Readiness Toolkit for Office** mediante Configuration Manager para examinar los dispositivos en los que se necesita información más detallada y comprobar si hay algún problema de compatibilidad potencial. Por ejemplo, si un archivo usa una función que cambió en una versión más reciente de Office.
+Este informe se puede usar para identificar los dispositivos que han usado recientemente archivos que podrían contener macros. Después, puede implementarse **Readiness Toolkit for Office** mediante Configuration Manager para examinar los dispositivos en los que se necesita información más detallada y comprobar si hay algún problema de compatibilidad potencial. Por ejemplo, si un archivo usa una función que cambió en una versión más reciente de Aplicaciones de Microsoft 365.
 
 Para obtener más información sobre cómo llevar a cabo el examen, vea [Preparación de la macro detallada](#bkmk_ort).
 
@@ -189,7 +189,7 @@ Para obtener más información sobre cómo llevar a cabo el examen, vea [Prepara
 <!--4488272, 4488301-->
 *(Se incluyó en la versión 1910)*
 
-A partir de la versión 1910, el **Piloto y panel de estado de Office 365 ProPlus** le ayuda a planear, probar realizar la implementación de Office 365 ProPlus. El panel proporciona información sobre el estado de los dispositivos con Office 365 ProPlus para ayudar a identificar posibles problemas que puedan afectar a los planes de implementación. En el **Panel de estado y piloto de Office 365 ProPlus** se proporciona una recomendación para dispositivos piloto basada en el inventario de complementos. Los iconos siguientes están en el panel:
+A partir de la versión 1910, el **Piloto y panel de estado de Office 365 ProPlus** lo ayuda a planear, probar y realizar la implementación de Aplicaciones de Microsoft 365. El panel proporciona información sobre el estado de los dispositivos con Aplicaciones de Microsoft 365 para ayudar a identificar posibles problemas que puedan afectar a los planes de implementación. En el **Panel de estado y piloto de Office 365 ProPlus** se proporciona una recomendación para dispositivos piloto basada en el inventario de complementos. Los iconos siguientes están en el panel:
 
 - Generación del piloto
 - Dispositivos piloto recomendados
@@ -215,15 +215,15 @@ Genere una recomendación piloto a partir de una recopilación de restricción a
 
 ### <a name="recommended-pilot-devices"></a>Dispositivos piloto recomendados
 
-**Los dispositivos piloto recomendados** son un conjunto mínimo de dispositivos que representan todos los complementos instalados en la recopilación de restricción que se ha usado al generar el piloto. Explore en profundidad para obtener una lista de estos dispositivos. Después, use los detalles para excluir los dispositivos del piloto, si es necesario. Si todos los complementos ya están en los dispositivos Office 365 ProPlus, los dispositivos con esos complementos no se incluirán en el cálculo. Esto también significa que es posible que no obtenga ningún resultado en la recopilación piloto, ya que todos los complementos se han detectado en dispositivos en los que está instalado Office 365 ProPlus.
+**Los dispositivos piloto recomendados** son un conjunto mínimo de dispositivos que representan todos los complementos instalados en la recopilación de restricción que se ha usado al generar el piloto. Explore en profundidad para obtener una lista de estos dispositivos. Después, use los detalles para excluir los dispositivos del piloto, si es necesario. Si todos los complementos ya están en los dispositivos con Aplicaciones de Microsoft 365, los dispositivos con esos complementos no se incluirán en el cálculo. Esto también significa que es posible que no obtenga ningún resultado en la recopilación piloto, ya que todos los complementos se han detectado en dispositivos en los que están instaladas las Aplicaciones de Microsoft 365.
 
 ### <a name="deploy-pilot"></a>Implementación del piloto
 
-Cuando acepte los dispositivos piloto, implemente Office 365 ProPlus en la recopilación piloto mediante el asistente para la implementación por fases. Los administradores pueden definir el piloto y limitar la recopilación en el asistente para administrar las implementaciones.
+Cuando acepte los dispositivos piloto, implemente Aplicaciones de Microsoft 365 en la recopilación piloto mediante el asistente para la implementación por fases. Los administradores pueden definir el piloto y limitar la recopilación en el asistente para administrar las implementaciones.
 
 ### <a name="health-data"></a>Datos de mantenimiento
 
-Una vez instalado Office 365 ProPlus, habilite los datos de mantenimiento en los dispositivos piloto. Los datos de mantenimiento proporcionan información sobre los complementos y macros que no cumplen los objetivos de mantenimiento. El gráfico **Dispositivos listos para implementar** identifica los dispositivos no piloto listos para la implementación mediante el uso de la información de mantenimiento. Obtenga un recuento de los dispositivos que envían datos de mantenimiento desde el gráfico **Dispositivos que envían datos de mantenimiento**.
+Una vez instaladas las Aplicaciones de Microsoft 365, habilite los datos de mantenimiento en los dispositivos piloto. Los datos de mantenimiento proporcionan información sobre los complementos y macros que no cumplen los objetivos de mantenimiento. El gráfico **Dispositivos listos para implementar** identifica los dispositivos no piloto listos para la implementación mediante el uso de la información de mantenimiento. Obtenga un recuento de los dispositivos que envían datos de mantenimiento desde el gráfico **Dispositivos que envían datos de mantenimiento**.
 
 ### <a name="devices-not-meeting-health-goals"></a>Dispositivos que no cumplen los objetivos de mantenimiento
 
@@ -252,4 +252,4 @@ Hay un problema conocido con el icono de **Implementar piloto**. En este momento
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Administración de Office 365 ProPlus con Configuration Manager](manage-office-365-proplus-updates.md)
+[Administración de actualizaciones de Aplicaciones de Microsoft 365 con Configuration Manager](manage-office-365-proplus-updates.md)

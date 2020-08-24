@@ -2,7 +2,7 @@
 title: Solución de problemas de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Detalles técnicos para ayudarle a solucionar problemas con Análisis de escritorio.
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828982"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089952"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de Análisis de escritorio
 
@@ -72,6 +73,9 @@ Análisis de escritorio agrega las siguientes aplicaciones a su instancia de Azu
 Si tiene que aprovisionar estas aplicaciones después de completar la instalación, vaya al panel de **Servicios conectados**. Seleccione **Configurar el acceso de los usuarios y las aplicaciones** y aprovisione las aplicaciones.  
 
 - **Aplicación de Azure AD para Configuration Manager**. Si necesita aprovisionar o solucionar problemas de conexión después de completar la instalación, consulte [Creación e importación de una aplicación para Configuration Manager](#create-and-import-app-for-configuration-manager). Esta aplicación requiere los permisos **Write CM Collection Data** (Escribir datos de recopilación de CM) y **Read CM Collection Data** (Leer datos de colección de CM) en la API **Configuration Manager Service**.  
+
+    > [!NOTE]
+    > Análisis de escritorio admite varias jerarquías de Configuration Manager que informan a un único inquilino de Azure AD.<!-- 4814075 --> Si tiene varias jerarquías en el entorno configuradas con el mismo identificador comercial, para compartir la instancia del inquilino de Azure AD y de Análisis de escritorio, use [aplicaciones diferentes](connect-configmgr.md#bkmk_connect) para cada jerarquía.
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Creación e importación de una aplicación para Configuration Manager
 

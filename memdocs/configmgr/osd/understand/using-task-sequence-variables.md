@@ -2,7 +2,7 @@
 title: Uso de variables en una secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre el uso de variables en una secuencia de tareas de Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 7013ae10de753cbcb664771bd30dc51b259aa390
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022269"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697558"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Uso de variables en una secuencia de tareas en Configuration Manager
 
@@ -78,7 +78,7 @@ Cuando especifique un nombre para una nueva variable de secuencia de tareas, sig
 
 - Los nombres de variables de secuencia de tareas no pueden comenzar ni terminar con un espacio. Tampoco pueden contener espacios incrustados. La secuencia de tareas ignora los espacios que quedan al principio o al final de un nombre de variable.  
 
-No hay ningún límite establecido respecto al número de variables de secuencias de tareas que puede crear. Sin embargo, el número de variables está limitado por el tamaño del entorno de secuencia de tareas. El límite de tamaño total para el entorno de secuencia de tareas es de 32 MB.  
+No hay ningún límite establecido respecto al número de variables de secuencias de tareas que puede crear. Sin embargo, el número de variables está limitado por el tamaño del entorno de secuencia de tareas. El límite de tamaño total para el entorno de secuencia de tareas es de 8 KB. Para más información, consulte [Reducción del tamaño de la directiva de secuencia de tareas](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a> Variables de solo lectura
 
@@ -167,7 +167,7 @@ Su entorno tiene usuarios en varios países o regiones, por lo que desea consult
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    Para obtener más información sobre el cmdlet, vea [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). Para obtener más información sobre los nombres de dos letras de los idiomas de ISO, consulte la [lista de códigos ISO 639-1](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
+    Para obtener más información sobre el cmdlet, vea [Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture). Para obtener más información sobre los nombres de dos letras de los idiomas de ISO, consulte la [lista de códigos ISO 639-1](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 1. Para la opción de la **salida a la variable de secuencia de tareas**, especifique `CurrentOSLanguage`.
 
@@ -190,10 +190,10 @@ Puede definir variables de secuencia de tareas personalizadas para dispositivos 
 
 Por ejemplo, el dispositivo XYZ es miembro de la recopilación ABC. Asigna MiVariable a la recopilación ABC con un valor de 1. También asigna MiVariable al dispositivo XYZ con un valor de 2. La variable que se asigna a XYZ tiene mayor prioridad que la variable que se asigna a la recopilación ABC. Cuando se ejecuta una secuencia de tareas con esta variable en XYZ, MiVariable tiene un valor de 2.
 
-Puede ocultar las variables por dispositivo y por recopilación para que no sean visibles en la consola de Configuration Manager. Cuando se usa la opción **No mostrar este valor en la consola de Configuration Manager**, el valor de la variable no se muestra en la consola. Aun así, la secuencia de tareas puede seguir usando la variable cuando se ejecute. Si ya no desea que estas variables estén ocultas, elimínelas en primer lugar. A continuación, vuelva a definir las variables sin seleccionar la opción para ocultarlas.  
+Puede ocultar las variables por dispositivo y por recopilación para que no sean visibles en la consola de Configuration Manager. Cuando se usa la opción **No mostrar este valor en la consola de Configuration Manager**, el valor de la variable no se muestra en la consola. El archivo de registro de la secuencia de tareas (**smsts.log**) o el depurador de secuencias de tareas no mostrarán el valor de la variable. Aun así, la secuencia de tareas puede seguir usando la variable cuando se ejecute. Si ya no desea que estas variables estén ocultas, elimínelas en primer lugar. A continuación, vuelva a definir las variables sin seleccionar la opción para ocultarlas.  
 
 > [!WARNING]  
-> La opción **No mostrar este valor en la consola de Configuration Manager** solo se aplica a la consola de Configuration Manager. Los valores de las variables siguen apareciendo en el archivo de registro de la secuencia de tareas (**smsts.log**).
+> Si incluye variables en el paso **Run Command Line** (Ejecutar línea de comandos), el archivo de registro de la secuencia de tareas muestra la línea de comandos completa, incluidos los valores de las variables. Para evitar que datos posiblemente confidenciales aparezcan en el archivo de registro, establezca la variable de secuencia de tareas **OSDDoNotLogCommand** en `TRUE`.
 
 Puede administrar las variables por dispositivo en un sitio primario o en un sitio de administración central. Configuration Manager no admite más de 1000 variables asignadas en un dispositivo.  
 

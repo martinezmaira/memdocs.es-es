@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694553"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699711"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Introducción a los informes en Configuration Manager
 
@@ -39,7 +39,7 @@ Configuration Manager usa SQL Server Reporting Services como principal solución
 
 - Exporta informes en diferentes tipos de formatos conocidos.  
 
-Para obtener más información, consulte [¿Qué es SQL Server Reporting Services (SSRS)?](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+Para obtener más información, consulte [¿Qué es SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
 
 ## <a name="power-bi-report-server"></a>Power BI Report Server
 
@@ -47,7 +47,7 @@ Para obtener más información, consulte [¿Qué es SQL Server Reporting Service
 
 A partir de la versión 2002, puede integrar Power BI Report Server con los informes de Configuration Manager. Esta integración proporciona una visualización moderna y un mejor rendimiento. Además, la consola admite informes de Power BI de manera similar a como ya ocurre con SQL Server Reporting Services. Para obtener más información, vea [Integración con Power BI Report Server](powerbi-report-server.md).
 
-Power BI Report Server es un servidor de informes local con un portal web en el que se muestran y se administran los informes. Incluye herramientas para crear informes de Power BI, informes paginados, informes móviles y KPI. Para obtener más información, vea [¿Qué es Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started)
+Power BI Report Server es un servidor de informes local con un portal web en el que se muestran y se administran los informes. Incluye herramientas para crear informes de Power BI, informes paginados, informes móviles y KPI. Para obtener más información, vea [¿Qué es Power BI Report Server?](/power-bi/report-server/get-started)
 
 ## <a name="reporting-services-point"></a>Punto de servicios de informes
 
@@ -124,7 +124,7 @@ Para los informes basados en Reporting Services, Configuration Manager usa el Ge
 
  La instalación del Generador de informes agrega compatibilidad para más de 20 idiomas. Cuando se ejecuta el Generador de informes, muestra los datos en el idioma del sistema operativo del equipo local. Si el Generador de informes no es compatible con el idioma, mostrará los datos en inglés. El Generador de informes es compatible con todas las funciones de SQL Server Reporting Services, que incluyen las funcionalidades siguientes:
 
-- Ofrece un entorno de creación de informes intuitivo, con un aspecto similar a Microsoft Office.  
+- Ofrece un entorno de creación de informes intuitivo, con un aspecto similar a Aplicaciones de Microsoft 365.  
 
 - Ofrece el diseño de informes flexible del lenguaje RDL (Report Definition Language) de SQL Server.  
 

@@ -2,20 +2,20 @@
 title: Requisitos de acceso a Internet
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los puntos de conexión de Internet para permitir la funcionalidad completa de las características de Configuration Manager.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137346"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692694"
 ---
 # <a name="internet-access-requirements"></a>Requisitos de acceso a Internet
 
@@ -89,11 +89,11 @@ Para más información sobre esta función, consulte [Configuración de servicio
 
 ## <a name="co-management"></a>Administración conjunta
 
-Si inscribe dispositivos de Windows 10 en Microsoft Intune para realizar una administración conjunta, asegúrese de que esos dispositivos puedan acceder a los puntos de conexión que Intune requiere. Para más información, consulte [Puntos de conexión de red de Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
+Si inscribe dispositivos de Windows 10 en Microsoft Intune para realizar una administración conjunta, asegúrese de que esos dispositivos puedan acceder a los puntos de conexión que Intune requiere. Para más información, consulte [Puntos de conexión de red de Microsoft Intune](/intune/intune-endpoints).
 
 ## <a name="microsoft-store-for-business"></a>Microsoft Store para Empresas
 
-Si integra Configuration Manager con [Microsoft Store para Empresas](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), asegúrese de que el punto de conexión de servicio y los dispositivos de destino puedan acceder al servicio en la nube. Para más información, consulte [Configuración del proxy de Microsoft Store para Empresas](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Si integra Configuration Manager con [Microsoft Store para Empresas](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), asegúrese de que el punto de conexión de servicio y los dispositivos de destino puedan acceder al servicio en la nube. Para más información, consulte [Configuración del proxy de Microsoft Store para Empresas](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ## <a name="delivery-optimization"></a>Optimización de entrega
 
@@ -103,7 +103,7 @@ Los puntos de distribución que admiten la caché conectada de Microsoft tambié
 
 Vea los siguientes artículos para más información:
 
-- [Preguntas más frecuentes sobre la optimización de la distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Preguntas más frecuentes sobre la optimización de la distribución](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Aspectos básicos de la administración de contenido en Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Caché de conexión de Microsoft en Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
@@ -201,8 +201,6 @@ Permita que el punto de actualización de software activo acceda a los puntos de
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 Para más información sobre las actualizaciones de software, consulte [Planear las actualizaciones de software](../../../sum/plan-design/plan-for-software-updates.md).
@@ -224,10 +222,10 @@ Es posible que tenga que agregar puntos de conexión a un firewall que se encuen
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>Administrar Office 365
+## <a name="manage-microsoft-365-apps"></a>Administración de Aplicaciones de Microsoft 365
 
 > [!NOTE]
-> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
+> A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
 
 Si usa Configuration Manager para implementar y actualizar Aplicaciones de Microsoft 365 para empresas, permita los siguientes puntos de conexión:
 
@@ -275,15 +273,21 @@ Si usa la **vista geográfica**, permita el acceso al punto de conexión siguien
 
 ## <a name="desktop-analytics"></a>Análisis de escritorio
 
-Para más información sobre los puntos de conexión requeridos para el servicio en la nube Análisis de escritorio, consulte [Habilitación del uso compartido de datos](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+Para más información, consulte [Habilitación del uso compartido de datos](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>Asociación de inquilinos
 
-Para obtener más información sobre los puntos de conexión necesarios para las características de asociación de inquilinos, vea [Habilitación de la asociación de inquilinos](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+Para más información, consulte [Habilitación de la asociación de inquilinos](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>Análisis de puntos de conexión
 
-Para obtener más información sobre los puntos de conexión necesarios para al análisis de puntos de conexión, vea [Configuración de proxy para el análisis de puntos de conexión](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+Para más información, consulte [Configuración del proxy de Análisis de puntos de conexión](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>Asset Intelligence
 

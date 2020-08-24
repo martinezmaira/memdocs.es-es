@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706403"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129042"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Características y funcionalidades de Configuration Manager
 
@@ -49,7 +49,7 @@ Use CMPivot para consultar inmediatamente los dispositivos conectados a Internet
 
 ## <a name="application-management"></a>Administración de aplicaciones
 
-Ayuda a crear, administrar, implementar y supervisar aplicaciones relativas a diversos dispositivos que administre. Implemente, actualice y administre Office 365 desde la consola de Configuration Manager. Configuration Manager se integra además con Microsoft Store para Empresas y Educación para ofrecer aplicaciones basadas en la nube. Para más información, vea [Introducción a la administración de aplicaciones](../../../apps/understand/introduction-to-application-management.md).
+Ayuda a crear, administrar, implementar y supervisar aplicaciones relativas a diversos dispositivos que administre. Implemente, actualice y administre Aplicaciones de Microsoft 365 desde la consola de Configuration Manager. Configuration Manager se integra además con Microsoft Store para Empresas y Educación para ofrecer aplicaciones basadas en la nube. Para más información, vea [Introducción a la administración de aplicaciones](../../../apps/understand/introduction-to-application-management.md).
 
 ## <a name="os-deployment"></a>Implementación del sistema operativo
 

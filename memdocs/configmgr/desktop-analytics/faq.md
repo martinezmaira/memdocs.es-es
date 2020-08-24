@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429805"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700827"
 ---
 # <a name="desktop-analytics-faq"></a>P+F sobre Análisis de escritorio
 
@@ -73,7 +73,7 @@ Sí. Para más información, consulte [Conversión de BIOS a UEFI durante una ac
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>¿Se puede usar Análisis de escritorio con Windows 10 LTSC?
 
-Análisis de escritorio no admite los dispositivos de canal de mantenimiento a largo plazo (LTSC) de Windows 10. Para más información, consulte [Administración de Windows como servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Análisis de escritorio no admite los dispositivos de canal de mantenimiento a largo plazo (LTSC) de Windows 10. Para más información, consulte [Administración de Windows como servicio](/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>¿Se puede reducir la cantidad de tiempo que tardan los datos en actualizarse en el portal de Análisis de escritorio?
 
@@ -106,7 +106,7 @@ Los datos de diagnóstico de Windows de los equipos se cifran, se envían a cent
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>¿Se puede usar Update Compliance junto con Análisis de escritorio?
 
-Sí. Si actualmente usa [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) en Azure Portal, puede seguir haciéndolo ahora y después de enero de 2020.
+Sí. Si actualmente usa [Update Compliance](/windows/deployment/update/update-compliance-get-started) en Azure Portal, puede seguir haciéndolo ahora y después de enero de 2020.
 
 Para más información, consulte [KB 4521815: Windows Analytics se retirará el 31 de enero de 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
@@ -126,7 +126,7 @@ Sí, las siguientes características de Windows Analytics se han retirado o toda
 #### <a name="upgrade-readiness"></a>Upgrade Readiness
 
 - Datos de detección de sitios de Internet Explorer
-- Información del complemento de Office (ahora [disponible en Configuration Manager](#bkmk_office))
+- Información del complemento Aplicaciones de Microsoft 365 (ahora [disponible en Configuration Manager](#bkmk_office))
 - Información sobre el concentrador de comentarios
 
 #### <a name="update-compliance"></a>Update Compliance
@@ -151,9 +151,9 @@ Sí, las siguientes características de Windows Analytics se han retirado o toda
 
 ## <a name="other"></a>Otros
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a> ¿Se puede usar Análisis de escritorio para las actualizaciones de Office 365 ProPlus?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> ¿Puedo usar Análisis de escritorio para las actualizaciones de Aplicaciones de Microsoft 365?
 
-No, Análisis de escritorio se centra en Windows. Microsoft desarrolló este servicio en estrecha colaboración con muchos clientes. Los comentarios de los clientes indican que Análisis de escritorio mejora su capacidad para administrar las implementaciones de Windows de forma segura. También nos dicen que quieren que la [preparación para Office 365 ProPlus](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) se integre de manera más estrecha con las herramientas de administración de Office en Configuration Manager e Intune. Microsoft continúa invirtiendo en esas áreas, a la vez que se centra en escenarios de Windows en Análisis del escritorio.
+No, Análisis de escritorio se centra en Windows. Microsoft desarrolló este servicio en estrecha colaboración con muchos clientes. Los comentarios de los clientes indican que Análisis de escritorio mejora su capacidad para administrar las implementaciones de Windows de forma segura. También nos dicen que quieren que la [preparación para Aplicaciones de Microsoft 365](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) se integre de manera más estrecha con las herramientas de administración de Aplicaciones de Microsoft 365 e Intune. Microsoft continúa invirtiendo en esas áreas, a la vez que se centra en escenarios de Windows en Análisis del escritorio.
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>¿Cómo se pueden proporcionar comentarios sobre Análisis de escritorio?
 

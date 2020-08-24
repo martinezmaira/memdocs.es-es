@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: aaba31a8a017f75338cf4d6dee3c2f2d80d7e377
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904656"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698527"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Novedades de la versión 1802 de Configuration Manager
 
@@ -236,7 +236,7 @@ Si un usuario final o técnico de escritorio necesita instalar varias aplicacion
 
 ### <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>Uso del Centro de software para buscar e instalar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD
 <!-- 1322613 -->
-Si implementa aplicaciones como disponibles para los usuarios, ahora puede examinarlas e instalarlas a través del Centro de software en dispositivos de Azure Active Directory (Azure AD). Para obtener más información, vea cómo [implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).
+Si implementa aplicaciones como disponibles para los usuarios, ahora puede examinarlas e instalarlas a través del Centro de software en dispositivos de Azure Active Directory (Azure AD). Para más información, vea [Implementación de aplicaciones disponibles para el usuario](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 ### <a name="hide-installed-applications-in-software-center"></a>Ocultar aplicaciones instaladas en el Centro de software
 <!--1357592-->
@@ -267,7 +267,7 @@ Ahora hay un nuevo informe para mostrar la cantidad de clientes con un explorado
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Información de dispositivo Windows AutoPilot
 <!-- 1351442 -->
-Windows AutoPilot es una solución para la incorporación y configuración de nuevos dispositivos de Windows 10 de forma moderna. Para más información, consulte [Resumen de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Un método para registrar dispositivos existentes con Windows AutoPilot es cargar la información de dispositivo a Microsoft Store para Empresas y Educación. Esta información incluye el número de serie del dispositivo, el identificador de producto de Windows y un identificador de hardware. Use Configuration Manager para recopilar y notificar esta información del dispositivo con el nuevo informe, **Información del dispositivo de Windows AutoPilot**, en el nodo de informes **Hardware: general**. Para más información, consulte el artículo sobre la [preparación de dispositivos basados en Internet para la administración conjunta](../../../comanage/how-to-prepare-Win10.md#windows-autopilot).
+Windows AutoPilot es una solución para la incorporación y configuración de nuevos dispositivos de Windows 10 de forma moderna. Para más información, consulte [Resumen de Windows AutoPilot](/windows/deployment/windows-autopilot/windows-10-autopilot). Un método para registrar dispositivos existentes con Windows AutoPilot es cargar la información de dispositivo a Microsoft Store para Empresas y Educación. Esta información incluye el número de serie del dispositivo, el identificador de producto de Windows y un identificador de hardware. Use Configuration Manager para recopilar y notificar esta información del dispositivo con el nuevo informe, **Información del dispositivo de Windows AutoPilot**, en el nodo de informes **Hardware: general**. Para más información, consulte el artículo sobre la [preparación de dispositivos basados en Internet para la administración conjunta](../../../comanage/how-to-prepare-Win10.md#windows-autopilot).
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>Informe sobre los detalles de mantenimiento de Windows 10 para una recopilación específica
 <!--1357653-->
@@ -287,7 +287,7 @@ En el informe **Detalles de mantenimiento de Windows 10 para una colección espe
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Mejoras en las directivas de Configuration Manager para Protección contra vulnerabilidades de seguridad de Windows Defender
 <!-- 1356220 -->
-Se han agregado nuevos parámetros de directivas para los componentes [Reducción de la superficie expuesta a ataques](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) y [Acceso controlado a carpetas](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) en Configuration Manager para [Protección contra vulnerabilidades de seguridad de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
+Se han agregado nuevos parámetros de directivas para los componentes [Reducción de la superficie expuesta a ataques](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) y [Acceso controlado a carpetas](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) en Configuration Manager para [Protección contra vulnerabilidades de seguridad de Windows Defender](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Nueva configuración de interacción de host para Protección de aplicaciones de Windows Defender
 <!-- 1356256 -->

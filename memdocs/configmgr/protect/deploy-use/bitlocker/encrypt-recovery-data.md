@@ -2,20 +2,20 @@
 title: Cifrado de los datos de recuperación
 titleSuffix: Configuration Manager
 description: Cifre claves de recuperación de BitLocker, paquetes de recuperación y hashes de contraseñas de TPM a través de la red y en la base de datos de Configuration Manager.
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709353"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697303"
 ---
 # <a name="encrypt-recovery-data"></a>Cifrado de los datos de recuperación
 
@@ -36,7 +36,7 @@ Dado el carácter confidencial de esta información, debe protegerla en las sigu
     > [!NOTE]
     > Actualmente no admite HTTP mejorado.
 
-- Considere también la posibilidad de cifrar estos datos cuando se almacenan en la base de datos del sitio. Puede usar el cifrado de nivel de celda de SQL Server con su propio certificado.
+- Considere también la posibilidad de cifrar estos datos cuando se almacenan en la base de datos del sitio. Si instala un certificado SQL, Configuration Manager cifra los datos en SQL.
 
     Si no quiere crear un certificado de cifrado de administración de BitLocker, opte por el almacenamiento en texto sin formato de los datos de recuperación. Al crear una directiva de administración de BitLocker, habilite la opción **Permite que la información de recuperación se almacene en texto sin formato**.
 
@@ -77,7 +77,7 @@ En el cliente, use **BitLockerManagementHandler.log** para solucionar problemas 
 
 ### <a name="sql-encryption-certificate"></a>Certificado de cifrado de SQL
 
-Use este certificado para habilitar el cifrado de nivel de celda de SQL Server de los datos de recuperación de BitLocker. Puede usar su propio proceso para crear e implementar el certificado de cifrado de administración de BitLocker, siempre que cumpla los siguientes requisitos:
+Use este certificado SQL para que Configuration Manager cifre los datos de recuperación de BitLocker en la base de datos de sitio. Puede usar su propio proceso para crear e implementar el certificado de cifrado de administración de BitLocker, siempre que cumpla los siguientes requisitos:
 
 - El nombre del certificado de cifrado de administración de BitLocker debe ser `BitLockerManagement_CERT`.
 
@@ -203,9 +203,9 @@ Si el certificado es válido, el script devuelve un valor de `1`.
 
 Para obtener más información sobre estos comandos SQL, consulte los siguientes artículos:
 
-- [SQL Server y claves de cifrado de base de datos (motor de base de datos)](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [Creación de certificado](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [Copia de seguridad de certificado](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [Creación de clave maestra](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [Copia de seguridad de clave maestra](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [GRANT (permisos de certificado de Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [SQL Server y claves de cifrado de base de datos (motor de base de datos)](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [Creación de certificado](/sql/t-sql/statements/create-certificate-transact-sql)
+- [Copia de seguridad de certificado](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [Creación de clave maestra](/sql/t-sql/statements/create-master-key-transact-sql)
+- [Copia de seguridad de clave maestra](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [GRANT (permisos de certificado de Transact-SQL)](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

@@ -5,17 +5,17 @@ description: Es imprescindible planear la infraestructura de punto de actualizac
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: dca6f3e4bf67ac4c947f785016d781e538ee0a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708753"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696725"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planear actualizaciones de software en Configuration Manager
 
@@ -71,7 +71,7 @@ El cliente selecciona aleatoriamente un punto de actualización de software en l
 ###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a> Cambio de punto de actualización de software  
 
 > [!NOTE]  
-> Los clientes usan grupos de límites para buscar un punto de actualización de software nuevo. Si su punto de actualización de software actual ya no es accesible, también usan grupos de límites para reservar y buscar uno nuevo. Agregue puntos de actualización de software individuales a otros grupos de límites para controlar qué servidores puede buscar un cliente. Para obtener más información, vea [Puntos de actualización de software](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Los clientes usan grupos de límites para buscar un punto de actualización de software nuevo. Si su punto de actualización de software actual ya no es accesible, también usan grupos de límites para reservar y buscar uno nuevo. Agregue puntos de actualización de software individuales a otros grupos de límites para controlar qué servidores puede buscar un cliente. Para obtener más información, vea [Puntos de actualización de software](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 Si tiene varios puntos de actualización de software en un sitio y uno deja de estar disponible o genera errores, los clientes se conectarán a otro punto de actualización de software. Con este nuevo servidor, los clientes continuarán con la exploración para detectar las actualizaciones de software más recientes. Cuando a un cliente se le asigna por primera vez un punto de actualización de software, permanece asignado a ese punto de actualización de software a no ser que no pueda explorar.  
 
@@ -111,7 +111,7 @@ Cambie los clientes de Configuration Manager a un nuevo punto de actualización 
 > [!IMPORTANT]    
 > Cuando cambia de dispositivo para usar un nuevo servidor, los dispositivos utilizan la reserva para buscar ese servidor nuevo. Los clientes cambian al nuevo punto de actualización de software durante su siguiente ciclo de detecciones de actualizaciones de software.<!-- SCCMDocs#1537 -->
 >
-> Antes de iniciar este cambio, revise las configuraciones de los grupos de límites para asegurarse de que los puntos de actualización de software se encuentran en los grupos de límites correctos. Para obtener más información, vea [Puntos de actualización de software](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Antes de iniciar este cambio, revise las configuraciones de los grupos de límites para asegurarse de que los puntos de actualización de software se encuentran en los grupos de límites correctos. Para obtener más información, vea [Puntos de actualización de software](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 >
 > El cambio a un nuevo punto de actualización de software genera tráfico de red adicional. La cantidad de tráfico depende de las opciones de configuración de WSUS, por ejemplo, los productos y clasificaciones sincronizados o el uso de una base de datos WSUS compartida. Si planea cambiar varios dispositivos, considere la posibilidad de hacerlo durante las ventanas de mantenimiento. Este tiempo reduce el impacto en la red cuando los clientes examinan con el nuevo punto de actualización de software.  
 
@@ -151,7 +151,7 @@ Cuando necesite administrar dispositivos que salen de la red y pasan a usar Inte
 #### <a name="cloud-management-gateway"></a>Puerta de enlace de administración en la nube
 Cree una puerta de enlace de administración en la nube en Microsoft Azure y habilite al menos un punto de actualización de software en el entorno local para permitir el tráfico desde clientes basados en Internet. Cuando los clientes pasen a usar Internet, seguirán buscando sus puntos de actualización de software. Todos los clientes basados en Internet obtienen siempre el contenido desde el servicio en la nube de Microsoft Update. 
 
-Para obtener más información, vea [Planificación de Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
+Para más información, consulte [Planear para Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) y [Configuración de grupos de límites](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 #### <a name="internet-based-client-management"></a>Administración de cliente basada en Internet
 Coloque un punto de actualización de software en una red con conexión a Internet y habilítelo para permitir el tráfico desde clientes basados en Internet. A medida que los clientes se conecten a Internet, cambiarán a este punto de actualización de software para el análisis. Todos los clientes basados en Internet obtienen siempre el contenido desde el servicio en la nube de Microsoft Update.
@@ -220,7 +220,7 @@ Esta sección proporciona información acerca de los pasos para planear y prepar
 
 Instale el rol de punto de actualización en un sitio del sistema que cumpla los requisitos mínimos de WSUS y las configuraciones compatibles con sistema de sitio de Configuration Manager.  
 
--   Para obtener más información sobre los requisitos mínimos para el rol de servidor WSUS en Windows Server, consulte [Review considerations and system requirements (Revisar consideraciones iniciales y requisitos del sistema)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
+-   Para obtener más información sobre los requisitos mínimos para el rol de servidor WSUS en Windows Server, consulte [Review considerations and system requirements (Revisar consideraciones iniciales y requisitos del sistema)](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   Para más información sobre las configuraciones admitidas para los sistemas de sitio de Configuration Manager, consulte [Requisitos previos del sitio y el sistema de sitio](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -235,7 +235,7 @@ Cuando use WSUS en Windows Server 2012 o posterior, debe configurar permisos adi
 
 -   Agregar la cuenta **NT AUTHORITY\SYSTEM** como un usuario de la base de datos WSUS (SUSDB). Configurar un valor mínimo de la pertenencia al rol de base de datos webService.  
   
-Para obtener más información acerca de cómo instalar WSUS en Windows Server, consulte [Install the WSUS Server Role (Instalar el rol de servidor de WSUS)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
+Para obtener más información acerca de cómo instalar WSUS en Windows Server, consulte [Install the WSUS Server Role (Instalar el rol de servidor de WSUS)](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
 Cuando instale más de un punto de actualización de software en un sitio primario, utilice la misma base de datos de WSUS para cada punto de actualización de software del mismo bosque de Active Directory. Compartir la misma base de datos mejora el rendimiento cuando los clientes cambian a un nuevo punto de actualización de software. Para obtener más información, vea [Usar una base de datos WSUS compartida para los puntos de actualización de software](software-updates-best-practices.md#bkmk_shared-susdb).  
 
@@ -372,7 +372,7 @@ Por lo general, una actualización de software que sustituye a otra actualizaci�
 
 -   Mejora la eficacia del paquete de archivos de actualización sustituidos, que se instala en los clientes si se aprueba la actualización para la instalación. Por ejemplo, la actualización reemplazada puede contener archivos que ya no correspondan a la corrección o a los sistemas operativos que la nueva actualización admite. Esos archivos no se incluyen en el paquete de archivos de reemplazo de la actualización.  
 
--   Actualiza las versiones más recientes de un producto. En otras palabras, actualiza las versiones que ya no se aplican a las versiones o configuraciones más antiguas de un producto. Las actualizaciones también pueden sustituir a otras actualizaciones si se han realizado modificaciones para ampliar la compatibilidad de idioma. Por ejemplo, una revisión posterior de una actualización de un producto para Microsoft Office puede quitar la compatibilidad para un sistema operativo más antiguo, pero podría agregar compatibilidad adicional para nuevos idiomas en la versión de actualización inicial.  
+-   Actualiza las versiones más recientes de un producto. En otras palabras, actualiza las versiones que ya no se aplican a las versiones o configuraciones más antiguas de un producto. Las actualizaciones también pueden sustituir a otras actualizaciones si se han realizado modificaciones para ampliar la compatibilidad de idioma. Por ejemplo, una revisión posterior de una actualización de un producto para Aplicaciones de Microsoft 365 podría eliminar la compatibilidad con sistemas operativos más antiguos, pero agregar otra adicional con nuevos idiomas en la versión de actualización inicial.  
 
 En las propiedades para el software del punto de actualización, especifique que las actualizaciones de software sustituidas expiran inmediatamente. Esta configuración evita que se incluyan en nuevas implementaciones. También marca las implementaciones existentes para indicar que contienen una o varias actualizaciones de software expiradas. O bien, especifique un período de tiempo antes de que las actualizaciones de software sustituidas expiren. Esta acción le permite continuar con las implementaciones. 
 
@@ -461,7 +461,8 @@ Cuando hay un reinicio pendiente para una actualización de software de Configur
 
 ## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a> Evaluación de las actualizaciones de software después de una actualización de la pila de servicio
 <!--4639943-->
-A partir de la versión 2002, Configuration Manager detecta si una actualización de la pila de servicio (SSU) forma parte de una instalación de varias actualizaciones. Cuando se detecta una SSU, se instala en primer lugar. Después de instalar la SSU, se ejecuta un ciclo de evaluación de actualizaciones de software para instalar las actualizaciones restantes. Este cambio permite instalar una actualización acumulativa dependiente después de la actualización de la pila de servicio. No es necesario reiniciar el dispositivo entre instalaciones ni tampoco crear una ventana de mantenimiento adicional. Las SSU se instalan en primer lugar solo para instalaciones no iniciadas por el usuario. Por ejemplo, si un usuario inicia una instalación de varias actualizaciones desde el centro de software, es posible que la SSU no se instale primero.
+A partir de la versión 2002, Configuration Manager detecta si una actualización de la pila de servicio (SSU) forma parte de una instalación de varias actualizaciones. Cuando se detecta una SSU, se instala en primer lugar. Después de instalar la SSU, se ejecuta un ciclo de evaluación de actualizaciones de software para instalar las actualizaciones restantes. Este cambio permite instalar una actualización acumulativa dependiente después de la actualización de la pila de servicio. No es necesario reiniciar el dispositivo entre instalaciones ni tampoco crear una ventana de mantenimiento adicional. Las SSU se instalan en primer lugar solo para instalaciones no iniciadas por el usuario. Por ejemplo, si un usuario inicia una instalación de varias actualizaciones desde el centro de software, es posible que la SSU no se instale primero. La instalación de las SSU primero no está disponible en los sistemas operativos Windows Server cuando se usa la versión 2002 de Configuration Manager. <!--7813007-->Esta funcionalidad se agregó en la versión 2006 de Configuration Manager para los sistemas operativos Windows Server.
+
 
 
 ## <a name="next-steps"></a>Pasos siguientes

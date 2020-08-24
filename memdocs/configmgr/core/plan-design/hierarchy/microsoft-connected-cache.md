@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814923"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699337"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Caché de conexión de Microsoft en Configuration Manager
 
@@ -61,7 +61,7 @@ Cuando se configuran los clientes para que usen el servidor de caché de conexi�
 
   - Sitio web predeterminado habilitado en el puerto 80
 
-  - No preinstale la característica [Enrutamiento de solicitud de aplicaciones](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR). La caché de conexión instala ARR y configura sus valores. Microsoft no puede garantizar que la configuración de ARR de la caché de conexión no entre en conflicto con otras aplicaciones del servidor que también usan esta característica.
+  - No preinstale la característica [Enrutamiento de solicitud de aplicaciones](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR). La caché de conexión instala ARR y configura sus valores. Microsoft no puede garantizar que la configuración de ARR de la caché de conexión no entre en conflicto con otras aplicaciones del servidor que también usan esta característica.
 
   - El punto de distribución requiere acceso a la nube de Microsoft a través de Internet. Las direcciones URL concretas pueden variar según el contenido específico habilitado para la nube. Asegúrese de permitir también los puntos de conexión para la optimización de la distribución. Para más información, consulte los [requisitos de acceso a Internet](../network/internet-endpoints.md).
 
@@ -132,11 +132,11 @@ Cuando los clientes descargan contenido administrado en la nube, usan la Optimiz
 - Si habilita [directivas de Windows Update para empresas](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): actualizaciones de características y de calidad de Windows 10
 - Para las [cargas de trabajo de administración conjunta](../../../comanage/workloads.md):
   - Windows Update para empresas: actualizaciones de características y de calidad de Windows 10
-  - Aplicaciones de Office Hacer clic y ejecutar: aplicaciones y actualizaciones de Office
+  - Aplicaciones de Office Hacer clic y ejecutar: Aplicaciones y actualizaciones de Microsoft 365
   - Aplicaciones cliente: aplicaciones y actualizaciones de Microsoft Store
   - Endpoint Protection: actualizaciones de definiciones de Windows Defender
 
-En Windows 10 versión 1809 o posteriores, compruebe este comportamiento con el cmdlet **Get-DeliveryOptimizationStatus** de Windows PowerShell. En la salida del cmdlet, revise el valor **BytesFromCacheServer**. Para más información, vea [Supervisar la optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
+En Windows 10 versión 1809 o posteriores, compruebe este comportamiento con el cmdlet **Get-DeliveryOptimizationStatus** de Windows PowerShell. En la salida del cmdlet, revise el valor **BytesFromCacheServer**. Para más información, vea [Supervisar la optimización de distribución](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
 
 Si el servidor de caché devuelve algún error HTTP, el cliente de Optimización de distribución recurre al origen inicial en la nube.
 
@@ -184,7 +184,7 @@ A partir de la versión 1910, cuando se habilita la caché de conexión en los 
 
 - Esta característica solo admite el tipo de aplicación Win32 de Intune.
 
-  - Cree y asigne (implemente) una nueva aplicación en Intune para este fin. (Las aplicaciones creadas antes de la versión 1811 de Intune no funcionan). Para más información, consulte [Administración de aplicaciones Win32 de Intune](https://docs.microsoft.com/intune/apps/apps-win32-app-management).
+  - Cree y asigne (implemente) una nueva aplicación en Intune para este fin. (Las aplicaciones creadas antes de la versión 1811 de Intune no funcionan). Para más información, consulte [Administración de aplicaciones Win32 de Intune](/intune/apps/apps-win32-app-management).
 
   - La aplicación debe tener un tamaño mínimo de 100 MB.
   

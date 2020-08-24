@@ -2,7 +2,7 @@
 title: Planear para Cloud Management Gateway
 titleSuffix: Configuration Manager
 description: Planee y diseñe Cloud Management Gateway (CMG) para simplificar la administración de clientes basados en Internet.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502262"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692849"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -53,7 +54,7 @@ Hay varios escenarios en los que CMG resulta beneficioso. Los escenarios siguien
 
 - Instalación del cliente de Configuration Manager en dispositivos Windows 10 a través de Internet. El uso de Azure AD permite que el dispositivo se autentique en CMG para el registro y la asignación de clientes. Puede instalar el cliente de forma manual o mediante otro método de distribución de software, como Microsoft Intune.  
 
-- Aprovisionamiento de dispositivos nuevos con administración conjunta. Al inscribir automáticamente los clientes existentes, CMG no es necesario para la administración conjunta. Se necesita para nuevos dispositivos que implican Windows AutoPilot, Azure AD, Microsoft Intune y Configuration Manager. Para más información, consulte [Rutas hacia la administración conjunta](../../../../comanage/quickstart-paths.md).
+- Aprovisionamiento de dispositivos nuevos con administración conjunta. Al inscribir automáticamente los clientes existentes, CMG no es necesario para la administración conjunta. Se necesita para nuevos dispositivos que abarcan Windows AutoPilot, Azure AD, Microsoft Intune y Configuration Manager. Para más información, consulte [Rutas hacia la administración conjunta](../../../../comanage/quickstart-paths.md).
 
 ### <a name="specific-use-cases"></a>Casos de uso específicos
 
@@ -104,10 +105,10 @@ La implementación y el funcionamiento de CMG incluye los componentes siguientes
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!-- 1324735 -->
-Cree la instancia de CMG mediante una **implementación de Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) es una moderna plataforma para administrar todos los recursos de la solución como una única entidad, denominada [grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Al implementar CMG con Azure Resource Manager, el sitio usa Azure Active Directory (Azure AD) para autenticar y crear los recursos necesarios en la nube. Esta implementación modernizada no requiere el certificado de administración de Azure clásico.  
+Cree la instancia de CMG mediante una **implementación de Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) es una moderna plataforma para administrar todos los recursos de la solución como una única entidad, denominada [grupo de recursos](/azure/azure-resource-manager/resource-group-overview#resource-groups). Al implementar CMG con Azure Resource Manager, el sitio usa Azure Active Directory (Azure AD) para autenticar y crear los recursos necesarios en la nube. Esta implementación modernizada no requiere el certificado de administración de Azure clásico.  
 
 > [!NOTE]
-> Esta función no habilita la compatibilidad de los proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, consulte [Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services) (Servicios de Azure disponibles en los proveedores de servicios en la nube de Azure).
+> Esta función no habilita la compatibilidad de los proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, consulte [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services) (Servicios de Azure disponibles en los proveedores de servicios en la nube de Azure).
 
 A partir de la versión 1902 de Configuration Manager, Azure Resource Manager es el único mecanismo de implementación para instancias nuevas de Cloud Management Gateway. Las implementaciones existentes seguirán funcionando.<!-- 3605704 -->
 
@@ -123,6 +124,8 @@ Cree la instancia de CMG en el sitio de nivel superior de la jerarquía. Si es u
 Puede crear varios servicios CMG en Azure y varios puntos de conexión de CMG. La existencia de varios puntos de conexión de CMG proporciona equilibrio de carga para el tráfico de cliente desde CMG a los roles locales.
 
 A partir de la versión 1902, puede asociar una instancia de CMG con un grupo de límites. Esta configuración permite a los clientes predeterminar o recurrir a dicha instancia de CMG para la comunicación con el cliente de acuerdo con las [relaciones de grupo de límites](../../../servers/deploy/configure/boundary-groups.md). Este comportamiento es especialmente útil en escenarios de sucursales y VPN. Puede dirigir el tráfico de clientes lejos de los enlaces WAN caros y lentos para utilizar servicios más rápidos en Microsoft Azure.<!--3640932-->
+
+A partir de la versión 2006, los clientes de la intranet pueden acceder a un punto de actualización de software de CMG cuando se asigna a un grupo de límites. Para obtener más información, vea [Configuración de grupos de límites](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
 
 > [!NOTE]
 > Los clientes basados en Internet no pertenecen a ningún grupo de límites.
@@ -213,7 +216,7 @@ Para más información, vea las siguientes preguntas frecuentes: [¿Las cuentas 
 
 - Los puntos de actualización de software que usan un equilibrador de carga de red no funcionan con CMG. <!--505311-->  
 
-- Las implementaciones de CMG que usan el modelo de implementación de Azure no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para más información, consulte [Servicios de Azure disponibles en el programa CSP de Azure](https://docs.microsoft.com/partner-center/azure-plan-available).
+- Las implementaciones de CMG que usan el modelo de implementación de Azure no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para más información, consulte [Servicios de Azure disponibles en el programa CSP de Azure](/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Compatibilidad con características de Configuration Manager
 
@@ -222,7 +225,7 @@ En la tabla siguiente se muestra la compatibilidad de CMG con características d
 |Característica  |Compatibilidad  |
 |---------|---------|
 | Actualizaciones de software     | ![Compatible.](media/green_check.png) |
-| Endpoint Protection     | ![Compatible](media/green_check.png) <sup>[Nota 1](#bkmk_note1)</sup> |
+| Endpoint Protection     | ![Compatible](media/green_check.png) <sup>[Nota&nbsp;1](#bkmk_note1)</sup> |
 | Inventario de hardware y software     | ![Compatible.](media/green_check.png) |
 | Estado de cliente y notificaciones     | ![Compatible.](media/green_check.png) |
 | Ejecutar scripts     | ![Compatible.](media/green_check.png) |
@@ -232,10 +235,11 @@ En la tabla siguiente se muestra la compatibilidad de CMG con características d
 | Instalación de cliente<br>(con [autenticación de tokens](../../deploy/deploy-clients-cmg-token.md)) | ![Compatible.](media/green_check.png) (2002) |
 | Distribución de software (dirigida al dispositivo)     | ![Compatible.](media/green_check.png) |
 | Distribución de software (dirigida al usuario, obligatorio)<br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png) |
-| Distribución de software (dirigida al usuario, disponible)<br>([todos los requisitos](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Compatible.](media/green_check.png) |
+| Distribución de software (dirigida al usuario, disponible)<br>([todos los requisitos](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Compatible.](media/green_check.png) |
 | [Secuencia de tareas de actualización local](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) de Windows 10 | ![Compatible.](media/green_check.png) |
-| Secuencias de tareas que no usan imágenes de arranque y que se implementan con una opción: **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas** | ![Compatible.](media/green_check.png) |
-| Secuencias de tareas que no usan imágenes de arranque y con [cualquiera de las opciones de descarga](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Compatible.](media/green_check.png) (1910)|
+| Secuencia de tareas sin una imagen de arranque, implementada con la opción para **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas** | ![Compatible.](media/green_check.png) |
+| Secuencia de tareas sin imagen de arranque, implementada con [una opción de descarga](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Compatible.](media/green_check.png) (1910) |
+| Secuencia de tareas con una imagen de arranque, iniciada desde el Centro de software | ![Compatible](media/green_check.png) (2006) |
 | Cualquier otro escenario de secuencia de tareas     | ![No compatible](media/Red_X.png) |
 | Inserción de cliente     | ![No compatible](media/Red_X.png) |
 | Asignación automática de sitio     | ![No compatible](media/Red_X.png) |
@@ -256,12 +260,18 @@ En la tabla siguiente se muestra la compatibilidad de CMG con características d
 |![No compatible](media/Red_X.png) = Esta característica no se admite con CMG. |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> Nota 1: Compatibilidad con Endpoint Protection
-<!-- 4350561 -->
-Para que los dispositivos unidos a un dominio apliquen la directiva de Endpoint Protection, necesitan tener acceso al dominio. Los dispositivos con acceso poco frecuente a la red interna pueden experimentar retrasos en la aplicación de la directiva de Endpoint Protection. Si necesita que los dispositivos apliquen inmediatamente la directiva de Endpoint Protection después de recibirla, considere una de las siguientes opciones:
 
-- Use la administración conjunta y cambie la [carga de trabajo de Endpoint Protection](../../../../comanage/workloads.md#endpoint-protection) a Intune y administre el [Antivirus de Microsoft Defender](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) desde la nube.
+A partir de la versión 2006, los clientes que se comunican a través de una CMG pueden aplicar inmediatamente directivas de Endpoint Protection sin una conexión activa a Active Directory.<!--4773948-->
+
+<!-- 4350561 -->
+En la versión 2002 y versiones anteriores, para que los dispositivos unidos a un dominio apliquen la directiva de Endpoint Protection, necesitan tener acceso al dominio. Los dispositivos con acceso poco frecuente a la red interna pueden experimentar retrasos en la aplicación de la directiva de Endpoint Protection. Si necesita que los dispositivos apliquen inmediatamente la directiva de Endpoint Protection después de recibirla, considere una de las siguientes opciones:
+
+- Actualice el sitio y los clientes a la versión 2006.
+
+- Use la administración conjunta y cambie la [carga de trabajo de Endpoint Protection](../../../../comanage/workloads.md#endpoint-protection) a Intune y administre el [Antivirus de Microsoft Defender](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) desde la nube.
 
 - Use [elementos de configuración](../../../../compliance/deploy-use/create-configuration-items.md) en lugar de la característica de [directivas antimalware](../../../../protect/deploy-use/endpoint-antimalware-policies.md) nativa para aplicar la directiva de Endpoint Protection.
+
 
 ## <a name="cost"></a>Coste
 
@@ -315,7 +325,7 @@ CMG usa los siguientes componentes de Azure, que conllevan cargos en la cuenta d
 
 - Una instancia de CMG también puede ser un punto de distribución en la nube para brindar contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. Para obtener más información, vea [Modify a CMG](setup-cloud-management-gateway.md#modify-a-cmg) (Modificar una instancia de CMG).<!--1358651-->  
 
-- CMG usa el almacenamiento con redundancia local (LRS) de Azure. Para más información, consulte [Almacenamiento con redundancia local](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+- CMG usa el almacenamiento con redundancia local (LRS) de Azure. Para más información, consulte [Almacenamiento con redundancia local](/azure/storage/common/storage-redundancy-lrs).  
 
 ### <a name="other-costs"></a>Otros costos
 

@@ -2,7 +2,7 @@
 title: Notificaciones de reinicio del dispositivo
 titleSuffix: Configuration Manager
 description: Comportamiento de las notificaciones de reinicio para diversas opciones de configuración de cliente en Configuration Manager.
-ms.date: 06/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347226"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127261"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Notificaciones de reinicio del dispositivo en Configuration Manager
 
@@ -33,25 +33,25 @@ La [configuración de cliente de reinicio de equipo](#client-settings) cambia la
 
 ## <a name="restart-notification-types"></a>Tipos de notificación de reinicio
 
-Cuando un dispositivo requiere un reinicio, el cliente muestra al usuario final una notificación del próximo reinicio. Hay cuatro notificaciones generales que pueden recibir los usuarios.
+Cuando un dispositivo requiere un reinicio, el cliente muestra al usuario final una notificación del próximo reinicio.
 
 ### <a name="toast-notification"></a>Notificación del sistema
 
 Una notificación del sistema de Windows informa al usuario de que el dispositivo se debe reiniciar. La información de la notificación del sistema puede ser diferente dependiendo de la versión de Configuration Manager que ejecute. Este tipo de notificación es nativo del sistema operativo Windows. Con este tipo de notificación también puede ver software de terceros.
 
-![Notificación del sistema de reinicio pendiente](media/3555947-restart-toast.png)
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="Notificación del sistema de reinicio pendiente":::
 
 ### <a name="software-center-notification-with-snooze"></a>Notificación del Centro de software con opción de posponer
 
 El Centro de software muestra una notificación con una opción de posponer y el tiempo restante antes de forzar el reinicio de los dispositivos. El mensaje puede ser diferente dependiendo de su versión de Configuration Manager.
 
-![Notificación del Centro de software de reinicio pendiente con el botón Posponer](media/3976435-snooze-restart-countdown.png)
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Notificación del Centro de software de reinicio pendiente con el botón Posponer":::
 
 ### <a name="software-center-final-countdown-notification"></a>Notificación de cuenta regresiva final del Centro de software
 
 El Centro de software muestra esta notificación de cuenta regresiva final que el usuario no puede cerrar ni posponer.
 
-![Notificación de cuenta regresiva final del Centro de software](media/3976435-final-restart-countdown.png)
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Notificación de cuenta regresiva final del Centro de software":::
 
 A partir de la versión 1906, el usuario no verá una barra de progreso en la notificación de reinicio hasta que el reinicio pendiente sea anterior a 24 horas.
 
@@ -59,17 +59,47 @@ A partir de la versión 1906, el usuario no verá una barra de progreso en la n
 
 Si el usuario instala de forma proactiva software necesario antes de la fecha límite y tiene que reiniciarse, verá otra notificación. La siguiente notificación se recibe si la configuración de la experiencia del usuario permite las notificaciones y no se usan notificaciones del sistema para la implementación. Para obtener más información sobre esta configuración, consulte [Configuración de la **experiencia del usuario** de implementación](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) y [Notificaciones de usuario para implementaciones obligatorias](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
-![Notificación de software instalado de forma proactiva](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notificación de software instalado de forma proactiva":::
 
 #### <a name="available-apps"></a>Aplicaciones disponibles
 
 Si no usa notificaciones del sistema, el cuadro de diálogo de software marcado como **Disponible** será similar al del software instalado de forma proactiva. En el caso del software **Disponible**, la notificación no tiene una fecha límite para el reinicio y el usuario puede elegir su propio intervalo de repetición. Para obtener más información, consulte [Configuración de aprobación](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
-![El software marcado como "Disponible" no tiene una fecha límite para el reinicio en la notificación.](media/3555947-deployment-marked-available-restart.png)
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="El software disponible no tiene una fecha límite para el reinicio en la notificación":::
+
+### <a name="software-center-notification-of-required-restart"></a>Notificación de reinicio necesario del Centro de software
+
+<!--3601213-->
+
+A partir de la versión 2006, puede definir la configuración del cliente para impedir que los dispositivos se reinicien automáticamente cuando una implementación lo requiera. Cuando una implementación obligatoria necesita que el dispositivo se reinicie, pero se deshabilita la configuración de cliente **Configuration Manager puede forzar el reinicio de un dispositivo**, verá la siguiente notificación:
+
+:::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Notificación del Centro de software para reiniciar el equipo":::
+
+Si decide **posponer** esta notificación, se mostrará de nuevo en función de cómo configure la frecuencia de las notificaciones de reinicio. El dispositivo no se reiniciará hasta que seleccione **Reiniciar** o reinicie Windows manualmente.
+
+> [!NOTE]
+> De forma predeterminada, Configuration Manager puede seguir forzando el reinicio de los dispositivos.
 
 ## <a name="client-settings"></a>Configuración de cliente
 
 Para controlar los comportamientos de reinicio del cliente, establezca la configuración siguiente de cliente de dispositivo en el grupo **Reinicio de equipo**. Para obtener más información, vea [Cómo configurar el cliente](configure-client-settings.md).
+
+### <a name="configuration-manager-can-force-a-device-to-restart"></a>Configuration Manager puede forzar el reinicio de un dispositivo
+
+<!--3601213-->
+
+A partir de la versión 2006, puede definir la configuración del cliente para impedir que los dispositivos se reinicien automáticamente cuando una implementación lo requiera. Configuration Manager habilita este valor de forma predeterminada.
+
+> [!IMPORTANT]
+> Este valor de cliente se aplica a todas las implementaciones de aplicaciones, actualizaciones de software y paquetes en el dispositivo. Hasta que un usuario reinicie manualmente el dispositivo:
+>
+> - Es posible que las actualizaciones de software y las revisiones de aplicaciones no estén totalmente instaladas.
+> - Es posible que no se realicen instalaciones de software adicionales.
+
+Cuando deshabilita esta configuración, no puede especificar la cantidad de tiempo después de la fecha límite en que se reinicia el dispositivo o se le presenta al usuario una notificación de cuenta atrás final.
+
+> [!NOTE]
+> Para aprovechar al máximo las nuevas características de Configuration Manager, después de actualizar el sitio, actualice también los clientes a la versión más reciente. Aunque la funcionalidad nueva aparece en la consola de Configuration Manager cuando se actualiza el sitio y la consola, la totalidad del escenario no es funcional hasta que la versión del cliente también es la más reciente.
 
 ### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>Especificar el tiempo después de la fecha límite antes de reiniciarse un dispositivo (minutos)
 
@@ -123,17 +153,17 @@ Si la opción **Cuando una implementación requiere reiniciar, mostrar al usuari
 
   - Si el reinicio supera las 24 horas, muestra un tiempo de reinicio estimado. La hora de esta notificación se basa en la opción: **Especificar el tiempo después de la fecha límite antes de reiniciarse un dispositivo (minutos)** .
 
-    ![El tiempo de reinicio supera las 24 horas](media/3976435-notification-greater-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-greater-than-24-hours.png" alt-text="El tiempo de reinicio supera las 24 horas":::
 
   - Si el reinicio dura menos de 24 horas, muestra una barra de progreso. La hora de esta notificación se basa en la opción: **Especificar el tiempo después de la fecha límite antes de reiniciarse un dispositivo (minutos)** .
 
-    ![El tiempo de reinicio no llega a las 24 horas](media/3976435-notification-less-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-less-than-24-hours.png" alt-text="El tiempo de reinicio no llega a las 24 horas":::
 
 Si el usuario selecciona **Posponer**, se muestra otra notificación temporal una vez transcurrido el período de aplazamiento. Este comportamiento presupone que todavía no llega a la cuenta regresiva final. La hora de la siguiente notificación se basa en la opción: **Especificar la frecuencia de las notificaciones de recordatorio presentadas al usuario, después de la fecha límite, antes de reiniciar un dispositivo (minutos)** . Si el usuario selecciona **Posponer** y el intervalo de aplazamiento es una hora, el Centro de software notifica al usuario nuevamente en 60 minutos. Este comportamiento presupone que todavía no llega a la cuenta regresiva final.
 
 Cuando llega a la cuenta regresiva final, el Centro de software muestra al usuario una notificación que no puede cerrar. La barra de progreso está de color rojo y el usuario no puede darle a **Posponer**.
 
-![Notificación de cuenta regresiva final del Centro de software en la versión 1906](media/3976435-1906-final-restart-countdown.png)
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="Notificación de cuenta regresiva final del Centro de software en la versión 1906":::
 
 ### <a name="proactively-install-required-software-before-the-deadline"></a>Instalación proactiva del software necesario antes de la fecha límite
 
@@ -141,7 +171,7 @@ Si el usuario instala de forma proactiva el software necesario que debe reinicia
 
 La siguiente notificación se recibe si la configuración de la experiencia del usuario permite las notificaciones y no se usan notificaciones del sistema para la implementación:
 
-![Notificación de software instalado de forma proactiva](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notificación de software instalado de forma proactiva":::
 
 Una vez que la implementación llega a la fecha límite, el Centro de software sigue el comportamiento para la [instalación del software necesario en la fecha límite o después](#install-required-software-at-or-after-the-deadline).
 
@@ -193,25 +223,25 @@ En el grupo [Reinicio de equipo](#client-settings) de la configuración de clien
 
 Cuando se realiza esta configuración del cliente, cambia la experiencia de usuario en todas las implementaciones necesarias que requieren un reinicio a partir de las notificaciones del sistema:
 
-![Notificación del sistema de reinicio necesario](media/3555947-restart-toast-initial.png)  
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="Notificación del sistema de reinicio necesario":::
 
 En la ventana de diálogo del Centro de software más intrusiva:
 
-![Ventana de diálogo con el reinicio del equipo](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Ventana de diálogo con el reinicio del equipo":::
 
 Si el usuario no reinició su dispositivo tras la instalación, recibirá una notificación como recordatorio. Este recordatorio temporal se mostrará al usuario en función de la configuración de cliente: **Mostrar una notificación temporal al usuario que indique el intervalo antes de que el usuario se desconecte o el equipo se inicie (minutos)** . Esta configuración es el tiempo general del que dispone el usuario para reiniciar la máquina antes de que se fuerce un reinicio.
 
 - Notificación temporal al usar notificaciones del sistema:
 
-  ![Notificación del sistema de reinicio pendiente](media/3555947-restart-toast.png)
+    :::image type="content" source="media/3555947-restart-toast.png" alt-text="Notificación del sistema de reinicio pendiente":::
 
 - Notificación temporal al usar la ventana de diálogo del Centro de software, no notificación del sistema:
 
-  ![Notificación del Centro de software de reinicio pendiente con el botón Posponer](media/3555947-1902-hide-notification.png)
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Notificación del Centro de software de reinicio pendiente con el botón Posponer":::
 
 Si el usuario no lleva a cabo el reinicio tras la notificación temporal, recibirá la notificación de cuenta regresiva final que no puede cerrar. La hora a la que aparece la notificación final se basa en la configuración de cliente: **Mostrar un cuadro de diálogo que el usuario no pueda cerrar, que muestre el intervalo de recuento antes de que el usuario se desconecte o el equipo se reinicie (minutos)** . Por ejemplo, si el valor es 60, se mostrará al usuario la notificación final una hora antes de forzarse un reinicio:
 
-![Notificación de cuenta regresiva final del Centro de software](media/3555947-1902-final-countdown.png)
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Notificación de cuenta regresiva final del Centro de software":::
 
 Las opciones siguientes deben tener menos duración que la [ventana de mantenimiento](../manage/collections/use-maintenance-windows.md) más corta que se aplique en el equipo:
 

@@ -2,59 +2,61 @@
 title: Usar PXE para OSD a través de la red
 titleSuffix: Configuration Manager
 description: Use las implementaciones de SO iniciadas por PXE para actualizar el sistema operativo de un equipo o instalar una versión nueva de Windows en un equipo nuevo.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7d2d467a053689edad1dcf62fa9bb140d5f259d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079355"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124625"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Usar el entorno PXE para implementar Windows a través de la red con Configuration Manager
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-Las implementaciones de SO iniciadas por el entorno de ejecución previo al arranque (PXE) en Configuration Manager permiten que los clientes soliciten e implementen sistemas operativos a través de la red. En este escenario de implementación, se envía la imagen de SO y las imágenes de arranque a un punto de distribución habilitado para PXE.
+Las implementaciones de SO iniciadas por el entorno de ejecución previo al arranque (PXE) en Configuration Manager permiten que los clientes soliciten e implementen sistemas operativos a través de la red. En este escenario de implementación, se envía la imagen del sistema operativo y las imágenes de arranque a un punto de distribución habilitado para PXE.
 
-> [!NOTE]  
+> [!NOTE]
 > Cuando se crea una implementación de SO dirigida únicamente a equipos con BIOS para x64, tanto la imagen de arranque para x64 como la imagen de arranque para x86 deben estar disponibles en el punto de distribución.
 
 Se pueden usar las implementaciones de SO iniciadas por PXE en los escenarios siguientes:
 
-- [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
-- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)
 
 Complete los pasos de uno de los escenarios de implementación de SO y luego use las secciones de este artículo para prepararse para las implementaciones iniciadas por PXE.
 
 > [!WARNING]
-> Si usa implementaciones de entorno PXE y configura el hardware del dispositivo con el adaptador de red como primer dispositivo de arranque, estos dispositivos pueden iniciar automáticamente una secuencia de tareas de implementación de sistema operativo sin interacción del usuario. La verificación de la implementación no administra esta configuración. Aunque esta configuración puede simplificar el proceso y reducir la interacción del usuario, coloca al dispositivo ante un riesgo mayor de restablecimiento de imagen inicial accidental.
+> Si usa implementaciones de entorno PXE y configura el hardware del dispositivo con el adaptador de red como primer dispositivo de arranque, estos dispositivos pueden iniciar automáticamente una secuencia de tareas de implementación de sistema operativo sin interacción del usuario. Esta configuración no se administra con la opción [Verificación de la implementación](../../core/servers/manage/settings-to-manage-high-risk-deployments.md). Aunque esta configuración puede simplificar el proceso y reducir la interacción del usuario, coloca al dispositivo ante un riesgo mayor de restablecimiento de imagen inicial accidental.
 
-## <a name="configure-at-least-one-distribution-point-to-accept-pxe-requests"></a><a name="BKMK_Configure"></a> Configure al menos un punto de distribución para aceptar solicitudes PXE
+A partir de la versión 2006, las secuencias de tareas basadas en PXE pueden descargar contenido basado en la nube. El punto de distribución habilitado para PXE aún necesita la imagen de arranque y el dispositivo necesita una conexión al punto de administración a través de la intranet. Se puede obtener contenido adicional de un punto de distribución de nube o de una instancia de Cloud Management Gateway (CMG) habilitados para contenido.<!--6209223--> Para más información, consulte [Compatibilidad con el contenido basado en la nube](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
 
-Para implementar sistemas operativos en clientes de Configuration Manager que efectúan solicitudes de arranque PXE, debe configurar uno o varios puntos de distribución para que acepten las solicitudes PXE. Una vez configurado el punto de distribución, responde a las solicitudes de arranque de PXE y determina las acciones de implementación adecuadas que se van a llevar a cabo. Para obtener más información, consulte [Instalar o modificar un punto de distribución](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
+## <a name="configure-distribution-points-for-pxe"></a><a name="BKMK_Configure"></a> Configuración de puntos de distribución para PXE
 
-> [!NOTE]  
-> Al configurar un único punto de distribución habilitado con entorno PXE para admitir varias subredes, no se permite usar opciones de DHCP. Configure asistentes de IP en los enrutadores para permitir que las solicitudes PXE se reenvíen a los puntos de distribución habilitados con PXE.
->
-> En la versión 1810, no se permite usar el respondedor del entorno PXE sin WDS en servidores que también estén ejecutando un servidor DHCP.
->
-> A partir de la versión 1902, cuando se habilita un respondedor del entorno PXE en un punto de distribución sin Servicio de implementación de Windows, ahora puede estar en el mismo servidor que el servicio DHCP.<!--3734270, SCCMDocs-pr #3416--> Agregue estas opciones para admitir esta configuración:  
->
-> - Establezca el valor DWord **DoNotListenOnDhcpPort** en `1` en esta clave del Registro: `HKLM\Software\Microsoft\SMS\DP`.
-> - Establezca la opción 60 de DHCP en `PXEClient`.  
-> - Reinicie los servicios SCCMPXE y DHCP en el servidor.  
+Para implementar sistemas operativos en clientes de Configuration Manager que efectúan solicitudes de arranque PXE, configure uno o varios puntos de distribución para que acepten las solicitudes PXE. A continuación, el punto de distribución responde a las solicitudes de arranque de PXE y determina las acciones de implementación adecuadas. Para obtener más información, consulte [Instalar o modificar un punto de distribución](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
+
+> [!NOTE]
+> Al configurar un único punto de distribución habilitado para PXE para admitir varias subredes, no se permite usar opciones de DHCP. Para permitir que la red reenvíe las solicitudes PXE de cliente a los puntos de distribución habilitados para PXE, configure aplicaciones auxiliares IP en los enrutadores.
+
+En la versión 1810, no se permite usar el respondedor del entorno PXE sin WDS en servidores que también estén ejecutando un servidor DHCP.
+
+A partir de la versión 1902, cuando se habilita un respondedor del entorno PXE en un punto de distribución sin Servicio de implementación de Windows, ahora puede estar en el mismo servidor que el servicio DHCP.<!--3734270, SCCMDocs-pr #3416--> Agregue estas opciones para admitir esta configuración:
+
+- Establezca el valor DWord **DoNotListenOnDhcpPort** en `1` en esta clave del Registro: `HKLM\Software\Microsoft\SMS\DP`.
+- Establezca la opción 60 de DHCP en `PXEClient`.
+- Reinicie los servicios SCCMPXE y DHCP en el servidor.
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Preparar una imagen de arranque habilitada para PXE
 
-Para usar PXE para implementar un sistema operativo, debe distribuir imágenes de arranque x86 y x64 habilitadas para PXE a uno o varios puntos de distribución habilitados para PXE. Use la información para habilitar PXE en una imagen de arranque y distribuirla a los puntos de distribución:
+Para usar PXE para implementar un sistema operativo, distribuya imágenes de arranque x86 y x64 habilitadas para PXE a uno o varios puntos de distribución habilitados para PXE.
 
 - Para habilitar PXE en una imagen de arranque, seleccione **Implementar esta imagen de arranque desde el punto de distribución habilitado con PXE** en la pestaña **Origen de datos** de las propiedades de la imagen de arranque.
 
@@ -66,7 +68,7 @@ Configuration Manager puede reconocer varios equipos como el mismo dispositivo s
 
 ## <a name="create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a> Crear una lista de exclusión para las implementaciones de PXE
 
-> [!Note]  
+> [!NOTE]
 > En algunas circunstancias, el proceso para [administrar identificadores de hardware duplicados](../../core/clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers) puede ser más fácil.<!-- SCCMDocs issue 802 -->
 >
 > En algunos casos, los comportamientos de cada uno pueden producir resultados diferentes. La lista de exclusión nunca inicia un cliente con la dirección MAC enumerada, sea cual sea.
@@ -75,22 +77,18 @@ Configuration Manager puede reconocer varios equipos como el mismo dispositivo s
 
 Cuando implementa sistemas operativos con PXE, puede crear una lista de exclusión en cada punto de distribución. Agregue las direcciones MAC a la lista de exclusión de los equipos que quiere que el punto de distribución ignore. Los equipos indicados no reciben las secuencias de tareas de implementación que Configuration Manager usa para la implementación de PXE.
 
-### <a name="process-to-create-the-exclusion-list"></a>Proceso para crear la lista de exclusión
+1. Cree un archivo de texto en el punto de distribución habilitado para PXE. Por ejemplo, asigne al archivo el nombre **pxeExceptions.txt**.
 
-1. Cree un archivo de texto en el punto de distribución que está habilitado para PXE. Por ejemplo, puede llamar a este archivo de texto **pxeExceptions.txt**.  
+1. Use un editor de texto sin formato, como el Bloc de notas, para editar el archivo. Agregue las direcciones MAC de los equipos que debe omitir el punto de distribución habilitado para PXE. Separar los valores de dirección MAC por dos puntos y escriba cada dirección en una línea independiente. Por ejemplo: `01:23:45:67:89:ab`
 
-2. Utilice un editor de texto sin formato, como el Bloc de notas, y agregue las direcciones MAC de los equipos que el punto de distribución habilitado para PXE debe ignorar. Separar los valores de dirección MAC por dos puntos y escriba cada dirección en una línea independiente. Por ejemplo: `01:23:45:67:89:ab`  
+1. Guarde el archivo de texto en el punto de distribución habilitado por PXE. Puede guardarlo en cualquier ubicación del servidor.
 
-3. Guarde el archivo de texto en el servidor de sistema de sitio del punto de distribución habilitado por PXE. El archivo de texto se puede guardar en cualquier ubicación en el servidor.  
+1. Edite el Registro en el punto de distribución habilitado para PXE. Vaya a la siguiente ruta de acceso al Registro: `HKLM\Software\Microsoft\SMS\DP`. Cree un valor de cadena **MACIgnoreListFile**. Agregue la ruta de acceso completa al archivo de texto en el punto de distribución habilitado para PXE.
 
-4. Edite el Registro del punto de distribución habilitado para PXE para crear una clave del Registro **MACIgnoreListFile**. Agregue el valor de cadena de la ruta de acceso completa para el archivo de texto en el servidor de sistema de sitio del punto de distribución habilitado para PXE. Utilice la siguiente ruta de acceso para el Registro:  
+    > [!WARNING]
+    > Si utiliza incorrectamente el Editor del Registro, podría causar problemas graves que quizás requieran volver a instalar Windows. Microsoft no puede garantizar que pueda resolver problemas ocasionados por un uso incorrecto del Editor del Registro. Usa el Editor del Registro bajo tu propia responsabilidad.
 
-    `HKLM\Software\Microsoft\SMS\DP`  
-
-    > [!WARNING]  
-    > Si utiliza incorrectamente el Editor del Registro, podría causar problemas graves que quizás requieran volver a instalar Windows. Microsoft no puede garantizar que pueda resolver problemas ocasionados por un uso incorrecto del Editor del Registro. Usa el Editor del Registro bajo tu propia responsabilidad.  
-
-5. Reinicie el servicio WDS o el servicio del respondedor PXE después de realizar este cambio de registro. No es necesario reiniciar el servidor.<!--512129-->  
+1. Tras realizar este cambio en el Registro, reinicie el servicio WDS o el servicio del respondedor de PXE. No es necesario reiniciar el servidor.<!--512129-->
 
 ## <a name="ramdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a> Tamaño de bloque de TFTP de RamDisk y tamaño de ventana
 
@@ -107,7 +105,8 @@ Para usar una implementación de SO iniciada por PXE, configure la implementaci�
 - Sólo medios y PXE (ocultos)
 
 ## <a name="option-82-during-pxe-dhcp-handshake"></a>Opción 82 durante el protocolo de enlace DHCP de PXE
-A partir de la versión 1906, la opción 82 durante el protocolo de enlace DHCP de PXE es compatible con el respondedor PXE sin WDS. Si se requiere la opción 82, asegúrese de usar el respondedor PXE sin WDS. La opción 82 no es compatible con WDS.
+
+A partir de la versión 1906, Configuration Manager admite la opción 82 durante el protocolo de enlace DHCP de PXE con el respondedor de PXE sin WDS. Si se requiere la opción 82, asegúrese de usar el respondedor de PXE sin WDS. Configuration Manager no admite la opción 82 con WDS.
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> Implementar la secuencia de tareas
 
@@ -119,8 +118,8 @@ Implemente el sistema operativo en una recopilación de destino. Para obtener m�
 
 Puede realizar de nuevo una implementación del entorno PXE requerida. Para ello, borre el estado de la última implementación del entorno PXE asignada a un equipo o a una recopilación de Configuration Manager. Para obtener más información sobre la acción **Borrar implementaciones de PXE requeridas**, vea [Administrar clientes](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) o [Administrar recopilaciones](../../core/clients/manage/collections/manage-collections.md#bkmk_device). Esta acción restablece el estado de la implementación, y vuelve a instalar las implementaciones requeridas más recientes.
 
-> [!IMPORTANT]  
-> El protocolo PXE no es seguro. Asegúrese de que el servidor PXE y el cliente de PXE se encuentran en una red físicamente segura, como, por ejemplo, en un centro de datos, para evitar accesos no autorizados al sitio.
+> [!IMPORTANT]
+> El protocolo PXE no es seguro. Asegúrese de que el servidor PXE y el cliente PXE se encuentran en una red físicamente segura, como, por ejemplo, en un centro de datos, para evitar accesos no autorizados al sitio.
 
 ## <a name="how-the-boot-image-is-selected-for-pxe"></a>Cómo se selecciona la imagen de arranque de PXE
 
@@ -140,3 +139,7 @@ En la lista siguiente se proporciona información sobre cómo se selecciona una 
     Si se encuentra más de una imagen de arranque, se usa el identificador de implementación de la secuencia de tareas *mayor* o más reciente. En el caso de una jerarquía de varios sitios, el sitio con la letra *mayor* tendría prioridad en esa comparación de cadenas. Por ejemplo, si ambas coinciden, se selecciona una implementación de años del sitio ZZZ por encima de la implementación de ayer del sitio AAA.<!-- SCCMDocs issue 877 -->  
 
 4. Si no se encuentra una imagen de arranque con la misma arquitectura, Configuration Manager busca una imagen de arranque que sea compatible con la arquitectura del cliente. Busca en la lista de secuencias de tareas que se encuentra en el paso 2. Por ejemplo, un cliente de BIOS o MBR de 64 bits es compatible con imágenes de arranque de 32 bits y 64 bits. Un cliente de BIOS o MBR de 32 bits solo es compatible con imágenes de arranque de 32 bits. Los clientes UEFI solo son compatibles con la arquitectura coincidente. Un cliente UEFI de 64 bits solo es compatible con imágenes de arranque de 64 bits y un cliente UEFI de 32 bits solo es compatible con imágenes de arranque de 32 bits.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Experiencias de usuario para la implementación de sistemas operativos](../understand/user-experience.md#pxe)

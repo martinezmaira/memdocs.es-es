@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262122"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700572"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novedades de la versión 2002 de la rama actual de Configuration Manager
 
@@ -147,7 +147,7 @@ Para más información, consulte [Supervisión del estado de conexión](../../..
 
 Se ha facilitado la navegación por las entidades CMPivot. Ahora puede buscar entidades CMPivot. También se han agregado nuevos iconos para que pueda diferenciar fácilmente las entidades y los tipos de objeto de entidad.
 
-Para obtener más información, vea [CMPivot](../../servers/manage/cmpivot.md#bkmk_2002).
+Para obtener más información, vea [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002).
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> Administración de contenido
 
@@ -391,9 +391,9 @@ De forma similar a las mejoras de versiones anteriores, ahora se puede usar la o
 
 <!--3555935, 3555936-->
 
-_Introducido por primera vez en junio de 2020_
+*(Se incorporó por primera vez en junio de 2020)*
 
-La comunidad de administradores de TI ha desarrollado multitud de conocimientos con el paso de los años. En lugar de reinventar elementos como scripts e informes desde cero, hemos creado un **Centro de comunidad** de Configuration Manager donde compartirlos. Al aprovechar el trabajo de los demás, puede ahorrarse horas de trabajo. El Centro de comunidad fomenta la creatividad mediante la creación de otros trabajos y con otras personas que se basan en los suyos. GitHub ya tiene procesos y herramientas en todo el sector diseñados para el uso compartido. Ahora, el Centro de comunidad aprovechará esas herramientas directamente en la consola de Configuration Manager como piezas fundamentales para impulsar esta nueva comunidad.
+La comunidad de administradores de TI ha desarrollado multitud de conocimientos con el paso de los años. En lugar de reinventar elementos como scripts e informes desde cero, hemos creado un **Centro de comunidad** de Configuration Manager donde compartirlos. Al aprovechar el trabajo de los demás, puede ahorrarse horas de trabajo. El Centro de comunidad fomenta la creatividad mediante la creación de otros trabajos y con otras personas que se basan en los suyos. GitHub ya tiene procesos y herramientas en todo el sector diseñados para el uso compartido. Ahora, el Centro de comunidad aprovechará esas herramientas directamente en la consola de Configuration Manager como piezas fundamentales para impulsar esta nueva comunidad. Para la versión inicial, el contenido disponible en el Centro de comunidad solo será cargado por Microsoft.
 
 Para más información, consulte [Centro de comunidad y GitHub](../../servers/manage/community-hub.md).
 
@@ -426,7 +426,7 @@ A partir de esta versión, las características siguientes dejarán de estar en 
 - [CMPivot independiente](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Aplicaciones cliente para dispositivos administrados conjuntamente](../../../comanage/workloads.md#client-apps) (antes denominadas *aplicaciones móviles para dispositivos administrados conjuntamente*)<!-- 1357892/3600959 -->
 
-Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell relativos a Configuration Manager, vea las [notas de la versión de PowerShell 2002](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
+Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell relativos a Configuration Manager, vea las [notas de la versión de PowerShell 2002](/powershell/sccm/2002-release-notes?view=sccm-ps).
 
 Para obtener más información sobre los cambios en la API REST del servicio de administración, consulte las [notas de la versión del servicio de administración](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
@@ -442,6 +442,7 @@ Se ofrecen estas revisiones adicionales para solucionar problemas específicos:
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | Los dispositivos aparecen dos veces en el centro de administración de Microsoft Endpoint Configuration Manager. | 23 de julio de 2020 | No |
 | [4575774](https://support.microsoft.com/help/4575774) | Error del cmdlet New-CMTSStepPrestartCheck en la versión 2002 de Configuration Manager. | 24 de julio de 2020 | No |
+| [4576782](https://support.microsoft.com/help/4576782) | Se agota el tiempo de espera de la hoja de la aplicación en el Centro de administración de Microsoft Endpoint Manager | 11 de agosto de 2020 | No |
 
 <!--
 > [!NOTE]

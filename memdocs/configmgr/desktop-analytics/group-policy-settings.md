@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: d00edbfc30a87660adc65758dc9fbcb9113197f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153460"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700657"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Configuración de la directiva de grupo para Análisis de escritorio
 
@@ -37,10 +37,10 @@ Configuration Manager establece las directivas de Windows en una o ambas claves 
 | Directiva | Path | Se aplica a | Valor |
 |--------|------|------------|-------|
 | **CommercialId** | Local | Todas las versiones de Windows | Para que un dispositivo se muestre en Análisis de escritorio, configúrelo con el identificador comercial de su organización. |
-| **AllowTelemetry**  | GPO | Windows 10 | Establezca el nivel de los datos de diagnóstico del modo siguiente: `1` para **Básico**, `2` para **Mejorado** o `3` para **Completo**. Aunque Análisis de escritorio necesita como mínimo datos de diagnóstico básicos, Microsoft recomienda usar el nivel Mejorado (limitado). Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versión 1803 y posteriores | esta configuración solo se aplica cuando el valor de AllowTelemetry está establecido en `2`. Limita los eventos de datos de diagnóstico mejorados enviados a Microsoft a solo los que necesita Análisis de escritorio. Para más información, consulte [Campos y eventos de datos de diagnóstico de Windows 10 recopilados mediante la directiva de datos de diagnóstico mejorados](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
+| **AllowTelemetry**  | GPO | Windows 10 | Establezca el nivel de los datos de diagnóstico del modo siguiente: `1` para **Básico** (Requerido), `2` para **Mejorado** o `3` para **Completo** (Opcional). Aunque Análisis de escritorio necesita como mínimo datos de diagnóstico básicos, Microsoft recomienda usar el nivel **Opcional (limitado)** (Mejorado [limitado]) con Análisis de escritorio. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versión 1803 y posteriores | esta configuración solo se aplica cuando el valor de AllowTelemetry está establecido en `2`. Limita los eventos de datos de diagnóstico mejorados enviados a Microsoft a solo los que necesita Análisis de escritorio. Para más información, consulte [Campos y eventos de datos de diagnóstico de Windows 10 recopilados mediante la directiva de datos de diagnóstico mejorados](/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, versión 1803 y posteriores | Permite que los dispositivos envíen el nombre del dispositivo. De forma predeterminada, el nombre del dispositivo no se envía a Microsoft. Si no envía el nombre del dispositivo, aparece en Análisis de escritorio como "desconocido". Para más información, consulte [Nombre del dispositivo](enroll-devices.md#device-name). |
-| **CommercialDataOptIn** | Local | Windows 8.1 y versiones anteriores | Análisis de escritorio requiere un valor de `1`. Para más información, consulte [Participación en los datos comerciales de Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **CommercialDataOptIn** | Local | Windows 8.1 y versiones anteriores | Análisis de escritorio requiere un valor de `1`. Para más información, consulte [Participación en los datos comerciales de Windows 7](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 | **RequestAllAppraiserVersions** | Ambos | Windows 8.1 y versiones anteriores | Análisis de escritorio requiere un valor de `1` para que la recopilación de datos funcione correctamente. |
 | **DisableEnterpriseAuthProxy** | GPO | Todas las versiones de Windows | Si su entorno requiere un proxy autenticado por el usuario con la autenticación integrada de Windows para el acceso a Internet, Análisis de escritorio requiere un valor de `0` para que la recopilación de datos funcione correctamente. Para más información, consulte [Compatibilidad del servidor proxy](enable-data-sharing.md#proxy-server-authentication). |
 
@@ -62,7 +62,7 @@ Si ejecutó el script de incorporación de Upgrade Readiness en un dispositivo, 
 
 En general, use recopilaciones de Configuration Manager como destino para la configuración y la inscripción de Análisis de escritorio. Use la pertenencia directa o las consultas para incluir o excluir dispositivos de la recopilación. Para obtener más información, vea [Creación de recopilaciones](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager configura las opciones de identificador comercial y datos de diagnóstico en la colección de destino. Si necesita configurar diferentes opciones de datos de diagnóstico para distintos grupos de dispositivos, use la configuración de la directiva de grupo para reemplazar la configuración de Configuration Manager. Por ejemplo, debe establecer el nivel  **Mejorado (limitado)** para algunos dispositivos y el **Básico** para otros. Algunos dispositivos pueden tener una configuración de [autenticación del servidor proxy](enable-data-sharing.md#proxy-server-authentication) diferente.
+Configuration Manager configura las opciones de identificador comercial y datos de diagnóstico en la colección de destino. Si necesita configurar diferentes opciones de datos de diagnóstico para distintos grupos de dispositivos, use la configuración de la directiva de grupo para reemplazar la configuración de Configuration Manager. Por ejemplo, debe establecer el nivel **Opcional (limitado)** para algunos dispositivos y **Requerido** para otros. Algunos dispositivos pueden tener una configuración de [autenticación del servidor proxy](enable-data-sharing.md#proxy-server-authentication) diferente.
 
 Las configuración de la directiva de grupo correspondiente se encuentran en la siguiente ruta de acceso: **Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Recopilación de datos y versiones preliminares**.
 
@@ -103,6 +103,6 @@ Configuration Manager o Análisis de escritorio no necesitan esta configuración
 | Nombre para mostrar | Valor del Registro | Efecto en los dispositivos inscritos en Análisis de escritorio |
 |--------------|----------------|-------------------------------------------------|
 | **Configurar las notificaciones de cambio de participación en la telemetría** | DisableTelemetryOptInChangeNotification | A partir de Windows 10, versión 1803, Windows envía una notificación a los usuarios cuando cambia el nivel de datos de diagnóstico. Use esta directiva para deshabilitar las notificaciones. |
-| **Configurar la interfaz de usuario de establecimiento de participación en la telemetría** | DisableTelemetryOptInSettingsUx | Al configurar el nivel de datos de diagnóstico, se establece el límite superior para el dispositivo. A partir de Windows 10, versión 1803, los usuarios pueden establecer un nivel inferior. Use esta directiva para evitar que los usuarios cambien el nivel de diagnóstico. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
+| **Configurar la interfaz de usuario de establecimiento de participación en la telemetría** | DisableTelemetryOptInSettingsUx | Al configurar el nivel de datos de diagnóstico, se establece el límite superior para el dispositivo. A partir de Windows 10, versión 1803, los usuarios pueden establecer un nivel inferior. Use esta directiva para evitar que los usuarios cambien el nivel de diagnóstico. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
 | **Deshabilitar la eliminación de datos de diagnóstico** | DisableDeviceDelete | A partir de la versión 1809 de Windows 10, los usuarios pueden eliminar los datos de diagnóstico de la página de configuración de **Diagnóstico y comentarios**. Use esta directiva para evitar la eliminación de los datos de diagnóstico que Microsoft recopila del dispositivo. |
 | **Deshabilitar el visor de datos de diagnóstico** | DisableDiagnosticDataViewer | A partir de la versión 1809 de Windows 10, los usuarios pueden habilitar y abrir el visor de datos de diagnóstico desde la página de configuración de **Diagnóstico y comentarios**. Use esta directiva para deshabilitar el visor de datos de diagnóstico en la configuración de Windows y evitar que muestre los datos de diagnóstico que Microsoft recopila del dispositivo.|

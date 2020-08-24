@@ -2,20 +2,20 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365515"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127008"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -139,7 +139,7 @@ Establezca esta opción en **Sí** para que los usuarios reciban la directiva de
 
 - El punto de administración basado en Internet autentica correctamente al usuario mediante la autenticación de Windows (Kerberos o NTLM). Para obtener más información, vea [Consideraciones sobre las comunicaciones de cliente desde Internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- Cloud Management Gateway autentica correctamente al usuario mediante el uso de Azure Active Directory. Para obtener más información, vea cómo [implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Cloud Management Gateway autentica correctamente al usuario mediante el uso de Azure Active Directory. Para más información, consulte [Implementar aplicaciones disponibles para el usuario](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 Si esta opción se establece en **No** (o no se cumple alguno de los requisitos anteriores), un equipo conectado a Internet solo recibirá directivas de equipo. En este escenario, los usuarios sí podrán ver, solicitar e instalar aplicaciones desde un catálogo de aplicaciones basado en Internet. Si esta opción se establece en **No**, pero la opción **Habilitar directiva de usuario en clientes** se establece en **Sí**, los usuarios no recibirán las directivas de usuario hasta que el equipo se conecte a la intranet.  
 
@@ -244,7 +244,7 @@ Para obtener más información sobre esta configuración, vea [Certificados de M
 
 ### <a name="organization-name-displayed-in-software-center"></a>Nombre de organización mostrado en el Centro de software
 
-Escriba el nombre que ven los usuarios en el Centro de software. Esta información de marca ayuda a los usuarios a identificar a esta aplicación como un origen de confianza. Para obtener más información acerca de la prioridad de esta configuración, consulte [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center) (Centro de software de personalización de marca).  
+Escriba el nombre que ven los usuarios en el Centro de software. Esta información de marca ayuda a los usuarios a identificar a esta aplicación como un origen de confianza. Para obtener más información acerca de la prioridad de esta configuración, consulte [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center) (Centro de software de personalización de marca).  
 
 ### <a name="use-new-software-center"></a>Usar el nuevo Centro de software
 
@@ -468,41 +468,40 @@ Para que un archivo MIF sea recopilado por el inventario de hardware, debe estar
 > [!NOTE]  
 > Este valor solo está disponible en la configuración predeterminada del cliente.
 
+## <a name="metered-internet-connections"></a>Conexiones a Internet de uso medido
 
+Administre la forma en que los equipos con Windows 8 y versiones posteriores usan las conexiones a Internet de uso medido para comunicarse con Configuration Manager. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que se envían y reciben cuando se utiliza una conexión a Internet de uso medido.
 
-## <a name="metered-internet-connections"></a>Conexiones a Internet de uso medido  
-
-Administre la forma en que los equipos con Windows 8 y versiones posteriores usan las conexiones a Internet de uso medido para comunicarse con Configuration Manager. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.  
-
-> [!NOTE]  
-> La configuración de cliente establecida no se aplica en los escenarios siguientes:  
+> [!NOTE]
+> La configuración de cliente establecida no se aplica en los escenarios siguientes:
 >
 > - Si el equipo está en una conexión de datos de itinerancia, el cliente de Configuration Manager no realiza ninguna tarea que necesite la transferencia de datos a sitios de Configuration Manager.  
 > - Si las propiedades de conexión de red de Windows se configuran como de uso no medido, el cliente de Configuration Manager se comporta como si la conexión fuera de uso no medido y, de este modo, transfiere datos al sitio.  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>Comunicación de clientes en conexiones a Internet de uso medido
 
-Elija una de las opciones siguientes para esta configuración:  
+Elija una de las opciones siguientes para esta configuración:
 
-- **Permitir**: se permiten todas las comunicaciones del cliente a través de la conexión a Internet de uso medido, a menos que el dispositivo cliente use una conexión de datos en movilidad.  
+- **Permitir**: se permiten todas las comunicaciones del cliente a través de la conexión a Internet de uso medido, a menos que el dispositivo cliente use una conexión de datos en movilidad.
 
-- **Limitar**: solo se permiten las siguientes comunicaciones de cliente a través de la conexión a Internet de uso medido:  
+- **Limitar**: el cliente solo se comunica a través de la conexión a Internet de uso medido para realizar las acciones siguientes:
 
-    - Recuperación de la directiva de cliente  
+  - Descargar directivas de cliente
 
-    - Mensajes de estado del cliente para enviar al sitio  
+  - Enviar mensajes de estado del cliente
 
-    - Solicitudes de instalación de software desde el Centro de software  
+  - Solicitar instalaciones de software del Centro de software
 
-    - Implementaciones requeridas (una vez alcanzada la fecha límite de instalación)  
+  - Descargar directivas y contenido adicionales para las implementaciones requeridas en la fecha límite de instalación
 
-    Si se alcanza el límite de transferencia de datos para la conexión a Internet de uso medido, el cliente ya no intentará comunicarse con los sitios de Configuration Manager.  
+  Si el cliente alcanza el límite de transferencia de datos de la conexión a Internet de uso medido, deja de comunicarse con el sitio.
 
-- **Bloquear**: el cliente de Configuration Manager no intenta comunicarse con los sitios de Configuration Manager si se encuentra en una conexión a Internet de uso medido. Esta opción es el valor predeterminado.  
+- **Bloquear**: cuando el dispositivo se encuentra en una conexión a Internet de uso medido, el cliente de Configuration Manager no intenta comunicarse con el sitio. Esta opción es el valor predeterminado.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > El cliente siempre permite las instalaciones de software desde el Centro de software, independientemente de la configuración de la conexión de Internet de uso medido. Si el usuario solicita una instalación de software mientras el dispositivo está en una red medida, el Centro de software respeta la intención del usuario.<!-- MEMDocs#285 -->
 
+A partir de la versión 2006, la instalación y actualización del cliente funcionan cuando se configura esta opción de cliente como **Permitir** o **Limitar**. Este comportamiento permite que el cliente se mantenga actualizado, pero la comunicación del cliente se sigue administrando en una red de uso medido. Este comportamiento puede controlarse durante la instalación del cliente con el parámetro ccmsetup **/AllowMetered**. Para obtener más información, vea [Acerca de los parámetros y propiedades de instalación de cliente](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## <a name="power-management"></a>Administración de energía  
 
@@ -894,7 +893,7 @@ Esta opción configura el puerto local para el que agente de escucha HTTP descar
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Habilitar administración del Agente cliente de Office 365
 
-Cuando esta opción se establece en **Sí**, se habilita la configuración de opciones de instalación de Office 365. También permite descargar archivos desde redes de Content Delivery Network (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para más información, vea [Administración de Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Cuando esta opción se establece en **Sí**, se permite la configuración de los valores de instalación de Aplicaciones de Microsoft 365. También permite descargar archivos desde redes de Content Delivery Network (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para más información, consulte [Administración de Aplicaciones de Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Habilitar la instalación de actualizaciones de software en la ventana de mantenimiento "Todas las implementaciones" cuando esté disponible la ventana de mantenimiento "Actualización de software"
 
@@ -980,9 +979,9 @@ Seleccione **Sí** para crear afinidad de dispositivo automático de usuarios en
 <!--3485366-->
 Si este valor es **Sí**, los usuarios pueden identificar sus propios dispositivos primarios en el Centro de software. Para más información, consulte el [Manual del usuario del Centro de software](../../understand/software-center.md#work-information).
 
-## <a name="windows-analytics"></a>Windows Analytics
+## <a name="windows-diagnostic-data"></a>Datos de diagnóstico de Windows
 
-> [!Important]  
-> El servicio Windows Analytics se retiró el 31 de enero de 2020. Para más información, consulte [KB 4521815: Windows Analytics se retirará el 31 de enero de 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> Este grupo se llamaba anteriormente **Windows Analytics**. Microsoft retiró el servicio Windows Analytics el 31 de enero de 2020. Para más información, consulte [KB 4521815: Windows Analytics se retirará el 31 de enero de 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Análisis de escritorio es la evolución de Windows Analytics. Vea [¿Qué es Análisis de escritorio?](../../../desktop-analytics/overview.md) para obtener más información.
+> Análisis de escritorio es la evolución de Windows Analytics. Use Análisis de escritorio para administrar la configuración de datos de diagnóstico de Windows. Vea [¿Qué es Análisis de escritorio?](../../../desktop-analytics/overview.md) para obtener más información.

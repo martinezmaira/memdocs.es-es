@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268545"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125838"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Supervisión del estado de mantenimiento en Análisis de escritorio
 
@@ -27,7 +27,7 @@ Para obtener más información sobre el empleo de esta característica, consulte
 ![Captura de pantalla de la página Supervisar el estado de Análisis de escritorio](media/monitor-health.png)
 
 > [!NOTE]  
-> Análisis de escritorio solo recopila datos de estado de los dispositivos que proporcionan datos de uso que puede usar como denominador. Esto significa que no se incluyen los dispositivos que ejecutan Windows 7 y Windows 10 que no están establecidos para compartir datos de diagnóstico en el nivel mejorado (limitado). Si más del 10 % de los dispositivos que ejecutan Windows 10 están configurados para compartir datos de diagnóstico en niveles distintos de mejorado (limitado), la página **Supervisión de estado** muestra una advertencia en el área del banner.  
+> Análisis de escritorio solo recopila datos de estado de los dispositivos que proporcionan datos de uso que puede usar como denominador. Esto significa que no se incluyen los dispositivos que ejecutan Windows 7 y Windows 10 que no están configurados para compartir datos de diagnóstico en el nivel Opcional (limitado). Si más del 10 % de los dispositivos que ejecutan Windows 10 están configurados para compartir datos de diagnóstico en niveles distintos de Opcional (limitado), la página **Monitor health** (Monitorear el estado) muestra una advertencia en el área de mensajes.  
 
 Para ver más información sobre una aplicación específica, selecciónela en la lista.
 

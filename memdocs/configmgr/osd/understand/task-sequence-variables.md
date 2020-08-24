@@ -2,20 +2,20 @@
 title: Referencia de variables de secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las variables para controlar y personalizar una secuencia de tareas de Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429820"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697354"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -372,6 +372,13 @@ Una variable de solo lectura por si la comprobación **Alimentación de CA conec
 *Se aplica al paso [Comprobar preparación](task-sequence-steps.md#BKMK_CheckReadiness).*
 
 Una variable de solo lectura por si la comprobación **Adaptador de red conectado** ha devuelto "true" (`1`) o "false" (`0`). Si no habilita la comprobación, el valor de esta variable de solo lectura estará en blanco.
+
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a> _TS_CRUEFI
+
+*A partir de la versión 2006* <!--6452769-->
+*Se aplica al paso [Comprobar preparación](task-sequence-steps.md#BKMK_CheckReadiness).*
+
+Una variable de solo lectura que indica si el **equipo está en modo UEFI** devolvió BIOS (`0`) o UEFI (`1`). Si no habilita la comprobación, el valor de esta variable de solo lectura estará en blanco.
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 
@@ -796,7 +803,7 @@ Especifica opciones adicionales para agregar a la línea de comandos de DISM al 
 
 Para usar esta variable, habilite el parámetro **Install driver package via running DISM with recurse option** (Instalar paquete de controladores mediante la ejecución de DISM con la opción de recursividad) en el paso **Aplicar paquete de controladores**.
 
-Para más información, vea [Opciones de línea de comandos del marco DISM de Windows 10](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+Para más información, vea [Opciones de línea de comandos del marco DISM de Windows 10](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
 
 ### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 

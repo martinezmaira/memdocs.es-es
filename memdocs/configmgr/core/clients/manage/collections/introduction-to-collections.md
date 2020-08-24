@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0665c6378ac81d6f6f254501760647048ce66b0b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4e43f5a36f2a1bf44959b9645c2fb48a22cc71f1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695333"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126780"
 ---
 # <a name="introduction-to-collections-in-configuration-manager"></a>Introducción a las recopilaciones en Configuration Manager
 
@@ -34,7 +34,7 @@ Estos son algunos ejemplos de uso de la colección:
 |Operación|Ejemplo|  
 |---------|-------|  
 |Agrupación de recursos|Puede crear recopilaciones que agrupen recursos según la jerarquía de la organización.<br /><br /> Por ejemplo, podría crear una recopilación de todos los equipos que se encuentran en la unidad organizativa (UO) de Active Directory "oficina central de Londres". Para más información sobre cómo crear este tipo de recopilación, vea [Cómo crear recopilaciones](../../../../core/clients/manage/collections/create-collections.md).<br /><br /> Después, podría usar esta recopilación para realizar operaciones como la configuración de Endpoint Protection, configurar opciones de administración de energía de dispositivos o instalar el cliente de Configuration Manager.|  
-|Implementación de aplicaciones|Puede crear una recopilación de todos los equipos que no tienen instalado Microsoft Office 2013 y, a continuación, realizar la implementación en todos los equipos de esa recopilación.<br /><br /> También puede utilizar los requisitos de la aplicación para realizar esta tarea. Para más información, vea [Cómo crear aplicaciones con Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
+|Implementación de aplicaciones|Puede crear una colección de todos los equipos que no tienen instalado Aplicaciones de Microsoft Office 365 y, luego, implementarlo en todos los equipos de esa colección.<br /><br /> También puede utilizar los requisitos de la aplicación para realizar esta tarea. Para más información, vea [Cómo crear aplicaciones con Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
 |[Administración de la configuración de clientes](../../../../core/clients/deploy/about-client-settings.md)|Aunque la configuración predeterminada del cliente de Configuration Manager se aplica a todos los dispositivos y todos los usuarios, puede crear una configuraciones personalizadas de cliente que se apliquen a una recopilación de dispositivos o una recopilación de usuarios.<br /><br /> Por ejemplo, si desea que el control remoto esté disponible en la mayoría de los dispositivos, defina la configuración predeterminada del cliente para permitir el control remoto y, a continuación, defina los parámetros personalizados del cliente que no permiten el control remoto y realice la implementación en la colección de clientes excepcionales. |  
 |[Administración de energía](../power/introduction-to-power-management.md)|Puede establecer la configuración de alimentación específica por colección.|  
 |[Administración basada en roles](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|Use las colecciones para controlar qué grupos de usuarios tienen acceso a distintas funcionalidades en la consola de Configuration Manager.|  

@@ -2,7 +2,7 @@
 title: Administrar clientes VDI
 titleSuffix: Configuration Manager
 description: Administre clientes de Configuration Manager en una infraestructura de escritorio virtual (VDI).
-ms.date: 04/23/2017
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,36 +10,53 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01348695ac5b3b64ca87a9b42aa52ac235b533d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1d79edb5ad1a60c5876163281ec5c1d1c17eff0a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693863"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692815"
 ---
 # <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>Administración de clientes de Configuration Manager en una infraestructura de escritorio virtual (VDI)
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-Configuration Manager admite la instalación del cliente de Configuration Manager en los siguientes escenarios de infraestructura de escritorio virtual (VDI):  
+Configuration Manager admite la instalación del cliente de Configuration Manager en los siguientes escenarios de infraestructura de escritorio virtual (VDI):
 
-- **Máquinas virtuales personales**: las máquinas virtuales personales se suelen usar cuando se quiere garantizar que los datos y la configuración de usuario se mantienen en la máquina virtual entre sesiones.  
+- **Máquinas virtuales personales**: la máquina virtual (VM) mantiene los datos y la configuración del usuario de una sesión a otra.
 
-- **Sesiones de Servicios de Escritorio Remoto**: Servicios de Escritorio Remoto permite a un servidor hospedar varias sesiones de cliente simultáneas. Los usuarios pueden conectarse a una sesión y, a continuación, ejecutar aplicaciones en ese servidor.  
+- **Herramientas de Servicios de Escritorio remoto**: hospede varias sesiones de cliente simultáneas en un servidor centralizado. Los usuarios se conectan a una sesión y ejecutan aplicaciones en ese servidor.
 
-- **Máquinas virtuales agrupadas**: las máquinas virtuales agrupadas no se conservan entre sesiones. Cuando se cierra una sesión, se descartan todos los datos y configuraciones. Las máquinas virtuales agrupadas son útiles cuando no se puede utilizar Servicios de Escritorio Remoto debido a que una aplicación empresarial requerida no se puede ejecutar en el servidor Windows Server que hospeda las sesiones de cliente.  
+- **Máquinas virtuales agrupadas**: la máquina virtual no se conserva de una sesión a otra. Cuando un usuario cierra una sesión, el entorno virtual descarta todos los datos y configuraciones. Las máquinas virtuales agrupadas son útiles cuando no se pueden usar los Servicios de Escritorio remoto. Por ejemplo, si una aplicación necesaria no se puede ejecutar en el servidor de Windows que hospeda las sesiones de cliente.
 
-  En la tabla siguiente se incluyen consideraciones para la administración del cliente de Configuration Manager en una infraestructura de escritorio virtual.  
+- **Windows Virtual Desktop**: un servicio de virtualización de escritorio y aplicaciones que se ejecuta en Microsoft Azure. A partir de la versión 1906, use Configuration Manager para administrar estos dispositivos virtuales que ejecutan Windows en Azure.
 
-|Tipo de máquina virtual|Consideraciones|  
-|--------------------------|--------------------|  
-|Máquinas virtuales personales|Configuration Manager trata a las máquinas virtuales personales de forma idéntica a un equipo físico. El cliente de Configuration Manager se puede instalar previamente en la imagen de máquina virtual o implementar después de aprovisionar la máquina virtual.|  
-|Servicios de Escritorio Remoto|El cliente de Configuration Manager no está instalado para sesiones de Escritorio Remoto individuales. En su lugar, el cliente sólo se instala una vez en el servidor de Servicios de Escritorio Remoto. Todas las características de Configuration Manager pueden usarse en el servidor de Servicios de Escritorio Remoto.|  
-|Máquinas virtuales agrupadas|Cuando se retira una máquina virtual agrupada, cualquier cambio realizado mediante Configuration Manager se pierde.<br /><br /> Es posible que los datos devueltos de características de Configuration Manager como el inventario de hardware, el inventario de software y la disponibilidad de software no sean relevantes para sus necesidades, ya que la máquina virtual podría estar operativa solo durante un breve periodo de tiempo. Considere la posibilidad de excluir a las máquinas virtuales agrupadas de las tareas de inventario.|  
+## <a name="personal-vms"></a>Máquinas virtuales personales
 
- Debido a que la virtualización admite la ejecución de varios clientes de Configuration Manager en el mismo equipo físico, muchas operaciones de cliente tienen un retraso aleatorio integrado para acciones programadas como el inventario de hardware y software, los exámenes antimalware, las instalaciones de software y los exámenes de actualizaciones de software. Este retraso ayuda a distribuir el procesamiento de la CPU y la transferencia de datos de un equipo que tiene varias máquinas virtuales que ejecutan el cliente de Configuration Manager.  
+Configuration Manager trata a las máquinas virtuales personales como si fueran equipos físicos. Puede preinstalar el cliente de Configuration Manager en la imagen de máquina virtual o después de aprovisionarlo.
 
-> [!NOTE]  
->  Con la excepción de los clientes de Windows Embedded que están en modo de mantenimiento, los clientes de Configuration Manager que no se están ejecutando en entornos virtualizados también usan este retraso aleatorio. Cuando se tienen muchos clientes implementados, este comportamiento ayuda a evitar que se produzcan picos de uso del ancho de banda de red y reduce el requisito de procesamiento de la CPU en los sistemas de sitio de Configuration Manager, como el punto de administración y el servidor de sitio. El intervalo de retraso varía según la capacidad de Configuration Manager.  
->   
->  El retraso de selección aleatoria está deshabilitado de forma predeterminada para las actualizaciones de software requeridas mediante la siguiente configuración de cliente: **Agente de equipo**: **Deshabilitar selección aleatoria de fecha límite**.
+Para más información, consulte [Compatibilidad con entornos de virtualización](../../../plan-design/configs/support-for-virtualization-environments.md).
+
+## <a name="remote-desktop-services"></a>Servicios de Escritorio remoto
+
+No se ha instalado el cliente de Configuration Manager para sesiones de Escritorio Remoto individuales. Instálelo una vez en el servidor que hospeda los Servicios de Escritorio remoto. Puede usar todas las características del cliente de Configuration Manager en el servidor de Servicios de Escritorio Remoto.
+
+Para más información, consulte [Bienvenida a Servicios de Escritorio remoto](/windows-server/remote/remote-desktop-services/welcome-to-rds).
+
+## <a name="pooled-vms"></a>Máquinas virtuales agrupadas
+
+Cuando se retira una máquina virtual agrupada, se pierden todos los cambios realizados por Configuration Manager.
+
+Dado que la máquina virtual podría estar operativa solo durante un breve período de tiempo, es posible que algunas características de Configuration Manager no devuelvan datos de interés. Por ejemplo, inventario de software, inventario de hardware y medición de software. Considere la posibilidad de excluir la máquina virtual agrupada de las tareas del inventario.
+
+## <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
+
+Para más información, vea [Sistemas operativos compatibles con clientes y dispositivos](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+
+## <a name="other-considerations"></a>Otras consideraciones
+
+Dado que la virtualización admite la ejecución de varios clientes de Configuration Manager en el mismo equipo físico, muchas operaciones de cliente tienen un retraso aleatorio integrado en acciones programadas. Por ejemplo, inventario de hardware y software, exámenes antimalware, instalaciones de software y exámenes de actualización de software. Este retraso ayuda a distribuir el procesamiento de la CPU y la transferencia de datos en un servidor que tiene varias máquinas virtuales que ejecutan el cliente de Configuration Manager.
+
+A excepción de los clientes de Windows Embedded en modo de servicio, los clientes de Configuration Manager que no están en entornos virtualizados también usan este retraso aleatorio. Este comportamiento ayuda a evitar picos en el ancho de banda de red. También reduce el procesamiento de la CPU en los sistemas de sitio, como el punto de administración y el servidor de sitio. El intervalo de retraso varía según la capacidad de Configuration Manager. Por ejemplo, consulte [Acerca de la configuración de cliente: Deshabilitar selección aleatoria de fecha límite](../about-client-settings.md#disable-deadline-randomization).
+
+Para contribuir al rendimiento del cliente de Configuration Manager en entornos virtuales que admiten varias sesiones de usuario, se deshabilita la directiva de usuario de forma predeterminada. A partir de la versión 1910, puede habilitar la directiva de usuario en este escenario. Para más información, consulte [Acerca de la configuración de cliente: Habilitar la directiva de usuario para varias sesiones de usuario](../about-client-settings.md#enable-user-policy-for-multiple-user-sessions).

@@ -2,7 +2,7 @@
 title: Niveles de datos de uso y diagnóstico
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los niveles de datos de diagnóstico y uso que se recopilan en Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9de63280786d620229c7d408f09ef2fe583e231d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d27e4a2f82de75cde853f3ce95c98ea8a12c465
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703803"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126514"
 ---
 # <a name="levels-of-diagnostic-usage-data"></a>Niveles de datos de uso y diagnóstico
 
@@ -63,11 +63,11 @@ Para cambiar el nivel de recopilación de datos, necesita permisos **Modificar**
 
 En los artículos que hay a continuación se incluyen los datos específicos que Configuration Manager recopila en cada nivel con cada versión admitida:
 
+- [Datos de diagnóstico y uso de la versión 2006](levels-of-diagnostic-usage-data-collection-2006.md)
 - [Datos de diagnóstico y uso en la versión 2002](levels-of-diagnostic-usage-data-collection-2002.md)
-- [Datos de diagnóstico y uso en la versión 1910](levels-of-diagnostic-usage-data-collection-1910.md)
-- [Datos de diagnóstico y uso en la versión 1906](levels-of-diagnostic-usage-data-collection-1906.md)
-- [Datos de diagnóstico y uso en la versión 1902](levels-of-diagnostic-usage-data-collection-1902.md)
-- [Datos de diagnóstico y uso en la versión 1810](levels-of-diagnostic-usage-data-collection-1810.md)
+- [Datos de diagnóstico y de uso en la versión 1910](levels-of-diagnostic-usage-data-collection-1910.md)
+- [Datos de diagnóstico y uso en la versión 1906](levels-of-diagnostic-usage-data-collection-1906.md)
+- [Datos de diagnóstico y uso en la versión 1902](levels-of-diagnostic-usage-data-collection-1902.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

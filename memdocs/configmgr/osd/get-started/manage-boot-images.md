@@ -5,23 +5,23 @@ description: En Configuration Manager, aprenda a administrar las imágenes de ar
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912383"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697643"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Administración de imágenes de arranque con Configuration Manager
 
 *Se aplica a: Configuration Manager (rama actual)*
 
-Una imagen de arranque de Configuration Manager es una imagen de [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) que se usa durante la implementación de un sistema operativo. Las imágenes de arranque se usan para iniciar un equipo en WinPE. Este sistema operativo mínimo contiene servicios y componentes limitados. Configuration Manager usa WinPE para preparar el equipo de destino para la instalación de Windows.
+Una imagen de arranque de Configuration Manager es una imagen de [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) que se usa durante la implementación de un sistema operativo. Las imágenes de arranque se usan para iniciar un equipo en WinPE. Este sistema operativo mínimo contiene servicios y componentes limitados. Configuration Manager usa WinPE para preparar el equipo de destino para la instalación de Windows.
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Imágenes de arranque predeterminadas
 
@@ -80,17 +80,21 @@ Si una imagen de arranque se basa en otra versión de Windows ADK instalada en u
 
 Durante la instalación de sitio, Configuration Manager agrega automáticamente imágenes de arranque basadas en una versión de WinPE desde la versión admitida de Windows ADK. Según la versión de Configuration Manager, puede agregar imágenes de arranque basadas en una versión de WinPE desde la versión admitida de Windows ADK. Se produce un error al intentar agregar una imagen de arranque que contiene una versión no admitida de WinPE. En la lista siguiente se muestran las versiones de Windows ADK y WinPE que se admiten actualmente:
 
-| Tipo Windows | Versiones compatibles |
-|--------------|--------------------|
-| Versión de Windows ADK | Windows ADK para Windows 10 |
-| Versiones de Windows PE para imágenes de arranque personalizables desde la consola de Configuration Manager | Windows PE 10 |
-| Versiones admitidas de Windows PE para imágenes de arranque *que no se pueden personalizar* desde la consola de Configuration Manager | - Windows PE 3.1<sup>[Nota 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
+- Versión de Windows ADK: Windows ADK para Windows 10
+
+- Versiones de Windows PE para imágenes de arranque personalizables desde la consola de Configuration Manager: Windows PE 10
+
+- Versiones admitidas de Windows PE para imágenes de arranque *que no se pueden personalizar* desde la consola de Configuration Manager
+
+  - Windows PE3.1<sup>[Nota 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 Por ejemplo, use la consola de Configuration Manager para personalizar las imágenes de arranque basadas en Windows PE 10 desde Windows ADK para Windows 10. Para una imagen de arranque basada en Windows PE 5, personalícela desde otro equipo con la versión de DISM de Windows ADK para Windows 8. Después, agregue la imagen de arranque personalizada a la consola de Configuration Manager. Vea los siguientes artículos para más información:
 
 - [Personalizar imágenes de arranque](customize-boot-images.md)
 - [Compatibilidad con Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [Plataformas compatibles de DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [Plataformas compatibles de DISM](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -202,11 +206,11 @@ En la pestaña **Personalización** , seleccione cualquiera de las siguientes op
 - **Establecer la distribución del teclado predeterminada en WinPE**: <!--4910348-->A partir de la versión 1910, configure la distribución del teclado predeterminada para una imagen de arranque. Si selecciona un idioma distinto de es-es, Configuration Manager sigue incluyéndolo en las configuraciones regionales disponibles. En el dispositivo, el diseño de teclado inicial es la configuración regional seleccionada, pero el usuario puede cambiar el dispositivo a es-es si es necesario.
 
 > [!Tip]
-> Use el cmdlet [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) de PowerShell para configurar estas opciones desde un script.
+> Use el cmdlet [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) de PowerShell para configurar estas opciones desde un script.
 
 #### <a name="optional-components"></a>Componentes opcionales
 
-En la pestaña **Componentes opcionales**, especifique los componentes agregados a Windows PE para su uso con Configuration Manager. Para obtener más información sobre los componentes opcionales, vea [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+En la pestaña **Componentes opcionales**, especifique los componentes agregados a Windows PE para su uso con Configuration Manager. Para obtener más información sobre los componentes opcionales, vea [WinPE: agregar paquetes (referencia de los componentes opcionales)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
 Los siguientes componentes son necesarios para Configuration Manager y siempre se agregan a las imágenes de arranque:
 
@@ -299,4 +303,4 @@ Use el procedimiento siguiente para establecer el idioma de WinPE de las impleme
 
 1. Compruebe que el archivo de recursos de secuencia de tareas correcto (tsres.dll) se encuentra en la carpeta de idioma correspondiente en el servidor de sitio antes de actualizar la imagen de arranque. Por ejemplo, el archivo de recursos del idioma inglés se encuentra en la siguiente ubicación: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. Como parte de su comando de preinicio, configure la variable de entorno **SMSTSLanguageFolder** con el identificador de idioma correspondiente. El identificador de idioma no debe especificarse con un formato hexadecimal sino mediante el formato decimal. Por ejemplo, para establecer el Id. de idioma en inglés, especifique el valor decimal **1033**, no el valor hexadecimal 00000409 del nombre de carpeta.  
+2. Como parte de su comando de preinicio, configure la variable de entorno **SMSTSLanguageFolder** con el identificador de idioma correspondiente. El identificador de idioma no debe especificarse con un formato hexadecimal sino mediante el formato decimal. Por ejemplo, para establecer el Id. de idioma en inglés, especifique el valor decimal **1033**, no el valor hexadecimal 00000409 del nombre de carpeta.

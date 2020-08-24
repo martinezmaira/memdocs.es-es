@@ -2,20 +2,20 @@
 title: Implementar una secuencia de tareas
 titleSuffix: Configuration Manager
 description: Utilice esta información para implementar una secuencia de tareas en los equipos de una colección.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fea9088a11310aedc95d2fdbeacdb98650eef361
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455204"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125209"
 ---
 # <a name="deploy-a-task-sequence"></a>Implementar una secuencia de tareas
 
@@ -146,9 +146,21 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
 
     - **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: esta opción controla el comportamiento de instalación en los dispositivos Windows Embedded habilitados con un filtro de escritura. Elija esta opción para que los cambios se confirmen en la fecha límite de instalación o durante una ventana de mantenimiento. Al seleccionar esta opción, se necesita un reinicio y los cambios persisten en el dispositivo. De lo contrario, la aplicación se instala en la superposición temporal y se confirma más tarde. Cuando implemente una secuencia de tareas en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
 
-    - **Permitir que la secuencia de tareas se ejecute para el cliente en Internet**: especifique si la secuencia de tareas se puede ejecutar en un cliente basado en Internet. Las operaciones que requieren un medio de arranque, como la instalación de un sistema operativo, no se admiten con esta configuración. Use esta opción solo para instalaciones de software genéricas o secuencias de tareas basadas en scripts que lleven a cabo acciones en el sistema operativo estándar.  
+    - **Permitir que la secuencia de tareas se ejecute para el cliente en Internet**: especifique si la secuencia de tareas se puede ejecutar en un cliente basado en Internet.
 
-        - Esta opción se admite para implementaciones de una secuencia de tareas de actualización local de Windows 10 en clientes basados en Internet a través de Cloud Management Gateway. Para obtener más información, vea [Implementar una actualización local de Windows 10 a través de CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
+        Esta opción se admite en implementaciones de una secuencia de tareas de actualización local de Windows 10 en clientes basados en Internet a través de Cloud Management Gateway (CMG). Para obtener más información, vea [Implementar una actualización local de Windows 10 a través de CMG](#deploy-windows-10-in-place-upgrade-via-cmg).
+
+        A partir de la versión 2006, puede implementar una secuencia de tareas con una imagen de arranque en un dispositivo que se comunique a través de CMG. El usuario debe iniciar la secuencia de tareas desde el Centro de Software.<!--6997525-->
+
+        > [!NOTE]
+        > Cuando un cliente unido a Azure Active Directory (Azure AD) ejecuta una secuencia de tareas de implementación del sistema operativo, el cliente del nuevo sistema operativo no se unirá automáticamente Azure AD. A pesar de ello, el cliente sigue estando administrado.
+        >
+        > Al ejecutar una secuencia de tareas de implementación del sistema operativo en un cliente basado en Internet, ya sea unido a Azure AD o que utilice la autenticación basada en token, debe especificar la propiedad **CCMHOSTNAME** en el paso [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) (Instalar Windows y Configuration Manager).
+
+        En la versión 2002 y versiones anteriores, las operaciones que requieren un medio de arranque no se admiten con esta configuración. Use esta opción solo para instalaciones de software genéricas o secuencias de tareas basadas en scripts que lleven a cabo acciones en el sistema operativo estándar.
+
+        > [!NOTE]
+        > En todos los escenarios de secuencia de tareas basados en Internet, inicie la secuencia de tareas desde el Centro de software. No se admite Windows PE, PXE o un medio de secuencia de tareas.
 
 8. En la página **Alertas**, especifique la configuración de alertas de esta implementación de secuencia de tareas.  
 

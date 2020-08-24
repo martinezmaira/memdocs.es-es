@@ -2,7 +2,7 @@
 title: Uso de límites y grupos de límites
 titleSuffix: Configuration Manager
 description: Utilice los límites y grupos de límites para definir ubicaciones de red y sistemas de sitio accesibles para dispositivos administrados.
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b1a6bb6ff9fdffad65db884fe8c3b68d3fc3263
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 385dc1b2f542c964b52515e755a9202ee951bc5c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690903"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126382"
 ---
 # <a name="define-site-boundaries-and-boundary-groups"></a>Definir límites de sitio y grupos de límites
 
@@ -29,6 +29,7 @@ Una jerarquía puede incluir cualquier número de grupos de límites. Cada grupo
 - Nombre de sitio de Active Directory  
 - Prefijo IPv6  
 - Intervalo de direcciones IP  
+- VPN (a partir de la versión 2006)
 
 Los clientes de la intranet evalúan su ubicación de red actual y después usan esa información para identificar los grupos de límites a los que pertenecen.  
 
@@ -66,4 +67,4 @@ Aunque cada grupo de límites admite tanto la referencia del sistema de sitio y 
 
 - [Definición de las ubicaciones de red como límites](boundaries.md)
 
-- [Configuración de grupos de límites](boundary-groups.md)
+- [Configurar grupos de límites](boundary-groups.md)

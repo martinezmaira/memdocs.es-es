@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b24ed0aa963373fc0933a2c34b7b036d77cc9a2b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878098"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699218"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Solución de problemas de la caché de conexión de Microsoft en Configuration Manager
 
@@ -223,12 +223,12 @@ El servidor de caché de optimización de distribución agrega las reglas de ree
 El espacio en disco necesario para cada servidor de caché de optimización de distribución puede variar en función de los requisitos de actualización de la organización. 100 GB deben ser espacio suficiente para almacenar en caché el contenido siguiente:
 
 - Una actualización de características
-- De dos a tres meses de actualizaciones de calidad y de Office
+- De dos a tres meses de calidad y actualizaciones de Aplicaciones de Microsoft 365
 - Aplicaciones de Microsoft Intune y aplicaciones de Bandeja de entrada de Windows
 
 El servidor de caché de optimización de distribución no debe consumir mucho tiempo de procesador o memoria del sistema. Después de instalar el servidor de caché de optimización de distribución, si observa un consumo significativo de recursos de memoria o de procesos, analice los archivos de registro de IIS y ARR.
 
-Si los archivos de registro de IIS y ARR ocupan demasiado espacio en el servidor, puede usar varios métodos para administrar esos archivos. Para más información, vea [Administración del almacenamiento de archivos de registro de IIS](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+Si los archivos de registro de IIS y ARR ocupan demasiado espacio en el servidor, puede usar varios métodos para administrar esos archivos. Para más información, vea [Administración del almacenamiento de archivos de registro de IIS](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
 ## <a name="see-also"></a>Vea también
 

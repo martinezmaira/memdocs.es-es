@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240480"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127144"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Creación de líneas base de configuración en Configuration Manager
 
@@ -84,7 +84,7 @@ Para crear una línea base de configuración mediante el cuadro de diálogo **Cr
 <!--3608345-->
 *(Se incorporó en la versión 1910)*
 
-A partir de la versión 1910, puede agregar la evaluación de líneas base de configuración personalizadas como una regla de evaluación de directivas de cumplimiento. Al crear o editar una línea base de configuración, tiene una opción para **Evaluar la línea base como parte de la evaluación de las directivas de cumplimiento**. Al agregar o editar una regla de directivas de cumplimiento, tiene una condición denominada **Incluir las líneas base configuradas en la evaluación de las directivas de cumplimiento**. En el caso de los dispositivos administrados conjuntamente, al configurar Intune para que tome los resultados de la evaluación de cumplimiento de Configuration Manager como parte del estado general de cumplimiento, esta información se envía a Azure AD, lo cual le permite usarla para el acceso condicional a los recursos de Office 365. Para más información, consulte [Acceso condicional con administración conjunta](../../comanage/quickstart-conditional-access.md).
+A partir de la versión 1910, puede agregar la evaluación de líneas base de configuración personalizadas como una regla de evaluación de directivas de cumplimiento. Al crear o editar una línea base de configuración, tiene una opción para **Evaluar la línea base como parte de la evaluación de las directivas de cumplimiento**. Al agregar o editar una regla de directivas de cumplimiento, tiene una condición denominada **Incluir las líneas base configuradas en la evaluación de las directivas de cumplimiento**. En el caso de los dispositivos administrados conjuntamente, al configurar Intune para que tome los resultados de la evaluación de cumplimiento de Configuration Manager como parte del estado general de cumplimiento, esta información se envía a Azure AD, lo cual le permite usarla para el acceso condicional a los recursos de Aplicaciones de Microsoft 365. Para más información, consulte [Acceso condicional con administración conjunta](../../comanage/quickstart-conditional-access.md).
 
 Para incluir líneas base de configuración personalizadas como parte de la evaluación de las directivas de cumplimiento, haga lo siguiente:
 

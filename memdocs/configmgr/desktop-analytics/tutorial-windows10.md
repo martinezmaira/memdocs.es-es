@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422837"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694276"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación de Windows 10 en el piloto
 
@@ -32,7 +32,7 @@ En este tutorial, aprenderá a:
 
 Si no tiene una suscripción a Azure, cree una cuenta [gratuita](https://azure.microsoft.com/free) antes de empezar. Cuando se configura correctamente, el uso de Análisis de escritorio no implica ningún costo de Azure.
 
-Análisis de escritorio usa un *área de trabajo de Log Analytics* en su suscripción de Azure. Un área de trabajo es básicamente un contenedor que incluye información de la cuenta e información de configuración sencilla para la cuenta. Para más información, vea [Administración del acceso a los datos de registro y las áreas de trabajo](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
+Análisis de escritorio usa un *área de trabajo de Log Analytics* en su suscripción de Azure. Un área de trabajo es básicamente un contenedor que incluye información de la cuenta e información de configuración sencilla para la cuenta. Para más información, vea [Administración del acceso a los datos de registro y las áreas de trabajo](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json).
 
 
 
@@ -56,7 +56,7 @@ Antes de empezar este tutorial, asegúrese de que se cumplen los siguientes requ
 
     - Cliente de Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571), o posterior.  
 
-- Aprobación empresarial para configurar el nivel de datos de diagnóstico de Windows en **Mejorado (limitado)** en los dispositivos piloto.  
+- Aprobación empresarial para configurar el nivel de datos de diagnóstico de Windows en **Opcional (limitado)** en los dispositivos piloto.  
 
     Para más información, consulte [Privacidad de Análisis de escritorio](privacy.md).
 
@@ -102,7 +102,7 @@ Use este procedimiento para iniciar sesión en Análisis de escritorio y configu
 
         Aunque no seleccione esta opción, Análisis de escritorio agregará usuarios como miembros del grupo de seguridad. Un **administrador global** debe asignar manualmente el rol de **administrador de Análisis de escritorio** para los usuarios.  
 
-        Para obtener más información sobre la asignación de permisos de rol de administrador en Azure Active Directory y los permisos asignados a **administradores de Análisis de escritorio**, consulte [Permisos de roles de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Para obtener más información sobre la asignación de permisos de rol de administrador en Azure Active Directory y los permisos asignados a **administradores de Análisis de escritorio**, consulte [Permisos de roles de administrador en Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Análisis de escritorio preconfigura el grupo de seguridad de **propietarios del área de trabajo** en Azure Active Directory para crear y administrar áreas de trabajo y planes de implementación. 
 
@@ -193,7 +193,7 @@ Instale el paquete acumulativo de actualizaciones de la versión 1902 (4500571)
 
     - **Id. comercial**: este valor se debe rellenar automáticamente con el identificador de la organización.  
 
-    - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **Mejorado (limitado)** .  
+    - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **Opcional (limitado)** .  
 
     - **Permitir nombre del dispositivo en los datos de diagnóstico**: seleccione **Habilitar**.  
   
@@ -339,7 +339,7 @@ A continuación, distribuya el paquete de actualización del sistema operativo a
     - **Clave de producto**: especifique la clave de producto de Windows para el sistema operativo que quiera instalar. Puede especificar claves de licencia por volumen codificadas o claves de producto estándar. Si usa una clave de producto estándar, separe cada grupo de cinco caracteres por un guion (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Si se trata de una actualización de una edición de licencia por volumen, la clave de producto puede no ser necesaria.  
 
         > [!Note]  
-        > Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server.
+        > Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server.
 
 6. En la página **Incluir actualizaciones**, seleccione **Siguiente** para no instalar ninguna actualización de software.  
 
