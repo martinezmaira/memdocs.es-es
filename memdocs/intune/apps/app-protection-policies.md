@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216406"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217638"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Creación y asignación de directivas de protección de aplicaciones
 
@@ -103,7 +103,7 @@ Cuando se crea una directiva de protección de aplicaciones para aplicaciones de
     - **Configuración del inicio condicional de Android**: para más información, vea la sección [Inicio condicional en Configuración de directivas de protección de aplicaciones de Android](app-protection-policy-settings-android.md#conditional-launch).
 
 9. Haga clic en **Siguiente** para abrir la página **Asignaciones**.<br>
-   La página **Asignaciones** permite asignar la directiva de protección de aplicaciones a grupos de usuarios.
+   La página **Asignaciones** permite asignar la directiva de protección de aplicaciones a grupos de usuarios. Debe aplicar la directiva a un grupo de usuarios para que esta surta efecto.
 
 10. Haga clic en **Siguiente: Revisar + crear** para revisar los valores y la configuración especificados para esta directiva de protección de aplicaciones.
 
@@ -111,6 +111,9 @@ Cuando se crea una directiva de protección de aplicaciones para aplicaciones de
 
     > [!TIP]
     > Esta configuración de directiva se aplica solo al usar aplicaciones en el contexto de trabajo. Cuando los usuarios finales usen la aplicación para realizar una tarea personal, no se verán afectados por estas directivas. Tenga en cuenta que cuando se crea un nuevo archivo se considera un archivo personal.
+
+    > [!IMPORTANT]
+    > Puede que las directivas de protección de aplicaciones tarden en aplicarse a los dispositivos existentes. Cuando se aplique la directiva de protección de aplicaciones, los usuarios finales verán una notificación en el dispositivo. Aplique las directivas de protección de aplicaciones a los dispositivos antes de aplicar las reglas de acceso de condicional.
 
 Los usuarios finales pueden descargar las aplicaciones desde App Store o Google Play. Para obtener más información, vea:
 * [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md) (Qué esperar cuando la aplicación Android se administra con directivas de protección de aplicaciones)

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262870"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252527"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integración de Windows Hello para empresas con Microsoft Intune  
 
@@ -45,17 +45,15 @@ Además, Intune admite los siguientes tipos de directivas para administrar algun
 El resto de este artículo se centra en la creación de una directiva de Windows Hello para empresas predeterminada destinada a toda la organización.
 
 > [!IMPORTANT]
-> En las versiones de escritorio y móvil de Windows 10 anteriores a la Actualización de aniversario, era posible establecer dos PIN diferentes para autenticarse en los recursos:
+> Antes de la Actualización de aniversario, se podían establecer dos PIN diferentes para autenticarse en los recursos:
 >
 > - El **PIN de dispositivo** se usaba para desbloquear el dispositivo y conectarse a recursos de nube.
 > - El **PIN de trabajo** se usaba para acceder a recursos de Azure AD en los dispositivos personales del usuario (BYOD).
-> 
+>
 > En la Actualización de aniversario, estos dos PIN se combinaron en un solo PIN de dispositivo.
 > Las directivas de configuración de Intune que establezca para controlar el PIN de dispositivo y las directivas de Windows Hello para empresas que configure serán las que establecerán ahora este nuevo valor de PIN.
-> Si ha establecido que ambos tipos de directivas controlarán el PIN, la directiva de Windows Hello para empresas se aplicará en los dispositivos móviles y de escritorio Windows 10.
+> Si ha establecido ambos tipos de directivas para controlar el PIN, se aplica la directiva de Windows Hello para empresas.
 > Para garantizar que se resuelven los conflictos de directivas y que la directiva de PIN se aplica correctamente, actualice su directiva de Windows Hello para empresas de modo que coincida con la configuración de la directiva de configuración y pídales a los usuarios que sincronicen sus dispositivos en la aplicación del portal de empresa.
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Crear una directiva de Windows Hello para empresas
 
@@ -65,13 +63,13 @@ El resto de este artículo se centra en la creación de una directiva de Windows
 
 3. En **Configurar Windows Hello para empresas**, seleccione entre las opciones siguientes.
 
-     - **Habilitado**. Seleccione esta opción si quiere configurar Windows Hello para empresas.  Cuando se selecciona *Habilitado*, los otros valores de configuración de Windows Hello se vuelven visibles y se pueden configurar para los dispositivos.
+   - **Habilitado**. Seleccione esta opción si quiere configurar Windows Hello para empresas.  Cuando se selecciona *Habilitado*, los otros valores de configuración de Windows Hello se vuelven visibles y se pueden configurar para los dispositivos.
 
-    - **Deshabilitado**. Si no quiere habilitar Windows Hello para empresas durante la inscripción de los dispositivos, seleccione esta opción. Cuando está deshabilitado, los usuarios no pueden aprovisionar Windows Hello para empresas excepto en teléfonos móviles unidos a Azure Active Directory donde puede ser necesario el aprovisionamiento. Cuando está establecido en *Deshabilitado*, las opciones siguientes pueden configurarse igualmente para Windows Hello para empresas, aunque esta directiva no habilite Windows Hello para empresas.
+   - **Deshabilitado**. Si no quiere habilitar Windows Hello para empresas durante la inscripción de los dispositivos, seleccione esta opción. Cuando está deshabilitada, los usuarios no pueden aprovisionar Windows Hello para empresas. Cuando está establecido en *Deshabilitado*, las opciones siguientes pueden configurarse igualmente para Windows Hello para empresas, aunque esta directiva no habilite Windows Hello para empresas.
 
-    - **No configurado**. Seleccione esta opción si no quiere usar Intune para controlar la configuración de Windows Hello para empresas. No se cambia ninguna de las opciones de configuración de Windows Hello para empresas existentes en los dispositivos Windows 10. Todas las demás configuraciones del panel no están disponibles.
+   - **No configurado**. Seleccione esta opción si no quiere usar Intune para controlar la configuración de Windows Hello para empresas. No se cambia ninguna de las opciones de configuración de Windows Hello para empresas existentes en los dispositivos Windows 10. Todas las demás configuraciones del panel no están disponibles.
 
-4. Si ha seleccionado **Habilitado** en el paso anterior, configure las opciones necesarias que se aplicarán en todos los dispositivos Windows 10 y Windows 10 Mobile inscritos. Después de configurar estos valores, seleccione **Guardar**.
+4. Si ha seleccionado **Habilitado** en el paso anterior, configure las opciones necesarias que se aplican a todos los dispositivos Windows 10 inscritos. Después de configurar estos valores, seleccione **Guardar**.
 
    - **Usar un Módulo de plataforma segura (TPM)** :
 

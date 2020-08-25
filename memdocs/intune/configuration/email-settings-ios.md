@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: aec16e4c3c1eae5614fdf000740dcf8363bec1ca
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506220"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145987"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Incorporación de la configuración de correo electrónico para dispositivos iOS y iPadOS en Microsoft Intune
 
@@ -162,4 +162,4 @@ En este artículo se enumeran y describen todas las configuraciones de correo el
 
 Se crea el perfil, pero todavía no hace nada. Después, [asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
-Configure los valores de correo electrónico en dispositivos [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md) y [Windows Phone 8.1](email-settings-windows-phone-8-1.md).
+Configure las opciones de correo electrónico en los dispositivos [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md) y [Windows 10](email-settings-windows-10.md).

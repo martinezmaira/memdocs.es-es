@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092888"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217632"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Agregar Wi-Fi para dispositivos Windows 10 y versiones posteriores en Intune
 
@@ -101,12 +101,14 @@ Los perfiles Enterprise usan el Protocolo de autenticación extensible (EAP) par
   - **Tiempo máximo para autenticarse antes del tiempo de espera**: escriba el número máximo de segundos que deben transcurrir antes de autenticarse en la red, de 1 a 120 segundos.
   - **Permitir que Windows solicite al usuario credenciales de autenticación adicionales**: si se hace clic en **Sí** se permite que el sistema Windows solicite al usuario credenciales de autenticación adicionales en caso de que el método de autenticación lo requiera. Haga clic en **No** para ocultar estos mensajes.
 
-- **Habilitar almacenamiento en caché de Clave maestra en pares (PMK)** : seleccione **Sí** para almacenar en caché la PMK usada en la autenticación. Este almacenamiento en caché normalmente permite que la autenticación en la red se complete más rápido. Haga clic en **No** para forzar el protocolo de enlace de autenticación al conectarse a la red Wi-Fi cada vez.
+- **Habilitar almacenamiento en caché de Clave maestra en pares (PMK)** : seleccione **Sí** para almacenar en caché la PMK usada en la autenticación. Este almacenamiento en caché normalmente permite que la autenticación en la red se complete más rápido. Haga clic en **No** para forzar el protocolo de enlace de autenticación al conectarse a la red Wi-Fi cada vez. Para usar el valor **Habilitar la autenticación previa**, seleccione **Sí**.
 
   - **Tiempo máximo que se almacena en caché una PMK**: escriba el número de minutos que una Clave maestra en pares (PMK) se almacena en caché, de 5 a 1440 minutos.
   - **Número máximo de PMK almacenadas en caché**: escriba el número de claves almacenadas en caché, de 1 a 255.
 
 - **Habilitar la autenticación previa**: la autenticación previa permite que el perfil se autentique en todos los puntos de acceso para la red del perfil antes de conectarse. Al moverse entre puntos de acceso, la autenticación previa vuelva a conectar al usuario o los dispositivos más rápidamente. Haga clic en **Sí** para que el perfil se autentique en todos los puntos de acceso para esta red que estén dentro del alcance. Haga clic en **No** para requerir que el usuario o dispositivo se autentique por separado en cada punto de acceso.
+
+  Para usar esta opción, establezca **Habilitar almacenamiento en caché de Clave maestra en pares (PMK)** en **Sí**.
 
   - **Número máximo de intentos de autenticación previa**: escriba el número de intentos de autenticación previa, de 1 a 16.
 

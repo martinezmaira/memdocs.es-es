@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491327"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252346"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo
 
@@ -132,14 +132,14 @@ Solo se pueden borrar dispositivos de quiosco. Los dispositivos de quiosco de An
 
 ### <a name="windows"></a>Windows
 
-|Tipo de datos|Windows 8.1 (MDM) y Windows RT 8.1|Windows RT|Windows Phone 8.1 y Windows Phone 8|Windows 10|
+|Tipo de datos|Windows 8.1 (MDM) y Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Aplicaciones de empresa y datos asociados instalados por Intune.|Se revocan las claves de los archivos protegidos con EFS. El usuario no puede abrir los archivos.|No se quitan las aplicaciones de empresa.|Se desinstalan las aplicaciones instaladas originalmente a través del Portal de empresa. Se quitarán los datos de la aplicación de empresa.|Las aplicaciones se desinstalarán. Se quitan las claves de instalación de prueba.<br>Para Windows 10 versión 1709 (Creator Update) y versiones posteriores, no se quitan las aplicaciones de Aplicaciones de Microsoft 365. Las aplicaciones Win32 instaladas en la extensión de administración de Intune no serán dispositivos desinstalados o no inscritos. Los administradores pueden aprovechar la exclusión de asignación para no ofrecer las aplicaciones Win32 en los dispositivos BYOD.|
-|Configuración|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|
-|Configuración de perfil de Wi-Fi y VPN|Quitado.|Quitado.|No compatible.|Quitado.|
-|Configuración de perfil de certificado|Certificados eliminados y revocados.|Certificados eliminados y revocados.|No compatible.|Certificados eliminados y revocados.|
-|Correo electrónico|Quita el correo electrónico habilitado para EFS. Se incluyen los mensajes de correo electrónico y los datos adjuntos de la aplicación de correo para Windows.|No compatible.|Se borran los perfiles de correo electrónico que se aprovisionan mediante Intune. Se elimina el correo electrónico almacenado en caché en el dispositivo.|Quita el correo electrónico habilitado para EFS. Se incluyen los mensajes de correo electrónico y los datos adjuntos de la aplicación de correo para Windows. Se quitan las cuentas de correo aprovisionadas por Intune.|
-|Separación de Azure AD|No.|No.|Se quita el registro de Azure AD.|Se quita el registro de Azure AD.|
+|Aplicaciones de empresa y datos asociados instalados por Intune.|Se revocan las claves de los archivos protegidos con EFS. El usuario no puede abrir los archivos.|No se quitan las aplicaciones de empresa.|Las aplicaciones se desinstalarán. Se quitan las claves de instalación de prueba.<br>Para Windows 10 versión 1709 (Creator Update) y versiones posteriores, no se quitan las aplicaciones de Aplicaciones de Microsoft 365. Las aplicaciones Win32 instaladas en la extensión de administración de Intune no serán dispositivos desinstalados o no inscritos. Los administradores pueden aprovechar la exclusión de asignación para no ofrecer las aplicaciones Win32 en los dispositivos BYOD.|
+|Configuración|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|Las configuraciones que estableció la directiva de Intune ya no se aplican y los usuarios pueden cambiar la configuración.|
+|Configuración de perfil de Wi-Fi y VPN|Quitado.|Quitado.|Quitado.|
+|Configuración de perfil de certificado|Certificados eliminados y revocados.|Certificados eliminados y revocados.|Certificados eliminados y revocados.|
+|Correo electrónico|Quita el correo electrónico habilitado para EFS. Se incluyen los mensajes de correo electrónico y los datos adjuntos de la aplicación de correo para Windows.|No compatible.|Quita el correo electrónico habilitado para EFS. Se incluyen los mensajes de correo electrónico y los datos adjuntos de la aplicación de correo para Windows. Se quitan las cuentas de correo aprovisionadas por Intune.|
+|Separación de Azure AD|No.|No.|Se quita el registro de Azure AD.|
 
 > [!NOTE]
 > En el caso de los dispositivos Windows 10 que se unen a Azure AD durante la configuración rápida (OOBE), el comando de retiro quita todas las cuentas de Azure AD del dispositivo. Siga los pasos que se indican en [Iniciar el PC en modo seguro en Windows 10](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) para iniciar sesión como administración local y recuperar el acceso a los datos locales del usuario. 
@@ -167,7 +167,8 @@ Puede configurar Intune para eliminar automáticamente los dispositivos que pare
 3. En el cuadro **Eliminar los dispositivos que no se hayan registrado durante el siguiente número de días**, escriba un número entre 30 y 270.
 4. Elija **Guardar**.
 
-
+> [!NOTE]
+> Las reglas de limpieza de dispositivos no están disponibles en escenarios de Android Enterprise de tipo [totalmente administrado](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [dedicado](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll) y [propiedad corporativa con perfil de trabajo](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Eliminación de dispositivos en el portal de Azure Active Directory
 

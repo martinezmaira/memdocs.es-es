@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983942"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179543"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Adición de la aplicación Portal de empresa de Windows 10 con Microsoft Intune
 
@@ -71,7 +71,7 @@ Para obtener más información sobre cómo controla Intune las dependencias de l
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>¿Cómo actualizo la aplicación Portal de empresa en los dispositivos de mis usuarios si ya han instalado las aplicaciones anteriores desde la Tienda?
-Si los usuarios ya han instalado las aplicaciones Portal de empresa de Windows 8.1 o Windows Phone 8.1 desde Microsoft Store, estas deben actualizarse automáticamente a la nueva versión sin necesidad de hacer nada. Si la actualización no se realiza, pida a los usuarios que confirmen que han habilitado las actualizaciones automáticas de aplicaciones de la Tienda en sus dispositivos.   
+Si los usuarios ya han instalado las aplicaciones del Portal de empresa de Windows 8.1 desde Microsoft Store, estas se actualizarán automáticamente a la nueva versión sin necesidad de hacer nada. Si la actualización no se realiza, pida a los usuarios que confirmen que han habilitado las actualizaciones automáticas de aplicaciones de la Tienda en sus dispositivos.   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>¿Cómo puedo actualizar mi aplicación transferida localmente del Portal de empresa para Windows 8.1 a la versión para Windows 10?
 La ruta de migración recomendada es eliminar la asignación de la aplicación Portal de empresa de Windows 8.1 al establecer la acción de asignación en **Desinstalar**. Después de seleccionar esta opción, puede asignar la aplicación Portal de empresa de Windows 10 mediante cualquiera de las opciones expuestas anteriormente.  
@@ -80,8 +80,8 @@ Si necesita transferir localmente la aplicación y ha asignado el Portal de empr
 
 Si necesita transferir localmente la aplicación y ha firmado y asignado la aplicación Portal de empresa de Windows 8.1 con el certificado de firma de código de Symantec, siga los pasos de la siguiente sección.
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>¿Cómo puedo actualizar mi aplicación transferida localmente y firmada del Portal de empresa para Windows Phone 8.1 o del Portal de empresa para Windows 8.1 a la versión para Windows 10?
-La ruta de migración recomendada es eliminar la asignación existente de la aplicación Portal de empresa de Windows Phone 8.1 o la aplicación Portal de empresa de Windows 8.1 al establecer la acción de asignación en **Desinstalar**. Después de seleccionar esta opción, puede asignar la aplicación Portal de empresa de Windows 10 con normalidad.  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>¿Cómo puedo actualizar mi aplicación del Portal de empresa firmada y transferida localmente para Windows 8.1 a la versión para Windows 10?
+La ruta de migración recomendada es eliminar la asignación existente de la aplicación del Portal de empresa de Windows 8.1 mediante el establecimiento de la acción de asignación en **Desinstalar**. Después de seleccionar esta opción, puede asignar la aplicación Portal de empresa de Windows 10 con normalidad.  
 
 De lo contrario, tiene que actualizar y firmar correctamente la aplicación Portal de empresa de Windows 10 para garantiza que se respete la ruta de actualización.  
 
@@ -99,7 +99,7 @@ Así es cómo se tiene que firmar y asignar la aplicación:
 |---|---|
 | InputWin10AppxBundle  |  Ruta de acceso al archivo de origen appxbundle. |
 | OutputWin10AppxBundle | La ruta de acceso de salida del archivo firmado appxbundle. 
-| Win81Appx  | Ruta de acceso al archivo del Portal de empresa de Windows Phone 8.1 o Windows 8.1 (.APPX). |
+| Win81Appx  | Ruta de acceso al archivo del Portal de empresa de Windows 8.1 (.APPX). |
 | PfxFilePath  |  Ruta de acceso al archivo del certificado de firma de código móvil de empresa de Symantec (.PFX).  |
 | PfxPassword  | La contraseña del certificado de firma de código móvil de empresa de Symantec. |
 | PublisherId | El identificador del publicador de la empresa. Si no hay, se usa el campo Asunto del certificado de firma de código móvil de empresa de Symantec. |

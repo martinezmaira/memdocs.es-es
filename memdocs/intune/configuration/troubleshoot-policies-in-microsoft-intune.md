@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301391"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146514"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Solución de problemas de directivas y perfiles en Intune
 
@@ -144,7 +144,7 @@ En función de la plataforma del dispositivo, si quiere cambiar la directiva a u
 
 Por ejemplo, en Windows 8.1, en el escritorio, deslice el dedo desde la derecha para abrir la barra **Accesos**. Seleccione **Configuración** > **Panel de control** > **Cuentas de usuario**. En el lado izquierdo, seleccione el vínculo **Restablecer directivas de seguridad** y elija **Restablecer directivas**.
 
-En otras plataformas, como Android, iOS/iPadOS y Windows Phone 8.1, es posible que tenga que retirarlos y volver a inscribirlos para aplicar una directiva menos restrictiva.
+En otras plataformas, como Android e iOS y iPadOS, es posible que tenga que retirarlos y volver a inscribirlos para aplicar una directiva menos restrictiva.
 
 [Solución de problemas con la inscripción de dispositivos en Intune](../enrollment/troubleshoot-device-enrollment-in-intune.md) puede ser un buen recurso.
 

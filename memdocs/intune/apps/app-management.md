@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912393"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252312"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>¿Qué es la administración de aplicaciones de Microsoft Intune?
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Como administrador de TI, puede usar Microsoft Intune para administrar las aplicaciones cliente que usan los trabajadores de su empresa. Esta funcionalidad se suma a la administración de dispositivos y la protección de datos. Una de las prioridades de un administrador es garantizar que los usuarios finales tengan acceso a las aplicaciones que necesitan para hacer su trabajo. Este objetivo puede ser difícil por las siguientes causas:
 - La amplia variedad de plataformas de dispositivo y tipos de aplicaciones.
@@ -44,29 +41,30 @@ La [administración de aplicaciones móviles de Intune](app-lifecycle.md) hace r
 MAM permite administrar y proteger los datos de la organización dentro de una aplicación. Con **MAM sin inscripción** (MAM-WE), una aplicación profesional o educativa que contiene información confidencial puede administrarse en casi cualquier [dispositivo](app-management.md#app-management-capabilities-by-platform), incluidos los dispositivos personales en escenarios de **Bring Your Own Device** (BYOD). Muchas aplicaciones de productividad, como las aplicaciones de Microsoft Office, pueden administrarse mediante Intune MAM. Consulte la lista oficial de [aplicaciones protegidas de Microsoft Intune](apps-supported-intune-apps.md), disponible para uso público.
 
 Intune MAM admite dos configuraciones:
-- **Intune MDM + MAM**: Los administradores de TI solo pueden administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en los dispositivos que están inscritos con la administración de dispositivos móviles (MDM) de Intune. Para administrar aplicaciones mediante MDM + MAM, los clientes deben usar la consola de Intune en Azure Portal (en https://portal.azure.com ).
-- **MAM sin inscripción de dispositivos**: MAM sin inscripción de dispositivos o MAM-WE permite a los administradores de TI administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en dispositivos no inscritos con Intune MDM. Esto significa que las aplicaciones pueden administrarse mediante Intune en dispositivos inscritos con proveedores de EMM de terceros. Para administrar aplicaciones mediante MAM-WE, los clientes deben usar la consola de Intune en Azure Portal (en https://portal.azure.com ). Además, Intune puede administrar las aplicaciones en dispositivos inscritos con otros proveedores de Enterprise Mobility Management (EMM) o no inscritos con MDM. Para más información sobre BYOD y EMS de Microsoft, consulte [Decisiones de tecnología para habilitar BYOD con Microsoft Enterprise Mobility + Security (EMS)](../fundamentals/byod-technology-decisions.md).
+
+- **Intune MDM + MAM**: Los administradores de TI solo pueden administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en los dispositivos que están inscritos con la administración de dispositivos móviles (MDM) de Intune. Para administrar aplicaciones mediante MDM + MAM, los clientes deben usar Intune en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+- **MAM sin inscripción de dispositivos**: MAM sin inscripción de dispositivos o MAM-WE permite a los administradores de TI administrar aplicaciones mediante directivas de protección de aplicaciones y MAM en dispositivos no inscritos con Intune MDM. Esto significa que las aplicaciones pueden administrarse mediante Intune en dispositivos inscritos con proveedores de EMM de terceros. Para administrar aplicaciones mediante MAM-WE, los clientes deben usar Intune en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Además, Intune puede administrar las aplicaciones en dispositivos inscritos con otros proveedores de Enterprise Mobility Management (EMM) o no inscritos con MDM. Para más información sobre BYOD y EMS de Microsoft, consulte [Decisiones de tecnología para habilitar BYOD con Microsoft Enterprise Mobility + Security (EMS)](../fundamentals/byod-technology-decisions.md).
 
 ## <a name="app-management-capabilities-by-platform"></a>Funcionalidades de administración de aplicaciones por plataforma
 
 Intune ofrece diversas funcionalidades para ayudarle a conseguir las aplicaciones que necesita en los dispositivos en los que desea que se ejecuten. En la tabla siguiente se ofrece un resumen de las capacidades de administración de aplicaciones.
 
-| Funcionalidad de administración de aplicaciones | Android o Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| Agregar y asignar aplicaciones a dispositivos y usuarios | Sí | Sí | Sí | Sí | Sí |
-| Asignar aplicaciones a dispositivos no inscritos en Intune | Sí | Sí | No | No | No |
-| Usar directivas de configuración de aplicaciones para controlar el comportamiento de inicio de las aplicaciones | Sí | Sí | No | No | No |
-| Usar directivas de aprovisionamiento de aplicaciones móviles para renovar aplicaciones caducadas | No | Sí | No | No | No |
-| Proteger los datos de empresa de las aplicaciones con directivas de protección de aplicaciones | Sí | Sí | No | No <sup>1</sup> | No |
-| Quitar solo los datos corporativos de una aplicación instalada (eliminación selectiva de aplicaciones) | Sí | Sí | No | Sí | Sí |
-| Supervisar las asignaciones de aplicaciones | Sí | Sí | Sí | Sí | Sí |
-| Asignar y realizar el seguimiento de aplicaciones compradas por volumen desde una tienda de aplicaciones | No | No | No | Sí | No |
-| Instalación obligatoria de aplicaciones en dispositivos (requerido) <sup>2</sup> | Sí | Sí | Sí | Sí | Sí |
-| Instalación opcional en dispositivos desde el Portal de empresa (instalación disponible) | Sí <sup>3</sup> | Sí | Sí | Sí | Sí |
-| Instalación de un acceso directo a una aplicación en Web (vínculo web) | Sí <sup>4</sup> | Sí | Sí | Sí | Sí |
-| Aplicaciones internas (línea de negocio) | Sí | Sí | Sí | Sí | No |
-| Aplicaciones de una tienda | Sí | Sí | No | Sí | Sí |
-| Actualizar aplicaciones | Sí | Sí | No | Sí | Sí |
+| Funcionalidad de administración de aplicaciones | Android o Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| Agregar y asignar aplicaciones a dispositivos y usuarios | Sí | Sí | Sí | Sí |
+| Asignar aplicaciones a dispositivos no inscritos en Intune | Sí | Sí | No | No |  |
+| Usar directivas de configuración de aplicaciones para controlar el comportamiento de inicio de las aplicaciones | Sí | Sí | No | No |
+| Usar directivas de aprovisionamiento de aplicaciones móviles para renovar aplicaciones caducadas | No | Sí | No | No |
+| Proteger los datos de empresa de las aplicaciones con directivas de protección de aplicaciones | Sí | Sí | No | No <sup>1</sup> |
+| Quitar solo los datos corporativos de una aplicación instalada (eliminación selectiva de aplicaciones) | Sí | Sí | No | Sí |
+| Supervisar las asignaciones de aplicaciones | Sí | Sí | Sí | Sí |
+| Asignar y realizar el seguimiento de aplicaciones compradas por volumen desde una tienda de aplicaciones | No | No | No | Sí |
+| Instalación obligatoria de aplicaciones en dispositivos (requerido) <sup>2</sup> | Sí | Sí | Sí | Sí |
+| Instalación opcional en dispositivos desde el Portal de empresa (instalación disponible) | Sí <sup>3</sup> | Sí | Sí | Sí |
+| Instalación de un acceso directo a una aplicación en Web (vínculo web) | Sí <sup>4</sup> | Sí | Sí | Sí |
+| Aplicaciones internas (línea de negocio) | Sí | Sí | Sí | Sí |
+| Aplicaciones de una tienda | Sí | Sí | No | Sí |
+| Actualizar aplicaciones | Sí | Sí | No | Sí |
 
 <sup>1</sup> Considere el uso de [Windows Information Protection](../protect/windows-information-protection-configure.md) para proteger aplicaciones en dispositivos que ejecutan Windows 10.<br>
 <sup>2</sup> Se aplica solo a dispositivos administrados por Intune.<br>
@@ -113,13 +111,15 @@ La parte superior del menú de navegación de la carga de trabajo de la aplicaci
 ### <a name="try-the-interactive-guide"></a>Pruebe la guía interactiva
 La guía interactiva [Administración y protección de aplicaciones para dispositivos móviles y de escritorio con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) le guía a través del Centro de administración de Microsoft Endpoint Manager para mostrarle cómo administrar dispositivos inscritos en Intune, aplicar el cumplimiento mediante directivas y proteger los datos de la organización.</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## <a name="additional-information"></a>Información adicional
 Los siguientes elementos de la consola de proporcionan funcionalidad relacionada con las aplicaciones:
 - **Microsoft Store para Empresas**: configure la integración con Microsoft Store para Empresas. Luego, puede sincronizar las aplicaciones adquiridas en Intune, asignarlas y realizar el seguimiento de su uso de licencias. Para obtener más información, consulte [Aplicaciones adquiridas por volumen en Microsoft Store para Empresas](windows-store-for-business.md).
 - **Certificado de Windows Enterprise**: aplique o vea el estado de un certificado de firma de código que se utiliza para distribuir aplicaciones de línea de negocio en los dispositivos de Windows administrados.
-- **Certificado de Symantec para Windows**: aplique o vea el estado de un certificado de firma de código de Symantec que se necesita para distribuir archivos appx de XAP y WP8.x a dispositivos Windows 10 Mobile.
+- **Certificado de Symantec para Windows**: aplique o vea el estado de un certificado de firma de código de Symantec.
 - **Claves de instalación de prueba de Windows**: agregue una clave de instalación de prueba de Windows que puede usarse para instalar una aplicación directamente en dispositivos en lugar de publicar y descargar la aplicación desde la tienda Windows. Para obtener más información, consulte [Carga de una aplicación de Windows](app-sideload-windows.md).
 - **Tokens de VPP de Apple**: aplique y vea sus licencias del Programa de Compras por Volumen (PCV) de iOS/iPadOS. Para obtener más información, consulte [Aplicaciones de iOS/iPadOS compradas a través de un programa de compras por volumen](vpp-apps-ios.md).
 - **Google Play administrado**: Google Play administrado es la tienda de aplicaciones empresariales de Google y el único origen de aplicaciones para Android Enterprise. Para obtener más información, consulte [Incorporación de aplicaciones de Google Play administrado a dispositivos Android Enterprise con Intune](apps-add-android-for-work.md).

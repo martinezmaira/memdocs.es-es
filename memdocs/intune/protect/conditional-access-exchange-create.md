@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462242"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252765"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configuración del acceso a Exchange local para Intune
 
@@ -69,14 +69,13 @@ Antes de configurar el acceso condicional, compruebe que existen las siguientes 
 
 ### <a name="support-for-mobile-devices"></a>Compatibilidad con dispositivos móviles
 
-- **Windows Phone 8.1 y versiones posteriores**: para crear directivas de acceso condicional, vea [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md)
+- **Windows Phone**: para crear directivas de acceso condicional, consulte [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md).
 - **Aplicación de correo electrónico nativo en iOS/iPadOS**: para crear directivas de acceso condicional, vea [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md)
 - **Clientes de correo EAS como Gmail en Android 4 o versiones posteriores**: para crear directivas de acceso condicional, vea [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md)
 
 - **Clientes de correo EAS en administrador de dispositivo Android 4**: para crear directivas de acceso condicional, vea [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md)
 
 - **Clientes de correo EAS en dispositivos con perfil de trabajo Android**: solo se admiten *Gmail* y *Nine Work for Android Enterprise* en los dispositivos de perfil de trabajo Android. Para que el acceso condicional funcione con perfiles de trabajo Android, debe implementar un perfil de correo electrónico para la aplicación *Gmail* o *Nine Work for Android Enterprise*, y también implementar esas aplicaciones como una instalación necesaria. Después de implementar la aplicación, puede configurar el acceso condicional basado en dispositivos.
-
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Para configurar el acceso condicional para dispositivos de perfil de trabajo Android
 

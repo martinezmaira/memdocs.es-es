@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881399"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179475"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Inscripción de dispositivos Windows en Portal de empresa de Intune  
 
@@ -75,10 +75,8 @@ Los pasos de inscripción varían para las distintas versiones de los dispositiv
     * __1607 o posteriores__: inscriba el dispositivo mediante la ruta [**Configuración** > **Obtener acceso a trabajo o escuela**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 o anteriores__: inscriba el dispositivo mediante la ruta [**Configuración** > **Cuentas**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## <a name="enroll-non-windows-10-devices"></a>Inscribir dispositivos que no son Windows 10  
-Use los siguientes artículos para inscribir otros dispositivos compatibles con Windows a través del sitio web Portal de empresa:   
-* [Dispositivo Windows 8.1 o Windows RT 8.1](enroll-your-W81-or-rt81-windows.md)  
-* [Dispositivo Windows Phone 8.1](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>Inscripción de otros dispositivos de Windows  
+Puede inscribir [dispositivos Windows 8.1. o Windows RT 8.1](enroll-your-W81-or-rt81-windows.md) a través del sitio web del Portal de empresa. 
 
 ## <a name="it-administrator-support"></a>Soporte técnico para administradores de TI  
 Si es administrador de TI y detecta problemas al inscribir dispositivos, vea [Solucionar problemas de inscripción de dispositivos de Windows de Microsoft Intune](https://support.microsoft.com/help/4469913). En este artículo se enumeran errores habituales, sus causas y los pasos para resolverlos.  

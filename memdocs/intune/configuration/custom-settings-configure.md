@@ -1,11 +1,11 @@
 ---
 title: 'Uso de una configuración de dispositivo personalizada en Microsoft Intune: Azure | Microsoft Docs'
-description: Agregue o cree un perfil para usar la configuración personalizada en dispositivos con Windows Phone, Windows 8.1, Windows 10 y versiones posteriores, el administrador de dispositivos Android, Android Enterprise, y macOS e iOS/iPadOS mediante Microsoft Intune.
+description: Agregue o cree un perfil para usar la configuración personalizada en dispositivos con Windows 8.1, Windows 10 y versiones posteriores, el administrador de dispositivos Android, Android Enterprise, macOS e iOS y iPadOS mediante Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: aaa0deaf2c6332965f40ae02a47b7541cf2f9e8e
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990102"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146412"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Crear un perfil con una configuración personalizada en Intune
 
@@ -45,7 +45,6 @@ En este artículo se muestra cómo crear un perfil personalizado para el adminis
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 y versiones posteriores**
-        - **Windows Phone 8.1**
 
     - **Perfil**: seleccione **Personalizado**.
 
@@ -65,7 +64,6 @@ En este artículo se muestra cómo crear un perfil personalizado para el adminis
     - [macOS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. Seleccione **Siguiente**.
 9. En **Etiquetas de ámbito** (opcional), asigne una etiqueta para filtrar el perfil por grupos de TI específicos, como `US-NC IT Team` o `JohnGlenn_ITDepartment`. Para obtener más información sobre las etiquetas de ámbito, vea [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito](../fundamentals/scope-tags.md).

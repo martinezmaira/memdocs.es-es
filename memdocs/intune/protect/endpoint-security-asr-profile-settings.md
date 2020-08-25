@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048079"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146038"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de reducción de la superficie expuesta a ataques de Seguridad de los puntos de conexión en Intune
 
@@ -177,11 +177,14 @@ Perfiles y plataformas compatibles:
 ### <a name="microsoft-defender-application-control"></a>Control de aplicaciones de Microsoft Defender
 
 - **Control de aplicaciones de AppLocker**  
+  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
   - **Sin configurar** (*valor predeterminado*).
   - **Aplicar componentes y aplicaciones de Store**
   - **Auditar componentes y aplicaciones de Store**
   - **Aplicar componentes, aplicaciones de Store y Smartlocker**
-  - CSP de **Auditar componentes, Aplicaciones de la Tienda y Smartlocker**: [CSP de AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  - **Auditar componentes, aplicaciones de Store y Smartlocker**
+   
 
 - **Impedir que los usuarios descarten advertencias de SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)

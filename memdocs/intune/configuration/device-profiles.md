@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093179"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146327"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicación de la configuración y características en dispositivos con perfiles de dispositivos Microsoft Intune
 
@@ -59,7 +59,6 @@ Esta característica es compatible con:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 y versiones posteriores
 
@@ -73,7 +72,6 @@ Esta característica es compatible con:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>Optimización de entrega
 
@@ -155,7 +153,6 @@ Esta característica es compatible con:
 - Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8.1
 - Windows 10 y versiones posteriores
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
@@ -187,7 +184,7 @@ Esta característica es compatible con:
 
 ## <a name="identity-protection"></a>Protección de identidad
 
-[Protección de identidad](../protect/identity-protection-configure.md) controla la experiencia de Windows Hello para empresas en dispositivos Windows 10 y Windows 10 Mobile. Configure estas opciones para que Windows Hello para empresas esté disponible para los usuarios y dispositivos, y para especificar los requisitos de PIN y gestos para los dispositivos.  
+[Protección de identidad](../protect/identity-protection-configure.md) controla la experiencia de Windows Hello para empresas en dispositivos Windows 10. Configure estas opciones para que Windows Hello para empresas esté disponible para los usuarios y dispositivos, y para especificar los requisitos de PIN y gestos para los dispositivos.  
 
 Esta característica es compatible con:  
 
@@ -278,7 +275,6 @@ Esta característica es compatible con:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 y versiones posteriores
 

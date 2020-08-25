@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 407189163107da24e19b84c2011fa47f6a796475
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990658"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591700"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Adición de aplicaciones de línea de negocio (LOB) de macOS a Microsoft Intune
 
@@ -42,8 +42,7 @@ Use la información de este artículo para agregar aplicaciones de línea de neg
 Debe descargar una herramienta externa, marcar la herramienta descargada como ejecutable y procesar previamente los archivos *.pkg* con la herramienta antes de que pueda cargar el archivo de línea de negocio en Microsoft Intune. El procesamiento previo de los archivos *.pkg* debe realizarse en un dispositivo macOS. Use la herramienta de ajuste de aplicaciones de Intune para Mac para permitir que Microsoft Intune administre las aplicaciones Mac.
 
 > [!IMPORTANT]
-> El archivo *.pkg* se debe firmar con el certificado "Instalador de id. de desarrollador", que se obtiene de una cuenta de Apple Developer. Solo los archivos *.pkg* se pueden usar para cargar aplicaciones de línea de negocio de macOS en Microsoft Intune. No se admite la conversión de otros formatos, como convertir de *.dmg* a *.pkg*.
->
+> El archivo *.pkg* se debe firmar con el certificado "Instalador de id. de desarrollador", que se obtiene de una cuenta de Apple Developer. Solo los archivos *.pkg* se pueden usar para cargar aplicaciones de línea de negocio de macOS en Microsoft Intune. Sin embargo, no se admite la conversión de otros formatos, como de *.dmg* a *.pkg*. Para más información sobre la conversión de tipos de aplicación que no son PKG, consulte [Implementación de aplicaciones en formato DMG o APP en equipos Mac administrados por Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
 1. Descargue la [herramienta de encapsulado de aplicaciones de Intune para Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
@@ -73,7 +72,7 @@ Debe descargar una herramienta externa, marcar la herramienta descargada como ej
 
 ## <a name="select-the-app-type"></a>Selección del tipo de aplicación
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En el panel **Seleccionar tipo de aplicación**, en los **Otros** tipos de aplicaciones, seleccione **Aplicación de línea de negocio**.
 4. Haga clic en **Seleccionar**. Se muestran los pasos para **Agregar aplicación**.

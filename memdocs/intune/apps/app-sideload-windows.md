@@ -1,12 +1,12 @@
 ---
-title: Transferencia local de aplicaciones de Windows y Windows Phone
+title: Transferencia local de aplicaciones de Windows
 titleSuffix: Microsoft Intune
 description: Aprenda a firmar aplicaciones de línea de negocios de modo que pueda usar Intune para implementarlas.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989586"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179628"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Firma de aplicaciones de línea de negocio para que se puedan implementar en dispositivos Windows con Intune
 
@@ -53,7 +53,7 @@ Si implementa la aplicación según sea necesario para los usuarios o dispositiv
 Si el dispositivo de Windows 10 todavía no confía en la entidad de certificación, después de haber firmado el paquete appx y de cargarlo en el servicio de Intune, debe cargar el certificado de firma de código en el portal de Intune:
 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Haga clic en **Administración de inquilinos** > **Conectores y tokens** > **Certificados de empresa de Windows**.
+2. Haga clic en **Administración de inquilinos** > **Conectores y tokens** > **Windows enterprise certificates** (Certificados de empresa de Windows).
 3. Seleccione un archivo en **Archivo de certificado de firma de código**.
 4. Seleccione el archivo *.cer* y haga clic en **Abrir**.
 5. Haga clic en **Cargar** para agregar el archivo de certificado a Intune.
@@ -64,13 +64,13 @@ Intune solo implementa el archivo. cer más reciente que se cargó. Si tiene var
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Cómo renovar el certificado de firma de código de empresa de Symantec
 
-El certificado usado para implementar aplicaciones móviles de Windows Phone 8.1 se dejó de usar el 28 de febrero de 2019 y ya no está disponible para su renovación desde Symantec. Si va a realizar la implementación en un dispositivo móvil de Windows 10, puede seguir usando los certificados de firma de código de Symantec Desktop Enterprise siguiendo las instrucciones sobre la [instalación de prueba de Windows 10](app-sideload-windows.md#windows-10-sideloading).
+El certificado usado para implementar aplicaciones móviles de Windows Phone 8.1 se dejó de usar el 28 de febrero de 2019 y ya no está disponible para su renovación desde Symantec. Además, a partir del 10 de agosto de 2020, Intune ha finalizado el soporte técnico para Windows 10 Mobile.
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Instalación del certificado actualizado para aplicaciones de línea de negocio (LOB)
 
 Windows Phone 8.1
 
-El servicio Intune ya no puede implementar aplicaciones de LOB para esta plataforma una vez que expire el certificado de firma de código de Symantec Mobile Enterprise existente. Todavía será posible realizar la instalación de prueba de archivos XAP/APPX sin firmar mediante una tarjeta SD o descargando el archivo en el dispositivo. Para obtener más información consulte [Instalación de archivos XAP en Windows Phone](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280).
+El servicio Intune ya no puede implementar aplicaciones de LOB para esta plataforma una vez que expire el certificado de firma de código de Symantec Mobile Enterprise existente.
 
 Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 
@@ -102,7 +102,7 @@ Consulte [Deploying an appxbundle with dependencies via Microsoft Intune MDM](ht
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>¿Cómo puedo actualizar el Portal de empresa en los dispositivos de mis usuarios si ya han instalado las aplicaciones anteriores desde la Tienda?
 
-Si los usuarios ya han instalado las aplicaciones del Portal de empresa para Windows 8.1 o Windows Phone 8.1 desde la Tienda, recibirán automáticamente la nueva versión sin que tengan que hacer nada. Si la actualización no se realiza, pida a los usuarios que comprueben que están habilitadas en sus dispositivos las actualizaciones automáticas para las aplicaciones de la Tienda.
+Si los usuarios ya han instalado las aplicaciones del Portal de empresa para Windows 8.1 desde Store, recibirán automáticamente la nueva versión sin que tengan que hacer nada. Si la actualización no se realiza, pida a los usuarios que comprueben que están habilitadas en sus dispositivos las actualizaciones automáticas para las aplicaciones de la Tienda.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>¿Cómo puedo actualizar mi aplicación transferida localmente del Portal de empresa para Windows 8.1 a la versión para Windows 10?
 
@@ -112,9 +112,9 @@ Si necesita transferir localmente la aplicación e implementó el Portal de empr
 
 Si necesita transferir localmente la aplicación y firmó e implementó el Portal de empresa para Windows 8.1 con el certificado de firma de código de Symantec, siga los pasos descritos en la sección siguiente.  
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>¿Cómo puedo actualizar mi aplicación transferida localmente y firmada del Portal de empresa para Windows Phone 8.1 o del Portal de empresa para Windows 8.1 a la versión para Windows 10?
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>¿Cómo puedo actualizar mi aplicación del Portal de empresa firmada y transferida localmente para Windows 8.1 a la versión para Windows 10?
 
-La ruta de migración recomendada consiste en eliminar la implementación existente de la aplicación del Portal de empresa para Windows Phone 8.1 o para Windows 8.1 estableciendo la acción de implementación en "Desinstalar". Una vez hecho, se puede implementar con normalidad la aplicación del Portal de empresa para Windows 10.  
+La ruta de migración recomendada consiste en eliminar la implementación existente de la aplicación del Portal de empresa para Windows 8.1 mediante la opción de implementación "Desinstalar". Una vez hecho, se puede implementar con normalidad la aplicación del Portal de empresa para Windows 10.  
 
 Si no, habrá que actualizar y firmar correctamente la aplicación del Portal de empresa para Windows 10 para garantiza que se respeta la ruta de actualización.  
 
@@ -130,7 +130,7 @@ Esta es la forma de firmar e implementar la aplicación:
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | InputWin10AppxBundle  |                                             La ruta de acceso donde se encuentra el archivo de origen appxbundle.                                              |
 | OutputWin10AppxBundle |                                                  La ruta de acceso de salida del archivo firmado appxbundle.                                                  |
-|       Win81Appx       |                          La ruta de acceso a la ubicación del archivo del Portal de empresa para Windows Phone 8.1 o Windows 8.1 (.APPX).                           |
+|       Win81Appx       |                          La ruta de acceso a la ubicación del archivo del Portal de empresa para Windows 8.1 (.APPX).                           |
 |      PfxFilePath      |                                   La ruta de acceso al archivo de certificado de firma de código móvil de empresa de Symantec (.PFX).                                    |
 |      PfxPassword      |                                     La contraseña del certificado de firma de código móvil de empresa de Symantec.                                      |
 |      PublisherId      |      El identificador del publicador de la empresa. Si está ausente, se usa el campo 'Asunto' del certificado de firma de código móvil empresarial de Symantec.       |

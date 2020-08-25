@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed7852a5aaf09a99823035d12bf2aa9139c1c02
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5be1c4fd42d27386b4fdc51cac6167625432491f
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990230"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559572"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Administración de aplicaciones compradas por volumen en Microsoft Store para Empresas con Microsoft Intune
 
@@ -53,7 +53,7 @@ Revise la información siguiente antes de iniciar la sincronización y la asigna
 - Los dispositivos inscritos deben usar la versión 1511 de Windows 10 o versiones posteriores.
 
 > [!NOTE]
-> Si deshabilita Store en dispositivos administrados (ya sea manualmente, a través de directivas o directivas de grupo), las aplicaciones con licencia en línea no se instalarán.
+> Si deshabilita el acceso a Store en los dispositivos administrados (ya sea manualmente, a través de directivas o mediante directiva de grupo), las aplicaciones con licencia en línea no se instalarán.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Asociar su cuenta de la Tienda Microsoft para Empresas con Intune
 
@@ -78,6 +78,7 @@ Ya puede continuar y configurar la sincronización en la consola de Intune.
 6. Haga clic en **Sincronizar** para que las aplicaciones que ha adquirido en la Microsoft Store aparezcan en Intune.
 
 ## <a name="synchronize-apps"></a>Sincronizar aplicaciones
+Si ya ha asociado su cuenta de Microsoft Store para Empresas con sus credenciales de administrador de Intune, puede sincronizar manualmente las aplicaciones de Microsoft Store para Empresas con Intune mediante los pasos siguientes.
 
 1. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Microsoft Store para Empresas**.
 2. Haga clic en **Sincronizar** para que las aplicaciones que ha adquirido en la Microsoft Store aparezcan en Intune.
@@ -92,7 +93,7 @@ Las aplicaciones de la tienda se asignan del mismo modo que cualquier otra aplic
 Las aplicaciones sin conexión pueden dirigirse a grupos de usuarios, grupos de dispositivos o grupos con usuarios y dispositivos.
 Las aplicaciones sin conexión pueden instalarse para un usuario determinado en un dispositivo o para todos los usuarios de un dispositivo.
 
-Al asignar una aplicación de la Tienda Microsoft para Empresas, cada usuario que instala la aplicación usa una licencia. Si usa todas las licencias disponibles para una aplicación asignada, no puede asignar más copias. Realice una de las acciones siguientes:
+Al asignar una aplicación de la Tienda Microsoft para Empresas, cada usuario que instala la aplicación usa una licencia. Si usa todas las licencias disponibles para una aplicación asignada, no puede asignar más copias. Realice una de las siguientes acciones:
 
 * Desinstalar la aplicación de algunos dispositivos.
 * Reducir el ámbito de la asignación actual y restringirla únicamente a los usuarios para los que haya suficientes licencias.

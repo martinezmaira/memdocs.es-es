@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501174"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guía para desarrolladores de Android acerca del SDK para aplicaciones de Microsoft Intune
 
@@ -1184,7 +1184,7 @@ La primera vez que se registra una cuenta, comienza con el estado `PENDING`, lo 
 | `AUTHORIZATION_NEEDED` | Este resultado indica que la instancia `MAMServiceAuthenticationCallback` registrada de la aplicación no proporcionó ningún token, o bien que el token que se proporcionó no era válido.  La aplicación debe adquirir un token válido y llamar a `updateToken()` si es posible. |
 | `NOT_LICENSED` | El usuario no cuenta con licencia para Intune, o bien se produjo un error al intentar ponerse en contacto con el servicio MAM de Intune.  La aplicación debe continuar con un estado no administrado (normal) y no se debe bloquear el usuario.  Las inscripciones se reintentarán periódicamente ante la eventualidad de que el usuario obtenga una licencia en el futuro. |
 | `ENROLLMENT_SUCCEEDED` | El intento de inscripción se completó con éxito, o bien el usuario ya está inscrito.  En caso de que se trate de una inscripción correcta, se enviará una notificación de actualización de política antes de esta notificación.  Se debe permitir el acceso a los datos corporativos. |
-| `ENROLLMENT_FAILED` | Error al intentar la inscripción.  Puede encontrar más detalles en los registros del dispositivo.  En este estado, la aplicación no debe permitir el acceso a los datos corporativos, ya que anteriormente se determinó que el usuario no tiene licencia para Intune.|
+| `ENROLLMENT_FAILED` | Error al intentar la inscripción.  Puede encontrar más detalles en los registros del dispositivo.  En este estado, la aplicación no debe permitir el acceso a los datos corporativos, ya que anteriormente se determinó que el usuario no tiene licencia para Intune. Todas las aplicaciones deben asegurarse de que el acceso a los datos corporativos no esté autorizado hasta que la aplicación reciba "enrollment_succeeded".|
 | `WRONG_USER` | Solo un usuario por dispositivo puede inscribir una aplicación con el servicio MAM. Este resultado indica que el usuario para el que se ha entregado este resultado (el segundo usuario) es destinatario de la directiva de MAM, pero que ya hay otro usuario inscrito. Dado que no se puede aplicar la directiva de MAM al segundo usuario, la aplicación no debe permitir el acceso a los datos de este ( y posiblemente lo quitará de la aplicación) a menos o hasta que la inscripción de este usuario se realice correctamente en un momento posterior. A la vez que entrega este resultado `WRONG_USER`, MAM le pregunta si se debe quitar la cuenta existente. Si el usuario responde de forma afirmativa, es posible inscribir al segundo un poco más tarde. Siempre que el segundo usuario permanezca registrado, MAM vuelve a intentar la inscripción periódicamente. |
 | `UNENROLLMENT_SUCCEEDED` | La anulación de inscripción se realizó correctamente.|
 | `UNENROLLMENT_FAILED` | Error en la solicitud de anulación de inscripción.  Puede encontrar más detalles en los registros del dispositivo. En general, esto no ocurre si la aplicación pasa un UPN válido (es decir, ni nulo ni vacío). No hay ninguna corrección directa ni confiable que pueda llevar a cabo la aplicación. Si se recibe este valor al anular el registro de un UPN válido, notifíquelo como un error al equipo de MAM de Intune.|

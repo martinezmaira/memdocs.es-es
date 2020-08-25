@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758353"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179560"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -232,18 +232,16 @@ Para personalizar las acciones de autoservicio de usuario disponibles, vea [Pers
 
 Algunas plataformas y configuraciones no realizar permiten acciones de autoservicio en el dispositivo. En la tabla siguiente se ofrecen más detalles sobre las acciones de autoservicio:
 
-| Acción | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Acción | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Retirar | Disponible<sup>(1)</sup> | Disponible<sup>(9)</sup> | Disponible | Disponible<sup>(7)</sup> |
 | Eliminación de datos | Disponible | Disponible<sup>(5)</sup><sup>(9)</sup> | N/D | Disponible<sup>(7)</sup> |
 | Cambiar nombre<sup>(4)</sup> | Disponible | Disponible | Disponible | Disponible |
 | Sincronización | Disponible | Disponible | Disponible | Disponible |
-| Bloqueo remoto | Solo en Windows Phone | Disponible | Disponible | Disponible |
-| Restablecer el código de acceso | Solo en Windows Phone | Disponible<sup>(8)</sup> | N/D | Disponible<sup>(6)</sup> |
 | Recuperación de claves | N/D | N/D | Disponible<sup>(2)</sup> | N/D |
 
 <sup>(1)</sup> La función **Retirar** siempre está bloqueada en los dispositivos Windows unidos a Azure AD.<br>
-<sup>(2)</sup> **Recuperación de claves** para MacOS solo está disponible a través del portal web.<br>
+<sup>(2)</sup> **Recuperación de clave** para macOS solo está disponible a través del portal web.<br>
 <sup>(3) </sup> Todas las acciones remotas se deshabilitan si se usa una inscripción del administrador de inscripción de dispositivos.<br>
 <sup>(4)</sup> **Cambiar nombre** solo cambia el nombre del dispositivo en la aplicación Portal de empresa o en el portal web, no en el dispositivo.<br>
 <sup>(5)</sup> **Borrar** no está disponible en los dispositivos iOS o iPadOS inscritos por el usuario.<br>

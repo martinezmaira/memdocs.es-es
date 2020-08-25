@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912580"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217218"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Administración de aplicaciones de iOS y macOS compradas a través del Programa de Compras por Volumen de Apple con Microsoft Intune
 
@@ -94,24 +94,30 @@ Migre el contenido y los tokens de VPP adquiridos existentes a Apps y libros en 
 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Tokens de VPP de Apple**.
-3. En la lista del panel de tokens del VPP, seleccione **Crear**.
-4. En el panel **Crear token de VPP**, especifique la información siguiente:
-    - **Archivo de token de VPP**: si aún no lo ha hecho, regístrese en Apple Business Manager o Apple School Manager. Después de registrarse, descargue el token de VPP de Apple para la cuenta y selecciónelo aquí.
-    - **Id. de Apple**: escriba el identificador de Apple administrado de la cuenta asociada con el token de carga.
-    - **Tomar el control del token desde otro MDM**: si establece esta opción en **sí**, el token se puede reasignar a Intune desde otra solución de MDM.
-    - **Nombre de token**: un campo administrativo para establecer el nombre del token.
-    - **País o región**: seleccione el país o la región de la tienda del VPP.  Intune sincroniza las aplicaciones de VPP para todas las configuraciones regionales desde la instancia de App Store del país o la región de VPP especificada.
+3. En la lista del panel de tokens del VPP, seleccione **Crear**. Se muestra el proceso **Crear token de VPP**. Al crear un token de VPP, se usan cuatro páginas. La primera es **Aspectos básicos**.
+4. En la página **Aspectos básicos**, especifique la información siguiente:
+   - **Nombre de token**: un campo administrativo para establecer el nombre del token.
+   - **Id. de Apple**: escriba el identificador de Apple administrado de la cuenta asociada con el token de carga.
+   - **Archivo de token de VPP**: si aún no lo ha hecho, regístrese en Apple Business Manager o Apple School Manager. Después de registrarse, descargue el token de VPP de Apple para la cuenta y selecciónelo aquí.
+5. Haga clic en **Siguiente** para abrir la página **Configuración**.
+6. En la página **Configuración**, especifique la siguiente información:
+   - **Tomar el control del token desde otro MDM**: si establece esta opción en **sí**, el token se puede reasignar a Intune desde otra solución de MDM.
+   - **País o región**: seleccione el país o la región de la tienda del VPP.  Intune sincroniza las aplicaciones de VPP para todas las configuraciones regionales desde la instancia de App Store del país o la región de VPP especificada.
+
         > [!WARNING]  
         > Al cambiar el país o la región, se actualizarán los metadatos de las aplicaciones y la dirección URL de App Store en la siguiente sincronización con el servicio de Apple de las aplicaciones creadas con ese token. La aplicación no se actualizará si no existe en la tienda del nuevo país o región.
 
-    - **Tipo de cuenta de VPP**: elija **Empresa** o **Educación**.
-    - **Actualizaciones automáticas de la aplicación**: elija entre **activar** o **desactivar** las actualizaciones automáticas. Cuando se habilite, Intune detectará las actualizaciones de la aplicación de VPP dentro de la App Store y las insertará automáticamente en el dispositivo cuando este se registre.
+   - **Tipo de cuenta de VPP**: elija **Empresa** o **Educación**.
+   - **Actualizaciones automáticas de la aplicación**: elija entre **activar** o **desactivar** las actualizaciones automáticas. Cuando se habilite, Intune detectará las actualizaciones de la aplicación de VPP dentro de la App Store y las insertará automáticamente en el dispositivo cuando este se registre.
 
         > [!NOTE]
         > Las actualizaciones automáticas de la aplicación para aplicaciones de VPP de Apple se actualizarán automáticamente para las aplicaciones implementadas con las intenciones de instalación **Obligatorio** y **Disponible**. En el caso de aplicaciones implementadas con la intención de instalación **Disponible**, la actualización automática genera un mensaje de estado dirigido al administrador en el que le informa de que hay disponible una versión nueva de la aplicación. Para ver este mensaje de estado, hay que seleccionar la aplicación, seleccionar la opción Estado de instalación del dispositivo y, finalmente, consultar Detalles del estado.  
 
     - **Concedo permiso a Microsoft para enviar información del usuario y del dispositivo a Apple.** -Debe seleccionar **Acepto** para continuar. Para revisar qué datos envía Microsoft a Apple, consulte [Datos que Intune envía a Apple](../protect/data-intune-sends-to-apple.md).
-5. Cuando haya terminado, seleccione **Crear**. El token se muestra en el panel de la lista de tokens.
+7. Haga clic en **Siguiente** para mostrar la página **Etiquetas de ámbito**.
+8. Si quiere, haga clic en **Seleccionar etiquetas de ámbito** para agregar etiquetas de ámbito para la aplicación. Para más información, consulte [Usar control de acceso basado en rol (RBAC) y etiquetas de ámbito para TI distribuida](../fundamentals/scope-tags.md).
+9. Elija **Siguiente** para mostrar la página **Revisar y crear**. Revise los valores y la configuración que especificó para el token de VPP.
+10. Cuando haya terminado, haga clic en **Crear**. El token se muestra en el panel de la lista de tokens.
 
 ## <a name="synchronize-a-vpp-token"></a>Sincronización de un token de VPP
 
@@ -141,13 +147,13 @@ El usuario final recibirá solicitudes para que instale la aplicación de VPP en
 
 | # | Escenario                                | Invitar al programa VPP de Apple                              | Solicitud de instalación de la aplicación | Solicitud del ID de Apple |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | BYOD: usuario con licencia (no dispositivo de inscripción de usuario)                             | S                                                                                               | S                                           | S                                 |
-| 2 | Corp: usuario con licencia (dispositivo no supervisado)     | S                                                                                               | S                                           | S                                 |
+| 1 | BYOD: usuario con licencia (no dispositivo de inscripción de usuario)                             | S                                                                                               | Y                                           | S                                 |
+| 2 | Corp: usuario con licencia (dispositivo no supervisado)     | S                                                                                               | Y                                           | S                                 |
 | 3 | Corp: usuario con licencia (dispositivo supervisado)         | S                                                                                               | N                                           | S                                 |
 | 4 | BYOD: dispositivo con licencia                           | No                                                                                               | Y                                           | No                                 |
 | 5 | Corp: dispositivo con licencia (dispositivo no supervisado)                           | No                                                                                               | Y                                           | No                                 |
-| 6 | Corp: dispositivo con licencia (dispositivo supervisado)                           | No                                                                                               | No                                           | No                                 |
-| 7 | Pantalla completa (dispositivo supervisado): dispositivo con licencia | No                                                                                               | No                                           | No                                 |
+| 6 | Corp: dispositivo con licencia (dispositivo supervisado)                           | No                                                                                               | N                                           | No                                 |
+| 7 | Pantalla completa (dispositivo supervisado): dispositivo con licencia | No                                                                                               | N                                           | No                                 |
 | 8 | Pantalla completa (dispositivo supervisado): usuario con licencia   | --- | ---                                          | ---                                |
 
 > [!Note]  

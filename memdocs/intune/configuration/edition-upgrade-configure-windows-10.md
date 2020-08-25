@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988420"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146344"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Actualización de las ediciones de Windows 10 o desactivación del modo S en dispositivos con Microsoft Intune
 
@@ -50,7 +50,7 @@ En este artículo se enumeran las rutas de actualización admitidas y se muestra
 Antes de actualizar los dispositivos, asegúrese de que se cumplen los siguientes requisitos previos:
 
 - Tener una clave de producto válida para instalar la versión actualizada de Windows en todos los dispositivos de destino de la directiva (para ediciones de Windows 10 Desktop). Puede utilizar las claves de las claves de activación múltiple (MAK) o el servidor de administración de claves (KMS).
-- Para las ediciones de Windows 10 Mobile y Windows 10 Holographic, puede usar un archivo de licencia de Microsoft. El archivo de licencia incluye la información de licencia para instalar la edición actualizada en todos los dispositivos de destino con la directiva.
+- Con las ediciones de Windows 10 Holographic, puede usar un archivo de licencia de Microsoft. El archivo de licencia incluye la información de licencia para instalar la edición actualizada en todos los dispositivos de destino con la directiva.
 - Los dispositivos Windows 10 a los que asigna la directiva están inscritos en Microsoft Intune. No puede usar la directiva de actualización de edición con equipos que ejecutan el software cliente de PC de Intune.
 
 ## <a name="supported-upgrade-paths"></a>Rutas de actualización compatibles
@@ -70,7 +70,6 @@ En la siguiente tabla, se muestran las rutas de actualización admitidas para el
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Edición Windows 10 Core N | Edición Windows 10 Education N <br/>Edición Windows 10 Enterprise N <br/>Edición Windows 10 Pro Education N | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 
@@ -125,7 +124,7 @@ En la siguiente tabla, se muestran las rutas de actualización admitidas para el
 
 11. En **Revisar y crear**, revise la configuración. Si selecciona **Crear**, se guardan los cambios y se asigna el perfil. La directiva también se muestra en la lista de perfiles.
 
-La próxima vez que se sincronice cada dispositivo, se aplica la directiva.
+La próxima vez que cada dispositivo se registre, se aplicará la directiva.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

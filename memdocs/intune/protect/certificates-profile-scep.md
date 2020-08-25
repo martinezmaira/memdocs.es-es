@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048096"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559545"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creación y asignación de perfiles de certificado SCEP en Intune
 
@@ -211,13 +211,15 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
 
    - **Algoritmo hash**:
 
-     *(Se aplica a Android, Android Enterprise, Windows Phone 8.1, Windows 8.1 y versiones posteriores, y Windows 10)*
+     *(se aplica a Android, Android Enterprise, Windows 8.1 y Windows 10 y versiones posteriores)*
 
      Seleccione uno de los tipos de algoritmos hash disponibles para usar con este certificado. Seleccione el nivel máximo de seguridad que admiten los dispositivos de conexión.
 
    - **Certificado raíz**:
 
      Seleccione el *perfil de certificado de confianza* que ha configurado y asignado antes a los usuarios y dispositivos correspondientes para este perfil de certificado SCEP. El perfil de certificado de confianza se usa para aprovisionar usuarios y dispositivos con el certificado de entidad de certificación raíz de confianza. Para obtener información sobre el perfil de certificado de confianza, vea [Exportación del certificado de entidad de certificación raíz de confianza](certificates-configure.md#export-the-trusted-root-ca-certificate) y [Creación de perfiles de certificado de confianza](certificates-configure.md#create-trusted-certificate-profiles) en *Uso de certificados para la autenticación en Intune*. Si tiene una entidad de certificación raíz y una entidad de certificación emisora, seleccione el perfil de certificado raíz de confianza que valida la segunda.
+     > [!NOTE]
+     > En dispositivos iOS y iPadOS, si tiene una entidad de certificación raíz y una entidad de certificación emisora, seleccione el perfil de certificado raíz de confianza que valida la segunda. 
 
    - **Uso mejorado de clave**:
 

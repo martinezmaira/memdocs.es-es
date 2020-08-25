@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262717"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252159"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Configuración de directivas de protección de aplicaciones Android en Microsoft Intune
 En este artículo se describe la configuración de directivas de protección de aplicaciones para dispositivos Android. La configuración de directivas que se describe puede [realizarse](app-protection-policies.md) para una directiva de protección de aplicaciones en el panel **Configuración** de Azure Portal.
@@ -127,9 +127,9 @@ Para obtener más información, consulte [Data transfer policy exceptions for ap
 
 
 ## <a name="conditional-launch"></a>Inicio condicional
-Configure opciones de inicio condicionales para establecer los requisitos de seguridad del inicio de sesión para la directiva de protección de acceso. 
+Configure opciones de inicio condicional para establecer los requisitos de seguridad del inicio de sesión de la directiva de protección de aplicaciones. 
 
-De forma predeterminada, se proporcionan varias opciones de configuración con acciones y valores preconfigurados. Puede eliminar algunas opciones de configuración, como la *Versión mínima del sistema operativo*. También puede seleccionar una configuración adicional en la lista desplegable **Seleccionar una**. 
+De forma predeterminada, se proporcionan varias opciones de configuración con acciones y valores preconfigurados. Puede eliminar algunas opciones de configuración, como *Versión mínima del sistema operativo*. También puede seleccionar una configuración adicional en la lista desplegable **Seleccionar una**. 
 
 | Setting | Cómo se usa |  
 |---------|------------| 

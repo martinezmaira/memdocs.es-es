@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 3/22/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357732"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179577"
 ---
 # <a name="create-a-design"></a>Creación de un diseño
 
@@ -311,7 +311,7 @@ A continuación se muestra un ejemplo de un diseño de un perfil de Wi-Fi:
 | **Tipo** | **Nombre de perfil** | **Plataforma de dispositivo** | **Casos de uso** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Perfil de Wi-Fi de Asia | Android | Corporativo, región de Asia BYOD|
-| Wi-Fi | Perfil de Wi-Fi de América del Norte | Android, iOS/iPadOS, Windows 10 Mobile | Corporativo, región de América del Norte BYOD |
+| Wi-Fi | Perfil de Wi-Fi de América del Norte | Android, iOS y iPadOS | Corporativo, región de América del Norte BYOD |
 
 Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar los requisitos de los perfiles de Wi-Fi.
 
@@ -323,7 +323,7 @@ A continuación se muestra un ejemplo de la documentación del diseño de un per
 
 | **Tipo** | **Nombre de perfil** | **Plataforma de dispositivo** | **Casos de uso** |
 |:---:|:---:|:---:|:---:|
-| VPN | Perfil de cualquier conexión de VPN Cisco | Android, iOS/iPadOS, Windows 10 Mobile | Corporativo, América del Norte y Alemania BYOD|
+| VPN | Perfil de cualquier conexión de VPN Cisco | Android, iOS y iPadOS | Corporativo, América del Norte y Alemania BYOD|
 | VPN | Pulse Secure | Android | Corporativo, región de Asia BYOD |
 
 Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar los requisitos de los perfiles de VPN.
@@ -374,7 +374,7 @@ Las directivas de protección de aplicaciones minimizan la pérdida de datos def
 | **Application** | **Finalidad** | **Plataformas** | **Caso de uso** | **Directiva de protección de aplicaciones** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | Available | iOS | Corporativo: ejecutivos | No puede descodificarse, archivos cifrados |                                                         
-| Word | Available | iOS/iPadOS, Android Samsung Knox y que no son Knox, Windows 10 Mobile | Corporativo, BYOD | No puede descodificarse, archivos cifrados |                                                         
+| Word | Available | iOS y iPadOS, Android Samsung Knox y que no son Knox | Corporativo, BYOD | No puede descodificarse, archivos cifrados |                                                         
 
 
 Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar los requisitos de la directiva de protección de aplicaciones.
@@ -388,7 +388,7 @@ A continuación se muestra un ejemplo de cómo diseñar una directiva de cumplim
 
 | **Nombre de la directiva** | **Plataforma de dispositivo** | **Configuración** | **Grupo de destino** |
 |:---:|:---:|:---:|:---:|
-| Directiva de cumplimiento | iOS/iPadOS, Android Samsung Knox y que no son Knox, Windows 10 Mobile | PIN: requerido, no puede descodificarse | Corporativo, BYOD |
+| Directiva de cumplimiento | iOS y iPadOS, Android Samsung Knox y que no son Knox | PIN: requerido, no puede descodificarse | Corporativo, BYOD |
 
 
 Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar los requisitos de la directiva de cumplimiento.

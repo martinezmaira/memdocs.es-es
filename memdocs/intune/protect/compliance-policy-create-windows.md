@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437351"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559501"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Configuración de Windows 10 y versiones posteriores para marcar dispositivos como compatibles o no compatibles con Intune
 
@@ -47,7 +47,9 @@ Como administrador del servicio Intune, use esta configuración de cumplimiento 
    La característica Cifrado de unidad BitLocker de Windows cifra todos los datos almacenados en el volumen del sistema operativo Windows. BitLocker usa el Módulo de plataforma segura (TPM) para ayudar a proteger el sistema operativo Windows y los datos de usuario. También ayuda a confirmar que un equipo no se manipule, incluso si se deja desatendido, se pierde o se lo roban. Si el equipo está equipado con un TPM compatible, BitLocker usa este para bloquear las claves de cifrado que protegen los datos. Como resultado, las claves no son accesibles hasta que el TPM comprueba el estado del equipo.  
 
   - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.
-  - **Requerir**: el dispositivo puede proteger los datos almacenados en la unidad contra el acceso no autorizado cuando el sistema está apagado o hibernando.  
+  - **Requerir**: el dispositivo puede proteger los datos almacenados en la unidad contra el acceso no autorizado cuando el sistema está apagado o hibernando.
+  
+  [CSP de HealthAttestation de dispositivo: BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
 
 - **Debe estar habilitado el arranque seguro en el dispositivo**:  
   - **Sin configurar** (*valor predeterminado*): no se evalúa el cumplimiento o incumplimiento de esta opción de configuración.
@@ -107,6 +109,9 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
 
     Por ejemplo, exige que todas las actualizaciones de software se instalen en los dispositivos. En Configuration Manager, este requisito tiene el estado "Instalado". Si algún programa del dispositivo se encuentra en un estado desconocido, dicho dispositivo no será conforme en Intune.
 
+  > [!NOTE]
+  > Use solo **Require device compliance from Configuration Manager** (Exigir el cumplimiento del dispositivo de Configuration Manager) cuando la carga de trabajo de cumplimiento para la administración conjunta esté establecida en *Configuration Manager*. Cuando se usa esta opción con la carga de trabajo de cumplimiento establecida en *Intune*, las evaluaciones de cumplimiento generales pueden verse afectadas.
+
 ## <a name="system-security"></a>Seguridad del sistema
 
 ### <a name="password"></a>Contraseña
@@ -163,6 +168,8 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
   Esta configuración se aplica a todas las unidades de un dispositivo.
   - **Sin configurar** (*valor predeterminado*).
   - **Requerir**: use *Requerir* para cifrar el almacenamiento de datos en los dispositivos.
+  
+   [CSP de DeviceStatus: DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > La configuración **Cifrado de almacenamiento de datos en el dispositivo** comprueba de manera genérica la presencia de cifrado en el dispositivo. Para conseguir una configuración de cifrado más sólida, considere la posibilidad de usar **Requerir BitLocker**, que aprovecha la Atestación de estado de dispositivo de Windows para validar el estado de Bitlocker en el nivel de TPM.
@@ -182,7 +189,7 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
   - **No configurado** (*valor predeterminado*): Intune no comprueba si el dispositivo tiene una versión de chip de TPM.
   - **Requerir**: Intune comprueba el cumplimiento de la versión del chip TPM. El dispositivo es conforme si la versión del chip TPM es mayor que **0** (cero). El dispositivo no es conforme si no hay una versión de TPM en el dispositivo.
 
-  [CSP de DeviceStatus CSP: nodo de DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [CSP de DeviceStatus: DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus**:  
   - **Sin configurar** (*valor predeterminado*): Intune no busca soluciones antivirus instaladas en el dispositivo.
@@ -214,7 +221,7 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
   - **Sin configurar** (*valor predeterminado*): Intune no aplica estos requisitos.
   - **Requerir**: fuerza a la inteligencia de seguridad de Microsoft Defender a actualizarse.
 
-  [CSP de Defender/Health/SignatureOutOfDate](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [CSP de Defender: CSP de Defender/Health/SignatureOutOfDate](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
   
   Para obtener más información, vea [Actualizaciones de inteligencia de seguridad para el antivirus de Microsoft Defender y otros antimalware de Microsoft](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -222,7 +229,7 @@ Solo se aplica a dispositivos administrados conjuntamente en los que se ejecuta 
   - **No configurado** (*valor predeterminado*): Intune no controla la característica ni cambia la configuración existente.
   - **Requerir**: activa la protección en tiempo real, que detecta malware, spyware y otro tipo de software no deseado.  
 
-  [CSP de Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [CSP de directiva: CSP de Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>ATP de Microsoft Defender
 
