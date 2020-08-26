@@ -51,7 +51,7 @@
           displayName: 'psk, oma-uri, eap'
         - name: Solución de problemas de Wi-Fi
           href: troubleshoot-wi-fi-profiles.md
-    - name: Plantillas administrativas en Windows
+    - name: Plantillas administrativas
       displayName: 'admx, gpo, group policy'
       items:
         - name: Crear plantillas administrativas
