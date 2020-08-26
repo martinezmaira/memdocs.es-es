@@ -2,7 +2,7 @@
 title: Novedades de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Resumen de las nuevas características de la última versión mensual del servicio en la nube Análisis de escritorio.
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819988"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614741"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novedades de Análisis de escritorio
 
@@ -26,6 +27,18 @@ Conozca las novedades mensuales de Análisis de escritorio.
 
 Para obtener una notificación cuando se actualice esta página, copie y pegue la siguiente dirección URL en su lector de fuentes RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="august-2020"></a>Agosto de 2020
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>Las aplicaciones implementadas desde Configuration Manager son importantes de forma predeterminada.
+
+<!-- 4859763 -->
+
+La configuración de la **importancia** de una aplicación es esencial para que Análisis de escritorio determine los dispositivos que se van a incluir en las implementaciones piloto. Un administrador necesitaba configurar manualmente la importancia de todas las aplicaciones en Análisis de escritorio. Solo una vez que validase el piloto podía continuar con una implementación de producción.
+
+Ahora, para cualquier aplicación que implemente con Configuration Manager, Análisis de escritorio lo configura automáticamente como importante de forma predeterminada. Este comportamiento le permite configurar las aplicaciones en el entorno con más rapidez para agilizar la implementación de producción.
+
+Para más información, vea [Recursos: aplicaciones](about-assets.md#apps).
 
 ## <a name="july-2020"></a>Julio de 2020
 

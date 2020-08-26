@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 73b8111cbada129997cec965ca685f1ef22b1f3a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705313"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693019"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Funciones de Technical Preview 1702 de Configuration Manager
 
@@ -76,7 +76,7 @@ Para usar Azure AD con Configuration Manager, necesitará lo siguiente:
 - Un sitio de Configuration Manager que se ejecute en una máquina virtual de Azure que esté unida a Azure AD.
 - Clientes de Configuration Manager que se ejecuten en el mismo entorno de Azure AD.
 
-Para configurar Azure AD Domain Services, consulte [Introducción a Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+Para configurar Azure AD Domain Services, consulte [Introducción a Azure AD Domain Services](/azure/active-directory-domain-services/create-instance).
 
 ### <a name="discover-resources"></a>Detectar recursos
 Después de configurar Configuration Manager para que se ejecute en Azure AD, puede usar los siguientes métodos de detección de Active Directory para buscar recursos en Azure AD:  
@@ -101,7 +101,7 @@ Azure AD no tiene ninguna unidad organizativa que almacene los grupos. En su lug
 
 Para obtener más información sobre Azure AD, consulte lo siguiente:  
 - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) en azure.microsoft.com.
-- [Documentación acerca de Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) en docs.microsoft.com.
+- [Documentación acerca de Active Directory Domain Services](/azure/active-directory-domain-services) en docs.microsoft.com.
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>Mejoras de la directiva de cumplimiento de dispositivos de acceso condicional
 
@@ -204,7 +204,7 @@ Siga este procedimiento para configurar los detalles de la secuencia de tareas q
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Comprobar los archivos ejecutables en ejecución antes de instalar una aplicación
 
-En el cuadro de diálogo **Propiedades** de *\<nombre del tipo de implementación>* de un tipo de implementación, en la pestaña Comportamiento de instalación, ahora se puede especificar uno o varios archivos ejecutables que, si se ejecutan, bloquearán la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación.
+En el cuadro de diálogo *\<deployment type name>* **Propiedades** de un tipo de implementación, en la pestaña Comportamiento de instalación, ahora se puede especificar uno de varios archivos ejecutables que, si se está ejecutando, bloqueará la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación.
 
 ### <a name="try-it-out"></a>Pruébelo.
 
@@ -226,12 +226,12 @@ Además, ahora se pueden especificar varias entidades de certificación (CA) en 
 
 Para dispositivos iOS, puede asociar un perfil de certificado PFX a un perfil de correo electrónico y habilitar el cifrado de S/MIME.  Después, esto habilita S/MIME en el cliente de correo electrónico nativo de iOS y le asocia el certificado de cifrado S/MIME correcto.
 
-Para más información sobre los certificados en Configuration Manager, vea [Introducción a los perfiles de certificado]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+Para más información sobre los certificados en Configuration Manager, vea [Introducción a los perfiles de certificado]( /sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
 
 ## <a name="new-compliance-settings-for-ios-devices"></a>Nueva configuración de cumplimiento para dispositivos iOS
 
-Se han agregado nuevas opciones que se pueden usar en los elementos de configuración para dispositivos iOS. Son opciones que existían con anterioridad en Microsoft Intune en una configuración independiente y que ahora están disponibles al usar Intune con Configuration Manager. Si necesita ayuda con cualquiera de estas configuraciones, vea [Configuración de directivas de iOS en Microsoft Intune](/mem/intune/configuration/device-restrictions-ios).
+Se han agregado nuevas opciones que se pueden usar en los elementos de configuración para dispositivos iOS. Son opciones que existían con anterioridad en Microsoft Intune en una configuración independiente y que ahora están disponibles al usar Intune con Configuration Manager. Si necesita ayuda con cualquiera de estas configuraciones, vea [Configuración de directivas de iOS en Microsoft Intune](../../../intune/configuration/device-restrictions-ios.md).
 
 - **Sincronización de datos desde aplicaciones administradas en iCloud**
 - **Handoff para continuar las actividades en otro dispositivo**
@@ -347,7 +347,7 @@ Para probarlo, cree un elemento de configuración mediante el flujo de trabajo e
 #### <a name="perform-selective-wipe"></a>Realizar la eliminación selectiva
 Los dispositivos inscritos como Android for Work solo se pueden eliminar de forma selectiva porque solo se administra el perfil de trabajo. Esto evita que el perfil personal se elimine. Realizar una eliminación selectiva en un dispositivo Android for Work quita el perfil de trabajo, incluidas todas las aplicaciones y los datos, y anula la inscripción del dispositivo.
 
-Para eliminar de forma selectiva un dispositivo Android for Work, use el [proceso de eliminación selectiva](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) normal en la consola de Configuration Manager.
+Para eliminar de forma selectiva un dispositivo Android for Work, use el [proceso de eliminación selectiva](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) normal en la consola de Configuration Manager.
 
 #### <a name="known-issues-for-android-for-work"></a>Problemas conocidos de Android for Work
 **Al configurar la programación de sincronización en Android for Work, los perfiles de correo electrónico no se pueden implementar** Una de las opciones en la interfaz de usuario de ConfigMgr para los perfiles de correo electrónico de Android for Work es "Programar". En otras plataformas, esto permite al administrador configurar una programación para la sincronización de correo electrónico y otros datos de la cuenta de correo en los dispositivos móviles en que se implementa. En cambio, no funciona para perfiles de correo electrónico de Android for Work y si se escoge cualquier opción que no sea "No configurado", el perfil no se implementará en ningún dispositivo.

@@ -2,7 +2,7 @@
 title: Recursos de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Aprenda sobre los dispositivos, los controladores y las aplicaciones de Análisis de escritorio.
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: d4328aee2bc08054fbeaa7147ceed30fe61b61a7
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107301"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614818"
 ---
 # <a name="assets-in-desktop-analytics"></a>Recursos de Análisis de escritorio
 
@@ -42,6 +42,9 @@ En la pestaña **Aplicaciones** se muestran todas las aplicaciones instaladas qu
 
 Las aplicaciones **destacadas** se instalan en más del 2 % de los dispositivos inscritos.
 
+> [!TIP]
+> Para un plan de implementación específico, puede configurar este valor. En las propiedades de un plan de implementación, en **Reglas de preparación**, especifique el valor de **Defina un umbral de recuento de instalaciones bajo para las aplicaciones**.
+
 La opción **App Versions Details** (Detalles de versiones de la aplicación) está desactivada de forma predeterminada, por lo que en esta pestaña se combinan todas las versiones de las aplicaciones con el mismo nombre y el mismo editor.<!-- 5542186 --> El comportamiento predeterminado ayuda a reducir el número total de aplicaciones que se ven, lo que contribuye a reducir la labor de anotar las aplicaciones. El recuento de aplicaciones en el icono **Aplicaciones de interés** también refleja este valor. Por ejemplo, en lugar de mostrar cientos de instancias de Microsoft Edge, hay una sola instancia para todas las versiones. Puede tomar decisiones una vez para todas las versiones. Si tiene que tomar decisiones sobre versiones específicas de una aplicación, active esta opción. También puede establecer esta opción al trabajar con un plan de implementación. Para más información, consulte [Planeamiento de recursos](about-deployment-plans.md#plan-assets).
 
 Seleccione la aplicación en la lista y elija **Editar**. Esta acción muestra los detalles de la aplicación. Seleccione el menú desplegable **Importancia** y establezca un valor. También puede asignar un **propietario**. Si realiza algún cambio, seleccione **Guardar**.
@@ -53,6 +56,9 @@ Configure la **importancia** de las aplicaciones mediante una de las siguientes 
 - Ignorar
 - Sin revisar
 - No importante<!-- 3587232 -->
+
+> [!NOTE]
+> Si implementó la aplicación con Configuration Manager, Análisis de escritorio la configura automáticamente como **importante** de forma predeterminada. Este comportamiento le permite configurar las aplicaciones en el entorno con más rapidez para agilizar la implementación de producción.<!-- 4859763 -->
 
 Cuando la opción **App Versions Details** (Detalles de versiones de la aplicación) está desactivada, el panel Detalles de la aplicación muestra el número de versiones de la aplicación y los idiomas que combina. Los cambios en los detalles de la aplicación que se guarden, se aplican a todas las versiones. Por ejemplo, establezca la **importancia** o el **propietario**. Algunos valores mostrarán "varios", lo que significa que no hay un valor coherente en todas las versiones.
 

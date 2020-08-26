@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905703"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695688"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funciones de Technical Preview 1609 de Configuration Manager
 
@@ -91,7 +91,7 @@ El procedimiento para crear e implementar una aplicación de Configuration Manag
 
 Se han agregado muchas opciones nuevas que se pueden usar en los elementos de configuración de varias plataformas de dispositivo.
 Son opciones que existían con anterioridad en Microsoft Intune en una configuración independiente y que ahora están disponibles al usar Intune con Configuration Manager.
-Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configuración y las características de los dispositivos con directivas de Microsoft Intune](/mem/intune/configuration/device-profiles) y luego seleccione el subtema de configuración de la plataforma que quiera.
+Si necesita ayuda con cualquiera de estas opciones, abra [Administrar la configuración y las características de los dispositivos con directivas de Microsoft Intune](../../../intune/configuration/device-profiles.md) y luego seleccione el subtema de configuración de la plataforma que quiera.
 
 
 ### <a name="new-settings-for-android-devices"></a>Nuevas opciones para dispositivos Android
@@ -317,8 +317,8 @@ Mediante la configuración de los distintos grupos vecinos para que estén dispo
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a> Actualizar grupos de límites existentes al nuevo modelo
 Al instalar la versión 1609 y actualizar el sitio, se realizan automáticamente las siguientes configuraciones. Su objetivo es garantizar que el comportamiento de reserva actual siga estando disponible hasta que configure nuevos grupos de límites y relaciones.  
-- Se agregan puntos de distribución sin proteger en un sitio al grupo de límites*Default-Site-Boundary-Group\<sitecode&gt;* de ese sitio.
-- Se realiza una copia de cada grupo de límites existente que incluye un servidor de sitio configurado con una conexión lenta. El nombre del nuevo grupo es ***\<nombre original del grupo de límites>-Slow-Tmp***:  
+- Se agregan puntos de distribución sin proteger en un sitio al grupo de límites *Default-Site-Boundary-Group\<sitecode>* de ese sitio.
+- Se realiza una copia de cada grupo de límites existente que incluye un servidor de sitio configurado con una conexión lenta. El nombre del nuevo grupo es ***\<original boundary group name>-Slow-Tmp***:  
   -   Los sistemas de sitio con una conexión rápida se dejan en el grupo de límites original.
   -   Se agrega una copia de los sistemas de sitio con una conexión lenta a la copia del grupo de límites. Los sistemas de sitio originales configurados como lentos permanecen en el grupo de límites original por razones de compatibilidad, pero no se usan desde ese grupo de límites.
   -   Esta copia del grupo de límites no tiene límites asociados, pero se crea un vínculo de reserva entre el grupo original y la nueva copia del grupo de límites con un tiempo de reserva establecido en cero.
@@ -347,7 +347,7 @@ El panel muestra gráficos para lo siguiente:
 - Versiones de cliente de Office 365
 - Idiomas de cliente de Office 365
 - Canales de cliente de Office 365     
-Para más información, vea [Información general de los canales de actualización para Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Para más información, vea [Información general de los canales de actualización para Office 365 ProPlus](/deployoffice/overview-update-channels).
 - Reglas de implementación automática que tienen seleccionado el cliente de Office 365 en el conjunto de productos disponibles
 
 En el panel se pueden realizar las siguientes acciones:

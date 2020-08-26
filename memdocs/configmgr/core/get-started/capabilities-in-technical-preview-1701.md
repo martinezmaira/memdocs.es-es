@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a9d0beeee1e00315a913adfc5dde6bd69f75cd6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076210"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693002"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Funciones de Technical Preview 1701 de Configuration Manager
 
@@ -116,7 +116,7 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
      &lt;/setting>
 
    - **Editado:**      
-     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value&gt;https://management.usgovcloudapi.net/&lt;/value&gt;  
      &lt;/setting>
 
    Cambie el valor del nombre de la configuración *FairFaxAuthorityResource* para que sea igual a "<https://login.microsoftonline.com/>".
@@ -125,9 +125,9 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
      &lt;value>&lt;/value>
 
    - **Editado:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-     &lt;value><https://login.microsoftonline.com/&lt;/value>>
+     &lt;value&gt;[https://login.microsoftonline.com](https://login.microsoftonline.com)&lt; /value&gt;
 
-2. Después de guardar el archivo con los dos cambios, reinicie la consola de Configuration Manager en el mismo equipo y úsela para instalar el conector de OMS. Para instalar el conector, use la información incluida en [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)y seleccione el **Área de trabajo de Operations Management Suite** que se encuentra en la nube de Microsoft Azure Government.
+2. Después de guardar el archivo con los dos cambios, reinicie la consola de Configuration Manager en el mismo equipo y úsela para instalar el conector de OMS. Para instalar el conector, use la información incluida en [Sincronizar datos de Configuration Manager con Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm)y seleccione el **Área de trabajo de Operations Management Suite** que se encuentra en la nube de Microsoft Azure Government.
 
 3. Cuando se haya instalado el conector de OMS, la conexión a la nube de Government estará disponible al usar cualquier consola que se conecte al sitio.
 
