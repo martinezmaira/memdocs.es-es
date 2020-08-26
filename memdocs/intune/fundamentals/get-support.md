@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093113"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820670"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Cómo obtener asistencia para Microsoft Intune
 
@@ -83,8 +83,6 @@ Este problema se produce cuando no ha autenticado la nueva cuenta del inquilino 
 
     > [!div class="mx-imgBorder"]
     > ![Confirmación del tipo de administración](./media/get-support/confirm-management-selection.png)
-
-  - Si abre Ayuda y soporte técnico desde **Solución de problemas y soporte técnico** > **Ayuda y soporte técnico**, no verá el tipo de administración que seleccionó en *Ayuda y soporte técnico*.
 
   - Si explora en profundidad cualquier otro nodo, como *Dispositivos*, *Aplicaciones*o *Usuarios* y, después, selecciona *Ayuda y soporte técnico*, no tendrá la oportunidad de seleccionar un tipo de administración ni se mostrará en *Ayuda y soporte*. En este caso, se da por hecho *Intune*. Si no quiere que el contexto sea Intune, use la opción **?** para que pueda seleccionar un tipo de administración diferente.
 

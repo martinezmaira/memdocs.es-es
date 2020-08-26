@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179577"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663249"
 ---
 # <a name="create-a-design"></a>Creación de un diseño
 
@@ -296,8 +296,8 @@ Aquí se muestra un ejemplo de cómo se pueden documentar los certificados duran
 
 | **Tipo** | **Nombre de perfil** | **Plataforma de dispositivo** | **Casos de uso** |   
 |:---:|:---:|:---:|:---:|
-| CA raíz | CA raíz corporativo | Android, iOS/iPadOS, Windows para dispositivos móviles | Corporativo, BYOD  |                                                           
-| SCEP | Certificado de usuario | Android, iOS/iPadOS, Windows para dispositivos móviles | Corporativo, BYOD |                                                           
+| CA raíz | CA raíz corporativo | Android, iOS y iPadOS | Corporativo, BYOD  |                                                           
+| SCEP | Certificado de usuario | Android, iOS y iPadOS | Corporativo, BYOD |                                                           
 
 
 Puede [descargar una plantilla de la tabla anterior](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar los requisitos de los perfiles de certificado.

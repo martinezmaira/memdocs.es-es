@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1616fe4104707668463843dfb890c2f8e0b0c4a8
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 84bf5d6be2761d368e514be31c6fd426b6c508f0
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880956"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820619"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Bloquear el dispositivo desde la aplicación Portal de empresa para Windows 10
 
@@ -35,9 +35,7 @@ El bloqueo remoto está admitido en los dispositivos que ejecutan:
 
 * Android
 * iOS
-* macOS
-* Windows 10 Mobile (si el dispositivo ya tenía un código de acceso establecido)
-* Windows Phone 8.1 (si el dispositivo ya tenía un código de acceso establecido) 
+* macOS  
   
 ## <a name="remote-lock-device"></a>Bloquear de forma remota un dispositivo
 Realice los pasos siguientes para bloquear el dispositivo desde la aplicación Portal de empresa.  
@@ -55,5 +53,7 @@ Realice los pasos siguientes para bloquear el dispositivo desde la aplicación P
    ![Captura de pantalla de la aplicación Portal de empresa, página Detalles del dispositivo, mensaje de confirmación de bloqueo remoto.](./media/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. Si encuentra el dispositivo, escriba el código de acceso para desbloquearlo.  
+
+## <a name="next-steps"></a>Pasos siguientes
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
