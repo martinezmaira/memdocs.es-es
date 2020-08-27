@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: Scripts de ejemplo de CMPivot
       href: cmpivot-samples-attached.md
+- name: Seguridad de puntos de conexión para dispositivos asociados al inquilino (versión preliminar)
+  items:
+    - name: Habilitación de la seguridad de puntos de conexión
+      href: atp-onboard.md
+    - name: Creación e implementación de una directiva antivirus de seguridad de puntos de conexión
+      href: deploy-antivirus-policy.md
+    - name: "Configuración para una directiva de Antivirus de Microsoft\_Defender"
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: Solución de problemas
   items:
     - name: Asociación de inquilinos y acciones de dispositivo

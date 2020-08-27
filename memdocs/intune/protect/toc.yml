@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: Migración de reglas de firewall
           href: endpoint-security-firewall-rule-tool.md
+        - name: Asociación de inquilinos
+          href: tenant-attach-intune.md
         - name: Cifrado de discos
           items:
             - name: Directiva de administración de BitLocker
@@ -308,8 +310,10 @@
           items:
             - name: Configuración de antivirus de Defender para macOS
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: "Configuración de antivirus de Microsoft\_Defender para Windows\_10"
+            - name: "Configuración de antivirus de Defender para Windows\_10"
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: Configuración de antivirus de asociación de inquilinos
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Configuración de la experiencia de Seguridad de Windows
               href: antivirus-security-experience-windows-settings.md
         - name: Configuración del perfil de cifrado de disco
