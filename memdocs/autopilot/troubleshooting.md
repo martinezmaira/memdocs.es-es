@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: c89731edddd94da99e114cf98c10547c096ebb53
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252018"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907913"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Solución de problemas de Windows AutoPilot
 
@@ -115,7 +115,7 @@ Además de las entradas del registro de eventos, el registro y las opciones de s
 
 La configuración del perfil de AutoPilot recibida del servicio de implementación de AutoPilot se almacena en el registro del dispositivo. Esta información puede encontrarse en **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Entre las entradas del registro disponibles se incluyen:
 
-| Valor | Descripción |
+| Value | Descripción |
 |-------|-------------|
 | AadTenantId | GUID del inquilino de Azure AD en el que el usuario inició sesión. El usuario recibe un error si esta entrada no coincide con el inquilino que se usó para registrar el dispositivo. |
 | CloudAssignedTenantDomain | El Azure AD inquilino con el que se ha registrado el dispositivo, por ejemplo, "contosomn.onmicrosoft.com". Si el dispositivo no está registrado con AutoPilot, este valor estará en blanco. |
@@ -126,7 +126,7 @@ La configuración del perfil de AutoPilot recibida del servicio de implementaci�
 
 ### <a name="windows-10-semi-annual-channel-supported-versions"></a>Versiones compatibles con el canal semianual de Windows 10
 
-En los dispositivos que ejecutan una [versión compatible](https://docs.microsoft.com/windows/release-information/) del canal semianual de Windows 10, puede usar el seguimiento de ETW para obtener información detallada de los componentes relacionados con el autopiloto y los relacionados. Los archivos de seguimiento de ETW se pueden ver mediante el analizador de rendimiento de Windows o herramientas similares. Para obtener más información, consulte [el blog de solución de problemas avanzada](https://blogs.technet.microsoft.com/mniehaus/2017/12/13/troubleshooting-windows-autopilot-level-300400/).
+En los dispositivos que ejecutan una [versión compatible](/windows/release-information/) del canal semianual de Windows 10, puede usar el seguimiento de ETW para obtener información detallada de los componentes relacionados con el autopiloto y los relacionados. Los archivos de seguimiento de ETW se pueden ver mediante el analizador de rendimiento de Windows o herramientas similares. Para obtener más información, consulte [el blog de solución de problemas avanzada](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
 ## <a name="troubleshooting-azure-ad-join-issues"></a>Solución de problemas de Azure AD join
 
@@ -144,7 +144,7 @@ Consulte [este artículo de Knowledge Base](https://support.microsoft.com/help/4
 
 El código de error 80180018 normalmente se inscribirá en una página de error titulada "algo salió mal". Este error significa que se produjo un error en la inscripción de MDM.
 
-Si se produce un error al restablecer el piloto automático inmediatamente con el error **. Inicie sesión con una cuenta de administrador para ver por qué y restablecer manualmente**. para obtener más ayuda, consulte [solución de problemas de restablecimiento de AutoPilot](https://docs.microsoft.com/education/windows/autopilot-reset#troubleshoot-autopilot-reset) .
+Si se produce un error al restablecer el piloto automático inmediatamente con el error **. Inicie sesión con una cuenta de administrador para ver por qué y restablecer manualmente**. para obtener más ayuda, consulte [solución de problemas de restablecimiento de AutoPilot](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) .
 
 ## <a name="profile-download"></a>Descarga de perfiles
 
@@ -162,9 +162,9 @@ Si necesita reiniciar un equipo durante OOBE:
 - Presione Mayús + F10 para abrir un símbolo del sistema.
 - Escriba **shutdown/r/t 0** para reiniciarlo inmediatamente o **cierre/s/t 0** para cerrarlo inmediatamente.
 
-Para más información, consulte [Opciones de la línea de comandos del programa de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+Para más información, consulte [Opciones de la línea de comandos del programa de instalación de Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 ## <a name="related-topics"></a>Temas relacionados
 
 [Windows AutoPilot: problemas conocidos](known-issues.md)<br>
-[Diagnóstico de errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnóstico de errores de MDM en Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

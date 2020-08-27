@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: fc892a4372aa7d72f294ddf93f811d641ca961b5
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b8737646946e1c575ddb8ebdd26397712c412e20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051429"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908573"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Agregar dispositivos a Windows AutoPilot
 
@@ -53,7 +53,7 @@ Windows AutoPilot no requiere permisos de administrador delegado al establecer l
 
 Si un dispositivo existente ya está ejecutando una versión compatible del canal semianual de Windows 10 y está inscrito en un servicio MDM como Intune, el servicio MDM puede solicitar al dispositivo el identificador de hardware (también conocido como hash de hardware).  Una vez que lo tenga, puede registrar automáticamente el dispositivo con Windows AutoPilot.
 
-Para obtener instrucciones sobre cómo hacerlo con Microsoft Intune, consulte la documentación sobre la [creación de un perfil de implementación de AutoPilot](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) que describe la configuración "convertir todos los dispositivos de destino en AutoPilot". 
+Para obtener instrucciones sobre cómo hacerlo con Microsoft Intune, consulte la documentación sobre la [creación de un perfil de implementación de AutoPilot](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) que describe la configuración "convertir todos los dispositivos de destino en AutoPilot". 
 
 Tenga en cuenta también que al usar el escenario [de Windows AutoPilot para dispositivos existentes](existing-devices.md) , no es necesario registrar previamente los dispositivos con Windows AutoPilot.  En su lugar, se usa un archivo de configuración (AutopilotConfigurationFile.jsen) que contiene todas las opciones de configuración del perfil de Windows AutoPilot. el dispositivo se puede registrar con Windows AutoPilot después del hecho mediante el mismo valor "convertir todos los dispositivos de destino en AutoPilot".
 
@@ -74,10 +74,10 @@ Tenga en cuenta que el hash de hardware también contiene detalles acerca de Cu�
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-microsoft-endpoint-configuration-manager"></a>Recopilar el identificador de hardware de los dispositivos existentes mediante el punto de conexión de Microsoft Configuration Manager
 
-El punto de conexión de Microsoft Configuration Manager recopila automáticamente los valores hash de hardware de los dispositivos Windows 10 existentes. Para obtener más información, consulte [recopilar información de Configuration Manager para Windows AutoPilot](https://docs.microsoft.com/configmgr/comanage/how-to-prepare-win10#windows-autopilot). Puede extraer la información de hash de Configuration Manager en un archivo CSV.
+El punto de conexión de Microsoft Configuration Manager recopila automáticamente los valores hash de hardware de los dispositivos Windows 10 existentes. Para obtener más información, consulte [recopilar información de Configuration Manager para Windows AutoPilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). Puede extraer la información de hash de Configuration Manager en un archivo CSV.
 
 > [!Note]
-> Antes de cargar el archivo CSV en Intune, asegúrese de que la primera fila contiene el número de serie del dispositivo, el ID. de producto de Windows, el hash de hardware, la etiqueta de grupo y el usuario asignado. Si hay información de encabezado en la parte superior del archivo CSV, elimine esa información de encabezado. Vea los detalles en [inscribir dispositivos Windows en Intune](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot).
+> Antes de cargar el archivo CSV en Intune, asegúrese de que la primera fila contiene el número de serie del dispositivo, el ID. de producto de Windows, el hash de hardware, la etiqueta de grupo y el usuario asignado. Si hay información de encabezado en la parte superior del archivo CSV, elimine esa información de encabezado. Vea los detalles en [inscribir dispositivos Windows en Intune](/intune/enrollment/enrollment-autopilot).
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-powershell"></a>Recopilar el identificador de hardware de los dispositivos existentes mediante PowerShell
 
@@ -115,7 +115,7 @@ Una vez que se han capturado los identificadores de hardware de los dispositivos
     - El centro de administración de Microsoft Endpoint Manager se usa para la inscripción de dispositivos de Intune.
 -   [Centro de Partners](https://msdn.microsoft.com/partner-center/autopilot).  Los asociados de CSP lo usan para registrar los dispositivos en nombre de los clientes.
 -   [Microsoft 365 Empresa & administrador de Office 365](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  Normalmente, lo utilizan las pequeñas y medianas empresas (SMB) que administran sus dispositivos mediante Microsoft 365 Empresa.
--   [Microsoft Store para la empresa](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  Es posible que ya esté usando MSfB para administrar las aplicaciones y la configuración.
+-   [Microsoft Store para la empresa](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  Es posible que ya esté usando MSfB para administrar las aplicaciones y la configuración.
 
 A continuación se proporciona un resumen de las funcionalidades de cada plataforma.<br>
 <br>
@@ -173,7 +173,7 @@ A continuación se proporciona un resumen de las funcionalidades de cada platafo
 Consulte también los temas siguientes para obtener más información acerca de los identificadores de dispositivo:
 - [Identificación del dispositivo](#device-identification)
 - [Instrucciones para dispositivos Windows AutoPilot](autopilot-device-guidelines.md)
-- [Agregar dispositivos a una cuenta de cliente](https://docs.microsoft.com/partner-center/autopilot)
+- [Agregar dispositivos a una cuenta de cliente](/partner-center/autopilot)
 
 
 ## <a name="summary"></a>Resumen

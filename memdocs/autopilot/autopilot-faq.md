@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 164288a9c5f178801d84a2ed6110e49349e6259e
-ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
+ms.openlocfilehash: bbdea6ed044d7fff82f8da49cfb7b57a47e4677c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953631"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908313"
 ---
 # <a name="windows-autopilot-faq"></a>Preguntas más frecuentes sobre Windows AutoPilot
 
@@ -87,7 +87,7 @@ Al final, se proporciona un [Glosario](#glossary) de abreviaturas que se usan en
 | Pregunta | Respuesta |
 | --- | --- |
 | ¿Hay algún requisito específico para el UUID de SMBIOS?    | Debe ser único como se especifica en los requisitos de hardware de Windows 10.    |
-| ¿Cuál es el requisito en la tabla de SMBIOS para cumplir las necesidades de hash de hardware de Windows AutoPilot?    | Debe cumplir todos los requisitos de hardware de Windows 10.  Puede encontrar más detalles [aquí](https://msdn.microsoft.com/library/jj128256(v=vs.85).aspx).    |
+| ¿Cuál es el requisito en la tabla de SMBIOS para cumplir las necesidades de hash de hardware de Windows AutoPilot?    | Debe cumplir todos los requisitos de hardware de Windows 10.  Puede encontrar más detalles [aquí](/previous-versions/windows/hardware/cert-program/windows-hardware-certification-requirements-for-client-and-server-systems).    |
 | Si el SMBIOS es compatible con el número de serie y el UUID, ¿es suficiente para que la herramienta OA3 genere el hash de hardware?    | No.  Como mínimo, los siguientes campos de SMBIOS deben rellenarse con valores únicos: ProductKeyID SmbiosSystemManufacturer SmbiosSystemProductName SmbiosSystemSerialNumber SmbiosSkuNumber SmbiosSystemFamily MacAddress SmbiosUuid DiskSerialNumber TPM EkPub |
 
 ## <a name="technical-interface"></a>Interfaz técnica

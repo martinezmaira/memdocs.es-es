@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88590909"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907993"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Requisitos de red de Windows AutoPilot
 
@@ -38,11 +38,11 @@ Puede ser necesaria una configuración adicional para conceder acceso a los serv
 - requiere autenticación antes de poder obtener acceso a Internet. 
 
 > [!NOTE]
-> La autenticación basada en certificados y tarjetas inteligentes no se admite durante OOBE. Para obtener más información, consulte [tarjetas inteligentes y autenticación basada en certificados](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> La autenticación basada en certificados y tarjetas inteligentes no se admite durante OOBE. Para obtener más información, consulte [tarjetas inteligentes y autenticación basada en certificados](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 Para obtener detalles adicionales acerca de cada uno de estos servicios y sus requisitos específicos, revise los detalles siguientes:
 
-<table><th>Servicio<th>Información
+<table><th>Servicio<th>Información de
 <tr><td><b>Servicio de implementación de Windows AutoPilot<b><td>Una vez que se haya establecido una conexión de red, cada dispositivo de Windows 10 se pondrá en contacto con el servicio de implementación de Windows AutoPilot. Con Windows 10 versión 1903 y versiones posteriores, se usan las direcciones URL siguientes: https://ztd.dds.microsoft.com , https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Activación de Windows<b><td>Windows AutoPilot requiere servicios de activación de Windows. Para obtener más información acerca de las direcciones URL que deben ser accesibles para los servicios de activación, consulte <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">activación o validación de Windows error con el código de error 0x8004FE33</a>.<br>
@@ -53,7 +53,7 @@ Para obtener detalles adicionales acerca de cada uno de estos servicios y sus re
 
 Si Windows Update es inaccesible, el proceso de AutoPilot seguirá continuando pero las actualizaciones críticas no estarán disponibles.
 
-<tr><td><b>Optimización de distribución<b><td>AutoPilot se pone en contacto con el servicio de <a href="https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization">optimización de entrega</a> al descargar las aplicaciones y las actualizaciones. Este contacto establece el uso compartido de contenido punto a punto para que solo unos pocos dispositivos necesiten descargarlo desde Internet.
+<tr><td><b>Optimización de distribución<b><td>AutoPilot se pone en contacto con el servicio de <a href="/windows/deployment/update/waas-delivery-optimization">optimización de entrega</a> al descargar las aplicaciones y las actualizaciones. Este contacto establece el uso compartido de contenido punto a punto para que solo unos pocos dispositivos necesiten descargarlo desde Internet.
 - Windows Updates - Microsoft Store aplicaciones y actualizaciones de aplicaciones - actualización de Office actualizaciones de - aplicaciones de Win32 de Intune<br>
 
 Si no se puede acceder al servicio de optimización de entrega, el proceso de AutoPilot seguirá continuando con las descargas de optimización de entrega desde la nube (sin punto de conexión).
@@ -69,7 +69,7 @@ Si no se pueden enviar datos de diagnóstico, el proceso de AutoPilot continúa.
 <tr><td><b>Notification Services de Windows (WNS)<b><td>Este servicio se usa para permitir que Windows reciba notificaciones de aplicaciones y servicios. Para obtener más información, vea <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>.<br>
 
 Si los servicios de WNS no están disponibles, el proceso de AutoPilot seguirá continuando sin notificaciones.
-<tr><td><b>Microsoft Store, Microsoft Store para empresas<b><td>Las aplicaciones del Microsoft Store pueden insertarse en el dispositivo, desencadenadas mediante Intune (MDM).También es posible que se necesiten actualizaciones de aplicaciones y otras aplicaciones cuando el usuario inicia sesión por primera vez. Para obtener más información, consulte <a href="https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business">requisitos previos para Microsoft Store para empresas y educación</a> (también incluye Azure ad y Windows Notification Services).<br>
+<tr><td><b>Microsoft Store, Microsoft Store para empresas<b><td>Las aplicaciones del Microsoft Store pueden insertarse en el dispositivo, desencadenadas mediante Intune (MDM).También es posible que se necesiten actualizaciones de aplicaciones y otras aplicaciones cuando el usuario inicia sesión por primera vez. Para obtener más información, consulte <a href="/microsoft-store/prerequisites-microsoft-store-for-business">requisitos previos para Microsoft Store para empresas y educación</a> (también incluye Azure ad y Windows Notification Services).<br>
 
 Si el Microsoft Store no es accesible, el proceso de AutoPilot seguirá continuando sin Microsoft Store aplicaciones.
 
@@ -87,4 +87,3 @@ Si el Microsoft Store no es accesible, el proceso de AutoPilot seguirá continua
 **Pasos siguientes**
 
 [Requisitos de licencia de Windows AutoPilot](licensing-requirements.md)
-

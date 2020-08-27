@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: d37ca65d89ffc37365ae3c71ba0fe0e1f15cf42d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: fc13a3a73e5e043d01bf5c7a3d310c496714caee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757237"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908397"
 ---
 # <a name="windows-autopilot-deployment-for-existing-devices"></a>Implementación de Windows AutoPilot para dispositivos existentes
 
@@ -32,11 +32,11 @@ En este tema se describe cómo convertir equipos Unidos a un dominio de Windows 
 >[!NOTE]
 >Windows AutoPilot para dispositivos existentes solo admite perfiles de Azure Active Directory y Azure AD híbrido basados en el usuario. No se admiten los perfiles de implementación automática.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 - Una versión compatible actualmente de Microsoft Endpoint Configuration Manager rama actual o rama de vista previa técnica. 
 - [Windows ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) 1803 o posterior
-    - Para obtener más información sobre la compatibilidad de Configuration Manager, consulte [compatibilidad con Windows 10 ADK](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+    - Para obtener más información sobre la compatibilidad de Configuration Manager, consulte [compatibilidad con Windows 10 ADK](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 - Licencias de Microsoft Intune asignadas
 - Azure Active Directory Premium
 - Windows 10 versión 1809 o posterior importada en Configuration Manager como una imagen de sistema operativo
@@ -51,8 +51,8 @@ Si lo desea, puede configurar una [Página de estado de inscripción](enrollment
 Para habilitar y configurar la página inscripción y estado:
 
 1. Abra [Intune en el Azure portal](https://aka.ms/intuneportal).
-2. Acceder a **Intune > la inscripción de dispositivos > la inscripción de Windows** y [configurar una página de estado de inscripción](https://docs.microsoft.com/intune/windows-enrollment-status). 
-3. Acceder a **Azure Active Directory > Mobility (MDM y MAM) > Microsoft Intune** y [configurar la inscripción automática de MDM](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) y configurar el ámbito de usuario de MDM para algunos o todos los usuarios. 
+2. Acceder a **Intune > la inscripción de dispositivos > la inscripción de Windows** y [configurar una página de estado de inscripción](/intune/windows-enrollment-status). 
+3. Acceder a **Azure Active Directory > Mobility (MDM y MAM) > Microsoft Intune** y [configurar la inscripción automática de MDM](/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) y configurar el ámbito de usuario de MDM para algunos o todos los usuarios. 
 
 Vea los ejemplos siguientes:
 
@@ -203,7 +203,7 @@ Vea los ejemplos siguientes:
    - <u>Imagen de arranque</u>: haga clic en **examinar** y seleccione una imagen de arranque de Windows 10 (1803 o posterior).
    - Haga clic en **siguiente**y, en la página instalar Windows, haga clic en **examinar** y seleccione un **paquete de imágenes** de Windows 10 e índice de **imagen**, versión 1803 o posterior.
    - Active la casilla **partición y formatee el equipo de destino antes de instalar el sistema operativo** .
-   - Active o desactive la casilla **configurar secuencia de tareas para usar con BitLocker** . De uso opcional.
+   - Active o desactive la casilla **configurar secuencia de tareas para usar con BitLocker** . Esto es opcional.
    - <u>Clave de producto</u> y <u>modo de licencia de servidor</u>: opcionalmente, escriba una clave de producto y el modo de licencia de servidor.
    - <u>Generar la contraseña de administrador local aleatoriamente y deshabilitar la cuenta en todas las plataformas de soporte técnico (recomendado)</u>: opcional.
    - <u>Habilite la cuenta y especifique la contraseña de administrador local</u>: opcional.
@@ -226,7 +226,7 @@ Vea los ejemplos siguientes:
      >Dado que la secuencia de tareas AutoPilot para dispositivos existentes se completa en Windows PE, la migración de datos del kit de herramientas de migración de estado de usuario (USMT) no se admite, ya que no hay forma de restaurar el estado de usuario en el nuevo sistema operativo.  Además, el kit de herramientas de migración de estado de usuario (USMT) no admite dispositivos Unidos a Azure AD.
 
 7. En la página incluir actualizaciones, elija una de las tres opciones disponibles. Esta selección es opcional.
-8. En la página instalar aplicaciones, agregue aplicaciones si lo desea. De uso opcional.
+8. En la página instalar aplicaciones, agregue aplicaciones si lo desea. Esto es opcional.
 9. Haga clic en **siguiente**, confirme la configuración, haga clic en **siguiente**y, a continuación, haga clic en **cerrar**.
 10. Haga clic con el botón derecho en la secuencia de tareas AutoPilot para dispositivos existentes y haga clic en **Editar**.
 11. En el editor de secuencia de tareas, en el grupo **instalar sistema operativo** , haga clic en la acción **Aplicar configuración de Windows** .
@@ -273,7 +273,7 @@ A continuación, asegúrese de que todo el contenido necesario para la secuencia
 
 1. Haga clic con el botón derecho en la secuencia **de tareas piloto automático para dispositivos existentes** y, a continuación, haga clic en **implementar**.
 2. En el Asistente para implementar software, escriba los siguientes detalles **generales** y de **configuración de implementación** :
-    - <u>Secuencia de tareas</u>: **AutoPilot para dispositivos existentes**.
+    - <u>Secuencia de tareas</u>:  **AutoPilot para dispositivos existentes**.
     - <u>Recopilación</u>: haga clic en **examinar** y seleccione **AutoPilot para recopilación de dispositivos existentes** (u otra colección que prefiera).
     - Haga clic en **siguiente** para especificar la **configuración de implementación**.
     - <u>Acción</u>: **instalar**.
@@ -325,4 +325,4 @@ Consulte también [Agregar dispositivos a Windows AutoPilot](add-devices.md).
 
 ## <a name="speeding-up-the-deployment-process"></a>Acelerar el proceso de implementación
 
-Para quitar unos 20 minutos del proceso de implementación, consulte el blog de Michael Niehaus con instrucciones para [acelerar Windows AutoPilot para dispositivos existentes](https://blogs.technet.microsoft.com/mniehaus/2018/10/25/speeding-up-windows-autopilot-for-existing-devices/).
+Para quitar unos 20 minutos del proceso de implementación, consulte el blog de Michael Niehaus con instrucciones para [acelerar Windows AutoPilot para dispositivos existentes](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices).

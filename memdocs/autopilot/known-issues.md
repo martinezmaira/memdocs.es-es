@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: d7c92d2e999ffe9a4e503359a81e6422cd24ee30
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4ad59d2891a94147a81450ee3c7157281b24d3df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252028"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908013"
 ---
 # <a name="windows-autopilot---known-issues"></a>Windows AutoPilot: problemas conocidos
 
@@ -28,7 +28,7 @@ ms.locfileid: "88252028"
 - Windows 10
 
 <table>
-<th>Problema<th>Más información
+<th>Incidencia<th>Más información
 
 <tr><td>Las aplicaciones de bloqueo especificadas en un perfil de estado de inscripción dirigido al usuario se omiten durante el ESP del dispositivo.</td>
 <td>Los servicios responsables de determinar la lista de aplicaciones que deben bloquearse durante el ESP del dispositivo no pueden determinar el perfil ESP correcto que contiene la lista de aplicaciones porque no conocen la identidad del usuario. Como solución alternativa, habilite el perfil ESP predeterminado (que tiene como destino a todos los usuarios y dispositivos) y coloque la lista de aplicaciones de bloqueo allí. En el futuro, será posible establecer como destino el perfil ESP en grupos de dispositivos para evitar este problema.</tr>
@@ -89,5 +89,5 @@ Este problema se produce porque Windows 10, versión 1903 y 1909 elimina el Auto
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Diagnóstico de errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnóstico de errores de MDM en Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
 [Solución de problemas de Windows AutoPilot](troubleshooting.md)

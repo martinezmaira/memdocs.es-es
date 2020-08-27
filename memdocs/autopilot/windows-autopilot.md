@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da15ea9ceae46c9c54858a6be0f724c5d67d22ce
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 8c339e2a55fd8876ce8a144bb72c7c0a37de8346
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252178"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907839"
 ---
 # <a name="overview-of-windows-autopilot"></a>Información general de Windows AutoPilot
 
@@ -48,7 +48,7 @@ Cuando se implementan inicialmente nuevos dispositivos Windows, Windows AutoPilo
 - cambie la edición de Windows 10 que se usa (por ejemplo, de Windows 10 Pro a Windows 10 Enterprise) para admitir características avanzadas.
 
 Una vez implementado, puede administrar dispositivos de Windows 10 con:
-- Microsoft Intune
+- Microsoft Intune
 - Windows Update para empresas
 - Microsoft Endpoint Configuration Manager
 - u otras herramientas similares.
@@ -56,7 +56,7 @@ Una vez implementado, puede administrar dispositivos de Windows 10 con:
 Con Windows AutoPilot, puede preparar rápidamente un dispositivo para un nuevo usuario con el restablecimiento de Windows AutoPilot. También puede usar el restablecimiento en escenarios de interrupción y corrección para devolver rápidamente un dispositivo a un estado listo para la empresa.
 
 Windows AutoPilot le permite:
-* Unir dispositivos automáticamente a Azure Active Directory (Azure AD) o Active Directory (a través de Unión a Azure AD híbrido). Para obtener más información sobre las diferencias entre estas dos opciones de combinación, vea [Introducción a la administración de dispositivos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+* Unir dispositivos automáticamente a Azure Active Directory (Azure AD) o Active Directory (a través de Unión a Azure AD híbrido). Para obtener más información sobre las diferencias entre estas dos opciones de combinación, vea [Introducción a la administración de dispositivos en Azure Active Directory](/azure/active-directory/device-management-introduction).
 * Inscripción automática de dispositivos en servicios MDM, como Microsoft Intune ([*requiere una suscripción Azure ad Premium para la configuración*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067)).
 * Restrinja la creación de la cuenta de administrador.
 * Crear y asignar automáticamente dispositivos a grupos de configuración según el perfil de un dispositivo.
@@ -72,9 +72,9 @@ Desde el punto de vista del profesional de ti, la única interacción requerida 
 
 ## <a name="requirements"></a>Requisitos
 
-Se requiere una [versión compatible](https://docs.microsoft.com/windows/release-information/) del canal semianual de Windows 10 para usar Windows AutoPilot. También se admite Windows 10 Enterprise LTSC 2019. Para obtener más información, consulte requisitos de software, [redes](networking-requirements.md), [configuración](configuration-requirements.md)y [licencias](licensing-requirements.md) de [Windows AutoPilot](software-requirements.md).
+Se requiere una [versión compatible](/windows/release-information/) del canal semianual de Windows 10 para usar Windows AutoPilot. También se admite Windows 10 Enterprise LTSC 2019. Para obtener más información, consulte requisitos de software, [redes](networking-requirements.md), [configuración](configuration-requirements.md)y [licencias](licensing-requirements.md) de [Windows AutoPilot](software-requirements.md).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Inscripción de dispositivos Windows en Intune mediante Windows AutoPilot](https://docs.microsoft.com/intune/enrollment-autopilot)<br>
+[Inscripción de dispositivos Windows en Intune mediante Windows AutoPilot](/intune/enrollment-autopilot)<br>
 [Escenarios y funcionalidades de Windows AutoPilot](windows-autopilot-scenarios.md)

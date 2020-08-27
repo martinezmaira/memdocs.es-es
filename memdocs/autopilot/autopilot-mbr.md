@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 4c8e66e9fb0ac4527f10824332f8ac5ae1646181
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 4ae8ffdf39b7812a869d3a7ef5b5289f46f8369a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757399"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908360"
 ---
 # <a name="windows-autopilot-motherboard-replacement-scenario-guidance"></a>Guía del escenario de sustitución de la placa de Windows AutoPilot
 
@@ -73,7 +73,7 @@ Para cancelar el registro de un dispositivo AutoPilot de Intune, un administrado
 
 El proceso de anulación del registro tardará unos 15 minutos.  Puede acelerar el proceso haciendo clic en el botón "sincronizar" y luego en "actualizar" la pantalla hasta que el dispositivo ya no esté presente.
 
-Puede encontrar más información sobre cómo cancelar el registro de dispositivos de Intune [aquí](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-device-group).
+Puede encontrar más información sobre cómo cancelar el registro de dispositivos de Intune [aquí](/intune/enrollment-autopilot#create-an-autopilot-device-group).
 
 ### <a name="deregister-from-mpc"></a>Anular el registro de MPC
 
@@ -83,7 +83,7 @@ Para cancelar el registro de un dispositivo AutoPilot del centro de Partners de 
 2. Vaya a dispositivos > cliente
 3. Seleccione el dispositivo que se va a cancelar del registro y haga clic en el botón "eliminar dispositivo".
 
-![dispositivos](images/devices.png)
+![devices](images/devices.png)
 
 **Nota**: la anulación del registro de un dispositivo de AutoPilot en MPC solo lo hace; tampoco anula la inscripción del dispositivo de MDM (Intune), ni se desconectará del dispositivo de AAD.  Por lo tanto, si es posible, el OEM o el CSP deberían trabajar con el administrador de TI del cliente para que el dispositivo se haya quitado por completo según los pasos de Intune de la sección anterior.
 
@@ -122,9 +122,9 @@ Los procesos de reparación y reemplazo de claves varían entre las instalacione
 
 Los técnicos de reparación deben iniciar sesión en el dispositivo reparado para capturar el nuevo identificador de dispositivo.  Suponiendo que el técnico de reparación no tenga acceso a las credenciales de inicio de sesión del cliente, tendrá que restablecer la imagen del dispositivo para obtener acceso, según los pasos siguientes:
 
-1. El técnico de reparaciones crea una [unidad USB de arranque de WinPE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
+1. El técnico de reparaciones crea una [unidad USB de arranque de WinPE](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
 2. El técnico de reparación inicia el dispositivo en WinPE.
-3. El técnico de reparación [aplica una nueva imagen de Windows al dispositivo](https://docs.microsoft.com/windows-hardware/manufacture/desktop/work-with-windows-images).
+3. El técnico de reparación [aplica una nueva imagen de Windows al dispositivo](/windows-hardware/manufacture/desktop/work-with-windows-images).
 
     **Nota**: Idealmente, se debe restablecer la imagen inicial de la misma versión de Windows en el dispositivo que estaba originalmente en el dispositivo, por lo que se necesitará cierta coordinación entre el servicio de reparación y el cliente para capturar esta información en el momento en que el dispositivo llega a la reparación.  Esto podría incluir el cliente que envía la utilidad de reparación a una imagen personalizada (archivo. PPK) a través de un stick USB, por ejemplo.
  
@@ -194,7 +194,7 @@ En el dispositivo, vaya a configuración > actualizar & Security > Recovery y ha
 
 ![reset](images/reset.png)
 
-Sin embargo, es probable que el servicio de reparación no tenga acceso a Windows porque carece de las credenciales de usuario para iniciar sesión, en cuyo caso necesitan usar otros medios para restablecer la imagen inicial del dispositivo, como la [herramienta de administración y mantenimiento de imágenes de implementación](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
+Sin embargo, es probable que el servicio de reparación no tenga acceso a Windows porque carece de las credenciales de usuario para iniciar sesión, en cuyo caso necesitan usar otros medios para restablecer la imagen inicial del dispositivo, como la [herramienta de administración y mantenimiento de imágenes de implementación](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
 
 ## <a name="return-the-repaired-device-to-the-customer"></a>Devolver el dispositivo reparado al cliente
 

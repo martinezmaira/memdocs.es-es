@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b2c9d3b8741fdae30b42aede8f5c7443e35d8bc7
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251964"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907923"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Modo controlado por el usuario de Windows Autopilot
 
@@ -41,7 +41,7 @@ El resto del proceso se automatiza, como el dispositivo:
 
 Cualquier solicitud adicional durante la ejecución rápida (OOBE) se puede suprimir. consulte [configuración de perfiles de AutoPilot](profiles.md) para ver las opciones disponibles.
 
-El modo controlado por el usuario de Windows AutoPilot admite dispositivos Azure Active Directory e híbridos Unidos Azure Active Directory. Para obtener más información sobre estas dos opciones de combinación, consulte [¿Qué es una identidad de dispositivo](https://docs.microsoft.com/azure/active-directory/devices/overview)?
+El modo controlado por el usuario de Windows AutoPilot admite dispositivos Azure Active Directory e híbridos Unidos Azure Active Directory. Para obtener más información sobre estas dos opciones de combinación, consulte [¿Qué es una identidad de dispositivo](/azure/active-directory/devices/overview)?
 
 El flujo de proceso completado durante el proceso controlado por el usuario es el siguiente:
 
@@ -67,7 +67,7 @@ Para obtener más información sobre las opciones de combinación disponibles, v
 
 Para completar una implementación controlada por el usuario mediante Windows AutoPilot, siga estos pasos de preparación:
 
-1. Asegúrese de que los usuarios que van a realizar implementaciones en modo controlado por el usuario pueden unir dispositivos a Azure Active Directory. Para obtener más información, consulte [Configure Device Settings](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) en la documentación de Azure Active Directory.
+1. Asegúrese de que los usuarios que van a realizar implementaciones en modo controlado por el usuario pueden unir dispositivos a Azure Active Directory. Para obtener más información, consulte [Configure Device Settings](/azure/active-directory/device-management-azure-portal#configure-device-settings) en la documentación de Azure Active Directory.
 2. Cree un perfil de AutoPilot para el modo controlado por el usuario con la configuración deseada. En Microsoft Intune, este modo se elige explícitamente al crear el perfil. Con Microsoft Store para la empresa y el centro de Partners, el modo controlado por el usuario es el valor predeterminado y no es necesario seleccionarlo.
 3. Si usa Intune, cree un grupo de dispositivos en Azure Active Directory y asigne el perfil de AutoPilot a ese grupo.
 
@@ -84,7 +84,7 @@ Estos pasos adicionales son necesarios para cada dispositivo que se va a impleme
 
 ## <a name="user-driven-mode-for-hybrid-azure-active-directory-join"></a>Modo controlado por el usuario para la Unión de Azure Active Directory híbrida
 
-Windows AutoPilot requiere que los dispositivos estén Azure Active Directory Unidos. Si tiene un entorno de Active Directory local, puede unir dispositivos a su dominio local. Para unirse a los dispositivos, debe configurar los dispositivos AutoPilot para que estén [Unidos a Azure Active Directory (Azure ad)](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). 
+Windows AutoPilot requiere que los dispositivos estén Azure Active Directory Unidos. Si tiene un entorno de Active Directory local, puede unir dispositivos a su dominio local. Para unirse a los dispositivos, debe configurar los dispositivos AutoPilot para que estén [Unidos a Azure Active Directory (Azure ad)](/azure/active-directory/devices/hybrid-azuread-join-plan). 
 
 ### <a name="requirements"></a>Requisitos
 
@@ -97,7 +97,7 @@ Para realizar una implementación híbrida orientada a Azure AD basada en el usu
 - El dispositivo debe tener acceso a un controlador de dominio de Active Directory. Debe estar conectado a la red de la organización. Debe ser capaz de resolver los registros DNS para el dominio de AD y el controlador de dominio de AD. Debe ser capaz de comunicarse con el controlador de dominio para autenticar al usuario.
 - El dispositivo debe poder tener acceso a Internet, según los [requisitos de red de Windows AutoPilot documentados](networking-requirements.md).
 - Se debe instalar el conector de Intune para Active Directory.
- - Nota: el conector de Intune realizará una Unión a AD local. Por lo tanto, los usuarios no necesitan el permiso AD-join local. Se supone que el conector está [configurado para realizar esta acción](https://docs.microsoft.com/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) en nombre del usuario. 
+ - Nota: el conector de Intune realizará una Unión a AD local. Por lo tanto, los usuarios no necesitan el permiso AD-join local. Se supone que el conector está [configurado para realizar esta acción](/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) en nombre del usuario. 
 - Si utiliza el proxy, la opción de configuración del proxy WPAD debe estar activada y configurada.
 
 **Azure ad Unión de dispositivos**: el proceso híbrido de unión a Azure ad utiliza el contexto del sistema para realizar la combinación de Azure ad de dispositivos. No se ve afectado por la configuración de permisos de unión de Azure AD basada en el usuario. Todos los usuarios pueden unir dispositivos a Azure AD de forma predeterminada.
@@ -145,7 +145,7 @@ A continuación, compruebe que la configuración de VPN (aplicación Win32, cert
 En el caso de las configuraciones de VPN que se conectan automáticamente, los pasos de validación pueden ser diferentes.
 
 > [!NOTE]
-> Se puede usar Always On VPN para este escenario. Para obtener más información, consulte la documentación de [implementación de Always on VPN](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) . Tenga en cuenta que Intune aún no puede implementar el perfil de VPN por equipo necesario. 
+> Se puede usar Always On VPN para este escenario. Para obtener más información, consulte la documentación de [implementación de Always on VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) . Tenga en cuenta que Intune aún no puede implementar el perfil de VPN por equipo necesario. 
 
 Para validar el proceso, asegúrese de que se ha instalado la actualización acumulativa de Windows 10 necesaria en Windows 10 1903 o Windows 10 1909. Puede instalar manualmente la actualización durante OOBE descargando primero la versión acumulativa más reciente de https://catalog.update.microsoft.com . Siga estos pasos:
 
@@ -163,7 +163,4 @@ O bien, puede iniciar Windows Update para instalar las actualizaciones más reci
 
 ### <a name="step-by-step-instructions"></a>Instrucciones paso a paso
 
-Consulte [implementar dispositivos híbridos Unidos a Azure ad mediante Intune y Windows AutoPilot](https://docs.microsoft.com/intune/windows-autopilot-hybrid).
-
-
-
+Consulte [implementar dispositivos híbridos Unidos a Azure ad mediante Intune y Windows AutoPilot](/intune/windows-autopilot-hybrid).

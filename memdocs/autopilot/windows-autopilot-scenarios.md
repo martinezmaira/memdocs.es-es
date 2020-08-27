@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 063d791b4b2373f195625c996c6b4a1667015ad3
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b8b91e25d01a64cfeee601c898c355111b960b7c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757006"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907876"
 ---
 # <a name="windows-autopilot-scenarios-and-capabilities"></a>Escenarios y funcionalidades de Windows AutoPilot
 
@@ -27,7 +27,7 @@ ms.locfileid: "87757006"
 
 ## <a name="scenarios"></a>Escenarios
 
-Windows AutoPilot incluye compatibilidad con una lista creciente de escenarios, diseñado para satisfacer las necesidades comunes de la organización. Estas necesidades pueden variar en función del tipo de organización y de su progreso, pasando a Windows 10 y [pasando a la administración moderna](https://docs.microsoft.com/windows/client-management/manage-windows-10-in-your-organization-modern-management).
+Windows AutoPilot incluye compatibilidad con una lista creciente de escenarios, diseñado para satisfacer las necesidades comunes de la organización. Estas necesidades pueden variar en función del tipo de organización y de su progreso, pasando a Windows 10 y [pasando a la administración moderna](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
 
 En esta guía se describen los siguientes escenarios de Windows AutoPilot:
 
@@ -49,7 +49,7 @@ Estos escenarios se resumen en el vídeo siguiente.
 
 ### <a name="windows-autopilot-is-self-updating-during-oobe"></a>Windows AutoPilot se actualiza automáticamente durante OOBE
 
-A partir de la versión 1903 de Windows 10, las actualizaciones funcionales y críticas del piloto automático comenzarán a descargarse automáticamente durante la OOBE después de que un dispositivo esté conectado a una red, y las [actualizaciones del controlador crítico y de la revisión de los días de la versión de Windows (ZDP)](https://docs.microsoft.com/windows-hardware/customize/desktop/windows-updates-during-oobe) se han completado. El usuario o el administrador de ti no puede rechazar estas actualizaciones de AutoPilot porque son necesarias para que la implementación de Windows AutoPilot funcione correctamente.  Windows avisará al usuario de que el dispositivo está comprobando, descargando e instalando las actualizaciones.
+A partir de la versión 1903 de Windows 10, las actualizaciones funcionales y críticas del piloto automático comenzarán a descargarse automáticamente durante la OOBE después de que un dispositivo esté conectado a una red, y las [actualizaciones del controlador crítico y de la revisión de los días de la versión de Windows (ZDP)](/windows-hardware/customize/desktop/windows-updates-during-oobe) se han completado. El usuario o el administrador de ti no puede rechazar estas actualizaciones de AutoPilot porque son necesarias para que la implementación de Windows AutoPilot funcione correctamente.  Windows avisará al usuario de que el dispositivo está comprobando, descargando e instalando las actualizaciones.
 
 Consulte [actualización de Windows AutoPilot](autopilot-update.md) para obtener más información.
 
@@ -61,7 +61,7 @@ También puede habilitar el reconocimiento de voz y VoiceOver de Cortana durante
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-El valor de clave es un DWORD con **0** = deshabilitado y **1** = habilitado.
+El valor de clave es un DWORD con  **0** = deshabilitado y **1** = habilitado.
 
 | Value | Descripción |
 | --- | --- |
@@ -69,7 +69,7 @@ El valor de clave es un DWORD con **0** = deshabilitado y **1** = habilitado.
 | 1 | La VoiceOver de Cortana está habilitada |
 | No hay ningún valor | El dispositivo revertirá al comportamiento predeterminado de la edición |
 
-Para cambiar este valor de clave, utilice la herramienta WCD para crear como PPKG como se documenta [aquí](https://docs.microsoft.com/windows/configuration/wcd/wcd-oobe#nforce).
+Para cambiar este valor de clave, utilice la herramienta WCD para crear como PPKG como se documenta [aquí](/windows/configuration/wcd/wcd-oobe#nforce).
 
 ### <a name="bitlocker-encryption"></a>Cifrado de BitLocker
 

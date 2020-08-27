@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 911ff589acb5d215931dd4a2e72a05bff760a533
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: c8bf506d0b9c7285087999967dd188122494661d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253363"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908003"
 ---
 # <a name="windows-autopilot-licensing-requirements"></a>Requisitos de licencia de Windows AutoPilot
 
@@ -36,17 +36,16 @@ Para proporcionar los Azure Active Directory necesarios (características de per
 - [Microsoft 365 la suscripción Academic a1, a3 o A5](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
 - [Microsoft 365 Enterprise suscripción a E3 o E5](https://www.microsoft.com/microsoft-365/enterprise), que incluye todas las características de Windows 10, Office 365 y em + S (Azure ad e Intune).
 - [Enterprise Mobility + Security suscripción a E3 o E5](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), que incluye todas las características necesarias de Azure ad e Intune.
-- [Intune for Education suscripción](https://docs.microsoft.com/intune-education/what-is-intune-for-education), que incluye todas las características necesarias de Azure ad e Intune.
+- [Intune for Education suscripción](/intune-education/what-is-intune-for-education), que incluye todas las características necesarias de Azure ad e Intune.
 - [Azure Active Directory Premium P1 o P2](https://azure.microsoft.com/services/active-directory/) y [Microsoft Intune suscripción](https://www.microsoft.com/cloud-platform/microsoft-intune) (o un servicio MDM alternativo).
 
 > [!NOTE]
-> Incluso cuando se usa Microsoft 365 suscripciones, todavía es necesario [asignar licencias de Intune a los usuarios](https://docs.microsoft.com/intune/fundamentals/licenses-assign).
+> Incluso cuando se usa Microsoft 365 suscripciones, todavía es necesario [asignar licencias de Intune a los usuarios](/intune/fundamentals/licenses-assign).
 
 Además, también se recomiendan los siguientes elementos (pero no son obligatorios):
 - [Microsoft 365 aplicaciones para la empresa](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0), que se pueden implementar fácilmente a través de Intune (u otros servicios de MDM).
-- [Activación de suscripciones de Windows](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-subscription-activation), para subir automáticamente los dispositivos de Windows 10 Pro a Windows 10 Enterprise.
+- [Activación de suscripciones de Windows](/windows/deployment/windows-10-enterprise-subscription-activation), para subir automáticamente los dispositivos de Windows 10 Pro a Windows 10 Enterprise.
 
 **Pasos siguientes**
 
 [Requisitos de configuración de Windows AutoPilot](configuration-requirements.md)
-

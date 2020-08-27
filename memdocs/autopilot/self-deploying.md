@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 5fccc36ff1ecacaee3d2aa3ed7c317faaaefc113
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 5ab51eda0791d42ed49b90e97b25ee66ee72c6dc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757069"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907953"
 ---
 # <a name="windows-autopilot-self-deploying-mode"></a>Modo autoimplementado de Windows AutoPilot
 
@@ -32,7 +32,7 @@ El modo de auto-implementación une el dispositivo a Azure Active Directory, ins
 >[!NOTE]
 >El modo de auto-implementación no admite Active Directory join ni Unión a Azure AD híbrido.  Todos los dispositivos se unirán a Azure Active Directory.
 
-El modo de implementación automática está diseñado para implementar Windows 10 como un quiosco, un dispositivo de señal digital o un dispositivo compartido. Al configurar un quiosco, puede aprovechar el nuevo explorador de quiosco, una aplicación basada en Microsoft Edge que se puede usar para crear una experiencia de exploración personalizada administrada por MDM. Cuando se combina con directivas de MDM para crear una cuenta local y configurarla para que inicie sesión automáticamente, se puede automatizar la configuración completa del dispositivo. Obtenga más información sobre estas opciones mediante la lectura de la simplificación de la administración de quioscos con Windows 10.  Consulte [configuración de un quiosco o inicio de sesión digital en Intune u otro servicio MDM](https://docs.microsoft.com/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service) para obtener más detalles.
+El modo de implementación automática está diseñado para implementar Windows 10 como un quiosco, un dispositivo de señal digital o un dispositivo compartido. Al configurar un quiosco, puede aprovechar el nuevo explorador de quiosco, una aplicación basada en Microsoft Edge que se puede usar para crear una experiencia de exploración personalizada administrada por MDM. Cuando se combina con directivas de MDM para crear una cuenta local y configurarla para que inicie sesión automáticamente, se puede automatizar la configuración completa del dispositivo. Obtenga más información sobre estas opciones mediante la lectura de la simplificación de la administración de quioscos con Windows 10.  Consulte [configuración de un quiosco o inicio de sesión digital en Intune u otro servicio MDM](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service) para obtener más detalles.
 
 >[!NOTE]
 >El modo de auto-implementación no asocia actualmente un usuario con el dispositivo (ya que no se especifica ningún identificador de usuario ni contraseña como parte del proceso).  Como resultado, es posible que algunas funcionalidades de Azure AD e Intune (como la recuperación de BitLocker, la instalación de aplicaciones desde el Portal de empresa o el acceso condicional) no estén disponibles para un usuario que inicie sesión en el dispositivo. Para obtener más información, consulte [escenarios y capacidades de Windows AutoPilot](windows-autopilot-scenarios.md) y [configuración del algoritmo de cifrado de BitLocker para dispositivos AutoPilot](bitlocker.md).
@@ -46,7 +46,7 @@ Dado que el modo de implementación automática usa el hardware de TPM 2,0 del d
 >[!IMPORTANT]
 >Si intenta realizar una implementación de modo de implementación automática en un dispositivo que no admite TPM 2,0 o en una máquina virtual, se producirá un error en el proceso al comprobar el dispositivo con un error de tiempo de espera de 0x800705B4 (no se admiten los TPM virtuales de Hyper-V). Tenga en cuenta también que se requiere la versión 1903 o posterior de Windows para usar el modo de implementación automática debido a problemas con la atestación del dispositivo de TPM en Windows 10, versión 1809. Dado que Windows 10 Enterprise 2019 LTSC se basa en Windows 10 versión 1809, el modo de Autoimplementación no se admite también en Windows 10 Enterprise 2019 LTSC. Consulte [problemas conocidos de Windows AutoPilot](known-issues.md) para revisar otros errores y soluciones conocidos.
 
-Para mostrar un logotipo específico de la organización y el nombre de la organización durante el proceso de AutoPilot, Azure Active Directory la personalización de marca de empresa debe configurarse con las imágenes y el texto que se deben mostrar.  Consulte [Inicio rápido: agregar personalización de marca de empresa a la página de inicio de sesión en Azure ad](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) para obtener más detalles. 
+Para mostrar un logotipo específico de la organización y el nombre de la organización durante el proceso de AutoPilot, Azure Active Directory la personalización de marca de empresa debe configurarse con las imágenes y el texto que se deben mostrar.  Consulte [Inicio rápido: agregar personalización de marca de empresa a la página de inicio de sesión en Azure ad](/azure/active-directory/fundamentals/customize-branding) para obtener más detalles. 
 
 ## <a name="step-by-step"></a>Paso a paso
 

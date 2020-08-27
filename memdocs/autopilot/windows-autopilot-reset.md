@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 8388febead5953fd6c76e7e40571d3b2e1b91e4d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: e084663527d48c83d42d426792da0bedddd35942
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757014"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907933"
 ---
 # <a name="windows-autopilot-reset"></a>Restablecimiento de Windows AutoPilot
 
@@ -55,7 +55,7 @@ Se aplican requisitos adicionales y detalles de configuración con cada escenari
 
 **Se aplica a: Windows 10, versión 1709 y versiones posteriores**
 
-El rol de administrador de servicios de Intune es necesario para realizar esta tarea.  Para más información, vea [Adición de usuarios y concesión de permiso administrativo a Intune](https://docs.microsoft.com/intune/users-add).
+El rol de administrador de servicios de Intune es necesario para realizar esta tarea.  Para más información, vea [Adición de usuarios y concesión de permiso administrativo a Intune](/intune/users-add).
 
 Los administradores de TI pueden realizar un restablecimiento de Windows AutoPilot local para quitar rápidamente los archivos personales, las aplicaciones y la configuración, y restablecer los dispositivos de Windows 10 desde la pantalla de bloqueo en cualquier momento y aplicar la configuración original y la inscripción de administración (Azure Active Directory y administración de dispositivos) para que los dispositivos estén listos para usarse. Una vez que se restablece el AutoPilot local, los dispositivos se devuelven a un estado de aprobado totalmente configurado o conocido.
 
@@ -66,7 +66,7 @@ Para habilitar el restablecimiento local del AutoPilot en Windows 10:
 
 ### <a name="enable-local-windows-autopilot-reset"></a>Habilitar restablecimiento de Windows AutoPilot local
 
-Para habilitar un restablecimiento de Windows AutoPilot local, debe configurarse la directiva **DisableAutomaticReDeploymentCredentials** . Esta Directiva se documenta en el [CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialproviders)de la Directiva, **CredentialProviders/DisableAutomaticReDeploymentCredentials**. De forma predeterminada, Windows AutoPilot local está deshabilitado. Esto garantiza que no se desencadene un restablecimiento local del AutoPilot por accidente.
+Para habilitar un restablecimiento de Windows AutoPilot local, debe configurarse la directiva **DisableAutomaticReDeploymentCredentials** . Esta Directiva se documenta en el [CSP](/windows/client-management/mdm/policy-csp-credentialproviders)de la Directiva, **CredentialProviders/DisableAutomaticReDeploymentCredentials**. De forma predeterminada, Windows AutoPilot local está deshabilitado. Esto garantiza que no se desencadene un restablecimiento local del AutoPilot por accidente.
 
 Puede establecer la Directiva con uno de estos métodos:
 
@@ -77,7 +77,7 @@ Puede establecer la Directiva con uno de estos métodos:
 
 - Diseñador de configuración de Windows
 
-    Puede [usar el diseñador de configuración de Windows](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package) para establecer la configuración de tiempo de **ejecución > las directivas > CredentialProviders > DisableAutomaticReDeploymentCredentials** en 0 y, a continuación, crear un paquete de aprovisionamiento.
+    Puede [usar el diseñador de configuración de Windows](/windows/configuration/provisioning-packages/provisioning-create-package) para establecer la configuración de tiempo de **ejecución > las directivas > CredentialProviders > DisableAutomaticReDeploymentCredentials** en 0 y, a continuación, crear un paquete de aprovisionamiento.
 
 - Configuración de la aplicación School PCs
 
@@ -131,9 +131,9 @@ Una vez completado el restablecimiento, el dispositivo vuelve a estar listo para
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-El restablecimiento de Windows AutoPilot requiere que el [entorno de recuperación de Windows (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) esté configurado y habilitado correctamente en el dispositivo. Si no está configurado y habilitado, se informará de un error como `Error code: ERROR_NOT_SUPPORTED (0x80070032)` .
+El restablecimiento de Windows AutoPilot requiere que el [entorno de recuperación de Windows (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) esté configurado y habilitado correctamente en el dispositivo. Si no está configurado y habilitado, se informará de un error como `Error code: ERROR_NOT_SUPPORTED (0x80070032)` .
 
-Para asegurarse de que WinRE está habilitado, use la [herramienta deREAgentC.exe](https://docs.microsoft.com/windows-hardware/manufacture/desktop/reagentc-command-line-options) para ejecutar el siguiente comando:
+Para asegurarse de que WinRE está habilitado, use la [ herramienta deREAgentC.exe](/windows-hardware/manufacture/desktop/reagentc-command-line-options) para ejecutar el siguiente comando:
 
 ```
 reagentc /enable

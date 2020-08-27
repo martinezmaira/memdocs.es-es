@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: d54377222f2e4ef3776e5a765d730f1e1ab38e37
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 840a46aa05f088f8c2ccb27d3b3a3ec368728ae9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757013"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907866"
 ---
 # <a name="windows-autopilot-whats-new"></a>Windows AutoPilot: novedades
 
@@ -64,5 +64,5 @@ Puede utilizar el modo de Autoimplementación de Windows AutoPilot para registra
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Novedades de Microsoft Intune](https://docs.microsoft.com/intune/whats-new)<br>
-[Novedades de Windows 10](https://docs.microsoft.com/windows/whats-new/)
+[Novedades de Microsoft Intune](/intune/whats-new)<br>
+[Novedades de Windows 10](/windows/whats-new/)
