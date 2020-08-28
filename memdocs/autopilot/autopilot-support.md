@@ -14,12 +14,12 @@ ms.reviewer: ''
 manager: laurawi
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f4727acde8a42a56e79dbbe22ae4ab0ce1ca9245
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bfd8f4f88b5462fb6fdc21287ad77bb133b83f90
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757379"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993192"
 ---
 # <a name="windows-autopilot-support-information"></a>Información de compatibilidad con Windows AutoPilot
 
@@ -38,5 +38,5 @@ Antes de ponerse en contacto con los recursos que se enumeran a continuación pa
 | Usuarios del centro de Partners de Microsoft (MPC) | Usar los [recursos de ayuda](https://partner.microsoft.com/support) disponibles en MPC. |
 | Usuarios de Microsoft Store para empresas (MSfB) | Use los recursos de ayuda disponibles en MSfB. |
 | Usuarios de Intune | En el Microsoft Azure Portal, haga clic en [ayuda y soporte técnico](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview). |
-| Microsoft 365 Empresa | La compatibilidad es accesible directamente a través del portal de Microsoft 365 Empresa cuando se inicia sesión: https://support.microsoft.com/en-us . |
+| Microsoft 365 Empresa Premium | La compatibilidad es accesible directamente a través del portal de Microsoft 365 Empresa Premium cuando se inicia sesión:  https://support.microsoft.com/en-us . |
 | Consultas relacionadas con las pruebas de MDA | Contacto MDAHelp@microsoft.com . |

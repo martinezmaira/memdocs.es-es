@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: e6e85b50fb96e5b6049cdadd5a2ae265896c2e93
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 16342550a30271afe20a85fb6cfabf1c0ad429da
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757125"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993809"
 ---
 # <a name="windows-autopilot-customer-consent"></a>Consentimiento de cliente de Windows AutoPilot
 
@@ -47,7 +47,7 @@ Para que un CSP registre dispositivos Windows AutoPilot en nombre de un cliente,
     - Haga clic en **cliente** en el menú del lado
     - Haga clic en el vínculo **solicitar una relación de reseller** : ![ solicitar una relación de revendedor.](images/csp1.png)
     - Active la casilla que indica si desea o no derechos de administrador delegado: ![ derechos delegados](images/csp2.png)
-    - Nota: en función de su asociado, pueden solicitar permisos de administrador delegado (DAP) al solicitar este consentimiento.  Si es posible, debe pedirles que usen el proceso sin uso de DAP más reciente (que se muestra en este documento). En caso contrario, puede quitar fácilmente su estado de DAP desde el centro de administración de Microsoft o desde el portal de administración de Office 365:https://docs.microsoft.com/partner-center/customers_revoke_admin_privileges
+    - Nota: en función de su asociado, pueden solicitar permisos de administrador delegado (DAP) al solicitar este consentimiento.  Si es posible, debe pedirles que usen el proceso sin uso de DAP más reciente (que se muestra en este documento). Si no es así, puede quitar fácilmente su estado de DAP en el centro de administración de Microsoft o en el portal de administración de Microsoft 365:  https://docs.microsoft.com/partner-center/customers_revoke_admin_privileges
     - Envíe la plantilla anterior al cliente por correo electrónico.
 2. Cliente con privilegios de administrador global en el centro de administración de Microsoft hace clic en el vínculo en el cuerpo del mensaje de correo electrónico una vez que lo reciba del CSP, que los lleva directamente a la siguiente página del centro de administración de Microsoft 365:
 
@@ -83,7 +83,7 @@ Cada OEM tiene un vínculo único para proporcionar a sus clientes respectivos, 
 3. El cliente selecciona la casilla **sí** , seguida del botón **Aceptar** y está listo.  La autorización se produce de forma instantánea.
 
     > [!NOTE]
-    > Una vez completado este proceso, actualmente no es posible que un administrador Quite un OEM. Para quitar un OEM o revocar sus permisos, envíe una solicitud amsoemops@microsoft.com
+    > Una vez completado este proceso, actualmente no es posible que un administrador Quite un OEM. Para quitar un OEM o revocar sus permisos, envíe una solicitud a msoemops@microsoft.com
 
 4. El OEM puede usar la API de datos de envío de dispositivo de validación para comprobar que se ha completado el consentimiento.  Esta API se describe en la versión más reciente de las notas del producto de la API, p. 14ff [https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx) . **Nota**: este vínculo solo es accesible para asociados de Microsoft Device. Como se describe en estas notas del producto, se recomienda que los asociados OEM ejecuten la comprobación de la API para confirmar que han recibido el consentimiento del cliente antes de intentar registrar los dispositivos y, por lo tanto, evitar errores en el proceso de registro.
 

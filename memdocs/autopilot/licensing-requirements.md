@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: c8bf506d0b9c7285087999967dd188122494661d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 22f9b5f8e93339bc41403b2acf6e4ce53395a139
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908003"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993782"
 ---
 # <a name="windows-autopilot-licensing-requirements"></a>Requisitos de licencia de Windows AutoPilot
 
@@ -34,7 +34,7 @@ Para proporcionar los Azure Active Directory necesarios (características de per
 - [Suscripción a Microsoft 365 Empresa Premium](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft 365 suscripción F1 o F3](https://www.microsoft.com/microsoft-365/enterprise/firstline)
 - [Microsoft 365 la suscripción Academic a1, a3 o A5](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
-- [Microsoft 365 Enterprise suscripción a E3 o E5](https://www.microsoft.com/microsoft-365/enterprise), que incluye todas las características de Windows 10, Office 365 y em + S (Azure ad e Intune).
+- [Microsoft 365 Enterprise suscripción a E3 o E5](https://www.microsoft.com/microsoft-365/enterprise), que incluye todas las características de Windows 10, Microsoft 365 y em + S (Azure ad e Intune).
 - [Enterprise Mobility + Security suscripción a E3 o E5](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), que incluye todas las características necesarias de Azure ad e Intune.
 - [Intune for Education suscripción](/intune-education/what-is-intune-for-education), que incluye todas las características necesarias de Azure ad e Intune.
 - [Azure Active Directory Premium P1 o P2](https://azure.microsoft.com/services/active-directory/) y [Microsoft Intune suscripción](https://www.microsoft.com/cloud-platform/microsoft-intune) (o un servicio MDM alternativo).

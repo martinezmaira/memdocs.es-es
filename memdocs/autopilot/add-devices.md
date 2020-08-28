@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b8737646946e1c575ddb8ebdd26397712c412e20
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c0e4e0b2d440856f24199d89485ac521208964e8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908573"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993239"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Agregar dispositivos a Windows AutoPilot
 
@@ -114,8 +114,8 @@ Una vez que se han capturado los identificadores de hardware de los dispositivos
 -   [Microsoft Intune](enrollment-autopilot.md).  Este es el mecanismo preferido para todos los clientes.
     - El centro de administración de Microsoft Endpoint Manager se usa para la inscripción de dispositivos de Intune.
 -   [Centro de Partners](https://msdn.microsoft.com/partner-center/autopilot).  Los asociados de CSP lo usan para registrar los dispositivos en nombre de los clientes.
--   [Microsoft 365 Empresa & administrador de Office 365](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  Normalmente, lo utilizan las pequeñas y medianas empresas (SMB) que administran sus dispositivos mediante Microsoft 365 Empresa.
--   [Microsoft Store para la empresa](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  Es posible que ya esté usando MSfB para administrar las aplicaciones y la configuración.
+-   [Microsoft 365 empresa Premium](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  Normalmente, lo usan las pequeñas y medianas empresas (SMB) que administran sus dispositivos mediante Microsoft 365 Empresa Premium.
+-   [Microsoft Store para la empresa](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  Es posible que ya esté usando MSfB para administrar las aplicaciones y la configuración.
 
 A continuación se proporciona un resumen de las funcionalidades de cada plataforma.<br>
 <br>
@@ -156,7 +156,7 @@ A continuación se proporciona un resumen de las funcionalidades de cada platafo
 </tr>
 
 <tr>
-<td><a href="https://docs.microsoft.com/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Empresa</a></td>
+<td><a href="https://docs.microsoft.com/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Empresa Premium</a></td>
 <td>SÍ-1000 a la hora máx.</td>
 <td>SÍ<b><sup>3</sup></b></td>
 <td>4K HH</td>

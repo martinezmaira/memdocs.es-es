@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1b217f7b299447b53c760cbba85b873d0626d741
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907993"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993755"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Requisitos de red de Windows AutoPilot
 
@@ -73,7 +73,7 @@ Si los servicios de WNS no están disponibles, el proceso de AutoPilot seguirá 
 
 Si el Microsoft Store no es accesible, el proceso de AutoPilot seguirá continuando sin Microsoft Store aplicaciones.
 
-<tr><td><b>Office 365<b><td>Como parte de la configuración del dispositivo de Intune, es posible que sea necesaria la instalación de Microsoft 365 aplicaciones para la empresa. Para obtener más información, consulte <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">direcciones URL e intervalos de direcciones IP de Office 365</a>. En este artículo se incluyen todos los servicios de Office, nombres DNS y direcciones IP. También incluye Azure AD y otros servicios que pueden superponerse con los servicios mencionados anteriormente.
+<tr><td><b>Microsoft 365<b><td>Como parte de la configuración del dispositivo de Intune, es posible que sea necesaria la instalación de Microsoft 365 aplicaciones para la empresa. Para obtener más información, consulte <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">direcciones URL e intervalos de direcciones IP de Office 365</a>. En este artículo se incluyen todos los servicios de Office, nombres DNS y direcciones IP. También incluye Azure AD y otros servicios que pueden superponerse con los servicios mencionados anteriormente.
 <tr><td><b>Listas de revocación de certificados (CRL)<b><td>Algunos de estos servicios también necesitarán comprobar las listas de revocación de certificados (CRL) para los certificados que se usan en los servicios.Para obtener una lista completa, consulte <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">direcciones URL e intervalos de direcciones IP de office 365</a> y <a href="https://aka.ms/o365chains">cadenas de certificados de Office 365</a>.
 <tr><td><b>Unión a Azure AD híbrido<b><td>El dispositivo puede ser híbrido Azure AD Unido. El equipo debe estar en la red corporativa para que la Unión Azure AD híbrida funcione. Ver los detalles en <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">el modo controlado por el usuario de Windows AutoPilot</a>
 <tr><td><b>Modo Autoimplementación AutoPilot y la guante blanca de autopiloto<b><td>Los dispositivos TPM de firmware, que solo son proporcionados por Intel, AMD o Qualcomm, no incluyen todos los certificados necesarios en el momento del arranque y deben ser capaces de recuperarlos del fabricante al usarse por primera vez. Los dispositivos con chips de TPM discretos (incluidos los dispositivos de cualquier otro fabricante) incluyen estos certificados preinstalados. Para obtener más información, vea <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">recomendaciones del TPM</a>. Para cada proveedor de TPM de firmware, asegúrese de que se pueda acceder a estas direcciones URL para que los certificados se puedan solicitar correctamente:
