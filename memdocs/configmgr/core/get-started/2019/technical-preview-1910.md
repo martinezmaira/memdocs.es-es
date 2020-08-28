@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2a35367b14d92b2d1e3c1b4c88d1e0051319de08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 491620f6dc39f59229ad85a4bdeedc9116e6a7a7
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697563"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995946"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-1910"></a>Características de la versión 1910 de Technical Preview de Configuration Manager
 
@@ -36,7 +36,7 @@ En las secciones siguientes se describen las características nuevas para probar
 [!INCLUDE [SEDO](includes/1910/4786915.md)]
 [!INCLUDE [Attach files to feedback](includes/1910/3556011.md)]
 [!INCLUDE [Client diagnostics](includes/1910/4433455.md)]
-[!INCLUDE [O365 pilot health dashboard](includes/1910/4488272.md)]
+[!INCLUDE [Office 365 pilot health dashboard](includes/1910/4488272.md)]
 [!INCLUDE [Search](includes/1910/4640570.md)]
 [!INCLUDE [OSD variable](includes/1910/4680263.md)]
 [!INCLUDE [Windows Virtual Desktop](includes/1910/4737447.md)]

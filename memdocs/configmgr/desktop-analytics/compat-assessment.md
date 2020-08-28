@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699082"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819752"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Evaluación de compatibilidad en Análisis de escritorio
 
@@ -245,4 +245,4 @@ Puede encontrar la evaluación sobre el controlador en Análisis de escritorio. 
 
 ## <a name="see-also"></a>Vea también
 
-Ventajas del Centro de FastTrack para Windows 10 proporciona acceso a **Asesoría de aplicaciones de escritorio**. Esta ventaja es un nuevo servicio diseñado para solucionar problemas con la compatibilidad de Windows 10 y Aplicaciones de Microsoft 365 para empresas. Para más información, consulte [Asesoría de aplicaciones de escritorio](/fasttrack/win-10-desktop-app-assure).
+Ventajas del Centro de FastTrack para Windows 10 proporciona acceso a **Asesoría de aplicaciones de escritorio**. Esta ventaja es un nuevo servicio diseñado para solucionar problemas con la compatibilidad de Windows 10 y Aplicaciones de Microsoft 365 para empresas. Para más información, consulte [Asesoría de aplicaciones de escritorio](/fasttrack/win-10-app-assure).

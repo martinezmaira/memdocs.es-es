@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 728f4e4d4b033ccc5e9517e94138549de9385eeb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2b25171beaa8e7fe469f76730fb124870927ae92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81698763"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995980"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-1904"></a>Características de la versión 1904 de la versión preliminar técnica de Configuration Manager
 
@@ -30,7 +30,7 @@ En las secciones siguientes se describen las características nuevas para probar
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
-[!INCLUDE [Office 365 ProPlus upgrade readiness dashboard](includes/1904/4021125.md)]
+[!INCLUDE [Microsoft 365 Apps for enterprise upgrade readiness dashboard](includes/1904/4021125.md)]
 
 [!INCLUDE [Configure dynamic update during feature updates](includes/1904/4062619.md)]
 
