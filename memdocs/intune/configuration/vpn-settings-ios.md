@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26b3af529fddb2c6d3515a365be9e8204fe02312
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 29ce01f9544db19757f58695eae624b2ac25995b
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815453"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819922"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Adición de la configuración de VPN en dispositivos iOS y iPadOS en Microsoft Intune
 
@@ -50,6 +50,7 @@ Seleccione el tipo de conexión VPN de la siguiente lista de proveedores:
 - **Citrix VPN**
 - **Citrix SSO**
 - **Zscaler**: para usar el acceso condicional o permitir a los usuarios que omitan la pantalla de inicio de sesión de Zscaler, debe integrar Zscaler Private Access (ZPA) con la cuenta de Azure AD. Para obtener instrucciones detalladas, vea la [documentación de Zscaler](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+- **NetMotion Mobility**
 - **IKEv2**: la [configuración de IKEv2](#ikev2-settings) (en este artículo) describe las propiedades.
 - **VPN personalizada**
 
@@ -104,7 +105,7 @@ La configuración que se muestra en la siguiente lista se determina según el ti
 
   - Para quitar esta configuración, vuelva a crear el perfil y no seleccione **Acepto**. Después, vuelva a asignar el perfil.
 
-## <a name="ikev2-settings"></a>Configuración de IKEv2
+### <a name="ikev2-settings"></a>Configuración de IKEv2
 
 Esta configuración se aplica cuando se elige **Tipo de conexión** > **IKEv2**.
 

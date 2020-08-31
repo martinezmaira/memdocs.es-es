@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022199"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663436"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -110,6 +110,9 @@ Para más información, vea [Configuración de las directivas de grupo de BitLoc
   Esta opción solo se aplica a dispositivos de SKU de Windows Mobile y Mobile Enterprise.
   - **Sí** (*valor predeterminado*): se requiere cifrado en tarjetas de almacenamiento para dispositivos móviles.
   - **No configurado**: está opción vuelve al valor predeterminado del sistema operativo, que no requiere cifrado de tarjeta de almacenamiento.
+
+  > [!NOTE]
+  > La compatibilidad con [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) y [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ha finalizado en agosto de 2020.
 
 - **Habilitar el cifrado de disco completo para las unidades de datos fijas y de sistema operativo**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)

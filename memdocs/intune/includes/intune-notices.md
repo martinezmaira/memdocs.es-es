@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051642"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820074"
 ---
 Estos avisos proporcionan información importante que puede ayudarle a prepararse para las características y los cambios futuros de Intune.
 
@@ -37,10 +37,10 @@ En MC208118, publicado el pasado marzo, se presentó una nueva dirección URL se
 La administración de administradores de dispositivos Android se incluyó en Android 2.2 como una manera de administrar dispositivos Android. A partir de Android 5, se incluyó el marco de administración más moderno de [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (para dispositivos que pueden establecer una conexión de confianza con Google Mobile Services). Para fomentar que se abandone la administración de administradores de dispositivos, Google está reduciendo la compatibilidad de administración en las nuevas versiones de Android.
 
 #### <a name="how-does-this-affect-me"></a>¿Cómo me afecta esto?
-Debido a estos cambios que ha introducido Google, en el cuarto trimestre de 2020, ya no dispondrá de funciones de administración tan amplias en los dispositivos administrados por el administrador de dispositivos que se han visto afectados. 
+Debido a estos cambios que ha introducido Google, en octubre de 2020, ya no dispondrá de funciones de administración tan amplias en los dispositivos administrados por el administrador de dispositivos que se han visto afectados. 
 
 > [!NOTE]
-> Inicialmente se comunicó que esto se produciría el tercer trimestre de 2020, pero la fecha ha cambiado según la [información más reciente de Google](https://www.blog.google/products/android-enterprise/da-migration/).
+> Inicialmente se comunicó que esto se produciría el cuarto trimestre de 2020, pero la fecha ha cambiado según la [información más reciente de Google](https://www.blog.google/products/android-enterprise/da-migration/).
 
 ##### <a name="device-types-that-will-be-impacted"></a>Tipos de dispositivos que se verán afectados
 Los dispositivos que se verán afectados por la menor compatibilidad con el administrador de dispositivos son los que cumplen estas tres condiciones:
@@ -96,14 +96,14 @@ Opciones de cumplimiento afectadas:
 - En el caso de los dispositivos recién inscritos, las opciones de configuración recién asignadas y las opciones de configuración actualizadas, las opciones de cumplimiento afectadas se seguirán mostrando como motivos de incumplimiento en la página "Actualizar configuración del dispositivo". El dispositivo no será compatible, pero no se aplicarán requisitos de contraseña más estrictos en la aplicación de configuración.
 
 #### <a name="cause-of-impact"></a>Causa de la afectación 
-Los dispositivos empezarán a verse afectados en el cuarto trimestre de 2020. En ese momento, habrá una actualización de la aplicación Portal de empresa que aumentará el destino de la API de Portal de empresa del nivel 28 al 29 ([como requiere Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
+Los dispositivos comenzarán a verse afectados en octubre de 2020. En ese momento, habrá una actualización de la aplicación Portal de empresa que aumentará el destino de la API de Portal de empresa del nivel 28 al 29 ([como requiere Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
 En ese momento, los dispositivos administrados por el administrador de dispositivos que no estén fabricados por Samsung se verán afectados una vez que el usuario lleve a cabo estas dos acciones:
 - Actualizar a Android 10 o una versión posterior.
 - Actualizar la aplicación Portal de empresa a la versión que tiene como destino la API de nivel 29.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>¿Qué debo hacer para prepararme para este cambio?
-Para evitar la reducción de la funcionalidad que tendrá lugar en el cuarto trimestre de 2020, siga estas recomendaciones:
+Para evitar la reducción de la funcionalidad que tendrá lugar en octubre de 2020, siga estas recomendaciones:
 - **Nuevas inscripciones**: incorpore los nuevos dispositivos en la administración de [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (si está disponible) o en [directivas de protección de aplicaciones](../apps/app-protection-policies.md). Evite incorporar nuevos dispositivos a la administración de administradores de dispositivos. 
 - **Dispositivos ya inscritos**: si un dispositivo administrado por el administrador de dispositivos ejecuta Android 10 o una versión posterior, o bien puede actualizarse a Android 10 o una versión posterior (especialmente si no es un dispositivo Samsung), cámbielo de la administración de administradores de dispositivos a la administración de [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) o a las [directivas de protección de aplicaciones](../apps/app-protection-policies.md). Puede aprovechar el flujo simplificado para [trasladar dispositivos Android del administrador de dispositivos a la administración de perfiles de trabajo](../enrollment/android-move-device-admin-work-profile.md).
 

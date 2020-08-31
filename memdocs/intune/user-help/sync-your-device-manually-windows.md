@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5346a288a8411a66ab79b0816385a530eeabb8c2
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ba2f9d2e3f9e89d37b1dc8361cd80451155a6869
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820687"
 ---
 # <a name="sync-your-windows-device-manually"></a>Sincronización manual del dispositivo Windows
 
@@ -36,8 +36,6 @@ Todos los dispositivos Windows se pueden sincronizar desde la aplicación de con
 
 * [Windows 10 desktop](#windows-10-desktop)  
 * [Microsoft HoloLens](#microsoft-hololens)   
-* [Windows 10 Mobile](#windows-10-mobile)  
-* [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Sincronización directa desde la aplicación Portal de empresa para Windows
 Complete estos pasos para sincronizar manualmente cualquier dispositivo Windows 10 que ejecute Creators Update (versión 1709) o posterior.
@@ -57,12 +55,12 @@ También puede acceder al control de sincronización fuera de la aplicación, de
 1. Busque el icono de la aplicación Portal de empresa en la barra de tareas o el menú Inicio.  
 2. Haga clic con el botón derecho en el icono de la aplicación para que aparezca su menú (que también se denomina lista de accesos directos).  
 
-    ![Captura de pantalla de la barra de tareas de Windows en el escritorio de un dispositivo. Se ha hecho clic en el icono de la aplicación Portal de empresa para mostrar un menú con las opciones "Pin to taskbar" (Anclar a la barra de tareas) y "Cerrar ventana", y la acción "Sync this device" (Sincronizar este dispositivo).](./media/sync-device-from-start-menu-1807.png)  
+    ![Captura de pantalla de la barra de tareas de Windows en el escritorio de un dispositivo. Se ha seleccionado el icono del Portal de empresa y se muestra un menú con las opciones "Anclar a la barra de tareas" y "Cerrar ventana", y la acción "Sincronizar este dispositivo".](./media/sync-device-from-start-menu-1807.png)  
 
 3. Seleccione **Sync this device** (Sincronizar este dispositivo). La aplicación Portal de empresa se abrirá en la página **Configuración** e iniciará la sincronización.  
 
 ## <a name="sync-from-settings-app"></a>Sincronización desde la aplicación de configuración 
-Complete estos pasos para sincronizar manualmente los dispositivos Microsoft HoloLens, Windows 10 Escritorio, Windows 10 Mobile o Windows Phone 8.1 desde la aplicación de configuración.  
+Siga estos pasos para sincronizar manualmente los dispositivos de escritorio de Microsoft HoloLens y Windows 10 desde la aplicación de configuración.  
 
 ### <a name="windows-10-desktop"></a>Windows 10 Escritorio
 1. En el dispositivo, seleccione **Inicio** > **Configuración**.
@@ -81,23 +79,36 @@ Complete estos pasos para sincronizar manualmente los dispositivos Microsoft Hol
 
     ![Elección del acceso al trabajo como tipo de cuenta](./media/win10pc-sync-3-work-access.png)
 
-#### <a name="access-work-or-school-steps"></a>Pasos de Acceso profesional o educativo
+### <a name="microsoft-hololens"></a>Microsoft HoloLens  
+Estas instrucciones se aplican a los dispositivos HoloLens que ejecutan la Actualización de aniversario de Windows 10 (también conocida como RS1).  
 
-1. Haga clic en **Acceso profesional o educativo**.
+1. Abra la aplicación de configuración del dispositivo.  
+
+2. Seleccione **Cuentas** > **Acceso al trabajo**.  
+
+    ![Captura de pantalla de la aplicación de configuración de HoloLens, con el vínculo de cuentas resaltado](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
+
+3. Seleccione la cuenta conectada > **Sincronizar**.  
+
+    ![Captura de pantalla de la aplicación de configuración de HoloLens, con el botón de sincronización resaltado](./media/RS1_holoLens_SyncRS1_Sync_08.png)   
+
+#### <a name="access-work-or-school-steps"></a>Pasos de Acceso profesional o educativo  
+
+1. Seleccione **Acceso profesional o educativo**.
 
     ![Captura de pantalla que muestra la opción Acceso al trabajo o educativo](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. Seleccione la cuenta con el icono de maletín. Si no ve esta cuenta, es posible que la empresa haya aplicado una configuración distinta. En su lugar, haga clic en la cuenta con el logotipo de Microsoft.
+2. Seleccione la cuenta con el icono de maletín. Si no ve esta cuenta, es posible que la empresa haya aplicado una configuración distinta. En su lugar, seleccione la cuenta con el logotipo de Microsoft.
 
      ![Elija el nombre de la cuenta junto al maletín o el logotipo de Microsoft](./media/win10pc-rs1-sync-info-button.png)
 
-3. Haga clic en **Información**. 
+3. Seleccione **Información**. 
 
-4. Haga clic en **Sincronizar**. 
+4. Seleccione **Sincronizar**. 
 
 #### <a name="work-access-steps"></a>Pasos de Acceso al trabajo
 
-1. Haga clic en **Acceso al trabajo**.
+1. Seleccione **Acceso al trabajo**.
 
     ![Elección del acceso al trabajo como tipo de cuenta](./media/win10pc-sync-3-work-access.png)
 
@@ -105,49 +116,10 @@ Complete estos pasos para sincronizar manualmente los dispositivos Microsoft Hol
 
     ![Elección del nombre de la empresa para la administración de dispositivos](./media/win10pc-sync-4-tap-com-name.png)
 
-3. Haga clic en **Sincronizar**. El botón queda deshabilitado hasta que se completa la sincronización.
+3. Seleccione **Sincronizar**. El botón queda deshabilitado hasta que se completa la sincronización.
 
     ![Elección del botón Sincronizar](./media/win10pc-sync-5-tap-sync.png)  
-
-
-### <a name="windows-10-mobile"></a>Windows 10 Mobile
-
-   1. En el dispositivo, vaya a **Todas las aplicaciones** > **Configuración** > **Cuentas**.
-
-       ![Elección de cuentas en la pantalla de configuración](./media/win10m-sync-1-settings-accounts.png)
-
-   2. Seleccione **Acceso al trabajo**.
-
-       ![Elección del acceso al trabajo como tipo de cuenta](./media/win10m-sync-2-work-access.png)
-
-   3. En **Enroll in to device management** (Inscribirse en la administración de dispositivos), seleccione el nombre de la empresa.
-
-       ![Elección del nombre de la empresa para la administración de dispositivos](./media/win10m-sync-3-tap-comp-name.png)
-
-   4. Seleccione el icono **Sincronizar**. El botón queda deshabilitado hasta que se completa la sincronización.
-
-       ![Elección del icono Sincronizar](./media/win10m-sync-4-tap-sync.png)  
-### <a name="microsoft-hololens"></a>Microsoft HoloLens  
-Estas instrucciones se aplican a los dispositivos HoloLens que ejecutan la Actualización de aniversario de Windows 10 (también conocida como RS1). 
-1. Abra la aplicación de configuración del dispositivo.  
-
-2. Seleccione **Cuentas** > **Acceso al trabajo**.  
-    ![Captura de pantalla de la aplicación de configuración de HoloLens, con el vínculo de cuentas resaltado](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
-
-3. Seleccione la cuenta conectada > **Sincronizar**.  ![Captura de pantalla de la aplicación de configuración de HoloLens, con el botón de sincronización resaltado](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
-
-### <a name="windows-phone-81"></a>Windows Phone 8.1
-
-1. Vaya a **Todas las aplicaciones** > **Configuración** > **Área de trabajo**.
-
-    ![Lista de configuración](./media/wp81-1-sync-settings-workplace.png)
-
-2. Seleccione el nombre de la empresa.
-
-    ![Elección del nombre de la empresa para la cuenta de trabajo](./media/wp81-2-sync-tap-compname.png)
-
-3. Seleccione el icono **Sincronizar**.
-
-    ![Elección del icono Sincronizar](./media/wp81-3-sync-tap-sync-button.png)
+    
+## <a name="next-steps"></a>Pasos siguientes  
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

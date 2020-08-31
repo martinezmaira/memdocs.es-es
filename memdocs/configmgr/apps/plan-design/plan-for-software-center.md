@@ -2,7 +2,7 @@
 title: Planeamiento del centro de software
 titleSuffix: Configuration Manager
 description: Decida cómo quiere configurar y personalizar la marca del Centro de software para que los usuarios interactúen con Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 802dbaa4188199e555a5cc0143ed599ad454e27e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127365"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695178"
 ---
 # <a name="plan-for-software-center"></a>Planeamiento del centro de software
 
@@ -43,6 +43,8 @@ Actualice los sitios y clientes de Configuration Manager a la versión 1906 o p
 - A partir de la versión 1906, puede agregar hasta cinco pestañas personalizadas al Centro de software. Para obtener más información, vea [Acerca de la configuración de cliente](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
 
 - Los usuarios pueden configurar la afinidad entre usuario y dispositivo en el Centro de software. Para obtener más información, vea [Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
+
+- A partir de la versión 2006, puede configurar los dispositivos administrados conjuntamente para usar el Portal de empresa para las aplicaciones de Intune y Configuration Manager. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 > [!IMPORTANT]
 > Para aprovechar las nuevas características de Configuration Manager, primero actualice los clientes a la versión más reciente. Aunque la funcionalidad nueva aparece en la consola de Configuration Manager cuando se actualiza el sitio y la consola, la totalidad del escenario no es funcional hasta que la versión del cliente también es la más reciente.
@@ -141,4 +143,7 @@ Si utiliza el catálogo de aplicaciones, la personalización de marca sigue esta
 ## <a name="see-also"></a>Consulte también
 
 - [Manual del usuario del Centro de software](../../core/understand/software-center.md)
+
 - [Planear y configurar la administración de aplicaciones en Configuration Manager](plan-for-and-configure-application-management.md)
+
+- [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](../../comanage/company-portal.md)

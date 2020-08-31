@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217632"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820636"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Agregar Wi-Fi para dispositivos Windows 10 y versiones posteriores en Intune
 
-Puede crear un perfil con una configuración específica de Wi-Fi y después implementar este perfil en dispositivos Windows 10 y versiones posteriores. Microsoft Intune ofrece muchas características, incluidas la autenticación en la red, con el uso de una clave precompartida, y mucho más.
+Puede crear un perfil con una configuración de Wi-Fi específica. A continuación, implemente este perfil en los dispositivos Windows 10 y versiones posteriores. Microsoft Intune ofrece muchas características, incluidas la autenticación en la red, con el uso de una clave precompartida, y mucho más.
 
 Ambas se describen en este artículo.
 
@@ -86,7 +86,7 @@ Los perfiles Enterprise usan el Protocolo de autenticación extensible (EAP) par
 
     Por ejemplo, crea una red Wi-Fi **ContosoCorp** y usa **ContosoCorp** dentro de este perfil de configuración. También tiene una red Wi-Fi **ContosoGuest** dentro del alcance. Cuando los dispositivos corporativos estén dentro del alcance, quiere que se conecten automáticamente a **ContosoCorp**. En este escenario, establezca la propiedad **Conectarse a una red con mayor preferencia si está disponible** en **No**.
 
-  - **Conectarse a esta red, incluso aunque no difunda su SSID**: elija **Sí** para que el perfil de configuración se conecte automáticamente a la red, incluso cuando está oculta (es decir, su SSID no se difunde públicamente). Haga clic en **No** si no quiere que este perfil de configuración se conecte a la red oculta.
+- **Conectarse a esta red, incluso aunque no difunda su SSID**: elija **Sí** para que el perfil de configuración se conecte automáticamente a la red, incluso cuando está oculta (es decir, su SSID no se difunde públicamente). Haga clic en **No** si no quiere que este perfil de configuración se conecte a la red oculta.
 
 - **Límite de conexión de uso medido**: un administrador puede elegir cómo se mide el tráfico. Las aplicaciones pueden luego ajustar su comportamiento de tráfico de red según este valor. Las opciones son:
 
@@ -124,19 +124,27 @@ Los perfiles Enterprise usan el Protocolo de autenticación extensible (EAP) par
     > [!NOTE]
     > Solo se admiten los perfiles de certificado SCEP y PKCS cuando se usa un tipo de EAP.
 
-    - **Confianza del servidor**  
+    **CONFIANZA DEL SERVIDOR**  
 
-      **Nombres de servidor de certificados**: se usan con los tipos de EAP **EAP-TLS**, **EAP-TTLS** o **PEAP**. Escriba uno o más nombres comunes usados en los certificados emitidos por la entidad de certificación (CA) de confianza. Si escribe esta información, puede omitir el cuadro de diálogo de confianza dinámica que se muestra en los dispositivos de los usuarios cuando se conectan a esta red Wi-Fi.  
+    - **Nombres de servidor de certificados**: se usan con los tipos de EAP **EAP-TLS**, **EAP-TTLS** o **PEAP**. Escriba uno o más nombres comunes usados en los certificados emitidos por la entidad de certificación (CA) de confianza. Si escribe esta información, puede omitir el cuadro de diálogo de confianza dinámica que se muestra en los dispositivos de los usuarios cuando se conectan a esta red Wi-Fi.  
 
-      **Certificado raíz para validación del servidor**: se usan con los tipos de EAP **EAP-TLS**, **EAP-TTLS** o **PEAP**. Seleccione el perfil de certificado raíz de confianza que se usa para autenticar la conexión.  
+    - **Certificado raíz para validación del servidor**: se usan con los tipos de EAP **EAP-TLS**, **EAP-TTLS** o **PEAP**. Seleccione el perfil de certificado raíz de confianza que se usa para autenticar la conexión.  
 
-      **Privacidad de identidad (identidad externa)** : se usa con el tipo de EAP **PEAP**. Escriba el texto que se envía como respuesta a una solicitud de identidad EAP. Este texto puede ser cualquier valor. Durante la autenticación, esta identidad anónima se envía inicialmente, seguida de la identificación real enviada en un túnel seguro.  
+    - **Privacidad de identidad (identidad externa)** : se usa con el tipo de EAP **PEAP**. Escriba el texto que se envía como respuesta a una solicitud de identidad EAP. Este texto puede ser cualquier valor. Durante la autenticación, esta identidad anónima se envía inicialmente, seguida de la identificación real enviada en un túnel seguro.  
 
-    - **Autenticación de cliente**
+    - **Realizar validación del servidor en PEAP fase 1**: cuando se establece en **Sí**, en la fase 1 de la negociación de PEAP, los dispositivos validan el certificado y comprueban el servidor. Seleccione **No** para bloquear o impedir esta validación. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
 
-      **Certificado de cliente para la autenticación del cliente (certificado de identidad)** : se usa con el tipo de EAP **EAP-TLS**. Seleccione el perfil de certificado que se usa para autenticar la conexión.
+      Si selecciona **Sí**, configure también:
 
-      **Método de autenticación**: se usa con el tipo de EAP **EAP-TTLS**. Seleccione el método de autenticación para la conexión:  
+      **Deshabilitar los mensajes de usuario para la validación del servidor en PEAP fase 1**: cuando se establece en **Sí**, en la fase 1 de la negociación de PEAP, no se muestran los mensajes de usuario que soliciten autorizar nuevos servidores PEAP para entidades de certificación de confianza. Seleccione **No** para mostrar los avisos. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+
+    - **Requerir enlace criptográfico**: **Sí** impide las conexiones a servidores PEAP que no utilizan el enlace criptográfico durante la negociación PEAP. **No** no requiere el enlace criptográfico. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+
+    **AUTENTICACIÓN DE CLIENTE**
+
+    - **Certificado de cliente para la autenticación del cliente (certificado de identidad)** : se usa con el tipo de EAP **EAP-TLS**. Seleccione el perfil de certificado que se usa para autenticar la conexión.
+
+    - **Método de autenticación**: se usa con el tipo de EAP **EAP-TTLS**. Seleccione el método de autenticación para la conexión:  
 
       - **Certificados**: seleccione el certificado de cliente que es el certificado de identidad presentado al servidor.
       - **Nombre de usuario y contraseña**: escriba un **Método que no sea EAP (identidad interna)** para la autenticación. Las opciones son:
@@ -146,7 +154,7 @@ Los perfiles Enterprise usan el Protocolo de autenticación extensible (EAP) par
         - **Microsoft CHAP (MS-CHAP)**
         - **Microsoft CHAP versión 2 (MS-CHAP v2)**
 
-      **Privacidad de identidad (identidad externa)** : se usa con el tipo de EAP **EAP-TTLS**. Escriba el texto que se envía como respuesta a una solicitud de identidad EAP. Este texto puede ser cualquier valor. Durante la autenticación, esta identidad anónima se envía inicialmente, seguida de la identificación real enviada en un túnel seguro.
+    - **Privacidad de identidad (identidad externa)** : se usa con el tipo de EAP **EAP-TTLS**. Escriba el texto que se envía como respuesta a una solicitud de identidad EAP. Este texto puede ser cualquier valor. Durante la autenticación, esta identidad anónima se envía inicialmente, seguida de la identificación real enviada en un túnel seguro.
 
 - **Configuración del proxy de la empresa**: elija la configuración del proxy que se va a usar en la organización. Las opciones son:
   - **Ninguna**: no se ha configurado ningún valor de proxy.
@@ -161,9 +169,9 @@ Para cualquier configuración que no esté disponible en Intune, puede exportar 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Se crea el perfil, pero no hacen nada. A continuación, [asigne este perfil](device-profile-assign.md).
+El perfil se crea, pero puede que no haga nada. Asegúrese de [asignar el perfil](device-profile-assign.md) y [supervise su estado](device-profile-monitor.md).
 
 ## <a name="more-resources"></a>Más recursos
 
-- Vea las opciones disponibles para [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
-- [Introducción a la configuración de Wi-Fi](wi-fi-settings-configure.md), incluidas otras plataformas.
+- [Configuración de Wi-Fi de Windows 8.1](wi-fi-settings-import-windows-8-1.md)
+- [Introducción a la configuración de Wi-Fi](wi-fi-settings-configure.md), incluidas otras plataformas

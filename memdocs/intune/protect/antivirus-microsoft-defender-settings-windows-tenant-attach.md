@@ -1,6 +1,6 @@
 ---
-title: Configuración de la directiva antivirus de Windows 10 para el antivirus de Microsoft Defender para Intune | Microsoft Docs
-description: Vea una lista de los valores de configuración en el perfil del antivirus de Microsoft Defender para Windows 10. Puede configurar estos valores como parte de la directiva del antivirus de seguridad de puntos de conexión en Microsoft Intune.
+title: Configuración de la directiva de Windows 10 de Antivirus de Microsoft Defender para dispositivos con asociación de inquilinos | Microsoft Docs
+description: Vea una lista de los valores de configuración del perfil de Antivirus de Microsoft Defender para dispositivos Windows 10 administrados por Configuration Manager. Estos valores se pueden configurar como parte de la directiva de antivirus de seguridad de puntos de conexión en Microsoft Intune después de configurar la asociación de inquilinos para Configuration Manager.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,24 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
+ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
 ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819786"
+ms.locfileid: "88823557"
 ---
-# <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Configuración de la directiva antivirus de Microsoft Defender para Windows 10 en Microsoft Intune
+# <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Configuración de la directiva de Antivirus de Microsoft Defender para dispositivos con asociación de inquilinos en Microsoft Intune
 
-Vea las opciones de directiva de antivirus de seguridad de puntos de conexión que se pueden configurar para el perfil de antivirus de Microsoft Defender para Windows 10 en Microsoft Intune como parte de una [directiva de seguridad de puntos de conexión](../protect/endpoint-security-policy.md).
+Vea la configuración de Antivirus de Microsoft Defender que puede administrar con el perfil **Microsoft Defender Antivirus Policy (ConfigMgr)** (Directiva de Antivirus de Microsoft Defender [ConfigMgr]) de Intune. El perfil está disponible cuando se configura la [directiva de antivirus de seguridad de punto de conexión](../protect/endpoint-security-antivirus-policy.md) y esta se implementa en los dispositivos que se administran con Configuration Manager cuando se ha configurado el escenario de [asociación de inquilinos](../protect/tenant-attach-intune.md).
 
 ## <a name="cloud-protection"></a>Protección de la nube
-
-Esta configuración está disponible en los siguientes perfiles:
-
-- Antivirus de Microsoft Defender
-
-**Configuración**:
 
 - **Activar la protección que proporciona la nube**  
   CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
@@ -41,8 +35,8 @@ Esta configuración está disponible en los siguientes perfiles:
   De forma predeterminada, Defender en dispositivos de escritorio de Windows 10 envía información a Microsoft sobre los problemas que encuentre. Microsoft analiza esa información para obtener detalles sobre los problemas que le afectan a usted y a otros clientes a fin de ofrecer soluciones mejoradas.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: la protección en la nube está activa.  Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.** Desactiva Microsoft Active Protection Service.
+  - **Permitido.**  Activa Microsoft Active Protection Service.
 
 - **Nivel de protección que proporciona la nube**  
   CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
@@ -56,16 +50,9 @@ Esta configuración está disponible en los siguientes perfiles:
 - **Tiempo de espera extendido en la nube en segundos de Defender**  
   CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
-  El antivirus de Defender bloquea automáticamente los archivos sospechosos durante 10 segundos, de manera que puede examinarlos en la nube para asegurarse de que son seguros. Puede agregar hasta 50 segundos adicionales a este tiempo de espera.
+  El antivirus de Defender bloquea automáticamente los archivos sospechosos durante 10 segundos, de manera que puede examinarlos en la nube para asegurarse de que son seguros. Con esta opción, puede agregar hasta 50 segundos adicionales a este tiempo de espera.
 
 ## <a name="microsoft-defender-antivirus-exclusions"></a>Exclusiones del antivirus de Microsoft Defender
-
-Esta configuración está disponible en los siguientes perfiles:
-
-- Antivirus de Microsoft Defender
-- Exclusiones del antivirus de Microsoft Defender
-
-**Configuración**:
 
 Puede expandir cada opción de este grupo, seleccionar **Agregar** y, a continuación, especificar un valor para la exclusión.
 
@@ -86,19 +73,13 @@ Puede expandir cada opción de este grupo, seleccionar **Agregar** y, a continua
 
 ## <a name="real-time-protection"></a>Protección en tiempo real
 
-Esta configuración está disponible en los siguientes perfiles:
-
-- Antivirus de Microsoft Defender
-
-**Configuración**:
-
 - **Activar la protección en tiempo real**  
   CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Requerir que Defender en dispositivos Windows 10 Escritorio use la funcionalidad de supervisión en tiempo real.
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: forzar el uso de la supervisión en tiempo real. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.** Desactiva el servicio de supervisión en tiempo real.
+  - **Permitido.** Activa y ejecuta el servicio de supervisión en tiempo real.
 
 - **Habilitar la protección de acceso**  
   CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
@@ -106,16 +87,16 @@ Esta configuración está disponible en los siguientes perfiles:
   Configure la protección antivirus que está activa de forma continua, a diferencia de la protección a petición.
 
   - **No configurado** (*opción predeterminada*): esta directiva no modifica el estado de esta opción en un dispositivo. El estado existente en el dispositivo permanece inalterado.
-  - **No**: bloqueo de la protección de acceso de los dispositivos. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: la protección de acceso está activa en los dispositivos.
+  - **No permitido.** Desactiva el servicio de supervisión en tiempo real.
+  - **Permitido.**
 
 - **Supervisión de archivos entrantes y salientes**  
   CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
 
   Configure esta opción para determinar qué actividad de archivos y programas de NTFS se supervisa.
-  - **Supervisar todos los archivos** (*valor predeterminado*)
-  - **Supervisar solo los archivos entrantes**
-  - **Supervisar solo los archivos salientes**
+  - **Supervisar todos los archivos (bidireccional).** (*predeterminado*)
+  - **Supervisar archivos entrantes.**
+  - **Supervisar archivos salientes.**
 
 - **Activar la supervisión de comportamiento**  
   CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
@@ -123,17 +104,13 @@ Esta configuración está disponible en los siguientes perfiles:
   De forma predeterminada, Defender en dispositivos Windows 10 Escritorio usa la funcionalidad de supervisión de comportamiento.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: forzar el uso de la supervisión de comportamiento en tiempo real. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.** Desactiva la supervisión del comportamiento.
+  - **Permitido.** Activa la supervisión del comportamiento en tiempo real.
 
-- **Activar la protección de red**  
-  CSP: [EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
-
-  Proteja a los usuarios de dispositivos para que al usar cualquier aplicación no accedan a estafas de suplantación de identidad (phishing), sitios de hospedaje de vulnerabilidades y contenido malintencionado en Internet. Esta protección incluye impedir que exploradores de terceros se conecten a sitios peligrosos.
-
+- **Permitir sistema de prevención de intrusiones**  
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: la protección de red está activada. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.**
+  - **Permitido.**
 
 - **Examinar todos los archivos y datos adjuntos descargados**  
   CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
@@ -141,8 +118,8 @@ Esta configuración está disponible en los siguientes perfiles:
   Configure Defender para examinar todos los archivos y datos adjuntos descargados.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: Defender examina todos los archivos y datos adjuntos descargados. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.**
+  - **Permitido.**
 
 - **Examinar scripts que se usan en los exploradores de Microsoft**  
   CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
@@ -150,8 +127,8 @@ Esta configuración está disponible en los siguientes perfiles:
   Configure Defender para examinar scripts.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: Defender examina los scripts. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.**
+  - **Permitido.**
 
 - **Examinar archivos de red**  
   CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
@@ -159,8 +136,8 @@ Esta configuración está disponible en los siguientes perfiles:
   Configure Defender para examinar archivos de red.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: activar el análisis de los archivos de red. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.** Desactiva el examen de archivos de red.
+  - **Permitido.** Examina los archivos de red.
 
 - **Examinar correos electrónicos**  
   CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
@@ -168,16 +145,10 @@ Esta configuración está disponible en los siguientes perfiles:
   Configure Defender para examinar el correo entrante.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: activar el análisis de correo electrónico. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.** Desactiva el examen del correo electrónico.
+  - **Permitido.** Activa el examen del correo electrónico.
 
 ## <a name="remediation"></a>Corrección
-
-Esta configuración está disponible en los siguientes perfiles:
-
-- Antivirus de Microsoft Defender
-
-**Configuración**:
 
 - **Número de días (0-90) para mantener el malware en cuarentena**  
   CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
@@ -187,10 +158,10 @@ Esta configuración está disponible en los siguientes perfiles:
 - **Enviar consentimiento de muestras**  
 
   - **Sin configurar** (*valor predeterminado*).
-  - **Enviar muestras seguras automáticamente**
-  - **Preguntar siempre**
-  - **No enviar nunca**
-  - **Enviar todas las muestras automáticamente**
+  - **Preguntar siempre.**
+  - **Enviar muestras seguras automáticamente.**
+  - **No enviar nunca.**
+  - **Enviar todas las muestras automáticamente.**
 
 - **Acción que se realiza en las aplicaciones potencialmente no deseadas**  
   CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
@@ -198,9 +169,14 @@ Esta configuración está disponible en los siguientes perfiles:
   Especifique el nivel de detección de aplicaciones potencialmente no deseadas (PUA). Defender alerta a los usuarios cuando se está descargando o intentando instalar software potencialmente no deseado en un dispositivo.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema (desactivado).
-  - **Deshabilitar**
-  - **Habilitar**: los elementos detectados se bloquean y se muestran en el historial junto con otras amenazas.
-  - **Modo de auditoría**: Defender detecta aplicaciones potencialmente no deseadas pero no toma ninguna medida. Puede revisar la información sobre las aplicaciones para las que Defender habría tomado medidas buscando eventos creados por Defender en el Visor de eventos.
+  - **PUA Protection off** (Protección de PUA desactivada). Windows Defender no protege frente a aplicaciones potencialmente no deseadas.
+  - **PUA Protection on** (Protección de PUA activada). Los elementos detectados están bloqueados. Estos elementos se muestran en el historial junto con otras amenazas.
+  - **Modo de auditoría.** Defender detecta aplicaciones potencialmente no deseadas, pero no toma ninguna medida. Puede revisar la información sobre las aplicaciones para las que Defender habría tomado medidas buscando eventos creados por Defender en el Visor de eventos.
+
+- **Create a system restore point before computers are cleaned** (Crear un punto de restauración del sistema antes de limpiar los equipos)  
+  - **Sí** (*valor predeterminado*)
+  - **No**
+  - **Not Configured** (No configurado)
 
 - **Acciones para las amenazas detectadas**  
   CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
@@ -208,14 +184,14 @@ Esta configuración está disponible en los siguientes perfiles:
   Especifique la acción que Defender realiza para el malware detectado según el nivel de amenaza del malware.
   
   Defender clasifica el malware que detecta con uno de los siguientes niveles de gravedad:
-  - **Gravedad baja**
-  - **Gravedad moderada**
-  - **Gravedad alta**
-  - **Gravedad muy alta**
+  - **Low threat** (Amenaza baja)
+  - **Moderate threat** (Amenaza moderada)
+  - **High threat** (Amenaza alta)
+  - **Severe threat** (Amenaza grave)
 
   Para cada nivel, especifique la acción que se va a realizar. El valor predeterminado para cada nivel de gravedad es *No configurado*.
 
-  - **No configurado**.
+  - **Sin configurar** (*valor predeterminado*).
   - **Limpiar**: el servicio intenta recuperar los archivos y desinfectarlos.
   - **Poner en cuarentena**: mueve los archivos a la cuarentena.
   - **Quitar**: quita archivos del dispositivo.
@@ -225,67 +201,61 @@ Esta configuración está disponible en los siguientes perfiles:
 
 ## <a name="scan"></a>Examinar
 
-Esta configuración está disponible en los siguientes perfiles:
-
-- Antivirus de Microsoft Defender
-
-**Configuración**:
-
 - **Examinar archivos de almacenamiento**  
   CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Configure Defender para examinar archivos de almacenamiento, como archivos ZIP o CAB.
 
-  - **No configurado** (*valor predeterminado*): el valor vuelve al predeterminado del cliente, que es examinar los archivos almacenados, aunque el usuario puede deshabilitarlo.
-Obtener más información
-  - **No**: los archivos de almacenamiento no se examinan. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: habilitar los exámenes de los archivos de almacenamiento. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No configurado** (*valor predeterminado*): el valor vuelve al valor predeterminado del cliente, que es examinar los archivos almacenados, aunque el usuario puede deshabilitar el examen.
+Más información
+  - **No permitido.** Desactiva el examen en archivos almacenados.
+  - **Permitido.** Examina los archivos de almacenamiento.
 
-- **Usar la prioridad baja de CPU para los exámenes programados**  
+- **Enable low CPU priority for scheduled scans** (Habilitar prioridad de CPU baja para exámenes programados)  
   CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Configure la prioridad de CPU para los exámenes programados.
   - **No configurado** (*opción predeterminada*): la configuración vuelve al valor predeterminado del sistema, en el que no se realiza ningún cambio en la prioridad de la CPU.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: la prioridad de la CPU baja se usará durante los exámenes programados. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **Deshabilitada**
+  - **Habilitado**
 
 - **Deshabilitar el análisis completo de puesta al día**  
   CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
-  Configure los análisis de puesta al día para exámenes completos programados. Un examen de puesta al día es un examen que se inicia porque se ha perdido un examen programado regularmente. Normalmente, estos exámenes programados se pierden porque se apagó el equipo a la hora programada.
+  Configure los análisis de puesta al día para exámenes completos programados. Un análisis de puesta al día es un examen que se inicia porque falta un examen programado regularmente. Normalmente, estos exámenes programados se pierden porque se apagó el equipo a la hora programada.
 
   - **No configurado** (*opción predeterminada*): el valor se devuelve al valor predeterminado del cliente, que consiste en habilitar los análisis de puesta al día para exámenes completos, pero el usuario puede desactivarlos.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: se aplican los análisis de puesta al día de los exámenes completos programados y el usuario no los puede deshabilitar. Si un equipo está sin conexión durante dos exámenes programados consecutivos, se inicia un examen de puesta al día la próxima vez que alguien inicia sesión en el equipo. Si no hay ningún examen programado configurado, no se ejecutará el análisis de puesta al día. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **Deshabilitada**
+  - **Habilitado**
 
 - **Deshabilitar examen rápido de puesta al día**  
   CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
-  Configure los análisis de puesta al día para exámenes rápidos programados. Un examen de puesta al día es un examen que se inicia porque se ha perdido un examen programado regularmente. Normalmente, estos exámenes programados se pierden porque se apagó el equipo a la hora programada.
+  Configure los análisis de puesta al día para exámenes rápidos programados. Un análisis de puesta al día es un examen que se inicia porque falta un examen programado regularmente. Normalmente, estos exámenes programados se pierden porque se apagó el equipo a la hora programada.
 
   - **No configurado** (*opción predeterminada*): el valor se devuelve al valor predeterminado del cliente, que consiste en habilitar los análisis de puesta al día rápidos, pero el usuario puede desactivarlos.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: se aplican los análisis de puesta al día de los exámenes rápidos programados y el usuario no los puede deshabilitar. Si un equipo está sin conexión durante dos exámenes programados consecutivos, se inicia un examen de puesta al día la próxima vez que alguien inicia sesión en el equipo. Si no hay ningún examen programado configurado, no se ejecutará el análisis de puesta al día. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **Deshabilitada**
+  - **Habilitado**
 
-- **Límite de uso de CPU por examen**  
+- **CPU usage limit (0-100 percent) per scan** (Límite de uso de CPU [0-100 por ciento] por examen)  
   CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Especificado como porcentaje de 0 a 100, es el factor de carga promedio de la CPU para el examen de Defender.
 
-- **Examinar unidades de red asignadas durante examen completo**  
+- **Enable mapped network drives be scanned during a full scan** (Habilitar la exploración de unidades de red asignadas durante un examen completo)  
   CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Configure Defender para examinar unidades de red asignadas.
 
   - **No configurado** (*opción predeterminada*): la opción se restaura al valor predeterminado del sistema, que deshabilita el examen en unidades de red asignadas.
-  - **No**: la opción está deshabilitada. Los usuarios de los dispositivos no pueden cambiar esta opción.
-  - **Sí**: habilitar los exámenes de las unidades de red asignadas. Los usuarios de los dispositivos no pueden cambiar esta opción.
+  - **No permitido.** Deshabilita el examen en unidades de red asignadas.
+  - **Permitido.** Examina las unidades de red asignadas.
 
 - **Ejecutar un análisis rápido diario a las**  
   CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Seleccione la hora del día a la que se ejecutan los exámenes rápidos de Defender.
-  De forma predeterminada, este valor es **No configurado**.
+  De forma predeterminada, esta opción es **No configurado**.
 
 - **Tipo de examen**  
   CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
@@ -304,46 +274,49 @@ Obtener más información
 
 - **Comprobar las actualizaciones de las firmas antes de ejecutar el examen**  
   - **No configurado** (*valor predeterminado*)
-  - **No**
-  - **Sí**
+  - **Deshabilitada**
+  - **Habilitado**
+
+- **Randomize scheduled scan and security intelligence update start times** (Aleatorizar las horas de inicio de examen programado y actualización de inteligencia de seguridad)  
+  -**No configurado** (*valor predeterminado*) -**Sí**
+  -**No**
+
+- **Examinar unidades extraíbles durante examen completo**
+  - **No configurado** (*valor predeterminado*)
+  - **No permitido.** Desactiva el examen en unidades extraíbles.
+  - **Permitido.** Examina las unidades extraíbles.
 
 ## <a name="updates"></a>Actualizaciones
-
-Esta configuración está disponible en los siguientes perfiles:
-
-- Antivirus de Microsoft Defender
-
-**Configuración**:
 
 - **Escriba la frecuencia (0-24 horas) para comprobar las actualizaciones de inteligencia de seguridad**  
   CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Especifique el intervalo de 0 a 24 (en horas) que se usa para comprobar las firmas. Un valor de cero se traduce en no comprobar las nuevas firmas. Un valor de 2 comprobará cada dos horas, etc.
 
-- **Definir recursos compartidos de archivos para descargar actualizaciones de definiciones**  
-  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+- **Signature Update Fallback Order (Device)** (Orden de reserva de actualización de firma [dispositivo])
 
-  Administre ubicaciones, por ejemplo, un recurso compartido de archivos UNC,como origen de la descarga para obtener actualizaciones de las definiciones. Una vez que se hayan descargado correctamente las actualizaciones de las definiciones de un origen especificado, no se contactarán los orígenes restantes de la lista.
+- **Signature Update File Shares Sources (Device)** (Orígenes de recursos compartidos de archivos de actualización de firmas [dispositivo])
 
-  Puede **Agregar** ubicaciones individuales o **Importar** una lista de ubicaciones como un archivo .csv.
-
-- **Definir orden de los orígenes para descargar actualizaciones de definiciones**  
-  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
-
-  Especifique el orden en el que hay que contactar con las ubicaciones de origen que ha especificado para obtener actualizaciones de las definiciones. Una vez que se hayan descargado correctamente las actualizaciones de las definiciones de un origen especificado, no se contactarán los orígenes restantes de la lista.
+- **Security Intelligence Location (Device)** (Ubicación de inteligencia de seguridad [dispositivo])  
 
 ## <a name="user-experience"></a>Experiencia del usuario
 
-Esta configuración está disponible en los siguientes perfiles:
+- **Bloquear el acceso de usuarios a la aplicación de Microsoft Defender**  
+  - **No configurado** (*valor predeterminado*)
+  - **No permitido.** Impide que los usuarios tengan acceso a la interfaz de usuario.
+  - **Permitido.** Permite que los usuarios tengan acceso a la interfaz de usuario.
 
-- Antivirus de Microsoft Defender
-
-**Configuración**:
-
-- **Permitir el acceso de usuarios a la aplicación de Microsoft Defender**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
-
-  - **No configurado** (*opción predeterminada*): la configuración vuelve al valor predeterminado del cliente en el que se permiten la interfaz de usuario y las notificaciones.
-  - **No**: no se puede acceder a la interfaz de usuario (IU) de Defender y se suprimen las notificaciones.
+- **Show notifications messages on the client computer when the user needs to run a full scan, update security intelligence, or run Windows Defender Offline** (Mostrar mensajes de notificación en el equipo cliente cuando el usuario necesite ejecutar un examen completo, actualizar la inteligencia de seguridad o ejecutar Windows Defender sin Conexión)  
+  - **No configurado** (*valor predeterminado*)
   - **Sí**
+  - **No**
 
+- **Disable the client user interface** (Deshabilitar la interfaz de usuario del cliente)  
+  - **No configurado** (*valor predeterminado*)
+  - **Sí**
+  - **No**
+
+- **Allow users to view full History results** (Permitir que los usuarios vean los resultados completos del historial)
+  - **No configurado** (*valor predeterminado*)
+  - **Sí**
+  - **No**

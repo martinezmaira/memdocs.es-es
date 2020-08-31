@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526073"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819616"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -435,29 +435,33 @@ Esta configuración se aplica a los tipos de inscripción Android Enterprise don
 
   - Android 7.0 y versiones más recientes con el perfil de trabajo habilitado
 
-- **Longitud mínima de la contraseña**: escriba la longitud mínima que debe tener la contraseña, entre 4 y 16 caracteres.
-- **Cantidad máxima de minutos de inactividad hasta que el perfil de trabajo se bloquea**: escriba el tiempo durante el cual los dispositivos deben estar inactivos antes de que se bloquee automáticamente la pantalla. Los usuarios deberán introducir sus credenciales para volver a obtener acceso. Por ejemplo, escriba `5` para bloquear el dispositivo tras estar 5 minutos inactivo. Cuando el valor está en blanco o se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
+  Configure también:
 
-  En los dispositivos, los usuarios no pueden establecer un valor de tiempo mayor que el tiempo configurado en el perfil. Los usuarios pueden establecer un valor de tiempo menor. Por ejemplo, si el perfil está establecido en `15` minutos, los usuarios pueden establecer el valor en 5 minutos. Pero no podrán establecerlo en 30 minutos.
+  - **Longitud mínima de la contraseña**: escriba la longitud mínima que debe tener la contraseña, entre 4 y 16 caracteres.
+  - **Cantidad máxima de minutos de inactividad hasta que el perfil de trabajo se bloquea**: escriba el tiempo durante el cual los dispositivos deben estar inactivos antes de que se bloquee automáticamente la pantalla. Los usuarios deberán introducir sus credenciales para volver a obtener acceso. Por ejemplo, escriba `5` para bloquear el dispositivo tras estar 5 minutos inactivo. Cuando el valor está en blanco o se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración.
 
-- **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el perfil de trabajo en el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
+    En los dispositivos, los usuarios no pueden establecer un valor de tiempo mayor que el tiempo configurado en el perfil. Los usuarios pueden establecer un valor de tiempo menor. Por ejemplo, si el perfil está establecido en `15` minutos, los usuarios pueden establecer el valor en 5 minutos. Pero no podrán establecerlo en 30 minutos.
 
-- **Expiración de la contraseña (días)** : escriba el número de días hasta que se deba cambiar las contraseñas de un usuario (**1**-**365**).
-- **Tipo de contraseña requerida**: especifique el nivel requerido de complejidad de la contraseña y si se pueden usar dispositivos biométricos. Las opciones son:
-  - **Valor predeterminado de dispositivo**
-  - **Biométrico de seguridad baja**: [Biométricas eficientes frente a deficientes](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (abre el sitio web de Android)
-  - **Requerido**
-  - **Al menos numérica**: Incluye caracteres numéricos, como `123456789`.
-  - **Numérica compleja**: no se permiten números repetidos ni consecutivos, como `1111` o `1234`.
-  - **Al menos alfabética**: incluye letras del alfabeto. No son necesarios números ni símbolos.
-  - **Al menos alfanumérica**: incluye letras mayúsculas, minúsculas y caracteres numéricos.
-  - **Al menos alfanumérica con símbolos**: incluye letras mayúsculas, minúsculas, caracteres numéricos, signos de puntuación y símbolos.
+  - **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el perfil de trabajo en el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 
-- **Impedir la reutilización de contraseñas anteriores**: utilice esta configuración para impedir que los usuarios creen contraseñas usadas anteriormente. escriba el número de contraseñas usadas previamente que no se pueden volver a usar, de 1 a 24. Por ejemplo, escriba `5` para que los usuarios no puedan establecer una nueva contraseña en su contraseña actual o en cualquiera de sus cuatro contraseñas anteriores. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
-- **Desbloqueo con huella digital**: **Bloquear** impide que los usuarios usen el escáner de huella digital del dispositivo para desbloquearlo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante una huella digital.
-- **Smart Lock y otros agentes de confianza**: **Bloquear** impide que Smart Lock u otros agentes de confianza ajusten la configuración de la pantalla de bloqueo en dispositivos compatibles. Si los dispositivos están en una ubicación de confianza, esta característica, conocida también como agente de confianza, permite deshabilitar u omitir la contraseña de la pantalla de bloqueo del dispositivo. Por ejemplo, se puede omitir la contraseña de perfil de trabajo cuando los dispositivos están conectados a un dispositivo Bluetooth específico o cuando están cerca de una etiqueta de NFC. Use esta opción para impedir que los usuarios configuren Smart Lock.
+  - **Expiración de la contraseña (días)** : escriba el número de días hasta que se deba cambiar las contraseñas de un usuario (**1**-**365**).
+  - **Tipo de contraseña requerida**: especifique el nivel requerido de complejidad de la contraseña y si se pueden usar dispositivos biométricos. Las opciones son:
+    - **Valor predeterminado de dispositivo**
+    - **Biométrico de seguridad baja**: [Biométricas eficientes frente a deficientes](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (abre el sitio web de Android)
+    - **Requerido**
+    - **Al menos numérica**: Incluye caracteres numéricos, como `123456789`.
+    - **Numérica compleja**: no se permiten números repetidos ni consecutivos, como `1111` o `1234`.
+    - **Al menos alfabética**: incluye letras del alfabeto. No son necesarios números ni símbolos.
+    - **Al menos alfanumérica**: incluye letras mayúsculas, minúsculas y caracteres numéricos.
+    - **Al menos alfanumérica con símbolos**: incluye letras mayúsculas, minúsculas, caracteres numéricos, signos de puntuación y símbolos.
 
-  Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
+  - **Impedir la reutilización de contraseñas anteriores**: utilice esta configuración para impedir que los usuarios creen contraseñas usadas anteriormente. escriba el número de contraseñas usadas previamente que no se pueden volver a usar, de 1 a 24. Por ejemplo, escriba `5` para que los usuarios no puedan establecer una nueva contraseña en su contraseña actual o en cualquiera de sus cuatro contraseñas anteriores. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
+  - **Desbloqueo facial**: **Bloquear**: impide que los usuarios usen el reconocimiento facial del dispositivo para desbloquear el perfil de trabajo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante el reconocimiento facial.
+  - **Desbloqueo con huella digital**: **Bloquear**: impide que los usuarios usen el escáner de huella digital del dispositivo para desbloquear el perfil de trabajo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante una huella digital.
+  - **Iris unlock** (Desbloqueo con iris): **Bloquear**: impide que los usuarios usen el escáner de iris del dispositivo para desbloquearlo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante el escáner de iris.
+  - **Smart Lock y otros agentes de confianza**: **Bloquear** impide que Smart Lock u otros agentes de confianza ajusten la configuración de la pantalla de bloqueo en dispositivos compatibles. Si los dispositivos están en una ubicación de confianza, esta característica, conocida también como agente de confianza, permite deshabilitar u omitir la contraseña de la pantalla de bloqueo del dispositivo. Por ejemplo, se puede omitir la contraseña de perfil de trabajo cuando los dispositivos están conectados a un dispositivo Bluetooth específico o cuando están cerca de una etiqueta de NFC. Use esta opción para impedir que los usuarios configuren Smart Lock.
+
+    Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 
 ### <a name="password"></a>Contraseña
 
@@ -481,7 +485,9 @@ Esta configuración de contraseña se aplica a los perfiles personales de los di
   - **Al menos alfanumérica con símbolos**: incluye letras mayúsculas, minúsculas, caracteres numéricos, signos de puntuación y símbolos.
 
 - **Impedir la reutilización de contraseñas anteriores**: utilice esta configuración para impedir que los usuarios creen contraseñas usadas anteriormente. escriba el número de contraseñas usadas previamente que no se pueden volver a usar, de 1 a 24. Por ejemplo, escriba `5` para que los usuarios no puedan establecer una nueva contraseña en su contraseña actual o en cualquiera de sus cuatro contraseñas anteriores. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
-- **Desbloqueo con huella digital**: **Bloquear** impide que los usuarios usen el escáner de huella digital del dispositivo para desbloquearlo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante una huella digital.
+- **Desbloqueo con huella digital**: **Bloquear**: impide que los usuarios usen el escáner de huella digital del dispositivo para desbloquearlo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante una huella digital.
+- **Desbloqueo facial**: **Bloquear**: impide que los usuarios usen el reconocimiento facial del dispositivo para desbloquearlo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante el reconocimiento facial.
+- **Iris unlock** (Desbloqueo con iris): **Bloquear**: impide que los usuarios usen el escáner de iris del dispositivo para desbloquearlo. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que los usuarios desbloqueen el dispositivo mediante el escáner de iris.
 - **Smart Lock y otros agentes de confianza**: **Bloquear** impide que Smart Lock u otros agentes de confianza ajusten la configuración de la pantalla de bloqueo en dispositivos compatibles. Si los dispositivos están en una ubicación de confianza, esta característica, conocida también como agente de confianza, permite deshabilitar u omitir la contraseña de la pantalla de bloqueo del dispositivo. Por ejemplo, se puede omitir la contraseña de perfil de trabajo cuando los dispositivos están conectados a un dispositivo Bluetooth específico o cuando están cerca de una etiqueta de NFC. Use esta opción para impedir que los usuarios configuren Smart Lock.
 
   Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.

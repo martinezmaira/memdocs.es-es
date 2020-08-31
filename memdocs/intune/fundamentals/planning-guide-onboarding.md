@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8396a9713e5ce4b6001aefb55485a908f0e605dd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357667"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663266"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementar el plan de Microsoft Intune
 
@@ -130,7 +130,7 @@ Intune admite el acceso condicional para Exchange Online, Exchange local, ShareP
 
 ### <a name="task-13-enroll-devices"></a>Tarea 13: Inscribir dispositivos
 
-Intune admite iOS/iPadOS, Mac OS, Android, el escritorio de Windows y las plataformas de dispositivos móviles de Windows. Inscriba plataformas de dispositivos móviles según corresponda en función de los requisitos y los casos de uso de la implementación de Intune.
+Intune admite iOS/iPadOS, Mac OS, Android, el escritorio de Windows y las plataformas de dispositivos de escritorio de Windows. Inscriba plataformas de dispositivos móviles según corresponda en función de los requisitos y los casos de uso de la implementación de Intune.
 
 - Más información sobre [cómo inscribir dispositivos](../enrollment/device-enrollment.md).
 

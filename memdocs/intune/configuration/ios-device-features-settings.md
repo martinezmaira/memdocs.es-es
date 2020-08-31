@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814947"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820194"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
@@ -304,7 +304,7 @@ Esta característica se aplica a:
   - **No configurado**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo no usará extensiones de la aplicación. Para deshabilitar una extensión de la aplicación, puede cambiar el tipo de extensión de la aplicación de SSO a **No configurado**.
   - **Microsoft Azure AD**: usa el complemento de Microsoft Enterprise Single Sign-On, que es una extensión de la aplicación de SSO de tipo redirección. Este complemento proporciona SSO para las cuentas de Active Directory en todas las aplicaciones compatibles con la característica [Enterprise Single Sign-On de Apple](https://developer.apple.com/documentation/authenticationservices). Use este tipo de extensión de la aplicación de SSO para habilitar el inicio de sesión único en las aplicaciones de Microsoft, las aplicaciones de la organización y los sitios web que se autentican mediante Azure AD.
 
-    El complemento de SSO actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario. Todas las aplicaciones que anteriormente usaban autenticación asincrónica con la aplicación Microsoft Authenticator seguirán recibiendo SSO con el [complemento de Microsoft Enterprise Single Sign-On para los dispositivos Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    El complemento de SSO actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario. Todas las aplicaciones que usaron Microsoft Authenticator seguirán obteniendo el inicio de sesión único con el [complemento Microsoft Enterprise Single Sign-On de los dispositivos Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
     > Para lograr el inicio de sesión único con el tipo de extensión de la aplicación de SSO de Microsoft Azure AD, instale en primer lugar la aplicación Microsoft Authenticator de iOS/iPadOS en los dispositivos. La aplicación Authenticator entrega el complemento de Microsoft Enterprise Single Sign-On a los dispositivos y la configuración de la extensión de la aplicación de SSO de MDM activa el complemento. Una vez que Authenticator y el perfil de extensión de la aplicación de SSO están instalados en los dispositivos, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión en los dispositivos. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo. Para obtener más información sobre Authenticator, vea [Qué es la aplicación Microsoft Authenticator](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -371,7 +371,12 @@ Esta característica se aplica a:
 
 - **Código de sitio de Active Directory** (solo Kerberos): escriba el nombre del sitio de Active Directory que la extensión de Kerberos debe usar. Es posible que no necesite cambiar este valor, ya que la extensión de Kerberos puede encontrar automáticamente el código del sitio de Active Directory.
 - **Nombre de la caché** (solo Kerberos): escriba el nombre de los servicios de seguridad genéricos (GSS) de la memoria caché de Kerberos. Lo más probable es que no tenga que establecer este valor.
-- **Identificadores de lote de las aplicaciones** (solo Kerberos): **agregue** los identificadores de lote de aplicaciones que deben usar el inicio de sesión único en los dispositivos. A estas aplicaciones se les concede acceso al vale de concesión de vales de Kerberos y al vale de autenticación, así como acceso para autenticar a los usuarios en los servicios a los que tienen acceso autorizado.
+- **Identificadores de lote de aplicaciones** (Microsoft Azure AD, Kerberos): escriba los identificadores de lote de las aplicaciones adicionales que deben obtener el inicio de sesión único mediante una extensión en los dispositivos.
+
+  Si va a usar el tipo de extensión de aplicación de inicio de sesión único de Microsoft Azure AD, estas aplicaciones emplean el complemento Microsoft Enterprise Single Sign-On para autenticar al usuario sin necesidad de un inicio de sesión. Los identificadores de lote de aplicaciones que especifique tienen permiso para usar la extensión de aplicación de inicio de sesión único de Microsoft Azure AD si no utilizan bibliotecas de Microsoft, como la de autenticación de Microsoft (MSAL). La experiencia en estas aplicaciones podría no ser tan fluida como con las bibliotecas de Microsoft. Las aplicaciones antiguas que usan la autenticación de MSAL, o las aplicaciones que no usan las bibliotecas de Microsoft más recientes, deben agregarse a esta lista para que funcionen correctamente con la extensión de aplicación de inicio de sesión único de Microsoft Azure.  
+
+  Si va a usar el tipo de extensión de aplicación de inicio de sesión único de Kerberos, estas aplicaciones tienen acceso al vale de concesión de vales de Kerberos y al vale de autenticación, y autentican a los usuarios en los servicios a los que tienen acceso autorizado.
+
 - **Asignación de dominio** (solo Kerberos): **agregue** los sufijos DNS de dominio que se deben asignar al dominio. Use esta opción cuando los nombres DNS de los hosts no coincidan con el nombre de dominio. Lo más probable es que no tenga que crear esta asignación personalizada de dominio a dominio.
 - **Certificado PKINIT** (solo Kerberos): **seleccione** el certificado de criptografía de clave pública de la autenticación inicial (PKINIT) que se puede usar en la autenticación Kerberos. Puede elegir entre los certificados [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) que ha agregado en Intune. Para más información sobre los certificados, consulte [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
 

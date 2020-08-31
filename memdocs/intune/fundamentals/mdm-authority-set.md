@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591253"
+ms.locfileid: "88614730"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Establecer la entidad de administración de dispositivos móviles
 
@@ -38,7 +38,7 @@ Las configuraciones posibles son:
 
 - **Basic Mobility and Security for Office 365** (Movilidad y seguridad básicas para Office 365): si tiene esta configuración activada, verá la entidad de MDM establecida en "Office 365". Si quiere empezar a usar Intune, deberá adquirir licencias de Intune.
 
-- **Basic Mobility and Security for Office 365 Coexistence** (Coexistencia de Movilidad y seguridad básicas para Office 365): puede agregar Intune a su inquilino si ya usa Basic Mobility and Security for Office 365 (Movilidad y seguridad básica para Office 365) y establecer la entidad de administración en Intune o en Basic Mobility and Security for Office 365 (Movilidad y seguridad básica para Office 365) para que cada usuario indique qué servicio se usará para administrar sus dispositivos inscritos en MDM. La entidad de administración del usuario se define en función de la licencia asignada al usuario: Si el usuario tiene solo una licencia básica o estándar de Microsoft 365, los dispositivos se administrarán mediante Basic Mobility and Security for Office 365. Si el usuario tiene una licencia de Intune, los dispositivos se administrarán mediante Intune. Si agrega una licencia de Intune a un usuario administrado previamente por Basic Mobility and Security for Office 365, sus dispositivos se cambiarán a la administración de Intune. Asegúrese de tener las configuraciones de Intune asignadas a los usuarios para reemplazar Basic Mobility and Security for Office 365 (Movilidad y seguridad básicas para Office 365) antes de cambiar los usuarios a Intune; de lo contrario, sus dispositivos perderán la configuración de Basic Mobility and Security for Office 365 (Movilidad y seguridad básicas para Office 365) y no recibirán ningún reemplazo de Intune.
+- [Coexistencia](#coexistence) de **Basic Mobility and Security for Office 365** (Movilidad y seguridad básicas para Office 365): puede agregar Intune a su inquilino si ya usa Basic Mobility and Security for Office 365 (Movilidad y seguridad básicas para Office 365) y establecer la entidad de administración en Intune o en Basic Mobility and Security for Office 365 (Movilidad y seguridad básicas para Office 365) para que cada usuario indique qué servicio se usará para administrar sus dispositivos inscritos en MDM. La entidad de administración del usuario se define en función de la licencia asignada al usuario: Si el usuario tiene solo una licencia básica o estándar de Microsoft 365, los dispositivos se administrarán mediante Basic Mobility and Security for Office 365. Si el usuario tiene una licencia de Intune, los dispositivos se administrarán mediante Intune. Si agrega una licencia de Intune a un usuario administrado previamente por Basic Mobility and Security for Office 365, sus dispositivos se cambiarán a la administración de Intune. Asegúrese de tener las configuraciones de Intune asignadas a los usuarios para reemplazar Basic Mobility and Security for Office 365 (Movilidad y seguridad básicas para Office 365) antes de cambiar los usuarios a Intune; de lo contrario, sus dispositivos perderán la configuración de Basic Mobility and Security for Office 365 (Movilidad y seguridad básicas para Office 365) y no recibirán ningún reemplazo de Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Establecimiento de la entidad de MDM en Intune
 
@@ -85,9 +85,9 @@ Para habilitar la coexistencia, se deben realizar principalmente tres pasos:
 ### <a name="preparation"></a>Preparación
 
 Antes de habilitar la coexistencia con la movilidad y seguridad básicas, tenga en cuenta los siguientes puntos:
-- Asegúrese de que dispone de suficientes licencias sujetas a Intune para los usuarios que quiere administrar mediante Intune.
-- Revise qué usuarios tienen asignadas licencias sujetas a Intune. Después de habilitar la coexistencia, todos los usuarios a los que ya se les haya asignado una licencia sujeta a Intune, tendrán sus dispositivos cambiados a Intune. Para evitar cambios de dispositivo inesperados, se recomienda no asignar ninguna licencia sujeta a Intune hasta que se haya habilitado la coexistencia.
-- Cree e implemente directivas de Intune para reemplazar las directivas de seguridad de dispositivos que se implementaron originalmente mediante el Portal de seguridad y cumplimiento de Office 365. Este reemplazo debe realizarse para los usuarios que pasan de la movilidad y seguridad básicas a Intune. Si no hay ninguna directiva de Intune asignada a esos usuarios, la habilitación de la coexistencia podría hacer que se perdiera la configuración de la movilidad y seguridad básicas. Esta configuración se perderá sin que se reemplace, como es el caso de los perfiles de correo electrónico administrados.
+- Asegúrese de que dispone de suficientes [licencias de Intune](licenses.md) para los usuarios que quiere administrar mediante Intune.
+- Revise qué usuarios tienen asignadas licencias de Intune. Después de habilitar la coexistencia, todos los usuarios a los que ya se les haya asignado una licencia de Intune, tendrán sus dispositivos cambiados a Intune. Para evitar cambios de dispositivo inesperados, se recomienda no asignar ninguna licencia de Intune hasta que se haya habilitado la coexistencia.
+- Cree e implemente directivas de Intune para reemplazar las directivas de seguridad de dispositivos que se implementaron originalmente mediante el Portal de seguridad y cumplimiento de Office 365. Este reemplazo debe realizarse para los usuarios que pasan de la movilidad y seguridad básicas a Intune. Si no hay ninguna directiva de Intune asignada a esos usuarios, la habilitación de la coexistencia podría hacer que se perdiera la configuración de la movilidad y seguridad básicas. Esta configuración se perderá sin que se reemplace, como es el caso de los perfiles de correo electrónico administrados. Incluso al reemplazar las directivas de seguridad de dispositivos por directivas de Intune, es posible que se pida a los usuarios que vuelvan a autenticar sus perfiles de correo electrónico después de que el dispositivo se mueva a la administración de Intune.
 
 ### <a name="add-intune-mdm-authority"></a>Adición de la entidad de MDM de Intune
 
@@ -101,7 +101,7 @@ Para habilitar la coexistencia, debe agregar Intune como entidad de MDM a su ent
 
 ### <a name="migrate-users-and-devices-optional"></a>Migración de usuarios y dispositivos (opcional)
 
-Una vez habilitada la entidad de MDM de Intune, la coexistencia se activa y puede empezar a administrar usuarios mediante Intune. También, si quiere mover los dispositivos administrados anteriormente mediante la movilidad y seguridad básicas para que los administre Intune, asigne a esos usuarios una licencia sujeta a Intune. Los dispositivos de los usuarios cambiarán a Intune en la siguiente sincronización de MDM. La configuración que se aplica a estos dispositivos mediante la movilidad y seguridad básicas dejará de aplicarse y se quitará de los dispositivos.
+Una vez habilitada la entidad de MDM de Intune, la coexistencia se activa y puede empezar a administrar usuarios mediante Intune. También, si quiere mover los dispositivos administrados anteriormente mediante la movilidad y seguridad básicas para que los administre Intune, asigne a esos usuarios una licencia de Intune. Los dispositivos de los usuarios cambiarán a Intune en la siguiente sincronización de MDM. La configuración que se aplica a estos dispositivos mediante la movilidad y seguridad básicas dejará de aplicarse y se quitará de los dispositivos.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Limpieza de dispositivos móviles tras la expiración del certificado MDM
 

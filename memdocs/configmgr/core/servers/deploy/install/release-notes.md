@@ -2,7 +2,7 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126298"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512655"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -112,6 +112,20 @@ Este error se produce porque no hay una carpeta `scripts` en el directorio `Admi
 Para solucionar esta incidencia, cree una carpeta llamada `scripts` en el directorio `AdminConsole\bin`. Copie los archivos de la carpeta localizada en la carpeta `scripts` recién creada. Una vez copiados los archivos, implemente Microsoft Edge, versión 77 y posteriores.
 
 ## <a name="os-deployment"></a>Implementación del sistema operativo
+
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>Error de directiva de cliente al implementar una secuencia de tareas
+
+<!-- 7970134 -->
+
+*Se aplica a: Anillo de actualización inicial de Configuration Manager, versión 2006*
+
+Cuando se implementa una secuencia de tareas en un cliente, una secuencia de tareas necesaria no se instala en la fecha límite, y una secuencia de tareas disponible no aparece en el Centro de software. Verá el mensaje de estado 10803 con una descripción similar al siguiente mensaje de error:
+
+*El cliente no pudo descargar la directiva. El servicio de transferencia de datos devolvió el error. "Error de BITS: La respuesta del servidor no es válida. El servidor no siguió el protocolo definido. (-2145386469).*
+
+Este problema se produce cuando se configura el punto de administración para HTTPS y el dispositivo usa la versión de cliente 1906 o anterior de Configuration Manager.
+
+Para solucionar este problema, actualice el cliente de Configuration Manager en el dispositivo a la versión 1910 o posterior.
 
 ### <a name="task-sequences-cant-run-over-cmg"></a>No se pueden ejecutar secuencias de tareas a través de CMG
 

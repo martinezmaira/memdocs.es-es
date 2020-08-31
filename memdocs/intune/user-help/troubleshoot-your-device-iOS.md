@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f2ba732cfd8f377937a6471b5fc7f0558e19d6f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 52bcff0e8b84b8e5b8a3fbd0a68d322836e91bea
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881781"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725339"
 ---
 # <a name="fix-common-problems-with-your-ios-device"></a>Solución de problemas comunes con el dispositivo iOS
 
@@ -39,4 +39,4 @@ Use los vínculos de este artículo para encontrar respuestas a preguntas comune
 - [Tengo que actualizar el dispositivo iOS](you-need-to-update-your-ios-device.md)
 - [La versión de iOS aún no es compatible](your-ios-version-isnt-yet-supported.md)
 - [Tengo que instalar una aplicación de Mobile Threat Defense en el dispositivo iOS](set-up-mobile-threat-defense.md)
-- [Tengo que solucionar una amenaza detectada por una aplicación de Mobile Threat Defense en el dispositivo iOS](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+- [Tengo que solucionar una amenaza detectada por una aplicación de Mobile Threat Defense en el dispositivo iOS](set-up-mobile-threat-defense.md#resolving-a-threat)

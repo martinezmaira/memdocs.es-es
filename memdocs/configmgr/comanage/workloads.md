@@ -5,17 +5,17 @@ description: Obtenga información sobre las cargas de trabajo que puede cambiar 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127229"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694872"
 ---
 # <a name="co-management-workloads"></a>Administración conjunta de cargas de trabajo
 
@@ -43,19 +43,19 @@ La administración conjunta admite estas cargas de trabajo:
 
 Las directivas de cumplimiento definen las reglas y los valores de configuración que un dispositivo debe cumplir para que se considere conforme a las directivas de acceso condicional. Las directivas de cumplimiento también se pueden usar para supervisar y corregir problemas de compatibilidad con dispositivos independientemente del acceso condicional. A partir de la versión 1910 de Configuration Manager, puede agregar evaluaciones de líneas base de configuración personalizadas como una regla de evaluación de directivas de cumplimiento. Para más información, vea [Inclusión de líneas base de configuración personalizadas como parte de la evaluación de las directivas de cumplimiento](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
-Para más información sobre la característica de Intune, consulte [Directivas de cumplimiento de dispositivos](https://docs.microsoft.com/intune/device-compliance-get-started).  
+Para más información sobre la característica de Intune, consulte [Directivas de cumplimiento de dispositivos](/intune/device-compliance-get-started).  
 
 ## <a name="windows-update-policies"></a>Directivas de Windows Update
 
 Las directivas de Windows Update para empresas le permiten configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente por Windows Update para empresas.
 
-Para más información sobre la característica de Intune, consulte [Configuración de directivas de aplazamiento de Windows Update para empresas](https://docs.microsoft.com/intune/windows-update-for-business-configure).  
+Para más información sobre la característica de Intune, consulte [Configuración de directivas de aplazamiento de Windows Update para empresas](/intune/windows-update-for-business-configure).  
 
 ## <a name="resource-access-policies"></a>Directivas de acceso a recursos
 
 Las directivas de acceso a recursos configuran los ajustes de VPN, Wi-Fi, correo electrónico y certificados en los dispositivos.
 
-Para más información sobre la característica de Intune, consulte el artículo sobre cómo [implementar perfiles de acceso a recursos](https://docs.microsoft.com/intune/device-profiles).
+Para más información sobre la característica de Intune, consulte el artículo sobre cómo [implementar perfiles de acceso a recursos](/intune/device-profiles).
 
 > [!Note]  
 > La carga de trabajo del acceso a recursos también forma parte de la configuración del dispositivo. Intune administra estas directivas cuando cambia la carga de trabajo [Configuración del dispositivo](#device-configuration).
@@ -76,7 +76,7 @@ La carga de trabajo de Endpoint Protection incluye el conjunto de característic
 - Centro de seguridad avanzada de Windows Defender  
 - Protección contra amenazas avanzada de Windows Defender (conocido ahora como Protección contra amenazas de Microsoft Defender)
 
-Para más información sobre la característica de Intune, consulte [Endpoint Protection para Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+Para más información sobre la característica de Intune, consulte [Endpoint Protection para Microsoft Intune](/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Al cambiar esta carga de trabajo, las directivas de Configuration Manager permanecen en el dispositivo hasta que las directivas de Intune las sobrescribe. Este comportamiento garantiza que el dispositivo todavía tiene directivas de protección durante la transición.
@@ -95,7 +95,7 @@ La carga de trabajo de configuración de dispositivos incluye la configuración 
 
 Todavía puede implementar la configuración de Configuration Manager en los dispositivos administrados conjuntamente, aunque Intune sea la autoridad de configuración de dispositivos. Esta excepción se podría usar para definir la configuración que necesita la organización, pero que todavía no está disponible en Intune. Especifique esta excepción en una [línea de base de configuración de Configuration Manager](../compliance/deploy-use/create-configuration-baselines.md). Habilite la opción **Aplicar siempre esta línea de base, incluso para clientes administrados conjuntamente** al crear la línea de base. Puede cambiarla más adelante en la pestaña **General** de las propiedades de una línea de base existente.  
 
-Para más información sobre la característica de Intune, consulte [Creación de un perfil de dispositivo en Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+Para más información sobre la característica de Intune, consulte [Creación de un perfil de dispositivo en Microsoft Intune](/intune/device-profile-create).  
 
 > [!NOTE]
 > Al cambiar la carga de trabajo de configuración del dispositivo, también incluye directivas para la característica Information Protection de Windows, que no se incluye en la carga de trabajo de Endpoint Protection.<!-- 4184095 -->
@@ -112,7 +112,7 @@ Esta carga de trabajo administra Aplicaciones de Microsoft 365 en dispositivos 
 
 - Hay una nueva condición global, **¿Las aplicaciones de Office 365 están administradas por Intune en este dispositivo?** Esta condición se agrega de forma predeterminada como requisito a las nuevas aplicaciones de Office 365. Cuando se realiza la transición de esta carga de trabajo, los clientes con administración conjunta no cumplen el requisito en la aplicación. Por tanto, no instalan Office 365 implementado a través de Configuration Manager.  
 
-Para más información sobre la característica de Intune, consulte [Asignación de aplicaciones de Office 365 a dispositivos Windows 10 con Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
+Para más información sobre la característica de Intune, consulte [Asignación de aplicaciones de Office 365 a dispositivos Windows 10 con Microsoft Intune](/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Aplicaciones cliente
 
@@ -120,7 +120,7 @@ Para más información sobre la característica de Intune, consulte [Asignación
 
 Use Intune para administrar las aplicaciones cliente y los scripts de PowerShell en dispositivos Windows 10 administrados en conjunto. Después de realizar la transición de esta carga de trabajo, las aplicaciones disponibles implementadas desde Intune están disponibles en el Portal de empresa. Las aplicaciones implementadas desde Configuration Manager están disponibles en el Centro de software.
 
-Para más información sobre la característica de Intune, consulte [¿Qué es la administración de aplicaciones de Microsoft Intune?](https://docs.microsoft.com/intune/app-management)
+Para más información sobre la característica de Intune, consulte [¿Qué es la administración de aplicaciones de Microsoft Intune?](/intune/app-management)
 
 > [!Tip]  
 > Esta característica se introdujo por primera vez en la versión 1806 como una [característica de versión preliminar](../core/servers/manage/pre-release-features.md). A partir de la versión 2002, ya no se encuentra en versión preliminar.  
@@ -131,9 +131,10 @@ A partir de la versión 1910, cuando se habilita la caché de conexión de Micr
 
 ## <a name="diagram-for-app-workloads"></a>Diagrama para cargas de trabajo de aplicaciones
 
-![Diagrama de cargas de trabajo de aplicaciones de administración conjunta](media/co-management-apps.svg)
+:::image type="content" source="media/co-management-apps.svg" alt-text="Diagrama de cargas de trabajo de aplicaciones de administración conjunta" lightbox="media/co-management-apps.svg":::
 
-[Ver el diagrama en tamaño completo](media/co-management-apps.svg)
+> [!TIP]
+> A partir de la versión 2006, puede configurar el Portal de empresa para mostrar también aplicaciones de Configuration Manager. Si cambia esta experiencia del portal de aplicaciones, cambiará los comportamientos descritos en el diagrama anterior. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 ## <a name="known-issues"></a>Problemas conocidos
 
@@ -147,11 +148,13 @@ Para solucionar este problema, aplique CleanUpPolicy.xml con ConfigSecurityPolic
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
+
 1. Abra un símbolo del sistema con privilegios elevados en `ConfigSecurityPolicy.exe`. Normalmente, este archivo ejecutable está en uno de los siguientes directorios:
    - C:\Archivos de programa\Windows Defender
    - C:\Archivos de Programa\Microsoft Security Client
+
 1. En el símbolo del sistema, pase el archivo XML para limpiar la directiva. Por ejemplo, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[How to switch workloads](how-to-switch-workloads.md) (Cambio de las cargas de trabajo)  
+[How to switch workloads](how-to-switch-workloads.md) (Cambio de las cargas de trabajo)

@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551917"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819718"
 ---
 # <a name="windows-update-settings-for-intune"></a>Configuración de actualizaciones de Windows para Intune  
 
@@ -179,12 +179,12 @@ La configuración de la experiencia de usuario controla la experiencia del usuar
   - **Allow**: permite a los usuarios del dispositivo usar el análisis de Windows Update para buscar y descargar actualizaciones e instalar características.
   - **Block**: impide que los usuarios del dispositivo accedan al análisis de Windows Update, la descarga de actualizaciones y la instalación de características.  
 
-- **Solicitar la aprobación del usuario para reiniciar fuera del horario de trabajo**  
+- **Require user approval to dismiss restart notification** (Exigir la aprobación del usuario para descartar la notificación de reinicio)  
   **Valor predeterminado**: No configurado  
   CSP de Windows Update: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **No configurado**.  
-  - **Requerido**: exigir que un usuario apruebe el reinicio de un dispositivo fuera del horario de trabajo.  
+  - **No**: rechazo automático al cabo de 25 segundos.
+  - **Sí**: exigir el rechazo del usuario.
    
 - **Recordar al usuario antes del reinicio automático necesario con aviso que se pueda descartar (horas)**  
   **Valor predeterminado**: 4  
@@ -239,7 +239,7 @@ La configuración de la experiencia de usuario controla la experiencia del usuar
   - **Período de gracia**  
     **Valor predeterminado**: *No configurado* CSP de Windows Update: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Especifica un número mínimo de días después de la fecha límite hasta que los reinicios se produzcan automáticamente (2-7).
+    Especifica un número mínimo de días después de la fecha límite hasta que los reinicios se produzcan automáticamente (0-7).
 
   - **Reinicio automático antes de la fecha límite**  
     **Valor predeterminado**:  Sí CSP de Windows Update: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

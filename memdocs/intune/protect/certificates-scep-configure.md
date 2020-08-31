@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166134"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820398"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configuración de la infraestructura para admitir SCEP con Intune
 
@@ -127,7 +127,7 @@ En las secciones siguientes se requieren conocimientos de Windows Server 2012 R2
 1. Cree una plantilla de certificado v2 (con compatibilidad con Windows 2003) para usarla como la plantilla de certificado SCEP. Puede:
 
    - Use el complemento *Plantillas de certificado* para crear una plantilla personalizada.
-   - Copie una plantilla existente (como Usuario) y luego actualice la copia para usarla como plantilla de NDES.
+   - Copie una plantilla existente (como Servidor web) y luego actualice la copia para usarla como plantilla de NDES.
 
 2. Configure las opciones siguientes en las pestañas especificadas de la plantilla:
 
@@ -215,7 +215,7 @@ La modificación del período de validez de la plantilla de certificado es opcio
 
 Después de [crear la plantilla de certificado SCEP](#create-the-scep-certificate-template), puede editarla para revisar el **Período de validez** en la pestaña **General**.
 
-Intune usa de forma predeterminada el valor configurado en la plantilla. Pero puede configurar la entidad de certificación para permitir que el solicitante escriba otro valor, que se puede establecer desde la consola de Intune.
+De forma predeterminada, Intune usa el valor configurado en la plantilla, pero puede configurar la entidad de certificación para permitir que el solicitante escriba un valor diferente, de modo que el valor se pueda establecer desde la consola de Intune.
 
 > [!IMPORTANT]
 > Para iOS/iPadOS y macOS, use siempre un valor establecido en la plantilla.
@@ -327,32 +327,51 @@ Los procedimientos siguientes pueden ayudarle a configurar el Servicio de inscri
   
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>Instalación y enlace de certificados en el servidor en el que se hospeda NDES
 
+En el servidor NDES, hay dos certificados que son necesarios para la configuración.
+Estos certificados son **Certificado de autenticación de cliente** y **Certificado de autenticación de servidor**, como se menciona en la sección [Certificados y plantillas](#certificates-and-templates).
+
 > [!TIP]
-> En el procedimiento siguiente, puede usar un solo certificado para la *autenticación de servidor* y la *autenticación de cliente* cuando ese certificado está configurado para cumplir los criterios de ambos usos. Los criterios para cada uso se describen en los pasos 1 y 3 del procedimiento siguiente.
+> En el procedimiento siguiente, puede usar un solo certificado para la *autenticación de servidor* y la *autenticación de cliente* cuando ese certificado está configurado para cumplir los criterios de ambos usos.
+> En cuanto al nombre del firmante, debe cumplir los requisitos de certificado de *autenticación del cliente*.
 
-1. Solicite un certificado de **autenticación de servidor** de la entidad de certificación interna o de una entidad de certificación pública, y después instálelo en el servidor.
+- **Certificado de autenticación del cliente** 
 
-   Si el servidor usa un nombre externo e interno para una única dirección de red, el certificado de autenticación de servidor debe tener lo siguiente:
+   Este certificado se usa durante la instalación de Intune Certificate Connector.
 
-   - Un **Nombre del firmante** con un nombre de servidor público externo.
-   - Un **Nombre alternativo del firmante** que incluya el nombre del servidor interno.
-
-2. Enlace el certificado de autenticación de servidor en IIS:
-
-   1. Después de instalar el certificado de autenticación de servidor, abra el **Administrador de IIS** y seleccione el **Sitio web predeterminado**. En el panel **Acciones**, seleccione **Enlaces**.
-
-   1. Seleccione **Agregar**, configure **Tipo** como **https** y confirme que el puerto es **443**.
+   Solicite e instale un certificado de **autenticación de cliente** de la entidad de certificación interna o de una entidad de certificación pública.
    
-   1. En el caso de **Certificado SSL**, especifique el certificado de autenticación de servidor.
-
-3. En el servidor NDES, solicite e instale un certificado de **autenticación del cliente** de la CA interna o de una entidad de certificación pública.
-
-   El certificado de autenticación del cliente debe tener las siguientes propiedades:
+   El certificado debe cumplir los siguientes requisitos:
 
    - **Uso mejorado de clave**: este valor debe incluir **Autenticación del cliente**.
-   - **Nombre del firmante**: el valor debe ser igual al nombre DNS del servidor donde se va a instalar el certificado (el servidor NDES).
+   - **Nombre del firmante**: establezca un CN (nombre común) con un valor que debe ser igual al FQDN del servidor en el que va a instalar el certificado (el servidor NDES).
 
-4. El servidor en el que se hospeda el servicio NDES ya está listo para admitir Intune Certificate Connector.
+- **Certificado de autenticación de servidor**
+
+   Este certificado se utiliza en IIS. Es un certificado de servidor web sencillo que permite al cliente confiar en la dirección URL de NDES.
+   
+   1. Solicite un certificado de **autenticación de servidor** de la entidad de certificación interna o de una entidad de certificación pública, y después instálelo en el servidor.
+      
+      En función de cómo exponga su NDES a Internet, existen requisitos diferentes. 
+      
+      Una buena configuración es la siguiente:
+   
+      - **Nombre de sujeto**: establezca un CN (nombre común) con un valor que debe ser igual al FQDN del servidor en el que va a instalar el certificado (el servidor NDES).
+      - **Nombre alternativo del sujeto**: establezca entradas DNS para cada dirección URL a la que responda el NDES, como el FQDN interno y las direcciones URL externas.
+   
+      > [!NOTE]
+      > Si va a usar el proxy de aplicación de Azure AD, el conector del proxy de aplicación de AAD traducirá las solicitudes de la dirección URL externa a la dirección URL interna.
+      > Como tal, NDES solo responderá a las solicitudes dirigidas a la dirección URL interna, normalmente el FQDN del servidor NDES.
+      >
+      > En esta situación, no se necesita la dirección URL externa.
+   
+   2. Enlace el certificado de autenticación de servidor en IIS:
+
+      1. Después de instalar el certificado de autenticación de servidor, abra el **Administrador de IIS** y seleccione el **Sitio web predeterminado**. En el panel **Acciones**, seleccione **Enlaces**.
+
+      1. Seleccione **Agregar**, configure **Tipo** como **https** y confirme que el puerto es **443**.
+   
+      1. En el caso de **Certificado SSL**, especifique el certificado de autenticación de servidor.
+
 
 ## <a name="install-the-intune-certificate-connector"></a>Instalación de Intune Certificate Connector
 
@@ -372,7 +391,7 @@ Microsoft Intune Certificate Connector se instala en el servidor en el que se ej
 
    1. Confirme que .NET Framework 4.5 esté instalado, como requiere Intune Certificate Connector. .NET Framework 4.5 se incluye de forma automática con Windows Server 2012 R2 y versiones más recientes.
 
-   2. Ejecute el instalador (**NDESConnectorSetup.exe**). El instalador también instala el módulo de directivas para NDES y el servicio web Punto de Registro de certificado (CRP) de IIS. El servicio web CRP *CertificateRegistrationSvc*, se ejecuta como una aplicación en IIS.
+   2. Use una cuenta con permisos administrativos en el servidor para ejecutar el instalador (**NDESConnectorSetup.exe**). El instalador también instala el módulo de directivas para NDES y el servicio web Punto de Registro de certificado (CRP) de IIS. El servicio web CRP *CertificateRegistrationSvc*, se ejecuta como una aplicación en IIS.
 
       Cuando instala NDES para Intune independiente, el servicio de CRP se instala automáticamente con Certificate Connector.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880930"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820653"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Bloquear un dispositivo de forma remota desde el sitio web del Portal de empresa
 
@@ -35,9 +35,7 @@ El valor de bloqueo remoto funciona para:
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (si el dispositivo ya tenía un código de acceso establecido)
-* Windows Phone 8.1 (si el dispositivo ya tenía un código de acceso establecido)  
+* Windows 10  
 
 1. En el [sitio web del Portal de empresa](https://portal.manage.microsoft.com), haga clic en el botón __Menú__ > __Dispositivos__.  
 
@@ -53,6 +51,8 @@ El valor de bloqueo remoto funciona para:
 
 4. Aparece un mensaje para advertir que se va a bloquear el dispositivo. Pulse **Bloqueo remoto** para confirmar.
 
+## <a name="check-the-status-of-remote-lock"></a>Comprobación del estado del bloqueo remoto
+
 Después de la confirmación, el Portal de empresa intenta bloquear el dispositivo. Durante este tiempo, aparece un mensaje de "Bloqueo remoto pendiente". Cuando el dispositivo está bloqueado, el estado aparece como "El bloqueo remoto se realizó correctamente".  
 
 El estado Bloqueo remoto se muestra en tres lugares:
@@ -66,4 +66,6 @@ El estado Bloqueo remoto se muestra en tres lugares:
 
 Si encuentra el dispositivo y quiere desbloquearlo después de usar Bloqueo remoto, simplemente escriba el código de acceso.  
 
-¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="next-steps"></a>Pasos siguientes
+
+¿Tiene alguna pregunta o necesita ayuda? Póngase en contacto con el personal de soporte técnico de TI. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

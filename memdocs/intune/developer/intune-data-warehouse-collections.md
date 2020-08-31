@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462004"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820330"
 ---
 # <a name="intune-data-warehouse-collections"></a>Colecciones de almacenamiento de datos de Intune
 
@@ -253,8 +253,9 @@ La entidad **device** muestra todos los dispositivos inscritos en administració
 | SubscriberCarrier          | Operador del suscriptor del dispositivo                                                                                                                                                       |
 | PhoneNumber                | Número de teléfono del dispositivo                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Tecnología de datos móviles del dispositivo                                                                                                                                                    |
-| WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
+| CellularTechnology         | Tecnología de datos móviles del dispositivo.                                                                                                                                                    |
+| WiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
+| windowsOsEdition             | Edición de sistema operativo Windows.                                                                                                                                                                              |
 
 
 ## <a name="devicetypes"></a>DeviceTypes

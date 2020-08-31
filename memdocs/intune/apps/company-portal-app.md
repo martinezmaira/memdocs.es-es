@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179560"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725441"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
@@ -45,7 +45,7 @@ En la tabla siguiente se proporcionan los detalles de personalización de marca 
 | **Mostrar en encabezado** | Seleccione si el encabezado de las experiencias del usuario final debe mostrar **Nombre y logotipo de la organización**, **Solo el logotipo de la organización** o **Solo el nombre de la organización**. En los cuadros de vista previa siguientes solo se muestran los logotipos, no el nombre.  |
 | **Upload logo for theme color background** (Cargar logotipo para fondo de color del tema) | Cargue el logotipo que quiera mostrar encima del color del tema seleccionado. Para conseguir la mejor apariencia, cargue un logotipo con un fondo transparente. Puede ver el aspecto que tendrá en el cuadro de vista previa que se encuentra debajo de la opción.<p>Tamaño máximo de imagen: 400 x 400 píxeles<br>Tamaño máximo de archivo:   750 KB<br>Tipo de archivo: PNG, JPG o JPEG |
 | **Upload logo for white or light background** (Cargar logotipo para fondo blanco o claro) | Cargue el logotipo que quiera mostrar encima de los fondos blancos o de color claro. Para conseguir la mejor apariencia, cargue un logotipo con un fondo transparente. Puede ver el aspecto que tendrá sobre un fondo blanco en el cuadro de vista previa que se encuentra debajo de la opción.<p>Tamaño máximo de imagen: 400 x 400 píxeles<br>Tamaño máximo de archivo: 750 KB<br>Tipo de archivo: PNG, JPG o JPEG |
-| **Upload brand image** (Cargar imagen de marca) | Cargue una imagen que refleje la marca de su organización.<p><ul><li>Ancho de imagen recomendado: mayor que 1125 píxeles (como mínimo 650 píxeles)</li><li>Tamaño máximo de imagen: 1,3 MB</li><li>Tipo de archivo: PNG, JPG o JPEG</li><li>Se muestra en estas ubicaciones:</li><ul><li>Portal de empresa de iOS o iPadOS: imagen de fondo en la página de perfil del usuario.</li><li>Sitio web del Portal de empresa:   imagen de fondo en la página de perfil del usuario.</li><li>Aplicación de Intune para Android: en el cajón, como imagen de fondo en la página de perfil del usuario.</li></ul></ul> |
+| **Upload brand image** (Cargar imagen de marca) | Cargue una imagen que refleje la marca de su organización.<p><ul><li>Ancho de imagen recomendado: mayor que 1125 píxeles (como mínimo 650 píxeles)</li><li>Tamaño máximo de imagen: 1,3 MB</li><li>Tipo de archivo: PNG, JPG o JPEG</li><li>Se muestra en estas ubicaciones:</li><ul><li>Portal de empresa de iOS o iPadOS: imagen de fondo en la página de perfil del usuario.</li><li>Portal de empresa de Windows: imagen de fondo en la página de perfil del usuario.</li><li>Sitio web del Portal de empresa:   imagen de fondo en la página de perfil del usuario.</li><li>Aplicación de Intune para Android: en el cajón, como imagen de fondo en la página de perfil del usuario.</li></ul></ul> |
 
 > [!NOTE]
 > Al instalar una aplicación iOS/iPadOS desde el Portal de empresa, el usuario recibirá un mensaje. Esto sucede cuando la aplicación iOS/iPadOS está vinculada a la tienda de aplicaciones, a un programa de compras por volumen (VPP) o a una aplicación de línea de negocio (LOB). El mensaje permite a los usuarios aceptar la acción o permitir la administración de la aplicación. El mensaje mostrará el nombre de la empresa o, cuando este no esté disponible, se mostrará **Portal de empresa**.
@@ -111,8 +111,8 @@ En la tabla siguiente se proporcionan detalles de configuración específicos de
 |    Opciones de inscripción de dispositivos    |    Descripción    |    Avisos de lista de comprobación    |    Notificación    |    Detalles de estado del dispositivo    |    Detalles de estado de la aplicación (de una aplicación que requiere inscripción)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Disponible, con avisos    |    La experiencia predeterminada con avisos para inscribirse en todas las ubicaciones posibles.    |    Sí    |    Sí    |    Sí    |    Sí    |
-|    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    No    |    Sin    |    Sí    |    Sí    |
-|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    No    |    Sin    |    No    |
+|    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    Sin    |    No    |    Sí    |    Sí    |
+|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    Sin    |    No    |    No    |
 
 ### <a name="privacy"></a>Privacidad
 
@@ -129,27 +129,32 @@ En la tabla siguiente se proporcionan detalles de configuración específicos de
 
 | Nombre de campo | Longitud máxima | Más información |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Enviar una notificación de inserción a los usuarios cuando el tipo de propiedad del dispositivo cambie de personal a corporativo (solo iOS/iPadOS y Android) | No aplicable | Envíe una notificación de inserción a los usuarios del Portal de empresa de Android y de iOS cuando el tipo de propiedad del dispositivo haya cambiado de personal a corporativo. Esta notificación de inserción se establece de forma predeterminada como desactivada. Cuando la propiedad del dispositivo se establece en propiedad corporativa, Intune tiene mayor acceso al dispositivo, que incluye el inventario completo de la aplicación, la rotación de claves de FileVault, la recuperación del número de teléfono y una selección de acciones remotas. Para obtener más información, vea [Cambiar la propiedad del dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Enviar una notificación de inserción a los usuarios cuando el tipo de propiedad del dispositivo cambie de personal a corporativo (solo iOS/iPadOS y Android) | No aplicable | Envíe una notificación de inserción a los usuarios del Portal de empresa de Android y de iOS cuando el tipo de propiedad del dispositivo haya cambiado de personal a corporativo. Esta notificación de inserción se establece de forma predeterminada como desactivada. Cuando la propiedad del dispositivo se establece en propiedad corporativa, Intune tiene mayor acceso al dispositivo, por ejemplo, al inventario completo de la aplicación, la rotación de claves de FileVault, la recuperación del número de teléfono y una selección de acciones remotas. Para obtener más información, vea [Cambiar la propiedad del dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="app-sources"></a>Orígenes de aplicación
 
-Puede elegir los orígenes de aplicación adicionales que se mostrarán en Portal de empresa. En la tabla siguiente se proporcionan detalles de configuración específicos de los orígenes de aplicación:
+Puede elegir los orígenes de aplicación adicionales que se mostrarán en Portal de empresa.
+
+> [!NOTE]
+> El Portal de empresa admite aplicaciones de Configuration Manager. Esta característica permite a los usuarios finales ver las aplicaciones implementadas de Configuration Manager y de Intune en el Portal de empresa de los clientes administrados conjuntamente. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](/mem/configmgr/comanage/company-portal).
+
+En la tabla siguiente se proporcionan detalles de configuración específicos de los orígenes de aplicación:
 
 | Nombre de campo | Longitud máxima | Más información |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Aplicaciones empresariales de Azure AD | No aplicable | Seleccione **Ocultar** o **Mostrar** para mostrar **Aplicaciones empresariales de Azure AD** en el Portal de empresa para cada usuario final. Para obtener más información, vea [Opciones de configuración de origen de aplicación](../apps/company-portal-app.md#app-source-setting-options). |
-| Aplicaciones de Office Online | No aplicable | Seleccione **Ocultar** o **Mostrar** para mostrar **Aplicaciones de Office Online** en el Portal de empresa para cada usuario final. Para obtener más información, vea [Opciones de configuración de origen de aplicación](../apps/company-portal-app.md#app-source-setting-options). |
+| Aplicaciones empresariales de Azure AD | No aplicable | Seleccione **Ocultar** o **Mostrar** para mostrar **Aplicaciones empresariales de Azure AD** para cada usuario final en el Portal de empresa. Para obtener más información, vea [Opciones de configuración de origen de aplicación](../apps/company-portal-app.md#app-source-setting-options). |
+| Aplicaciones de Office Online | No aplicable | Seleccione **Ocultar** o **Mostrar** para mostrar **Office Online applications** (Aplicaciones de Office Online) para cada usuario final en el Portal de empresa. Para obtener más información, vea [Opciones de configuración de origen de aplicación](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### <a name="app-source-setting-options"></a>Opciones de configuración de origen de aplicación
 
 > [!NOTE]
 > El sitio web de Portal de empresa admitirá inicialmente la presentación de aplicaciones de otros servicios de Microsoft.
 
-Puede ocultar o mostrar **Aplicaciones empresariales de Azure AD** y **Aplicaciones de Office Online** en el Portal de empresa para cada usuario final. **Mostrar** provocará que el Portal de empresa muestre todo el catálogo de aplicaciones de los servicios de Microsoft seleccionados asignados al usuario. Las **aplicaciones empresariales de Azure AD** se registran y asignan a través de [Azure Portal](https://portal.azure.com). Las **aplicaciones de Office Online** se asignan mediante los controles de licencia disponibles en el [Centro de administración de M365](https://admin.microsoft.com). En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Administración de inquilinos** > **Personalización** para encontrar esta opción de configuración. De forma predeterminada, cada origen de aplicación adicional se establecerá en **Ocultar**. 
+Puede ocultar o mostrar **Aplicaciones empresariales de Azure AD** y **Office Online applications** (Aplicaciones de Office Online) para cada usuario final en el Portal de empresa. **Mostrar** provocará que el Portal de empresa muestre todo el catálogo de aplicaciones de los servicios de Microsoft seleccionados asignados al usuario. Las **aplicaciones empresariales de Azure AD** se registran y asignan a través de [Azure Portal](https://portal.azure.com). Las **aplicaciones de Office Online** se asignan mediante los controles de licencia disponibles en el [Centro de administración de M365](https://admin.microsoft.com). En el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Administración de inquilinos** > **Personalización** para encontrar esta opción de configuración. De forma predeterminada, cada origen de aplicación adicional se establecerá en **Ocultar**. 
 
 ### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Personalización de acciones de autoservicio de usuario para el Portal de empresa
 
-Puede personalizar las acciones de dispositivo de autoservicio disponibles que se muestran a los usuarios finales en la aplicación Portal de empresa y el sitio web. Para ayudar a evitar acciones de dispositivo no deseadas, puede configurar opciones para la aplicación Portal de empresa si selecciona **Administración de inquilinos** > **Personalización**. 
+Puede personalizar las acciones de autoservicio de dispositivos que se muestran a los usuarios finales en la aplicación del Portal de empresa y el sitio web. Para ayudar a evitar acciones de dispositivo no deseadas, puede configurar opciones para la aplicación Portal de empresa si selecciona **Administración de inquilinos** > **Personalización**.
 
 Están disponibles las siguientes acciones:
 - Ocultar el botón **Quitar** en los dispositivos corporativos de Windows.
@@ -158,7 +163,7 @@ Están disponibles las siguientes acciones:
 - Ocultar el botón **Restablecer** en los dispositivos iOS/iPadOS corporativos.
 
 > [!NOTE]
-> Estas acciones se pueden usar para restringir las acciones de dispositivo en la aplicación Portal de empresa y el sitio web, y no implementan ninguna directiva de restricción de dispositivos. Para impedir que los usuarios realicen el restablecimiento de fábrica o la eliminación de MDM desde la configuración, debe configurar directivas de restricción de dispositivos. 
+> Estas acciones se pueden usar para restringir las acciones de dispositivo en la aplicación Portal de empresa y el sitio web, y no implementan ninguna directiva de restricción de dispositivos. Para impedir que los usuarios realicen el restablecimiento de fábrica o la eliminación de MDM desde la configuración, debe configurar directivas de restricción de dispositivos.
 
 ## <a name="opening-web-company-portal-applications"></a>Apertura de las aplicaciones web del Portal de empresa
 En el caso de las aplicaciones web del Portal de empresa, si los usuarios finales tienen instalada la aplicación Portal de empresa, verán un cuadro de diálogo en el que se les preguntará cómo quieren abrir la aplicación al iniciarla fuera del explorador. Si la aplicación no se encuentra en la ruta de acceso del Portal de empresa, abrirá la página principal. Si la aplicación sí que está en la ruta de acceso, el Portal de empresa abrirá la aplicación específica. 

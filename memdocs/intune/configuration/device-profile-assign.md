@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565689"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820007"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Asignación de perfiles de dispositivo en Microsoft Intune
 
-Puede crear un perfil e incluir toda la configuración que escribió. El paso siguiente es implementar o "asignar el perfil" a los grupos de dispositivos o usuarios de Azure Active Directory (Azure AD). Cuando se asigna, los usuarios y dispositivos reciben su perfil y se aplica la configuración que escribió.
+Puede crear un perfil e incluir toda la configuración que escribió. El siguiente paso consiste en implementar o "asignar" el perfil a los grupos de usuarios o dispositivos. Cuando se asigna, los usuarios y dispositivos reciben su perfil y se aplica la configuración que escribió.
 
 En este artículo se muestra cómo asignar un perfil y se incluye información sobre el uso de las etiquetas de ámbito en los perfiles.
 
@@ -45,21 +45,16 @@ Asegúrese de que tiene el rol adecuado para asignar perfiles. Para más informa
 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Perfiles de configuración**. Se muestran todos los perfiles.
-3. Seleccione el perfil que quiere asignar > **Asignaciones**.
-4. Elija **Incluir** grupos o **Excluir** grupos y, luego, seleccione los grupos. Al seleccionar los grupos, se elige un grupo de Azure AD. Para seleccionar varios grupos, mantenga presionada la tecla **Ctrl** y seleccione los grupos.
+3. Seleccione el perfil que quiere asignar > **Propiedades** > **Asignaciones** > **Editar**:
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Captura de pantalla de las opciones para incluir o excluir grupos de una asignación de perfil en Microsoft Intune":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Selección de asignaciones para implementar el perfil en usuarios y grupos en Microsoft Intune y Endpoint Manager":::
 
-5. Guarde los cambios mediante **Guardar**.
+4. Seleccione **Grupos incluidos** o **Grupos excluidos** y, luego, elija **Select groups to include** (Seleccionar grupos para incluir). Al seleccionar los grupos, se elige un grupo de Azure AD. Para seleccionar varios grupos, mantenga presionada la tecla **Ctrl** y seleccione los grupos.
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Evaluación de cuántos usuarios se rigen por una directiva
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Inclusión o exclusión de usuarios y grupos al asignar o implementar un perfil en Microsoft Intune y Endpoint Manager.":::
 
-Cuando asigna el perfil, también puede **evaluar** cuántos usuarios se verán afectados. Esta característica calcula los usuarios, no los dispositivos.
-
-1. En el Centro de administración, seleccione **Dispositivos** > **Perfiles de configuración**.
-2. Seleccione un perfil > **Asignaciones** > **Evaluar**. Un mensaje muestra a cuántos usuarios se aplica este perfil.
-
-Si el botón **Evaluar** está atenuado, asegúrese de que el perfil se asignó a uno o más grupos.
+5. Seleccione **Revisar y guardar**. En este paso no se asigna el perfil.
+6. Seleccione **Guardar**. Al guardar, se asigna el perfil. Los grupos recibirán la configuración del perfil cuando los dispositivos se registren con el servicio de Intune.
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>Uso de etiquetas de ámbito o reglas de aplicabilidad
 

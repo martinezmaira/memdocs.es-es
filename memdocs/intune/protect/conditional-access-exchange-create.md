@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252765"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663351"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configuración del acceso a Exchange local para Intune
 
@@ -59,7 +59,7 @@ Antes de configurar el acceso condicional, compruebe que existen las siguientes 
   - Debe estar **inscrito** en Intune o estar en un equipo unido a un dominio.
   - Debe estar **registrado en Azure Active Directory**. Además, el identificador de Exchange ActiveSync del cliente debe registrarse con Azure Active Directory.
 
-- El servicio Registro de dispositivos (DRS) de Azure AD se activará automáticamente para los clientes de Intune y Office 365. Los clientes que ya han implementado el servicio de registro de dispositivos de ADFS no ven los dispositivos registrados en la instancia local de Active Directory. **Esto no se aplica a equipos de Windows ni a dispositivos Windows Phone.**
+- El servicio Registro de dispositivos (DRS) de Azure AD se activará automáticamente para los clientes de Intune y Office 365. Los clientes que ya han implementado el servicio de registro de dispositivos de ADFS no ven los dispositivos registrados en la instancia local de Active Directory. **Esto no se aplica a los equipos y dispositivos Windows**.
 
 - **Cumplir** todas las directivas de cumplimiento de dispositivos implementadas en ese dispositivo.
 
@@ -69,7 +69,6 @@ Antes de configurar el acceso condicional, compruebe que existen las siguientes 
 
 ### <a name="support-for-mobile-devices"></a>Compatibilidad con dispositivos móviles
 
-- **Windows Phone**: para crear directivas de acceso condicional, consulte [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md).
 - **Aplicación de correo electrónico nativo en iOS/iPadOS**: para crear directivas de acceso condicional, vea [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md)
 - **Clientes de correo EAS como Gmail en Android 4 o versiones posteriores**: para crear directivas de acceso condicional, vea [Creación de directivas de acceso condicional](../protect/create-conditional-access-intune.md)
 

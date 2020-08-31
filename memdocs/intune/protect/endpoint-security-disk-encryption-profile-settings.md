@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 37e9f68951c3576393e6ed3eb3346847029736c4
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462038"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663215"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de cifrado de discos para seguridad de los puntos de conexión en Intune
 
@@ -92,6 +92,9 @@ Perfiles y plataformas compatibles:
   Esta opción solo se aplica a dispositivos de SKU de Windows Mobile y Mobile Enterprise.
   - **No configurado** (*valor predeterminado*): está opción vuelve al valor predeterminado del sistema operativo, que no requiere cifrado de tarjeta de almacenamiento.
   - **Sí**: se requiere cifrado en tarjetas de almacenamiento para dispositivos móviles.
+
+  > [!NOTE]
+  > La compatibilidad con [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) y [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ha finalizado en agosto de 2020.
 
 - **Ocultar aviso sobre el cifrado de terceros**  
   CSP: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)

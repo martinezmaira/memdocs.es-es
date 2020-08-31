@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127008"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693427"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -167,7 +167,7 @@ Establezca esta opción en **Sí** para que los clientes obtengan contenido desd
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>Registrar automáticamente los nuevos dispositivos de Windows 10 unidos a un dominio con Azure Active Directory
 
-Al configurar Azure Active Directory para admitir la combinación híbrida, Configuration Manager configura los dispositivos Windows 10 para esta funcionalidad. Para obtener más información, vea [Configuración de dispositivos híbridos unidos a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+Al configurar Azure Active Directory para admitir la combinación híbrida, Configuration Manager configura los dispositivos Windows 10 para esta funcionalidad. Para obtener más información, vea [Configuración de dispositivos híbridos unidos a Azure Active Directory](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>Permitir que los clientes usen una instancia de Cloud Management Gateway
 
@@ -341,11 +341,11 @@ Para más información sobre esta configuración, consulte [Notificaciones de re
 ## <a name="delivery-optimization"></a>Optimización de entrega
 
 <!-- 1324696 -->
-Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. Configure Optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
+Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. Configure Optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
 
 > [!Note]
 > - La optimización de distribución solo está disponible en clientes de Windows 10.
-> - El acceso al servicio en la nube Optimización de distribución a través de Internet es un requisito para utilizar su funcionalidad punto a punto. Para obtener información sobre los puntos de conexión de Internet necesarios, vea [Preguntas más frecuentes sobre Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - El acceso al servicio en la nube Optimización de distribución a través de Internet es un requisito para utilizar su funcionalidad punto a punto. Para obtener información sobre los puntos de conexión de Internet necesarios, vea [Preguntas más frecuentes sobre Optimización de distribución](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - Cuando se usa CMG para el almacenamiento de contenido, el contenido de las actualizaciones de terceros no se descarga en los clientes si está habilitada la [opción de cliente](#allow-clients-to-download-delta-content-when-available) **Descarga de contenido diferencial cuando esté disponible**. <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Uso de grupos de límites de Configuration Manager para el identificador del grupo de optimización de distribución
@@ -641,6 +641,17 @@ Establezca esta opción en **Sí** para usar autenticación de nivel de red (NLA
 
 ## <a name="software-center"></a>Centro de software
 
+### <a name="select-the-user-portal"></a>Selección del portal de usuarios
+
+<!--CMADO-3601237,INADO-4297660-->
+A partir de la versión 2006, si implementa el Portal de empresa en dispositivos administrados conjuntamente, configure esta opción para **Portal de empresa**. Esta configuración garantiza que los usuarios solo reciban notificaciones del Portal de empresa.
+
+Si instala el Portal de empresa en un dispositivo administrado conjuntamente, pero configura esta opción en **Centro de software**, los usuarios verán las notificaciones de ambos portales. Esta experiencia puede resultar confusa para los usuarios.
+
+Si cambia la configuración de cliente para Portal de empresa, cuando un usuario selecciona una notificación de Configuration Manager se inicia el Portal de empresa. Si la notificación es para un escenario no compatible con el Portal de empresa, la selección de la notificación inicia el Centro de software.
+
+El comportamiento del Portal de empresa depende de la configuración de la carga de trabajo de administración conjunta. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](../../../comanage/company-portal.md).
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Seleccionar la configuración nueva para especificar la información de la compañía
 
 Establezca esta opción en **Sí** y, después, especifique las opciones siguientes para personalizar el Centro de software para su organización:
@@ -927,11 +938,11 @@ Esta nueva configuración de cliente proporciona estas opciones:
 
 - **Normal**: el programa de instalación de Windows usa más recursos del sistema y se actualiza con más rapidez. Usa más tiempo del procesador, por lo que el tiempo total de instalación es más corto, pero la interrupción del usuario es más larga.  
 
-    - Configura el archivo setupconfig.ini en el dispositivo con la [opción de línea de comandos de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority Normal`.
+    - Configura el archivo setupconfig.ini en el dispositivo con la [opción de línea de comandos de instalación de Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority Normal`.
 
 - **Bajo**: puede seguir trabajando en el dispositivo mientras se descarga y se actualiza en segundo plano. El tiempo de instalación total es superior, pero la interrupción del usuario es más corta. Es posible que necesite aumentar el tiempo máximo de ejecución de la actualización para evitar el agotamiento del tiempo de espera cuando use esta opción.  
 
-    - Quita la [opción de línea de comandos de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority` desde el archivo setupconfig.ini.
+    - Quita la [opción de línea de comandos de instalación de Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority` desde el archivo setupconfig.ini.
 
 
 ### <a name="enable-third-party-software-updates"></a>Habilitar actualizaciones de software de terceros
@@ -940,7 +951,7 @@ Cuando esta opción se configura como **Sí**, se establece la directiva para **
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>Habilitación de la actualización dinámica de las actualizaciones de características
 <!--4062619-->
-A partir de la versión 1906 de Configuration Manager, puede configurar la [actualización dinámica de Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). La actualización dinámica instala paquetes de idioma, características a petición, controladores y actualizaciones acumulativas durante la instalación de Windows al dirigir al cliente a descargar estas actualizaciones de Internet. Cuando esta configuración se establece en **Sí** o en **No**, Configuration Manager modifica el archivo [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) que se usa durante la instalación de la actualización de las características.
+A partir de la versión 1906 de Configuration Manager, puede configurar la [actualización dinámica de Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). La actualización dinámica instala paquetes de idioma, características a petición, controladores y actualizaciones acumulativas durante la instalación de Windows al dirigir al cliente a descargar estas actualizaciones de Internet. Cuando esta configuración se establece en **Sí** o en **No**, Configuration Manager modifica el archivo [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) que se usa durante la instalación de la actualización de las características.
 
 - **No configurado**: el valor predeterminado. No se realiza ningún cambio en el archivo setupconfig.
   - La actualización dinámica está habilitada de manera predeterminada en todas las versiones compatibles de Windows 10.

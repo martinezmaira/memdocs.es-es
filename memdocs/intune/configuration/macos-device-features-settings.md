@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093558"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819667"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Configuración de características de dispositivos macOS en Intune
 
@@ -267,6 +267,15 @@ Esta característica se aplica a:
 - **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO. Las opciones son:
 
   - **No configurado**: no se usan las extensiones de la aplicación. Para deshabilitar una extensión de aplicación, cambie el tipo de extensión de la aplicación de SSO a **Sin configurar**.
+  - **Microsoft Azure AD**: usa el complemento de Microsoft Enterprise Single Sign-On, que es una extensión de la aplicación de SSO de tipo redirección. Este complemento proporciona inicio de sesión único para las cuentas de Active Directory en todas las aplicaciones macOS compatibles con la característica [Enterprise Single Sign-On de Apple](https://developer.apple.com/documentation/authenticationservices). Use este tipo de extensión de la aplicación de SSO para habilitar el inicio de sesión único en las aplicaciones de Microsoft, las aplicaciones de la organización y los sitios web que se autentican mediante Azure AD.
+
+    El complemento de SSO actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario.
+
+    > [!IMPORTANT]
+    > Para lograr el inicio de sesión único con el tipo de extensión de aplicación de inicio de sesión único de Microsoft Azure AD, instale la aplicación del Portal de empresa para macOS en los dispositivos. La aplicación del Portal de empresa suministra el complemento Enterprise Single Sign-On de Microsoft a los dispositivos. La configuración de la extensión de aplicación de inicio de sesión único de MDM activa el complemento. Después de instalar la aplicación del Portal de empresa y el perfil de extensión de aplicación de inicio de sesión único en los dispositivos, los usuarios inician sesión con sus credenciales y crean una sesión en sus dispositivos. Esta sesión se usa en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo.
+    >
+    > Para más información sobre la aplicación del Portal de empresa, consulte [¿Qué ocurre si instala la aplicación de Portal de empresa e inscribe el dispositivo macOS en Intune?](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md). [Descargue](https://go.microsoft.com/fwlink/?linkid=853070) la aplicación del Portal de empresa.
+
   - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce la extensión y el identificador del equipo correspondiente a la extensión de la aplicación de su organización.
   - **Credenciales**: use una extensión de la aplicación de credenciales genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación de desafío y respuesta. Asegúrese de que conoce el identificador de la extensión y del equipo correspondiente a la extensión de la aplicación de inicio de sesión único de su organización.  
   - **Kerberos**: use la extensión integrada de Kerberos de Apple, que se incluye en macOS Catalina 10.15 y versiones más recientes. Esta opción es una versión específica de Kerberos de la extensión de la aplicación de **Credenciales**.
@@ -291,7 +300,7 @@ Esta característica se aplica a:
   - Todas las direcciones URL de los perfiles de extensión de la aplicación de inicio de sesión único de Intune deben ser únicas. No se puede repetir un dominio en ningún perfil de extensión de la aplicación de SSO, aunque se usen distintos tipos de extensiones de la aplicación de SSO.
   - Las direcciones URL deben comenzar por `http://` or `https://`.
 
-- **Configuración adicional** (redireccionamiento y credenciales): escriba datos adicionales específicos de la extensión para pasarlos a la extensión de la aplicación de SSO:
+- **Configuración adicional** (Microsoft Azure AD, redireccionamiento y credenciales): escriba datos adicionales específicos de la extensión para pasarlos a la extensión de la aplicación de SSO:
   - **Clave**: escriba el nombre del elemento que quiere agregar, como `user name`.
   - **Tipo**: escriba el tipo de datos. Las opciones son:
 
@@ -331,7 +340,13 @@ Esta característica se aplica a:
 - **Código de sitio de Active Directory** (solo Kerberos): escriba el nombre del sitio de Active Directory que la extensión de Kerberos debe usar. Es posible que no necesite cambiar este valor, ya que la extensión de Kerberos puede encontrar automáticamente el código del sitio de Active Directory.
 - **Nombre de la caché** (solo Kerberos): escriba el nombre de los servicios de seguridad genéricos (GSS) de la memoria caché de Kerberos. Lo más probable es que no tenga que establecer este valor.  
 - **Mensaje de requisitos de contraseñas** (solo Kerberos): escriba una versión de texto de los requisitos de contraseña de su organización que se muestra a los usuarios. El mensaje se muestra si no necesita los requisitos de complejidad de la contraseña de Active Directory, o bien no escribe una longitud mínima de la contraseña.  
-- **Identificadores de lote de las aplicaciones** (solo Kerberos): **agregue** los identificadores de lote de aplicaciones que deben usar el inicio de sesión único en los dispositivos. Estas aplicaciones obtienen acceso al vale de concesión de vales de Kerberos y al vale de autenticación. Las aplicaciones también autentican a los usuarios en los servicios a los que están autorizados a acceder.
+- **Modo de dispositivo compartido** (solo Microsoft Azure AD): Seleccione **Sí** si se va a implementar el complemento Microsoft Enterprise Single Sign-On en dispositivos macOS configurados para la característica de modo de dispositivo compartido de Azure AD. Los dispositivos en modo compartido permiten a muchos usuarios iniciar sesión de forma global y fuera de las aplicaciones que admiten el modo de dispositivo compartido. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración. 
+
+  Cuando se establece en **Sí**, todas las cuentas de usuario existentes se borran de los dispositivos. Para evitar la pérdida de datos o impedir que se restablezca la configuración de fábrica, asegúrese de comprender cómo esta configuración cambia los dispositivos.
+
+  Para más información sobre el modo de dispositivo compartido, consulte [Introducción al modo de dispositivo compartido](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+
+- **Identificadores de lote de aplicaciones** (Microsoft Azure AD, Kerberos): **agregue** los identificadores de lote de aplicaciones que deben usar el inicio de sesión único en los dispositivos. Estas aplicaciones obtienen acceso al vale de concesión de vales de Kerberos y al vale de autenticación. Las aplicaciones también autentican a los usuarios en los servicios a los que están autorizados a acceder.
 - **Asignación de dominio** (solo Kerberos): **agregue** los sufijos DNS de dominio que se deben asignar al dominio. Use esta opción cuando los nombres DNS de los hosts no coincidan con el nombre de dominio. Lo más probable es que no tenga que crear esta asignación personalizada de dominio a dominio.
 - **Certificado PKINIT** (solo Kerberos): **seleccione** el certificado de criptografía de clave pública de la autenticación inicial (PKINIT) que se puede usar en la autenticación Kerberos. Puede elegir entre los certificados [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) que ha agregado en Intune. Para más información sobre los certificados, consulte [Uso de certificados para la autenticación en Microsoft Intune](../protect/certificates-configure.md).
 

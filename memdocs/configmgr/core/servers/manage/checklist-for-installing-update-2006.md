@@ -2,7 +2,7 @@
 title: Lista de comprobación de 2006
 titleSuffix: Configuration Manager
 description: Sepa lo que debe hacer antes de actualizar a la versión 2006 de Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a3c66863e7768c5ca90151bf85d61aa1e3a0e17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129613"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696470"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 2006 de Configuration Manager
 
@@ -81,7 +81,11 @@ Microsoft firma el script digitalmente y lo agrupa dentro de un archivo ejecutab
 
 Para participar en el anillo de actualización inicial:
 
-1. Abra Windows PowerShell y **Ejecutar como administrador**.
+1. Abra una sesión de la versión 5 de Windows PowerShell, **como administrador**.
+
+    > [!IMPORTANT]
+    > La rama actual de Configuration Manager no es compatible actualmente con la versión 7 de PowerShell. Si ya ha instalado la versión 7 de PowerShell, puede seguir usando la versión 5 de PowerShell. Para obtener más información, consulte [Uso de PowerShell 7 en paralelo con Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+
 1. Ejecute el script **EnableEarlyUpdateRing2006.ps1** con la siguiente sintaxis:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`

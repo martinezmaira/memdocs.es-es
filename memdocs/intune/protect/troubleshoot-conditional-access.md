@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405824"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663385"
 ---
 # <a name="troubleshoot-conditional-access"></a>Solucionar problemas de acceso condicional
 En este artículo se describe qué hacer cuando los usuarios no pueden obtener acceso a los recursos protegidos con el acceso condicional o cuando los usuarios pueden acceder a recursos protegidos, pero se debería bloquear el acceso.
@@ -45,7 +45,7 @@ Para que funcione el acceso condicional, se deben cumplir los siguientes requisi
 
 - De forma predeterminada, el usuario debe tener asignada una directiva de cumplimiento. Esto puede depender de la configuración de la opción **Marcar los dispositivos sin directiva de cumplimiento asignada como**, que es encuentra en **Cumplimiento del dispositivo** > **Configuración de directiva de cumplimiento** en el portal de administración de Intune.
 
-- Si el usuario usa el cliente de correo nativo del dispositivo en lugar de Outlook, Exchange ActiveSync debe estar activado en el dispositivo. Esto ocurre de forma automática para dispositivos iOS/iPadOS, Windows Phone y Android Knox.
+- Si el usuario usa el cliente de correo nativo del dispositivo en lugar de Outlook, Exchange ActiveSync debe estar activado en el dispositivo. Esto ocurre de forma automática para dispositivos iOS/iPadOS y Android Knox.
 
 - En el caso de Exchange local, Intune Exchange Connector debe estar configurado correctamente. Para más información, consulte [Solucionar problemas de Exchange Connector en Microsoft Intune](troubleshoot-exchange-connector.md).
 
@@ -94,7 +94,7 @@ Puede ver si estas condiciones se cumplen en los dispositivos en Azure Portal y 
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Los dispositivos no son compatibles pero no se bloquean a los usuarios
 
-- Para equipos Windows, el acceso condicional solo bloquea la aplicación de correo electrónico nativa, Office 2013 con autenticación moderna u Office 2016. El bloqueo de las versiones anteriores de Outlook o todas las aplicaciones de correo electrónico en los equipos de Windows requiere configuraciones de Servicios de federación de Active Directory (AD FS) y registro de dispositivo de AAD, tal como se indicó en [Procedimientos para configurar SharePoint Online y Exchange Online para el acceso condicional de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- Para equipos Windows, el acceso condicional solo bloquea la aplicación de correo electrónico nativa, Office 2013 con autenticación moderna u Office 2016. El bloqueo de las versiones anteriores de Outlook o de todas las aplicaciones de correo electrónico en los equipos Windows requiere configuraciones de Servicios de federación de Active Directory (AD FS) y Registro de dispositivos de AAD, tal como se indicó en [Configuración de SharePoint Online y Exchange Online para el acceso condicional de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - Si el dispositivo se borra selectivamente o se retira de Intune, podría continuar teniendo acceso durante varias horas después de la retirada. Esto es se debe a que Exchange almacena en caché los derechos de acceso durante seis horas. Considere otras formas de proteger los datos en dispositivos retirados en este escenario.
 

@@ -1,11 +1,11 @@
 ---
 title: 'Configuración y características de dispositivos en Microsoft Intune: Azure | Microsoft Docs'
-description: Información general de los distintos perfiles de dispositivo de Microsoft Intune. Obtenga información de las características, restricciones, correo electrónico, Wi-Fi, VPN, educación, certificados, actualización de Windows 10, BitLocker y Microsoft Defender, Windows Information Protection, plantillas administrativas y opciones de configuración de dispositivos personalizada en el Centro de administración de Microsoft Endpoint Manager. Use estos perfiles para administrar y proteger los datos y los dispositivos de su compañía.
+description: Información general de los distintos perfiles de dispositivo de Microsoft Intune. Obtenga información sobre GPO, las características, restricciones, correo electrónico, Wi-Fi, VPN, educación, certificados, actualización de Windows 10, BitLocker y Microsoft Defender, Windows Information Protection, plantillas administrativas y opciones de configuración de dispositivos personalizadas en el centro de administración de Microsoft Endpoint Manager. Use estos perfiles para administrar y proteger los datos y los dispositivos de su compañía.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820500"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicación de la configuración y características en dispositivos con perfiles de dispositivos Microsoft Intune
 
@@ -41,9 +41,7 @@ En este artículo se proporciona información general de los distintos tipos de 
 
 ## <a name="administrative-templates"></a>Plantillas administrativas
 
-Las [plantillas administrativas](administrative-templates-windows.md) incluyen cientos de opciones que puede configurar para Internet Explorer, Microsoft Edge, OneDrive, Escritorio remoto, Word, Excel y otros programas de Office.
-
-Estas plantillas proporcionan a los administradores una vista simplificada de las configuraciones similares a una directiva de grupo, pero que están basadas por completo en la nube.
+Las [plantillas administrativas](administrative-templates-windows.md) incluyen cientos de opciones que puede configurar para Internet Explorer, Microsoft Edge, OneDrive, Escritorio remoto, Word, Excel y otros programas de Office. Estas plantillas proporcionan a los administradores una vista simplificada de las configuraciones similares a una directiva de grupo, pero que están basadas por completo en la nube.
 
 Esta característica es compatible con:
 
