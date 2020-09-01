@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193819"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89280937"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Agregar dispositivos a Windows AutoPilot
 
@@ -92,7 +92,7 @@ El punto de conexión de Microsoft Configuration Manager recopila automáticamen
 
 ### <a name="collecting-the-hardware-hash-from-existing-devices-using-powershell"></a>Recopilación del hash de hardware de dispositivos existentes con PowerShell
 
-El hash de hardware de un dispositivo existente está disponible a través de Instrumental de administración de Windows (WMI), siempre que el dispositivo ejecute una versión compatible del canal semianual de Windows 10. Puede usar un script de PowerShell ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) para obtener el número de serie y el hash de hardware de un dispositivo. El número de serie es útil para ver rápidamente a qué dispositivo pertenece el hash de hardware.
+El hash de hardware de un dispositivo existente está disponible a través de Instrumental de administración de Windows (WMI), siempre que el dispositivo ejecute una versión compatible del canal semianual de Windows 10. Puede usar un script de PowerShell ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) para obtener el número de serie y el hash de hardware de un dispositivo. El número de serie es útil para ver rápidamente a qué dispositivo pertenece el hash de hardware.
 
 Para usar este script, puede usar cualquiera de los métodos siguientes:
 - Descárguelo del Galería de PowerShell y ejecútelo en cada equipo.
