@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700306"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993478"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Novedades de la versión 1910 de la rama actual de Configuration Manager
 
@@ -134,7 +134,7 @@ Para más información, vea [Caché con conexión de Microsoft en Configuration 
 
 Ahora puede agregar la evaluación de líneas base de configuración personalizadas como regla de evaluación de las directivas de cumplimiento. Al crear o editar una línea base de configuración, ahora existe la posibilidad de usar la opción **Evaluar la línea base como parte de la evaluación de las directivas de cumplimiento**. Al agregar o editar una regla de directivas de cumplimiento, tiene una condición denominada **Incluir las líneas base configuradas en la evaluación de las directivas de cumplimiento**.
 
-Respecto a los dispositivos administrados conjuntamente, al configurar Intune para que tome los resultados de la evaluación de cumplimiento de Configuration Manager como parte del estado general de cumplimiento, esta información se envía a Azure Active Directory, lo cual le permite usarla para el acceso condicional a los recursos de Office 365.
+Respecto a los dispositivos administrados conjuntamente, al configurar Intune para que tome los resultados de la evaluación de cumplimiento de Configuration Manager como parte del estado general de cumplimiento, esta información se envía a Azure Active Directory, lo cual le permite usarla para el acceso condicional a los recursos de Microsoft 365.
 
 Para más información, vea [Inclusión de líneas base de configuración personalizadas como parte de la evaluación de las directivas de cumplimiento](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 

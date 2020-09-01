@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700289"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819684"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Novedades de la versión 2006 de la rama actual de Configuration Manager
 
@@ -31,6 +31,13 @@ Para aprovechar al máximo las nuevas características de Configuration Manager,
 > Para obtener una notificación cuando se actualice esta página, copie y pegue la siguiente dirección URL en su lector de fuentes RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Asociación de inquilinos de Microsoft Endpoint Manager
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Asociación de inquilinos: Directivas del Antivirus de Microsoft Defender en el Centro de administración de Microsoft Endpoint Manager.
+<!--4812909-->
+Ahora puede crear directivas de Antivirus de Microsoft Defender en la consola de Microsoft Endpoint Manager e implementarlas en las recopilaciones de Configuration Manager. Para obtener más información, incluidas las instrucciones detalladas y la configuración disponible, consulte los siguientes artículos:
+- [Asociación de inquilinos: incorporación de clientes de Configuration Manager a ATP de Microsoft Defender desde el centro de administración (versión preliminar)](../../../tenant-attach/atp-onboard.md)
+- [Asociación de inquilinos: implementación de la directiva de antivirus de seguridad de punto de conexión desde el centro de administración (versión preliminar)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Configuración de la directiva de Antivirus de Microsoft Defender para dispositivos con asociación de inquilinos en Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
 
 ### <a name="install-applications-from-the-admin-center"></a>Instalación de aplicaciones desde el centro de administración
 <!--7518897, 6024389-->
@@ -124,7 +131,7 @@ Para adaptarse mejor a los requisitos de Análisis de escritorio para los datos 
 
 | Versión 2006 y posteriores | Versión 2002 y anteriores |
 |---------|---------|
-| Obligatorio | Básico |
+| Requerido | Básico |
 | Opcional (limitado) | Mejorado (limitado) |
 | N/D | Mejorada |
 | Opcional | Completo |

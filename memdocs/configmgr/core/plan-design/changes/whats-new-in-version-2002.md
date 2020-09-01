@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700572"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993342"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novedades de la versión 2002 de la rama actual de Configuration Manager
 
@@ -312,13 +312,13 @@ Ahora Configuration Manager detecta si una actualización de la pila de servicio
 
 Para obtener más información, vea [Planear actualizaciones de software](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>Actualizaciones de Office 365 para puntos de actualización de software desconectados
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>Actualizaciones de Microsoft 365 para puntos de actualización de software desconectados
 
 <!-- 4065163 -->
 
-Puede usar una nueva herramienta para importar actualizaciones de Office 365 desde un servidor de WSUS conectado a Internet en un entorno de Configuration Manager desconectado. Anteriormente, cuando exportaba e importaba metadatos para software actualizado en entornos desconectados, no podía implementar las actualizaciones de Office 365. Las actualizaciones de Office 365 requieren metadatos adicionales descargados de una API de Office y la red CDN de Office, lo cual no es posible en entornos desconectados.
+Puede usar una nueva herramienta para importar actualizaciones de Microsoft 365 desde un servidor de WSUS conectado a Internet en un entorno de Configuration Manager desconectado. Anteriormente, cuando exportaba e importaba metadatos de software actualizado en entornos desconectados, no podía implementar actualizaciones de Microsoft 365. Las actualizaciones de Microsoft 365 requieren metadatos adicionales descargados de una API de Office y la red CDN de Office, lo cual no es posible en entornos desconectados.
 
-Para obtener más información, consulte [Sincronización de actualizaciones de Office 365 desde un punto de actualización de software desconectado](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+Para más información, vea [Sincronización de actualizaciones de Microsoft 365 desde un punto de actualización de software desconectado](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

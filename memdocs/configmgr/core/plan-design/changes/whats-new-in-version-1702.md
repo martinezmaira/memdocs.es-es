@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5c125bc92c8949384486c7efc03cea122258092e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692798"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993512"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novedades de la versión 1702 de Configuration Manager
 
@@ -220,11 +220,11 @@ A partir de esta versión, al actualizar la versión de Windows ADK y usar las a
 
 ## <a name="software-updates"></a>Actualizaciones de software
 
-### <a name="deploy-office-365-apps-to-clients"></a>Implementar aplicaciones de Office 365 en clientes
-A partir de la versión 1702, desde el panel Administración de clientes de Office 365, puede iniciar el Instalador de Office 365, que le permite configurar las opciones de instalación de Office 365, descargar archivos desde redes de entrega de contenido (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para obtener información, consulte [Administración de actualizaciones de Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
+### <a name="deploy-microsoft-365-apps-to-clients"></a>Implementación de Aplicaciones de Microsoft 365 en clientes
+A partir de la versión 1702, desde el panel Administración de clientes de Office 365, puede iniciar el Instalador de Office 365, que le permite configurar las opciones de instalación, descargar archivos desde redes de entrega de contenido (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para obtener más información, consulte [Administrar actualizaciones de Aplicaciones de Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
-> Configuration Manager no administra automáticamente la aplicación de Office 365 creada e implementada con el Asistente para aplicaciones de Office 365 en Configuration Manager hasta que habilite de nuevo la configuración **Habilitar administración del Agente cliente de Office 365** del Agente cliente de actualizaciones de software. Para obtener información detallada, vea [Acerca de la configuración de cliente](../../clients/deploy/about-client-settings.md).
+> Configuration Manager no administra automáticamente la aplicación de Microsoft 365 creada e implementada con el Asistente para aplicaciones de Office 365 en Configuration Manager hasta que habilite de nuevo la configuración **Habilitar administración del Agente cliente de Office 365** del agente cliente de actualizaciones de software. Para obtener información detallada, vea [Acerca de la configuración de cliente](../../clients/deploy/about-client-settings.md).
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>Administración de archivos de instalación rápida para actualizaciones de Windows 10
 A partir de la versión 1702, Configuration Manager admite archivos de instalación rápida para las actualizaciones de Windows 10. Cuando use una versión compatible con Windows 10, puede usar la configuración de Configuration Manager para descargar solo los cambios entre la actualización acumulativa de Windows 10 del mes actual y la actualización del mes anterior. Sin los archivos de instalación rápida, Configuration Manager descarga cada mes la actualización acumulativa completa de Windows 10 (incluidas todas las actualizaciones de los meses anteriores). Usar los archivos de instalación rápida proporciona descargas más pequeñas y tiempos de instalación más rápidos en los clientes. Para obtener información detallada, vea [Administración de archivos de instalación rápida para actualizaciones de Windows 10](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).

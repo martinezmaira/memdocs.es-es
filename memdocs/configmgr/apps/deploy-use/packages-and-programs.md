@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2c125212a13790e196d001f53411633d1e42d4f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c87ae35fa3e5a76c57342a0d1cad4167b0f14685
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689293"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895964"
 ---
 # <a name="packages-and-programs-in-configuration-manager"></a>Paquetes y programas en Configuration Manager
 
@@ -67,7 +67,9 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
     - **Carpeta de origen**: si el paquete contiene archivos de origen, haga clic en **Examinar** para abrir el cuadro de diálogo **Establecer carpeta de origen** y, después, especifique la ubicación de los archivos de origen del paquete.  
 
         > [!NOTE]  
-        > La cuenta de equipo del servidor de sitio debe tener permisos de acceso de lectura a la carpeta de origen que especifique.  
+        > La cuenta de equipo del servidor de sitio debe tener permisos de acceso de lectura a la carpeta de origen que especifique.
+        >
+        > Windows limita la ruta de acceso de origen a 256 caracteres como máximo. Este límite se aplica al origen del paquete y a las aplicaciones. Para obtener más información, vea [Nomenclatura de archivos, rutas de acceso y espacios de nombres](/windows/win32/fileio/naming-a-file).
 
     - A partir de la versión 1906, si quiere almacenar previamente en caché contenido en un cliente, especifique la **Arquitectura** y el **Lenguaje** de la imagen. Para obtener más información, vea [Configuración del contenido de la caché previa](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
@@ -87,7 +89,7 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
         > [!NOTE]  
         > El nombre del programa debe ser único dentro de un paquete. Después de crear un programa, no puede modificar su nombre.  
 
-    - **Línea de comandos**: escriba la línea de comandos que se va a usar para iniciar este programa, o bien haga clic en **Examinar** para ir a la ubicación del archivo.  
+    - **Línea de comandos**: escriba la línea de comandos que se usará para iniciar este programa o seleccione **Examinar** para ir a la ubicación del archivo.  
 
         Si no especifica una extensión para un nombre de archivo, Configuration Manager intentará usar .com, .exe y .bat como posibles extensiones.  
 
@@ -101,9 +103,9 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
     - **Carpeta de inicio** (opcional): especifique la carpeta desde la que se ejecuta el programa, con un máximo de 127 caracteres. Esta carpeta puede ser una ruta de acceso absoluta en el cliente. También puede ser una ruta de acceso relacionada con la carpeta del punto de distribución que contiene el paquete.
 
-    - **Ejecutar**: especifique el modo en el que se ejecuta el programa en los equipos cliente. Seleccione una de las siguientes opciones:  
+    - **Ejecutar**: especifique el modo en que se ejecutará el programa en los equipos cliente. Seleccione una de las siguientes opciones:  
 
-        - **Normal**: el programa se ejecuta en el modo normal según los valores predeterminados del programa y del sistema. Este es el modo predeterminado.  
+        - **Normal**: el programa se ejecuta en el modo normal basado en los valores predeterminados del programa y del sistema. Este es el modo predeterminado.  
 
         - **Minimizado**: el programa se ejecuta minimizado en los dispositivos cliente. Los usuarios pueden ver la actividad de instalación en el área de notificación o la barra de tareas.  
 
@@ -111,7 +113,7 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
         - **Oculto**: el programa se ejecuta de forma oculta en los dispositivos cliente. Los usuarios no ven ninguna actividad de instalación.  
 
-    - **El programa se puede ejecutar**: especifique si el programa se ejecuta solo cuando un usuario ha iniciado sesión, solo cuando ningún usuario ha iniciado sesión o sin importar si un usuario ha iniciado sesión en el equipo cliente.  
+    - **El programa se puede ejecutar**: especifique si el programa se ejecuta solo cuando un usuario haya iniciado sesión, solo cuando ningún usuario haya iniciado sesión o si se ejecutará independientemente de si un usuario ha iniciado sesión en el equipo cliente.  
 
     - **Modo de ejecución**: especifique si el programa se ejecuta con permisos administrativos o con los permisos del usuario que tenga la sesión actualmente iniciada.  
 
@@ -122,23 +124,23 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
     - **Modo de unidad**: especifique información sobre cómo se ejecuta este programa en la red. Elija una de las siguientes opciones:  
 
-        - **Se ejecuta con nombre UNC**: especifique que el programa se ejecuta con un nombre de convención de nomenclatura universal (UNC). Esta configuración es la predeterminada.  
+        - **Se ejecuta con nombre UNC**: indica que el programa se ejecuta con un nombre de convención de nomenclatura universal (UNC). Esta es la configuración predeterminada.  
 
-        - **Requiere letra de unidad**: indica que el programa requiere una letra de unidad para que su ubicación esté completa. Para esta configuración, Configuration Manager puede usar cualquier letra de unidad disponible en el cliente.  
+        - **Requiere una letra de unidad**: indica que el programa requiere una letra de unidad para que su ubicación esté completa. Para esta configuración, Configuration Manager puede usar cualquier letra de unidad disponible en el cliente.  
 
-        - **Requiere una letra de unidad específica**: especifique que el programa requiere una letra de unidad concreta que establezca para que su ubicación esté completa. Por ejemplo, **Z:** . Si el cliente ya usa la letra de unidad especificada, el programa no se ejecuta.  
+        - **Requiere una letra de unidad específica**: indica que el programa requiere la letra de unidad específica que establezca para que su ubicación esté completa. Por ejemplo, **Z:**. Si el cliente ya usa la letra de unidad especificada, el programa no se ejecuta.  
 
-    - **Reconectarse al punto de distribución al iniciar sesión**: especifique si el cliente se vuelve a conectar al punto de distribución cuando el usuario inicia sesión. De forma predeterminada, el asistente no habilita esta opción.
+    - **Reconectarse al punto de distribución al iniciar sesión**: indique si el cliente se vuelve a conectar al punto de distribución cuando el usuario inicie sesión. De forma predeterminada, el asistente no habilita esta opción.
 
 3. En la página **Requisitos** del **Asistente para crear paquetes y programas**, especifique la información siguiente:  
 
-    - **Ejecutar otro programa primero**: identifica un paquete y programa que se ejecutan antes de este paquete y programa.  
+    - **Ejecutar otro programa primero**: identifique un paquete y un programa que se ejecutarán antes de que lo hagan este paquete y programa.  
 
     - **Requisitos de la plataforma**: Seleccione **Este programa puede ejecutarse en cualquier plataforma** o **Este programa solo puede ejecutarse en las plataformas especificadas**. Después, elija las versiones de sistema operativo que los clientes deben tener para instalar este paquete y programa.  
 
-    - **Espacio en disco estimado**: especifique la cantidad de espacio en disco que necesita el programa para ejecutarse en el equipo. El valor predeterminado es **Desconocido**. Si es necesario, especifique un número entero mayor o igual que cero. Si establece un valor, seleccione también unidades para el valor.  
+    - **Espacio en disco estimado**: especifique la cantidad de espacio en disco que requiere el programa para poder ejecutarse en el equipo. El valor predeterminado es **Desconocido**. Si es necesario, especifique un número entero mayor o igual que cero. Si establece un valor, seleccione también unidades para el valor.  
 
-    - **Duración máxima permitida de la ejecución (minutos)** : especifica el tiempo máximo que espera el programa para ejecutarse en el equipo cliente. El valor predeterminado es **120** minutos. Use solo números enteros mayores que cero.  
+    - **Duración máxima permitida de la ejecución (minutos)**: especifique la duración máxima que espera que el programa se ejecute en el equipo cliente. El valor predeterminado es **120** minutos. Use solo números enteros mayores que cero.  
 
         > [!IMPORTANT]  
         > Si usa ventanas de mantenimiento en la misma recopilación en la que se ejecuta este programa, puede producirse un conflicto si el **Tiempo de ejecución máximo permitido** es mayor que la ventana de mantenimiento programada. Si el tiempo de ejecución máximo se establece en **Desconocido**, el programa empieza a ejecutarse durante la ventana de mantenimiento. Después, sigue ejecutándose cuando sea necesario una vez que se ha cerrado la ventana de mantenimiento. Si establece el tiempo de ejecución máximo en un periodo concreto que sea superior a la duración de alguna ventana de mantenimiento disponible, el cliente no ejecutará el programa.  
@@ -170,7 +172,7 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
     - **Ejecutar línea de comandos en carpeta de descarga**: seleccione esta opción para ejecutar el programa desde la carpeta de descarga.  
 
-    - **Ejecutar línea de comandos desde esta carpeta**: seleccione esta opción para especificar otra carpeta desde la que se va a ejecutar el programa.  
+    - **Ejecutar línea de comandos desde esta carpeta**: seleccione esta opción para especificar una carpeta distinta desde la que se ejecutará el programa.  
 
 3. En la página **Requisitos**, especifique la siguiente configuración:  
 
@@ -194,11 +196,11 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
 5. En la página **Configuración de implementación**, configure las siguientes opciones:  
 
-    - **Finalidad**: Elija una de las siguientes opciones:
+    - **Finalidad**: elija una de las siguientes opciones:
 
         - **Disponible**: El usuario verá el paquete y el programa publicados en el Centro de software y los podrá instalar a petición.  
 
-        - **Requerido**: el paquete y el programa se implementan de forma automática según la programación configurada. En el Centro de software, puede realizar un seguimiento de su estado de implementación e instalarlos antes de la fecha límite.  
+        - **Requerido**: el paquete y el programa se implementan automáticamente según la programación configurada. En el Centro de software, puede realizar un seguimiento de su estado de implementación e instalarlos antes de la fecha límite.  
 
         > [!NOTE]
         > Si varios usuarios inician sesión en el dispositivo, es posible que las implementaciones de paquete y secuencia de tareas no aparezcan en el centro de Software.
@@ -216,12 +218,12 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
     En el caso de las implementaciones **requeridas**, configure el comportamiento de volver a ejecutar el programa en el menú desplegable **comportamiento de volver a ejecutar** . Elija entre las siguientes opciones:  
 
-    | comportamiento de reejecución | Descripción |
+    | comportamiento de reejecución | Description |
     |----------------|-------------|
     | **No volver a ejecutar nunca el programa implementado** | El cliente no volverá a ejecutar el programa. Este comportamiento sucederá incluso aunque se haya producido originalmente un error en el programa o se hayan cambiado los archivos de programa. |
-    | **Volver a ejecutar siempre el programa** | el cliente siempre vuelve a ejecutar el programa cuando se programa la implementación. Este comportamiento se produce incluso si el programa ya se ha ejecutado correctamente. Resulta útil dadas las implementaciones periódicas al actualizar el programa. |
+    | **Siempre vuelva a ejecutar el programa** | el cliente siempre vuelve a ejecutar el programa cuando se programa la implementación. Este comportamiento se produce incluso si el programa ya se ha ejecutado correctamente. Resulta útil dadas las implementaciones periódicas al actualizar el programa. |
     | **Volver a ejecutar en caso de error del intento anterior** | El cliente vuelve a ejecutar el programa cuando se programa la implementación solo si se produjo un error en el intento de ejecución anterior. |
-    | **Volver a ejecutar si el intento anterior se realizó correctamente** | El cliente vuelve a ejecutar el programa solo si previamente se ejecutó correctamente en el cliente. Este comportamiento es útil con las implementaciones periódicas cuando el programa se actualiza de forma regular y cada actualización requiere que la actualización anterior esté correctamente instalada. |
+    | **Vuelva a ejecutar si se realizó correctamente en el intento anterior** | El cliente vuelve a ejecutar el programa solo si previamente se ejecutó correctamente en el cliente. Este comportamiento es útil con las implementaciones periódicas cuando el programa se actualiza de forma regular y cada actualización requiere que la actualización anterior esté correctamente instalada. |
 
 7. En la página **Experiencia del usuario** , especifique la siguiente información:  
 
@@ -229,9 +231,9 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
     - **Instalación de software**: permite que el software se instale fuera de las ventanas de mantenimiento configuradas.  
 
-    - **Reinicio del sistema (si es necesario para completar la instalación)** : si la instalación de software requiere un reinicio del dispositivo para completarse, permita que esta acción se produzca fuera de las ventanas de mantenimiento configuradas.  
+    - **Reinicio del sistema (si es necesario para completar la instalación)**: si la instalación de software requiere un reinicio del dispositivo para completarse, permite que esta acción se produzca fuera de las ventanas de mantenimiento configuradas.  
 
-    - **Dispositivos de Embedded**: cuando implemente paquetes y programas en dispositivos de Windows Embedded habilitados con filtro de escritura, puede especificar que instalen los paquetes y programas en la superposición temporal y confirmar los cambios más tarde. También puede confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar y los cambios se conservan en el dispositivo.  
+    - **Dispositivos incrustados**: cuando implementa paquetes y programas en dispositivos de Windows Embedded habilitados con filtro de escritura, puede especificar que instalen los paquetes y programas en la superposición temporal y confirmar los cambios más tarde. También puede confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar y los cambios se conservan en el dispositivo.  
 
         > [!NOTE]  
         > Al implementar un paquete o programa a un dispositivo de Windows Embedded, asegúrese de que el dispositivo es un miembro de una colección que tiene una ventana de mantenimiento configurada. Para obtener más información sobre cómo se usan las ventanas de mantenimiento al implementar paquetes y programas en dispositivos de Windows Embedded, vea [Creación de aplicaciones de Windows Embedded](../get-started/creating-windows-embedded-applications.md).  
@@ -243,7 +245,7 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
         > [!IMPORTANT]  
         > Si establece la opción de implementación en **Ejecutar programa desde el punto de distribución**, asegúrese de habilitar la opción **Copiar el contenido de este paquete en un recurso compartido de paquete en los puntos de distribución** en la pestaña **Acceso a datos** de las propiedades del paquete. De lo contrario, el paquete no estará disponible para ejecutarse desde puntos de distribución.  
 
-    - **Permitir que los clientes usen puntos de distribución del grupo de límite del sitio predeterminado**: cuando este contenido no esté disponible desde ningún punto de distribución de los grupos de límites actuales o vecinos, habilite esta opción para permitirles probar puntos de distribución en el grupo de límites predeterminado del sitio.
+    - **Permitir a los clientes usar puntos de distribución del grupo de límites del sitio predeterminado**: cuando este contenido no esté disponible desde ningún punto de distribución en los grupos de límites actuales o vecinos, habilite esta opción para permitirles probar puntos de distribución en el grupo de límites predeterminado del sitio.
 
 9. Complete el asistente.  
 
@@ -269,15 +271,15 @@ Abre el **Asistente para crear archivos de contenido preconfigurados** para crea
 
 ### <a name="create-program"></a>Crear el programa
 
-Abre el **Asistente para crear programas**  para crear un nuevo programa para este paquete.
+Abre el **Asistente para crear programas ** para crear un nuevo programa para este paquete.
 
-### <a name="export"></a>Exportar
+### <a name="export"></a>Exportación
 
 Abre el **Asistente para exportar paquete** para exportar el paquete seleccionado y su contenido en un archivo. Use este archivo para importar el archivo en otra jerarquía.
 
 Para información sobre cómo importar paquetes y programas, consulte [Crear un paquete y programa](#create-a-package-and-program).
 
-### <a name="deploy"></a>Implementar
+### <a name="deploy"></a>Implementación
 
 Abre el **Asistente para implementar software** para implementar el paquete y el programa seleccionados en una recopilación. Para más información, vea [Implementar paquetes y programas](#deploy-packages-and-programs).
 
@@ -290,7 +292,7 @@ Abre el **Asistente para distribuir contenido**, que envía el contenido para el
 Actualiza los puntos de distribución con el contenido más reciente para el programa y el paquete seleccionados.
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Scripts](create-deploy-scripts.md)
 

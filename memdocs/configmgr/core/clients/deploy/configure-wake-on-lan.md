@@ -2,7 +2,7 @@
 title: Configurar Wake On LAN
 titleSuffix: Configuration Manager
 description: Seleccione la configuración de Wake On LAN en Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127042"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907854"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Cómo configurar Wake On LAN en Configuration Manager
 
@@ -27,7 +27,7 @@ Especifique la configuración de Wake On LAN para Configuration Manager cuando
 <!--3607710-->
 A partir de Configuration Manager 1810, hay una manera nueva de reactivar los equipos en suspensión. Puede reactivar clientes desde la consola de Configuration Manager aunque el cliente no esté en la misma subred que el servidor de sitio. Si necesita realizar tareas de mantenimiento o consultar dispositivos, no se ve limitado por los clientes remotos que están inactivos. El servidor de sitio usa el canal de notificación de cliente para identificar otros clientes que están activos en la misma subred remota y usa a esos clientes para enviar una solicitud de activación por LAN (paquete mágico). Usar el canal de notificación de cliente ayuda a evitar oscilaciones de la dirección MAC, que podrían provocar que el enrutador apague el puerto. La nueva versión de Wake on LAN se puede habilitar al mismo tiempo que la [versión anterior](#bkmk_wol-previous).
 
-### <a name="limitations"></a>Limitaciones
+### <a name="prerequisites-and-limitations"></a>Requisitos previos y limitaciones
 <!--7323898, 7363492-->
 - Al menos un cliente en la subred de destino debe estar activo.
 - Esta característica no es compatible con las siguientes tecnologías de red:
@@ -38,6 +38,8 @@ A partir de Configuration Manager 1810, hay una manera nueva de reactivar los eq
 - Los equipos solo se reactivan cuando reciben la notificación de cliente **Reactivar**.
     - Para realizar una reactivación cuando se alcanza una fecha límite, se usa la versión anterior de Wake on LAN.
     -  Si no está habilitada la versión anterior, no se producirá la reactivación del cliente para las implementaciones creadas con la configuración **Usar Wake-on-LAN para activar clientes para las implementaciones requeridas** o **Enviar paquetes de reactivación**.  
+- La duración de la concesión de DHCP no se puede establecer en infinita. <!--8018584-->
+   - Es posible que vea que SleepAgent_&lt;*dominio*\>@SYSTEM_0.log se vuelva muy grande y, posiblemente, una tormenta de difusión en entornos en los que las concesiones de DHCP están configuradas con duración infinita.  
 
 ### <a name="security-role-permissions"></a>Permisos del rol de seguridad
 

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694515"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995490"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funciones de Technical Preview 1511 de Configuration Manager
 
@@ -50,24 +50,24 @@ Configuration Manager no podrá informar sobre el estado de cumplimiento (incluy
 
 5.  Los equipos que se administran a través de WUfB, mostrarán el valor **Desconocido** en el estado de cumplimiento y no se tendrán en cuenta como parte del porcentaje total de cumplimiento.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Administración de la actualización de cliente de Office 365 ProPlus a través de Configuration Manager  
- Configuration Manager tiene ahora la capacidad de administrar actualizaciones de cliente para equipos de escritorio de Office 365 mediante el flujo de trabajo de administración de actualizaciones de software de Configuration Manager.    
-Cuando Microsoft publica una nueva actualización de cliente para equipos de escritorio de Office 365 para Windows Server Updates Services (WSUS), Configuration Manager puede sincronizar la actualización con su catálogo si la actualización de Office 365 está configurada para ser parte de la sincronización del catálogo.  El servidor de sitio de Configuration Manager descarga las actualizaciones de cliente de Office 365 y distribuye el paquete a los puntos de distribución de Configuration Manager.  Luego, el cliente de Configuration Manager informa a los clientes para equipos de escritorio de Office 365 de dónde obtener las actualizaciones y de cuándo iniciar el proceso de instalación de las mismas.  
+##  <a name="managing-microsoft-365-apps-for-enterprise-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Administración de la actualización del cliente de Aplicaciones de Microsoft 365 para empresas a través de Configuration Manager  
+Configuration Manager tiene ahora la capacidad de administrar actualizaciones de cliente para equipos de escritorio de Microsoft 365 mediante el flujo de trabajo de Administración de actualizaciones de software de Configuration Manager.
+Cuando Microsoft publica una nueva actualización de cliente para equipos de escritorio de Microsoft 365 para Windows Server Updates Services (WSUS), Configuration Manager podrá sincronizar la actualización con su catálogo si la actualización de Microsoft 365 está configurada para ser parte de la sincronización del catálogo.  El servidor de sitio de Configuration Manager descargará las actualizaciones de cliente de Microsoft 365 y distribuirá el paquete a los puntos de distribución de Configuration Manager.  Luego, el cliente de Configuration Manager informará a los clientes para equipos de escritorio de Microsoft 365 de dónde obtener las actualizaciones y de cuándo iniciar el proceso de instalación de estas.  
 
 **Requisitos previos para este escenario:**  
 
 ### <a name="try-it-out"></a>Haga la prueba  
  Intente realizar la siguiente tarea y después use la información de comentarios que se encuentra al principio de este tema para hacernos saber cómo ha funcionado:  
 
-1. Puede sincronizar actualizaciones de Office 365 con el servidor de sitio de Configuration Manager y verlas desde la consola de Configuration Manager.  
+1. Puede sincronizar actualizaciones de Microsoft 365 con el servidor de sitio de Configuration Manager y verlas desde la consola de Configuration Manager.  
 
-2. Puede aprobar e implementar correctamente actualizaciones de Office 365.  
+2. Puede aprobar e implementar correctamente actualizaciones de Microsoft 365.  
 
-3. Puede descargar correctamente las actualizaciones de Office 365 para los clientes.  
+3. Puede descargar correctamente las actualizaciones de Microsoft 365 para los clientes.  
 
-4. Puede comprobar el funcionamiento de las actualizaciones de Office 365 supervisándolas o creando informes con la consola.  
+4. Puede comprobar el funcionamiento de las actualizaciones de Microsoft 365 supervisándolas o creando informes con la consola.  
 
-   Para obtener los pasos detallados, vea [Administrar las actualizaciones de cliente de Office 365 con Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Para obtener los pasos detallados, vea [Administrar las actualizaciones de cliente de Microsoft 365 con Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Compatibilidad con SQL Server AlwaysOn para bases de datos de alta disponibilidad  
  Configuration Manager ahora admite el uso de grupos de disponibilidad de SQL Server AlwaysOn para hospedar la base de datos del sitio.  Cuando instale un sitio nuevo, podrá indicar al programa de instalación que use el grupo de disponibilidad en lugar de una instancia normal de SQL Server.  

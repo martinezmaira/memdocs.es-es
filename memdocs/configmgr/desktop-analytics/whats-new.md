@@ -2,7 +2,7 @@
 title: Novedades de Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Resumen de las nuevas características de la última versión mensual del servicio en la nube Análisis de escritorio.
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: dd188b80375861cd08784d0574e737bfce7f2d92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614741"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993153"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novedades de Análisis de escritorio
 
@@ -39,6 +39,12 @@ La configuración de la **importancia** de una aplicación es esencial para que 
 Ahora, para cualquier aplicación que implemente con Configuration Manager, Análisis de escritorio lo configura automáticamente como importante de forma predeterminada. Este comportamiento le permite configurar las aplicaciones en el entorno con más rapidez para agilizar la implementación de producción.
 
 Para más información, vea [Recursos: aplicaciones](about-assets.md#apps).
+
+<!-- 6049643 -->
+
+### <a name="improved-processing-of-diagnostic-data-during-snapshot-generation"></a>Procesamiento mejorado de datos de diagnóstico durante la generación de instantáneas
+
+Microsoft ha mejorado el modo en que recopila y procesa los datos de diagnóstico de Windows de los dispositivos inscritos en Análisis de escritorio. Estas mejoras aumentan la confiabilidad de la generación diaria de instantáneas y preparan el entorno para las nuevas características en desarrollo. Como resultado de este trabajo, Microsoft ha deshabilitado temporalmente el recuento de **Dispositivos que han iniciado esta aplicación durante los últimos 30 días** en los planes de implementación. Para más información, vea [Recursos: aplicaciones](about-assets.md#usage).
 
 ## <a name="july-2020"></a>Julio de 2020
 
@@ -66,7 +72,7 @@ Ahora el portal de Análisis de escritorio puede mostrar banners de notificació
 
 ### <a name="improvement-to-prerequisites"></a>Mejoras de los requisitos previos
 
-Análisis de escritorio ya no requiere la implementación de un servicio de Office 365 en su inquilino de Azure Active Directory (Azure AD). La aplicación de **administración del cliente de Office 365** en Azure AD ahora es **Análisis de escritorio** para permitir a Configuration Manager recuperar información y el estado del servicio.
+Análisis de escritorio ya no requiere la implementación de un servicio de Microsoft 365 en su inquilino de Azure Active Directory (Azure AD). La aplicación de **administración del cliente de Office 365** en Azure AD ahora es **Análisis de escritorio** para permitir a Configuration Manager recuperar información y el estado del servicio.
 
 ## <a name="may-2020"></a>Mayo de 2020
 

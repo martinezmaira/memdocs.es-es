@@ -10,12 +10,12 @@ ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7db3c587d592f7ef972e53a8bbdc2b27da1abbf4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ed0cb60e07482ec3a9088eaa468bce9e5e9c9408
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126552"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994538"
 ---
 # <a name="diagnostic-and-usage-data-for-version-2002"></a>Datos de diagnóstico y uso en la versión 2002
 
@@ -176,7 +176,7 @@ En el caso de la versión 2002 de Configuration Manager, este nivel incluye los
 
 - Recuento de personalizaciones de marca distintivas de catálogo de aplicaciones  
 
-- Recuento de aplicaciones de Office 365 creadas con el panel  
+- Recuento de aplicaciones de Microsoft 365 creadas con el panel  
 
 - Número de paquetes por tipo  
 
@@ -226,7 +226,7 @@ En el caso de la versión 2002 de Configuration Manager, este nivel incluye los
 
 - Estadísticas acumuladas sobre el uso de los grupos de aplicaciones
 
-- Estadísticas acumuladas sobre los complementos de Office, el uso de Office Readiness Toolkit y los recuentos de clientes con Office 365 ProPlus
+- Estadísticas acumuladas sobre los complementos de Office, el uso de Office Readiness Toolkit y los recuentos de clientes con Aplicaciones de Microsoft 365 para empresas
 
 - Estadísticas acumuladas sobre el estado de los complementos de Office
 
@@ -480,7 +480,7 @@ En el caso de la versión 2002 de Configuration Manager, este nivel incluye los
 
 - Configuraciones que se usan para planes de mantenimiento activos de Windows 10  
 
-- Recuento de actualizaciones implementadas de Office 365  
+- Recuento de actualizaciones de Microsoft 365 implementadas  
 
 - Recuento de controladores de Microsoft Surface sincronizados  
 

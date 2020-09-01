@@ -2,11 +2,11 @@
 
 ## [¿Qué es la inscripción de dispositivos?](use-managed-devices-to-get-work-done.md)
 
-## [¿Qué información puede ver mi empresa con Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [¿Qué información puede ver mi organización?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Requisitos de contraseña de dispositivo](password-does-not-meet-it-administrator-requirements.md)
 
-## [Iniciar sesión en el Portal de empresa](sign-in-to-the-company-portal.md)  
+## [Cómo obtener acceso al Portal de empresa](sign-in-to-the-company-portal.md)  
 
 ## [Instalación de aplicaciones de Mobile Threat Defense](set-up-mobile-threat-defense.md)  
 
@@ -64,7 +64,6 @@
 
 ## [Uso de dispositivos iOS](using-your-iOS-device-with-intune.md)
 ### [Efectos del restablecimiento del dispositivo iOS](effects-of-device-reset-company-portal-ios.md)
-### [Instalación e inicio de sesión en el Portal de empresa](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Inscribir el dispositivo
 #### [Inscripción de dispositivos iOS](enroll-your-device-in-intune-ios.md)
 #### [Inscripción de un dispositivo iOS proporcionado por la organización](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [Envío de registros al equipo de soporte técnico de su empresa desde la aplicación Portal de empresa para Windows 10](send-logs-to-your-it-admin-cp-windows.md)
 #### [Envío de registros al equipo de soporte técnico de su empresa desde la aplicación Configuración para Windows 10](send-logs-to-your-it-admin-settings-windows.md)
 #### [La versión del sistema operativo de su dispositivo Windows todavía no es compatible](your-windows-version-isnt-yet-supported.md)
-#### [Instalación de Office 365 en dispositivos Windows 10](install-office-windows.md)
+#### [Instalación de Office en un dispositivo Windows 10](install-office-windows.md)
 #### [Necesita habilitar el cifrado](you-need-to-enable-windows-encryption.md)
 #### [El dispositivo necesita software antimalware](your-device-needs-antimalware-software.md)
 #### [Habilitación del arranque seguro](you-need-to-enable-secure-boot-windows.md)

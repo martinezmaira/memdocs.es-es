@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692832"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993393"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novedades de la versión 1706 de Configuration Manager
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>Infraestructura del sitio
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Compatibilidad con la caché del mismo nivel de cliente para archivos de instalación rápida en Windows 10 y Office 365  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Compatibilidad con la caché del mismo nivel de cliente para archivos de instalación rápida en Windows 10 y Microsoft 365  
 <!-- 1352486 -->
-A partir de esta versión, la caché del mismo nivel de cliente admite la distribución de archivos de instalación rápida de contenido para Windows 10, así como de archivos de actualización para Office 365. No se requiere ninguna configuración adicional para admitir este cambio.
+A partir de esta versión, la caché del mismo nivel de cliente admite la distribución de archivos de instalación rápida de contenido para Windows 10, así como de archivos de actualización para Microsoft 365. No se requiere ninguna configuración adicional para admitir este cambio.
 
 ### <a name="updates-for-the-data-warehouse"></a>Actualizaciones para el almacenamiento de datos
 <!-- 1277922 -->
@@ -227,8 +227,8 @@ Ahora puede configurar directivas de aplazamiento para actualizaciones de caract
 
 Para detalles, consulte [Integración con Windows Update for Business en Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>Mejora en las notificaciones de usuario para las actualizaciones de Office 365
-Se han hecho mejoras para aprovechar la experiencia de usuario Hacer clic y ejecutar de Office cuando un cliente instala una actualización de Office 365. Esto incluye notificaciones emergentes y en la aplicación y una experiencia de cuenta atrás. Para obtener más información, consulte [Comportamiento al reiniciar y notificaciones de cliente para las actualizaciones de Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>Mejora en las notificaciones de usuario para las actualizaciones de Microsoft 365
+Se han hecho mejoras para aprovechar la experiencia de usuario Hacer clic y ejecutar de Office cuando un cliente instala una actualización de Microsoft 365. Esto incluye notificaciones emergentes y en la aplicación y una experiencia de cuenta atrás. Para obtener más información, consulte [Comportamiento al reiniciar y notificaciones de cliente para las actualizaciones de Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="reporting"></a>Generación de informes
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d23880def99fd12bffe83efffe9768f94481d07e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904814"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993563"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Novedades de la versión 1610 de Configuration Manager
 
@@ -183,9 +183,9 @@ El panel muestra gráficos para lo siguiente:
 - Número de clientes de Office 365
 - Versiones de cliente de Office 365
 - Idiomas de cliente de Office 365
-- Canales de cliente de Office 365     
+- Canales de cliente de Office 365
 
-Para obtener información, consulte [Administración de actualizaciones de Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Para obtener más información, consulte [Administrar actualizaciones de Aplicaciones de Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI
 Ahora puede personalizar una secuencia de tareas de implementación de sistema operativo con una nueva variable, TSUEFIDrive, para que el paso **Reiniciar el equipo** prepare una partición FAT32 en la unidad de disco duro para la transición a UEFI. En el procedimiento siguiente se proporciona un ejemplo de cómo crear pasos de secuencia de tareas para preparar la unidad de disco duro para la conversión de BIOS en UEFI. Para obtener más información, consulte [Pasos de la secuencia de tareas para administrar la conversión de BIOS a UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).

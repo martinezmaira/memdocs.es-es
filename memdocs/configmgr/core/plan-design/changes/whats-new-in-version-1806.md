@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692645"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995014"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -235,7 +235,7 @@ Las siguientes cargas de trabajo ahora pueden pasar de Configuration Manager a I
 
 - **Configuración del dispositivo**<!--1357903-->: esta carga de trabajo le permite usar Intune para implementar directivas de MDM y seguir utilizando Configuration Manager para la implementación de aplicaciones.  
 
-- **Office 365**<!--1357841-->: los dispositivos no instalan implementaciones de Office 365 desde Configuration Manager.  
+- **Office 365**<!--1357841-->: los dispositivos no instalan implementaciones de Microsoft 365 desde Configuration Manager.  
 
 - **Aplicaciones móviles**<!--1357892-->: las aplicaciones disponibles implementadas desde Intune están disponibles en el Portal de empresa. Las aplicaciones implementadas desde Configuration Manager están disponibles en el Centro de software. Esta es una [característica de versión preliminar](../../servers/manage/pre-release-features.md).  
 
@@ -294,9 +294,9 @@ Para obtener más información, vea [Creación de aplicaciones Windows](../../..
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Integración de la Herramienta de personalización de Office en el instalador de Office 365
 <!--1358149-->
-La Herramienta de personalización de Office está ahora integrada con el programa de instalación de Office 365 en la consola de Configuration Manager. Al crear una implementación de Office 365, configure de manera dinámica la capacidad de administración más reciente de Office. Microsoft actualiza la Herramienta de personalización de Office cuando publica nuevas compilaciones de Office 365. Esta integración permite aprovechar la nueva capacidad de administración de Office 365 en cuanto está disponible. 
+La Herramienta de personalización de Office está ahora integrada con el programa de instalación de Office 365 en la consola de Configuration Manager. Al crear una implementación de Microsoft 365, configure de manera dinámica la capacidad de administración más reciente de Office. Microsoft actualiza la Herramienta de personalización de Office cuando publica nuevas compilaciones de Microsoft 365. Esta integración permite aprovechar la nueva capacidad de administración de Microsoft 365 en cuanto está disponible. 
 
-Para obtener más información, consulte [Implementación de aplicaciones de Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Para más información, consulte [Implementación de Aplicaciones de Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Compatibilidad con nuevos formatos de paquete de aplicaciones de Windows

@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698721"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995116"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novedades de la versión 1906 de la rama actual de Configuration Manager
 
@@ -94,7 +94,7 @@ Para obtener más información, vea [Información de administración](../../serv
     > [!Note]  
     > Este cambio no se aplica a los clústeres de SQL Server.
 
-- La recuperación del sitio puede volver a crear la base de datos en un grupo AlwaysOn de SQL. Este proceso funciona tanto con la inicialización manual como la automática.<!-- SCCMDocs-pr#3846 -->
+- La recuperación del sitio puede volver a crear la base de datos en un grupo Always On de SQL. Este proceso funciona tanto con la inicialización manual como la automática.<!-- SCCMDocs-pr#3846 -->
 
 - Comprobaciones de los requisitos previos para una instalación nueva:<!-- SCCMDocs-pr#3899 -->  
 
@@ -505,7 +505,7 @@ El hipervínculo **Ver las actualizaciones necesarias** está disponible en esta
    - **Biblioteca de software** > **Mantenimiento de Windows 10** > **Todas las actualizaciones de Windows 10**
    - **Biblioteca de software** > **Administración de clientes de Office 365** > **Actualizaciones de Office 365**
 
-Para más información, consulte [Supervisar actualizaciones de software](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Administración de Windows como servicio](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) y [Administración de las actualizaciones de Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Para más información, consulte [Supervisar actualizaciones de software](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Administración de Windows como servicio](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) y [Administrar actualizaciones de Aplicaciones de Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Administración de Office
@@ -514,7 +514,7 @@ Para más información, consulte [Supervisar actualizaciones de software](../../
 
 <!--4021125-->
 
-Para ayudarle a determinar qué dispositivos están listos para actualizar a Office 365 ProPlus, hay un nuevo panel de preparación. Incluye el icono de **Upgrade Readiness para Office 365 ProPlus** que se publicó en la versión 1902 de la rama actual de Configuration Manager. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Administración de clientes de Office 365** y seleccione el nodo **Upgrade Readiness para Office 365 ProPlus**.
+Para ayudar a determinar qué dispositivos están listos para actualizar a Aplicaciones de Microsoft 365 para empresas, hay un nuevo panel de preparación. Incluye el icono de **Upgrade Readiness para Office 365 ProPlus** que se publicó en la versión 1902 de la rama actual de Configuration Manager. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Administración de clientes de Office 365** y seleccione el nodo **Upgrade Readiness para Office 365 ProPlus**.
 
 Para más información sobre el panel, los requisitos previos y el uso de estos datos, consulte [Integración para la preparación de Office 365 ProPlus](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 

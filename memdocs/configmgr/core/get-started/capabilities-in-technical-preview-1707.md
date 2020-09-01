@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9ea860568d7f094588e628955f128e5b8a3aa154
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692985"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995422"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Funciones de Technical Preview 1707 de Configuration Manager
 
@@ -54,9 +54,9 @@ En este artículo se presentan las características disponibles en Technical Pre
  -  Task 2              
 -->
 
-## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Compatibilidad con la caché del mismo nivel de cliente para archivos de instalación rápida en Windows 10 y Office 365
+## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Compatibilidad con la caché del mismo nivel de cliente para archivos de instalación rápida en Windows 10 y Microsoft 365
 <!-- 1352486 -->
-A partir de esta versión, la caché del mismo nivel de cliente admite la distribución de archivos de instalación rápida de contenido para Windows 10, así como de archivos de actualización para Office 365. No se requiere ninguna configuración adicional.
+A partir de esta versión, la caché del mismo nivel de cliente admite la distribución de archivos de instalación rápida de contenido para Windows 10, así como de archivos de actualización para Microsoft 365. No se requiere ninguna configuración adicional.
 
 ## <a name="surface-device-dashboard"></a>Panel de Surface Device
 <!--1355788-->
@@ -70,7 +70,7 @@ Haga clic en una sección del gráfico **Modelos Surface** para obtener una list
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender
 <!-- 1351960 -->
 
-[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante las opciones de conformidad de Configuration Manager que establezca para, posteriormente, implementarla en una recopilación. Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Fall Creators Update (nombre de código: RS3). Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
+[Protección de aplicaciones de Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) es una nueva característica de Windows que ayuda a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo. En esta versión preliminar técnica, ya se admite la configuración de esta característica mediante las opciones de conformidad de Configuration Manager que establezca para, posteriormente, implementarla en una recopilación. Esta característica se publicará en la versión preliminar para la versión de 64 bits de Windows 10 Fall Creators Update (nombre de código: RS3). Para probar esta característica ahora debe estar utilizando una versión preliminar de esta actualización.
 
 ### <a name="before-you-start"></a>Antes de empezar
 

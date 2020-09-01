@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: faf8401e6aa89a60f2acbea8e0d97f9efaf09a84
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695773"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994470"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
@@ -66,7 +66,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 -->
 
 > [!IMPORTANT]
-> Configuration Manager no está incluido en el plan [Microsoft 365 Empresa](https://www.microsoft.com/microsoft-365/business).
+> Configuration Manager no está incluido en el plan [Microsoft 365 Empresa Premium](https://www.microsoft.com/microsoft-365/business).
 
 ### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> ¿Qué es lo que cambia con las licencias para administración conjunta en Microsoft Endpoint Manager?
 
@@ -102,6 +102,7 @@ La licencia de administración conjunta permite a los clientes de Configuration 
 |Administración de actualizaciones de software|Sí|Sí|
 |Tema de|Sí|Sí|
 |Administración de aplicaciones|Sí|Sí|
+|Borrado completo/selectivo remoto|Sí|Sí|
 |Asistencia remota<br>(Se requiere licencia de TeamViewer).|Sí|Sí|
 |Análisis de escritorio<br>(Se requieren licencias de suscripción de Windows).|Sí|No aplicable|
 |Asociación de inquilinos|Sí|No aplicable|

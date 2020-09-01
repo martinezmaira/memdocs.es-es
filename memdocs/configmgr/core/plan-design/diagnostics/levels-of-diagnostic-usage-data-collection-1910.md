@@ -10,12 +10,12 @@ ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 316cd4b532c248027def1f1cac4dfbe71476b0a4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e1bd8667a1b6a808b0e0cdd645562fafdd24ad95
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128610"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994521"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1910"></a>Datos de diagnóstico y uso en la versión 1910
 
@@ -158,7 +158,7 @@ En el caso de la versión 1910 de Configuration Manager, este nivel incluye los
 
 - Recuento de personalizaciones de marca distintivas de catálogo de aplicaciones  
 
-- Recuento de aplicaciones de Office 365 creadas con el panel  
+- Recuento de Aplicaciones de Microsoft 365 creadas con el panel  
 
 - Número de paquetes por tipo  
 
@@ -208,7 +208,7 @@ En el caso de la versión 1910 de Configuration Manager, este nivel incluye los
 
 - Estadísticas acumuladas sobre el uso de los grupos de aplicaciones
 
-- Estadísticas acumuladas sobre los complementos de Office, el uso de Office Readiness Toolkit y los recuentos de clientes con Office 365 ProPlus
+- Estadísticas acumuladas sobre los complementos de Office, el uso de Office Readiness Toolkit y los recuentos de clientes con Aplicaciones de Microsoft 365 para empresas
 
 - ***[Nuevo]*** Estadísticas acumuladas sobre el estado de los complementos de Office
 
@@ -446,7 +446,7 @@ En el caso de la versión 1910 de Configuration Manager, este nivel incluye los
 
 - Configuraciones que se usan para planes de mantenimiento activos de Windows 10  
 
-- Recuento de actualizaciones implementadas de Office 365  
+- Recuento de actualizaciones de Microsoft 365 implementadas  
 
 - Recuento de controladores de Microsoft Surface sincronizados  
 

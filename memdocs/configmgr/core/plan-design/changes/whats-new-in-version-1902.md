@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700374"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995252"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
@@ -351,27 +351,27 @@ Utilice Configuration Manager para mover las carpetas conocidas de Windows a One
 
 Para más información sobre esta característica de OneDrive para la Empresa, consulte [Redirigir y mover las carpetas conocidas de Windows a OneDrive](/onedrive/redirect-known-folders).
 
-Primero, [busque el identificador de inquilino de Office 365](/onedrive/find-your-office-365-tenant-id). Luego, implemente la versión de cliente de sincronización de OneDrive 18.111.0603.0004 o una versión posterior. Para más información, vea [Implementar aplicaciones de OneDrive con Configuration Manager](/onedrive/deploy-on-windows).  
+Primero, [busque el identificador de inquilino de Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Luego, implemente la versión de cliente de sincronización de OneDrive 18.111.0603.0004 o una versión posterior. Para más información, vea [Implementar aplicaciones de OneDrive con Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
 Para crear e implementar un perfil de OneDrive para la Empresa, en la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad**. Expanda **Configuración de cumplimiento** y seleccione el nodo **Perfiles de OneDrive para la Empresa**.  
 
 Para más información, consulte la sección sobre redirección de carpetas conocidas de Windows a OneDrive en el artículo [OneDrive for Business Profiles](../../../compliance/deploy-use/onedrive-profile.md) (OneDrive for Business Profiles).
 
-### <a name="integration-for-office-365-proplus-readiness"></a>Integración para la preparación de Office 365 ProPlus
+### <a name="integration-for-microsoft-365-apps-for-enterprise-readiness"></a>Integración para la preparación de Aplicaciones de Microsoft 365 para empresas
 
 <!--3735402-->
-Use Configuration Manager para identificar los dispositivos con una confianza alta que estén listos para actualizar a Office 365 ProPlus. La integración proporciona conclusiones sobre los posibles problemas de compatibilidad con los complementos y las macros de Office usados en su entorno. Después, use Configuration Manager para implementar Office en los dispositivos que estén listos.
+Use Configuration Manager para identificar los dispositivos con una confianza alta que estén listos para actualizar a Aplicaciones de Microsoft 365 para empresas. La integración proporciona conclusiones sobre los posibles problemas de compatibilidad con los complementos y las macros de Office usados en su entorno. Después, use Configuration Manager para implementar Office en los dispositivos que estén listos.
 
-El panel de administración de clientes existente de Office 365 ahora incluye un nuevo icono, **Office 365 ProPlus Upgrade Readiness**.
+El panel de administración de clientes existente de Microsoft 365 ahora incluye un nuevo icono, **Upgrade Readiness para Office 365 ProPlus**.
 
-Para más información, consulte [Panel de administración del cliente de Office 365](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness).
+Para más información, consulte [Panel de administración de clientes de Microsoft 365](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness).
 
-### <a name="additional-languages-for-office-365-updates"></a>Idiomas adicionales para las actualizaciones de Office 365
+### <a name="additional-languages-for-microsoft-365-updates"></a>Idiomas adicionales para las actualizaciones de Microsoft 365
 
 <!--3555955-->
-Configuration Manager ahora es compatible con todos los idiomas admitidos para las actualizaciones de cliente de Office 365. El flujo de trabajo de actualización ahora separa los 38 idiomas de **Windows Update** de los numerosos idiomas de la **actualización de cliente de Office 365**.
+Configuration Manager ahora es compatible con todos los idiomas admitidos para las actualizaciones de cliente de Microsoft 365. El flujo de trabajo de actualización ahora separa los 38 idiomas de **Windows Update** de los numerosos idiomas de la **actualización de cliente de Office 365**.
 
-Para más información, consulte [Administración de las actualizaciones de Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang).
+Para más información, consulte [Administración de actualizaciones de Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang).
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>Productos de Office en el panel de ciclo de vida
 

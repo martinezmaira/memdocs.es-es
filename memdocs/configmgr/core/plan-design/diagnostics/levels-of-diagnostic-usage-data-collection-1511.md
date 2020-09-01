@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 94166557b07050706401c122b835579762bfa982
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 66be927a75da3027b6ecc5e3873fe8f8e13a9cd6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128838"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994929"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-configuration-manager"></a>Niveles de recopilación de datos de uso de diagnóstico de la versión 1511 de Configuration Manager
 
@@ -221,7 +221,7 @@ A partir de la versión 1511 de Configuration Manager, este nivel incluye lo si
 
     -   Estadísticas de aplicación de revisiones de clúster  
 
-    -   Recuento de actualizaciones implementadas de Office 365  
+    -   Recuento de actualizaciones de Microsoft 365 implementadas  
 
 -   **Datos de SQL o de rendimiento:**  
 

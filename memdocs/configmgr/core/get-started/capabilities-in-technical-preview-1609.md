@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695688"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995541"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funciones de Technical Preview 1609 de Configuration Manager
 
@@ -347,36 +347,36 @@ El panel muestra gráficos para lo siguiente:
 - Versiones de cliente de Office 365
 - Idiomas de cliente de Office 365
 - Canales de cliente de Office 365     
-Para más información, vea [Información general de los canales de actualización para Office 365 ProPlus](/deployoffice/overview-update-channels).
+Para más información, vea [Información general de los canales de actualización para Aplicaciones de Microsoft 365](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Reglas de implementación automática que tienen seleccionado el cliente de Office 365 en el conjunto de productos disponibles
 
 En el panel se pueden realizar las siguientes acciones:
 - En la parte superior del panel, use la opción desplegable **Colección** para filtrar los datos del panel por miembros de una colección determinada.
-- En el lado superior derecho del panel, haga clic en **Programa de instalación de Office 365** para iniciar el Asistente para la instalación del cliente de Office 365 a fin de implementar aplicaciones de Office 365 en clientes. Para obtener detalles, vea [Implementar aplicaciones de Office 365 en clientes](#deploy-office-365-apps-to-clients).
-- En la parte central derecha del panel, haga clic en **Crear una ADR** para abrir el Asistente para crear regla de implementación automática a fin de crear una nueva regla de implementación automática (ADR). Para crear una ADR para aplicaciones de Office 365, seleccione **Cliente de Office 365** al elegir el producto. Para más información, vea [Implementar actualizaciones de software automáticamente](../../sum/deploy-use/automatically-deploy-software-updates.md).
+- En el lado superior derecho del panel, haga clic en **Programa de instalación de Office 365** para iniciar el Asistente para la instalación del cliente de Office 365 a fin de implementar aplicaciones de Microsoft 365 en clientes. Para obtener detalles, vea [Implementación de Aplicaciones de Microsoft 365 en clientes](#deploy-microsoft-365-apps-to-clients).
+- En la parte central derecha del panel, haga clic en **Crear una ADR** para abrir el Asistente para crear regla de implementación automática a fin de crear una nueva regla de implementación automática (ADR). Para crear una ADR para aplicaciones de Microsoft 365, seleccione **Cliente de Office 365** al elegir el producto. Para más información, vea [Implementar actualizaciones de software automáticamente](../../sum/deploy-use/automatically-deploy-software-updates.md).
 - En la parte inferior derecha del panel, haga clic en **Crear configuración de agente de cliente** para abrir la configuración del agente de cliente. Para más información, vea [Acerca de la configuración de cliente](../clients/deploy/about-client-settings.md).
 
 
 
-Para más información sobre las actualizaciones de Office 365 ProPlus, vea [Manage Office 365 ProPlus updates with Configuration Manager (Administrar las actualizaciones de Office 365 ProPlus con Configuration Manager)](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Para obtener más información sobre las actualizaciones de Aplicaciones de Microsoft 365 para empresas, consulte [Administración de actualizaciones de Aplicaciones de Microsoft 365 con Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-## <a name="deploy-office-365-apps-to-clients"></a>Implementar aplicaciones de Office 365 en clientes
-En esta versión, desde el panel Administración de clientes de Office 365, puede iniciar el programa de instalación de Office 365, que le permite configurar las opciones de instalación de Office 365, descargar archivos desde redes de entrega de contenido (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager.
+## <a name="deploy-microsoft-365-apps-to-clients"></a>Implementación de Aplicaciones de Microsoft 365 en clientes
+En esta versión, desde el panel Administración de clientes de Office 365, puede iniciar el programa de instalación de Office 365, que le permite configurar las opciones de instalación de Microsoft 365, descargar archivos desde redes de entrega de contenido (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager.
 
-### <a name="limitations-of-office-365-deployment"></a>Limitaciones de la implementación de Office 365
+### <a name="limitations-of-microsoft-365-deployment"></a>Limitaciones de la implementación de Microsoft 365
 - Es posible que tenga problemas al intentar importar la configuración de cliente existente (XML) en el Asistente para la instalación de aplicaciones de Office 365. Puede configurar manualmente la configuración de cliente sin problemas.
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>Para implementar aplicaciones de Office 365 en clientes
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>Para implementar aplicaciones de Microsoft 365 en clientes
 1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de clientes de Office 365**.
 2. Haga clic en **Programa de instalación de Office 365** en el panel superior derecho. Se abre el Asistente para la instalación del cliente de Office 365.
 3. En la página **Configuración de la aplicación**, proporcione un nombre y una descripción para la aplicación, escriba la ubicación de descarga de los archivos y haga clic en **Siguiente**. Tenga en cuenta que la ubicación se debe especificar con el formato &#92;&#92;*servidor*&#92;*recurso compartido*.
-4. En la página **Importar configuración de cliente**, elija si quiere importar la configuración del cliente de Office 365 desde un archivo de configuración XML existente o especificarla manualmente y, luego, haga clic en **Siguiente**.
+4. En la página **Importar configuración de cliente**, elija si quiere importar la configuración del cliente de Microsoft 365 desde un archivo de configuración XML existente o especificarla manualmente y, luego, haga clic en **Siguiente**.
 Si tiene un archivo de configuración existente, escriba su ubicación y vaya al paso 7. Tenga en cuenta que la ubicación se debe especificar con el formato &#92;&#92;*servidor*&#92;*recurso compartido*&#92;*nombre archivo*.XML.
 
     > [!IMPORTANT]
     >Es posible que tenga problemas al intentar importar la configuración de cliente existente (XML) en esta Technical Preview.
 
-5. En la página **Productos de cliente**, seleccione el conjunto de Office 365 que usa, seleccione las aplicaciones que quiere incluir, seleccione los productos de Office adicionales que deberían incluirse y luego haga clic en **Siguiente**.
+5. En la página **Productos de cliente**, seleccione el conjunto de Microsoft 365 que usa, seleccione las aplicaciones que quiere incluir, seleccione los productos de Office adicionales que deberían incluirse y luego haga clic en **Siguiente**.
 6. En la página **Configuración de cliente**, elija la configuración que quiere incluir y luego haga clic en **Siguiente**.
 7. En la página **Implementación**, elija si quiere implementar la aplicación y haga clic en **Siguiente**.
 Si decide no implementar el paquete en el asistente, vaya al paso 9.
@@ -385,7 +385,7 @@ Si decide no implementar el paquete en el asistente, vaya al paso 9.
 10. Puede implementar o modificar la aplicación igual que cualquier otra aplicación de Configuration Manager desde **Biblioteca de software** > **Información general** > **Administración de aplicaciones** > **Aplicaciones**.
 
 >[!NOTE]
->Después de implementar las aplicaciones de Office 365, puede crear reglas de implementación automática para mantener esas aplicaciones. Para crear una ADR para aplicaciones de Office 365, haga clic en **Crear una ADR** y seleccione **Cliente de Office 365** al elegir el producto. Para más información, vea [Implementar actualizaciones de software automáticamente](../../sum/deploy-use/automatically-deploy-software-updates.md).
+>Después de implementar las Aplicaciones de Microsoft 365, puede crear reglas de implementación automática para mantener las aplicaciones. Para crear una ADR para aplicaciones de Microsoft 365, haga clic en **Crear una ADR** y seleccione **Cliente de Office 365** al elegir el producto. Para más información, vea [Implementar actualizaciones de software automáticamente](../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a> Mejoras en BIOS para la conversión UEFI
 Ahora puede personalizar una secuencia de tareas de implementación de sistema operativo con una nueva variable, TSUEFIDrive, para que el paso Reiniciar el equipo prepare una partición FAT32 en la unidad de disco duro para la transición a UEFI. En el procedimiento siguiente se proporciona un ejemplo de cómo crear pasos de secuencia de tareas para preparar la unidad de disco duro para la conversión de BIOS en UEFI.

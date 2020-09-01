@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692934"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995456"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funciones de Technical Preview 1705 de Configuration Manager
 
@@ -136,20 +136,20 @@ Para detener el sitio, puede usar la [herramienta de mantenimiento de jerarquía
 Detener el sitio equivale a detener el servicio Administrador de componentes del sitio (sitecomp) seguido por el servicio SMS_Executive en el servidor del sitio.
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>Mejora en las notificaciones de usuario para las actualizaciones de Office 365
-Se han hecho mejoras para aprovechar la experiencia de usuario Hacer clic y ejecutar de Office cuando un cliente instala una actualización de Office 365. Esto incluye notificaciones emergentes y en la aplicación y una experiencia de cuenta atrás. Antes de esta versión, cuando se enviaba una actualización de Office 365 a un cliente, las aplicaciones de Office que estaban abiertas se cerraban automáticamente sin previo aviso. Después de esta actualización, las aplicaciones de Office ya no se cerrarán inesperadamente.
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Mejora en las notificaciones de usuario para las actualizaciones de Microsoft 365
+Se han hecho mejoras para aprovechar la experiencia de usuario Hacer clic y ejecutar de Office cuando un cliente instala una actualización de Microsoft 365. Esto incluye notificaciones emergentes y en la aplicación y una experiencia de cuenta atrás. Antes de esta versión, cuando se enviaba una actualización de Microsoft 365 a un cliente, las aplicaciones de Office que estaban abiertas se cerraban automáticamente sin previo aviso. Después de esta actualización, las aplicaciones de Office ya no se cerrarán inesperadamente.
 
 ### <a name="prerequisites"></a>Requisitos previos
-Esta actualización se aplica a los clientes de Office 365 ProPlus.
+Esta actualización se aplica a los clientes de Aplicaciones de Microsoft 365 para empresas.
 
 ### <a name="known-issues"></a>Problemas conocidos
-Cuando un cliente evalúa por primera vez una asignación de actualización de Office 365 y la actualización tiene un tiempo límite programado en el pasado, programado inmediatamente o programado para los siguientes 30 minutos, la experiencia del usuario de Office 365 puede ser incoherente. Por ejemplo, es posible que el cliente reciba un cuadro de diálogo de cuenta atrás de 30 minutos para la actualización pero que su aplicación pueda iniciarse de manera efectiva antes del final de la cuenta atrás. Para evitar este comportamiento, tenga en cuenta lo siguiente:
-- Implemente la actualización de Office 365 con un tiempo límite de al menos 60 minutos con respecto a la hora actual.
+Cuando un cliente evalúa por primera vez una asignación de actualización de Microsoft 365 y la actualización tiene un tiempo límite programado en el pasado, programado inmediatamente o programado para los siguientes 30 minutos, la experiencia del usuario de Microsoft 365 puede ser incoherente. Por ejemplo, es posible que el cliente reciba un cuadro de diálogo de cuenta atrás de 30 minutos para la actualización pero que su aplicación pueda iniciarse de manera efectiva antes del final de la cuenta atrás. Para evitar este comportamiento, tenga en cuenta lo siguiente:
+- Implemente la actualización de Microsoft 365 con un tiempo límite de al menos 60 minutos con respecto a la hora actual.
 - Configure una ventana de mantenimiento fuera del horario laboral en la recopilación o configure un período de gracia para la aplicación en la implementación.
 
 ### <a name="try-it-out"></a>Haga la prueba
 Intente realizar las tareas siguientes y luego envíenos sus **comentarios** desde la pestaña **Inicio** de la cinta para comunicarnos si funcionó:
-- Implemente en un cliente una actualización de Office 365 con un tiempo límite de al menos 60 minutos después de la hora actual. Observe el nuevo comportamiento en el cliente.
+- Implemente en un cliente una actualización de Microsoft 365 con un tiempo límite de al menos 60 minutos después de la hora actual. Observe el nuevo comportamiento en el cliente.
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Configuración e implementación de directivas de Protección de aplicaciones de Windows Defender

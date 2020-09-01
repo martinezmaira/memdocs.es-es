@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bc848cd1f6365b5a94c915a00517ca0a4abb8e4a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694379"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995320"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funcionalidades de la versión 1807 Technical Preview de Configuration Manager 
 
@@ -42,14 +42,14 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Problemas conocidos 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Problemas con las actualizaciones de software de Office 365
+### <a name="issues-with-microsoft-365-software-updates"></a><a name="ki_o365"></a> Problemas con las actualizaciones de software de Microsoft 365
 <!--521365-->
-Si administra las actualizaciones de Office 365 mediante las versiones de rama 1806 y 1806.2 Technical Preview, es posible que no se instalen en los clientes. 
+Si administra las actualizaciones de Microsoft 365 mediante las versiones de rama 1806 y 1806.2 Technical Preview, es posible que no se instalen en los clientes. 
 
 #### <a name="workaround"></a>Solución alternativa
-- Elimine los paquete de implementación y los grupos de actualizaciones de software existentes para Office 365.  
+- Elimine los paquete de implementación y los grupos de actualizaciones de software existentes para Microsoft 365.  
 
-- A partir del 31 de julio de 2018, sincronice las actualizaciones de software de Office 365 e implemente solo las actualizaciones más recientes.  
+- A partir del 31 de julio de 2018, sincronice las actualizaciones de software de Microsoft 365 e implemente solo las actualizaciones más recientes.  
 
 
 

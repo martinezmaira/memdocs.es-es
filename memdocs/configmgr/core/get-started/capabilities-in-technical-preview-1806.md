@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 01c482700b56a1835e46cf5d48da75710f380496
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694430"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995405"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funciones de Technical Preview 1806 de Configuration Manager
 
@@ -176,14 +176,15 @@ A partir de esta versión, cuando se [cambia una carga de trabajo de administrac
 
 
 
-## <a name="transition-office-365-workload-to-intune-using-co-management"></a>Transición de la carga de trabajo de Office 365 a Intune mediante la administración conjunta
+## <a name="transition-microsoft-365-workload-to-intune-using-co-management"></a>Transición de la carga de trabajo de Microsoft 365 a Intune mediante la administración conjunta
 <!--1357841-->
-Ahora puede pasar la carga de trabajo de Office 365 de Configuration Manager a Microsoft Intune después de habilitar la administración conjunta. Para realizar la transición de esta carga de trabajo, vaya a la página de propiedades de administración conjunta y mueva la barra deslizante de Configuration Manager a Piloto o a Todo. Para más información, vea [Administración conjunta para dispositivos de Windows 10](../../comanage/overview.md).
+Ahora puede pasar la carga de trabajo de Microsoft 365 de Configuration Manager a Microsoft Intune después de habilitar la administración conjunta. Para realizar la transición de esta carga de trabajo, vaya a la página de propiedades de administración conjunta y mueva la barra deslizante de Configuration Manager a Piloto o a Todo. Para más información, vea [Administración conjunta para dispositivos de Windows 10](../../comanage/overview.md).
 
-También hay una nueva condición global, **Are Office 365 applications managed by Intune on the device** (¿Las aplicaciones de Office 365 están administradas por Intune en este dispositivo?). Esta condición se agrega de forma predeterminada como requisito a las nuevas aplicaciones de Office 365. Cuando se hace la transición de esta carga de trabajo, los clientes administrados conjuntamente no cumplen el requisito en la aplicación. Por lo tanto, no instale Office 365 implementado a través de Configuration Manager.
+También hay una nueva condición global, **Are Office 365 applications managed by Intune on the device** (¿Las aplicaciones de Office 365 están administradas por Intune en este dispositivo?). Esta condición se agrega de forma predeterminada como requisito a las nuevas aplicaciones de Microsoft 365. Cuando se hace la transición de esta carga de trabajo, los clientes administrados conjuntamente no cumplen el requisito en la aplicación. Por lo tanto, no instale Microsoft 365 implementado a través de Configuration Manager.
 
 ### <a name="known-issue"></a>Problema conocido
-- Esta transición de carga de trabajo actualmente solo se aplica a las implementaciones de Office 365. Configuration Manager continúa administrando las actualizaciones de Office 365.<!--510876--> Para obtener más información y una posible solución alternativa, consulte las notas de la versión 1802 de Configuration Manager [No se aplica la configuración cliente de cambios de Office 365](../servers/deploy/install/release-notes.md).
+
+- Esta transición de carga de trabajo actualmente solo se aplica a las implementaciones de Microsoft 365. Configuration Manager continúa administrando las actualizaciones de Microsoft 365.<!--510876--> Para obtener más información y una posible solución alternativa, consulte las notas de la versión 1802 de Configuration Manager [No se aplica la configuración cliente de cambios de Microsoft 365](../servers/deploy/install/release-notes.md).
 
 
 
@@ -240,7 +241,7 @@ La Herramienta de personalización de Office está ahora integrada con el progra
  Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities-in-technical-preview-1804.md#bkmk_feedback) para que sepamos cómo le ha ido.
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software** y seleccione el nodo **Administración de clientes de Office 365**.
-2. En el panel, haga clic en el mosaico del **Instalador de Office 365** para iniciar el Asistente para instalación de cliente de Office 365. Para obtener más información, consulte [Implementación de aplicaciones de Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+2. En el panel, haga clic en el mosaico del **Instalador de Office 365** para iniciar el Asistente para instalación de cliente de Office 365. Para más información, consulte [Implementación de Aplicaciones de Microsoft 365](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. En la página **Office Setting** (Configuración de Office), haga clic en **Go To Office Web Page** (Ir a la página web de Office). Utilice la Herramienta de personalización de Office online para especificar la configuración de esta implementación. 
 4. Cuando haya finalizado, haga clic en **Enviar** en la esquina superior derecha. Finalice el Asistente para la instalación de cliente de Office 365.
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 334397cfa52c90694823107c2144bfbbcbd509ac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698578"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993631"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Novedades de la versión 1602 de Configuration Manager
 
@@ -98,8 +98,8 @@ Encontrará estas aplicaciones en el nodo **Aplicaciones** de la consola de Conf
 
 ## <a name="software-updates"></a>Actualizaciones de software  
 
-### <a name="manage-office-365-client-updates"></a>Administración de las actualizaciones de cliente de Office 365  
- Configuration Manager tiene la capacidad de administrar las actualizaciones del cliente de Office 365 mediante el flujo de trabajo de administración de actualizaciones de software. Para más información, vea [Administración de actualizaciones de Office 365 ProPlus con Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
+### <a name="manage-microsoft-365-client-updates"></a>Administración de actualizaciones del cliente de Microsoft 365  
+ Configuration Manager tiene la capacidad de administrar las actualizaciones del cliente de Microsoft 365 mediante el flujo de trabajo de administración de actualizaciones de software. Para más información, vea [Administración de actualizaciones de Aplicaciones de Office 365 con Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
 
 ## <a name="compliance-settings"></a>Configuración de cumplimiento  
 
@@ -119,7 +119,7 @@ Encontrará estas aplicaciones en el nodo **Aplicaciones** de la consola de Conf
 
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Restringir el acceso basándose en el estado de los dispositivos  
- Ahora puede restringir el acceso a los servicios de correo electrónico y Office 365 según el estado de los dispositivos, como ha notificado el Servicio de atestación de estado. Además, los dispositivos administrados por Intune se incluyen en los informes de estado de dispositivos.  
+ Ahora puede restringir el acceso a los servicios de correo electrónico y Microsoft 365 según el estado de los dispositivos, como ha notificado el Servicio de atestación de estado. Además, los dispositivos administrados por Intune se incluyen en los informes de estado de dispositivos.  
 
  La consola de Configuration Manager presenta una nueva regla de cumplimiento que le permite especificar si debe permitir o bloquear el acceso de los dispositivos en función de su estado de mantenimiento. Para más información sobre el servicio de atestación de estado y cómo se notifica el estado de los dispositivos en Intune, vea [Atestación de estado para Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 

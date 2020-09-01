@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c66200041bcc643dc7306b76c540daf2b0b1058
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bfd7818622ca536fd3a7a00de95bd5400b060fd5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128629"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994623"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>Datos de diagnóstico y uso en la versión 1902
 
@@ -154,7 +154,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - Recuento de personalizaciones de marca distintivas de catálogo de aplicaciones  
 
-- Recuento de aplicaciones de Office 365 creadas con el panel  
+- Recuento de Aplicaciones de Microsoft 365 creadas con el panel  
 
 - Número de paquetes por tipo  
 
@@ -441,7 +441,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - Configuraciones que se usan para planes de mantenimiento activos de Windows 10  
 
-- Recuento de actualizaciones implementadas de Office 365  
+- Recuento de actualizaciones de Microsoft 365 implementadas  
 
 - Recuento de controladores de Microsoft Surface sincronizados  
 

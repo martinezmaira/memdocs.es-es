@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 48c03b26ae04d4e4bc256a146ad48206b4de1d9d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f4b96d3f7fc4f1c02142bfdb4027abd320b22a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126671"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994912"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-configuration-manager"></a>Niveles de recopilación de datos de uso de diagnóstico de la versión 1602 de Configuration Manager
 
@@ -238,7 +238,7 @@ A partir de la versión 1602 de Configuration Manager, este nivel incluye lo si
 
   -   Estadísticas de aplicación de revisiones de clúster
 
-  -   Recuento de actualizaciones implementadas de Office 365
+  -   Recuento de actualizaciones de Microsoft 365 implementadas
 
   -   ***[Nuevo]*** Clasificaciones que se sincronizan por punto de actualización de software
 
