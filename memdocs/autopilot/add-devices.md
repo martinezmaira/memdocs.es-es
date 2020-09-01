@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b3f25f424857d99919450ec1426ee1023bae3aca
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057377"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193819"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Agregar dispositivos a Windows AutoPilot
 
@@ -75,7 +75,7 @@ Para identificar un dispositivo con Windows AutoPilot, el hash de hardware únic
 
 El hash de hardware contiene detalles sobre el dispositivo:
 - fabricante
-- model
+- modelo
 - número de serie del dispositivo
 - número de serie de la unidad de disco duro
 - detalles sobre cuándo se generó el identificador
@@ -130,10 +130,10 @@ Para obtener más información sobre cómo ejecutar el script, vea la ayuda del 
 
 Una vez que se han capturado los hash de hardware de los dispositivos existentes, se pueden cargar de cualquiera de las maneras siguientes:
 
-- [Microsoft Intune](enrollment-autopilot.md) es el mecanismo preferido para todos los clientes.
- - El centro de administración de Microsoft Endpoint Manager se usa para la inscripción de dispositivos de Intune.
-- Los asociados de CSP usan el [centro de Partners](https://msdn.microsoft.com/partner-center/autopilot) para registrar dispositivos para los clientes.
-- Por lo general, las pequeñas y medianas empresas (PYMES) que administran sus dispositivos utilizan Microsoft 365 Empresa. [365 & Microsoft 365 empresa](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)
+- [Microsoft Intune](enrollment-autopilot.md). Este es el mecanismo preferido para todos los clientes.
+  - El centro de administración de Microsoft Endpoint Manager se usa para la inscripción de dispositivos de Intune.
+- [Centro de Partners](https://msdn.microsoft.com/partner-center/autopilot). Los asociados de CSP lo usan para registrar los dispositivos en nombre de los clientes.
+- [Microsoft 365 Empresa & administrador de Office 365](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). Normalmente, lo utilizan las pequeñas y medianas empresas (SMB) que administran sus dispositivos mediante Microsoft 365 Empresa.
 - [Microsoft Store para la empresa](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). Es posible que ya esté usando MSfB para administrar las aplicaciones y la configuración.
 
 A continuación se proporciona un resumen de las funcionalidades de cada plataforma.<br>

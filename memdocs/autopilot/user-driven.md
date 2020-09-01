@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f5299db1c151d3338fb2060246a7d07beb462779
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907923"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193657"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Modo controlado por el usuario de Windows Autopilot
 
@@ -90,10 +90,11 @@ Windows AutoPilot requiere que los dispositivos estén Azure Active Directory Un
 
 Para realizar una implementación híbrida orientada a Azure AD basada en el usuario mediante Windows AutoPilot:
 
+- El dispositivo debe ejecutar Windows 10, versión 1809 o posterior. 
 - Se debe crear un perfil de Windows AutoPilot para el modo controlado por el usuario y 
  - **Azure ad híbrido** join debe especificarse como la opción seleccionada en **unirse a Azure ad como** en el perfil de AutoPilot.
 - Si usa Intune, debe existir un grupo de dispositivos en Azure Active Directory con el perfil de Windows AutoPilot asignado a ese grupo.
-- El dispositivo debe ejecutar Windows 10, versión 1809 o posterior.
+- Si usa Intune, cree y asigne un perfil de unión a un dominio. Un perfil de configuración de unión a un dominio incluye información de dominio de Active Directory local
 - El dispositivo debe tener acceso a un controlador de dominio de Active Directory. Debe estar conectado a la red de la organización. Debe ser capaz de resolver los registros DNS para el dominio de AD y el controlador de dominio de AD. Debe ser capaz de comunicarse con el controlador de dominio para autenticar al usuario.
 - El dispositivo debe poder tener acceso a Internet, según los [requisitos de red de Windows AutoPilot documentados](networking-requirements.md).
 - Se debe instalar el conector de Intune para Active Directory.
