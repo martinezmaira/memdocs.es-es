@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 80a26e10a3c05436699d3cafb3c4564e73099c07
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c77a7355d63eb7f670949846c15670148b61c971
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165845"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907184"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Directivas de protección de aplicaciones y perfiles de trabajo en dispositivos de Android Enterprise en Intune
 
@@ -106,7 +106,7 @@ Las aplicaciones de Office, como Outlook y OneDrive, tienen un comportamiento de
 
 Al usar perfiles de trabajo, puede que quiera deshabilitar este comportamiento de identidades múltiples. Al deshabilitarlo, las instancias con distintivo de la aplicación en el perfil de trabajo solo pueden configurarse con una identidad de organización. Use la opción de configuración de aplicaciones Cuentas permitidas para permitir la compatibilidad con aplicaciones Android de Office.
 
-Para más información, vea [Implementación de las opciones de configuración de la aplicación de Outlook para iOS/iPadOS y Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Para más información, vea [Implementación de las opciones de configuración de la aplicación de Outlook para iOS/iPadOS y Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="when-to-use-intune-app"></a>Cuándo usar Intune APP
 

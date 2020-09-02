@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406554"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907901"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Uso de la nube para configurar directivas de grupo en dispositivos con Windows 10 con plantillas de ADMX y Microsoft Intune
 
@@ -37,7 +37,7 @@ Las plantillas de ADMX están disponibles para los siguientes servicios:
 - **Office**: descárguelas de [Aplicaciones de Microsoft 365, Office 2019 y Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: integradas en el sistema operativo Windows 10.
 
-Para obtener más información sobre las directivas de ADMX, vea [Descripción de las directivas respaldadas por ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
+Para obtener más información sobre las directivas de ADMX, vea [Descripción de las directivas respaldadas por ADMX](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 Estas plantillas se integran en Microsoft Intune y están disponibles como perfiles de **Plantillas administrativas**. En este perfil, configure los valores que quiere incluir y, luego, "asigne" este perfil a los dispositivos.
 
@@ -57,7 +57,7 @@ Esta característica se aplica a:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Una suscripción de Microsoft 365 E3 o E5, que incluye Intune y Azure Active Directory (AD) Premium. Si no tiene una suscripción E3 o E5, [pruébela de forma gratuita](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- Una suscripción de Microsoft 365 E3 o E5, que incluye Intune y Azure Active Directory (AD) Premium. Si no tiene una suscripción E3 o E5, [pruébela de forma gratuita](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
   Para obtener más información sobre lo que se obtiene con las distintas licencias de Microsoft 365, vea [Transforma tu empresa con Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -190,10 +190,10 @@ En los siguientes pasos se crean grupos de seguridad y se agregan usuarios a los
 
 - Los grupos dinámicos son una característica de Azure AD Premium. Si no tiene Azure AD Premium, solo tiene licencia para crear grupos asignados. Para obtener más información sobre los grupos dinámicos, vea:
 
-  - [Pertenencia a grupos dinámicos en Azure Active Directory (parte 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Pertenencia a grupos dinámicos en Azure Active Directory (parte 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Pertenencia a grupos dinámicos en Azure Active Directory (parte 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Pertenencia a grupos dinámicos en Azure Active Directory (parte 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium incluye otros servicios que se suelen usar al administrar aplicaciones y dispositivos, como la [autenticación multifactor (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) y el [acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
+- Azure AD Premium incluye otros servicios que se suelen usar al administrar aplicaciones y dispositivos, como la [autenticación multifactor (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) y el [acceso condicional](/azure/active-directory/conditional-access/overview).
 
 - Muchos administradores se preguntan cuándo usar grupos de usuarios y cuándo grupos de dispositivos. Para obtener instrucciones, vea [Grupos de usuarios y grupos de dispositivos](device-profile-assign.md#user-groups-vs-device-groups).
 
@@ -420,7 +420,7 @@ La configuración tiene un aspecto similar a la siguiente:
 > [!div class="mx-imgBorder"]
 > ![Creación de una plantilla administrativa de OneDrive en Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-Para obtener más información sobre la configuración de cliente de OneDrive, vea [Usar la directiva de grupo para controlar la configuración de sincronización de OneDrive](https://docs.microsoft.com/onedrive/use-group-policy).
+Para obtener más información sobre la configuración de cliente de OneDrive, vea [Usar la directiva de grupo para controlar la configuración de sincronización de OneDrive](/onedrive/use-group-policy).
 
 ### <a name="assign-your-template"></a>Asignación de la plantilla
 
@@ -438,7 +438,7 @@ En este punto ha creado algunas plantillas administrativas y las ha asignado a l
 En esta sección se usan los recursos siguientes. Estos recursos se instalan en esta sección.
 
 - [SDK de PowerShell de Intune](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Microsoft Graph API para Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Microsoft Graph API para Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. En el **equipo de administración**, abra **Windows PowerShell** como administrador:
 
@@ -458,7 +458,7 @@ En esta sección se usan los recursos siguientes. Estos recursos se instalan en 
 
     3. Escriba `Y` para cambiarlo.
 
-    La directiva de ejecución de PowerShell ayuda a evitar la ejecución de scripts malintencionados. Para obtener más información, vea [Acerca de las directivas de ejecución](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+    La directiva de ejecución de PowerShell ayuda a evitar la ejecución de scripts malintencionados. Para obtener más información, vea [Acerca de las directivas de ejecución](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 3. Especifique: `Install-Module -Name Microsoft.Graph.Intune`.
 
@@ -581,7 +581,7 @@ Cuando ya no sean necesarios, puede:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial se ha familiarizado con el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431), ha usado el generador de consultas para crear grupos dinámicos y ha creado plantillas administrativas en Intune para configurar [valores de ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). También ha comparado el uso de plantillas de ADMX en local y en la nube con Intune. Como bonus, ha usado cmdlets de PowerShell para crear una plantilla administrativa.
+En este tutorial se ha familiarizado con el [Centro de administración de puntos de conexión](https://go.microsoft.com/fwlink/?linkid=2109431), ha usado el generador de consultas para crear grupos dinámicos y ha creado plantillas administrativas en Intune para configurar [valores de ADMX](/windows/client-management/mdm/understanding-admx-backed-policies). También ha comparado el uso de plantillas de ADMX en local y en la nube con Intune. Como bonus, ha usado cmdlets de PowerShell para crear una plantilla administrativa.
 
 Para obtener más información sobre las plantillas administrativas en Intune, vea:
 

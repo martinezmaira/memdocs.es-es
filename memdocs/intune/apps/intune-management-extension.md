@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 80f49d00f042037d0833df9536d792fda6f9068b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179492"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910373"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Uso de scripts de PowerShell para dispositivos Windows 10 en Intune
 
@@ -51,14 +51,14 @@ La extensión de administración de Intune tiene los siguientes requisitos previ
   
 - Dispositivos unidos a Azure Active Directory (AD), incluidos los siguientes:  
   
-  - Unidos a Azure AD híbrido: dispositivos unidos a Azure Active Directory (AD) y que también están unidos a Active Directory (AD) local. Vea [Planeamiento de la implementación de la unión a Azure Active Directory híbrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) para obtener instrucciones.
+  - Unidos a Azure AD híbrido: dispositivos unidos a Azure Active Directory (AD) y que también están unidos a Active Directory (AD) local. Vea [Planeamiento de la implementación de la unión a Azure Active Directory híbrido](/azure/active-directory/devices/hybrid-azuread-join-plan) para obtener instrucciones.
   
   > [!TIP]
-  > Asegúrese de que los dispositivos estén [unidos](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) a Azure AD. Los dispositivos que solo están [registrados](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) en Azure AD no recibirán los scripts.  
+  > Asegúrese de que los dispositivos estén [unidos](/azure/active-directory/user-help/user-help-join-device-on-network) a Azure AD. Los dispositivos que solo están [registrados](/azure/active-directory/user-help/user-help-register-device-on-network) en Azure AD no recibirán los scripts.  
 
 - Dispositivos inscritos en Intune, incluidos los siguientes:
 
-  - Dispositivos inscritos en una directiva de grupo (GPO). Vea [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) (Inscripción automática de un dispositivo Windows 10 con Directiva de grupo) para obtener instrucciones.
+  - Dispositivos inscritos en una directiva de grupo (GPO). Vea [Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) (Inscripción automática de un dispositivo Windows 10 con Directiva de grupo) para obtener instrucciones.
   
   - Dispositivos inscritos manualmente en Intune, que son los que encajan con una de las siguientes descripciones:
   
@@ -70,9 +70,9 @@ La extensión de administración de Intune tiene los siguientes requisitos previ
 
   - Dispositivos administrados conjuntamente que usan Configuration Manager e Intune. Al instalar las aplicaciones Win32, asegúrese de que la carga de trabajo **Aplicaciones** esté establecida en **Intune piloto** o **Intune**. Los scripts de PowerShell se ejecutarán incluso si la carga de trabajo de **Aplicaciones** está establecida en **Configuration Manager**. La extensión de administración de Intune se implementará en un dispositivo cuando el destino sea un script de PowerShell en el dispositivo. Sin embargo, como se indicó anteriormente, el dispositivo debe ser un dispositivo Azure AD o un dispositivo unido a Azure AD híbrido y debe ejecutar Windows 10 versión 1607 o posterior. Consulte los artículos siguientes para obtener instrucciones: 
   
-    - [¿Qué es la administración conjunta?](https://docs.microsoft.com/configmgr/comanage/overview) 
-    - [Carga de trabajo de aplicaciones cliente](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
-    - [Cambio de las cargas de trabajo de Configuration Manager a Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
+    - [¿Qué es la administración conjunta?](/configmgr/comanage/overview) 
+    - [Carga de trabajo de aplicaciones cliente](/configmgr/comanage/workloads#client-apps)
+    - [Cambio de las cargas de trabajo de Configuration Manager a Intune](/configmgr/comanage/how-to-switch-workloads)
   
 > [!NOTE]
 > Para obtener información sobre el uso de máquinas virtuales Windows 10, vea [Uso de máquinas virtuales Windows 10 con Intune](../fundamentals/windows-10-virtual-machines.md).
@@ -169,7 +169,7 @@ En **Scripts de PowerShell**, seleccione el script que quiere supervisar y, desp
 
 ## <a name="intune-management-extension-logs"></a>Registros de extensión de administración de Intune
 
-Habitualmente, los registros de agente en la máquina cliente se encuentran en `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Puede usar [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) para ver estos archivos de registro.
+Habitualmente, los registros de agente en la máquina cliente se encuentran en `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Puede usar [CMTrace.exe](/configmgr/core/support/cmtrace) para ver estos archivos de registro.
 
 ![Captura de pantalla o registros de agente de CMTrace de muestra en Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -210,7 +210,7 @@ En [Habilitar la inscripción automática de Windows 10](../enrollment/windows-e
     > [!TIP]
     > La **extensión de administración de Microsoft Intune** es un servicio que se ejecuta en el dispositivo, al igual que cualquier otro servicio que aparezca en la aplicación Servicios (services.msc). Después de reiniciar un dispositivo, es posible que el servicio también lo haga y compruebe si hay algún script de PowerShell asignado con el servicio de Intune. Si el servicio de **extensión de administración de Microsoft Intune** está establecido en Manual, es posible que el servicio no se reinicie después del reinicio del dispositivo.
 
-- Asegúrese de que los dispositivos estén [unidos a Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Los dispositivos que solo están unidos al área de trabajo o a la organización ([registrados](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) en Azure AD) no recibirán los scripts.
+- Asegúrese de que los dispositivos estén [unidos a Azure AD](/azure/active-directory/user-help/user-help-join-device-on-network). Los dispositivos que solo están unidos al área de trabajo o a la organización ([registrados](/azure/active-directory/user-help/user-help-register-device-on-network) en Azure AD) no recibirán los scripts.
 - El cliente de la extensión de administración de Intune comprueba con Intune cada hora si se han producido cambios en el script o la directiva.
 - Confirme que la extensión de administración de Intune se ha descargado en `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Los scripts no se ejecutan en dispositivos Surface Hub ni con Windows 10 en modo S.
@@ -219,7 +219,7 @@ En [Habilitar la inscripción automática de Windows 10](../enrollment/windows-e
 
 - Para aislar los problemas de scripts, haga lo siguiente:
 
-  - Revise la configuración de ejecución de PowerShell de los dispositivos. Vea la [directiva de ejecución de PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) para obtener instrucciones.
+  - Revise la configuración de ejecución de PowerShell de los dispositivos. Vea la [directiva de ejecución de PowerShell](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) para obtener instrucciones.
   - Ejecute un script de ejemplo con la extensión de administración de Intune. Por ejemplo, cree el directorio `C:\Scripts` y proporcione a todos control total. Ejecute el siguiente script:
 
     ```powershell
@@ -228,7 +228,7 @@ En [Habilitar la inscripción automática de Windows 10](../enrollment/windows-e
 
     Si se ejecuta correctamente, se creará un archivo output.txt e incluirá el texto "Script Worked" (El script funcionó).
 
-  - Para probar la ejecución del script sin Intune, ejecute los scripts en la cuenta del sistema mediante el uso local de la [herramienta psexec](https://docs.microsoft.com/sysinternals/downloads/psexec):
+  - Para probar la ejecución del script sin Intune, ejecute los scripts en la cuenta del sistema mediante el uso local de la [herramienta psexec](/sysinternals/downloads/psexec):
 
     `psexec -i -s`  
     

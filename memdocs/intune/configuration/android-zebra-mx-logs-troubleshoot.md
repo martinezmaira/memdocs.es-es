@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c8cc44cb614154df1a128ee1f1708a3259f88169
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083847"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910050"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Solución de problemas y detección de posibles problemas en dispositivos Android Zebra en Microsoft Intune
 
@@ -57,7 +57,7 @@ Para obtener registros después de que el perfil se haya implementado con Intune
 En el dispositivo, los registros se guardan en `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`.
 
 ### <a name="get-logs-from-email"></a>Obtención de registros de correo electrónico
-Para obtener registros después de que el perfil se haya implementado con Intune, los usuarios finales pueden enviarle los registros por correo electrónico con una aplicación de correo electrónico en el dispositivo. En el dispositivo Zebra, abra la aplicación Portal de empresa y [envíe los registros](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). El uso de la característica de envío de registros también crea un identificador de incidente de PowerLift, al que puede hacer referencia si se pone en contacto con el soporte técnico de Microsoft.
+Para obtener registros después de que el perfil se haya implementado con Intune, los usuarios finales pueden enviarle los registros por correo electrónico con una aplicación de correo electrónico en el dispositivo. En el dispositivo Zebra, abra la aplicación Portal de empresa y [envíe los registros](../user-help/send-logs-to-your-it-admin-by-email-android.md). El uso de la característica de envío de registros también crea un identificador de incidente de PowerLift, al que puede hacer referencia si se pone en contacto con el soporte técnico de Microsoft.
 
 ## <a name="read-the-logs"></a>Lectura de los registros
 

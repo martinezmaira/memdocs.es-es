@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051679"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907303"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscripción automática de dispositivos iOS/iPadOS con la Inscripción de dispositivos automatizada de Apple
 
@@ -154,7 +154,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 4. Seleccione **Siguiente: Configuración de administración de dispositivos**.
 
 5. En **Afinidad de usuario**, elija si los dispositivos con este perfil deben inscribirse con o sin un usuario asignado.
-    - **Inscribir con afinidad de usuario**: seleccione esta opción para dispositivos que pertenezcan a usuarios y necesiten usar el Portal de empresa para hacer uso de servicios, como instalar aplicaciones. Si usa ADFS y el Asistente de configuración para realizar la autenticación, se requiere [Punto de conexión mixto/nombre de usuario de WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Más información](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Inscribir con afinidad de usuario**: seleccione esta opción para dispositivos que pertenezcan a usuarios y necesiten usar el Portal de empresa para hacer uso de servicios, como instalar aplicaciones. Si usa ADFS y el Asistente de configuración para realizar la autenticación, se requiere [Punto de conexión mixto/nombre de usuario de WS-Trust 1.3](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [Más información](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
     - **Inscribir sin afinidad de usuario**: seleccione esta opción para dispositivos no afiliados con un usuario único. Use esta opción para los dispositivos que no tengan acceso a los datos de usuario local. Para permitir que un usuario final inicie sesión en el Portal de empresa de iOS y se establezca como el usuario principal del dispositivo, envíe la clave de `IntuneUDAUserlessDevice` al Portal de empresa de iOS en una directiva de configuración de aplicaciones para dispositivos administrados. Tenga en cuenta que solo el primer usuario que inicia sesión se establece como el usuario principal. Si el primer usuario cierra sesión y un segundo usuario inicia sesión, aquel sigue siendo el usuario principal del dispositivo. Para más información, consulte [Configuración de la aplicación Portal de empresa para que admita dispositivos iOS e iPadOS de DEP](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 

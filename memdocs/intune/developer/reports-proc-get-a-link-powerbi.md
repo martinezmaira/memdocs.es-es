@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443860"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907759"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Conectarse al Almacenamiento de datos con Power BI
 
@@ -42,7 +42,7 @@ Puede usar la aplicación de cumplimiento de Power BI para cargar informes inter
 También se resaltan las tendencias de la inscripción, el cumplimiento, el perfil de configuración de dispositivos y las actualizaciones de software. Los gráficos e informes de ejemplo aplican al lienzo filtros fáciles de usar. Para usar filtros avanzados, vea el panel **Filtro** de Power BI Desktop.
 
 > [!NOTE]
-> Las aplicaciones de plantilla de Power BI permiten a los asociados de Power BI compilar aplicaciones de Power BI con poca o ninguna codificación e implementarlas en cualquier cliente de Power BI. Por ejemplo, se puede usar la plantilla de informe de cumplimiento de Power BI en la versión V2.0. En V2.0 se incluye un diseño mejorado, así como cambios en los cálculos y datos que se muestran como parte de la plantilla. Para obtener más información, vea [Actualización de una aplicación de plantilla](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [Aplicación de cumplimiento de Intune (Data Warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) y [¿Qué son las aplicaciones de plantilla de Power BI?](https://docs.microsoft.com/power-bi/service-template-apps-overview).
+> Las aplicaciones de plantilla de Power BI permiten a los asociados de Power BI compilar aplicaciones de Power BI con poca o ninguna codificación e implementarlas en cualquier cliente de Power BI. Por ejemplo, se puede usar la plantilla de informe de cumplimiento de Power BI en la versión V2.0. En V2.0 se incluye un diseño mejorado, así como cambios en los cálculos y datos que se muestran como parte de la plantilla. Para obtener más información, vea [Actualización de una aplicación de plantilla](/power-bi/service-template-apps-install-distribute#update-a-template-app), [Aplicación de cumplimiento de Intune (Data Warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) y [¿Qué son las aplicaciones de plantilla de Power BI?](/power-bi/service-template-apps-overview).
 
 En los pasos siguientes se muestra cómo descargar el archivo de Power BI y cómo usar el vínculo de OData con Power BI.
 

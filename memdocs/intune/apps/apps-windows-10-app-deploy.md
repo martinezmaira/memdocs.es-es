@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985930"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907816"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementación de aplicaciones Windows 10 con Microsoft Intune 
 
@@ -69,7 +69,7 @@ Puede firmar y cargar aplicaciones de línea de negocios de Windows 10 en la co
 
 ## <a name="microsoft-store-for-business-apps"></a>Aplicaciones de la Tienda Microsoft para Empresas
 
-Las aplicaciones de Microsoft Store para Empresas son aplicaciones modernas que se compran en el portal de administración de Microsoft Store para Empresas. Después se sincronizan a través de Microsoft Intune para administrarlas. Las aplicaciones pueden ser con licencia en línea o con licencia sin conexión. Microsoft Store administra directamente las actualizaciones, sin necesidad de que el administrador realice ninguna acción adicional. También puede evitar las actualizaciones de aplicaciones específicas mediante un identificador uniforme de recursos (URI) personalizado. Para obtener más información, vea [Administración de aplicaciones empresariales - Impedir las actualizaciones automáticas de la aplicación](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). El usuario final también puede deshabilitar las actualizaciones de todas las aplicaciones de Microsoft Store para Empresas en el dispositivo. 
+Las aplicaciones de Microsoft Store para Empresas son aplicaciones modernas que se compran en el portal de administración de Microsoft Store para Empresas. Después se sincronizan a través de Microsoft Intune para administrarlas. Las aplicaciones pueden ser con licencia en línea o con licencia sin conexión. Microsoft Store administra directamente las actualizaciones, sin necesidad de que el administrador realice ninguna acción adicional. También puede evitar las actualizaciones de aplicaciones específicas mediante un identificador uniforme de recursos (URI) personalizado. Para obtener más información, vea [Administración de aplicaciones empresariales - Impedir las actualizaciones automáticas de la aplicación](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). El usuario final también puede deshabilitar las actualizaciones de todas las aplicaciones de Microsoft Store para Empresas en el dispositivo. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Categorización de aplicaciones de Microsoft Store para Empresas 
 Para categorizar aplicaciones de Microsoft Store para Empresas: 
@@ -106,7 +106,7 @@ Las aplicaciones de línea de negocio de Windows (en concreto, appx y MSIX) y de
   - Error: un usuario no puede ser destino de una instalación de contexto de dispositivo.
 
 > [!IMPORTANT]
-> Cuando se usa en combinación con un escenario preferencial de Autopilot, no hay ningún requisito para las aplicaciones de línea de negocio y de Microsoft Store para Empresas implementadas en el contexto de dispositivo para establecer como destino un grupo de dispositivos. Para más información, consulte [Implementación preferencial de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
+> Cuando se usa en combinación con un escenario preferencial de Autopilot, no hay ningún requisito para las aplicaciones de línea de negocio y de Microsoft Store para Empresas implementadas en el contexto de dispositivo para establecer como destino un grupo de dispositivos. Para más información, consulte [Implementación preferencial de Windows Autopilot](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > Después de guardar una asignación de aplicación con una implementación específica, no puede modificar el contexto de esa asignación, excepto para las aplicaciones modernas. En el caso de las aplicaciones modernas, puede cambiar el contexto del contexto de usuario al contexto de dispositivo. 

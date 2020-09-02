@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 64e15e05ba7613b8bf2941d00a48c19292fafc90
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693512"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909761"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Información general sobre el ciclo de vida de administración de dispositivos móviles (MDM) de Microsoft Intune
 
-Todos los dispositivos que administra tienen un *ciclo de vida*. Intune puede ayudarle a administrar su ciclo de vida: desde la inscripción, pasando por la configuración y la protección, hasta la retirada del dispositivo cuando ya no resulte necesario. Por ejemplo, si la empresa compra un iPad, primero hay que inscribirlo con una cuenta de Microsoft Intune para que la empresa pueda administrarlo; después, debe configurarse para adaptarlo a las necesidades de la empresa; luego, hay que proteger los datos que el usuario almacena en el iPad; y por último, cuando ya no se necesite el iPad, habrá que [retirar o borrar](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) todos los datos confidenciales que contenga el dispositivo.
+Todos los dispositivos que administra tienen un *ciclo de vida*. Intune puede ayudarle a administrar su ciclo de vida: desde la inscripción, pasando por la configuración y la protección, hasta la retirada del dispositivo cuando ya no resulte necesario. Por ejemplo, si la empresa compra un iPad, primero hay que inscribirlo con una cuenta de Microsoft Intune para que la empresa pueda administrarlo; después, debe configurarse para adaptarlo a las necesidades de la empresa; luego, hay que proteger los datos que el usuario almacena en el iPad; y por último, cuando ya no se necesite el iPad, habrá que [retirar o borrar](../remote-actions/devices-wipe.md) todos los datos confidenciales que contenga el dispositivo.
 
 ![Ciclo de vida del dispositivo](./media/device-lifecycle/device-lifecycle.png "Ciclo de vida del dispositivo Intune")
 

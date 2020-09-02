@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: ca64791256acbdcd124ee79401d116962671dd71
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462225"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909710"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Impulso de la adopción de usuarios finales con acceso condicional en Microsoft Intune
 
@@ -65,9 +65,9 @@ Se trata de un método entre otros. Es posible elegir un proceso más sencillo q
 
 Elija una de las siguientes opciones:
 
-- [Configurar el acceso condicional en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Configurar el acceso condicional en Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Configuración de la autenticación moderna híbrida](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
+- [Configuración de la autenticación moderna híbrida](/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Configurar directivas de acceso condicional basado en la aplicación para Exchange Online](../protect/app-based-conditional-access-intune-create.md)
 

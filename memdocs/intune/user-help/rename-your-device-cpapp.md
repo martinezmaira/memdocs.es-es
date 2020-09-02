@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881142"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907657"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Cambio de nombre del dispositivo desde la aplicación Portal de empresa para Windows
 Cambie el nombre de un dispositivo para que sea más fácil de reconocer entre otros dispositivos. La aplicación Portal de empresa para Windows permite cambiar el nombre de los siguientes tipos de dispositivos conectados:  
@@ -47,7 +47,7 @@ Realice el paso siguiente para quitar un dispositivo desde la página **Detalles
      ![Captura de pantalla de ejemplo de la aplicación Portal de empresa para Windows, página Detalles del dispositivo, campo emergente Cambiar nombre.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Cambio de nombre del dispositivo desde el menú contextual del dispositivo  
-Realice el paso siguiente para quitar un dispositivo mediante las acciones del [menú contextual](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+Realice el paso siguiente para quitar un dispositivo mediante las acciones del [menú contextual](//windows/uwp/design/controls-and-patterns/menus).  
 
 1. En la página **Inicio** de la aplicación Portal de empresa, vaya a **Mis dispositivos**.
 
@@ -61,4 +61,3 @@ Realice el paso siguiente para quitar un dispositivo mediante las acciones del [
      ![Captura de pantalla de ejemplo de la página principal de la aplicación Portal de empresa para Windows. El campo emergente Cambiar nombre aparece sobre el dispositivo. Allí, el usuario puede escribir un nombre nuevo y hacer clic en Cambiar nombre o Cancelar.](./media/1808_RenameApp_Popup.png)  
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
-

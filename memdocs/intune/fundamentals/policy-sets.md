@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531647"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909931"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Uso de conjuntos de directivas para agrupar colecciones de objetos de administración
 
@@ -71,7 +71,7 @@ Cuando se crea un conjunto de directivas, se crea una única unidad de asignaci�
 5. Haga clic en **Siguiente: Administración de dispositivos**.<br>
    En la página **Administración de dispositivos** puede agregar objetos de administración de dispositivos al conjunto de directivas, como [perfiles de configuración de dispositivos](../configuration/device-profiles.md) y [directivas de cumplimiento de dispositivos](../protect/device-compliance-get-started.md). Asegúrese de incluir todos los objetos asociados, como otras directivas, certificados y perfiles de línea de base de seguridad.
 6. Haga clic en **Siguiente: Inscripción de dispositivos**.<br>
-   En la página **Inscripción de dispositivos** puede agregar objetos de inscripción de dispositivos al conjunto de directivas, como [restricciones de tipo de dispositivo](../enrollment/enrollment-restrictions-set.md), [perfiles de Windows Autopilot Deployment](../enrollment/enrollment-autopilot.md) y [perfiles de página de estado de la inscripción](../enrollment/windows-enrollment-status.md).
+   En la página **Inscripción de dispositivos** puede agregar objetos de inscripción de dispositivos al conjunto de directivas, como [restricciones de tipo de dispositivo](../enrollment/enrollment-restrictions-set.md), [perfiles de Windows Autopilot Deployment](../../autopilot/enrollment-autopilot.md) y [perfiles de página de estado de la inscripción](../enrollment/windows-enrollment-status.md).
 7. Haga clic en **Siguiente: Asignaciones**.<br>
    En la página **Asignaciones** puede asignar el conjunto de directivas a usuarios y dispositivos. Es importante saber que un conjunto de directivas se puede asignar a un dispositivo, independientemente de si dicho dispositivo está administrado o no por Intune.
 8. Haga clic en **Siguiente: Revisar + crear** para revisar los valores especificados en el perfil.

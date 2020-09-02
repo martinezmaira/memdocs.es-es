@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a385b990dfb3c81ea10454b2134f92dec5a2f073
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357563"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907674"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Recursos adicionales para planear la implementación de Intune
 
@@ -50,7 +50,7 @@ Aquí se muestra una lista de plantillas de tabla para cada sección.
 
 Consulte estos recursos para obtener información adicional que puede resultar útil durante el proceso de planeación, diseño y ejecución de la implementación de Intune.
 
-- [Documentación de Microsoft Intune](https://docs.microsoft.com/intune/): la serie completa de documentación de Intune.
+- [Documentación de Microsoft Intune](/intune/): la serie completa de documentación de Intune.
 
 - [Microsoft Trust Center](https://www.microsoft.com/TrustCenter): conozca el enfoque de Microsoft con respecto a la seguridad, la privacidad, el cumplimiento y la transparencia de todos los productos y servicios de Microsoft Cloud.
 

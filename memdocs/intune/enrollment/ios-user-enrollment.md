@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093772"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907742"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Configuración de la Inscripción de usuario de iOS/iPadOS y iPadOS (versión preliminar)
 
@@ -46,7 +46,7 @@ Un perfil de inscripción define la configuración que se aplica a un grupo de d
 
     ![Creación de un perfil de inscripción de Apple](./media/ios-user-enrollment/create-profile.png)
 
-2. En la página **Básico**, escriba la información pertinente en **Nombre** y **Descripción** para el perfil con fines administrativos. Los usuarios no ven estos detalles. Puede usar este campo de **nombre** para crear un grupo dinámico en Azure Active Directory. Use el nombre de perfil para definir el parámetro enrollmentProfileName para asignar dispositivos con este perfil de inscripción. Obtenga más información sobre los [grupos dinámicos de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+2. En la página **Básico**, escriba la información pertinente en **Nombre** y **Descripción** para el perfil con fines administrativos. Los usuarios no ven estos detalles. Puede usar este campo de **nombre** para crear un grupo dinámico en Azure Active Directory. Use el nombre de perfil para definir el parámetro enrollmentProfileName para asignar dispositivos con este perfil de inscripción. Obtenga más información sobre los [grupos dinámicos de Azure Active Directory](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Página de aspectos básicos](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ Un perfil de inscripción define la configuración que se aplica a un grupo de d
 
     - **Inscripción de dispositivos**: todos los usuarios de este perfil usarán la Inscripción de dispositivos.
     - **Inscripción de usuarios**: todos los usuarios de este perfil usarán la Inscripción de usuarios.
-    - **Determinar según la opción del usuario**: todos los usuarios de este grupo tendrán la posibilidad de elegir qué tipo de inscripción usar. Cuando los usuarios inscriban sus dispositivos, verán una opción de elegir entre **Soy el propietario de este dispositivo** y **(Empresa) es el propietario de este dispositivo**. Si optan por la segunda, el dispositivo se inscribirá mediante la inscripción de dispositivos. Si el usuario elige **Soy el propietario de este dispositivo**, tendrá otra opción para proteger todo el dispositivo o solo las aplicaciones y los datos relacionados con el trabajo. La selección del usuario final de si es el propietario del dispositivo determina qué tipo de inscripción se implementa en su dispositivo. Esta opción de usuario también se refleja en el atributo Propiedad del dispositivo en Intune. Para obtener más información sobre la experiencia del usuario, vea [Configuración del acceso de dispositivos iOS/iPadOS a los recursos de la empresa](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+    - **Determinar según la opción del usuario**: todos los usuarios de este grupo tendrán la posibilidad de elegir qué tipo de inscripción usar. Cuando los usuarios inscriban sus dispositivos, verán una opción de elegir entre **Soy el propietario de este dispositivo** y **(Empresa) es el propietario de este dispositivo**. Si optan por la segunda, el dispositivo se inscribirá mediante la inscripción de dispositivos. Si el usuario elige **Soy el propietario de este dispositivo**, tendrá otra opción para proteger todo el dispositivo o solo las aplicaciones y los datos relacionados con el trabajo. La selección del usuario final de si es el propietario del dispositivo determina qué tipo de inscripción se implementa en su dispositivo. Esta opción de usuario también se refleja en el atributo Propiedad del dispositivo en Intune. Para obtener más información sobre la experiencia del usuario, vea [Configuración del acceso de dispositivos iOS/iPadOS a los recursos de la empresa](../user-help/enroll-your-device-in-intune-macos-cp.md).
     
 5. Seleccione **Siguiente**.
 
@@ -81,5 +81,3 @@ Después de crear más de un perfil de tipo de inscripción, puede cambiar el or
 2. Arrastre y coloque los perfiles en la lista en el orden en el que desea que se apliquen.
 
 En caso de que se produzcan conflictos entre los perfiles de cualquier usuario, se aplicará el perfil de mayor prioridad para el usuario.
-
-

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: a9c3e456722d0b747a07c3f7040edc2cdf28f264
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179526"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909591"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Configuración de ATP de Microsoft Defender en Intune
 
@@ -84,9 +84,9 @@ Cuando se habilita la compatibilidad con ATP de Microsoft Defender en Intune, s
 
 Cuando estableció la conexión entre Intune y ATP de Microsoft Defender, Intune recibió un paquete de configuración de incorporación de ATP de Microsoft Defender procedente de ATP de Microsoft Defender. Este paquete de configuración se implementa en los dispositivos Windows con un perfil de configuración de dispositivo para ATP de Microsoft Defender.
 
-El paquete de configuración configura los dispositivos para que se comuniquen con los [servicios de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) para examinar archivos y detectar amenazas. El dispositivo también está configurado para notificar a ATP de Microsoft Defender el nivel de riesgo de los dispositivos en función de las directivas de cumplimiento que cree.
+El paquete de configuración configura los dispositivos para que se comuniquen con los [servicios de ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) para examinar archivos y detectar amenazas. El dispositivo también está configurado para notificar a ATP de Microsoft Defender el nivel de riesgo de los dispositivos en función de las directivas de cumplimiento que cree.
 
-Después de incorporar un dispositivo mediante el paquete de configuración, no es necesario hacerlo de nuevo. También puede incorporar dispositivos mediante una [directiva de grupo o Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+Después de incorporar un dispositivo mediante el paquete de configuración, no es necesario hacerlo de nuevo. También puede incorporar dispositivos mediante una [directiva de grupo o Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### <a name="create-the-device-configuration-profile-to-onboard-windows-devices"></a>Creación del perfil de configuración de dispositivos para incorporar dispositivos Windows
 
@@ -105,7 +105,7 @@ Después de incorporar un dispositivo mediante el paquete de configuración, no 
    - **Uso compartido de muestras para todos los archivos**: la opción **Habilitar** permite recopilar muestras y compartirlas con ATP de Microsoft Defender. Por ejemplo, si ve un archivo sospechoso, puede enviarlo a ATP de Microsoft Defender para un análisis profundo. **No configurado**: no se comparte ninguna muestra con ATP de Microsoft Defender.
    - **Frecuencia de informes de telemetría urgentes**: para los dispositivos que presentan un riesgo alto, **habilite** esta opción para informar de la telemetría al servicio de ATP de Microsoft Defender con más frecuencia.
 
-     [Incorporar máquinas Windows 10 con Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) tiene más detalles sobre estas configuraciones de ATP de Microsoft Defender.
+     [Incorporar máquinas Windows 10 con Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) tiene más detalles sobre estas configuraciones de ATP de Microsoft Defender.
 
 7. Seleccione **Siguiente** para abrir la página **Etiquetas de ámbito**. Las etiquetas de ámbito son opcionales. Seleccione **Siguiente** para continuar.
 
@@ -120,7 +120,7 @@ Después de incorporar un dispositivo mediante el paquete de configuración, no 
 
 Después de establecer la conexión de servicio a servicio entre Intune y ATP de Microsoft Defender, puede incorporar dispositivos Android a ATP de Microsoft Defender. La incorporación configura los dispositivos para que se comuniquen con ATP de Microsoft Defender, que luego recopila datos sobre el nivel de riesgo de los dispositivos.
 
-A diferencia de los dispositivos Windows, no hay un paquete de configuración para los dispositivos que ejecutan Android. En su lugar, consulte [Introducción a ATP de Microsoft Defender para Android](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) en la documentación de ATP de Microsoft Defender para ver los requisitos previos y las instrucciones de incorporación para Android.
+A diferencia de los dispositivos Windows, no hay un paquete de configuración para los dispositivos que ejecutan Android. En su lugar, consulte [Introducción a ATP de Microsoft Defender para Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) en la documentación de ATP de Microsoft Defender para ver los requisitos previos y las instrucciones de incorporación para Android.
 
 En el caso de los dispositivos que ejecutan Android, también puede usar la directiva de Intune para modificar ATP de Microsoft Defender en Android. Para obtener más información, consulte [Protección web de ATP de Microsoft Defender](../protect/advanced-threat-protection-manage-android.md).
 
@@ -145,7 +145,7 @@ Si no está familiarizado con la creación de una directiva de cumplimiento, con
   
 5. En la pestaña **Configuración de compatibilidad**, expanda el grupo **ATP de Microsoft Defender** y establezca la opción **Solicitar que el dispositivo tenga o esté por debajo de la puntuación de riesgo de la máquina** en su nivel preferido.
 
-   Las clasificaciones de nivel de amenaza vienen [determinadas por ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
+   Las clasificaciones de nivel de amenaza vienen [determinadas por ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
    - **Borrar**: este nivel es el más seguro. El dispositivo no puede tener ninguna amenaza existente y aún puede acceder a los recursos de la empresa. Si se encuentra alguna amenaza, el dispositivo se clasificará como no conforme. (ATP de Microsoft Defender usa el valor *Seguro*).
    - **Bajo**: el dispositivo se evalúa como compatible si solo hay amenazas de nivel bajo. Los dispositivos con niveles de amenaza medio o alto no son compatibles.
@@ -194,5 +194,5 @@ Obtenga más información en la documentación de Intune:
 
 Obtenga más información en la documentación de ATP de Microsoft Defender:
 
-- [Acceso condicional de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Panel de riesgo de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Acceso condicional de ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Panel de riesgo de ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

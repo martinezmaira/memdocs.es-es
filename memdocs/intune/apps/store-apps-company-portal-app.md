@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179543"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910271"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Adición de la aplicación Portal de empresa de Windows 10 con Microsoft Intune
 
@@ -67,7 +67,7 @@ Para administrar dispositivos e instalar aplicaciones, los usuarios pueden insta
 
 11. Asigne la aplicación Portal de empresa como una aplicación necesaria al conjunto seleccionado de grupos de dispositivos o usuarios.  
 
-Para obtener más información sobre cómo controla Intune las dependencias de las aplicaciones universales, vea [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Implementación de appxbundle con dependencias a través de la MDM de Microsoft Intune).  
+Para obtener más información sobre cómo controla Intune las dependencias de las aplicaciones universales, vea [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Implementación de appxbundle con dependencias a través de la MDM de Microsoft Intune).  
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>¿Cómo actualizo la aplicación Portal de empresa en los dispositivos de mis usuarios si ya han instalado las aplicaciones anteriores desde la Tienda?
@@ -110,4 +110,3 @@ Cuando el script termina de ejecutarse, genera la versión firmada de la aplicac
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Asignar aplicaciones a grupos](apps-deploy.md)
-

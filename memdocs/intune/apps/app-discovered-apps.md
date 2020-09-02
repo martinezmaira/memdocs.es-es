@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: 358d01a968c98262980f8e121d8e7e92e2880c6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512740"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907826"
 ---
 # <a name="intune-discovered-apps"></a>Aplicaciones descubiertas de Intune
 
@@ -64,7 +64,7 @@ En la lista siguiente se proporciona el tipo de plataforma de aplicaciones, las 
 | Android Enterprise | Solo aplicaciones administradas | Solo aplicaciones instaladas en el perfil de trabajo | Cada 7 días a partir de la inscripción de dispositivos |
 
 > [!NOTE]
-> - Los dispositivos Windows 10 administrados conjuntamente, como se muestra en la carga de trabajo de [aplicaciones cliente](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) de Configuration Manager, no recopilan actualmente el inventario de aplicaciones a través de la extensión de administración de Intune (IME) según la programación anterior. Para mitigar este problema, la carga de trabajo de [aplicaciones cliente](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) de Configuration Manager debe cambiarse a Intune para que el IME se instale en el dispositivo (se requiere el IME para el inventario de Win32 y la implementación de PowerShell). Tenga en cuenta que cualquier cambio o actualización en este comportamiento se anuncia en las secciones [en desarrollo p](../fundamentals/in-development.md) o [Novedades](../fundamentals/whats-new.md).
+> - Los dispositivos Windows 10 administrados conjuntamente, como se muestra en la carga de trabajo de [aplicaciones cliente](../../configmgr/comanage/workloads.md#client-apps) de Configuration Manager, no recopilan actualmente el inventario de aplicaciones a través de la extensión de administración de Intune (IME) según la programación anterior. Para mitigar este problema, la carga de trabajo de [aplicaciones cliente](../../configmgr/comanage/workloads.md#client-apps) de Configuration Manager debe cambiarse a Intune para que el IME se instale en el dispositivo (se requiere el IME para el inventario de Win32 y la implementación de PowerShell). Tenga en cuenta que cualquier cambio o actualización en este comportamiento se anuncia en las secciones [en desarrollo p](../fundamentals/in-development.md) o [Novedades](../fundamentals/whats-new.md).
 > - Es posible que los dispositivos macOS de propiedad personal inscritos antes de noviembre de 2019 sigan mostrando todas las aplicaciones instaladas en el dispositivo hasta que los dispositivos se vuelvan a inscribir.
 > - Las versiones Android Enterprise totalmente administrado y dedicado no muestran las aplicaciones detectadas.
 

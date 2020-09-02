@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252782"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909659"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configuración de acciones para dispositivos no compatibles en Intune
 
@@ -29,7 +29,7 @@ Para aquellos dispositivos que no cumplen las reglas o las directivas de cumplim
 
 ## <a name="overview"></a>Introducción
 
-De forma predeterminada, cada directiva de cumplimiento incluye la acción de incumplimiento de **Marcar el dispositivo no compatible** con una programación de cero días (**0**). El resultado de este valor predeterminado es que cuando Intune detecta un dispositivo que no es compatible, lo marca inmediatamente como tal. Una vez que un dispositivo se ha marcado como no compatible, el [Acceso condicional](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) de Azure Active Directory (AD) puede bloquear el dispositivo.
+De forma predeterminada, cada directiva de cumplimiento incluye la acción de incumplimiento de **Marcar el dispositivo no compatible** con una programación de cero días (**0**). El resultado de este valor predeterminado es que cuando Intune detecta un dispositivo que no es compatible, lo marca inmediatamente como tal. Una vez que un dispositivo se ha marcado como no compatible, el [Acceso condicional](/azure/active-directory/active-directory-conditional-access-azure-portal) de Azure Active Directory (AD) puede bloquear el dispositivo.
 
 Mediante la configuración de **Acciones en caso de incumplimiento** se obtiene flexibilidad para decidir qué hacer respecto a los dispositivos no compatibles y cuándo hacerlo. Por ejemplo, puede elegir no bloquear el dispositivo inmediatamente y conceder al usuario un período de gracia para convertirlo en compatible.
 
@@ -107,7 +107,7 @@ Cuando se envía el correo electrónico, Intune incluye información sobre los d
 
 Se pueden [agregar acciones en caso de incumplimiento](#add-actions-for-noncompliance) cuando se configure la directiva de cumplimiento de dispositivos o, más adelante, editando la directiva. Se pueden agregar acciones adicionales a cada directiva para satisfacer sus necesidades. Tenga en cuenta que cada directiva de cumplimiento incluye automáticamente la acción predeterminada de incumplimiento que marca los dispositivos como no compatibles, con una programación establecida en cero días.
 
-Para usar las directivas de cumplimiento de dispositivos a fin de bloquear los dispositivos del uso de los recursos corporativos, se debe configurar el acceso condicional de Azure AD. Consulte [¿Qué es el acceso condicional en Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) o [¿Cuáles son las formas habituales de usar el acceso condicional con Intune?](conditional-access-intune-common-ways-use.md) para obtener instrucciones.
+Para usar las directivas de cumplimiento de dispositivos a fin de bloquear los dispositivos del uso de los recursos corporativos, se debe configurar el acceso condicional de Azure AD. Consulte [¿Qué es el acceso condicional en Azure Active Directory?](/azure/active-directory/active-directory-conditional-access-azure-portal) o [¿Cuáles son las formas habituales de usar el acceso condicional con Intune?](conditional-access-intune-common-ways-use.md) para obtener instrucciones.
 
 A fin de crear una directiva de cumplimiento de dispositivos, vea la guía siguiente específica para plataformas:
 
