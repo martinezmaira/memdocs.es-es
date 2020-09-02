@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559545"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915592"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creación y asignación de perfiles de certificado SCEP en Intune
 
@@ -104,16 +104,16 @@ Después de [configurar la infraestructura](certificates-scep-configure.md) para
          - **CN={{IMEINumber}}** : número exclusivo de identidad de equipo móvil internacional (IMEI) usado para identificar un teléfono móvil.
          - **CN={{OnPrem_Distinguished_Name}}** : Secuencia de nombres distintivos relativos separados por comas, como *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-           Para usar la variable *{{OnPrem_Distinguished_Name}}* , asegúrese de sincronizar el atributo de usuario *onpremisesdistinguishedname* mediante [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
+           Para usar la variable *{{OnPrem_Distinguished_Name}}* , asegúrese de sincronizar el atributo de usuario *onpremisesdistinguishedname* mediante [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
 
          - **CN={{onPremisesSamAccountName}}** : los administradores pueden sincronizar el atributo samAccountName de Active Directory con Azure AD mediante Azure AD Connect en un atributo llamado *onPremisesSamAccountName*. Intune puede sustituir esa variable como parte de una solicitud de emisión de certificado en el asunto de un certificado. El atributo samAccountName es el nombre de inicio de sesión del usuario que se utiliza para admitir clientes y servidores de una versión anterior de Windows (anterior a Windows 2000). El formato de nombre de inicio de sesión de usuario es el siguiente: *NombreDeDominio\usuario de prueba*, o bien solo *usuario de prueba*.
 
-            Para usar la variable *{{onPremisesSamAccountName}}* , asegúrese de sincronizar el atributo de usuario *onPremisesSamAccountName* mediante [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
+            Para usar la variable *{{onPremisesSamAccountName}}* , asegúrese de sincronizar el atributo de usuario *onPremisesSamAccountName* mediante [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
 
          Mediante una combinación de una o muchas de estas variables y cadenas estáticas, puede crear un formato de nombre de firmante personalizado como este:  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-         Ese ejemplo incluye un formato de nombre de firmante en el que se usan las variables CN y E, y cadenas para los valores Unidad organizativa, Organización, Ubicación, Estado y País. [CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describe esta función y sus cadenas admitidas.
+         Ese ejemplo incluye un formato de nombre de firmante en el que se usan las variables CN y E, y cadenas para los valores Unidad organizativa, Organización, Ubicación, Estado y País. [CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describe esta función y sus cadenas admitidas.
          
          \* En el caso de los perfiles de Android Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado, el valor **CN={{UserPrincipalName}}** no funcionará. Los perfiles de Android Perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado se pueden usar con dispositivos sin usuario, por lo que este perfil no podrá obtener el nombre principal de usuario del usuario. Si realmente necesita esta opción para dispositivos con usuarios, puede usar una solución alternativa como la siguiente: **CN={{NombreDeUsuario}}\@contoso.com**. Proporcionará el nombre de usuario y el dominio que haya agregado manualmente, como janedoe@contoso.com.
 
@@ -313,7 +313,7 @@ Antes de continuar, tenga en cuenta lo siguiente:
 
 - Para publicar rápidamente un certificado en un dispositivo una vez inscrito el dispositivo, asigne el perfil de certificado en un grupo de usuarios (no en un grupo de dispositivos). Si lo asigna en un grupo de dispositivos, deberá efectuar un registro completo del dispositivo para que el dispositivo reciba directivas.
 
-- Si usa la administración conjunta para Intune y Configuration Manager, en Configuration Manager, [establezca el control deslizante de la carga de trabajo](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) de las directivas de acceso a los recursos en **Intune** o **Intune piloto**. Esta configuración permite que los clientes de Windows 10 inicien el proceso de solicitar el certificado.
+- Si usa la administración conjunta para Intune y Configuration Manager, en Configuration Manager, [establezca el control deslizante de la carga de trabajo](/configmgr/comanage/how-to-switch-workloads) de las directivas de acceso a los recursos en **Intune** o **Intune piloto**. Esta configuración permite que los clientes de Windows 10 inicien el proceso de solicitar el certificado.
 
 > [!NOTE]
 > - En los dispositivos iOS/iPadOS, cuando hay un perfil de certificado SCEP o PKCS asociado con un perfil adicional, como uno de Wi-Fi o VPN, el dispositivo recibe un certificado para cada uno de esos perfiles adicionales. Esto hace que la solicitud de certificado SCEP o PKCS entregue varios certificados al dispositivo iOS/iPadOS. 

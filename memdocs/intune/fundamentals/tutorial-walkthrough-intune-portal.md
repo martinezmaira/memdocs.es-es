@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355262"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907014"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Tutorial: Tutorial de Microsoft Intune en Azure Portal
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) contiene más de 100 servicios para ayudarle con una variedad de escenarios y posibilidades de informática en la nube. Microsoft Intune es uno de los distintos servicios disponibles en Azure. Intune ayuda a asegurarse de que los dispositivos, aplicaciones y datos empresariales cumplen los requisitos de seguridad de la empresa. Tiene el control para establecer qué requisitos se deben comprobar y qué sucede cuando no se cumplen. [Azure Portal](https://portal.azure.com) es la ubicación en la que se encuentra el servicio Microsoft Intune. Comprender las características disponibles en Intune le ayudará a realizar diferentes tareas de administración de dispositivos móviles (MDM) y administración de aplicaciones móviles (MAM).
+[Azure](/learn/modules/welcome-to-azure) contiene más de 100 servicios para ayudarle con una variedad de escenarios y posibilidades de informática en la nube. Microsoft Intune es uno de los distintos servicios disponibles en Azure. Intune ayuda a asegurarse de que los dispositivos, aplicaciones y datos empresariales cumplen los requisitos de seguridad de la empresa. Tiene el control para establecer qué requisitos se deben comprobar y qué sucede cuando no se cumplen. [Azure Portal](https://portal.azure.com) es la ubicación en la que se encuentra el servicio Microsoft Intune. Comprender las características disponibles en Intune le ayudará a realizar diferentes tareas de administración de dispositivos móviles (MDM) y administración de aplicaciones móviles (MAM).
 
 En este tutorial, aprenderá a:
 > [!div class="checklist"]

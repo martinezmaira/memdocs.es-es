@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ede37e43740d6b8e7627df017f0c7acc5f712b3c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5b2c14e4447ddf968eaba1874260ad3f684dfb52
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880767"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913042"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Necesita habilitar el arranque seguro
 
@@ -32,6 +32,6 @@ La organización requiere que se habilite el arranque seguro de Windows, que es 
 
 Habilitar el arranque seguro es una tarea avanzada. Si usa un dispositivo móvil, póngase en contacto con el equipo de soporte técnico de su empresa para obtener ayuda.
 
-Si usa un equipo de escritorio, puede ponerse en contacto con el equipo de soporte técnico de su empresa o consultar la sección "Para volver a habilitar el arranque seguro" en la página [Deshabilitar el arranque seguro](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) para intentar habilitarlo usted mismo.
+Si usa un equipo de escritorio, puede ponerse en contacto con el equipo de soporte técnico de su empresa o consultar la sección "Para volver a habilitar el arranque seguro" en la página [Deshabilitar el arranque seguro](/windows-hardware/manufacture/desktop/disabling-secure-boot) para intentar habilitarlo usted mismo.
 
 ¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

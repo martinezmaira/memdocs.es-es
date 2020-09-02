@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429503"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915711"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Configuración de Windows 10 y versiones posteriores para administrar dispositivos compartidos mediante Intune
 
@@ -32,7 +32,7 @@ Con Microsoft Intune, los usuarios finales pueden iniciar sesión en estos dispo
 
 En este artículo se enumeran y describen las configuraciones que usa en un perfil de configuración de dispositivo con Windows 10 y versiones posteriores. Al crear el perfil en Intune, implementa o asigna el perfil en los grupos de dispositivos de su organización. También puede asignar este perfil a grupos de dispositivos con distintos tipos de dispositivo y versiones del SO.
 
-Para obtener más información sobre esta característica de Intune, vea [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Control de acceso, cuentas y características de energía en dispositivos con varios usuarios o equipos compartidos). Para obtener más información sobre el CSP de Windows, vea [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp) (CSP de SharedPC).
+Para obtener más información sobre esta característica de Intune, vea [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Control de acceso, cuentas y características de energía en dispositivos con varios usuarios o equipos compartidos). Para obtener más información sobre el CSP de Windows, vea [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp) (CSP de SharedPC).
 
 ## <a name="before-your-begin"></a>Antes de empezar
 
@@ -40,7 +40,7 @@ Para obtener más información sobre esta característica de Intune, vea [Contro
 
 ## <a name="shared-multi-user-device-settings"></a>Configuración de dispositivos compartidos con varios usuarios
 
-Esta configuración usa el [CSP de SharedPC](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+Esta configuración usa el [CSP de SharedPC](/windows/client-management/mdm/sharedpc-csp).
 
 - **Modo de PC compartido**: **Habilitar** activa el modo de PC compartido. En este modo, no puede haber más de un usuario que inicie sesión en el dispositivo. Otro usuario no puede iniciar sesión hasta que el primero la cierre. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 - **Cuenta de invitado**: elija la opción de crear un invitado en la pantalla de inicio de sesión. Las cuentas de invitado no requieren autenticación ni credenciales de usuario. Esta configuración crea una cuenta local cada vez que se usa. Las opciones son:
@@ -92,10 +92,10 @@ Esta configuración usa el [CSP de SharedPC](https://docs.microsoft.com/windows/
   - **Habilitada**: usa la configuración recomendada para los dispositivos que se emplean en escuelas, que es más restrictiva.
   - **Disabled**: no se usan las directivas de educación recomendadas y predeterminadas.
 
-  Para obtener más información sobre qué hacen las directivas de educación, consulte [Recomendaciones de configuración de Windows 10 para clientes del sector educativo](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+  Para obtener más información sobre qué hacen las directivas de educación, consulte [Recomendaciones de configuración de Windows 10 para clientes del sector educativo](/education/windows/configure-windows-for-education).
 
 > [!TIP]
-> [Configurar un equipo compartido o de invitado con Windows 10](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (abre otro sitio web de Microsoft Docs) es un excelente recurso sobre esta característica de Windows 10, que incluye conceptos y directivas de grupo que se pueden establecer en modo compartido.
+> [Configurar un equipo compartido o de invitado con Windows 10](/windows/configuration/set-up-shared-or-guest-pc) (abre otro sitio web de Microsoft Docs) es un excelente recurso sobre esta característica de Windows 10, que incluye conceptos y directivas de grupo que se pueden establecer en modo compartido.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

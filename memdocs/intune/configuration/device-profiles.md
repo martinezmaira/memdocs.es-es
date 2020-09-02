@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820500"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913790"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicación de la configuración y características en dispositivos con perfiles de dispositivos Microsoft Intune
 
@@ -138,7 +138,7 @@ Esta característica es compatible con:
 
 ## <a name="education"></a>Education
 
-En [Configuración de los ajustes de educación de Windows 10 en Microsoft Intune](education-settings-configure.md) se configuran opciones para la [aplicación Take a Test de Windows](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Al configurar estas opciones, no puede ejecutar ninguna otra aplicación en el dispositivo hasta que se complete la prueba.
+En [Configuración de los ajustes de educación de Windows 10 en Microsoft Intune](education-settings-configure.md) se configuran opciones para la [aplicación Take a Test de Windows](/education/windows/take-tests-in-windows-10). Al configurar estas opciones, no puede ejecutar ninguna otra aplicación en el dispositivo hasta que se complete la prueba.
 
 En [Configuración del entorno educativo: iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) se usa la aplicación Classroom de iOS/iPadOS para guiar el aprendizaje y controlar los dispositivos de los alumnos en el aula. Puede configurar dispositivos iPad para que muchos alumnos puedan compartir un solo dispositivo.
 
@@ -157,7 +157,7 @@ Esta característica es compatible con:
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) configura los valores de BitLocker y Microsoft Defender para dispositivos Windows 10. Además, configura el firewall, la puerta de enlace y otros recursos en dispositivos macOS.
 
-Para incorporar Advanced Threat Protection de Microsoft Defender (WDATP) a Microsoft Intune, consulte [Configuración de los puntos de conexión mediante las herramientas de Administración de dispositivos móviles (MDM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+Para incorporar Advanced Threat Protection de Microsoft Defender (WDATP) a Microsoft Intune, consulte [Configuración de los puntos de conexión mediante las herramientas de Administración de dispositivos móviles (MDM)](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 Esta característica es compatible con:
 

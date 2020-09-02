@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 061ee72dfb473eef8e1373497ad6494fa0c3541c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252731"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912617"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar dispositivos como corporativos
 
@@ -36,7 +36,7 @@ A la hora de efectuar la inscripción, Intune asigna de forma automática estado
 - Se ha inscrito con una cuenta de [administrador de inscripción de dispositivos](device-enrollment-manager-enroll.md) (todas las plataformas).
 - Se ha inscrito mediante el [Programa de inscripción de dispositivos](device-enrollment-program-enroll-ios.md) de Apple, [Apple School Manager](apple-school-manager-set-up-ios.md) o [Apple Configurator](apple-configurator-enroll-ios.md) (solo iOS).
 - [Se ha identificado como corporativo antes de la inscripción](#identify-corporate-owned-devices-with-imei-or-serial-number) mediante un número de identidad internacional de dispositivos móviles IMEI (todas las plataformas con números IMEI) o un número de serie (iOS y Android).
-- Se ha unido a Azure Active Directory con credenciales profesionales o educativas. [Los dispositivos Azure Active Directory registrados](https://docs.microsoft.com/azure/active-directory/devices/overview) se marcarán como personales.
+- Se ha unido a Azure Active Directory con credenciales profesionales o educativas. [Los dispositivos Azure Active Directory registrados](/azure/active-directory/devices/overview) se marcarán como personales.
 - Se ha establecido como corporativo en la [lista de propiedades del dispositivo](#change-device-ownership).
 
 Una vez realizada la inscripción, [podrá cambiar la opción de propiedad](#change-device-ownership) entre **Personal** y **Corporativo**.

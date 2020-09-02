@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252346"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906759"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo
 
@@ -168,7 +168,7 @@ Puede configurar Intune para eliminar automáticamente los dispositivos que pare
 4. Elija **Guardar**.
 
 > [!NOTE]
-> Las reglas de limpieza de dispositivos no están disponibles en escenarios de Android Enterprise de tipo [totalmente administrado](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [dedicado](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll) y [propiedad corporativa con perfil de trabajo](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
+> Las reglas de limpieza de dispositivos no están disponibles en escenarios de Android Enterprise de tipo [totalmente administrado](../enrollment/android-fully-managed-enroll.md), [dedicado](../enrollment/android-kiosk-enroll.md) y [propiedad corporativa con perfil de trabajo](../enrollment/android-corporate-owned-work-profile-enroll.md). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Eliminación de dispositivos en el portal de Azure Active Directory
 
@@ -206,4 +206,3 @@ Aplicable a los dispositivos con Windows 10. Obtenga más información sobre [Em
 ## <a name="next-steps"></a>Pasos siguientes
 
 Si quiere volver a inscribir un dispositivo eliminado, vea [Opciones de inscripción](../enrollment/enrollment-options.md).
-

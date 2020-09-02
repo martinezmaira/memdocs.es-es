@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 2c6648f66c585dac5b8913fdb13adfcb98cbf927
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429619"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912702"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Configuración de la aplicación Hacer un examen en dispositivos Windows 10 con Microsoft Intune
 
@@ -49,7 +49,7 @@ Una vez configurado el perfil, asígnelo a los alumnos e impleméntelo.
   - `user@contoso.com`
   - `computerName\username`
 - **Nombre de la cuenta**: para configurar un tipo de cuenta de invitado local, escriba el nombre de la cuenta que se usa con la aplicación Hacer un examen. El nombre de la cuenta aparecerá como un icono en la pantalla de inicio de sesión. Los alumnos deben hacer clic en el icono para iniciar el examen.  
-- **Dirección URL de evaluación**: especifique la dirección URL del examen que desea que los usuarios realicen. Para más información sobre cómo obtener la dirección URL, vea la [documentación de Hacer un examen](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Dirección URL de evaluación**: especifique la dirección URL del examen que desea que los usuarios realicen. Para más información sobre cómo obtener la dirección URL, vea la [documentación de Hacer un examen](/education/windows/take-tests-in-windows-10).
 - **Conexión de impresora**: **Requerir** solo permite el acceso a la aplicación Hacer un examen desde dispositivos conectados a una impresora. Esta opción también hace que el botón Imprimir de la aplicación esté disponible para los alumnos que van a realizar el examen. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede permitir a los alumnos acceder a la aplicación desde dispositivos que no están conectados a una impresora.  
 - **Supervisión de pantalla**: **Permitir** supervisa la actividad de la pantalla mientras los usuarios hacen un examen. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede evitar la supervisión de la pantalla durante el examen.
 - **Sugerencias de texto**: elija **Permitir** para que los que hacen el examen puedan ver sugerencias de texto. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo puede bloquear las sugerencias de texto mientras los usuarios hacen un examen.

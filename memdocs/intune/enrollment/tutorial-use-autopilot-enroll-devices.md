@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 45ec9e0353feffdc6beb068d5b99426a734d7096
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915439"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutorial: Uso de Autopilot para inscribir dispositivos Windows en Intune
 
@@ -40,12 +40,12 @@ En este tutorial, aprenderá a:
 
 Si no tiene una suscripción a Intune, [regístrese para obtener una cuenta de prueba gratuita](../fundamentals/free-trial-sign-up.md).
 
-Para obtener información general sobre las ventajas, los escenarios y los requisitos previos de Autopilot, vea [Introducción a Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+Para obtener información general sobre las ventajas, los escenarios y los requisitos previos de Autopilot, vea [Introducción a Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
 ## <a name="prerequisites"></a>Requisitos previos
 - [Configurar la inscripción automática para Windows](quickstart-setup-auto-enrollment.md)
-- [Suscripción a las ediciones Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Suscripción a las ediciones Azure Active Directory Premium](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## <a name="add-devices"></a>Agregar dispositivos
@@ -128,5 +128,3 @@ Puede encontrar más información sobre otras opciones disponibles para Windows 
 
 > [!div class="nextstepaction"]
 > [Artículo exhaustivo sobre la inscripción de Autopilot](../../autopilot/enrollment-autopilot.md)
-
-

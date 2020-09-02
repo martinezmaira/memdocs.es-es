@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: c2183f68cd49c9ca353511aadb4cb3a0b6901e84
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872059"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915762"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Solución de problemas de perfiles de configuración de dispositivos de Wi-Fi en Microsoft Intune
 
@@ -72,7 +72,7 @@ En este escenario se usa un dispositivo Nokia 6.1. Antes de instalar el perfil 
 
 En Android, el archivo **Omadmlog.log** detalla las actividades del perfil de Wi-Fi cuando se instala en el dispositivo. Puede tener hasta cinco archivos de registro de Omadmlog. Asegúrese de obtener la marca de tiempo de la última sincronización, ya que le ayudará a encontrar las entradas de registro relacionadas.
 
-En el ejemplo siguiente, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) para leer los registros y busque "wifimgr":
+En el ejemplo siguiente, use [CMTrace](/configmgr/core/support/cmtrace) para leer los registros y busque "wifimgr":
 
 > [!div class="mx-imgBorder"]
 > ![La conexión Wi-Fi se muestra como una red guardada](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -201,7 +201,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
       > ![Información de diagnóstico de MDM de ejemplo que muestra la configuración del perfil de Wi-Fi en dispositivos Windows 10](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
-  > Para obtener más información, consulte [Diagnosticar errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+  > Para obtener más información, consulte [Diagnosticar errores de MDM en Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
 
 - En dispositivos Android, si los perfiles de SCEP y raíz de confianza no están instalados en el dispositivo, verá la siguiente entrada en el archivo Omadmlog de la aplicación Portal de empresa:
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Confirme que todos los certificados necesarios en toda la cadena de certificados están en el dispositivo Android. De lo contrario, no se podrá instalar el perfil de Wi-Fi en el dispositivo. Para obtener más información, vea [Falta de autoridad de certificación intermedia](https://developer.android.com/training/articles/security-ssl#MissingCa) (se abre el sitio web de Android).
   - Filtre Omadmlog con palabras clave para buscar información, como qué certificado se usa en el perfil de Wi-Fi y si el perfil se aplicó correctamente.
 
-    Por ejemplo, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) para leer los registros. Use la cadena de búsqueda para filtrar "wifimgr":
+    Por ejemplo, use [CMTrace](/configmgr/core/support/cmtrace) para leer los registros. Use la cadena de búsqueda para filtrar "wifimgr":
 
     > [!div class="mx-imgBorder"]
     > ![Filtrado de CMTrace para buscar perfiles de configuración de WiFiMgr en dispositivos Android](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

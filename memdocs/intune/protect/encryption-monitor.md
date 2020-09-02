@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460474"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910985"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Supervisión del cifrado de dispositivos con Intune
 
@@ -59,7 +59,7 @@ En el panel de informe de cifrado se muestra una lista de los dispositivos que s
     - versión 1709 o posterior de *Business*, *Enterprise*, *Education*, o versión 1809 o posterior de *Pro*.
     - El dispositivo debe tener un chip TPM.
 
-    Para más información, vea el [proveedor de servicios de configuración (CSP) de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) en la documentación de Windows.
+    Para más información, vea el [proveedor de servicios de configuración (CSP) de BitLocker](/windows/client-management/mdm/bitlocker-csp) en la documentación de Windows.
 
   - **No está listo**: El dispositivo no tiene capacidades de cifrado completo, pero admite el cifrado. Por ejemplo, un dispositivo Windows lo podría cifrar un usuario de forma manual o también a través de la directiva de grupo que se puede establecer para permitir el cifrado sin TMP.
   - **No aplicable**: no hay suficiente información para clasificar este dispositivo.

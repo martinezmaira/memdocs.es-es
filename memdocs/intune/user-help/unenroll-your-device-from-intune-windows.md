@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9e9101a46cac488ef8a80858377cbabac8dc7936
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: d6cb9693f0bafcff22f3fce9d3f972e9eac41b22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881581"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909098"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Quitar el dispositivo Windows de la administración
 
@@ -57,7 +57,7 @@ Siga estos pasos para quitar un dispositivo Windows 10 de la administración.
 
     ![Captura de pantalla de ejemplo de la página principal de la aplicación Portal de empresa para Windows, donde se resalta la sección Mis dispositivos.](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. Haga clic con el botón derecho en un dispositivo o manténgalo pulsado para abrir el [menú contextual](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Haga clic con el botón derecho en un dispositivo o manténgalo pulsado para abrir el [menú contextual](//windows/uwp/design/controls-and-patterns/menus).  
 
 3. Seleccione **Quitar**.  
 

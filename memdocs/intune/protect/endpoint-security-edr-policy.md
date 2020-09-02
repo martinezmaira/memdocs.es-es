@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff880b564562b3e6d67dc852f97ef7a9f5d6b814
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820534"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915048"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Directiva de detección y respuesta de puntos de conexión para la seguridad de puntos de conexión en Intune
 
@@ -191,4 +191,4 @@ Puede ver los detalles de las directivas de EDR que implemente en el centro de a
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Configuración de directivas de seguridad de puntos de conexión](endpoint-security-policy.md#create-an-endpoint-security-policy)
-- Obtenga más información sobre [detección de puntos de conexión y respuesta](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) en la documentación de ATP de Microsoft Defender.
+- Obtenga más información sobre [detección de puntos de conexión y respuesta](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) en la documentación de ATP de Microsoft Defender.

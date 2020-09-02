@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3a64d3f58541194ed4c1a63ac57cddec70ff6873
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455079"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913484"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Supervisión de las directivas de protección de aplicaciones
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -92,7 +92,7 @@ Puede buscar un solo usuario y examinar su estado de cumplimiento. En el panel *
 - **Última sincronización**: hora de la última sincronización de la aplicación con Intune.
 
 >[!NOTE]
-> La columna **Última sincronización** representa el mismo valor tanto en el informe de estado de usuario de la consola como en el [informe .csv exportable](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities) de la directiva de protección de aplicaciones. La diferencia es un pequeño retraso en la sincronización entre el valor de los dos informes.
+> La columna **Última sincronización** representa el mismo valor tanto en el informe de estado de usuario de la consola como en el [informe .csv exportable](/intune/app-protection-policies-monitor#export-app-protection-activities) de la directiva de protección de aplicaciones. La diferencia es un pequeño retraso en la sincronización entre el valor de los dos informes.
 >
 > La hora de Última sincronización hace referencia a la última vez que Intune vio la instancia de la aplicación. Cuando un usuario inicia una aplicación, esta puede comunicarse con el servicio de Intune App Protection en el momento del inicio, en función de cuándo se sincronizara por última vez. Vea [las horas del intervalo de reintentos para la sincronización de la directiva de protección de aplicaciones](app-protection-policy-delivery.md). Por lo tanto, si un usuario final no ha usado esa aplicación concreta en el último intervalo de sincronización (que suele ser de 30 minutos para el uso activo) e inicia la aplicación, entonces:
 >

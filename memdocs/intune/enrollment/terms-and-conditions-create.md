@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66bc3db54ebefe814a14f564abbad42dc226aefe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b3d0ae7f0ec42cef3ba792b5c0bf3c913bb9e63e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988998"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906861"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Términos y condiciones para el acceso de los usuarios
 
@@ -39,7 +39,7 @@ Puede crear varios conjuntos de términos y asignarlos a grupos distintos, como 
 
 Hay dos maneras de crear los términos y condiciones de su empresa:
 - Con Intune, tal y como se describe en este artículo.
-- Con la [característica de términos de uso de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou).
+- Con la [característica de términos de uso de Azure Active Directory](/azure/active-directory/governance/active-directory-tou).
 
 Para saber qué método es el más adecuado para usted, revise la entrada de blog sobre la [elección de la solución de términos adecuada para la organización](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409). 
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 7f2b2826e8eaf1cf1c1c8680743b582203199aed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865513"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906844"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configuración de la inscripción de dispositivos macOS en Intune
 
@@ -51,7 +51,7 @@ Puede permitir que los usuarios inscriban sus propios dispositivos personales en
 - visitando el [sitio web Portal de empresa](https://portal.manage.microsoft.com), o bien
 - descargando la aplicación Portal de empresa de Mac en [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-También puede enviar a los usuarios un vínculo sobre los pasos de inscripción en línea: [Inscriba el dispositivo macOS en Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+También puede enviar a los usuarios un vínculo sobre los pasos de inscripción en línea: [Inscriba el dispositivo macOS en Intune](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 Para más información acerca de otras tareas de usuario final, consulte estos artículos:
 
@@ -82,7 +82,7 @@ En el caso de VMware Fusion, hay que [editar el archivo .vmx](https://kb.vmware.
 
 La inscripción de MDM aprobada por el usuario es un tipo de inscripción de macOS que se puede usar para administrar cierta configuración relacionada con la seguridad. Para más información, consulte la [documentación de soporte técnico de Apple](https://support.apple.com/HT208019).  
  
-A partir de junio de 2020, todas las inscripciones de MDM de macOS nuevas en Intune, incluidas las que no se realizan a través de Inscripción de dispositivo automatizada (ADE), se consideran aprobadas por el usuario. El usuario final debe instalar manualmente el perfil de administración en **Preferencias del sistema** > **Perfiles** y, por tanto, proporcionar la aprobación del perfil de administración. Preferencias del sistema se inicia de forma automática desde la aplicación Portal de empresa para los usuarios BYOD de macOS. Las [instrucciones para instalar el perfil de administración](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) se proporcionan en la aplicación Portal de empresa.     
+A partir de junio de 2020, todas las inscripciones de MDM de macOS nuevas en Intune, incluidas las que no se realizan a través de Inscripción de dispositivo automatizada (ADE), se consideran aprobadas por el usuario. El usuario final debe instalar manualmente el perfil de administración en **Preferencias del sistema** > **Perfiles** y, por tanto, proporcionar la aprobación del perfil de administración. Preferencias del sistema se inicia de forma automática desde la aplicación Portal de empresa para los usuarios BYOD de macOS. Las [instrucciones para instalar el perfil de administración](../user-help/enroll-your-device-in-intune-macos-cp.md) se proporcionan en la aplicación Portal de empresa.     
 
 Las inscripciones de MDM de BYOD macOS anteriores a junio de 2020 no pueden ser aprobadas por el usuario si el usuario final no ha proporcionado manualmente la aprobación del perfil de administración en **Preferencias del sistema** > **Perfiles**. En el caso de las inscripciones de BYOD posteriores a junio de 2020, la aplicación Portal de empresa inicia **Preferencias del sistema** para el usuario y el usuario tendrá que seleccionar Instalar. Si el usuario no ha aprobado el perfil de administración durante la inscripción, puede ir a **Preferencias del sistema** > **Perfiles**, elegir el perfil de administración y seleccionar **Aprobar** para aprobarlo más adelante.
 

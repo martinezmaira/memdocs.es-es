@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 220a57b3e668d47d3f6fd12dde8fd54e240dd0da
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076125"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911580"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>Configuración de Intune de la aplicación Classroom para iOS/iPadOS
 
@@ -68,9 +68,9 @@ Puede importar información a SDS mediante uno de los siguientes métodos:
 
 ### <a name="find-out-more"></a>Obtenga más información
 
-- [Obtener más información sobre la experiencia completa de sincronización de datos locales de escuelas en Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [Obtener más información sobre la experiencia completa de sincronización de datos locales de escuelas en Azure AD](/azure/active-directory/connect/active-directory-aadconnect)
 - [Obtener más información sobre School Data Sync de Microsoft](https://sds.microsoft.com/)
-- [Obtener más información sobre las licencias en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Obtener más información sobre las licencias en Azure Active Directory](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 ## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Paso 2: Creación y asignación de un perfil educativo de iOS/iPadOS en Intune
 

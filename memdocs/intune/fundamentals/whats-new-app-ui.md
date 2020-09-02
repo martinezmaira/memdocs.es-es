@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048164"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915014"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Actualizaciones de la interfaz de usuario para las aplicaciones de usuario final de Intune
 
@@ -32,7 +32,7 @@ Obtenga información sobre las actualizaciones más recientes para las aplicacio
 * Alertar a los alumnos y los empleados sobre cambios en la aplicación y la inscripción.
 * Actualizar la documentación y los procedimientos del departamento de soporte técnico de la organización.  
 
-Si es un empleado o un alumno, asegúrese de consultar las capturas de pantalla y los vínculos de la documentación de ayuda del Portal de empresa. Para obtener más información sobre cómo usar la aplicación Portal de empresa, vea la [documentación de ayuda al usuario del Portal de empresa](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
+Si es un empleado o un alumno, asegúrese de consultar las capturas de pantalla y los vínculos de la documentación de ayuda del Portal de empresa. Para obtener más información sobre cómo usar la aplicación Portal de empresa, vea la [documentación de ayuda al usuario del Portal de empresa](../user-help/use-managed-devices-to-get-work-done.md).  
 
 ## <a name="week-of-august-10-2020"></a>Semana del 10 de agosto de 2020
 
@@ -193,7 +193,7 @@ Se han actualizado los pasos y las pantallas de inscripción del Portal de empre
 * Abrir la aplicación Ajustes para instalar el perfil de administración en el dispositivo.  
 * Volver a la aplicación Portal de empresa para completar la inscripción.  
 
-Para conocer los pasos y las pantallas de inscripción actualizados, vea cómo [inscribir dispositivos iOS en Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
+Para conocer los pasos y las pantallas de inscripción actualizados, vea cómo [inscribir dispositivos iOS en Intune](../user-help/enroll-your-device-in-intune-ios.md).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Actualización de la experiencia de usuario para la aplicación Portal de empresa para iOS <!-- 2536024 -->
 Se ha rediseñado la página principal de la aplicación Portal de empresa para dispositivos iOS. Con este cambio, la página principal seguirá mejor los patrones de la interfaz de usuario de iOS y ofrecerá una mejor detectabilidad para aplicaciones y libros electrónicos.  
@@ -217,7 +217,7 @@ Como administrador de Microsoft Intune, puede cargar una imagen de marca persona
 ## <a name="week-of-august-27-2018"></a>Semana del 27 de agosto de 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nueva actualización de la experiencia de usuario para el sitio web del Portal de empresa <!--2000968 -->  
-Tras escuchar los comentarios de los clientes, hemos agregado características nuevas al sitio web de Portal de empresa. Experimentará una mejora considerable en las funciones y la facilidad de uso actual de los dispositivos. Determinadas áreas del sitio, como los detalles del dispositivo, los comentarios, el soporte técnico y la descripción general del dispositivo, tienen ahora un diseño nuevo, moderno y receptivo. Se ha actualizado la [documentación del sitio web de Portal de empresa de Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) para reflejar estos cambios.   
+Tras escuchar los comentarios de los clientes, hemos agregado características nuevas al sitio web de Portal de empresa. Experimentará una mejora considerable en las funciones y la facilidad de uso actual de los dispositivos. Determinadas áreas del sitio, como los detalles del dispositivo, los comentarios, el soporte técnico y la descripción general del dispositivo, tienen ahora un diseño nuevo, moderno y receptivo. Se ha actualizado la [documentación del sitio web de Portal de empresa de Intune](../user-help/using-the-intune-company-portal-website.md) para reflejar estos cambios.   
 
 Las actualizaciones que verá incluyen las siguientes:  
 
@@ -257,7 +257,7 @@ Captura de pantalla de ejemplo en la que se muestra la vista Detalles:
 
 ## <a name="week-of-april-23-2018"></a>Semana del 23 de abril de 2018
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Vista de navegación actualizada en la aplicación Portal de empresa para Windows 10 <!-- 1195010 -->
-La aplicación Portal de empresa de Intune para Windows 10 se ha actualizado con la [vista de navegación de Fluent Design System](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). En la parte lateral de la aplicación, verá una lista estática vertical de todas las páginas de nivel superior. Haga clic en cualquier vínculo para ver y cambiar entre páginas rápidamente. Esta es la primera de varias actualizaciones que verá como parte de nuestros esfuerzos para crear una experiencia más adaptable, empática y familiar en Intune. 
+La aplicación Portal de empresa de Intune para Windows 10 se ha actualizado con la [vista de navegación de Fluent Design System](/windows/uwp/design/basics/navigation-basics). En la parte lateral de la aplicación, verá una lista estática vertical de todas las páginas de nivel superior. Haga clic en cualquier vínculo para ver y cambiar entre páginas rápidamente. Esta es la primera de varias actualizaciones que verá como parte de nuestros esfuerzos para crear una experiencia más adaptable, empática y familiar en Intune. 
 
 ![Captura de pantalla del panel de la aplicación Portal de empresa con la vista de navegación de diseño fluido](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 

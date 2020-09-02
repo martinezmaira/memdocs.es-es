@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f94fdd6dcad0b1d1e05caa38dbdfd63dd8746013
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077927"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915235"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>¿Dónde está mi característica de Intune en Azure?
 Hemos aprovechado la oportunidad para organizar algunas tareas de forma más lógica durante el traslado de Intune a Azure Portal. Pero, como ocurre con todas las mejoras, deberá aprender la nueva organización. Esta guía de referencia está dirigida a aquellos que están familiarizados con Intune en el portal clásico y se preguntan dónde se encuentra una determinada función en Intune en Azure Portal. Si en este artículo no se incluye una característica que intenta encontrar, deje un comentario al final para que podamos actualizarlo.
@@ -45,7 +45,7 @@ Configuración del Portal de empresa|Admin > Portal de empresa|**Administrar** >
 
 
 ## <a name="where-do-i-manage-groups"></a>¿Dónde se administran los grupos?
-Intune en Azure Portal usa [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) para administrar grupos.
+Intune en Azure Portal usa [Azure Active Directory (AD)](/azure/active-directory/active-directory-groups-create-azure-portal) para administrar grupos.
 
 ## <a name="where-did-enrollment-rules-go"></a>¿Dónde están las reglas de inscripción?
 En el portal clásico, podía establecer reglas que controlaran la inscripción de MDM de dispositivos macOS y Windows móviles y modernos.
@@ -73,7 +73,7 @@ Se agregarán nuevas capacidades de restricción únicamente a Azure Portal.
 ## <a name="where-did-my-conditional-access-policies-go"></a>¿Dónde puedo encontrar mis directivas de acceso condicional?
 Las directivas de acceso condicional del inquilino se seguirán aplicando cuando el inquilino se haya migrado a Azure Portal. Sin embargo, no podrá ver o modificarlas desde Intune en Azure Portal.
 
-Si quiere ver y modificar las directivas de acceso condicional desde Azure Portal, deberá quitar del portal clásico las directivas anteriores. Después, deberá volver a crearlas en Azure Portal. Para obtener más información sobre la migración de directivas de acceso condicional, vea [Migración de directivas clásicas en Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
+Si quiere ver y modificar las directivas de acceso condicional desde Azure Portal, deberá quitar del portal clásico las directivas anteriores. Después, deberá volver a crearlas en Azure Portal. Para obtener más información sobre la migración de directivas de acceso condicional, vea [Migración de directivas clásicas en Azure Portal](/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>¿Dónde puedo encontrar mis directivas de cumplimiento?
 Las directivas de cumplimiento del inquilino se seguirán aplicando cuando el inquilino se haya migrado a Azure Portal. Sin embargo, no podrá ver o modificarlas desde Intune en Azure Portal.

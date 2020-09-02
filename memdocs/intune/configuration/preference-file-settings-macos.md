@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 478cce186d5f2943aeb5730acf90c3e875c8b687
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988675"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915320"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Adición de un archivo de lista de propiedades a dispositivos macOS con Microsoft Intune
 
@@ -66,7 +66,7 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 
     - **Nombre de dominio de preferencia**: Escriba el identificador de agrupación, como `com.company.application`. Por ejemplo, escriba `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
 
-      los archivos de lista de propiedades se suelen usar en exploradores web (Microsoft Edge), [Advanced Threat Protection de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) y aplicaciones personalizadas. Al crear un dominio de preferencia, también se crea un identificador de agrupación.
+      los archivos de lista de propiedades se suelen usar en exploradores web (Microsoft Edge), [Advanced Threat Protection de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) y aplicaciones personalizadas. Al crear un dominio de preferencia, también se crea un identificador de agrupación.
 
     - **Archivo de la lista de propiedades**: seleccione el archivo de lista de propiedades asociado a la aplicación. Asegúrese de que es un archivo `.plist` o `.xml`. Por ejemplo, cargue un archivo `YourApp-Manifest.plist` o `YourApp-Manifest.xml`.
 
@@ -97,4 +97,4 @@ Estos valores se agregan a un perfil de configuración de dispositivo en Intune 
 
 [Asigne el perfil](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
-Para obtener más información sobre los archivos de preferencia de Microsoft Edge, consulte [Configurar las opciones de directiva de Microsoft Edge en macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+Para obtener más información sobre los archivos de preferencia de Microsoft Edge, consulte [Configurar las opciones de directiva de Microsoft Edge en macOS](/deployedge/configure-microsoft-edge-on-mac).

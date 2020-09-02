@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690676"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911189"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Uso de la página de estado del inquilino de Intune
 
 La página de estado del inquilino de Microsoft Intune es un centro donde puede ver detalles importantes y actuales sobre el inquilino. Entre estos detalles se incluyen la disponibilidad y el uso de la licencia, el estado del conector y comunicaciones importantes sobre el servicio Intune.
 
 > [!TIP]
-> Un inquilino es una instancia de Azure Active Directory (Azure AD). La suscripción a Intune está hospedada en un inquilino de Azure AD. Para obtener más información, vea [Configuración de un inquilino](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) en la documentación de Azure AD.
+> Un inquilino es una instancia de Azure Active Directory (Azure AD). La suscripción a Intune está hospedada en un inquilino de Azure AD. Para obtener más información, vea [Configuración de un inquilino](/azure/active-directory/develop/quickstart-create-new-tenant) en la documentación de Azure AD.
 
 Para ver el panel, inicie sesión en el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), vaya a **Administración de inquilinos** y, a continuación, seleccione **Estado del inquilino**.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 0ae39f91c4daa67c40c42022f63137f0b23daf80
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252799"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911070"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Uso de directivas de cumplimiento para establecer reglas para los dispositivos que administra con Intune
 
@@ -143,8 +143,8 @@ Para más información sobre cómo usar el acceso condicional con las directivas
 
 Más información sobre el acceso condicional en la documentación de Azure AD:
 
-- [¿Qué es el acceso condicional?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [¿Qué es una identidad de dispositivo?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+- [¿Qué es el acceso condicional?](/azure/active-directory/conditional-access/overview)
+- [¿Qué es una identidad de dispositivo?](/azure/active-directory/device-management-introduction)
 
 ### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>Referencia para el no cumplimiento y acceso condicional en las distintas plataformas
 

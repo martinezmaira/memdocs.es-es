@@ -16,19 +16,19 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: fb981563c2d98389f6d1dda4d050e391e9ad5637
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179628"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910475"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Firma de aplicaciones de línea de negocio para que se puedan implementar en dispositivos Windows con Intune
 
 Como Administrador de Intune, puede implementar aplicaciones universales de línea de negocio (LOB) en dispositivos Windows 8.1 Desktop o Windows 10 Desktop & Mobile, incluida la aplicación del Portal de empresa. Para implementar aplicaciones *.appx* en dispositivos Windows 8.1 Desktop o Windows 10 Desktop & Mobile, puede usar un certificado de firma de código de una entidad de certificación pública que ya sea de confianza para los dispositivos Windows, o bien puede usar su propia entidad de certificación.
 
  > [!NOTE]
- > Windows 8.1 Desktop requiere una directiva empresarial para habilitar la instalación de prueba o el uso de claves de instalación de prueba (habilitadas automáticamente para dispositivos unidos a un dominio). Para obtener más información, vea [Instalación de prueba de Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
+ > Windows 8.1 Desktop requiere una directiva empresarial para habilitar la instalación de prueba o el uso de claves de instalación de prueba (habilitadas automáticamente para dispositivos unidos a un dominio). Para obtener más información, vea [Instalación de prueba de Windows 8](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet).
 
 ## <a name="windows-10-sideloading"></a>Instalación de prueba de Windows 10
 
@@ -36,11 +36,11 @@ En Windows 10, la instalación de prueba es diferente de la de versiones anteri
 
 - Puede desbloquear un dispositivo para la instalación de prueba mediante una directiva empresarial. Intune proporciona una directiva de configuración de dispositivos denominada "Instalación de aplicaciones de confianza". El establecimiento de este valor en <allow> es todo lo necesario para los dispositivos que ya confían en el certificado usado para firmar la aplicación appx.
 
-- No se necesitan certificados de Symantec Phone ni claves de licencia de instalación de prueba. Sin embargo, si una entidad de certificación local no está disponible, puede que tenga que obtener un certificado de firma de código de una entidad de certificación pública. Para obtener más información, consulte [Introducción a la firma de código](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
+- No se necesitan certificados de Symantec Phone ni claves de licencia de instalación de prueba. Sin embargo, si una entidad de certificación local no está disponible, puede que tenga que obtener un certificado de firma de código de una entidad de certificación pública. Para obtener más información, consulte [Introducción a la firma de código](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
 ### <a name="code-sign-your-app"></a>Firma de código de la aplicación
 
-El primer paso es firmar el código del paquete de la aplicación. Para más información, consulte [Firma de un paquete de la aplicación con SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
+El primer paso es firmar el código del paquete de la aplicación. Para más información, consulte [Firma de un paquete de la aplicación con SignTool](/windows/uwp/packaging/sign-app-package-using-signtool).
 
 ### <a name="upload-your-app"></a>Carga de la aplicación
 
@@ -98,7 +98,7 @@ Si no quiere ofrecer acceso a Microsoft Store, puede implementar de forma manua
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Vuelva a Intune y cargue la aplicación del Portal de empresa como una nueva aplicación. Impleméntela como una aplicación necesaria para el conjunto de usuarios de destino deseado.  
 
-Consulte [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Implementación de appxbundle con dependencias a través de la MDM de Microsoft Intune) para obtener más información sobre cómo Intune controla las dependencias de aplicaciones universales.  
+Consulte [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Implementación de appxbundle con dependencias a través de la MDM de Microsoft Intune) para obtener más información sobre cómo Intune controla las dependencias de aplicaciones universales.  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>¿Cómo puedo actualizar el Portal de empresa en los dispositivos de mis usuarios si ya han instalado las aplicaciones anteriores desde la Tienda?
 
@@ -136,4 +136,4 @@ Esta es la forma de firmar e implementar la aplicación:
 |      PublisherId      |      El identificador del publicador de la empresa. Si está ausente, se usa el campo 'Asunto' del certificado de firma de código móvil empresarial de Symantec.       |
 |        SdkPath        | La ruta de acceso a la carpeta raíz de Windows SDK para Windows 10. Este argumento es opcional y está establecido de forma predeterminada en ${env:ProgramFiles(x86)}\Windows Kits\10. |
 
-El script generará la versión firmada de la aplicación del Portal de empresa para Windows 10 cuando haya terminado de ejecutarse. Después, puede implementar la versión firmada de la aplicación como una aplicación LOB mediante Intune, que actualizará las versiones implementadas actualmente a esta nueva aplicación.  
+El script generará la versión firmada de la aplicación del Portal de empresa para Windows 10 cuando haya terminado de ejecutarse. Después, puede implementar la versión firmada de la aplicación como una aplicación LOB mediante Intune, que actualizará las versiones implementadas actualmente a esta nueva aplicación.

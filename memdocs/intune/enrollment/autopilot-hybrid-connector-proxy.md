@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26bf4910e6745a60634a2b313a37beeb33192d3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9c7300c03ce0ba703f423aa420e9e47534ef2968
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986899"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908690"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Trabajar con servidores proxy locales existentes
 
 En este artículo se explica cómo configurar el conector de Intune para Active Directory para trabajar con servidores proxy de salida. Está dirigido a clientes con entornos de red que tienen servidores proxy.
 
-De forma predeterminada, el conector de Intune para Active Directory intentará localizar automáticamente un servidor proxy en la red mediante la detección automática de proxy web (WPAD). Si se ha configurado en la red, puede que no sea necesaria una configuración adicional.  Si se necesitan cambios, en las siguientes secciones se describe cómo invalidar la configuración predeterminada, aprovechando [las capacidades de .NET Framework estándar para configurar los valores de proxy](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  En esa documentación se describen opciones adicionales.
+De forma predeterminada, el conector de Intune para Active Directory intentará localizar automáticamente un servidor proxy en la red mediante la detección automática de proxy web (WPAD). Si se ha configurado en la red, puede que no sea necesaria una configuración adicional.  Si se necesitan cambios, en las siguientes secciones se describe cómo invalidar la configuración predeterminada, aprovechando [las capacidades de .NET Framework estándar para configurar los valores de proxy](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  En esa documentación se describen opciones adicionales.
 
-Para más información sobre cómo funcionan los conectores, vea [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors) (Descripción de conectores de Azure AD Application Proxy).
+Para más información sobre cómo funcionan los conectores, vea [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors) (Descripción de conectores de Azure AD Application Proxy).
 
 ## <a name="completely-bypass-outbound-proxies"></a>Omisión por completo de los servidores proxy de salida
 

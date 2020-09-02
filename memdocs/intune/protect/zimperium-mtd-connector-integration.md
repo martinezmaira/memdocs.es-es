@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666c8c765f15ddd103727ccf2a7d840cb69bd20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 889706a0fcf0d84abcbdb70b429e507233159254
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989368"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915949"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrar Zimperium con Intune
 
@@ -61,7 +61,7 @@ El proceso de autorización de la aplicación Zimperium es el siguiente:
 
 - Permitir que la aplicación de Zimperium inicie sesión con el SSO de Azure AD.
 
-Para obtener más información sobre el consentimiento y las aplicaciones de Azure Active Directory, consulte [Request the permissions from a directory admin](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) (Solicitar los permisos desde un administrador del directorio) en el artículo de Azure Active Directory *Permissions and consent in the Azure Active Directory v2.0 endpoint* (Permisos y consentimiento en el punto de conexión de Azure Active Directory v2.0).
+Para obtener más información sobre el consentimiento y las aplicaciones de Azure Active Directory, consulte [Request the permissions from a directory admin](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) (Solicitar los permisos desde un administrador del directorio) en el artículo de Azure Active Directory *Permissions and consent in the Azure Active Directory v2.0 endpoint* (Permisos y consentimiento en el punto de conexión de Azure Active Directory v2.0).
 
 
 ## <a name="to-set-up-zimperium-integration"></a>Para configurar la integración de Zimperium

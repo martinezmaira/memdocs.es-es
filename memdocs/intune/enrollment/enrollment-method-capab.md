@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9dca2303d960937a529a902391d6c05539fc9d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 701794ba476f87aaf079e39c834f3e8e3f2c280d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359318"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913892"
 ---
 # <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Capacidades de Intune por método de inscripción para dispositivos Windows
 [!INCLUDE[azure_portal](../includes/azure_portal.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "79359318"
 Hay varios métodos para inscribir los dispositivos de los recursos en Intune. Cada método tiene diferentes procedimientos recomendados y funciones, como se muestra en estas tablas.
 
 ## <a name="best-practices-by-enrollment-method"></a>Procedimientos recomendados por método de inscripción
-| **Best practices** (Procedimientos recomendados) | **[Unido a Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Unido a Azure AD con AutoPilot (modo controlado por el usuario)](enrollment-autopilot.md)** |**[Unido a Azure AD con AutoPilot (modo de implementación automática)](enrollment-autopilot.md)** |**[Masivo](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Administración conjunta](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **Best practices** (Procedimientos recomendados) | **[Unido a Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Unido a Azure AD con AutoPilot (modo controlado por el usuario)](../../autopilot/enrollment-autopilot.md)** |**[Unido a Azure AD con AutoPilot (modo de implementación automática)](../../autopilot/enrollment-autopilot.md)** |**[Masivo](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Administración conjunta](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Uso frecuente en EDU|![X](./media/enrollment-method-capab/xmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
 |Se pueden usar dispositivos como dispositivos compartidos|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
@@ -39,7 +39,7 @@ Hay varios métodos para inscribir los dispositivos de los recursos en Intune. C
 
 ## <a name="capabilities-by-enrollment-method"></a>Capacidades por método de inscripción
 
-| **Capacidades** | **[Unido a Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Unido a Azure AD con AutoPilot (modo controlado por el usuario)](enrollment-autopilot.md)** |**[Unido a Azure AD con AutoPilot (modo de implementación automática)](enrollment-autopilot.md)** |**[Masivo](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Administración conjunta](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **Capacidades** | **[Unido a Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Unido a Azure AD con AutoPilot (modo controlado por el usuario)](../../autopilot/enrollment-autopilot.md)** |**[Unido a Azure AD con AutoPilot (modo de implementación automática)](../../autopilot/enrollment-autopilot.md)** |**[Masivo](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Administración conjunta](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Conditional Access                                      |![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)\*\*|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|
 |El usuario se asocia con el dispositivo                    |![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|![Marca de verificación](./media/enrollment-method-capab/checkmark.png)|
@@ -60,4 +60,3 @@ Hay varios métodos para inscribir los dispositivos de los recursos en Intune. C
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Configuración de la inscripción para Windows](windows-enroll.md)
-

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7858253772b554858209f3524f20bccf08839bd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: bd15cc44ac3e6d17c36e3b623135b94ddcfcdbc3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217463"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912974"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Solucionar problemas de la administración de aplicaciones móviles
 
@@ -59,7 +59,7 @@ Los problemas comunes del usuario final se desglosan en las siguientes categorí
 Plataforma | Escenario | Explicación |
 ---| --- | --- |
 iOS | El usuario final puede usar la extensión de recursos compartidos de iOS/iPadOS para abrir los datos profesionales o educativos en aplicaciones no administradas, incluso con la directiva de transferencia de datos establecida en **Solo aplicaciones administradas** o **Ninguna aplicación**. ¿No es esto una pérdida de datos? | La directiva de protección de aplicaciones de Intune no puede controlar la extensión de recursos compartidos de iOS/iPadOS sin administrar el dispositivo. Por tanto, **Intune cifra los datos "corporativos" antes de compartirlos fuera de la aplicación**. Puede validar esto intentando abrir el archivo "corporativo" fuera de la aplicación administrada. El archivo debe estar cifrado y no debe poder abrirse fuera de la aplicación administrada.
-iOS | ¿Por qué se solicita al usuario final **que instale la aplicación Microsoft Authenticator**? | Esto es necesario cuando se aplica el acceso condicional basado en la aplicación; vea [Requerir aplicación cliente aprobada](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
+iOS | ¿Por qué se solicita al usuario final **que instale la aplicación Microsoft Authenticator**? | Esto es necesario cuando se aplica el acceso condicional basado en la aplicación; vea [Requerir aplicación cliente aprobada](/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | ¿Por qué el usuario final **necesita instalar la aplicación de portal de empresa** aunque esté usando la protección de aplicaciones de MAM sin la inscripción de dispositivos?  | En Android, la mayor parte de la función de protección de aplicaciones se integra en la aplicación de portal de empresa. **La inscripción de dispositivos no se requiere aunque la aplicación de portal de empresa se requiera siempre**. Para la protección de aplicaciones sin inscripción, el usuario final solo necesita tener la aplicación de portal de empresa instalada en el dispositivo.
 iOS/Android | Directiva de protección de aplicaciones no aplicada en el borrador de correo electrónico en la aplicación Outlook | Puesto que Outlook es compatible con el contexto personal y corporativo, no aplica MAM en el borrador de correo electrónico.
 iOS/Android | Directiva de protección de aplicaciones no aplicada en los nuevos documentos de WXP (Word, Excel y PowerPoint) | Dado que WXP admite el contexto corporativo y personal, no aplica MAM en los nuevos documentos hasta que se guardan en una ubicación corporativa identificada, como OneDrive.

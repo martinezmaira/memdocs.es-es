@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146038"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913467"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de reducción de la superficie expuesta a ataques de Seguridad de los puntos de conexión en Intune
 
@@ -177,7 +177,7 @@ Perfiles y plataformas compatibles:
 ### <a name="microsoft-defender-application-control"></a>Control de aplicaciones de Microsoft Defender
 
 - **Control de aplicaciones de AppLocker**  
-  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  CSP: [AppLocker](/windows/client-management/mdm/applocker-csp)
 
   - **Sin configurar** (*valor predeterminado*).
   - **Aplicar componentes y aplicaciones de Store**
@@ -397,7 +397,7 @@ Perfiles y plataformas compatibles:
   - **Sí**: impida el acceso directo a memoria (DMA) a todos los puertos PCI de bajada de conexión instantánea hasta que un usuario inicie sesión en Windows. Cuando un usuario inicie sesión, Windows mostrará los dispositivos PCI conectados a los puertos PCI de conexión de host. Cada vez que el usuario bloquee el equipo, DMA se bloquea en los puertos PCI de conexión instantánea sin dispositivos secundarios, hasta que el usuario inicie sesión de nuevo. Los dispositivos que ya aparecían cuando se ha desbloqueado la máquina seguirán funcionando hasta que se desconecten.
 
 - **Enumeración de los dispositivos externos compatibles con Kernel DMA Protection**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Esta directiva puede proporcionar seguridad adicional contra los dispositivos compatibles con DMA externos. Permite mayor control sobre la enumeración de dispositivos externos compatibles con DMA incompatibles con la reasignación de DMA o el aislamiento de la memoria de dispositivo y el espacio aislado.
 
@@ -408,40 +408,40 @@ Perfiles y plataformas compatibles:
   - **Permitir todo**
 
 - **Bloquear conexiones Bluetooth**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Sin configurar** (*valor predeterminado*).
   - **Sí**: bloquear las conexiones Bluetooth hacia el dispositivo y desde este.
 
 - **Bloquear detectabilidad de Bluetooth**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Sin configurar** (*valor predeterminado*).
   - **Sí**: impide que otros dispositivos con Bluetooth habilitado detecten el dispositivo.
 
 - **Bloquear emparejamiento previo Bluetooth**  
-  CSP: [Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing).
+  CSP: [Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing).
 
   - **Sin configurar** (*valor predeterminado*).
   - **Sí**: impide que dispositivos Bluetooth específicos se emparejen automáticamente con el dispositivo de host.
 
 - **Bloquear anuncios de Bluetooth**  
-  CSP: [Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  CSP: [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **Sin configurar** (*valor predeterminado*).
   - **Sí**: impide que el dispositivo envíe anuncios de Bluetooth.  
 
 - **Bloquear conexiones Bluetooth próximas**  
-  CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections); impide que los usuarios usen la característica Emparejamiento rápido y otros escenarios basados en proximidad.
+  CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections); impide que los usuarios usen la característica Emparejamiento rápido y otros escenarios basados en proximidad.
 
   - **Sin configurar** (*valor predeterminado*).
   - **Sí**: impide que un usuario del dispositivo utilice la característica Emparejamiento rápido y otros escenarios basados en proximidad.  
 
-  [CSP Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [CSP Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Servicios Bluetooth permitidos**  
-  CSP: [Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
-  Para obtener más información sobre la lista de servicios, vea [Guía de uso de ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide).
+  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  Para obtener más información sobre la lista de servicios, vea [Guía de uso de ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide).
 
   - **Agregar**: especifique los servicios y perfiles de Bluetooth permitidos como cadenas hexadecimales, por ejemplo, `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
   - **Importar**: importe un archivo .csv que contenga una lista de servicios y perfiles Bluetooth como cadenas hexadecimales, por ejemplo, `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.

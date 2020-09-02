@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3ffef32f4f33e79b25145dd4c0257b8a5bcfd32a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820449"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913773"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Configuración de Optimización de distribución en Microsoft Intune
 
@@ -30,7 +30,7 @@ En este artículo se explica cómo configurar las opciones de Optimización de d
 
 Para ver una lista de las opciones de Optimización de distribución que admite Intune, vea [Configuración de Optimización de distribución para Intune](delivery-optimization-settings.md).  
 
-Para obtener más información sobre la opción Optimización de distribución en Windows 10, consulte [Actualizaciones de optimización de Windows 10 de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) en la documentación de Windows.  
+Para obtener más información sobre la opción Optimización de distribución en Windows 10, consulte [Actualizaciones de optimización de Windows 10 de distribución](/windows/deployment/update/waas-delivery-optimization) en la documentación de Windows.  
 
 ## <a name="create-the-profile"></a>Creación del perfil
 

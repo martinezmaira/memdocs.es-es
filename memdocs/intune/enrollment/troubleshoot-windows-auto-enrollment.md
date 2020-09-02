@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 6aff5dfe62c1c44ec22f56c287220b59b98a7536
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546873"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915490"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>Solución de problemas de inscripción automática basada en directivas de grupo de Windows 10 en Intune
 
-Se puede usar la directiva de grupo para desencadenar la inscripción automática en MDM para dispositivos unidos a un dominio de Active Directory (AD). Para obtener información sobre esta característica, vea [Inscripción automática de un dispositivo Windows 10 con directiva de grupo](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+Se puede usar la directiva de grupo para desencadenar la inscripción automática en MDM para dispositivos unidos a un dominio de Active Directory (AD). Para obtener información sobre esta característica, vea [Inscripción automática de un dispositivo Windows 10 con directiva de grupo](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
 ## <a name="verify-the-configuration"></a>Comprobación de la configuración
 
@@ -37,7 +37,7 @@ Antes de empezar a solucionar problemas, es mejor comprobar que todo está confi
 
    ![Comprobación de la licencia de Intune](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-- Compruebe que la inscripción automática está habilitada para todos los usuarios que inscribirán los dispositivos en Intune. Para obtener más información, vea [Azure AD y Microsoft Intune: Inscripción automática de MDM en el portal nuevo](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Compruebe que la inscripción automática está habilitada para todos los usuarios que inscribirán los dispositivos en Intune. Para obtener más información, vea [Azure AD y Microsoft Intune: Inscripción automática de MDM en el portal nuevo](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
    ![Comprobación de la inscripción automática](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -106,7 +106,7 @@ El id. de evento 75 no se registra en las situaciones siguientes:
 
   Para comprobar este error, busque el id. de evento 76 (mensaje de evento: Inscripción automática de MDM: error (código de error de Win32 desconocido: 0x8018002b)). Este evento indica que se ha producido una inscripción automática con errores.
 
-  Para obtener una resolución de este error, vea [Solución de problemas con la inscripción de dispositivos Windows en Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors).
+  Para obtener una resolución de este error, vea [Solución de problemas con la inscripción de dispositivos Windows en Microsoft Intune](/intune/troubleshoot-windows-enrollment-errors).
 
 - La inscripción no se ha desencadenado en absoluto. En este caso, los id. de evento 75 y 76 no se registran.
   

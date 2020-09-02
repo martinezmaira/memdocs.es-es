@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e6806e8d755163d5ae1701ca49ad2daeff464f
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 45b14b74b6bb08b01ad885eaeffb55a86982a176
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865880"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912787"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalar el cliente de software de Intune en equipos con Windows
 
@@ -81,7 +81,7 @@ En los equipos en los que el software cliente se va a instalar, vaya a la carpet
 
 3. Use la directiva de grupo para implementar el software en los equipos de la red.
 
-    Para más información sobre cómo usar la directiva de grupo para implementar software automáticamente, consulte [Directiva de grupo para principiantes](https://technet.microsoft.com/library/hh147307.aspx).
+    Para más información sobre cómo usar la directiva de grupo para implementar software automáticamente, consulte [Directiva de grupo para principiantes](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Implementar el software cliente como parte de una imagen
 El software cliente de Intune se puede implementar en equipos como parte de una imagen de sistema operativo. Para ello, puede usar el siguiente procedimiento como guía:

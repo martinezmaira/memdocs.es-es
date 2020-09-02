@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 88b7f41b873697a7ec34bd1fc2f1098384ab1c18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556292"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915728"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Opciones de configuración de Windows Holographic for Business para administrar dispositivos compartidos con Intune
 
@@ -32,7 +32,7 @@ Con Microsoft Intune, los usuarios pueden iniciar sesión en estos dispositivos 
 
 En este artículo se describen las opciones de configuración que usa en un perfil de configuración de dispositivos con Windows Holographic for Business. Tras crear el perfil en Intune, implementará o asignará el perfil en los grupos de dispositivos de su organización. También puede asignar este perfil a un grupo de dispositivos con distintos tipos de dispositivo y versiones del SO.
 
-Para obtener más información sobre esta característica de Intune, vea [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Control del acceso, las cuentas y las características de energía en dispositivos con varios usuarios o equipos compartidos). Para obtener más información sobre el CSP de Windows, vea [AccountManagement CSP](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp) (CSP de AccountManagement).
+Para obtener más información sobre esta característica de Intune, vea [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Control del acceso, las cuentas y las características de energía en dispositivos con varios usuarios o equipos compartidos). Para obtener más información sobre el CSP de Windows, vea [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp) (CSP de AccountManagement).
 
 ## <a name="before-your-begin"></a>Antes de empezar
 

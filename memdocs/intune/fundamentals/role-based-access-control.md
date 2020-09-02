@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0a0b1913b200c8316be98cc7df5de4b8d63d0d18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80220173"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911444"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Control de acceso basado en rol (RBAC) con Microsoft Intune
 
@@ -60,9 +60,9 @@ Puede crear sus propios roles con permisos personalizados. Para obtener más inf
 ### <a name="azure-active-directory-roles-with-intune-access"></a>Roles de Azure Active Directory con acceso a Intune
 | Rol de Azure Active Directory | Todos los datos de Intune | Datos de auditoría de Intune |
 | --- | :---: | :---: |
-| Administrador global | Lectura y escritura | Lectura y escritura |
-| Administrador del servicio de Intune | Lectura y escritura | Lectura y escritura |
-| Administrador de acceso condicional | Ninguno | Ninguno |
+| Administrador global | Lectura/escritura | Lectura/escritura |
+| Administrador de servicios de Intune | Lectura/escritura | Lectura/escritura |
+| Administrador de acceso condicional | None | None |
 | Administrador de seguridad | Solo lectura (permisos administrativos completos para el nodo Seguridad de puntos de conexión) | Solo lectura |
 | Operador de seguridad | Solo lectura | Solo lectura |
 | Lector de seguridad | Solo lectura | Solo lectura |
@@ -71,7 +71,7 @@ Puede crear sus propios roles con permisos personalizados. Para obtener más inf
 | Lector global | Solo lectura | Solo lectura |
 
 > [!TIP]
-> Intune también muestra tres extensiones de Azure AD: **Usuarios**, **Grupos** y **Acceso condicional**, que se controlan mediante RBAC en Azure AD. Además, el **administrador de cuentas de usuario** solo realiza actividades de usuario o grupo de AAD y no tiene permisos completos para realizar todas las actividades en Intune. Para más información, vea [RBAC con Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
+> Intune también muestra tres extensiones de Azure AD: **Usuarios**, **Grupos** y **Acceso condicional**, que se controlan mediante RBAC en Azure AD. Además, el **administrador de cuentas de usuario** solo realiza actividades de usuario o grupo de AAD y no tiene permisos completos para realizar todas las actividades en Intune. Para más información, vea [RBAC con Azure AD](/azure/active-directory/active-directory-assign-admin-roles).
 
 ## <a name="role-assignments"></a>Asignaciones de roles
 Una asignación de roles define:
@@ -88,7 +88,7 @@ Para ver una asignación de roles, seleccione **Intune** > **Roles** > **Todos l
 - **Ámbito (grupos)** : los usuarios de Miembros pueden administrar todos los usuarios o dispositivos de estos grupos de seguridad de Azure.
 - **[Ámbito (etiquetas)](scope-tags.md)** : los usuarios de Miembros pueden ver los recursos que tienen las mismas etiquetas de ámbito.
 
-### <a name="multiple-role-assignments"></a>Múltiples asignaciones de roles
+### <a name="multiple-role-assignments"></a>Asignaciones de varios roles
 Si un usuario tiene varias asignaciones de roles, los permisos y las etiquetas de ámbito de estas asignaciones de roles se amplían a diferentes objetos, como se indica a continuación:
 
 - Los permisos de asignación y las etiquetas de ámbito solo se aplican a los objetos (como directivas o aplicaciones) del Ámbito (grupos) de la asignación de ese rol. Los permisos de asignación y las etiquetas de ámbito no se aplican a los objetos de otras asignaciones de roles, a menos que la otra asignación los conceda específicamente.
@@ -96,5 +96,5 @@ Si un usuario tiene varias asignaciones de roles, los permisos y las etiquetas d
 - Los permisos y las etiquetas de ámbito para objetos de tipos diferentes (como directivas o aplicaciones) no se aplican entre sí. Por ejemplo, un permiso de lectura para una directiva no proporciona un permiso de lectura a las aplicaciones de las asignaciones del usuario.
 
 ## <a name="next-steps"></a>Pasos siguientes
-- [Asignación de un rol a un usuario](assign-role.md)
-- [Creación de un rol personalizado](create-custom-role.md)
+- [Asignar de un rol a un usuario](assign-role.md)
+- [Crear un rol personalizado](create-custom-role.md)

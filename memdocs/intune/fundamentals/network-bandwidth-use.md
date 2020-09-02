@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943848"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911495"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Ancho de banda y requisitos de configuración de red de Intune
 
@@ -79,7 +79,7 @@ Para obtener información sobre el uso de un servidor proxy para almacenar conte
 
 La optimización de entrega le permite usar Intune para reducir el consumo de ancho de banda cuando los dispositivos Windows 10 descargan aplicaciones y actualizaciones. Mediante el uso de una memoria caché distribuida de organización automática, las descargas pueden extraerse de servidores tradicionales y orígenes alternativos (como elementos del mismo nivel de red).
 
-Para ver la lista completa de las versiones de Windows 10 y los tipos de contenido admitidos por la optimización de entrega, consulte el [artículo sobre la optimización de entrega para actualizaciones de Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
+Para ver la lista completa de las versiones de Windows 10 y los tipos de contenido admitidos por la optimización de entrega, consulte el [artículo sobre la optimización de entrega para actualizaciones de Windows 10](/windows/deployment/update/waas-delivery-optimization#requirements).
 
 Puede [configurar la optimización de entrega](../configuration/delivery-optimization-settings.md) como parte de los perfiles de configuración del dispositivo.
 
@@ -95,7 +95,7 @@ Durante las horas que configuró, puede usar BITS en un equipo con Windows para 
 > [!NOTE]
 > Para la administración de MDM en Windows, solo la interfaz de administración del SO del tipo de aplicación MobileMSI usa BITS para la descarga. AppX/MsiX usan su propia pila de descarga no BITS y las aplicaciones Win32 a través del agente de Intune usan Optimización de distribución en lugar de BITS.
 
-Para obtener más información sobre BITS y equipos Windows, consulte [Servicio de transferencia inteligente en segundo plano](https://technet.microsoft.com/library/bb968799.aspx) en la biblioteca TechNet.
+Para obtener más información sobre BITS y equipos Windows, consulte [Servicio de transferencia inteligente en segundo plano](/windows/win32/bits/background-intelligent-transfer-service-portal) en la biblioteca TechNet.
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Usar BranchCache en los equipos (requiere el cliente de software de Intune)
@@ -111,7 +111,7 @@ Para utilizar BranchCache, el equipo cliente debe tener BranchCache habilitado y
 
 Cuando el cliente Intune está instalado en los equipos, BranchCache y el modo de caché distribuida están habilitados de manera predeterminada. Sin embargo, si la directiva de grupo deshabilitó BranchCache, Intune no invalida dicha directiva y BranchCache sigue deshabilitado.
 
-Si usa BranchCache, colabore con otros administradores de la organización para administrar la directiva de grupo y la directiva de firewall de Intune. Asegúrese de que no implementen ninguna directiva que deshabilite las excepciones de BranchCache o de firewall. Para obtener información sobre BranchCache, vea [Información general sobre BranchCache](https://technet.microsoft.com/library/hh831696.aspx).
+Si usa BranchCache, colabore con otros administradores de la organización para administrar la directiva de grupo y la directiva de firewall de Intune. Asegúrese de que no implementen ninguna directiva que deshabilite las excepciones de BranchCache o de firewall. Para obtener información sobre BranchCache, vea [Información general sobre BranchCache](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
 
 
 ## <a name="next-steps"></a>Pasos siguientes

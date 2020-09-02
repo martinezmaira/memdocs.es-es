@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 865a6f33053d9e1fe011d6c2cddf94d0e3995148
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084774"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914978"
 ---
 # <a name="view-and-correct-personal-data"></a>Visualización y corrección de datos personales
 
@@ -37,7 +37,7 @@ Los administradores de Intune pueden ver algunos datos personales en función de
 Los administradores pueden ver la información personal del usuario final en varias hojas en la interfaz de usuario de Intune. En los siguientes artículos se explica a qué información tienen o no acceso los administradores:
 - En la sección [Visualización de los detalles del dispositivo](../remote-actions/device-inventory.md) en Intune se explica cómo puede revisar los detalles del dispositivo de un usuario final.
 - En [Supervisión de información y asignaciones de aplicaciones](../apps/apps-monitor.md) se explica cómo ver los detalles de las aplicaciones instaladas en el dispositivo de un usuario final.
-- En el artículo [¿Qué información puede ver mi empresa cuando inscribo mi dispositivo?](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) se proporciona a los usuarios finales una lista con los datos que su empresa puede y no puede ver. Es mejor decir claramente a los usuarios qué tipo de datos se van a recopilar y por qué. Este artículo puede ser el primer paso para hacerlo.
+- En el artículo [¿Qué información puede ver mi empresa cuando inscribo mi dispositivo?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) se proporciona a los usuarios finales una lista con los datos que su empresa puede y no puede ver. Es mejor decir claramente a los usuarios qué tipo de datos se van a recopilar y por qué. Este artículo puede ser el primer paso para hacerlo.
 
 ### <a name="who-can-view-the-data"></a>¿Quién puede ver los datos?
 

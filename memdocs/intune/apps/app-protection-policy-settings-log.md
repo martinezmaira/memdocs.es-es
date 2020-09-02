@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43ebd7a242fbc0b859c7b947b02b330498649296
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 895db60bcd4d484a218289978c2da2d2688b8887
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410883"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910577"
 ---
 # <a name="review-client-app-protection-logs"></a>Revisión de los registros de protección de aplicaciones cliente
 
@@ -31,7 +31,7 @@ Obtenga información sobre la configuración que puede revisar en los registros 
 
 El proceso para habilitar y recopilar registros varía según la plataforma:
 - **Dispositivos iOS/iPadOS**: use Microsoft Edge para iOS/iPadOS para recopilar registros. Para obtener información detallada, vea [Uso de Edge para iOS y Android a fin de acceder a registros de aplicaciones administradas](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
-- **Dispositivos Windows 10**: use *MDMDiag* y registros de eventos. Consulte [Diagnósticos de errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10), que encontrará en el contenido de administración del cliente de Windows, así como la entrada de blog [Solución de problemas de errores de directivas de Intune en Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
+- **Dispositivos Windows 10**: use *MDMDiag* y registros de eventos. Consulte [Diagnósticos de errores de MDM en Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10), que encontrará en el contenido de administración del cliente de Windows, así como la entrada de blog [Solución de problemas de errores de directivas de Intune en Windows 10](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures).
 - **Dispositivos Android**: use Microsoft Edge para Android para recopilar registros. Para obtener información detallada, vea [Uso de Edge para iOS y Android a fin de acceder a registros de aplicaciones administradas](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!NOTE]

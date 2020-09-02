@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d2d19b03253725bde7b0ee27f3c94b42adb5917
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f4a1929749c5921714078ec54ac687f4cefe1474
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990133"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915881"
 ---
 # <a name="use-wdac-and-windows-powershell-to-allow-or-blocks-apps-on-hololens-2-devices-with-microsoft-intune"></a>Uso de WDAC y Windows PowerShell para permitir o bloquear aplicaciones en dispositivos HoloLens 2 con Microsoft Intune
 
-Los dispositivos Microsoft HoloLens 2 admiten el [CSP Control de aplicaciones de Windows Defender (WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp), que reemplaza al [CSP de AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).
+Los dispositivos Microsoft HoloLens 2 admiten el [CSP Control de aplicaciones de Windows Defender (WDAC)](/windows/client-management/mdm/applicationcontrol-csp), que reemplaza al [CSP de AppLocker](/windows/client-management/mdm/applocker-csp).
 
 Con Windows PowerShell y Microsoft Intune, puede usar el CSP WDAC para permitir o bloquear que se abran aplicaciones específicas en dispositivos Microsoft HoloLens 2. Por ejemplo, puede que quiera permitir o impedir que la aplicación Cortana se abra en los dispositivos HoloLens 2 de la organización.
 
@@ -33,7 +33,7 @@ Esta característica se aplica a:
 
 - Dispositivos HoloLens 2 que ejecutan Windows Holographic for Business
 
-El CSP WDAC se basa en la [característica Control de aplicaciones de Windows Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). También puede [usar varias directivas de WDAC](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
+El CSP WDAC se basa en la [característica Control de aplicaciones de Windows Defender (WDAC)](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). También puede [usar varias directivas de WDAC](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
 
 En este artículo se muestra cómo:
 
@@ -159,7 +159,7 @@ En este ejemplo se usa Windows PowerShell para crear una directiva de Control d
     Set-RuleOption -o 15 .\mergedPolicy.xml
     ```
 
-    Para obtener más información sobre estas reglas, vea [Comprender las reglas de directivas de WDAC y las reglas de archivos](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
+    Para obtener más información sobre estas reglas, vea [Comprender las reglas de directivas de WDAC y las reglas de archivos](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
 
 9. Convierta **mergedPolicy.xml** a formato binario. En este paso se crea **compiledPolicy.bin**. Agregará este archivo binario **compiledPolicy.bin** a Intune.
 

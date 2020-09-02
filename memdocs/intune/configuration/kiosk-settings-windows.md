@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 6a37b94ee0e474e9e3da6aae359ba1b315212910
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093628"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911937"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Configuración de dispositivos con Windows 10 y versiones posteriores para ejecutarse como una pantalla completa en Intune
 
@@ -41,7 +41,7 @@ Para más información sobre la característica de pantalla completa de Windows 
   1. Cree este perfil de pantalla completa para ejecutar el dispositivo en pantalla completa.
   2. Cree el [perfil de restricciones de dispositivo](device-restrictions-windows-10.md#microsoft-edge-browser) y configure opciones y características específicas que se permiten en Microsoft Edge.
 
-- Asegúrese de que todos los archivos, scripts y accesos directos estén en el sistema local. Para obtener más información, incluidos otros requisitos de Windows, vea [Personalizar y exportar el diseño de la pantalla Inicio](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+- Asegúrese de que todos los archivos, scripts y accesos directos estén en el sistema local. Para obtener más información, incluidos otros requisitos de Windows, vea [Personalizar y exportar el diseño de la pantalla Inicio](/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Asegúrese de asignar este perfil de pantalla completa a los mismos dispositivos que su [perfil de Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -54,17 +54,17 @@ Solo se ejecuta una aplicación en el dispositivo.
 
 - **Tipo de inicio de sesión de usuario**: Seleccione el tipo de cuenta que ejecuta la aplicación. Las opciones son:
 
-  - **Inicio de sesión automático (Windows 10, versión 1803 y versiones posteriores)** : use esta opción en pantallas completas en entornos orientados al público que no exigen que el usuario inicie sesión, similar a una cuenta de invitado. Esta configuración usa el [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Inicio de sesión automático (Windows 10, versión 1803 y versiones posteriores)** : use esta opción en pantallas completas en entornos orientados al público que no exigen que el usuario inicie sesión, similar a una cuenta de invitado. Esta configuración usa el [CSP AssignedAccess](/windows/client-management/mdm/assignedaccess-csp).
   - **Cuenta de usuario local**: escriba la cuenta de usuario local (en el dispositivo). La cuenta que especifique inicia sesión en la pantalla completa.
 
 - **Tipo de aplicación**: seleccione el tipo de aplicación. Las opciones son:
 
   - **Agregar explorador Microsoft Edge**: seleccione **Explorador Microsoft Edge** y elija el **Tipo de modo de quiosco de Microsoft Edge**:
 
-    - **Señal digital o interactiva**: se abre una URL en pantalla completa y solo se muestra el contenido de ese sitio web. En [Configurar señales digitales](https://docs.microsoft.com/windows/configuration/setup-digital-signage) se proporciona más información sobre esta característica.
+    - **Señal digital o interactiva**: se abre una URL en pantalla completa y solo se muestra el contenido de ese sitio web. En [Configurar señales digitales](/windows/configuration/setup-digital-signage) se proporciona más información sobre esta característica.
     - **Exploración pública (InPrivate)** : se ejecuta una versión limitada de varias pestañas de Microsoft Edge. Los usuarios pueden explorar públicamente o finalizar su sesión de exploración.
 
-    Para más información sobre estas opciones, vea [Implementar la pantalla completa de Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+    Para más información sobre estas opciones, vea [Implementar la pantalla completa de Microsoft Edge](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
     > Esta valor habilita el explorador de Microsoft Edge en el dispositivo. Para configurar opciones específicas de Microsoft Edge, cree un perfil de restricciones de dispositivos (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > **Windows 10** para la plataforma > **Restricciones de dispositivos** > **Explorador Microsoft Edge**). [Explorador de Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) muestra y describe las opciones disponibles.
@@ -96,7 +96,7 @@ Solo se ejecuta una aplicación en el dispositivo.
       `office.com`
 
     > [!NOTE]
-    > Los dispositivos Windows 10 de pantalla completa con el inicio de sesión automático habilitado que usen el explorador del Quiosco de Microsoft deben utilizar una licencia sin conexión de Microsoft Store para Empresas. Este requisito se debe a que el inicio de sesión automático usa una cuenta de usuario local sin credenciales de Azure Active Directory (AD). Por lo tanto, no se pueden evaluar las licencias en línea. Para obtener más información, vea [Distribuir aplicaciones sin conexión](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+    > Los dispositivos Windows 10 de pantalla completa con el inicio de sesión automático habilitado que usen el explorador del Quiosco de Microsoft deben utilizar una licencia sin conexión de Microsoft Store para Empresas. Este requisito se debe a que el inicio de sesión automático usa una cuenta de usuario local sin credenciales de Azure Active Directory (AD). Por lo tanto, no se pueden evaluar las licencias en línea. Para obtener más información, vea [Distribuir aplicaciones sin conexión](/microsoft-store/distribute-offline-apps).
 
   - **Agregar aplicación de Store**: elija **Agregar una aplicación de la tienda** y seleccione una aplicación de la lista.
 
@@ -112,7 +112,7 @@ Solo se ejecuta una aplicación en el dispositivo.
 
   Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosk"></a>Pantalla completa con varias operaciones
 
@@ -126,10 +126,10 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
 
 - **Tipo de inicio de sesión de usuario**: seleccione el tipo de cuenta que ejecuta las aplicaciones. Las opciones son:
 
-  - **Auto logon (Windows 10 version 1803 and later)** [Inicio de sesión automático (Windows 10, versión 1803 y posteriores)]: use esta opción en pantallas completas en entornos orientados al público que no exigen que el usuario inicie sesión, similar a una cuenta de invitado. Esta configuración usa el [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Auto logon (Windows 10 version 1803 and later)** [Inicio de sesión automático (Windows 10, versión 1803 y posteriores)]: use esta opción en pantallas completas en entornos orientados al público que no exigen que el usuario inicie sesión, similar a una cuenta de invitado. Esta configuración usa el [CSP AssignedAccess](/windows/client-management/mdm/assignedaccess-csp).
   - **Cuenta de usuario local**: **añada** la cuenta de usuario local (en el dispositivo). La cuenta que especifique inicia sesión en la pantalla completa.
   - **Azure AD user or group (Windows 10 version 1803 and later)** [Usuario o grupo de Azure AD (Windows 10, versión 1803 y posteriores)]: Seleccione **Agregar** y elija usuarios o grupos de Azure AD en la lista. Puede seleccionar varios usuarios y grupos. Elija **Seleccionar** para guardar los cambios.
-  - **Visitante de HoloLens**: la cuenta de visitante es una cuenta de invitado que no requiere ninguna credencial de usuario ni autenticación, como se describe en [Conceptos del modo de equipo compartido](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **Visitante de HoloLens**: la cuenta de visitante es una cuenta de invitado que no requiere ninguna credencial de usuario ni autenticación, como se describe en [Conceptos del modo de equipo compartido](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Exploradores y aplicaciones**: agregue las aplicaciones que se van a ejecutar en el dispositivo de pantalla completa. Recuerde que puede agregar varias aplicaciones.
 
@@ -142,7 +142,7 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
       - **Modo normal (versión completa de Microsoft Edge)** : Se ejecuta una versión completa de Microsoft Edge con todas las características de exploración. Los datos de usuario y el estado se guardan entre sesiones.
       - **Exploración pública (InPrivate)** : se ejecuta una versión de varias pestañas de InPrivate de Microsoft Edge con una experiencia adaptada a los quioscos que se ejecutan en modo de pantalla completa.
 
-      Para más información sobre estas opciones, vea [Implementar la pantalla completa de Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Para más información sobre estas opciones, vea [Implementar la pantalla completa de Microsoft Edge](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
       > Esta valor habilita el explorador de Microsoft Edge en el dispositivo. Para configurar opciones específicas de Microsoft Edge, cree un perfil de restricciones de dispositivos (**Dispositivos** > **Perfiles de configuración** > **Crear perfil** > > **Windows 10** para la plataforma > **Restricciones de dispositivos** >  **Explorador Microsoft Edge**). [Explorador de Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) muestra y describe las opciones disponibles.
@@ -166,7 +166,7 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
         Para permitir sitios web específicos, cargue un archivo .csv que incluye una lista de los sitios web permitidos. Si no agrega un archivo .csv, se permitirán todos los sitios web.
 
       > [!NOTE]
-      > Los dispositivos Windows 10 de pantalla completa con el inicio de sesión automático habilitado que usen el explorador del Quiosco de Microsoft deben utilizar una licencia sin conexión de Microsoft Store para Empresas. Este requisito se debe a que el inicio de sesión automático usa una cuenta de usuario local sin credenciales de Azure Active Directory (AD). Por lo tanto, no se pueden evaluar las licencias en línea. Para obtener más información, vea [Distribuir aplicaciones sin conexión](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+      > Los dispositivos Windows 10 de pantalla completa con el inicio de sesión automático habilitado que usen el explorador del Quiosco de Microsoft deben utilizar una licencia sin conexión de Microsoft Store para Empresas. Este requisito se debe a que el inicio de sesión automático usa una cuenta de usuario local sin credenciales de Azure Active Directory (AD). Por lo tanto, no se pueden evaluar las licencias en línea. Para obtener más información, vea [Distribuir aplicaciones sin conexión](/microsoft-store/distribute-offline-apps).
 
   - **Aplicaciones**
 
@@ -176,12 +176,12 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
 
       - **Nombre de la aplicación**: Necesario. Escriba un nombre para la aplicación.
       - **Ruta de acceso local al archivo ejecutable de la aplicación**: Necesario. Escriba la ruta de acceso al archivo ejecutable, como `C:\Program Files (x86)\Microsoft VS Code\Code.exe` o `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **Identificador de modelo del usuario de la aplicación (AUMID) para la aplicación Win32**: Escriba el identificador de modelo de usuario de la aplicación (AUMID) de la aplicación Win32. Esta configuración determina el diseño de inicio del icono en el escritorio. Para obtener este identificador, vea [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+      - **Identificador de modelo del usuario de la aplicación (AUMID) para la aplicación Win32**: Escriba el identificador de modelo de usuario de la aplicación (AUMID) de la aplicación Win32. Esta configuración determina el diseño de inicio del icono en el escritorio. Para obtener este identificador, vea [Get-StartApps](/powershell/module/startlayout/get-startapps?view=win10-ps).
 
     - **Agregar por AUMID**: use esta opción para agregar aplicaciones de Windows de bandeja de entrada, como el Bloc de notas o la Calculadora. Escriba las siguientes propiedades:
 
       - **Nombre de la aplicación**: Necesario. Escriba un nombre para la aplicación.
-      - **Identificador de modelo del usuario de la aplicación (AUMID)** : Necesario. Escriba el identificador de modelo de usuario de aplicación (AUMID) de la aplicación de Windows. Para obtener este identificador, vea [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Buscar el identificador de modelo de usuario de aplicación de una aplicación instalada).
+      - **Identificador de modelo del usuario de la aplicación (AUMID)** : Necesario. Escriba el identificador de modelo de usuario de aplicación (AUMID) de la aplicación de Windows. Para obtener este identificador, vea [Find the Application User Model ID of an installed app](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Buscar el identificador de modelo de usuario de aplicación de una aplicación instalada).
 
     - **Inicio automático**: Opcional. Después de agregar las aplicaciones y el explorador, seleccione una aplicación o un explorador que se abra automáticamente cuando el usuario inicie sesión. Solo puede iniciarse automáticamente una única aplicación o explorador.
     - **Tamaño de icono**: Necesario. Después de agregar las aplicaciones, seleccione un tamaño de icono de aplicación pequeño, mediano, ancho o grande.
@@ -191,7 +191,7 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
   > [!TIP]
   > Una vez agregadas todas las aplicaciones, puede modificar el orden de visualización haciendo clic en ellas y arrastrándolas en la lista.  
 
-- **Usar diseño de inicio alternativo**: elija **Sí** para especificar un archivo XML que describa el modo en que las aplicaciones aparecen en el menú Inicio, incluido el orden de estas. Use esta opción si necesita personalizar más el menú Inicio. [Personalizar y exportar el diseño de la pantalla Inicio](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) incluye algunas instrucciones y XML de ejemplo.
+- **Usar diseño de inicio alternativo**: elija **Sí** para especificar un archivo XML que describa el modo en que las aplicaciones aparecen en el menú Inicio, incluido el orden de estas. Use esta opción si necesita personalizar más el menú Inicio. [Personalizar y exportar el diseño de la pantalla Inicio](/windows/configuration/customize-and-export-start-layout) incluye algunas instrucciones y XML de ejemplo.
 
 - **Barra de tareas de Windows**: elija **Mostrar** u **Ocultar** la barra de tareas. De forma predeterminada, la barra de tareas no aparece. Se muestran iconos, por ejemplo, el icono de Wi-Fi, pero los usuarios finales no pueden cambiar la configuración.
 
@@ -207,7 +207,7 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
 
   Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración.
 
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -215,4 +215,4 @@ Las aplicaciones en este modo están disponibles en el menú Inicio. Estas aplic
 
 También puede crear perfiles de pantalla completa para dispositivos [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) y [Windows Holographic for Business](kiosk-settings-holographic.md).
 
-Consulte también [Configurar un quiosco multimedia de aplicación única](https://docs.microsoft.com/windows/configuration/kiosk-single-app) o [Configurar un quiosco multimedia de varias aplicaciones](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) en la guía de Windows.
+Consulte también [Configurar un quiosco multimedia de aplicación única](/windows/configuration/kiosk-single-app) o [Configurar un quiosco multimedia de varias aplicaciones](/windows/configuration/lock-down-windows-10-to-specific-apps) en la guía de Windows.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5200f0476e3f692b02cbac9b0934c35e522ee906
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1c342fcb4c7930861e4b851cba5c7d203f159dee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983618"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915218"
 ---
 # <a name="android-device-administrator-enrollment"></a>Inscripción del administrador de dispositivos Android
 
@@ -49,7 +49,7 @@ Después de que un usuario se haya inscrito, puede empezar a administrar sus dis
 
 Para más información sobre otras tareas de usuario final, vea estos artículos:
 - [Recursos sobre la experiencia del usuario final con Microsoft Intune](../fundamentals/end-user-educate.md)
-- [Uso de un dispositivo Android con Intune](https://docs.microsoft.com/mem/intune/user-help/why-enroll-android-device)
+- [Uso de un dispositivo Android con Intune](../user-help/why-enroll-android-device.md)
 
 
 ## <a name="block-device-administrator-enrollment"></a>Bloqueo de la inscripción del administrador de dispositivos Android

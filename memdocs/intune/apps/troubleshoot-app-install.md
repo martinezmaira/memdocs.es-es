@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
-ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
+ms.openlocfilehash: 287306a8a583dcb6a9617a2933cecb0223a25df4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86285290"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913110"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Solucionar problemas de instalación de aplicaciones
 
@@ -125,7 +125,7 @@ Entre los tipos de aplicaciones que se admiten en dispositivos ARM64 se incluyen
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Solucionar problemas de aplicaciones de la Microsoft Store
 
-La información contenida en el tema [Troubleshooting packaging, deployment, and query of Microsoft Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (Solucionar problemas de empaquetado, implementación y consulta de aplicaciones de la Microsoft Store) le ayuda a solucionar problemas comunes que pueden surgir al instalar aplicaciones desde la Microsoft Store, tanto si usa Intune como otros medios.
+La información contenida en el tema [Troubleshooting packaging, deployment, and query of Microsoft Store apps](/windows/win32/appxpkg/troubleshooting) (Solucionar problemas de empaquetado, implementación y consulta de aplicaciones de la Microsoft Store) le ayuda a solucionar problemas comunes que pueden surgir al instalar aplicaciones desde la Microsoft Store, tanto si usa Intune como otros medios.
 
 ## <a name="app-troubleshooting-resources"></a>Recursos de solución de problemas de aplicaciones
 - [Implementación de Visio y Project como parte de la implementación de Aplicaciones de Microsoft 365](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)

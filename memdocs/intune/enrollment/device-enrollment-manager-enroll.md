@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986765"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913144"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscripción de dispositivos en Intune mediante una cuenta de administrador de inscripción de dispositivos
 
@@ -49,7 +49,7 @@ Los dispositivos y las cuentas de los usuarios de DEM inscritos con una cuenta d
 
 Puede usar los siguientes métodos para inscribir dispositivos mediante cuentas de DEM:
 
-- [Windows Autopilot](enrollment-autopilot.md):
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md):
 - [Inscripción masiva de dispositivos Windows](windows-bulk-enroll.md)
 - DEM iniciado a través del Portal de empresa
 
@@ -77,4 +77,3 @@ La eliminación de un administrador de inscripción de dispositivos no afecta a 
 
 1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), elija **Dispositivos** > **Inscribir dispositivos** > **Administradores de inscripciones de dispositivos**.
 2. En la hoja **Administradores de inscripción de dispositivos**, seleccione el usuario DEM y **Eliminar**.
-

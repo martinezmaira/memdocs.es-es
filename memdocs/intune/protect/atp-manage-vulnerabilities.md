@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d5c57dcbe91d18b633831bafde3a0feae997ba76
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262598"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909387"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Uso de Intune para corregir las vulnerabilidades que identifica ATP de Microsoft Defender
 
 Al integrar Intune con la Protección de amenazas avanzada (ATP) de Microsoft Defender, puede aprovechar Threat & Vulnerability Management (TVM) de ATP y usar Intune para corregir los puntos débiles del punto de conexión que TVM identifica. Esta integración ofrece un enfoque basado en riesgos para la detección de vulnerabilidades y la asignación de prioridades de las mismas que puede mejorar el tiempo de respuesta de corrección en todo el entorno.
 
-[Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) forma parte de la [Protección de amenazas avanzada de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+[Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) forma parte de la [Protección de amenazas avanzada de Microsoft Defender](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
 ## <a name="how-integration-works"></a>Funcionamiento de la integración
 
@@ -108,4 +108,4 @@ Más información sobre Intune y [ATP de Microsoft Defender](advanced-threat-pr
 
 Revise [Mobile Threat Defense](mobile-threat-defense.md) de Intune.
 
-Revise el [panel de Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) en ATP de Microsoft Defender.
+Revise el [panel de Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) en ATP de Microsoft Defender.

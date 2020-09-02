@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820398"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916000"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configuración de la infraestructura para admitir SCEP con Intune
 
@@ -40,7 +40,7 @@ Antes de continuar, asegúrese de que ha [creado e implementado un *perfil de ce
 
 La siguiente infraestructura local se debe ejecutar en servidores unidos a dominio en la instancia de Active Directory, con la excepción del servidor proxy de aplicación web.
 
-- **Entidad de certificación**: use una entidad de certificación (CA) empresarial de Servicios de certificados de Active Directory de Microsoft que se ejecute en una edición Enterprise de Windows Server 2008 R2 con Service Pack 1 o posterior. La versión de Windows Server que use debe seguir siendo compatible con Microsoft. No se admiten CA independientes. Para más información, vea [Instalación de la entidad de certificación](https://technet.microsoft.com/library/jj125375.aspx). Si la entidad de certificación ejecuta Windows Server 2008 R2 SP1, tendrá que [instalar la revisión de KB2483564](https://support.microsoft.com/kb/2483564/).
+- **Entidad de certificación**: use una entidad de certificación (CA) empresarial de Servicios de certificados de Active Directory de Microsoft que se ejecute en una edición Enterprise de Windows Server 2008 R2 con Service Pack 1 o posterior. La versión de Windows Server que use debe seguir siendo compatible con Microsoft. No se admiten CA independientes. Para más información, vea [Instalación de la entidad de certificación](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)). Si la entidad de certificación ejecuta Windows Server 2008 R2 SP1, tendrá que [instalar la revisión de KB2483564](https://support.microsoft.com/kb/2483564/).
 
 - **Rol de servidor NDES**: tendrá que configurar un rol de servidor Servicio de inscripción de dispositivos de red (NDES) en Windows Server 2012 R2 o posterior. En una sección posterior de este artículo, se le guiará a través de la [instalación de NDES](#set-up-ndes).
 
@@ -48,7 +48,7 @@ La siguiente infraestructura local se debe ejecutar en servidores unidos a domin
   - No puede usar NDES instalado en el servidor en el que se hospeda la entidad de certificación empresarial.
   - Microsoft Intune Certificate Connector se instalará en el mismo servidor en el que se hospeda NDES.
 
-  Para más información sobre NDES, vea [Orientación para el Servicio de inscripción de dispositivos de red](https://technet.microsoft.com/library/hh831498.aspx) y [Uso de un módulo de directivas con el Servicio de inscripción de dispositivos de red](https://technet.microsoft.com/library/dn473016.aspx).
+  Para más información sobre NDES, vea [Orientación para el Servicio de inscripción de dispositivos de red](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) y [Uso de un módulo de directivas con el Servicio de inscripción de dispositivos de red](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
 
 - **Microsoft Intune Certificate Connector**: se necesita Microsoft Intune Certificate Connector para usar perfiles de certificado SCEP con Intune. Este artículo le guiará a través de la [instalación de este conector](#install-the-intune-certificate-connector).
 
@@ -56,21 +56,21 @@ La siguiente infraestructura local se debe ejecutar en servidores unidos a domin
   - El conector tiene los mismos requisitos de red que los [dispositivos administrados](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - El conector se debe ejecutar en el mismo servidor que el rol de servidor NDES, un servidor que ejecute Windows Server 2012 R2 o posterior.
   - El conector requiere .NET Framework 4.5 y se incluye automáticamente con Windows Server 2012 R2.
-  - La configuración de seguridad mejorada de Internet Explorer [debe estar deshabilitada en el servidor en el que se hospeda NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) y Microsoft Intune Certificate Connector.
+  - La configuración de seguridad mejorada de Internet Explorer [debe estar deshabilitada en el servidor en el que se hospeda NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) y Microsoft Intune Certificate Connector.
 
 La infraestructura local siguiente es opcional:
 
 Para permitir que los dispositivos de Internet obtengan certificados, debe publicar la dirección URL de NDES externa a la red corporativa. Puede usar Azure AD Application Proxy, Servidor proxy de aplicación web u otro proxy inverso.
 
-- **Azure AD Application Proxy** (opcional): puede usar Azure AD Application Proxy en lugar de un servidor proxy de aplicación web (WAP) dedicado para publicar la dirección URL de NDES en Internet. Esto permite que los dispositivos de la intranet y con conexión a Internet obtengan los certificados. Para más información, consulte [Provisión de acceso remoto seguro a aplicaciones locales](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD Application Proxy** (opcional): puede usar Azure AD Application Proxy en lugar de un servidor proxy de aplicación web (WAP) dedicado para publicar la dirección URL de NDES en Internet. Esto permite que los dispositivos de la intranet y con conexión a Internet obtengan los certificados. Para más información, consulte [Provisión de acceso remoto seguro a aplicaciones locales](/azure/active-directory/manage-apps/application-proxy).
 
 - **Servidor proxy de aplicación web** (opcional): use un servidor que ejecute Windows Server 2012 R2 o posterior como servidor proxy de aplicación web (WAP) para publicar la dirección URL de NDES en Internet.  Esto permite que los dispositivos de la intranet y con conexión a Internet obtengan los certificados.
 
-  El servidor que hospeda WAP [debe instalar una actualización](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) que habilite la compatibilidad con las direcciones URL largas que usa el Servicio de inscripción de dispositivos de red. Esta actualización está incluida en el [paquete acumulativo de actualizaciones de diciembre de 2014](https://support.microsoft.com/kb/3013769)o está disponible por separado, en [KB3011135](https://support.microsoft.com/kb/3011135).
+  El servidor que hospeda WAP [debe instalar una actualización](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) que habilite la compatibilidad con las direcciones URL largas que usa el Servicio de inscripción de dispositivos de red. Esta actualización está incluida en el [paquete acumulativo de actualizaciones de diciembre de 2014](https://support.microsoft.com/kb/3013769)o está disponible por separado, en [KB3011135](https://support.microsoft.com/kb/3011135).
 
   El servidor WAP debe tener un certificado SSL que coincida con el nombre que se ha publicado para los clientes externos y confiar en el certificado SSL que se usa en el equipo en el que se hospeda el servicio NDES. Estos certificados habilitan al servidor WAP para terminar la conexión SSL de los clientes y crear una conexión SSL al servicio NDES.
 
-  Para más información, consulte [Planeamiento de certificados para WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) e [Información general sobre los servidores WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+  Para más información, consulte [Planeamiento de certificados para WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) e [Información general sobre los servidores WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="accounts"></a>Cuentas
 
@@ -82,7 +82,7 @@ Para permitir que los dispositivos de Internet obtengan certificados, debe publi
   - **Iniciar sesión como un servicio**
   - **Iniciar sesión como trabajo por lotes**
 
-  Para más información, vea [Creación de una cuenta de usuario de dominio como cuenta de servicio NDES](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
+  Para más información, vea [Creación de una cuenta de usuario de dominio como cuenta de servicio NDES](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
 
 - **Acceso al equipo en el que se hospeda el servicio NDES**: necesitará una cuenta de usuario de dominio con permisos para instalar y configurar roles de servidor de Windows en el servidor en el que instale NDES.
 
@@ -90,7 +90,7 @@ Para permitir que los dispositivos de Internet obtengan certificados, debe publi
 
 ### <a name="network-requirements"></a>Requisitos de red
 
-Se recomienda publicar el servicio NDES a través de un proxy inverso, como el [proxy de aplicaciones de Azure AD, el proxy de acceso web](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/) o un proxy de terceros. Si no usa ningún proxy inverso, permita el tráfico TCP en el puerto 443 desde todos los hosts y direcciones IP de Internet al servicio NDES.
+Se recomienda publicar el servicio NDES a través de un proxy inverso, como el [proxy de aplicaciones de Azure AD, el proxy de acceso web](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application) o un proxy de terceros. Si no usa ningún proxy inverso, permita el tráfico TCP en el puerto 443 desde todos los hosts y direcciones IP de Internet al servicio NDES.
 
 Permita todos los puertos y protocolos necesarios para la comunicación entre el servicio NDES y cualquier infraestructura de soporte del entorno. Por ejemplo, el equipo en el que se hospeda el servicio NDES necesita comunicarse con la entidad de certificación, los servidores DNS, los controladores de dominio y posiblemente con otros servicios o servidores del entorno, como Configuration Manager.
 
@@ -234,11 +234,11 @@ De forma predeterminada, Intune usa el valor configurado en la plantilla, pero p
 
 ## <a name="set-up-ndes"></a>Configuración de NDES
 
-Los procedimientos siguientes pueden ayudarle a configurar el Servicio de inscripción de dispositivos de red (NDES) para usarlo con Intune. Para más información sobre NDES, vea [Orientación para el Servicio de inscripción de dispositivos de red](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v%3dws.11)).
+Los procedimientos siguientes pueden ayudarle a configurar el Servicio de inscripción de dispositivos de red (NDES) para usarlo con Intune. Para más información sobre NDES, vea [Orientación para el Servicio de inscripción de dispositivos de red](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
 
 ### <a name="install-the-ndes-service"></a>Instalación del servicio NDES
 
-1. En el servidor en el que se va a hospedar el servicio NDES, inicie sesión como **Administrador de la empresa** y, luego, use el [Asistente para agregar roles y características](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) para instalar NDES:
+1. En el servidor en el que se va a hospedar el servicio NDES, inicie sesión como **Administrador de la empresa** y, luego, use el [Asistente para agregar roles y características](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) para instalar NDES:
 
    1. En el asistente, seleccione **Servicios de certificados de Active Directory** para obtener acceso a los servicios de rol de AD CS. Seleccione **Servicio de inscripción de dispositivos de red**, desactive **Entidad de certificación** y complete el asistente.
 

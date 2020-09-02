@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866135"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915694"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Cómo usar Azure AD para acceder a las API de Intune en Microsoft Graph
 
@@ -53,9 +53,9 @@ En este artículo:
 
 Para obtener más información, vea:
 
-- [Autorización del acceso a aplicaciones web mediante OAuth 2.0 y Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Autorización del acceso a aplicaciones web mediante OAuth 2.0 y Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Getting start with Azure AD authentication](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth) (Introducción a la autenticación de Azure AD)
-- [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Integración de aplicaciones con Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Comprender OAuth 2.0](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registro de aplicaciones para usar la API de Microsoft Graph
@@ -80,7 +80,7 @@ Para registrar una aplicación para usar la API de Microsoft Graph:
 
     2. Los valores de **Tipo de aplicación** y **URI de redireccionamiento**.
 
-        Pueden variar en función de sus requisitos. Por ejemplo, si usa [Biblioteca de autenticación](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) de Azure AD (ADAL), establezca **Tipo de aplicación** en `Native` y **URI de redireccionamiento** en `urn:ietf:wg:oauth:2.0:oob`.
+        Pueden variar en función de sus requisitos. Por ejemplo, si usa [Biblioteca de autenticación](/azure/active-directory/develop/active-directory-authentication-libraries) de Azure AD (ADAL), establezca **Tipo de aplicación** en `Native` y **URI de redireccionamiento** en `urn:ietf:wg:oauth:2.0:oob`.
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) Authentication Library (ADAL) y Azure AD Graph API quedarán obsoletos próximamente. Para obtener más información, consulte [Actualización de aplicaciones para el uso de la biblioteca de autenticación de Microsoft (MSAL) y Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -88,7 +88,7 @@ Para registrar una aplicación para usar la API de Microsoft Graph:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        Para más información, consulte [Escenarios de autenticación para Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+        Para más información, consulte [Escenarios de autenticación para Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. En la hoja de la aplicación:
 
@@ -106,7 +106,7 @@ Para registrar una aplicación para usar la API de Microsoft Graph:
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Elija los roles necesarios para la aplicación mediante la colocación de una marca de verificación a la izquierda de los nombres correspondientes.  Para más información sobre los ámbitos de permiso específicos de Intune, consulte [Ámbitos de permiso de Intune](#intune-permission-scopes).  Para obtener más información sobre los otros ámbitos de permiso de Graph API, consulte [Referencia de permisos de Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Elija los roles necesarios para la aplicación mediante la colocación de una marca de verificación a la izquierda de los nombres correspondientes.  Para más información sobre los ámbitos de permiso específicos de Intune, consulte [Ámbitos de permiso de Intune](#intune-permission-scopes).  Para obtener más información sobre los otros ámbitos de permiso de Graph API, consulte [Referencia de permisos de Microsoft Graph](/graph/permissions-reference).
 
     Para obtener mejores resultados, elija la menor cantidad de roles necesarios para implementar la aplicación.
 
@@ -141,8 +141,8 @@ Azure AD y Microsoft Graph usan los ámbitos de permiso para controlar el acceso
 Los ámbitos de permiso (también denominados _ámbitos de OAuth_) controlan el acceso a entidades específicas de Intune y sus propiedades. En esta sección se resumen los ámbitos de permiso para las características de la API de Intune.
 
 Para más información:
-- [Autenticación de Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [Ámbitos de permiso de aplicaciones](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Autenticación de Azure AD](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Ámbitos de permiso de aplicaciones](/azure/active-directory/develop/active-directory-v2-scopes)
 
 Al conceder permiso a Microsoft Graph, puede especificar los ámbitos siguientes para controlar el acceso a las características de Intune: En la tabla siguiente se resumen los ámbitos de permiso de la API de Intune.  En la primera columna se muestra el nombre de la característica, tal como aparece en Azure Portal y en la segunda columna se proporciona el nombre del ámbito de permiso.
 

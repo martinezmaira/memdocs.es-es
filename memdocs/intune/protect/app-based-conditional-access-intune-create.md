@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a61e92265447f8ceced83d493b9397713b67dca6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989784"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909438"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configuración de directivas de acceso condicional basado en la aplicación con Intune
 
@@ -32,7 +32,7 @@ Configure directivas de acceso condicional basado en la aplicación para aplicac
 Antes de usar directivas de acceso condicional basadas en la aplicación, debe haber aplicado [directivas de protección de aplicaciones de Intune](../apps/app-protection-policies.md) a las aplicaciones.
 
 > [!IMPORTANT]
-> En este artículo se describen los pasos necesarios para agregar una directiva sencilla de acceso condicional basado en la aplicación. Puede usar los mismos pasos para otras aplicaciones en la nube. Para obtener más información, consulte [Planeamiento de la implementación del acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access).
+> En este artículo se describen los pasos necesarios para agregar una directiva sencilla de acceso condicional basado en la aplicación. Puede usar los mismos pasos para otras aplicaciones en la nube. Para obtener más información, consulte [Planeamiento de la implementación del acceso condicional](/azure/active-directory/conditional-access/plan-conditional-access).
 
 ## <a name="create-app-based-conditional-access-policies"></a>Creación de directivas de acceso condicional basado en la aplicación
 
@@ -72,4 +72,4 @@ Para poder crear directivas de acceso condicional desde el Centro de administrac
 ## <a name="see-also"></a>Vea también
 
 [Proteger datos de aplicaciones mediante directivas de protección de aplicaciones](../apps/app-protection-policies.md)
-[Acceso condicional en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Acceso condicional en Azure Active Directory](/azure/active-directory/active-directory-conditional-access)

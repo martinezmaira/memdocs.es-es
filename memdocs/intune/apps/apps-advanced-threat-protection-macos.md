@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc226279ea72a804a0d6ac0fa63f0b9bb90fe7a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 17f039bede5b179b85abd66cc4c1f3b7aaefcb3a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531560"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914181"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Adición de ATP de Microsoft Defender a dispositivos macOS con Microsoft Intune
 
@@ -35,7 +35,7 @@ Para poder implementar, configurar, supervisar o proteger aplicaciones, antes de
 - Implemente la extensión de kernel en Intune. Para más información, vea [Adición de extensiones de kernel de macOS en Intune](../configuration/kernel-extensions-overview-macos.md).
 
 > [!IMPORTANT]
-> La extensión de kernel solo se puede aprobar automáticamente si está presente en el dispositivo antes de que se instale la aplicación de ATP de Microsoft Defender. En caso contrario, los usuarios verán el mensaje "La extensión del sistema está bloqueada" en los equipos Mac y tendrán que aprobar la extensión si van a **Preferencias de seguridad** o **Preferencias del sistema** > **Seguridad y privacidad** y, después, seleccionan **Permitir**. Para obtener más información, vea [Solución de problemas de la extensión de kernel en ATP de Microsoft Defender para Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+> La extensión de kernel solo se puede aprobar automáticamente si está presente en el dispositivo antes de que se instale la aplicación de ATP de Microsoft Defender. En caso contrario, los usuarios verán el mensaje "La extensión del sistema está bloqueada" en los equipos Mac y tendrán que aprobar la extensión si van a **Preferencias de seguridad** o **Preferencias del sistema** > **Seguridad y privacidad** y, después, seleccionan **Permitir**. Para obtener más información, vea [Solución de problemas de la extensión de kernel en ATP de Microsoft Defender para Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>Adición de ATP de Microsoft Defender a Intune
 Puede agregar ATP de Microsoft Defender a Intune si sigue estos pasos:
@@ -80,4 +80,3 @@ La aplicación que ha creado aparece en la lista de aplicaciones, donde puede as
 - Para más información sobre cómo aplicar una directiva de antivirus para la seguridad de los puntos de conexión en Intune, consulte [Directiva de antivirus para la seguridad de puntos de conexión en Intune](../protect/endpoint-security-antivirus-policy.md) 
 - Para información sobre cómo incluir y excluir las asignaciones de aplicaciones para grupos de usuarios, consulte [Inclusión y exclusión de asignaciones de aplicaciones](apps-inc-exl-assignments.md).
 - Para obtener más información sobre cómo asignar aplicaciones a grupos en Intune, consulte [Asignación de aplicaciones a grupos](apps-deploy.md).
-

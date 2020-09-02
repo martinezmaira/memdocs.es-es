@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd8070dd1584beac0744ebfae63aa4fd066fa2bf
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4703288faac219b40fae08c6551425d6f0d5e4f3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022252"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909421"
 ---
 # <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Bloqueo de aplicaciones que no usan la autenticación moderna (ADAL)
 
@@ -41,9 +41,9 @@ Para bloquear el acceso a las aplicaciones que no usan la autenticación moderna
 ## <a name="additional-information"></a>Información adicional
 
 Para más información sobre el acceso condicional de Azure AD, consulte estos temas:
-- [¿Qué es el acceso condicional en Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [¿Qué es el acceso condicional en Azure Active Directory?](/azure/active-directory/conditional-access/overview)
 - [Funcionamiento del acceso condicional basado en aplicación](app-based-conditional-access-intune.md#how-app-based-conditional-access-works)
-- [Procedimientos para configurar SharePoint Online y Exchange Online para el acceso condicional de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
+- [Procedimientos para configurar SharePoint Online y Exchange Online para el acceso condicional de Azure Active Directory](/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

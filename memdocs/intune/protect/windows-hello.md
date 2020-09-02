@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 70c0418f02bd94a957967c72045be210dad56c78
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252527"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914708"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integración de Windows Hello para empresas con Microsoft Intune  
 
@@ -134,4 +134,4 @@ Windows Holographic for Business es compatible con las siguientes opciones de co
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre Windows Hello para empresas, consulte [la guía](https://technet.microsoft.com/library/mt589441.aspx) de la documentación de Windows 10.
+Para más información sobre Windows Hello para empresas, consulte [la guía](/windows/security/identity-protection/hello-for-business/hello-identity-verification) de la documentación de Windows 10.

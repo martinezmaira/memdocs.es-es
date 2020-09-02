@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c757688dec9d7c484ec2c71f86177ffbdf3a92d3
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 8cb847410bf04b4d7d8132e2069b6ced1751b921
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872008"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913586"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Adición de entidades de certificación de asociado en Intune mediante SCEP
 
@@ -70,7 +70,7 @@ Antes de integrar las entidades de certificación de terceros con Intune, confir
 
 Para permitir que un servidor SCEP de terceros ejecute la validación de desafío personalizada con Intune, cree una aplicación en Azure AD. Esta aplicación otorga derechos delegados a Intune para validar las solicitudes SCEP.
 
-Asegúrese de que tiene los permisos necesarios para registrar una aplicación de Azure AD. Consulte [Permisos necesarios](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) en la documentación de Azure AD.
+Asegúrese de que tiene los permisos necesarios para registrar una aplicación de Azure AD. Consulte [Permisos necesarios](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) en la documentación de Azure AD.
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Creación de una aplicación en Azure Active Directory  
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acd807911dc68c3139e953379a569990c34ac85b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: fa5593486f51d28c33ed280c97f819426be60fa2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989114"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911325"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Reasignación de directivas de acceso condicional desde el Portal de Intune clásico a Azure Portal
 
@@ -203,4 +203,4 @@ Como MDM se ha quitado del portal clásico de Intune, se ha proporcionado el sig
 
 - [Formas habituales de usar el acceso condicional con Intune](conditional-access-intune-common-ways-use.md)
 - [Acceso condicional basado en aplicación con Intune](app-based-conditional-access-intune.md)
-- [Acceso condicional en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Acceso condicional en Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

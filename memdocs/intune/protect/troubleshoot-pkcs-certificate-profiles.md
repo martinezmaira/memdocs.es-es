@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: acc61df344cb4134a863d75fff517047e78d067d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110688"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914793"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Solución de problemas de la implementación de certificados PKCS en Microsoft Intune
 
@@ -39,7 +39,7 @@ La fuente más común de problemas de los perfiles de certificado PKCS ha sido l
 - **Entidad de certificación**: el FQDN interno del equipo de la entidad de certificación. Por ejemplo, server1.domain.local.
 - **Nombre de la entidad de certificación**: el nombre de la entidad de certificación que se muestra en el MMC de la entidad de certificación. Mire en **Entidad de certificación (local)** .
 
-Puede usar el [programa de línea de comandos certutil](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil) en la CA para confirmar que la entidad de certificación y el nombre de la entidad de certificación son correctos.
+Puede usar el [programa de línea de comandos certutil](/windows-server/administration/windows-commands/certutil) en la CA para confirmar que la entidad de certificación y el nombre de la entidad de certificación son correctos.
 
 ## <a name="pkcs-communication-overview"></a>Introducción a la comunicación de PKCS
 
@@ -76,7 +76,7 @@ Los archivos de registro de estos roles incluyen el Visor de eventos de Windows,
 
 - **NDESConnector_date_time.svclog**:
 
-  Este registro muestra la comunicación desde Microsoft Intune Certificate Connector al servicio en la nube de Intune. Puede usar la [herramienta del visor de seguimiento de servicio](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
+  Este registro muestra la comunicación desde Microsoft Intune Certificate Connector al servicio en la nube de Intune. Puede usar la [herramienta del visor de seguimiento de servicio](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
 
   Clave del Registro relacionada: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -84,7 +84,7 @@ Los archivos de registro de estos roles incluyen el Visor de eventos de Windows,
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  este registro muestra el módulo de directivas de NDES que recibe y comprueba las solicitudes de certificado. Puede usar la [herramienta del visor de seguimiento de servicio](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
+  este registro muestra el módulo de directivas de NDES que recibe y comprueba las solicitudes de certificado. Puede usar la [herramienta del visor de seguimiento de servicio](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
 
   Ubicación: en el servidor que hospeda NDES en *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -217,7 +217,7 @@ Este problema se produce si el equipo que hospeda Intune NDES Connector no encue
 
 **Solución**:
 
-Configure manualmente el nombre del servidor de directivas de inscripción de certificados en el equipo que hospeda el conector NDES. Para configurar el nombre, use el cmdlet de PowerShell [Add-CertificateEnrollmentPolicyServer](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps).
+Configure manualmente el nombre del servidor de directivas de inscripción de certificados en el equipo que hospeda el conector NDES. Para configurar el nombre, use el cmdlet de PowerShell [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps).
 
 ### <a name="the-submission-is-pending"></a>El envío está pendiente
 

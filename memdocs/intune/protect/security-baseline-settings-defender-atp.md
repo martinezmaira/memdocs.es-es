@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 322e3be8e7421b0c622a8e656a3312791ed7feac
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663436"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913450"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -55,12 +55,12 @@ Los detalles de este artículo se aplican a la versión 3 de la línea de base 
 
 La línea base de [Advanced Threat Protection de Microsoft Defender](advanced-threat-protection.md#prerequisites) está disponible si el entorno cumple con los requisitos previos para su uso.
 
-La línea de base se optimiza para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados. Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
+La línea de base se optimiza para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados. Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
 
 
 ## <a name="application-guard"></a>Protección de aplicaciones
 
-Para más información, vea [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) (CSP de WindowsDefenderApplicationGuard) en la documentación de Windows.  
+Para más información, vea [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) (CSP de WindowsDefenderApplicationGuard) en la documentación de Windows.  
 
 Al utilizar Microsoft Edge, Protección de aplicaciones de Microsoft Defender protege su entorno de sitios que no son de confianza para su organización. Cuando los usuarios visitan sitios que no aparecen en el límite de red aislada, estos se abren en una sesión de exploración virtual de Hyper-V. Los sitios de confianza se definen mediante un límite de red.  
 
@@ -89,7 +89,7 @@ Al utilizar Microsoft Edge, Protección de aplicaciones de Microsoft Defender pr
     - **Permitir copiar y pegar entre el PC y el explorador**: no existen bloqueos del contenido.
 
 - **Directiva de aislamiento de red de Windows**  
-  CSP: [CSP de directiva: NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP: [CSP de directiva: NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   Especifique una lista de *Dominios de red*, que son recursos de empresa hospedados en la nube que Protección de aplicaciones trata como sitios empresariales.
   - **Configurar** (*valor predeterminado*)
@@ -102,7 +102,7 @@ Al utilizar Microsoft Edge, Protección de aplicaciones de Microsoft Defender pr
 
 ## <a name="bitlocker"></a>BitLocker
 
-Para más información, vea [Configuración de las directivas de grupo de BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) en la documentación de Windows.
+Para más información, vea [Configuración de las directivas de grupo de BitLocker](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) en la documentación de Windows.
 
 - **Exigir cifrado de tarjeta de almacenamiento (solo dispositivos móviles)**  
   CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -290,7 +290,7 @@ Para más información, vea [Configuración de las directivas de grupo de BitLoc
 ## <a name="dma-guard"></a>Protección de DMA
 
 - **Enumeración de los dispositivos externos compatibles con Kernel DMA Protection**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Esta directiva puede proporcionar seguridad adicional contra los dispositivos compatibles con DMA externos. Permite mayor control sobre la enumeración de dispositivos externos compatibles con DMA incompatibles con la reasignación de DMA o el aislamiento de la memoria de dispositivo y el espacio aislado.
   
@@ -302,10 +302,10 @@ Para más información, vea [Configuración de las directivas de grupo de BitLoc
 
 ## <a name="endpoint-detection-and-response"></a>Endpoint Detection and Response
 
-Para más información sobre la siguiente configuración, consulte [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) en la documentación de Windows.
+Para más información sobre la siguiente configuración, consulte [WindowsAdvancedThreatProtection CSP](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) en la documentación de Windows.
 
 - **Uso compartido de muestras para todos los archivos**  
-  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Devuelve o establece el parámetro de configuración de uso compartido de muestras de Advanced Threat Protection de Microsoft Defender.  
   
@@ -313,7 +313,7 @@ Para más información sobre la siguiente configuración, consulte [WindowsAdvan
   - **No configurado**.
 
 - **Frecuencia de informes de telemetría urgentes**  
-  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Frecuencia de informes de telemetría de Advanced Threat Protection de Microsoft Defender urgentes.  
 
@@ -322,7 +322,7 @@ Para más información sobre la siguiente configuración, consulte [WindowsAdvan
 
 ## <a name="firewall"></a>Firewall
 
-Para más información, vea [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP de Firewall) en la documentación de Windows.
+Para más información, vea [Firewall CSP](/windows/client-management/mdm/firewall-csp) (CSP de Firewall) en la documentación de Windows.
 
 - **Deshabilitación del Protocolo de transferencia de archivos con estado (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
@@ -590,7 +590,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   De forma predeterminada, está establecida para realizarse a las **2:00**.
 
 - **Configurar la prioridad baja de CPU para los exámenes programados**  
-  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP: [Defender/EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**Sí** (*valor predeterminado*)
   - **No configurado**.
@@ -630,7 +630,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Configure el número de días que se deben conservar los elementos en la carpeta de cuarentena antes de eliminarse. El valor predeterminado es cero (**0**), lo que hace que los archivos en cuarentena no se quiten nunca.
 
 - **Programación de exámenes de sistema de Defender**  
-  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP: [Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   Programe el día en que Defender examina los dispositivos. De forma predeterminada, el examen está **definido por el usuario**, pero se puede establecer en *Todos los días*, cualquier día de la semana o *No hay ningún examen programado*.
 
@@ -754,7 +754,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **No configurado**: el cliente vuelve a su valor predeterminado, que deshabilita el examen de los archivos de red.
   
 - **Defender potentially unwanted app action** (Acción frente a aplicaciones potencialmente no deseadas de Windows Defender)  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   Especifique el nivel de detección de aplicaciones potencialmente no deseadas (PUA). Defender alerta a los usuarios cuando se está descargando o intentando instalar software potencialmente no deseado en un dispositivo.
   - **Valor predeterminado de dispositivo**
@@ -762,7 +762,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Auditar**: Microsoft Defender detecta aplicaciones potencialmente no deseadas, pero no toma ninguna medida. Puede revisar la información sobre las aplicaciones para las que Defender habría tomado medidas buscando eventos creados por Defender en el Visor de eventos.
 
 - **Activar la protección que proporciona la nube**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   De forma predeterminada, Defender en dispositivos de escritorio de Windows 10 envía información a Microsoft sobre los problemas que encuentre. Microsoft analiza esa información para obtener detalles sobre los problemas que le afectan a usted y a otros clientes a fin de ofrecer soluciones mejoradas.
 
@@ -879,7 +879,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
 ## <a name="windows-hello-for-business"></a>Windows Hello para empresas
 
-Para más información, vea [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) (CSP de PassportForWork) en la documentación de Windows.
+Para más información, vea [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp) (CSP de PassportForWork) en la documentación de Windows.
 
 - **Bloquear Windows Hello para empresas**  
 

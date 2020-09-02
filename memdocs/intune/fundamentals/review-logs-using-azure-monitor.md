@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: c93f50f7c4b2537ab4dbd1d9462f13434e9c158e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912527"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911529"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envío de datos de registro al almacenamiento, a Event Hubs o a Log Analytics en Intune (versión preliminar)
 
@@ -53,9 +53,9 @@ Para usar esta característica, necesita:
 
 Dependiendo de dónde desea enrutar los datos de registro de auditoría, necesita uno de los siguientes servicios:
 
-* Una [cuenta de almacenamiento de Azure](https://docs.microsoft.com/azure/storage/common/storage-account-overview) con permisos *ListKeys*. Se recomienda que use una cuenta de almacenamiento general y no una cuenta de almacenamiento de blobs. Para información sobre los precios de almacenamiento, consulte la [calculadora de precios de Azure Storage](https://azure.microsoft.com/pricing/calculator/?service=storage). 
-* Un [espacio de nombres de Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) para integrar con soluciones de terceros.
-* Un [espacio de nombres de Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) para enviar registros a Log Analytics.
+* Una [cuenta de almacenamiento de Azure](/azure/storage/common/storage-account-overview) con permisos *ListKeys*. Se recomienda que use una cuenta de almacenamiento general y no una cuenta de almacenamiento de blobs. Para información sobre los precios de almacenamiento, consulte la [calculadora de precios de Azure Storage](https://azure.microsoft.com/pricing/calculator/?service=storage). 
+* Un [espacio de nombres de Azure Event Hubs](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) para integrar con soluciones de terceros.
+* Un [espacio de nombres de Azure Log Analytics](/azure/azure-monitor/learn/quick-create-workspace) para enviar registros a Log Analytics.
 
 ## <a name="send-logs-to-azure-monitor"></a>Envío de registros a Azure Monitor
 
@@ -83,7 +83,7 @@ Dependiendo de dónde desea enrutar los datos de registro de auditoría, necesit
         1. Seleccione esta opción > **Configurar**. 
         2. Cree una nueva área de trabajo y escriba los detalles de la misma. O bien, elija un área de trabajo existente en la lista > **Aceptar**.
 
-            El [área de trabajo de Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) proporciona más detalles sobre estas configuraciones.
+            El [área de trabajo de Azure Log Analytics](/azure/azure-monitor/learn/quick-create-workspace) proporciona más detalles sobre estas configuraciones.
 
     - **LOG** > **AuditLogs**: elija esta opción para enviar los [registros de auditoría de Intune](monitor-audit-logs.md) a su cuenta de almacenamiento, al centro de eventos o a Log Analytics. Los registros de auditoría muestran el historial de todas las tareas que genera un cambio en Intune, incluido quién lo hizo y cuándo.
 
@@ -187,7 +187,7 @@ La siguiente tabla contiene los costos aproximados al mes para un centro de even
 
 ### <a name="log-analytics-cost-considerations"></a>Consideraciones sobre el costo de Log Analytics
 
-Para revisar los costos relacionados con la administración del área de trabajo de Log Analytics, consulte [Administración de los costos mediante el control del volumen de datos y la retención en Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
+Para revisar los costos relacionados con la administración del área de trabajo de Log Analytics, consulte [Administración de los costos mediante el control del volumen de datos y la retención en Log Analytics](/azure/log-analytics/log-analytics-manage-cost-storage).
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
@@ -199,7 +199,7 @@ Los registros de auditoría y los registros operativos (versión preliminar) est
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Después de una acción, ¿cuándo se muestran los registros correspondientes en el centro de eventos?
 
-Los registros normalmente se muestran en el centro de eventos unos minutos después de realizar la acción. [Documentación de Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/) proporciona más información.
+Los registros normalmente se muestran en el centro de eventos unos minutos después de realizar la acción. [Documentación de Azure Event Hubs](/azure/event-hubs/) proporciona más información.
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Después de una acción, ¿cuándo se muestran los registros correspondientes en la cuenta de almacenamiento?
 
@@ -219,22 +219,22 @@ El costo del streaming depende del número de mensajes que reciba por minuto. Pa
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>¿Cómo integro los registros de auditoría de Intune con mi sistema SIEM?
 
-Use Azure Monitor con Event Hubs para hacer streaming de los registros en el sistema SIEM. En primer lugar, [transmita los registros a un centro de eventos](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). A continuación, [configure la herramienta SIEM](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con el centro de eventos configurado. 
+Use Azure Monitor con Event Hubs para hacer streaming de los registros en el sistema SIEM. En primer lugar, [transmita los registros a un centro de eventos](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). A continuación, [configure la herramienta SIEM](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con el centro de eventos configurado. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>¿Qué herramientas SIEM se admiten actualmente?
 
-Actualmente, [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar y [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (abre un nuevo sitio Web) admiten Azure Monitor. Para más información sobre cómo funcionan los conectores, consulte [Flujo de datos de supervisión de Azure a un centro de eventos para que lo consuma una herramienta externa](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
+Actualmente, [Splunk](/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar y [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (abre un nuevo sitio Web) admiten Azure Monitor. Para más información sobre cómo funcionan los conectores, consulte [Flujo de datos de supervisión de Azure a un centro de eventos para que lo consuma una herramienta externa](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>¿Puedo acceder a los datos desde un centro de eventos sin usar una herramienta SIEM externa?
 
-Sí. Para acceder a los registros desde la aplicación personalizada, puede usar la [API de Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Sí. Para acceder a los registros desde la aplicación personalizada, puede usar la [API de Event Hubs](/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
 ### <a name="what-data-is-stored"></a>¿Dónde se almacenan los datos?
 
-Intune no almacena los datos enviados a través de la canalización. Intune enruta los datos a la canalización de Azure Monitor, con la autorización del inquilino. Para más información, consulte [Introducción a Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
+Intune no almacena los datos enviados a través de la canalización. Intune enruta los datos a la canalización de Azure Monitor, con la autorización del inquilino. Para más información, consulte [Introducción a Azure Monitor](/azure/azure-monitor/overview).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Archivado de registros de actividad en una cuenta de almacenamiento](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Enrutamiento de registros de actividad a un centro de eventos](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Integración de registros de actividad en Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Archivado de registros de actividad en una cuenta de almacenamiento](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [Enrutamiento de registros de actividad a un centro de eventos](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Integración de registros de actividad en Log Analytics](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262547"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912413"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Puntos de conexión de red de Microsoft Intune  
 
@@ -91,7 +91,7 @@ Si usa Intune para implementar scripts de PowerShell o aplicaciones Win32, tambi
 
 ## <a name="windows-push-notification-services-wns"></a>Servicios de notificaciones de inserción de Windows (WNS)  
 
-En los dispositivos de Windows administrados por Intune que se administran mediante administración de dispositivos móviles (MDM), las acciones de dispositivos y otras actividades inmediatas requieren el uso de servicios de notificaciones de inserción de Windows (WNS). Para obtener más información, consulte [Permitir el tráfico de notificaciones de Windows a través de firewalls empresariales](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
+En los dispositivos de Windows administrados por Intune que se administran mediante administración de dispositivos móviles (MDM), las acciones de dispositivos y otras actividades inmediatas requieren el uso de servicios de notificaciones de inserción de Windows (WNS). Para obtener más información, consulte [Permitir el tráfico de notificaciones de Windows a través de firewalls empresariales](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
 
 ## <a name="delivery-optimization-port-requirements"></a>Requisitos de puerto para la optimización de entrega  
 
@@ -101,7 +101,7 @@ En el tráfico de punto a punto, la optimización de entrega usa 7680 para TCP/I
 
 ### <a name="proxy-requirements"></a>Requisitos de proxy  
 
-Para usar la optimización de entrega, debe permitir las solicitudes de intervalo de bytes. Para más información, vea [Requisitos de proxy para Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+Para usar la optimización de entrega, debe permitir las solicitudes de intervalo de bytes. Para más información, vea [Requisitos de proxy para Windows Update](/windows/deployment/update/windows-update-troubleshooting).
 
 ### <a name="firewall-requirements"></a>Requisitos de firewall  
 
@@ -125,10 +125,10 @@ Para obtener más información, vea los artículos de Apple [Puertos TCP y UDP u
 
 ## <a name="android-port-information"></a>Información del puerto de Android
 
-En función de cómo decida administrar los dispositivos Android, es posible que tenga que abrir los puertos de Google Android Enterprise y/o la notificación de inserción de Android. Para obtener más información sobre los métodos de administración de Android admitidos, vea la [documentación de inscripción de Android](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+En función de cómo decida administrar los dispositivos Android, es posible que tenga que abrir los puertos de Google Android Enterprise y/o la notificación de inserción de Android. Para obtener más información sobre los métodos de administración de Android admitidos, vea la [documentación de inscripción de Android](../enrollment/android-enroll.md). 
 
 > [!NOTE]
-> Como Google Mobile Services no está disponible en China, los clientes en China administrados por Intune no pueden usar características que requieran Google Mobile Services. Estas características incluyen: funciones de Google Play Protect como la atestación de dispositivos SafetyNet, la administración de aplicaciones desde Google Play Store, las funciones de Android Enterprise (consulte esta [documentación de Google](https://support.google.com/work/android/answer/6270910)). Además, la aplicación Portal de empresa de Intune para Android usa Google Mobile Services para comunicarse con el servicio Microsoft Intune. Como los servicios de Google Play no están disponible en China, algunas tareas pueden tardar hasta ocho horas en completarse. Para más información, consulte este [artículo](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+> Como Google Mobile Services no está disponible en China, los clientes en China administrados por Intune no pueden usar características que requieran Google Mobile Services. Estas características incluyen: funciones de Google Play Protect como la atestación de dispositivos SafetyNet, la administración de aplicaciones desde Google Play Store, las funciones de Android Enterprise (consulte esta [documentación de Google](https://support.google.com/work/android/answer/6270910)). Además, la aplicación Portal de empresa de Intune para Android usa Google Mobile Services para comunicarse con el servicio Microsoft Intune. Como los servicios de Google Play no están disponible en China, algunas tareas pueden tardar hasta ocho horas en completarse. Para más información, consulte este [artículo](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -140,4 +140,4 @@ Intune aprovecha la Mensajería en la nube de Firebase (FCM) de Google para noti
 
 ## <a name="endpoint-analytics"></a>Análisis de puntos de conexión
 
-Para obtener más información sobre los puntos de conexión necesarios para al análisis de puntos de conexión, vea [Configuración de proxy para el análisis de puntos de conexión](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).
+Para obtener más información sobre los puntos de conexión necesarios para al análisis de puntos de conexión, vea [Configuración de proxy para el análisis de puntos de conexión](../../analytics/troubleshoot.md#bkmk_endpoints).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990628"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913331"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Incorporación de una aplicación de línea de negocio de Windows a Microsoft Intune
 
@@ -50,7 +50,7 @@ Una aplicación de línea de negocio (LOB) es aquella que se agrega desde un arc
    Se mostrarán los detalles de la aplicación.
 
     > [!NOTE]
-    > Las extensiones de archivo de las aplicaciones de Windows incluyen **.msi**, **.appx**, **.appxbundle**, **.msix** y **.msixbundle**. Para obtener más información sobre **.msix**, consulte la [documentación de MSIX](https://docs.microsoft.com/windows/msix/) y el artículo sobre [distribución de aplicaciones de MSIX](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
+    > Las extensiones de archivo de las aplicaciones de Windows incluyen **.msi**, **.appx**, **.appxbundle**, **.msix** y **.msixbundle**. Para obtener más información sobre **.msix**, consulte la [documentación de MSIX](/windows/msix/) y el artículo sobre [distribución de aplicaciones de MSIX](/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. Cuando haya terminado, seleccione **Aceptar** en el panel **Archivo del paquete de aplicaciones** para agregar la aplicación.
 
@@ -62,7 +62,7 @@ Una aplicación de línea de negocio (LOB) es aquella que se agrega desde un arc
     - **Publicador**: Escriba el nombre del publicador de la aplicación.
     - **Contexto de instalación de la aplicación**: seleccione el contexto de instalación que se va a asociar a esta aplicación. En el caso de las aplicaciones de modo dual, seleccione el contexto deseado para esta aplicación. Para todas las demás aplicaciones, esta opción está preseleccionada en función del paquete y no se puede modificar.
     - **Omitir la versión de la aplicación**: establezca esta opción en **Sí** en el caso de que el desarrollador de la aplicación actualice automáticamente esta. Esta opción se aplica solo a las aplicaciones para móviles .msi.
-    - **Argumentos de línea de comandos**: si lo desea, especifique los argumentos de línea de comandos que desea aplicar al archivo .msi cuando se ejecuta.  Un ejemplo es **/q**. No incluya el comando ni los argumentos de msiexec, como **/i** o **/x**, ya que se usan automáticamente. Para obtener más información, vea [Opciones de línea de comandos](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Si el archivo .MSI necesita más opciones de la línea de comandos, considere la posibilidad de usar la [administración de aplicaciones Win32](app-management.md).
+    - **Argumentos de línea de comandos**: si lo desea, especifique los argumentos de línea de comandos que desea aplicar al archivo .msi cuando se ejecuta.  Un ejemplo es **/q**. No incluya el comando ni los argumentos de msiexec, como **/i** o **/x**, ya que se usan automáticamente. Para obtener más información, vea [Opciones de línea de comandos](/windows/desktop/Msi/command-line-options). Si el archivo .MSI necesita más opciones de la línea de comandos, considere la posibilidad de usar la [administración de aplicaciones Win32](app-management.md).
     - **Categoría**: seleccione una o varias de las categorías de aplicaciones integradas o seleccione una categoría que haya creado. Las categorías facilitan a los usuarios encontrar la aplicación cuando exploran el portal de empresa.
     - **Mostrar como aplicación destacada en el Portal de empresa**: Muestra la aplicación de forma destacada en la página principal del portal de empresa cuando los usuarios buscan aplicaciones.
     - **Dirección URL de información**: Opcionalmente, escriba la dirección URL de un sitio web que contenga información sobre esta aplicación. La dirección URL aparece en el portal de empresa.

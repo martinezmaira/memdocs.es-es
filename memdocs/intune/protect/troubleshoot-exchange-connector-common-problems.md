@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b1ed3cd24c05586bd5dc9d9a2443a33ffcdc2a48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972137"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914810"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Solución de problemas comunes con Intune Exchange Connector
  
@@ -56,7 +56,7 @@ Revise las siguientes secciones para solucionar problemas de notificación de co
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Comprobación de la cuenta de notificación que recupera la configuración de detección automática
 
-1. Asegúrese de que el servicio de detección automática y EWS están configurados en los servicios de acceso de cliente de Exchange. Para obtener más información, consulte el artículo sobre [servicios de acceso de cliente](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) y [Servicio de detección automática en Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Asegúrese de que el servicio de detección automática y EWS están configurados en los servicios de acceso de cliente de Exchange. Para obtener más información, consulte el artículo sobre [servicios de acceso de cliente](/Exchange/architecture/client-access/client-access) y [Servicio de detección automática en Exchange Server](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
 
 2. Compruebe que la cuenta de notificación cumple los requisitos siguientes:
 
@@ -71,14 +71,14 @@ Revise las siguientes secciones para solucionar problemas de notificación de co
    2. Escriba *Autodiscover.SMTPdomain.com*. La salida código debe ser similar a la imagen siguiente: ![Resultados de nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   También puede probar el servicio de detección automática desde Internet en https://testconnectivity.microsoft.com. O probarlo desde un dominio local mediante la herramienta Analizador de conectividad de Microsoft. Para más información, consulte [Herramienta Analizador de conectividad de Microsoft](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   También puede probar el servicio de detección automática desde Internet en https://testconnectivity.microsoft.com. O probarlo desde un dominio local mediante la herramienta Analizador de conectividad de Microsoft. Para más información, consulte [Herramienta Analizador de conectividad de Microsoft](/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
 ### <a name="check-autodiscover"></a>Comprobación de la detección automática
 
 Si se produce un error en la detección automática, pruebe con los pasos siguientes:
 
-1. [Configure un registro DNS de detección automática válido](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
+1. [Configure un registro DNS de detección automática válido](/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
 
 2. Codifique de forma rígida la dirección URL de EWS en el archivo de configuración de Intune Exchange Connector:
 

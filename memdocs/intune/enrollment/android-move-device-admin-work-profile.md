@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: fb62a7b592b492d4092b7af7ee29b2bfd50c66e8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126522"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915184"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Traslado de dispositivos Android del administrador de dispositivos a la administración de perfil de trabajo
 
@@ -40,7 +40,7 @@ Cuando los usuarios ven que no cumplen los requisitos por este motivo, pueden pu
 - Configure la administración de perfiles de trabajo de Android [conectando su cuenta de inquilino de Intune a su cuenta de Android Enterprise](connect-intune-android-enterprise.md).
 - [Establezca la inscripción del perfil de trabajo de Android Enterprise](android-work-profile-enroll.md) para el grupo de usuarios que se está trasladando al perfil de trabajo de Android.
 - Considere la posibilidad de aumentar los límites de dispositivos de usuario. Al anular la inscripción de los dispositivos de la administración de los administradores de dispositivos, es posible que los registros de dispositivo no se quiten inmediatamente. Para proporcionar un margen durante este período, puede que necesite aumentar la capacidad del límite de dispositivos para que los usuarios puedan inscribirse en la administración de perfiles de trabajo.
-  - [Establezca la configuración del dispositivo Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) para el número máximo de dispositivos por usuario.
+  - [Establezca la configuración del dispositivo Azure Active Directory](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) para el número máximo de dispositivos por usuario.
   - Ajuste las [restricciones del límite de dispositivos de Intune](enrollment-restrictions-set.md#create-a-device-limit-restriction) estableciendo el límite de dispositivos. 
 
 ## <a name="create-device-compliance-policy"></a>Creación de una directiva de cumplimiento de dispositivos

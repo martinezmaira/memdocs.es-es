@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342912"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915898"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Administración de PC con Windows con el software de cliente de PC de Intune
 
@@ -90,7 +90,7 @@ Aunque el software cliente de Intune admite [características de administración
 
 Cuando use el software cliente de Intune para administrar equipos con Windows, solo puede usar las directivas que se muestran en la sección **Administración de equipos**.
 
-Intune administra equipos con Windows mediante directivas, de la misma forma en que los objetos de directiva de grupo (GPO) de Active Directory Domain Services (AD DS) de Windows Server. Si administra equipos unidos a un dominio de Active Directory con Intune, [asegúrese de que las directivas de Intune no entren en conflicto con ningún GPO](resolve-gpo-and-microsoft-intune-policy-conflicts.md) utilizado en la organización. Para obtener más información, vea [Directiva de grupo para principiantes](https://technet.microsoft.com/library/hh147307.aspx).
+Intune administra equipos con Windows mediante directivas, de la misma forma en que los objetos de directiva de grupo (GPO) de Active Directory Domain Services (AD DS) de Windows Server. Si administra equipos unidos a un dominio de Active Directory con Intune, [asegúrese de que las directivas de Intune no entren en conflicto con ningún GPO](resolve-gpo-and-microsoft-intune-policy-conflicts.md) utilizado en la organización. Para obtener más información, vea [Directiva de grupo para principiantes](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
   ![Selección de la plantilla para la nueva directiva de equipo de Windows](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988287"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914861"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Adición de directivas de actualización de software de iOS/iPadOS en Intune
 
@@ -35,7 +35,7 @@ Esta característica se aplica a:
 De forma predeterminada, los dispositivos se registran con Intune aproximadamente cada ocho horas. Si hay una actualización disponible a través de una directiva de actualización, el dispositivo descarga la actualización. Después, el dispositivo instala la actualización la próxima vez que se registre dentro de la configuración de programación. Aunque el proceso de actualización normalmente no implica ninguna interacción del usuario, si el dispositivo tiene un código de acceso, el usuario tendrá que escribirlo para iniciar una actualización de software. Los perfiles no impiden que los usuarios actualicen el sistema operativo de forma manual. Se puede impedir que los usuarios actualicen el sistema operativo de forma manual con una directiva de configuración de dispositivos para restringir la visibilidad de las actualizaciones de software.
 
 > [!NOTE]
-> Si usa el [Modo de aplicación única autónoma (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), se debe considerar el impacto de las actualizaciones del sistema operativo, ya que el comportamiento resultante podría no ser el buscado.
+> Si usa el [Modo de aplicación única autónoma (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), se debe considerar el impacto de las actualizaciones del sistema operativo, ya que el comportamiento resultante podría no ser el buscado.
 Considere la posibilidad de realizar pruebas para evaluar el impacto de las actualizaciones del sistema operativo en la aplicación que se ejecuta en ASAM.
 
 ## <a name="configure-the-policy"></a>Configuración de la directiva

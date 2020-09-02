@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088537"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914997"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Administración de dispositivos con seguridad de puntos de conexión en Microsoft Intune
 
-Como administrador de seguridad, puede usar la vista *Todos los dispositivos* del centro de administración de Microsoft Endpoint Manager para revisar y actuar a fin de administrar los dispositivos. En la vista se muestra una lista de todos los dispositivos de la instancia de Azure Active Directory (Azure AD). Esto incluye los dispositivos administrados por Intune, Configuration Manager y a través de la [administración conjunta](https://docs.microsoft.com/configmgr/comanage/overview), tanto por medio de Intune como Configuration Manager. Los dispositivos pueden estar en la nube y en la infraestructura local cuando se integran con Azure AD.
+Como administrador de seguridad, puede usar la vista *Todos los dispositivos* del centro de administración de Microsoft Endpoint Manager para revisar y actuar a fin de administrar los dispositivos. En la vista se muestra una lista de todos los dispositivos de la instancia de Azure Active Directory (Azure AD). Esto incluye los dispositivos administrados por Intune, Configuration Manager y a través de la [administración conjunta](/configmgr/comanage/overview), tanto por medio de Intune como Configuration Manager. Los dispositivos pueden estar en la nube y en la infraestructura local cuando se integran con Azure AD.
 
  Para buscar la vista, abra el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) y seleccione **Seguridad de los puntos de conexión** > **Todos los dispositivos**.
 
@@ -59,15 +59,13 @@ Tenga en cuenta los campos siguientes:
 
     El estado de cumplimiento de los dispositivos administrados por Configuration Manager no es visible en el centro de administración de Microsoft Endpoint Manager.
 
-    Para obtener más información, vea [Habilitación de la asociación de inquilinos](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) en la documentación de Configuration Manager.
+    Para obtener más información, vea [Habilitación de la asociación de inquilinos](/configmgr/tenant-attach/device-sync-actions) en la documentación de Configuration Manager.
 
   - **Agente de MDM/ConfigMgr**: estos dispositivos están en administración conjunta entre Intune y Configuration Manager.
 
-    Con la administración conjunta, se [eligen diferentes cargas de trabajo de administración conjunta](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) para determinar qué aspectos se administran mediante Configuration Manager o Intune. Estas opciones afectarán a las directivas que se aplican al dispositivo y al modo en que se envían los datos de cumplimiento al centro de administración.
+    Con la administración conjunta, se [eligen diferentes cargas de trabajo de administración conjunta](/configmgr/comanage/how-to-switch-workloads) para determinar qué aspectos se administran mediante Configuration Manager o Intune. Estas opciones afectarán a las directivas que se aplican al dispositivo y al modo en que se envían los datos de cumplimiento al centro de administración.
 
     Por ejemplo, puede usar Intune para configurar la directiva del antivirus, el firewall y el cifrado. Estos tipos de directivas se consideran una directiva para *Endpoint Protection*. Para que un dispositivo administrado de forma conjunta use las directivas de Intune y no las de Configuration Manager, establezca el control deslizante de administración conjunta de Endpoint Protection en *Intune* o *Intune piloto*. Si el control deslizante se establece en Configuration Manager, el dispositivo usa las directivas y la configuración de Configuration Manager en su lugar.
-
-  - **Workspace ONE**: estos dispositivos están administrados por Workspace ONE, el partner externo de cumplimiento de dispositivos. Para obtener más información, vea [Partners de cumplimiento de dispositivos](../protect/device-compliance-partners.md).
 
 - **Cumplimiento**: el cumplimiento se evalúa de acuerdo a las directivas de cumplimiento que se asignan al dispositivo. El origen de estas directivas y la información que se encuentra en la consola depende de cómo se administre el dispositivo: mediante Intune, Configuration Manager o administración conjunta. Para que los dispositivos administrados conjuntamente notifiquen cumplimiento, establezca el control deslizante de administración conjunta para Conformidad de dispositivos en Intune o Intune piloto.  
 

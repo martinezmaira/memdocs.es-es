@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820194"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909013"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Configuración de dispositivos iOS/iPadOS para usar las características comunes de iOS/iPadOS en Intune
 
@@ -304,10 +304,10 @@ Esta característica se aplica a:
   - **No configurado**: Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo no usará extensiones de la aplicación. Para deshabilitar una extensión de la aplicación, puede cambiar el tipo de extensión de la aplicación de SSO a **No configurado**.
   - **Microsoft Azure AD**: usa el complemento de Microsoft Enterprise Single Sign-On, que es una extensión de la aplicación de SSO de tipo redirección. Este complemento proporciona SSO para las cuentas de Active Directory en todas las aplicaciones compatibles con la característica [Enterprise Single Sign-On de Apple](https://developer.apple.com/documentation/authenticationservices). Use este tipo de extensión de la aplicación de SSO para habilitar el inicio de sesión único en las aplicaciones de Microsoft, las aplicaciones de la organización y los sitios web que se autentican mediante Azure AD.
 
-    El complemento de SSO actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario. Todas las aplicaciones que usaron Microsoft Authenticator seguirán obteniendo el inicio de sesión único con el [complemento Microsoft Enterprise Single Sign-On de los dispositivos Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    El complemento de SSO actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario. Todas las aplicaciones que usaron Microsoft Authenticator seguirán obteniendo el inicio de sesión único con el [complemento Microsoft Enterprise Single Sign-On de los dispositivos Apple](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > Para lograr el inicio de sesión único con el tipo de extensión de la aplicación de SSO de Microsoft Azure AD, instale en primer lugar la aplicación Microsoft Authenticator de iOS/iPadOS en los dispositivos. La aplicación Authenticator entrega el complemento de Microsoft Enterprise Single Sign-On a los dispositivos y la configuración de la extensión de la aplicación de SSO de MDM activa el complemento. Una vez que Authenticator y el perfil de extensión de la aplicación de SSO están instalados en los dispositivos, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión en los dispositivos. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo. Para obtener más información sobre Authenticator, vea [Qué es la aplicación Microsoft Authenticator](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
+    > Para lograr el inicio de sesión único con el tipo de extensión de la aplicación de SSO de Microsoft Azure AD, instale en primer lugar la aplicación Microsoft Authenticator de iOS/iPadOS en los dispositivos. La aplicación Authenticator entrega el complemento de Microsoft Enterprise Single Sign-On a los dispositivos y la configuración de la extensión de la aplicación de SSO de MDM activa el complemento. Una vez que Authenticator y el perfil de extensión de la aplicación de SSO están instalados en los dispositivos, los usuarios deben escribir sus credenciales para iniciar sesión y establecer una sesión en los dispositivos. Esta sesión se usa a continuación en aplicaciones diferentes sin necesidad de que los usuarios se autentiquen de nuevo. Para obtener más información sobre Authenticator, vea [Qué es la aplicación Microsoft Authenticator](/azure/active-directory/user-help/user-help-auth-app-overview).
 
   - **Redireccionamiento**: use una extensión de la aplicación de redireccionamiento genérica y personalizable para usar SSO con flujos de autenticación modernos. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
   - **Credenciales**: use una extensión de la aplicación de credenciales genérica y personalizable para realizar el inicio de sesión único con flujos de autenticación de desafío y respuesta. Asegúrese de que conoce el identificador de la extensión de la aplicación de su organización.
@@ -318,7 +318,7 @@ Esta característica se aplica a:
 
 - **Modo de dispositivo compartido** (solo Microsoft Azure AD): elija **Habilitar** si se va a implementar el complemento de Microsoft Enterprise Single Sign-On en dispositivos iOS/iPados configurados para la característica de modo de dispositivo compartido de Azure AD. Los dispositivos en modo compartido permiten a muchos usuarios iniciar sesión de forma global y fuera de las aplicaciones que admiten el modo de dispositivo compartido. Cuando se establece en **Sin configurar**, Intune no cambia ni actualiza esta configuración. De forma predeterminada, los dispositivos iOS/iPad no están diseñados para compartirse entre varios usuarios.
 
-  Para obtener más información sobre el modo de dispositivo compartido y cómo habilitarlo, vea [Información general del modo de dispositivo compartido](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) y [Modo de dispositivo compartido para dispositivos iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+  Para obtener más información sobre el modo de dispositivo compartido y cómo habilitarlo, vea [Información general del modo de dispositivo compartido](/azure/active-directory/develop/msal-shared-devices) y [Modo de dispositivo compartido para dispositivos iOS](/azure/active-directory/develop/msal-ios-shared-devices).  
 
   Esta característica se aplica a:
   

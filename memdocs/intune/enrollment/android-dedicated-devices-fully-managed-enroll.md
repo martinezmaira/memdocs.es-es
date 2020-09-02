@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461732"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915252"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Inscripción de los dispositivos dedicados, totalmente administrados o corporativos de Android Enterprise con un perfil de trabajo
 
@@ -35,11 +35,11 @@ Después de configurar los [dispositivos dedicados](android-kiosk-enroll.md), lo
 | Entrada de token | 6.0 |
 | Código QR | 7.0 |
 | Zero Touch  | 8.0<br><br> En los fabricantes participantes. |
-| [Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> Solo en dispositivos Samsung Knox 2.8 o versiones posteriores. |
+| [Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md)  | 6.0<br><br> Solo en dispositivos Samsung Knox 2.8 o versiones posteriores. |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Inscripción mediante Transmisión de datos en proximidad (NFC)
 
-Para dispositivos 6 y posteriores que admitan NFC, puede aprovisionar los dispositivos mediante la creación de una etiqueta NFC con formato especial. Puede usar su propia aplicación o cualquier herramienta de creación de etiquetas NFC. Para más información, vea [NFC-based Android Enterprise device enrollment with Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) (Inscripción de dispositivos de Android Enterprise basados en NFC) y la [Documentación de la API de administración de Android de Google](https://developers.google.com/android/management/provision-device#nfc_method).
+Para dispositivos 6 y posteriores que admitan NFC, puede aprovisionar los dispositivos mediante la creación de una etiqueta NFC con formato especial. Puede usar su propia aplicación o cualquier herramienta de creación de etiquetas NFC. Para más información, vea [NFC-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) (Inscripción de dispositivos de Android Enterprise basados en NFC) y la [Documentación de la API de administración de Android de Google](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ## <a name="enroll-by-using-a-token"></a>Inscripción mediante token
 
@@ -91,9 +91,8 @@ Para usar el sistema Zero Touch de Google, el dispositivo debe admitirlo y estar
 4. Elija **Aplicar**.
 
 ## <a name="enroll-by-using-knox-mobile-enrollment"></a>Inscripción mediante Knox Mobile Enrollment
-Para usar Knox Mobile Enrollment de Samsung, el dispositivo debe ejecutar el SO Android versión 6 o posteriores, y Samsung Knox 2.8 o superior. Para obtener más información, vea [Procedimiento para la inscripción automática de dispositivos con Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll).
+Para usar Knox Mobile Enrollment de Samsung, el dispositivo debe ejecutar el SO Android versión 6 o posteriores, y Samsung Knox 2.8 o superior. Para obtener más información, vea [Procedimiento para la inscripción automática de dispositivos con Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 - [Implementar aplicaciones Android](../apps/apps-deploy.md)
 - [Agregar directivas de configuración de Android](../configuration/device-profiles.md)
-

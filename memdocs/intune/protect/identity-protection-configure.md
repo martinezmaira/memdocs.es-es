@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 835105b12da44f34f23c3d1162ced27a7eca6868
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 233ef8ce9c4ebd8ce5efe91715d653feaba2e88a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252544"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909149"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Uso de Windows Hello para empresas en dispositivos Windows 10 que tienen Microsoft Intune
 
@@ -56,11 +56,11 @@ En este artículo se muestra cómo crear un perfil de configuración de disposit
 
    - **Configurar Windows Hello para empresas**: elija cómo desea configurar Windows Hello para empresas.
 
-     - **Sin configurar** (valor predeterminado): [aprovisiona Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) en el dispositivo. Al asignar perfiles de protección de identidad solo a los usuarios, el contexto de dispositivo tiene como valor predeterminado **Sin configurar**.
+     - **Sin configurar** (valor predeterminado): [aprovisiona Windows Hello para empresas](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) en el dispositivo. Al asignar perfiles de protección de identidad solo a los usuarios, el contexto de dispositivo tiene como valor predeterminado **Sin configurar**.
 
      - **Disabled**: si no quiere usar Windows Hello para empresas, seleccione esta opción. Esta opción deshabilita Windows Hello para empresas para todos los usuarios.
 
-     - **Habilitada**: elija esta opción para [aprovisionar](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) y configurar Windows Hello para empresas en Intune. especifique la configuración que desee definir. Para obtener una lista de todas las configuraciones y saber para qué sirve cada una, consulte [Configuración de dispositivos Windows 10 para habilitar Windows Hello para empresas](identity-protection-windows-settings.md).
+     - **Habilitada**: elija esta opción para [aprovisionar](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) y configurar Windows Hello para empresas en Intune. especifique la configuración que desee definir. Para obtener una lista de todas las configuraciones y saber para qué sirve cada una, consulte [Configuración de dispositivos Windows 10 para habilitar Windows Hello para empresas](identity-protection-windows-settings.md).
 
    - **Utilice las claves de seguridad para el inicio de sesión**: habilite la clave de seguridad de Windows Hello como credencial de inicio de sesión para todos los equipos del inquilino.
 

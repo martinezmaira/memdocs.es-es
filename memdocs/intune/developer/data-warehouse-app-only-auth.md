@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daa4d079d60dc7474e5ba6a140e07a77e25b347d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 28b213ff690dcc745f023f8deb225b0bd6ef9bc1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165981"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908809"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Autenticación de solo aplicación de Almacenamiento de datos de Intune
 
@@ -31,7 +31,7 @@ Puede configurar una aplicación con Azure Active Directory (Azure AD) y autenti
 
 ## <a name="authorization"></a>Autorización
 
-Azure Active Directory (Azure AD) usa OAuth 2.0 para permitir autorizar el acceso a aplicaciones web y API web en el inquilino de Azure AD. En esta guía se explica cómo autenticar la aplicación con C#. El flujo del código de autorización de OAuth 2.0 se describe en la sección 4.1 de la especificación de OAuth 2.0. Para obtener más información, vea [Autorización del acceso a aplicaciones web mediante OAuth 2.0 y Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Azure Active Directory (Azure AD) usa OAuth 2.0 para permitir autorizar el acceso a aplicaciones web y API web en el inquilino de Azure AD. En esta guía se explica cómo autenticar la aplicación con C#. El flujo del código de autorización de OAuth 2.0 se describe en la sección 4.1 de la especificación de OAuth 2.0. Para obtener más información, vea [Autorización del acceso a aplicaciones web mediante OAuth 2.0 y Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 
 ## <a name="azure-keyvault"></a>Azure Key Vault
@@ -51,7 +51,7 @@ En esta sección, se proporciona información sobre la aplicación web a la que 
 
     - Un nombre de aplicación, como *Autenticación de solo aplicación de Intune*.
     - El **tipo de aplicación**. Elija **Aplicación web o API** para agregar una aplicación que represente una aplicación web, una API web o ambas.
-    - La dirección **URL de inicio de sesión** de la aplicación. Esta es la ubicación a la que los usuarios navegan durante el proceso de autenticación. Esta información es necesaria para probar que los usuarios son quienes dicen ser. Para más información, vea [¿Qué es el acceso a aplicaciones y el inicio de sesión único con Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)
+    - La dirección **URL de inicio de sesión** de la aplicación. Esta es la ubicación a la que los usuarios navegan durante el proceso de autenticación. Esta información es necesaria para probar que los usuarios son quienes dicen ser. Para más información, vea [¿Qué es el acceso a aplicaciones y el inicio de sesión único con Azure Active Directory?](/azure/active-directory/active-directory-appssoaccess-whatis)
 
 7. Haga clic en **Crear** en la parte inferior de la hoja **Crear**.
 
@@ -164,5 +164,4 @@ Con Visual Studio, cree un proyecto de aplicación de consola (.NET Framework) q
     > Para ver código de implementación adicional, vea el [ejemplo de código Intune-Data-Warehouse](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ).
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre Azure Key Vault, revise [¿Qué es Azure Key Vault?](https://docs.microsoft.com/azure/key-vault/key-vault-whatis)
-
+Para obtener más información sobre Azure Key Vault, revise [¿Qué es Azure Key Vault?](/azure/key-vault/key-vault-whatis)

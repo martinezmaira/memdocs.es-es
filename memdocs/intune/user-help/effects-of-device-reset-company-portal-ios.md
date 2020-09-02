@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878083"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913416"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Efectos del restablecimiento de dispositivos iOS en Portal de empresa 
 
@@ -42,6 +42,6 @@ Si el dispositivo solo está configurado para tener acceso al correo electrónic
 
 - Inicie sesión con su cuenta de correo electrónico profesional o educativo. Se eliminarán los mensajes de correo electrónico no guardados.   
 
-La opción de restablecimiento de dispositivos no está disponible para todos los dispositivos iOS. Si es miembro del personal de soporte técnico de TI y quiere obtener más información estas limitaciones, consulte [Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo](https://docs.microsoft.com/intune/devices-wipe).  
+La opción de restablecimiento de dispositivos no está disponible para todos los dispositivos iOS. Si es miembro del personal de soporte técnico de TI y quiere obtener más información estas limitaciones, consulte [Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo](/intune/devices-wipe).  
 
 Si tiene alguna pregunta, póngase en contacto con el personal de soporte técnico de TI. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

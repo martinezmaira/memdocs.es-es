@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 0f6c70bcfa1bf9d23ff3555498cb199ff032bb34
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821638"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910543"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adición de aplicaciones de Google Play administrado a dispositivos Android Enterprise con Intune
 
@@ -183,7 +183,7 @@ Si se ha aprobado una aplicación desde la tienda y todavía no la ve en la carg
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Asignación de una aplicación de Google Play administrado para dispositivos de perfil de trabajo y corporativos de perfil de trabajo de Android Enterprise
 
-Cuando la aplicación se muestre en el nodo **Licencias de aplicación** del panel de la carga de trabajo **Aplicaciones**, podrá [asignarla igual que haría con cualquier otra aplicación](/mem/intune/apps/apps-deploy) asignando la aplicación a grupos de usuarios.
+Cuando la aplicación se muestre en el nodo **Licencias de aplicación** del panel de la carga de trabajo **Aplicaciones**, podrá [asignarla igual que haría con cualquier otra aplicación](./apps-deploy.md) asignando la aplicación a grupos de usuarios.
 
 Después de asignar la aplicación, se instala (o está disponible para su instalación) en los dispositivos de los usuarios que ha especificado. Al usuario del dispositivo no se le pide que apruebe la instalación. Para más información sobre los dispositivos de perfil de trabajo de Android Enterprise, consulte [Configuración de la inscripción de dispositivos de perfil de trabajo de Android Enterprise](../enrollment/android-work-profile-enroll.md). 
 

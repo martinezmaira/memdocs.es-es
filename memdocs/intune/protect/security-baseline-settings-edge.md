@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556326"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914436"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -74,7 +74,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
     - **Negotiate** *(seleccionado de forma predeterminada)*
 
 - **Configuración predeterminada de Adobe Flash**  
-  CSP: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash) y [Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+  CSP: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash) y [Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
   Habilite el acceso al valor siguiente, donde puede configurar el comportamiento de ejecución del complemento de Adobe Flash.  
 
@@ -110,7 +110,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
   - **No configurado**: de forma predeterminada, Microsoft Edge permite el uso de hosts de mensajería nativa en el nivel de usuario.
 
 - **Habilitar el guardado de contraseñas en el administrador de contraseñas**  
-  CSP de Microsoft Edge: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  CSP de Microsoft Edge: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Habilite Microsoft Edge para guardar las contraseñas de usuario.
 
@@ -119,7 +119,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
   - **No configurado**: los usuarios podrán guardar las contraseñas, así como desactivar esta característica.
 
 - **Impedir la omisión de los avisos de SmartScreen de Windows Defender para sitios**  
-  CSP: [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Decida si los usuarios pueden invalidar las advertencias de SmartScreen de Microsoft Defender sobre sitios web potencialmente malintencionados.
 
@@ -128,7 +128,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
   - **No configurado**: los usuarios podrán omitir las advertencias de SmartScreen de Microsoft Defender y continuar en el sitio.
 
 - **Impedir la omisión de las advertencias de SmartScreen de Microsoft Defender sobre descargas**  
-  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Esta directiva le permite determinar si los usuarios pueden invalidar las advertencias de SmartScreen de Microsoft Defender sobre las descargas no comprobadas.
 
@@ -143,10 +143,10 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
   - **Deshabilitado**: los usuarios pueden rechazar el aislamiento del sitio. El aislamiento de sitio no está desactivado.
   - **No configurado**: los usuarios pueden rechazar el aislamiento del sitio. El aislamiento de sitio no está desactivado.
 
-  También puede usar la directiva [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins) para aislar orígenes adicionales más precisos.  Intune no admite la configuración de la directiva IsolateOrigins.
+  También puede usar la directiva [IsolateOrigins](/deployedge/microsoft-edge-policies#isolateorigins) para aislar orígenes adicionales más precisos.  Intune no admite la configuración de la directiva IsolateOrigins.
   
 - **Configuración de SmartScreen de Microsoft Defender**  
-  CSP: [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
+  CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
   
   SmartScreen de Microsoft Defender proporciona mensajes de advertencia para ayudar a proteger a los usuarios de software malintencionado y posibles estafas de suplantación de identidad (phishing). De forma predeterminada, SmartScreen de Microsoft Defender está activado.
   
@@ -166,7 +166,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
   Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory o en instancias de Windows 10 Pro o Enterprise que inscritas para la administración de dispositivos.
 
 - **Permitir a los usuarios continuar desde la página de advertencia de SSL**  
-   CSP: [Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+   CSP: [Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge muestra una página de advertencia cuando los usuarios visitan sitios que tienen errores de SSL.
   - **Habilitado**: los usuarios pueden hacer clic en las páginas de advertencia.
@@ -193,7 +193,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
 
 - **Impedir la omisión de los avisos de SmartScreen de Windows Defender para sitios**  
   **Valor predeterminado**: Habilitado  
-  CSP de Microsoft Edge: [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  CSP de Microsoft Edge: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Esta configuración de directiva le permite decidir si los usuarios pueden invalidar las advertencias de SmartScreen de Microsoft Defender sobre sitios web potencialmente malintencionados. 
   - Si habilita esta opción, los usuarios no podrán omitir las advertencias de SmartScreen de Microsoft Defender y no podrán continuar al sitio. 
@@ -213,7 +213,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
 
 - **Impedir la omisión de las advertencias de SmartScreen de Microsoft Defender sobre descargas**  
   **Valor predeterminado**: Habilitado  
-  CSP de Microsoft Edge: [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP de Microsoft Edge: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Esta directiva le permite determinar si los usuarios pueden invalidar las advertencias de SmartScreen de Microsoft Defender sobre las descargas no comprobadas.
   - Si habilita esta directiva, los usuarios de su organización no podrán omitir las advertencias de SmartScreen de Microsoft Defender y se les impedirá que completen las descargas no comprobadas.
@@ -221,13 +221,13 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
 
 - **Permitir a los usuarios continuar desde la página de advertencia de SSL**  
   **Valor predeterminado**: Deshabilitado  
-  CSP de Microsoft Edge: [Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+  CSP de Microsoft Edge: [Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge muestra una página de advertencia cuando los usuarios visitan sitios que tienen errores de SSL. Si establece esta directiva en *Habilitada* o *No configurada*, los usuarios pueden hacer clic en estas páginas de advertencia. Cuando esta directiva está *Deshabilitada*, se impide que los usuarios hagan clic en cualquier página de advertencia. 
 
 - **Configuración predeterminada de Adobe Flash**  
   **Valor predeterminado**: Habilitado  
-  CSP de Microsoft Edge: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash) y [Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
+  CSP de Microsoft Edge: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash) y [Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
 
   Determina si los sitios web que no están incluidos en "PluginsAllowedForUrls" o "PluginsBlockedForUrls" pueden ejecutar automáticamente el complemento de Adobe Flash. 
 
@@ -264,7 +264,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
 
 - **Habilitar el guardado de contraseñas en el administrador de contraseñas**  
   **Valor predeterminado**: Deshabilitado  
-  CSP de Microsoft Edge: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  CSP de Microsoft Edge: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Habilite Microsoft Edge para guardar las contraseñas de usuario.
   - Si habilita esta directiva, los usuarios pueden guardar sus contraseñas en Microsoft Edge. La próxima vez que visiten el sitio, Microsoft Edge introducirá la contraseña automáticamente.
@@ -288,7 +288,7 @@ Para comprender lo que ha cambiado en esta versión de línea de base con respec
 
 - **Configuración de SmartScreen de Microsoft Defender**  
   **Valor predeterminado**: Habilitado  
-  CSP de Microsoft Edge: [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  CSP de Microsoft Edge: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
   Esta configuración de directiva le permite configurar si se activa SmartScreen de Microsoft Defender. SmartScreen de Microsoft Defender proporciona mensajes de advertencia para ayudar a proteger a los usuarios de software malintencionado y posibles estafas de suplantación de identidad.
   

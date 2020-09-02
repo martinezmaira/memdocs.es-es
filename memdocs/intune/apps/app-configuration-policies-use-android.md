@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bed9fe2ce2f674b5202deecce512802520f6a1d
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 19a5123b3c6415e67591027ccf87c5d5631d1157
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758183"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907286"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados
 
@@ -155,7 +155,7 @@ Por ejemplo, una aplicación usa el micrófono del dispositivo. Se solicita al u
 ## <a name="additional-information"></a>Información adicional
 
 - [Asignación de una aplicación de Google Play administrado para dispositivos de Android Enterprise](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
-- [Implementación de las opciones de configuración de la aplicación de Outlook para iOS/iPadOS y Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Implementación de las opciones de configuración de la aplicación de Outlook para iOS/iPadOS y Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

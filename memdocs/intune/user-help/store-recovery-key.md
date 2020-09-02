@@ -19,12 +19,12 @@ ms.reviewer: annochiva
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 826515026e578cb993bb706fc61dedb4a80fb3e6
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f0a674753ff23fca509bd21e6b52101104a6803f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465045"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910798"
 ---
 # <a name="store-your-personal-filevault-key"></a>Almacenamiento de la clave de FileVault personal 
 
@@ -81,7 +81,7 @@ Para obtener más información sobre los mensajes que pueden aparecer durante es
 
 ## <a name="it-pro-support"></a>Soporte para profesionales de TI
 
-Si forma parte del personal soporte técnico de TI, y quiere configurar y administrar el cifrado de FileVault para dispositivos Mac en su organización, consulte [Uso del cifrado de discos FileVault para macOS con Intune](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault).  
+Si forma parte del personal soporte técnico de TI, y quiere configurar y administrar el cifrado de FileVault para dispositivos Mac en su organización, consulte [Uso del cifrado de discos FileVault para macOS con Intune](../protect/encrypt-devices-filevault.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -89,4 +89,4 @@ Siempre puede recuperar la clave desde el sitio web del Portal de empresa, la ap
 
 Descubra qué más puede hacer en el sitio web del Portal de empresa. Consulte [Usar el sitio web del Portal de empresa de Intune](using-the-intune-company-portal-website.md) para obtener la lista de acciones.  
 
-¿Aún necesita ayuda? Póngase en contacto con el personal de soporte técnico de TI. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+¿Aún necesita ayuda? Póngase en contacto con el personal de soporte técnico de TI. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

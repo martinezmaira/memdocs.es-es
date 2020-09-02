@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 950df650466966d7de1c360263b4f6a2c3b0824c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502636"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911665"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funcionalidades de administración de dispositivos inscritos en Microsoft Intune
 
@@ -44,7 +44,7 @@ Los usuarios obtienen acceso al Portal de empresa que les permite instalar aplic
 |Directivas de configuración<br><br>Directivas personalizadas| Le permiten administrar numerosas opciones y características de los dispositivos móviles de su organización. Por ejemplo, puede exigir una contraseña, limitar el número de intentos erróneos, limitar la cantidad de tiempo antes de que la pantalla se bloquee, establecer el plazo de expiración de una contraseña e impedir que se usen contraseñas que se han usado previamente. También puede controlar el uso de las características de hardware y software, como la cámara del dispositivo o el explorador web.<br><br>Use directivas personalizadas cuando las directivas de configuración no contengan la configuración que necesita. Para dispositivos iOS/iPadOS, puede importar la configuración que ha exportado desde la herramienta Apple Configurator. Para otros dispositivos, puede usar la configuración OMA-URI (identificador uniforme de recursos de Open Mobile Alliance) para configurar opciones y características en el dispositivo.|[Administrar la configuración y las características de los dispositivos con directivas de Microsoft Intune](../protect/device-compliance-get-started.md)|
 |Eliminación remota, bloqueo remoto y restablecimiento de código de acceso|Borra información confidencial tras la pérdida o el robo de un dispositivo. Por ejemplo, puede bloquear el dispositivo de forma remota, restaurar la configuración de fábrica o borrar solo los datos corporativos.<br><br>Puede restablecer los códigos de acceso si los usuarios dejan de tener acceso a sus dispositivos, bloquear dispositivos extraviados o robados, e incluso borrar los datos de dispositivos extraviados o robados.|Ayudar a proteger los dispositivos con el [bloqueo remoto](../remote-actions/device-remote-lock.md) y el [restablecimiento de código de acceso](../remote-actions/device-passcode-reset.md)|
 |Modo de quiosco|Le permite bloquear determinadas características de dispositivos móviles, como las capturas de pantalla y los interruptores de alimentación. También le permite restringir dispositivos para que ejecuten una única aplicación que especifique. |[Configuración de directivas de configuración de iOS en Microsoft Intune](../configuration/device-restrictions-ios.md)|
-|Restablecimiento de Autopilot|Envía una tarea al dispositivo para iniciar el proceso de restablecimiento de forma remota, sin que así sea necesario que el personal de TI u otros administradores visiten cada máquina para iniciar el proceso. Al usarse el restablecimiento de Autopilot en un dispositivo, se quitará el usuario primario del dispositivo. El próximo usuario que inicie sesión tras el restablecimiento se establecerá como usuario primario.|[Restablecimiento remoto de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
+|Restablecimiento de Autopilot|Envía una tarea al dispositivo para iniciar el proceso de restablecimiento de forma remota, sin que así sea necesario que el personal de TI u otros administradores visiten cada máquina para iniciar el proceso. Al usarse el restablecimiento de Autopilot en un dispositivo, se quitará el usuario primario del dispositivo. El próximo usuario que inicie sesión tras el restablecimiento se establecerá como usuario primario.|[Restablecimiento remoto de Windows Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>Administración de aplicaciones
 

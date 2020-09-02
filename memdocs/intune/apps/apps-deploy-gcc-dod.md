@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e98171955ed4f026da4c983e6ca8959cfe2606a
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9fb3556d363d2e831861a15aeadfb78bc2fa7dbb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217230"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914113"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Implementación de aplicaciones mediante Intune en los entornos GCC High y DoD 
 
@@ -38,7 +38,7 @@ Para agregar una aplicación de línea de negocio destinada a un entorno GCC Hig
 
 ## <a name="distribute-offline-apps-from-the-store-for-business-using-intune"></a>Distribución de aplicaciones sin conexión desde Microsoft Store para Empresas con Intune  
 
-Si necesita [descargar una aplicación con licencia sin conexión](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) desde Microsoft Store para Empresas, siga estos pasos: 
+Si necesita [descargar una aplicación con licencia sin conexión](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) desde Microsoft Store para Empresas, siga estos pasos: 
 
 1. Inicie sesión en [Microsoft Store para Empresas](https://businessstore.microsoft.com/).
 2. Seleccione **Administrar** > **Configuración**.
@@ -48,7 +48,7 @@ Cuando vaya a comprar una aplicación, si hay disponible una versión sin conexi
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Sincronización de Intune con Microsoft Store para Empresas 
 
-En un entorno comercial (que no sea de la Administración Pública), un administrador puede sincronizar Intune con Microsoft Store para Empresas. Esta característica no está disponible en los entornos de la Administración Pública. Para obtener más información sobre las diferencias entre Intune en entornos comerciales e Intune para entornos de la Administración Pública, vea [Descripción del servicio Enterprise Mobility + Security para el gobierno de EE. UU.](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description)  
+En un entorno comercial (que no sea de la Administración Pública), un administrador puede sincronizar Intune con Microsoft Store para Empresas. Esta característica no está disponible en los entornos de la Administración Pública. Para obtener más información sobre las diferencias entre Intune en entornos comerciales e Intune para entornos de la Administración Pública, vea [Descripción del servicio Enterprise Mobility + Security para el gobierno de EE. UU.](/enterprise-mobility-security/solutions/ems-govt-service-description)  
 
 Para sincronizar Intune con su cuenta de Microsoft Store para Empresas, vea [Cómo administrar las aplicaciones adquiridas a través de la Microsoft Store para Empresas con Microsoft Intune](windows-store-for-business.md).  
 
@@ -60,4 +60,3 @@ Revise las declaraciones de privacidad y cumplimiento de las aplicaciones y comp
 
 Para obtener más información sobre cómo implementar y asignar aplicaciones, vea [Asignación de aplicaciones a grupos con Microsoft Intune](apps-deploy.md).
 
- 

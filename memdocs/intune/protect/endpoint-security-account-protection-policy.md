@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6fb5702b7c809c7810004a53d084f19fa94dea9e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f08282fe6bd8675474415290d50c0b07b4e1fc25
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431857"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915065"
 ---
 # <a name="account-protection-policy-for-endpoint-security-in-intune"></a>Directiva de protección de cuentas de seguridad de los puntos de conexión en Intune
 
@@ -30,7 +30,7 @@ Use las directivas de seguridad de los puntos de conexión de Intune para la pro
 - *Windows Hello para empresas* reemplaza las contraseñas con una autenticación de dos factores sólida en equipos y dispositivos móviles.
 - *Credential Guard* ayuda a proteger las credenciales y los secretos que se usan con los dispositivos.
 
-Para obtener más información, consulte [Administración de identidad y acceso](https://docs.microsoft.com/windows/security/identity-protection/) en la documentación de administración de identidades y acceso de Windows.
+Para obtener más información, consulte [Administración de identidad y acceso](/windows/security/identity-protection/) en la documentación de administración de identidades y acceso de Windows.
 
 Encontrará las directivas de seguridad de los puntos de conexión correspondientes a la protección de cuentas en *Administrar*, en el nodo **Seguridad de los puntos de conexión** del [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663301"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915575"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Información general sobre S/MIME para firmar y cifrar el correo electrónico en Intune
 
@@ -33,7 +33,7 @@ Los certificados de correo electrónico, también conocidos como certificados S/
 
 En los dispositivos iOS/iPadOS, puede crear un perfil de correo electrónico administrado por Intune que use S/MIME y certificados para firmar y cifrar los mensajes de correo electrónico entrantes y salientes. Para otras plataformas, es posible que S/MIME sea o no compatible. Si se admite, instale certificados que usen cifrado y firma S/MIME. Luego, el usuario final puede habilitar S/MIME en su aplicación de correo electrónico.
 
-Para obtener más información sobre la firma y el cifrado de correo electrónico con S/MIME, vea [S/MIME para la firma y el cifrado de mensajes](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+Para obtener más información sobre la firma y el cifrado de correo electrónico con S/MIME, vea [S/MIME para la firma y el cifrado de mensajes](/Exchange/policy-and-compliance/smime).
 
 En este artículo se proporciona información general sobre el uso de certificados S/MIME para firmar y cifrar el correo electrónico de los dispositivos.
 
@@ -41,7 +41,7 @@ En este artículo se proporciona información general sobre el uso de certificad
 
 Los certificados que se usan para la firma permiten que la aplicación de correo electrónico cliente se comunique de forma segura con el servidor de correo electrónico.
 
-Para usar certificados de firma, cree una plantilla centrada en la firma en la entidad de certificación (CA). En la entidad de certificación de Microsoft Active Directory, en [Configurar la plantilla de certificado de servidor](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) se enumeran los pasos para crear plantillas de certificado.
+Para usar certificados de firma, cree una plantilla centrada en la firma en la entidad de certificación (CA). En la entidad de certificación de Microsoft Active Directory, en [Configurar la plantilla de certificado de servidor](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) se enumeran los pasos para crear plantillas de certificado.
 
 Los certificados de firma en Intune usan certificados PKCS. En [Configuración y uso de certificados PKCS con Intune](certficates-pfx-configure.md) se describe cómo implementar y usar el certificado PKCS en el entorno de Intune. Estos pasos incluyen:
 

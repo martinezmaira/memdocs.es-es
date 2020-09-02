@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afc823a906d76edfe8d3d635bcbfdbe845867266
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 5823071064c92378e3ad20edb8a409e402510d99
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022303"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914844"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Configuración de líneas de base de seguridad de MDM para Intune  
 
@@ -39,7 +39,7 @@ Para obtener información sobre lo que ha cambiado en la última versión de est
 Para obtener información sobre el uso de las líneas de base de seguridad con Intune, consulte [Uso de líneas de base de seguridad](security-baselines.md).  
 
 ## <a name="above-lock"></a>Above Lock (Por encima de la pantalla de bloqueo)  
-Para más información, vea [Policy CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) (CSP de directiva: AboveLock) en la documentación de Windows.  
+Para más información, vea [Policy CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock) (CSP de directiva: AboveLock) en la documentación de Windows.  
 
 - **Block display of toast notifications** (Bloquear la presentación de notificaciones del sistema)  
   Esta configuración de directiva permite impedir que aparezcan notificaciones de aplicaciones en la pantalla de bloqueo. Si habilita esta configuración de directiva, no se mostrará ninguna notificación de aplicación en la pantalla de bloqueo. Si deshabilita o no establece esta configuración de directiva, los usuarios podrán elegir qué notificaciones de aplicaciones se mostrarán en la pantalla de bloqueo.  
@@ -52,7 +52,7 @@ Para más información, vea [Policy CSP - AboveLock](https://docs.microsoft.com/
   **Valor predeterminado**: Deshabilitado
 
 ## <a name="app-runtime"></a>Tiempo de ejecución de la aplicación    
-Para más información, vea [Policy CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
+Para más información, vea [Policy CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime
 ) (CSP de directiva: AppRuntime) en la documentación de Windows.  
 
 - **Microsoft accounts optional for Windows Store apps** (Cuentas de Microsoft opcionales para las aplicaciones de Microsoft Store)  
@@ -62,7 +62,7 @@ Para más información, vea [Policy CSP - AppRuntime](https://docs.microsoft.com
   **Valor predeterminado**: Habilitado  
 
 ## <a name="application-management"></a>Administración de aplicaciones   
-Para más información, vea [Policy CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) (CSP de directiva: ApplicationManagement) en la documentación de Windows.  
+Para más información, vea [Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) (CSP de directiva: ApplicationManagement) en la documentación de Windows.  
 
 - **Bloquear el control del usuario sobre las instalaciones**  
   Esta configuración de directiva permite que los usuarios cambien las opciones de instalación que normalmente solo están disponibles para los administradores del sistema. Si habilita esta configuración de directiva, se omitirán algunas de las características de seguridad de Windows Installer. Permite que las instalaciones se completen; de lo contrario, se detendrían debido a una infracción de seguridad. Si deshabilita o no configura esta configuración de directiva, las características de seguridad de Windows Installer impedirán que los usuarios cambien las opciones de instalación que normalmente están reservadas para los administradores del sistema, como especificar el directorio en el que se instalan los archivos. Si Windows Installer detecta que un paquete de instalación ha permitido que el usuario cambie una opción protegida, detendrá la instalación y mostrará un mensaje. Estas características de seguridad solo funcionan si el programa de instalación se ejecuta en un contexto de seguridad con privilegios y tiene acceso a los directorios denegados al usuario. Esta configuración de directiva está diseñada para entornos menos restrictivos. Se puede usar para eludir los errores de un programa de instalación que impida que se instale el software.  
@@ -86,7 +86,7 @@ Para más información, vea [Policy CSP - ApplicationManagement](https://docs.mi
   **Valor predeterminado**: Sí  
 
 ## <a name="auto-play"></a>Reproducción automática   
-Para más información, vea [Policy CSP - Autoplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) (CSP de directiva: Autoplay) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Autoplay](/windows/client-management/mdm/policy-csp-autoplay) (CSP de directiva: Autoplay) en la documentación de Windows.  
 
 - **Auto play default auto run behavior** (Comportamiento predeterminado de ejecución automática de la reproducción automática)  
   Esta configuración afecta al comportamiento predeterminado de los comandos de ejecución automática. Los comandos de ejecución automática se almacenan en archivos autorun.inf y pueden iniciar programas de instalación u otras rutinas. Cuando el valor es *Habilitada*, los administradores pueden cambiar el comportamiento de ejecución automática predeterminado en un dispositivo que ejecute Windows Vista o versiones posteriores. El comportamiento se puede establecer en: a) Deshabilitar completamente los comandos de ejecución automática, o bien en b) Volver al comportamiento anterior a Windows Vista de ejecutar automáticamente el comando de ejecución automática. Si se establece en *Deshabilitada* o *No configurada*, los dispositivos que ejecutan Windows Vista o versiones posteriores preguntarán al usuario si se debe ejecutar el comando de ejecución automática.  
@@ -107,7 +107,7 @@ Para más información, vea [Policy CSP - Autoplay](https://docs.microsoft.com/w
   **Valor predeterminado**: Habilitado  
 
 ## <a name="bitlocker"></a>BitLocker    
-Para más información, consulte [CSP de directiva: Bitlocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
+Para más información, consulte [CSP de directiva: Bitlocker](/windows/client-management/mdm/policy-csp-bitlocker
 ) en la documentación de Windows.  
 
 - **Directiva de unidad extraíble de BitLocker**  
@@ -121,7 +121,7 @@ Para más información, consulte [CSP de directiva: Bitlocker](https://docs.micr
   
 
 ## <a name="browser"></a>Explorador  
-Para más información, vea [Policy CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) (CSP de directiva: Browser) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Browser](/windows/client-management/mdm/policy-csp-browser) (CSP de directiva: Browser) en la documentación de Windows.  
 
 - **Require SmartScreen for Microsoft Edge** (Requerir SmartScreen para Microsoft Edge)  
   Microsoft Edge usa SmartScreen de Microsoft Defender (activado) para proteger a los usuarios de software malintencionado y posibles estafas de suplantación de identidad de forma predeterminada. Además, de forma predeterminada, los usuarios no pueden deshabilitar (desactivar) SmartScreen de Microsoft Defender. Si habilita esta directiva se desactiva SmartScreen de Microsoft Defender y se impide que los usuarios lo activen. No configure esta directiva para permitir que los usuarios puedan elegir activar o desactivar SmartScreen de Microsoft Defender.  
@@ -154,7 +154,7 @@ Para más información, vea [Policy CSP - Browser](https://docs.microsoft.com/wi
   **Valor predeterminado**: Sí  
 
 ## <a name="connectivity"></a>Conectividad  
-Para más información, vea [Policy CSP - Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) (CSP de directiva: Connectivity) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Connectivity](/windows/client-management/mdm/policy-csp-connectivity) (CSP de directiva: Connectivity) en la documentación de Windows.  
 
 - **Block Internet download for web publishing and online ordering wizards** (Bloquear la descarga de Internet para los asistentes para publicación y pedidos en línea)  
   Esta configuración de directiva especifica si Windows debe descargar una lista de proveedores para los asistentes de publicación en web y pedidos en línea. Estos asistentes permiten que los usuarios seleccionen de una lista de compañías que proporcionan servicios, como almacenamiento en línea e impresión fotográfica. De manera predeterminada, Windows mostrará los proveedores descargados de un sitio web de Windows, además de los proveedores especificados en el Registro. Si habilita esta configuración de directiva, Windows no descargará ningún proveedor y solo se mostrarán los proveedores de servicios almacenados en la memoria caché en el Registro local. Si deshabilita o no establece esta configuración de directiva, se descarga una lista de proveedores cuando el usuario usa los asistentes de publicación en web y pedidos en línea. Vea la documentación sobre los asistentes mencionados para obtener más información, incluidos detalles sobre cómo especificar proveedores de servicios en el Registro.  
@@ -179,7 +179,7 @@ Para más información, vea [Policy CSP - Connectivity](https://docs.microsoft.c
   **Valor predeterminado**: Habilitado  
 
 ## <a name="credentials-delegation"></a>Delegación de credenciales  
-Para más información, vea [Policy CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
+Para más información, vea [Policy CSP - CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation
 ) (CSP de directiva: CredentialsDelegation) en la documentación de Windows.  
 
 - **Remote host delegation of non-exportable credentials** (Delegación de credenciales no exportables del host remoto)  
@@ -189,7 +189,7 @@ Para más información, vea [Policy CSP - CredentialsDelegation](https://docs.mi
   **Valor predeterminado**: Habilitado  
 
 ## <a name="credentials-ui"></a>Interfaz de usuario de credenciales  
-Para más información, vea [Policy CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) (CSP de directiva: CredentialsUI) en la documentación de Windows.  
+Para más información, vea [Policy CSP - CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui) (CSP de directiva: CredentialsUI) en la documentación de Windows.  
 
 - **Enumerate administrators** (Enumerar administradores) Esta configuración de directiva controla si se muestran las cuentas de administrador cuando un usuario intenta elevar una aplicación en ejecución. De forma predeterminada, cuando un usuario intenta elevar una aplicación en ejecución no se muestran las cuentas de administrador. Si habilita esta configuración de directiva, se muestran todas las cuentas de administrador local en el equipo para que el usuario pueda elegir una y escribir la contraseña adecuada. Si deshabilita esta configuración de directiva, los usuarios siempre deberán escribir un nombre de usuario y una contraseña para realizar la elevación.  
   [Más información](https://go.microsoft.com/fwlink/?linkid=2067021).
@@ -198,7 +198,7 @@ Para más información, vea [Policy CSP - CredentialsUI](https://docs.microsoft.
   **Valor predeterminado**: Deshabilitado  
 
 ## <a name="data-protection"></a>Protección de datos  
-Para más información, vea [Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
+Para más información, vea [Policy CSP - DataProtection](/windows/client-management/mdm/policy-csp-dataprotection
 ) (CSP de directiva: DataProtection) en la documentación de Windows.  
 
 - **Block direct memory access** (Bloquear el acceso directo a memoria)  
@@ -208,7 +208,7 @@ Para más información, vea [Policy CSP - DataProtection](https://docs.microsoft
   **Valor predeterminado**: Sí  
 
 ## <a name="device-guard"></a>Device Guard  
-Para más información, vea [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
+Para más información, vea [Policy CSP - DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard
 ) (CSP de directiva: DeviceGuard) en la documentación de Windows.  
 
 - **Credential Guard**  
@@ -228,7 +228,7 @@ Para más información, vea [Policy CSP - DeviceGuard](https://docs.microsoft.co
   **Valor predeterminado**: Habilitado  
 
 ## <a name="device-installation"></a>Instalación de dispositivos  
-Para más información, vea [Policy CSP - DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) (CSP de directiva: DeviceInstallation) en la documentación de Windows.  
+Para más información, vea [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) (CSP de directiva: DeviceInstallation) en la documentación de Windows.  
 
 - **Hardware device installation by device identifiers** (Instalación de dispositivos de hardware mediante identificadores de dispositivo)  
   Esta configuración de directiva le permite especificar una lista de identificadores de hardware Plug and Play e identificadores compatibles para dispositivos que Windows no puede instalar. Esta configuración de directiva tiene prioridad sobre cualquier otra configuración de directiva que permita a Windows instalar dispositivos. Si habilita esta configuración de directiva, Windows no podrá instalar un dispositivo cuyo identificador de hardware o identificador compatible aparezca en la lista que usted cree. Si habilita esta configuración de directiva en un servidor de escritorio remoto, esta afectará a la redirección de los dispositivos especificados desde un cliente de escritorio remoto al servidor de escritorio remoto. Si deshabilita o no establece esta configuración de directiva, se podrán instalar o actualizar dispositivos según lo permitan o impidan otras configuraciones de directiva.  
@@ -266,7 +266,7 @@ Para más información, vea [Policy CSP - DeviceInstallation](https://docs.micro
     **Valor predeterminado**: *Sin configuración predeterminada*  
 
 ## <a name="device-lock"></a>Bloqueo del dispositivo  
-Para más información, vea [Policy CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) (CSP de directiva: DeviceLock) en la documentación de Windows.  
+Para más información, vea [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) (CSP de directiva: DeviceLock) en la documentación de Windows.  
 
 - **Impedir el uso de la cámara**  
   Deshabilita el conmutador para alternar la cámara en la pantalla de bloqueo en Configuración de PC y evita que una cámara se invoque en la pantalla de bloqueo. De forma predeterminada, los usuarios pueden habilitar la invocación de una cámara disponible en la pantalla de bloqueo. Si habilita esta configuración, los usuarios ya no podrán habilitar o deshabilitar el acceso a la cámara en la pantalla de bloqueo en Configuración de PC, y la cámara no se podrá invocar en la pantalla de bloqueo.  
@@ -339,15 +339,15 @@ Para más información, vea [Policy CSP - DeviceLock](https://docs.microsoft.com
   **Valor predeterminado**: 1  
 
 ## <a name="dma-guard"></a>Protección de DMA  
-Para más información, vea [Policy CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) (CSP de directiva: DmaGuard) en la documentación de Windows.
+Para más información, vea [Policy CSP - DmaGuard](/windows/client-management/mdm/policy-csp-dmaguard) (CSP de directiva: DmaGuard) en la documentación de Windows.
 - **Enumeración de los dispositivos externos compatibles con Kernel DMA Protection**  
   Esta directiva pretende proporcionar seguridad adicional a los dispositivos que admiten DMA externo. Permite mayor control sobre la enumeración de dispositivos externos compatibles con DMA incompatibles con la reasignación de DMA o el aislamiento de la memoria de dispositivo y el espacio aislado. Esta directiva solo surte efecto cuando la característica Kernel DMA Protection se admite y está habilitada por el firmware del sistema. Kernel DMA Protection es una característica de plataforma que no se puede controlar mediante directivas ni por parte del usuario final. Tiene que ser compatible con el sistema en el momento de fabricación. Para comprobar si el sistema admite Kernel DMA Protection, revise el campo Kernel DMA Protection en la página de resumen de MSINFO32.exe.  
-  [Más información](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy).
+  [Más información](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy).
 
   **Valor predeterminado**: Bloquear todo   
 
 ## <a name="event-log-service"></a>Servicio Registro de eventos  
-Para más información, vea [Policy CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) (CSP de directiva: EventLogService) en la documentación de Windows.  
+Para más información, vea [Policy CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) (CSP de directiva: EventLogService) en la documentación de Windows.  
 
 - **Tamaño máximo del archivo de registro de seguridad en KB**  
   Esta configuración de directiva especifica el tamaño máximo del archivo de registro en kilobytes. Si habilita esta configuración de directiva, puede configurar el tamaño máximo del archivo de registro entre 1 megabyte (1024 KB) y 2 terabytes (2147483647 kilobytes), en incrementos de kilobytes. Si deshabilita o no establece esta configuración de directiva, el tamaño máximo del archivo de registro se establece en el valor configurado de forma local. Este valor lo puede cambiar el administrador local mediante el cuadro de diálogo Propiedades del registro y el valor predeterminado es de 20 megabytes.  
@@ -368,7 +368,7 @@ Para más información, vea [Policy CSP - EventLogService](https://docs.microsof
   **Valor predeterminado**: 32768  
 
 ## <a name="experience"></a>Experiencia  
-Para más información, vea [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) (CSP de directiva: Experiencia) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Experience](/windows/client-management/mdm/policy-csp-experience) (CSP de directiva: Experiencia) en la documentación de Windows.  
 
 - **Bloquear el Contenido destacado de Windows**  
   Permite a los administradores de TI desactivar todas las características de Contenido destacado de Windows: Contenido destacado de Windows en la pantalla de bloqueo, sugerencias de Windows, características de consumidor de Microsoft y otras características relacionadas.  
@@ -390,7 +390,7 @@ Para más información, vea [Policy CSP - Experience](https://docs.microsoft.com
     **Valor predeterminado**: Sí  
 
 ## <a name="exploit-guard"></a>Protección contra vulnerabilidades de seguridad  
-Para más información, vea [Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) (CSP de directiva: ExploitGuard) en la documentación de Windows.  
+Para más información, vea [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) (CSP de directiva: ExploitGuard) en la documentación de Windows.  
 
 - **XML de protección contra vulnerabilidades**  
   Permite a los administradores de TI enviar a todos los dispositivos de la organización una configuración que representa las opciones de mitigación deseadas del sistema y las aplicaciones. La configuración se representa por medio de XML. Protección contra vulnerabilidades ayuda a proteger los dispositivos frente al malware que usa ataques para infectar y propagar. Use la aplicación de seguridad de Windows o PowerShell para crear un conjunto de mitigaciones (conocido como una configuración). Después, puede exportar esta configuración como un archivo XML y compartirlo con varios equipos en la red para que todos tengan el mismo conjunto de opciones de mitigación. También puede convertir e importar un archivo XML de configuración EMET en un archivo XML de configuración de protección contra vulnerabilidades.  
@@ -399,7 +399,7 @@ Para más información, vea [Policy CSP - ExploitGuard](https://docs.microsoft.c
   **Valor predeterminado**: *Se proporciona el código XML de ejemplo* 
  
 ## <a name="file-explorer"></a>Explorador de archivos  
-Para más información, vea [Policy CSP - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) (CSP de directiva: FileExplorer) en la documentación de Windows.  
+Para más información, vea [Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) (CSP de directiva: FileExplorer) en la documentación de Windows.  
 
 - **Block data execution prevention** (Bloquear la prevención de ejecución de datos)  
   Deshabilitar la prevención de ejecución de datos puede permitir que ciertas aplicaciones de complemento heredadas funcionen sin cerrar Explorer.  
@@ -415,7 +415,7 @@ Para más información, vea [Policy CSP - FileExplorer](https://docs.microsoft.c
     
 
 ## <a name="internet-explorer"></a>Internet Explorer  
-Para más información, vea [Policy CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) (CSP de directiva: InternetExplorer) en la documentación de Windows.  
+Para más información, vea [Policy CSP - InternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer) (CSP de directiva: InternetExplorer) en la documentación de Windows.  
 
 - **Internet Explorer restricted zone updates to status bar via script** (Actualizaciones de la barra de estado mediante scripts en la zona restringida de Internet Explorer)  
   Esta configuración de directiva le permite administrar si se permite a los scripts actualizar la barra de estado dentro de la zona. 
@@ -1144,7 +1144,7 @@ Para más información, vea [Policy CSP - InternetExplorer](https://docs.microso
   **Valor predeterminado**: Deshabilitado  
   
 ## <a name="local-policies-security-options"></a>Opciones de seguridad de directivas locales
-Para más información, vea [Policy CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) (CSP de directiva: LocalPoliciesSecurityOptions) en la documentación de Windows. 
+Para más información, vea [Policy CSP - LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) (CSP de directiva: LocalPoliciesSecurityOptions) en la documentación de Windows. 
 
 - **Restrict anonymous access to named pipes and shares** (Restringir el acceso anónimo a las canalizaciones con nombre y los recursos compartidos)  
   Cuando se habilita, esta configuración de seguridad restringe el acceso anónimo a recursos compartidos y canalizaciones a la configuración de: (1) Canalizaciones con nombre a las que se puede acceder de forma anónima (2) Recursos compartidos a los que se puede acceder de forma anónima.  
@@ -1318,7 +1318,7 @@ Para más información, vea [Policy CSP - LocalPoliciesSecurityOptions](https://
   **Valor predeterminado**: Sí
 
 ## <a name="ms-security-guide"></a>Guía de seguridad de MS  
-Para más información, vea [Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) (CSP de directiva: MSSecurityGuide) en la documentación de Windows.  
+Para más información, vea [Policy CSP - MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide) (CSP de directiva: MSSecurityGuide) en la documentación de Windows.  
 
 - **Apply UAC restrictions to local accounts on network logon** (Aplicar restricciones de UAC a cuentas locales en el inicio de sesión de red)  
   [Más información](https://go.microsoft.com/fwlink/?linkid=2067188).  
@@ -1346,7 +1346,7 @@ Para más información, vea [Policy CSP - MSSecurityGuide](https://docs.microsof
   **Valor predeterminado**: Habilitado
   
 ## <a name="mss-legacy"></a>MSS heredado  
-Para más información, vea [Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) (CSP de directiva: MSSLegacy) en la documentación de Windows.  
+Para más información, vea [Policy CSP - MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy) (CSP de directiva: MSSLegacy) en la documentación de Windows.  
 
 - **Network IP source routing protection level** (Nivel de protección del enrutamiento de origen de IP de red)  
   [Más información](https://go.microsoft.com/fwlink/?linkid=2067220).  
@@ -1369,7 +1369,7 @@ Para más información, vea [Policy CSP - MSSLegacy](https://docs.microsoft.com/
   **Valor predeterminado**: Deshabilitado
   
 ## <a name="power"></a>Potencia  
-Para más información, vea [Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) (CSP de directiva: Power) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Power](/windows/client-management/mdm/policy-csp-power) (CSP de directiva: Power) en la documentación de Windows.  
 
 - **Require password on wake while plugged in** (Requerir contraseña al activarse durante la conexión)  
   Esta configuración de directiva especifica si el sistema solicitará al usuario una contraseña cuando el equipo salga de la suspensión y reanude su funcionamiento. Si habilita o no establece esta configuración de directiva, el sistema solicitará una contraseña al usuario cuando el equipo salga de la suspensión y reanude su funcionamiento. Si deshabilita esta configuración de directiva, el sistema no solicitará ninguna contraseña al usuario cuando el equipo salga de la suspensión y reanude su funcionamiento.  
@@ -1422,7 +1422,7 @@ Para más información, vea [Policy CSP - Power](https://docs.microsoft.com/wind
 
   
 ## <a name="remote-desktop-services"></a>Servicios de Escritorio Remoto  
-Para más información, vea [Policy CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) (CSP de directiva: RemoteDesktopServices) en la documentación de Windows.  
+Para más información, vea [Policy CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices) (CSP de directiva: RemoteDesktopServices) en la documentación de Windows.  
 
 - **Block password saving** (Bloquear Guardar contraseñas)  
   Controla si se pueden guardar contraseñas en este equipo desde Conexión a Escritorio remoto. Si habilita esta opción, se deshabilita la casilla para guardar contraseñas en Conexión a Escritorio remoto y los usuarios no podrán guardar contraseñas. Cuando un usuario abre un archivo RDP por medio de Conexión a Escritorio remoto y guarda su configuración, se eliminan todas las contraseñas que existían con anterioridad en el archivo RDP. Si deshabilita esta opción o no la configura, el usuario puede guardar contraseñas mediante Conexión a Escritorio remoto.  
@@ -1460,7 +1460,7 @@ Para más información, vea [Policy CSP - RemoteDesktopServices](https://docs.mi
   **Valor predeterminado**: Alto
   
 ## <a name="remote-management"></a>Administración remota  
-Para más información, vea [Policy CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) (CSP de directiva: RemoteManagement) en la documentación de Windows.  
+Para más información, vea [Policy CSP - RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement) (CSP de directiva: RemoteManagement) en la documentación de Windows.  
 
 - **Block storing run as credentials** (Bloquear el almacenamiento de credenciales Ejecutar como)  
   Autenticación básica de cliente  
@@ -1499,7 +1499,7 @@ Para más información, vea [Policy CSP - RemoteManagement](https://docs.microso
   **Valor predeterminado**: Deshabilitado
   
 ## <a name="remote-procedure-call"></a>Llamada a procedimiento remoto  
-Para más información, vea [Policy CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) (CSP de directiva: RemoteProcedureCall) en la documentación de Windows.  
+Para más información, vea [Policy CSP - RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall) (CSP de directiva: RemoteProcedureCall) en la documentación de Windows.  
 
 - **RPC unauthenticated client options** (Opciones de cliente RPC no autenticado)  
   Esta configuración de directiva controla la forma en la que el tiempo de ejecución del servidor de RPC administra los clientes de RPC no autenticados que se conectan a servidores de RPC. Esta configuración de directiva afecta a todas las aplicaciones de RPC. En un entorno de dominio, use esta configuración de directiva con precaución, ya que puede afectar a un amplio rango de funcionalidades, entre ellas el propio procesamiento de la directiva de grupo. Revertir un cambio en esta configuración de directiva puede requerir intervención manual en cada equipo afectado. Esta configuración de directiva nunca debe aplicarse a un controlador de dominio. Si deshabilita esta configuración de directiva, el tiempo de ejecución del servidor de RPC usa el valor "Autenticado" en el cliente de Windows y el valor "Ninguno" en las versiones de Windows Server que son compatibles con esta configuración de directiva. Si no establece esta configuración de directiva, permanece deshabilitada. El tiempo de ejecución del servidor RPC se comporta como si estuviera habilitado con el valor de "Autenticado" que se usa para el cliente de Windows y el valor de "Ninguno" que se usa para las SKU de servidor que son compatibles con esta configuración de directiva. Si habilita esta configuración de directiva, el tiempo de ejecución del servidor de RPC impedirá que los clientes de RPC no autenticados se conecten a los servidores de RPC que se ejecuten en un equipo. Un cliente se considera como autenticado cuando usa una canalización con nombre para comunicarse con el servidor o cuando usa seguridad de RPC. Las interfaces de RPC que solicitaron específicamente ser accesibles a clientes no autenticados pueden quedar exentas de esta restricción, según el valor seleccionado para esta configuración de directiva.  
@@ -1512,7 +1512,7 @@ Para más información, vea [Policy CSP - RemoteProcedureCall](https://docs.micr
   **Valor predeterminado**: Autenticado
 
 ## <a name="search"></a>Búsqueda 
-Para más información, vea [Policy CSP - Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) (CSP de directiva: Search) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Search](/windows/client-management/mdm/policy-csp-search) (CSP de directiva: Search) en la documentación de Windows.  
 
 - **Disable indexing encrypted items** (Deshabilitar la indexación de elementos cifrados)  
   Permite o deniega la indexación de elementos. Este modificador se aplica al indizador de Windows Search, que controla si se indexarán los elementos cifrados, como los archivos protegidos de Windows Information Protection (WIP). Cuando la directiva está habilitada, los elementos protegidos por WIP se indexan y los metadatos sobre ellos se almacenan en una ubicación sin cifrar. Los metadatos incluyen elementos tales como la ruta de acceso de archivo y la fecha de modificación. Cuando la directiva está deshabilitada, los elementos protegidos por WIP no se indexan y no se muestran en los resultados de Cortana o del explorador de archivos. También puede haber un impacto en el rendimiento de fotografías y aplicaciones de Groove si hay muchos archivos multimedia protegidos por WIP en el dispositivo.  
@@ -1521,7 +1521,7 @@ Para más información, vea [Policy CSP - Search](https://docs.microsoft.com/win
   **Valor predeterminado**: Sí
   
 ## <a name="smart-screen"></a>SmartScreen  
-Para más información, vea [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) (CSP de directiva: SmartScreen) en la documentación de Windows. 
+Para más información, vea [Policy CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen) (CSP de directiva: SmartScreen) en la documentación de Windows. 
 
 - **Block execution of unverified files** (Bloquear la ejecución de archivos no comprobados)  
   Impide al usuario ejecutar archivos no comprobados.
@@ -1539,7 +1539,7 @@ Para más información, vea [Policy CSP - SmartScreen](https://docs.microsoft.co
   **Valor predeterminado**: Sí
   
 ## <a name="system"></a>System (Sistema)  
-Para más información, vea [Policy CSP - System](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) (CSP de directiva: System) en la documentación de Windows.  
+Para más información, vea [Policy CSP - System](/windows/client-management/mdm/policy-csp-system) (CSP de directiva: System) en la documentación de Windows.  
 
 - **System boot start driver initialization** (Inicialización de controladores de arranque del sistema)  
   Esta configuración de directiva permite especificar qué controladores de arranque se inicializarán de acuerdo con la clasificación determinada por un controlador de arranque de inicio temprano. El controlador de Antimalware de inicio temprano puede proporcionar las siguientes clasificaciones para cada controlador de arranque: 
@@ -1555,7 +1555,7 @@ Para más información, vea [Policy CSP - System](https://docs.microsoft.com/win
 
 
 ## <a name="wi-fi"></a>Wi-Fi  
-Para más información, vea [Policy CSP - Wifi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) (CSP de directiva: Wifi) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Wifi](/windows/client-management/mdm/policy-csp-wifi) (CSP de directiva: Wifi) en la documentación de Windows.  
 
 - **Impedir el uso compartido de Internet**  
   Especifica si la conexión compartida es posible en el dispositivo.   
@@ -1570,7 +1570,7 @@ Para más información, vea [Policy CSP - Wifi](https://docs.microsoft.com/windo
   **Valor predeterminado**: Sí  
   
 ## <a name="windows-connection-manager"></a>Administrador de conexiones de Windows  
-Para más información, vea [Policy CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) (CSP de directiva: WindowsConnectionManager) en la documentación de Windows.  
+Para más información, vea [Policy CSP - WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager) (CSP de directiva: WindowsConnectionManager) en la documentación de Windows.  
 
 - **Block connection to non-domain networks** (Bloquear la conexión a redes que no son de dominio)  
   Esta configuración de directiva evita que los equipos se conecten a una red basada en dominio y a una red no basada en dominio al mismo tiempo. Si esta configuración de directiva está habilitada, el equipo responde a intentos de conexión manual y automática a redes de acuerdo con las siguientes circunstancias: 
@@ -1583,7 +1583,7 @@ Para más información, vea [Policy CSP - WindowsConnectionManager](https://docs
   **Valor predeterminado**: Habilitado
   
 ## <a name="microsoft-defender"></a>Microsoft Defender  
-Para más información, vea [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) (CSP de directiva: Defender) en la documentación de Windows.  
+Para más información, vea [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) (CSP de directiva: Defender) en la documentación de Windows.  
 
 - **Examinar mensajes de correo entrante**  
   Permite o impide el examen de correo electrónico.  
@@ -1648,7 +1648,7 @@ Para más información, vea [Policy CSP - Defender](https://docs.microsoft.com/w
 
 - **Defender potentially unwanted app action** (Acción frente a aplicaciones potencialmente no deseadas de Windows Defender)  
   La característica de protección frente a aplicaciones potencialmente no deseadas (PUA) del Antivirus de Microsoft Defender puede identificar aplicaciones PUA e impedir que se descarguen e instalen en puntos de conexión de la red. Estas aplicaciones no se consideran virus, malware u otro tipo de amenazas, pero es posible que realicen acciones en los puntos de conexión que afecten de forma negativa a su rendimiento o uso. PUA también puede hacer referencia a las aplicaciones que se consideran que tienen una mala reputación. Entre el comportamiento típico de PUA se incluye lo siguiente: varios tipos de paquetes de software que insertan anuncios en exploradores web, optimizadores de controladores y registros que detectan problemas y solicitan pagos para corregir los errores, pero permanecen en el punto de conexión y no realizan cambios ni optimizaciones (también conocidos como programas "antivirus fraudulentos"). Estas aplicaciones pueden aumentar el riesgo de que su red se infecte con malware, provocar que las infecciones de malware sean más difíciles de identificar y desperdiciar recursos de TI en la limpieza de las aplicaciones.  
-  [Más información](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection).    
+  [Más información](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection).    
   
   **Valor predeterminado**: Bloquear  
 
@@ -1719,7 +1719,7 @@ Para más información, vea [Policy CSP - Defender](https://docs.microsoft.com/w
   **Valor predeterminado**: Bloquear
 
 ## <a name="microsoft-defender-firewall"></a>Firewall de Microsoft Defender  
-Para obtener más información, consulte [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) en la documentación sobre los protocolos de Windows.  
+Para obtener más información, consulte [2.2.2 FW_PROFILE_TYPOE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) en la documentación sobre los protocolos de Windows.  
 
 - **Dominio de Perfil del firewall**  
   Especifica los perfiles a la que pertenece la regla: Dominio, Privado o Público. Este valor representa el perfil para las redes que están conectadas a dominios.  
@@ -1816,7 +1816,7 @@ Para obtener más información, consulte [2.2.2 FW_PROFILE_TYPOE]( https://docs.
 
 
 ## <a name="windows-ink-workspace"></a>Área de trabajo de Windows Ink  
-Para más información, vea [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) (CSP de directiva: WindowsInkWorkspace) en la documentación de Windows.  
+Para más información, vea [Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace) (CSP de directiva: WindowsInkWorkspace) en la documentación de Windows.  
 
 - **Ink Workspace** (Área de trabajo de Ink)  
   Especifica si permitir que el usuario acceda al área de trabajo de Windows Ink. 
@@ -1829,7 +1829,7 @@ Para más información, vea [Policy CSP - WindowsInkWorkspace](https://docs.micr
   **Valor predeterminado**: Habilitado
  
 ## <a name="windows-powershell"></a>Windows PowerShell  
-Para más información, vea [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) (CSP de directiva: WindowsPowerShell) en la documentación de Windows.  
+Para más información, vea [Policy CSP - WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell) (CSP de directiva: WindowsPowerShell) en la documentación de Windows.  
 
 - **Power shell shell script block logging** (Bloquear el registro de scripts de PowerShell)  
   Esta configuración de directiva permite el registro de todas las entradas de script de PowerShell en el registro de eventos Microsoft-Windows-PowerShell/Operational. Si habilita esta configuración de directiva, Windows PowerShell registrará el procesamiento de comandos, bloques de script, funciones y scripts, ya sea invocado de forma interactiva o mediante la automatización. Si deshabilita esta configuración de directiva, se deshabilitará el registro de entradas de script de PowerShell. Si habilita el registro de invocación de bloque de script, PowerShell también registrará los eventos cuando se inicie o se detenga la invocación de un comando, bloque de script, función o script. Si habilita el registro de invocación, se generará una gran cantidad de registros de eventos. Nota: Esta configuración de directiva se encuentra en Configuración del equipo y Configuración del usuario en el Editor de directivas de grupo. La configuración de directiva de Configuración del equipo tiene prioridad sobre la de Configuración del usuario.  
@@ -1914,4 +1914,4 @@ La configuración es alguna de las siguientes:
   - **Letras minúsculas en el PIN** 
   - **Caracteres especiales en el PIN** 
   - **Longitud mínima del PIN**  
-  - **Letras mayúsculas en el PIN** 
+  - **Letras mayúsculas en el PIN**

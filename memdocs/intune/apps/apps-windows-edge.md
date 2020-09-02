@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baaec1e48579313085c039872cc931891c367132
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: abf2ad4a1b0857f1a839de49bb709fc4ff27f369
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531543"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913960"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Adición de Microsoft Edge para Windows 10 a Microsoft Intune
 
@@ -121,7 +121,7 @@ Si necesita desinstalar Microsoft Edge de los dispositivos de los usuarios, sig
 
 ## <a name="troubleshooting"></a>Solución de problemas
 **Microsoft Edge versión 77 y posteriores para Windows 10:**<br>
-Intune usa la extensión de administración de Intune para descargar e implementar el instalador de Microsoft Edge en los dispositivos Windows 10 asignados y, después, comunica la configuración de implementación al instalador de Microsoft Edge, que descarga e instala el explorador Microsoft Edge directamente desde la red CDN. Consulte los [requisitos previos de la extensión de administración de Intune](intune-management-extension.md#prerequisites) y los procedimientos recomendados que se describen en el acceso al servicio de actualización de Azure y la red CDN para asegurarse de que la configuración de red permite que los dispositivos Windows 10 accedan a estas ubicaciones. Además, para permitir el acceso a los archivos de instalación desde una red CDN para instalar el explorador, debe permitir el acceso a los puntos de conexión de Windows Update. Para más información, consulte [Administrar los puntos de conexión para Windows 10, versión 1809: Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) y [Puntos de conexión de red para Microsoft Intune](../fundamentals/intune-endpoints.md).
+Intune usa la extensión de administración de Intune para descargar e implementar el instalador de Microsoft Edge en los dispositivos Windows 10 asignados y, después, comunica la configuración de implementación al instalador de Microsoft Edge, que descarga e instala el explorador Microsoft Edge directamente desde la red CDN. Consulte los [requisitos previos de la extensión de administración de Intune](intune-management-extension.md#prerequisites) y los procedimientos recomendados que se describen en el acceso al servicio de actualización de Azure y la red CDN para asegurarse de que la configuración de red permite que los dispositivos Windows 10 accedan a estas ubicaciones. Además, para permitir el acceso a los archivos de instalación desde una red CDN para instalar el explorador, debe permitir el acceso a los puntos de conexión de Windows Update. Para más información, consulte [Administrar los puntos de conexión para Windows 10, versión 1809: Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update) y [Puntos de conexión de red para Microsoft Intune](../fundamentals/intune-endpoints.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 - [Asignar aplicaciones a grupos](apps-deploy.md)

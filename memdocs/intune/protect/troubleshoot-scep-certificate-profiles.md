@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991005"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914742"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Información general para solucionar problemas de los perfiles de certificados SCEP con Microsoft Intune
 
@@ -80,7 +80,7 @@ En la lista siguiente se incluyen consolas o registros a los que se hace referen
 
 - **NDESConnector_date_time.svclog**:
 
-  Este registro muestra la comunicación desde Microsoft Intune Certificate Connector al servicio en la nube de Intune. Puede usar la [herramienta del visor de seguimiento de servicio](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
+  Este registro muestra la comunicación desde Microsoft Intune Certificate Connector al servicio en la nube de Intune. Puede usar la [herramienta del visor de seguimiento de servicio](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
 
   Clave del Registro relacionada: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ En la lista siguiente se incluyen consolas o registros a los que se hace referen
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  este registro muestra el módulo de directivas de NDES que recibe y comprueba las solicitudes de certificado. Puede usar la [herramienta del visor de seguimiento de servicio](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
+  este registro muestra el módulo de directivas de NDES que recibe y comprueba las solicitudes de certificado. Puede usar la [herramienta del visor de seguimiento de servicio](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) para ver este archivo de registro.
 
   Ubicación: en el servidor que hospeda NDES en *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -148,4 +148,4 @@ En el dispositivo, abra **Visor de eventos** > **Registros de aplicaciones y ser
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Revise la [implementación de perfiles de certificado SCEP](troubleshoot-scep-certificate-profile-deployment.md) 
+Revise la [implementación de perfiles de certificado SCEP](troubleshoot-scep-certificate-profile-deployment.md)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 771c1133d10c256d29755ebc146197a6cb35ceee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428970"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914912"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Solución de problemas de directivas de BitLocker en Microsoft Intune
 
@@ -35,7 +35,7 @@ Con Microsoft Intune, dispone de los siguientes métodos para administrar BitLo
 
 - **Directivas de configuración de dispositivos**: hay determinadas opciones de directivas integradas disponibles en Intune cuando se crea un perfil de configuración de dispositivo para administrar Endpoint Protection. Para encontrar estas opciones, debe [crear un perfil de dispositivo que contenga la configuración de Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), seleccionar **Windows 10 y versiones posteriores** como *Plataforma* y, luego, la categoría **Cifrado de Windows** como *Configuración*. 
 
-   Puede obtener información sobre las opciones y características disponibles en: [Cifrado de Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Puede obtener información sobre las opciones y características disponibles en: [Cifrado de Windows](/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Líneas base de seguridad**: las [líneas base de seguridad](security-baselines.md) son grupos conocidos de opciones y valores predeterminados que el equipo de seguridad correspondiente recomienda para ayudar a proteger los dispositivos Windows. Distintos orígenes de líneas base, como la *línea base de seguridad de MDM* o la *línea base de ATP de Microsoft Defender*, pueden administrar la misma configuración u otra distinta. También pueden administrar la misma configuración que administra con directivas de configuración de dispositivos. 
 
@@ -43,12 +43,12 @@ Además de Intune, para el hardware compatible con el modo de espera moderno y H
 
 Es posible que la configuración de BitLocker esté administrada por otros medios, como directivas de grupo, o que un usuario del dispositivo la establezca de forma manual.
 
-Independientemente de cómo se aplique la configuración a un dispositivo, las directivas de BitLocker usan el [CSP de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) para configurar el cifrado en el dispositivo. El CSP de BitLocker está integrado en Windows y, cuando Intune implementa una directiva de BitLocker en un dispositivo asignado, es el CSP de BitLocker del dispositivo el que escribe los valores adecuados en el Registro de Windows para que la configuración de la directiva surta efecto.
+Independientemente de cómo se aplique la configuración a un dispositivo, las directivas de BitLocker usan el [CSP de BitLocker](/windows/client-management/mdm/bitlocker-csp) para configurar el cifrado en el dispositivo. El CSP de BitLocker está integrado en Windows y, cuando Intune implementa una directiva de BitLocker en un dispositivo asignado, es el CSP de BitLocker del dispositivo el que escribe los valores adecuados en el Registro de Windows para que la configuración de la directiva surta efecto.
 
 Si quiere obtener más información sobre BitLocker, vea los siguientes recursos:
 
-- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [Preguntas más frecuentes sobre BitLocker y requisitos](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Preguntas más frecuentes sobre BitLocker y requisitos](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 Ahora que comprende lo que hacen estas directivas y cómo funcionan, vea cómo puede comprobar si la configuración de BitLocker se aplica correctamente a un cliente Windows.
 
@@ -109,7 +109,7 @@ Una vez que la directiva de BitLocker se implementa correctamente en un disposit
 
 ![Clave del Registro de BitLocker](./media/troubleshooting-bitlocker-policies/registry.png)
 
-Estos valores los configura el CSP de BitLocker. Compruebe que los valores de las claves coinciden con los especificados en el origen de la directiva de cifrado de Windows de Intune. Para obtener más información sobre cada uno de estos valores, vea [CSP de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
+Estos valores los configura el CSP de BitLocker. Compruebe que los valores de las claves coinciden con los especificados en el origen de la directiva de cifrado de Windows de Intune. Para obtener más información sobre cada uno de estos valores, vea [CSP de BitLocker](/windows/client-management/mdm/bitlocker-csp).
 
 > [!NOTE]
 > El Visor de eventos de Windows también contiene diversa información relacionada con BitLocker. Hay demasiada para enumerarla aquí, pero, si busca **API de BitLocker**, encontrará una gran cantidad de información de utilidad.
@@ -136,7 +136,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-Puede ir a la [documentación del CSP de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) para ver qué significa cada valor. En este ejemplo se comparte un fragmento de código en la siguiente imagen.
+Puede ir a la [documentación del CSP de BitLocker](/windows/client-management/mdm/bitlocker-csp) para ver qué significa cada valor. En este ejemplo se comparte un fragmento de código en la siguiente imagen.
 
 ![Propósitos de los valores](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -162,10 +162,10 @@ Ahora debería tener una buena idea de cómo confirmar que Intune ha implementad
 - **¿El error afecta a la implementación de toda la directiva o son solo algunas opciones las que no se aplican?** Si se enfrenta a un escenario en el que no se aplican únicamente algunas opciones de la directiva, compruebe las siguientes consideraciones:
 
   1. **No todas las opciones de BitLocker se admiten en todas las versiones de Windows**.
-     La directiva llega a un dispositivo como una sola unidad, por lo que si se aplican algunas opciones y otras no, puede tener la certeza de que se ha recibido. En este escenario, es posible que la versión de Windows del dispositivo no admita la opción problemática. Vea [CSP de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) en la documentación de Windows para obtener más información sobre los requisitos de versión de cada opción.
+     La directiva llega a un dispositivo como una sola unidad, por lo que si se aplican algunas opciones y otras no, puede tener la certeza de que se ha recibido. En este escenario, es posible que la versión de Windows del dispositivo no admita la opción problemática. Vea [CSP de BitLocker](/windows/client-management/mdm/bitlocker-csp) en la documentación de Windows para obtener más información sobre los requisitos de versión de cada opción.
 
   2. **BitLocker no se admite en todo el hardware**.
-     Aunque tenga la versión correcta de Windows, es posible que el hardware del dispositivo subyacente no cumpla los requisitos de cifrado de BitLocker. Puede encontrar los [requisitos del sistema de BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) en la documentación de Windows, pero lo principal que debe comprobar es que el dispositivo tenga un chip TPM compatible (1.2 o posterior) y un firmware UEFI o BIOS compatible con Trusted Computing Group (TCG).
+     Aunque tenga la versión correcta de Windows, es posible que el hardware del dispositivo subyacente no cumpla los requisitos de cifrado de BitLocker. Puede encontrar los [requisitos del sistema de BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) en la documentación de Windows, pero lo principal que debe comprobar es que el dispositivo tenga un chip TPM compatible (1.2 o posterior) y un firmware UEFI o BIOS compatible con Trusted Computing Group (TCG).
      
 El **cifrado de BitLocker no se realiza de forma silenciosa**: ha configurado una directiva de Endpoint Protection con la opción "Advertencia para otro cifrado de disco" establecida en bloquear, y el asistente para cifrado sigue apareciendo:
 
@@ -209,11 +209,11 @@ Al solucionar problemas de directivas de BitLocker con Intune y confirmar que un
 
 A continuación se ofrecen más recursos que pueden ayudar al trabajar con BitLocker:
 
-- [Documentación del producto BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [Requisitos del sistema de BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [Preguntas más frecuentes sobre BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [Documentación del CSP de BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Configuración de directivas de cifrado de Windows de Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [Cifrado automático de BitLocker independiente del hardware mediante AAD/MDM](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [Documentación del producto BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Requisitos del sistema de BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [Preguntas más frecuentes sobre BitLocker](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [Documentación del CSP de BitLocker](/windows/client-management/mdm/bitlocker-csp)
+- [Configuración de directivas de cifrado de Windows de Intune](/intune/endpoint-protection-windows-10#windows-encryption)
+- [Cifrado automático de BitLocker independiente del hardware mediante AAD/MDM](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [Directiva de CSP para el cifrado de BitLocker en dispositivos Auto Pilot](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [Tutorial para crear e implementar una directiva de BitLocker con Intune](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [Tutorial para crear e implementar una directiva de BitLocker con Intune](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

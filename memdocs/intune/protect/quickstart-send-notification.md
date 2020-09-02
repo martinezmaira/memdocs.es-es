@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e986021bb4d575ec3269e97b228cc381e1f2cf72
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079491"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910900"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Inicio rápido: Enviar notificaciones a dispositivos no conformes
 
 En este inicio rápido, usará Microsoft Intune para enviar una notificación por correo electrónico a los miembros de su personal que tienen dispositivos no conformes.
 
-De forma predeterminada, cuando Intune detecta un dispositivo que no es compatible, lo marca inmediatamente como tal. Luego, el [acceso condicional](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) de Azure Active Directory (Azure AD) bloquea el dispositivo. Cuando un dispositivo es no conforme, Intune le permite agregar acciones en caso de no conformidad, lo que le ofrece flexibilidad de decidir lo que debe hacer. Por ejemplo, puede dar a los usuarios un período de gracia antes de bloquear los dispositivos que no sean conformes.
+De forma predeterminada, cuando Intune detecta un dispositivo que no es compatible, lo marca inmediatamente como tal. Luego, el [acceso condicional](/azure/active-directory/active-directory-conditional-access-azure-portal) de Azure Active Directory (Azure AD) bloquea el dispositivo. Cuando un dispositivo es no conforme, Intune le permite agregar acciones en caso de no conformidad, lo que le ofrece flexibilidad de decidir lo que debe hacer. Por ejemplo, puede dar a los usuarios un período de gracia antes de bloquear los dispositivos que no sean conformes.
 
 Una acción que debe llevarse a cabo cuando un dispositivo no satisface los requisitos de cumplimiento es enviar un correo electrónico al usuario de los dispositivos. También puede personalizar una notificación por correo electrónico antes de enviarla. En concreto, puede personalizar los destinatarios, el asunto, el cuerpo del mensaje, incluido el logotipo de la empresa, y la información de contacto. Intune también incluye detalles sobre los dispositivos no conformes en la notificación por correo electrónico.
 
@@ -37,7 +37,7 @@ Si no dispone de ninguna suscripción a Intune, [regístrese para obtener una cu
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Al usar las directivas de cumplimiento de dispositivos para bloquear los dispositivos para evitar que usen los recursos corporativos, se debe configurar el acceso condicional de Azure AD. Si ha seguido el inicio rápido [Creación de una directiva de cumplimiento de dispositivos](quickstart-set-password-length-android.md), estará usando Azure Active Directory. Para más información sobre Azure AD, consulte [Acceso condicional en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) y [Formas habituales de usar el acceso condicional con Intune](../protect/conditional-access-intune-common-ways-use.md).
+Al usar las directivas de cumplimiento de dispositivos para bloquear los dispositivos para evitar que usen los recursos corporativos, se debe configurar el acceso condicional de Azure AD. Si ha seguido el inicio rápido [Creación de una directiva de cumplimiento de dispositivos](quickstart-set-password-length-android.md), estará usando Azure Active Directory. Para más información sobre Azure AD, consulte [Acceso condicional en Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) y [Formas habituales de usar el acceso condicional con Intune](../protect/conditional-access-intune-common-ways-use.md).
 
 ## <a name="sign-in-to-intune"></a>Iniciar sesión en Intune
 

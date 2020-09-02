@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5daf488d878881c35db689fae0279c0312eb4c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074782"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915796"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Tutorial: Configuración de Slack para usar Intune para EMM y la configuración de aplicaciones
 
@@ -45,7 +45,7 @@ Necesitará a un inquilino de prueba con las siguientes suscripciones para este 
 También necesitará un plan de [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-).
 
 ## <a name="configure-your-slack-enterprise-grid-plan"></a>Configuración de un plan de Slack Enterprise Grid
-Para activar EMM para el plan de Slack Enterprise Grid, siga las [instrucciones de Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) y [conecte Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) como el proveedor de identidades (IDP) del plan de Grid.
+Para activar EMM para el plan de Slack Enterprise Grid, siga las [instrucciones de Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) y [conecte Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) como el proveedor de identidades (IDP) del plan de Grid.
 
 ## <a name="sign-in-to-intune"></a>Iniciar sesión en Intune
 Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) como administrador global o administrador de servicios de Intune. Si ha creado una suscripción de prueba de Intune, la cuenta con la que creó la suscripción es el administrador global.

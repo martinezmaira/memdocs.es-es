@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 03c43adb14c854b89ef914f0b9b30ea2be690a92
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565672"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906793"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Uso de API para agregar entidades de certificación de terceros para SCEP en Intune
 
@@ -96,7 +96,7 @@ Para autenticarse en Intune, el servidor SCEP requiere un identificador de aplic
 
 Para obtener estos datos, el administrador del servidor SCEP inicia sesión en Azure Portal, registra la aplicación, le proporciona el permiso **API de Microsoft Intune/validación de desafío de SCEP**, crea una clave para la aplicación y, después, descarga el identificador de aplicación, su clave y el identificador del inquilino.
 
-Para obtener instrucciones sobre cómo registrar una aplicación y obtener los identificadores y las claves, vea [Uso del portal para crear una aplicación de Azure Active Directory y una entidad de servicio con acceso a los recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+Para obtener instrucciones sobre cómo registrar una aplicación y obtener los identificadores y las claves, vea [Uso del portal para crear una aplicación de Azure Active Directory y una entidad de servicio con acceso a los recursos](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 ### <a name="java-library-api"></a>API de bibliotecas de Java
 
@@ -241,7 +241,7 @@ Notifica a Intune que se ha producido un error al procesar una solicitud SCEP. E
 
 - **transactionId**: id. de transacción de SCEP.
 - **certificateRequest**: cadena codificada en Base64 de solicitud de certificado PKCS #10 con codificación DER.
-- **hResult**: código de error Win32 que mejor describe el error detectado. Vea [Win32 Error Codes](https://msdn.microsoft.com/library/cc231199.aspx) (Códigos de error Win32)
+- **hResult**: código de error Win32 que mejor describe el error detectado. Vea [Win32 Error Codes](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d) (Códigos de error Win32)
 - **errorDescription**: descripción del error encontrado.
 
 **Inicia**:

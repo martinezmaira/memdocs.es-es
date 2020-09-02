@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252578"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915983"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Administración de actualizaciones de software de Windows 10 en Intune
 
@@ -38,7 +38,7 @@ Intune proporciona los siguientes tipos de directivas para administrar las actua
 
 El usuario asigna directivas para anillos de actualización de Windows 10 y actualizaciones de características de Windows 10 a grupos de dispositivos. Puede usar ambos tipos de directivas en el mismo entorno de Intune para administrar las actualizaciones de software para los dispositivos de Windows 10 y para crear una estrategia de actualización que refleje sus necesidades empresariales.
 
-Para obtener más información, consulte [Administrar actualizaciones con Windows Update para empresas](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+Para obtener más información, consulte [Administrar actualizaciones con Windows Update para empresas](/windows/deployment/update/waas-manage-updates-wufb).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -182,7 +182,7 @@ Cuando realice la desinstalación, debe tener en cuenta lo siguiente:
 
   Por ejemplo, imagine un anillo de actualización con un período de desinstalación de actualizaciones de características de 20 días. A los 25 días decide revertir la última actualización de características y usar la opción Desinstalar.  Los dispositivos que instalaron la actualización de características hace más de 20 días no pueden desinstalarla ya que quitaron los bits necesarios como parte de su mantenimiento. Pero los dispositivos que solo han instalado la actualización de características hace un máximo de 19 días pueden desinstalarla si se registran correctamente para recibir el comando de desinstalación antes de superar el período de desinstalación de 20 días.
 
-Para más información sobre las directivas de Windows Updates, consulte [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) (CSP de actualización) en la documentación de administración de clientes de Windows.
+Para más información sobre las directivas de Windows Updates, consulte [Update CSP](/windows/client-management/mdm/update-csp) (CSP de actualización) en la documentación de administración de clientes de Windows.
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>Para desinstalar la actualización más reciente de Windows 10
 
@@ -247,7 +247,7 @@ Desde este panel, podrá:
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Validación e informes de las actualizaciones de Windows 10
 
-En el caso de los anillos de actualización de Windows 10 y de las actualizaciones de características de Windows 10, use [Informes de cumplimiento de Intune para las actualizaciones](windows-update-compliance-reports.md) para supervisar el estado de las actualizaciones de los dispositivos. Esta solución usa [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) con la suscripción de Azure.
+En el caso de los anillos de actualización de Windows 10 y de las actualizaciones de características de Windows 10, use [Informes de cumplimiento de Intune para las actualizaciones](windows-update-compliance-reports.md) para supervisar el estado de las actualizaciones de los dispositivos. Esta solución usa [Update Compliance](/windows/deployment/update/update-compliance-monitor) con la suscripción de Azure.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

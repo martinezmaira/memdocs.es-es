@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca22e74469cf84967d4d9630293a2b4e617e3d81
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5a3954057d14aaf24a1a0147d9717cfc01413d51
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698786"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914929"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Uso de líneas de base de seguridad para configurar dispositivos Windows 10 en Intune
 
@@ -46,7 +46,7 @@ Las líneas de base de seguridad es poder ayudarlo a tener un flujo de trabajo s
 - Si es nuevo en Intune y no está seguro de por dónde empezar, las líneas de base de seguridad ofrecen una ventaja. Puede crear e implementar rápidamente un perfil seguro, sabiendo que ayuda a proteger los recursos y datos de su organización.
 - Si actualmente usa una directiva de grupo, migrar a Intune para la administración es mucho más fácil con estas líneas de base. Estas líneas de base están integradas de forma nativa en Intune e incluyen una experiencia de administración moderna.
 
-Las [líneas de base de seguridad de Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) son un excelente recurso para obtener más información sobre esta característica. La [administración de dispositivos móviles](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) es un magnífico recurso sobre MDM y lo que puede hacer en los dispositivos Windows.
+Las [líneas de base de seguridad de Windows](/windows/security/threat-protection/windows-security-baselines) son un excelente recurso para obtener más información sobre esta característica. La [administración de dispositivos móviles](/windows/client-management/mdm/) (MDM) es un magnífico recurso sobre MDM y lo que puede hacer en los dispositivos Windows.
 
 ## <a name="available-security-baselines"></a>Líneas de base de seguridad disponibles
 
@@ -62,7 +62,7 @@ Las instancias de línea de base de seguridad siguientes están disponibles para
   - [Línea de base de ATP de Microsoft Defender para marzo de 2020: versión 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > La base de referencia de seguridad de ATP de Microsoft Defender se ha optimizado para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados.  Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
+  > La base de referencia de seguridad de ATP de Microsoft Defender se ha optimizado para dispositivos físicos y actualmente no se recomienda su uso en máquinas virtuales (VM) ni puntos de conexión de VDI. Ciertas configuraciones de base de referencia pueden afectar a las sesiones interactivas remotas en entornos virtualizados.  Para obtener más información, vea [Aumento del cumplimiento de la base de referencia de seguridad de ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) en la documentación de Windows.
 
 - **Línea de base de Microsoft Edge**
   - [Línea de base de Microsoft Edge para abril de 2020 (Edge versión 80 y posteriores)](security-baseline-settings-edge.md?pivots-edge-april-2020)
@@ -253,9 +253,9 @@ Si tiene un perfil asociado a una línea de base anterior, seguirá apareciendo.
 
 ## <a name="co-managed-devices"></a>Dispositivos administrados conjuntamente
 
-Las líneas de base de seguridad en dispositivos administrados por Intune son similares a los dispositivos administrados conjuntamente con Configuration Manager. Los dispositivos administrados conjuntamente usan Configuration Manager y Microsoft Intune para administrar los dispositivos Windows 10 al mismo tiempo. Le permite conectar a la nube su inversión existente de Configuration Manager a las ventajas de Intune. La [introducción a la administración conjunta](https://docs.microsoft.com/configmgr/comanage/overview) es un excelente recurso si usa Configuration Manager y también quiere las ventajas de la nube.
+Las líneas de base de seguridad en dispositivos administrados por Intune son similares a los dispositivos administrados conjuntamente con Configuration Manager. Los dispositivos administrados conjuntamente usan Configuration Manager y Microsoft Intune para administrar los dispositivos Windows 10 al mismo tiempo. Le permite conectar a la nube su inversión existente de Configuration Manager a las ventajas de Intune. La [introducción a la administración conjunta](/configmgr/comanage/overview) es un excelente recurso si usa Configuration Manager y también quiere las ventajas de la nube.
 
-Cuando se usen dispositivos administrados conjuntamente, debe cambiar la carga de trabajo de la **configuración del dispositivo** (su configuración) a Intune. [Las cargas de trabajo de configuración de dispositivo](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration) proporcionan más información.
+Cuando se usen dispositivos administrados conjuntamente, debe cambiar la carga de trabajo de la **configuración del dispositivo** (su configuración) a Intune. [Las cargas de trabajo de configuración de dispositivo](/configmgr/comanage/workloads#device-configuration) proporcionan más información.
 
 ## <a name="q--a"></a>Q & A
 
@@ -273,11 +273,11 @@ Estrictamente hablando, no. El equipo de seguridad de Microsoft consulta a las o
 
 ### <a name="what-certifications-does-microsofts-security-baselines-have"></a>¿Qué certificaciones tienen las líneas de base de seguridad de Microsoft? 
 
-- Microsoft continúa publicando líneas de base de seguridad para directivas de grupo (GPO) y el [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), como ha hecho durante muchos años. Muchas organizaciones usan estas líneas de base. Las recomendaciones que figuran en estas líneas de base provienen del compromiso del equipo de seguridad de Microsoft con clientes empresariales y agencias externas, incluido el Departamento de Defensa (DoD), el Instituto Nacional de Estándares y Tecnología (NIST), etc. Compartimos nuestras recomendaciones y líneas de base con estas organizaciones. Estas organizaciones también tienen sus propias recomendaciones que reflejan fielmente las recomendaciones de Microsoft. Dado que la administración de dispositivos móviles (MDM) continúa creciendo en la nube, Microsoft ha creado recomendaciones de MDM equivalentes de estas líneas de base de directivas de grupo. Estas líneas de base adicionales están integradas en Microsoft Intune e incluyen informes de cumplimiento sobre usuarios, grupos y dispositivos que siguen (o no) la línea de base.
+- Microsoft continúa publicando líneas de base de seguridad para directivas de grupo (GPO) y el [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10), como ha hecho durante muchos años. Muchas organizaciones usan estas líneas de base. Las recomendaciones que figuran en estas líneas de base provienen del compromiso del equipo de seguridad de Microsoft con clientes empresariales y agencias externas, incluido el Departamento de Defensa (DoD), el Instituto Nacional de Estándares y Tecnología (NIST), etc. Compartimos nuestras recomendaciones y líneas de base con estas organizaciones. Estas organizaciones también tienen sus propias recomendaciones que reflejan fielmente las recomendaciones de Microsoft. Dado que la administración de dispositivos móviles (MDM) continúa creciendo en la nube, Microsoft ha creado recomendaciones de MDM equivalentes de estas líneas de base de directivas de grupo. Estas líneas de base adicionales están integradas en Microsoft Intune e incluyen informes de cumplimiento sobre usuarios, grupos y dispositivos que siguen (o no) la línea de base.
 
 - Muchos clientes utilizan las recomendaciones de línea de base de Intune como punto de partida y luego las personalizan para satisfacer sus demandas de TI y seguridad. La **línea de base de seguridad de MDM** de Windows 10 RS5 de Microsoft es la primera línea de base que se lanza. Esta línea de base se construye como una infraestructura genérica que permite a los clientes eventualmente importar otras líneas de base de seguridad basadas en CIS, NIST y otros estándares. En la actualidad, está disponible para Windows y eventualmente incluirá iOS/iPadOS y Android.
 
-- La migración de las directivas de grupo de Active Directory locales a una solución en la nube pura mediante Azure Active Directory (AD) con Microsoft Intune es una odisea. Para ayudar, se incluyen plantillas de directiva de grupo en el [kit de herramientas para el cumplimiento de la seguridad](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) que pueden ayudar a administrar dispositivos híbridos unidos a Azure AD. Estos dispositivos pueden obtener configuraciones de MDM desde la nube (Intune) y configuraciones de directiva de grupo desde los controladores de dominio locales según sea necesario.
+- La migración de las directivas de grupo de Active Directory locales a una solución en la nube pura mediante Azure Active Directory (AD) con Microsoft Intune es una odisea. Para ayudar, se incluyen plantillas de directiva de grupo en el [kit de herramientas para el cumplimiento de la seguridad](/windows/security/threat-protection/security-compliance-toolkit-10) que pueden ayudar a administrar dispositivos híbridos unidos a Azure AD. Estos dispositivos pueden obtener configuraciones de MDM desde la nube (Intune) y configuraciones de directiva de grupo desde los controladores de dominio locales según sea necesario.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

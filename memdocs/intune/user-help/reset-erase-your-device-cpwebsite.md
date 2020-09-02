@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881473"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915524"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Restablecimiento de un dispositivo desde el sitio web de Portal de empresa
 
@@ -32,7 +32,7 @@ Restablezca un dispositivo usado, perdido o robado a los valores de fábrica des
 
 Después de restablecer un dispositivo, ya no aparece en el Portal de empresa. Los archivos y las aplicaciones que existían previamente se borran y el dispositivo se restaura a la configuración predeterminada de fábrica. 
 
-El restablecimiento de dispositivos en Portal de empresa no está disponible para todos los dispositivos iOS. Si es un miembro del personal de soporte técnico de TI y quiere obtener más información sobre el restablecimiento de dispositivos y sus limitaciones, vea [Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo](https://docs.microsoft.com/intune/devices-wipe).  
+El restablecimiento de dispositivos en Portal de empresa no está disponible para todos los dispositivos iOS. Si es un miembro del personal de soporte técnico de TI y quiere obtener más información sobre el restablecimiento de dispositivos y sus limitaciones, vea [Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo](/intune/devices-wipe).  
 
 > [!Note]
 > También puede seguir estos pasos desde otro dispositivo que haya inscrito. Abra la aplicación Portal de empresa y complete los pasos para tener una experiencia de restablecimiento similar. 

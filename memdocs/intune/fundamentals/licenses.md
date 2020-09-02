@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf4fb6499299cd09fcac5673e252dd064120620
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: a447112bc721a87283210ca560b5d6bdbd38d26e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764261"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912362"
 ---
 # <a name="microsoft-intune-licensing"></a>Licencias de Microsoft Intune
 Microsoft Intune está disponible para las distintas necesidades de los clientes y los diversos tamaños de las organizaciones, desde una experiencia de administración fácil de usar para escuelas y pequeñas empresas a funcionalidades más avanzadas requeridas por los clientes empresariales. La mayoría de las licencias que incluyen Microsoft Intune también conceden los derechos a usar Microsoft Endpoint Configuration Manager, siempre y cuando la suscripción permanezca activa. Para administrar Intune, un administrador debe tener una licencia asignada.
@@ -48,7 +48,7 @@ Intune for Education se incluye en las licencias siguientes:
 ## <a name="additional-information"></a>Información adicional
 - Una suscripción de dispositivos y del usuario de Microsoft Intune está disponible como independiente, además de las agrupaciones indicadas arriba.
 - Una suscripción solo de dispositivos de Microsoft Intune está disponible para administrar quioscos, dispositivos dedicados, dispositivos de sala de teléfono, IoT y otros dispositivos de uso único que no requieren características de seguridad y administración basadas en el usuario.
-- La licencia de Microsoft Intune adecuada es necesaria si un usuario o dispositivo se beneficia de forma directa o indirecta del servicio de Microsoft Intune, incluido el acceso a dicho servicio a través de una [API de Microsoft](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use).
+- La licencia de Microsoft Intune adecuada es necesaria si un usuario o dispositivo se beneficia de forma directa o indirecta del servicio de Microsoft Intune, incluido el acceso a dicho servicio a través de una [API de Microsoft](/legal/microsoft-apis/terms-of-use).
 - Intune no se incluye en las licencias que no figuran en las tablas anteriores.
 
 Visite la página de [licencias de Microsoft](https://www.microsoft.com/licensing/default) para obtener la información más reciente sobre ediciones de productos, actualizaciones de licencias de productos, planes de licencias de volumen y otra información relacionada con sus casos de uso específicos.  

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 55835d5ee8527f54e530da5113f841ed108fa6f5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820007"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915813"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Asignación de perfiles de dispositivo en Microsoft Intune
 
@@ -31,7 +31,7 @@ Puede crear un perfil e incluir toda la configuración que escribió. El siguien
 En este artículo se muestra cómo asignar un perfil y se incluye información sobre el uso de las etiquetas de ámbito en los perfiles.
 
 > [!NOTE]  
-> Cuando se quita un perfil o ya no se asigna a un dispositivo, pueden generarse diferentes acciones, dependiendo de la configuración del perfil. La configuración se basa en CSP y cada CSP puede controlar la eliminación del perfil de manera distinta. Por ejemplo, un valor de configuración podría mantener el valor existente y no volver a un valor predeterminado. Cada CSP controla el comportamiento en el sistema operativo. Para una lista de CSP de Windows, consulte la [referencia del proveedor de servicios de configuración (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+> Cuando se quita un perfil o ya no se asigna a un dispositivo, pueden generarse diferentes acciones, dependiendo de la configuración del perfil. La configuración se basa en CSP y cada CSP puede controlar la eliminación del perfil de manera distinta. Por ejemplo, un valor de configuración podría mantener el valor existente y no volver a un valor predeterminado. Cada CSP controla el comportamiento en el sistema operativo. Para una lista de CSP de Windows, consulte la [referencia del proveedor de servicios de configuración (CSP)](/windows/client-management/mdm/configuration-service-provider-reference).
 >
 > Para cambiar una configuración a otro valor, cree un perfil, establezca la configuración en **No configurado** y asigne el perfil. Una vez aplicados al dispositivo, los usuarios deben tener el control para cambiar la configuración a su valor preferido.
 >

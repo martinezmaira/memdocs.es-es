@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 1420bf03fe236decba0345e299eb5d5893f96c93
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663454"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915116"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Aplicación del cumplimiento de ATP de Microsoft Defender con acceso condicional en Intune
 
@@ -51,7 +51,7 @@ Considere el caso en que alguien envía datos adjuntos de Word con código malin
 ATP de Microsoft Defender puede ayudar a resolver eventos de seguridad como el de este escenario.
 
 - En nuestro ejemplo, ATP de Microsoft Defender detecta que el dispositivo ejecutó código anómalo, experimentó una elevación de privilegios de proceso, inyectó código malintencionado y emitió un shell remoto sospechoso.
-- En función de estas acciones del dispositivo, ATP de Microsoft Defender [clasifica el dispositivo como de alto riesgo](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) e incluye un informe detallado de actividad sospechosa en el portal de Security Center de Microsoft Defender.
+- En función de estas acciones del dispositivo, ATP de Microsoft Defender [clasifica el dispositivo como de alto riesgo](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) e incluye un informe detallado de actividad sospechosa en el portal de Security Center de Microsoft Defender.
 
 Puede integrar Advanced Threat Protection de Microsoft Defender (ATP de Microsoft Defender) con Microsoft Intune como solución de Mobile Threat Defense. Esta integración puede ayudarle a evitar infracciones de seguridad y a limitar su impacto en una organización.
 
@@ -65,7 +65,7 @@ Para usar ATP de Microsoft Defender con Intune, asegúrese de que tiene configu
 
 - Inquilino con licencia para Enterprise Mobility + Security E3 y Windows E5 (o Microsoft 365 Enterprise E5)
 - Entorno de Microsoft Intune, con dispositivos Windows 10 [administrados por Intune](../enrollment/windows-enroll.md) o dispositivos Android que también estén unidos a Azure AD.
-- Entorno de [ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) que le proporcionará acceso al Centro de seguridad de Microsoft Defender (portal de ATP).
+- Entorno de [ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) que le proporcionará acceso al Centro de seguridad de Microsoft Defender (portal de ATP).
 
 > [!NOTE]
 > ATP de Microsoft Defender no es compatible con las directivas de protección de aplicaciones de Intune de iOS/iPadOS y Android.
@@ -81,5 +81,5 @@ Obtenga más información en la documentación de Intune:
 
 Obtenga más información en la documentación de ATP de Microsoft Defender:
 
-- [Acceso condicional de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Panel de riesgo de ATP de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Acceso condicional de ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Panel de riesgo de ATP de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 849be91ccedab1f97b68b14e5bc2a51bc5a62f19
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871990"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915303"
 ---
 # <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Preguntas y respuestas habituales sobre los perfiles y las directivas de los dispositivos en Microsoft Intune
 
@@ -149,7 +149,7 @@ Algunas opciones de configuración de los dispositivos Windows 10 pueden mostrar
 - La configuración solo está disponible para versiones más recientes de Windows, pero no para la versión actual del sistema operativo (SO) del dispositivo.
 - La configuración solo está disponible para ediciones de Windows o SKU específicas, como Home, Professional, Enterprise o Education.
 
-Para obtener más información sobre los requisitos de versión y de SKU para las distintas opciones de configuración, vea [Configuration Service Provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Referencia del proveedor de servicios de configuración).
+Para obtener más información sobre los requisitos de versión y de SKU para las distintas opciones de configuración, vea [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference) (Referencia del proveedor de servicios de configuración).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
