@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680411"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996697"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos macOS para permitir o restringir características mediante Intune
 
@@ -176,7 +176,7 @@ Esta característica se aplica a:
 ### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>Las opciones se aplican a: Inscripción de dispositivos aprobada por el usuario e inscripción de dispositivos automatizada
 
 - **Aplicaciones y procesos**: **agregue** aplicaciones o procesos para configurar el acceso. Indique también:
-  - **Nombre**: indique un nombre para la aplicación o el proceso. Por ejemplo, escriba `Microsoft Remote Desktop` o `Microsoft Office 365`.
+  - **Nombre**: indique un nombre para la aplicación o el proceso. Por ejemplo, escriba `Microsoft Remote Desktop` o `Microsoft 365`.
   
   - **Tipo de identificador**: Las opciones son:
     - **Identificador de lote**: seleccione esta opción para las aplicaciones.

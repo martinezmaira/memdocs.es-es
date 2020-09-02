@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 402285b871db6c3ff18e8f89ec0553a51dab9c13
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 42d77d8424464973f7a0c114193c11c9440664cf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165556"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992966"
 ---
 # <a name="reference-for-application-entities"></a>Referencia de entidades de aplicaciones
 
@@ -77,7 +77,7 @@ La entidad **appTypes** muestra el origen de instalación de una aplicación.
 | 3 |Aplicación de la tienda iOS | Una aplicación de la tienda iOS. |
 | 4 |Aplicación de LOB de iOS | Una aplicación de línea de negocio de iOS. |
 | 5 |Aplicación administrada de la tienda iOS (¿MAM?) | Una aplicación de la tienda iOS habilitada para la administración. |
-| 6 |Conjunto de aplicaciones de O365 ProPlus | Las Aplicaciones de Microsoft 365 para Windows 10. |
+| 6 |Aplicaciones de Microsoft 365 para empresas | Las Aplicaciones de Microsoft 365 para Windows 10. |
 | 7 |Aplicación web | Una aplicación web. |
 | 8 |Aplicación de la Tienda Windows Phone 8.1 | Una aplicación de la Tienda Windows Phone 8.1. |
 | 9 |Aplicación de la Tienda Windows | Una aplicación de la Tienda Windows. |

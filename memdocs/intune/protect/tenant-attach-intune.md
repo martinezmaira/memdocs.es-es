@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d56b06b49846201d6198c1abc81185bf74765ae3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 5c3d5bd14efddc74e1898f374bbaac2aa962ebf7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823530"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193672"
 ---
 # <a name="configure-tenant-attach-to-support-endpoint-security-policies-from-intune"></a>Configuración de la asociación de inquilinos para admitir directivas de seguridad de punto de conexión de Intune
 
@@ -187,4 +187,4 @@ Después de configurar las colecciones que se van a sincronizar con el centro de
 
 - [Configure directivas de seguridad de punto de conexión](endpoint-security-policy.md#create-an-endpoint-security-policy) para *antivirus* y *detección de puntos de conexión y respuesta*.
 
-- Obtenga más información sobre [detección de puntos de conexión y respuesta](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) en la documentación de ATP de Microsoft Defender.
+- Obtenga más información sobre [detección de puntos de conexión y respuesta](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) en la documentación de ATP de Microsoft Defender.

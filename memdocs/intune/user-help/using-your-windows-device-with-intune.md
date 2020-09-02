@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179331"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057277"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Uso del dispositivo Windows con Portal de empresa de Intune
 
@@ -33,7 +33,7 @@ En esta sección se describen las tareas y la información específica para el P
 ## <a name="how-to-get-company-portal"></a>Cómo obtener el Portal de empresa
 El Portal de empresa está disponible en la versión de sitio web y también como una descarga de aplicación. Para [acceder al sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980), inicie sesión con sus credenciales profesionales o educativas.  
 
-Vea [¿Cómo puedo iniciar sesión en la aplicación Portal de empresa?](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal) para conocer los pasos detallados y ver capturas de pantalla.
+Vea [¿Cómo puedo iniciar sesión en la aplicación Portal de empresa?](./sign-in-to-the-company-portal.md) para conocer los pasos detallados y ver capturas de pantalla.
 
 ## <a name="supported-versions"></a>Versiones compatibles
 
@@ -67,7 +67,7 @@ El Portal de empresa admite otras versiones de Windows, como [Windows 10 Hologra
 * [Necesita actualizar el dispositivo Windows](you-need-to-update-your-windows-device.md)
 * [Envío de registros al equipo de soporte técnico de su empresa desde la aplicación Portal de empresa para Windows 10](send-logs-to-your-it-admin-cp-windows.md)
 * [Envío de registros al equipo de soporte técnico de su empresa desde la aplicación Configuración para Windows 10](send-logs-to-your-it-admin-settings-windows.md)
-* [Instalación de Office 365 en dispositivos Windows 10](install-office-windows.md)
+* [Instalación de Office en un dispositivo Windows 10](install-office-windows.md)
 * [Necesita habilitar el cifrado](you-need-to-enable-windows-encryption.md)
 * [Su dispositivo necesita software antimalware](your-device-needs-antimalware-software.md)
 * [Habilitación del arranque seguro](you-need-to-enable-secure-boot-windows.md)
