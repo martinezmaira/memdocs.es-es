@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: aafd83f1aa09881c9e7c4196b91798ab0d278a87
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993660"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385337"
 ---
 # <a name="windows-autopilot-requirements"></a>Requisitos de Windows Autopilot
 
@@ -53,14 +53,14 @@ Windows AutoPilot depende de una variedad de servicios basados en Internet. El a
 - Garantizar la resolución de nombres DNS para los nombres DNS de Internet
 - Permitir el acceso a todos los hosts a través del puerto 80 (HTTP), 443 (HTTPS) y 123 (UDP/NTP)
 
-En entornos que tengan acceso a Internet más restrictivo, o para los que requieran autenticación antes de que se pueda obtener acceso a Internet, es posible que sea necesario realizar una configuración adicional para incluir en la lista de permitidos el acceso a los servicios necesarios. 
+En entornos que tengan acceso a Internet más restrictivo, o para los que requieran autenticación antes de que se pueda obtener acceso a Internet, puede ser necesaria una configuración adicional para permitir el acceso a los servicios necesarios. 
 
 > [!NOTE]
 > La autenticación basada en certificados y tarjetas inteligentes no se admite durante OOBE. Para obtener más información, consulte [tarjetas inteligentes y autenticación basada en certificados](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 Para obtener detalles adicionales acerca de cada uno de estos servicios y sus requisitos específicos, revise los detalles siguientes:
 
-<table><th>Servicio<th>Información de
+<table><th>Servicio<th>Information
 <tr><td><b>Servicio de implementación de Windows AutoPilot<b><td>Una vez que se haya establecido una conexión de red, cada dispositivo de Windows 10 se pondrá en contacto con el servicio de implementación de Windows AutoPilot.  Con Windows 10 versión 1903 y versiones posteriores, se usan las direcciones URL siguientes: https://ztd.dds.microsoft.com , https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Activación de Windows<b><td>Windows AutoPilot también requiere servicios de activación de Windows. Consulte <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">activación o validación de Windows error con el código de error 0x8004FE33</a> para obtener más información sobre las direcciones URL que deben ser accesibles para los servicios de activación.<br>
