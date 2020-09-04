@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995201"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193689"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Preguntas frecuentes sobre la retirada de Ready for modern desktop
 
@@ -49,7 +49,7 @@ Muchos clientes tienen dificultades para estar siempre actualizados con Windows�
 
 En el directorio *Ready for modern desktop* se enumeraban las soluciones de software admitidas y en uso en dispositivos comerciales que ejecutaban Windows 10 y Aplicaciones de Microsoft 365 para empresas. El directorio ayuda a los administradores de TI que están pensado en implementar las versiones más recientes de Windows 10 y Microsoft 365.
 
-Los administradores de TI expresan en sus comentarios que quieren que esta información se integre con las herramientas que ya usan para crear sus planes de implementación. Use [Análisis de escritorio](https://aka.ms/dadocs) y las [características de preparación para Aplicaciones de Microsoft 365](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) de Configuration Manager para planear y administrar los proyectos de actualización de Windows 10 y Aplicaciones de Microsoft 365 para empresas. 
+Los administradores de TI expresan en sus comentarios que quieren que esta información se integre con las herramientas que ya usan para crear sus planes de implementación. Use [Análisis de escritorio](https://aka.ms/dadocs) y las [características de preparación para Aplicaciones de Microsoft 365](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) de Configuration Manager para planear y administrar los proyectos de actualización de Windows 10 y Aplicaciones de Microsoft 365 para empresas. 
 
 > [!Note]
 > A partir del 21 de abril de 2020, el nombre de Office 365 ProPlus cambia a **Aplicaciones de Microsoft 365 para empresas**. Para obtener más información, vea [Cambio de nombre para Office 365 ProPlus](/deployoffice/name-change). Es posible que siga viendo referencias al nombre anterior en la consola de Configuration Manager y la documentación complementaria mientras se está actualizando la consola.
@@ -122,4 +122,4 @@ Evalúe el rendimiento de las soluciones con informes de estado y métricas a tr
 
 Asegúrese de que las aplicaciones de escritorio sean compatibles con Windows 10 ahora y en el futuro. Para más información, consulte [Compatibilidad de aplicaciones para desarrolladores](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Si desarrolla soluciones para Aplicaciones de Microsoft 365 para empresas, consulte [Procedimientos recomendados de desarrollo para complementos COM, VSTO y VBA en Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Si desarrolla soluciones para Aplicaciones de Microsoft 365 para empresas, consulte [Procedimientos recomendados de desarrollo para complementos COM, VSTO y VBA en Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

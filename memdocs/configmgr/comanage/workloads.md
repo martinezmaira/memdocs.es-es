@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 08261c51170e110dff40ebaaf7699c631ceda7e7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995235"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193722"
 ---
 # <a name="co-management-workloads"></a>Administración conjunta de cargas de trabajo
 
@@ -112,7 +112,7 @@ Esta carga de trabajo administra Aplicaciones de Microsoft 365 en dispositivos 
 
 - Hay una nueva condición global, **¿Las aplicaciones de Office 365 están administradas por Intune en este dispositivo?** Esta condición se agrega de forma predeterminada como requisito a las nuevas aplicaciones de Microsoft 365. Cuando se realiza la transición de esta carga de trabajo, los clientes con administración conjunta no cumplen el requisito en la aplicación. Por tanto, no instalan Microsoft 365 implementado a través de Configuration Manager.  
 
-Para más información sobre la característica de Intune, consulte [Asignación de aplicaciones de Microsoft 365 a dispositivos Windows 10 con Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
+Para más información sobre la característica de Intune, consulte [Asignación de aplicaciones de Microsoft 365 a dispositivos Windows 10 con Microsoft Intune](/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Aplicaciones cliente
 

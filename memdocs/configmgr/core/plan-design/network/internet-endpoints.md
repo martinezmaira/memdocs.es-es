@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a71fcd23977cc105a8d64f59edc45333cbd8c451
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692694"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068242"
 ---
 # <a name="internet-access-requirements"></a>Requisitos de acceso a Internet
 
@@ -264,12 +264,6 @@ Para más información sobre esta característica, consulte [Centro de comunidad
 - `https://github.com`
 
 - `https://communityhub.microsoft.com`
-
-### <a name="monitoring-workspace-site-hierarchy-node"></a>Área de trabajo Supervisión, nodo Jerarquía de sitios
-
-Si usa la **vista geográfica**, permita el acceso al punto de conexión siguiente:
-
-- `http://maps.bing.com`
 
 ## <a name="desktop-analytics"></a>Análisis de escritorio
 

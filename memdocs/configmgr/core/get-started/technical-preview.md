@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129127"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432581"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -166,11 +166,8 @@ Las características siguientes se lanzaron con versiones anteriores de la rama 
 
 | Característica        | Versión de Technical Preview |
 |----------------|---------------------------|
-| Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente <!--3601237--> | [Versión preliminar técnica 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | Mejoras en las aplicaciones disponibles a través de CMG <!--7033501--> | [Versión preliminar técnica 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Asociación de inquilinos: Mejoras en las acciones de Configuration Manager del centro de administración de Microsoft Endpoint Manager <!--7518897--> | [Versión preliminar técnica 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | Asociación de inquilinos: escala de tiempo del dispositivo en el centro de administración <!--7141381--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Asociación de inquilinos: instalación de una aplicación desde el centro de administración <!--6024389--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | Asociación de inquilinos: CMPivot desde el centro de administración <!--6024392--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Asociación de inquilinos: ejecución de scripts desde el centro de administración <!--6234688--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Mejoras en los cmdlets de Cloud Management Gateway <!--6978300--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |

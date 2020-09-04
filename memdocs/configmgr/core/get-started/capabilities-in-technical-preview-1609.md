@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2ab05abee2889259cc6c92e9081e4d10e2123923
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995541"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193756"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funciones de Technical Preview 1609 de Configuration Manager
 
@@ -347,7 +347,7 @@ El panel muestra gráficos para lo siguiente:
 - Versiones de cliente de Office 365
 - Idiomas de cliente de Office 365
 - Canales de cliente de Office 365     
-Para más información, vea [Información general de los canales de actualización para Aplicaciones de Microsoft 365](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Para más información, vea [Información general de los canales de actualización para Aplicaciones de Microsoft 365](/deployoffice/overview-update-channels).
 - Reglas de implementación automática que tienen seleccionado el cliente de Office 365 en el conjunto de productos disponibles
 
 En el panel se pueden realizar las siguientes acciones:
