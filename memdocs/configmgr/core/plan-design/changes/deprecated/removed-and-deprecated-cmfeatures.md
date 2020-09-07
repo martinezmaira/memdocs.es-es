@@ -2,7 +2,7 @@
 title: Características en desuso
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las características que Configuration Manager ya no admite.
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aca9dc5c2ff2d88155ab19656f391cf87a4e977f
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694266"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068096"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Características en desuso y eliminadas de Configuration Manager
 
@@ -31,6 +31,7 @@ Las siguientes características están en desuso. Ahora todavía puede usarlas, 
 
 |Característica|Primer anuncio del desuso|Soporte técnico&nbsp;eliminado|
 |-----------|---|--------------|
+|La vista geográfica en el nodo **Jerarquía de sitios** del área de trabajo **Supervisión** de la consola de Configuration Manager.<!--8116777-->|Agosto de 2020|TBD|
 |Ha cambiado la implementación para compartir contenido de Azure. Use una puerta de enlace de administración en la nube habilitada para contenido. No podrá crear un punto de distribución en la nube tradicional en el futuro.|Febrero de 2019|Por determinar<sup>[Nota 1](#bkmk_note1)</sup>|
 |Implementación del servicio clásico en Azure para la puerta de enlace de administración y el punto de distribución en la nube. Para obtener más información, vea [Planificación de Cloud Management Gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|Noviembre de 2018|Por determinar<sup>[Nota 1](#bkmk_note1)</sup>|
 

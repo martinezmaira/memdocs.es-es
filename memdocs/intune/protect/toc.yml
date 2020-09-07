@@ -214,6 +214,8 @@
       items:
         - name: Uso de certificados para la autenticación
           href: certificates-configure.md
+        - name: Conectores de certificados
+          href: certificate-connectors.md
         - name: SCEP
           items:
             - name: Infraestructura de SCEP

@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b419f313b9d4d300d286cf32605ebfe7e0e1573c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699796"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068062"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Más información sobre la privacidad de Configuration Manager
 
@@ -88,6 +88,9 @@ Para obtener más información, vea [Endpoint Protection](../../../protect/deplo
 
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Jerarquía del sitio – vista geográfica con Bing Maps
+
+> [!IMPORTANT]
+> A partir de agosto de 2020, esta característica está en desuso. Use la opción **Diagrama de jerarquía**.<!--8116777-->
 
 En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**, seleccione el nodo **Jerarquía de sitio** y cambie a la **Vista geográfica**. Esta visa le permite usar mapas proporcionados por Mapas de Bing de Microsoft para ver la topología del servidor físico de Configuration Manager. Para habilitar esta característica, se envía información de ubicación proporcionada por usted desde su servidor al servicio web de Mapas de Bing.
 

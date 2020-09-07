@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699592"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432547"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integración con Power BI Report Server
 
@@ -103,9 +103,15 @@ Use este proceso solo si aún no tiene un punto de servicios de informes en el s
 
 1. Cuando el informe esté listo para ser guardado, vaya al menú **Archivo**, seleccione **Guardar como** y, después, seleccione **Power BI Report Server**.
 
-1. En la ventana **Power BI Report Server Selection** (Selección de Power BI Report Server), escriba la dirección URL del punto de servicios de informes como **Nueva dirección de servidor de informes**. Por ejemplo, `https://rsp.contoso.com/Reports`.
+1. En la ventana **Power BI Report Server Selection** (Selección de Power BI Report Server), escriba la dirección URL del punto de servicios de informes como **Nueva dirección de servidor de informes**. Por ejemplo, `https://rsp.contoso.com/Reports`. Seleccione **Aceptar**.
 
-En la consola de Configuration Manager, verá el informe nuevo en la lista de informes de Power BI.
+1. En la ventana **Guardar informe**, haga doble clic en la carpeta `ConfigMgr_<SiteCode>`. Por ejemplo, `ConfigMgr_PS1`, donde `PS1` es el código de sitio de ConfigMgr. También puede elegir o crear (desde el servidor de informes) una subcarpeta donde almacenarlo.
+    > [!TIP]
+    > Los informes y las carpetas con informes de Power BI se deben colocar en la carpeta `ConfigMgr_<SiteCode>` del servidor de informes o no aparecerán en la consola de Configuration Manager.
+
+1. En **Nombre de archivo**, escriba un nombre para el informe.
+
+En la consola de Configuration Manager, verá el informe nuevo en la lista de informes de Power BI. Si no ve los informes, compruebe que los guardó en la carpeta `ConfigMgr_<SiteCode>`.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

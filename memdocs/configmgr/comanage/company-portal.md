@@ -2,7 +2,7 @@
 title: Aplicaciones del Portal de empresa
 titleSuffix: Configuration Manager
 description: Proporcione una experiencia de usuario uniforme para que los dispositivos administrados conjuntamente usen la aplicación Portal de empresa.
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 535b91b82e024431e4221824b4623b6ffc17b286
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700889"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432564"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente
 
@@ -50,7 +50,9 @@ Para más información, consulte los siguientes artículos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Rama actual de Configuration Manager, versión 2006 o posterior
+- Rama actual de Configuration Manager, versión 2006 o posterior<sup>([Ver las Preguntas más frecuentes](#bkmk_ver-prereq))</sup>
+
+- Aplicación Portal de empresa, versión 11.0.8980.0 o posterior
 
 - Windows 10, versión 1803 o posterior:
 
@@ -116,6 +118,10 @@ Si cambia la configuración de cliente para el Portal de empresa, cuando un usua
 Para ayudar a solucionar problemas relacionados con la instalación de aplicaciones de Configuration Manager, vaya a la sección **Ayuda y soporte técnico** del Portal de empresa. Si usa la opción **Obtener ayuda**, puede enviar archivos de registro de Configuration Manager como parte de la solicitud.
 
 ## <a name="frequently-asked-questions-faq"></a>Preguntas más frecuentes
+
+### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Uso la versión 2002 de Configuration Manager, ¿por qué el Portal de empresa nuevo muestra las aplicaciones de Configuration Manager?
+
+El Portal de empresa, versión 11.0.8980.0 o posterior, muestra las aplicaciones implementadas por Configuration Manager para todos los clientes administrados conjuntamente que la usan. El requisito previo es la versión 2006 de Configuration Manager, porque agrega la configuración de cliente para controlar las notificaciones. Si instala el Portal de empresa en un dispositivo administrado conjuntamente de una versión anterior o no ajusta la configuración de cliente, los usuarios verán las notificaciones de ambos portales. Esta experiencia puede resultar confusa para los usuarios.
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>¿El Portal de empresa admite las aplicaciones implementadas como actualizaciones de software de Configuration Manager?
 

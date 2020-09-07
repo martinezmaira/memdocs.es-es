@@ -10,12 +10,12 @@ ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fc6744ef7d1aaf90a5e7339cc9a5174c0d33f6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 504943df58c0471a0ef821a269cc22b2d12d76d8
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694403"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068045"
 ---
 # <a name="monitor-the-hierarchy"></a>Supervisión de la jerarquía
 
@@ -101,11 +101,7 @@ Para obtener más información, consulte [Monitor software updates](../../../sum
 
 ## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a> Supervisión de jerarquías de sitio
 
-El nodo **Jerarquía del sitio** del área de trabajo **Supervisión** proporciona una visión general de la jerarquía de Configuration Manager y de los vínculos entre sitios. Puede utilizar dos vistas:  
-
-- **Diagrama de jerarquía**: muestra la jerarquía como un mapa topológico simplificado que solo muestra la información esencial. Para más información, consulte [Diagrama de jerarquía](#hierarchy-diagram).  
-
-- **Vista geográfica**: presenta los sitios en un mapa geográfico que muestra las ubicaciones de sitios que configure. Para más información, consulte [Vista geográfica](#geographical-view).  
+El nodo **Jerarquía del sitio** del área de trabajo **Supervisión** proporciona una visión general de la jerarquía de Configuration Manager y de los vínculos entre sitios. 
 
 Use el nodo **Jerarquía del sitio** para supervisar el estado de cada sitio. Supervise también los vínculos de replicación entre sitios y su relación con factores externos, como una ubicación geográfica.  
 
@@ -123,13 +119,16 @@ Las siguientes opciones modifican el diagrama de jerarquía:
 
 #### <a name="groups"></a>Grupos
 
-Configure el número de sitios primarios y secundarios que desencadenan un cambio en el diagrama de jerarquía. Este cambio en la visualización combina los sitios en un solo objeto. Después, verá el número total de sitios y un resumen de alto nivel de mensajes de estado y estado de sitio. Las configuraciones de grupo no afectan a la vista geográfica.  
+Configure el número de sitios primarios y secundarios que desencadenan un cambio en el diagrama de jerarquía. Este cambio en la visualización combina los sitios en un solo objeto. Después, verá el número total de sitios y un resumen de alto nivel de mensajes de estado y estado de sitio.
 
 #### <a name="favorite-sites"></a>Sitios favoritos
 
 Especifique los sitios individuales como sitios favoritos. Un icono de estrella identifica un sitio favorito en el diagrama de jerarquía. Los sitios favoritos no se combinan con otros sitios cuando se utilizan grupos. Siempre se muestran de forma individual.  
 
 ### <a name="geographical-view"></a>Vista geográfica
+
+> [!IMPORTANT]
+> A partir de agosto de 2020, esta característica está en desuso. Use la opción **Diagrama de jerarquía**.<!--8116777-->
 
 La vista geográfica muestra la ubicación de cada sitio en un mapa geográfico. Solo muestra los sitios que configure con una ubicación. Cuando seleccione un sitio en esta vista, muestra los vínculos de replicación a sitios primarios o secundarios. A diferencia de la vista Diagrama de jerarquía, en esta vista no puede mostrar mensajes de estado del sitio ni detalles del vínculo de replicación.  
 
