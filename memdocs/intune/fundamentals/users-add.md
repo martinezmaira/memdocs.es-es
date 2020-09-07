@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10b3e8d25f32277b3aa96e5e008d1f6611b7e46c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 56d632da8480e0beedac7f086928638633dbe49c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988156"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996323"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Adición de usuarios y concesión de permiso administrativo a Intune
 
@@ -36,7 +36,7 @@ Puede agregar usuarios manualmente a la suscripción de Intune mediante el [Cent
 ### <a name="add-intune-users-in-the-microsoft-365-admin-center"></a>Incorporación de usuarios de Intune en el Centro de administración de Microsoft 365
 
 1. Inicie sesión en el [Centro de administración de Microsoft 365](https://admin.microsoft.com) con una cuenta de administrador de administración de usuarios o administrador global.
-2. En el menú de Office 365, seleccione **Administración**.
+2. En el menú de Microsoft 365, seleccione **Administración**.
 3. En el Centro de administración, seleccione **Agregar un usuario**.
 
    ![Captura de pantalla de la sección Agregar usuario](./media/users-add/office-add-user.png)
@@ -76,10 +76,10 @@ Puede agregar usuarios manualmente a la suscripción de Intune mediante el [Cent
 
 Tras agregar usuarios adicionales a la suscripción de Intune, le recomendamos que conceda permiso administrativo a algunos usuarios.  Para conceder permisos administrativos, siga estos pasos:
 
-### <a name="give-admin-permissions-in-office-365"></a>Proporcionar permisos administrativos en Office 365
+### <a name="give-admin-permissions-in-microsoft-365"></a>Concesión de permisos administrativos en Microsoft 365
 
 1. Inicie sesión en el [Centro de administración de Microsoft 365](https://admin.microsoft.com) con una cuenta de administrador global.
-2. En el menú de Office 365, seleccione **Administración**.
+2. En el menú de Microsoft 365, seleccione **Administración**.
 3. En el Centro de administración, pulse **Usuarios activos** y, después, elija el usuario al que se le van a proporcionar los permisos de administración.
 
 4. En la columna **Roles**, pulse **Editar**.
@@ -102,11 +102,11 @@ Tras agregar usuarios adicionales a la suscripción de Intune, le recomendamos q
 
 Asigne a los usuarios uno o varios permisos de administrador. Estos permisos definen el ámbito administrativo de los usuarios y las tareas que pueden administrar. Los permisos de administrador son comunes entre los diferentes servicios en la nube de Microsoft, y es posible que algunos servicios no sean compatibles con determinados permisos. Azure Portal y el Centro de administración de Microsoft 365 muestran roles de administrador limitados que no usa Intune. Los permisos de administrador de Intune incluyen las opciones siguientes:
 
-- **Administrador global**: (Office 365 e Intune) tiene acceso a todas las características administrativas de Intune. De manera predeterminada, la persona que se suscriba a Intune se convertirá en un administrador global. Los administradores globales son los únicos administradores que pueden asignar otros roles de administrador. Puede tener más de un administrador global en la organización. Como procedimiento recomendado, se recomienda que solo unas pocas personas de la empresa tengan este rol, a fin de disminuir el riesgo para la empresa.
-- **Administrador de contraseñas**: (Office 365 e Intune) restablece contraseñas, administra solicitudes del servicio y supervisa el estado de dicho servicio. Los administradores de contraseñas están limitados a restablecer las contraseñas de los usuarios.
-- **Administrador de servicio**: (Office 365 e Intune) abre solicitudes de soporte técnico con Microsoft y puede ver el panel de servicio y el centro de mensajes. Tienen permisos de "solo para visualización", excepto para abrir incidencias de soporte técnico y leerlas.
-- **Administrador de facturación**: (Office 365 e Intune) hace compras, administra suscripciones e incidencias de soporte técnico, y supervisa el estado del servicio.
-- **Administrador de usuarios**: (Office 365 e Intune) restablece contraseñas, supervisa el estado del servicio, agrega y elimina cuentas de usuario y, además, administra solicitudes de servicio. El administrador de control de usuarios no puede eliminar a un administrador global, crear otros roles de administrador ni restablecer las contraseñas de otros administradores.
+- **Administrador global**: (Microsoft 365 e Intune) tiene acceso a todas las características administrativas de Intune. De manera predeterminada, la persona que se suscriba a Intune se convertirá en un administrador global. Los administradores globales son los únicos administradores que pueden asignar otros roles de administrador. Puede tener más de un administrador global en la organización. Como procedimiento recomendado, se recomienda que solo unas pocas personas de la empresa tengan este rol, a fin de disminuir el riesgo para la empresa.
+- **Administrador de contraseñas**: (Microsoft 365 e Intune) restablece contraseñas, administra solicitudes del servicio y supervisa el mantenimiento de dicho servicio. Los administradores de contraseñas están limitados a restablecer las contraseñas de los usuarios.
+- **Administrador de servicio**: (Microsoft 365 e Intune) abre solicitudes de soporte técnico con Microsoft y puede ver el panel de servicio y el centro de mensajes. Tienen permisos de "solo para visualización", excepto para abrir incidencias de soporte técnico y leerlas.
+- **Administrador de facturación**: (Microsoft 365 e Intune) hace compras, administra suscripciones e incidencias de soporte técnico y supervisa el mantenimiento del servicio.
+- **Administrador de usuarios**: (Microsoft 365 e Intune) restablece contraseñas, supervisa el mantenimiento del servicio, agrega y elimina cuentas de usuario y, además, administra solicitudes de servicio. El administrador de control de usuarios no puede eliminar a un administrador global, crear otros roles de administrador ni restablecer las contraseñas de otros administradores.
 - **Administrador de servicios de Intune**: todos los permisos de administrador global de Intune excepto el permiso para crear administradores con las opciones **Rol de directorio**.
 
 La cuenta que se usa para crear la suscripción a Microsoft Intune es un administrador global. Como procedimiento recomendado, no use un administrador global para las tareas de administración cotidianas. Aunque los administradores no necesitan tener una licencia de Intune para acceder al portal de Intune en Azure, sí que necesitan tener una licencia de Intunes para realizar ciertas tareas de administración, como configurar el Conector de servicio de Exchange.
@@ -115,11 +115,11 @@ Para acceso al Centro de administración de Microsoft 365, la cuenta debe tener
 
 ## <a name="sync-active-directory-and-add-users-to-intune"></a>Sincronizar Active Directory y agregar usuarios a Intune
 
-Puede configurar la sincronización de directorios para importar las cuentas de usuario desde la instancia local de Active Directory a Microsoft Azure Active Directory (Azure AD), que incluye los usuarios de Intune. Tener el servicio local de Active Directory conectado con todos los servicios basados en Azure Active Directory facilita la administración de identidades de usuario en gran medida. También puede configurar características de inicio de sesión único para que la experiencia de autenticación resulte fácil y familiar a los usuarios. Al vincular el mismo [inquilino de Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) con varios servicios, las cuentas de usuario que sincronizó previamente están disponibles para todos los servicios basados en la nube.
+Puede configurar la sincronización de directorios para importar las cuentas de usuario desde la instancia local de Active Directory a Microsoft Azure Active Directory (Azure AD), que incluye los usuarios de Intune. Tener el servicio local de Active Directory conectado con todos los servicios basados en Azure Active Directory facilita la administración de identidades de usuario en gran medida. También puede configurar características de inicio de sesión único para que la experiencia de autenticación resulte fácil y familiar a los usuarios. Al vincular el mismo [inquilino de Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity) con varios servicios, las cuentas de usuario que sincronizó previamente están disponibles para todos los servicios basados en la nube.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Sincronización de usuarios locales con Azure AD
 
 La única herramienta que necesita para sincronizar las cuentas de usuario con Azure AD es el [Asistente de Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594). El Asistente de Azure AD Connect proporciona una experiencia guiada y simplificada que conectará su infraestructura de identidad local con la nube. Elija la topología y las necesidades (uno o varios directorios, sincronización de hash de contraseñas, autenticación de paso a través o federación). El asistente implementa y configura todos los componentes necesarios para preparar la conexión. Esto incluye los servicios de sincronización, los servicios de federación de Active Directory (AD FS) y el módulo de PowerShell de Azure AD.
 
 > [!TIP]
-> Azure AD Connect abarca funciones que se publicaron anteriormente, como la Sincronización de directorios y la Sincronización de Azure AD. Obtenga más información sobre la [integración de directorios](https://technet.microsoft.com/library/jj573653.aspx). Para obtener información sobre la sincronización de cuentas de usuario desde un directorio local con Azure AD, consulte [Similitudes entre Active Directory y Azure AD](https://technet.microsoft.com/library/dn518177.aspx).
+> Azure AD Connect abarca funciones que se publicaron anteriormente, como la Sincronización de directorios y la Sincronización de Azure AD. Obtenga más información sobre la [integración de directorios](/previous-versions/azure/azure-services/jj573653(v=azure.100)). Para obtener información sobre la sincronización de cuentas de usuario desde un directorio local con Azure AD, consulte [Similitudes entre Active Directory y Azure AD](/previous-versions/azure/azure-services/dn518177(v=azure.100)).

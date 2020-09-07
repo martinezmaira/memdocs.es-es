@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 34f1aeb9ec265b7a6e09135bc931574732f5816d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137384"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994215"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune ofrecido por 21Vianet en China  
 
@@ -48,20 +48,20 @@ Dado que los servicios de China operan en un partner de dentro de China, hay alg
   - Funcionalidades de Google Play Protect como certificación de dispositivo SafetyNet
   - Administración de aplicaciones desde Google Play Store
   - Funcionalidades de Android Enterprise Para más información, consulte la [documentación de Google](https://support.google.com/work/android/answer/6270910?hl=en).
-- La aplicación Portal de empresa de Intune para Android utiliza los servicios de Google para móviles para comunicarse con el servicio Microsoft Intune. Como los servicios de Google Play no están disponible en China, algunas tareas pueden tardar hasta ocho horas en completarse. Para más información, consulte este [artículo](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
+- La aplicación Portal de empresa de Intune para Android utiliza los servicios de Google para móviles para comunicarse con el servicio Microsoft Intune. Como los servicios de Google Play no están disponible en China, algunas tareas pueden tardar hasta ocho horas en completarse. Para más información, consulte este [artículo](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - Para seguir las regulaciones locales y proporcionar una funcionalidad mejorada, la experiencia del cliente de Intune (aplicación Portal de empresa) puede diferir en China.
 - Las barreras no están disponibles.
 - La disponibilidad de administración de aplicaciones móviles (MAM) depende de las aplicaciones que están disponibles en la República Popular China.
 
 ## <a name="you-control-customer-data"></a>Control de los datos de los clientes
 
-En Microsoft Azure, Intune, Office 365 y Power BI ofrecido por 21Vianet, usted tiene el control total de los datos:
+En Microsoft Azure, Intune, Microsoft 365 y Power BI ofrecido por 21Vianet, usted tiene el control total de los datos:
 - Sabe dónde se encuentran los datos del cliente.
 - Puede controlar el acceso a los datos del cliente.
 - Puede controlar los datos de los clientes si deja el servicio.
 - Tiene opciones para controlar la seguridad de los datos de los clientes.
 
-Con Microsoft Azure, Intune, Office 365 y Power BI ofrecido por 21Vianet, usted es el propietario de los datos:
+Con Microsoft Azure, Intune, Microsoft 365 y Power BI ofrecido por 21Vianet, usted es el propietario de los datos:
 - 21Vianet no utiliza los datos de clientes para publicidad.
 - Usted controla quién tiene acceso a los datos del cliente.
 - Usamos el aislamiento lógico para separar los datos de cada cliente.
@@ -72,8 +72,8 @@ Con Microsoft Azure, Intune, Office 365 y Power BI ofrecido por 21Vianet, uste
 
 El rol Administrador de inquilinos para Intune ofrecido por 21Vianet puede solicitar datos para los titulares de las siguientes maneras:
 
-- Mediante el centro de administración de Azure Active Directory, un administrador de inquilinos puede eliminar de forma permanente un titular de los datos de Azure Active Directory y servicios relacionados. Para más información, consulte la sección Paso 5: Eliminar de [Solicitudes de titulares de los datos de Azure para el RGPD y la CCPA](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- Los administradores de inquilinos pueden exportar los registros generados por el sistema para los servicios de Microsoft ofrecidos por 21Vianet mediante la exportación del registro de datos. Para más información, consulte la sección Paso 6: Exportar de [Solicitudes de titulares de los datos de Azure para el RGPD y la CCPA](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
+- Mediante el centro de administración de Azure Active Directory, un administrador de inquilinos puede eliminar de forma permanente un titular de los datos de Azure Active Directory y servicios relacionados. Para más información, consulte la sección Paso 5: Eliminar de [Solicitudes de titulares de los datos de Azure para el RGPD y la CCPA](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- Los administradores de inquilinos pueden exportar los registros generados por el sistema para los servicios de Microsoft ofrecidos por 21Vianet mediante la exportación del registro de datos. Para más información, consulte la sección Paso 6: Exportar de [Solicitudes de titulares de los datos de Azure para el RGPD y la CCPA](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

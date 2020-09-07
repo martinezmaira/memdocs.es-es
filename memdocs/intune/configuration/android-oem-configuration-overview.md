@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f493b6c6f9ee100c15a3958ec435261da271f7c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 8bc0bdaec4d8eb194619176a4130737752d36c06
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262819"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194188"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Uso y administración de dispositivos Android Enterprise con OEMConfig en Microsoft Intune
 
@@ -151,7 +151,7 @@ La siguiente vez que el dispositivo busca actualizaciones de configuración, se 
 
 ## <a name="supported-oemconfig-apps"></a>Aplicaciones OEMConfig admitidas
 
-En comparación con las aplicaciones estándar, las aplicaciones OEMConfig expanden los privilegios de configuración administrados concedidos por Google para admitir esquemas y funciones más complejos. Los OEM deben registrar sus aplicaciones OEMConfig en Google. Si no las registran, es posible que estas características no funcionen según lo esperado. Intune admite actualmente las siguientes aplicaciones OEMConfig:
+En comparación con las aplicaciones estándar, las aplicaciones OEMConfig expanden los privilegios de configuración administrados concedidos por Google para admitir esquemas y funciones más complejos. Los OEM deben [registrar sus aplicaciones OEMConfig en Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform). Si no las registran, es posible que estas características no funcionen según lo esperado. Intune admite actualmente las siguientes aplicaciones OEMConfig:
 
 -----------------
 
@@ -183,12 +183,12 @@ En comparación con las aplicaciones estándar, las aplicaciones OEMConfig expan
 
 -----------------
 
-Si existe una aplicación OEMConfig para el dispositivo, pero no aparece en la tabla anterior ni en la consola de Intune, envíe un correo electrónico a `IntuneOEMConfig@microsoft.com`.
+Si representa un OEM y existe una aplicación OEMConfig para los dispositivos, pero no se encuentra en la tabla anterior, escriba un correo electrónico a `IntuneOEMConfig@microsoft.com` para solicitar ayuda de incorporación. Los OEM también deben [registrar sus aplicaciones OEMConfig en Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform).
 
 > [!NOTE]
-> Las aplicaciones OEMConfig deben ser incorporadas por Intune para que se puedan configurar con perfiles de OEMConfig. Una vez que una aplicación se ha admitido, no es necesario ponerse en contacto con Microsoft al respecto de su configuración en el inquilino. Solo tiene que seguir las instrucciones que aparecerán en esta página.
+> Las aplicaciones OEMConfig deben ser incorporadas por Google e Intune para que se puedan configurar con perfiles de OEMConfig. Una vez que una aplicación se ha admitido, no es necesario ponerse en contacto con Microsoft al respecto de su configuración en el inquilino. Solo tiene que seguir las instrucciones que aparecerán en esta página.
 >
-> Si tiene una aplicación OEMConfig que se comporta de manera incorrecta, póngase en contacto con los desarrolladores de la aplicación. Intune no es responsable de los problemas técnicos de las aplicaciones OEMConfig individuales.
+> Si los valores de configuración de una aplicación OEMConfig se comportan de manera incorrecta, póngase en contacto con los desarrolladores de la aplicación. Intune no es responsable de los problemas técnicos de las aplicaciones OEMConfig individuales.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

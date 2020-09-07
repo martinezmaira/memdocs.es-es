@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f44bd52d12753ae25b8828d6c41d3055721a1fd6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: fc6201ca73a7599ab05b8a4874a431eed6b81c46
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165998"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912481"
 ---
 # <a name="intune-reports"></a>Informes de Intune
 Los informes de Microsoft Intune le permiten supervisar de forma más eficaz y proactiva el estado y la actividad de los puntos de conexión de toda la organización, además de proporcionar otros datos de informes en Intune. Por ejemplo, podrá ver informes sobre el cumplimiento, el estado y las tendencias de los dispositivos. Además, puede crear informes personalizados para obtener datos más específicos. 
@@ -40,12 +40,12 @@ La plataforma de informes proporciona una experiencia de informes coherente y m�
 - **Rendimiento**: puede generar y ver rápidamente los informes creados a partir de inquilinos de gran tamaño.
 - **Exportación**: puede exportar rápidamente los datos de informes generados a partir de inquilinos de gran tamaño.
 
-### <a name="who-can-access-the-data"></a>¿Quién puede tener acceso a los datos?
+### <a name="who-can-access-the-data"></a>¿Quién puede acceder a los datos?
 
 Los usuarios con los siguientes permisos pueden revisar los registros:
 
 - Administrador global
-- Administrador del servicio de Intune
+- Administrador de servicios de Intune
 - Administradores asignados a un rol de Intune con los permisos de **Lectura**
 
 ## <a name="non-compliant-devices-report-operational"></a>Informe de dispositivos no conformes (operativo)
@@ -53,7 +53,7 @@ El informe de dispositivos no conformes muestra los datos que suelen usar los ro
 
 Puede ver el informe **Dispositivos no conformes** mediante los pasos siguientes:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Dispositivos** > **Monitor** > **Dispositivos no conformes**.
 
     ![Informe de dispositivos no conformes](./media/intune-reports/intune-reports-02.png)
@@ -67,7 +67,7 @@ Los informes de cumplimiento de dispositivos son generales por naturaleza y prop
 
 Para ver un informe generado del estado de un dispositivo, puede seguir estos pasos:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Informes** para ver el resumen de informes.
 3. Seleccione **Cumplimiento del dispositivo**.
 4. Seleccione los filtros **Estado de cumplimiento**, **OS** y **Propiedad** para refinar el informe.
@@ -84,7 +84,7 @@ Para ver información relacionada, consulte acerca de la [aplicación del cumpli
 
 El informe de cumplimiento de dispositivos está disponible como informe de resumen en la carga de trabajo **Informes**. Use los pasos siguientes para ver el informe de cumplimiento de dispositivos:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Informes** para ver el resumen de informes.
 
     ![Resumen de informes de Intune](./media/intune-reports/intune-reports-01.png)
@@ -97,13 +97,13 @@ Un informe de tendencias de cumplimiento de dispositivos puede mostrar la tenden
 
 Para ver el informe de **Tendencias**, siga estos pasos:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Informes** > **Tendencias** para ver el cumplimiento de los dispositivos durante una tendencia de 60 días.
 
     ![Informe de tendencias de Intune](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Informes de integración de Azure Monitor (especialista)
-Puede personalizar sus propios informes para obtener los datos que desee. Los datos de los informes estarán disponibles opcionalmente a través de [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) mediante [Log Analytics](reports.md#log-analytics) y los [libros de Azure Monitor](reports.md#workbooks). Estas soluciones le permiten crear consultas personalizadas, configurar alertas y hacer que los paneles muestren los datos de cumplimiento de dispositivos de la manera deseada. Además, puede conservar los registros de actividad en su cuenta de almacenamiento de Azure, integrarlos con los informes mediante [herramientas de administración de eventos e información de seguridad (SIEM)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration) y correlacionar los informes con los registros de actividad de Azure AD. Además de para importar paneles, los libros de Azure Monitor se pueden usar cuando es necesario generar informes personalizados.
+Puede personalizar sus propios informes para obtener los datos que desee. Los datos de los informes estarán disponibles opcionalmente a través de [Azure Monitor](/azure/azure-monitor/overview) mediante [Log Analytics](reports.md#log-analytics) y los [libros de Azure Monitor](reports.md#workbooks). Estas soluciones le permiten crear consultas personalizadas, configurar alertas y hacer que los paneles muestren los datos de cumplimiento de dispositivos de la manera deseada. Además, puede conservar los registros de actividad en su cuenta de almacenamiento de Azure, integrarlos con los informes mediante [herramientas de administración de eventos e información de seguridad (SIEM)](/microsoft-365/security/office-365-security/siem-server-integration) y correlacionar los informes con los registros de actividad de Azure AD. Además de para importar paneles, los libros de Azure Monitor se pueden usar cuando es necesario generar informes personalizados.
 
 > [!NOTE]
 > La funcionalidad de informes complejos requiere una suscripción a Azure.
@@ -112,7 +112,7 @@ Un informe especialista de ejemplo crearía una correlación entre los datos de 
 
 Para crear y ver informes personalizados, siga estos pasos:
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Informes** > **Configuración de diagnóstico** y agregue una [configuración de diagnóstico](reports.md#diagnostic-settings).
 
     ![Resumen de informes de Intune](./media/intune-reports/intune-reports-04.png)
@@ -123,7 +123,7 @@ Para crear y ver informes personalizados, siga estos pasos:
 
     ![Resumen de informes de Intune](./media/intune-reports/intune-reports-04a.png)
 
-6. Haga clic en **Guardar**.
+6. Haga clic en **Save**(Guardar).
 7. Luego, seleccione **Log Analytics** para crear y ejecutar una nueva consulta mediante [Log Analytics](reports.md#log-analytics).
 
    ![Log Analytics: consulta de registros](./media/intune-reports/intune-reports-05.png)
@@ -135,27 +135,27 @@ Para crear y ver informes personalizados, siga estos pasos:
 ### <a name="diagnostic-settings"></a>Configuración de diagnóstico
 Cada recurso de Azure requiere su propia configuración de diagnóstico. La configuración de diagnóstico define lo siguiente para un recurso:
 
-- Las categorías de registros y los datos de métricas enviados a los destinos definidos en la configuración. Las categorías disponibles variarán para los distintos tipos de recursos.
+- Categorías de los datos de los registros y las métricas que se envían a los destinos definidos en la configuración. Las categorías disponibles varían para los distintos tipos de recursos.
 - Uno o más destinos para enviar los registros. Los destinos actuales incluyen el área de trabajo de Log Analytics, Event Hubs y Azure Storage.
-- Directiva de retención de los datos almacenados en Azure Storage.
+- Directiva de retención para los datos almacenados en Azure Storage.
 
-Una sola configuración de diagnóstico puede definir uno de cada uno de los destinos. Si quiere enviar datos a más de uno de un tipo de destino determinado (por ejemplo, dos áreas de trabajo de Log Analytics diferentes), cree varias opciones de configuración. Cada recurso puede tener hasta cinco configuraciones de diagnóstico.
+Una sola configuración de diagnóstico puede definir uno de los destinos. Si desea enviar datos a más de un tipo de destino determinado (por ejemplo, dos áreas de trabajo de Log Analytics diferentes), cree varias configuraciones. Cada recurso puede tener hasta 5 configuraciones de diagnóstico.
 
-Para más información sobre la configuración de diagnóstico, consulte [Creación de una configuración de diagnóstico para recopilar registros de plataforma y métricas en Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings).
+Para más información sobre la configuración de diagnóstico, consulte [Creación de una configuración de diagnóstico para recopilar registros de plataforma y métricas en Azure](/azure/azure-monitor/platform/diagnostic-settings).
 
-### <a name="log-analytics"></a>Análisis de registro
-Log Analytics es la herramienta principal de Azure Portal para escribir consultas de registro y analizar de forma interactiva los resultados de las consultas. Incluso si una consulta de registro se usa en otra parte de Azure Monitor, normalmente escribirá y probará la consulta primero con Log Analytics. Para más información sobre el uso de Log Analytics y la creación de consultas de registro, consulte [Introducción a las consultas de registro en Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
+### <a name="log-analytics"></a>Log Analytics
+Log Analytics es la herramienta principal de Azure Portal para escribir consultas de registro y analizar de forma interactiva los resultados de las consultas. Incluso si una consulta de registro se usa en otro lugar en Azure Monitor, normalmente deberá escribir y probar la consulta primero mediante Log Analytics. Para más información sobre el uso de Log Analytics y la creación de consultas de registro, consulte [Introducción a las consultas de registro en Azure Monitor](/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Libros
-Los libros combinan texto, consultas de análisis, métricas de Azure y parámetros en informes interactivos enriquecidos. Los libros son editables por cualquier otro miembro del equipo que tenga acceso a los mismos recursos de Azure. Para más información sobre los libros, consulte [Libros de Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Además, puede trabajar con las plantillas de libro y contribuir a ellas. Para más información, consulte [Plantillas de libro de Azure Monitor](https://go.microsoft.com/fwlink/?linkid=867045).
+### <a name="workbooks"></a>Workbooks
+Los libros combinan texto, consultas de análisis, métricas de Azure y parámetros en informes interactivos enriquecidos. Otros miembros del equipo con acceso a los mismos recursos de Azure pueden editar los libros. Para más información sobre los libros, consulte [Libros de Azure Monitor](/azure/azure-monitor/app/usage-workbooks). Además, puede trabajar con las plantillas de libro y contribuir a ellas. Para más información, consulte [Plantillas de libro de Azure Monitor](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Pasos siguientes 
 
 Conozca más sobre las siguientes tecnologías:
 - [Blog: Plataforma de informes de Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
-- [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [¿Qué es Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Consultas de registros](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
-- [Introducción a Log Analytics en Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
-- [Libros de Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
-- [Herramientas de administración de eventos e información de seguridad (SIEM)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)
+- [Azure Monitor](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+- [¿Qué es Log Analytics?](/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Consultas de registros](/azure/azure-monitor/log-query/log-query-overview)
+- [Introducción a los análisis de registros de Azure Monitor](/azure/azure-monitor/log-query/get-started-portal)
+- [Libros de Azure Monitor](/azure/azure-monitor/app/usage-workbooks)
+- [Herramientas de administración de eventos e información de seguridad (SIEM)](/microsoft-365/security/office-365-security/siem-server-integration)

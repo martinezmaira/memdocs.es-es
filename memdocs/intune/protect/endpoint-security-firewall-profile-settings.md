@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431610"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068140"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Configuración de la directiva de firewall para la seguridad de los puntos de conexión en Intune
 
@@ -198,22 +198,22 @@ Los siguientes valores se configuran como [Directiva de seguridad para los punto
   - **No configurado**
 
 - **Nombre de familia del paquete**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Para recuperar los nombres de familia del paquete, ejecute el comando Get-AppxPackage de PowerShell.
 
 - **Ruta de acceso de archivo**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   Para especificar la ruta de acceso de un archivo de una aplicación, escriba la ubicación de las aplicaciones en el dispositivo cliente. Por ejemplo, `C:\Windows\System\Notepad.exe` o `%WINDIR%\Notepad.exe`.
 
 - **Nombre del servicio**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Use un nombre corto de servicio de Windows cuando un servicio, no una aplicación, envía o recibe tráfico. Los nombres cortos de servicio se recuperan mediante la ejecución del comando `Get-Service` desde PowerShell.
 
 - **Protocolo**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Especifique el protocolo para esta regla de puerto.
   - Los protocolos de nivel de transporte como *TCP(6)* y *UDP(17)* permiten especificar puertos o intervalos de puertos.
@@ -228,7 +228,7 @@ Los siguientes valores se configuran como [Directiva de seguridad para los punto
   - **No configurado**.
 
 - **Usuarios autorizados**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Especifique una lista de usuarios locales autorizados para esta regla. No se puede especificar una lista de usuarios autorizados si en esta directiva se establece *Nombre del servicio* como un servicio de Windows. Si no se especifica ningún usuario autorizado, el valor predeterminado es *Todos los usuarios*.
 
@@ -237,9 +237,14 @@ Los siguientes valores se configuran como [Directiva de seguridad para los punto
   - **Sí**: admita cualquier dirección local y no configure ningún intervalo de direcciones.
 
 - **Intervalos de direcciones locales**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Agregue una o más direcciones en una lista separada por comas de las direcciones locales que cubre la regla. Las entradas válidas (tokens) incluyen las opciones siguientes:
+  Administre los intervalos de direcciones locales para esta regla. Puede:
+  - **Agregar** una o más direcciones en una lista separada por comas de las direcciones locales que cubre la regla.
+  - **Importar** un archivo .csv que contenga una lista de direcciones que se usarán como intervalos de direcciones locales.
+  - **Exportar** la lista actual de intervalos de direcciones locales como un archivo .csv.
+
+  Las entradas válidas (tokens) incluyen las opciones siguientes:
   - **Un asterisco**: este símbolo (\*) indica cualquier dirección local. Si está presente, el asterisco debe ser el único token incluido.
   - **Una subred**: especifique las subredes con la notación de máscara de subred o de prefijo de red. Si no se especifica ninguna máscara de subred ni ningún prefijo de red, el valor predeterminado de la máscara de subred será 255.255.255.255.
   - **Una dirección IPv6 válida**
@@ -253,9 +258,14 @@ Los siguientes valores se configuran como [Directiva de seguridad para los punto
   - **Sí**: admita cualquier dirección remota y no configure ningún intervalo de direcciones.
 
 - **Intervalos de direcciones remotas**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Agregue una o más direcciones en una lista separada por comas de las direcciones remotas que cubre la regla. Las entradas válidas (tokens) incluyen lo siguiente y no distinguen mayúsculas de minúsculas:
+  Administre los intervalos de direcciones remotas para esta regla. Puede:
+  - **Agregar** una o más direcciones en una lista separada por comas de las direcciones remotas que cubre la regla.
+  - **Importar** un archivo .csv que contenga una lista de direcciones que se usarán como intervalos de direcciones remotas.
+  - **Exportar** la lista actual de intervalos de direcciones remotas como un archivo .csv.
+
+  Las entradas válidas (tokens) incluyen lo siguiente y no distinguen mayúsculas de minúsculas:
   - **Un asterisco**: este símbolo (\*) indica cualquier dirección remota. Si está presente, el asterisco debe ser el único token incluido.
   - **Defaultgateway**
   - **DHCP**

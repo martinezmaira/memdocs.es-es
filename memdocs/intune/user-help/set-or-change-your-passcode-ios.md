@@ -1,11 +1,11 @@
 ---
-title: Establecer o cambiar el código de acceso | Microsoft Docs
-description: Establecer o cambiar el código de acceso
+title: Establecimiento o cambio del código de acceso del dispositivo | Portal de empresa de Intune | Microsoft Docs
+description: Establezca o cambie el código de acceso en el dispositivo iOS para cumplir los requisitos de seguridad de la organización.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,33 +17,32 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 85b98d9ea3a4953e26bf94f990e2c1321309f4de
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d4bc798b668fb0922183419eac01a2d3003eb16
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881920"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057494"
 ---
-# <a name="set-or-change-your-passcode"></a>Establecer o cambiar el código de acceso
+# <a name="set-a-device-passcode-on-ios-device"></a>Establecimiento de un código de acceso de dispositivo en el dispositivo iOS  
 
-Cree otro código de acceso o cambie uno existente para satisfacer los requisitos de la organización. El código de acceso impedirá que personas no autorizadas desbloqueen y utilicen el dispositivo. 
+> [!TIP]
+> Para conocer los pasos más actualizados, consulte la [documentación de Apple](https://support.apple.com/HT204060). 
 
-La organización puede establecer más de un requisito para los códigos de acceso. Para obtener una lista de los requisitos de contraseña comunes, consulte [Requisitos de contraseña para los dispositivos inscritos](password-does-not-meet-it-administrator-requirements.md).  
-
-Si tiene problemas para crear o cambiar el código de acceso, póngase en contacto con el personal de soporte técnico de TI.  
-
-
-## <a name="set-your-passcode"></a>Establecer el código de acceso
+Cree una contraseña nueva o más segura en el dispositivo iOS.  
 
 1. Pulse en **Settings** > **Touch ID & Passcode**.
 2. En el menú **Touch ID & Passcode** (Touch ID y código de acceso), pulse en **Turn Passcode On** (Activar código de acceso).
-3. Escriba un nuevo código de acceso que cumpla los requisitos del equipo de soporte técnico de su empresa y, luego, vuelva a escribirlo para confirmarlo.
+3. Escriba un nuevo código de acceso y vuelva a escribirlo para confirmarlo.  
 
-## <a name="change-your-passcode"></a>Cambiar el código de acceso
+Para cambiar el código de acceso del dispositivo: 
 
 1. Pulse en **Settings** > **Touch ID & Passcode**.
-2. Escriba el código de acceso. Se abre el menú **Touch ID & Passcode** (Touch ID y código de acceso).
-2. Pulse en **Change Passcode** (Cambiar código de acceso) y escriba el código de acceso anterior.
-3. Escriba un nuevo código de acceso que cumpla los requisitos del equipo de soporte técnico de su empresa y, luego, vuelva a escribirlo para confirmarlo.
+2. Escriba el código de acceso actual. 
+3. Se abre el menú **Touch ID & Passcode** (Touch ID y código de acceso). Pulse **Cambiar código de acceso** y vuelva a escribir su código de acceso actual (que pasará a ser el antiguo).  
+4. Escriba un nuevo código de acceso y vuelva a escribirlo para confirmarlo.  
 
-¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Pasos siguientes  
+
+¿Todavía necesita ayuda o tiene problemas para obtener acceso a la red de la organización? Póngase en contacto con el personal de soporte técnico de TI. Para obtener la información de contacto, consulte el [sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

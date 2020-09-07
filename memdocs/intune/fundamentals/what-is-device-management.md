@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: c7d5583addc4e76f5af0ea0b9780f20d8fa78a2c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353622"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996204"
 ---
 # <a name="device-management-overview"></a>Información general sobre la administración de dispositivos
 
@@ -52,20 +52,20 @@ Con Intune, es posible administrar varios dispositivos por persona y las distint
 **[Usos habituales de Microsoft Intune](common-scenarios.md)** es un excelente recurso para ver cómo Intune responde ante preguntas comunes al trabajar con dispositivos móviles. Encontrará escenarios sobre:  
 
 - Protección del correo electrónico con Exchange local
-- Acceso a Office 365 de forma segura
+- Acceso a Microsoft 365 de forma segura
 - Uso de dispositivos personales para acceder a recursos de la organización
 
 Para más información sobre Intune, consulte [¿Qué es Intune?](what-is-intune.md)
 
 ## <a name="co-management"></a>Administración conjunta
 
-Muchas organizaciones usan Configuration Manager en el entorno local para administrar dispositivos, como equipos de escritorio y servidores. Puede asociar su instancia local de Configuration Manager a Microsoft Intune. Cuando se conecta en la nube, se obtienen las ventajas de Intune y la nube, incluidos el [acceso condicional](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), la [ejecución de acciones remotas](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), el [uso de Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), etc.
+Muchas organizaciones usan Configuration Manager en el entorno local para administrar dispositivos, como equipos de escritorio y servidores. Puede asociar su instancia local de Configuration Manager a Microsoft Intune. Cuando se conecta en la nube, se obtienen las ventajas de Intune y la nube, incluidos el [acceso condicional](../../configmgr/comanage/quickstart-conditional-access.md), la [ejecución de acciones remotas](../../configmgr/comanage/quickstart-remote-actions.md), el [uso de Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md), etc.
 
-[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) es una plataforma de soluciones que unifica varios servicios. Incluye [Microsoft Intune](what-is-intune.md) para la administración de dispositivos basada en la nube y [Configuration Manager e Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) para la administración de dispositivos que se conectan a la nube.
+[Microsoft Endpoint Manager](../../endpoint-manager-overview.md) es una plataforma de soluciones que unifica varios servicios. Incluye [Microsoft Intune](what-is-intune.md) para la administración de dispositivos basada en la nube y [Configuration Manager e Intune](../../configmgr/comanage/overview.md) para la administración de dispositivos que se conectan a la nube.
 
 Si usa Configuration Manager y está listo para trasladar algunas tareas a la nube, la administración conjunta es la respuesta.
 
-Para obtener más información sobre cómo asociar la nube a Configuration Manager, consulte [¿Qué es administración conjunta?](https://docs.microsoft.com/mem/configmgr/comanage/overview).
+Para obtener más información sobre cómo asociar la nube a Configuration Manager, consulte [¿Qué es administración conjunta?](../../configmgr/comanage/overview.md).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integración con servicios de protección
 
@@ -108,11 +108,11 @@ En el centro de administración de dispositivos, puede:
 - Administrar actualizaciones de software
   - [Administrar actualizaciones de Windows 10](../protect/windows-update-for-business-configure.md)  
   - [Administración de actualizaciones de iOS/iPadOS](../protect/software-updates-ios.md)  
-- [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
-- [Administración de usuarios](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [Administrar grupos y miembros](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Azure Active Directory](/azure/active-directory)  
+- [Administración de usuarios](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [Administrar grupos y miembros](/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [Solución de problemas](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Cuando esté listo para empezar a trabajar con una solución de MDM o MAM, siga los distintos pasos para configurar Intune, inscribir dispositivos y empezar a crear directivas. [Mobile device management for Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) (Administración de dispositivos móviles para Microsoft 365) también es un excelente recurso.
+Cuando esté listo para empezar a trabajar con una solución de MDM o MAM, siga los distintos pasos para configurar Intune, inscribir dispositivos y empezar a crear directivas. [Mobile device management for Microsoft 365](/microsoft-365/enterprise/mobility-infrastructure) (Administración de dispositivos móviles para Microsoft 365) también es un excelente recurso.

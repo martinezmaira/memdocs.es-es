@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262054"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286278"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Guía de pruebas para desarrolladores de Android sobre del SDK para aplicaciones de Microsoft Intune
 
@@ -33,7 +33,7 @@ Si aún no tiene un inquilino con la empresa, puede crear un inquilino de demost
 1. Vaya al [sitio de creación de inquilinos de Microsoft CDX](https://cdx.transform.microsoft.com/my-tenants/create-tenant) y cree un inquilino de Microsoft 365 Enterprise.
 2. [Configure Intune](../fundamentals/setup-steps.md) para habilitar la administración de dispositivos móviles (MDM).
 3. [Cree usuarios](../fundamentals/users-add.md).
-4. [Crear grupos](../fundamentals/groups-add.md).
+4. [Create groups]../fundamentals/(groups-add.md).
 5. [Asigne licencias](../fundamentals/licenses-assign.md) según corresponda para las pruebas.
 
 
@@ -97,7 +97,7 @@ Puede restringir el Portapapeles del sistema a las aplicaciones administradas co
     - Se bloquea la copia de texto de la aplicación en una aplicación no administrada (por ejemplo, mensajes).
 
 ### <a name="prevent-save"></a>Impedir guardar
-Si su aplicación requiere [controles "Guardar como" integrados](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations), puede controlar la función **Guardar como** de la siguiente manera:
+Si su aplicación requiere controles "Guardar como" integrados, puede controlar la función **Guardar como** de la siguiente manera:
 
 1. Establezca **Impedir "Guardar como"** en **Sí**.
 2. Confirme las condiciones siguientes:

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048113"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992579"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS importados con Intune
 
@@ -69,7 +69,7 @@ Para usar certificados PKCS importados con Intune, debe contar con esta infraest
 
   Utilice una instancia de Windows Server para hospedar el conector de certificado PFX para Microsoft Intune.  El conector se usa para procesar solicitudes de los certificados importados a Intune.
   
-  El conector requiere acceso a los mismos puertos que se han detallado para los dispositivos administrados, como se indica en el [contenido de punto de conexión de dispositivo](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  El conector requiere acceso a los mismos puertos que se han detallado para los dispositivos administrados, como se indica en el [contenido de punto de conexión de dispositivo](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune admite la instalación de *Microsoft Intune Certificate Connector* en el mismo servidor que el *conector de certificado PFX para Microsoft Intune*.
 
@@ -104,7 +104,7 @@ Al utilizar Intune para implementar un **certificado PFX importado** para un usu
 5. El Conector de certificado PFX para Microsoft Intune se abre en la pestaña **Inscripción** después de la instalación. Para habilitar la conexión con Intune, **inicie sesión**, y escriba una cuenta con permisos de administrador global de Azure o de Intune.
 
    > [!WARNING]
-   > De forma predeterminada, en Windows Server, la opción **Configuración de seguridad mejorada de Internet Explorer** está establecida en **Activada**, lo que puede causar problemas con el inicio de sesión en Office 365.
+   > De forma predeterminada, en Windows Server, la opción **Configuración de seguridad mejorada de IE** está establecida en **Activada**, lo que puede causar problemas con el inicio de sesión en Microsoft 365.
 
 6. Cierre la ventana.
 
@@ -112,9 +112,9 @@ Al utilizar Intune para implementar un **certificado PFX importado** para un usu
 
 ## <a name="import-pfx-certificates-to-intune"></a>Importación de certificados PFX en Intune
 
-Use [Microsoft Graph](https://docs.microsoft.com/graph) para importar los certificados PFX de los usuarios en Intune. El asistente [PFXImport PowerShell Project en GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) proporciona cmdlets para realizar las operaciones con facilidad.
+Use [Microsoft Graph](/graph) para importar los certificados PFX de los usuarios en Intune. El asistente [PFXImport PowerShell Project en GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) proporciona cmdlets para realizar las operaciones con facilidad.
 
-Si prefiere usar su propia solución personalizada con Graph, use el [tipo de recurso userPFXCertificate](https://docs.microsoft.com/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
+Si prefiere usar su propia solución personalizada con Graph, use el [tipo de recurso userPFXCertificate](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
 
 ### <a name="build-pfximport-powershell-project-cmdlets"></a>Compilación de cmdlets de "PFXImport PowerShell Project"
 
@@ -210,7 +210,7 @@ Seleccione el proveedor de almacenamiento de claves que coincida con el proveedo
 
 8. Para validar que el certificado se ha importado, ejecute `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`.
 
-9.  Ejecute `Remove-IntuneAuthenticationToken` para llevar a cabo el procedimiento recomendado a fin de limpiar la memoria caché de tokens de AAD sin esperar a que expire.
+9.  Ejecute `Remove-IntuneAuthenticationToken` para llevar a cabo el procedimiento recomendado a fin de limpiar la memoria caché de tokens de Azure AD sin esperar a que expire.
 
 Para más información sobre otros comandos disponibles, consulte el archivo Léame en [PFXImport PowerShell Project en GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 

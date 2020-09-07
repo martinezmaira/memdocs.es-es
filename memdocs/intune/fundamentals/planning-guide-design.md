@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 6a1f3f4dc6187616d007c0ab9c97072bc3970c0a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663249"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996374"
 ---
 # <a name="create-a-design"></a>Creación de un diseño
 
@@ -134,15 +134,15 @@ Aquí veremos con más detalle estas dependencias externas comunes.
 
 ### <a name="identity"></a>Identidad
 
-Identidad es la manera en que se identifica a los usuarios que pertenecen a la organización y que se inscriben en un dispositivo. Intune requiere Azure Active Directory (Azure AD) como el proveedor de identidades de usuario. Si ya usa este servicio, puede usar la identidad existente en la nube. Además, Azure AD Connect es la herramienta recomendada para sincronizar sus identidades de usuario locales con los servicios en la nube de Microsoft. Si su organización ya usa Office 365, es importante que Intune use el mismo entorno de Azure AD.
+Identidad es la manera en que se identifica a los usuarios que pertenecen a la organización y que se inscriben en un dispositivo. Intune requiere Azure Active Directory (Azure AD) como el proveedor de identidades de usuario. Si ya usa este servicio, puede usar la identidad existente en la nube. Además, Azure AD Connect es la herramienta recomendada para sincronizar sus identidades de usuario locales con los servicios en la nube de Microsoft. Si su organización ya usa Microsoft 365, es importante que Intune use el mismo entorno de Azure AD.
 
 Obtenga más información sobre los siguientes requisitos de identidad de Intune:
 
-- [Requisitos de identidad](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions).
+- [Requisitos de identidad](/azure/active-directory/understand-azure-identity-solutions).
 
-- [Requisitos de sincronización de directorios](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- [Requisitos de sincronización de directorios](/azure/active-directory/connect/active-directory-aadconnect).
 
-- [Requisitos de autenticación multifactor](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+- [Requisitos de autenticación multifactor](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
 ### <a name="user-and-device-groups"></a>Grupos de usuarios y dispositivos
 

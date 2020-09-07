@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820670"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994351"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Cómo obtener asistencia para Microsoft Intune
 
 Microsoft proporciona servicios globales de soporte técnico, preventa, facturación y suscripción para Microsoft Intune. El soporte técnico está disponible tanto en línea como por teléfono para las suscripciones de pago y de prueba. El soporte técnico en línea está disponible en inglés y japonés. El soporte técnico telefónico y para facturación en línea está disponible en otros idiomas.
 
-Como administrador de Intune, puede usar la opción **Ayuda y soporte técnico** para registrar una incidencia de soporte técnico en línea sobre Intune desde Azure Portal. Para crear y administrar un incidente de soporte técnico, su cuenta debe tener un rol de Azure Active Directory (Azure AD) que incluya la *acción* **microsoft.office365.supportTickets/tickets/manage**. Para información sobre los permisos y roles de Azure AD que se necesitan para crear una incidencia de soporte técnico, consulte el artículo sobre los [roles de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+Como administrador de Intune, puede usar la opción **Ayuda y soporte técnico** para registrar una incidencia de soporte técnico en línea sobre Intune desde Azure Portal. Para crear y administrar un incidente de soporte técnico, su cuenta debe tener un rol de Azure Active Directory (Azure AD) que incluya la *acción* **microsoft.office365.supportTickets/tickets/manage**. Para información sobre los permisos y roles de Azure AD que se necesitan para crear una incidencia de soporte técnico, consulte el artículo sobre los [roles de administrador en Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
 >[!IMPORTANT]
 > Para obtener soporte técnico para productos de terceros que funcionan con Intune (por ejemplo, Saaswedo, Cisco o Lookout), póngase en contacto con el proveedor de ese producto en primer lugar. Asegúrese de que ha configurado el otro producto correctamente antes de abrir una solicitud con el soporte técnico de Intune.
@@ -50,7 +50,7 @@ Cuando se usa un inquilino recién creado con Intune, es posible que no pueda ab
 
 Los detalles del error incluyen un *identificador de sesión*, la *extensión*, etc.
 
-Este problema se produce cuando no ha autenticado la nueva cuenta del inquilino en el **Centro de administración de M365** en https://admin.microsoft.com o en el **portal de Office 365** en https://portal.office.com. Para resolver este problema, seleccione el vínculo del *Centro de administración de M365* en el mensaje, o bien, visite https://portal.office.com e inicie sesión. Tras la autenticación en uno de estos sitios, la experiencia *Ayuda y soporte técnico* para Intune se vuelve accesible.
+Este problema se produce cuando no ha autenticado la nueva cuenta del inquilino en el **Centro de administración de Microsoft 365** en https://admin.microsoft.com o en el **portal de Office 365** en https://portal.office.com. Para resolver este problema, seleccione el vínculo del *Centro de administración de Microsoft 365* en el mensaje, o bien, visite https://portal.office.com e inicie sesión. Tras la autenticación en uno de estos sitios, la experiencia *Ayuda y soporte técnico* para Intune se vuelve accesible.
 
 **Acceso a Ayuda y soporte técnico**:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c2689e010c0ec75340e1a96952cf6ac162322da
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 618be398d963e0a796ad9be7e8810201fc5e12f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758285"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995099"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Restricciones de inscripción de dispositivos de Android Enterprise
 
@@ -58,9 +58,9 @@ En el caso de la seguridad alta del perfil de trabajo de Android Enterprise (niv
 Consulte [Inscribir dispositivos totalmente administrados](android-fully-managed-enroll.md#enroll-the-fully-managed-devices) para asegurarse de que la organización admita la inscripción de dispositivos totalmente administrados de Android Enterprise. 
 
 ## <a name="conditional-access-policies"></a>Directivas de acceso condicional
-Las organizaciones pueden usar directivas de acceso condicional de Azure AD para asegurarse de que los usuarios solo puedan acceder al contenido profesional o educativo en dispositivos Android inscritos. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de dispositivos administrados para el acceso a aplicaciones en la nube mediante el acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+Las organizaciones pueden usar directivas de acceso condicional de Azure AD para asegurarse de que los usuarios solo puedan acceder al contenido profesional o educativo en dispositivos Android inscritos. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de dispositivos administrados para el acceso a aplicaciones en la nube mediante el acceso condicional](/azure/active-directory/conditional-access/require-managed-devices). 
 
-Siga los pasos descritos en el [escenario relativo a la obligatoriedad de la inscripción para dispositivos iOS y Android](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), que garantiza que solo los dispositivos móviles inscritos conformes se puedan conectar a los puntos de conexión de Office 365.
+Siga los pasos descritos en el [escenario relativo a la obligatoriedad de la inscripción para dispositivos iOS y Android](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), que garantiza que solo los dispositivos móviles inscritos conformes se puedan conectar a los puntos de conexión de Microsoft 365.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

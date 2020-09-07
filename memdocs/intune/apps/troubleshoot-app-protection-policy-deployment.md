@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531577"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996629"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Solución de problemas de la implementación de directivas de protección de aplicaciones en Intune
 
@@ -57,14 +57,14 @@ Aunque puede usar directivas de protección de aplicaciones en Intune independie
 - El usuario debe pertenecer a un grupo de seguridad de destino de una directiva de protección de aplicaciones. La misma directiva de protección de aplicaciones debe tener como destino la aplicación específica que se va a usa.
 - En el caso de los dispositivos Android, se requiere la aplicación Portal de empresa para recibir directivas de protección de aplicaciones.
 - Si usa aplicaciones de [Word, Excel o PowerPoint](https://products.office.com/business/office), deben cumplirse los siguientes requisitos adicionales:
-    - El usuario debe tener una licencia de [Aplicaciones de Microsoft 365 para negocios o empresas](https://products.office.com/business/compare-more-office-365-for-business-plans) asignada a su cuenta de Azure Active Directory (Azure AD). La suscripción debe incluir las aplicaciones de Office en dispositivos móviles y puede incluir una cuenta de almacenamiento en la nube con [OneDrive para la Empresa](https://onedrive.live.com/about/business/). Las licencias de Office 365 se pueden asignar en el [centro de administración de Microsoft 365](https://admin.microsoft.com) siguiendo [estas instrucciones](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+    - El usuario debe tener una licencia de [Aplicaciones de Microsoft 365 para negocios o empresas](https://products.office.com/business/compare-more-office-365-for-business-plans) asignada a su cuenta de Azure Active Directory (Azure AD). La suscripción debe incluir las aplicaciones de Office en dispositivos móviles y puede incluir una cuenta de almacenamiento en la nube con [OneDrive para la Empresa](https://onedrive.live.com/about/business/). Las licencias de Microsoft 365 se pueden asignar en el [Centro de administración de Microsoft 365](https://admin.microsoft.com) siguiendo estas [instrucciones](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
     - El usuario debe tener una ubicación administrada configurada mediante la funcionalidad específica **Guardar como**. Este comando se encuentra en la opción de configuración **Guardar copias de los datos de la organización** de la directiva de protección de aplicaciones. Por ejemplo, si la ubicación administrada es [OneDrive](https://onedrive.live.com/about/), la aplicación de OneDrive debe estar configurada en la aplicación de Word, Excel o PowerPoint del usuario.
     - Si la ubicación administrada es OneDrive, la directiva de protección de aplicaciones implementada para el usuario debe tener como destino la aplicación.
 
   > [!NOTE]
   > Las aplicaciones móviles de Office actualmente solo admiten SharePoint Online y no SharePoint local.
 
-- Si usa directivas de protección de aplicaciones de Intune junto con recursos locales (Microsoft Skype Empresarial y Microsoft Exchange Server), debe habilitar la [autenticación moderna híbrida (HMA) para Skype Empresarial y Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Si usa directivas de protección de aplicaciones de Intune junto con recursos locales (Microsoft Skype Empresarial y Microsoft Exchange Server), debe habilitar la [autenticación moderna híbrida (HMA) para Skype Empresarial y Exchange](/office365/enterprise/hybrid-modern-auth-overview).
 
 Las directivas de protección de aplicaciones de Intune requieren que la identidad del usuario sea coherente entre la aplicación e [Intune App SDK](../developer/app-sdk-get-started.md). La única manera de garantizar esta coherencia es a través de la autenticación moderna. Hay escenarios en los que las aplicaciones pueden funcionar en una configuración local sin autenticación moderna. Sin embargo, los resultados no son coherentes ni están garantizados.
 
@@ -74,7 +74,7 @@ Para obtener más información acerca de cómo habilitar la HMA para las configu
 [Disponibilidad general de la autenticación moderna híbrida para Skype Empresarial y Exchange](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **Configuración local**<br>
-[Autenticación moderna para Skype Empresarial local con AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[Autenticación moderna para Skype Empresarial local con Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>Comprobación del estado de la directiva de protección de aplicaciones
 
@@ -83,7 +83,7 @@ Para comprobar el estado de protección de las aplicaciones, siga estos pasos:
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Supervisar** > **Estado de protección de la aplicación** y, luego, el icono **Usuarios asignados**.
 3. En la página **Informes de aplicaciones**, seleccione **Seleccionar usuario** para abrir una lista de usuarios y grupos.
-4. Busque a uno de los usuarios afectados en la lista y, a continuación, haga clic en **Seleccionar usuario**. En la parte superior del panel "Informes de aplicaciones", puede ver si el usuario tiene licencia para la protección de aplicaciones y para O365. También puede ver el estado de la aplicación para todos los dispositivos del usuario.
+4. Busque a uno de los usuarios afectados en la lista y, a continuación, haga clic en **Seleccionar usuario**. En la parte superior del panel "Informes de aplicaciones", puede ver si el usuario tiene licencia para la protección de aplicaciones y para Microsoft 365. También puede ver el estado de la aplicación para todos los dispositivos del usuario.
 5. Tome nota de la información importante, como las aplicaciones de destino, los tipos de dispositivos, las directivas, el estado de sincronización de los dispositivos y la hora de la última sincronización.
 
 > [!NOTE]
@@ -95,9 +95,9 @@ Para obtener más información, consulte el artículo [Validación de la configu
 
 En la mayoría de los escenarios, los usuarios inician sesión en sus cuentas mediante su nombre principal de usuario (UPN). Sin embargo, en algunos entornos (como los escenarios locales), los usuarios pueden usar otro tipo de credenciales de inicio de sesión. En estos casos, podría encontrar que el UPN que se usa en la aplicación no coincide con el UPN usado en Azure AD. Cuando pasa esto, las directivas de protección de aplicaciones no se aplican del modo esperado.
 
-El procedimiento recomendado de Microsoft es hacer coincidir el UPN con la dirección SMTP principal. Este procedimiento permite a los usuarios iniciar sesión en aplicaciones administradas, la protección de aplicaciones de Intune y otros recursos de Azure AD con una identidad coherente. Para obtener más información, vea el artículo [Rellenado de userPrincipalName de Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+El procedimiento recomendado de Microsoft es hacer coincidir el UPN con la dirección SMTP principal. Este procedimiento permite a los usuarios iniciar sesión en aplicaciones administradas, la protección de aplicaciones de Intune y otros recursos de Azure AD con una identidad coherente. Para obtener más información, vea el artículo [Rellenado de userPrincipalName de Azure AD](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
-Si su entorno requiere métodos de inicio de sesión alternativos, consulte el artículo [Configuración de un identificador de inicio de sesión alternativo](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), en concreto la sección [Autenticación moderna híbrida con un identificador alternativo](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+Si su entorno requiere métodos de inicio de sesión alternativos, consulte el artículo [Configuración de un identificador de inicio de sesión alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), en concreto la sección [Autenticación moderna híbrida con un identificador alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
 ### <a name="verify-that-the-user-is-targeted"></a>Comprobación de que el usuario es el destinatario
 
@@ -115,7 +115,7 @@ Cuando asigne la directiva a un grupo de usuarios, asegúrese de que el usuario 
 1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Grupos > Todos los grupos** y, a continuación, busque y seleccione el grupo que se usa para la asignación de la directiva de protección de aplicaciones.
 3. En la sección **Administrar**, seleccione **Miembros**.
-4. Si el usuario afectado no aparece en la lista, revise el artículo [Administración del acceso a recursos y aplicaciones con grupos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) y sus reglas de pertenencia a grupos. Asegúrese de que el usuario afectado está incluido en el grupo.
+4. Si el usuario afectado no aparece en la lista, revise el artículo [Administración del acceso a recursos y aplicaciones con grupos en Azure Active Directory](/azure/active-directory/fundamentals/active-directory-manage-groups) y sus reglas de pertenencia a grupos. Asegúrese de que el usuario afectado está incluido en el grupo.
 5. Asegúrese de que el usuario afectado no está en ninguno de los grupos excluidos de la directiva.
 
 > [!IMPORTANT]

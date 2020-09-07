@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865829"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993529"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Solución de problemas con la inscripción de dispositivos en Microsoft Intune
 
@@ -47,8 +47,8 @@ También puede asegurarse de que la hora y fecha en el dispositivo del usuario e
 
 Los usuarios de dispositivos administrados pueden recopilar registros de inscripción y diagnóstico para que usted pueda revisarlos. Aquí se proporcionan instrucciones de usuario para recopilar registros:
 
-- [Enviar errores de inscripción de Android al administrador de TI](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [Enviar errores de iOS/iPadOS al administrador de TI](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Enviar errores de inscripción de Android al administrador de TI](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Enviar errores de iOS/iPadOS al administrador de TI](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>Problemas generales de inscripción
@@ -121,12 +121,12 @@ Para evitar alcanzar los límites de dispositivos, asegúrese de quitar los regi
 **Problema:** este problema puede producirse cuando se agrega un segundo dominio comprobado a ADFS. Los usuarios con el sufijo del nombre principal de usuario (UPN) del segundo dominio no puedan iniciar sesión en los portales o inscribir dispositivos.
 
 
-<strong>Solución:</strong> los clientes de Microsoft Office 365 deben implementar una instancia independiente del Servicio de federación de AD FS 2.0 para cada sufijo si estos:
+<strong>Solución:</strong> los clientes de Microsoft 365 deben implementar una instancia independiente del Servicio de federación de AD FS 2.0 para cada sufijo si estos:
 - usan el inicio de sesión único (SSO) a través de AD FS 2.0, y
 - tienen varios dominios de nivel superior para los sufijos de UPN de los usuarios de su organización (por ejemplo, @contoso.com o @fabrikam.com).
 
 
-Una [acumulación para AD FS 2.0](https://support.microsoft.com/kb/2607496) funciona con el conmutador <strong>SupportMultipleDomain</strong> para permitir que el servidor de AD FS admita este escenario sin necesidad de servidores de AD FS 2.0 adicionales. Para más información, vea [este blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+Una [acumulación para AD FS 2.0](https://support.microsoft.com/kb/2607496) funciona con el conmutador <strong>SupportMultipleDomain</strong> para permitir que el servidor de AD FS admita este escenario sin necesidad de servidores de AD FS 2.0 adicionales. Para más información, vea [este blog](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
 
 ## <a name="android-issues"></a>Problemas de Android
@@ -215,7 +215,7 @@ El usuario podría ser capaz de recuperar el certificado que falta siguiendo las
 
 Después de escribir sus credenciales corporativas y ser redirigidos al inicio de sesión federado, los usuarios todavía pueden ver el error de que falta un certificado. En este caso, el error puede significar que falta un certificado intermedio en el servidor de Servicios de federación de Active Directory (AD FS)
 
-El error de certificado se produce porque los dispositivos Android requieren certificados intermedios que se incluirán en una instancia de [hola de SSL de servidor](https://technet.microsoft.com/library/cc783349.aspx). Actualmente, un servidor AD FS predeterminado o un servidor proxy WAP - AD FS envía solo el certificado SSL del servicio AD FS en la respuesta de hola de SSL de servidor a un hola de SSL de cliente.
+El error de certificado se produce porque los dispositivos Android requieren certificados intermedios que se incluirán en una instancia de [hola de SSL de servidor](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Actualmente, un servidor AD FS predeterminado o un servidor proxy WAP - AD FS envía solo el certificado SSL del servicio AD FS en la respuesta de hola de SSL de servidor a un hola de SSL de cliente.
 
 Para corregir el problema, importe los certificados a los certificados personales de equipos en los servidores proxy o el servidor AD FS de la manera siguiente:
 
@@ -294,9 +294,9 @@ La inscripción de dispositivos ADE con afinidad de usuario requiere que el punt
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-Para obtener más información, consulte la [documentación de Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+Para obtener más información, consulte la [documentación de Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
-Para obtener más información, consulte los [procedimientos recomendados para proteger los Servicios de federación de Active Directory](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Para ayudar a determinar si se habilita WS-Trust 1.3 Username/Mixed en el proveedor de federación de identidades:
+Para obtener más información, consulte los [procedimientos recomendados para proteger los Servicios de federación de Active Directory](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). Para ayudar a determinar si se habilita WS-Trust 1.3 Username/Mixed en el proveedor de federación de identidades:
 - póngase en contacto con el Soporte técnico de Microsoft si usa ADFS
 - póngase en contacto con su proveedor de identidades de terceros.
 

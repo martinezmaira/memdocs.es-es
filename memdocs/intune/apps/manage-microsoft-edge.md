@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501191"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995150"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Administración del acceso web mediante Edge para iOS y Android con Microsoft Intune
 
@@ -34,20 +34,20 @@ Edge para iOS es compatible con iOS 12.0 y versiones posteriores. Edge para And
 > [!NOTE]
 > Edge para iOS y Android no usa la configuración establecida por los usuarios para el explorador nativo en sus dispositivos, porque Edge para iOS y Android no puede acceder a esta configuración.
 
-Tendrá a su disposición las capacidades de protección más enriquecidas y más amplias para los datos de Office 365 cuando se suscriba al conjunto de aplicaciones de Enterprise Mobility + Security, que incluye características de Microsoft Intune y Azure Active Directory Premium, como el acceso condicional. Como mínimo, le interesará implementar una directiva de acceso condicional que solo permita la conectividad a Edge para iOS y Android desde dispositivos móviles y una directiva de protección de aplicaciones de Intune que garantice que la experiencia de exploración esté protegida.
+Tendrá a su disposición las capacidades de protección más enriquecidas y más amplias para los datos de Microsoft 365 cuando se suscriba al conjunto de aplicaciones de Enterprise Mobility + Security, que incluye características de Microsoft Intune y Azure Active Directory Premium, como el acceso condicional. Como mínimo, le interesará implementar una directiva de acceso condicional que solo permita la conectividad a Edge para iOS y Android desde dispositivos móviles y una directiva de protección de aplicaciones de Intune que garantice que la experiencia de exploración esté protegida.
 
 > [!NOTE]
 > Los nuevos clips web (aplicaciones web ancladas) de los dispositivos iOS se abrirán en Edge para iOS y Android, en lugar de en Intune Managed Browser, si tienen que abrirse en un explorador protegido. En el caso de los clips web de iOS más antiguos, debe cambiar el destino de estos clips web para asegurarse de que se abren en Edge para iOS y Android, y no en Managed Browser.
 
 ## <a name="apply-conditional-access"></a>Aplicación del acceso condicional
-Las organizaciones pueden usar directivas de acceso condicional de Azure AD para que los usuarios solo puedan acceder al contenido profesional o educativo mediante Edge para iOS y Android. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de directivas de protección de aplicaciones para el acceso a aplicaciones en la nube con acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Las organizaciones pueden usar directivas de acceso condicional de Azure AD para que los usuarios solo puedan acceder al contenido profesional o educativo mediante Edge para iOS y Android. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de directivas de protección de aplicaciones para el acceso a aplicaciones en la nube con acceso condicional](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Siga el [Escenario 2: Las aplicaciones de explorador requieren aplicaciones aprobadas con directivas de protección de aplicaciones](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), lo que permite Edge para iOS y Android, pero impide que otros exploradores web de dispositivos móviles se conecten a los puntos de conexión de Office 365.
+1. Siga el [Escenario 2: Las aplicaciones de explorador requieren aplicaciones aprobadas con directivas de protección de aplicaciones](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), lo que permite Edge para iOS y Android, pero impide que otros exploradores web de dispositivos móviles se conecten a los puntos de conexión de Office 365.
 
    >[!NOTE]
-   > Esta directiva garantiza que los usuarios móviles puedan acceder a todos los puntos de conexión de Office 365 desde Edge para iOS y Android. Esta Directiva también impide que los usuarios empleen InPrivate para acceder a los puntos de conexión de Office 365.
+   > Esta directiva garantiza que los usuarios móviles puedan acceder a todos los puntos de conexión de Microsoft 365 desde Edge para iOS y Android. Esta directiva también impide que los usuarios empleen InPrivate para acceder a los puntos de conexión de Microsoft 365.
 
-Con el acceso condicional, también puede establecer como destino sitios locales que haya expuesto a usuarios externos a través del [proxy de aplicación de Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
+Con el acceso condicional, también puede establecer como destino sitios locales que haya expuesto a usuarios externos a través del [proxy de aplicación de Azure AD](/azure/active-directory/active-directory-application-proxy-get-started).
 
 ## <a name="create-intune-app-protection-policies"></a>Creación de directivas de protección de aplicaciones de Intune
 
@@ -268,7 +268,7 @@ De forma predeterminada, la sincronización de Microsoft Edge permite a los usu
 - Contraseñas
 - Direcciones y más (entrada de formulario de autorrelleno)
 
-La función de sincronización se habilita mediante el consentimiento del usuario y los usuarios pueden activar o desactivar la sincronización para cada uno de los tipos de datos enumerados anteriormente. Para obtener más información, vea [Sincronización de Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
+La función de sincronización se habilita mediante el consentimiento del usuario y los usuarios pueden activar o desactivar la sincronización para cada uno de los tipos de datos enumerados anteriormente. Para obtener más información, vea [Sincronización de Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync).
 
 Las organizaciones tienen la capacidad de deshabilitar la sincronización de Edge en iOS y Android. 
 
@@ -343,7 +343,7 @@ Puede usar diferentes formatos de URL para crear listas de sitios permitidos o b
 
 ### <a name="manage-proxy-configuration"></a>Administración de la configuración del proxy
 
-Puede usar Edge para iOS y Android junto con [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) para proporcionar a los usuarios acceso a sitios de la intranet desde sus dispositivos móviles. Por ejemplo: 
+Puede usar Edge para iOS y Android junto con [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started) para proporcionar a los usuarios acceso a sitios de la intranet desde sus dispositivos móviles. Por ejemplo: 
 
 - Un usuario está utilizando la aplicación móvil de Outlook, que está protegida por Intune. El usuario hace clic en un vínculo de un correo electrónico que dirige a un sitio de la intranet y Edge para iOS y Android reconoce que dicho sitio se ha expuesto al usuario a través del proxy de aplicación. El usuario se enruta automáticamente a través del proxy de aplicación para que se autentique con una autenticación multifactor y un acceso condicional antes de llegar al sitio de la intranet. Ahora el usuario puede acceder a sitios internos incluso desde sus dispositivos móviles y el vínculo de Outlook funciona según lo previsto.
 - Un usuario abre Edge para iOS y Android en su dispositivo iOS o Android. Si Edge para iOS y Android está protegido con Intune y el proxy de aplicación está habilitado, el usuario puede ir a un sitio de la intranet mediante la URL interna como de costumbre. Edge para iOS y Android reconoce que este sitio de intranet se ha expuesto al usuario a través del proxy de aplicación. El usuario se enruta automáticamente a través del proxy de aplicación para autenticarse antes de llegar al sitio de la intranet. 
@@ -351,7 +351,7 @@ Puede usar Edge para iOS y Android junto con [Azure AD Application Proxy](htt
 Antes de empezar:
 
 - Configure las aplicaciones internas a través de Azure AD Application Proxy.
-  - Para configurar el proxy de aplicación y publicar aplicaciones, vea la [documentación de configuración](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+  - Para configurar el proxy de aplicación y publicar aplicaciones, vea la [documentación de configuración](/azure/active-directory/manage-apps/application-proxy).
 - La aplicación de Edge para iOS y Android debe tener una [directiva de protección de aplicaciones de Intune](app-protection-policy.md) asignada.
 - Las aplicaciones de Microsoft deben contar con una directiva de protección de aplicaciones que tenga el valor de configuración de transferencia de datos **Restringir la transferencia de contenido web con otras aplicaciones** establecido en **Microsoft Edge**.
 
@@ -438,7 +438,7 @@ Los usuarios que tengan instalado Edge para iOS y Android en el dispositivo iOS 
 
 Para obtener una lista de las opciones de configuración almacenadas en los registros de la aplicación, vea [Revisión de los registros de protección de aplicaciones cliente](app-protection-policy-settings-log.md).
 
-Para ver cómo se pueden consultar los registros en dispositivos Android, vea [Enviar registros al administrador de TI por correo electrónico](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
+Para ver cómo se pueden consultar los registros en dispositivos Android, vea [Enviar registros al administrador de TI por correo electrónico](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

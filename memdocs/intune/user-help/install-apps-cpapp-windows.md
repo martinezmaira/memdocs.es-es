@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882196"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057321"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalar y compartir aplicaciones en el dispositivo
 
@@ -53,12 +53,12 @@ Instale aplicaciones en el dispositivo desde la aplicación Portal de empresa pa
 > [!IMPORTANT]
 > Si una aplicación necesaria no se instala y su organización la pone a su disposición para que la instale manualmente, seleccione **Reintentar**. Puede tardar hasta diez minutos en ver el estado actualizado. Si selecciona **Reintentar** de nuevo durante este tiempo y recibe un error, no hay problema. Continúe esperando los diez minutos para obtener un estado actualizado.   
 
-Según el tamaño de la empresa, puede ver varias versiones de Office disponibles para su descarga desde el Portal de empresa. Para información específica sobre el conjunto de aplicaciones Office para dispositivos Windows, vea [Instalación de Office 365 en dispositivos Windows 10](./install-office-windows.md).
+Según el tamaño de la empresa, puede ver varias versiones de Office disponibles para su descarga desde el Portal de empresa. Para obtener información específica sobre el conjunto de aplicaciones Office para dispositivos Windows, vea [Instalación de Microsoft 365 en dispositivos Windows 10](./install-office-windows.md).
 
 ## <a name="share-apps"></a>Recurso compartido de aplicaciones  
 Comparta y recomiende las aplicaciones a sus contactos profesionales o de instituciones educativas. Los pasos siguientes describen cómo compartir un vínculo directamente desde el Portal de empresa.
 
-1. En el Portal de empresa, haga clic con el botón derecho o pulse y mantenga pulsada cualquier aplicación para abrir su [menú contextual](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+1. En el Portal de empresa, haga clic con el botón derecho o pulse y mantenga pulsada cualquier aplicación para abrir su [menú contextual](//windows/uwp/design/controls-and-patterns/menus).  
 
     ![La aplicación Portal de empresa para Windows 10, página principal, que muestra una lista de aplicaciones y dispositivos. El menú de contexto “Compartir” en el que puede hacer clic está visible encima del icono de la aplicación de ejemplo. ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -97,4 +97,4 @@ Para acceder a esta página, vaya al menú de navegación y seleccione **Aplicac
 
 Use **Ordenar por** para reorganizar el tipo de asignación de las aplicaciones, publicador, alfabéticamente por nombre, o cronológicamente por fecha de publicación. Use **Filtrar por** para limitar las aplicaciones que ve según el estado de la instalación.  Si no hay ninguna aplicación disponible, verá un mensaje que indica que no se ha instalado ninguna aplicación de empresa.  
 
-¿Necesita más ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+¿Necesita más ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

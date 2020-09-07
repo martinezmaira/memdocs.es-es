@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565723"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995133"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Problemas comunes y resoluciones con perfiles de correo electrónico en Microsoft Intune
 
@@ -51,7 +51,7 @@ En estos casos, decida si es más importante usar los grupos de dispositivos o m
 
 ## <a name="device-already-has-an-email-profile-installed"></a>El dispositivo ya tiene instalado un perfil de correo electrónico
 
-Si los usuarios crean un perfil de correo electrónico antes de inscribirse en Intune u Office 365 MDM, es posible que el perfil de correo electrónico implementado por Intune no funcione según lo previsto:
+Si los usuarios crean un perfil de correo electrónico antes de inscribirse en Intune o Microsoft 365 MDM, es posible que el perfil de correo electrónico implementado por Intune no funcione según lo previsto:
 
 - **iOS/iPadOS**: Intune detecta un perfil de correo electrónico existente duplicado según el nombre de host y la dirección de correo electrónico. El perfil de correo electrónico creado por el usuario bloquea la implementación del perfil creado por Intune. Este es un problema común, ya que los usuarios de iOS/iPadOS suelen crear un perfil de correo electrónico y, luego, se inscriben. La aplicación Portal de empresa indica que el usuario no cumple con los requisitos y podría pedirle al usuario que quite el perfil de correo electrónico.
 

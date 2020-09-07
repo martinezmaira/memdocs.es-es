@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079236"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992648"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Determinación de los desafíos, los objetivos y las metas de implementación
 
@@ -33,9 +33,9 @@ Tener un buen plan de implementación comienza por identificar primero los objet
 
 Los objetivos de implementación son los logros a largo plazo que pretende conseguir con la implementación de Intune en su organización. A continuación se muestran algunos ejemplos de estos objetivos junto con la descripción y el valor empresarial de cada uno.
 
-- **Integración con Office 365 y admisión del uso de aplicaciones móviles de Office**
+- **Integración con Microsoft 365 y admisión del uso de aplicaciones móviles de Office**
 
-  - **Descripción:** proporcionar una integración firme con Office 365 y el uso de aplicaciones móviles de Office con la protección de aplicaciones.
+  - **Descripción:** proporcionar una integración firme con Microsoft 365 y el uso de aplicaciones móviles de Office con la protección de aplicaciones.
 
   - **Valor empresarial:** experiencia de usuario segura y mejorada permitiendo a los usuarios usar las aplicaciones que prefieren y con las que están familiarizados.
 

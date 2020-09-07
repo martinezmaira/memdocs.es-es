@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
-ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
+ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334630"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193970"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Administración de la directiva de BitLocker para Windows 10 en Intune
 
@@ -97,7 +97,7 @@ Use uno de los procedimientos siguientes para crear el tipo de directiva que pre
    1. **Plataforma**: Windows 10 y versiones posteriores
    2. **Tipo de perfil**: Endpoint Protection
 
-   ![Selección del perfil de BitLocker](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Selección del perfil](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Seleccione **Configuración** > **Cifrado de Windows**.
 
@@ -123,7 +123,8 @@ Puede configurar una directiva de BitLocker que habilite de forma automática y 
 
 Un dispositivo debe cumplir las condiciones siguientes para ser apto para habilitar BitLocker de forma silenciosa:
 
-- El dispositivo debe ejecutar Windows 10, versión 1809 o posterior
+- Si los usuarios finales inician sesión en los dispositivos como administradores, el dispositivo debe ejecutar Windows 10, versión 1803 o posterior.
+- Si los usuarios finales inician sesión en los dispositivos como usuarios estándar, el dispositivo debe ejecutar Windows 10, versión 1809 o posterior.
 - El dispositivo debe estar unido a Azure AD  
 
 **Configuración de directivas de BitLocker**:
@@ -156,7 +157,7 @@ Intune proporciona acceso la hoja de Azure AD para BitLocker, para que pueda ve
 
    Cuando las claves no están en Azure AD, Intune mostrará *No se encontró ninguna clave de BitLocker para este dispositivo*.
 
-La información de BitLocker se obtiene mediante el [proveedor de servicios de configuración de BitLocker (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp). El CSP de BitLocker se admite en Windows 10 versión 1703 y posteriores y en Windows 10 Pro versión 1809 y posteriores.
+La información de BitLocker se obtiene mediante el [proveedor de servicios de configuración de BitLocker (CSP)](/windows/client-management/mdm/bitlocker-csp). El CSP de BitLocker se admite en Windows 10 versión 1703 y posteriores y en Windows 10 Pro versión 1809 y posteriores.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>Rotación de claves de recuperación de BitLocker
 

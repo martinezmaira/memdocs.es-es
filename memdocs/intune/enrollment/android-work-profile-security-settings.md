@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546833"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286210"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Configuraciones de seguridad del perfil de trabajo de Android Enterprise
 
@@ -90,7 +90,9 @@ El nivel 1 es la configuración de seguridad mínima recomendada para los dispos
 | Configuración de perfil de trabajo | Expiración de contraseña (días) | No configurado | Es posible que las organizaciones tengan que actualizar esta configuración para que coincida con su directiva de contraseñas. |
 | Configuración de perfil de trabajo | Tipo de contraseña obligatoria | Numérica compleja ||
 | Configuración de perfil de trabajo | Impedir la reutilización de contraseñas anteriores | No configurado | Es posible que las organizaciones tengan que actualizar esta configuración para que coincida con su directiva de contraseñas.|
+| Configuración de perfil de trabajo | Desbloqueo facial | No configurado ||
 | Configuración de perfil de trabajo | Desbloqueo con huella digital | No configurado ||
+| Configuración de perfil de trabajo | Desbloqueo con iris | No configurado ||
 | Configuración de perfil de trabajo | Smart Lock y otros agentes de confianza | No configurado |||
 | Contraseña del dispositivo | Longitud mínima de la contraseña | 6 | Es posible que las organizaciones tengan que actualizar esta configuración para que coincida con su directiva de contraseñas. |
 | Contraseña del dispositivo | Máximo de minutos de inactividad hasta que se bloquea la pantalla | 5 | Es posible que las organizaciones tengan que actualizar esta configuración para que coincida con su directiva de contraseñas. |
@@ -117,7 +119,7 @@ La configuración de directiva que se aplica en el nivel 3 incluye todas las con
 
 ### <a name="device-compliance"></a>Cumplimiento de dispositivos
 
-| Sección | Setting | Valor | Notas |
+| Sección | Configuración | Value | Notas |
 | ----- | ----- | ----- | ----- |
 | ATP de Microsoft Defender | Solicitar que el dispositivo tenga o esté por debajo de la puntuación de riesgo de la máquina | Borrar | Esta configuración requiere ATP de Microsoft Defender. Para más información, consulte la aplicación del cumplimiento de [ATP de Microsoft Defender con acceso condicional en Intune](../protect/advanced-threat-protection.md).<p>Los clientes deben considerar la posibilidad de implementar ATP de Microsoft Defender o una solución de defensa contra frente a amenazas para dispositivos móviles. No es necesario implementar ambas. |
 | Estado del dispositivo | Requerir que el dispositivo tenga el nivel de amenaza del dispositivo | Protegido | Esta configuración requiere un producto de defensa frente a amenazas para dispositivos móviles. Para más información, consulte [Mobile Threat Defense para dispositivos inscritos](../protect/mtd-device-compliance-policy-create.md).<p>Los clientes deben considerar la posibilidad de implementar ATP de Microsoft Defender o una solución de defensa contra frente a amenazas para dispositivos móviles. No es necesario implementar ambas.|
@@ -128,7 +130,7 @@ La configuración de directiva que se aplica en el nivel 3 incluye todas las con
 
 ### <a name="device-restrictions"></a>Restricciones de dispositivos
 
-| Sección | Setting | Valor | Notas |
+| Sección | Configuración | Value | Notas |
 | ----- | ----- | ----- | ----- |
 | Configuración de perfil de trabajo | Notificaciones del perfil profesional con dispositivo bloqueado | Bloquear | El bloqueo de esta configuración garantiza que los datos confidenciales no se exponen en las notificaciones del perfil de trabajo, lo que puede afectar a la usabilidad. |
 | Configuración de perfil de trabajo | Uso compartido de contactos a través de Bluetooth | No configurado | De forma predeterminada, el acceso a los contactos de trabajo no está disponible en otros dispositivos, como en los automóviles mediante la integración con Bluetooth. Al habilitar esta opción, se mejora la experiencia de usuario sin manos. Sin embargo, el dispositivo Bluetooth puede almacenar en caché los contactos tras la primera conexión. Al implementar esta configuración, las organizaciones deben pensar en el equilibrio entre los escenarios de usabilidad y los problemas de protección de datos. |

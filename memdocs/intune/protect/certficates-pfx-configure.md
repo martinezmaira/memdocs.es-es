@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946650"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970505"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS con Intune
 
@@ -40,12 +40,12 @@ Para usar certificados PKCS con Intune, debe contar con esta infraestructura:
 - **Dominio de Active Directory**:  
   todos los servidores mencionados en esta sección deben estar unidos al dominio de Active Directory.
 
-  Para más información sobre cómo instalar y configurar Active Directory Domain Services (AD DS), vea [Planeación y diseño de AD DS](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  Para más información sobre cómo instalar y configurar Active Directory Domain Services (AD DS), vea [Planeación y diseño de AD DS](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
 - **Entidad de certificación**:  
    entidad de certificación empresarial (CA).
 
-  Para más información sobre cómo instalar y configurar los Servicios de certificados de Active Directory (AD CS), vea [Active Directory Certificate Services Step-by-Step Guide](https://technet.microsoft.com/library/cc772393) (Guía detallada de los Servicios de certificados de Active Directory).
+  Para más información sobre cómo instalar y configurar los Servicios de certificados de Active Directory (AD CS), vea [Active Directory Certificate Services Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)) (Guía detallada de los Servicios de certificados de Active Directory).
 
   > [!WARNING]  
   > Intune requiere ejecutar AD CS con una entidad de certificación (CA) empresarial, no una CA independiente.
@@ -82,7 +82,7 @@ Para usar certificados PKCS con Intune, debe contar con esta infraestructura:
   - Microsoft Intune Certificate Connector para casos de autenticación y firma de correo electrónico S/MIME.
   - Conector de certificado PFX para Microsoft Intune para casos de cifrado de correo electrónico S/MIME.
 
-  Los conectores requieren acceso a los mismos puertos que se detallan para los dispositivos administrados, como se indica en nuestro [contenido sobre los puntos de conexión de los dispositivos](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  Los conectores requieren acceso a los mismos puertos que se detallan para los dispositivos administrados, como se indica en nuestro [contenido sobre los puntos de conexión de los dispositivos](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune admite la instalación del *Conector de certificado PFX* en el mismo servidor que *Microsoft Intune Certificate Connector*.
   
@@ -119,6 +119,12 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
     > El **nombre de la plantilla** predeterminado es el mismo que el **nombre para mostrar de la plantilla** *sin espacios*. Apunte el nombre de la plantilla, lo necesitará más adelante.
 
 6. En **Tratamiento de la solicitud**, seleccione **Permitir que la clave privada se pueda exportar**.
+    
+    > [!NOTE]
+    > A diferencia de SCEP, con PKCS, la clave privada del certificado se genera en el servidor en el que el conector está instalado, y no en el dispositivo. Es necesario que la plantilla de certificado permita la exportación de la clave privada, para que Certificate Connector pueda exportar el certificado PFX y enviarlo al dispositivo. 
+    >
+    > Aun así, tenga en cuenta que los certificados se instalan en el propio dispositivo con la clave privada marcada como no exportable.
+    
 7. En **Criptografía**, confirme que el **Tamaño mínimo de clave** esté establecido en 2048.
 8. En **Nombre del firmante**, elija **Proporcionado por el solicitante**.
 9. En **Extensiones**, confirme que ve Sistema de cifrado de archivos, Correo seguro y Autenticación de cliente en las **Directivas de aplicación**.
@@ -142,7 +148,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 > [!IMPORTANT]  
 > Microsoft Intune Certificate Connector no puede instalarse en la entidad emisora de certificados (CA) y debe instalarse en una instancia independiente de Windows Server.  
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Seleccione **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificados** >  **+ Agregar**.
 
@@ -160,7 +166,7 @@ Para autenticar un dispositivo con VPN, Wi-Fi u otros recursos, el dispositivo n
 6. En la pestaña **Avanzadas**, se recomienda dejar seleccionado **Usar la cuenta SYSTEM de este equipo (predeterminado)** .
 7. **Aplicar** > **Cerrar**
 8. Vuelva al portal de Intune [**Intune** > **Configuración del dispositivo** > **Certification Connectors** (Conectores de certificación)]. Tras unos minutos, se mostrará una marca de verificación verde y el **Estado de la conexión** figurará como **Activo**. Ahora, el servidor del conector puede comunicarse con Intune.
-9. Si tiene un proxy web en el entorno de red, es posible que necesite configuraciones adicionales para que el conector funcione. Para obtener más información, consulte [Trabajo con servidores proxy locales existentes](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) en la documentación de Azure Active Directory.
+9. Si tiene un proxy web en el entorno de red, es posible que necesite configuraciones adicionales para que el conector funcione. Para obtener más información, consulte [Trabajo con servidores proxy locales existentes](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) en la documentación de Azure Active Directory.
     - Android Enterprise (*perfil de trabajo*)
     - iOS
     - macOS
@@ -292,16 +298,16 @@ Plataformas:
   - **CN={{IMEINumber}}** : número exclusivo de identidad de equipo móvil internacional (IMEI) usado para identificar un teléfono móvil.
   - **CN={{OnPrem_Distinguished_Name}}** : Secuencia de nombres distintivos relativos separados por comas, como *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-    Para usar la variable *{{OnPrem_Distinguished_Name}}* , asegúrese de sincronizar el atributo de usuario *onpremisesdistinguishedname* mediante [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
+    Para usar la variable *{{OnPrem_Distinguished_Name}}* , asegúrese de sincronizar el atributo de usuario *onpremisesdistinguishedname* mediante [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
 
   - **CN={{onPremisesSamAccountName}}** : los administradores pueden sincronizar el atributo samAccountName de Active Directory con Azure AD mediante Azure AD Connect en un atributo llamado *onPremisesSamAccountName*. Intune puede sustituir esa variable como parte de una solicitud de emisión de certificado en el asunto de un certificado. El atributo samAccountName es el nombre de inicio de sesión del usuario que se utiliza para admitir clientes y servidores de una versión anterior de Windows (anterior a Windows 2000). El formato de nombre de inicio de sesión de usuario es el siguiente: *NombreDeDominio\usuario de prueba*, o bien solo *usuario de prueba*.
 
-    Para usar la variable *{{onPremisesSamAccountName}}* , asegúrese de sincronizar el atributo de usuario *onPremisesSamAccountName* mediante [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
+    Para usar la variable *{{onPremisesSamAccountName}}* , asegúrese de sincronizar el atributo de usuario *onPremisesSamAccountName* mediante [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) con la instancia de Azure AD.
 
   Mediante una combinación de una o muchas de estas variables y cadenas estáticas, puede crear un formato de nombre de firmante personalizado como este:  
   - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
   
-  Ese ejemplo incluye un formato de nombre de firmante en el que se usan las variables CN y E, y cadenas para los valores Unidad organizativa, Organización, Ubicación, Estado y País. [CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describe esta función y sus cadenas admitidas.
+  Ese ejemplo incluye un formato de nombre de firmante en el que se usan las variables CN y E, y cadenas para los valores Unidad organizativa, Organización, Ubicación, Estado y País. [CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describe esta función y sus cadenas admitidas.
 
 - **Tipo de certificado de dispositivo**  
   Las opciones de formato para el formato de nombre del firmante incluyen las variables siguientes: 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4ef3a4c2ba539cc507ef413a4648b42e246b11d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 297707da0afb03650eaab91b26abad9947c6a951
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990905"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286159"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Informes de cumplimiento de Intune para las actualizaciones
 
@@ -39,15 +39,15 @@ Para revisar un informe de directivas sobre el estado de implementación para lo
 
    En la sección **Supervisar**, elija uno de los siguientes informes para ver información más detallada sobre el círculo de actualizaciones:
 
-   - **Estado de dispositivo**: muestra el estado de configuración del dispositivo. Para más información, consulte [Actualizar deviceConfigurationDeviceStatus]( https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0).
+   - **Estado de dispositivo**: muestra el estado de configuración del dispositivo. Para más información, consulte [Actualizar deviceConfigurationDeviceStatus]( /graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0).
 
-   - **Estado del usuario**: muestra el nombre del usuario, el estado y la fecha de último informe. Para más información, consulte [Enumerar deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
+   - **Estado del usuario**: muestra el nombre del usuario, el estado y la fecha de último informe. Para más información, consulte [Enumerar deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
 
-   - **Estado de actualización del usuario final**: muestra el estado de actualización del dispositivo Windows. Para más información, vea [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
+   - **Estado de actualización del usuario final**: muestra el estado de actualización del dispositivo Windows. Para más información, vea [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
 
 ## <a name="use-update-compliance"></a>Uso de Update Compliance
 
-Puede supervisar las implementaciones de actualización de Windows 10 mediante [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Update Compliance se ofrece a través de Azure Portal y está disponible de forma gratuita para los dispositivos que cumplen los [requisitos previos](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+Puede supervisar las implementaciones de actualización de Windows 10 mediante [Update Compliance](/windows/deployment/update/update-compliance-monitor). Update Compliance se ofrece a través de Azure Portal y está disponible de forma gratuita para los dispositivos que cumplen los [requisitos previos](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 Cuando se utiliza esta solución, se implementa un identificador comercial en cualquiera de sus dispositivos Windows 10 administrados con Intune para el que quiera que se informe del cumplimiento de las actualizaciones.  
 
@@ -59,12 +59,12 @@ Por ejemplo, puede usar los siguientes valores en **Agregar o editar configuraci
 
 - **Nombre de la configuración**: identificador comercial de Windows Analytics
 - **Descripción de la configuración**: configuración del identificador comercial para soluciones de Windows Analytics
-- **OMA-URI** (distingue mayúsculas de minúsculas): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
+- **OMA-URI** (distingue mayúsculas de minúsculas): *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
 - **Tipo de datos**: String
-- **Valor**: \<Utilizar el GUID que se muestra en la pestaña Telemetría de Windows del área de trabajo de OMS>
+- **Valor**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
 
 > [!NOTE]
-> Para obtener más información sobre MS DM Server, vea [DMClient configuration service provider (CSP)]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp) (Proveedor de servicios de configuración (CSP) de DMClient).
+> Para obtener más información sobre MS DM Server, vea [DMClient configuration service provider (CSP)]( /windows/client-management/mdm/dmclient-csp) (Proveedor de servicios de configuración (CSP) de DMClient).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

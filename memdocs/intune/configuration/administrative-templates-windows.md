@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990196"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992810"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Usar plantillas de Windows 10 para configurar opciones de directiva de grupo en Microsoft Intune
 
@@ -33,7 +33,7 @@ Esta característica se aplica a:
 
 - Windows 10 y versiones posteriores
 
-La configuración de Windows es similar a la configuración de la directiva de grupo (GPO) en Active Directory (AD). Estas configuraciones están integradas en Windows y son [configuraciones con respaldo de ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) en las que se usa XML. La configuración de Office y Microsoft Edge está probada por ADMX y utiliza la configuración de ADMX en los [archivos de plantillas administrativas de Office](https://www.microsoft.com/download/details.aspx?id=49030) y los [archivos de plantillas administrativas de Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). Y las plantillas de Intune están totalmente basadas en la nube. Ofrecen una manera simple y sencilla de configurar y de buscar la configuración deseada.
+La configuración de Windows es similar a la configuración de la directiva de grupo (GPO) en Active Directory (AD). Estas configuraciones están integradas en Windows y son [configuraciones con respaldo de ADMX](/windows/client-management/mdm/understanding-admx-backed-policies) en las que se usa XML. La configuración de Office y Microsoft Edge está probada por ADMX y utiliza la configuración de ADMX en los [archivos de plantillas administrativas de Office](https://www.microsoft.com/download/details.aspx?id=49030) y los [archivos de plantillas administrativas de Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). Y las plantillas de Intune están totalmente basadas en la nube. Ofrecen una manera simple y sencilla de configurar y de buscar la configuración deseada.
 
 Las **plantillas administrativas** están integradas en Intune y no requieren personalizaciones, ni siquiera el uso de OMA-URI. Como parte de la solución de administración de dispositivos móviles (MDM), use estos valores de plantilla como centro único para administrar los dispositivos Windows 10.
 
@@ -43,7 +43,7 @@ En este artículo se enumeran los pasos para crear una plantilla para dispositiv
 
 - Algunos de estos ajustes están disponibles a partir de la versión 1709 de Windows 10 (RS2/compilación 15063). Algunas opciones de configuración no se incluyen en todas las ediciones de Windows. Para obtener la mejor experiencia, se recomienda usar Windows 10 Enterprise versión 1903 (19H1/compilación 18362) y posteriores.
 
-- La configuración de Windows usa los [CSP de directivas de Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). El CSP funciona en diferentes ediciones de Windows, como por ejemplo, Home, Professional, Enterprise, etcétera. Para ver si un CSP funciona en una edición específica, vaya a [CSP de directivas de Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
+- La configuración de Windows usa los [CSP de directivas de Windows](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). El CSP funciona en diferentes ediciones de Windows, como por ejemplo, Home, Professional, Enterprise, etcétera. Para ver si un CSP funciona en una edición específica, vaya a [CSP de directivas de Windows](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
 ## <a name="create-the-template"></a>Crear la plantilla
 
@@ -136,6 +136,6 @@ Hay miles de opciones disponibles en estas plantillas. Para que sea más fácil 
 
 Se crea la plantilla, pero quizá no haga nada todavía. A continuación, [asigne la plantilla (también denominada perfil)](device-profile-assign.md) y [supervise el estado](device-profile-monitor.md).
 
-Actualice [Office 365 mediante las plantillas administrativas](administrative-templates-update-office.md).
+Actualice [Microsoft 365 mediante las plantillas administrativas](administrative-templates-update-office.md).
 
 [Tutorial: Usar la nube para configurar una directiva de grupo en dispositivos de Windows 10 con plantillas ADMX y Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

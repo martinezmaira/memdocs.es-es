@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: ba4bef364f734f9078b7c404e06978b018f4c387
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383264"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281088"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Administración de experiencias de colaboración mediante Office para iOS y Android con Microsoft Intune
 
@@ -32,12 +32,12 @@ Office para iOS y Android ofrece varias ventajas clave, entre las que se incluye
 - Integra la tecnología Office Lens para desbloquear la potencia de la cámara con funciones como la conversión de imágenes en documentos de Word y Excel editables, el examen de archivos PDF y la captura de pizarras con mejoras digitales automáticas para facilitar la lectura del contenido.
 - Agrega nuevas funciones a las tareas comunes que suelen llevar a cabo los usuarios al trabajar en un teléfono, como tomar notas rápidas, firmar archivos PDF, escanear códigos QR y transferir archivos entre dispositivos.
 
-Tendrá a su disposición las capacidades de protección más enriquecidas y más amplias para los datos de Office 365 cuando se suscriba al conjunto de aplicaciones de Enterprise Mobility + Security, que incluye características de Microsoft Intune y Azure Active Directory Premium, como el acceso condicional. Como mínimo, le interesará implementar una directiva de acceso condicional que permita la conectividad a Office para iOS y Android desde dispositivos móviles y una directiva de protección de aplicaciones de Intune que garantice que la experiencia de colaboración esté protegida.
+Tendrá a su disposición las capacidades de protección más enriquecidas y más amplias para los datos de Microsoft 365 cuando se suscriba al conjunto de aplicaciones de Enterprise Mobility + Security, que incluye características de Microsoft Intune y Azure Active Directory Premium, como el acceso condicional. Como mínimo, le interesará implementar una directiva de acceso condicional que permita la conectividad a Office para iOS y Android desde dispositivos móviles y una directiva de protección de aplicaciones de Intune que garantice que la experiencia de colaboración esté protegida.
 
 ## <a name="apply-conditional-access"></a>Aplicación del acceso condicional
-Las organizaciones pueden usar directivas de acceso condicional de Azure AD para asegurarse de que los usuarios solo puedan acceder al contenido profesional o educativo mediante Office para iOS y Android. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de directivas de protección de aplicaciones para el acceso a aplicaciones en la nube con acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Las organizaciones pueden usar directivas de acceso condicional de Azure AD para asegurarse de que los usuarios solo puedan acceder al contenido profesional o educativo mediante Office para iOS y Android. Para ello, necesitará una directiva de acceso condicional destinada a todos los usuarios potenciales. Encontrará más información sobre la creación de esta directiva en [Uso obligatorio de directivas de protección de aplicaciones para el acceso a aplicaciones en la nube con acceso condicional](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Siga el "Paso 1: Configuración de una directiva de acceso condicional de Azure AD para Office 365" del [Escenario 1: Las aplicaciones de Office 365 requieren aplicaciones aprobadas con directivas de protección de aplicaciones](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), que permite Office para iOS y Android, pero impide que los clientes de dispositivos móviles compatibles con OAuth de terceros se conecten a los puntos de conexión de Office 365.
+1. Siga el "Paso 1: Configuración de una directiva de acceso condicional de Azure AD para Office 365" del [Escenario 1: Las aplicaciones de Office 365 requieren aplicaciones aprobadas con directivas de protección de aplicaciones](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), que permite Office para iOS y Android, pero impide que los clientes de dispositivos móviles compatibles con OAuth de terceros se conecten a los puntos de conexión de Office 365.
 
    >[!NOTE]
    > Esta directiva garantiza que los usuarios móviles puedan acceder a todos los puntos de conexión de Office mediante las aplicaciones correspondientes.
@@ -74,6 +74,7 @@ Office para iOS y Android admite la configuración de aplicaciones que permite a
 La configuración de aplicaciones se puede entregar a través del canal del sistema operativo de administración de dispositivos móviles (MDM) en los dispositivos inscritos (canal [Configuración de aplicaciones administradas](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) para iOS o canal [Android empresarial](https://developer.android.com/work/managed-configurations) para Android) o a través del canal Directiva de protección de aplicaciones (APP) de Intune. Office para iOS y Android admite los siguientes escenarios de configuración:
 
 - Permitir solo cuentas profesionales o educativas
+- Configuración general de la aplicación
 - Configuración de la protección de datos
 
 > [!IMPORTANT]
@@ -96,6 +97,26 @@ Este escenario de configuración solo funciona con dispositivos inscritos. Aun a
 
 > [!NOTE]
 > En este momento, solo Office para Android admite el modo de cuentas permitido por la organización.
+
+## <a name="general-app-configuration-scenarios"></a>Escenarios generales de configuración de aplicaciones
+
+Office para iOS y Android ofrece a los administradores la posibilidad de personalizar la configuración predeterminada para varias configuraciones de aplicación.  Esta funcionalidad se ofrece tanto para dispositivos inscritos a través de cualquier proveedor de UEM como para dispositivos que no están inscritos cuando Office para iOS y Android tiene aplicada una directiva de Intune App Protection.
+
+> [!NOTE]
+> Si una directiva de App Protection está destinada a los usuarios, se recomienda implementar la configuración general de la aplicación en un modelo de inscripción de **aplicaciones administradas**. Esto garantiza que la directiva de configuración de aplicaciones se implementa en los dispositivos inscritos y no inscritos. 
+
+Office admite los siguientes valores de configuración:
+
+- Administración de la creación de Notas rápidas
+
+### <a name="manage-the-creation-of-sticky-notes"></a>Administración de la creación de Notas rápidas
+
+De forma predeterminada, Office para iOS y Android permite a los usuarios crear Notas rápidas. En el caso de los usuarios con buzones de Exchange Online, las notas se sincronizan en el buzón del usuario. En el caso de los usuarios con buzones locales, estas notas solo se almacenan en el dispositivo local.
+
+|    Clave    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.NotesCreationEnabled    |    **True** (valor predeterminado) habilita la creación de Notas rápidas para la cuenta profesional o educativa.<br>**False** deshabilita la creación de Notas rápidas para la cuenta profesional o educativa.    |
+
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Escenarios de configuración de aplicaciones de protección de datos
 

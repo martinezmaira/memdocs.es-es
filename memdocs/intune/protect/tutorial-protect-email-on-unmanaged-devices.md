@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Protección del correo electrónico de Exchange Online en dispositivos no administrados'
 titleSuffix: Microsoft Intune
-description: Aprenda a proteger Office 365 Exchange Online con directivas de protección de aplicaciones de Intune y acceso condicional de Azure AD.
+description: Aprenda a proteger Microsoft 365 Exchange Online con directivas de protección de aplicaciones de Intune y acceso condicional de Azure AD.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: 12b776af250a9d4a9bf0fb6c8ba7eec98540f883
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605225"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993960"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutorial: Protección del correo electrónico de Exchange Online en dispositivos no administrados
 
@@ -120,7 +120,7 @@ Ahora vamos a crear dos directivas de acceso condicional para cubrir todas las p
 
 4. En **Asignaciones**, seleccione **Usuarios y grupos**. En la pestaña **Incluir**, seleccione **Todos los usuarios**, y luego seleccione **Listo**.
 
-5. En **Asignaciones**, seleccione **Acciones o aplicaciones en la nube**. Puesto que deseamos proteger el correo electrónico de Office 365 Exchange Online, lo seleccionaremos siguiendo estos pasos:
+5. En **Asignaciones**, seleccione **Acciones o aplicaciones en la nube**. Puesto que queremos proteger el correo electrónico de Microsoft 365 Exchange Online, lo seleccionaremos siguiendo estos pasos:
 
    1. En la pestaña **Incluir**, elija **Seleccionar aplicaciones**.
    2. Elija **Seleccionar**.
@@ -170,7 +170,7 @@ Se crea la directiva de acceso condicional para clientes de autenticación moder
 
 4. En **Asignaciones**, seleccione **Usuarios y grupos**. En la pestaña *Incluir*, seleccione **Todos los usuarios**, y luego seleccione **Listo**.
 
-5. En **Asignaciones**, seleccione **Acciones o aplicaciones en la nube**. Seleccione el correo electrónico de Office 365 Exchange Online con estos pasos:
+5. En **Asignaciones**, seleccione **Acciones o aplicaciones en la nube**. Seleccione el correo electrónico de Microsoft 365 Exchange Online con estos pasos:
 
    1. En la pestaña *Incluir*, elija **Seleccionar aplicaciones**.
    2. Elija **Seleccionar**.
@@ -205,7 +205,7 @@ Las directivas de protección de aplicaciones y el acceso condicional están pre
 
 ## <a name="try-it-out"></a>Haga la prueba
 
-Con las directivas que se han creado, los dispositivos deberán inscribirse en Intune y usar la aplicación móvil de Outlook para acceder al correo electrónico de Office 365. Para probar este escenario en un dispositivo iOS, intente iniciar sesión en Exchange Online con las credenciales de un usuario en su inquilino de prueba.
+Con las directivas que se han creado, los dispositivos deberán inscribirse en Intune y usar la aplicación móvil de Outlook para acceder al correo electrónico de Microsoft 365. Para probar este escenario en un dispositivo iOS, intente iniciar sesión en Exchange Online con las credenciales de un usuario en su inquilino de prueba.
 
 1. Para realizar pruebas en un iPhone, vaya a **Configuración** > **Contraseñas y cuentas** > **Agregar cuenta** > **Exchange** .
 

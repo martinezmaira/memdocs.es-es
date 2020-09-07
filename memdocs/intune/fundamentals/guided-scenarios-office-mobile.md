@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217484"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993909"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Escenario guiado: Aplicaciones móviles seguras de Microsoft Office
 
@@ -52,7 +52,7 @@ Puede usar directivas de protección de aplicaciones para impedir a los usuarios
 - Las directivas de reubicación de datos como **Guardar copias de los datos de la organización** y **Restringir funciones Cortar, Copiar y Pegar**.
 - Opciones de directivas de acceso para requerir un PIN sencillo para el acceso o bloquear las aplicaciones administradas para que no se ejecuten en dispositivos con jailbreak o rooting
 
-El acceso condicional basado en aplicación y la administración de aplicaciones cliente agregan una capa de seguridad al garantizar que solo las aplicaciones cliente que admiten las directivas de protección de aplicaciones de Intune pueden tener acceso a Exchange Online y a otros servicios de Office 365.
+El acceso condicional basado en la aplicación y la administración de aplicaciones cliente agregan una capa de seguridad al garantizar que solo las aplicaciones cliente que admiten las directivas de protección de aplicaciones de Intune pueden acceder a Exchange Online y a otros servicios de Microsoft 365.
 
 Puede bloquear las aplicaciones de correo electrónico integradas en iOS/iPadOS y Android cuando solo permita a la aplicación Microsoft Outlook acceder a Exchange Online. Además, puede bloquear las aplicaciones que no tienen directivas de protección de aplicaciones de Intune aplicadas para que no puedan acceder a SharePoint Online.
 

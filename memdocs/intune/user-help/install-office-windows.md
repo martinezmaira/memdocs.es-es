@@ -1,6 +1,6 @@
 ---
-title: Instalación de Office 365 en dispositivos Windows 10 | Microsoft Docs
-description: ''
+title: Instalación de Office en dispositivos Windows 10 | Microsoft Docs
+description: Obtenga información sobre las maneras de instalar el conjunto de aplicaciones Office en dispositivos Windows 10. Consulte las opciones adicionales de soporte técnico disponibles para su empresa.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,14 +19,14 @@ ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a49d5de1ce0dd91ff9dacb07d50970bc9ef2e90d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ea5c59c27939fbef454d372c0a18e4b51feee
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882169"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057392"
 ---
-# <a name="installing-office-365-on-your-windows-10-device"></a>Instalación de Office 365 en dispositivos Windows 10
+# <a name="install-office-on-your-windows-10-device"></a>Instalación de Office en un dispositivo Windows 10
 
 Hay muchas maneras de instalar el conjunto de aplicaciones Office en dispositivos Windows 10. Según el tamaño de la empresa, puede haber varias versiones de Office disponibles para su descarga desde el Portal de empresa.
 

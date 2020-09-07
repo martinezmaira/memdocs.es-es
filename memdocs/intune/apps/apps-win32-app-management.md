@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2c8d007ba2fccb92fd90de4da64945155678041d
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271014"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281207"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune independiente: administración de aplicaciones Win32
 
@@ -240,7 +240,7 @@ En los pasos siguientes se proporcionan instrucciones para ayudarle a agregar un
                 ![Captura de pantalla del panel Regla de detección - Existencia de la carpeta](./media/apps-win32-app-management/apps-win32-app-04.png)
         
         3. **Registro**: comprobación basada en el valor, la cadena, el entero o la versión.
-            - **Ruta de acceso clave**: la ruta de acceso completa de la entrada del registro que contiene el valor que se va a detectar.
+            - **Ruta de acceso clave**: la ruta de acceso completa de la entrada del registro que contiene el valor que se va a detectar. Una sintaxis válida es HKEY_LOCAL_MACHINE\Software\WinRAR o HKLM\Software\WinRAR.
             - **Nombre del valor**: nombre del valor del registro que se va a detectar. Si este valor está vacío, la detección se realizará en la clave. El valor (predeterminado) de una clave se usará como valor de detección si el método de detección no es la existencia del archivo o de la carpeta.
             - **Método de detección**: seleccione el tipo de método de detección utilizado para validar la presencia de la aplicación.
             - **Asociado con una aplicación de 32 bits en clientes de 64 bits**: seleccione **Sí** para buscar el registro de 32 bits en clientes de 64 bits. Seleccione **No** (valor predeterminado) para buscar el registro de 64 bits en clientes de 64 bits. Los clientes de 32 bits siempre buscan el registro de 32 bits.

@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048045"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057409"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configuración del acceso de dispositivos iOS a los recursos de la empresa  
 
@@ -54,11 +54,11 @@ Una vez inscrito el dispositivo, la aplicación Portal de empresa continuará pa
 ### <a name="setting-notifications"></a>Configuración de notificaciones  
 Si después de la inscripción, la organización exige un nuevo requisito de seguridad, como la autenticación multifactor, la aplicación Portal de empresa se lo notificará. Tendrá la oportunidad de ajustar la configuración para poder seguir trabajando desde su dispositivo.  
 
-Para obtener más información sobre la inscripción, vea [¿Qué ocurre si instalo la aplicación de Portal de empresa e inscribo el dispositivo?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+Para obtener más información sobre la inscripción, vea [¿Qué ocurre si instalo la aplicación de Portal de empresa e inscribo el dispositivo?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="prerequisties"></a>Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos    
 
-* Vaya al App Store para descargar e instalar la [aplicación Portal de empresa de Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) en su dispositivo. 
+* Instalación de la aplicación Portal de empresa [desde App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Mantenga una conexión Wi-Fi hasta que se completen todos los pasos.
 * Debe tener acceso al explorador web Safari en el dispositivo.
 
@@ -188,4 +188,4 @@ Si es administrador de TI y detecta problemas al inscribir dispositivos, vea [Tr
 ## <a name="next-steps"></a>Pasos siguientes  
 Busque aplicaciones que le ayudarán en el trabajo o la escuela. Obtenga información sobre [cómo se ponen las aplicaciones a su disposición](use-managed-apps-on-your-device-ios.md) mediante el Portal de empresa.  
 
-¿Aún necesita ayuda? Póngase en contacto con el equipo de soporte técnico de su empresa. Puede encontrar su información de contacto en el [sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+¿Aún necesita ayuda? Póngase en contacto con el equipo de soporte técnico de su empresa. Puede encontrar su información de contacto en el [sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

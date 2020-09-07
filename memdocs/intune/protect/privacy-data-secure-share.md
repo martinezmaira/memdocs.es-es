@@ -2,7 +2,7 @@
 title: Uso compartido y seguridad de datos en Intune
 titleSuffix: Microsoft Intune
 description: Obtenga más información sobre cómo se protegen y comparten los datos personales en Intune.
-keywords: ''
+keywords: privacidad, datos
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079559"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286261"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Uso compartido y seguridad de datos en Intune
 
@@ -36,17 +36,9 @@ Microsoft Intune sigue las mismas medidas técnicas y organizativas que toman lo
 
 Para obtener más información, vea el [Portal de confianza de servicios](https://www.microsoft.com/en-us/TrustCenter/stp).
 
-Intune usa técnicas de minimización de datos, como
-
-- aggregation
-- recopilación de datos opcional para algunas características
-- datos menos precisos o confidenciales
-
-Intune también usa técnicas como la seguridad JiT y RBAC para incidentes de soporte técnico para garantizar la protección de datos de forma predeterminada. 
-
 ### <a name="data-breach-reporting"></a>Informes de vulneración de datos
 
-Cuando se identifica un incidente de seguridad notificable a los clientes (CRSI), los clientes reciben una notificación al respecto. Este proceso incluye trabajar con el equipo de Microsoft O365 para comunicar la notificación de vulneración a los clientes de Microsoft O365 que usan Intune.
+Cuando se identifica un incidente de seguridad notificable a los clientes (CRSI), los clientes reciben una notificación al respecto. Este proceso incluye trabajar con el equipo de Microsoft 365 para comunicar la notificación de vulneración a los clientes de Microsoft 365 que usan Intune.
 
 ## <a name="data-sharing"></a>Uso compartido de datos
 
@@ -72,7 +64,7 @@ Para obtener más información sobre los datos compartidos con terceros determin
 
 Microsoft Intune no comparte ningún dato con Configuration Manager. Configuration Manager es un producto local implementado, administrado y operado directamente por el cliente. Los datos de uso y diagnóstico recopilados por Configuration Manager solo son para mejorar la experiencia de instalación, la calidad y la seguridad de las versiones futuras.
 
-Para más información, consulte [Diagnósticos y datos de uso para Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Para más información, consulte [Diagnósticos y datos de uso para Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Pasos siguientes

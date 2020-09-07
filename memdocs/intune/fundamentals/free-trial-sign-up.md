@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 778937ed360a2271c342c55bdd03e33ddb5bdb25
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: f6ce7aeb5d7a64d98ec27fe3882c256120358d3c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217554"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994164"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Inicio rápido: Prueba gratuita de Microsoft Intune
 
@@ -121,7 +121,7 @@ Tal como se mencionó anteriormente, si quiere usar el dominio personalizado de 
    ![Captura de pantalla del Centro de administración de Microsoft 365: Verificar dominio](./media/free-trial-sign-up/domain-custom-verify.png)
 
    > [!NOTE]
-   > Para obtener detalles de la comprobación de registros TXT, consulte [Crear registros DNS en cualquier proveedor de hospedaje DNS para Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
+   > Para obtener detalles de la comprobación de registros TXT, consulte [Crear registros DNS en cualquier proveedor de hospedaje DNS para Microsoft 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
 
 ## <a name="admin-experiences"></a>Experiencias del administrador
 

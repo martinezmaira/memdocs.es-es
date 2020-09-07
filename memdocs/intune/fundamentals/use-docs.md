@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 07574b0e08d3e46785b354551434007bc63bee44
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988171"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194081"
 ---
 # <a name="using-the-intune-docs"></a>Uso de los documentos de Intune
 
@@ -48,7 +48,7 @@ Para obtener ayuda y soporte técnico general para Intune, consulte [Obtención 
 
 ## <a name="provide-doc-feedback"></a>Realización de comentarios sobre documentos
 
-La sección Comentarios se encuentra en la parte inferior de cada artículo. Haga clic en el vínculo **Comentarios** en la parte superior derecha de cualquier artículo para ir a esta sección. Los comentarios se integran con Problemas de GitHub. Para más información sobre la integración con los problemas de GitHub, consulte la [entrada de blog de la plataforma de documentos](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+La sección Comentarios se encuentra en la parte inferior de cada artículo. Haga clic en el vínculo **Comentarios** en la parte superior derecha de cualquier artículo para ir a esta sección. Los comentarios se integran con Problemas de GitHub. Para más información sobre la integración con los problemas de GitHub, consulte la [entrada de blog de la plataforma de documentos](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Para compartir comentarios sobre el servicio de Intune (no documentos), haga clic en **Comentarios sobre el producto**.
 
@@ -68,13 +68,13 @@ Use Problemas de GitHub para enviar los siguientes tipos de comentarios:
 - Localización: comentarios sobre la traducción del contenido.
 - Optimización del motor de búsqueda (SEO): comentarios sobre problemas de búsqueda de contenido. Incluya el motor de búsqueda, las palabras clave y el artículo de destino en los comentarios.
 
-Si los problemas son sobre temas no relacionados con la documentación, como [comentarios sobre el producto](https://microsoftintune.uservoice.com/forums/291681-ideas), [preguntas sobre el producto](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod) o [solicitudes de soporte técnico](get-support.md), estos problemas se cierran y se redirige al usuario al canal de comentarios correcto.
+Si los problemas son sobre temas no relacionados con la documentación, como [comentarios sobre el producto](https://microsoftintune.uservoice.com/forums/291681-ideas), [preguntas sobre el producto](/answers/products/mem) o [solicitudes de soporte técnico](get-support.md), estos problemas se cierran y se redirige al usuario al canal de comentarios correcto.
 
 Para compartir comentarios sobre la plataforma docs.microsoft.com, vea [Comentarios de Docs](https://aka.ms/sitefeedback). La plataforma incluye todos los componentes contenedores, como el encabezado, la tabla de contenido y el menú de la derecha. También cómo se representan los artículos en el explorador, como la fuente, los cuadros de alerta y los delimitadores de página.
 
 ## <a name="contribute-to-docs"></a>Colaborar en documentación
 
-Los documentos de Intune, como la mayoría del contenido de docs.microsoft.com, son de código abierto en GitHub. Esta biblioteca acepta y fomenta contribuciones de la comunidad. Para obtener más información sobre cómo empezar, vea la [guía para colaboradores](https://docs.microsoft.com/contribute). El único requisito previo es crear una [cuenta de GitHub](https://github.com/join).
+Los documentos de Intune, como la mayoría del contenido de docs.microsoft.com, son de código abierto en GitHub. Esta biblioteca acepta y fomenta contribuciones de la comunidad. Para obtener más información sobre cómo empezar, vea la [guía para colaboradores](/contribute). El único requisito previo es crear una [cuenta de GitHub](https://github.com/join).
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>Pasos básicos para contribuir a documentos
 
@@ -82,11 +82,11 @@ Los documentos de Intune, como la mayoría del contenido de docs.microsoft.com, 
 
 2. Para editar el archivo de origen, haga clic en el icono de lápiz.  
 
-3. Realice cambios en el origen Markdown. Para obtener más información, vea [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown) (Cómo usar Markdown para escribir documentos).  
+3. Realice cambios en el origen Markdown. Para obtener más información, vea [How to use Markdown for writing Docs](/contribute/contribute-how-to-write-use-markdown) (Cómo usar Markdown para escribir documentos).  
 
 4. En la sección Propose file change (Proponer cambio de archivo), escriba el comentario de confirmación público que describe *qué* ha modificado. Luego haga clic en **Propose file change** (Proponer cambio de archivo).  
 
-5. Desplácese hacia abajo y compruebe los cambios realizados. Haga clic en **Crear solicitud de incorporación de cambios** para abrir el formulario. Describa *por qué* ha realizado este cambio. Haga clic en **Crear solicitud de incorporación de cambios**.
+5. Desplácese hacia abajo y compruebe los cambios realizados. Haga clic en **Crear solicitud de incorporación de cambios** para abrir el formulario. Describa *por qué* ha realizado este cambio. Haga clic en **Create pull request** (Crear solicitud de incorporación de cambios).
 
 El equipo de redacción recibirá la solicitud de incorporación de cambios, asignará el elemento al escritor adecuado, revisará el texto y realizará un paso de edición rápida en él, y aprobará y combinará los cambios o se pondrá en contacto con usted para obtener más información sobre la actualización.  
 
@@ -109,7 +109,7 @@ Siga estas directrices generales al colaborar en documentos de Intune:
 
 - No nos sorprenda con grandes solicitudes de incorporación de cambios. En su lugar, [notifique un problema](#provide-doc-feedback) e inicie una discusión. Así podremos acordar un rumbo antes de invertir una gran cantidad de tiempo.  
 
-- Lea la [guía de estilo de Microsoft](https://aka.ms/MicrosoftStyle). Conozca los [10 principales consejos sobre el estilo y el tono de Microsoft](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
+- Lea la [guía de estilo de Microsoft](https://aka.ms/MicrosoftStyle). Conozca los [10 principales consejos sobre el estilo y el tono de Microsoft](/style-guide/top-10-tips-style-voice).  
 
 - Siga el [flujo de trabajo de GitHub Flow](https://guides.github.com/introduction/flow/).  
 
@@ -117,7 +117,7 @@ Siga estas directrices generales al colaborar en documentos de Intune:
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidación de la documentación sobre Microsoft Endpoint Manager
 
-Para mejorar la compatibilidad de escenarios combinados con Intune y Configuration Manager, se ha consolidado la documentación de Intune y Configuration Manager en el sitio de Microsoft Endpoint Manager. La documentación de Intune se encuentra ahora en [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) y la biblioteca de documentación de Configuration Manager está disponible en [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). Todos los vínculos se redirigirán automáticamente si usa una dirección URL antigua, por lo que no es necesario realizar ningún cambio para leer este contenido.
+Para mejorar la compatibilidad de escenarios combinados con Intune y Configuration Manager, se ha consolidado la documentación de Intune y Configuration Manager en el sitio de Microsoft Endpoint Manager. La documentación de Intune se encuentra ahora en [../index.yml](../index.yml) y la biblioteca de documentación de Configuration Manager está disponible en [../../configmgr/index.yml](../../configmgr/index.yml). Todos los vínculos se redirigirán automáticamente si usa una dirección URL antigua, por lo que no es necesario realizar ningún cambio para leer este contenido.
 
 Si proporciona algún comentario o contribuye en algún artículo, sí se precisan algunos cambios:
 

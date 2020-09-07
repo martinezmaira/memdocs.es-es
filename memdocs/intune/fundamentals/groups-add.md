@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 534a7f60668091e613ff9dd9fc8a388ec59a247a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f99ddee5a30b7fb6d604e91711d12ed81b53dd91
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989416"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993943"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Agregar grupos para organizar usuarios y dispositivos
 
@@ -54,7 +54,7 @@ Use los siguientes pasos para crear un grupo.
         >
         > Si su rol principal es la administración de dispositivos, se recomienda usar el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365**: Proporciona oportunidades de colaboración al otorgar a los miembros acceso compartido a un buzón, calendario, archivos, sitio de SharePoint, etc. Esta opción también le permite conceder acceso al grupo a personas ajenas a la organización. Para más información, consulte [Más información sobre los grupos de Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Microsoft 365**: Proporciona oportunidades de colaboración al otorgar a los miembros acceso compartido a un buzón, calendario, archivos, sitio de SharePoint, etc. Esta opción también le permite conceder acceso al grupo a personas ajenas a la organización. Para obtener más información, consulte [Más información sobre los grupos de Microsoft 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Escriba los valores para **Nombre del grupo** y **Descripción del grupo** del nuevo grupo. Sea concreto e incluya información que permita a que otros usuarios saber para qué sirve el grupo.
 
@@ -70,8 +70,8 @@ Use los siguientes pasos para crear un grupo.
 
     Para más información sobre estos tipos de pertenencia y la creación de expresiones dinámicas, consulte:
 
-    - [Creación de un grupo básico e incorporación de miembros con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Reglas de pertenencia dinámica a grupos de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Creación de un grupo básico e incorporación de miembros con Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Reglas de pertenencia dinámica a grupos de Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > En este centro de administración, al crear usuarios o grupos, es posible que no vea la personalización de marca de **Azure Active Directory**. Sin embargo, eso es lo que está usando.
@@ -106,4 +106,4 @@ Para instrucciones y recomendaciones sobre los perfiles de configuración, consu
 ## <a name="see-also"></a>Vea también
 
 - [Control de acceso basado en rol (RBAC) con Microsoft Intune](role-based-access-control.md)
-- [Administración del acceso a recursos y aplicaciones con grupos en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Administración del acceso a recursos y aplicaciones con grupos en Azure Active Directory](/azure/active-directory/active-directory-manage-groups)

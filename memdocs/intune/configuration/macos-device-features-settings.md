@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819667"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194205"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Configuración de características de dispositivos macOS en Intune
 
@@ -267,7 +267,12 @@ Esta característica se aplica a:
 - **Tipo de extensión de la aplicación de SSO**: elija el tipo de extensión de la aplicación de SSO. Las opciones son:
 
   - **No configurado**: no se usan las extensiones de la aplicación. Para deshabilitar una extensión de aplicación, cambie el tipo de extensión de la aplicación de SSO a **Sin configurar**.
-  - **Microsoft Azure AD**: usa el complemento de Microsoft Enterprise Single Sign-On, que es una extensión de la aplicación de SSO de tipo redirección. Este complemento proporciona inicio de sesión único para las cuentas de Active Directory en todas las aplicaciones macOS compatibles con la característica [Enterprise Single Sign-On de Apple](https://developer.apple.com/documentation/authenticationservices). Use este tipo de extensión de la aplicación de SSO para habilitar el inicio de sesión único en las aplicaciones de Microsoft, las aplicaciones de la organización y los sitios web que se autentican mediante Azure AD.
+  - **Microsoft Azure AD**: 
+
+    > [!IMPORTANT]
+    > Todavía se está desarrollando la extensión de SSO de Microsoft Azure AD. Aparece en la interfaz de usuario de Intune, pero no funciona según lo previsto. No use **Microsoft Azure AD** para el tipo de extensión de la aplicación de SSO.
+
+    usa el complemento de Microsoft Enterprise Single Sign-On, que es una extensión de la aplicación de SSO de tipo redirección. Este complemento proporciona inicio de sesión único para las cuentas de Active Directory en todas las aplicaciones macOS compatibles con la característica [Enterprise Single Sign-On de Apple](https://developer.apple.com/documentation/authenticationservices). Use este tipo de extensión de la aplicación de SSO para habilitar el inicio de sesión único en las aplicaciones de Microsoft, las aplicaciones de la organización y los sitios web que se autentican mediante Azure AD.
 
     El complemento de SSO actúa como agente de autenticación avanzado que ofrece mejoras en la seguridad y la experiencia del usuario.
 
@@ -324,7 +329,7 @@ Esta característica se aplica a:
 - **Detección automática** (solo Kerberos): cuando se establece en **Bloquear**, la extensión de Kerberos no usa automáticamente LDAP y DNS para determinar su nombre de sitio de Active Directory. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir que la extensión busque automáticamente el nombre del sitio de Active Directory.
 - **Cambios de contraseña** (solo Kerberos): **Bloquear** impide que los usuarios cambien las contraseñas que usan para iniciar sesión en los dominios que ha escrito. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría permitir cambiar las contraseñas.  
 - **Sincronización de contraseñas** (solo Kerberos): elija **Habilitar** para sincronizar las contraseñas locales de los usuarios con Azure AD. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría deshabilitar la sincronización de contraseñas en Azure AD. Use esta opción como alternativa o copia de seguridad en SSO. Esta configuración no funciona si los usuarios han iniciado sesión con una cuenta móvil de Apple.
-- **Complejidad de contraseña de Windows Server Active Directory** (solo Kerberos): elija **Requerir** para exigir que las contraseñas de usuario cumplan los requisitos de complejidad de contraseñas de Active Directory. Para obtener más información, consulte [Las contraseñas deben cumplir los requisitos de complejidad](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no requerir que los usuarios cumplan los requisitos de contraseña de Active Directory.
+- **Complejidad de contraseña de Windows Server Active Directory** (solo Kerberos): elija **Requerir** para exigir que las contraseñas de usuario cumplan los requisitos de complejidad de contraseñas de Active Directory. Para obtener más información, consulte [Las contraseñas deben cumplir los requisitos de complejidad](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no requerir que los usuarios cumplan los requisitos de contraseña de Active Directory.
 - **Longitud mínima de contraseña** (solo Kerberos): escriba el número mínimo de caracteres que pueden formar las contraseñas de los usuarios. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir una longitud de contraseña mínima en los usuarios.
 - **Límite de reutilización de contraseñas** (solo Kerberos): escriba el número de contraseñas nuevas, de 1 a 24, que se usan hasta que se pueda reutilizar una contraseña anterior en el dominio. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no aplicar un límite de reutilización de contraseñas.
 - **Vigencia mínima de la contraseña** (solo Kerberos): escriba el número de días que se usa una contraseña en el dominio antes de que los usuarios puedan cambiarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría no exigir una vigencia mínima para las contraseñas antes de que se puedan cambiar.
@@ -344,7 +349,7 @@ Esta característica se aplica a:
 
   Cuando se establece en **Sí**, todas las cuentas de usuario existentes se borran de los dispositivos. Para evitar la pérdida de datos o impedir que se restablezca la configuración de fábrica, asegúrese de comprender cómo esta configuración cambia los dispositivos.
 
-  Para más información sobre el modo de dispositivo compartido, consulte [Introducción al modo de dispositivo compartido](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+  Para más información sobre el modo de dispositivo compartido, consulte [Introducción al modo de dispositivo compartido](/azure/active-directory/develop/msal-shared-devices).
 
 - **Identificadores de lote de aplicaciones** (Microsoft Azure AD, Kerberos): **agregue** los identificadores de lote de aplicaciones que deben usar el inicio de sesión único en los dispositivos. Estas aplicaciones obtienen acceso al vale de concesión de vales de Kerberos y al vale de autenticación. Las aplicaciones también autentican a los usuarios en los servicios a los que están autorizados a acceder.
 - **Asignación de dominio** (solo Kerberos): **agregue** los sufijos DNS de dominio que se deben asignar al dominio. Use esta opción cuando los nombres DNS de los hosts no coincidan con el nombre de dominio. Lo más probable es que no tenga que crear esta asignación personalizada de dominio a dominio.

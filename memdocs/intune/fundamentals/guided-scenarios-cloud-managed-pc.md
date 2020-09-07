@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262768"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993858"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Escenario guiado: Escritorio moderno administrado en la nube
 
@@ -55,14 +55,14 @@ En este escenario guiado debe proporcionar el dispositivo de prueba y el usuario
 
 - Configurar una cuenta de usuario de prueba en Azure Active Directory.
 - Crear un dispositivo de prueba que ejecute Windows 10 versión, 1903 o posterior.
-- (Opcional) [Registrar el dispositivo de prueba con Windows Autopilot](../enrollment/enrollment-autopilot.md#add-devices).
+- (Opcional) [Registrar el dispositivo de prueba con Windows Autopilot](../../autopilot/enrollment-autopilot.md#add-devices).
 - (Opcional) Habilitar la [personalización de marca en la página de inicio de sesión Azure Active Directory de la organización](https://go.microsoft.com/fwlink/?linkid=2102455).
 
 ## <a name="step-2---user"></a>Paso 2: Usuario
 
 Elija un usuario para configurar en el dispositivo. Será el usuario primario del dispositivo.
 
-Si quiere agregar más usuarios o dispositivos a esta configuración, simplemente agréguelos a los grupos de seguridad de AAD generados por el asistente. A diferencia de otros escenarios guiados, no es necesario ejecutar el asistente más de una vez, ya que la configuración no se puede personalizar. Simplemente agregue más usuarios y dispositivos a los grupos de AAD creados. Después de completar el asistente, podrá ver el grupo generado con las directivas recomendadas implementadas.
+Si quiere agregar más usuarios o dispositivos a esta configuración, simplemente agréguelos a los grupos de seguridad de Azure AD generados por el asistente. A diferencia de otros escenarios guiados, no es necesario ejecutar el asistente más de una vez, ya que la configuración no se puede personalizar. Simplemente agregue más usuarios y dispositivos a los grupos de Azure AD creados. Después de completar el asistente, podrá ver el grupo generado con las directivas recomendadas implementadas.
 
 ## <a name="step-3---device"></a>Paso 3: Dispositivo
 
@@ -74,7 +74,7 @@ Windows Autopilot automatiza la configuración de dispositivos nuevos para que 
 
 ### <a name="option-b--manual-device-enrollment"></a>Opción B: Inscripción manual de dispositivos
 
-Los usuarios instalarán e inscribirán de forma manual los dispositivos nuevos en la administración de dispositivos móviles. Después de completar este escenario, restablezca el dispositivo y proporcione al usuario principal las instrucciones de inscripción para los dispositivos Windows. Para más información, vea [Unión de un dispositivo Windows 10 a Azure AD durante la experiencia de primera ejecución](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+Los usuarios instalarán e inscribirán de forma manual los dispositivos nuevos en la administración de dispositivos móviles. Después de completar este escenario, restablezca el dispositivo y proporcione al usuario principal las instrucciones de inscripción para los dispositivos Windows. Para más información, vea [Unión de un dispositivo Windows 10 a Azure AD durante la experiencia de primera ejecución](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ## <a name="step-4---review--create"></a>Paso 4: Revisión y creación
 
@@ -90,12 +90,12 @@ El último paso permite revisar un resumen de los valores que ha configurado. Un
         - Establecido en **Todo** para la aplicación **Microsoft Intune** o bien,
         - Establecido en **Algunos**. Además, agregue el grupo de usuarios creado por este escenario guiado.
 2. Compruebe que el usuario seleccionado puede unir dispositivos a Azure Active Directory.
-    - Asegúrese de que la unión a AAD está:
+    - Asegúrese de que la unión a Azure AD esté:
         - Establecida en **Todos** o bien,
         - Establecida en **Algunos**. Además, agregue el grupo de usuarios creado por este escenario guiado.
 3. Siga los pasos adecuados en el dispositivo para unirlo a Azure AD en función de lo siguiente:
-    - Con Autopilot. Para más información, vea [Modo controlado por el usuario de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven).
-    - Sin Autopilot: Para más información, vea [Unión de un dispositivo Windows 10 a Azure AD durante la experiencia de primera ejecución](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+    - Con Autopilot. Para más información, vea [Modo controlado por el usuario de Windows Autopilot](/windows/deployment/windows-autopilot/user-driven).
+    - Sin Autopilot: Para más información, vea [Unión de un dispositivo Windows 10 a Azure AD durante la experiencia de primera ejecución](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### <a name="what-happens-when-i-click-deploy"></a>¿Qué ocurre cuando hago clic en Implementar?
 El usuario y el dispositivo se agregarán a grupos de seguridad nuevos. También se configurarán con los valores recomendados por Intune para la seguridad y la productividad en el ámbito educativo o laboral. Después de que el usuario una el dispositivo a Azure AD, se agregarán más aplicaciones y configuraciones al dispositivo. Para obtener más información sobre estas configuraciones adicionales, vea [Inicio rápido: Inscripción de dispositivos Windows 10](../enrollment/quickstart-enroll-windows-device.md).
@@ -122,7 +122,7 @@ El escenario guiado también asignará el usuario al dispositivo Autopilot selec
 
 Una vez que el usuario une el dispositivo a Azure Active Directory, se aplicarán las configuraciones siguientes al dispositivo:
 
-1. Aplicaciones de Microsoft 365 se instalará de forma automática en el equipo administrado en la nube. Incluye las aplicaciones con las que está familiarizado, como Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype Empresarial y Word. Puede usar estas aplicaciones para conectarse a servicios de Office 365, como SharePoint Online, Exchange Online y Skype Empresarial Online. Aplicaciones de Microsoft 365 se actualiza periódicamente con nuevas características, a diferencia de las versiones de Office que no son de suscripción. Para obtener una lista de las características nuevas, vea Novedades de Office 365.
+1. Aplicaciones de Microsoft 365 se instalará de forma automática en el equipo administrado en la nube. Incluye las aplicaciones con las que está familiarizado, como Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype Empresarial y Word. Puede usar estas aplicaciones para conectarse a servicios de Microsoft 365, como SharePoint Online, Exchange Online y Skype Empresarial Online. Aplicaciones de Microsoft 365 se actualiza periódicamente con nuevas características, a diferencia de las versiones de Office que no son de suscripción. Para obtener una lista de las características nuevas, vea Novedades de Microsoft 365.
 2. Las líneas de base de seguridad de Windows se instalarán en el equipo administrado en la nube. Si ha configurado Protección contra amenazas avanzada de Microsoft Defender, el escenario guiado también configurará las opciones de línea de base de Defender. Protección contra amenazas avanzada de Microsoft Defender proporciona una nueva capa de protección posterior a la infracción en la pila de seguridad de Windows 10. Con una combinación de tecnología cliente integrada en Windows 10 y un sólido servicio en la nube, ayudará a detectar las amenazas que han superado otras medidas de defensa. 
 
 ## <a name="next-steps"></a>Pasos siguientes

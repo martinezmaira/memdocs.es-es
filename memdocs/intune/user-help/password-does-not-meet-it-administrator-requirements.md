@@ -1,11 +1,11 @@
 ---
-title: Requisitos de contraseña para dispositivos en Portal de empresa de Intune | Microsoft Docs
-description: En este artículo se describen los requisitos de contraseña habituales que su organización puede aplicar.
+title: Requisitos de contraseña para dispositivos inscritos en Intune | Microsoft Docs
+description: En este artículo se describe cómo cumplir los requisitos de contraseña de la organización para poder acceder a la red.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +15,38 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: b9bdada31e280c7fdc8a5d7a5a0a4a7ab7d36ae3
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047984"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057294"
 ---
-# <a name="device-password-requirements-for-enrolled-devices"></a>Requisitos de contraseña para dispositivos inscritos
+# <a name="device-password-requirements"></a>Requisitos de contraseña de dispositivo  
 
-Su organización puede solicitar que cree una contraseña más segura antes de permitirle el acceso a recursos profesionales o educativos. En este artículo se describen los requisitos de contraseña habituales para dispositivos Windows 10, iOS, macOS y Android. Es posible que la organización no aplique todos los requisitos.  
+Recibirá un mensaje de Portal de empresa si la contraseña del dispositivo no cumple los requisitos de seguridad de la organización. Se aplican requisitos de contraseña para protegerlo a usted y a los datos de la organización contra el acceso no autorizado. Mientras no cree una contraseña más segura, es posible que se le bloquee el acceso a la red de la organización.  
 
+Portal de empresa envía un mensaje por cada requisito de contraseña, por lo que es posible que reciba más de un mensaje a la vez. Pulse cualquier mensaje para consultar los detalles (si se proporcionan).  
 
-Cuando una contraseña o un código de acceso ya no cumpla un requisito, recibirá un mensaje de Portal de empresa. Se describirán los cambios que debe realizar. Si no se proporciona ningún detalle en el mensaje, use este artículo como referencia para realizar una comparación con la contraseña actual.  
+En este artículo se enumeran todos los mensajes relacionados con la contraseña que se podrían recibir y se proporcionan detalles adicionales sobre cada requisito, en función de la plataforma del sistema operativo.     
+
+## <a name="change-password-passcode-pin"></a>Cambio de la contraseña, el código de acceso y el PIN  
+
+Por lo general, para acceder a la configuración de contraseña, puede abrir la aplicación de configuración en el dispositivo y buscar la *pantalla de bloqueo* o la *configuración de seguridad*.  
+
+En los artículos siguientes se describe cómo actualizar la contraseña del dispositivo, en función de la plataforma del sistema operativo. Para obtener las instrucciones más actualizadas de un dispositivo específico, consulte la documentación de ayuda del fabricante del dispositivo.  
+
+- [Establecer la contraseña del dispositivo Windows 10](set-or-change-your-password-windows.md)  
+- [Establecer el código de acceso del dispositivo iOS](set-or-change-your-passcode-ios.md)  
+- [Establecer el PIN o contraseña del dispositivo Android](set-your-pin-or-password-android.md)  
+
 
 > [!IMPORTANT]
 > Si ha cambiado la contraseña para cumplir los requisitos, pero sigue recibiendo notificaciones, reinicie el dispositivo.  
 
-Para obtener ayuda adicional o averiguar los requisitos específicos de su organización, póngase en contacto con la persona responsable de soporte técnico de TI. Para conocer la información de contacto, vaya al [sitio web del Portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Si tiene preguntas específicas sobre los requisitos de contraseña de la organización, póngase en contacto con el personal de soporte técnico de TI.  
 
 ## <a name="windows-10-password-requirements"></a>Requisitos de contraseña de Windows 10
 
@@ -55,7 +67,7 @@ Para obtener ayuda adicional o averiguar los requisitos específicos de su organ
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | El código de acceso es obligatorio.| Establezca un código de acceso. La organización requiere que escriba un código de acceso para desbloquear el dispositivo. |
 | El código de acceso es demasiado sencillo. |  Asegúrese de que el código de acceso no contenga números repetidos o secuenciales, como 1234 o 1111. |
-| El código de acceso es demasiado corto. | Actualice o establezca un código de acceso con más caracteres. La organización requiere que el código de acceso tenga una longitud determinada. La elección variará, pero la longitud mínima es de 4 caracteres, mientras que la máxima es de 14. Al cambiar el código de acceso, es posible que aparezca un mensaje de Apple que le indicará que escriba 6 o más caracteres. Este mensaje es una recomendación del sistema Apple. Si la organización solo necesita un código de acceso de 4 o 5 caracteres, no es necesario que escriba uno de 6.|  
+| El código de acceso es demasiado corto. | Actualice o establezca un código de acceso con más caracteres. La organización requiere que el código de acceso tenga una longitud determinada. La elección variará, pero la longitud mínima es de 4 caracteres, mientras que la máxima es de 14. Al cambiar el código de acceso, es posible que aparezca un mensaje de Apple que le indicará que escriba seis o más caracteres. Este mensaje es simplemente una recomendación del sistema Apple. Si la organización solo necesita un código de acceso de cuatro o cinco caracteres, no es necesario que escriba uno de seis.|  
 | El código de acceso debe contener únicamente números. | Establezca un código de acceso que contenga únicamente números.|
 | El código de acceso solo puede contener caracteres alfanuméricos.| Establezca un código de acceso que contenga una combinación de números y letras.|
 | El código de acceso debe contener caracteres no alfanuméricos. | Agregue caracteres especiales como `&`, `!`, `$`, `%` y `#`. La organización requiere una combinación de letras, números y caracteres no alfanuméricos para que a otros usuarios les resulte más difícil averiguar el código de acceso.|
@@ -89,16 +101,9 @@ Para obtener ayuda adicional o averiguar los requisitos específicos de su organ
 | La contraseña ha expirado. | Establezca una nueva contraseña. La organización requiere que cambie la contraseña después de un número determinado de días. |
 | La contraseña se ha usado recientemente. | Elija una contraseña que no haya usado antes. La organización requiere que transcurra un período de tiempo determinado antes de volver a usar una contraseña. |
 
-## <a name="update-password-passcode-pin"></a>Actualización de la contraseña, el código de acceso y el PIN
-
-En los artículos siguientes se describe cómo cambiar la contraseña, el código de acceso o el PIN del dispositivo. Para obtener las instrucciones más actualizadas, consulte la documentación de ayuda del fabricante del dispositivo. 
-
-- [Establecer la contraseña del dispositivo Windows 10](set-or-change-your-password-windows.md)  
-- [Establecer el código de acceso del dispositivo iOS](set-or-change-your-passcode-ios.md)  
-- [Establecer el PIN o contraseña del dispositivo Android](set-your-pin-or-password-android.md)  
-
 ## <a name="next-steps"></a>Pasos siguientes
+Si después de actualizar la contraseña sigue recibiendo mensajes relacionados con la contraseña, pruebe a reiniciar el dispositivo. 
 
-¿Aún necesita ayuda? Póngase en contacto con el personal de soporte técnico. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+¿Aún necesita ayuda? Póngase en contacto con el personal de soporte técnico de TI. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d3c42683e1c9a9d67f6fadd51878ebf2da3e0cac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820041"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996612"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Registro de cambios en la API Almacenamiento de datos de Intune
 
@@ -41,7 +41,7 @@ En la tabla siguiente se indica la propiedad agregada a la entidad [device](../d
 |    Colección                          |    Cambio     |    Información de descripción                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Adición    |    Identificador de red único de este dispositivo.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Adición    |    La versión de Office 365 instalada en el dispositivo.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Adición    |    Versión de Microsoft 365 instalada en el dispositivo.                                                                                                                                                                                                                                                                     |
 
 En la tabla siguiente se indican las propiedades agregadas a la entidad [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) en el almacenamiento de datos de Intune.
 
@@ -80,7 +80,7 @@ En la tabla siguiente se indican las propiedades agregadas a la entidad **device
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Adición    |    Identificador de red único de este dispositivo.                                                                                                                                                                                                                                                                     |
 |    modelo    |    Adición    |    El modelo del dispositivo.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Adición    |    La versión de Office 365 instalada en el dispositivo.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Adición    |    Versión de Microsoft 365 instalada en el dispositivo.                                                                                                                                                                                                                                                                     |
 
 En la tabla siguiente se indican las propiedades agregadas a la entidad **devicePropertyHistory** en el almacenamiento de datos de Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146514"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995184"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Solución de problemas de directivas y perfiles en Intune
 
@@ -122,15 +122,15 @@ Compruebe el valor de [Estado del inquilino](../fundamentals/tenant-status.md) y
 ## <a name="policy-troubleshooting-resources"></a>Recursos de solución de problemas de directivas
 
 - [Solución de problemas de directivas de iOS/iPadOS o Android que no se aplican a los dispositivos](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (se abre otro sitio de Microsoft)
-- [Solución de problemas de errores de directivas de Intune en Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (abre un blog)
+- [Solución de problemas de errores de directivas de Intune en Windows 10](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (abre un blog)
 - [Solución de problemas de configuración personalizada de CSP para Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (abre otro sitio de Microsoft)
-- [Directiva de grupo de Windows 10 frente a directiva de MDM de Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (abre otro sitio de Microsoft)
+- [Directiva de grupo de Windows 10 frente a directiva de MDM de Intune](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (abre otro sitio de Microsoft)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alerta: Error al guardar las reglas de acceso en Exchange
 
 **Problema**: recibe la alerta **Error al guardar las reglas de acceso en Exchange** en la consola de administración.
 
-Si crea directivas en el área de trabajo Directiva de Exchange local (consola de administración) pero usa Office 365, Intune no aplica las opciones configuradas de la directiva. En la alerta, tenga en cuenta el origen de la directiva. En el área de trabajo Directiva de Exchange local, elimine las reglas heredadas. Las reglas heredadas son reglas de Exchange globales en Intune para Exchange local y no son pertinentes para Office 365. Después, cree una directiva para Office 365.
+Si crea directivas en el área de trabajo Directiva de Exchange local (consola de administración), pero usa Microsoft 365, Intune no aplica las opciones configuradas de la directiva. En la alerta, tenga en cuenta el origen de la directiva. En el área de trabajo Directiva de Exchange local, elimine las reglas heredadas. Las reglas heredadas son reglas de Exchange globales en Intune para Exchange local y no son pertinentes para Microsoft 365. Después, cree una directiva para Microsoft 365.
 
 [Solucionar problemas de Intune On-Premises Exchange Connector](../protect/troubleshoot-exchange-connector.md) puede ser un buen recurso.
 

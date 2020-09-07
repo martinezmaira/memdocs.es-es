@@ -1,7 +1,7 @@
 ---
-title: Instalación de aplicaciones de Office 365 en dispositivos macOS mediante Microsoft Intune
+title: Instalación de aplicaciones de Microsoft 365 en dispositivos macOS mediante Microsoft Intune
 titleSuffix: ''
-description: Obtenga información sobre cómo usar Microsoft Intune para instalar aplicaciones de Office 365 en dispositivos macOS.
+description: Obtenga información sobre cómo usar Microsoft Intune para instalar aplicaciones de Microsoft 365 en dispositivos macOS.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2eb8ea29739e2478df68e3b9926f111f2ee8d0e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989522"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996493"
 ---
-# <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Asignación de Office 365 a dispositivos macOS con Microsoft Intune
+# <a name="assign-microsoft-365-to-macos-devices-with-microsoft-intune"></a>Asignación de Microsoft 365 a dispositivos macOS con Microsoft Intune
 
-Este tipo de aplicación facilita la asignación de aplicaciones de Office 365 2016 a los dispositivos macOS. Mediante este tipo de aplicación, puede instalar Word, Excel, PowerPoint, Outlook, OneNote y Teams. Para ayudar a mantener las aplicaciones más seguras y actualizadas, las aplicaciones incluyen Microsoft AutoUpdate (MAU). Las aplicaciones que desea se muestran como una aplicación en la lista de aplicaciones de la consola de Intune.
+Este tipo de aplicación facilita la asignación de aplicaciones de Microsoft 365 a los dispositivos macOS. Mediante este tipo de aplicación, puede instalar Word, Excel, PowerPoint, Outlook, OneNote y Teams. Para ayudar a mantener las aplicaciones más seguras y actualizadas, las aplicaciones incluyen Microsoft AutoUpdate (MAU). Las aplicaciones que desea se muestran como una aplicación en la lista de aplicaciones de la consola de Intune.
 
 > [!NOTE]
 > El nombre de Microsoft Office 365 ProPlus ha cambiado a **Aplicaciones de Microsoft 365 para empresas**. En nuestra documentación, normalmente hacemos referencia a este producto como **Aplicaciones de Microsoft 365**.
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-Antes de empezar a agregar aplicaciones de Office 365 a dispositivos macOS, debe entender los detalles siguientes:
+Antes de empezar a agregar aplicaciones de Microsoft 365 a dispositivos macOS, debe entender los detalles siguientes:
 
 - Los dispositivos en los que implementa estas aplicaciones deben ejecutar macOS 10.10 o una versión posterior.
 - Intune admite la adición de aplicaciones de Office que se incluyen únicamente con el conjunto de aplicaciones de Office 2016 para Mac.
@@ -89,5 +89,5 @@ Puede usar las etiquetas de ámbito para determinar quién puede ver informació
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Para obtener información sobre cómo agregar aplicaciones de Office 365 a dispositivos Windows 10, vea [Asignación de aplicaciones de Microsoft 365 a dispositivos Windows 10 con Microsoft Intune](apps-add-office365.md).
+- Para obtener información sobre cómo agregar aplicaciones de Microsoft 365 a dispositivos Windows 10, vea [Asignación de aplicaciones de Microsoft 365 a dispositivos Windows 10 con Microsoft Intune](apps-add-office365.md).
 - Para información sobre cómo incluir y excluir las asignaciones de aplicaciones para grupos de usuarios, consulte [Inclusión y exclusión de asignaciones de aplicaciones](apps-inc-exl-assignments.md).

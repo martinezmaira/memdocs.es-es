@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 0d638cb382aa7abe8859648192837601c86f22ce
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088384"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996561"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Información general sobre Microsoft Endpoint Manager
 
@@ -42,40 +42,40 @@ Endpoint Manager incluye los siguientes servicios:
 
   Si tiene una infraestructura local, como Exchange o una instancia de Active Directory, también están disponibles los conectores de Intune:
 
-  - El **conector de Intune para Active Directory** agrega entradas al dominio de Active Directory local para los equipos que se inscriben con Windows Autopilot. Para obtener más información, vea [Implementación de dispositivos unidos a Azure AD híbridos](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - **Intune Certificate Connector** procesa las solicitudes de certificado de los dispositivos que usan certificados para la autenticación y el cifrado de correo electrónico S/MIME. Para obtener más información, vea [Uso de certificados para la autenticación](/mem/intune/protect/certificates-configure).
+  - El **conector de Intune para Active Directory** agrega entradas al dominio de Active Directory local para los equipos que se inscriben con Windows Autopilot. Para obtener más información, vea [Implementación de dispositivos unidos a Azure AD híbridos](./autopilot/windows-autopilot-hybrid.md).
+  - **Intune Certificate Connector** procesa las solicitudes de certificado de los dispositivos que usan certificados para la autenticación y el cifrado de correo electrónico S/MIME. Para obtener más información, vea [Uso de certificados para la autenticación](./intune/protect/certificates-configure.md).
 
   Como parte de Endpoint Manager, use Intune para crear y comprobar la compatibilidad e implementar aplicaciones, características y configuraciones en los dispositivos mediante la nube.
 
-  Para más información, vea [¿Qué es Microsoft Intune?](https://docs.microsoft.com/intune/fundamentals/what-is-intune)
+  Para más información, vea [¿Qué es Microsoft Intune?](/intune/fundamentals/what-is-intune)
 
 - **Configuration Manager**: Configuration Manager es una solución de administración local para administrar equipos de escritorio, servidores y equipos portátiles que se encuentran en la red o en Internet. Puede habilitarla en la nube para que se integre con Intune, Azure Active Directory (AD), ATP de Microsoft Defender y otros servicios en la nube. Use Configuration Manager para implementar aplicaciones, actualizaciones de software y sistemas operativos. También puede supervisar el cumplimiento, consultar los clientes en tiempo real y actuar en ellos (y mucho más).
 
-  Como parte de Endpoint Manager, siga usando Configuration Manager como siempre lo ha hecho. Si está listo para trasladar algunas tareas a la nube, considere la posibilidad de usar la [administración conjunta](https://docs.microsoft.com/configmgr/comanage/).
+  Como parte de Endpoint Manager, siga usando Configuration Manager como siempre lo ha hecho. Si está listo para trasladar algunas tareas a la nube, considere la posibilidad de usar la [administración conjunta](/configmgr/comanage/).
 
-  Para obtener más información, vea [¿Qué es Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction)
+  Para obtener más información, vea [¿Qué es Configuration Manager?](/configmgr/core/understand/introduction)
 
 - **Administración conjunta**: la administración conjunta combina su inversión de Configuration Manager local existente con la nube mediante Intune y otros servicios en la nube de Microsoft 365. Elija si Configuration Manager o Intune es la entidad de administración de los siete grupos de cargas de trabajo diferentes.
 
   Como parte de Endpoint Manager, la administración conjunta utiliza características en la nube, incluido el acceso condicional. Mantiene algunas tareas locales, mientras ejecuta otras tareas en la nube con Intune.
 
-  Para más información, vea [What is co-management?](https://docs.microsoft.com/configmgr/comanage/overview) (¿Qué es la administración conjunta?).
+  Para más información, vea [What is co-management?](/configmgr/comanage/overview) (¿Qué es la administración conjunta?).
 
 - **Análisis de escritorio**: Análisis de escritorio es un servicio basado en la nube que se integra con Configuration Manager. Proporciona información detallada e inteligente para que pueda tomar decisiones más fundamentadas sobre la preparación de actualizaciones de sus clientes Windows. El servicio combina datos de su organización con datos agregados de millones de dispositivos conectados a la nube de Microsoft. Proporciona información sobre las actualizaciones de seguridad, las aplicaciones y los dispositivos de la organización, e identifica los problemas de compatibilidad con las aplicaciones y los controladores. Cree una prueba piloto para que los dispositivos tengan más probabilidades de proporcionar la mejor información para los recursos de toda la organización.
 
   Como parte de Endpoint Manager, use la información con tecnología de la nube de Análisis de escritorio para mantener actualizados los dispositivos Windows 10.
 
-  Vea [¿Qué es Análisis de escritorio?](https://docs.microsoft.com/configmgr/desktop-analytics/overview) para obtener más información.
+  Vea [¿Qué es Análisis de escritorio?](/configmgr/desktop-analytics/overview) para obtener más información.
 
 - **Windows Autopilot**: Windows Autopilot prepara y configura previamente nuevos dispositivos y los prepara para su uso. Está diseñado para simplificar el ciclo de vida de los dispositivos Windows, tanto para los usuarios de TI como para los finales, desde la implementación inicial hasta el final de su ciclo de vida.
 
   Como parte de Endpoint Manager, use Autopilot para preconfigurar dispositivos e inscribirlos automáticamente en Intune. También puede integrar Autopilot con Configuration Manager y la administración conjunta para configuraciones de dispositivo más complejas (en versión preliminar).
 
-  Para más información, consulte [Introducción a Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) e [Inscripción de dispositivos Windows en Intune](/mem/intune/enrollment/enrollment-autopilot).
+  Para más información, consulte [Introducción a Windows Autopilot](/windows/deployment/windows-autopilot/windows-autopilot) e [Inscripción de dispositivos Windows en Intune](./autopilot/enrollment-autopilot.md).
 
 - **Azure Active Directory (AD)** : Endpoint Manager usa Azure AD para la identidad de dispositivos, usuarios, grupos y Multi-Factor Authentication (MFA). **Azure AD Premium**, que puede ser un costo añadido, tiene [características adicionales](https://azure.microsoft.com/pricing/details/active-directory/) para ayudar a proteger los dispositivos, las aplicaciones y los datos, incluidos los grupos dinámicos, la inscripción automática y el acceso condicional.
 
-  Para obtener más información, vea [Adición de usuarios](/mem/intune/fundamentals/users-add), [Configuración de la inscripción de dispositivos Windows](/mem/intune/enrollment/windows-enroll) y [Más información sobre el acceso condicional](/mem/intune/protect/conditional-access).
+  Para obtener más información, vea [Adición de usuarios](./intune/fundamentals/users-add.md), [Configuración de la inscripción de dispositivos Windows](./intune/enrollment/windows-enroll.md) y [Más información sobre el acceso condicional](./intune/protect/conditional-access.md).
 
 - **Centro de administración de Endpoint Manager**: el [centro de administración](https://go.microsoft.com/fwlink/?linkid=2109431) es un sitio web único para crear directivas y administrar los dispositivos. Se conecta a otros servicios clave de administración de dispositivos, incluidos los grupos, la seguridad, el acceso condicional y los informes. Este centro de administración también muestra los dispositivos administrados por Configuration Manager e Intune (en versión preliminar).
 
@@ -105,7 +105,7 @@ Microsoft Endpoint Manager es una plataforma de soluciones que unifica varias t
 
 Si actualmente usa Configuration Manager, también puede obtener Microsoft Intune para la administración conjunta de sus dispositivos Windows. Para otras plataformas, como iOS/iPadOS y Android, necesitará una licencia de Intune independiente.
 
-En la mayoría de los escenarios, Microsoft 365 puede ser la mejor opción, ya que proporciona Endpoint Manager y Office 365. Para obtener más información, vea [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+En la mayoría de los escenarios, Microsoft 365 puede ser la mejor opción, ya que proporciona Endpoint Manager y Office. Para obtener más información, vea [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -115,4 +115,4 @@ En la mayoría de los escenarios, Microsoft 365 puede ser la mejor opción, ya 
 
 [Tutorial: Intune en Microsoft Endpoint Manager](/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
 
-[Módulo de aprendizaje ¿Qué es Microsoft 365?](https://docs.microsoft.com/learn/modules/what-is-m365/index)
+[Módulo de aprendizaje ¿Qué es Microsoft 365?](/learn/modules/what-is-m365/index)

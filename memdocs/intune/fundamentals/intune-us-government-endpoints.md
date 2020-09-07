@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1574e07ca58debaef5bbc134a86d76aa21778a3
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 25ec8099c628c4a39266a9352b3b4b9810698592
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347271"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996595"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Puntos de conexión del Gobierno de EE. UU. de Microsoft Intune
 
@@ -49,15 +49,15 @@ En las siguientes tablas se enumeran los puertos y los servicios a los que acced
 
 ## <a name="us-government-customer-designated-endpoints"></a>Puntos de conexión del Gobierno de EE. UU. designados por el cliente:
 - Azure Portal: https:\//portal.azure.us/ 
-- Office 365: https:\//portal.office365.us/ 
+- Microsoft 365: https:\//portal.office365.us/ 
 - Portal de empresa de Intune: https:\//portal.manage.microsoft.us/ 
 - Centro de administración de Microsoft Endpoint Manager:\//endpoint.microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Puntos de conexión de servicio asociados de los que depende Intune:
-- Servicio sincronización de AAD: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
+- Servicio Sincronización de Azure AD: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
 - Evo STS: https:\//login.microsoftonline.us
 - Proxy de directorio: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph: https:\//directory.microsoftazure.us y https:\//graph.microsoftazure.us
+- Azure AD Graph: https:\//directory.microsoftazure.us y https:\//graph.microsoftazure.us
 - MS Graph: https:\//graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 

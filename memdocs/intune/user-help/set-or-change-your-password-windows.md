@@ -1,11 +1,11 @@
 ---
 title: Configuración o cambio de contraseña de dispositivos| Microsoft Docs
-description: ''
+description: Cree o cambie la contraseña en el dispositivo móvil o de escritorio Windows 10.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2018
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,35 +17,30 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c4922bfa179436d30d73c4314662ee0cd7aa815
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ec3fdfb5015cd1b0c0c43e94f9cf55762e4bf559
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881907"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057460"
 ---
-# <a name="make-your-device-safer-with-the-right-password"></a>Hacer que el dispositivo esté más seguro con la contraseña correcta
+# <a name="set-a-device-password-on-windows-10-device"></a>Establecimiento de una contraseña de dispositivo en un dispositivo Windows 10
+Cree o cambie la contraseña en el dispositivo móvil o de escritorio Windows 10. 
 
-El acceso a recursos corporativos, como correo electrónico y documentos, es algo que las personas necesitan hacer cada día desde sus dispositivos de Windows. Su organización desea asegurarse de que el dispositivo lo hace sin ningún riesgo. Una manera de asegurarse de que el dispositivo tiene acceso de forma segura a estos recursos es requerir que los dispositivos usen una contraseña. Por ejemplo, estas contraseñas se utilizan para acceder al dispositivo desde la pantalla de bloqueo.
+En un dispositivo móvil:
 
-Si el dispositivo Windows no se ajusta a la directiva de contraseñas del equipo de soporte técnico de su empresa, verá un mensaje que describirá el problema brevemente y explicará lo que hay que hacer para que la contraseña cumpla los requisitos.
+1. Vaya al menú **Inicio** > **Configuración**.
+2. Se abrirá la configuración del sistema. Seleccione **Cuentas** > **Opciones de inicio de sesión**.
+3. Seleccione **Contraseña** > **Cambiar**.
+4. Siga las indicaciones en pantalla para establecer una nueva contraseña.  
 
-> [!Note]
-> El equipo de soporte técnico de su empresa puede establecer más de un requisito para las contraseñas. Por ejemplo, la contraseña podría tener que incluir un número determinado de caracteres y ser una combinación de números y letras. Puesto que se puede establecer más de un requisito, en estas instrucciones solo se explica cómo establecer o cambiar la contraseña. No se explican todas las combinaciones posibles de requisitos.
+En un dispositivo de escritorio:  
+1. Presione **CTRL**+**ALT**+**SUPR** en el teclado.   
+2. Seleccione **Cambiar una contraseña**.
+3. Siga las indicaciones en pantalla para establecer una nueva contraseña.  
 
-## <a name="to-change-your-password-on-windows-phone-81"></a>Para cambiar la contraseña en Windows Phone 8.1
+Para obtener más ayuda: 
+ 
+* Póngase en contacto con el personal de soporte técnico de TI para obtener ayuda con los requisitos de contraseñas, el uso de Portal de empresa o problemas de acceso a la red. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Para obtener más información sobre otras opciones de inicio de sesión en Windows 10, consulte [Opciones de inicio de sesión de Windows 10 y protección de cuentas](https://support.microsoft.com/help/4468253/windows-10-sign-in-options-and-privacy).  
 
-1. En la **pantalla principal**, elija **Configuración** y, luego, **Pantalla de bloqueo**.
-2. Desplácese hacia abajo hasta **Contraseña** y elija **Cambiar contraseña**.
-3. Escriba la contraseña actual en el cuadro **Contraseña actual**.
-4. Escriba la nueva contraseña en el cuadro **Nueva contraseña** y luego vuelva a escribirla en el cuadro **Confirmar contraseña**.
-4. Elija **Listo**.
-
-## <a name="to-set-your-password-on-windows-phone-81"></a>Para establecer la contraseña en Windows Phone 8.1
-
-1. En la **pantalla principal**, elija **Configuración** y, luego, **Pantalla de bloqueo**.
-2. Desplácese hacia abajo hasta **Contraseña** y deslice la barra **Contraseña** hasta **Activar**.
-3. Escriba la nueva contraseña en el cuadro **Nueva contraseña** y luego vuelva a escribirla en el cuadro **Confirmar contraseña**.
-4. Elija **Listo**.
-
-¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

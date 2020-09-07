@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819616"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194113"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -296,7 +296,7 @@ End of comment -->
 - **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de contraseñas incorrectas permitidas antes de que se borre el dispositivo, entre 4 y 11. `0` (cero) puede deshabilitar la función de borrado del dispositivo. Cuando el valor está en blanco, Intune no cambia ni actualiza esta configuración.
 
   > [!NOTE]
-  > No se pedirá a los dispositivos de perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado que establezcan una contraseña. La configuración se aplicará y tendrá que establecer la contraseña manualmente. La directiva que aplique esto se notificará como errónea hasta que se establezca la contraseña que cumpla sus requisitos.
+  > No se pedirá a los dispositivos de perfil de trabajo de propiedad corporativa, dedicado y totalmente administrado que establezcan una contraseña. La configuración es necesaria, pero es posible que los usuarios no reciban una notificación. Los usuarios deben establecer la contraseña manualmente. La directiva informará de un error hasta que el usuario establezca una contraseña que cumpla los requisitos.
 
 ### <a name="power-settings"></a>Configuración de energía
 

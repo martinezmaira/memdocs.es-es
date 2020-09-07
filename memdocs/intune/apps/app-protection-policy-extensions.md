@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2e05e86bf765071d9d22edebfec2ec03115123
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ecb0e1864fd47cf7aad65fa88de765cb47fce583
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217586"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996731"
 ---
 # <a name="protecting-application-extensions"></a>Protección de las extensiones de aplicación
 
@@ -39,10 +39,10 @@ Si quiere que los usuarios finales dejen de acceder a complementos de Outlook e 
 - Para evitar que los usuarios carguen complementos, quíteles el rol Mis aplicaciones personalizadas.
 - Para evitar que los usuarios instalen todos los complementos, quíteles los roles Mis aplicaciones personalizadas y Mi Marketplace.
 
-Estas instrucciones se aplican a Office 365, Exchange 2016, Exchange 2013 a través de Outlook en la Web, Windows, Mac y dispositivos móviles.
+Estas instrucciones se aplican a Microsoft 365, Exchange 2016, Exchange 2013 a través de Outlook en la Web, Windows, Mac y dispositivos móviles.
 
-- Más información sobre [complementos para Outlook](https://technet.microsoft.com/library/jj943753(v=exchg.150).aspx).
-- Aprenda [cómo especificar los administradores y los usuarios que pueden instalar y administrar complementos para la aplicación Outlook](https://technet.microsoft.com/library/jj943754(v=exchg.150).aspx).
+- Más información sobre [complementos para Outlook](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
+- Aprenda [cómo especificar los administradores y los usuarios que pueden instalar y administrar complementos para la aplicación Outlook](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins).
 
 ## <a name="linkedin-account-connections-for-microsoft-apps"></a>Conexiones de cuenta de LinkedIn para las aplicaciones de Microsoft
 
@@ -51,7 +51,7 @@ Las conexiones de cuenta de LinkedIn permiten a los usuarios ver información p�
 > [!NOTE]
 > La integración de LinkedIn no está disponible actualmente para clientes del gobierno de Estados Unidos y para las organizaciones con buzones de correo de Exchange Online hospedados en Alemania, Australia, Canadá, China, Corea del Sur, Francia, India, Japón, Reino Unido y Sudáfrica.
 
-El SDK de Intune y las directivas de protección de aplicaciones de Intune no incluyen compatibilidad con la administración de conexiones de cuentas de LinkedIn, pero existen otras maneras de administrarlas. Puede deshabilitar las conexiones de cuenta de LinkedIn para toda la organización o habilitarlas para determinados grupos de usuarios de su organización. Esta configuración afecta a las conexiones de LinkedIn en las aplicaciones de Office 365 en todas las plataformas (web, móviles y escritorio). Puede:
+El SDK de Intune y las directivas de protección de aplicaciones de Intune no incluyen compatibilidad con la administración de conexiones de cuentas de LinkedIn, pero existen otras maneras de administrarlas. Puede deshabilitar las conexiones de cuenta de LinkedIn para toda la organización o habilitarlas para determinados grupos de usuarios de su organización. Esta configuración afecta a las conexiones de LinkedIn en las aplicaciones de Microsoft 365 en todas las plataformas (web, móviles y escritorio). Puede:
 
 - Habilitar o deshabilitar las conexiones de cuenta de LinkedIn para el inquilino en Azure Portal. 
 - Habilitar o deshabilitar las conexiones de cuenta de LinkedIn para las aplicaciones de Office 2016 de su organización mediante la directiva de grupo.
@@ -66,16 +66,16 @@ Si un usuario da su consentimiento para compartir datos entre las cuentas, como 
 
 |Permisos de Microsoft Graph  |Descripción  |
 |---------|---------|
-|Permisos de lectura para [Contactos](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Permite que la aplicación lea una lista puntuada de personas relevantes para el usuario que inició sesión. La lista puede incluir contactos locales, contactos de redes sociales o el directorio de su organización, así como personas con las que se ha comunicado recientemente (por ejemplo, por correo electrónico y Skype).         |
-|Permisos de lectura para [Calendarios](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Permite que la aplicación lea eventos de los calendarios de los usuarios. Incluye las reuniones recogidas en los calendarios del usuario que ha iniciado sesión, las horas, las ubicaciones y los asistentes.         |
-|Permisos de lectura para [Perfil de usuario](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Permite que los usuarios inicien sesión en la aplicación y que la aplicación lea el perfil del usuario que ha iniciado sesión. También permite que la aplicación lea información básica de la empresa para los usuarios que han iniciado sesión.         |
-|Subscriptions     |Este ámbito no está disponible y aún no está en uso. Incluye suscripciones proporcionadas por la organización del usuario a aplicaciones y servicios de Microsoft, como Office 365.         |
+|Permisos de lectura para [Contactos](/graph/permissions-reference#people-permissions)     |Permite que la aplicación lea una lista puntuada de personas relevantes para el usuario que inició sesión. La lista puede incluir contactos locales, contactos de redes sociales o el directorio de su organización, así como personas con las que se ha comunicado recientemente (por ejemplo, por correo electrónico y Skype).         |
+|Permisos de lectura para [Calendarios](/graph/permissions-reference#calendars-permissions)     |Permite que la aplicación lea eventos de los calendarios de los usuarios. Incluye las reuniones recogidas en los calendarios del usuario que ha iniciado sesión, las horas, las ubicaciones y los asistentes.         |
+|Permisos de lectura para [Perfil de usuario](/graph/permissions-reference#user-permissions)     |Permite que los usuarios inicien sesión en la aplicación y que la aplicación lea el perfil del usuario que ha iniciado sesión. También permite que la aplicación lea información básica de la empresa para los usuarios que han iniciado sesión.         |
+|Subscriptions     |Este ámbito no está disponible y aún no está en uso. Incluye suscripciones proporcionadas por la organización del usuario a aplicaciones y servicios de Microsoft, como Microsoft 365.         |
 |Información detallada     |Este ámbito no está disponible y aún no está en uso. Incluye los intereses asociados a la cuenta del usuario que ha iniciado sesión en función de su uso de los servicios de Microsoft.         |
 
 ### <a name="learn-more"></a>Obtener más información
 
 - Descubra [información y características de LinkedIn en las aplicaciones de Microsoft](https://go.microsoft.com/fwlink/?linkid=850740).
-- Obtenga información sobre la publicación de las conexiones de cuenta de LinkedIn en la página [Plan de desarrollo de Office 365](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
-- Obtenga información sobre cómo [configurar conexiones de cuenta de LinkedIn](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
+- Obtenga información sobre la publicación de las conexiones de cuenta de LinkedIn en la página [Plan de desarrollo de Microsoft 365](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
+- Obtenga información sobre cómo [configurar conexiones de cuenta de LinkedIn](/azure/active-directory/linkedin-integration).
 - Para obtener más información sobre los datos que se comparten entre las cuentas de LinkedIn y las cuentas profesionales o educativas de Microsoft de los usuarios, vea [LinkedIn en aplicaciones de Microsoft en su trabajo o centro educativo](https://www.linkedin.com/help/linkedin/answer/84077).
 

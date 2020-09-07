@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 76d1141a1c4dd442f6fb94a06b5d20adc8c7fa77
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080137"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996340"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Determinación de los requisitos de los escenarios de casos de uso
 
@@ -64,7 +64,7 @@ Estos son algunos ejemplos más que pueden usarse en la columna "Requisitos":
   - Correo electrónico (Windows 10 Mobile)
 
 - **Aplicaciones**
-  - Office 365 con directivas de protección de aplicaciones
+  - Microsoft 365 con directivas de protección de aplicaciones
   - Línea de negocio (LOB) con directivas de protección de aplicaciones
 
 ## <a name="next-steps"></a>Pasos siguientes
