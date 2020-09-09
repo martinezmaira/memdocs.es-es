@@ -6,7 +6,7 @@ keywords: privacidad, datos
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: 34e99a53165afdccd5ee9a2f3f190c78f673a507
+ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286261"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516263"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Uso compartido y seguridad de datos en Intune
 

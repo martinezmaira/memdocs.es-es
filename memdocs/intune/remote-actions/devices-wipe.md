@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906759"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564285"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo
 
@@ -174,7 +174,7 @@ Puede configurar Intune para eliminar automáticamente los dispositivos que pare
 
 Es posible que deba eliminar dispositivos de Azure AD si se producen problemas de comunicación o si faltan dispositivos. Puede usar la acción **Eliminar** para quitar registros de dispositivo de Azure Portal de los dispositivos que sabe que son inaccesibles y que es poco probable que vuelvan a comunicarse con Azure. La acción **Eliminar** no quita ningún dispositivo de la administración.
 
-1. Inicie sesión en [Azure Active Directory en Azure Portal](https://aka.ms/accessaad) con sus credenciales de administrador. También puede iniciar sesión en el [Centro de administración de Microsoft 365](https://admin.microsoft.com). En el menú, seleccione **Centros de administración** > **Azure AD**.
+1. Inicie sesión en [Azure Active Directory en Azure Portal](https://azure.microsoft.com/services/active-directory/) con sus credenciales de administrador. También puede iniciar sesión en el [Centro de administración de Microsoft 365](https://admin.microsoft.com). En el menú, seleccione **Centros de administración** > **Azure AD**.
 2. Si no tiene ninguna, cree una suscripción de Azure. Si tiene una cuenta de pago, no necesitará ninguna tarjeta de crédito ni deberá efectuar ningún pago (seleccione el vínculo de suscripción **Registre su suscripción gratuita de Azure Active Directory**).
 3. Seleccione **Azure Active Directory** y, después, seleccione su organización.
 4. Seleccione la pestaña **Usuarios** .
