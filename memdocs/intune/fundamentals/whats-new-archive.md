@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996272"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423941"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novedades de Microsoft Intune: meses anteriores
 
@@ -447,7 +447,7 @@ Ahora, Intune proporciona escenarios guiados que ayudan a realizar una tarea con
 Para más información, vea [Introducción a los escenarios guiados de Intune](guided-scenarios-overview.md).
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>Variable de configuración de aplicaciones adicional disponible<!-- 4969237   -->
-Al crear una directiva de configuración de aplicaciones, puede incluir la variable de configuración `AAD Device ID` como parte de los valores de configuración. En Intune, seleccione **Aplicaciones cliente** > **Directivas de configuración de aplicaciones** > **Agregar**. Especifique los detalles de la directiva de configuración y seleccione **Opciones de configuración** para ver la hoja **Opciones de configuración**. Para más información, vea la sección [Uso del diseñador de configuración en Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+Al crear una directiva de configuración de aplicaciones, puede incluir la variable de configuración `AAD_Device_ID` como parte de los valores de configuración. En Intune, seleccione **Aplicaciones cliente** > **Directivas de configuración de aplicaciones** > **Agregar**. Especifique los detalles de la directiva de configuración y seleccione **Opciones de configuración** para ver la hoja **Opciones de configuración**. Para más información, vea la sección [Uso del diseñador de configuración en Adición de directivas de configuración de aplicaciones para dispositivos Android Enterprise administrados](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>Creación de grupos de objetos de administración denominados conjuntos de directivas<!-- 3762880  -->
 Los conjuntos de directivas permiten crear una agrupación de referencias a entidades de administración ya existentes que se deben identificar, establecer como destino y supervisar como una sola unidad conceptual. Los conjuntos de directivas no reemplazan los conceptos ni los objetos existentes. Puede seguir asignando objetos individuales en Intune y hacer referencia a objetos individuales como parte de un conjunto de directivas. Por lo tanto, cualquier cambio que se realice en esos objetos individuales se verá reflejado en el conjunto de directivas.  En Intune, deberá seleccionar **Conjuntos de directivas** > **Crear** para crear un conjunto de directivas desde cero.
@@ -479,7 +479,7 @@ Hemos actualizado la experiencia de interfaz de usuario para [crear](../protect/
 #### <a name="engaged-restart-settings-are-removed-from-windows-update-rings----4464404--------"></a>La configuración Reinicio establecido se ha quitado de los anillos de Windows Update<!--  4464404      -->
 Como ya anunciamos en su día, ahora los anillos de actualización de Windows 10 de Intune [admiten la configuración de fechas límite](../protect/windows-update-settings.md) y ya no admiten *Reinicio establecido*. Las opciones de *Reinicio establecido* ya no están disponibles cuando al configurar o administrar anillos de actualización en Intune.  
 
-Este cambio viene de la mano de algunos [cambios recientes en el Servicio de actualización de Windows](//windows/whats-new/whats-new-windows-10-version-1903#servicing) y en los dispositivos que ejecutan Windows 10 1903 o versiones posteriores, las *fechas límite* reemplazan las configuraciones de *Reinicio establecido*.
+Este cambio viene de la mano de algunos [cambios recientes en el Servicio de actualización de Windows](/windows/whats-new/whats-new-windows-10-version-1903#servicing) y en los dispositivos que ejecutan Windows 10 1903 o versiones posteriores, las *fechas límite* reemplazan las configuraciones de *Reinicio establecido*.
 
 #### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices---4760025-----"></a>Imposibilidad de instalar aplicaciones desde orígenes desconocidos en dispositivos de perfil de trabajo de Android Enterprise<!-- 4760025   -->
 En los dispositivos de perfil de trabajo de Android Enterprise, los usuarios no pueden instalar aplicaciones procedentes de orígenes desconocidos en ninguna circunstancia. En esta actualización hay una nueva configuración, **Impedir la instalación de aplicaciones de orígenes desconocidos en el perfil personal**. Esta opción impide de forma predeterminada que los usuarios carguen aplicaciones de orígenes desconocidos en el perfil personal del dispositivo.
@@ -1346,7 +1346,7 @@ Los administradores verán que estas cuatro aplicaciones se agregan automáticam
 ### <a name="device-configuration"></a>Configuración del dispositivo
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>Conector de certificados PFX actualizado para Microsoft Intune<!-- 1533038 -->
-Hemos publicado una actualización del [Conector de certificado PFX para Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) que resuelve un problema por el que los certificados PFX existentes se siguen reprocesando, lo que provoca que el conector deje de procesar nuevas solicitudes.
+Hemos publicado una actualización del [Conector de certificado PFX para Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) que resuelve un problema por el que los certificados PFX existentes se siguen reprocesando, lo que provoca que el conector deje de procesar nuevas solicitudes.
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>Tareas de seguridad de Intune para ATP de Defender (en versión preliminar pública)<!-- 3208597 -->
 En la versión preliminar pública, puede usar Intune para administrar las [tareas de seguridad para Protección contra amenazas avanzada (ATP) de Microsoft Defender](../protect/atp-manage-vulnerabilities.md). Esta integración con ATP agrega un enfoque basado en riesgos para detectar vulnerabilidades y errores de configuración de puntos de conexión, establecer su prioridad y corregirlos, a la vez que reduce el tiempo entre la detección y la mitigación.
@@ -1400,7 +1400,7 @@ Para ver las opciones disponibles, vaya a [Configuración de VPN en dispositivos
 Se aplica a iOS.
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>Conector de certificados PFX actualizado para Microsoft Intune<!-- doc-vso 1521237  -->  
-Se ha publicado una actualización para el [Conector de certificados PFX para Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) que reduce el intervalo de sondeo de 5 minutos a 30 segundos.
+Se ha publicado una actualización para el [Conector de certificados PFX para Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) que reduce el intervalo de sondeo de 5 minutos a 30 segundos.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1487,7 +1487,7 @@ La compatibilidad de la directiva de protección de aplicaciones (APP) de Intune
 ### <a name="device-configuration"></a>Configuración del dispositivo
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>Conectores de certificado actualizados<!-- ICM 113304612 -->
-Se han publicado actualizaciones para [Intune Certificate Connector y el conector de certificados PFX para Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors). Las nuevas versiones corrigen varios problemas conocidos.
+Se han publicado actualizaciones para [Intune Certificate Connector y el conector de certificados PFX para Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors). Las nuevas versiones corrigen varios problemas conocidos.
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>Establecer configuración de inicio de sesión y opciones de reinicio de control en dispositivos macOS<!-- 1210083  -->
 En dispositivos macOS, puede crear un perfil de configuración de dispositivos (**Configuración de dispositivos** > **Perfiles** > **Crear perfil** > elija **macOS** como plataforma > **Características del dispositivo** para tipo de perfil). Esta actualización incluye una nueva configuración de la ventana de inicio de sesión, como mostrar un encabezado personalizado, elegir cómo inician sesión los usuarios, mostrar u ocultar la configuración de energía y mucho más.

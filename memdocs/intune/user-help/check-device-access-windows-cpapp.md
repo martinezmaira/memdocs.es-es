@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: af883fc950a878a70bac2f9121967254583a90d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 58abb6c011fb2c974ad55bb0feefce19b3aef806
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914453"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390881"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Comprobar el acceso desde la aplicación Portal de empresa para Windows
 
@@ -68,7 +68,7 @@ Complete los pasos que se describen en este artículo para comprobar el acceso d
 
     ![Captura de pantalla de ejemplo de la página principal de la aplicación Portal de empresa para Windows, donde se resalta la sección Mis dispositivos.](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. Haga clic con el botón derecho en un dispositivo o manténgalo pulsado para abrir el [menú contextual](//windows/uwp/design/controls-and-patterns/menus).  
+2. Haga clic con el botón derecho en un dispositivo o manténgalo pulsado para abrir el [menú contextual](/windows/uwp/design/controls-and-patterns/menus).  
 
     ![Captura de pantalla de ejemplo de la página principal de la aplicación Portal de empresa para Windows. El menú contextual del dispositivo está visible en la sección **Mis dispositivos** de la página y muestra las acciones "Cambiar nombre", "Quitar" y "Comprobar acceso".](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Seleccione **Comprobar acceso**. La aplicación sincroniza el dispositivo con los requisitos actuales de la organización y comprueba que el dispositivo los cumpla. Esta comprobación puede tardar unos minutos.  

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ea17b57fc0881e189d0d57b823caece3610b4528
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907657"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390847"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Cambio de nombre del dispositivo desde la aplicación Portal de empresa para Windows
 Cambie el nombre de un dispositivo para que sea más fácil de reconocer entre otros dispositivos. La aplicación Portal de empresa para Windows permite cambiar el nombre de los siguientes tipos de dispositivos conectados:  
@@ -47,7 +47,7 @@ Realice el paso siguiente para quitar un dispositivo desde la página **Detalles
      ![Captura de pantalla de ejemplo de la aplicación Portal de empresa para Windows, página Detalles del dispositivo, campo emergente Cambiar nombre.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Cambio de nombre del dispositivo desde el menú contextual del dispositivo  
-Realice el paso siguiente para quitar un dispositivo mediante las acciones del [menú contextual](//windows/uwp/design/controls-and-patterns/menus).  
+Realice el paso siguiente para quitar un dispositivo mediante las acciones del [menú contextual](/windows/uwp/design/controls-and-patterns/menus).  
 
 1. En la página **Inicio** de la aplicación Portal de empresa, vaya a **Mis dispositivos**.
 

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0639f5a92d4377212834f5c7089f534628e787d1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057321"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390864"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalar y compartir aplicaciones en el dispositivo
 
@@ -58,7 +58,7 @@ Según el tamaño de la empresa, puede ver varias versiones de Office disponible
 ## <a name="share-apps"></a>Recurso compartido de aplicaciones  
 Comparta y recomiende las aplicaciones a sus contactos profesionales o de instituciones educativas. Los pasos siguientes describen cómo compartir un vínculo directamente desde el Portal de empresa.
 
-1. En el Portal de empresa, haga clic con el botón derecho o pulse y mantenga pulsada cualquier aplicación para abrir su [menú contextual](//windows/uwp/design/controls-and-patterns/menus).  
+1. En el Portal de empresa, haga clic con el botón derecho o pulse y mantenga pulsada cualquier aplicación para abrir su [menú contextual](/windows/uwp/design/controls-and-patterns/menus).  
 
     ![La aplicación Portal de empresa para Windows 10, página principal, que muestra una lista de aplicaciones y dispositivos. El menú de contexto “Compartir” en el que puede hacer clic está visible encima del icono de la aplicación de ejemplo. ](./media/1808_ShareContext_CP_Windows.png)  
 
