@@ -8,9 +8,15 @@
       href: client-details.md
     - name: Instalación de aplicaciones (versión preliminar)
       href: applications.md
+    - name: Escala de tiempo del dispositivo (vista previa)
+      href: timeline.md
+    - name: Explorador de recursos (vista previa)
+      href: resource-explorer.md
 - name: CMPivot para dispositivos conectados al inquilino (versión preliminar)
   items:
-    - name: Información general de CMPivot
+    - name: Iniciar CMPivot (vista previa)
+      href: cmpivot-start.md
+    - name: Información general del uso de CMPivot
       href: cmpivot-overview-attached.md
     - name: Scripts de ejemplo de CMPivot
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: Instalación de la aplicación (versión preliminar)
       href: troubleshoot-applications.md
+    - name: Escala de tiempo (vista previa)
+      href: troubleshoot-timeline.md
+    - name: Explorador de recursos (vista previa)
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot (vista previa)
+      href: troubleshoot-cmpivot.md
