@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Lea noticias y recursos sobre las últimas actualizaciones y versiones anteriores de Windows AutoPilot.
 keywords: MDM, configurar, Windows, Windows 10, Oobe, administrar, implementar, AutoPilot, ZTD, cero-Touch, Partner, msfb, Intune
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -14,18 +15,18 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 840a46aa05f088f8c2ccb27d3b3a3ec368728ae9
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 736e01696cf503b63762c32a9acee3cb68c1e241
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907866"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606559"
 ---
 # <a name="windows-autopilot-whats-new"></a>Windows AutoPilot: novedades
 
 **Se aplica a**
 
--   Windows 10
+- Windows 10
 
 ## <a name="windows-autopilot-update-history"></a>Historial de actualizaciones de Windows AutoPilot
 
@@ -51,13 +52,13 @@ También novedad en esta versión de Windows:
 - La página de estado de inscripción (ESP) de Intune ahora realiza el seguimiento de las extensiones de administración de Intune.
 - [Cortana VoiceOver y reconocimiento de voz durante Oobe](windows-autopilot-scenarios.md#cortana-voiceover-and-speech-recognition-during-oobe) está deshabilitado de forma predeterminada para todas las SKU de Windows 10 Pro y Enterprise.
 - [Windows AutoPilot se actualiza automáticamente durante Oobe](windows-autopilot-scenarios.md#windows-autopilot-is-self-updating-during-oobe). A partir de las actualizaciones funcionales y críticas del piloto de Windows 10, versión 1903, se iniciará la descarga automática durante OOBE.
-- Windows AutoPilot establecerá el nivel de datos de diagnóstico en completo en la versión 1903 de Windows 10 y versiones posteriores durante OOBE. 
+- Windows AutoPilot establecerá el nivel de datos de diagnóstico en Full durante OOBE en los dispositivos que ejecutan Windows 10, versión 1903 o posterior. 
 
 ## <a name="new-in-windows-10-version-1809"></a>Novedad de Windows 10, versión 1809
 
-El [modo de Autoimplementación de](self-deploying.md) Windows AutoPilot permite una experiencia de aprovisionamiento de dispositivos de toque cero. Simplemente encienda el dispositivo, conéctelo a Ethernet y el dispositivo esté configurado por completo con Windows AutoPilot. Esta capacidad de auto-implementación elimina la necesidad actual de que un usuario final interactúe presionando el botón "siguiente" durante el proceso de implementación. 
+El [modo de Autoimplementación de](self-deploying.md) Windows AutoPilot es un proceso de aprovisionamiento de dispositivos sin interacción. Simplemente encienda el dispositivo, conéctese a Ethernet y AutoPilot configura automáticamente el dispositivo. Los usuarios finales no tienen que presionar el botón "siguiente" durante el proceso de implementación. 
 
-Puede utilizar el modo de Autoimplementación de Windows AutoPilot para registrar el dispositivo en un inquilino de AAD, inscribirse en el proveedor de MDM de su organización y aprovisionar directivas y aplicaciones, todo ello sin necesidad de autenticación de usuario o interacción del usuario. 
+Puede usar el modo de Autoimplementación de Windows AutoPilot para registrar el dispositivo en un inquilino de AAD, inscribirse en el proveedor de MDM de la organización y aprovisionar directivas y aplicaciones. No se requiere autenticación de usuario ni interacción del usuario.
 
 >[!NOTE]
 >Se requiere Windows 10, versión 1903 o posterior para usar el modo de implementación automática debido a problemas con la atestación de dispositivo de TPM en Windows 10, versión 1809.

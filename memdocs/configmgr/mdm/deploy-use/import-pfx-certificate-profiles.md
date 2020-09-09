@@ -1,7 +1,7 @@
 ---
 title: Importar perfiles de certificado PFX
 titleSuffix: Configuration Manager
-description: Aprenda a usar archivos PFX en Configuration Manager para generar certificados específicos del usuario que admitan el intercambio de datos cifrados.
+description: Obtenga información sobre cómo importar archivos PFX en Configuration Manager para generar certificados específicos del usuario que admitan el intercambio de datos cifrados.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ef8c1656c12ead992d5305cdf86b1ab8fcfcb836
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700504"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608435"
 ---
 # <a name="import-pfx-certificate-profiles"></a>Importar perfiles de certificado PFX
 
@@ -56,7 +56,7 @@ Use Configuration Manager para importar las credenciales de certificado y, a con
 
 1. En la página **plataformas admitidas** , elija las plataformas de dispositivos compatibles.
 
-1. Finalice el asistente.
+1. Complete el asistente.
 
 ## <a name="deploy-the-profile"></a>Implementar el perfil
 
@@ -70,9 +70,9 @@ Asigne los usuarios de destino como usuarios primarios en los dispositivos de Wi
 
 Para importar un certificado PFX, use los siguientes cmdlets de PowerShell de Configuration Manager para aprovisionar un script de creación de PFX:
 
-- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx)
 
 ### <a name="example-script"></a>Script de ejemplo
 

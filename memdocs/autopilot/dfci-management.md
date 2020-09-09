@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Con la implementación de Windows AutoPilot e Intune, puede administrar la configuración de UEFI (BIOS) una vez que se ha inscrito mediante la interfaz de configuración de firmware del dispositivo (DFCI).
 keywords: AutoPilot, DFCI, UEFI, Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,20 +15,20 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df49fb939b709c15f2b01b3577f7fc7ced60140d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 95979a3c53752bb77c31710e20de54dbc2781262
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908350"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606617"
 ---
-# <a name="dfci-management"></a>Administración de DFCI
+# <a name="device-firmware-configuration-interface-dfci-management"></a>Administración de la interfaz de configuración de firmware del dispositivo (DFCI)
 
 **Se aplica a**
 
--   Windows 10
+- Windows 10
 
-Con la implementación de Windows AutoPilot e Intune, puede administrar la configuración de Unified Extensible Firmware Interface (UEFI) una vez que se ha inscrito mediante la interfaz de configuración de firmware del dispositivo (DFCI).  DFCI [permite a Windows pasar comandos de administración](/windows/client-management/mdm/uefi-csp) de Intune a UEFI a dispositivos implementados con AutoPilot. Esto le permite limitar el control del usuario final de la configuración del BIOS. Por ejemplo, puede bloquear las opciones de arranque para impedir que los usuarios arranquen otro sistema operativo, como uno que no tenga las mismas características de seguridad.
+Con la implementación de Windows AutoPilot e Intune, puede administrar la configuración de Unified Extensible Firmware Interface (UEFI) una vez que se ha inscrito mediante la interfaz de configuración de firmware del dispositivo (DFCI). DFCI [permite a Windows pasar comandos de administración](/windows/client-management/mdm/uefi-csp) de Intune a UEFI para dispositivos implementados con AutoPilot. Esta funcionalidad permite limitar el control del usuario final de la configuración del BIOS. Por ejemplo, puede bloquear las opciones de arranque para impedir que los usuarios arranquen otro sistema operativo, como uno que no tenga las mismas características de seguridad.
 
 Si un usuario vuelve a instalar una versión anterior de Windows, instala un sistema operativo independiente o formatea el disco duro, no puede invalidar la administración de DFCI. Esta característica también puede impedir que el malware se comunique con los procesos del sistema operativo, incluidos los procesos de sistema operativo elevados. La cadena de confianza de DFCI utiliza criptografía de clave pública y no depende de la seguridad de contraseñas de UEFI local. Este nivel de seguridad impide que los usuarios locales tengan acceso a la configuración administrada desde los menús UEFI del dispositivo.
 
@@ -35,9 +36,18 @@ Para obtener información general sobre las ventajas, los escenarios y los requi
 
 ## <a name="dfci-management-lifecycle"></a>Ciclo de vida de administración de DFCI
 
-El ciclo de vida de la administración de DFCI se puede ver como integración de UEFI, registro de dispositivos, creación de perfiles, inscripción, administración, retirada y recuperación. Consulte la siguiente figura.
+El ciclo de vida de administración de DFCI incluye los siguientes procesos:
+- Integración de UEFI
+- Registro de dispositivos
+- Creación de perfiles
+- Inscripción
+- Administración
+- Retirada
+- Recuperación
 
-   ![Ciclo de vida](images/dfci.png)
+Consulte la siguiente figura.
+
+ ![Ciclo de vida](images/dfci.png)
 
 ## <a name="requirements"></a>Requisitos
 

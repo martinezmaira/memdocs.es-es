@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Infórmese sobre los requisitos de red para la implementación de Windows AutoPilot.
 keywords: MDM, configurar, Windows, Windows 10, Oobe, administrar, implementar, AutoPilot, ZTD, cero-Touch, Partner, msfb, Intune
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -17,12 +18,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 1b217f7b299447b53c760cbba85b873d0626d741
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: c17f56bfb75cb2e3fb96f2b470d0c91df7ea2ef0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993755"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606554"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Requisitos de red de Windows AutoPilot
 
@@ -42,7 +43,7 @@ Puede ser necesaria una configuración adicional para conceder acceso a los serv
 
 Para obtener detalles adicionales acerca de cada uno de estos servicios y sus requisitos específicos, revise los detalles siguientes:
 
-<table><th>Servicio<th>Información de
+<table><th>Servicio<th>Información
 <tr><td><b>Servicio de implementación de Windows AutoPilot<b><td>Una vez que se haya establecido una conexión de red, cada dispositivo de Windows 10 se pondrá en contacto con el servicio de implementación de Windows AutoPilot. Con Windows 10 versión 1903 y versiones posteriores, se usan las direcciones URL siguientes: https://ztd.dds.microsoft.com , https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Activación de Windows<b><td>Windows AutoPilot requiere servicios de activación de Windows. Para obtener más información acerca de las direcciones URL que deben ser accesibles para los servicios de activación, consulte <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">activación o validación de Windows error con el código de error 0x8004FE33</a>.<br>
@@ -76,7 +77,10 @@ Si el Microsoft Store no es accesible, el proceso de AutoPilot seguirá continua
 <tr><td><b>Microsoft 365<b><td>Como parte de la configuración del dispositivo de Intune, es posible que sea necesaria la instalación de Microsoft 365 aplicaciones para la empresa. Para obtener más información, consulte <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">direcciones URL e intervalos de direcciones IP de Office 365</a>. En este artículo se incluyen todos los servicios de Office, nombres DNS y direcciones IP. También incluye Azure AD y otros servicios que pueden superponerse con los servicios mencionados anteriormente.
 <tr><td><b>Listas de revocación de certificados (CRL)<b><td>Algunos de estos servicios también necesitarán comprobar las listas de revocación de certificados (CRL) para los certificados que se usan en los servicios.Para obtener una lista completa, consulte <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">direcciones URL e intervalos de direcciones IP de office 365</a> y <a href="https://aka.ms/o365chains">cadenas de certificados de Office 365</a>.
 <tr><td><b>Unión a Azure AD híbrido<b><td>El dispositivo puede ser híbrido Azure AD Unido. El equipo debe estar en la red corporativa para que la Unión Azure AD híbrida funcione. Ver los detalles en <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">el modo controlado por el usuario de Windows AutoPilot</a>
-<tr><td><b>Modo Autoimplementación AutoPilot y la guante blanca de autopiloto<b><td>Los dispositivos TPM de firmware, que solo son proporcionados por Intel, AMD o Qualcomm, no incluyen todos los certificados necesarios en el momento del arranque y deben ser capaces de recuperarlos del fabricante al usarse por primera vez. Los dispositivos con chips de TPM discretos (incluidos los dispositivos de cualquier otro fabricante) incluyen estos certificados preinstalados. Para obtener más información, vea <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">recomendaciones del TPM</a>. Para cada proveedor de TPM de firmware, asegúrese de que se pueda acceder a estas direcciones URL para que los certificados se puedan solicitar correctamente:
+<tr><td><b>Modo Autoimplementación AutoPilot y la guante blanca de autopiloto<b><td>
+El proceso de atestación de TPM requiere acceso a un conjunto de direcciones URL HTTPS (único para cada proveedor de TPM).  Asegúrese de tener acceso a este patrón de dirección URL: *. microsoftaik.azure.net
+ 
+Los dispositivos TPM de firmware, que solo son proporcionados por Intel, AMD o Qualcomm, no incluyen todos los certificados necesarios en el momento del arranque y deben ser capaces de recuperarlos del fabricante al usarse por primera vez. Los dispositivos con chips de TPM discretos (incluidos los dispositivos de cualquier otro fabricante) incluyen estos certificados preinstalados. Para obtener más información, vea <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">recomendaciones del TPM</a>. Para cada proveedor de TPM de firmware, asegúrese de que se pueda acceder a estas direcciones URL para que los certificados se puedan solicitar correctamente: 
 
  <br>Procesador <code>https://ekop.intel.com/ekcertservice</code>
  <br>Qualcomm <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
