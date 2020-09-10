@@ -3,6 +3,7 @@ title: Implementación de Windows AutoPilot para la guante blanca
 description: Implementación de Windows AutoPilot para la guante blanca
 keywords: MDM, configurar, Windows, Windows 10, Oobe, administrar, implementar, AutoPilot, ZTD, sin intervención del socio, msfb, Intune, aprovisionamiento previo
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: low
 ms.sitesec: library
@@ -11,14 +12,15 @@ audience: itproF
 manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614693"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643444"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Implementación de Windows AutoPilot para la guante blanca
 
@@ -26,17 +28,17 @@ ms.locfileid: "88614693"
 
 Windows AutoPilot ayuda a las organizaciones a aprovisionar fácilmente nuevos dispositivos mediante la imagen y los controladores OEM preinstalados. Esto permite a los usuarios finales obtener sus dispositivos listos para la empresa mediante un proceso sencillo.
 
- ![OEM](images/wg01.png)
+ ![proceso de OEM](images/wg01.png)
 
 Windows AutoPilot también puede proporcionar un servicio de la <I>guante de blanco</I> que ayuda a los asociados o al personal de ti a aprovisionar previamente un equipo con Windows 10 preparado para el negocio y totalmente configurado. Desde la perspectiva del usuario final, la experiencia controlada por el usuario de Windows AutoPilot no cambia, pero la obtención de su dispositivo a un estado totalmente aprovisionado es más rápida.
 
 Con la **implementación de Windows AutoPilot para la guante blanca**, se divide el proceso de aprovisionamiento. Las partes que requieren mucho tiempo se realizan por ti, asociados o OEM. El usuario final simplemente completa algunos valores y directivas necesarios y, a continuación, puede empezar a usar su dispositivo.
 
- ![OEM](images/wg02.png)
+ ![Proceso de OEM con asociado](images/wg02.png)
 
 Las implementaciones de la guante blanca usan Microsoft Intune en Windows 10, versión 1903 y posteriores. Estas implementaciones se basan en escenarios de Windows AutoPilot existentes basados en [el usuario](user-driven.md) y admiten escenarios de modo controlado por el usuario para dispositivos Azure Active Directory Unidos e híbridos Unidos Azure Active Directory.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Además de [los requisitos de Windows AutoPilot](software-requirements.md), la implementación de Windows AutoPilot para la guante blanca también requiere:
 
@@ -86,7 +88,7 @@ Una vez que el cliente o el administrador de ti ha dirigido todas las aplicacion
 - Arranque el dispositivo (con las SKU de Windows 10 Pro, Enterprise o Education, versión 1903 o posterior).
 - En la primera pantalla de OOBE (que podría ser una pantalla de selección de idioma o de configuración regional), no haga clic en **siguiente**. En su lugar, presione la tecla de Windows cinco veces para ver un cuadro de diálogo de opciones adicionales. En esa pantalla, elija la opción de **aprovisionamiento de Windows AutoPilot** y, a continuación, haga clic en **continuar**.
 
- ![choice](images/choice.png)
+ ![Opción de aprovisionamiento de Windows AutoPilot](images/choice.png)
 
 - En la pantalla **configuración de Windows AutoPilot** , se mostrará información sobre el dispositivo:
  - El perfil AutoPilot asignado al dispositivo.
@@ -96,13 +98,13 @@ Una vez que el cliente o el administrador de ti ha dirigido todas las aplicacion
  - **Nota**: los códigos QR se pueden analizar mediante una aplicación complementaria. La aplicación también configura el dispositivo para especificar a quién pertenece. El equipo de AutoPilot ha publicado en GitHub un [ejemplo de código abierto de la aplicación complementaria](https://github.com/Microsoft/WindowsAutopilotCompanion) que se integra con Intune mediante el Graph API.
 - Valide la información que se muestra. Si se necesitan cambios, realice los cambios y, a continuación, haga clic en **Actualizar** para volver a descargar los detalles del perfil AutoPilot actualizado.
 
- ![destino](images/landing.png)
+ ![Pantalla de configuración de Windows AutoPilot](images/landing.png)
 
 - Haga clic en **aprovisionar** para comenzar el proceso de aprovisionamiento.
 
 Si el proceso de aprovisionamiento previo se completa correctamente:
 - Aparece una pantalla de estado verde con información sobre el dispositivo, incluidos los mismos detalles presentados anteriormente. Por ejemplo, perfil de AutoPilot, nombre de la organización, usuario asignado y código QR. También se proporciona el tiempo transcurrido para los pasos previos al aprovisionamiento.
- ![blanco-guante-resultado](images/white-glove-result.png)
+ ![Pantalla de configuración verde](images/white-glove-result.png)
 - Haga clic en volver a **sellar** para apagar el dispositivo. En ese momento, el dispositivo puede enviarse al usuario final.
 
 >[!NOTE]
