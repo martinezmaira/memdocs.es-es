@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: fb2fb87a483328d06b3e0757fb6eb5a25e734b1d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193645"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607902"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funciones de Technical Preview 1511 de Configuration Manager
 
@@ -110,7 +110,7 @@ Intente realizar las siguientes tareas y después use la información de comenta
  Use los siguientes procedimientos para crear y configurar por primera vez el grupo de disponibilidad y, luego, instale un nuevo sitio de Configuration Manager que use el grupo de disponibilidad.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Para crear el grupo de disponibilidad de SQL Server AlwaysOn  
-El proceso para [crear un grupo de disponibilidad de SQL Server](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) se documenta en la biblioteca de documentación de SQL Server.  Cuando cree el grupo de disponibilidad, asegúrese de que se cumplan los siguientes requisitos para poder usarlo con Configuration Manager:  
+El proceso para [crear un grupo de disponibilidad de SQL Server](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) se documenta en la biblioteca de documentación de SQL Server.  Cuando cree el grupo de disponibilidad, asegúrese de que se cumplan los siguientes requisitos para poder usarlo con Configuration Manager:  
 
 -   Un máximo de tres miembros:  
 

@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1b11d0e54305b148a2f73a3a3af9f0497fe8e557
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696912"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608041"
 ---
 # <a name="software-updates-maintenance"></a>Mantenimiento de las actualizaciones de software
 
@@ -130,11 +130,11 @@ La adición de índices no agrupados mejora el rendimiento de la limpieza de WSU
 
 Cuando la base de datos de WSUS se encuentra en un servidor SQL Server remoto, es posible que tenga que agregar permisos en SQL para crear índices. La cuenta usada para conectarse a la base de datos de WSUS y crear los índices puede variar. Si especifica una [cuenta de conexión del servidor WSUS en las propiedades del punto de actualización de software](../get-started/install-a-software-update-point.md#wsus-server-connection-account), asegúrese de que la cuenta de conexión tiene los permisos de SQL. Si no especifica una cuenta de conexión del servidor WSUS, la cuenta de equipo del servidor de sitio necesita los permisos de SQL.
 
-- Para crear un índice se requiere el permiso `ALTER` en la tabla o la vista. La cuenta de equipo del servidor de sitio debe ser miembro del rol fijo de servidor `sysadmin` o de los roles fijos de base de datos `db_ddladmin` y `db_owner`. Para más información sobre la creación, el índice y los permisos, consulte [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- Debe concederse permiso de servidor `CONNECT SQL` a la cuenta. Para más información, consulte [GRANT (permisos de servidor de Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Para crear un índice se requiere el permiso `ALTER` en la tabla o la vista. La cuenta de equipo del servidor de sitio debe ser miembro del rol fijo de servidor `sysadmin` o de los roles fijos de base de datos `db_ddladmin` y `db_owner`. Para más información sobre la creación, el índice y los permisos, consulte [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql#permissions).
+- Debe concederse permiso de servidor `CONNECT SQL` a la cuenta. Para más información, consulte [GRANT (permisos de servidor de Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 > [!NOTE]  
->  Si la base de datos de WSUS se encuentra en un servidor SQL remoto mediante un puerto no predeterminado, entonces puede que los índices no se agreguen. Puede crear un [alias de servidor mediante SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) para este escenario. Una vez que se agrega el alias y Configuration Manager puede realizar una conexión a la base de datos de WSUS, se agregarán los índices.
+>  Si la base de datos de WSUS se encuentra en un servidor SQL remoto mediante un puerto no predeterminado, entonces puede que los índices no se agreguen. Puede crear un [alias de servidor mediante SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) para este escenario. Una vez que se agrega el alias y Configuration Manager puede realizar una conexión a la base de datos de WSUS, se agregarán los índices.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Quitar las actualizaciones obsoletas de la base de datos de WSUS
 
@@ -150,8 +150,8 @@ Las actualizaciones obsoletas son actualizaciones y revisiones de actualización
 
 Cuando la base de datos WSUS se encuentra en un servidor SQL remoto, la cuenta de equipo del servidor de sitio necesita los siguientes permisos de SQL:
 
-- Los roles fijos de base de datos `db_datareader` y `db_datawriter`. Para más información, consulte [Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- El permiso de servidor `CONNECT SQL` se debe conceder a la cuenta de equipo del servidor de sitio. Para más información, consulte [GRANT (permisos de servidor de Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Los roles fijos de base de datos `db_datareader` y `db_datawriter`. Para más información, consulte [Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
+- El permiso de servidor `CONNECT SQL` se debe conceder a la cuenta de equipo del servidor de sitio. Para más información, consulte [GRANT (permisos de servidor de Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 #### <a name="wsus-cleanup-wizard"></a>Asistente para limpieza de WSUS
 

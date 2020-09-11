@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 950146c694addc5be0b351278a381ff4839e7bca
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193834"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607789"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
@@ -479,7 +479,7 @@ Al instalar o actualizar el servidor de sitio, copia estos archivos de instalaci
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, consulte [Resumen de cambios en la rama actual de Configuration Manager, versión 1902](https://support.microsoft.com/help/4498910).
 
-Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, consulte las [notas de la versión de PowerShell 1902](/powershell/sccm/1902-release-notes?view=sccm-ps).
+Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, consulte las [notas de la versión de PowerShell 1902](/powershell/sccm/1902-release-notes).
 
 El paquete acumulativo de actualizaciones siguiente (4500571) está disponible en la consola desde el 17 de junio de 2019: [Paquete acumulativo de actualizaciones de la rama actual de Configuration Manager, versión 1902](https://support.microsoft.com/help/4500571).
 

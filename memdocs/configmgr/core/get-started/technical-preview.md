@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432581"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564217"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -167,8 +167,6 @@ Las características siguientes se lanzaron con versiones anteriores de la rama 
 | Característica        | Versión de Technical Preview |
 |----------------|---------------------------|
 | Mejoras en las aplicaciones disponibles a través de CMG <!--7033501--> | [Versión preliminar técnica 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Asociación de inquilinos: escala de tiempo del dispositivo en el centro de administración <!--7141381--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Asociación de inquilinos: CMPivot desde el centro de administración <!--6024392--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Asociación de inquilinos: ejecución de scripts desde el centro de administración <!--6234688--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Mejoras en los cmdlets de Cloud Management Gateway <!--6978300--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Notificación de errores de instalación y actualización a Microsoft <!--5622909--> | [Versión preliminar técnica 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

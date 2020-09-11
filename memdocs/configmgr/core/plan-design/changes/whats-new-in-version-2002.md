@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993342"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607704"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novedades de la versión 2002 de la rama actual de Configuration Manager
 
@@ -426,7 +426,7 @@ A partir de esta versión, las características siguientes dejarán de estar en 
 - [CMPivot independiente](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Aplicaciones cliente para dispositivos administrados conjuntamente](../../../comanage/workloads.md#client-apps) (antes denominadas *aplicaciones móviles para dispositivos administrados conjuntamente*)<!-- 1357892/3600959 -->
 
-Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell relativos a Configuration Manager, vea las [notas de la versión de PowerShell 2002](/powershell/sccm/2002-release-notes?view=sccm-ps).
+Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell relativos a Configuration Manager, vea las [notas de la versión de PowerShell 2002](/powershell/sccm/2002-release-notes).
 
 Para obtener más información sobre los cambios en la API REST del servicio de administración, consulte las [notas de la versión del servicio de administración](../../../develop/adminservice/release-notes.md#bkmk_2002).
 

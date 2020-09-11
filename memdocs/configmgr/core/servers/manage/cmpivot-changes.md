@@ -10,12 +10,12 @@ ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 20b23cec74ae3d201bc81fe1834e87e7eb8fcc13
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 32800284c415de6a36e856abf473bc6d8d729e6f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129614"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608237"
 ---
 # <a name="changes-to-cmpivot"></a>Cambios de CMPivot
 
@@ -359,7 +359,7 @@ Para que CMPivot funcione en el servidor de CAS con dicho "escenario de salto do
       1. Seleccione **Usar solamente Kerberos**.
       1. Agregue el servicio de SQL Server de cada sitio principal con el puerto y la instancia.
       1. Asegúrese de que estos cambios se ajustan a la directiva de seguridad de su empresa.
-1. Asegúrese de que el [SPN se publique](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) para el nombre del cliente de escucha de SQL del CAS y para cada nombre del cliente de escucha de SQL principal.
+1. Asegúrese de que el [SPN se publique](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) para el nombre del cliente de escucha de SQL del CAS y para cada nombre del cliente de escucha de SQL principal.
 1. Reinicie los servidores principales de SQL Server.
 1. Reinicie el servidor de sitio del CAS y los servidores SQL Server del CAS.
 

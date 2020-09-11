@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240361"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468318"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Importación de datos de configuración con Configuration Manager
 
@@ -28,8 +28,6 @@ Además de crear líneas base de configuración y elementos de configuración en
 - Datos de configuración que se han exportado desde System Center 2012 Configuration Manager y versiones posteriores.  
 
 - Datos de configuración que se crearon externamente y que se ajustan al esquema de (SML).  
-
-  Para un ejemplo de paquete de configuración que le ayude a administrar el cumplimiento de los roles de servidor de sitio de System Center 2012 Configuration Manager, vea [System Center 2012 Configuration Manager Configuration Pack](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Al importar una línea base de configuración, algunos o todos los elementos de configuración a los que se hace referencia en la línea de base de configuración pueden incluirse también en el archivo contenedor. Durante el proceso de importación, Configuration Manager comprueba que todos los elementos de configuración a los que se hace referencia en la línea de base de configuración también se incluyen en el archivo .cab o ya existen en el sitio de Configuration Manager. Se produce un error en el proceso de importación si intenta importar una línea de base de configuración que hace referencia a datos de configuración que Configuration Manager no puede encontrar.  
 

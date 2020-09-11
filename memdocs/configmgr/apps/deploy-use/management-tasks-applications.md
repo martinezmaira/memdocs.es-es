@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 15c1be9ed388356e17f8591123114dccf7bcd612
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cf96add17fa9ff5d4bf0aeb7970f4db046f7b463
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695212"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606538"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Tareas de administración de aplicaciones de Configuration Manager
 
@@ -40,7 +40,7 @@ Para obtener más información sobre la creación de aplicaciones y los tipos de
 |**Actualizar estadísticas**|Actualiza la información que se muestra en el nodo **Implementaciones** del área de trabajo **Supervisión** sobre las implementaciones de esta aplicación.<br /><br /> Consulte [Supervisar aplicaciones desde la consola de System Center Configuration Manager](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
 |**Restablecer**|Restablece una aplicación retirada anteriormente mediante la tarea de administración **Retirar**.|  
 |**Retirar**|Cuando retira una aplicación, dejará de estar disponible para la implementación. En cambio, la aplicación y sus implementaciones no se eliminan. No se quitarán las copias existentes de la aplicación que se instalaron en equipos cliente. Todos los cambios hechos en la aplicación se eliminarán de Configuration Manager transcurridos 60 días. Pero, las copias instaladas de la aplicación no se eliminan.<br /><br /> Para eliminar una aplicación primero debe retirarla, eliminar todas las implementaciones, quitar las referencias de otras implementaciones a la aplicación y, después, eliminar todas sus revisiones.<br /><br /> See [Revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md) (Revisión y sustitución de aplicaciones).|  
-|**Exportarar**|Abre el **Asistente para exportar aplicaciones** que le permite exportar las aplicaciones seleccionadas en un archivo .zip que puede archivar o instalar en otro sitio. Si decide exportar el contenido de una aplicación, se creará una carpeta con el contenido.<br /><br /> También puede exportar las dependencias de aplicación, las relaciones de sustitución y las condiciones, y el contenido de la aplicación y de sus dependencias.<br /><br /> El cmdlet de Windows PowerShell, **Export-CMApplication**, realiza la misma función. Para obtener más información, vea [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps).|  
+|**Exportarar**|Abre el **Asistente para exportar aplicaciones** que le permite exportar las aplicaciones seleccionadas en un archivo .zip que puede archivar o instalar en otro sitio. Si decide exportar el contenido de una aplicación, se creará una carpeta con el contenido.<br /><br /> También puede exportar las dependencias de aplicación, las relaciones de sustitución y las condiciones, y el contenido de la aplicación y de sus dependencias.<br /><br /> El cmdlet de Windows PowerShell, **Export-CMApplication**, realiza la misma función. Para obtener más información, vea [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication).|  
 |**Eliminar**|Elimina la aplicación seleccionada.<br /><br /> No se puede eliminar una aplicación si otras aplicaciones dependen de la misma, si tiene una implementación activa o si tiene secuencias de tareas dependientes.|  
 |**Simular implementación**|Abre el **Asistente para simular implementación de aplicación** , en el que puede probar el resultado de una implementación de aplicación en equipos sin instalar o desinstalar la aplicación.<br /><br /> Consulte [Simulate application deployments](../../apps/deploy-use/simulate-application-deployments.md) (Simulación de implementaciones de aplicaciones).|  
 |**Implementar**|Abre el **Asistente para implementar software** , en el que puede implementar la aplicación seleccionada en recopilaciones de equipos en su jerarquía.<br /><br /> Consulte [Deploy applications](../../apps/deploy-use/deploy-applications.md) (Implementación de aplicaciones).|  

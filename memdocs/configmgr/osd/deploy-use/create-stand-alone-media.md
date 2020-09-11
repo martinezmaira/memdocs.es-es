@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 8ff3e0ee8f002a21e283b8a56f55d0daa2490253
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068028"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606361"
 ---
 # <a name="create-stand-alone-media"></a>Crear medios independientes
 
@@ -151,7 +151,7 @@ Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crea
         >
         > En un medio independiente, solo se cifran los pasos de la secuencia de tareas y sus variables. No se cifra el contenido restante del medio. No incluya información confidencial en los scripts de la secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
 
-    - **Seleccionar el intervalo de fechas de validez de este medio independiente**: establezca fechas de inicio y expiración opcionales en los medios. Esta configuración está deshabilitada de manera predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps).  
+    - **Seleccionar el intervalo de fechas de validez de este medio independiente**: establezca fechas de inicio y expiración opcionales en los medios. Esta configuración está deshabilitada de manera predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia).  
 
 6. En la página **CD/DVD independiente**, seleccione la secuencia de tareas que implementa el sistema operativo. Solo se pueden seleccionar esas secuencias de tareas que están asociadas con una imagen de arranque. Compruebe la lista de contenido al que hace referencia la secuencia de tareas.  
 

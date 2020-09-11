@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5bdf2adbf4ba5f02869ba5058da84ee7738e0ce2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698963"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608069"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
@@ -741,7 +741,7 @@ La cuenta que ha configurado para ejecutar el servicio SQL Server para la instan
 
 A partir de la versión 1810, compruebe si la base de datos del sitio tiene algún trabajo pendiente de datos de seguimiento de cambios de SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Haga manualmente esta comprobación ejecutando un procedimiento de diagnóstico almacenado en la base de datos. En primer lugar, cree una [conexión de diagnóstico](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) a la base de datos de sitio. El método más sencillo consiste en usar el editor de consultas del Motor de base de datos de SQL Server Management Studio y conectarse a `admin:<instance name>`.
+Haga manualmente esta comprobación ejecutando un procedimiento de diagnóstico almacenado en la base de datos. En primer lugar, cree una [conexión de diagnóstico](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) a la base de datos de sitio. El método más sencillo consiste en usar el editor de consultas del Motor de base de datos de SQL Server Management Studio y conectarse a `admin:<instance name>`.
 
 En una ventana de consulta de conexión de administrador dedicada, ejecute los siguientes comandos:
 

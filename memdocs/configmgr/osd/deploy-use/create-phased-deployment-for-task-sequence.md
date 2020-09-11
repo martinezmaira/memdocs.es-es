@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a14448c03596853be943440c0fab775ee1d19081
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 71e7f9c23b55beecc98bffb5da73465f0681a4a4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820432"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606385"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Crear implementaciones por fases con Configuration Manager
 
@@ -53,8 +53,8 @@ Estos valores son únicos para las implementaciones por fases. Configure estas o
 
 A partir de la versión 2002, use los siguientes cmdlets de Windows PowerShell para configurar manualmente las fases de las implementaciones por fases de la actualizaciones de software y las secuencias de tareas:
 
-- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
-- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase)
 
 ### <a name="criteria-for-success-of-the-first-phase"></a>Criterios para considerar que la primera fase se ha completado correctamente
 
@@ -118,9 +118,9 @@ Configure estas opciones para que el lanzamiento en cada fase sea gradual. Este 
 
 A partir de la versión 2002, use los siguientes cmdlets de Windows PowerShell para esta tarea:
 
-- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
-- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment)
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Creación de una implementación por fases con fases configuradas manualmente
 <!--1358148-->
@@ -170,8 +170,8 @@ Creación de una implementación por fases con fases configuradas manualmente pa
 
 A partir de la versión 2002, use los siguientes cmdlets de Windows PowerShell para esta tarea:
 
-- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment)
 
 Después de crear una implementación por fases, abra sus propiedades para realizar cambios:  
 

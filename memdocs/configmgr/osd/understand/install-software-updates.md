@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 855351fc7fe28b40f23e1e01767fd62a782bc1e0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697507"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606984"
 ---
 # <a name="install-software-updates"></a>Instalar actualizaciones de software
 
@@ -107,7 +107,7 @@ Para más información, vea [Aplicar las actualizaciones de software a una image
 - Solo es compatible con actualizaciones basadas en CBS No se pueden aplicar actualizaciones de Aplicaciones de Microsoft 365
 
 > [!Tip]  
-> Puede automatizar la selección de las actualizaciones de software con PowerShell. Use el cmdlet [Get CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) para obtener una lista de actualizaciones. A continuación, utilice el cmdlet [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) para crear la programación del mantenimiento sin conexión. El ejemplo siguiente muestra un método para automatizar esta acción:
+> Puede automatizar la selección de las actualizaciones de software con PowerShell. Use el cmdlet [Get CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate) para obtener una lista de actualizaciones. A continuación, utilice el cmdlet [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule) para crear la programación del mantenimiento sin conexión. El ejemplo siguiente muestra un método para automatizar esta acción:
 >
 > ```PowerShell
 > # Get the OS image

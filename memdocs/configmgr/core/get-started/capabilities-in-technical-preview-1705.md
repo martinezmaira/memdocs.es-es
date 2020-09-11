@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995456"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607888"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funciones de Technical Preview 1705 de Configuration Manager
 
@@ -121,12 +121,12 @@ Con esta versión, ahora puede usar réplicas de confirmación asincrónica en l
 
 - Esta versión no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
   > [!CAUTION]  
-  > Dado que Configuration Manager no valida el estado de la réplica de confirmación asincrónica para confirmar que está actualizada, y que [por cuestiones de diseño una réplica de este tipo puede no estar sincronizada](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), el uso de una réplica de confirmación asincrónica como la base de datos de sitio puede poner en peligro la integridad de los datos y del sitio.  
+  > Dado que Configuration Manager no valida el estado de la réplica de confirmación asincrónica para confirmar que está actualizada, y que [por cuestiones de diseño una réplica de este tipo puede no estar sincronizada](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), el uso de una réplica de confirmación asincrónica como la base de datos de sitio puede poner en peligro la integridad de los datos y del sitio.  
 
 - Puede usar el mismo número y tipo de réplicas en un grupo de disponibilidad en la medida en que lo admita la versión de SQL Server que utilice.   (La compatibilidad anterior se limitaba a dos réplicas de confirmación sincrónica).
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configuración de una réplica de confirmación asincrónica
-Para agregar una réplica asincrónica a un [grupo de disponibilidad que utilice con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), no es necesario ejecutar los scripts de configuración necesarios para configurar una réplica sincrónica. (El motivo es que no se admite el uso de esa réplica asincrónica como la base de datos de sitio). Para más información, vea [Adición de una réplica secundaria a un grupo de disponibilidad Always On](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+Para agregar una réplica asincrónica a un [grupo de disponibilidad que utilice con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), no es necesario ejecutar los scripts de configuración necesarios para configurar una réplica sincrónica. (El motivo es que no se admite el uso de esa réplica asincrónica como la base de datos de sitio). Para más información, vea [Adición de una réplica secundaria a un grupo de disponibilidad Always On](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Uso de la réplica asincrónica para la recuperación del sitio
 Antes de usar una réplica asincrónica para recuperar la base de datos de sitio, debe detener el sitio primario activo para evitar escrituras adicionales en la base de datos de sitio. Una vez detenido el sitio, puede utilizar una réplica asincrónica en lugar de una [base de datos recuperada manualmente](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).

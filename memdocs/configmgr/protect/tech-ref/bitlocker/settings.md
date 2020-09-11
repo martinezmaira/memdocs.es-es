@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b52fe5a60899d7e871381d1a34a2360bbe68a36c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 82b122f96806b6e3f77afccf8b8d4195c294b224
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820483"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608021"
 ---
 # <a name="bitlocker-settings-reference"></a>Referencia de la configuración de BitLocker
 
@@ -56,7 +56,7 @@ Para dispositivos Windows 8.1, habilite la opción **Método de cifrado de unid
 - AES, 128 bits (valor predeterminado)
 - AES de 256 bits
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy).
 
 #### <a name="windows-10-devices"></a>Dispositivos Windows 10
 
@@ -72,7 +72,7 @@ En el caso de los dispositivos Windows 10, habilite la opción **Método de cif
 >
 > Si necesita usar una unidad extraíble en dispositivos que no ejecutan Windows 10, use AES-CBC.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts).
 
 #### <a name="general-usage-notes-for-drive-encryption-and-cipher-strength"></a>Notas de uso general del cifrado de unidades y su intensidad
 
@@ -92,7 +92,7 @@ Configure esta directiva para mejorar el rendimiento de reinicio sin sobrescribi
 
 Si no se configura esta directiva, BitLocker quita sus secretos de la memoria cuando se reinicia el equipo.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy).
 
 ### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>Validar el cumplimiento de reglas de uso de certificados de tarjetas inteligentes
 
@@ -102,7 +102,7 @@ Configure esta directiva para utilizar la protección de BitLocker basada en cer
 
 Si no se configura esta directiva, BitLocker usa el identificador de objeto predeterminado `1.3.6.1.4.1.311.67.1.1` para especificar un certificado.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy).
 
 ### <a name="organization-unique-identifiers"></a>Identificadores únicos de la organización
 
@@ -114,7 +114,7 @@ Si no se configura esta directiva, BitLocker no usa el campo de **Identificació
 
 Si su organización requiere más medidas de seguridad, configure el campo **Identificación**. Establezca este campo en todos los dispositivos USB de destino y alinéelo con esta configuración.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy).
 
 ## <a name="os-drive"></a>Unidad de sistema operativo
 
@@ -144,7 +144,7 @@ En dispositivos con un TPM compatible, se pueden usar dos tipos de métodos de a
 >
 > - Permitir estados de espera (S1-S3) mientras el equipo está en suspensión (con batería)
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy).
 
 ### <a name="allow-enhanced-pins-for-startup"></a>Permitir PIN de inicio mejorados
 
@@ -161,7 +161,7 @@ Si habilita esta configuración, todos los PIN de inicio de BitLocker nuevos per
 
 Si deshabilita o no establece esta configuración de directiva, BitLocker no usará PIN mejorados.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin).
 
 ### <a name="operating-system-drive-password-policy"></a>Directiva de contraseñas de controlador de sistema operativo
 
@@ -177,7 +177,7 @@ Use esta configuración para establecer las restricciones de las contraseñas co
 
 Si habilita esta configuración de directiva, los usuarios pueden configurar una contraseña que cumpla los requisitos que se hayan definido.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase).
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>Notas de uso general de la directiva de contraseñas de unidades de sistema operativo
 
@@ -197,7 +197,7 @@ Si habilita o no establece esta configuración, Windows actualizará los datos d
 
 Si deshabilita esta configuración de directiva, Windows no actualizará los datos de validación de plataforma en esta situación.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy).
 
 ### <a name="pre-boot-recovery-message-and-url"></a>URL y mensaje de recuperación previos al arranque
 
@@ -220,7 +220,7 @@ Al habilitar esta configuración, seleccione una de las opciones siguientes para
 > [!NOTE]
 > No se admiten todos los caracteres y idiomas en el entorno previo al arranque. Primero pruebe el mensaje o la dirección URL personalizados para asegurarse de que aparezca correctamente en la pantalla de recuperación de BitLocker previa al arranque.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo).
 
 ### <a name="encryption-policy-enforcement-settings-os-drive"></a>Configuración de cumplimiento de directiva de cifrado (unidad de sistema operativo)
 
@@ -236,7 +236,7 @@ Si deshabilita o no establece esta configuración, Configuration Manager no requ
 
 Para aplicar la directiva inmediatamente, establezca un período de gracia de `0`.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy).
 
 ## <a name="fixed-drive"></a>Unidad fija
 
@@ -256,7 +256,7 @@ Si no establece esta configuración, BitLocker no requerirá que los usuarios po
 
 Si deshabilita esta configuración, los usuarios no podrán poner sus unidades de datos fijas bajo protección de BitLocker. Si deshabilita esta directiva después de que BitLocker cifre las unidades de datos fijas, BitLocker descifrará las unidades de datos fijas.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy).
 
 ### <a name="deny-write-access-to-fixed-drives-not-protected-by-bitlocker"></a>Denegar el acceso de escritura a unidades fijas no protegidas por BitLocker
 
@@ -272,7 +272,7 @@ Al habilitar esta configuración:
 
 Si no configura esta opción, Windows montará todas las unidades de datos fijas con acceso de lectura y escritura.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy).
 
 ### <a name="fixed-data-drive-password-policy"></a>Directiva de contraseñas de unidades de datos fijas
 
@@ -294,7 +294,7 @@ Si deshabilita esta configuración, los usuarios no podrán configurar una contr
 
 Si no se configura la directiva, BitLocker admite contraseñas con la configuración predeterminada. La configuración predeterminada no incluye los requisitos de complejidad de la contraseña y solo requiere ocho caracteres.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy).
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>Notas de uso general de la directiva de contraseñas de unidades de datos fijas
 
@@ -318,7 +318,7 @@ Si deshabilita o no establece esta configuración, Configuration Manager no requ
 
 Para aplicar la directiva inmediatamente, establezca un período de gracia de `0`.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy).
 
 ## <a name="removable-drive"></a>Unidad extraíble
 
@@ -348,7 +348,7 @@ Al habilitar esta configuración:
 
 Si deshabilita esta configuración, los usuarios no podrán usar BitLocker en unidades extraíbles.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy).
 
 ### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>Denegar el acceso de escritura a unidades extraíbles no protegidas por BitLocker
 
@@ -369,7 +369,7 @@ Si deshabilita o no establece esta configuración, Windows montará todas las un
 > [!NOTE]
 > Puede reemplazar esta configuración por la configuración de directiva de grupo en **Sistema** > **Acceso al almacenamiento extraíble**. Si habilita la configuración de directiva de grupo **Discos extraíbles: Denegar acceso de escritura**, BitLocker omite esta opción de Configuration Manager.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy).
 
 ### <a name="removable-data-drive-password-policy"></a>Directiva de contraseñas de unidades de datos extraíbles
 
@@ -391,7 +391,7 @@ Si deshabilita esta configuración, los usuarios no podrán configurar una contr
 
 Si no se configura la directiva, BitLocker admite contraseñas con la configuración predeterminada. La configuración predeterminada no incluye los requisitos de complejidad de la contraseña y solo requiere ocho caracteres.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy).
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>Notas de uso general de la directiva de contraseñas de unidades de datos extraíbles
 
@@ -419,8 +419,8 @@ Si habilita esta opción, Configuration Manager realizará automáticamente y de
 
 Para obtener más información sobre cómo crear estas directivas con Windows PowerShell, consulte:
 
-- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
-- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
+- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage)
+- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy)
 
 ### <a name="user-exemption-policy"></a>Directiva de exención de usuario
 
@@ -447,7 +447,7 @@ Si deshabilita o no establece esta configuración, Windows no mostrará las inst
 > [!NOTE]
 > BitLocker administra las exenciones por usuario, no por equipo. Si varios usuarios inician sesión en el mismo equipo y un usuario no está exento, BitLocker cifrará el equipo.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy).
 
 ### <a name="url-for-the-security-policy-link"></a>Dirección URL para el vínculo de la directiva de seguridad
 
@@ -459,8 +459,8 @@ Si habilita esta configuración, configure la **dirección URL del vínculo de l
 
 Si deshabilita o no establece esta configuración, BitLocker no mostrará el vínculo de la directiva de seguridad.
 
-Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps).
+Para obtener más información sobre cómo crear esta directiva con Windows PowerShell, vea [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si usa Windows PowerShell para crear estos objetos de directiva, use el cmdlet [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps). Este cmdlet crea un objeto de configuración de la directiva de administración de BitLocker que contiene todas las directivas especificadas. Para implementar la configuración de directiva en una recopilación, use el cmdlet [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
+Si usa Windows PowerShell para crear estos objetos de directiva, use el cmdlet [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting). Este cmdlet crea un objeto de configuración de la directiva de administración de BitLocker que contiene todas las directivas especificadas. Para implementar la configuración de directiva en una recopilación, use el cmdlet [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).

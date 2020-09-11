@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: eae605c067094665f2f6866e75fa8f9a94a5df52
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995014"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607730"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -584,7 +584,7 @@ Para obtener más información, vea [Console improvements in version 1806](../..
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, vea [Resumen de cambios en la rama actual de Configuration Manager, versión 1806](https://support.microsoft.com/help/4459701).
 
-Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [PowerShell 1806 Release Notes](/powershell/sccm/1806_release_notes?view=sccm-ps) (Notas de la versión de PowerShell 1806).
+Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [PowerShell 1806 Release Notes](/powershell/sccm/1806_release_notes) (Notas de la versión de PowerShell 1806).
 
 El siguiente paquete acumulativo de actualizaciones (4462978) está disponible en la consola desde el 24 de octubre de 2018: [Paquete acumulativo de actualizaciones de la rama actual de Configuration Manager, versión 1806](https://support.microsoft.com/help/4462978).
 

@@ -10,12 +10,12 @@ ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 06bb88368c6c958adc8fdefd336307d9b2924d31
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 884adddf8eb469bb0b21c48d239d48b04a530f44
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693104"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607958"
 ---
 # <a name="how-to-use-maintenance-windows-in-configuration-manager"></a>Cómo usar las ventanas de mantenimiento en Configuration Manager
 
@@ -96,7 +96,7 @@ En la pestaña **Ventanas de mantenimiento** de las propiedades de la colección
 
 PowerShell puede usarse para configurar ventanas de mantenimiento. Vea los siguientes artículos para más información:
 
-- [Get-CMMaintenanceWindow](/powershell/module/configurationmanager/get-cmmaintenancewindow?view=sccm-ps)
-- [New-CMMaintenanceWindow](/powershell/module/configurationmanager/new-cmmaintenancewindow?view=sccm-ps)
-- [Remove-CMMaintenanceWindow](/powershell/module/configurationmanager/remove-cmmaintenancewindow?view=sccm-ps)
-- [Set-CMMaintenanceWindow](/powershell/module/configurationmanager/set-cmmaintenancewindow?view=sccm-ps)
+- [Get-CMMaintenanceWindow](/powershell/module/configurationmanager/get-cmmaintenancewindow)
+- [New-CMMaintenanceWindow](/powershell/module/configurationmanager/new-cmmaintenancewindow)
+- [Remove-CMMaintenanceWindow](/powershell/module/configurationmanager/remove-cmmaintenancewindow)
+- [Set-CMMaintenanceWindow](/powershell/module/configurationmanager/set-cmmaintenancewindow)

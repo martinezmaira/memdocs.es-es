@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 90e4c0dfd2b55ec5acf943cd591ba45c719a68ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699150"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607515"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Uso de un clúster de SQL Server para la base de datos del sitio
 
@@ -63,7 +63,7 @@ Tenga en cuenta los siguientes requisitos previos:
 - Para admitir la autenticación Kerberos, habilite el protocolo de comunicación de red **TCP/IP** para la conexión de red de cada nodo del clúster de SQL Server. No hace falta el protocolo de **canalizaciones con nombre**, pero puede usarse para solucionar problemas de autenticación Kerberos. Las opciones de protocolo de red se configuran en **Administrador de configuración de SQL Server**, en **Configuración de red de SQL Server**.  
 
 - Hay requisitos de certificado específicos cuando se usa el clúster de SQL Server para la base de datos del sitio. Vea los siguientes artículos para más información:
-  - [Instalación de un certificado en una configuración de clúster de conmutación por error de SQL](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Instalación de un certificado en una configuración de clúster de conmutación por error de SQL](/sql/database-engine/configure-windows/manage-certificates#provision-failover-cluster-cert)
   - [Requisitos de certificados PKI para Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager no admite la copia de seguridad de Data Protection Manager
 
 Estas son las principales tareas que debe llevar a cabo para preparar la base de datos del sitio:
 
-- Cree el clúster virtual de SQL Server para hospedar la base de datos del sitio en un entorno de clúster de Windows Server existente. Para conocer pasos específicos para instalar y configurar un clúster de SQL Server, vea la documentación específica de la versión de SQL Server. Para obtener más información, consulte [Crear un nuevo clúster de conmutación por error](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Cree el clúster virtual de SQL Server para hospedar la base de datos del sitio en un entorno de clúster de Windows Server existente. Para conocer pasos específicos para instalar y configurar un clúster de SQL Server, vea la documentación específica de la versión de SQL Server. Para obtener más información, consulte [Crear un nuevo clúster de conmutación por error](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup).  
 
 - En cada equipo del clúster de SQL Server, coloque un archivo en la carpeta raíz de cada unidad en donde no quiere que Configuration Manager instale componentes del sitio. Ponga al archivo el nombre `NO_SMS_ON_DRIVE.SMS`. De forma predeterminada, Configuration Manager instala algunos componentes en cada nodo físico para admitir operaciones como la copia de seguridad.  
 

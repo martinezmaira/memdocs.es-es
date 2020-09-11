@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 70ef4ba22be8668053929639f951769f1aa2fe7d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699439"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608327"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centro de soporte técnico de Configuration Manager
 
@@ -52,7 +52,7 @@ A partir de la versión 1906, **OneTrace** es un nuevo visor de registros del Ce
 
 ### <a name="powershell-cmdlets"></a>Cmdlets de PowerShell
 
-El centro de soporte técnico también incluye [cmdlets de PowerShell](/powershell/sccm/overview?view=sccm-ps). Use estos cmdlets para crear una conexión remota a otro cliente de Configuration Manager, para configurar las opciones de recopilación de datos y para iniciar la recopilación de datos.
+El centro de soporte técnico también incluye [cmdlets de PowerShell](/powershell/sccm/overview). Use estos cmdlets para crear una conexión remota a otro cliente de Configuration Manager, para configurar las opciones de recopilación de datos y para iniciar la recopilación de datos.
 
 
 ## <a name="prerequisites"></a>Requisitos previos

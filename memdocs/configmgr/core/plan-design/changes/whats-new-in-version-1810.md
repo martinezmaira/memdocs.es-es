@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a92d5a627d6cbe4e64ffa221ae00458f4227c844
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699847"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607754"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novedades de la versión 1810 de la rama actual de Configuration Manager
 
@@ -427,7 +427,7 @@ El requisito previo de MDM local para configurar una suscripción de Microsoft I
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, vea [Resumen de cambios en la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4482169).
 
-Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [las notas de la versión de PowerShell 1810](/powershell/sccm/1810-release-notes?view=sccm-ps).
+Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, vea [las notas de la versión de PowerShell 1810](/powershell/sccm/1810-release-notes).
 
 El siguiente paquete acumulativo de actualizaciones (4488598) está disponible en la consola desde el 25 de octubre de 2019: [Paquete acumulativo de actualizaciones 2 de la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4488598). Este paquete acumulativo de actualizaciones reemplaza el anterior (KB 4486457).
 

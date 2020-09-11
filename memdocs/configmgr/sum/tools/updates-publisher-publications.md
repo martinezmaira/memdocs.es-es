@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700043"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608375"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Administrar publicaciones en Updates Publisher
 
@@ -83,10 +83,7 @@ Con la publicación seleccionada, elija **Exportar** en la pestaña **Inicio** d
 
 También tendrá la posibilidad de exportar (incluir) actualizaciones de software dependientes como parte de la exportación.
 
-## <a name="rename-a-publication"></a>Cambiar el nombre de una publicación
-Para cambiar el nombre de una publicación, seleccione la publicación en el **área de trabajo Publicaciones** y luego elija **Editar** en la pestaña **Publicación** de la cinta de opciones.
-
-## <a name="delete-a-publication"></a>Eliminar una publicación
+## <a name="delete-a-publication"></a>Eliminación de una publicación
 Para cambiar el nombre de una publicación, seleccione la publicación en el **área de trabajo Publicaciones** y luego elija **Editar** en la pestaña **Publicación** de la cinta de opciones.
 
 Una vez quitada una publicación de Updates Publisher, las actualizaciones que estaban en la publicación siguen disponibles en el repositorio de Updates Publisher.

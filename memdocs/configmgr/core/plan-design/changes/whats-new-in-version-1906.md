@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d28d3ed697097b177ef9e2849fbcd6003505594c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995116"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607797"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novedades de la versión 1906 de la rama actual de Configuration Manager
 
@@ -622,7 +622,7 @@ A partir de esta versión las características siguientes dejarán de estar en v
 
 Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, consulte [Resumen de cambios en la rama actual de Configuration Manager, versión 1906](https://support.microsoft.com/help/4514258).
 
-Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, consulte las [notas de la versión de PowerShell 1906](/powershell/sccm/1906-release-notes?view=sccm-ps).
+Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, consulte las [notas de la versión de PowerShell 1906](/powershell/sccm/1906-release-notes).
 
 El siguiente paquete acumulativo de actualizaciones (4517869) está disponible en la consola desde el 1 de octubre de 2019: [Paquete acumulativo de actualizaciones de la rama actual de Configuration Manager, versión 1906](https://support.microsoft.com/help/4517869).
 

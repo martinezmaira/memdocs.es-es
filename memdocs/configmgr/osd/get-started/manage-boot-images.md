@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697643"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606309"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Administración de imágenes de arranque con Configuration Manager
 
@@ -206,7 +206,7 @@ En la pestaña **Personalización** , seleccione cualquiera de las siguientes op
 - **Establecer la distribución del teclado predeterminada en WinPE**: <!--4910348-->A partir de la versión 1910, configure la distribución del teclado predeterminada para una imagen de arranque. Si selecciona un idioma distinto de es-es, Configuration Manager sigue incluyéndolo en las configuraciones regionales disponibles. En el dispositivo, el diseño de teclado inicial es la configuración regional seleccionada, pero el usuario puede cambiar el dispositivo a es-es si es necesario.
 
 > [!Tip]
-> Use el cmdlet [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) de PowerShell para configurar estas opciones desde un script.
+> Use el cmdlet [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) de PowerShell para configurar estas opciones desde un script.
 
 #### <a name="optional-components"></a>Componentes opcionales
 

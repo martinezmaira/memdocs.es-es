@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0c2894bcdf80901171cceba96e7829793f899383
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699490"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606781"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Actualizar la infraestructura local compatible con Configuration Manager
 
@@ -242,15 +242,15 @@ Para identificar el nivel de compatibilidad de la estimación de cardinalidad de
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-Para obtener más información sobre los niveles de compatibilidad de CE de SQL y cómo establecerlos, consulte [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+Para obtener más información sobre los niveles de compatibilidad de CE de SQL y cómo establecerlos, consulte [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 Para más información sobre la actualización de SQL Server, consulte los siguientes artículos de SQL Server:  
 
 - [Actualización a SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Actualización a SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Actualización a SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
-- [Actualización a SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Actualización a SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Para actualizar SQL Server en el servidor de base de datos del sitio  
 

@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819939"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606930"
 ---
 # <a name="deploy-bitlocker-management"></a>Implementación de la administración de BitLocker
 
@@ -118,7 +118,7 @@ Para cambiar la configuración de una directiva existente, selecciónela en la l
 
 Al crear más de una directiva, puede configurar su prioridad relativa. Si implementa varias directivas en un cliente, usa el valor de prioridad para determinar su configuración.
 
-A partir de la versión 2006, puede usar los cmdlets de Windows PowerShell para esta tarea. Para obtener más información, vea [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+A partir de la versión 2006, puede usar los cmdlets de Windows PowerShell para esta tarea. Para obtener más información, vea [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
 
 ## <a name="deploy-a-policy"></a>Implementación de una directiva
 
@@ -137,7 +137,7 @@ Puede crear varias implementaciones de la misma directiva. Para consultar inform
 > [!IMPORTANT]
 > El cliente de MBAM no inicia las acciones de Cifrado de unidad BitLocker si está activa una conexión de protocolo de escritorio remoto. Todas las conexiones de la consola remota deben estar cerradas, y un usuario debe haber iniciado sesión en una sesión de consola física antes de que se inicie el Cifrado de unidad BitLocker.
 
-A partir de la versión 2006, puede usar los cmdlets de Windows PowerShell para esta tarea. Para obtener más información, vea [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
+A partir de la versión 2006, puede usar los cmdlets de Windows PowerShell para esta tarea. Para obtener más información, vea [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## <a name="monitor"></a>Supervisión
 
