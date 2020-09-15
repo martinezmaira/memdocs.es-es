@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127261"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608003"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Notificaciones de reinicio del dispositivo en Configuration Manager
 
@@ -51,7 +51,7 @@ El Centro de software muestra una notificación con una opción de posponer y el
 
 El Centro de software muestra esta notificación de cuenta regresiva final que el usuario no puede cerrar ni posponer.
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Notificación de cuenta regresiva final del Centro de software":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Cuenta regresiva final para el Centro de software":::
 
 A partir de la versión 1906, el usuario no verá una barra de progreso en la notificación de reinicio hasta que el reinicio pendiente sea anterior a 24 horas.
 
@@ -237,11 +237,11 @@ Si el usuario no reinició su dispositivo tras la instalación, recibirá una no
 
 - Notificación temporal al usar la ventana de diálogo del Centro de software, no notificación del sistema:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Notificación del Centro de software de reinicio pendiente con el botón Posponer":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Notificación del Centro de software de reinicio pendiente con el botón Posponer en la versión 1902":::
 
 Si el usuario no lleva a cabo el reinicio tras la notificación temporal, recibirá la notificación de cuenta regresiva final que no puede cerrar. La hora a la que aparece la notificación final se basa en la configuración de cliente: **Mostrar un cuadro de diálogo que el usuario no pueda cerrar, que muestre el intervalo de recuento antes de que el usuario se desconecte o el equipo se reinicie (minutos)** . Por ejemplo, si el valor es 60, se mostrará al usuario la notificación final una hora antes de forzarse un reinicio:
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Notificación de cuenta regresiva final del Centro de software":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Notificación de cuenta regresiva final del Centro de software en la versión 1902":::
 
 Las opciones siguientes deben tener menos duración que la [ventana de mantenimiento](../manage/collections/use-maintenance-windows.md) más corta que se aplique en el equipo:
 

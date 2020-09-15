@@ -2,7 +2,7 @@
 title: CMPivot para datos en tiempo real
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar CMPivot en Configuration Manager para realizar consultas en clientes en tiempo real.
-ms.date: 08/11/2020
+ms.date: 09/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fa96d09302b9b4cd908880e97e1735fff5f43743
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700589"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643576"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -188,7 +188,8 @@ La ventana CMPivot contiene los elementos siguientes:
 
    - El número total de filas en el panel de resultados. Por ejemplo, `1 objects`.  
 
-
+> [!TIP]
+> Para volver a ejecutar la consulta CMPivot actual en los clientes, mantenga presionada la tecla **Ctrl** mientras hace clic en **Ejecutar**.
 
 ## <a name="example-scenarios"></a>Escenarios de ejemplo
 

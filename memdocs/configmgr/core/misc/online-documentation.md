@@ -9,12 +9,13 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+description: Vínculos adicionales para la documentación de ayuda de Configuration Manager
+ms.openlocfilehash: 00ac9ad91739a4144e3b8a4e44d6e5d31e8abada
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819701"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607813"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Documentación en línea de Configuration Manager
 
@@ -36,11 +37,11 @@ Vea la documentación en línea de la rama actual de Configuration Manager en [d
 
 - [Administración de sistemas operativos de empresa con Configuration Manager](../../osd/understand/introduction-to-operating-system-deployment.md)  
 
-- [Implementación y administración de aplicaciones con Configuration Manager](../../apps/deploy-use/deploy-applications.md)  
+- [Implementar y administrar aplicaciones mediante Configuration Manager](../../apps/deploy-use/deploy-applications.md)  
 
 - [Implementación y administración de actualizaciones de software en Configuration Manager](../../sum/understand/software-updates-introduction.md)  
 
-- [Garantizar el cumplimiento de los dispositivos con Configuration Manager](../../compliance/understand/ensure-device-compliance.md)  
+- [Asegurar el cumplimiento de dispositivos con Configuration Manager](../../compliance/understand/ensure-device-compliance.md)  
 
 - [Protección de la infraestructura de datos y del sitio con Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)  
 
@@ -78,7 +79,7 @@ Vea la documentación en línea en las siguientes ubicaciones:
 
 - [Introducción a System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [Site Administration for System Center 2012 Configuration Manager (Administración del sitio de System Center 2012 Configuration Manager) (Administración del sitio de System Center 2012 Configuration Manager)](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [Administración del sitio de System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
 - [Migración de jerarquías en System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 

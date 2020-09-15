@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776963"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606821"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Cambio de las cargas de trabajo de Configuration Manager a Intune
 
@@ -43,7 +43,7 @@ A partir de la versión 1906, puede configurar distintas colecciones piloto para
 
 4. Vaya a la pestaña **Almacenamiento provisional** y cambie la **recopilación piloto** de todas las cargas que sea necesario.
   
-   ![Captura de pantalla de la pestaña Cargas de trabajo en la página de propiedades de administración conjunta](media/3555750-co-management-staging-tab.png)
+   ![Captura de pantalla de la pestaña Almacenamiento provisional en la página de propiedades de administración conjunta](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Antes de cambiar las cargas de trabajo, asegúrese de que la carga de trabajo correspondiente en Intune se configuró e implementó correctamente. Asegúrese de que las cargas de trabajo siempre se administren mediante una de las herramientas de administración para los dispositivos.
@@ -60,7 +60,7 @@ Puede cambiar las cargas de trabajo cuando habilita la administración conjunta 
 
 3. Cambie a la pestaña **Cargas de trabajo**. De manera predeterminada, todas las cargas de trabajo se establecen en la configuración **Configuration Manager**. Para cambiar una carga de trabajo, mueva el control deslizante de esa carga de trabajo a la configuración deseada.  
 
-    ![Captura de pantalla de la pestaña Cargas de trabajo en la página de propiedades de administración conjunta](media/properties-workloads.png)
+    ![Captura de pantalla de la pestaña Cargas de trabajo en la página de propiedades de administración conjunta, versión 1902](media/properties-workloads.png)
 
     - **Configuration Manager**: Configuration Manager sigue administrando esta carga de trabajo.  
 

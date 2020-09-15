@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4d0bd136278053ded38d0d6ed4cfe4059ffe3037
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110192"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479321"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -54,7 +54,7 @@ La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimizac
 
 Para habilitar la caché del mismo nivel, implemente la [configuración de cliente](#bkmk_settings) en una colección. Después, los miembros de esa colección actúan como un origen de la caché del mismo nivel para otros clientes en el mismo grupo de límites.  
 
-- Un cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración mediante mensajes de estado.
+- Un cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración mediante mensajes de estado. Un cliente de origen de contenido del mismo nivel también envía un mensaje de estado al punto de administración cuando quita contenido de la memoria caché local.
 
    > [!NOTE]
    > Vea [Mensajes de estado en Configuration Manager](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map) para obtener la lista de mensajes de estado de origen de contenido del mismo nivel aplicables, en concreto los que tienen los identificadores de mensaje de estado 7200, 7201, 7202 y 7203.

@@ -4,17 +4,18 @@ ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
+description: Información y reglas para docatón MMS 2019
 ms.assetid: 8fe2ecfc-f5c1-4fa6-8703-245339400723
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 91430688fd2af93e5d5b5ce7eb0cbc6358388ea4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695586"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607842"
 ---
 # <a name="mms-2019-docathon"></a>Docatón MMS 2019
 
@@ -28,7 +29,7 @@ Durante la cumbre Midwest Management Summit (MMS) 2019, el equipo de contenido d
 - Sugerencias e instrucciones para el mundo real
 - Actualización o revisión del contenido
 
-## <a name="set-up"></a>Configuración
+## <a name="set-up"></a>Configurar
 
 Si todavía no está configurado para colaborar, siga estos pasos antes.
 
@@ -71,7 +72,7 @@ Lea la información sobre [cómo informar problemas](../understand/use-docs.md#b
 > Si está interesado en el flujo de trabajo más complejo con Git y VSCode, consulte [Install content authoring tools](/contribute/get-started-setup-tools) (Instalación de herramientas de creación de contenido). O puede pedirle ayuda a Aaron o a Erik. Las acciones siguientes son algunos de los motivos por los cuales usar el flujo de trabajo más complejo:
 >
 > - Creación de un artículo
-> - Incorporación de imágenes
+> - Adición de imágenes
 > - Búsqueda y reemplazo de cadena, incluidas expresiones regulares
 > - Cambios más grandes y más complejos  
 
@@ -138,7 +139,7 @@ Los premios siguientes se calculan según el número de contribuciones válidas 
 
     - [10 principales consejos sobre el estilo y el tono de Microsoft](/style-guide/top-10-tips-style-voice)
 
-- [Guía para colaboradores](/contribute)
+- [Guía del colaborador](/contribute)
 
 - [How to use Markdown for writing Docs](/contribute/markdown-reference) (Cómo usar Markdown para escribir documentos)
 
@@ -252,6 +253,6 @@ REGLAS OFICIALES del concurso Evento Docatón de MMS 2019 de aprendizaje y conte
 
 13. PRIVACIDAD
 
-    En Microsoft, estamos comprometidos a proteger su privacidad. Microsoft usa la información proporcionada en este formulario para enviarle notificaciones de información importante sobre nuestros productos, actualizaciones y mejores y para enviarle información sobre otros productos y servicios de Microsoft. Microsoft no compartirá la información proporcionada con terceros sin su permiso, excepto cuando sea necesaria para completar los servicios o las transacciones que ha solicitud o según lo requiera la ley. Microsoft se compromete a proteger la seguridad de su información personal. Utilizamos diversas tecnologías y procedimientos de seguridad para proteger su información personal de un acceso, uso o revelación no autorizados. La información personal nunca se comparte fuera de la empresa sin su permiso, excepto en las condiciones ya explicadas.
+    En Microsoft, estamos comprometidos a proteger su privacidad. Microsoft usa la información proporcionada en este formulario para enviarle notificaciones de información importante sobre nuestros productos, actualizaciones y mejores y para enviarle información sobre otros productos y servicios de Microsoft. Microsoft no compartirá la información proporcionada con terceros sin su permiso, excepto cuando sea necesaria para completar los servicios o las transacciones que ha solicitud o según lo requiera la ley. Microsoft se compromete a proteger la seguridad de su información personal. Utilizamos diversos procedimientos y tecnologías de seguridad para ayudar a proteger su información personal del acceso, uso o divulgación no autorizados. La información personal nunca se comparte fuera de la empresa sin su permiso, excepto en las condiciones ya explicadas.
 
     Si cree que Microsoft no cumple con esta declaración, póngase en contacto con Microsoft a través de un correo electrónico a privrc@microsoft.com o un correo postal a Microsoft Privacy Response Center, Microsoft Corporation, One Microsoft Way, Redmond, WA 98052.

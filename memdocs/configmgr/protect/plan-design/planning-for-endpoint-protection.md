@@ -9,12 +9,13 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+description: Planeamiento de directivas antimalware y la seguridad del Firewall de Windows
+ms.openlocfilehash: 2e3904b7b7232e92fd4a246d2e0519ef32fb67f6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590514"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606839"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Planificación de Endpoint Protection en Configuration Manager
 
@@ -34,7 +35,7 @@ Si usa Endpoint Protection con Configuration Manager, disfrutará de las siguien
 
 -   Envíe notificaciones de correo electrónico, use la supervisión en la consola y vea informes para mantener a los usuarios administrativos informados cuando se detecte malware en los equipos cliente.  
 
-Los equipos Windows 10 no requieren ningún cliente adicional para la administración de Endpoint Protection. En Windows 8.1 y versiones anteriores, Endpoint Protection instala a su propio cliente además del cliente de Configuration Manager. El cliente de Endpoint Protection tiene las siguientes capacidades:  
+Los equipos Windows 10 no requieren ningún cliente adicional para la administración de Endpoint Protection. En Windows 8.1 y versiones anteriores, Endpoint Protection instala su propio cliente además del cliente de Configuration Manager. El cliente de Endpoint Protection tiene las siguientes capacidades:  
 
 -   Detección y corrección de malware y spyware  
 
@@ -65,7 +66,7 @@ Endpoint Protection en Configuration Manager permite crear directivas antimalwar
 
 -   [Administrar directivas antimalware y opciones de configuración de firewall](../deploy-use/endpoint-antimalware-firewall.md): puede cambiar la prioridad de directiva de [antimalware](../deploy-use/endpoint-antimalware-firewall.md#manage-antimalware-policies) o [firewall](../deploy-use/endpoint-antimalware-firewall.md#manage-windows-firewall-policies), [corregir el malware que se encuentre en los equipos cliente](../deploy-use/endpoint-antimalware-firewall.md#remediate-detected-malware) y otras tareas.
 
-## <a name="managing-windows-firewall-with-endpoint-protection"></a>Administración del Firewall de Windows con Endpoint Protection  
+## <a name="managing-windows-firewall-with-endpoint-protection"></a>Administración de Firewall de Windows con Endpoint Protection  
  Endpoint Protection en Configuration Manager proporciona administración básica del Firewall de Windows en los equipos cliente. Para cada perfil de red, puede configurar las siguientes opciones:  
 
 -   Habilitar o deshabilitar el Firewall de Windows.  
@@ -79,7 +80,7 @@ Endpoint Protection en Configuration Manager permite crear directivas antimalwar
 
   Para más información sobre cómo crear e implementar las directivas del Firewall de Windows para Endpoint Protection, consulte [Crear e implementar directivas de Firewall de Windows para Endpoint Protection en System Center Configuration Manager](../deploy-use/create-windows-firewall-policies.md).  
 
-## <a name="microsoft-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Microsoft Defender
+## <a name="microsoft-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Microsoft Defender
 
 A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Protection puede ayudar a administrar y supervisar Protección contra amenazas avanzada (ATP) de Microsoft Defender, anteriormente conocido como ATP de Windows Defender. ATP de Microsoft Defender es un servicio que ayuda a las empresas a detectar ataques avanzados en sus redes, a investigarlos y a responder a ellos. Vea [Protección contra amenazas avanzada de Microsoft Defender](../deploy-use/defender-advanced-threat-protection.md).
 

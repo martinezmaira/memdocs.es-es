@@ -9,12 +9,13 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: Use el Asistente para instalación de Configuration Manager para instalar un sitio nuevo.
+ms.openlocfilehash: a0956e53af0d8ca4dd182dd3c2be944d3a0a703d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700708"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606190"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Use el Asistente para instalación si quiere instalar sitios de Configuration Manager.
 

@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bf50039a7c2fe8490c89f3e3b0adca275bb69e20
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696895"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607987"
 ---
 # <a name="enable-third-party-updates"></a>Habilitar actualizaciones de terceros 
 
@@ -125,7 +125,7 @@ Cuando se suscribe a un catálogo de terceros en la consola de Configuration Man
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**. Expanda **Actualizaciones de software** y seleccione el nodo **Catálogos de actualizaciones de software de terceros**.  
 2. Seleccione el catálogo al que quiere suscribirse y haga clic en **Suscribirse al catálogo** en la cinta de opciones. 
-    ![Agregar catálogo personalizado de actualizaciones de terceros](media/third-party-updates-subscribe.png)
+    ![Suscripción al catálogo para actualizaciones de terceros](media/third-party-updates-subscribe.png)
 3. Revise y apruebe el certificado de catálogo.  
    > [!NOTE]
    > 
