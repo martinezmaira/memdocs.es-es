@@ -2,7 +2,7 @@
 title: Novedades de la versión 2006
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 2006 de la rama actual de Configuration Manager.
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385369"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607650"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Novedades de la versión 2006 de la rama actual de Configuration Manager
 
@@ -32,12 +32,26 @@ Para aprovechar al máximo las nuevas características de Configuration Manager,
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Asociación de inquilinos de Microsoft Endpoint Manager
 
+### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Escala de tiempo del dispositivo en el centro de administración
+<!--7220536, CM7141381-->
+Cuando Configuration Manager sincroniza un dispositivo con Microsoft Endpoint Manager de Microsoft a través de una asociación de inquilinos, podrá ver una escala de tiempo de eventos. Esta escala de tiempo muestra la actividad pasada en el dispositivo que puede ayudarle a solucionar problemas. Para obtener más información, consulte [Escala de tiempo del dispositivo en el centro de administración](../../../tenant-attach/timeline.md).
+
+### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Explorador de recursos en el centro de administración
+<!--6479284-->
+Desde el centro de administración del punto de conexión de Microsoft, puede ver el inventario de hardware para los dispositivos Configuration Manager cargados mediante el explorador de recursos. Para más información, consulte [Asociación de inquilinos: explorador de recursos en el centro de administración](../../../tenant-attach/resource-explorer.md).
+
+### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> CMPivot desde el centro de administración
+<!--6024392-->
+Incorpore la eficacia de CMPivot al centro de administración de Microsoft Endpoint Manager. Permita que otros roles, como el de Departamento de soporte técnico, puedan iniciar consultas en tiempo real desde la nube en un dispositivo individual administrado por ConfigMgr y devolver los resultados al centro de administración. Esto proporciona todas las ventajas tradicionales de CMPivot, permitiendo a los administradores de TI y a otros roles designados evaluar rápidamente el estado de los dispositivos en su entorno y tomar medidas.
+
+Para obtener más información sobre CMPivot desde el centro de administración, vea [Requisitos previos de CMPivot](../../../tenant-attach/cmpivot-start.md), [Información general de CMPivot](../../../tenant-attach/cmpivot-overview-attached.md) y [Scripts de ejemplo CMPivot](../../../tenant-attach/cmpivot-samples-attached.md).
+
 ### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Asociación de inquilinos: Directivas del Antivirus de Microsoft Defender en el Centro de administración de Microsoft Endpoint Manager.
 <!--4812909-->
 Ahora puede crear directivas de Antivirus de Microsoft Defender en la consola de Microsoft Endpoint Manager e implementarlas en las recopilaciones de Configuration Manager. Para obtener más información, incluidas las instrucciones detalladas y la configuración disponible, consulte los siguientes artículos:
 - [Asociación de inquilinos: incorporación de clientes de Configuration Manager a ATP de Microsoft Defender desde el centro de administración (versión preliminar)](../../../tenant-attach/atp-onboard.md)
 - [Asociación de inquilinos: implementación de la directiva de antivirus de seguridad de punto de conexión desde el centro de administración (versión preliminar)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Configuración de la directiva de Antivirus de Microsoft Defender para dispositivos con asociación de inquilinos en Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
+- [Configuración de la directiva de Antivirus de Microsoft Defender para dispositivos con asociación de inquilinos en Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 
 ### <a name="install-applications-from-the-admin-center"></a>Instalación de aplicaciones desde el centro de administración
 <!--7518897, 6024389-->
@@ -131,7 +145,7 @@ Para adaptarse mejor a los requisitos de Análisis de escritorio para los datos 
 
 | Versión 2006 y posteriores | Versión 2002 y anteriores |
 |---------|---------|
-| Requerido | Básico |
+| Obligatorio | Básico |
 | Opcional (limitado) | Mejorado (limitado) |
 | N/D | Mejorada |
 | Opcional | Completo |
@@ -336,7 +350,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell relativos a Configuration Manager, vea las [notas de la versión de PowerShell 2006](/powershell/sccm/2006-release-notes?view=sccm-ps).
+Para obtener más información sobre los cambios en los cmdlets de Windows PowerShell relativos a Configuration Manager, vea las [notas de la versión de PowerShell 2006](/powershell/sccm/2006-release-notes).
 
 Para obtener más información sobre los cambios en la API REST del servicio de administración, consulte las [notas de la versión del servicio de administración](../../../develop/adminservice/release-notes.md#bkmk_2006).
 

@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: a61bf84a872458f37826c3de07ede05b1b658f0c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b0c25174873e00cf23dacd2c77208775f1fb1ced
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127325"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644250"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 
@@ -61,6 +61,6 @@ Al habilitar la administración conjunta, se puede usar la nube pública de Azur
 
 1. En la página **Almacenamiento provisional**, especifique la colección piloto para cada una de las cargas de trabajo establecidas en **Intune piloto**.
 
-   ![Especifique la colección de inscripción automática de Intune ](../media/3555750-co-management-onboarding-staging.png)
+   ![Asistente para configuración de administración conjunta, página de almacenamiento provisional, especificación de colecciones piloto](../media/3555750-co-management-onboarding-staging.png)
 
 1. Para habilitar la administración conjunta, siga los pasos del asistente.

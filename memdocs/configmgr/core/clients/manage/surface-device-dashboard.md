@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: cbea7d7e126b120145533b7cf19822b54b3cb701
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613935"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607967"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Panel de dispositivos Surface en Configuration Manager
 
@@ -52,7 +52,7 @@ En el panel de dispositivos Surface se muestran tres gráficos para el entorno.
 
 - **Cinco versiones principales de firmware**: muestra un gráfico con los cinco modelos de firmware principales en el entorno. 
   - Al mantener el puntero sobre una sección del gráfico se proporciona el porcentaje de los dispositivos Surface en la versión de firmware seleccionada. A partir de la versión 1806 de Configuration Manager, al hacer clic en una sección del gráfico muestra una lista de los dispositivos correspondientes. <!--1358654-->
-     ![Lista de dispositivos del modelo de Surface](media/Surface-Firmware-Hover.PNG)
+     ![Información sobre herramientas de firmware de Surface](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>Más información
