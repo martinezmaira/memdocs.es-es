@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: bf0b6d1f074de85793f025f9578892a126bbce3d
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385337"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076082"
 ---
 # <a name="windows-autopilot-requirements"></a>Requisitos de Windows Autopilot
 
@@ -41,7 +41,7 @@ Windows AutoPilot depende de las capacidades específicas disponibles en los ser
   - Windows 10 Pro for Workstations
   - Windows 10 Enterprise
   - Windows 10 Education
-  - Windows 10 Enterprise 2019 LTSC
+  - Windows 10 Enterprise 2019 LTSC (no admite el modo de auto-implementación)
 
 >[!NOTE]
 >Los procedimientos para implementar Windows AutoPilot pueden hacer referencia a productos y versiones específicos. La inclusión de estos productos en este contenido no implica una extensión de la compatibilidad con una versión que supere su ciclo de vida de soporte técnico. Windows AutoPilot no admite productos que superan su ciclo de vida de soporte técnico. Para más información, consulte [Directiva de ciclo de vida de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270).
@@ -60,7 +60,7 @@ En entornos que tengan acceso a Internet más restrictivo, o para los que requie
 
 Para obtener detalles adicionales acerca de cada uno de estos servicios y sus requisitos específicos, revise los detalles siguientes:
 
-<table><th>Servicio<th>Information
+<table><th>Servicio<th>Información
 <tr><td><b>Servicio de implementación de Windows AutoPilot<b><td>Una vez que se haya establecido una conexión de red, cada dispositivo de Windows 10 se pondrá en contacto con el servicio de implementación de Windows AutoPilot.  Con Windows 10 versión 1903 y versiones posteriores, se usan las direcciones URL siguientes: https://ztd.dds.microsoft.com , https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Activación de Windows<b><td>Windows AutoPilot también requiere servicios de activación de Windows. Consulte <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">activación o validación de Windows error con el código de error 0x8004FE33</a> para obtener más información sobre las direcciones URL que deben ser accesibles para los servicios de activación.<br>

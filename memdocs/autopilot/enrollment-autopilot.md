@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c98025ecf731e856de150d1cb5ffa854ef623c0e
-ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
+ms.openlocfilehash: 421c9ebcf15e9c45bd235c10062dd63179a9f59c
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516309"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076194"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Inscripción de dispositivos Windows en Intune mediante Windows AutoPilot
 
@@ -119,6 +119,9 @@ Los perfiles de implementación de Autopilot sirven para configurar los disposit
     - **Ocultar opciones para cambiar la cuenta (se necesita Windows 10, versión 1809 o posteriores)** : elija **Ocultar** para impedir que se muestren opciones para cambiar la cuenta en las páginas de error de inicio de sesión y dominio de empresa. Esta opción requiere la [configuración de la personalización de marca de la empresa en Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
     - **Tipo de cuenta de usuario**: elija el tipo de cuenta de usuario (**Administrador** o **Estándar**). Se permite que el usuario que se una el dispositivo sea un administrador local agregándolo al grupo de administradores locales. No se habilita el usuario como administrador predeterminado en el dispositivo.
     - **Permitir OOBE de White Glove** (requiere Windows 10, versión 1903 o posteriores; [requisitos físicos adicionales](white-glove.md#prerequisites)): elija **Sí** para admitir White Glove.
+    > [!NOTE]
+    > Al establecer este valor en no (el bloqueo de la guante blanca), tenga en cuenta que seguirá siendo posible presionar la tecla de Windows cinco veces durante la ejecución de OOBE para invocar la guante blanca y avanzar dicho trazado. Sin embargo, Intune aplicará posteriormente esta configuración y encontrará una pantalla roja que indica un error de aprovisionamiento previo con el código de error 0x80180005.
+
     - **Aplicar la plantilla de nombre de dispositivo** (se necesita Windows 10, versión 1809 o posteriores, y el tipo de combinación de Azure AD): elija **Sí** para crear una plantilla que se usará al asignar nombres a dispositivos durante la inscripción. Los nombres deben tener 15 caracteres o menos y pueden contener letras, números y guiones. Los nombres no pueden estar formados solo por números. Use la [macro %SERIAL%](/windows/client-management/mdm/accounts-csp) para agregar el número de serie de hardware específico. O use la [macro %RAND:x%](/windows/client-management/mdm/accounts-csp) para agregar una cadena de números aleatoria, donde x equivale al número de dígitos para agregar. Solo puede proporcionar una corrección previa para dispositivos híbridos en un [perfil de unión a un dominio](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
     - **Idioma (región)** \*: elija el idioma que se usará en el dispositivo. Esta opción solo está disponible si ha elegido **Implementación automática** como **Modo de implementación**.
     - **Configurar el teclado automáticamente**\*: si se selecciona un valor de **Idioma (región)** , elija **Sí** para omitir la página de selección de teclado. Esta opción solo está disponible si ha elegido **Implementación automática** como **Modo de implementación**.

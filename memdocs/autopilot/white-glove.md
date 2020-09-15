@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 61bddf4ffcb844a997e19ad4d954b2e2a8ec6b45
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643444"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081714"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Implementación de Windows AutoPilot para la guante blanca
 
@@ -38,14 +38,14 @@ Con la **implementación de Windows AutoPilot para la guante blanca**, se divide
 
 Las implementaciones de la guante blanca usan Microsoft Intune en Windows 10, versión 1903 y posteriores. Estas implementaciones se basan en escenarios de Windows AutoPilot existentes basados en [el usuario](user-driven.md) y admiten escenarios de modo controlado por el usuario para dispositivos Azure Active Directory Unidos e híbridos Unidos Azure Active Directory.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Además de [los requisitos de Windows AutoPilot](software-requirements.md), la implementación de Windows AutoPilot para la guante blanca también requiere:
 
 - Windows 10, versión 1903 o posterior.
 - Una suscripción de Intune.
 - Dispositivos físicos que admiten TPM 2,0 y la atestación de dispositivo. No se admiten las máquinas virtuales. El proceso de aprovisionamiento de la guante blanca usa las capacidades de Autoimplementación de Windows AutoPilot, por lo que se requiere TPM 2,0.
-- Dispositivos físicos con conectividad Ethernet. No se admite la conectividad Wi-Fi debido al requisito de elegir un idioma, una configuración regional y un teclado para realizar esa conexión Wi-Fi. Aplicar este requisito en un proceso de aprovisionamiento previo podría impedir que el usuario elegira su idioma, configuración regional y teclado cuando reciban el dispositivo.
+- Los dispositivos físicos con conectividad Ethernet son necesarios para realizar aprovisionamiento. No se admite la conectividad Wi-Fi debido al requisito de elegir un idioma, una configuración regional y un teclado para realizar esa conexión Wi-Fi. Aplicar este requisito en un proceso de aprovisionamiento previo podría impedir que el usuario elegira su idioma, configuración regional y teclado cuando reciban el dispositivo. Para obtener más información, consulte [uso de una conexión de red inalámbrica con la guante blanca de Windows AutoPilot](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
 
 >[!IMPORTANT]
 >Dado que el OEM o el proveedor lleva a cabo el proceso de la guante blanca, <u>no requiere acceso a la infraestructura de dominio local del usuario final</u>. Esto no es lo mismo que un escenario híbrido típico de Azure AD Unidos porque se pospone el reinicio del dispositivo. El dispositivo se vuelve a sellar antes del momento en que se espera la conectividad con un controlador de dominio y se Contacta con la red del dominio cuando el usuario final vuelve a desempaquetar el dispositivo local.

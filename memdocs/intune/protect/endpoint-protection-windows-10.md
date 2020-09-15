@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 12ac9998f60236a9aa661fc2088449db982180bf
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915082"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432615"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Configuración de Windows 10 (y versiones posteriores) para proteger dispositivos mediante Intune
 
@@ -1016,6 +1016,9 @@ Elija aplicaciones adicionales que se tengan que auditar o con confianza para ej
   - **No configurado**: el control de aplicaciones no se agrega a los dispositivos. Pero la configuración que se ha agregado antes se sigue aplicando a los dispositivos asignados. 
  
   - **Solo auditoría**: las aplicaciones no se bloquean. Todos los eventos se registran en los registros del cliente local.  
+
+    > [!NOTE]
+    > Si utiliza esta configuración, el CSP de AppLocker actualmente solicita al usuario final que reinicie el equipo al implementar una directiva.
 
 ## <a name="microsoft-defender-credential-guard"></a>Credential Guard de Microsoft Defender  
 

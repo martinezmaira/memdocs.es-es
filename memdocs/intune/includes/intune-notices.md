@@ -7,14 +7,20 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820074"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564112"
 ---
 Estos avisos proporcionan información importante que puede ayudarle a prepararse para las características y los cambios futuros de Intune.
+
+### <a name="updated-end-user-experience-for-android-device-administrator-wi-fi-profiles---7662680----"></a>Actualización de la experiencia del usuario final para perfiles de Wi-Fi de administrador de dispositivos Android<!-- 7662680  -->
+Debido a un cambio realizado por Google, la experiencia del usuario final en nuevos perfiles de Wi-Fi es significativamente diferente a partir de la versión de octubre de la aplicación Portal de empresa. Los usuarios deberán aceptar permisos adicionales y aceptar explícitamente las configuraciones de Wi-Fi cuando se hayan implementado. Las configuraciones de Wi-Fi no aparecerán en la lista de redes Wi-Fi conocidas, pero se conectarán automáticamente cuando estén dentro del alcance. El comportamiento de los perfiles de Wi-Fi existentes no experimenta ningún cambio, ni tampoco la experiencia de administración en el centro de administración de Endpoint Manager.
+
+Se aplica a:
+- Administrador de dispositivos de Android, Android 10 y versiones posteriores
 
 ### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Fin de la compatibilidad de Microsoft Intune con Windows Phone 8.1 y Windows 10 Mobile<!-- 3544938, 3544909 -->
 El soporte estándar de Microsoft para Windows Phone 8.1 finalizó en julio de 2017 y el soporte ampliado en junio de 2019. La aplicación Portal de empresa para Windows Phone 8.1 está en modo de mantenimiento desde octubre de 2017. Además, Microsoft Intune ha finalizado el soporte técnico para Windows Phone 8.1 el 20 de febrero de 2020. 
@@ -46,7 +52,7 @@ Debido a estos cambios que ha introducido Google, en octubre de 2020, ya no disp
 Los dispositivos que se verán afectados por la menor compatibilidad con el administrador de dispositivos son los que cumplen estas tres condiciones:
 - Están inscritos en la administración de administradores de dispositivos.
 - Ejecutan Android 10 o una versión posterior.
-- No son dispositivos Samsung.
+- Todos los fabricantes de dispositivos Android, excepto Samsung.
 
 Los dispositivos con las características siguientes no se verán afectados:
 - No están inscritos con la administración de administradores de dispositivos.
@@ -76,15 +82,6 @@ La [menor compatibilidad de Google con el administrador de dispositivos](https:/
 
 ![Captura de pantalla de la página de la directiva de cumplimiento de Android](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### <a name="additional-impacts-based-on-android-os-version"></a>Otras consecuencias en función de la versión del sistema operativo Android
-
-**Android 10**: en todos los dispositivos administrados por el administrador de dispositivos (incluidos los Samsung) que ejecutan Android 10 y versiones posteriores, Google ha restringido a los agentes de administración del administrador de dispositivos, como el Portal de empresa, el acceso a la información de identificación del dispositivo. Esta restricción afecta a las siguientes características de Intune después de que un dispositivo se actualice a Android 10 o una versión posterior:
-- El control de acceso a la red de VPN dejará de funcionar.
-- La identificación de los dispositivos como propiedad de la empresa con el número IMEI o el número de serie no marcará automáticamente los dispositivos como propiedad de la empresa.
-- El número IMEI y el número de serie ya no serán visibles para los administradores de TI en Intune.
-
-**Android 11**: actualmente estamos probando la compatibilidad con Android 11 en la versión beta más reciente para desarrolladores, con el fin de valorar si afectará a los dispositivos administrados por el administrador de dispositivos.
-
 #### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>Experiencia del usuario con relación a las opciones afectadas en los dispositivos afectados
 
 Opciones de configuración afectadas:
@@ -95,6 +92,9 @@ Opciones de cumplimiento afectadas:
 - En el caso de los dispositivos inscritos en los que ya se ha aplicado la configuración, las opciones de cumplimiento afectadas se seguirán mostrando como motivos de incumplimiento en la página "Actualizar configuración del dispositivo". El dispositivo no será compatible y los requisitos de contraseña se seguirán aplicando en la aplicación de configuración.
 - En el caso de los dispositivos recién inscritos, las opciones de configuración recién asignadas y las opciones de configuración actualizadas, las opciones de cumplimiento afectadas se seguirán mostrando como motivos de incumplimiento en la página "Actualizar configuración del dispositivo". El dispositivo no será compatible, pero no se aplicarán requisitos de contraseña más estrictos en la aplicación de configuración.
 
+Otro cambio en la experiencia del usuario para perfiles Wi-Fi:
+- Los usuarios deberán aceptar permisos adicionales y aceptar explícitamente las configuraciones de Wi-Fi cuando se hayan implementado. Las configuraciones de Wi-Fi no aparecerán en la lista de redes Wi-Fi conocidas, pero se conectarán automáticamente cuando estén dentro del alcance. El comportamiento de los perfiles de Wi-Fi existentes no experimenta ningún cambio, ni tampoco la experiencia de administración en el centro de administración de Endpoint Manager.  
+
 #### <a name="cause-of-impact"></a>Causa de la afectación 
 Los dispositivos comenzarán a verse afectados en octubre de 2020. En ese momento, habrá una actualización de la aplicación Portal de empresa que aumentará el destino de la API de Portal de empresa del nivel 28 al 29 ([como requiere Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
@@ -102,10 +102,28 @@ En ese momento, los dispositivos administrados por el administrador de dispositi
 - Actualizar a Android 10 o una versión posterior.
 - Actualizar la aplicación Portal de empresa a la versión que tiene como destino la API de nivel 29.
 
+#### <a name="additional-impacts-based-on-android-os-version"></a>Otras consecuencias en función de la versión del sistema operativo Android 
+**Android 10**: en todos los dispositivos administrados por el administrador de dispositivos (incluidos los Samsung) que ejecutan Android 10 y versiones posteriores, Google ha restringido a los agentes de administración del administrador de dispositivos, como el Portal de empresa, el acceso a la información de identificación del dispositivo. Esta restricción afecta a las siguientes características de Intune después de que un dispositivo se actualice a Android 10 o una versión posterior: 
+- El control de acceso a la red de VPN dejará de funcionar. 
+- La identificación de los dispositivos como propiedad de la empresa con el número IMEI o el número de serie no marcará automáticamente los dispositivos como propiedad de la empresa. 
+- El número IMEI y el número de serie ya no serán visibles para los administradores de TI en Intune. 
+
+**Android 11**: seguimos comprobando la última versión beta de Android 11 para evaluar el impacto en los dispositivos administrados por el administrador de dispositivos. Hemos detectado lo siguiente: 
+- En el caso de los dispositivos del administrador de dispositivos (excepto Samsung) que ejecutan Android 11 y versiones posteriores, Google quitó la capacidad de los agentes de administración como Portal de empresa de forzar el bloqueo de la cámara antes de que la aplicación de Portal de empresa se actualizara en octubre. Se seguirán aplicando las directivas de bloqueo de la cámara que se aplican a los dispositivos antes de que se actualicen a Android 11.  
+- Con Android 11, ya no se pueden implementar certificados raíz de confianza en dispositivos inscritos con el administrador de dispositivos (excepto en dispositivos Android). Los usuarios deben instalar manualmente el certificado raíz de confianza en el dispositivo. Con el certificado raíz de confianza instalado manualmente en un dispositivo, puede usar SCEP para aprovisionar certificados en el dispositivo. En este caso, sigue teniendo que crear e implementar una directiva de certificado de confianza en el dispositivo y vincularla al perfil del certificado SCEP. 
+    - Si el certificado raíz de confianza está en el dispositivo, el perfil de certificado SCEP se instalará correctamente.  
+    - Si no se encuentra el certificado de confianza, se producirá un error en el perfil de certificado SCEP. 
+
+
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>¿Qué debo hacer para prepararme para este cambio?
 Para evitar la reducción de la funcionalidad que tendrá lugar en octubre de 2020, siga estas recomendaciones:
 - **Nuevas inscripciones**: incorpore los nuevos dispositivos en la administración de [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (si está disponible) o en [directivas de protección de aplicaciones](../apps/app-protection-policies.md). Evite incorporar nuevos dispositivos a la administración de administradores de dispositivos. 
 - **Dispositivos ya inscritos**: si un dispositivo administrado por el administrador de dispositivos ejecuta Android 10 o una versión posterior, o bien puede actualizarse a Android 10 o una versión posterior (especialmente si no es un dispositivo Samsung), cámbielo de la administración de administradores de dispositivos a la administración de [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) o a las [directivas de protección de aplicaciones](../apps/app-protection-policies.md). Puede aprovechar el flujo simplificado para [trasladar dispositivos Android del administrador de dispositivos a la administración de perfiles de trabajo](../enrollment/android-move-device-admin-work-profile.md).
+- **Configuración de la complejidad de la contraseña**: en el caso de los dispositivos afectados que ejecuten Android 10 y versiones posteriores, podrá seguir aplicando las restricciones y el cumplimiento de las contraseñas en una configuración futura llamada Complejidad de la contraseña. Complejidad de la contraseña es una forma de medir la seguridad de la contraseña, que incluye el tipo, la longitud y la calidad de la contraseña.
+
+#### <a name="what-if-i-have-non-samsung-devices-that-cannot-move-to-android-enterprise"></a>¿Qué ocurre si tengo dispositivos que no son de Samsung que no se pueden migrar a Android Enterprise? 
+Algunos dispositivos no se pueden migrar del administrador de dispositivos a la administración de Android Enterprise. Por ejemplo, [Google no ha lanzado Android Enterprise en todos los mercados](https://support.google.com/work/android/answer/6270910?hl=en). Puede seguir usando Intune para administrar dispositivos que no son de Samsung con el administrador de dispositivos, pero se aplicarán los cambios en la funcionalidad mencionados en esta publicación. Para obtener instrucciones sobre la administración de dispositivos cuando Android Enterprise no está disponible, vea [Uso de Intune en entornos sin Google Mobile Services](../apps/manage-without-gms.md). 
+
 
 #### <a name="additional-information"></a>Información adicional
 - [Traslado de dispositivos Android del administrador de dispositivos a la administración de perfiles de trabajo](../enrollment/android-move-device-admin-work-profile.md)

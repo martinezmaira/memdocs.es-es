@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0c6655f9d7aaa708e5dd0b2818c9cfc1ba4c9cdc
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906895"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390796"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integración de Mobile Threat Defense con Intune
 
@@ -86,7 +86,9 @@ Se concede acceso cuando el dispositivo se repara:<br>
 ![Imagen en la que se muestra un acceso concedido por Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> Puede usar varios proveedores de Mobile Defense con un solo inquilino de Intune. Sin embargo, cuando se configuran dos o más proveedores para usarlos en la misma plataforma, todos los dispositivos que ejecutan esa plataforma deben instalar cada aplicación MTD y examinar las posibles amenazas. Si no se envía un examen desde alguna aplicación configurada, el dispositivo se marca como no conforme. 
+> Se recomienda usar un proveedor de Mobile Threat Defense por inquilino por plataforma. 
+> 
+> Para el cumplimiento de dispositivos, puede usar varios proveedores de Mobile Defense con un solo inquilino de Intune. Sin embargo, cuando se configuran dos o más proveedores para usarlos en la misma plataforma, todos los dispositivos que ejecutan esa plataforma deben instalar cada aplicación MTD y examinar las posibles amenazas. Si no se envía un examen desde alguna aplicación configurada, el dispositivo se marca como no conforme. 
 
 ## <a name="mobile-threat-defense-partners"></a>Asociados de Mobile Threat Defense
 

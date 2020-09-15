@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913501"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432530"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Directiva de reducción de la superficie expuesta a ataques para la seguridad de puntos de conexión en Intune
 
@@ -58,6 +58,9 @@ Vea cuáles son las [opciones de los perfiles de reducción de la superficie exp
 - **Control de aplicaciones**: las opciones de control de aplicaciones ayudan a mitigar las amenazas de seguridad restringiendo las aplicaciones que los usuarios pueden ejecutar y el código que se ejecuta en el núcleo del sistema (kernel). Administre las opciones que pueden bloquear archivos MSI y scripts sin firmar, y restrinja Windows PowerShell para que se ejecute en modo de lenguaje restringido.
 
   Para más información, vea [Control de aplicaciones](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) en la documentación de ATP de Microsoft Defender.
+  
+    > [!NOTE]
+    > Si utiliza esta configuración, el CSP de AppLocker actualmente solicita al usuario final que reinicie el equipo al implementar una directiva.
 
 - **Reglas de reducción de la superficie expuesta a ataques**: configure las opciones de las reglas de reducción de la superficie expuesta a ataques dirigidas a acabar con los comportamientos que el malware y las aplicaciones malintencionadas suelen manifestar para infectar equipos, por ejemplo:
   - Archivos ejecutables y scripts usados en aplicaciones de Office, o correo electrónico web que intenta descargar o ejecutar archivos

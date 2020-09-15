@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/05/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 9391be828452cbda25dd6c4f4ed75cffa2ef687c
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995150"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423754"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Administración del acceso web mediante Edge para iOS y Android con Microsoft Intune
 
@@ -310,7 +310,7 @@ Puede usar diferentes formatos de URL para crear listas de sitios permitidos o b
 
 - Asegúrese de anteponer **http://** o **https://** a todas las direcciones URL al introducirlas en la lista.
 - Puede usar el carácter comodín (\*) según las reglas de la siguiente lista de patrones permitidos.
-- Un carácter comodín solo puede coincidir con un componente entero del nombre de host (separado por puntos) o partes completas de la ruta de acceso (separadas por barras diagonales). Por ejemplo, `http://*contoso.com`**no** es compatible.
+- Un carácter comodín solo puede coincidir con parte del nombre de host (por ejemplo, `news-contoso.com`), con el nombre entero (por ejemplo, `host.contoso.com`) o con partes completas de la ruta de acceso separadas por barras diagonales (`www.contoso.com/images`).
 - Puede especificar números de puerto en la dirección. Si no especifica un número de puerto, los valores usados son:
   - Puerto 80 para http
   - Puerto 443 para https
@@ -321,11 +321,11 @@ Puede usar diferentes formatos de URL para crear listas de sitios permitidos o b
     |    `http://www.contoso.com`    |    Coincide con una sola página    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Coincide con una sola página    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*`   |    Coincide con todas las direcciones URL que comienzan por `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Coincide con todos los subdominios en `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    Coincide con todos los subdominios que terminan en `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Coincide con todos los subdominios en `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`<br>`news-contoso.com`
+    |    `http://*contoso.com/*`    |    Coincide con todos los subdominios que terminan en `contoso.com/`    |    `news-contoso.com`<br>`news-contoso.com.com/daily`    |    `news-contoso.host.com`<br>`news.contoso.com`    |
     `http://www.contoso.com/images`    |    Coincide con una sola carpeta    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
-    |    `http://www.contoso.com:80`    |    Coincide con una sola página, con un número de puerto    |    `http://www.contoso.com:80`    |         |
-    |    `https://www.contoso.com`    |    Coincide con una sola página segura    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
+    |    `http://www.contoso.com:80`    |    Coincide con una sola página, con un número de puerto    |    `www.contoso.com:80`    |         |
+    |    `https://www.contoso.com`    |    Coincide con una sola página segura    |    `www.contoso.com`    |    `www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Coincide con una sola carpeta y todas sus subcarpetas    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - Los siguientes son ejemplos de algunas de las entradas que no se pueden especificar:
@@ -337,7 +337,6 @@ Puede usar diferentes formatos de URL para crear listas de sitios permitidos o b
   - Direcciones IP
   - `https://*`
   - `http://*`
-  - `https://*contoso.com`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 

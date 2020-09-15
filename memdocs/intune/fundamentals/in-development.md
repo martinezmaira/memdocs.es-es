@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286244"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564251"
 ---
 # <a name="in-development-for-microsoft-intune"></a>En desarrollo para Microsoft Intune
 
@@ -218,15 +218,6 @@ Los scripts de PowerShell admitirán dispositivos registrados de Azure AD en In
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics incluirá registros de detalles del dispositivo<!--6014987  -->
 Habrá disponibles registros detallados del dispositivo de Intune en **Informes** > **Log Analytics**. Puede correlacionar los detalles del dispositivo para compilar consultas personalizadas y libros de Azure.
 
-### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381---"></a>Asociación de inquilinos: escala de tiempo del dispositivo en el centro de administración<!--7220536, CM7141381 -->
-Cuando Configuration Manager sincroniza un dispositivo con Microsoft Endpoint Manager de Microsoft a través de una asociación de inquilinos, podrá ver una escala de tiempo de eventos. Esta escala de tiempo muestra la actividad pasada en el dispositivo que puede ayudarle a solucionar problemas. Para más información, consulte [Technical Preview 2005 para Configuration Manager](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline).  
-
-### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389---"></a>Asociación de inquilinos: instalación de una aplicación desde el centro de administración<!-- 7220536, CM6024389 -->
-Ahora podrá iniciar la instalación de una aplicación en tiempo real para un dispositivo asociado al inquilino desde el centro de administración de Microsoft Endpoint Management. Para más información, consulte [Technical Preview 2005 para Configuration Manager](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps).
-
-### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392---"></a>Asociación de inquilinos: CMPivot desde el centro de administración<!--7220536, CM6024392 -->
-Podrá incorporar la eficacia de [CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) al centro de administración de Microsoft Endpoint Manager. Permita que otros roles, como el de Departamento de soporte técnico, puedan iniciar consultas en tiempo real desde la nube en un dispositivo individual administrado por ConfigMgr y devolver los resultados al centro de administración. Esto proporciona todas las ventajas tradicionales de CMPivot, permitiendo a los administradores de TI y a otros roles designados evaluar rápidamente el estado de los dispositivos en su entorno y tomar medidas. Para más información, consulte [Technical Preview 2005 para Configuration Manager](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot). 
-
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>Asociación de inquilinos: ejecución de scripts desde el centro de administración<!--7220536, CM6234688 -->
 Podrá incorporar la eficacia de la característica [Ejecutar scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) local de Configuration Manager al centro de administración de Microsoft Endpoint Manager. Permita que otros roles, como el de Departamento de soporte técnico, ejecuten scripts de PowerShell desde la nube en un dispositivo administrado de Configuration Manager individual. Esto proporciona todas las ventajas tradicionales de los scripts de PowerShell que ya se han definido y aprobado por el administrador de Configuration Manager en este nuevo entorno. Para más información, consulte [Technical Preview 2005 para Configuration Manager](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts). 
 
@@ -275,11 +266,11 @@ En **Dispositivos** > **Análisis de directivas de grupo (versión preliminar)**
 Se aplica a:
 - Windows 10 y versiones posteriores
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>Nuevo informe de actualizaciones de características de Windows 10<!-- 6473121   -->
-El informe de **errores de actualización de características** proporciona detalles sobre los errores de los dispositivos que se establecen como destino mediante una directiva de **actualizaciones de características de Windows 10** y que han intentado llevar a cabo una actualización. En el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Monitor** > **Errores de actualización de características** para ver este informe.
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>Nuevo informe de actualizaciones de características de Windows 10<!-- 6473128  -->
 El informe de **actualizaciones de características de Windows** proporciona una vista general del cumplimiento de los dispositivos que se establecen como destino mediante una directiva de **actualizaciones de características de Windows 10**. En el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Informes** > **Actualizaciones de características de Windows (versión preliminar)**  > **Errores de actualización de características** para ver el resumen de este informe. Para ver los informes de directivas específicas, seleccione la pestaña **Informes** y abra el **informe de actualización de características de Windows**. 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>Nuevo informe de fallo en la actualización de las características de Windows 10<!-- 6473121   -->
+El informe de **errores de actualización de características** proporciona detalles sobre los errores de los dispositivos que se establecen como destino mediante una directiva de **actualizaciones de características de Windows 10** y que han intentado llevar a cabo una actualización. En el [centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), seleccione **Dispositivos** > **Monitor** > **Errores de actualización de características** para ver este informe.
 
 <!-- ***********************************************-->
 <!--

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910271"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390779"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Adición de la aplicación Portal de empresa de Windows 10 con Microsoft Intune
 
@@ -33,6 +33,9 @@ Para administrar dispositivos e instalar aplicaciones, los usuarios pueden insta
 
  > [!IMPORTANT]
  > Si descarga la aplicación Portal de empresa, la opción descrita en este artículo exige que asigne actualizaciones manuales cada vez que se publica la actualización de una aplicación. Para implementar la aplicación Portal de empresa para dispositivos Windows 10 aprovisionados con Autopilot, vea [Adición de dispositivos Autopilot con la aplicación Portal de empresa de Windows 10](store-apps-company-portal-autopilot.md).
+
+> [!NOTE]
+> El Portal de empresa admite aplicaciones de Configuration Manager. Esta característica permite a los usuarios finales ver las aplicaciones implementadas de Configuration Manager y de Intune en el Portal de empresa de los clientes administrados conjuntamente. Esta nueva versión del portal de empresa mostrará las aplicaciones implementadas por Configuration Manager para todos los clientes administrados conjuntamente. Esta compatibilidad ayuda a los administradores a consolidar sus diferentes experiencias del portal de usuario final. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](/mem/configmgr/comanage/company-portal).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Configuración de las opciones para mostrar las aplicaciones sin conexión
 1. Inicie sesión en [Microsoft Store para Empresas](https://www.microsoft.com/business-store) con la cuenta de administrador.
@@ -95,7 +98,7 @@ Así es cómo se tiene que firmar y asignar la aplicación:
 3. Para firmar la aplicación Portal de empresa de Windows 10, ejecute el script con los parámetros de entrada detallados en el encabezado del script, como se muestra en la siguiente tabla.  
     Las dependencias no tienen que pasarse al script. Solo se necesitan cuando la aplicación va a cargarse en la consola de administración de Intune.
 
-| Parámetro |  Description  |
+| Parámetro |  Descripción  |
 |---|---|
 | InputWin10AppxBundle  |  Ruta de acceso al archivo de origen appxbundle. |
 | OutputWin10AppxBundle | La ruta de acceso de salida del archivo firmado appxbundle. 

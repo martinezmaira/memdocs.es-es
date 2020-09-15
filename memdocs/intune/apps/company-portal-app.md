@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194236"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390817"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Personalización de las aplicaciones del Portal de empresa de Intune, el sitio web del Portal de empresa y la aplicación de Intune
 
 Las aplicaciones del Portal de empresa, el sitio web del Portal de empresa y la aplicación de Intune en Android son los lugares en los que los usuarios acceden a los datos de la empresa y pueden realizar tareas comunes. Las tareas comunes pueden incluir la inscripción de dispositivos, la instalación de aplicaciones y la búsqueda de información (por ejemplo, para solicitar asistencia del departamento de TI). Además, permiten a los usuarios acceder de forma segura a los recursos de la empresa. La experiencia del usuario final ofrece varias páginas diferentes, como Inicio, Aplicaciones, Detalles de la aplicación, Dispositivos y Detalles del dispositivo. Para buscar rápidamente aplicaciones en el Portal de empresa, puede filtrar las aplicaciones en la página Aplicaciones.
+
+> [!NOTE]
+> El Portal de empresa admite aplicaciones de Configuration Manager. Esta característica permite a los usuarios finales ver las aplicaciones implementadas de Configuration Manager y de Intune en el Portal de empresa de los clientes administrados conjuntamente. Esta nueva versión del portal de empresa mostrará las aplicaciones implementadas por Configuration Manager para todos los clientes administrados conjuntamente. Esta compatibilidad ayuda a los administradores a consolidar sus diferentes experiencias del portal de usuario final. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](/mem/configmgr/comanage/company-portal).
 
 ## <a name="customizing-the-user-experience"></a>Personalización de la experiencia del usuario
 
@@ -111,8 +114,8 @@ En la tabla siguiente se proporcionan detalles de configuración específicos de
 |    Opciones de inscripción de dispositivos    |    Descripción    |    Avisos de lista de comprobación    |    Notificación    |    Detalles de estado del dispositivo    |    Detalles de estado de la aplicación (de una aplicación que requiere inscripción)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Disponible, con avisos    |    La experiencia predeterminada con avisos para inscribirse en todas las ubicaciones posibles.    |    Sí    |    Sí    |    Sí    |    Sí    |
-|    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    Sin    |    No    |    Sí    |    Sí    |
-|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    Sin    |    No    |    No    |
+|    Disponible, sin avisos    |    El usuario puede inscribirse a través del estado de los detalles de su dispositivo actual o de las aplicaciones que requieren inscripción.    |    No    |    No    |    Sí    |    Sí    |
+|    No disponible    |    No hay ninguna manera de que se inscriban los usuarios.    |    No    |    No    |    No    |    No    |
 
 ### <a name="privacy"></a>Privacidad
 

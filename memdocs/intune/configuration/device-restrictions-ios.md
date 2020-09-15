@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303443"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423890"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos iOS e iPadOS para permitir o restringir características mediante Intune
 
@@ -70,8 +70,9 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
   Para usar esta opción, establezca **Captura de pantalla** en **Bloquear**.
 
   Esta característica se aplica a:  
-  - iOS 9.3 y versiones más recientes
-  - IPadOS 13.0 y versiones más recientes
+  - iOS 9.3 - iOS 12.x: requiere dispositivos supervisados
+  - iOS 13.0 y versiones posteriores: no requiere dispositivos supervisados
+  - IPadOS 13.0 y versiones posteriores: Los dispositivos deben haberse inscrito con la inscripción de dispositivos o con la inscripción de dispositivos automatizada (ADE).
 
 - **Observación de pantalla sin mensajes por la aplicación Classroom**: **Permitir** habilita a los profesores para observar de manera silenciosa las pantallas iOS/iPadOS de los alumnos con la aplicación Classroom sin que estos lo sepan. Los dispositivos de alumnos inscritos en una clase con la aplicación Classroom automáticamente dan permiso al profesor de ese curso. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el sistema operativo podría impedir esta característica.
 

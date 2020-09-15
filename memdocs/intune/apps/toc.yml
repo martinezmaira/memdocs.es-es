@@ -81,9 +81,17 @@
             - name: Aplicaciones de LOB para macOS
               href: lob-apps-macos.md
             - name: Administración de aplicaciones Win32
-              href: apps-win32-app-management.md
-            - name: "Dispositivos en modo\_S con aplicaciones\_Win32"
-              href: apps-win32-s-mode.md
+              items:
+                - name: Introducción a la administración de aplicaciones Win32
+                  href: apps-win32-app-management.md
+                - name: Preparación de una aplicación Win32
+                  href: apps-win32-prepare.md
+                - name: Adición de una aplicación Win32
+                  href: apps-win32-add.md
+                - name: Solución de problemas de una aplicación Win32
+                  href: apps-win32-troubleshoot.md
+                - name: "Dispositivos en modo\_S con aplicaciones\_Win32"
+                  href: apps-win32-s-mode.md
         - name: Adición de aplicaciones específicas
           items:
             - name: Aplicación Portal de empresa - Autopilot

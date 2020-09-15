@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251979"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423822"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Uso de certificados para la autenticación en Microsoft Intune
 
@@ -44,11 +44,13 @@ Cada perfil de certificado individual que cree es compatible con una sola plataf
 
 Cuando se usa una entidad de certificación (CA) de Microsoft:
 
-- Para usar perfiles de certificado SCEP, debe [configurar un servidor de servicio de inscripción de dispositivos de red (NDES)](certificates-scep-configure.md#set-up-ndes) para su uso con Intune.
-- Para usar los siguientes tipos de perfiles de certificado, debe [instalar Microsoft Intune Certificate Connector](certificates-scep-configure.md#install-the-intune-certificate-connector):
-  - Perfil de certificación de SCEP
-  - Perfil de certificado PKCS
+- Para usar perfiles de certificado SCEP:
+  - [configure un servidor de servicio de inscripción de dispositivos de red (NDES)](certificates-scep-configure.md#set-up-ndes) para usar con Intune.
+  - [instale Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
+- Para usar perfiles de certificado PKCS:
+  - [instale el conector de certificados PFX para Microsoft Intune](certificates-imported-pfx-configure).
+  
 - Para usar certificados PKCS importados:
   - [Instale el conector de certificado PFX para Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
   - Exporte los certificados de la entidad de certificación y, luego, impórtelos en Microsoft Intune. Consulte [el proyecto PFXImport de PowerShell](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
@@ -79,14 +81,14 @@ Cuando se usa una entidad de certificación (CA) de terceros (que no es de Micro
 
 | Plataforma              | Perfil de certificado de confianza | Perfil de certificado PKCS | Perfil de certificado SCEP | Perfil de certificado PKCS importado  |
 |--|--|--|--|---|
-| Administrador de dispositivos Android | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png)|  ![Compatible.](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - Totalmente administrado (propietario del dispositivo)   | ![Compatible.](./media/certificates-configure/green-check.png) |   | ![Compatible.](./media/certificates-configure/green-check.png) |  ![Compatible](./media/certificates-configure/green-check.png)  |
-| Android Enterprise <br> - Dedicado (propietario del dispositivo)   | ![Compatible.](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png)|
-| Android Enterprise <br> -Perfil de trabajo de propiedad corporativa   | ![Compatible.](./media/certificates-configure/green-check.png)  |  | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png)  |
-| Android Enterprise <br> - Perfil de trabajo    | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png) |
-| iOS/iPadOS                   | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png) |
-| macOS                 | ![Compatible](./media/certificates-configure/green-check.png) |  ![Compatible](./media/certificates-configure/green-check.png) |![Compatible.](./media/certificates-configure/green-check.png)|![Compatible](./media/certificates-configure/green-check.png)|
-| Windows 8.1 y posterior |![Compatible.](./media/certificates-configure/green-check.png)  |  |![Compatible.](./media/certificates-configure/green-check.png) |   |
+| Administrador de dispositivos Android | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png)|  ![Compatible](./media/certificates-configure/green-check.png) |
+| Android Enterprise <br> - Totalmente administrado (propietario del dispositivo)   | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png) |  ![Compatible](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Dedicado (propietario del dispositivo)   | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png)|
+| Android Enterprise <br> -Perfil de trabajo de propiedad corporativa   | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible](./media/certificates-configure/green-check.png)  | ![Compatible.](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Perfil de trabajo    | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) |
+| macOS                 | ![Compatible](./media/certificates-configure/green-check.png) |  ![Compatible](./media/certificates-configure/green-check.png) |![Compatible.](./media/certificates-configure/green-check.png)|![Compatible.](./media/certificates-configure/green-check.png)|
+| Windows 8.1 y posterior |![Compatible.](./media/certificates-configure/green-check.png)  |  |![Compatible](./media/certificates-configure/green-check.png) |   |
 | Windows 10 y versiones posteriores  | ![Compatible.](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible](./media/certificates-configure/green-check.png) | ![Compatible.](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Exportación del certificado de entidad de certificación raíz de confianza
@@ -172,3 +174,5 @@ Cree perfiles de certificado SCEP, PKCS o PKCS importados para cada plataforma q
 - [Configuración de la infraestructura para admitir certificados SCEP con Intune](certificates-scep-configure.md)  
 - [Configuración y administración de certificados PKCS con Intune](certficates-pfx-configure.md)  
 - [Creación de un perfil de certificado PKCS importado](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+Más información sobre [conectores de certificados](certificate-connectors.md)
