@@ -4,6 +4,7 @@ description: Obtenga información acerca de cómo solucionar los problemas que s
 keywords: MDM, configurar, Windows, Windows 10, Oobe, administrar, implementar, AutoPilot, ZTD, cero-Touch, Partner, msfb, Intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -14,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907913"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574584"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Solución de problemas de Windows AutoPilot
 
@@ -42,9 +43,9 @@ Para solucionar problemas, las actividades clave que se deben realizar son las s
 
 - Configuración: ¿Azure Active Directory y Microsoft Intune (o un servicio MDM equivalente) se han configurado según se especifica en [los requisitos de configuración de Windows AutoPilot](configuration-requirements.md)?
 - Conectividad de red: ¿el dispositivo puede acceder a los servicios descritos en [requisitos de red de Windows AutoPilot](networking-requirements.md)?
-- Comportamiento de implementación rápida (OOBE) de AutoPilot: ¿solo se muestran las pantallas de la pantalla de presentación rápida esperada? ¿Se ha personalizado la página de credenciales de Azure AD con detalles específicos de la organización?
-- Problemas de Azure AD join: ¿el dispositivo pudo unirse Azure Active Directory?
-- Problemas de inscripción de MDM: ¿el dispositivo pudo inscribirse en Microsoft Intune (o un servicio de MDM equivalente)?
+- Comportamiento de la experiencia rápida (OOBE) del piloto automático: ¿se muestran las pantallas [Oobe esperadas](#troubleshooting-autopilot-oobe-issues) ? ¿Se ha personalizado la página de credenciales de Azure AD con detalles específicos de la organización?
+- Problemas de Azure AD join: ¿el dispositivo puede [unirse Azure Active Directory](#troubleshooting-azure-ad-join-issues)?
+- Problemas de inscripción de MDM: ¿el dispositivo puede [inscribirse en Microsoft Intune](#troubleshooting-intune-enrollment-issues) (o un servicio de MDM equivalente)?
 
 ## <a name="troubleshooting-autopilot-device-import"></a>Solución de problemas de importación de dispositivos AutoPilot
 
@@ -115,7 +116,7 @@ Además de las entradas del registro de eventos, el registro y las opciones de s
 
 La configuración del perfil de AutoPilot recibida del servicio de implementación de AutoPilot se almacena en el registro del dispositivo. Esta información puede encontrarse en **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Entre las entradas del registro disponibles se incluyen:
 
-| Value | Descripción |
+| Valor | Descripción |
 |-------|-------------|
 | AadTenantId | GUID del inquilino de Azure AD en el que el usuario inició sesión. El usuario recibe un error si esta entrada no coincide con el inquilino que se usó para registrar el dispositivo. |
 | CloudAssignedTenantDomain | El Azure AD inquilino con el que se ha registrado el dispositivo, por ejemplo, "contosomn.onmicrosoft.com". Si el dispositivo no está registrado con AutoPilot, este valor estará en blanco. |
