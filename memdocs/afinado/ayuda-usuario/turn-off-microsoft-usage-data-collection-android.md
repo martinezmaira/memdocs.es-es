@@ -1,4 +1,4 @@
----
+Desactivar---
 title: Cómo desactivar la recopilación de datos de Microsoft | Microsoft Docs
 description: ''
 keywords: ''
